@@ -58,6 +58,30 @@ class PracticeScreen extends StatelessWidget {
         Text(context.tr('${pool.length} प्रश्न · ${subjects.length} विषय', '${pool.length} questions · ${subjects.length} subjects'),
             style: TextStyle(color: Theme.of(context).hintColor)),
         const SizedBox(height: 16),
+        Card(
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () => startQuiz(context, s.builder.weeklyMock()),
+            child: Container(
+              padding: const EdgeInsets.all(18),
+              decoration: const BoxDecoration(gradient: BrandColors.fireGradient),
+              child: Row(children: [
+                const Icon(Icons.workspace_premium, color: Colors.white, size: 38),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Text(context.tr('साप्ताहिक मोठी परीक्षा 🗓️', 'Weekly big test 🗓️'),
+                        style: const TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w900)),
+                    Text(context.tr('50 प्रश्न · सर्व विषय · ही आठवडाभर तीच राहते', '50 questions · all subjects · same all week'),
+                        style: const TextStyle(color: Colors.white)),
+                  ]),
+                ),
+                const Icon(Icons.chevron_right, color: Colors.white),
+              ]),
+            ),
+          ),
+        ),
+        const SizedBox(height: 10),
         Row(children: [
           Expanded(
             child: _QuickTile(
@@ -145,26 +169,61 @@ class _SubjectTile extends StatelessWidget {
   }
 }
 
-class SubjectScreen extends StatelessWidget {
+class SubjectScreen extends StatefulWidget {
   final Subject subject;
   const SubjectScreen({super.key, required this.subject});
 
   @override
+  State<SubjectScreen> createState() => _SubjectScreenState();
+}
+
+const _difficultyLabels = [
+  (null, Bi('सर्व', 'All')),
+  (1, Bi('सोपे', 'Easy')),
+  (2, Bi('मध्यम', 'Medium')),
+  (3, Bi('कठीण', 'Hard')),
+];
+
+class _SubjectScreenState extends State<SubjectScreen> {
+  int? difficulty;
+
+  @override
   Widget build(BuildContext context) {
+    final subject = widget.subject;
     final s = context.scope;
     final lang = context.lang;
-    final qs = s.repo.questions.where((q) => q.subject == subject.id).toList();
+    final qs = s.repo.questions
+        .where((q) => q.subject == subject.id && (difficulty == null || q.difficulty == difficulty))
+        .toList();
     final topicStats = {for (final t in s.builder.topicStats().where((t) => t.subject == subject.id)) t.topic: t};
     return Scaffold(
       appBar: AppBar(title: Text(subject.name.of(lang))),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
         children: [
+          SizedBox(
+            width: double.infinity,
+            child: Wrap(
+              spacing: 8,
+              children: [
+                for (final (level, label) in _difficultyLabels)
+                  ChoiceChip(
+                    label: Text(label.of(lang)),
+                    selected: difficulty == level,
+                    selectedColor: BrandColors.saffron.withValues(alpha: 0.25),
+                    onSelected: (_) => setState(() => difficulty = level),
+                  ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
           FilledButton.icon(
             style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
             icon: const Icon(Icons.shuffle),
             label: Text(context.tr('सर्व घटकांतून मिश्र सराव 🔀', 'Mixed practice from all topics 🔀')),
-            onPressed: () => startQuiz(context, s.builder.practice(subject: subject.id)),
+            onPressed: qs.isEmpty
+                ? null
+                : () => startQuiz(context, s.builder.practice(subject: subject.id, difficulty: difficulty)),
           ),
           SectionTitle(context.tr('घटक 🧩', 'Topics 🧩')),
           for (final t in subject.topics) ...[
@@ -194,7 +253,10 @@ class SubjectScreen extends StatelessWidget {
                   ]),
                   trailing: IconButton(
                     icon: const Icon(Icons.play_circle, color: BrandColors.saffron, size: 34),
-                    onPressed: n == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: t.id)),
+                    onPressed: n == 0
+                        ? null
+                        : () => startQuiz(context,
+                            s.builder.practice(subject: subject.id, topic: t.id, difficulty: difficulty)),
                   ),
                   onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: t))),
                 ),

@@ -39,7 +39,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (!_recorded && widget.spec.mode == QuizMode.mock) {
+    if (!_recorded && (widget.spec.mode == QuizMode.mock || widget.spec.mode == QuizMode.weeklyMock)) {
       _recorded = true;
       final p = AppScope.read(context).progress;
       p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));

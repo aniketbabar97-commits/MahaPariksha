@@ -4,7 +4,7 @@ import '../data/content_repo.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 
-enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks }
+enum QuizMode { practice, daily, mock, weeklyMock, speed, mistakes, bookmarks }
 
 class QuizSpec {
   final QuizMode mode;
@@ -17,7 +17,7 @@ class QuizSpec {
       {this.timeLimit, this.negative = 0});
 
   /// Instant feedback after each answer (practice-style) vs reveal at the end (test-style).
-  bool get instantFeedback => mode != QuizMode.mock;
+  bool get instantFeedback => mode != QuizMode.mock && mode != QuizMode.weeklyMock;
 }
 
 class TopicStat {
@@ -36,11 +36,12 @@ class QuizBuilder {
 
   Exam? get exam => progress.examId == null ? null : repo.exam(progress.examId!);
 
-  List<Question> _pool({String? subject, String? topic}) {
+  List<Question> _pool({String? subject, String? topic, int? difficulty}) {
     final e = exam;
     Iterable<Question> qs = e == null ? repo.questions : repo.questionsFor(e);
     if (subject != null) qs = qs.where((q) => q.subject == subject);
     if (topic != null) qs = qs.where((q) => q.topic == topic);
+    if (difficulty != null) qs = qs.where((q) => q.difficulty == difficulty);
     return qs.where((q) => !progress.reported.contains(q.id)).toList();
   }
 
@@ -58,12 +59,33 @@ class QuizBuilder {
     return pool.take(n).toList();
   }
 
-  QuizSpec practice({required String subject, String? topic, int count = 10}) {
+  /// [difficulty] 1=easy, 2=medium, 3=hard; null = all levels mixed.
+  QuizSpec practice({required String subject, String? topic, int count = 10, int? difficulty}) {
     final s = repo.subject(subject);
     final t = topic == null ? null : repo.topic(subject, topic);
-    final qs = _pick(_pool(subject: subject, topic: topic), count, Random());
-    return QuizSpec(QuizMode.practice, qs, t?.name.mr ?? s?.name.mr ?? 'सराव',
-        t?.name.en ?? s?.name.en ?? 'Practice');
+    final qs = _pick(_pool(subject: subject, topic: topic, difficulty: difficulty), count, Random());
+    final level = switch (difficulty) {
+      1 => Bi(' · सोपे', ' · Easy'),
+      2 => Bi(' · मध्यम', ' · Medium'),
+      3 => Bi(' · कठीण', ' · Hard'),
+      _ => const Bi('', ''),
+    };
+    return QuizSpec(
+      QuizMode.practice,
+      qs,
+      '${t?.name.mr ?? s?.name.mr ?? 'सराव'}${level.mr}',
+      '${t?.name.en ?? s?.name.en ?? 'Practice'}${level.en}',
+    );
+  }
+
+  /// Difficulty mix (easy/medium/hard) available for a subject/topic, with counts,
+  /// so the UI can grey out a level that has no questions yet.
+  Map<int, int> difficultyCounts({required String subject, String? topic}) {
+    final counts = {1: 0, 2: 0, 3: 0};
+    for (final q in _pool(subject: subject, topic: topic)) {
+      counts[q.difficulty] = (counts[q.difficulty] ?? 0) + 1;
+    }
+    return counts;
   }
 
   List<TopicStat> topicStats() {
@@ -125,6 +147,34 @@ class QuizBuilder {
     }
     final negative = e?.negative ?? 0.0;
     return QuizSpec(QuizMode.mock, chosen, 'सराव परीक्षा (Mock)', 'Mock Test',
+        timeLimit: Duration(seconds: 48 * chosen.length), negative: negative);
+  }
+
+  /// A bigger, full-syllabus mock that is the same for everyone all week (seeded by
+  /// ISO week + exam), so it can be compared against past weeks like a real exam.
+  QuizSpec weeklyMock({int count = 50}) {
+    final e = exam;
+    final week = (today() / 7).floor();
+    final rnd = Random(week * 977 + (e?.id.hashCode ?? 0));
+    final pool = _pool();
+    final bySubject = <String, List<Question>>{};
+    for (final q in pool) {
+      bySubject.putIfAbsent(q.subject, () => []).add(q);
+    }
+    for (final list in bySubject.values) {
+      list.shuffle(rnd);
+    }
+    final chosen = <Question>[];
+    final subjects = bySubject.keys.toList()..shuffle(rnd);
+    var i = 0;
+    while (chosen.length < count && bySubject.values.any((l) => l.isNotEmpty)) {
+      final list = bySubject[subjects[i % subjects.length]]!;
+      if (list.isNotEmpty) chosen.add(list.removeAt(0));
+      i++;
+    }
+    chosen.shuffle(rnd);
+    final negative = e?.negative ?? 0.0;
+    return QuizSpec(QuizMode.weeklyMock, chosen, 'साप्ताहिक मोठी परीक्षा', 'Weekly Big Test',
         timeLimit: Duration(seconds: 48 * chosen.length), negative: negative);
   }
 

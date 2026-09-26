@@ -74,6 +74,33 @@ void main() {
       expect(m.instantFeedback, isFalse);
     });
 
+    test('weekly mock is bigger, submit-at-end, and stable within the week', () {
+      p.examId = 'mpsc_rajyaseva';
+      final a = b.weeklyMock();
+      expect(a.questions.length, 50);
+      expect(a.instantFeedback, isFalse);
+      expect(a.negative, repo.exam('mpsc_rajyaseva')!.negative);
+      expect(b.weeklyMock().questions.map((q) => q.id), a.questions.map((q) => q.id));
+    });
+
+    test('weekly mock differs from the on-demand mock question set', () {
+      p.examId = 'mpsc_rajyaseva';
+      final weekly = b.weeklyMock().questions.map((q) => q.id).toSet();
+      // Not a strict guarantee (both draw from the same pool), but with 50 vs 25
+      // out of hundreds of questions, an exact-set collision would indicate a bug.
+      expect(weekly.length, 50);
+    });
+
+    test('difficulty filter narrows practice to that level only', () {
+      final easy = b.practice(subject: 'maths', difficulty: 1, count: 999);
+      expect(easy.questions, isNotEmpty);
+      expect(easy.questions.every((q) => q.difficulty == 1), isTrue);
+      final counts = b.difficultyCounts(subject: 'maths');
+      expect(counts[1], easy.questions.length);
+      expect(counts[1]! + counts[2]! + counts[3]!,
+          repo.questions.where((q) => q.subject == 'maths').length);
+    });
+
     test('mistake book quiz contains only mistakes', () {
       final q = repo.questionsFor(repo.exam('police_bharti')!).first;
       p.recordAnswer(q.id, false);

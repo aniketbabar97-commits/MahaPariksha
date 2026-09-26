@@ -1,0 +1,218 @@
+[
+ {
+  "id": "fc-hw3b-001",
+  "s": "maths",
+  "t": "number",
+  "f_mr": "2 च्या घातांची शेष (mod) चक्रीयता किती पदांची असते?",
+  "b_mr": "2 च्या घातांचे 7 ने भागल्यावरचे शेष 2,4,1 असे 3 पदांच्या चक्रात पुनरावृत्त होतात.",
+  "f_en": "How many terms does the remainder-cycle of powers of 2 (mod small numbers) typically have?",
+  "b_en": "Remainders of powers of 2 mod 7 repeat in a cycle of 3 terms: 2, 4, 1."
+ },
+ {
+  "id": "fc-hw3b-002",
+  "s": "maths",
+  "t": "number",
+  "f_mr": "n! मधील शून्यांची संख्या कशी काढतात?",
+  "b_mr": "⌊n/5⌋ + ⌊n/25⌋ + ⌊n/125⌋ ... अशी बेरीज करून n! च्या शेवटी येणाऱ्या शून्यांची संख्या मिळते.",
+  "f_en": "How do you find the number of trailing zeros in n!?",
+  "b_en": "Add ⌊n/5⌋ + ⌊n/25⌋ + ⌊n/125⌋ ... to get the number of trailing zeros in n!."
+ },
+ {
+  "id": "fc-hw3b-003",
+  "s": "maths",
+  "t": "percentage",
+  "f_mr": "क्रमवार टक्केवारी बदल एकत्र कसे काढतात?",
+  "b_mr": "प्रत्येक बदलाचा गुणक (उदा. +20% → 1.20) एकमेकांशी गुणून अंतिम निव्वळ % बदल काढतात.",
+  "f_en": "How do you combine successive percentage changes?",
+  "b_en": "Multiply the factor for each change (e.g. +20% → 1.20) together to get the final net % change."
+ },
+ {
+  "id": "fc-hw3b-004",
+  "s": "maths",
+  "t": "interest",
+  "f_mr": "3 वर्षांसाठी CI आणि SI मधील फरकाचे सूत्र काय आहे?",
+  "b_mr": "CI − SI (3 वर्षे) = P(r/100)² × (3 + r/100).",
+  "f_en": "What is the formula for the difference between CI and SI over 3 years?",
+  "b_en": "CI − SI (3 years) = P(r/100)² × (3 + r/100)."
+ },
+ {
+  "id": "fc-hw3b-005",
+  "s": "maths",
+  "t": "time_work",
+  "f_mr": "जोडींचे दर दिलेले असताना तिघांचा एकत्रित दर कसा काढतात?",
+  "b_mr": "तिन्ही जोड्यांच्या दरांची बेरीज करून 2 ने भागल्यास तिघांचा एकत्रित दर मिळतो (कारण प्रत्येकजण दोनदा मोजला जातो).",
+  "f_en": "How do you find the combined rate of three workers from pairwise rates?",
+  "b_en": "Add all three pairwise rates and divide by 2 to get the combined rate of all three (since each worker is counted twice)."
+ },
+ {
+  "id": "fc-hw3b-006",
+  "s": "maths",
+  "t": "mensuration",
+  "f_mr": "समान त्रिज्येचा गोल वितळवून शंकू बनवल्यास शंकूची उंची त्रिज्येच्या किती पट असते?",
+  "b_mr": "शंकूची उंची त्रिज्येच्या 4 पट असते (h = 4r), कारण घनफळ समान ठेवावे लागते.",
+  "f_en": "If a sphere is recast into a cone of the same radius, how many times the radius is the cone's height?",
+  "b_en": "The cone's height is 4 times the radius (h = 4r), since the volume must stay equal."
+ },
+ {
+  "id": "fc-hw3b-007",
+  "s": "maths",
+  "t": "algebra",
+  "f_mr": "x + 1/x माहीत असल्यास x² + 1/x² कसे काढतात?",
+  "b_mr": "(x+1/x)² = x²+1/x²+2 हे सूत्र वापरून x²+1/x² = (x+1/x)²−2 असे काढतात.",
+  "f_en": "How do you find x² + 1/x² when x + 1/x is known?",
+  "b_en": "Use (x+1/x)² = x²+1/x²+2, so x²+1/x² = (x+1/x)²−2."
+ },
+ {
+  "id": "fc-hw3b-008",
+  "s": "maths",
+  "t": "geometry",
+  "f_mr": "काटकोन त्रिकोणाच्या अंतर्वर्तुळाची त्रिज्या कशी काढतात?",
+  "b_mr": "r = (लंब बाजू1 + लंब बाजू2 − कर्ण) / 2 या सूत्राने काटकोन त्रिकोणाची अंतर्वर्तुळ त्रिज्या मिळते.",
+  "f_en": "How do you find the inradius of a right triangle?",
+  "b_en": "r = (leg1 + leg2 − hypotenuse) / 2 gives the inradius of a right triangle directly."
+ },
+ {
+  "id": "fc-hw3b-009",
+  "s": "maths",
+  "t": "trigonometry",
+  "f_mr": "उन्नयन कोन 30° वरून 60° होण्यासाठी अंतर d इतके कमी झाल्यास उंची कशी काढतात?",
+  "b_mr": "अशा परिस्थितीत उंची नेहमी d√3 इतकी येते (30°-60° चा विशेष गुणधर्म).",
+  "f_en": "When the elevation angle changes from 30° to 60° after moving distance d closer, how is the height found?",
+  "b_en": "In this special 30°-60° case, the height always works out to d√3."
+ },
+ {
+  "id": "fc-hw3b-010",
+  "s": "reasoning",
+  "t": "series",
+  "f_mr": "फिबोनाची क्रम कसा तयार होतो?",
+  "b_mr": "प्रत्येक पद हे त्याच्या आधीच्या दोन पदांच्या बेरजेइतके असते (उदा. 2,3,5,8,13,21...).",
+  "f_en": "How is the Fibonacci sequence formed?",
+  "b_en": "Each term equals the sum of the two preceding terms (e.g. 2,3,5,8,13,21...)."
+ },
+ {
+  "id": "fc-hw3b-011",
+  "s": "reasoning",
+  "t": "coding",
+  "f_mr": "स्थान-आधारित (position-based) अक्षर सांकेतिकीकरण कसे तपासतात?",
+  "b_mr": "दिलेल्या उदाहरणातील प्रत्येक अक्षराचा शिफ्ट त्याच्या शब्दातील स्थानाशी जुळतो का ते तपासून नियम शोधतात.",
+  "f_en": "How do you crack a position-based letter-shift code?",
+  "b_en": "Check whether each letter's shift in the given example matches its position in the word to find the rule."
+ },
+ {
+  "id": "fc-hw3b-012",
+  "s": "reasoning",
+  "t": "blood",
+  "f_mr": "'आजोबांचा एकुलता एक मुलगा' असा उल्लेख आल्यास तो कोणाला सूचित करतो?",
+  "b_mr": "तो नेहमी वक्त्याच्या स्वतःच्या वडिलांनाच सूचित करतो, कारण दुसरा कोणी मुलगा नसतो.",
+  "f_en": "When 'grandfather's only son' is mentioned in a puzzle, whom does it refer to?",
+  "b_en": "It always refers to the speaker's own father, since there is no other son."
+ },
+ {
+  "id": "fc-hw3b-013",
+  "s": "reasoning",
+  "t": "direction",
+  "f_mr": "दिशा-अंतराचे प्रश्न सोडवण्याची सोपी पद्धत कोणती?",
+  "b_mr": "प्रत्येक हालचाल (X,Y) निर्देशांकांवर नोंदवून शेवटी पायथागोरस प्रमेयाने अंतर काढणे.",
+  "f_en": "What is an easy method to solve direction-distance puzzles?",
+  "b_en": "Plot every movement on (X,Y) coordinates and use the Pythagoras theorem at the end to find the distance."
+ },
+ {
+  "id": "fc-hw3b-014",
+  "s": "reasoning",
+  "t": "calendar",
+  "f_mr": "सामान्य व लीप वर्षाचे 'जास्तीचे दिवस' (odd days) किती असतात?",
+  "b_mr": "सामान्य वर्षाचा 1 जास्तीचा दिवस असतो, तर लीप वर्षाचे 2 जास्तीचे दिवस असतात.",
+  "f_en": "How many 'odd days' does an ordinary year and a leap year contribute?",
+  "b_en": "An ordinary year contributes 1 odd day, while a leap year contributes 2 odd days."
+ },
+ {
+  "id": "fc-hw3b-015",
+  "s": "reasoning",
+  "t": "ranking",
+  "f_mr": "एकूण संख्या माहीत असल्यास डावीकडून व उजवीकडून स्थान कसे जोडतात?",
+  "b_mr": "डावीकडून स्थान + उजवीकडून स्थान − 1 = एकूण संख्या हे सूत्र लक्षात ठेवा.",
+  "f_en": "How are position-from-left and position-from-right related to the total count?",
+  "b_en": "Remember: position-from-left + position-from-right − 1 = total count."
+ },
+ {
+  "id": "fc-hw3b-016",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_mr": "'काही A आहेत B' आणि 'कोणतेही B नाही C' यातून काय निष्कर्ष निघतो?",
+  "b_mr": "यातून नेहमी 'काही A नाहीत C' हा वैध निष्कर्ष निघतो.",
+  "f_en": "What conclusion follows from 'Some A are B' and 'No B is C'?",
+  "b_en": "This combination always validly gives 'Some A are not C'."
+ },
+ {
+  "id": "fc-hw3b-017",
+  "s": "reasoning",
+  "t": "puzzles",
+  "f_mr": "वर्तुळाकार बैठकीत (सम संख्या जागा) 'बरोबर विरुद्ध' बसलेली व्यक्ती कशी शोधतात?",
+  "b_mr": "एकूण जागांच्या निम्म्या स्थानांइतके पुढे मोजून 'बरोबर विरुद्ध' व्यक्ती शोधतात.",
+  "f_en": "In a circular seating with an even number of seats, how do you find who sits exactly opposite?",
+  "b_en": "Count exactly half the total number of seats away to find the person sitting directly opposite."
+ },
+ {
+  "id": "fc-hw3b-018",
+  "s": "reasoning",
+  "t": "inequality",
+  "f_mr": "साखळीत '≥' नंतर '>' आल्यास एकत्रित संबंध काय होतो?",
+  "b_mr": "एकत्रित संबंध नेहमी काटेकोर '>' असाच होतो.",
+  "f_en": "When a '≥' is followed by a '>' in a chain, what does the combined relation become?",
+  "b_en": "The combined relation always becomes a strict '>'."
+ },
+ {
+  "id": "fc-hw3b-019",
+  "s": "science",
+  "t": "physics",
+  "f_mr": "H = I²Rt या सूत्रात वेळ कोणत्या एककात घ्यावी?",
+  "b_mr": "वेळ नेहमी सेकंदातच घ्यावी लागते; मिनिटांना 60 ने गुणून सेकंदात रूपांतरित करा.",
+  "f_en": "In the formula H = I²Rt, in what unit should time be taken?",
+  "b_en": "Time must always be in seconds; convert minutes to seconds by multiplying by 60."
+ },
+ {
+  "id": "fc-hw3b-020",
+  "s": "science",
+  "t": "physics",
+  "f_mr": "भिंगाची क्षमता (डायोप्टर) व नाभीय अंतर यांचा संबंध काय आहे?",
+  "b_mr": "क्षमता P = 1/f, जिथे f मीटरमध्ये असते; म्हणजे f = 1/P.",
+  "f_en": "What is the relationship between a lens's power (dioptre) and its focal length?",
+  "b_en": "Power P = 1/f, where f is in metres; hence f = 1/P."
+ },
+ {
+  "id": "fc-hw3b-021",
+  "s": "science",
+  "t": "chemistry",
+  "f_mr": "मोलॅरिटी कशी काढतात?",
+  "b_mr": "मोलॅरिटी = विद्राव्याचे मोल / द्रावणाचे आकारमान (लिटरमध्ये).",
+  "f_en": "How is molarity calculated?",
+  "b_en": "Molarity = moles of solute / volume of solution (in litres)."
+ },
+ {
+  "id": "fc-hw3b-022",
+  "s": "science",
+  "t": "biology",
+  "f_mr": "स्निग्धांशात विरघळणारी जीवनसत्त्वे कोणती?",
+  "b_mr": "A, D, E, K ही जीवनसत्त्वे स्निग्धांशात विरघळणारी असतात ('ADEK' असे लक्षात ठेवा).",
+  "f_en": "Which vitamins are fat-soluble?",
+  "b_en": "Vitamins A, D, E and K are fat-soluble (remember the mnemonic 'ADEK')."
+ },
+ {
+  "id": "fc-hw3b-023",
+  "s": "marathi",
+  "t": "samas",
+  "f_mr": "बहुव्रीही समास कसा ओळखतात?",
+  "b_mr": "समासाचा अर्थ दोन्ही पदांव्यतिरिक्त तिसऱ्याच व्यक्ती/वस्तूकडे निर्देश करत असेल तर तो बहुव्रीही समास असतो.",
+  "f_en": "How do you identify Bahuvrihi samas?",
+  "b_en": "If the compound's meaning points to a third entity rather than either of its two words, it is Bahuvrihi samas."
+ },
+ {
+  "id": "fc-hw3b-024",
+  "s": "marathi",
+  "t": "prayog",
+  "f_mr": "भावे प्रयोग कसा ओळखतात?",
+  "b_mr": "क्रियापद नेहमी नपुंसकलिंगी, तृतीयपुरुषी, एकवचनी राहते आणि कर्ता व कर्म दोघांपासूनही स्वतंत्र असते.",
+  "f_en": "How do you identify Bhave prayog (impersonal voice)?",
+  "b_en": "The verb always stays neuter, third-person, singular, and is independent of both the subject and the object."
+ }
+]

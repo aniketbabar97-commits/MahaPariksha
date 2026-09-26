@@ -104,7 +104,7 @@ class _QuizScreenState extends State<QuizScreen> {
     _finished = true;
     timer?.cancel();
     final p = AppScope.read(context).progress;
-    if (spec.mode == QuizMode.mock) {
+    if (spec.mode == QuizMode.mock || spec.mode == QuizMode.weeklyMock) {
       for (var i = 0; i < spec.questions.length; i++) {
         final a = answers[i];
         if (a != null) xpEarned += p.recordAnswer(spec.questions[i].id, a == spec.questions[i].answer).xp;

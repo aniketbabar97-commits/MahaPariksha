@@ -1,0 +1,2502 @@
+[
+ {
+  "id": "hw3b-001",
+  "s": "maths",
+  "t": "number",
+  "d": 3,
+  "q_mr": "2¹⁰⁰ ला 7 ने भागल्यास बाकी किती राहील?",
+  "q_en": "What is the remainder when 2¹⁰⁰ is divided by 7?",
+  "o_mr": [
+   "2",
+   "4",
+   "1",
+   "6"
+  ],
+  "o_en": [
+   "2",
+   "4",
+   "1",
+   "6"
+  ],
+  "a": 0,
+  "e_mr": "1. 2³=8, म्हणजे 2³ ≡ 1 (mod 7). 2. 100 = 3×33+1, म्हणजे 2¹⁰⁰ = (2³)³³ × 2¹. 3. ≡ 1³³ × 2 = 2 (mod 7). शॉर्टकट: 2 च्या घातांचा शेष चक्र 2,4,1 (आवर्तन 3) असते; 100 mod 3 = 1, म्हणजे पहिले पद 2.",
+  "e_en": "1. 2³=8, so 2³ ≡ 1 (mod 7). 2. 100 = 3×33+1, so 2¹⁰⁰=(2³)³³×2¹. 3. ≡ 1³³×2 = 2 (mod 7). Shortcut: remainders of powers of 2 mod 7 cycle 2,4,1 (period 3); 100 mod 3 = 1, giving the 1st term, 2.",
+  "hook_mr": "शॉर्टकट: घातांक मापांक बाकी नेहमी आवर्ती चक्रात येते, चक्राची लांबी शोधा.",
+  "hook_en": "Shortcut: remainders of a^n mod m always repeat in a cycle; find the cycle length first."
+ },
+ {
+  "id": "hw3b-002",
+  "s": "maths",
+  "t": "number",
+  "d": 3,
+  "q_mr": "100! (100 फॅक्टोरियल) च्या शेवटी किती शून्य येतात?",
+  "q_en": "How many zeros are there at the end of 100! (100 factorial)?",
+  "o_mr": [
+   "20",
+   "24",
+   "22",
+   "26"
+  ],
+  "o_en": [
+   "20",
+   "24",
+   "22",
+   "26"
+  ],
+  "a": 1,
+  "e_mr": "1. शून्यांची संख्या = ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋. 2. = 20 + 4 + 0 = 24.",
+  "e_en": "1. Number of zeros = ⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋. 2. = 20 + 4 + 0 = 24.",
+  "hook_mr": "शॉर्टकट: 10 पेक्षा 5 चे घटक कमी असतात, म्हणून फक्त 5 च्या घातांची मोजणी पुरेशी असते.",
+  "hook_en": "Shortcut: factors of 5 are scarcer than 2, so only count powers of 5."
+ },
+ {
+  "id": "hw3b-003",
+  "s": "maths",
+  "t": "simplification",
+  "d": 3,
+  "q_mr": "किंमत काढा: (3.6 × 0.48 × 2.50) ÷ (0.12 × 0.09 × 0.5) = ?",
+  "q_en": "Find the value of: (3.6 × 0.48 × 2.50) ÷ (0.12 × 0.09 × 0.5) = ?",
+  "o_mr": [
+   "600",
+   "700",
+   "800",
+   "900"
+  ],
+  "o_en": [
+   "600",
+   "700",
+   "800",
+   "900"
+  ],
+  "a": 2,
+  "e_mr": "1. अंश = 3.6×0.48×2.50 = 4.32. 2. वर्गमूळ = 0.12×0.09×0.5 = 0.0054. 3. 4.32 ÷ 0.0054 = 800.",
+  "e_en": "1. Numerator = 3.6×0.48×2.50 = 4.32. 2. Denominator = 0.12×0.09×0.5 = 0.0054. 3. 4.32 ÷ 0.0054 = 800.",
+  "hook_mr": "शॉर्टकट: दशांश संख्यांना अपूर्णांकात रूपांतरित करून सामाईक घटक कापा (3.6=0.12×30, इ.).",
+  "hook_en": "Shortcut: convert decimals to fractions and cancel common factors (3.6=0.12×30, etc.) before multiplying."
+ },
+ {
+  "id": "hw3b-004",
+  "s": "maths",
+  "t": "simplification",
+  "d": 2,
+  "q_mr": "(7/9 चा 3/5) ÷ 14/27 = ? येथे 'चा' म्हणजे गुणाकार.",
+  "q_en": "(7/9 of 3/5) ÷ 14/27 = ?",
+  "o_mr": [
+   "11/12",
+   "7/10",
+   "4/5",
+   "9/10"
+  ],
+  "o_en": [
+   "11/12",
+   "7/10",
+   "4/5",
+   "9/10"
+  ],
+  "a": 3,
+  "e_mr": "1. 7/9 चा 3/5 = 7/9 × 3/5 = 21/45 = 7/15. 2. 7/15 ÷ 14/27 = 7/15 × 27/14 = 189/210 = 9/10.",
+  "e_en": "1. 7/9 of 3/5 = 7/9 × 3/5 = 21/45 = 7/15. 2. 7/15 ÷ 14/27 = 7/15 × 27/14 = 189/210 = 9/10.",
+  "hook_mr": "शॉर्टकट: गुणाकारापूर्वीच सामाईक अवयवांनी (7 व 14, 27 व 15) भागाकार करा.",
+  "hook_en": "Shortcut: cancel common factors (7 with 14, 27 with 15) before multiplying."
+ },
+ {
+  "id": "hw3b-005",
+  "s": "maths",
+  "t": "percentage",
+  "d": 3,
+  "q_mr": "एका कर्मचाऱ्याचा पगार आधी 20% ने वाढवला, नंतर नवीन पगार 20% ने कमी केला आणि शेवटी तो 25% ने वाढवला. मूळ पगाराच्या तुलनेत एकूण किती टक्के बदल झाला?",
+  "q_en": "An employee's salary is first increased by 20%, then the new salary is decreased by 20%, and finally increased by 25%. What is the overall percentage change from the original salary?",
+  "o_mr": [
+   "20% वाढ",
+   "10% वाढ",
+   "4% घट",
+   "25% वाढ"
+  ],
+  "o_en": [
+   "20% increase",
+   "10% increase",
+   "4% decrease",
+   "25% increase"
+  ],
+  "a": 0,
+  "e_mr": "1. मूळ पगार 100 धरा. 2. 20% वाढ: 100×1.20=120. 3. 20% घट: 120×0.80=96. 4. 25% वाढ: 96×1.25=120. 5. निव्वळ बदल = 120−100 = 20% वाढ.",
+  "e_en": "1. Let original salary be 100. 2. +20%: 100×1.20=120. 3. −20%: 120×0.80=96. 4. +25%: 96×1.25=120. 5. Net change = 120−100 = 20% increase.",
+  "hook_mr": "शॉर्टकट: क्रमवार गुणाकार घटक (1.2×0.8×1.25=1.2) थेट गुणून अंतिम % काढा.",
+  "hook_en": "Shortcut: multiply the successive factors directly (1.2×0.8×1.25=1.2) to get the net % at once."
+ },
+ {
+  "id": "hw3b-006",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_mr": "एका शाळेत तुकडी अ मध्ये 60 विद्यार्थी असून त्यापैकी 40% मुली आहेत आणि तुकडी ब मध्ये 40 विद्यार्थी असून त्यापैकी 60% मुली आहेत. दोन्ही तुकड्या मिळून मुलींचे एकूण प्रमाण किती टक्के आहे?",
+  "q_en": "Section A has 60 students of whom 40% are girls, and Section B has 40 students of whom 60% are girls. What is the overall percentage of girls in both sections combined?",
+  "o_mr": [
+   "46%",
+   "48%",
+   "50%",
+   "52%"
+  ],
+  "o_en": [
+   "46%",
+   "48%",
+   "50%",
+   "52%"
+  ],
+  "a": 1,
+  "e_mr": "1. अ मधील मुली = 60×0.40 = 24. 2. ब मधील मुली = 40×0.60 = 24. 3. एकूण मुली = 48, एकूण विद्यार्थी = 100. 4. टक्केवारी = 48/100×100 = 48%.",
+  "e_en": "1. Girls in A = 60×0.40 = 24. 2. Girls in B = 40×0.60 = 24. 3. Total girls = 48, total students = 100. 4. Percentage = 48/100×100 = 48%.",
+  "hook_mr": "शॉर्टकट: एकूण विद्यार्थी 100 असल्याने मुलींची बेरीज थेट टक्केवारी देते.",
+  "hook_en": "Shortcut: since total students = 100, the sum of girls directly gives the percentage."
+ },
+ {
+  "id": "hw3b-007",
+  "s": "maths",
+  "t": "profit_loss",
+  "d": 3,
+  "q_mr": "एक बेईमान दुकानदार 1 किलोच्या ऐवजी 900 ग्रॅमचे वजन वापरतो आणि खरेदी किमतीपेक्षा 30% जास्त किमतीला माल विकतो, पण त्यावर 10% सूट देतो. त्याचा प्रत्यक्ष नफा किती टक्के आहे?",
+  "q_en": "A dishonest shopkeeper uses a 900 g weight instead of 1 kg, marks his goods 30% above cost price, and then gives a 10% discount. Find his actual profit percentage.",
+  "o_mr": [
+   "27%",
+   "33%",
+   "30%",
+   "36%"
+  ],
+  "o_en": [
+   "27%",
+   "33%",
+   "30%",
+   "36%"
+  ],
+  "a": 2,
+  "e_mr": "1. खर्च किंमत 1 किलोसाठी ₹1 धरा. 2. विक्री किंमत (1 किलो दराने) = 1×1.30×0.90 = 1.17. 3. प्रत्यक्ष दिलेला माल फक्त 900 ग्रॅम, म्हणजे प्रत्यक्ष खर्च = 0.90. 4. नफा% = (1.17−0.90)/0.90 ×100 = 30%.",
+  "e_en": "1. Let cost price for 1 kg = ₹1. 2. Selling price (charged for 1 kg) = 1×1.30×0.90 = 1.17. 3. Goods actually given = 900 g, so actual cost = 0.90. 4. Profit% = (1.17−0.90)/0.90×100 = 30%.",
+  "hook_mr": "शॉर्टकट: वजनातील फसवणूक व दरातील बदल दोन्ही स्वतंत्र गुणोत्तर म्हणून गुणा.",
+  "hook_en": "Shortcut: treat the weight fraud and the price markup/discount as two independent ratios and multiply them."
+ },
+ {
+  "id": "hw3b-008",
+  "s": "maths",
+  "t": "profit_loss",
+  "d": 3,
+  "q_mr": "A ने एक वस्तू B ला 20% नफ्याने विकली आणि B ने ती C ला 10% तोट्याने विकली. C ने त्यासाठी ₹1080 दिले. A ची खरेदी किंमत किती होती?",
+  "q_en": "A sold an article to B at a 20% profit, and B sold it to C at a 10% loss. C paid ₹1080 for it. Find A's cost price.",
+  "o_mr": [
+   "₹900",
+   "₹1200",
+   "₹1100",
+   "₹1000"
+  ],
+  "o_en": [
+   "₹900",
+   "₹1200",
+   "₹1100",
+   "₹1000"
+  ],
+  "a": 3,
+  "e_mr": "1. C ची किंमत = A ची CP × 1.20 × 0.90. 2. 1080 = CP × 1.08. 3. CP = 1080/1.08 = ₹1000.",
+  "e_en": "1. C's price = A's CP × 1.20 × 0.90. 2. 1080 = CP × 1.08. 3. CP = 1080/1.08 = ₹1000.",
+  "hook_mr": "शॉर्टकट: 1.20×0.90 = 1.08 आधीच गुणून घ्या, मग सरळ भागाकार करा.",
+  "hook_en": "Shortcut: multiply 1.20×0.90 = 1.08 first, then divide directly."
+ },
+ {
+  "id": "hw3b-009",
+  "s": "maths",
+  "t": "interest",
+  "d": 3,
+  "q_mr": "₹8000 वर 10% वार्षिक दराने 3 वर्षांसाठी चक्रवाढ व्याज आणि सरळव्याज यांतील फरक किती?",
+  "q_en": "Find the difference between compound interest and simple interest on ₹8000 at 10% per annum for 3 years.",
+  "o_mr": [
+   "₹248",
+   "₹236",
+   "₹224",
+   "₹260"
+  ],
+  "o_en": [
+   "₹248",
+   "₹236",
+   "₹224",
+   "₹260"
+  ],
+  "a": 0,
+  "e_mr": "1. SI = 8000×10×3/100 = ₹2400. 2. CI = 8000×(1.1³−1) = 8000×0.331 = ₹2648. 3. फरक = 2648−2400 = ₹248.",
+  "e_en": "1. SI = 8000×10×3/100 = ₹2400. 2. CI = 8000×(1.1³−1) = 8000×0.331 = ₹2648. 3. Difference = 2648−2400 = ₹248.",
+  "hook_mr": "शॉर्टकट: 3 वर्षांसाठी CI-SI फरक = P(r/100)²(3 + r/100) सूत्र वापरा.",
+  "hook_en": "Shortcut: for 3 years, CI−SI = P(r/100)²×(3+r/100)."
+ },
+ {
+  "id": "hw3b-010",
+  "s": "maths",
+  "t": "interest",
+  "d": 2,
+  "q_mr": "एक रक्कम सरळव्याजाने 4 वर्षांत स्वतःच्या 6/5 पट होते. व्याजाचा दर किती?",
+  "q_en": "A sum becomes 6/5 of itself in 4 years at simple interest. Find the rate of interest.",
+  "o_mr": [
+   "4%",
+   "5%",
+   "6%",
+   "8%"
+  ],
+  "o_en": [
+   "4%",
+   "5%",
+   "6%",
+   "8%"
+  ],
+  "a": 1,
+  "e_mr": "1. मुद्दल P, रक्कम = 6P/5, म्हणजे व्याज = P/5. 2. SI = P×r×4/100 = P/5. 3. r = 100/(5×4) = 5%.",
+  "e_en": "1. Let principal be P; amount = 6P/5, so interest = P/5. 2. SI = P×r×4/100 = P/5. 3. r = 100/(5×4) = 5%.",
+  "hook_mr": "शॉर्टकट: व्याज हा मुद्दलाचा अंश आहे हे ओळखून थेट दर काढा.",
+  "hook_en": "Shortcut: express the interest as a fraction of principal and solve directly for rate."
+ },
+ {
+  "id": "hw3b-011",
+  "s": "maths",
+  "t": "ratio",
+  "d": 3,
+  "q_mr": "एका भांड्यात दूध व पाणी 2:1 या प्रमाणात असून एकूण मिश्रण 60 लिटर आहे. मिश्रणाचे दूध व पाणी यांचे प्रमाण 1:2 करण्यासाठी किती लिटर पाणी मिसळावे लागेल?",
+  "q_en": "A vessel contains milk and water in the ratio 2:1, with the total mixture being 60 litres. How many litres of water must be added to make the milk-to-water ratio 1:2?",
+  "o_mr": [
+   "50 लिटर",
+   "55 लिटर",
+   "60 लिटर",
+   "65 लिटर"
+  ],
+  "o_en": [
+   "50 litres",
+   "55 litres",
+   "60 litres",
+   "65 litres"
+  ],
+  "a": 2,
+  "e_mr": "1. दूध = 40 लिटर, पाणी = 20 लिटर. 2. समजा x लिटर पाणी मिसळले: 40/(20+x) = 1/2. 3. 80 = 20+x ⇒ x = 60 लिटर.",
+  "e_en": "1. Milk = 40 L, water = 20 L. 2. Let x litres of water be added: 40/(20+x) = 1/2. 3. 80 = 20+x ⇒ x = 60 litres.",
+  "hook_mr": "शॉर्टकट: फक्त दूधाचे प्रमाण स्थिर राहते, त्यामुळे नवीन एकूण मिश्रण थेट काढता येते.",
+  "hook_en": "Shortcut: since milk quantity stays fixed, directly compute the new total mixture needed for the target ratio."
+ },
+ {
+  "id": "hw3b-012",
+  "s": "maths",
+  "t": "ratio",
+  "d": 2,
+  "q_mr": "A : B : C = 2 : 3 : 4 असून त्यांची बेरीज 540 आहे. B ची किंमत किती?",
+  "q_en": "A : B : C = 2 : 3 : 4 and their sum is 540. Find the value of B.",
+  "o_mr": [
+   "120",
+   "150",
+   "210",
+   "180"
+  ],
+  "o_en": [
+   "120",
+   "150",
+   "210",
+   "180"
+  ],
+  "a": 3,
+  "e_mr": "1. एकूण भाग = 2+3+4 = 9. 2. एक भाग = 540/9 = 60. 3. B = 3×60 = 180.",
+  "e_en": "1. Total parts = 2+3+4 = 9. 2. One part = 540/9 = 60. 3. B = 3×60 = 180.",
+  "hook_mr": "शॉर्टकट: गुणोत्तराचा प्रत्येक भाग एकाच वेळी काढून हवा तो भाग गुणा.",
+  "hook_en": "Shortcut: find the value of one part once, then multiply for the required share."
+ },
+ {
+  "id": "hw3b-013",
+  "s": "maths",
+  "t": "average",
+  "d": 3,
+  "q_mr": "8 व्यक्तींच्या समूहातील एका 65 किलो वजनाच्या व्यक्तीच्या जागी नवीन व्यक्ती आल्याने सरासरी वजन 2.5 किलोने वाढले. नवीन व्यक्तीचे वजन किती?",
+  "q_en": "The average weight of a group of 8 persons increases by 2.5 kg when a person weighing 65 kg is replaced by a new person. Find the weight of the new person.",
+  "o_mr": [
+   "85 किलो",
+   "82.5 किलो",
+   "80 किलो",
+   "87.5 किलो"
+  ],
+  "o_en": [
+   "85 kg",
+   "82.5 kg",
+   "80 kg",
+   "87.5 kg"
+  ],
+  "a": 0,
+  "e_mr": "1. एकूण वाढ = 8×2.5 = 20 किलो. 2. नवीन व्यक्तीचे वजन = 65+20 = 85 किलो.",
+  "e_en": "1. Total increase = 8×2.5 = 20 kg. 2. New person's weight = 65+20 = 85 kg.",
+  "hook_mr": "शॉर्टकट: वाढ = संख्या × सरासरीतील वाढ, हे थेट जुन्या वजनात मिळवा.",
+  "hook_en": "Shortcut: total increase = count × rise in average; add it directly to the old value."
+ },
+ {
+  "id": "hw3b-014",
+  "s": "maths",
+  "t": "average",
+  "d": 2,
+  "q_mr": "11 निकालांची सरासरी 50 आहे. पहिल्या 6 निकालांची सरासरी 49 आणि शेवटच्या 6 निकालांची सरासरी 52 आहे. सहावा निकाल किती?",
+  "q_en": "The average of 11 results is 50. The average of the first 6 results is 49 and of the last 6 results is 52. Find the 6th result.",
+  "o_mr": [
+   "50",
+   "56",
+   "53",
+   "59"
+  ],
+  "o_en": [
+   "50",
+   "56",
+   "53",
+   "59"
+  ],
+  "a": 1,
+  "e_mr": "1. एकूण 11 = 11×50 = 550. 2. पहिले 6 = 6×49 = 294. शेवटचे 6 = 6×52 = 312. 3. सहावा निकाल = 294+312−550 = 56 (कारण तो दोन्हीत मोजला जातो).",
+  "e_en": "1. Sum of 11 = 11×50 = 550. 2. First 6 = 6×49 = 294. Last 6 = 6×52 = 312. 3. 6th result = 294+312−550 = 56 (since it is counted in both groups).",
+  "hook_mr": "शॉर्टकट: सहावा निकाल दोन्ही गटांत समाईक आहे, त्यामुळे दोन्ही बेरजा जोडून एकूण बेरीज वजा करा.",
+  "hook_en": "Shortcut: the 6th result is common to both groups, so add both sums and subtract the total sum."
+ },
+ {
+  "id": "hw3b-015",
+  "s": "maths",
+  "t": "time_work",
+  "d": 3,
+  "q_mr": "A आणि B मिळून एक काम 12 दिवसांत, B आणि C मिळून 15 दिवसांत आणि A आणि C मिळून 20 दिवसांत पूर्ण करतात. तिघे मिळून काम किती दिवसांत पूर्ण करतील?",
+  "q_en": "A and B together can do a work in 12 days, B and C together in 15 days, and A and C together in 20 days. In how many days will all three together finish the work?",
+  "o_mr": [
+   "8 दिवस",
+   "9 दिवस",
+   "10 दिवस",
+   "12 दिवस"
+  ],
+  "o_en": [
+   "8 days",
+   "9 days",
+   "10 days",
+   "12 days"
+  ],
+  "a": 2,
+  "e_mr": "1. (A+B)+(B+C)+(A+C) = 1/12+1/15+1/20 = 5/60+4/60+3/60 = 12/60 = 1/5. 2. 2(A+B+C) = 1/5, म्हणजे A+B+C = 1/10. 3. तिघे मिळून काम = 10 दिवसांत.",
+  "e_en": "1. (A+B)+(B+C)+(A+C) = 1/12+1/15+1/20 = 5/60+4/60+3/60 = 12/60 = 1/5. 2. 2(A+B+C) = 1/5, so A+B+C = 1/10. 3. All three together finish the work in 10 days.",
+  "hook_mr": "शॉर्टकट: तिन्ही जोड्यांच्या दरांची बेरीज ही (A+B+C) च्या दुप्पट असते.",
+  "hook_en": "Shortcut: the sum of all three pairwise rates equals twice the combined rate of A+B+C."
+ },
+ {
+  "id": "hw3b-016",
+  "s": "maths",
+  "t": "time_work",
+  "d": 3,
+  "q_mr": "नळ A एक टाकी 12 तासांत भरतो, नळ B 15 तासांत भरतो, तर नळ C 20 तासांत रिकामी करतो. तिन्ही नळ एकाच वेळी सुरू केल्यास टाकी किती तासांत भरेल?",
+  "q_en": "Pipe A fills a tank in 12 hours, pipe B fills it in 15 hours, and pipe C empties it in 20 hours. If all three pipes are opened together, in how many hours will the tank be filled?",
+  "o_mr": [
+   "8 तास",
+   "9 तास",
+   "12 तास",
+   "10 तास"
+  ],
+  "o_en": [
+   "8 hours",
+   "9 hours",
+   "12 hours",
+   "10 hours"
+  ],
+  "a": 3,
+  "e_mr": "1. एकत्रित दर = 1/12+1/15−1/20. 2. LCM 60: = 5/60+4/60−3/60 = 6/60 = 1/10. 3. टाकी 10 तासांत भरेल.",
+  "e_en": "1. Combined rate = 1/12+1/15−1/20. 2. Using LCM 60: = 5/60+4/60−3/60 = 6/60 = 1/10. 3. Tank fills in 10 hours.",
+  "hook_mr": "शॉर्टकट: रिकामी करणाऱ्या नळाचा दर वजा करूनच एकत्रित दर काढा.",
+  "hook_en": "Shortcut: subtract the emptying pipe's rate while combining, since it works against filling."
+ },
+ {
+  "id": "hw3b-017",
+  "s": "maths",
+  "t": "speed",
+  "d": 3,
+  "q_mr": "एक होडी प्रवाहासोबत 20 किमी/तास आणि प्रवाहाविरुद्ध 10 किमी/तास वेगाने जाते. होडीला 45 किमी जाऊन परत यायला किती वेळ लागेल?",
+  "q_en": "A boat travels downstream at 20 km/h and upstream at 10 km/h. Find the total time taken to travel 45 km and return.",
+  "o_mr": [
+   "6.75 तास",
+   "6.25 तास",
+   "6 तास",
+   "7 तास"
+  ],
+  "o_en": [
+   "6.75 hours",
+   "6.25 hours",
+   "6 hours",
+   "7 hours"
+  ],
+  "a": 0,
+  "e_mr": "1. जाताना वेळ = 45/20 = 2.25 तास. 2. येताना वेळ = 45/10 = 4.5 तास. 3. एकूण वेळ = 2.25+4.5 = 6.75 तास.",
+  "e_en": "1. Time downstream = 45/20 = 2.25 hours. 2. Time upstream = 45/10 = 4.5 hours. 3. Total time = 2.25+4.5 = 6.75 hours.",
+  "hook_mr": "शॉर्टकट: प्रवाहासोबत व विरुद्ध वेगच थेट दिलेले असल्याने स्थिर पाण्याचा वेग काढण्याची गरज नाही.",
+  "hook_en": "Shortcut: since downstream and upstream speeds are given directly, you don't need the still-water speed at all."
+ },
+ {
+  "id": "hw3b-018",
+  "s": "maths",
+  "t": "speed",
+  "d": 2,
+  "q_mr": "120 मीटर लांबीची एक रेल्वेगाडी 54 किमी/तास वेगाने आणि 180 मीटर लांबीची दुसरी रेल्वेगाडी 36 किमी/तास वेगाने परस्परविरुद्ध दिशेने येत आहेत. त्या एकमेकांना पार करायला किती सेकंद लागतील?",
+  "q_en": "A 120 m long train runs at 54 km/h and a 180 m long train runs at 36 km/h in opposite directions. How many seconds will they take to cross each other?",
+  "o_mr": [
+   "10 सेकंद",
+   "12 सेकंद",
+   "14 सेकंद",
+   "16 सेकंद"
+  ],
+  "o_en": [
+   "10 seconds",
+   "12 seconds",
+   "14 seconds",
+   "16 seconds"
+  ],
+  "a": 1,
+  "e_mr": "1. एकूण लांबी = 120+180 = 300 मी. 2. सापेक्ष वेग = 54+36 = 90 किमी/तास = 25 मी/से. 3. वेळ = 300/25 = 12 सेकंद.",
+  "e_en": "1. Total length = 120+180 = 300 m. 2. Relative speed = 54+36 = 90 km/h = 25 m/s. 3. Time = 300/25 = 12 seconds.",
+  "hook_mr": "शॉर्टकट: विरुद्ध दिशेने असल्याने वेग बेरीज करा; किमी/तास × 5/18 = मी/से.",
+  "hook_en": "Shortcut: opposite directions mean speeds add; convert km/h to m/s by ×5/18."
+ },
+ {
+  "id": "hw3b-019",
+  "s": "maths",
+  "t": "mensuration",
+  "d": 3,
+  "q_mr": "एक घन आकाराचा (solid) गोळा वितळवून त्याच त्रिज्येचा शंकू (cone) बनवला. शंकूची उंची व त्रिज्या यांचे गुणोत्तर किती?",
+  "q_en": "A solid sphere is melted and recast into a cone with the same radius as the sphere. Find the ratio of the cone's height to its radius.",
+  "o_mr": [
+   "2 : 1",
+   "3 : 1",
+   "4 : 1",
+   "6 : 1"
+  ],
+  "o_en": [
+   "2 : 1",
+   "3 : 1",
+   "4 : 1",
+   "6 : 1"
+  ],
+  "a": 2,
+  "e_mr": "1. गोलाचे घनफळ = (4/3)πr³, शंकूचे घनफळ = (1/3)πr²h. 2. दोन्ही समान: (4/3)πr³ = (1/3)πr²h. 3. h = 4r, म्हणजे h : r = 4 : 1.",
+  "e_en": "1. Volume of sphere = (4/3)πr³, volume of cone = (1/3)πr²h. 2. Equating: (4/3)πr³ = (1/3)πr²h. 3. h = 4r, so h : r = 4 : 1.",
+  "hook_mr": "शॉर्टकट: πr² हा घटक दोन्ही बाजूंनी वजा करून थेट h शोधा.",
+  "hook_en": "Shortcut: cancel the common πr² factor from both sides to solve for h directly."
+ },
+ {
+  "id": "hw3b-020",
+  "s": "maths",
+  "t": "mensuration",
+  "d": 2,
+  "q_mr": "दोन घनांच्या घनफळांचे गुणोत्तर 27 : 64 आहे. त्यांच्या पृष्ठफळांचे गुणोत्तर किती?",
+  "q_en": "The volumes of two cubes are in the ratio 27 : 64. Find the ratio of their surface areas.",
+  "o_mr": [
+   "3 : 4",
+   "81 : 256",
+   "27 : 64",
+   "9 : 16"
+  ],
+  "o_en": [
+   "3 : 4",
+   "81 : 256",
+   "27 : 64",
+   "9 : 16"
+  ],
+  "a": 3,
+  "e_mr": "1. बाजूंचे गुणोत्तर = (27)^(1/3) : (64)^(1/3) = 3 : 4. 2. पृष्ठफळ बाजूच्या वर्गाच्या प्रमाणात असते: 3² : 4² = 9 : 16.",
+  "e_en": "1. Ratio of sides = (27)^(1/3) : (64)^(1/3) = 3 : 4. 2. Surface area is proportional to the square of the side: 3² : 4² = 9 : 16.",
+  "hook_mr": "शॉर्टकट: घनफळांचे घनमूळ काढून थेट बाजूंचे गुणोत्तर मिळवा.",
+  "hook_en": "Shortcut: take cube roots of the volume ratio to get the side ratio directly."
+ },
+ {
+  "id": "hw3b-021",
+  "s": "maths",
+  "t": "age",
+  "d": 3,
+  "q_mr": "A आणि B यांच्या सध्याच्या वयांचे गुणोत्तर 3 : 4 आहे. 5 वर्षांपूर्वी त्यांचे वयांचे गुणोत्तर 2 : 3 होते. B चे सध्याचे वय किती?",
+  "q_en": "The present ages of A and B are in the ratio 3 : 4. Five years ago, their ages were in the ratio 2 : 3. Find B's present age.",
+  "o_mr": [
+   "20 वर्षे",
+   "15 वर्षे",
+   "24 वर्षे",
+   "28 वर्षे"
+  ],
+  "o_en": [
+   "20 years",
+   "15 years",
+   "24 years",
+   "28 years"
+  ],
+  "a": 0,
+  "e_mr": "1. सध्याची वये 3x, 4x धरा. 2. 5 वर्षांपूर्वी: (3x−5)/(4x−5) = 2/3. 3. 9x−15 = 8x−10 ⇒ x = 5. 4. B चे वय = 4×5 = 20 वर्षे.",
+  "e_en": "1. Let present ages be 3x and 4x. 2. Five years ago: (3x−5)/(4x−5) = 2/3. 3. 9x−15 = 8x−10 ⇒ x = 5. 4. B's age = 4×5 = 20 years.",
+  "hook_mr": "शॉर्टकट: गुणोत्तर समीकरण सोडवण्याआधी क्रॉस-गुणाकार करा.",
+  "hook_en": "Shortcut: cross-multiply the ratio equation before simplifying."
+ },
+ {
+  "id": "hw3b-022",
+  "s": "maths",
+  "t": "age",
+  "d": 2,
+  "q_mr": "वडिलांचे वय मुलाच्या वयाच्या 5 पट आहे. 6 वर्षांनंतर वडिलांचे वय मुलाच्या वयाच्या 3 पट होईल. मुलाचे सध्याचे वय किती?",
+  "q_en": "A father's age is 5 times his son's age. After 6 years, the father's age will be 3 times the son's age. Find the son's present age.",
+  "o_mr": [
+   "5 वर्षे",
+   "6 वर्षे",
+   "7 वर्षे",
+   "8 वर्षे"
+  ],
+  "o_en": [
+   "5 years",
+   "6 years",
+   "7 years",
+   "8 years"
+  ],
+  "a": 1,
+  "e_mr": "1. मुलाचे वय x, वडिलांचे वय 5x. 2. 6 वर्षांनी: 5x+6 = 3(x+6). 3. 5x+6 = 3x+18 ⇒ 2x = 12 ⇒ x = 6 वर्षे.",
+  "e_en": "1. Let son's age be x, father's age 5x. 2. After 6 years: 5x+6 = 3(x+6). 3. 5x+6 = 3x+18 ⇒ 2x = 12 ⇒ x = 6 years.",
+  "hook_mr": "शॉर्टकट: दोन्ही बाजूंचे रेषीय समीकरण मांडून x साठी सोडवा.",
+  "hook_en": "Shortcut: set up the linear equation directly from the two age conditions and solve for x."
+ },
+ {
+  "id": "hw3b-023",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 3,
+  "q_mr": "एका दुकानाची आठवड्याभराची विक्री (नग): सोम-120, मंगळ-150, बुध-90, गुरु-180, शुक्र-160, शनि-200, रवि-100. शनिवार व रविवार मिळून झालेली विक्री एकूण साप्ताहिक विक्रीच्या किती टक्के आहे?",
+  "q_en": "A shop's weekly sales (units): Mon-120, Tue-150, Wed-90, Thu-180, Fri-160, Sat-200, Sun-100. What percentage of the total weekly sales is the combined Saturday and Sunday sale?",
+  "o_mr": [
+   "25%",
+   "28%",
+   "30%",
+   "32%"
+  ],
+  "o_en": [
+   "25%",
+   "28%",
+   "30%",
+   "32%"
+  ],
+  "a": 2,
+  "e_mr": "1. एकूण विक्री = 120+150+90+180+160+200+100 = 1000. 2. शनि+रवि = 200+100 = 300. 3. टक्केवारी = 300/1000×100 = 30%.",
+  "e_en": "1. Total sales = 120+150+90+180+160+200+100 = 1000. 2. Sat+Sun = 200+100 = 300. 3. Percentage = 300/1000×100 = 30%.",
+  "hook_mr": "शॉर्टकट: एकूण बेरीज 1000 असल्याने कोणत्याही भागाची टक्केवारी थेट त्या संख्येइतकीच अपूर्णांकात दिसते.",
+  "hook_en": "Shortcut: since the total is a round 1000, any part's percentage equals its value divided by 10."
+ },
+ {
+  "id": "hw3b-024",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 2,
+  "q_mr": "एका विद्यार्थ्याला 5 विषयांत (प्रत्येकी 100 गुण) खालीलप्रमाणे गुण मिळाले: 68, 72, 80, 56, 74. त्याची एकूण टक्केवारी किती?",
+  "q_en": "A student scored the following marks out of 100 in 5 subjects: 68, 72, 80, 56, 74. Find his overall percentage.",
+  "o_mr": [
+   "68%",
+   "74%",
+   "72%",
+   "70%"
+  ],
+  "o_en": [
+   "68%",
+   "74%",
+   "72%",
+   "70%"
+  ],
+  "a": 3,
+  "e_mr": "1. एकूण गुण = 68+72+80+56+74 = 350. 2. एकूण पैकी गुण = 500. 3. टक्केवारी = 350/500×100 = 70%.",
+  "e_en": "1. Total marks obtained = 68+72+80+56+74 = 350. 2. Total maximum marks = 500. 3. Percentage = 350/500×100 = 70%.",
+  "hook_mr": "शॉर्टकट: 500 पैकी गुणांची टक्केवारी काढताना गुण ÷ 5 केल्यास थेट टक्के मिळतात.",
+  "hook_en": "Shortcut: out of 500, dividing the total marks by 5 gives the percentage directly."
+ },
+ {
+  "id": "hw3b-025",
+  "s": "maths",
+  "t": "algebra",
+  "d": 3,
+  "q_mr": "जर x + 1/x = 41/20 असेल आणि x > 1, तर x ची किंमत किती?",
+  "q_en": "If x + 1/x = 41/20 and x > 1, find the value of x.",
+  "o_mr": [
+   "5/4",
+   "4/5",
+   "6/5",
+   "5/6"
+  ],
+  "o_en": [
+   "5/4",
+   "4/5",
+   "6/5",
+   "5/6"
+  ],
+  "a": 0,
+  "e_mr": "1. समीकरण: 20x²−41x+20 = 0. 2. विवेचक = 41²−4×20×20 = 1681−1600 = 81 = 9². 3. x = (41±9)/40 ⇒ x = 50/40=5/4 किंवा 32/40=4/5. 4. x>1 असल्याने x = 5/4.",
+  "e_en": "1. Equation: 20x²−41x+20 = 0. 2. Discriminant = 41²−4×20×20 = 1681−1600 = 81 = 9². 3. x = (41±9)/40 ⇒ x = 50/40=5/4 or 32/40=4/5. 4. Since x>1, x = 5/4.",
+  "hook_mr": "शॉर्टकट: दोन्ही मुळांचा गुणाकार नेहमी 1 असतो (कारण x व 1/x ही दोन मुळे आहेत).",
+  "hook_en": "Shortcut: the two roots of such an equation always multiply to 1, since x and 1/x are the two roots."
+ },
+ {
+  "id": "hw3b-026",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर x + 1/x = 5 असेल, तर x² + 1/x² ची किंमत किती?",
+  "q_en": "If x + 1/x = 5, find the value of x² + 1/x².",
+  "o_mr": [
+   "21",
+   "23",
+   "25",
+   "27"
+  ],
+  "o_en": [
+   "21",
+   "23",
+   "25",
+   "27"
+  ],
+  "a": 1,
+  "e_mr": "1. दोन्ही बाजूंचा वर्ग करा: (x+1/x)² = x²+2+1/x² = 25. 2. x²+1/x² = 25−2 = 23.",
+  "e_en": "1. Square both sides: (x+1/x)² = x²+2+1/x² = 25. 2. x²+1/x² = 25−2 = 23.",
+  "hook_mr": "शॉर्टकट: (a+b)² = a²+b²+2ab हे सूत्र लगेच वापरा, नुसते वर्गीकरण टाळा.",
+  "hook_en": "Shortcut: apply (a+b)² = a²+b²+2ab directly instead of expanding manually."
+ },
+ {
+  "id": "hw3b-027",
+  "s": "maths",
+  "t": "geometry",
+  "d": 3,
+  "q_mr": "एका काटकोन त्रिकोणाच्या दोन बाजू (लंब बाजू) 9 सेमी व 12 सेमी आहेत. त्या त्रिकोणाच्या अंतर्वर्तुळाची त्रिज्या किती?",
+  "q_en": "A right triangle has legs of 9 cm and 12 cm. Find the radius of its incircle.",
+  "o_mr": [
+   "2 सेमी",
+   "2.5 सेमी",
+   "3 सेमी",
+   "3.5 सेमी"
+  ],
+  "o_en": [
+   "2 cm",
+   "2.5 cm",
+   "3 cm",
+   "3.5 cm"
+  ],
+  "a": 2,
+  "e_mr": "1. कर्ण = √(9²+12²) = √225 = 15 सेमी. 2. काटकोन त्रिकोणासाठी अंतर्वर्तुळ त्रिज्या r = (लंब बाजू1+लंब बाजू2−कर्ण)/2. 3. r = (9+12−15)/2 = 6/2 = 3 सेमी.",
+  "e_en": "1. Hypotenuse = √(9²+12²) = √225 = 15 cm. 2. For a right triangle, inradius r = (leg1+leg2−hypotenuse)/2. 3. r = (9+12−15)/2 = 6/2 = 3 cm.",
+  "hook_mr": "शॉर्टकट: काटकोन त्रिकोणासाठी r=(a+b−c)/2 हे थेट सूत्र लक्षात ठेवा.",
+  "hook_en": "Shortcut: memorise the direct formula r=(a+b−c)/2 for a right triangle's inradius."
+ },
+ {
+  "id": "hw3b-028",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका नियमित बहुभुजाच्या सर्व अंतःकोनांची बेरीज 1440° आहे. त्या बहुभुजाला किती बाजू आहेत?",
+  "q_en": "The sum of the interior angles of a regular polygon is 1440°. How many sides does it have?",
+  "o_mr": [
+   "8",
+   "9",
+   "12",
+   "10"
+  ],
+  "o_en": [
+   "8",
+   "9",
+   "12",
+   "10"
+  ],
+  "a": 3,
+  "e_mr": "1. अंतःकोनांची बेरीज = (n−2)×180°. 2. (n−2)×180 = 1440 ⇒ n−2 = 8. 3. n = 10.",
+  "e_en": "1. Sum of interior angles = (n−2)×180°. 2. (n−2)×180 = 1440 ⇒ n−2 = 8. 3. n = 10.",
+  "hook_mr": "शॉर्टकट: 1440 ला 180 ने भागून थेट (n−2) मिळवा.",
+  "hook_en": "Shortcut: divide 1440 by 180 to get (n−2) directly."
+ },
+ {
+  "id": "hw3b-029",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 3,
+  "q_mr": "एका मनोऱ्याच्या पायथ्यापासून काही अंतरावरील बिंदूपासून मनोऱ्याच्या शिखराचा उन्नयन कोन 30° आहे. मनोऱ्याकडे 20 मी सरळ रेषेत चालत गेल्यास कोन 60° होतो. मनोऱ्याची उंची किती?",
+  "q_en": "From a point, the angle of elevation of the top of a tower is 30°. Walking 20 m straight towards the tower, the angle becomes 60°. Find the height of the tower.",
+  "o_mr": [
+   "10√3 मी",
+   "10 मी",
+   "20 मी",
+   "20√3 मी"
+  ],
+  "o_en": [
+   "10√3 m",
+   "10 m",
+   "20 m",
+   "20√3 m"
+  ],
+  "a": 0,
+  "e_mr": "1. समजा उंची h, जवळचे अंतर d. h = d tan60° आणि h = (d+20) tan30°. 2. d√3 = (d+20)/√3 ⇒ 3d = d+20 ⇒ d = 10. 3. h = 10√3 मी.",
+  "e_en": "1. Let height be h, nearer distance d. h = d tan60° and h = (d+20) tan30°. 2. d√3 = (d+20)/√3 ⇒ 3d = d+20 ⇒ d = 10. 3. h = 10√3 m.",
+  "hook_mr": "शॉर्टकट: 30°-60° उंचीच्या प्रश्नांत उत्तर नेहमी अंतराच्या √3 पटीत येते.",
+  "hook_en": "Shortcut: in 30°-60° elevation problems, the height always comes out as √3 times the base distance moved."
+ },
+ {
+  "id": "hw3b-030",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "एका मनोऱ्याची उंची 10√3 मीटर आहे. त्याच्या पायथ्यापासून 30 मीटर अंतरावरील बिंदूपासून शिखराचा उन्नयन कोन किती अंश आहे?",
+  "q_en": "The height of a tower is 10√3 metres. Find the angle of elevation of its top from a point 30 m from its base.",
+  "o_mr": [
+   "45°",
+   "30°",
+   "53°",
+   "60°"
+  ],
+  "o_en": [
+   "45°",
+   "30°",
+   "53°",
+   "60°"
+  ],
+  "a": 1,
+  "e_mr": "1. tanθ = उंची/अंतर = 10√3/30 = √3/3 = 1/√3. 2. tanθ = 1/√3 म्हणजे θ = 30°.",
+  "e_en": "1. tanθ = height/distance = 10√3/30 = √3/3 = 1/√3. 2. tanθ = 1/√3 means θ = 30°.",
+  "hook_mr": "शॉर्टकट: उंची : अंतर = 1 : √3 आढळल्यास कोन नेहमी 30° असतो.",
+  "hook_en": "Shortcut: whenever height : distance = 1 : √3, the angle is always 30°."
+ },
+ {
+  "id": "hw3b-031",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_mr": "पुढील संख्या शोधा: 4, 9, 25, 64, 169, ?",
+  "q_en": "Find the next number: 4, 9, 25, 64, 169, ?",
+  "o_mr": [
+   "324",
+   "400",
+   "441",
+   "484"
+  ],
+  "o_en": [
+   "324",
+   "400",
+   "441",
+   "484"
+  ],
+  "a": 2,
+  "e_mr": "1. संख्या फिबोनाची क्रमाच्या वर्गांच्या आहेत: 2², 3², 5², 8², 13². 2. फिबोनाची क्रम: 2,3,5,8,13,21 (पुढील पद = आधीच्या दोन पदांची बेरीज). 3. पुढील पद = 21² = 441.",
+  "e_en": "1. The numbers are squares of Fibonacci terms: 2², 3², 5², 8², 13². 2. Fibonacci sequence: 2,3,5,8,13,21 (next term = sum of previous two). 3. Next term = 21² = 441.",
+  "hook_mr": "शॉर्टकट: प्रत्येक संख्येचे वर्गमूळ काढून लपलेला क्रम शोधा.",
+  "hook_en": "Shortcut: take the square root of each term to reveal the hidden underlying sequence."
+ },
+ {
+  "id": "hw3b-032",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_mr": "पुढील संख्या शोधा: 7, 26, 63, 124, 215, ?",
+  "q_en": "Find the next number: 7, 26, 63, 124, 215, ?",
+  "o_mr": [
+   "316",
+   "330",
+   "356",
+   "342"
+  ],
+  "o_en": [
+   "316",
+   "330",
+   "356",
+   "342"
+  ],
+  "a": 3,
+  "e_mr": "1. प्रत्येक संख्या n³−1 स्वरूपात आहे: 2³−1=7, 3³−1=26, 4³−1=63, 5³−1=124, 6³−1=215. 2. पुढील पद = 7³−1 = 343−1 = 342.",
+  "e_en": "1. Each number is of the form n³−1: 2³−1=7, 3³−1=26, 4³−1=63, 5³−1=124, 6³−1=215. 2. Next term = 7³−1 = 343−1 = 342.",
+  "hook_mr": "शॉर्टकट: प्रत्येक संख्येत 1 मिळवून घनसंख्या (cube) आहे का ते तपासा.",
+  "hook_en": "Shortcut: add 1 to each term and check whether it becomes a perfect cube."
+ },
+ {
+  "id": "hw3b-033",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_mr": "पुढील अक्षर शोधा: B, D, H, N, ?",
+  "q_en": "Find the next letter: B, D, H, N, ?",
+  "o_mr": [
+   "V",
+   "U",
+   "T",
+   "W"
+  ],
+  "o_en": [
+   "V",
+   "U",
+   "T",
+   "W"
+  ],
+  "a": 0,
+  "e_mr": "1. अक्षरांमधील अंतर: B→D(+2), D→H(+4), H→N(+6). 2. पुढील फरक +8 असेल: N(14वे अक्षर)+8 = 22वे अक्षर. 3. 22वे अक्षर = V.",
+  "e_en": "1. Gaps between letters: B→D(+2), D→H(+4), H→N(+6). 2. Next gap is +8: N (14th letter) + 8 = 22nd letter. 3. The 22nd letter is V.",
+  "hook_mr": "शॉर्टकट: अक्षरांमधील फरक 2,4,6,8 अशा सम संख्यांत वाढतो हे ओळखा.",
+  "hook_en": "Shortcut: notice the gaps increase as even numbers 2,4,6,8."
+ },
+ {
+  "id": "hw3b-034",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_mr": "पुढील संख्या शोधा: 6, 11, 21, 36, 56, ?",
+  "q_en": "Find the next number: 6, 11, 21, 36, 56, ?",
+  "o_mr": [
+   "71",
+   "81",
+   "76",
+   "86"
+  ],
+  "o_en": [
+   "71",
+   "81",
+   "76",
+   "86"
+  ],
+  "a": 1,
+  "e_mr": "1. क्रमिक फरक: 5, 10, 15, 20. 2. पुढील फरक 25 असेल (फरकांमध्ये 5 ने वाढ). 3. पुढील पद = 56+25 = 81.",
+  "e_en": "1. Successive differences: 5, 10, 15, 20. 2. The next difference will be 25 (each difference rises by 5). 3. Next term = 56+25 = 81.",
+  "hook_mr": "शॉर्टकट: फरकांची मालिका स्वतः 5 च्या पटीत वाढते हे लक्षात घ्या.",
+  "hook_en": "Shortcut: notice the differences themselves form a simple arithmetic series increasing by 5."
+ },
+ {
+  "id": "hw3b-035",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 3,
+  "q_mr": "एका सांकेतिक भाषेत MONEY हा शब्द NQQID असा लिहिला जातो (प्रत्येक अक्षर त्याच्या क्रमांकाइतक्या स्थानांनी पुढे सरकवले जाते: 1ले अक्षर +1, 2रे +2, इ.). त्याच नियमाने TIGER कसे लिहाल?",
+  "q_en": "In a certain code, MONEY is written as NQQID (each letter is shifted forward by as many places as its position: 1st letter +1, 2nd +2, and so on). Using the same rule, how is TIGER written?",
+  "o_mr": [
+   "VKJIW",
+   "UKIJW",
+   "UKJIW",
+   "UKJHW"
+  ],
+  "o_en": [
+   "VKJIW",
+   "UKIJW",
+   "UKJIW",
+   "UKJHW"
+  ],
+  "a": 2,
+  "e_mr": "1. T(स्थान1)+1=U. 2. I(स्थान2)+2=K. 3. G(स्थान3)+3=J. 4. E(स्थान4)+4=I. 5. R(स्थान5)+5=W. 6. कोड = UKJIW.",
+  "e_en": "1. T(pos1)+1=U. 2. I(pos2)+2=K. 3. G(pos3)+3=J. 4. E(pos4)+4=I. 5. R(pos5)+5=W. 6. Code = UKJIW.",
+  "hook_mr": "शॉर्टकट: MONEY वरून नियम तपासा (M+1=N, O+2=Q...) आणि तोच नियम नवीन शब्दाला लावा.",
+  "hook_en": "Shortcut: verify the rule on MONEY itself (M+1=N, O+2=Q...) then apply the same shift pattern to the new word."
+ },
+ {
+  "id": "hw3b-036",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 2,
+  "q_mr": "एका सांकेतिक भाषेत DELHI हे EFMIJ असे लिहिले जाते. त्याच नियमाने MUMBAI कसे लिहाल?",
+  "q_en": "In a certain code, DELHI is written as EFMIJ. Using the same rule, how is MUMBAI written?",
+  "o_mr": [
+   "NVMCBJ",
+   "NVNBCJ",
+   "MVNCBJ",
+   "NVNCBJ"
+  ],
+  "o_en": [
+   "NVMCBJ",
+   "NVNBCJ",
+   "MVNCBJ",
+   "NVNCBJ"
+  ],
+  "a": 3,
+  "e_mr": "1. प्रत्येक अक्षर एका स्थानाने पुढे सरकते: D+1=E, E+1=F, L+1=M, H+1=I, I+1=J. 2. तोच नियम MUMBAI ला लावा: M+1=N, U+1=V, M+1=N, B+1=C, A+1=B, I+1=J. 3. कोड = NVNCBJ.",
+  "e_en": "1. Each letter shifts forward by one place: D+1=E, E+1=F, L+1=M, H+1=I, I+1=J. 2. Apply the same rule to MUMBAI: M+1=N, U+1=V, M+1=N, B+1=C, A+1=B, I+1=J. 3. Code = NVNCBJ.",
+  "hook_mr": "शॉर्टकट: प्रत्येक अक्षर फक्त एका स्थानाने पुढे जाते, हा साधा नियम पहिल्याच जोडीत ओळखा.",
+  "hook_en": "Shortcut: spot that it is simply a +1 shift for every letter from the given example pair."
+ },
+ {
+  "id": "hw3b-037",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 3,
+  "q_mr": "जर P म्हणजे '÷', Q म्हणजे '×', R म्हणजे '+' आणि S म्हणजे '−' असेल, तर 18 Q 12 R 4 S 6 P 2 = ?",
+  "q_en": "If P denotes '÷', Q denotes '×', R denotes '+' and S denotes '−', find the value of: 18 Q 12 R 4 S 6 P 2 = ?",
+  "o_mr": [
+   "217",
+   "214",
+   "220",
+   "223"
+  ],
+  "o_en": [
+   "217",
+   "214",
+   "220",
+   "223"
+  ],
+  "a": 0,
+  "e_mr": "1. चिन्हे बदला: 18×12 + 4 − 6÷2. 2. गणिती क्रमानुसार (BODMAS) आधी भागाकार: 6÷2=3. 3. 18×12=216. 4. 216+4−3 = 217.",
+  "e_en": "1. Replace symbols: 18×12 + 4 − 6÷2. 2. Following BODMAS, do division first: 6÷2=3. 3. 18×12=216. 4. 216+4−3 = 217.",
+  "hook_mr": "शॉर्टकट: चिन्ह बदलल्यानंतर नेहमीच्या गणिती क्रमाचे (BODMAS) पालन करा.",
+  "hook_en": "Shortcut: after substituting the symbols, apply the normal order of operations (BODMAS)."
+ },
+ {
+  "id": "hw3b-038",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 2,
+  "q_mr": "जर इंग्रजी वर्णमालेतील प्रत्येक अक्षराची किंमत त्याच्या स्थानाइतकी (A=1, B=2, ... Z=26) मानली, तर CAT या शब्दाची किंमत 24 आहे. त्याच नियमाने DOG या शब्दाची किंमत किती?",
+  "q_en": "If each letter of the English alphabet has a value equal to its position (A=1, B=2, ... Z=26), the value of CAT is 24. Using the same rule, find the value of DOG.",
+  "o_mr": [
+   "24",
+   "26",
+   "28",
+   "30"
+  ],
+  "o_en": [
+   "24",
+   "26",
+   "28",
+   "30"
+  ],
+  "a": 1,
+  "e_mr": "1. C=3, A=1, T=20; बेरीज = 3+1+20 = 24 (दिलेले तपासून पहा). 2. D=4, O=15, G=7. 3. बेरीज = 4+15+7 = 26.",
+  "e_en": "1. C=3, A=1, T=20; sum = 3+1+20 = 24 (matches the given check). 2. D=4, O=15, G=7. 3. Sum = 4+15+7 = 26.",
+  "hook_mr": "शॉर्टकट: वर्णमालेतील स्थान लक्षात ठेवण्यासाठी A,E,I,O,U ची स्थाने (1,5,9,15,21) पाठ करा.",
+  "hook_en": "Shortcut: memorise the positions of A,E,I,O,U (1,5,9,15,21) as quick anchor points."
+ },
+ {
+  "id": "hw3b-039",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 3,
+  "q_mr": "एका पुरुषाने एका स्त्रीची ओळख करून देताना म्हटले, \"ती माझ्या आजोबांच्या एकुलत्या एक मुलाची मुलगी आहे.\" ती स्त्री त्या पुरुषाशी कशी नातेवाईक आहे?",
+  "q_en": "Introducing a woman, a man said, \"She is the daughter of my grandfather's only son.\" How is the woman related to the man?",
+  "o_mr": [
+   "आई",
+   "पत्नी",
+   "बहीण",
+   "मुलगी"
+  ],
+  "o_en": [
+   "Mother",
+   "Wife",
+   "Sister",
+   "Daughter"
+  ],
+  "a": 2,
+  "e_mr": "1. आजोबांचा एकुलता एक मुलगा म्हणजेच पुरुषाचे वडील (कारण दुसरा कोणी मुलगा नाही). 2. वडिलांची मुलगी म्हणजे पुरुषाची बहीण. 3. म्हणून ती स्त्री त्याची बहीण आहे.",
+  "e_en": "1. Grandfather's only son must be the man's own father (since there is no other son). 2. The father's daughter is the man's sister. 3. Hence the woman is his sister.",
+  "hook_mr": "शॉर्टकट: 'एकुलता एक मुलगा' असे शब्द आले की तो नेहमी वक्त्याचे वडीलच असतात.",
+  "hook_en": "Shortcut: whenever 'only son' of the grandfather is mentioned, it always refers to the speaker's own father."
+ },
+ {
+  "id": "hw3b-040",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 3,
+  "q_mr": "P ही Q आणि R ची आई आहे. S हा P चा पती आहे. T हा S चा मुलगा आणि R चा भाऊ आहे. T चा Q शी काय नातेसंबंध आहे?",
+  "q_en": "P is the mother of Q and R. S is P's husband. T is the son of S and brother of R. How is T related to Q?",
+  "o_mr": [
+   "वडील",
+   "चुलत भाऊ",
+   "मामा",
+   "भाऊ"
+  ],
+  "o_en": [
+   "Father",
+   "Cousin",
+   "Maternal uncle",
+   "Brother"
+  ],
+  "a": 3,
+  "e_mr": "1. T हा S व P यांचा मुलगा आहे, म्हणजे Q आणि R चा भाऊ. 2. T हा R चा भाऊ असल्याचे आधीच दिले आहे, आणि Q देखील P-S चेच अपत्य आहे. 3. म्हणून T हा Q चा भाऊ आहे.",
+  "e_en": "1. T is the son of S and P, hence a sibling of Q and R. 2. T is already stated to be R's brother, and Q is also a child of the same parents P-S. 3. Therefore T is Q's brother.",
+  "hook_mr": "शॉर्टकट: एकाच जोडप्याची सर्व अपत्ये परस्परांची भावंडे असतात, हे लक्षात ठेवा.",
+  "hook_en": "Shortcut: all children of the same couple are siblings of one another."
+ },
+ {
+  "id": "hw3b-041",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "A हा B चा मुलगा आहे. B ही C ची बहीण आहे. C ला D नावाची मुलगी आहे. D चा A शी काय नातेसंबंध आहे?",
+  "q_en": "A is the son of B. B is the sister of C. C has a daughter named D. How is D related to A?",
+  "o_mr": [
+   "मावसबहीण/चुलतबहीण",
+   "बहीण",
+   "मुलगी",
+   "भाची"
+  ],
+  "o_en": [
+   "Cousin",
+   "Sister",
+   "Daughter",
+   "Niece"
+  ],
+  "a": 0,
+  "e_mr": "1. B आणि C हे भावंड आहेत. 2. A हा B चा मुलगा आणि D ही C ची मुलगी, म्हणजे दोघेही एकमेकांच्या मावशी/मामाची मुले. 3. म्हणून D ही A ची चुलत/मावसबहीण आहे.",
+  "e_en": "1. B and C are siblings. 2. A is B's son and D is C's daughter, making them children of siblings. 3. Therefore D is A's cousin.",
+  "hook_mr": "शॉर्टकट: भावंडांची मुले नेहमी एकमेकांची चुलत/मावसभावंडे असतात.",
+  "hook_en": "Shortcut: children of siblings are always cousins of each other."
+ },
+ {
+  "id": "hw3b-042",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 3,
+  "q_mr": "राज पूर्वेकडे 8 किमी चालतो, नंतर डावीकडे वळून 6 किमी चालतो, पुन्हा डावीकडे वळून 8 किमी चालतो आणि शेवटी उजवीकडे वळून 4 किमी चालतो. तो सुरुवातीच्या ठिकाणापासून किती अंतरावर आणि कोणत्या दिशेला आहे?",
+  "q_en": "Raj walks 8 km east, turns left and walks 6 km, turns left again and walks 8 km, then turns right and walks 4 km. How far and in which direction is he from the starting point?",
+  "o_mr": [
+   "6 किमी, उत्तर",
+   "10 किमी, उत्तर",
+   "8 किमी, पश्चिम",
+   "10 किमी, पूर्व"
+  ],
+  "o_en": [
+   "6 km, North",
+   "10 km, North",
+   "8 km, West",
+   "10 km, East"
+  ],
+  "a": 1,
+  "e_mr": "1. सुरुवात (0,0) पूर्वेकडे 8: (8,0). 2. डावीकडे वळून (उत्तर दिशेने) 6: (8,6). 3. पुन्हा डावीकडे वळून (पश्चिम दिशेने) 8: (0,6). 4. उजवीकडे वळून (उत्तर दिशेने) 4: (0,10). 5. अंतर = 10 किमी, दिशा उत्तर.",
+  "e_en": "1. Start at (0,0), east 8: (8,0). 2. Turn left (now facing north), walk 6: (8,6). 3. Turn left again (now facing west), walk 8: (0,6). 4. Turn right (now facing north), walk 4: (0,10). 5. Distance = 10 km, direction North.",
+  "hook_mr": "शॉर्टकट: प्रत्येक वळणानंतर दिशा बदलताना (X,Y) निर्देशांकांवर हालचाल नोंदवा, म्हणजे गोंधळ होत नाही.",
+  "hook_en": "Shortcut: track movement on (X,Y) coordinates after each turn to avoid confusion about direction."
+ },
+ {
+  "id": "hw3b-043",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 3,
+  "q_mr": "एक व्यक्ती दक्षिणेकडे 5 किमी, नंतर पश्चिमेकडे 5 किमी आणि नंतर उत्तरेकडे 5 किमी चालते. ती सुरुवातीच्या ठिकाणापासून किती अंतरावर आणि कोणत्या दिशेला आहे?",
+  "q_en": "A person walks 5 km south, then 5 km west, then 5 km north. How far and in which direction is he from the starting point?",
+  "o_mr": [
+   "5 किमी, पूर्व",
+   "10 किमी, पश्चिम",
+   "5 किमी, पश्चिम",
+   "0 किमी"
+  ],
+  "o_en": [
+   "5 km, East",
+   "10 km, West",
+   "5 km, West",
+   "0 km"
+  ],
+  "a": 2,
+  "e_mr": "1. दक्षिण 5 आणि उत्तर 5 एकमेकांना रद्द करतात (उभी हालचाल = 0). 2. फक्त पश्चिमेकडील 5 किमी शिल्लक राहते. 3. तो सुरुवातीच्या ठिकाणापासून 5 किमी पश्चिमेला आहे.",
+  "e_en": "1. South 5 and north 5 cancel out (net vertical movement = 0). 2. Only the 5 km westward movement remains. 3. He is 5 km west of the starting point.",
+  "hook_mr": "शॉर्टकट: परस्परविरुद्ध दिशांतील समान अंतरे एकमेकांना रद्द करतात.",
+  "hook_en": "Shortcut: equal distances in opposite directions cancel each other out."
+ },
+ {
+  "id": "hw3b-044",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 2,
+  "q_mr": "एक व्यक्ती सुरुवातीच्या ठिकाणापासून 3 किमी पूर्वेकडे आणि नंतर 4 किमी उत्तरेकडे चालते. तो सुरुवातीच्या ठिकाणापासून सरळ रेषेत किती अंतरावर आहे?",
+  "q_en": "A person walks 3 km east and then 4 km north from the starting point. How far is he from the starting point in a straight line?",
+  "o_mr": [
+   "8 किमी",
+   "6 किमी",
+   "7 किमी",
+   "5 किमी"
+  ],
+  "o_en": [
+   "8 km",
+   "6 km",
+   "7 km",
+   "5 km"
+  ],
+  "a": 3,
+  "e_mr": "1. पूर्व व उत्तर या दिशा एकमेकांना काटकोनात असतात. 2. पायथागोरस प्रमेय: अंतर = √(3²+4²) = √25 = 5 किमी.",
+  "e_en": "1. East and north are perpendicular directions. 2. By Pythagoras theorem: distance = √(3²+4²) = √25 = 5 km.",
+  "hook_mr": "शॉर्टकट: 3-4-5 हा प्रसिद्ध पायथागोरियन त्रिकूट लक्षात ठेवा.",
+  "hook_en": "Shortcut: recognise the classic 3-4-5 Pythagorean triple instantly."
+ },
+ {
+  "id": "hw3b-045",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_mr": "खालील संख्यात्मक साधर्म्य पूर्ण करा: 5 : 30 :: 7 : ?",
+  "q_en": "5 : 30 :: 7 : ?",
+  "o_mr": [
+   "56",
+   "49",
+   "42",
+   "63"
+  ],
+  "o_en": [
+   "56",
+   "49",
+   "42",
+   "63"
+  ],
+  "a": 0,
+  "e_mr": "1. नियम: n : n×(n+1). 2. 5×6 = 30 (जुळते). 3. 7×8 = 56.",
+  "e_en": "1. Rule: n : n×(n+1). 2. 5×6 = 30 (matches). 3. 7×8 = 56.",
+  "hook_mr": "शॉर्टकट: संख्या व पुढील संख्येचा गुणाकार तपासा.",
+  "hook_en": "Shortcut: check if the pattern is the number multiplied by the next number."
+ },
+ {
+  "id": "hw3b-046",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_mr": "लेखक : पुस्तक :: शिल्पकार : ?",
+  "q_en": "Author : Book :: Sculptor : ?",
+  "o_mr": [
+   "रंग",
+   "शिल्प",
+   "संगीत",
+   "चित्र"
+  ],
+  "o_en": [
+   "Colour",
+   "Sculpture",
+   "Music",
+   "Painting"
+  ],
+  "a": 1,
+  "e_mr": "1. लेखक हा पुस्तक निर्माण करतो (कर्ता व निर्मिती हे नाते). 2. त्याच नात्याने, शिल्पकार शिल्प निर्माण करतो.",
+  "e_en": "1. An author creates a book (creator-creation relationship). 2. By the same relationship, a sculptor creates a sculpture.",
+  "hook_mr": "शॉर्टकट: पहिल्या जोडीतील नाते (निर्माता-कृती) ओळखून तीच रचना दुसऱ्या जोडीत लावा.",
+  "hook_en": "Shortcut: identify the creator-creation relationship in the first pair and apply the same pattern."
+ },
+ {
+  "id": "hw3b-047",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 3,
+  "q_mr": "विजोड घटक ओळखा: 121, 144, 169, 200, 225",
+  "q_en": "Find the odd one out: 121, 144, 169, 200, 225",
+  "o_mr": [
+   "144",
+   "169",
+   "200",
+   "225"
+  ],
+  "o_en": [
+   "144",
+   "169",
+   "200",
+   "225"
+  ],
+  "a": 2,
+  "e_mr": "1. सर्व संख्या पूर्ण वर्ग आहेत का तपासा: 11²=121, 12²=144, 13²=169, 15²=225. 2. 200 हा कोणत्याही पूर्णांकाचा वर्ग नाही. 3. म्हणून 200 ही विजोड संख्या.",
+  "e_en": "1. Check whether each is a perfect square: 11²=121, 12²=144, 13²=169, 15²=225. 2. 200 is not the square of any integer. 3. Hence 200 is the odd one out.",
+  "hook_mr": "शॉर्टकट: प्रत्येक संख्येचे वर्गमूळ पूर्णांक येते का ते पटकन तपासा.",
+  "hook_en": "Shortcut: quickly check whether the square root of each number is a whole number."
+ },
+ {
+  "id": "hw3b-048",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 2,
+  "q_mr": "विजोड घटक ओळखा: 8, 27, 64, 125, 196",
+  "q_en": "Find the odd one out: 8, 27, 64, 125, 196",
+  "o_mr": [
+   "27",
+   "64",
+   "125",
+   "196"
+  ],
+  "o_en": [
+   "27",
+   "64",
+   "125",
+   "196"
+  ],
+  "a": 3,
+  "e_mr": "1. सर्व संख्या घनसंख्या (cubes) आहेत का तपासा: 2³=8, 3³=27, 4³=64, 5³=125. 2. 6³=216, पण 196 दिलेला आहे. 3. म्हणून 196 ही विजोड संख्या.",
+  "e_en": "1. Check whether each is a perfect cube: 2³=8, 3³=27, 4³=64, 5³=125. 2. 6³=216, but 196 is given instead. 3. Hence 196 is the odd one out.",
+  "hook_mr": "शॉर्टकट: घनमूळ पूर्णांक येते का पडताळून पाहा.",
+  "hook_en": "Shortcut: verify whether the cube root of each number is a whole number."
+ },
+ {
+  "id": "hw3b-049",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 3,
+  "q_mr": "1 जानेवारी 2024 हा सोमवार होता. 1 जानेवारी 2027 हा कोणता वार असेल?",
+  "q_en": "1 January 2024 was a Monday. What day of the week will 1 January 2027 be?",
+  "o_mr": [
+   "शुक्रवार",
+   "गुरुवार",
+   "शनिवार",
+   "रविवार"
+  ],
+  "o_en": [
+   "Friday",
+   "Thursday",
+   "Saturday",
+   "Sunday"
+  ],
+  "a": 0,
+  "e_mr": "1. 2024 हे लीप वर्ष आहे (366 दिवस = 2 जास्तीचे दिवस), 2025 व 2026 सामान्य वर्षे (प्रत्येकी 1 जास्तीचा दिवस). 2. एकूण जास्तीचे दिवस = 2+1+1 = 4. 3. सोमवार + 4 दिवस = शुक्रवार.",
+  "e_en": "1. 2024 is a leap year (366 days = 2 odd days), 2025 and 2026 are ordinary years (1 odd day each). 2. Total odd days = 2+1+1 = 4. 3. Monday + 4 days = Friday.",
+  "hook_mr": "शॉर्टकट: सामान्य वर्षाचा 1 जास्तीचा दिवस व लीप वर्षाचे 2 जास्तीचे दिवस लक्षात ठेवा.",
+  "hook_en": "Shortcut: remember an ordinary year contributes 1 odd day and a leap year contributes 2."
+ },
+ {
+  "id": "hw3b-050",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "1 जानेवारी 2000 हा कोणता वार होता, जर 1 जानेवारी 2001 हा सोमवार होता?",
+  "q_en": "If 1 January 2001 was a Monday, what day of the week was 1 January 2000?",
+  "o_mr": [
+   "रविवार",
+   "शनिवार",
+   "सोमवार",
+   "मंगळवार"
+  ],
+  "o_en": [
+   "Sunday",
+   "Saturday",
+   "Monday",
+   "Tuesday"
+  ],
+  "a": 1,
+  "e_mr": "1. 2000 हे लीप वर्ष होते, म्हणजे त्यात 2 जास्तीचे दिवस असतात. 2. म्हणजे 1 जाने 2001 हा 1 जाने 2000 पेक्षा 2 दिवस पुढे आहे. 3. सोमवार − 2 दिवस = शनिवार.",
+  "e_en": "1. 2000 was a leap year, contributing 2 odd days. 2. So 1 Jan 2001 is 2 days ahead of 1 Jan 2000. 3. Monday − 2 days = Saturday.",
+  "hook_mr": "शॉर्टकट: मागे जाताना जास्तीचे दिवस वजा करा, पुढे जाताना बेरीज करा.",
+  "hook_en": "Shortcut: subtract odd days when going backward in time, add them when going forward."
+ },
+ {
+  "id": "hw3b-051",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 3,
+  "q_mr": "एका रांगेत आदित्य डावीकडून 15वा आणि उजवीकडून 23वा आहे. कविता आदित्यच्या उजवीकडे 8 व्या स्थानी आहे. कविता उजवीकडून कितव्या स्थानी आहे?",
+  "q_en": "In a row, Aditya is 15th from the left and 23rd from the right. Kavya is 8th to the right of Aditya. What is Kavya's position from the right?",
+  "o_mr": [
+   "13वा",
+   "17वा",
+   "15वा",
+   "19वा"
+  ],
+  "o_en": [
+   "13th",
+   "17th",
+   "15th",
+   "19th"
+  ],
+  "a": 2,
+  "e_mr": "1. एकूण लोक = 15+23−1 = 37. 2. आदित्य उजवीकडून 23वा आहे. 3. कविता आदित्यच्या उजवीकडे 8 स्थाने असल्याने ती उजवीकडून 23−8 = 15वी आहे.",
+  "e_en": "1. Total people = 15+23−1 = 37. 2. Aditya is 23rd from the right. 3. Since Kavya is 8 places to Aditya's right, her position from the right is 23−8 = 15th.",
+  "hook_mr": "शॉर्टकट: 'उजवीकडे x स्थाने' म्हणजे उजवीकडून क्रमांक थेट x ने कमी होतो.",
+  "hook_en": "Shortcut: moving x places to the right directly reduces the rank-from-right by x."
+ },
+ {
+  "id": "hw3b-052",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 2,
+  "q_mr": "20 विद्यार्थ्यांच्या रांगेत मीना डावीकडून 9वी आहे. ती उजवीकडून कितवी आहे?",
+  "q_en": "In a row of 20 students, Meena is 9th from the left. What is her position from the right?",
+  "o_mr": [
+   "10वी",
+   "11वी",
+   "13वी",
+   "12वी"
+  ],
+  "o_en": [
+   "10th",
+   "11th",
+   "13th",
+   "12th"
+  ],
+  "a": 3,
+  "e_mr": "1. सूत्र: उजवीकडून स्थान = एकूण संख्या − डावीकडून स्थान + 1. 2. = 20−9+1 = 12वी.",
+  "e_en": "1. Formula: position from right = total − position from left + 1. 2. = 20−9+1 = 12th.",
+  "hook_mr": "शॉर्टकट: एकूण+1 मधून डावीकडील स्थान वजा करा.",
+  "hook_en": "Shortcut: subtract the left position from (total+1) directly."
+ },
+ {
+  "id": "hw3b-053",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_mr": "विधाने: सर्व पुस्तके पेन आहेत. काही पेन पेन्सिल आहेत. कोणतीही पेन्सिल खोडरबर नाही.\nनिष्कर्ष: I. काही पुस्तके पेन्सिल आहेत. II. कोणतेही पुस्तक खोडरबर नाही. III. काही पेन खोडरबर नाहीत.",
+  "q_en": "Statements: All books are pens. Some pens are pencils. No pencil is an eraser.\nConclusions: I. Some books are pencils. II. No book is an eraser. III. Some pens are not erasers.",
+  "o_mr": [
+   "फक्त III निष्कर्ष निघतो",
+   "फक्त II निष्कर्ष निघतो",
+   "फक्त I निष्कर्ष निघतो",
+   "सर्व निष्कर्ष निघतात"
+  ],
+  "o_en": [
+   "Only III follows",
+   "Only II follows",
+   "Only I follows",
+   "All conclusions follow"
+  ],
+  "a": 0,
+  "e_mr": "1. 'काही पेन पेन्सिल आहेत' आणि 'कोणतीही पेन्सिल खोडरबर नाही' या दोन विधानांतून मध्यम पद 'पेन्सिल' वापरून 'काही पेन खोडरबर नाहीत' हा वैध निष्कर्ष (III) निघतो. 2. पुस्तक व पेन्सिल यांच्यातील संबंध निश्चित होत नसल्याने I चुकीचा आहे. 3. त्याचप्रमाणे पुस्तक व खोडरबर यांचा थेट संबंध सिद्ध होत नाही, त्यामुळे II चुकीचा आहे.",
+  "e_en": "1. From 'some pens are pencils' and 'no pencil is an eraser', combining via the middle term 'pencil' validly gives 'some pens are not erasers' (III). 2. The relation between books and pencils is not fixed, so I does not follow. 3. Likewise books and erasers have no established direct link, so II does not follow.",
+  "hook_mr": "शॉर्टकट: 'काही...आहेत' + 'कोणतेही...नाही' या जोडीतून नेहमी 'काही...नाहीत' हा निष्चित निष्कर्ष निघतो.",
+  "hook_en": "Shortcut: a 'some are' statement combined with a 'no...is' statement on the same middle term always validly yields a 'some are not' conclusion."
+ },
+ {
+  "id": "hw3b-054",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_mr": "विधाने: सर्व फुले वनस्पती आहेत. कोणतीही वनस्पती प्राणी नाही.\nनिष्कर्ष: I. कोणतेही फूल प्राणी नाही. II. काही वनस्पती फुले आहेत.",
+  "q_en": "Statements: All flowers are plants. No plant is an animal.\nConclusions: I. No flower is an animal. II. Some plants are flowers.",
+  "o_mr": [
+   "फक्त I निष्कर्ष निघतो",
+   "I आणि II दोन्ही निष्कर्ष निघतात",
+   "फक्त II निष्कर्ष निघतो",
+   "कोणताही निष्कर्ष निघत नाही"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Both I and II follow",
+   "Only II follows",
+   "Neither conclusion follows"
+  ],
+  "a": 1,
+  "e_mr": "1. 'सर्व फुले वनस्पती' + 'कोणतीही वनस्पती प्राणी नाही' → 'कोणतेही फूल प्राणी नाही' (I) हा प्रमाणित वैध निष्कर्ष आहे. 2. 'सर्व फुले वनस्पती आहेत' या विधानाचे प्रत्यावर्तन (conversion) करून 'काही वनस्पती फुले आहेत' (II) हाही वैध निष्कर्ष ठरतो.",
+  "e_en": "1. 'All flowers are plants' + 'No plant is an animal' → 'No flower is an animal' (I) is a standard valid conclusion. 2. Converting 'All flowers are plants' gives 'Some plants are flowers' (II), which is also valid.",
+  "hook_mr": "शॉर्टकट: 'सर्व A आहेत B' या विधानातून नेहमी 'काही B आहेत A' हा प्रत्यावर्तित निष्कर्ष मिळतो.",
+  "hook_en": "Shortcut: an 'All A are B' statement always converts validly to 'Some B are A'."
+ },
+ {
+  "id": "hw3b-055",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 3,
+  "q_mr": "सहा मित्र P, Q, R, S, T, U हे एका वर्तुळाकार टेबलाभोवती केंद्राकडे तोंड करून बसले आहेत. P हा Q च्या उजवीकडे तिसऱ्या स्थानी आहे. S हा P च्या डावीकडे दुसऱ्या स्थानी आहे. T हा Q च्या उजवीकडे दुसऱ्या स्थानी आहे. R हा P च्या लगेच उजवीकडे बसला आहे. Q च्या अगदी विरुद्ध (समोर) कोण बसले आहे?",
+  "q_en": "Six friends P, Q, R, S, T, U sit around a circular table facing the centre. P sits third to the right of Q. S sits second to the left of P. T sits second to the right of Q. R sits immediately to the right of P. Who sits exactly opposite Q?",
+  "o_mr": [
+   "T",
+   "S",
+   "P",
+   "U"
+  ],
+  "o_en": [
+   "T",
+   "S",
+   "P",
+   "U"
+  ],
+  "a": 2,
+  "e_mr": "1. दिलेल्या माहितीनुसार क्रमवार (घड्याळाच्या काट्याच्या दिशेने) बैठक अशी ठरते: Q, S, T, P, R, U. 2. वर्तुळात 6 जागा असल्याने बरोबर विरुद्ध बसलेली व्यक्ती 3 स्थाने पुढे असते. 3. Q पासून 3 स्थाने पुढे P येतो, म्हणून Q च्या समोर P बसला आहे.",
+  "e_en": "1. Working through the clues, the clockwise seating order is: Q, S, T, P, R, U. 2. With 6 seats around the circle, the person exactly opposite sits 3 places away. 3. Three places from Q (clockwise) is P, so P sits exactly opposite Q.",
+  "hook_mr": "शॉर्टकट: सम संख्येच्या वर्तुळाकार बैठकीत 'बरोबर विरुद्ध' व्यक्ती नेहमी अर्ध्या जागांइतकी पुढे असते.",
+  "hook_en": "Shortcut: in a circular arrangement with an even number of seats, the person directly opposite is always exactly half the total seats away."
+ },
+ {
+  "id": "hw3b-056",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 3,
+  "q_mr": "A, B, C, D, E हे पाच मित्र उत्तरेकडे तोंड करून एका रांगेत बसले आहेत. B हा A च्या उजवीकडे दुसऱ्या स्थानी आहे. D कोणत्याही टोकाला नाही. C हा D च्या लगेच डावीकडे आहे. B एका टोकाला आहे. E च्या लगेच डावीकडे कोण बसले आहे?",
+  "q_en": "Five friends A, B, C, D, E sit in a row facing north. B sits second to the right of A. D is not at either end. C sits immediately to the left of D. B sits at one of the ends. Who sits immediately to the left of E?",
+  "o_mr": [
+   "कोणीही नाही",
+   "C",
+   "D",
+   "A"
+  ],
+  "o_en": [
+   "None of these",
+   "C",
+   "D",
+   "A"
+  ],
+  "a": 3,
+  "e_mr": "1. दिलेल्या सर्व अटी तपासल्यास एकमेव शक्य क्रम (डावीकडून उजवीकडे) असा येतो: C, D, A, E, B. 2. यात E हा चौथ्या स्थानी असून त्याच्या लगेच डावीकडे तिसऱ्या स्थानी A आहे.",
+  "e_en": "1. Checking all the conditions together, the only possible left-to-right order is: C, D, A, E, B. 2. Here E is 4th, and immediately to his left (3rd position) sits A.",
+  "hook_mr": "शॉर्टकट: सर्व अटी एकाच रांगेत बसवून एकच शक्य क्रम उरतो का ते पडताळून पाहा (brute-force logic).",
+  "hook_en": "Shortcut: apply all clues together on the row positions until only one consistent order survives."
+ },
+ {
+  "id": "hw3b-057",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 3,
+  "q_mr": "जर P > Q = R ≥ S > T असेल, तर खालीलपैकी कोणता/कोणते निष्कर्ष निश्चित सत्य आहे/आहेत? I. P > T  II. Q > T",
+  "q_en": "If P > Q = R ≥ S > T, which of the following conclusion(s) is/are definitely true? I. P > T  II. Q > T",
+  "o_mr": [
+   "I आणि II दोन्ही सत्य",
+   "फक्त II सत्य",
+   "फक्त I सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Both I and II are true",
+   "Only II is true",
+   "Only I is true",
+   "Neither is true"
+  ],
+  "a": 0,
+  "e_mr": "1. Q = R ≥ S > T यावरून Q ≥ S > T, म्हणजे Q > T निश्चित (II सत्य). 2. P > Q आणि Q > T यावरून P > T निश्चित (I सत्य). 3. म्हणून दोन्ही निष्कर्ष सत्य आहेत.",
+  "e_en": "1. From Q = R ≥ S > T, we get Q ≥ S > T, so Q > T is definite (II is true). 2. From P > Q and Q > T, P > T is definite (I is true). 3. Hence both conclusions are true.",
+  "hook_mr": "शॉर्टकट: '≥' नंतर '>' आले की एकत्रित संबंध नेहमी '>' असाच राहतो.",
+  "hook_en": "Shortcut: whenever a '≥' is followed by a '>', the combined relation always simplifies to strict '>'."
+ },
+ {
+  "id": "hw3b-058",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "जर X ≥ Y > Z असेल, तर X आणि Z यांच्यातील संबंध काय आहे?",
+  "q_en": "If X ≥ Y > Z, what is the relationship between X and Z?",
+  "o_mr": [
+   "X = Z",
+   "X > Z",
+   "X < Z",
+   "निश्चित सांगता येत नाही"
+  ],
+  "o_en": [
+   "X = Z",
+   "X > Z",
+   "X < Z",
+   "Cannot be determined"
+  ],
+  "a": 1,
+  "e_mr": "1. X ≥ Y आणि Y > Z. 2. '≥' नंतर '>' आल्यास एकत्रित संबंध नेहमी काटेकोर '>' होतो. 3. म्हणून X > Z निश्चित.",
+  "e_en": "1. X ≥ Y and Y > Z. 2. A '≥' followed by a '>' always combines into a strict '>'. 3. Hence X > Z is definite.",
+  "hook_mr": "शॉर्टकट: साखळीतील एकच '>' पुरेसे असते संपूर्ण संबंध काटेकोर बनवण्यास.",
+  "hook_en": "Shortcut: even a single strict '>' anywhere in the chain makes the overall combined relation strict."
+ },
+ {
+  "id": "hw3b-059",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "प्रश्न: रवीचे वय किती आहे? विधान I: रवी त्याच्या भावापेक्षा 5 वर्षांनी मोठा आहे. विधान II: रवीचा भाऊ 20 वर्षांचा आहे.",
+  "q_en": "Question: What is Ravi's age? Statement I: Ravi is 5 years older than his brother. Statement II: Ravi's brother is 20 years old.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्र आवश्यक आहेत",
+   "एकटे कोणतेही विधान पुरेसे आहे"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Either statement alone is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "1. विधान I एकटे: फक्त फरक कळतो, प्रत्यक्ष वय नाही — अपुरे. 2. विधान II एकटे: फक्त भावाचे वय कळते, रवीचे नाही — अपुरे. 3. दोन्ही एकत्र: रवीचे वय = 20+5 = 25 — पुरेसे.",
+  "e_en": "1. Statement I alone: only gives the age difference, not the actual age — insufficient. 2. Statement II alone: only gives the brother's age, not Ravi's — insufficient. 3. Both together: Ravi's age = 20+5 = 25 — sufficient.",
+  "hook_mr": "शॉर्टकट: फरक व एक ठराविक वय दोन्ही असतील तरच दुसरे वय काढता येते.",
+  "hook_en": "Shortcut: you need both the difference and one actual value to determine the other value."
+ },
+ {
+  "id": "hw3b-060",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 3,
+  "q_mr": "प्रश्न: x ही सम संख्या आहे का? विधान I: x ला 4 ने पूर्ण भाग जातो. विधान II: x² ही सम संख्या आहे.",
+  "q_en": "Question: Is x an even number? Statement I: x is divisible by 4. Statement II: x² is an even number.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्र आवश्यक आहेत",
+   "प्रत्येक विधान स्वतंत्रपणे पुरेसे आहे"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Each statement alone is sufficient"
+  ],
+  "a": 3,
+  "e_mr": "1. विधान I: 4 ने भाग जाणारी संख्या नेहमी सम असते — पुरेसे. 2. विधान II: x² सम असेल तरच x सम असू शकते (विषम संख्येचा वर्ग नेहमी विषमच असतो) — हेही स्वतंत्रपणे पुरेसे. 3. म्हणून प्रत्येक विधान स्वतंत्रपणे पुरेसे आहे.",
+  "e_en": "1. Statement I: any number divisible by 4 is always even — sufficient. 2. Statement II: x² is even only if x is even (the square of an odd number is always odd) — also sufficient alone. 3. Hence each statement alone is sufficient.",
+  "hook_mr": "शॉर्टकट: विषम संख्येचा वर्ग नेहमी विषमच येतो, हे लक्षात ठेवा.",
+  "hook_en": "Shortcut: remember that the square of an odd number is always odd, never even."
+ },
+ {
+  "id": "hw3b-061",
+  "s": "science",
+  "t": "physics",
+  "d": 3,
+  "q_mr": "एका रोधकातून (resistor) 2 अँपिअरचा विद्युतप्रवाह 5 मिनिटे वाहतो. जर रोधकाचा रोध 15 ओहम असेल, तर निर्माण झालेली उष्णता (जूलमध्ये) किती?",
+  "q_en": "A current of 2 A flows through a resistor of 15 Ω for 5 minutes. Find the heat generated (in joules).",
+  "o_mr": [
+   "18000 J",
+   "15000 J",
+   "9000 J",
+   "20000 J"
+  ],
+  "o_en": [
+   "18000 J",
+   "15000 J",
+   "9000 J",
+   "20000 J"
+  ],
+  "a": 0,
+  "e_mr": "1. सूत्र: H = I²Rt. 2. वेळ t = 5×60 = 300 सेकंद. 3. H = 2²×15×300 = 4×15×300 = 18000 J.",
+  "e_en": "1. Formula: H = I²Rt. 2. Time t = 5×60 = 300 seconds. 3. H = 2²×15×300 = 4×15×300 = 18000 J.",
+  "hook_mr": "शॉर्टकट: वेळ नेहमी सेकंदात रूपांतरित करूनच H=I²Rt मध्ये टाका.",
+  "hook_en": "Shortcut: always convert time to seconds before applying H=I²Rt."
+ },
+ {
+  "id": "hw3b-062",
+  "s": "science",
+  "t": "physics",
+  "d": 3,
+  "q_mr": "एक वस्तू 5 मीटर उंचीवरून मुक्तपणे खाली सोडली जाते (g=10 मी/से²). जमिनीवर आदळण्यापूर्वी तिचा वेग किती असेल?",
+  "q_en": "An object is freely dropped from a height of 5 m (g=10 m/s²). Find its speed just before hitting the ground.",
+  "o_mr": [
+   "5 मी/से",
+   "10 मी/से",
+   "8 मी/से",
+   "12 मी/से"
+  ],
+  "o_en": [
+   "5 m/s",
+   "10 m/s",
+   "8 m/s",
+   "12 m/s"
+  ],
+  "a": 1,
+  "e_mr": "1. सूत्र: v² = u²+2gh, इथे u=0. 2. v² = 2×10×5 = 100. 3. v = √100 = 10 मी/से.",
+  "e_en": "1. Formula: v² = u²+2gh, with u=0. 2. v² = 2×10×5 = 100. 3. v = √100 = 10 m/s.",
+  "hook_mr": "शॉर्टकट: मुक्तपतनात प्रारंभिक वेग u=0 धरूनच सूत्र वापरा.",
+  "hook_en": "Shortcut: in free fall, always take initial velocity u=0 before applying the formula."
+ },
+ {
+  "id": "hw3b-063",
+  "s": "science",
+  "t": "physics",
+  "d": 3,
+  "q_mr": "6 ओहम आणि 3 ओहम या दोन रोधकांना समांतर (parallel) जोडले आहे. त्यांचा एकत्रित (तुल्य) रोध किती?",
+  "q_en": "Two resistors of 6 Ω and 3 Ω are connected in parallel. Find their equivalent resistance.",
+  "o_mr": [
+   "1 ओहम",
+   "4.5 ओहम",
+   "2 ओहम",
+   "9 ओहम"
+  ],
+  "o_en": [
+   "1 Ω",
+   "4.5 Ω",
+   "2 Ω",
+   "9 Ω"
+  ],
+  "a": 2,
+  "e_mr": "1. समांतर जोडणीचे सूत्र: R = (R1×R2)/(R1+R2). 2. R = (6×3)/(6+3) = 18/9 = 2 ओहम.",
+  "e_en": "1. Parallel formula: R = (R1×R2)/(R1+R2). 2. R = (6×3)/(6+3) = 18/9 = 2 Ω.",
+  "hook_mr": "शॉर्टकट: समांतर रोध नेहमी दोन्ही रोधकांपेक्षा लहानच असतो, हे उत्तर पडताळण्यास उपयोगी.",
+  "hook_en": "Shortcut: the parallel resistance is always smaller than the smallest individual resistor — a quick sanity check."
+ },
+ {
+  "id": "hw3b-064",
+  "s": "science",
+  "t": "physics",
+  "d": 2,
+  "q_mr": "20 न्यूटन बल 4 किलोग्रॅम वस्तुमानाच्या वस्तूवर लावले असता तिचा त्वरण किती असेल?",
+  "q_en": "A force of 20 N acts on a 4 kg mass. Find the resulting acceleration.",
+  "o_mr": [
+   "4 मी/से²",
+   "8 मी/से²",
+   "6 मी/से²",
+   "5 मी/से²"
+  ],
+  "o_en": [
+   "4 m/s²",
+   "8 m/s²",
+   "6 m/s²",
+   "5 m/s²"
+  ],
+  "a": 3,
+  "e_mr": "1. न्यूटनचा दुसरा नियम: F = ma. 2. a = F/m = 20/4 = 5 मी/से².",
+  "e_en": "1. Newton's second law: F = ma. 2. a = F/m = 20/4 = 5 m/s².",
+  "hook_mr": "शॉर्टकट: F=ma मध्ये थेट भागाकार करून त्वरण मिळवा.",
+  "hook_en": "Shortcut: directly divide force by mass using F=ma."
+ },
+ {
+  "id": "hw3b-065",
+  "s": "science",
+  "t": "physics",
+  "d": 3,
+  "q_mr": "एका भिंगाची क्षमता (power) +5 डायोप्टर आहे. त्याची नाभीय अंतर (focal length) किती असेल?",
+  "q_en": "A lens has a power of +5 dioptre. Find its focal length.",
+  "o_mr": [
+   "20 सेमी",
+   "15 सेमी",
+   "10 सेमी",
+   "25 सेमी"
+  ],
+  "o_en": [
+   "20 cm",
+   "15 cm",
+   "10 cm",
+   "25 cm"
+  ],
+  "a": 0,
+  "e_mr": "1. सूत्र: P = 1/f (f मीटरमध्ये). 2. f = 1/5 = 0.2 मीटर. 3. 0.2 मीटर = 20 सेमी.",
+  "e_en": "1. Formula: P = 1/f (f in metres). 2. f = 1/5 = 0.2 m. 3. 0.2 m = 20 cm.",
+  "hook_mr": "शॉर्टकट: क्षमता (डायोप्टर) चा व्यस्त = नाभीय अंतर मीटरमध्ये.",
+  "hook_en": "Shortcut: the reciprocal of power (in dioptres) directly gives the focal length in metres."
+ },
+ {
+  "id": "hw3b-066",
+  "s": "science",
+  "t": "physics",
+  "d": 2,
+  "q_mr": "हवेतील ध्वनीचा वेग 340 मी/से आहे. 170 हर्ट्झ वारंवारतेच्या ध्वनी लहरीची तरंगलांबी किती असेल?",
+  "q_en": "The speed of sound in air is 340 m/s. Find the wavelength of a sound wave with a frequency of 170 Hz.",
+  "o_mr": [
+   "1 मी",
+   "2 मी",
+   "1.5 मी",
+   "2.5 मी"
+  ],
+  "o_en": [
+   "1 m",
+   "2 m",
+   "1.5 m",
+   "2.5 m"
+  ],
+  "a": 1,
+  "e_mr": "1. सूत्र: वेग = वारंवारता × तरंगलांबी. 2. तरंगलांबी = 340/170 = 2 मी.",
+  "e_en": "1. Formula: speed = frequency × wavelength. 2. Wavelength = 340/170 = 2 m.",
+  "hook_mr": "शॉर्टकट: v=fλ मधून थेट λ=v/f काढा.",
+  "hook_en": "Shortcut: rearrange v=fλ directly to get λ=v/f."
+ },
+ {
+  "id": "hw3b-067",
+  "s": "science",
+  "t": "chemistry",
+  "d": 3,
+  "q_mr": "4 ग्रॅम NaOH (मोलर वस्तुमान 40) 500 मिली पाण्यात विरघळवले. द्रावणाची मोलॅरिटी (molarity) किती?",
+  "q_en": "4 g of NaOH (molar mass 40) is dissolved in 500 mL of water. Find the molarity of the solution.",
+  "o_mr": [
+   "0.1 M",
+   "0.4 M",
+   "0.2 M",
+   "0.5 M"
+  ],
+  "o_en": [
+   "0.1 M",
+   "0.4 M",
+   "0.2 M",
+   "0.5 M"
+  ],
+  "a": 2,
+  "e_mr": "1. मोल = वस्तुमान/मोलर वस्तुमान = 4/40 = 0.1 मोल. 2. आकारमान = 500 मिली = 0.5 लिटर. 3. मोलॅरिटी = मोल/लिटर = 0.1/0.5 = 0.2 M.",
+  "e_en": "1. Moles = mass/molar mass = 4/40 = 0.1 mol. 2. Volume = 500 mL = 0.5 L. 3. Molarity = moles/litre = 0.1/0.5 = 0.2 M.",
+  "hook_mr": "शॉर्टकट: मिली नेहमी 1000 ने भागून लिटरमध्ये रूपांतरित करा.",
+  "hook_en": "Shortcut: always convert mL to litres by dividing by 1000 before computing molarity."
+ },
+ {
+  "id": "hw3b-068",
+  "s": "science",
+  "t": "chemistry",
+  "d": 2,
+  "q_mr": "44 ग्रॅम कार्बन डायऑक्साइड (CO₂, मोलर वस्तुमान 44) मध्ये किती मोल असतात?",
+  "q_en": "How many moles are present in 44 g of carbon dioxide (CO₂, molar mass 44)?",
+  "o_mr": [
+   "0.5 मोल",
+   "4 मोल",
+   "2 मोल",
+   "1 मोल"
+  ],
+  "o_en": [
+   "0.5 mol",
+   "4 mol",
+   "2 mol",
+   "1 mol"
+  ],
+  "a": 3,
+  "e_mr": "1. मोल = दिलेले वस्तुमान/मोलर वस्तुमान. 2. मोल = 44/44 = 1 मोल.",
+  "e_en": "1. Moles = given mass/molar mass. 2. Moles = 44/44 = 1 mol.",
+  "hook_mr": "शॉर्टकट: दिलेले वस्तुमान व मोलर वस्तुमान सारखेच असल्यास उत्तर नेहमी 1 मोल येते.",
+  "hook_en": "Shortcut: when the given mass equals the molar mass, the answer is always exactly 1 mole."
+ },
+ {
+  "id": "hw3b-069",
+  "s": "science",
+  "t": "chemistry",
+  "d": 3,
+  "q_mr": "एका मूलद्रव्यात 17 प्रोटॉन असून त्याची द्रव्यमानसंख्या (mass number) 35 आहे. त्यात न्यूट्रॉन्सची संख्या किती?",
+  "q_en": "An element has 17 protons and a mass number of 35. Find the number of neutrons.",
+  "o_mr": [
+   "18",
+   "17",
+   "16",
+   "19"
+  ],
+  "o_en": [
+   "18",
+   "17",
+   "16",
+   "19"
+  ],
+  "a": 0,
+  "e_mr": "1. सूत्र: न्यूट्रॉन्स = द्रव्यमानसंख्या − प्रोटॉन संख्या. 2. न्यूट्रॉन्स = 35−17 = 18.",
+  "e_en": "1. Formula: neutrons = mass number − number of protons. 2. Neutrons = 35−17 = 18.",
+  "hook_mr": "शॉर्टकट: द्रव्यमानसंख्येतून अणुक्रमांक (प्रोटॉन संख्या) वजा करा.",
+  "hook_en": "Shortcut: subtract the atomic number (proton count) from the mass number."
+ },
+ {
+  "id": "hw3b-070",
+  "s": "science",
+  "t": "chemistry",
+  "d": 2,
+  "q_mr": "एका द्रावणातील [H⁺] आयनांचे प्रमाण 10⁻³ मोल/लिटर आहे. त्या द्रावणाचा pH किती असेल?",
+  "q_en": "The [H⁺] ion concentration of a solution is 10⁻³ mol/L. Find its pH.",
+  "o_mr": [
+   "2",
+   "3",
+   "4",
+   "11"
+  ],
+  "o_en": [
+   "2",
+   "3",
+   "4",
+   "11"
+  ],
+  "a": 1,
+  "e_mr": "1. सूत्र: pH = −log[H⁺]. 2. pH = −log(10⁻³) = 3.",
+  "e_en": "1. Formula: pH = −log[H⁺]. 2. pH = −log(10⁻³) = 3.",
+  "hook_mr": "शॉर्टकट: 10 च्या घाताचा फक्त ऋण घातांक हाच pH असतो.",
+  "hook_en": "Shortcut: for concentrations that are simple powers of 10, the pH is just the negative of the exponent."
+ },
+ {
+  "id": "hw3b-071",
+  "s": "science",
+  "t": "chemistry",
+  "d": 3,
+  "q_mr": "खालीलपैकी कोणती विक्रिया रेडॉक्स (ऑक्सिडीकरण-क्षपण) विक्रिया आहे?",
+  "q_en": "Which of the following is a redox (oxidation-reduction) reaction?",
+  "o_mr": [
+   "NaOH + HCl → NaCl + H₂O",
+   "CaCO₃ → CaO + CO₂",
+   "Zn + CuSO₄ → ZnSO₄ + Cu",
+   "AgNO₃ + NaCl → AgCl + NaNO₃"
+  ],
+  "o_en": [
+   "NaOH + HCl → NaCl + H₂O",
+   "CaCO₃ → CaO + CO₂",
+   "Zn + CuSO₄ → ZnSO₄ + Cu",
+   "AgNO₃ + NaCl → AgCl + NaNO₃"
+  ],
+  "a": 2,
+  "e_mr": "1. रेडॉक्स विक्रियेत काही अणूंची ऑक्सिडीकरण अवस्था बदलते. 2. Zn+CuSO₄ मध्ये Zn चे ऑक्सिडीकरण (0→+2) व Cu²⁺ चे क्षपण (+2→0) होते. 3. इतर तिन्ही विक्रिया अनुक्रमे उदासिनीकरण, विघटन व अवक्षेपण असून त्यात ऑक्सिडीकरण अवस्था बदलत नाही.",
+  "e_en": "1. In a redox reaction, the oxidation state of some atoms changes. 2. In Zn+CuSO₄, Zn is oxidised (0→+2) while Cu²⁺ is reduced (+2→0). 3. The other three are neutralisation, decomposition and precipitation reactions where oxidation states remain unchanged.",
+  "hook_mr": "शॉर्टकट: धातू विस्थापन विक्रिया (एक धातू दुसऱ्याला त्याच्या क्षारातून बाहेर काढतो) नेहमी रेडॉक्स असते.",
+  "hook_en": "Shortcut: a metal displacement reaction (one metal displaces another from its salt) is always a redox reaction."
+ },
+ {
+  "id": "hw3b-072",
+  "s": "science",
+  "t": "biology",
+  "d": 3,
+  "q_mr": "एका सामान्य व्यक्तीचा नाडीचा वेग प्रति मिनिट 72 ठोके आहे. एका दिवसात हृदय अंदाजे किती वेळा ठोके देते?",
+  "q_en": "A person's pulse rate is 72 beats per minute. Approximately how many times does the heart beat in one day?",
+  "o_mr": [
+   "86400",
+   "144000",
+   "120960",
+   "103680"
+  ],
+  "o_en": [
+   "86400",
+   "144000",
+   "120960",
+   "103680"
+  ],
+  "a": 3,
+  "e_mr": "1. एका तासातील ठोके = 72×60 = 4320. 2. एका दिवसातील तास = 24. 3. एकूण ठोके = 4320×24 = 103680.",
+  "e_en": "1. Beats per hour = 72×60 = 4320. 2. Hours in a day = 24. 3. Total beats = 4320×24 = 103680.",
+  "hook_mr": "शॉर्टकट: प्रति मिनिट ठोके × 1440 (एका दिवसातील मिनिटे) असे थेट गुणा.",
+  "hook_en": "Shortcut: multiply beats-per-minute directly by 1440 (minutes in a day)."
+ },
+ {
+  "id": "hw3b-073",
+  "s": "science",
+  "t": "biology",
+  "d": 3,
+  "q_mr": "मानवी शरीरातील एका सर्वसाधारण (somatic) पेशीत गुणसूत्रांच्या (chromosomes) किती जोड्या असतात?",
+  "q_en": "How many pairs of chromosomes are present in a normal human somatic cell?",
+  "o_mr": [
+   "23",
+   "22",
+   "21",
+   "24"
+  ],
+  "o_en": [
+   "23",
+   "22",
+   "21",
+   "24"
+  ],
+  "a": 0,
+  "e_mr": "1. मानवी सर्वसाधारण पेशीत एकूण 46 गुणसूत्रे असतात. 2. ती 23 जोड्यांमध्ये मांडलेली असतात (22 जोड्या स्वयंसूत्रे + 1 जोडी लिंगसूत्रे).",
+  "e_en": "1. A normal human somatic cell has a total of 46 chromosomes. 2. These are arranged in 23 pairs (22 pairs of autosomes + 1 pair of sex chromosomes).",
+  "hook_mr": "शॉर्टकट: एकूण 46 गुणसूत्रे लक्षात ठेवा आणि निम्मे करून जोड्यांची संख्या काढा.",
+  "hook_en": "Shortcut: remember the total of 46 chromosomes and halve it to get the number of pairs."
+ },
+ {
+  "id": "hw3b-074",
+  "s": "science",
+  "t": "biology",
+  "d": 3,
+  "q_mr": "खालीलपैकी कोणते जीवनसत्त्व स्निग्धांशात विरघळणारे (fat-soluble) आहे?",
+  "q_en": "Which of the following vitamins is fat-soluble?",
+  "o_mr": [
+   "व्हिटॅमिन B1",
+   "व्हिटॅमिन K",
+   "व्हिटॅमिन C",
+   "व्हिटॅमिन B12"
+  ],
+  "o_en": [
+   "Vitamin B1",
+   "Vitamin K",
+   "Vitamin C",
+   "Vitamin B12"
+  ],
+  "a": 1,
+  "e_mr": "1. स्निग्धांशात विरघळणारी जीवनसत्त्वे: A, D, E, K. 2. B व C गटातील जीवनसत्त्वे पाण्यात विरघळणारी असतात. 3. म्हणून व्हिटॅमिन K हे स्निग्धांशात विरघळणारे आहे.",
+  "e_en": "1. Fat-soluble vitamins are: A, D, E, K. 2. Vitamins of the B and C groups are water-soluble. 3. Hence Vitamin K is fat-soluble.",
+  "hook_mr": "शॉर्टकट: 'ADEK' हे संक्षिप्त रूप स्निग्धांशात विरघळणाऱ्या जीवनसत्त्वांसाठी लक्षात ठेवा.",
+  "hook_en": "Shortcut: remember the mnemonic 'ADEK' for the fat-soluble vitamins."
+ },
+ {
+  "id": "hw3b-075",
+  "s": "science",
+  "t": "biology",
+  "d": 3,
+  "q_mr": "एका आनुवंशिक विकाराच्या बाबतीत दोन्ही पालक वाहक (Aa, विषमयुग्मी) आहेत. त्यांच्या अपत्यास तो विकार (aa, समयुग्मी अप्रभावी) होण्याची संभाव्यता किती?",
+  "q_en": "For a genetic disorder, both parents are carriers (Aa, heterozygous). What is the probability that their child will be affected (aa, homozygous recessive)?",
+  "o_mr": [
+   "0%",
+   "50%",
+   "25%",
+   "75%"
+  ],
+  "o_en": [
+   "0%",
+   "50%",
+   "25%",
+   "75%"
+  ],
+  "a": 2,
+  "e_mr": "1. Aa × Aa या संकरणातून पंनेट चौकोनानुसार संतती: 1 AA : 2 Aa : 1 aa. 2. म्हणजे 4 पैकी 1 संतती aa (प्रभावित) असते. 3. संभाव्यता = 1/4 = 25%.",
+  "e_en": "1. In an Aa × Aa cross, the Punnett square gives offspring ratio 1 AA : 2 Aa : 1 aa. 2. So 1 out of 4 offspring is aa (affected). 3. Probability = 1/4 = 25%.",
+  "hook_mr": "शॉर्टकट: दोन विषमयुग्मी (Aa×Aa) पालकांपासून नेहमी 1:2:1 हे प्रमाण येते, त्यातील 1/4 अप्रभावी असते.",
+  "hook_en": "Shortcut: an Aa×Aa cross always gives the classic 1:2:1 ratio, of which 1/4 is homozygous recessive."
+ },
+ {
+  "id": "hw3b-076",
+  "s": "science",
+  "t": "biology",
+  "d": 2,
+  "q_mr": "कोणता रक्तगट 'सार्वत्रिक दाता' (universal donor) मानला जातो?",
+  "q_en": "Which blood group is considered the 'universal donor'?",
+  "o_mr": [
+   "A पॉझिटिव्ह",
+   "B निगेटिव्ह",
+   "AB पॉझिटिव्ह",
+   "O निगेटिव्ह"
+  ],
+  "o_en": [
+   "A positive",
+   "B negative",
+   "AB positive",
+   "O negative"
+  ],
+  "a": 3,
+  "e_mr": "1. O निगेटिव्ह रक्तपेशींवर A व B प्रतिजन (antigens) आणि Rh घटक नसतो. 2. त्यामुळे ते कोणत्याही रक्तगटाच्या व्यक्तीला सुरक्षितपणे देता येते. 3. म्हणून O निगेटिव्ह हा सार्वत्रिक दाता आहे.",
+  "e_en": "1. O negative blood cells lack A and B antigens as well as the Rh factor. 2. Hence it can be safely given to a person of any blood group. 3. Therefore O negative is the universal donor.",
+  "hook_mr": "शॉर्टकट: 'प्रतिजन नाही' असा रक्तगट नेहमी सार्वत्रिक दाता असतो.",
+  "hook_en": "Shortcut: the blood group with no antigens at all is always the universal donor."
+ },
+ {
+  "id": "hw3b-077",
+  "s": "science",
+  "t": "health",
+  "d": 3,
+  "q_mr": "रक्तदाब मोजताना साधारणपणे '120/80' असे सांगितले जाते. यातील 120 व 80 हे अनुक्रमे कशाचे मापन आहे?",
+  "q_en": "Blood pressure is generally expressed as '120/80'. What do the values 120 and 80 respectively measure?",
+  "o_mr": [
+   "आकुंचक (systolic) व शिथिलन (diastolic) दाब",
+   "नाडीचा वेग व श्वासोच्छ्वास दर",
+   "शरीराचे तापमान व नाडीचा वेग",
+   "हृदयाचे वजन व आकार"
+  ],
+  "o_en": [
+   "Systolic and diastolic pressure",
+   "Pulse rate and breathing rate",
+   "Body temperature and pulse rate",
+   "Weight and size of the heart"
+  ],
+  "a": 0,
+  "e_mr": "1. हृदय आकुंचन पावताना रक्तवाहिन्यांवर पडणारा जास्तीत जास्त दाब म्हणजे आकुंचक (systolic) दाब — 120. 2. हृदय शिथिल असताना असणारा किमान दाब म्हणजे शिथिलन (diastolic) दाब — 80.",
+  "e_en": "1. The maximum pressure exerted when the heart contracts is the systolic pressure — 120. 2. The minimum pressure when the heart relaxes is the diastolic pressure — 80.",
+  "hook_mr": "शॉर्टकट: मोठा आकडा नेहमी आकुंचक (systolic) आणि लहान आकडा शिथिलन (diastolic) असतो.",
+  "hook_en": "Shortcut: the larger number is always systolic and the smaller number is always diastolic."
+ },
+ {
+  "id": "hw3b-078",
+  "s": "science",
+  "t": "health",
+  "d": 2,
+  "q_mr": "एका व्यक्तीचे वजन 65 किलो आणि उंची 1.7 मीटर आहे. तिचा बॉडी मास इंडेक्स (BMI = वजन/उंची²) अंदाजे किती असेल?",
+  "q_en": "A person weighs 65 kg and is 1.7 m tall. Find their approximate Body Mass Index (BMI = weight/height²).",
+  "o_mr": [
+   "18.5",
+   "22.5",
+   "20.0",
+   "25.0"
+  ],
+  "o_en": [
+   "18.5",
+   "22.5",
+   "20.0",
+   "25.0"
+  ],
+  "a": 1,
+  "e_mr": "1. उंचीचा वर्ग = 1.7² = 2.89. 2. BMI = 65/2.89 ≈ 22.5.",
+  "e_en": "1. Height squared = 1.7² = 2.89. 2. BMI = 65/2.89 ≈ 22.5.",
+  "hook_mr": "शॉर्टकट: उंचीचा वर्ग आधी काढून मगच वजनाला भागा.",
+  "hook_en": "Shortcut: square the height first, then divide the weight by that value."
+ },
+ {
+  "id": "hw3b-079",
+  "s": "science",
+  "t": "sci_tech",
+  "d": 3,
+  "q_mr": "एका किरणोत्सर्गी पदार्थाचे अर्धायुष्य (half-life) 10 दिवस आहे. 30 दिवसांनंतर त्या पदार्थाचा किती अंश शिल्लक राहील?",
+  "q_en": "A radioactive substance has a half-life of 10 days. What fraction of it will remain after 30 days?",
+  "o_mr": [
+   "1/2",
+   "1/4",
+   "1/8",
+   "1/16"
+  ],
+  "o_en": [
+   "1/2",
+   "1/4",
+   "1/8",
+   "1/16"
+  ],
+  "a": 2,
+  "e_mr": "1. 30 दिवसांत अर्धायुष्ये = 30/10 = 3. 2. शिल्लक अंश = (1/2)³ = 1/8.",
+  "e_en": "1. Number of half-lives in 30 days = 30/10 = 3. 2. Remaining fraction = (1/2)³ = 1/8.",
+  "hook_mr": "शॉर्टकट: एकूण काळाला अर्धायुष्याने भागून (1/2) चा तितका घात घ्या.",
+  "hook_en": "Shortcut: divide total time by the half-life to get n, then compute (1/2)^n."
+ },
+ {
+  "id": "hw3b-080",
+  "s": "science",
+  "t": "sci_tech",
+  "d": 2,
+  "q_mr": "वातावरणातील कोणता थर सूर्याच्या हानिकारक अतिनील (UV) किरणांपासून पृथ्वीचे रक्षण करतो?",
+  "q_en": "Which layer of the atmosphere protects the Earth from the Sun's harmful ultraviolet (UV) rays?",
+  "o_mr": [
+   "आयनांबर (Ionosphere)",
+   "बहिर्मंडल (Exosphere)",
+   "क्षोभावरण (Troposphere)",
+   "ओझोन थर (Ozone layer)"
+  ],
+  "o_en": [
+   "Ionosphere",
+   "Exosphere",
+   "Troposphere",
+   "Ozone layer (Stratosphere)"
+  ],
+  "a": 3,
+  "e_mr": "1. ओझोन (O₃) रेणू स्थितांबर (stratosphere) मध्ये केंद्रित असतात. 2. हा थर सूर्याच्या बहुतांश अतिनील किरणांचे शोषण करून पृथ्वीवरील सजीवांचे संरक्षण करतो.",
+  "e_en": "1. Ozone (O₃) molecules are concentrated in the stratosphere. 2. This layer absorbs most of the Sun's harmful UV radiation, protecting life on Earth.",
+  "hook_mr": "शॉर्टकट: 'ओझोन थर' नेहमी अतिनील किरण-संरक्षणाशी जोडलेला असतो हे लक्षात ठेवा.",
+  "hook_en": "Shortcut: always associate the 'ozone layer' with UV protection in such questions."
+ },
+ {
+  "id": "hw3b-081",
+  "s": "marathi",
+  "t": "sandhi",
+  "d": 3,
+  "q_mr": "'महोदय' या शब्दातील संधीचा प्रकार ओळखा.",
+  "q_en": "Identify the type of sandhi in the word 'महोदय'.",
+  "o_mr": [
+   "स्वरसंधी",
+   "व्यंजनसंधी",
+   "विसर्गसंधी",
+   "कोणतीही संधी नाही"
+  ],
+  "o_en": [
+   "Swarsandhi (vowel)",
+   "Vyanjansandhi (consonant)",
+   "Visargasandhi",
+   "Not a sandhi"
+  ],
+  "a": 0,
+  "e_mr": "1. फोड करा: महा + उदय. 2. 'आ' आणि 'उ' हे दोन स्वर एकत्र येऊन 'ओ' तयार होतो (आ+उ=ओ, गुण संधी). 3. दोन स्वरांच्या मीलनाने संधी झाल्याने ती स्वरसंधी आहे.",
+  "e_en": "1. Split: महा + उदय. 2. The vowels 'आ' and 'उ' combine to form 'ओ' (आ+उ=ओ, a guna sandhi). 3. Since two vowels combine, this is a swarsandhi (vowel sandhi).",
+  "hook_mr": "शॉर्टकट: संधीच्या जागी दोन्ही बाजूला स्वर असतील तर ती नेहमी स्वरसंधी असते.",
+  "hook_en": "Shortcut: if vowels sit on both sides of the join, it is always a vowel (swar) sandhi."
+ },
+ {
+  "id": "hw3b-082",
+  "s": "marathi",
+  "t": "sandhi",
+  "d": 2,
+  "q_mr": "'सज्जन' या शब्दाची योग्य संधी-विग्रह (फोड) कोणती?",
+  "q_en": "Which is the correct sandhi-split of the word 'सज्जन'?",
+  "o_mr": [
+   "सद् + जन",
+   "सत् + जन",
+   "स + अज्जन",
+   "सज् + अन"
+  ],
+  "o_en": [
+   "सद् + जन",
+   "सत् + जन",
+   "स + अज्जन",
+   "सज् + अन"
+  ],
+  "a": 1,
+  "e_mr": "1. 'सत्' या शब्दातील अंत्य 'त्' नंतर 'ज' हे व्यंजन आल्याने 'त्' चा 'ज्' होतो (सत्+जन→सज्जन). 2. ही व्यंजन-व्यंजन मीलनाने होणारी व्यंजनसंधी आहे. 3. म्हणून योग्य फोड 'सत् + जन' ही आहे.",
+  "e_en": "1. The final 't' of 'सत्' changes to 'ज्' before the consonant 'ज' (सत्+जन→सज्जन). 2. This is a consonant sandhi (vyanjansandhi) formed by two consonants meeting. 3. Hence the correct split is 'सत् + जन'.",
+  "hook_mr": "शॉर्टकट: 'सत्' हा उपसर्ग जोडशब्दांत आढळल्यास पुढील व्यंजनाशी जुळणारा बदल तपासा.",
+  "hook_en": "Shortcut: whenever the prefix 'सत्' appears in a compound, check how its final consonant assimilates with what follows."
+ },
+ {
+  "id": "hw3b-083",
+  "s": "marathi",
+  "t": "samas",
+  "d": 3,
+  "q_mr": "'दशानन' (रावण) या शब्दातील समास ओळखा.",
+  "q_en": "Identify the samas (compound) in the word 'दशानन' (Ravana).",
+  "o_mr": [
+   "द्वंद्व समास",
+   "कर्मधारय समास",
+   "बहुव्रीही समास",
+   "अव्ययीभाव समास"
+  ],
+  "o_en": [
+   "Dwandwa samas",
+   "Karmadharay samas",
+   "Bahuvrihi samas",
+   "Avyayibhav samas"
+  ],
+  "a": 2,
+  "e_mr": "1. 'दशानन' म्हणजे 'दहा आहेत आनने (तोंडे) ज्याला असा तो' — म्हणजे रावण. 2. यात दोन्ही पदांपेक्षा तिसऱ्याच (रावण) अर्थाकडे निर्देश होतो. 3. अशा प्रकारे इतर अर्थाला प्राधान्य देणारा समास बहुव्रीही समास असतो.",
+  "e_en": "1. 'दशानन' means 'one who has ten (dasha) faces (anan)' — referring to Ravana. 2. Neither of the two words itself is the main meaning; the compound points to a third entity (Ravana). 3. Such a compound, where an external entity is denoted, is a Bahuvrihi samas.",
+  "hook_mr": "शॉर्टकट: समासाचा अर्थ दोन्ही शब्दांव्यतिरिक्त तिसऱ्याच व्यक्ती/वस्तूकडे निर्देश करत असेल तर तो बहुव्रीही समास असतो.",
+  "hook_en": "Shortcut: if the compound's meaning points to a third entity rather than either word itself, it is Bahuvrihi samas."
+ },
+ {
+  "id": "hw3b-084",
+  "s": "marathi",
+  "t": "samas",
+  "d": 3,
+  "q_mr": "'प्रतिदिन' या शब्दातील समास ओळखा.",
+  "q_en": "Identify the samas (compound) in the word 'प्रतिदिन'.",
+  "o_mr": [
+   "द्वंद्व समास",
+   "बहुव्रीही समास",
+   "तत्पुरुष समास",
+   "अव्ययीभाव समास"
+  ],
+  "o_en": [
+   "Dwandwa samas",
+   "Bahuvrihi samas",
+   "Tatpurush samas",
+   "Avyayibhav samas"
+  ],
+  "a": 3,
+  "e_mr": "1. 'प्रतिदिन' म्हणजे 'प्रत्येक दिवशी' — हा संपूर्ण समास एका अव्ययासारखा (क्रियाविशेषण) वापरला जातो. 2. ज्या समासात पहिले पद उपसर्गासारखे अव्यय असते व संपूर्ण शब्द अव्यय बनतो, तो अव्ययीभाव समास असतो.",
+  "e_en": "1. 'प्रतिदिन' means 'every day' — the whole compound functions like an indeclinable adverb. 2. When the first word is an indeclinable prefix-like element and the whole compound behaves as an indeclinable, it is an Avyayibhav samas.",
+  "hook_mr": "शॉर्टकट: 'प्रति-', 'यथा-', 'आ-' असे उपसर्गयुक्त शब्द बहुधा अव्ययीभाव समास असतात.",
+  "hook_en": "Shortcut: compounds beginning with prefixes like 'प्रति-', 'यथा-', 'आ-' are usually Avyayibhav samas."
+ },
+ {
+  "id": "hw3b-085",
+  "s": "marathi",
+  "t": "vibhakti",
+  "d": 3,
+  "q_mr": "'मुलांसाठी खाऊ आणा' या वाक्यातील 'मुलांसाठी' या शब्दाची विभक्ती ओळखा.",
+  "q_en": "Identify the vibhakti (case) of 'मुलांसाठी' in the sentence 'मुलांसाठी खाऊ आणा' (Bring snacks for the children).",
+  "o_mr": [
+   "चतुर्थी",
+   "तृतीया",
+   "पंचमी",
+   "सप्तमी"
+  ],
+  "o_en": [
+   "Chaturthi (dative)",
+   "Tritiya (instrumental)",
+   "Panchami (ablative)",
+   "Saptami (locative)"
+  ],
+  "a": 0,
+  "e_mr": "1. 'साठी' हा प्रत्यय 'च्यासाठी/करिता' या अर्थाने येऊन 'कोणासाठी' हा प्रश्न सोडवतो. 2. दान, फायदा किंवा उद्देश दर्शवणारी विभक्ती चतुर्थी असते. 3. म्हणून 'मुलांसाठी' ही चतुर्थी विभक्ती आहे.",
+  "e_en": "1. The suffix 'साठी' (meaning 'for') answers the question 'for whom'. 2. The case that expresses giving, benefit, or purpose is the Chaturthi (dative) vibhakti. 3. Hence 'मुलांसाठी' is in the Chaturthi vibhakti.",
+  "hook_mr": "शॉर्टकट: 'साठी', 'स', 'ला' हे प्रत्यय आले की बहुधा चतुर्थी विभक्ती असते.",
+  "hook_en": "Shortcut: suffixes like 'साठी', 'स', 'ला' usually signal the Chaturthi (dative) vibhakti."
+ },
+ {
+  "id": "hw3b-086",
+  "s": "marathi",
+  "t": "vibhakti",
+  "d": 2,
+  "q_mr": "'टेबलावर पुस्तक आहे' या वाक्यातील 'टेबलावर' या शब्दाची विभक्ती ओळखा.",
+  "q_en": "Identify the vibhakti (case) of 'टेबलावर' in the sentence 'टेबलावर पुस्तक आहे' (The book is on the table).",
+  "o_mr": [
+   "षष्ठी",
+   "सप्तमी",
+   "तृतीया",
+   "द्वितीया"
+  ],
+  "o_en": [
+   "Shashthi (genitive)",
+   "Saptami (locative)",
+   "Tritiya (instrumental)",
+   "Dwitiya (accusative)"
+  ],
+  "a": 1,
+  "e_mr": "1. 'वर' हा प्रत्यय ठिकाण किंवा आधार दर्शवतो ('कोठे' या प्रश्नाचे उत्तर). 2. ठिकाण/आधार दर्शवणारी विभक्ती सप्तमी असते. 3. म्हणून 'टेबलावर' ही सप्तमी विभक्ती आहे.",
+  "e_en": "1. The suffix 'वर' indicates location or support (answers the question 'where'). 2. The case indicating location/support is Saptami (locative). 3. Hence 'टेबलावर' is in the Saptami vibhakti.",
+  "hook_mr": "शॉर्टकट: 'त', 'ात', 'वर' हे प्रत्यय आले की बहुधा सप्तमी विभक्ती असते.",
+  "hook_en": "Shortcut: suffixes like 'त', 'ात', 'वर' usually signal the Saptami (locative) vibhakti."
+ },
+ {
+  "id": "hw3b-087",
+  "s": "marathi",
+  "t": "kal",
+  "d": 3,
+  "q_mr": "'तो अभ्यास करत होता' या वाक्याचा काळ ओळखा.",
+  "q_en": "Identify the tense of the sentence 'तो अभ्यास करत होता' (He was studying).",
+  "o_mr": [
+   "साधा भूतकाळ",
+   "पूर्ण भूतकाळ",
+   "अपूर्ण भूतकाळ",
+   "रीत्यर्थक भूतकाळ"
+  ],
+  "o_en": [
+   "Simple past",
+   "Perfect past",
+   "Imperfect past (continuous)",
+   "Habitual past"
+  ],
+  "a": 2,
+  "e_mr": "1. या वाक्यात भूतकाळात क्रिया चालू असल्याचे (सुरू असलेली, पूर्ण न झालेली) दर्शवले आहे. 2. 'करत होता' हे रूप क्रिया भूतकाळात चालू होती हे दाखवते. 3. म्हणून हा अपूर्ण भूतकाळ (past continuous) आहे.",
+  "e_en": "1. The sentence shows an action that was ongoing (not completed) in the past. 2. The form 'करत होता' shows the action was in progress in the past. 3. Hence this is the imperfect/continuous past tense.",
+  "hook_mr": "शॉर्टकट: क्रियापदाला '-त होता/होती/होते' असे रूप जोडलेले दिसले की तो अपूर्ण भूतकाळ ओळखा.",
+  "hook_en": "Shortcut: whenever the verb ends in '-त होता/होती/होते', recognise it as the imperfect (continuous) past tense."
+ },
+ {
+  "id": "hw3b-088",
+  "s": "marathi",
+  "t": "kal",
+  "d": 3,
+  "q_mr": "'पाऊस पडून गेला' या वाक्याचा काळ ओळखा.",
+  "q_en": "Identify the tense of the sentence 'पाऊस पडून गेला' (The rain had fallen/stopped).",
+  "o_mr": [
+   "साधा भूतकाळ",
+   "अपूर्ण भूतकाळ",
+   "साधा वर्तमानकाळ",
+   "पूर्ण भूतकाळ"
+  ],
+  "o_en": [
+   "Simple past",
+   "Imperfect past",
+   "Simple present",
+   "Perfect past"
+  ],
+  "a": 3,
+  "e_mr": "1. 'पडून गेला' या रूपात क्रिया पूर्णपणे संपल्याचे व त्याचा परिणाम स्पष्ट दिसतो. 2. क्रिया पूर्ण होऊन संपलेली दाखवणारा काळ पूर्ण भूतकाळ असतो.",
+  "e_en": "1. The form 'पडून गेला' shows the action was fully completed with a clear resulting effect. 2. A tense showing a fully completed past action is the perfect past tense.",
+  "hook_mr": "शॉर्टकट: 'ऊन गेला/गेली/गेले' असे संयुक्त क्रियारूप आले की तो पूर्ण भूतकाळ ओळखा.",
+  "hook_en": "Shortcut: a compound verb form like '-ऊन गेला/गेली/गेले' signals the perfect past tense."
+ },
+ {
+  "id": "hw3b-089",
+  "s": "marathi",
+  "t": "prayog",
+  "d": 3,
+  "q_mr": "'शेतकऱ्याने नांगर धरला' या वाक्यातील प्रयोग ओळखा.",
+  "q_en": "Identify the prayog (voice) in the sentence 'शेतकऱ्याने नांगर धरला' (The farmer held the plough).",
+  "o_mr": [
+   "कर्मणी प्रयोग",
+   "कर्तरी प्रयोग",
+   "भावे प्रयोग",
+   "समापन कर्मणी प्रयोग"
+  ],
+  "o_en": [
+   "Karmani prayog (passive)",
+   "Kartari prayog (active)",
+   "Bhave prayog (impersonal)",
+   "Samapan Karmani prayog"
+  ],
+  "a": 0,
+  "e_mr": "1. कर्ता 'शेतकऱ्याने' याला तृतीया विभक्तीचा प्रत्यय 'ने' लागला आहे. 2. क्रियापद 'धरला' हे कर्म 'नांगर' (पुल्लिंगी, एकवचनी) यानुसार बदलते, कर्त्यानुसार नाही. 3. कर्त्याला प्रत्यय लागून क्रियापद कर्मानुसार चालणारा प्रयोग कर्मणी प्रयोग असतो.",
+  "e_en": "1. The subject 'शेतकऱ्याने' carries the Tritiya (instrumental) suffix 'ने'. 2. The verb 'धरला' agrees with the object 'नांगर' (masculine, singular), not with the subject. 3. When the subject takes a suffix and the verb agrees with the object, it is Karmani prayog (passive voice).",
+  "hook_mr": "शॉर्टकट: कर्त्याला 'ने' प्रत्यय आणि क्रियापद कर्माप्रमाणे बदलले की तो कर्मणी प्रयोग ओळखा.",
+  "hook_en": "Shortcut: subject with 'ने' suffix plus verb agreeing with the object signals Karmani (passive) prayog."
+ },
+ {
+  "id": "hw3b-090",
+  "s": "marathi",
+  "t": "prayog",
+  "d": 3,
+  "q_mr": "'मुलाला हसू आले' या वाक्यातील प्रयोग ओळखा.",
+  "q_en": "Identify the prayog (voice) in the sentence 'मुलाला हसू आले' (The boy felt like laughing).",
+  "o_mr": [
+   "कर्तरी प्रयोग",
+   "भावे प्रयोग",
+   "कर्मणी प्रयोग",
+   "अकर्मक कर्तरी प्रयोग"
+  ],
+  "o_en": [
+   "Kartari prayog (active)",
+   "Bhave prayog (impersonal)",
+   "Karmani prayog (passive)",
+   "Intransitive Kartari prayog"
+  ],
+  "a": 1,
+  "e_mr": "1. या वाक्यात कर्ता 'मुलाला' यास द्वितीया/चतुर्थीसदृश प्रत्यय लागलेला आहे. 2. क्रियापद 'आले' हे ना कर्त्याच्या लिंग-वचनाप्रमाणे, ना कर्माच्या लिंग-वचनाप्रमाणे बदलते (ते नेहमी तृतीयपुरुषी नपुंसकलिंगी एकवचनी असते). 3. कर्ता व कर्म दोघांहूनही स्वतंत्र, क्रियापद नेहमी एकाच रूपात राहणारा प्रयोग भावे प्रयोग असतो.",
+  "e_en": "1. Here the subject 'मुलाला' takes an oblique (dative-like) suffix. 2. The verb 'आले' does not agree in gender/number with either the subject or an object (it stays third-person, neuter, singular). 3. A construction where the verb is independent of both subject and object, always in a fixed form, is Bhave prayog (impersonal voice).",
+  "hook_mr": "शॉर्टकट: क्रियापद नेहमी नपुंसकलिंगी, तृतीयपुरुषी, एकवचनी राहत असेल तर तो भावे प्रयोग ओळखा.",
+  "hook_en": "Shortcut: if the verb always stays neuter, third-person, singular regardless of subject or object, it is Bhave prayog."
+ },
+ {
+  "id": "hw3b-091",
+  "s": "marathi",
+  "t": "shabdjati",
+  "d": 3,
+  "q_mr": "'जो अभ्यास करतो, तो यशस्वी होतो' या वाक्यातील 'जो-तो' या सर्वनामांचा प्रकार ओळखा.",
+  "q_en": "Identify the type of the pronouns 'जो-तो' in the sentence 'जो अभ्यास करतो, तो यशस्वी होतो' (Whoever studies, he succeeds).",
+  "o_mr": [
+   "पुरुषवाचक सर्वनाम",
+   "प्रश्नार्थक सर्वनाम",
+   "संबंधी सर्वनाम",
+   "आत्मवाचक सर्वनाम"
+  ],
+  "o_en": [
+   "Personal pronoun",
+   "Interrogative pronoun",
+   "Relative pronoun",
+   "Reflexive pronoun"
+  ],
+  "a": 2,
+  "e_mr": "1. 'जो' हे सर्वनाम पुढील वाक्यातील 'तो' शी संबंध जोडते, म्हणजे दोन वाक्यांना जोडणारे कार्य करते. 2. जे सर्वनाम एका वाक्याचा संबंध दुसऱ्या वाक्याशी जोडते, त्याला संबंधी सर्वनाम म्हणतात.",
+  "e_en": "1. The pronoun 'जो' establishes a link with 'तो' in the following clause, connecting the two clauses. 2. A pronoun that connects one clause to another in this way is called a relative pronoun.",
+  "hook_mr": "शॉर्टकट: 'जो-तो', 'जी-ती', 'जे-ते' अशा जोड्या नेहमी संबंधी सर्वनामे असतात.",
+  "hook_en": "Shortcut: paired forms like 'जो-तो', 'जी-ती', 'जे-ते' are always relative pronouns."
+ },
+ {
+  "id": "hw3b-092",
+  "s": "marathi",
+  "t": "shabdjati",
+  "d": 2,
+  "q_mr": "'घराजवळ बाग आहे' या वाक्यातील 'जवळ' या शब्दाची शब्दजाती ओळखा.",
+  "q_en": "Identify the part of speech of 'जवळ' in the sentence 'घराजवळ बाग आहे' (There is a garden near the house).",
+  "o_mr": [
+   "नाम",
+   "क्रियाविशेषण अव्यय",
+   "उभयान्वयी अव्यय",
+   "शब्दयोगी अव्यय"
+  ],
+  "o_en": [
+   "Noun",
+   "Adverb",
+   "Conjunction",
+   "Postposition (Shabdayogi avyay)"
+  ],
+  "a": 3,
+  "e_mr": "1. 'जवळ' हा शब्द 'घरा' या नामाला जोडून त्याचा संबंध पुढील शब्दाशी (बाग) दर्शवतो. 2. जे अविकारी शब्द नामाला किंवा सर्वनामाला जोडून एखादा संबंध दाखवतात, त्यांना शब्दयोगी अव्यय म्हणतात.",
+  "e_en": "1. 'जवळ' attaches to the noun 'घरा' and shows its relation to what follows (the garden). 2. Indeclinable words that attach to a noun/pronoun to show such a relation are called postpositions (Shabdayogi avyay).",
+  "hook_mr": "शॉर्टकट: 'जवळ', 'खाली', 'साठी', 'शिवाय' असे शब्द नामाला जोडून येतात तेव्हा ते शब्दयोगी अव्यय असतात.",
+  "hook_en": "Shortcut: words like 'जवळ', 'खाली', 'साठी', 'शिवाय' attached right after a noun are postpositions (Shabdayogi avyay)."
+ },
+ {
+  "id": "hw3b-093",
+  "s": "marathi",
+  "t": "alankar",
+  "d": 3,
+  "q_mr": "'भुकेने आतडी पिळवटून निघाली' या वाक्यातील अलंकार ओळखा.",
+  "q_en": "Identify the figure of speech (alankar) in 'भुकेने आतडी पिळवटून निघाली' (Hunger wrung out the intestines).",
+  "o_mr": [
+   "अतिशयोक्ती अलंकार",
+   "उत्प्रेक्षा अलंकार",
+   "उपमा अलंकार",
+   "दृष्टान्त अलंकार"
+  ],
+  "o_en": [
+   "Atishayokti (hyperbole)",
+   "Utpreksha",
+   "Upama (simile)",
+   "Drishtant"
+  ],
+  "a": 0,
+  "e_mr": "1. या वाक्यात भुकेचे वर्णन प्रत्यक्षापेक्षा खूप जास्त वाढवून केले आहे (आतडी खरोखर पिळवटत नाहीत). 2. जेव्हा एखाद्या गोष्टीचे वर्णन वास्तवापेक्षा खूप फुगवून/अतिशयोक्तीने केले जाते, तेव्हा तो अतिशयोक्ती अलंकार असतो.",
+  "e_en": "1. Here hunger is described in a hugely exaggerated way (intestines don't literally get wrung out). 2. When a description is exaggerated far beyond reality, it is called Atishayokti alankar (hyperbole).",
+  "hook_mr": "शॉर्टकट: वर्णन वास्तवापेक्षा खूपच फुगवलेले वाटल्यास तो अतिशयोक्ती अलंकार असतो.",
+  "hook_en": "Shortcut: when a description feels wildly exaggerated beyond reality, it is Atishayokti (hyperbole)."
+ },
+ {
+  "id": "hw3b-094",
+  "s": "marathi",
+  "t": "alankar",
+  "d": 2,
+  "q_mr": "'तुझे सौंदर्य चंद्राच्याही पुढे जाते' या वाक्यातील अलंकार ओळखा.",
+  "q_en": "Identify the figure of speech (alankar) in 'तुझे सौंदर्य चंद्राच्याही पुढे जाते' (Your beauty surpasses even the moon).",
+  "o_mr": [
+   "उपमा अलंकार",
+   "व्यतिरेक अलंकार",
+   "रूपक अलंकार",
+   "अनुप्रास अलंकार"
+  ],
+  "o_en": [
+   "Upama (simile)",
+   "Vyatirek",
+   "Rupak (metaphor)",
+   "Anupras (alliteration)"
+  ],
+  "a": 1,
+  "e_mr": "1. सर्वसाधारण उपमेत उपमेय (सौंदर्य) व उपमान (चंद्र) समान मानले जातात. 2. इथे मात्र उपमेयाला (सौंदर्याला) उपमानापेक्षा (चंद्रापेक्षा) श्रेष्ठ ठरवले आहे. 3. उपमेयाला उपमानापेक्षा जास्त सरस दाखवणारा अलंकार व्यतिरेक अलंकार असतो.",
+  "e_en": "1. In an ordinary simile, the subject (beauty) and the standard of comparison (moon) are treated as equal. 2. Here, however, the subject (beauty) is shown as superior to the standard (moon). 3. A figure of speech that shows the subject surpassing the standard of comparison is Vyatirek alankar.",
+  "hook_mr": "शॉर्टकट: उपमेय हे उपमानापेक्षा 'श्रेष्ठ/जास्त' असे दाखवले की तो व्यतिरेक अलंकार ओळखा.",
+  "hook_en": "Shortcut: when the subject is shown as superior to the object of comparison (not just equal), recognise Vyatirek alankar."
+ },
+ {
+  "id": "hw3b-095",
+  "s": "marathi",
+  "t": "samanarthi",
+  "d": 3,
+  "q_mr": "'रात्र' या शब्दाला समानार्थी शब्द कोणता?",
+  "q_en": "Which word is a synonym of 'रात्र' (night)?",
+  "o_mr": [
+   "संध्या",
+   "उषा",
+   "निशा",
+   "प्रभा"
+  ],
+  "o_en": [
+   "Sandhya",
+   "Usha",
+   "Nisha",
+   "Prabha"
+  ],
+  "a": 2,
+  "e_mr": "1. 'निशा' या शब्दाचा अर्थ 'रात्र' असाच होतो, म्हणून तो समानार्थी शब्द आहे. 2. 'उषा' म्हणजे पहाट, 'संध्या' म्हणजे सायंकाळ आणि 'प्रभा' म्हणजे तेज/प्रकाश — हे वेगळ्या वेळेचे/अर्थाचे शब्द आहेत.",
+  "e_en": "1. 'निशा' directly means 'night', so it is the correct synonym. 2. 'उषा' means dawn, 'संध्या' means evening, and 'प्रभा' means light/radiance — these refer to different times or meanings.",
+  "hook_mr": "शॉर्टकट: वेळ दर्शवणाऱ्या शब्दांत रात्र, पहाट व सायंकाळ यांच्यातील फरक नीट लक्षात ठेवा.",
+  "hook_en": "Shortcut: keep the distinction clear between words for night, dawn and evening, which often look similar."
+ },
+ {
+  "id": "hw3b-096",
+  "s": "marathi",
+  "t": "samanarthi",
+  "d": 2,
+  "q_mr": "'उदार' या शब्दाचा विरुद्धार्थी शब्द कोणता?",
+  "q_en": "Which word is the antonym of 'उदार' (generous)?",
+  "o_mr": [
+   "सदय",
+   "दानशूर",
+   "परोपकारी",
+   "कंजूष"
+  ],
+  "o_en": [
+   "Sadaya (kind)",
+   "Danshur (charitable)",
+   "Paropkari (benevolent)",
+   "Kanjush (miserly)"
+  ],
+  "a": 3,
+  "e_mr": "1. 'उदार' म्हणजे मनाने मोठा, दानशूर, खुल्या हाताने देणारा. 2. याच्या अगदी विरुद्ध अर्थाचा शब्द म्हणजे 'कंजूष' (कृपण, हात आखडता घेणारा). 3. इतर तिन्ही शब्द 'उदार'शी जवळचेच (समानार्थी) आहेत.",
+  "e_en": "1. 'उदार' means large-hearted, generous, giving freely. 2. Its exact opposite is 'कंजूष' (miserly, stingy). 3. The other three words are close synonyms of 'उदार' itself.",
+  "hook_mr": "शॉर्टकट: दिलेल्या पर्यायांपैकी जो शब्द मूळ शब्दाच्या अर्थाच्या जवळचा वाटतो, तो विरुद्धार्थी असू शकत नाही.",
+  "hook_en": "Shortcut: eliminate options that are near-synonyms of the given word — the antonym must feel opposite in meaning."
+ },
+ {
+  "id": "hw3b-097",
+  "s": "marathi",
+  "t": "mhani",
+  "d": 3,
+  "q_mr": "'उंटावरून शेळ्या हाकणे' या म्हणीचा अर्थ काय आहे?",
+  "q_en": "What does the proverb 'उंटावरून शेळ्या हाकणे' (Herding goats while riding a camel) mean?",
+  "o_mr": [
+   "प्रत्यक्ष सहभाग न घेता निष्काळजीपणे देखरेख करणे",
+   "स्वतः कष्ट करून काम पूर्ण करणे",
+   "एकाच वेळी अनेक कामे यशस्वीपणे करणे",
+   "लहान कामासाठी मोठी तयारी करणे"
+  ],
+  "o_en": [
+   "Supervising carelessly from a distance without direct involvement",
+   "Completing work through one's own hard effort",
+   "Successfully handling many tasks at once",
+   "Making elaborate preparation for a small task"
+  ],
+  "a": 0,
+  "e_mr": "1. उंटावर बसून खालच्या शेळ्यांना नीट हाकता येत नाही, कारण प्रत्यक्ष सहभाग नसतो. 2. म्हणून ही म्हण दुसऱ्याकडून काम करवून घेताना स्वतः प्रत्यक्ष लक्ष न देता, बेजबाबदारपणे केवळ वरवर देखरेख करणे या अर्थाने वापरतात.",
+  "e_en": "1. Sitting atop a camel, one cannot properly herd goats below, since there's no direct hands-on involvement. 2. Hence this proverb refers to carelessly supervising work from a distance without getting directly involved.",
+  "hook_mr": "शॉर्टकट: म्हणीतील चित्रमय दृश्य (उंट-शेळ्या) डोळ्यासमोर आणून त्यातील विसंगती ओळखा.",
+  "hook_en": "Shortcut: picture the literal scene in the proverb (camel and goats) to spot the mismatch it is highlighting."
+ },
+ {
+  "id": "hw3b-098",
+  "s": "marathi",
+  "t": "mhani",
+  "d": 2,
+  "q_mr": "'नाक मुरडणे' या वाक्प्रचाराचा अर्थ काय आहे?",
+  "q_en": "What does the idiom 'नाक मुरडणे' (to twist one's nose) mean?",
+  "o_mr": [
+   "आनंद व्यक्त करणे",
+   "नापसंती दाखवणे",
+   "आश्चर्य व्यक्त करणे",
+   "माफी मागणे"
+  ],
+  "o_en": [
+   "To express joy",
+   "To show displeasure/disapproval",
+   "To express surprise",
+   "To apologise"
+  ],
+  "a": 1,
+  "e_mr": "1. एखाद्या गोष्टीबद्दल न आवडल्याचे हावभावाने (चेहऱ्यावरून) दाखवणे म्हणजे 'नाक मुरडणे'. 2. म्हणून या वाक्प्रचाराचा अर्थ 'नापसंती दाखवणे' असा होतो.",
+  "e_en": "1. Showing dislike for something through a facial expression is what 'नाक मुरडणे' literally depicts. 2. Hence this idiom means 'to show displeasure or disapproval'.",
+  "hook_mr": "शॉर्टकट: शरीराच्या अवयवांशी संबंधित वाक्प्रचार बहुधा भावना दर्शवतात; 'नाक' हे नापसंतीशी जोडा.",
+  "hook_en": "Shortcut: idioms involving body parts usually express emotions; link 'nose' with disapproval here."
+ },
+ {
+  "id": "hw3b-099",
+  "s": "marathi",
+  "t": "shuddhlekhan",
+  "d": 3,
+  "q_mr": "खालीलपैकी शुद्धलेखनदृष्ट्या बरोबर शब्द कोणता?",
+  "q_en": "Which of the following words is spelt correctly?",
+  "o_mr": [
+   "विद्यार्थीं",
+   "विद्यार्थि",
+   "विद्यार्थी",
+   "विद्यार्थ्यी"
+  ],
+  "o_en": [
+   "Vidyarthin",
+   "Vidyarthi (short i)",
+   "Vidyarthi (long ee)",
+   "Vidyarthyi"
+  ],
+  "a": 2,
+  "e_mr": "1. मराठीत शब्दाच्या शेवटी येणारा 'ई' कार दीर्घ लिहिला जातो, जोपर्यंत व्याकरणदृष्ट्या वेगळा नियम लागू होत नाही. 2. 'विद्यार्थी' या पुल्लिंगी एकवचनी शब्दाचा शेवट दीर्घ 'ई' नेच होतो. 3. त्यामुळे 'विद्यार्थी' हीच शुद्धलेखनदृष्ट्या बरोबर संहिता आहे.",
+  "e_en": "1. In Marathi, a word-final 'ee' sound is written long (दीर्घ) unless a specific grammatical rule dictates otherwise. 2. The masculine singular word 'विद्यार्थी' correctly ends in a long 'ई'. 3. Hence 'विद्यार्थी' is the correctly spelled form.",
+  "hook_mr": "शॉर्टकट: शब्दाच्या शेवटचा स्वर सामान्यतः दीर्घच लिहिला जातो, हा सर्वसाधारण नियम लक्षात ठेवा.",
+  "hook_en": "Shortcut: remember the general rule that a word-final vowel is usually written long (deergha) in Marathi."
+ },
+ {
+  "id": "hw3b-100",
+  "s": "marathi",
+  "t": "sahitya",
+  "d": 2,
+  "q_mr": "कवयित्री बहिणाबाई चौधरी यांनी आपली कविता प्रामुख्याने कोणत्या बोलीभाषेत रचली?",
+  "q_en": "In which dialect did poetess Bahinabai Chaudhari primarily compose her poetry?",
+  "o_mr": [
+   "वऱ्हाडी",
+   "कोल्हापुरी",
+   "मालवणी",
+   "अहिराणी (खानदेशी)"
+  ],
+  "o_en": [
+   "Varhadi",
+   "Kolhapuri",
+   "Malvani",
+   "Ahirani (Khandeshi)"
+  ],
+  "a": 3,
+  "e_mr": "1. बहिणाबाई चौधरी या खानदेश प्रांतातील शेतकरी कवयित्री होत्या. 2. त्यांनी आपल्या रोजच्या जीवनानुभवावर आधारित कविता अहिराणी (खानदेशी) या बोलीभाषेत रचल्या, ज्या नंतर 'बहिणाबाईंची गाणी' या नावाने प्रसिद्ध झाल्या.",
+  "e_en": "1. Bahinabai Chaudhari was a farmer-poetess from the Khandesh region. 2. She composed her life-experience-based poems in the Ahirani (Khandeshi) dialect, later published as 'Bahinabaichi Gani'.",
+  "hook_mr": "शॉर्टकट: खानदेश प्रांताशी संबंधित साहित्यिकांची बोलीभाषा नेहमी अहिराणी असते हे लक्षात ठेवा.",
+  "hook_en": "Shortcut: remember that writers associated with the Khandesh region are linked to the Ahirani dialect."
+ }
+]
