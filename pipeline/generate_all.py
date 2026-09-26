@@ -30,12 +30,13 @@ GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 TARGET = int(os.environ.get("TARGET_PER_SUBJECT", "100"))
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "10"))
 MAX_BATCHES = int(os.environ.get("MAX_BATCHES", "12"))
+GEMINI_PACING_SECONDS = float(os.environ.get("GEMINI_PACING_SECONDS", "5"))
 
 SKIP_SUBJECTS = {"current_affairs"}  # handled by the daily pipeline instead
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 
 
-def _post_json(url, payload, headers, timeout=90, retries=3):
+def _post_json(url, payload, headers, timeout=90, retries=6):
     body = json.dumps(payload).encode("utf-8")
     headers = {**headers, "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) BharariGenBot/1.0"}
     for attempt in range(retries):
@@ -43,7 +44,13 @@ def _post_json(url, payload, headers, timeout=90, retries=3):
             req = urllib.request.Request(url, data=body, headers=headers, method="POST")
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return json.loads(r.read().decode("utf-8"))
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
+        except urllib.error.HTTPError as e:
+            if attempt == retries - 1:
+                raise
+            wait = 20 * (attempt + 1) if e.code == 429 else 2 ** attempt * 3
+            print(f"  request failed ({e}); retrying in {wait}s", file=sys.stderr)
+            time.sleep(wait)
+        except (urllib.error.URLError, TimeoutError) as e:
             if attempt == retries - 1:
                 raise
             wait = 2 ** attempt * 3
@@ -199,7 +206,9 @@ def process_subject(subject, topics):
             drafts = gemini_draft(subject, sorted(topics), n, list(seen_q))
         except Exception as e:
             print(f"  {subject}: gemini batch failed: {e}", file=sys.stderr)
+            time.sleep(20)
             continue
+        time.sleep(GEMINI_PACING_SECONDS)
         for d in drafts:
             if not shape_ok(d, topics):
                 parked.append({"reason": "bad_shape", "item": d})

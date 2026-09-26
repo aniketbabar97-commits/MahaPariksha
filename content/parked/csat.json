@@ -1,0 +1,74 @@
+[
+ {
+  "reason": "mismatch (gemini=3, groq=2, confident=True)",
+  "item": {
+   "t": "data_interpretation",
+   "d": 3,
+   "q_mr": "खालील तक्त्यामध्ये एका शहराच्या लोकसंख्येत गेल्या 5 वर्षांतील वाढ (हजारांत) दर्शविली आहे. माहितीचा अभ्यास करून प्रश्नाचे उत्तर द्या.\n\n| वर्ष | लोकसंख्येत वाढ (हजारांत) |\n|---|---|\n| 2019 | 10 |\n| 2020 | 15 |\n| 2021 | 12 |\n| 2022 | 18 |\n| 2023 | 20 |\n\nकोणत्या वर्षात लोकसंख्येत मागील वर्षाच्या तुलनेत सर्वाधिक वाढ झाली?",
+   "q_en": "The table below shows the population increase (in thousands) of a city over the last 5 years. Study the information and answer the question.\n\n| Year | Population Increase (in thousands) |\n|---|---|\n| 2019 | 10 |\n| 2020 | 15 |\n| 2021 | 12 |\n| 2022 | 18 |\n| 2023 | 20 |\n\nIn which year was the population increase highest compared to the previous year?",
+   "o_mr": [
+    "2019",
+    "2020",
+    "2022",
+    "2023"
+   ],
+   "o_en": [
+    "2019",
+    "2020",
+    "2022",
+    "2023"
+   ],
+   "a": 3,
+   "e_mr": "तक्त्यातील आकडेवारीनुसार, 2019 मध्ये 10 हजार, 2020 मध्ये 15 हजार, 2021 मध्ये 12 हजार, 2022 मध्ये 18 हजार आणि 2023 मध्ये 20 हजार अशी वाढ झाली आहे. यापैकी 2023 मध्ये (20 हजार) सर्वात जास्त वाढ झाली.",
+   "e_en": "According to the table, the increase was 10 thousand in 2019, 15 thousand in 2020, 12 thousand in 2021, 18 thousand in 2022, and 20 thousand in 2023. Among these, the highest increase was in 2023 (20 thousand)."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "basic_numeracy",
+   "d": 3,
+   "q_mr": "600 मीटर लांबीची एक ट्रेन 72 किमी/तास वेगाने एका बोगद्याला 1 मिनिटात पार करते. त्या बोगद्याची लांबी किती?",
+   "q_en": "A 600 m long train running at 72 km/h crosses a tunnel in 1 minute. What is the length of the tunnel?",
+   "o_mr": [
+    "600 मीटर",
+    "720 मीटर",
+    "800 मीटर",
+    "900 मीटर"
+   ],
+   "o_en": [
+    "600 meters",
+    "720 meters",
+    "800 meters",
+    "900 meters"
+   ],
+   "a": 1,
+   "e_mr": "ट्रेनचा वेग = 72 किमी/तास = 72 * (5/18) मी/से = 20 मी/से. वेळ = 1 मिनिट = 60 सेकंद. ट्रेनने कापलेले एकूण अंतर = वेग * वेळ = 20 * 60 = 1200 मीटर. हे अंतर ट्रेनची लांबी + बोगद्याची लांबी असते. म्हणून, बोगद्याची लांबी = एकूण अंतर - ट्रेनची लांबी = 1200 - 600 = 600 मीटर.",
+   "e_en": "Train speed = 72 km/h = 72 * (5/18) m/s = 20 m/s. Time = 1 minute = 60 seconds. Total distance covered by train = Speed * Time = 20 * 60 = 1200 meters. This distance is the sum of the train's length and the tunnel's length. So, length of the tunnel = Total distance - Train's length = 1200 - 600 = 600 meters."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "data_interpretation",
+   "d": 2,
+   "q_mr": "एका कंपनीच्या चार उत्पादनांची (P, Q, R, S) चार तिमाहीतील विक्री (हजार युनिट्समध्ये) खालीलप्रमाणे आहे:\n\n| उत्पादन | तिमाही 1 | तिमाही 2 | तिमाही 3 | तिमाही 4 |\n|---|---|---|---|---|\n| P | 120 | 150 | 130 | 160 |\n| Q | 100 | 110 | 120 | 130 |\n| R | 140 | 130 | 150 | 140 |\n| S | 90 | 100 | 110 | 120 |\n\nवरील माहितीनुसार, कोणत्या उत्पादनाची एकूण वार्षिक विक्री सर्वाधिक आहे?",
+   "q_en": "The sales (in thousand units) of four products (P, Q, R, S) of a company over four quarters are given below:\n\n| Product | Quarter 1 | Quarter 2 | Quarter 3 | Quarter 4 |\n|---|---|---|---|---|\n| P | 120 | 150 | 130 | 160 |\n| Q | 100 | 110 | 120 | 130 |\n| R | 140 | 130 | 150 | 140 |\n| S | 90 | 100 | 110 | 120 |\n\nBased on the above information, which product has the highest total annual sales?",
+   "o_mr": [
+    "उत्पादन P",
+    "उत्पादन Q",
+    "उत्पादन R",
+    "उत्पादन S"
+   ],
+   "o_en": [
+    "Product P",
+    "Product Q",
+    "Product R",
+    "Product S"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक उत्पादनाची एकूण वार्षिक विक्री काढूया:\nउत्पादन P: 120 + 150 + 130 + 160 = 560 हजार युनिट्स\nउत्पादन Q: 100 + 110 + 120 + 130 = 460 हजार युनिट्स\nउत्पादन R: 140 + 130 + 150 + 140 = 560 हजार युनिट्स\nउत्पादन S: 90 + 100 + 110 + 120 = 420 हजार युनिट्स\nउत्पादन P आणि R यांची विक्री सर्वाधिक (560 हजार युनिट्स) आहे, पण पर्यायमध्ये फक्त P असल्याने, P हे उत्तर आहे.",
+   "e_en": "Let's calculate the total annual sales for each product:\nProduct P: 120 + 150 + 130 + 160 = 560 thousand units\nProduct Q: 100 + 110 + 120 + 130 = 460 thousand units\nProduct R: 140 + 130 + 150 + 140 = 560 thousand units\nProduct S: 90 + 100 + 110 + 120 = 420 thousand units\nProducts P and R have the highest sales (560 thousand units). Since only P is an option, P is the answer."
+  }
+ }
+]
