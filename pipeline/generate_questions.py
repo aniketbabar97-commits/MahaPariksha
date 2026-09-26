@@ -25,10 +25,18 @@ example -- both Groq's draft and a naive check got a sandhi answer wrong the
 same way). That's exactly what pending_review + a later Claude audit sample is
 for -- this script deliberately does not claim 100% accuracy on its own.
 
+Drafting is given to the more reliable of the two models (Gemini by default --
+it's the stronger general-purpose model of the pair) since draft quality sets
+the ceiling for what can possibly ship; the cross-check only needs to be good
+enough to independently catch mistakes, which Groq's open-weight model is.
+
 Env:
-  DRAFT_PROVIDER (default groq), CHECK_PROVIDER (default gemini) -- see draft_llm.py.
-  Both need their own API key (GROQ_API_KEY / GEMINI_API_KEY) set as environment
+  DRAFT_PROVIDER (default gemini), CHECK_PROVIDER (default groq) -- see draft_llm.py.
+  Both need their own API key (GEMINI_API_KEY / GROQ_API_KEY) set as environment
   secrets, not passed on the command line.
+
+For generating across many subjects/topics at once, use generate_all.py instead
+of calling this script in a loop -- it parallelizes safely by subject.
 """
 import argparse
 import json
@@ -43,8 +51,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 
-DRAFT_PROVIDER = os.environ.get("DRAFT_PROVIDER", "groq")
-CHECK_PROVIDER = os.environ.get("CHECK_PROVIDER", "gemini")
+DRAFT_PROVIDER = os.environ.get("DRAFT_PROVIDER", "gemini")
+CHECK_PROVIDER = os.environ.get("CHECK_PROVIDER", "groq")
 
 DRAFT_PROMPT = """You write multiple-choice questions for Marathi-medium aspirants preparing for
 Maharashtra government exams (Police Bharti, Talathi, MPSC) and SSC/Railway.
@@ -127,46 +135,51 @@ def cross_check(d: dict) -> tuple[bool, str]:
     return True, ""
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--subject", required=True)
-    ap.add_argument("--topic", required=True)
-    ap.add_argument("--count", type=int, default=20)
-    ap.add_argument("--difficulty", type=int, choices=[1, 2, 3], default=1)
-    ap.add_argument("--batch-size", type=int, default=15)
-    args = ap.parse_args()
+def check_providers():
+    """Raises RuntimeError naming whichever provider isn't configured."""
+    for role, name in (("draft", DRAFT_PROVIDER), ("check", CHECK_PROVIDER)):
+        if not draft_llm.is_configured(name):
+            raise RuntimeError(f"{role} provider '{name}' not configured -- set its API key as an environment secret")
 
-    if not draft_llm.is_configured(DRAFT_PROVIDER):
-        sys.exit(f"draft provider '{DRAFT_PROVIDER}' not configured -- set its API key as an environment secret")
-    if not draft_llm.is_configured(CHECK_PROVIDER):
-        sys.exit(f"check provider '{CHECK_PROVIDER}' not configured -- set its API key as an environment secret")
 
+def generate_topic(subject_id, topic_id, count, difficulty=1, batch_size=15, log=print):
+    """Generates up to `count` verified questions for one subject/topic.
+
+    Safe to call repeatedly for different topics of the SAME subject in
+    sequence (it read-modify-writes that subject's bank + pending files), but
+    NOT concurrently for the same subject from two threads/processes at once
+    -- see generate_all.py, which parallelizes by subject for exactly this
+    reason (each subject's files are independent; each subject is only ever
+    touched by one worker).
+
+    Returns (kept, parked).
+    """
     taxonomy = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
-    subj = next((s for s in taxonomy["subjects"] if s["id"] == args.subject), None)
+    subj = next((s for s in taxonomy["subjects"] if s["id"] == subject_id), None)
     if not subj:
-        sys.exit(f"unknown subject: {args.subject}")
-    topic = next((t for t in subj["topics"] if t["id"] == args.topic), None)
+        raise ValueError(f"unknown subject: {subject_id}")
+    topic = next((t for t in subj["topics"] if t["id"] == topic_id), None)
     if not topic:
-        sys.exit(f"unknown topic: {args.topic} in subject {args.subject}")
-    difficulty_label = {1: "easy", 2: "medium", 3: "hard"}[args.difficulty]
+        raise ValueError(f"unknown topic: {topic_id} in subject {subject_id}")
+    difficulty_label = {1: "easy", 2: "medium", 3: "hard"}[difficulty]
 
-    bank_path = CONTENT / "bank" / f"{args.subject}.json"
+    bank_path = CONTENT / "bank" / f"{subject_id}.json"
     bank = load_json(bank_path)
-    pending_path = CONTENT / "pending_review" / f"{args.subject}.json"
+    pending_path = CONTENT / "pending_review" / f"{subject_id}.json"
     pending = load_json(pending_path)
 
-    existing_stems = [q["q_en"] for q in bank if q["s"] == args.subject and q["t"] == args.topic]
+    existing_stems = [q["q_en"] for q in bank if q["s"] == subject_id and q["t"] == topic_id]
     seen = {q["q_en"].strip().lower() for q in bank} | {p["draft"]["q_en"].strip().lower() for p in pending}
-    next_n = max([int(q["id"].split("-")[-1]) for q in bank if q["s"] == args.subject] or [0]) + 1
+    next_n = max([int(q["id"].split("-")[-1]) for q in bank if q["s"] == subject_id] or [0]) + 1
 
     kept, parked, attempts = 0, 0, 0
-    while kept < args.count and attempts < args.count * 3:
-        n = min(args.batch_size, args.count - kept)
+    while kept < count and attempts < count * 3:
+        n = min(batch_size, count - kept)
         try:
             drafts = draft_batch(subj["en"], subj["mr"], topic["en"], topic["mr"], n,
                                   difficulty_label, existing_stems + [q["q_en"] for q in bank[-30:]])
         except Exception as e:
-            print(f"draft batch failed: {e}", file=sys.stderr)
+            log(f"[{subject_id}/{topic_id}] draft batch failed: {e}")
             attempts += n
             continue
         for d in drafts:
@@ -182,25 +195,43 @@ def main():
             ok, reason = cross_check(d)
             seen.add(d["q_en"].strip().lower())
             if not ok:
-                print(f"parked ({reason}): {d['q_en'][:70]}", file=sys.stderr)
+                log(f"[{subject_id}/{topic_id}] parked ({reason}): {d['q_en'][:70]}")
                 pending.append({"reason": reason, "draft": d})
                 parked += 1
                 continue
             bank.append({
-                "id": f"{args.subject}-{next_n:03d}", "s": args.subject, "t": args.topic, "d": args.difficulty,
+                "id": f"{subject_id}-{next_n:03d}", "s": subject_id, "t": topic_id, "d": difficulty,
                 "q_mr": d["q_mr"], "q_en": d["q_en"], "o_mr": d["o_mr"], "o_en": d["o_en"], "a": d["a"],
                 "e_mr": d["e_mr"], "e_en": d["e_en"],
             })
             next_n += 1
             kept += 1
-            if kept >= args.count:
+            if kept >= count:
                 break
 
     bank_path.write_text(json.dumps(bank, ensure_ascii=False, indent=1), encoding="utf-8")
     pending_path.parent.mkdir(parents=True, exist_ok=True)
     pending_path.write_text(json.dumps(pending, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"kept {kept}/{args.count} (both models agreed) -> {bank_path}")
-    print(f"parked {parked} (shape issue or disagreement, needs a later audit) -> {pending_path}")
+    return kept, parked
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--subject", required=True)
+    ap.add_argument("--topic", required=True)
+    ap.add_argument("--count", type=int, default=20)
+    ap.add_argument("--difficulty", type=int, choices=[1, 2, 3], default=1)
+    ap.add_argument("--batch-size", type=int, default=15)
+    args = ap.parse_args()
+
+    try:
+        check_providers()
+        kept, parked = generate_topic(args.subject, args.topic, args.count, args.difficulty, args.batch_size)
+    except (RuntimeError, ValueError) as e:
+        sys.exit(str(e))
+
+    print(f"kept {kept}/{args.count} (both models agreed) -> content/bank/{args.subject}.json")
+    print(f"parked {parked} (shape issue or disagreement, needs a later audit) -> content/pending_review/{args.subject}.json")
     return 0 if kept else 1
 
 
