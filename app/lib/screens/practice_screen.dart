@@ -196,6 +196,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
         .where((q) => q.subject == subject.id && (difficulty == null || q.difficulty == difficulty))
         .toList();
     final topicStats = {for (final t in s.builder.topicStats().where((t) => t.subject == subject.id)) t.topic: t};
+    final diffCounts = s.builder.difficultyCounts(subject: subject.id);
     return Scaffold(
       appBar: AppBar(title: Text(subject.name.of(lang))),
       body: ListView(
@@ -211,7 +212,9 @@ class _SubjectScreenState extends State<SubjectScreen> {
                     label: Text(label.of(lang)),
                     selected: difficulty == level,
                     selectedColor: BrandColors.saffron.withValues(alpha: 0.25),
-                    onSelected: (_) => setState(() => difficulty = level),
+                    onSelected: level == null || (diffCounts[level] ?? 0) > 0
+                        ? (_) => setState(() => difficulty = level)
+                        : null,
                   ),
               ],
             ),
