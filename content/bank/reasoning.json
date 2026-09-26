@@ -1292,5 +1292,1063 @@
   "e_en": "1) Rain → wet ground. 2) The ground is not wet. 3) Therefore it did not rain (modus tollens).",
   "hook_mr": "'जर P तर Q' व 'Q नाही' ⇒ 'P नाही'. पण 'Q' वरून 'P' निघत नाही.",
   "hook_en": "'If P then Q' and 'not Q' ⇒ 'not P'. But 'Q' alone does not imply 'P'."
+ },
+ {
+  "id": "reasoning-055",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "पुढील मालिकेत प्रश्नचिन्हाच्या जागी योग्य पर्याय निवडा: पुस्तक : ग्रंथालय :: रुग्ण : ?",
+  "q_en": "Choose the correct option for the question mark: Book : Library :: Patient : ?",
+  "o_mr": [
+   "औषध",
+   "रुग्णालय",
+   "डॉक्टर",
+   "शैया"
+  ],
+  "o_en": [
+   "Medicine",
+   "Hospital",
+   "Doctor",
+   "Bed"
+  ],
+  "a": 1,
+  "e_mr": "जसे पुस्तक ग्रंथालयात ठेवले जाते, तसेच रुग्ण उपचारासाठी रुग्णालयात असतो.",
+  "e_en": "Just as a book is kept in a library, a patient is typically found in a hospital."
+ },
+ {
+  "id": "reasoning-056",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "जर ५ जानेवारी २००१ रोजी शुक्रवार होता, तर ५ जानेवारी २००२ रोजी कोणता वार असेल?",
+  "q_en": "If January 5, 2001 was a Friday, what day of the week was January 5, 2002?",
+  "o_mr": [
+   "शनिवार",
+   "रविवार",
+   "सोमवार",
+   "शुक्रवार"
+  ],
+  "o_en": [
+   "Saturday",
+   "Sunday",
+   "Monday",
+   "Friday"
+  ],
+  "a": 0,
+  "e_mr": "वर्ष २००१ हे साधारण वर्ष आहे, ज्यामध्ये ३६५ दिवस असतात (१ विषम दिवस). म्हणून शुक्रवारमध्ये १ दिवस मिळवल्यास शनिवार येतो.",
+  "e_en": "The year 2001 is an ordinary year with 365 days (1 odd day). Adding 1 day to Friday gives Saturday."
+ },
+ {
+  "id": "reasoning-057",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 1,
+  "q_mr": "एका सांकेतिक भाषेत 'PEN' ला 'QFO' असे लिहिले जाते, तर 'CAT' ला त्याच भाषेत कसे लिहीले जाईल?",
+  "q_en": "In a code language, 'PEN' is written as 'QFO', then how will 'CAT' be written in that language?",
+  "o_mr": [
+   "DBU",
+   "EBU",
+   "DCT",
+   "CBU"
+  ],
+  "o_en": [
+   "DBU",
+   "EBU",
+   "DCT",
+   "CBU"
+  ],
+  "a": 0,
+  "e_mr": "प्रत्येक अक्षरामध्ये पुढील अक्षर घेतले आहे (+१). P+1=Q, E+1=F, N+1=O. याचप्रमाणे C+1=D, A+1=B, T+1=U.",
+  "e_en": "Each letter is shifted forward by one position (+1). P+1=Q, E+1=F, N+1=O. Similarly, C+1=D, A+1=B, T+1=U."
+ },
+ {
+  "id": "reasoning-058",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 3,
+  "q_mr": "A, B, C पैकी सर्वात मोठे कौन आहे हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत? विधान १: A हा B पेक्षा मोठा आहे. विधान २: B हा C पेक्षा मोठा आहे.",
+  "q_en": "Which of the following statements is/are sufficient to determine who is the tallest among A, B, C? Statement 1: A is taller than B. Statement 2: B is taller than C.",
+  "o_mr": [
+   "फक्त विधान १ पुरेशी आहे",
+   "फक्त विधान २ पुरेशी आहे",
+   "दोन्ही विधाने मिळून पुरेशी आहेत",
+   "दोन्ही मिळूनही पुरेशी नाहीत"
+  ],
+  "o_en": [
+   "Only statement 1 is sufficient",
+   "Only statement 2 is sufficient",
+   "Both statements together are sufficient",
+   "Both statements together are not sufficient"
+  ],
+  "a": 2,
+  "e_mr": "विधान १ नुसार A > B आणि विधान २ नुसार B > C, त्यामुळे A > B > C असा क्रम मिळतो आणि सर्वात मोठे कोण हे समजते.",
+  "e_en": "From statement 1, A > B, and from statement 2, B > C. Combining both gives A > B > C, allowing us to find the tallest."
+ },
+ {
+  "id": "reasoning-059",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 2,
+  "q_mr": "एक व्यक्ती पश्चिमेकडे तोंड करून उभी आहे. ती व्यक्ती ९० अंश घड्याळाच्या दिशेने (clockwise) आणि नंतर १८० अंश घड्याळाच्या विरुद्ध दिशेने वळते. आता तिचे तोंड कोणत्या दिशेला आहे?",
+  "q_en": "A person is facing West. They turn 90° clockwise and then 180° counter-clockwise. Which direction are they facing now?",
+  "o_mr": [
+   "दक्षिण",
+   "उत्तर",
+   "पूर्व",
+   "आग्नेय"
+  ],
+  "o_en": [
+   "South",
+   "North",
+   "East",
+   "South-East"
+  ],
+  "a": 0,
+  "e_mr": "पश्चिमपासून ९०° घड्याळाच्या दिशेने म्हणजे उत्तर दिशा येते. तिथून १८०° विरुद्ध दिशेने म्हणजे बरोबर उलट, म्हणजेच दक्षिण दिशा येते.",
+  "e_en": "Facing West, a 90° clockwise turn brings the person to North. From North, a 180° counter-clockwise turn brings them to South."
+ },
+ {
+  "id": "reasoning-060",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "योग्य पर्याय निवडा: क्रिकेट : बॅट :: हॉकी : ?",
+  "q_en": "Choose the correct option: Cricket : Bat :: Hockey : ?",
+  "o_mr": [
+   "बॉल",
+   "स्टिक",
+   "रॅकेट",
+   "गोल"
+  ],
+  "o_en": [
+   "Ball",
+   "Stick",
+   "Racket",
+   "Goal"
+  ],
+  "a": 1,
+  "e_mr": "जसे क्रिकेट खेळण्यासाठी बॅटचा वापर होतो, तसेच हॉकी खेळण्यासाठी हॉकी स्टिकचा वापर केला जातो.",
+  "e_en": "Just as a bat is used in cricket, a stick is used in the game of hockey."
+ },
+ {
+  "id": "reasoning-061",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 2,
+  "q_mr": "जर 'B = 2' आणि 'MAT = 34' असेल, तो 'BOX' ची किंमत किती?",
+  "q_en": "If 'B = 2' and 'MAT = 34', what is the value of 'BOX'?",
+  "o_mr": [
+   "४०",
+   "४१",
+   "४२",
+   "४३"
+  ],
+  "o_en": [
+   "40",
+   "41",
+   "42",
+   "43"
+  ],
+  "a": 1,
+  "e_mr": "अक्षरांच्या वर्णमालेतील क्रमांकांची बेरीज केली आहे. M(13) + A(1) + T(20) = 34. तसेच B(2) + O(15) + X(24) = 41.",
+  "e_en": "The values are the sum of alphabetical positions. M+A+T = 13+1+20 = 34. Similarly, B+O+X = 2+15+24 = 41."
+ },
+ {
+  "id": "reasoning-062",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "सुमित पूर्वेकडे ५ किलोमीटर चालला, त्यानंतर तो डावीकडे वळला आणि ३ किलोमीटर चालला. आता तो सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आहे?",
+  "q_en": "Sumit walked 5 km East, then turned left and walked 3 km. Which direction is he from the starting point?",
+  "o_mr": [
+   "ईशान्य",
+   "आग्नेय",
+   "वायव्य",
+   "नैऋत्य"
+  ],
+  "o_en": [
+   "North-East",
+   "South-East",
+   "North-West",
+   "South-West"
+  ],
+  "a": 0,
+  "e_mr": "सुमित पूर्वेकडे जाऊन नंतर उत्तरेकडे (डावीकडे) वळल्यामुळे तो सुरुवातीच्या ठिकाणाच्या ईशान्य दिशेला असेल.",
+  "e_en": "Since Sumit moved East and then turned left (North), he is located to the North-East of his starting point."
+ },
+ {
+  "id": "reasoning-063",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "एका मुलीकडे बोट दाखवून रोहित म्हणाला, 'तिचे वडील माझ्या आईच्या एकुलत्या एका मुलाचे वडील आहेत.' तर ती मुलगी रोहितची कोण?",
+  "q_en": "Pointing to a girl, Rohit said, 'Her father is the father of my mother's only son.' How is the girl related to Rohit?",
+  "o_mr": [
+   "बहीण",
+   "आई",
+   "आत्या",
+   "मुुलगी"
+  ],
+  "o_en": [
+   "sister",
+   "mother",
+   "aunt",
+   "daughter"
+  ],
+  "a": 0,
+  "e_mr": "रोहितच्या आईचा एकुलता एक मुलगा म्हणजे स्वतः रोहित. आणि त्याच्या वडिलांची मुलगी म्हणजे रोहितची बहीण.",
+  "e_en": "My mother's only son is Rohit himself. And his father's daughter is Rohit's sister."
+ },
+ {
+  "id": "reasoning-064",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "P, Q, R, S पैकी सर्वात हलके कोण आहे हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत? विधान १: R हा P आणि S पेक्षा जड आहे. विधान २: Q हा P पेक्षा हलका आहे.",
+  "q_en": "Which of the following statements is/are sufficient to determine who is the lightest among P, Q, R, S? Statement 1: R is heavier than P and S. Statement 2: Q is lighter than P.",
+  "o_mr": [
+   "फक्त विधान १ पुरेसे आहे",
+   "फक्त विधान २ पुरेसे आहे",
+   "विधान १ आणि २ दोन्ही मिळून पुरेसे नाहीत",
+   "विधान १ आणि २ दोन्ही मिळून पुरेसे आहेत"
+  ],
+  "o_en": [
+   "Only statement 1 is sufficient",
+   "Only statement 2 is sufficient",
+   "Both statements 1 and 2 together are not sufficient",
+   "Both statements 1 and 2 together are sufficient"
+  ],
+  "a": 2,
+  "e_mr": "विधानांवरून R हा सर्वात जड हे समजते, पण P, Q आणि S यांच्यातील वजनाचे नेमके नाते स्पष्ट होत नाही. त्यामुळे दोन्ही विधाने एकत्र केली तरी सर्वात हलके कोण हे निश्चित होत नाही.",
+  "e_en": "From the statements, R is heaviest, but the exact weight relationship between P, Q, and S is unclear. Even combined, both statements are insufficient to determine the lightest."
+ },
+ {
+  "id": "reasoning-065",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: A > B, B = C, C < D. निष्कर्ष: I. A > C, II. A > D. योग्य निष्कर्ष निवडा.",
+  "q_en": "Statements: A > B, B = C, C < D. Conclusions: I. A > C, II. A > D. Choose the correct conclusion.",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही निष्कर्ष सत्य आहेत",
+   "काहीही सांगता येत नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions are true",
+   "Neither is true"
+  ],
+  "a": 0,
+  "e_mr": "A > B आणि B = C वरून A > C हे निश्चित होते. परंतु A आणि D मध्ये उलट चिन्ह (>) आल्यामुळे A > D निश्चित करता येत नाही.",
+  "e_en": "From A > B and B = C, we get A > C. However, between A and D, opposite signs prevent any definitive relation like A > D."
+ },
+ {
+  "id": "reasoning-066",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "पुढील अंकमालिकेत प्रश्नचिन्हाच्या जागी कोणती संख्या येईल? ४, ९, १६, २५, ३६, ?",
+  "q_en": "What number will replace the question mark in the following series? 4, 9, 16, 25, 36, ?",
+  "o_mr": [
+   "४२",
+   "४८",
+   "४९",
+   "६४"
+  ],
+  "o_en": [
+   "42",
+   "48",
+   "49",
+   "64"
+  ],
+  "a": 2,
+  "e_mr": "दिलेली मालिका ही नैसर्गिक संख्यांचे वर्ग आहेत: २^२, ३^२, ४^२, ५^२, ६^२, त्यामुळे पुढील संख्या ७^२ म्हणजेच ४९ असेल.",
+  "e_en": "The given series consists of squares of natural numbers: 2^2, 3^2, 4^2, 5^2, 6^2, so the next number is 7^2 which is 49."
+ },
+ {
+  "id": "reasoning-067",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "दिलेल्या पर्यायांमधून योग्य जोडी निवडा: राजा : राजवाडा :: सिंह : ?",
+  "q_en": "Choose the correct option: king : palace :: lion : ?",
+  "o_mr": [
+   "तबेला",
+   "गुहा",
+   "घर",
+   "पिंजरा"
+  ],
+  "o_en": [
+   "stable",
+   "den",
+   "house",
+   "cage"
+  ],
+  "a": 1,
+  "e_mr": "ज्याप्रमाणे राजा राहण्याच्या ठिकाणाला राजवाडा म्हणतात, त्याचप्रमाणे सिंहाच्या राहण्याच्या नैसर्गिक जागेला गुहा (Den) म्हणतात.",
+  "e_en": "Just as a king's dwelling place is a palace, a lion's natural dwelling place is a den."
+ },
+ {
+  "id": "reasoning-068",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "एका स्त्रियांकडे बोट दाखवून एका पुरुषाने म्हटले, \"तिच्या वडिलांचा एकुलता एक मुलगा माझ्या वडिलांच्या पत्नीचा एकुलता एक मुलगा आहे.\" तर त्या पुरुषाचा त्या स्त्रीशी काय संबंध आहे?",
+  "q_en": "Pointing to a woman, a man said, \"Her father's only son is the only son of my father's wife.\" How is the man related to the woman?",
+  "o_mr": [
+   "वडील",
+   "भाऊ",
+   "काका",
+   "पती"
+  ],
+  "o_en": [
+   "father",
+   "brother",
+   "uncle",
+   "husband"
+  ],
+  "a": 1,
+  "e_mr": "माझ्या वडिलांच्या पत्नीचा एकुलता एक मुलगा म्हणजे तो पुरुष स्वतः आहे. त्यामुळे त्या स्त्रीच्या वडिलांचा एकुलता एक मुलगा म्हणजे तिचा भाऊ होईल.",
+  "e_en": "The only son of my father's wife is the man himself. Therefore, the only son of the woman's father is her brother."
+ },
+ {
+  "id": "reasoning-069",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "अमित दक्षिणेकडे 5 किमी चालला, नंतर डावीकडे वळून 3 किमी चालला आणि पुन्हा डावीकडे वळून 5 किमी चालला. तर तो सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आहे?",
+  "q_en": "Amit walked 5 km south, turned left and walked 3 km, then turned left again and walked 5 km. Which direction is he from the starting point?",
+  "o_mr": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_mr": "अमित सुरुवातीला दक्षिणेकडे 5 किमी गेला, मग डावीकडे वळून 3 किमी पूर्वेला गेला, आणि नंतर उत्तरेकडे 5 किमी परत आला. त्यामुळे तो सुरुवातीच्या बिंदूपासून पूर्वेकडे 3 किमी अंतरावर आहे.",
+  "e_en": "Amit went 5 km south, turned left 3 km east, and then went 5 km north. Thus he is 3 km east of his starting point."
+ },
+ {
+  "id": "reasoning-070",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 1,
+  "q_mr": "खालील गटात न बसणारा शब्द/संख्या ओळखा: 27, 64, 125, 216, 343, 512, 700",
+  "q_en": "Find the odd one out in the following: 27, 64, 125, 216, 343, 512, 700",
+  "o_mr": [
+   "64",
+   "125",
+   "343",
+   "700"
+  ],
+  "o_en": [
+   "64",
+   "125",
+   "343",
+   "700"
+  ],
+  "a": 3,
+  "e_mr": "27 हा 3 चा घन आहे, 64 हा 4 चा घन आहे, 125 हा 5 चा घन आहे, 216 हा 6 चा घन आहे, 343 हा 7 चा घन आहे, 512 हा 8 चा घन आहे. तर 700 हा कोणत्याही पूर्णांकाचा घन नाही.",
+  "e_en": "27, 64, 125, 216, 343, and 512 are cubes of integers (3 to 8 respectively), whereas 700 is not a perfect cube."
+ },
+ {
+  "id": "reasoning-071",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 1,
+  "q_mr": "एका वर्गात 45 विद्यार्थ्यांमध्ये, रोहन वरून 15 व्या क्रमांकावर आहे. तर खालून त्याचा क्रमांक कितीवा असेल?",
+  "q_en": "In a class of 45 students, Rohan ranks 15th from the top. What is his rank from the bottom?",
+  "o_mr": [
+   "29",
+   "30",
+   "31",
+   "32"
+  ],
+  "o_en": [
+   "29",
+   "30",
+   "31",
+   "32"
+  ],
+  "a": 2,
+  "e_mr": "खालून क्रमांक = (एकूण विद्यार्थी - वरून क्रमांक) + 1 = (45 - 15) + 1 = 30 + 1 = 31.",
+  "e_en": "Rank from the bottom = (Total students - Rank from top) + 1 = (45 - 15) + 1 = 31."
+ },
+ {
+  "id": "reasoning-072",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_mr": "विधाने: सर्व पेन पेपर्स आहेत. काही पेपर्स पुस्तके आहेत. निष्कर्ष: I. काही पेन पुस्तके आहेत. II. काही पुस्तके पेपर्स आहेत. योग्य निष्कर्ष निवडा.",
+  "q_en": "Statements: All pens are papers. Some papers are books. Conclusions: I. Some pens are books. II. Some books are papers. Choose the correct conclusion.",
+  "o_mr": [
+   "फक्त निष्कर्ष I अनुसरण करतो",
+   "फक्त निष्कर्ष II अनुसरण करतो",
+   "दोन्ही निष्कर्ष अनुसरण करतात",
+   "एकही निष्कर्ष अनुसरण करत नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
+  "a": 1,
+  "e_mr": "विधान 'काही पेपर्स पुस्तके आहेत' वरून 'काही पुस्तके पेपर्स आहेत' हे थेट सत्य ठरते (निष्कर्ष II). पेन आणि पुस्तकांमध्ये थेट संबंध दिलेला नाही, म्हणून निष्कर्ष I निश्चित सांगता येत नाही.",
+  "e_en": "From 'some papers are books', it directly follows that 'some books are papers' (Conclusion II). No direct relation is given between pens and books, so conclusion I does not necessarily follow."
+ },
+ {
+  "id": "reasoning-073",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 2,
+  "q_mr": "एका सांकेतिक भाषेत 'CAT' हा शब्द '3120' असा लिहिला जातो, तर त्याच भाषेत 'DOG' कसा लिहिला जाईल?",
+  "q_en": "In a code language, 'CAT' is written as '3120', how will 'DOG' be written in that language?",
+  "o_mr": [
+   "4157",
+   "3147",
+   "4147",
+   "5157"
+  ],
+  "o_en": [
+   "4157",
+   "3147",
+   "4147",
+   "5157"
+  ],
+  "a": 0,
+  "e_mr": "अक्षरांच्या वर्णमालेतील क्रमांकांची ही जोडी आहे: C=3, A=1, T=20. याचप्रमाणे DOG चे क्रमांक D=4, O=15, G=7 म्हणजेच 4157 असा कोड येईल.",
+  "e_en": "Letters are replaced by their alphabetical positions: C=3, A=1, T=20. Similarly, DOG gives D=4, O=15, G=7, which is 4157."
+ },
+ {
+  "id": "reasoning-074",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "पुढील मालिकेत प्रश्नचिन्हाच्या जागी योग्य पर्याय निवडा: जहाज : नौका :: पुस्तक : ?",
+  "q_en": "Choose the correct option for the question mark in the following series: Ship : Boat :: Book : ?",
+  "o_mr": [
+   "ग्रंथालय",
+   "पुस्तिका",
+   "वाचन",
+   "लेखक"
+  ],
+  "o_en": [
+   "Library",
+   "Booklet",
+   "Reading",
+   "Author"
+  ],
+  "a": 1,
+  "e_mr": "जसे 'नौका' हे 'जहाजाचे' लहान रूप आहे, तसे 'पुस्तिका' हे 'पुस्तकाचे' लहान रूप आहे.",
+  "e_en": "Just as a 'boat' is a smaller version of a 'ship', a 'booklet' is a smaller version of a 'book'."
+ },
+ {
+  "id": "reasoning-075",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "जर आज गुरुवार असेल, तर बरोबर 65 दिवसांनंतर कोणता वार असेल?",
+  "q_en": "If today is Thursday, what day of the week will it be after exactly 65 days?",
+  "o_mr": [
+   "शुक्रवार",
+   "शनिवार",
+   "मंगळवार",
+   "बुधवार"
+  ],
+  "o_en": [
+   "Friday",
+   "Saturday",
+   "Tuesday",
+   "Wednesday"
+  ],
+  "a": 1,
+  "e_mr": "65 ला 7 ने भागल्यास बाकी 2 येते (65 ÷ 7 = 9 आठवडे आणि बाकी 2). गुरुवारी 2 दिवस मिळवल्यास शनिवार येतो.",
+  "e_en": "65 divided by 7 leaves a remainder of 2 (65 % 7 = 2). Adding 2 days to Thursday gives Saturday."
+ },
+ {
+  "id": "reasoning-076",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_mr": "विधाने: सर्व माकडे प्राणी आहेत. सर्व प्राणी सजीव आहेत.\nनिष्कर्ष: I. सर्व माकडे सजीव आहेत. II. काही सजीव माकडे नाहीत.",
+  "q_en": "Statements: All monkeys are animals. All animals are living beings.\nConclusions: I. All monkeys are living beings. II. Some living beings are not monkeys.",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही निष्कर्ष सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions are true",
+   "Neither conclusion is true"
+  ],
+  "a": 0,
+  "e_mr": "सर्व माकडे प्राणी आहेत आणि सर्व प्राणी सजीव आहेत, त्यामुळे सर्व माकडे सजीव असणे निश्चितपणे सत्य आहे (निष्कर्ष I). निष्कर्ष II नकारात्मक असल्याने तो चुकीचा आहे.",
+  "e_en": "All monkeys are animals and all animals are living beings, so all monkeys being living beings is definitely true (Conclusion I). Conclusion II is negative and false."
+ },
+ {
+  "id": "reasoning-077",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 3,
+  "q_mr": "पाच मित्र A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा मध्यभागी आहे. R हा C च्या लगेच डावीकडे आहे. T टोकाला आहे. S हा Q आणि T च्या मध्ये आहे. (टीप: येथे प्रश्नातील अक्षरे इंग्रजी क्रमानुसार समजावीत - प्रश्न मराठीत आहे). जर C हा मध्यभागी असेल तर डाव्या टोकाला कोण आहे?",
+  "q_en": "Five friends sit in a row facing north. C is in the middle. (Consider standard arrangement). Who is at the extreme left end if C is in the middle?",
+  "o_mr": [
+   "A",
+   "B",
+   "माहिती अपुरी",
+   "C"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "Data inadequate",
+   "C"
+  ],
+  "a": 2,
+  "e_mr": "दिलेली माहिती पूर्ण रांगेतील सर्व व्यक्तींच्या अचूक स्थानासाठी अपुरी आहे.",
+  "e_en": "The given information is insufficient to determine the exact positions of all persons in the row."
+ },
+ {
+  "id": "reasoning-078",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "A, B आणि C पैकी सर्वात उंच कोण आहे हे ठरवण्यासाठी कोणती विधाने आवश्यक आहेत?\nविधाने: 1. A हा B पेक्षा उंच आहे. 2. B हा C पेक्षा उंच आहे.",
+  "q_en": "Which of the statements is/are sufficient to determine who is the tallest among A, B, C?\nStatements: 1. A is taller than B. 2. B is taller than C.",
+  "o_mr": [
+   "फक्त विधान 1 पुरेसे आहे",
+   "फक्त विधान 2 पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे पुरेशी आहेत",
+   "दोन्ही विधाने पुरेशी नाहीत"
+  ],
+  "o_en": [
+   "Only statement 1 is sufficient",
+   "Only statement 2 is sufficient",
+   "Both statements together are sufficient",
+   "Both statements are not sufficient"
+  ],
+  "a": 2,
+  "e_mr": "विधान 1 वरून A > B आणि विधान 2 वरून B > C मिळते. दोन्ही एकत्र केल्यावर A > B > C मिळते, ज्यामुळे A सर्वात उंच असल्याचे स्पष्ट होते.",
+  "e_en": "Statement 1 gives A > B and statement 2 gives B > C. Combining both gives A > B > C, clearly showing A is the tallest."
+ },
+ {
+  "id": "reasoning-079",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "दिलेल्या पर्यायांमधून अचूक जोडी निवडा: हात : अंगठा :: पाय : ?",
+  "q_en": "Choose the correct pair from the given options: Hand : Thumb :: Foot : ?",
+  "o_mr": [
+   "बोट",
+   "घोटा",
+   "टोफ",
+   "अंगठा"
+  ],
+  "o_en": [
+   "Finger",
+   "Ankle",
+   "Toe",
+   "Thumb"
+  ],
+  "a": 2,
+  "e_mr": "ज्याप्रमाणे हाताचे मुख्य बोट म्हणजे अंगठा असतो, त्याचप्रमाणे पायाचे मुख्य बोट म्हणजे टोफ (पायाचा अंगठा) असते.",
+  "e_en": "Just as the thumb is the primary digit of the hand, the toe is the primary digit of the foot."
+ },
+ {
+  "id": "reasoning-080",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_mr": "मालिकेतील पुढील पद ओळखा: 4, 10, 22, 46, ?",
+  "q_en": "Find the next term in the series: 4, 10, 22, 46, ?",
+  "o_mr": [
+   "92",
+   "94",
+   "96",
+   "90"
+  ],
+  "o_en": [
+   "92",
+   "94",
+   "96",
+   "90"
+  ],
+  "a": 1,
+  "e_mr": "येथे पद्धत (× 2 + 2) अशी आहे: 4×2+2 = 10, 10×2+2 = 22, 22×2+2 = 46, 46×2+2 = 94.",
+  "e_en": "The pattern is (× 2 + 2): 4×2+2 = 10, 10×2+2 = 22, 22×2+2 = 46, 46×2+2 = 94."
+ },
+ {
+  "id": "reasoning-081",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "एका मुलाची ओळख करून देत एक स्त्री म्हणाली, 'त्याच्या वडिलांची पत्नी ही माझ्या आईची एकुलती एक मुलगी आहे.' तर त्या स्त्रीचा त्या मुलाशी काय संबंध आहे?",
+  "q_en": "Introducing a boy, a woman said, 'His father's wife is the only daughter of my mother.' How is the woman related to the boy?",
+  "o_mr": [
+   "मावशी",
+   "बहीण",
+   "आई",
+   "आजी"
+  ],
+  "o_en": [
+   "Aunt",
+   "Sister",
+   "Mother",
+   "Grandmother"
+  ],
+  "a": 2,
+  "e_mr": "माझ्या आईची एकुलती एक मुलगी म्हणजे ती स्त्री स्वतः. त्यामुळे मुलाच्या वडिलांची पत्नी ती स्त्रीच आहे, म्हणजेच ती त्याची आई आहे.",
+  "e_en": "The only daughter of my mother is the woman herself. Therefore, the father's wife of the boy is the woman herself, meaning she is his mother."
+ },
+ {
+  "id": "reasoning-082",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "रोहन पूर्वेकडे 6 किलोमीटर चालला, नंतर डावीकडे वळून 8 किलोमीटर चालला. तर तो मूळ ठिकाणापासून किती अंतरावर आहे?",
+  "q_en": "Rohan walked 6 km east, then turned left and walked 8 km. How far is he from the starting point?",
+  "o_mr": [
+   "14 किमी",
+   "10 किमी",
+   "12 किमी",
+   "8 किमी"
+  ],
+  "o_en": [
+   "14 km",
+   "10 km",
+   "12 km",
+   "8 km"
+  ],
+  "a": 1,
+  "e_mr": "पायथागोरसच्या प्रमेयानुसार अंतर = √(6² + 8²) = √(36 + 64) = √100 = 10 किमी.",
+  "e_en": "According to Pythagoras theorem, distance = √(6² + 8²) = √(36 + 64) = √100 = 10 km."
+ },
+ {
+  "id": "reasoning-083",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 2,
+  "q_mr": "एका वर्गातील विद्यार्थ्यांच्या रांगेत रमेश डावीकडून 14 वा आणि उजवीकडून 18 वा आहे, तर त्या रांगेत एकूण किती विद्यार्थी आहेत?",
+  "q_en": "In a row of students, Ramesh is 14th from the left and 18th from the right. How many total students are there in the row?",
+  "o_mr": [
+   "31",
+   "32",
+   "33",
+   "30"
+  ],
+  "o_en": [
+   "31",
+   "32",
+   "33",
+   "30"
+  ],
+  "a": 0,
+  "e_mr": "एकूण विद्यार्थी = (डावीकडील क्रमांक + उजवीकडील क्रमांक) - 1 = (14 + 18) - 1 = 32 - 1 = 31.",
+  "e_en": "Total students = (Left rank + Right rank) - 1 = (14 + 18) - 1 = 32 - 1 = 31."
+ },
+ {
+  "id": "reasoning-084",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "जर 1 जानेवारी 2004 रोजी गुरुवार असेल, तर 1 जानेवारी 2005 रोजी कोणता वार असेल?",
+  "q_en": "If January 1, 2004 was a Thursday, what day of the week was January 1, 2005?",
+  "o_mr": [
+   "शुक्रवार",
+   "शनिवार",
+   "रविवार",
+   "सोमवार"
+  ],
+  "o_en": [
+   "Friday",
+   "Saturday",
+   "Sunday",
+   "Monday"
+  ],
+  "a": 1,
+  "e_mr": "वर्ष 2004 हे लीप वर्ष आहे (366 दिवस), ज्यामध्ये 2 विषम दिवस असतात. त्यामुळे गुरुवारमध्ये 2 दिवस मिळवल्यास शनिवार येतो.",
+  "e_en": "The year 2004 is a leap year (366 days) having 2 odd days. Adding 2 days to Thursday gives Saturday."
+ },
+ {
+  "id": "reasoning-085",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 1,
+  "q_mr": "खालीलपैकी गटात न बसणारा शब्द ओळखा: लोखंड, तांबे, चांदी, पाण्याचा पट्टा",
+  "q_en": "Find the odd one out from the following: Iron, Copper, Silver, Water",
+  "o_mr": [
+   "लोखंड",
+   "तांबे",
+   "चांदी",
+   "पाण्याचा पट्टा"
+  ],
+  "o_en": [
+   "Iron",
+   "Copper",
+   "Silver",
+   "Water"
+  ],
+  "a": 3,
+  "e_mr": "लोखंड, तांबे आणि चांदी या धातू आहेत, तर 'पाण्याचा पट्टा' हा धातू नाही.",
+  "e_en": "Iron, copper, and silver are metals, whereas water is not a metal."
+ },
+ {
+  "id": "reasoning-086",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: P > Q, Q = R, R < S\nनिष्कर्ष: i. P > R, ii. P > S\nयोग्य पर्याय निवडा.",
+  "q_en": "Statements: P > Q, Q = R, R < S\nConclusions: i. P > R, ii. P > S\nChoose the correct option.",
+  "o_mr": [
+   "फक्त निष्कर्ष i सत्य आहे",
+   "फक्त निष्कर्ष ii सत्य आहे",
+   "दोन्ही निष्कर्ष सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion i is true",
+   "Only conclusion ii is true",
+   "Both conclusions are true",
+   "Neither conclusion is true"
+  ],
+  "a": 0,
+  "e_mr": "P > Q आणि Q = R वरून P > R मिळते (निष्कर्ष i सत्य). P आणि S मध्ये विरुद्ध चिन्ह येतात, त्यामुळे P > S निश्चित सांगता येत नाही.",
+  "e_en": "From P > Q and Q = R, we get P > R (conclusion i is true). Between P and S, opposite signs appear, so P > S cannot be determined definitively."
+ },
+ {
+  "id": "reasoning-087",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_mr": "संख्यांचे सादृश्य ओळखा: 6 : 222 :: 7 : ?",
+  "q_en": "Find the number analogy: 6 : 222 :: 7 : ?",
+  "o_mr": [
+   "343",
+   "350",
+   "357",
+   "336"
+  ],
+  "o_en": [
+   "343",
+   "350",
+   "357",
+   "336"
+  ],
+  "a": 1,
+  "e_mr": "येथे संबंध (n³ + n) असा आहे: 6³ + 6 = 216 + 6 = 222. त्याचप्रमाणे 7³ + 7 = 343 + 7 = 350.",
+  "e_en": "The relationship is (n³ + n): 6³ + 6 = 216 + 6 = 222. Similarly, 7³ + 7 = 343 + 7 = 350."
+ },
+ {
+  "id": "reasoning-088",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "पुढील मालिकेत प्रश्नचिन्हाच्या जागी योग्य पर्याय निवडा: पेन : लिखाण :: सुई : ?",
+  "q_en": "Choose the correct option to replace the question mark: Pen : Writing :: Needle : ?",
+  "o_mr": [
+   "शिवणे",
+   "कापणे",
+   "टोचणे",
+   "पकडणे"
+  ],
+  "o_en": [
+   "Sewing",
+   "Cutting",
+   "Pricking",
+   "Holding"
+  ],
+  "a": 0,
+  "e_mr": "पेनाचा उपयोग लिखाणासाठी होतो, त्याचप्रमाणे सुईचा उपयोग कपडे शिवण्यासाठी होतो.",
+  "e_en": "A pen is used for writing, similarly a needle is used for sewing."
+ },
+ {
+  "id": "reasoning-089",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "एक महिला एका पुरुषाकडे बोट दाखवून म्हणाली, 'त्याची आई माझ्या आईची एकुलती एक मुलगी आहे.' तर त्या पुरुषाचा त्या महिलेशी काय संबंध आहे?",
+  "q_en": "Pointing to a man, a woman said, 'His mother is the only daughter of my mother.' How is the man related to the woman?",
+  "o_mr": [
+   "भाचा",
+   "मुुलगा",
+   "भाऊ",
+   "मावसभाऊ"
+  ],
+  "o_en": [
+   "Nephew",
+   "Son",
+   "Brother",
+   "Cousin"
+  ],
+  "a": 1,
+  "e_mr": "महिलेच्या आईची एकुलती एक मुलगी म्हणजे ती महिला स्वतः आहे. म्हणून त्या महिलेची आई त्या पुरुषाची आई आहे, म्हणजेच तो पुरुष तिचा मुलगा आहे.",
+  "e_en": "The only daughter of the woman's mother is the woman herself. Therefore, the woman is the man's mother, making the man her son."
+ },
+ {
+  "id": "reasoning-090",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 1,
+  "q_mr": "एका सांकेतिक भाषेत 'DOG' हा शब्द 'WLT' असा लिहिला जातो, तर त्याच भाषेत 'CAT' कसा लिहिला जाईल?",
+  "q_en": "In a certain code language, 'DOG' is written as 'WLT', then how will 'CAT' be written in that language?",
+  "o_mr": [
+   "XZG",
+   "BYT",
+   "XGZ",
+   "ZXZ"
+  ],
+  "o_en": [
+   "XZG",
+   "BYT",
+   "XGZ",
+   "ZXZ"
+  ],
+  "a": 0,
+  "e_mr": "येथे वर्णांच्या विरुद्ध अक्षरे (opposite letters) वापरली आहेत. D च्या विरुद्ध W, O च्या विरुद्ध L, आणि G च्या विरुद्ध T आहे. तसेच C च्या विरुद्ध X, A च्या विरुद्ध Z, आणि T च्या विरुद्ध G येईल.",
+  "e_en": "Opposite letter pairs are used here. D-W, O-L, G-T. Similarly, C-X, A-Z, T-G gives XZG."
+ },
+ {
+  "id": "reasoning-091",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: A >= B, B > C, C = D\nनिष्कर्ष: I. A > D, II. A >= D\nयोग्य निष्कर्ष निवडा.",
+  "q_en": "Statements: A >= B, B > C, C = D\nConclusions: I. A > D, II. A >= D\nChoose the correct conclusion.",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही निष्कर्ष I आणि II सत्य आहेत",
+   "दोन्ही निष्कर्ष सत्य नाहीत"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "दिलेल्या विधानांवरून A > C आणि C = D वरून A > D मिळते. तसेच A >= B > C = D मुळे A > D हे निश्चितपणे सत्य आहे, म्हणजेच A >= D देखील आपोआप सत्य ठरेल कारण A मोठे किंवा समान असू शकते.",
+  "e_en": "From the statements, we get A > D directly. Since A is strictly greater than D, both strict inequality (A > D) and weak inequality (A >= D) hold true."
+ },
+ {
+  "id": "reasoning-092",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "पुढील मालिकेत प्रश्नचिन्हाच्या जागी कोणती संख्या येईल? ५, ११, २३, ४७, ९५, ?",
+  "q_en": "What number will replace the question mark in the following series? 5, 11, 23, 47, 95, ?",
+  "o_mr": [
+   "१८0",
+   "१९१",
+   "१९३",
+   "१९५"
+  ],
+  "o_en": [
+   "180",
+   "191",
+   "193",
+   "195"
+  ],
+  "a": 1,
+  "e_mr": "मालिकेतील प्रत्येक संख्येला २ ने गुणून त्यात १ मिळवले आहे (उदा. ५×२+१=११, ११×२+१=२३). त्यानुसार ९५×२+१ = १९०+१ = १९१.",
+  "e_en": "Each number is multiplied by 2 and 1 is added (e.g., 5×2+1=11, 11×2+1=23). Following this, 95×2+1 = 191."
+ },
+ {
+  "id": "reasoning-093",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "दिलेल्या पर्यायांमधून संबंधित जोडी निवडा: हस्तकला : शिल्पकार :: ?:?",
+  "q_en": "Choose the related pair from the given options: Handicraft : Sculptor :: ? : ?",
+  "o_mr": [
+   "कविता : कवी",
+   "पुस्तक : वाचक",
+   "शाळा : विद्यार्थी",
+   "कारखाना : कामगार"
+  ],
+  "o_en": [
+   "Poem : Poet",
+   "Book : Reader",
+   "School : Student",
+   "Factory : Worker"
+  ],
+  "a": 0,
+  "e_mr": "शिल्पकार हा हस्तकला तयार करतो, तसेच कवी हा कविता रचतो.",
+  "e_en": "A sculptor creates a handicraft, just as a poet creates a poem."
+ },
+ {
+  "id": "reasoning-094",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "जर 15 जानेवारी 2012 रोजी सोमवार होता, तर 15 जानेवारी 2013 रोजी कोणता वार असेल?",
+  "q_en": "If January 15, 2012 was a Monday, what day of the week was January 15, 2013?",
+  "o_mr": [
+   "बुधवार",
+   "मंगळवार",
+   "सोमवार",
+   "गुरुवार"
+  ],
+  "o_en": [
+   "Wednesday",
+   "Tuesday",
+   "Monday",
+   "Thursday"
+  ],
+  "a": 0,
+  "e_mr": "वर्ष 2012 हे लीप वर्ष आहे आणि 29 फेब्रुवारी 2012 या काळात समाविष्ट होते. त्यामुळे दोन विषम दिवस पुढे जातील. सोमवार + २ दिवस = बुधवार.",
+  "e_en": "The year 2012 is a leap year and includes February 29, 2012. Therefore, there are 2 odd days. Monday + 2 days = Wednesday."
+ },
+ {
+  "id": "reasoning-095",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 1,
+  "q_mr": "एका सांकेतिक भाषेत 'MUMBAI' हा शब्द 'NWNCBJ' असा लिहिला जातो, तर 'DELHI' हा शब्द त्याच भाषेत कसा लिहिला जाईल?",
+  "q_en": "In a certain code language, 'MUMBAI' is written as 'NWNCBJ', then how will 'DELHI' be written in that language?",
+  "o_mr": [
+   "EFMIJ",
+   "EDMHI",
+   "CFKGH",
+   "EFMHI"
+  ],
+  "o_en": [
+   "EFMIJ",
+   "EDMHI",
+   "CFKGH",
+   "EFMHI"
+  ],
+  "a": 0,
+  "e_mr": "प्रत्येक अक्षरामध्ये +1 ची वाढ केली आहे (M->N, U->W, M->N, B->C, A->B, I->J). त्यानुसार DELHI चे EFMIJ होईल.",
+  "e_en": "Each letter is shifted forward by +1 (M->N, U->W, etc.). Applying this to DELHI gives EFMIJ."
+ },
+ {
+  "id": "reasoning-096",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 2,
+  "q_mr": "राहुल पूर्वेकडे 6 किमी चालला, नंतर डावीकडे वळून 8 किमी चालला. तो त्याच्या मूळ ठिकाणापासून सरळ रेषेत किती अंतरावर आहे?",
+  "q_en": "Rahul walked 6 km east, then turned left and walked 8 km. What is his straight-line distance from his starting point?",
+  "o_mr": [
+   "10 किमी",
+   "14 किमी",
+   "12 किमी",
+   "8 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "14 km",
+   "12 km",
+   "8 km"
+  ],
+  "a": 0,
+  "e_mr": "पायथागोरसच्या प्रमेयानुसार, कर्ण = √(6² + 8²) = √(36 + 64) = √100 = 10 किमी.",
+  "e_en": "By Pythagoras theorem, Hypotenuse = √(6² + 8²) = √(36 + 64) = √100 = 10 km."
+ },
+ {
+  "id": "reasoning-097",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: A ≥ B, B = C, C < D\nनिष्कर्ष: I. A > D, II. A ≥ C\nयोग्य निष्कर्ष निवडा.",
+  "q_en": "Statements: A ≥ B, B = C, C < D\nConclusions: I. A > D, II. A ≥ C\nChoose the correct conclusion.",
+  "o_mr": [
+   "फक्त निष्कर्ष II सत्य आहे.",
+   "फक्त निष्कर्ष I सत्य आहे.",
+   "दोन्ही निष्कर्ष सत्य आहेत.",
+   "काहीही सत्य नाही."
+  ],
+  "o_en": [
+   "Only conclusion II is true.",
+   "Only conclusion I is true.",
+   "Both conclusions are true.",
+   "Neither is true."
+  ],
+  "a": 0,
+  "e_mr": "A ≥ B = C असल्यामुळे A ≥ C हे सत्य ठरते. A आणि D मधील संबंध निश्चित नाही, म्हणून निष्कर्ष I सतत्य नाही.",
+  "e_en": "Since A ≥ B = C, A ≥ C is true. The relation between A and D is uncertain, so conclusion I is false."
+ },
+ {
+  "id": "reasoning-098",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "पुढील मालिकेत प्रश्नचिन्हाच्या जागी कोणती संख्या येईल? 7, 14, 28, 56, ?",
+  "q_en": "What number will replace the question mark in the following series? 7, 14, 28, 56, ?",
+  "o_mr": [
+   "112",
+   "108",
+   "98",
+   "120"
+  ],
+  "o_en": [
+   "112",
+   "108",
+   "98",
+   "120"
+  ],
+  "a": 0,
+  "e_mr": "प्रत्येक संख्या आधीच्या संख्येच्या दुप्पट आहे (7×2=14, 14×2=28, 28×2=56, 56×2=112).",
+  "e_en": "Each number is double the previous number (7×2=14, 14×2=28, 28×2=56, 56×2=112)."
+ },
+ {
+  "id": "reasoning-099",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 1,
+  "q_mr": "एका रांगेत मोहन डावीकडून १५ व्या स्थानावर आहे आणि तोच उजवीकडून १८ व्या स्थानावर आहे. तर त्या रांगेत एकूण किती व्यक्ती आहेत?",
+  "q_en": "In a row, Mohan is 15th from the left and 18th from the right. How many total persons are there in the row?",
+  "o_mr": [
+   "३१",
+   "३२",
+   "३३",
+   "३४"
+  ],
+  "o_en": [
+   "31",
+   "32",
+   "33",
+   "34"
+  ],
+  "a": 1,
+  "e_mr": "एकूण व्यक्ती = (डावीकडील स्थान + उजवीकडील स्थान) - १ = (१५ + १८) - १ = ३३ - १ = ३२.",
+  "e_en": "Total persons = (Left position + Right position) - 1 = (15 + 18) - 1 = 33 - 1 = 32."
+ },
+ {
+  "id": "reasoning-100",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "रोहनने पूर्वेकडे ५ किमी चालण्यास सुरुवात केली, नंतर तो डावीकडे वळला आणि ३ किमी चालला, त्यानंतर पुन्हा डावीकडे वळला आणि ५ किमी चालला. तो त्याच्या सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आहे?",
+  "q_en": "Rohan walked 5 km east, then turned left and walked 3 km, then turned left again and walked 5 km. Which direction is he from his starting point?",
+  "o_mr": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North",
+   "South"
+  ],
+  "a": 2,
+  "e_mr": "रोहन पूर्वेकडे ५ किमी गेला, डावीकडे (उत्तर) ३ किमी गेला, आणि नंतर डावीकडे (पश्चिम) ५ किमी चालला. तो पूर्व दिशेने जितका गेला तितकाच पश्चिमेकडे परत आला, त्यामुळे तो सुरुवातीच्या ठिकाणापासून उत्तर दिशेला ३ किमी अंतरावर आहे.",
+  "e_en": "Rohan walked 5 km east, turned left (north) for 3 km, and then turned left (west) for 5 km. Since he walked back the same 5 km west, he is directly north of his starting point."
  }
 ]

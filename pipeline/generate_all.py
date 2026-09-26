@@ -46,7 +46,7 @@ class QuotaExhausted(Exception):
     pass
 
 
-def _post_json(url, payload, headers, timeout=90, retries=4):
+def _post_json(url, payload, headers, timeout=90, retries=4, rotate_on_429=False):
     body = json.dumps(payload).encode("utf-8")
     headers = {**headers, "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) BharariGenBot/1.0"}
     for attempt in range(retries):
@@ -56,8 +56,11 @@ def _post_json(url, payload, headers, timeout=90, retries=4):
                 return json.loads(r.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             if e.code == 429:
-                detail = e.read().decode("utf-8", "replace")
-                if "PerDay" in detail or "generate_content_free_tier_requests" in detail:
+                if rotate_on_429:
+                    # Gemini free tier: could be a per-day cap or a model needing paid billing.
+                    # Either way this model is a dead end for the rest of today; rotate now
+                    # instead of burning retries on it.
+                    detail = e.read().decode("utf-8", "replace")
                     raise QuotaExhausted(detail[:200]) from None
                 if attempt == retries - 1:
                     raise
@@ -169,7 +172,7 @@ def _gemini_draft_with_model(model, subject, topics, n, avoid):
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
         "generationConfig": {"temperature": 0.9, "maxOutputTokens": 16384},
     }
-    data = _post_json(url, payload, {"Content-Type": "application/json"})
+    data = _post_json(url, payload, {"Content-Type": "application/json"}, rotate_on_429=True)
     if "candidates" not in data or not data["candidates"]:
         raise ValueError(f"gemini: no candidates ({data.get('promptFeedback', data)})")
     parts = data["candidates"][0].get("content", {}).get("parts", [])

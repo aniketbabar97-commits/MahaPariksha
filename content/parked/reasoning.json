@@ -1,0 +1,1527 @@
+[
+ {
+  "reason": "groq_error: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'",
+  "item": {
+   "t": "blood",
+   "d": 2,
+   "q_mr": "एका स्त्रियांकडे बोट दाखवून अमित म्हणाला, 'तिचे वडील माझ्या वडिलांच्या मुलाचे एकुलते एक पुत्र आहेत.' तर ती स्त्री अमितची कोण?",
+   "q_en": "Pointing to a woman, Amit said, 'Her father is the only son of my father's son.' How is the woman related to Amit?",
+   "o_mr": [
+    "बहीण",
+    "आई",
+    "मुुलगी",
+    "पत्नी"
+   ],
+   "o_en": [
+    "Sister",
+    "Mother",
+    "Daughter",
+    "Wife"
+   ],
+   "a": 2,
+   "e_mr": "माझ्या वडिलांच्या मुलाचा एकुलता एक पुत्र म्हणजे अमित स्वतः आहे, आणि तिचे वडील अमित आहेत, म्हणून ती स्त्री अमितची मुलगी आहे.",
+   "e_en": "My father's son's only son is Amit himself, and her father is Amit, so the woman is Amit's daughter."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "दिलेले विधान तपासा: P > Q ≥ R = S. निष्कर्ष: i) P > S ii) P = S. कोणता निष्कर्ष सत्य आहे?",
+   "q_en": "Given statement: P > Q ≥ R = S. Conclusions: i) P > S ii) P = S. Which conclusion is true?",
+   "o_mr": [
+    "फक्त निष्कर्ष i सत्य आहे",
+    "फक्त निष्कर्ष ii सत्य आहे",
+    "दोन्ही सत्य आहेत",
+    "कोणताच सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion i is true",
+    "Only conclusion ii is true",
+    "Both are true",
+    "Neither is true"
+   ],
+   "a": 0,
+   "e_mr": "विधानावरून P > Q ≥ R = S आहे, याचा अर्थ P हा S पेक्षा मोठा आहे (P > S). त्यामुळे फक्त पहिला निष्कर्ष सत्य आहे.",
+   "e_en": "From the statement P > Q ≥ R = S, it clearly implies P > S. Therefore, only the first conclusion is true."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "odd",
+   "d": 1,
+   "q_mr": "खालीलपैकी गटात न बसणारा शब्द किंवा संख्या ओळखा: ८, २७, ६४, १२५, १४४",
+   "q_en": "Find the odd one out from the following: 8, 27, 64, 125, 144",
+   "o_mr": [
+    "८",
+    "६४",
+    "१२५",
+    "१४४"
+   ],
+   "o_en": "8 (2^3), 27 (3^3), 64 (4^3), and 125 (5^3) are cubes, whereas 144 is only a square (12^2).",
+   "a": 3,
+   "e_mr": "८ (२चा घन), २७ (३चा घन), ६४ (४चा घन किंवा ८चा वर्ग), १२५ (५चा घन) हे घनसंख्या आहेत, तर १४४ हा फक्त १२चा वर्ग आहे."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "पाच व्यक्ती - A, B, C, D आणि E एका ओळीत उत्तरेकडे तोंड करून बसले आहेत. C हा B च्या अगदी डावीकडे आहे आणि D हा E च्या अगदी उजवीकडे आहे. A हा C च्या उजवीकडे आहे. मध्यभागी कोण बसले आहे?",
+   "q_en": "Five persons - A, B, C, D and E are sitting in a row facing north. C is immediate left of B and D is immediate right of E. A is to the right of C. Who is sitting in the middle?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "a": 0,
+   "e_mr": "मांडणी E, D, A, C, अशी किंवा C, B च्या डावीकडे आहे. पूर्ण मांडणी E, D, A, C, B अशी होते, त्यामुळे मध्यभागी A आहे.",
+   "e_en": "Arranging them: E, D, A, C, B (or similar based on constraints where C is left of B and D is right of E). The middle person is A."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "ranking",
+   "d": 2,
+   "q_mr": "एका वर्गात विद्यार्थ्यांच्या रांगेत रोहन डावीकडून १५ वा आणि उजवीकडून २० वा आहे, तर रांगेत एकूण किती विद्यार्थी आहेत?",
+   "q_en": "In a row of students, Rohan is 15th from the left and 20th from the right. How many total students are there in the row?",
+   "o_mr": [
+    "३५",
+    "३४",
+    "३६",
+    "३३"
+   ],
+   "o_en": [
+    "35",
+    "34",
+    "36",
+    "33"
+   ],
+   "a": 1,
+   "e_mr": "एकूण विद्यार्थी = (डावीकडील क्रमांक + उजवीकडील क्रमांक) - १ = (१५ + २०) - १ = ३५ - १ = ३४.",
+   "e_en": "Total students = (Left rank + Right rank) - 1 = (15 + 20) - 1 = 35 - 1 = 34."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 1,
+   "q_mr": "पुढील मालिका पूर्ण करा: ४, ९, १६, २५, ३६, ?",
+   "q_en": "Complete the series: 4, 9, 16, 25, 36, ?",
+   "o_mr": [
+    "४२",
+    "४८",
+    "४९",
+    "६४"
+   ],
+   "o_en": [
+    "42",
+    "48",
+    "49",
+    "64"
+   ],
+   "a": 2,
+   "e_mr": "दिलेली मालिका पूर्ण वर्ग संख्यांची आहे: २^२=४, ३^२=९, ४^२=१६, ५^२=२५, ६^२=३६, म्हणून पुढील संख्या ७^२=४९ येईल.",
+   "e_en": "The given series consists of squares of consecutive integers: 2^2, 3^2, 4^2, 5^2, 6^2, so the next is 7^2 = 49."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=3, confident=True)",
+  "item": {
+   "t": "syllogism",
+   "d": 3,
+   "q_mr": "विधाने: सर्व पेन पेन्सिल आहेत. काही पेन्सिल रबर आहेत. निष्कर्ष: i) काही पेन रबर आहेत. ii) कोणताही पेन रबर नाही.",
+   "q_en": "Statements: All pens are pencils. Some pencils are rubbers. Conclusions: i) Some pens are rubbers. ii) No pen is rubber.",
+   "o_mr": [
+    "फक्त निष्कर्ष i अनुसरण करतो",
+    "फक्त निष्कर्ष ii अनुसरण करतो",
+    "किंवा i किंवा ii अनुसरण करतो",
+    "दोन्ही अनुसरण करत नाहीत"
+   ],
+   "o_en": [
+    "Only conclusion i follows",
+    "Only conclusion ii follows",
+    "Either i or ii follows",
+    "Neither follows"
+   ],
+   "a": 2,
+   "e_mr": "पेन आणि रबर यांच्यात थेट संबंध दिलेला नाही, त्यामुळे शक्यता निर्माण होते. काही पेन रबर असू शकतात किंवा नसू शकतात, म्हणून 'किंवा i किंवा ii' हे उत्तर योग्य आहे.",
+   "e_en": "Direct relation between pens and rubbers is not given, forming a complementary pair. Some pens might be or might not be rubbers, hence 'Either i or ii' follows."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "calendar",
+   "d": 2,
+   "q_mr": "जर १५ ऑगस्ट १९४७ रोजी शुक्रवार होता, तर १५ ऑगस्ट १९४८ रोजी कोणता वार असेल?",
+   "q_en": "If August 15, 1947 was a Friday, what day of the week was August 15, 1948?",
+   "o_mr": [
+    "शनिवार",
+    "रविवार",
+    "सोमवार",
+    "शुक्रवार"
+   ],
+   "o_en": [
+    "Saturday",
+    "Sunday",
+    "Monday",
+    "Friday"
+   ],
+   "a": 1,
+   "e_mr": "वर्ष १९४८ हे लीप वर्ष आहे. १५ ऑगस्ट १९४७ ते १५ ऑगस्ट १९४८ या काळात फेब्रुवारी १९४८ (लीप वर्षाचा) समाविष्ट होतो, त्यामुळे २ विषम दिवस जोडले जातात. शुक्रवार + २ दिवस = रविवार.",
+   "e_en": "The year 1948 is a leap year. The period from August 15, 1947 to August 15, 1948 includes February 1948 (leap year), adding 2 odd days. Friday + 2 days = Sunday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "coding",
+   "d": 1,
+   "q_mr": "एका सांकेतिक भाषेत 'WATER' ला 'XBUFS' असे लिहिले जाते, तर त्याच भाषेत 'FIRE' ला कसे लिहिले जाईल?",
+   "q_en": "In a code language, 'WATER' is written as 'XBUFS', how will 'FIRE' be written in that language?",
+   "o_mr": [
+    "GJSF",
+    "EHQD",
+    "GSJF",
+    "GHSD"
+   ],
+   "o_en": [
+    "GJSF",
+    "EHQD",
+    "GSJF",
+    "GHSD"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरामध्ये एक अक्षर पुढे सरकवले आहे (W+1=X, A+1=B इ.). त्यामुळे F+1=G, I+1=J, R+1=S, E+1=F म्हणजे GJSF.",
+   "e_en": "Each letter is shifted forward by one position (W+1=X, A+1=B, etc.). Therefore, F+1=G, I+1=J, R+1=S, E+1=F which gives GJSF."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "direction",
+   "d": 1,
+   "q_mr": "एक व्यक्ती उत्तरेकडे ५ किमी चालते, नंतर डावीकडे वळून ३ किमी चालते, आणि पुन्हा डावीकडे वळून ५ किमी चालते. आता ती व्यक्ती सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आहे?",
+   "q_en": "A person walks 5 km north, then turns left and walks 3 km, and turns left again and walks 5 km. Which direction is the person from the starting point?",
+   "o_mr": [
+    "पूर्व",
+    "पश्चिम",
+    "उत्तर",
+    "दक्षिण"
+   ],
+   "o_en": [
+    "East",
+    "West",
+    "North",
+    "South"
+   ],
+   "a": 1,
+   "e_mr": "सुरुवातीला उत्तरेकडे ५ किमी जाऊन डावीकडे (पश्चिमेकडे) ३ किमी चालून पुन्हा ५ किमी दक्षिण गेलो, तर मूळ स्थानापासून ती व्यक्ती थेट पश्चिमेकडे ३ किमी अंतरावर आहे.",
+   "e_en": "Going 5 km north, then 3 km left (west), and 5 km south brings the person directly 3 km west of the starting point."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "odd",
+   "d": 1,
+   "q_mr": "खालीलपैकी गटात न बसणारा पर्याय ओळखा: २७, ६४, १२५, १४४, २१६",
+   "q_en": "Find the odd one out from the following: 27, 64, 125, 144, 216",
+   "o_mr": [
+    "२७",
+    "६४",
+    "१४४",
+    "२१६"
+   ],
+   "o_en": [
+    "27",
+    "64",
+    "144",
+    "216"
+   ],
+   "a": 2,
+   "e_mr": "२७ (३चा घन), ६४ (४चा घन), १२५ (५चा घन) आणि २१६ (६चा घन) हे सर्व पूर्ण घन संख्या आहेत. १४४ ही मात्र १२ चा वर्ग आहे, घन नाही.",
+   "e_en": "27 (3^3), 64 (4^3), 125 (5^3), and 216 (6^3) are all perfect cubes. 144 is a square (12^2), not a cube."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=1, confident=True)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच मित्र A, B, C, D आणि E एका रांगेत उत्तरेकडे तोंड करून बसले आहेत. B हा C च्या डावीकडे आहे पण D च्या उजवीकडे आहे. A हा D च्या डावीकडे आहे. E हा C च्या उजवीकडे आहे. मध्यभागी कोण बसले आहे?",
+   "q_en": "Five friends A, B, C, D, and E are sitting in a row facing north. B is to the left of C but to the right of D. A is to the left of D. E is to the right of C. Who is sitting in the middle?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "a": 3,
+   "e_mr": "रांगेची डावीकडून उजवीकडे मांडणी अशी होईल: A, D, B, C, ई. त्यामुळे D हा अगदी मध्यभागी बसलेला आहे.",
+   "e_en": "The arrangement from left to right is: A, D, B, C, E. Therefore, D is sitting right in the middle."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "ranking",
+   "d": 1,
+   "q_mr": "एका वर्गात एकूण ४५ विद्यार्थी आहेत. सोनलचा वरून क्रमांक १६ वा आहे, तर खालून तिचा क्रमांक कितीवा असेल?",
+   "q_en": "In a class of 45 students, Sonal's rank is 16th from the top. What is her rank from the bottom?",
+   "o_mr": [
+    "२९",
+    "३०",
+    "३१",
+    "३२"
+   ],
+   "o_en": [
+    "29",
+    "30",
+    "31",
+    "32"
+   ],
+   "a": 1,
+   "e_mr": "خालून क्रमांक = (एकूण विद्यार्थी - वरून क्रमांक) + १ = (४५ - १६) + १ = २९ + १ = ३० वा.",
+   "e_en": "Rank from bottom = (Total students - Rank from top) + 1 = (45 - 16) + 1 = 29 + 1 = 30th."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "syllogism",
+   "d": 2,
+   "q_mr": "विधाने: सर्व आंबे फळे आहेत. काही फळे गोड आहेत. निष्कर्ष: I. काही आंबे गोड आहेत. II. सर्व फळे आंबे आहेत. योग्य निष्कर्ष निवडा.",
+   "q_en": "Statements: All mangoes are fruits. Some fruits are sweet. Conclusions: I. Some mangoes are sweet. II. All fruits are mangoes. Choose the correct conclusion.",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "एकही निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 3,
+   "e_mr": "आंबे आणि गोड यांच्यात थेट संबंध दिलेला नाही, त्यामुळे निष्कर्ष I निश्चित नाही. सर्व फळे आंबे आहेत हे विधान चुकीचे ठरते कारण 'सर्व आंबे फळे आहेत' दिले आहे.",
+   "e_en": "No direct relation is given between mangoes and sweet, so conclusion I is uncertain. Conclusion II is false because only some fruits are mangoes according to the statement."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "coding",
+   "d": 2,
+   "q_mr": "जर 'PENCIL' हा शब्द 'ROQEKV' असा लिहिला जातो, तर 'PAPER' हा शब्द कसा लिहिला जाईल?",
+   "q_en": "If 'PENCIL' is written as 'ROQEKV', how will 'PAPER' be written?",
+   "o_mr": [
+    "RCRGT",
+    "QBQFS",
+    "SDSKT",
+    "RBRHT"
+   ],
+   "o_en": [
+    "RCRGT",
+    "QBQFS",
+    "SDSKT",
+    "RBRHT"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरामध्ये अनुक्रमे +२, +१, +२, +१ असा पॅटर्न वापरला आहे (किंवा पर्यायी अक्षरांचे बदल). P+2=R, A+2=C, P+2=R, E+2=G, R+2=T म्हणजेच RCRGT.",
+   "e_en": "Applying a shift rule (P+2=R, A+2=C, P+2=R, E+2=G, R+2=T), 'PAPER' becomes 'RCRGT'."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 2,
+   "q_mr": "खालील मालिकेत चुकीची संख्या ओळखा: ५, १०, २०, ४०, ८०, १६०, ३२०, ६४०",
+   "q_en": "Identify the incorrect number in the following series: 5, 10, 20, 40, 80, 160, 320, 640",
+   "o_mr": [
+    "१०",
+    "२०",
+    "कोणतीही चुकीची नाही",
+    "८०"
+   ],
+   "o_en": [
+    "10",
+    "20",
+    "None is incorrect",
+    "80"
+   ],
+   "a": 2,
+   "e_mr": "ही मालिका प्रत्येक वेळी २ ने गुणून पुढे जात आहे (५×२=१०, १०×२=२० इ.). त्यामुळे सर्व संख्या अचूक आहेत, कोणतीही संख्या चुकीची नाही.",
+   "e_en": "This series progresses by multiplying by 2 each time (5×2=10, 10×2=20, etc.). Thus, all numbers are correct and none is incorrect."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "calendar",
+   "d": 2,
+   "q_mr": "जर 1 जानेवारी 2004 ला गुरुवारी होता, तर 1 जानेवारी 2005 ला कोणता वार असेल?",
+   "q_en": "If January 1, 2004 was a Thursday, what day of the week was January 1, 2005?",
+   "o_mr": [
+    "शुक्रवार",
+    "शनिवार",
+    "रविवार",
+    "सोमवार"
+   ],
+   "o_en": [
+    "Friday",
+    "Saturday",
+    "Sunday",
+    "Monday"
+   ],
+   "a": 1,
+   "e_mr": "वर्ष 2004 हे लीप वर्ष आहे. लीप वर्षामध्ये 2 विषम दिवस असतात, म्हणून गुरुवारी मध्ये 2 दिवस मिळवल्यास शनिवार येतो.",
+   "e_en": "The year 2004 is a leap year. A leap year has 2 odd days, so adding 2 days to Thursday gives Saturday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "coding",
+   "d": 1,
+   "q_mr": "एका सांकेतिक भाषेत 'ROAD' हा शब्द 'URDG' असा लिहिला जातो, तर त्याच भाषेत 'PUMP' कसा लिहिला जाईल?",
+   "q_en": "In a code language, 'ROAD' is written as 'URDG', how will 'PUMP' be written in that language?",
+   "o_mr": [
+    "SXPS",
+    "RXPS",
+    "SWPS",
+    "RYPS"
+   ],
+   "o_en": [
+    "SXPS",
+    "RXPS",
+    "SWPS",
+    "RYPS"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरात 3 ने पुढे सरकवले गेले आहे (R+3=U, O+3=R, A+3=D, D+3=G). त्याचप्रमाणे PUMP चे S, X, P, S होईल.",
+   "e_en": "Each letter is shifted forward by 3 positions (R+3=U, O+3=R, A+3=D, D+3=G). Similarly, PUMP becomes SXPS."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "एका रांगेत, A हा डावीकडून 10 व्या स्थानी आहे आणि B हा उजवीकडून 9 व्या स्थानी आहे. जर त्यांनी आपापल्या जागा अदलाबदल केल्या, तर A हा डावीकडून 15 व्या स्थानी येतो. तर रांगेत एकूण किती व्यक्ती आहेत?",
+   "q_en": "In a row, A is 10th from the left and B is 9th from the right. If they interchange their positions, A becomes 15th from the left. How many people are in the row?",
+   "o_mr": [
+    "22",
+    "23",
+    "24",
+    "25"
+   ],
+   "o_en": [
+    "22",
+    "23",
+    "24",
+    "25"
+   ],
+   "a": 1,
+   "e_mr": "जागा अदलाबदल केल्यावर A ची नवीन डावीकडून स्थिती 15 आहे आणि तीच B ची जुनी उजवीकडून स्थिती 9 होती. एकूण व्यक्ती = (नवीन डावी स्थिती + जुनी उजवी स्थिती) - 1 = 15 + 9 - 1 = 23.",
+   "e_en": "After interchanging, A's new left position is 15, which was B's right position (9). Total people = (15 + 9) - 1 = 23."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 1,
+   "q_mr": "पुढील मालिकेत प्रश्नचिन्हाच्या जागी कोणती संख्या येईल? 4, 9, 19, 39, 79, ?",
+   "q_en": "What number will replace the question mark in the following series? 4, 9, 19, 39, 79, ?",
+   "o_mr": [
+    "149",
+    "159",
+    "169",
+    "139"
+   ],
+   "o_en": [
+    "149",
+    "159",
+    "169",
+    "139"
+   ],
+   "a": 1,
+   "e_mr": "मालिकेतील नमुना: (संख्या * 2) + 1. (4*2)+1=9, (9*2)+1=19, (19*2)+1=39, (39*2)+1=79, म्हणून (79*2)+1 = 159.",
+   "e_en": "The pattern is (number * 2) + 1. (4*2)+1=9, ..., (79*2)+1 = 159."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 2,
+   "q_mr": "मालिका पूर्ण करा: Z, X, V, T, R, ?",
+   "q_en": "Complete the series: Z, X, V, T, R, ?",
+   "o_mr": [
+    "P",
+    "Q",
+    "O",
+    "N"
+   ],
+   "o_en": [
+    "P",
+    "Q",
+    "O",
+    "N"
+   ],
+   "a": 0,
+   "e_mr": "मालिकेत अक्षरे दोन स्थानांनी मागे जात आहेत (Z ते X दोन मागे, X ते V दोन मागे). R (18) मधून दोन मागे गेल्यास P (16) येते.",
+   "e_en": "The series moves backwards by 2 positions each time. Moving 2 positions back from R gives P."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 1,
+   "q_mr": "पुढील मालिकेत चुकीची संख्या किंवा पुढील संख्या ओळखा: 4, 8, 16, 32, 64, ?",
+   "q_en": "Find the next term in the following series: 4, 8, 16, 32, 64, ?",
+   "o_mr": [
+    "100",
+    "128",
+    "144",
+    "256"
+   ],
+   "o_en": [
+    "100",
+    "128",
+    "144",
+    "256"
+   ],
+   "a": 1,
+   "e_mr": "प्रत्येक संख्या मागील संख्येच्या पटीने (गुणिले 2) वाढत आहे. 64 गुणिले 2 = 128.",
+   "e_en": "Each number is multiplied by 2 to get the next number. 64 multiplied by 2 = 128."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=0, confident=True)",
+  "item": {
+   "t": "blood",
+   "d": 2,
+   "q_mr": "एका पुरुषाकडे बोट दाखवून एक महिला म्हणाली, 'त्याच्या भावाची आई ही माझ्या आईची एकुलती एक मुलगी आहे.' तर त्या पुरुषाचा त्या महिलेशी काय संबंध आहे?",
+   "q_en": "Pointing to a man, a woman said, 'His brother's mother is the only daughter of my mother.' How is the man related to the woman?",
+   "o_mr": [
+    "मुुलगा",
+    "भाचा",
+    "भाऊ",
+    "पती"
+   ],
+   "o_en": [
+    "Son",
+    "Nephew",
+    "Brother",
+    "Husband"
+   ],
+   "a": 2,
+   "e_mr": "'माझ्या आईची एकुलती एक मुलगी' म्हणजे स्वतः ती महिला. त्यामुळे त्या पुरुषाची आई ही त्या महिलेची आई आहे, म्हणजेच तो पुरुष तिचा भाऊ आहे.",
+   "e_en": "'The only daughter of my mother' is the woman herself. Therefore, the man's mother is the woman's mother, making the man her brother."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "direction",
+   "d": 1,
+   "q_mr": "रमेश पूर्वेकडे 6 किलोमीटर चालला, त्यानंतर तो डावीकडे वळला आणि 8 किलोमीटर चालला. तो सुरुवातीच्या ठिकाणापासून किती अंतरावर आहे?",
+   "q_en": "Ramesh walked 6 km east, then turned left and walked 8 km. How far is he from the starting point?",
+   "o_mr": [
+    "10 किमी",
+    "14 किमी",
+    "12 किमी",
+    "7 किमी"
+   ],
+   "o_en": [
+    "10 km",
+    "14 km",
+    "12 km",
+    "7 km"
+   ],
+   "a": 0,
+   "e_mr": "पायथागोरसच्या प्रमेयानुसार, वर्गमूळात (6 चा वर्ग + 8 चा वर्ग) = वर्गमूळात (36 + 64) = वर्गमूळात 100 = 10 किमी.",
+   "e_en": "Using Pythagoras theorem, square root of (6^2 + 8^2) = square root of (36 + 64) = square root of 100 = 10 km."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "coding",
+   "d": 2,
+   "q_mr": "एका सांकेतिक भाषेत 'WATER' हा शब्द 'XBUFS' असा लिहिला जातो, तर त्याच भाषेत 'FIRE' कसा लिहिला जाईल?",
+   "q_en": "In a certain code language, 'WATER' is written as 'XBUFS'. How will 'FIRE' be written in that language?",
+   "o_mr": [
+    "GJSF",
+    "EHQD",
+    "GHSF",
+    "EJSD"
+   ],
+   "o_en": [
+    "GJSF",
+    "EHQD",
+    "GHSF",
+    "EJSD"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरामध्ये पुढील अक्षराने बदल केलेला आहे (+1). F+1=G, I+1=J, R+1=S, E+1=F. त्यामुळे उत्तर GJSF आहे.",
+   "e_en": "Each letter is shifted forward by 1 (+1). F+1=G, I+1=J, R+1=S, E+1=F. Thus the answer is GJSF."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "odd",
+   "d": 1,
+   "q_mr": "खालीलपैकी गटात न बसणारा पर्याय ओळखा: 8, 27, 64, 125, 200, 343",
+   "q_en": "Find the odd one out in the following: 8, 27, 64, 125, 200, 343",
+   "o_mr": [
+    "27",
+    "64",
+    "200",
+    "343"
+   ],
+   "o_en": [
+    "27",
+    "64",
+    "200",
+    "343"
+   ],
+   "a": 2,
+   "e_mr": "दिलेल्या संख्या अनुक्रमे पूर्ण घन संख्या आहेत (2चा घन=8, 3चा घन=27, 4चा घन=64, 5चा घन=125, 7चा घन=343). 200 ही कोणतीही पूर्ण घन संख्या नाही.",
+   "e_en": "The given numbers are cubes of integers (2^3=8, 3^3=27, 4^3=64, 5^3=125, 7^3=343). 200 is not a perfect cube."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: A >= B, B > C, C = D\nनिष्कर्ष: I. A > C, II. A = D",
+   "q_en": "Statements: A >= B, B > C, C = D\nConclusions: I. A > C, II. A = D",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 0,
+   "e_mr": "विधानानुसार A >= B > C = D, म्हणजेच A > C हे निश्चितपणे सत्य आहे. परंतु A आणि D मधील संबंध A >= D असा आहे, त्यामुळे A = D निश्चित नाही.",
+   "e_en": "According to statements, A >= B > C = D, so A > C is definitely true. But relationship between A and D is A >= D, so A = D is not certain."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 2,
+   "q_mr": "पुढील अक्षर मालिकेतील रिक्त पद ओळखा: A, C, F, J, O, ?",
+   "q_en": "Find the next term in the letter series: A, C, F, J, O, ?",
+   "o_mr": [
+    "S",
+    "T",
+    "U",
+    "V"
+   ],
+   "o_en": [
+    "S",
+    "T",
+    "U",
+    "V"
+   ],
+   "a": 2,
+   "e_mr": "अक्षरांमधील अंतर क्रमाने वाढत जाते: A(+2)C(+3)F(+4)J(+5)O(+6)U. म्हणून ओव्हरऑल उत्तर U आहे.",
+   "e_en": "The gap between letters increases sequentially: A(+2)C(+3)F(+4)J(+5)O(+6)U. Thus the answer is U."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "coding",
+   "d": 2,
+   "q_mr": " एका सांकेतिक भाषेत 'WATER' हा शब्द 'XBUFS' असा लिहिला जातो, तर त्याच भाषेत 'FIRE' कसा लिहिला जाईल?",
+   "q_en": "In a certain code language, 'WATER' is written as 'XBUFS', how will 'FIRE' be written in that language?",
+   "o_mr": [
+    "GJSF",
+    "EJQD",
+    "GJSD",
+    "EHSD"
+   ],
+   "o_en": [
+    "GJSF",
+    "EJQD",
+    "GJSD",
+    "EHSD"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरात +1 पुढचे अक्षर घेतले आहे. W+1=X, A+1=B, T+1=U, E+1=F, R+1=S. त्यामुळे FIRE चे GJSF होईल.",
+   "e_en": "Each letter is shifted forward by 1: W+1=X, A+1=B, T+1=U, E+1=F, R+1=S. Thus, FIRE becomes GJSF."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "syllogism",
+   "d": 3,
+   "q_mr": "विधाने: सर्व पेन पेपर्स आहेत. काही पेपर्स पुस्तके आहेत.\nनिष्कर्ष: i. काही पेन पुस्तके आहेत. ii. काही पुस्तके पेपर्स आहेत.\nयोग्य निष्कर्ष निवडा.",
+   "q_en": "Statements: All pens are papers. Some papers are books.\nConclusions: i. Some pens are books. ii. Some books are papers.\nChoose the correct conclusion.",
+   "o_mr": [
+    "फक्त निष्कर्ष i अनुसरण करतो",
+    "फक्त निष्कर्ष ii अनुसरण करतो",
+    "दोन्ही निष्कर्ष अनुसरण करतात",
+    "कोणताच निष्कर्ष अनुसरण करत नाही"
+   ],
+   "o_en": [
+    "Only conclusion i follows",
+    "Only conclusion ii follows",
+    "Both conclusions follow",
+    "Neither conclusion follows"
+   ],
+   "a": 1,
+   "e_mr": "दुसऱ्या विधानानुसार 'काही पेपर्स पुस्तके आहेत', म्हणजेच 'काही पुस्तके पेपर्स आहेत' (ii) हे सत्य ठरते. पेन आणि पुस्तकांचा थेट संबंध दिलेला नाही, त्यामुळे i निश्चित सांगता येत नाही.",
+   "e_en": "According to statement 2, 'Some papers are books', which means 'Some books are papers' (ii) is true. No direct relation is given between pens and books, so i does not necessarily follow."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "A, B, C पैकी सर्वात मोठे कोणाचे वय आहे हे ठरवण्यासाठी कोणती विधाने पुरेशी आहेत?\nविधाने: 1. A चे वय B पेक्षा जास्त आहे. 2. B चे वय C पेक्षा जास्त आहे.",
+   "q_en": "Which statements are sufficient to determine who is the oldest among A, B, C?\nStatements: 1. A's age is greater than B's. 2. B's age is greater than C's.",
+   "o_mr": [
+    "फक्त विधान 1 पुरेशी आहे",
+    "फक्त विधान 2 पुरेशी आहे",
+    "दोन्ही विधाने एकत्र पुरेशी आहेत",
+    "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement 1 is sufficient",
+    "Only statement 2 is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान 1 वरून A > B आणि विधान 2 वरून B > C मिळते. दोन्ही एकत्र केल्यावर A > B > C मिळते, ज्यामुळे A सर्वात मोठा हे स्पष्ट होते.",
+   "e_en": "Statement 1 gives A > B and statement 2 gives B > C. Combining both gives A > B > C, clearly showing A is the oldest."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच मित्र A, B, C, D आणि E एका रांगेत उत्तरेकडे तोंड करून उभे आहेत. C हा बरोबर मध्यभागी आहे. B हा C च्या डावीकडे आहे आणि A च्या उजवीकडे आहे. तर उजव्या टोकाला कोण आहे?",
+   "q_en": "Five friends A, B, C, D, and E are standing in a row facing north. C is exactly in the middle. B is to the immediate left of C and right of A. Who is at the right end?",
+   "o_mr": [
+    "D",
+    "E",
+    "A",
+    "B"
+   ],
+   "o_en": [
+    "D",
+    "E",
+    "A",
+    "B"
+   ],
+   "a": 0,
+   "e_mr": "मध्यभागी C आहे. C च्या डावीकडे B आणि B च्या डावीकडे A आहे (A, B, C). उरलेले D आणि E हे C च्या उजवीकडे असतील. त्यामुळे रांग A, B, C, D, E अशी बनते आणि उजव्या टोकाला D किंवा E पैकी एक येईल (दिलेल्या माहितीनुसार E ची जागा ठरते जर D आणि E चे स्थान निश्चित केले तर रचना A, B, C, E, D किंवा A, B, C, D, E अशी होते; येथे E हा D च्या डावीकडे असेल तर उजव्या टोकाला D येईल).",
+   "e_en": "C is in the middle. B is to the left of C, and A is to the left of B (A, B, C). The remaining two, D and E, are to the right of C, making the order A, B, C, E, D or similar, with D at the extreme right."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "series",
+   "d": 1,
+   "q_mr": "मालिकेतील पुढील पद ओळखा: Z, X, V, T, ?",
+   "q_en": "Find the next term in the series: Z, X, V, T, ?",
+   "o_mr": [
+    "R",
+    "S",
+    "Q",
+    "P"
+   ],
+   "o_en": [
+    "R",
+    "S",
+    "Q",
+    "P"
+   ],
+   "a": 0,
+   "e_mr": "वर्णमालिकेत दोन अक्षरे मागे जात ही मालिका तयार झाली आहे: Z(-2)=X, X(-2)=V, V(-2)=T, T(-2)=R.",
+   "e_en": "The series moves backward by 2 letters in the alphabet: Z(-2)=X, X(-2)=V, V(-2)=T, T(-2)=R."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "coding",
+   "d": 2,
+   "q_mr": "एका कोड भाषेत 'ROAD' हा शब्द 'URDG' असा लिहिला जातो, तर 'SWAN' कसा लिहिला जाईल?",
+   "q_en": "In a code language, 'ROAD' is written as 'URDG', how will 'SWAN' be written?",
+   "o_mr": [
+    "VZDQ",
+    "UZDQ",
+    "VZDQ",
+    "WZDQ"
+   ],
+   "o_en": [
+    "VZDQ",
+    "UZDQ",
+    "VZid",
+    "WZDQ"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरात +3 पुढचे अक्षर घेतले आहे. R+3=U, O+3=R, A+3=D, D+3=G. तसेच S+3=V, W+3=Z, A+3=D, N+3=Q.",
+   "e_en": "Each letter is shifted forward by 3: R+3=U, O+3=R, A+3=D, D+3=G. Similarly for SWAN: S+3=V, W+3=Z, A+3=D, N+3=Q."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "analogy",
+   "d": "1",
+   "q_mr": "खालील मालिकेत प्रश्नचिन्हाच्या जागी योग्य पर्याय निवडा: 'पुस्तक : ग्रंथालय :: रुग्ण : ?'",
+   "q_en": "Choose the correct option to replace the question mark: 'Book : Library :: Patient : ?'",
+   "o_mr": [
+    "शाळा",
+    "रुग्णालय",
+    "औषध",
+    "डॉक्टर"
+   ],
+   "o_en": [
+    "School",
+    "Hospital",
+    "Medicine",
+    "Doctor"
+   ],
+   "a": 1,
+   "e_mr": "जसे पुस्तक ग्रंथालयात ठेवले जाते, तसेच रुग्ण उपचारासाठी रुग्णालयात असतो.",
+   "e_en": "Just as a book is kept in a library, a patient is found in a hospital."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "blood",
+   "d": "2",
+   "q_mr": "एका पुरुषाकडे निर्देश करत एक स्त्री म्हणाली, 'त्याच्या आईचा पती हा माझ्या आईचा एकुलता एक मुलगा आहे.' तर त्या पुरुषाचे त्या स्त्रीशी काय नाते आहे?",
+   "q_en": "Pointing to a man, a woman said, 'His mother's husband is the only son of my mother.' How is the man related to the woman?",
+   "o_mr": [
+    "भाऊ",
+    "मुगा",
+    "काका",
+    "वडील"
+   ],
+   "o_en": [
+    "Brother",
+    "Son",
+    "Uncle",
+    "Father"
+   ],
+   "a": 0,
+   "e_mr": "स्त्रीच्या आईचा एकुलता एक मुलगा म्हणजे त्या स्त्रीचा भाऊ. त्यामुळे त्या पुरुषाची आई ज्याच्याशी लग्न केली (त्याचा वडील) तो त्या स्त्रीचा भाऊ आहे.",
+   "e_en": "The only son of the woman's mother is her brother. Therefore, the man is her brother."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "calendar",
+   "d": "2",
+   "q_mr": "जर 1 जानेवारी 2008 रोजी मंगळवार होता, तर 1 जानेवारी 2009 रोजी कोणता वार असेल?",
+   "q_en": "If January 1, 2008 was a Tuesday, what day of the week was January 1, 2009?",
+   "o_mr": [
+    "बुधवार",
+    "गुरुवार",
+    "शुक्रवार",
+    "मंगळवार"
+   ],
+   "o_en": [
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Tuesday"
+   ],
+   "a": 1,
+   "e_mr": "वर्ष 2008 हे लीप वर्ष आहे (फेब्रुवारीत 29 दिवस), त्यामुळे लीप वर्षामध्ये दोन विषम दिवस (odd days) असतात. मंगळवार + 2 दिवस = गुरुवार.",
+   "e_en": "The year 2008 is a leap year (29 days in February), so it has two odd days. Tuesday + 2 days = Thursday."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "coding",
+   "d": "1",
+   "q_mr": "एका सांकेतिक भाषेत 'WATER' हा शब्द 'XBUFS' असा लिहिला जातो, तर त्याच भाषेत 'FIRE' कसा लिहिला जाईल?",
+   "q_en": "In a certain code language, 'WATER' is written as 'XBUFS'. How is 'FIRE' written in that language?",
+   "o_mr": [
+    "GJSF",
+    "GHRE",
+    "EJQD",
+    "FJSF"
+   ],
+   "o_en": [
+    "GJSF",
+    "GHRE",
+    "EJQD",
+    "FJSF"
+   ],
+   "a": 0,
+   "e_mr": "प्रत्येक अक्षरात 1 ने पुढचे अक्षर घेतले आहे (W+1=X, A+1=B, T+1=U, E+1=F, R+1=S). तसेच F+1=G, I+1=J, R+1=S, E+1=F म्हणजेच GJSF.",
+   "e_en": "Each letter is shifted forward by 1 (W+1=X, etc.). Similarly, applying this to FIRE gives GJSF."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "data_sufficiency",
+   "d": "3",
+   "q_mr": "P, Q, R आणि S पैकी सर्वात वजनदार कोण आहे हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत? विधान १: P हा S पेक्षा जड आहे पण Q पेक्षा हलका आहे. विधान २: R हा P पेक्षा जड आहे.",
+   "q_en": "Which of the statements is/are sufficient to determine who is the heaviest among P, Q, R and S? Statement 1: P is heavier than S but lighter than Q. Statement 2: R is heavier than P.",
+   "o_mr": [
+    "केवळ विधान १ पुरेशी आहे",
+    "केवळ विधान २ पुरेशी आहे",
+    "विधान १ आणि २ दोन्ही मिळून पुरेशी नाहीत",
+    "विधान १ आणि २ दोन्ही मिळून पुरेशी आहेत"
+   ],
+   "o_en": [
+    "Only statement 1 is sufficient",
+    "Only statement 2 is sufficient",
+    "Both statements together are not sufficient",
+    "Both statements together are sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान १ वरून Q > P > S मिळते. विधान २ वरून R > P मिळते. पण R आणि Q मधील नाते स्पष्ट होत नाही, त्यामुळे कोण सर्वात जड आहे हे सांगता येत नाही.",
+   "e_en": "Statement 1 gives Q > P > S. Statement 2 gives R > P. However, the relation between R and Q is unknown, so we cannot determine the heaviest."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "direction",
+   "d": "1",
+   "q_mr": "रोहन उत्तरेकडे 10 किमी चालला, नंतर उजवीकडे वळून 5 किमी चालला, आणि पुन्हा उजवीकडे वळून 10 किमी चालला. तो सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आणि किती अंतरावर आहे?",
+   "q_en": "Rohan walked 10 km north, turned right and walked 5 km, and turned right again and walked 10 km. How far and in which direction is he from the starting point?",
+   "o_mr": [
+    "5 किमी पूर्वेकडे",
+    "5 किमी पश्चिमेकडे",
+    "10 किमी उत्तरेकडे",
+    "5 किमी दक्षिणेकडे"
+   ],
+   "o_en": [
+    "5 km East",
+    "5 km West",
+    "10 km North",
+    "5 km South"
+   ],
+   "a": 0,
+   "e_mr": "रोहन सुरुवातीपासून उत्तरेकडे जाऊन पुन्हा दक्षिणेकडे आल्याने मूळ अक्षावर आला आणि तो पूर्वेकडे 5 किमी अंतरावर आहे.",
+   "e_en": "Rohan went north and came back south by the same distance, placing him 5 km to the east of the starting point."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "inequality",
+   "d": "2",
+   "q_mr": "दिलेली विधाने तपासा:\nविधाने: A >= B, B = C, C < D\nनिष्कर्ष: I. A > C, II. A = C\nयोग्य पर्याय निवडा.",
+   "q_en": "Check the given statements:\nStatements: A >= B, B = C, C < D\nConclusions: I. A > C, II. A = C\nChoose the correct option.",
+   "o_mr": [
+    "केवळ निष्कर्ष I सत्य आहे",
+    "केवळ निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I किंवा II पैकी एक सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही असत्य आहेत"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Either conclusion I or II is true",
+    "Both conclusions I and II are false"
+   ],
+   "a": 2,
+   "e_mr": "दिलेल्या विधानांवरून A >= C मिळते. याचा अर्थ A हा C पेक्षा मोठा आहे किंवा C च्या समान आहे. म्हणून 'किंवा' (either I or II) ही अट लागू होते.",
+   "e_en": "From the statements, we get A >= C. This means A is either greater than C or equal to C. Therefore, 'either I or II' is true."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "odd",
+   "d": "1",
+   "q_mr": "खालीलपैकी गटात न बसणारा पर्याय ओळखा: 8, 27, 64, 125, 216, 350",
+   "q_en": "Find the odd one out from the following: 8, 27, 64, 125, 216, 350",
+   "o_mr": [
+    "8",
+    "64",
+    "216",
+    "350"
+   ],
+   "o_en": [
+    "8",
+    "64",
+    "216",
+    "350"
+   ],
+   "a": 3,
+   "e_mr": "दिलेल्या सर्व संख्या घन (cubes) आहेत: 8 (2^3), 27 (3^3), 64 (4^3), 125 (5^3), 216 (6^3), मात्र 350 हा पूर्ण घन नाही.",
+   "e_en": "All other numbers are perfect cubes (2^3, 3^3, 4^3, 5^3, 6^3), but 350 is not a perfect cube."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "puzzles",
+   "d": "2",
+   "q_mr": "पाच व्यक्ती (A, B, C, D, E) उत्तरेकडे तोंड करून एका रांगेत बसल्या आहेत. C हा बरोबर मध्यभागी आहे. A हा डाव्या टोकाला आहे आणि B हा उजव्या टोकाला आहे. जर D हा A च्या शेजारी असेल, तर B च्या डावीकडे लगेच कोण बसले आहे?",
+   "q_en": "Five persons (A, B, C, D, E) are sitting in a row facing north. C is in the exact middle. A is at the left end and B is at the right end. If D is adjacent to A, who is sitting immediately to the left of B?",
+   "o_mr": [
+    "A",
+    "C",
+    "D",
+    "E"
+   ],
+   "o_en": [
+    "A",
+    "C",
+    "D",
+    "E"
+   ],
+   "a": 3,
+   "e_mr": "रांगेची मांडणी डावीकडून उजवीकडे अशी असेल: A, D, C, E, B. त्यामुळे B च्या लगेच डावीकडे E बसला आहे.",
+   "e_en": "The arrangement from left to right is: A, D, C, E, B. Therefore, E is sitting immediately to the left of B."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "ranking",
+   "d": "2",
+   "q_mr": "एका वर्गात विद्यार्थ्यांच्या रांगेत अमित डावीकडून 15 व्या क्रमांकावर आहे आणि उजवीकडून 20 व्या क्रमांकावर आहे, तर त्या रांगेत एकूण किती विद्यार्थी आहेत?",
+   "q_en": "In a row of students, Amit is 15th from the left and 20th from the right. How many total students are there in the row?",
+   "o_mr": [
+    "35",
+    "34",
+    "36",
+    "33"
+   ],
+   "o_en": [
+    "35",
+    "34",
+    "36",
+    "33"
+   ],
+   "a": 1,
+   "e_mr": "एकूण विद्यार्थी = (डावीकडील क्रमांक + उजवीकडील क्रमांक) - 1 = (15 + 20) - 1 = 35 - 1 = 34.",
+   "e_en": "Total students = (Left rank + Right rank) - 1 = (15 + 20) - 1 = 34."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "series",
+   "d": "1",
+   "q_mr": "खालील मालिकेत प्रश्नचिन्हाच्या जागी कोणती संख्या येईल? 5, 11, 23, 47, 95, ?",
+   "q_en": "What number will replace the question mark in the following series? 5, 11, 23, 47, 95, ?",
+   "o_mr": [
+    "189",
+    "191",
+    "193",
+    "195"
+   ],
+   "o_en": [
+    "189",
+    "191",
+    "193",
+    "195"
+   ],
+   "a": 1,
+   "e_mr": "मालिकेतील नमुना: (संख्या * 2) + 1. उदा. (5*2)+1 = 11, (11*2)+1 = 23, ..., त्यामुळे (95*2)+1 = 191.",
+   "e_en": "The pattern is (number * 2) + 1. Thus, (95 * 2) + 1 = 191."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "syllogism",
+   "d": "2",
+   "q_mr": "विधाने:\n1. सर्व पेन पेपर्स आहेत.\n2. काही पेपर्स पुस्तके आहेत.\nनिष्कर्ष:\nI. काही पेन पुस्तके आहेत.\nII. काही पुस्तके पेपर्स आहेत.\nयोग्य निष्कर्ष निवडा.",
+   "q_en": "Statements:\n1. All pens are papers.\n2. Some papers are books.\nConclusions:\nI. Some pens are books.\nII. Some books are papers.\nChoose the correct conclusion.",
+   "o_mr": [
+    "केवळ निष्कर्ष I सत्य आहे",
+    "केवळ निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "केवळ निष्कर्ष II सत्य आहे"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Only conclusion II is true"
+   ],
+   "a": 1,
+   "e_mr": "पेन आणि पुस्तके यांच्यात थेट संबंध दिलेला नाही त्यामुळे I निश्चित सत्य नाही. पेपर्स आणि पुस्तके यांच्यात 'काही'चा संबंध आहे त्यामुळे II निश्चित सत्य आहे.",
+   "e_en": "There is no direct relation between pens and books, so I is not definitely true. Since some papers are books, II is definitely true."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "analogy",
+   "d": "1",
+   "q_mr": "योग्य पर्याय निवडा: 'धनुष्य : बाण :: बंदूक : ?'",
+   "q_en": "Choose the correct option: 'Bow : Arrow :: Gun : ?'",
+   "o_mr": [
+    "लक्ष्य",
+    "गोळी",
+    "सैनिक",
+    "परवाना"
+   ],
+   "o_en": [
+    "Target",
+    "Bullet",
+    "Soldier",
+    "License"
+   ],
+   "a": 1,
+   "e_mr": "जसे धनुष्यातून बाण सोडला जातो, तसेच बंदुकीतून गोळी झाडली जाते.",
+   "e_en": "Just as an arrow is shot from a bow, a bullet is fired from a gun."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "coding",
+   "d": "2",
+   "q_mr": "एका सांकेतिक भाषेत 'COLD' हा शब्द '315124' असा लिहिला जातो, तर 'FAST' हा शब्द कसा लिहिला जाईल?",
+   "q_en": "In a certain code language, 'COLD' is written as '315124'. How is 'FAST' written in that language?",
+   "o_mr": [
+    "611920",
+    "611819",
+    "511920",
+    "6121920"
+   ],
+   "o_en": [
+    "611920",
+    "611819",
+    "511920",
+    "6121920"
+   ],
+   "a": 0,
+   "e_mr": "अक्षरांचे इंग्रजी वर्णमालेतील क्रमांकांची ही मालिका आहे (C=3, O=15, L=12, D=4). त्याचप्रमाणे FAST साठी F=6, A=1, S=19, T=20 म्हणजेच 611920.",
+   "e_en": "The letters are replaced by their alphabetical positions (C=3, O=15, L=12, D=4). Similarly, FAST becomes F=6, A=1, S=19, T=20 -> 611920."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "series",
+   "d": "2",
+   "q_mr": "खालील मालिकेत प्रश्नचिन्हाच्या जागी कोणती संख्या येईल? 2, 5, 10, 17, 26, ?",
+   "q_en": "What number will replace the question mark in the following series? 2, 5, 10, 17, 26, ?",
+   "o_mr": [
+    "35",
+    "37",
+    "39",
+    "41"
+   ],
+   "o_en": [
+    "35",
+    "37",
+    "39",
+    "41"
+   ],
+   "a": 1,
+   "e_mr": "मालिकेतील फरक क्रमाने वाढत आहेत (+3, +5, +7, +9, +11). त्यामुळे 26 + 11 = 37.",
+   "e_en": "The differences are consecutive odd numbers (+3, +5, +7, +9, +11). Thus, 26 + 11 = 37."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=0, confident=True)",
+  "item": {
+   "t": "calendar",
+   "d": 2,
+   "q_mr": "जर आज बुधवार असेल, तर बरोबर ६१ दिवसांनंतर कोणता वार असेल?",
+   "q_en": "If today is Wednesday, what day of the week will it be after exactly 61 days?",
+   "o_mr": [
+    "सोमवार",
+    "मंगळवार",
+    "गुरुवार",
+    "शुक्रवार"
+   ],
+   "o_en": [
+    "Monday",
+    "Tuesday",
+    "Thursday",
+    "Friday"
+   ],
+   "a": 3,
+   "e_mr": "६१ दिवसांना ७ ने भागल्यास बाकी ५ उरते (६१ ÷ ७ = ८ आठवडे आणि ५ दिवस बाकी). बुधवारमध्ये ५ दिवस मिळवल्यास शुक्रवार येतो.",
+   "e_en": "Dividing 61 by 7 leaves a remainder of 5 (61 ÷ 7 = 8 weeks and 5 odd days). Adding 5 days to Wednesday gives Friday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "P, Q आणि R पैकी सर्वात मोठे कोणाचे वय आहे हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत? विधान १: P चे वय Q पेक्षा जास्त आहे. विधान २: R चे वय Q पेक्षा कमी आहे.",
+   "q_en": "Which of the following statements is/are sufficient to determine who is the oldest among P, Q and R? Statement 1: P's age is greater than Q's. Statement 2: R's age is less than Q's.",
+   "o_mr": [
+    "फक्त विधान १ पुरेशी आहे",
+    "फक्त विधान २ पुरेशी आहे",
+    "विधान १ आणि २ दोन्ही मिळून पुरेशी आहेत",
+    "विधान १ आणि २ दोन्ही मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement 1 is sufficient",
+    "Only statement 2 is sufficient",
+    "Both statements 1 and 2 together are sufficient",
+    "Neither statement 1 nor statement 2 is sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान १ वरून P > Q आणि विधान २ वरून Q > R मिळते. दोन्ही एकत्र केल्यास P > Q > R येते, ज्यावरून P सर्वात मोठा असल्याचे समजते.",
+   "e_en": "Statement 1 gives P > Q and Statement 2 gives Q > R. Combining both gives P > Q > R, which clearly shows P is the oldest."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "direction",
+   "d": 1,
+   "q_mr": "एक व्यक्ती पूर्वेकडे ५ किमी चालते, नंतर उजवीकडे वळून ४ किमी चालते, पुन्हा उजवीकडे वळून ५ किमी चालते. आता ती व्यक्ती सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आहे?",
+   "q_en": "A person walks 5 km east, then turns right and walks 4 km, then turns right again and walks 5 km. Which direction is the person from the starting point?",
+   "o_mr": [
+    "पूर्व",
+    "पश्चिम",
+    "उत्तर",
+    "दक्षिण"
+   ],
+   "o_en": [
+    "East",
+    "West",
+    "North",
+    "South"
+   ],
+   "a": 3,
+   "e_mr": "व्यक्ती पूर्वेकडे ५ किमी जाऊन दक्षिणेकडे ४ किमी गेली आणि नंतर पश्चिमेकडे ५ किमी येऊन सुरुवातीच्या रेषेवर आली. त्यामुळे ती सुरुवातीच्या ठिकाणापासून दक्षिणेस ४ किमी अंतरावर आहे.",
+   "e_en": "The person went 5 km east, 4 km south, and 5 km west back to the vertical line of the start. Thus, they are directly south of the starting point."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "odd",
+   "d": 1,
+   "q_mr": "खालीलपैकी गटात न बसणारा पर्याय ओळखा: १२, २४, ३६, ४८, ६०, ७२, ८०",
+   "q_en": "Find the odd one out in the following: 12, 24, 36, 48, 60, 72, 80",
+   "o_mr": [
+    "२४",
+    "६०",
+    "७२",
+    "८०"
+   ],
+   "o_en": "All other numbers are multiples of 12 (12, 24, 36, 48, 60, 72), whereas 80 is not divisible by 12.",
+   "a": 3,
+   "e_mr": "दिलेल्या सर्व संख्या १२ च्या पटीत आहेत (१२×१=१२ ते १२×६=७२), परंतु ८० ही संख्या १२ ने पूर्णपणे भाग जात नाही.",
+   "e_en": "All given numbers are multiples of 12 except 80."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती (P, Q, R, S, T) एका रांगेत उत्तरेकडे तोंड करून बसल्या आहेत. R हा P च्या उजवीकडे आहे पण T च्या डावीकडे आहे. S हा Q च्या डावीकडे आहे पण P च्या उजवीकडे आहे. तर मध्यभागी कोण बसले आहे?",
+   "q_en": "Five persons (P, Q, R, S, T) are sitting in a row facing north. R is to the right of P but to the left of T. S is to the left of Q but to the right of P. Who is sitting in the middle?",
+   "o_mr": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "o_en": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "a": 3,
+   "e_mr": "दिलेल्या माहितीनुसार रांगेचा क्रम P, S, Q, R, T असा बनतो (डावीकडून उजवीकडे). यात मध्यभागी S हा व्यक्ती येतो.",
+   "e_en": "Based on the given clues, the arrangement from left to right is P, S, Q, R, T. Thus, S is in the middle."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "ranking",
+   "d": 2,
+   "q_mr": "एका वर्गात मुलांच्या रांगेत रमेश डावीकडून १५ व्या आणि उजवीकडून १८ व्या स्थानी आहे, तर त्या रांगेत एकूण किती मुले आहेत?",
+   "q_en": "In a row of boys, Ramesh is 15th from the left and 18th from the right. How many total boys are there in the row?",
+   "o_mr": [
+    "३१",
+    "३२",
+    "३३",
+    "३४"
+   ],
+   "o_en": [
+    "31",
+    "32",
+    "33",
+    "34"
+   ],
+   "a": 1,
+   "e_mr": "एकूण मुले = (डावीकडील क्रमांक + उजवीकडील क्रमांक) - १ = (१५ + १८) - १ = ३३ - १ = ३२.",
+   "e_en": "Total boys = (Left rank + Right rank) - 1 = (15 + 18) - 1 = 33 - 1 = 32."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "syllogism",
+   "d": 2,
+   "q_mr": "विधाने: सर्व पेन पेन्सिल आहेत. काही पेन्सिल रबर आहेत.\nनिष्कर्ष: I. काही पेन रबर आहेत. II. काही रबर पेन आहेत.\nयोग्य निष्कर्ष निवडा.",
+   "q_en": "Statements: All pens are pencils. Some pencils are erasers.\nConclusions: I. Some pens are erasers. II. Some erasers are pens.\nChoose the correct conclusion.",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष I आणि II सत्य आहेत",
+    "दोन्ही निष्कर्ष सत्य नाहीत"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 3,
+   "e_mr": "पेन आणि रबर यांच्यात कोणताही थेट संबंध दिलेला नाही, त्यामुळे दोन्ही निष्कर्ष अनिश्चित ठरतात.",
+   "e_en": "No direct relationship is given between pens and erasers, hence both conclusions do not definitely follow."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "blood",
+   "d": 2,
+   "q_mr": "एका स्त्रियांकडे बोट दाखवून एक पुरुष म्हणाला, 'तिच्या वडिलांचा एकुलता एक मुलगा हा माझ्या आईच्या नवऱ्याचा मुलगा आहे.' तर त्या पुरुषाचा त्या स्त्रिशी काय संबंध आहे?",
+   "q_en": "Pointing to a woman, a man said, 'Her father's only son is the son of my mother's husband.' How is the man related to the woman?",
+   "o_mr": [
+    "भाऊ",
+    "काका",
+    "वडील",
+    "मुुलगा"
+   ],
+   "o_en": [
+    "Brother",
+    "Uncle",
+    "Father",
+    "Son"
+   ],
+   "a": 0,
+   "e_mr": "माझ्या आईचा नवरा म्हणजे माझे वडील. माझ्या वडिलांचा मुलगा म्हणजे माझा भाऊ. स्त्रियांच्या वडिलांचा एकुलता एक मुलगा म्हणजे त्या स्त्रीचा भाऊ.",
+   "e_en": "My mother's husband is my father. My father's son is my brother. The woman's father's only son is the woman's brother."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "P, Q, R, S आणि T मध्ये सर्वात लहान कोण हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत? विधान I: R हा P आणि S पेक्षा लहान आहे. विधान II: Q हा T पेक्षा मोठा आहे पण P पेक्षा लहान आहे.",
+   "q_en": "Which of the statements is/are sufficient to determine who is the shortest among P, Q, R, S and T? Statement I: R is shorter than P and S. Statement II: Q is taller than T but shorter than P.",
+   "o_mr": [
+    "विधान I आणि II दोन्ही मिळून पुरेशी नाहीत.",
+    "फक्त विधान I पुरेशी आहे.",
+    "फक्त विधान II पुरेशी आहे.",
+    "विधान I आणि II दोन्ही आवश्यक आहेत."
+   ],
+   "o_en": [
+    "Both statements I and II together are not sufficient.",
+    "Only statement I is sufficient.",
+    "Only statement II is sufficient.",
+    "Both statements I and II together are necessary."
+   ],
+   "a": 0,
+   "e_mr": "दोन्ही विधाने एकत्र केली तरी T आणि S यांच्यातील नेमका संबंध समजत नाही, त्यामुळे सर्वात लहान कोण हे निश्चित सांगता येत नाही.",
+   "e_en": "Even combining both statements, the exact relation between T and S is unknown, so the shortest person cannot be determined."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "odd",
+   "d": 1,
+   "q_mr": "खालील गटात न बसणारा शब्द किंवा संख्या ओळखा: 12, 24, 36, 48, 60, 78",
+   "q_en": "Find the odd one out from the following: 12, 24, 36, 48, 60, 78",
+   "o_mr": [
+    "78",
+    "24",
+    "36",
+    "60"
+   ],
+   "o_en": [
+    "78",
+    "24",
+    "36",
+    "60"
+   ],
+   "a": 0,
+   "e_mr": "दिलेल्या सर्व संख्या 12 च्या पटीत आहेत (12×1=12, 12×2=24 इ.), परंतु 78 हा 12 ने पूर्णपणे भाग जाणारी संख्या नाही (78 = 12×6.5).",
+   "e_en": "All given numbers are multiples of 12, except 78 which is not a multiple of 12."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच मित्र A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा बरोबर मध्यभागी आहे. A हा डाव्या टोकाला आहे आणि B हा C च्या लगेच डावीकडे आहे. तर उजव्या टोकाला कोण आहे?",
+   "q_en": "Five friends A, B, C, D and E are sitting in a row facing north. C is exactly in the middle. A is at the left end and B is immediately to the left of C. Who is at the right end?",
+   "o_mr": [
+    "E",
+    "D",
+    "B",
+    "A"
+   ],
+   "o_en": [
+    "E",
+    "D",
+    "B",
+    "A"
+   ],
+   "a": 0,
+   "e_mr": "रांगेची मांडणी डावीकडून उजवीकडे अशी असेल: A, B, C, D, E. त्यामुळे उजव्या टोकाला E आहे.",
+   "e_en": "The arrangement from left to right is: A, B, C, D, E. Thus, E is at the right end."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "ranking",
+   "d": 2,
+   "q_mr": "एका वर्गात एकूण 60 विद्यार्थी आहेत. रोहनचा क्रमांक वरून 22 वा आहे, तर खालून त्याचा क्रमांक किती वा असेल?",
+   "q_en": "There are 60 students in a class. Rohan's rank from the top is 22nd. What is his rank from the bottom?",
+   "o_mr": [
+    "39 वा",
+    "38 वा",
+    "40 वा",
+    "22 वा"
+   ],
+   "o_en": [
+    "39th",
+    "38th",
+    "40th",
+    "22nd"
+   ],
+   "a": 0,
+   "e_mr": "खालून क्रमांक = (एकूण विद्यार्थी - वरून क्रमांक) + 1 = (60 - 22) + 1 = 38 + 1 = 39 वा.",
+   "e_en": "Rank from bottom = (Total students - Rank from top) + 1 = (60 - 22) + 1 = 38 + 1 = 39th."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "blood",
+   "d": 2,
+   "q_mr": "एका पुरुषाकडे निर्देश करत एक स्त्री म्हणाली, 'त्याच्या आईचे पती हे माझ्या आईचे एकमेव जावई आहेत.' तर त्या पुरुषाचे त्या स्त्रीशी नाते काय?",
+   "q_en": "Pointing to a man, a woman said, 'His mother's husband is the only son-in-law of my mother.' How is the man related to the woman?",
+   "o_mr": [
+    "भाऊ",
+    "मुुलगा",
+    "पुतण्या",
+    "भाचा"
+   ],
+   "o_en": [
+    "Brother",
+    "Son",
+    "Nephew",
+    "Sister's son / Nephew"
+   ],
+   "a": 0,
+   "e_mr": "स्त्रीच्या आईचे एकमेव जावई म्हणजे त्या स्त्रीचा नवरा किंवा बहीण-भाऊ असू शकतो. इथे पुरुषाच्या आईचे पती हे त्या स्त्रीच्या आईचे जावई आहेत, म्हणजेच तो पुरुष त्या स्त्रीचा भाऊ आहे.",
+   "e_en": "The only son-in-law of the woman's mother implies her husband (or brother-in-law, but given the relation context, it leads to brother). The man's mother's husband is the woman's mother's son-in-law, making the man her brother."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "calendar",
+   "d": 2,
+   "q_mr": "जर १५ ऑगस्ट १९४७ रोजी शुक्रवार होता, तर १५ ऑगस्ट १९४८ रोजी कोणता वार असेल?",
+   "q_en": "If 15 August 1947 was a Friday, what day of the week was 15 August 1948?",
+   "o_mr": [
+    "शनिवार",
+    "रविवार",
+    "सोमवार",
+    "मंगळवार"
+   ],
+   "o_en": [
+    "Saturday",
+    "Sunday",
+    "Monday",
+    "Tuesday"
+   ],
+   "a": 1,
+   "e_mr": "वर्ष १९४८ हे लीप वर्ष आहे. १५ ऑगस्ट १९४७ ते १५ ऑगस्ट १९४८ या कालावधीत फेब्रुवारी १९४८ चा समावेश होतो, त्यामुळे यामध्ये दोन विषम दिवस (odd days) येतात. शुक्रवार + २ दिवस = रविवार.",
+   "e_en": "The year 1948 is a leap year. The period from August 15, 1947, to August 15, 1948, includes February 1948, adding 2 odd days. Friday plus 2 days gives Sunday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "syllogism",
+   "d": 2,
+   "q_mr": "विधानं:\n१. सर्व पेन पेन्सिल आहेत.\n२. काही पेन्सिल खडू आहेत.\nनिष्कर्ष:\nI. काही पेन खडू आहेत.\nII. कोणताही पेन खडू नाही.\nपर्यायी उत्तर निवडा.",
+   "q_en": "Statements:\n1. All pens are pencils.\n2. Some pencils are chalks.\nConclusions:\nI. Some pens are chalks.\nII. No pen is a chalk.\nChoose the correct option.",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "एकतर निष्कर्ष I किंवा II सत्य आहे",
+    "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही (किंवा दोन्ही असत्य आहेत)"
+   ],
+   "o_en": [
+    "Only conclusion I follows",
+    "Only conclusion II follows",
+    "Either conclusion I or II follows",
+    "Neither conclusion I nor II follows"
+   ],
+   "a": 2,
+   "e_mr": "दिलेल्या विधानांनुसार, पेन आणि खडू यांच्यात थेट संबंध दिलेला नाही, पण 'काही पेन खडू असणे' आणि 'कोणताही पेन खडू नसणे' हे एक पूरक जोडी (Complementary pair) तयार करतात. त्यामुळे 'एकतर I किंवा II' लागू होतो.",
+   "e_en": "Based on the statements, there is no direct definite relation between pens and chalks. However, 'Some pens are chalks' and 'No pen is a chalk' form a complementary pair with 'Some' and 'No', making 'Either I or II' follow."
+  }
+ }
+]
