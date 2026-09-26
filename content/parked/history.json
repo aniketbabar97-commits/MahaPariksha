@@ -1,0 +1,290 @@
+[
+ {
+  "reason": "mismatch (gemini=1, groq=2, confident=True)",
+  "item": {
+   "t": "medieval",
+   "d": 1,
+   "q_mr": "दिल्ली सल्तनतमध्ये 'दीवान-ए-कोही' (शेतकी विभाग) ची स्थापना कोणत्या सुलतानाने केली होती?",
+   "q_en": "Which Sultan of the Delhi Sultanate established 'Diwan-i-Kohi' (Department of Agriculture)?",
+   "o_mr": [
+    "अलाउद्दीन खिलजी",
+    "मोहम्मद बिन तुघलक",
+    "फिोजशहा तुघलक",
+    "कुतबुद्दीन ऐबक"
+   ],
+   "o_en": [
+    "Alauddin Khilji",
+    "Muhammad bin Tughlaq",
+    "Firoz Shah Tughlaq",
+    "Qutb-ud-din Aibak"
+   ],
+   "a": 1,
+   "e_mr": "मोहम्मद बिन तुघलकने शेतीला प्रोत्साहन देण्यासाठी आणि पडीक जमीन हाताखाली आणण्यासाठी 'दीवान-ए-कोही' या स्वतंत्र विभागाची स्थापना केली होती.",
+   "e_en": "Muhammad bin Tughlaq established the 'Diwan-i-Kohi' department to promote agriculture and bring uncultivated land under cultivation."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=False)",
+  "item": {
+   "t": "reformers",
+   "d": 2,
+   "q_mr": "गोपाळ गणेश आगरकर यांनी 'सुधारकत' हे वृत्तपत्र कोणत्या वर्षी सुरू केले?",
+   "q_en": "In which year did Gopal Ganesh Agarkar start the newspaper 'Sudharak'?",
+   "o_mr": [
+    "१८८८",
+    "१८९०",
+    "१८९२",
+    "१८९५"
+   ],
+   "o_en": [
+    "1888",
+    "1890",
+    "1892",
+    "1895"
+   ],
+   "a": 1,
+   "e_mr": "टीळकांशी विचारांच्या मतभेदांमुळे आगरकरांनी 'केसरी' सोडले आणि १८९० मध्ये 'सुधारकत' हे स्वतःचे वृत्तपत्र सुरू केले.",
+   "e_en": "Due to ideological differences with Tilak, Agarkar left 'Kesari' and started his own progressive weekly 'Sudharak' in 1890."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "reformers",
+   "d": 2,
+   "q_mr": "गोपाळ गणेश आगरकर यांनी 'सुधारटक' हे साप्ताहिक कोणत्या वर्षी सुरू केले?",
+   "q_en": "In which year did Gopal Ganesh Agarkar start the weekly newspaper 'Sudharak'?",
+   "o_mr": [
+    "१८८५",
+    "१८८८",
+    "१८९०",
+    "१८९५"
+   ],
+   "o_en": [
+    "1885",
+    "1888",
+    "1890",
+    "1895"
+   ],
+   "a": 1,
+   "e_mr": "गोपाळ गणेश आगरकर यांनी लोकमान्य टिळकांशी मतभेद झाल्यानंतर १८८८ मध्ये 'सुधारटक' हे साप्ताहिक सुरू केले, ज्यातून सामाजिक सुधारणांचा पुरस्कार केला गेला.",
+   "e_en": "After ideological differences with Lokmanya Tilak, Gopal Ganesh Agarkar started the weekly 'Sudharak' in 1888, advocating for social reforms."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "samyukta",
+   "d": 3,
+   "q_mr": "एस. एम. जोशी आणि प्रल्हाद केशव अत्रे यांच्या नेतृत्वाखालील 'संयुक्त महाराष्ट्र समिती'ची स्थापना कधी झाली?",
+   "q_en": "When was the 'Samyukta Maharashtra Samiti' led by S. M. Joshi and P. K. Atre established?",
+   "o_mr": [
+    "६ फेब्रुवारी १९५६",
+    "१ नोव्हेंबर १९५६",
+    "६ फेब्रुवारी १९५६",
+    "१ मे १९६०"
+   ],
+   "o_en": [
+    "6 February 1956",
+    "1 November 1956",
+    "6 February 1956",
+    "1 May 1960"
+   ],
+   "a": 0,
+   "e_mr": "पुण्यात ६ फेब्रुवारी १९५६ रोजी संयुक्त महाराष्ट्र समितीची अधिकृत स्थापना झाली, ज्याने मुंबईसह संयुक्त महाराष्ट्राच्या निर्मितीसाठी मोठा लढा दिला.",
+   "e_en": "The Samyukta Maharashtra Samiti was officially established in Pune on February 6, 1956, which led a massive struggle for the creation of unified Maharashtra including Mumbai."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "reformers",
+   "d": 2,
+   "q_mr": "महर्षी विठ्ठल रामजी शिंदे यांनी डnपर्स्ड क्लासेस मिशन सोसायटी (Depressed Classes Mission Society) ची स्थापना कधी केली?",
+   "q_en": "When did Maharshi Vitthal Ramji Shinde establish the Depressed Classes Mission Society?",
+   "o_mr": [
+    "१९०६",
+    "१९०८",
+    "१९११",
+    "१९२०"
+   ],
+   "o_en": [
+    "1906",
+    "1908",
+    "1911",
+    "1920"
+   ],
+   "a": 0,
+   "e_mr": "अस्पृश्योध्दाराचे कार्य करण्यासाठी महर्षी विठ्ठल रामजी शिंदे यांनी १९०६ मध्ये मुंबईत 'डपर्स्ड क्लासेस मिशन सोसायटी'ची स्थापना केली.",
+   "e_en": "To work for the upliftment of the untouchables, Maharshi Vitthal Ramji Shinde established the 'Depressed Classes Mission Society' in Mumbai in 1906."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=False)",
+  "item": {
+   "t": "medieval",
+   "d": 2,
+   "q_mr": "विजापूरच्या आदिलशाहीचा सेनापती अफझल खान याने प्रतापगड मोहिमेवर निघण्यापूर्वी छत्रपती शिवाजी महाराजांची कोणती वाडा उद्ध्वस्त केला होता?",
+   "q_en": "Which wada belonging to Chhatrapati Shivaji Maharaj was destroyed by Adilshahi general Afzal Khan before setting out on the Pratapgad expedition?",
+   "o_mr": [
+    "पुण्याचा लाल महाल",
+    "तोर्याचे ठिकाण",
+    "पारगावचा वाडा",
+    "वाईचे मंदिर"
+   ],
+   "o_en": [
+    "Lal Mahal in Pune",
+    "Torna fort area",
+    "Pargaon wada",
+    "Wai temple"
+   ],
+   "a": 0,
+   "e_mr": "अफझलखानाने प्रतापगड मोहिमेवर येताना महाराष्ट्रातील अनेक मंदिरांची व पुण्याचा लाल महाल याची नासधूस केली होती.",
+   "e_en": "On his way to the Pratapgad expedition, Afzal Khan vandalized several temples and the Lal Mahal in Pune."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "samyukta",
+   "d": 2,
+   "q_mr": "संयुक्त महाराष्ट्र समितीच्या वतीने काढण्यात आलेल्या मुखपत्राचे किंवा साप्ताहिकाचे नाव काय होते?",
+   "q_en": "What was the name of the official mouthpiece or weekly published on behalf of the Samyukta Maharashtra Samiti?",
+   "o_mr": [
+    "महाराष्ट्र",
+    "नवयुग",
+    "साप्ताहिक प्रबोधन",
+    "विशाल सह्याद्री"
+   ],
+   "o_en": [
+    "Maharashtra",
+    "Navyug",
+    "Saptaahik Prabodhan",
+    "Vishal Sahyadri"
+   ],
+   "a": 0,
+   "e_mr": "'महाराष्ट्र' हे साप्ताहिक किंवा मुखपत्र संयुक्त महाराष्ट्र चळवळीच्या काळात विचारप्रसारासाठी महत्त्वाचे ठरले होते.",
+   "e_en": "'Maharashtra' was the weekly publication/mouthpiece that played a crucial role in propagating the views of the Samyukta Maharashtra movement."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=2, confident=True)",
+  "item": {
+   "t": "medieval",
+   "d": 1,
+   "q_mr": "दिल्ली सल्तनतमध्ये 'दीवान-ए-कोही' (शेती विभाग) ची स्थापना कोणत्या सुलतानाने केली होती?",
+   "q_en": "Which Sultan of the Delhi Sultanate established 'Diwan-i-Kohi' (Department of Agriculture)?",
+   "o_mr": [
+    "अलाउद्दीन खिलजी",
+    "मोहम्मद बिन तुघलक",
+    "फिोजशहा तुघलक",
+    "कुतबुद्दीन ऐबक"
+   ],
+   "o_en": [
+    "Alauddin Khilji",
+    "Muhammad bin Tughlaq",
+    "Firoz Shah Tughlaq",
+    "Qutb-ud-din Aibak"
+   ],
+   "a": 1,
+   "e_mr": "मोहम्मद बिन तुघलक याने शेती सुधारण्यासाठी आणि पडीक जमीन खताखाली आणण्यासाठी 'दीवान-ए-कोही' या स्वतंत्र कृषी विभागाची स्थापना केली होती.",
+   "e_en": "Muhammad bin Tughlaq established a separate agricultural department called 'Diwan-i-Kohi' to improve agriculture and bring barren land under cultivation."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=3, confident=True)",
+  "item": {
+   "t": "modern",
+   "d": 2,
+   "q_mr": "इ.स. १८९९ मध्ये भारतीय राष्ट्रीय काँग्रेसच्या लखनौ अधिवेशनाचे अध्यक्षपद कोणी भूषवले होते?",
+   "q_en": "Who presided over the Lucknow session of the Indian National Congress in 1899?",
+   "o_mr": [
+    "रमेश चंद्र दत्त",
+    "गोपाळ कृष्ण गोखले",
+    "सरोजिनी नायडू",
+    "अंबिका चरण मजुमदार"
+   ],
+   "o_en": [
+    "Romesh Chunder Dutt",
+    "Gopal Krishna Gokhale",
+    "Sarojini Naidu",
+    "Ambica Charan Mazumdar"
+   ],
+   "a": 0,
+   "e_mr": "इ.स. १८९९ मधील लखनौ येथील काँग्रेस अधिवेशनाचे अध्यक्ष प्रसिद्ध अर्थतज्ज्ञ रमेश चंद्र दत्त (आर. सी. दत्त) हे होते.",
+   "e_en": "The prominent economist Romesh Chunder Dutt (R. C. Dutt) presided over the 1899 Lucknow session of the Indian National Congress."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "reformers",
+   "d": 1,
+   "q_mr": "गोपाळ गणेश आगरकर यांनी पुण्यात 'सुधारक' हे वृत्तपत्र कोणत्या वर्षी सुरू केले?",
+   "q_en": "In which year did Gopal Ganesh Agarkar start the newspaper 'Sudharak' in Pune?",
+   "o_mr": [
+    "इ.स. १८८५",
+    "इ.स. १८८८",
+    "इ.स. १८९२",
+    "इ.स. १८७८"
+   ],
+   "o_en": [
+    "1885 AD",
+    "1888 AD",
+    "1892 AD",
+    "1878 AD"
+   ],
+   "a": 1,
+   "e_mr": "केसरी सोडल्यानंतर गोपाळ गणेश आगरकर यांनी सामाजिक सुधारणांच्या प्रसारासाठी २० ऑक्टोबर १८८८ रोजी 'सुधारक' हे साप्ताहिक सुरू केले.",
+   "e_en": "After leaving Kesari, Gopal Ganesh Agarkar started the weekly newspaper 'Sudharak' on October 20, 1888, to propagate social reforms."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=3, confident=True)",
+  "item": {
+   "t": "modern",
+   "d": 2,
+   "q_mr": "इ.स. १९१६ मध्ये लखनौ येथे झालेल्या काँग्रेस अधिवेशनाचे अध्यक्षीय पद कोणी भूषवले होते?",
+   "q_en": "Who presided over the Lucknow session of the Indian National Congress held in 1916?",
+   "o_mr": [
+    "अंबिका चरण मजुमदार",
+    "राजबिहारी बोस",
+    "दादाभाई नौरोजी",
+    "गोपाल कृष्ण गोखले"
+   ],
+   "o_en": [
+    "Ambica Charan Mazumdar",
+    "Ras Bihari Bose",
+    "Dadabhai Naoroji",
+    "Gopal Krishna Gokhale"
+   ],
+   "a": 0,
+   "e_mr": "१९१६ च्या लखनौ अधिवेशनात मवाळ व जहाल गट पुन्हा एकत्र आले आणि या ऐतिहासिक अधिवेशनाचे अध्यक्ष अंबिका चरण मजुमदार हे होते.",
+   "e_en": "The 1916 Lucknow session saw the reunion of Moderates and Extremists, and it was presided over by Ambica Charan Mazumdar."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "reformers",
+   "d": 2,
+   "q_mr": "गोपाळ गणेश आगरकरांनी १८४८ मध्ये सुरू केलेले वृत्तपत्र कोणते?",
+   "q_en": "Which newspaper/periodical was started by Gopal Ganesh Agarkar?",
+   "o_mr": [
+    "केसरी",
+    "दीनबंधु",
+    "सुधारक",
+    "प्रभाकर"
+   ],
+   "o_en": [
+    "Kesari",
+    "Deenbandhu",
+    "Sudharak",
+    "Prabhakar"
+   ],
+   "a": 2,
+   "e_mr": "गोपाळ गणेश आगरकरांनी लोकमान्य टिळकांपासून वेगळे झाल्यावर सामाजिक सुधारणांच्या प्रचारासाठी 'सुधारक' हे वृत्तपत्र सुरू केले.",
+   "e_en": "After separating from Lokmanya Tilak, Gopal Ganesh Agarkar started the periodical 'Sudharak' to advocate social reforms."
+  }
+ }
+]

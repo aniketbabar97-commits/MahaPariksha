@@ -1,0 +1,73 @@
+[
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "statistics",
+   "d": 2,
+   "q_mr": "जर दिलेल्या माहितीचा मध्य 20 आणि मध्यक 22 असेल, तर बहुलक किती?",
+   "q_en": "If the mean of a given data is 20 and the median is 22, what is the mode?",
+   "o_mr": [
+    "26",
+    "24",
+    "28",
+    "21"
+   ],
+   "o_en": [
+    "26",
+    "24",
+    "28",
+    "21"
+   ],
+   "a": 0,
+   "e_mr": "बहुलक, मध्य आणि मध्यक यांच्यातील संबंध: बहुलक = 3(मध्यक) - 2(मध्य). बहुलक = 3(22) - 2(20) = 66 - 40 = 26.",
+   "e_en": "Relationship between mode, median and mean: Mode = 3(Median) - 2(Mean). Mode = 3(22) - 2(20) = 66 - 40 = 26."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "number",
+   "d": 1,
+   "q_mr": "कोणत्या सर्वात लहान संख्येने 2880 ला गुणल्यास ती पूर्ण वर्ग संख्या होईल?",
+   "q_en": "By which smallest number should 2880 be multiplied to make it a perfect square?",
+   "o_mr": [
+    "5",
+    "2",
+    "3",
+    "10"
+   ],
+   "o_en": [
+    "5",
+    "2",
+    "3",
+    "10"
+   ],
+   "a": 0,
+   "e_mr": "Prime factorization of 2880: 2880 = 2⁶ × 3² × 5 = (2³ × 3)² × 5. Here 5 does not have a pair, so multiplying by 5 makes it a perfect square."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=False)",
+  "item": {
+   "t": "statistics",
+   "d": 2,
+   "q_mr": "एका माहितीचा मध्य (Mean) 24 आणि मध्यक (Median) 26 आहे, तर बहुलक (Mode) किती असेल?",
+   "q_en": "If the mean of a data is 24 and the median is 26, what will be its mode?",
+   "o_mr": [
+    "28",
+    "30",
+    "32",
+    "34"
+   ],
+   "o_en": [
+    "28",
+    "30",
+    "32",
+    "34"
+   ],
+   "a": 1,
+   "e_mr": "सूत्र: बहुलक = 3(मध्यक) - 2(मध्य). बहुलक = 3(26) - 2(24) = 78 - 48 = 30.",
+   "e_en": "Formula: Mode = 3(Median) - 2(Mean). Mode = 3(26) - 2(24) = 78 - 48 = 30."
+  }
+ }
+]

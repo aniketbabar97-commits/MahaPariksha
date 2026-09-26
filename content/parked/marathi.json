@@ -1,0 +1,482 @@
+[
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "kal",
+   "d": 2,
+   "q_mr": "'मी अंघोळ करत असे' या वाक्यातील काळ ओळख.ओळखा.",
+   "q_en": "Identify the tense of the sentence 'मी अंघोळ करत असे'.",
+   "o_mr": [
+    "रीती भूतकाळ",
+    "पूर्ण भूतकाळ",
+    "अपूर्ण भूतकाळ",
+    "साधा भूतकाळ"
+   ],
+   "o_en": [
+    "Riti Bhutkal (Habitual Past Tense)",
+    "Purna Bhutkal (Complete Past Tense)",
+    "Apurna Bhutkal (Continuous Past Tense)",
+    "Sadha Bhutkal (Simple Past Tense)"
+   ],
+   "a": 0,
+   "e_mr": "ज्या भूतकाळी क्रियेत सततता किंवा सवय दर्शवली जाते आणि शेवटी 'त असे' असे येते, तिथे रीती भूतकाळ असतो.",
+   "e_en": "When a past action shows habit or regular occurrence ending with 't ase', it is the habitual past tense."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "samas",
+   "d": 2,
+   "q_mr": "'प्रतिदिन' या सामासिक शब्दाचा समास आणि विग्रह ओळखा.",
+   "q_en": "Identify the samas and vigraha of the compound word 'प्रतिदिन'.",
+   "o_mr": [
+    "अव्ययीभाव समास - दिवसेंदिवस / प्रत्येक दिवशी",
+    "तत्पुरुष समास - दिवसाचा दिन",
+    "द्वंद्व समास - दिन आणि दिन",
+    "बहुव्रीहि समास - ज्याचा दिन प्रति आहे"
+   ],
+   "o_en": [
+    "Avyayibhav Samas - Each day / Every day",
+    "Tatpurusha Samas - Day's day",
+    "Dvandva Samas - Day and day",
+    "Bahuvrihi Samas - Whose day is per"
+   ],
+   "a": 0,
+   "e_mr": "'प्रतिदिन' या शब्दात पहिले पद 'प्रति' हे उपसर्ग असून ते महत्त्वाचे आहे आणि संपूर्ण शब्द क्रियाविशेषणाचे काम करतो, म्हणून हा अव्ययीभाव समास आहे.",
+   "e_en": "In 'Pratidin', the first element 'prati' is a prominent prefix, and the whole word functions adverbially, making it Avyayibhav Samas."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "alankar",
+   "d": 2,
+   "q_mr": "'पिसे जणू काही पाखरांच्या पंखांवर आली आहेत' - या वाक्यात कोणता अलंकार आहे?",
+   "q_en": "Which figure of speech is present in the sentence 'पिसे जणू काही पाखरांच्या पंखांवर आली आहेत'?",
+   "o_mr": [
+    "उत्प्रेक्षा",
+    "उपमा",
+    "रूपक",
+    "यममक"
+   ],
+   "o_en": [
+    "Utpreksha (Poetic fancy)",
+    "Upama (Simile)",
+    "Rupak (Metaphor)",
+    "Yamaka (Rhyme)"
+   ],
+   "a": 0,
+   "e_mr": "या वाक्यात उपमेय हे जणू काय उपमानच आहे अशी कल्पना केलेली असते, आणि 'जणू', 'गमे', 'भासे' यांसारखे शब्द वापरले जातात, म्हणून तिथे उत्प्रेक्षा अलंकार होतो.",
+   "e_en": "In this sentence, the subject is imagined to be the standard of comparison using words like 'janu' (as if), making it Utpreksha."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "sandhi",
+   "d": 2,
+   "q_mr": "'सूर्योदय' या शब्दाचा योग्य संधीविग्रह खालीलपैकी कोणता आहे?",
+   "q_en": "Which of the following is the correct sandhi split for the word 'सूर्योदय'?",
+   "o_mr": [
+    "सूर्य + उदय",
+    "सूर्यो + दय",
+    "सूर्य + दय",
+    "सूर्या + उदय"
+   ],
+   "o_en": [
+    "Surya + Uday",
+    "Suryo + Day",
+    "Surya + Day",
+    "Surya + Uday"
+   ],
+   "a": 0,
+   "e_mr": "'सूर्योदय' हा गुणस्वर संधीचा शब्द आहे. यात 'सूर्य' मधील 'अ' आणि 'उदय' मधील 'उ' एकत्र येऊन 'ओ' बनतो.",
+   "e_en": "'Suryauday' is an example of Guna Swar Sandhi, where 'a' from 'Surya' and 'u' from 'Uday' combine to form 'o'."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "samanarthi",
+   "d": 1,
+   "q_mr": "'वारा' या शब्दाचा समानार्थी शब्द खालीलपैकी कोणता नाही?",
+   "q_en": "Which of the following is not a synonym for the word 'वारा' (wind)?",
+   "o_mr": [
+    "अनिल",
+    "समीर",
+    "पावक",
+    "मारुत"
+   ],
+   "o_en": [
+    "Anil",
+    "Samir",
+    "Pavak",
+    "Marut"
+   ],
+   "a": 2,
+   "e_mr": "'पावक' हा अग्नीचा समानार्थी शब्द आहे, तर अनिल, समीर आणि मारुत हे वाऱ्याचे समानार्थी शब्द आहेत.",
+   "e_en": "'Pavak' is a synonym for fire (agni), whereas Anil, Samir, and Marut are synonyms for wind."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=3, confident=True)",
+  "item": {
+   "t": "kal",
+   "d": 2,
+   "q_mr": "'मी आंबा खात असे.' या वाक्यातील काळ ओळखा.",
+   "q_en": "Identify the tense of the sentence 'मी आंबा खात असे.'",
+   "o_mr": [
+    "साधा भूतकाळ",
+    "रीती भूतकाळ",
+    "पूर्ण भूतकाळ",
+    "अपूर्ण भूतकाळ"
+   ],
+   "o_en": [
+    "Simple past tense",
+    "Habitual past tense",
+    "Past perfect tense",
+    "Past continuous tense"
+   ],
+   "a": 1,
+   "e_mr": "जेव्हा भूतकाळात एखादी क्रिया सतत किंवा नियमितपणे घडत होती असे दर्शवले जाते, तेव्हा त्याला 'रीती भूतकाळ' म्हणतात.",
+   "e_en": "When an action was performed regularly or habitually in the past, it is called the habitual past tense (riti bhutkal)."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=3, confident=True)",
+  "item": {
+   "t": "sahitya",
+   "d": 2,
+   "q_mr": "'शाळा' ही गाजलेली कादंबरी खालीलपैकी कोणी लिहिली आहे?",
+   "q_en": "Who among the following wrote the famous novel 'Shala'?",
+   "o_mr": [
+    "पु. भा. भावे",
+    "मिलिंद बोकील",
+    "व्यंकटेश माडगूळकर",
+    "भालचंद्र नेमाडे"
+   ],
+   "o_en": [
+    "P. Bhants",
+    "Milind Bokil",
+    "Venkatesh Madgulkar",
+    "Bhalchandra Nemade"
+   ],
+   "a": 1,
+   "e_mr": "'शाळा' ही अत्यंत लोकप्रिय मराठी कादंबरी मिलिंद बोकील यांनी लिहिली असून, या कादंबरीवर चित्रपटही बनला आहे.",
+   "e_en": "'Shala' is a very popular Marathi novel written by Milind Bokil, which was also adapted into an acclaimed film."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "vibhakti",
+   "d": 1,
+   "q_mr": "'नदीवरून' या शब्दाची विभक्ती प्रत्ययावरून कोणती ठरते?",
+   "q_en": "Identify the vibhakti of the word 'नदीवरून' based on its suffix.",
+   "o_mr": [
+    "प्रथमा",
+    "तृतीया",
+    "पंचमी",
+    "सप्तमी"
+   ],
+   "o_en": [
+    "Prathama",
+    "Trutiya",
+    "Panchami",
+    "Saptami"
+   ],
+   "a": 2,
+   "e_mr": "'ऊन', 'हून' हे प्रत्यय पंचमी विभक्तीचे असतात, म्हणून 'नदीवरून' ही पंचमी विभक्ती आहे.",
+   "e_en": "The suffixes 'ऊन' and 'हून' belong to the Panchami vibhakti, making 'नदीवरून' a Panchami form."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=1, confident=True)",
+  "item": {
+   "t": "samanarthi",
+   "d": 1,
+   "q_mr": "'अमृत' या शब्दाचा समानार्थी शब्द खालीलपैकी कोणता नाही?",
+   "q_en": "Which of the following is NOT a synonym for 'अमृत' (nectar)?",
+   "o_mr": [
+    "सुधा",
+    "पियुष",
+    "सोम",
+    "समीर"
+   ],
+   "o_en": [
+    "Sudha",
+    "Piyush",
+    "Som",
+    "Samir"
+   ],
+   "a": 3,
+   "e_mr": "'समीर' म्हणजे वारा असा होतो, तर सुधा, पियुष आणि सोम हे अमृताचे समानार्थी शब्द आहेत.",
+   "e_en": "'समीर' means wind, whereas Sudha, Piyush, and Som are synonyms for nectar."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=0, confident=True)",
+  "item": {
+   "t": "prayog",
+   "d": 3,
+   "q_mr": "'आईने मुलाला शाळेत पाठवले.' या वाक्यातील प्रयोग ओळखा.",
+   "q_en": "Identify the prayog (voice) in the sentence 'आईने मुलाला शाळेत पाठवले.' (Mother sent the child to school.)",
+   "o_mr": [
+    "कर्तरी प्रयोग",
+    "कर्मणी प्रयोग",
+    "भावे प्रयोग",
+    "संकीर्ण प्रयोग"
+   ],
+   "o_en": [
+    "Kartari Prayog",
+    "Karmani Prayog",
+    "Bhave Prayog",
+    "Sankirna Prayog"
+   ],
+   "a": 2,
+   "e_mr": "या वाक्यात कर्ता ('आईने') व कर्म ('मुलाला') या दोन्ही घटकांना विभक्तीचे प्रत्यय जोडलेले आहेत आणि क्रियापद स्वतंत्र व तटस्थ (नपुंसकलिंगी, एकवचनी) आहे, त्यामुळे हा भावे प्रयोग आहे.",
+   "e_en": "In this sentence, both the subject and object have vibhakti suffixes, and the verb is independent and neuter singular, making it Bhave Prayog."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "samarth",
+   "d": 1,
+   "q_mr": "खालीलपैकी कोणता शब्द 'पाणी' शब्दाचा समानार्थी नाही?",
+   "q_en": "Which of the following is not a synonym of 'water' (पाणी)?",
+   "o_mr": [
+    "जल",
+    "नीर",
+    "पय",
+    "अनिल"
+   ],
+   "o_en": [
+    "Jal",
+    "Neer",
+    "Pay",
+    "Anil"
+   ],
+   "a": 3,
+   "e_mr": "'अनिल' म्हणजे वारा असा होतो, तर जल, नीर आणि पय हे पाण्याचे समानार्थी शब्द आहेत.",
+   "e_en": "'Anil' means wind, whereas Jal, Neer, and Pay are synonyms for water."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "samas",
+   "d": 2,
+   "q_mr": "'दररोज' या शब्दाचा समास ओळखा.",
+   "q_en": "Identify the samas of the word 'दररोज'.",
+   "o_mr": [
+    "अव्ययीभाव समास",
+    "तत्पुरुष समास",
+    "द्वंद्व समास",
+    "बहुव्रीहि समास"
+   ],
+   "o_en": [
+    "Avyayibhav Samas",
+    "Tatpurush Samas",
+    "Dvandva Samas",
+    "Bahuvrihi Samas"
+   ],
+   "a": 0,
+   "e_mr": "ज्या समासातील पहिले पद महत्त्वाचे असते आणि सामासिक शब्द क्रियाविशेषणाचे काम करतो, तिथे अव्ययीभाव समास होतो. 'दररोज' हा अव्ययीभाव समासाचे उदाहरण आहे.",
+   "e_en": "In Avyayibhav Samas, the first term is dominant and the compound acts as an adverb. 'दररोज' is an example of it."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "sandhi",
+   "d": 2,
+   "q_mr": "'जगन्नाथ' या शब्दाचा योग्य संधीविग्रह कोणता?",
+   "q_en": "What is the correct sandhi split of 'जगन्नाथ'?",
+   "o_mr": [
+    "जगत् + नाथ",
+    "जग + नाथ",
+    "जगा + नाथ",
+    "जगत् + नाद"
+   ],
+   "o_en": [
+    "Jagat + Nath",
+    "Jaga + Nath",
+    "Jaga + Nath",
+    "Jagat + Naad"
+   ],
+   "a": 0,
+   "e_mr": "'जगन्नाथ' हा व्यंजन संधीचा शब्द असून त्याचा विग्रह 'जगत् + नाथ' असा होतो.",
+   "e_en": "'Jagannath' is a consonant sandhi word and its split is 'Jagat + Nath'."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=0, confident=False)",
+  "item": {
+   "t": "vibhakti",
+   "d": 1,
+   "q_mr": "सप्तमी विभक्तीचे प्रत्यय कोणते आहेत?",
+   "q_en": "What are the suffixes of Saptami vibhakti?",
+   "o_mr": [
+    "ने, ए, शी",
+    "स, ला, ते",
+    "त, ई, आ",
+    "चा, ची, चे"
+   ],
+   "o_en": [
+    "Ne, E, Shi",
+    "Sa, La, Te",
+    "Ta, E, Aa",
+    "Cha, Chi, Che"
+   ],
+   "a": 2,
+   "e_mr": "मराठी व्याकरणामध्ये सप्तमी विभक्तीचे प्रत्यय 'त, ई, आ' हे आहेत, जे ठिकाण किंवा वेळ दर्शवतात.",
+   "e_en": "In Marathi grammar, the suffixes for Saptami vibhakti are 'ta, e, aa', which indicate location or time."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "prayog",
+   "d": 3,
+   "q_mr": "'शिक्षकांनी विद्यार्थ्यांना शिकवले.' या वाक्यातील प्रयोग ओळखा.",
+   "q_en": "Identify the prayog in the sentence 'शिक्षकांनी विद्यार्थ्यांना शिकवले.'",
+   "o_mr": [
+    "कर्तरी प्रयोग",
+    "कर्मणी प्रयोग",
+    "भावे प्रयोग",
+    "संकीर्ण प्रयोग"
+   ],
+   "o_en": [
+    "Kartari Prayog",
+    "Karmani Prayog",
+    "Bhave Prayog",
+    "Sankirna Prayog"
+   ],
+   "a": 2,
+   "e_mr": "या वाक्यात कर्ता आणि कर्म दोघांनाही विभक्तीचे प्रत्यय जोडलेले आहेत आणि क्रियापदाचे रूप कथेनुसार किंवा कर्माचे लिंग/वचन बदलून बदलत नाही, त्यामुळे येथे भावे प्रयोग होतो.",
+   "e_en": "In this sentence, both subject and object take case suffixes and the verb does not change according to them, hence it is Bhave Prayog."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "prayog",
+   "d": 2,
+   "q_mr": "'तिने आंबा खाल्ला.' या वाक्यातील प्रयोग ओळख.ा.",
+   "q_en": "Identify the voice (prayog) in the sentence 'तिने आंबा खाल्ला.'",
+   "o_mr": [
+    "कर्तरी प्रयोग",
+    "कर्मणी प्रयोग",
+    "भावे प्रयोग",
+    "संकीर्ण प्रयोग"
+   ],
+   "o_en": [
+    "Kartari Prayog (Active)",
+    "Karmani Prayog (Passive)",
+    "Bhave Prayog (Impersonal)",
+    "Mixed Prayog"
+   ],
+   "a": 1,
+   "e_mr": "या वाक्यात कर्ता 'तिने' (तृतीया विभक्ती) आहे आणि कर्म 'आंबा' (प्रथमा/द्वितीया) आहे. क्रियापदाचे रूप 'खाल्ला' हे कर्माच्या (आंबा) लिंगवचनानुसार बदलले आहे, त्यामुळे हा कर्मणी प्रयोग आहे.",
+   "e_en": "In this sentence, the subject is in the instrumental case ('तिने') and the object 'आंबा' determines the gender/number of the verb 'खाल्ला'. Therefore, it is Karmani Prayog."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "kal",
+   "d": 2,
+   "q_mr": "'मी आंबा खात असे.' या वाक्याचा काळ ओळखा.",
+   "q_en": "Identify the tense of the sentence 'मी आंबा खात असे.'",
+   "o_mr": [
+    "रिती भूतकाळ",
+    "पूर्ण भूतकाळ",
+    "अपूर्ण भूतकाळ",
+    "साधा भूतकाळ"
+   ],
+   "o_en": [
+    "Riti Bhutkal (Habitual Past)",
+    "Purna Bhutkal (Complete Past)",
+    "Apurna Bhutkal (Continuous Past)",
+    "Sadha Bhutkal (Simple Past)"
+   ],
+   "a": 0,
+   "e_mr": "ज्या भूतकाळात क्रिया सतत किंवा रीतीने घडत होती असा अर्थ बोध होतो, त्यास रिती भूतकाळ किंवा चालू पूर्ण भूतकाळ म्हणतात. येथे 'खात असे' हे रिती भूतकाळ दर्शवतो.",
+   "e_en": "When a past tense indicates a habitual or recurring action, it is called Riti Bhutkal (Habitual Past). 'खात असे' indicates this tense."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "shuddhlekhan",
+   "d": 1,
+   "q_mr": "खालीलपैकी अचूक (शुद्ध) शब्द कोणता?",
+   "q_en": "Which of the following is a correctly spelled word?",
+   "o_mr": [
+    "आशीर्वाद",
+    "आशिर्वाद",
+    "आशिरवाद",
+    "आर्शिवाद"
+   ],
+   "o_en": [
+    "Aashirwad",
+    "Ashirwad",
+    "Aashirwad",
+    "Aarshirwad"
+   ],
+   "a": 0,
+   "e_mr": "मराठी शुद्धलेखनाच्या नियमांनुसार 'आशीर्वाद' हा शब्द बरोबर आहे, ज्यामध्ये 'श' वर रफार येतो.",
+   "e_en": "According to Marathi spelling rules, 'आशीर्वाद' is the correct spelling, where the 'rafar' is on 'श'."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=0, confident=True)",
+  "item": {
+   "t": "prayog",
+   "d": 3,
+   "q_mr": "'शिक्षकांनी विद्यार्थ्यांना शिकवले.' या वाक्यातील प्रयोग ओळखा.",
+   "q_en": "Identify the voice (prayog) in the sentence 'शिक्षकांनी विद्यार्थ्यांना शिकवले.'",
+   "o_mr": [
+    "कर्तरी प्रयोग",
+    "कर्मणी प्रयोग",
+    "भावे प्रयोग",
+    "संकर प्रयोग"
+   ],
+   "o_en": [
+    "Kartari Prayog (Active)",
+    "Karmani Prayog (Passive)",
+    "Bhave Prayog (Impersonal)",
+    "Sankar Prayog"
+   ],
+   "a": 2,
+   "e_mr": "या वाक्यातील क्रियापदाचे रूप कर्त्याच्या किंवा Karma (कर्माच्या) लिंग-वचनाप्रमाणे बदलत नाही, तर ते नेहेमी तृतीय पुरुषी, नपुंसकलिंगी एकवचनी राहते. त्यामुळे हा भावे प्रयोग आहे.",
+   "e_en": "In this sentence, the verb does not agree with the subject or object in gender and number; it remains third-person, neuter, singular. Therefore, it is Bhave Prayog."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=3, confident=False)",
+  "item": {
+   "t": "samas",
+   "d": 1,
+   "q_mr": "'पोलीसपाटील' या सामासिक शब्दाचा समास ओळखा.",
+   "q_en": "Identify the samas (compound) for the word 'पोलीसपाटील'.",
+   "o_mr": [
+    "अव्ययीभाव समास",
+    "तत्पुरुष समास",
+    "द्वंद्व समास",
+    "बहुव्रीहि समास"
+   ],
+   "o_en": [
+    "Avyayibhav Samas",
+    "Tatpurusha Samas",
+    "Dvandva Samas",
+    "Bahuvrihi Samas"
+   ],
+   "a": 1,
+   "e_mr": "'पोलीसपाटील' हा मध्यमपदलोपी तत्पुरुष समासाचे उदाहरण आहे, जिथे मधला शब्द गाळलेला असतो (पोलीस खात्यात असलेला पाटील).",
+   "e_en": "'पोलीसपाटील' is an example of a Tatpurusha Samas (specifically Madhyampadalopi Tatpurusha where middle words are dropped)."
+  }
+ }
+]

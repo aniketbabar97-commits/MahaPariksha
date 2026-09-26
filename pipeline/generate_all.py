@@ -26,13 +26,17 @@ PARKED = CONTENT / "parked"
 GEMINI_KEY = os.environ["GEMINI_API_KEY"]
 GROQ_KEY = os.environ["GROQ_API_KEY"]
 GEMINI_MODELS = os.environ.get(
-    "GEMINI_MODELS", "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-flash-lite-latest,gemma-4-26b-a4b-it"
+    "GEMINI_MODELS",
+    "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-flash-lite-latest,gemini-pro-latest,"
+    "gemini-2.5-pro,gemini-3-flash-preview,gemini-3.1-flash-lite,gemini-3.1-flash-lite-preview,"
+    "gemma-4-26b-a4b-it,gemma-4-31b-it"
 ).split(",")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
+GROQ_DRAFT_MODEL = os.environ.get("GROQ_DRAFT_MODEL", "qwen/qwen3.8-27b")
 TARGET = int(os.environ.get("TARGET_PER_SUBJECT", "100"))
-BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "10"))
+BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "15"))
 MAX_BATCHES = int(os.environ.get("MAX_BATCHES", "12"))
-GEMINI_PACING_SECONDS = float(os.environ.get("GEMINI_PACING_SECONDS", "5"))
+GEMINI_PACING_SECONDS = float(os.environ.get("GEMINI_PACING_SECONDS", "3"))
 
 SKIP_SUBJECTS = {"current_affairs"}  # handled by the daily pipeline instead
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
@@ -125,13 +129,15 @@ def gemini_draft(subject, topics, n, avoid):
         except QuotaExhausted:
             print(f"  {model}: daily quota exhausted, rotating model", file=sys.stderr)
             _model_idx[0] += 1
-    raise QuotaExhausted("all Gemini models exhausted for today")
+    print("  all Gemini models exhausted for today; falling back to Groq for drafting",
+          file=sys.stderr)
+    return groq_draft(subject, topics, n, avoid)
 
 
-def _gemini_draft_with_model(model, subject, topics, n, avoid):
+def _draft_prompt(subject, topics, n, avoid):
     avoid_txt = ("\nDo not repeat these already-used question texts (English):\n- "
                  + "\n- ".join(avoid[:60])) if avoid else ""
-    prompt = f"""You write multiple-choice questions for Marathi-medium aspirants preparing for
+    return f"""You write multiple-choice questions for Marathi-medium aspirants preparing for
 Maharashtra government exams (Police Bharti, Talathi, MPSC Group C/Rajyaseva) and SSC/Railway.
 
 Subject: {subject}
@@ -154,6 +160,9 @@ Rules:
 Return ONLY a JSON array (no markdown fences, no commentary) of {n} objects, each with exactly
 these keys: t, d, q_mr, q_en, o_mr, o_en, a, e_mr, e_en."""
 
+
+def _gemini_draft_with_model(model, subject, topics, n, avoid):
+    prompt = _draft_prompt(subject, topics, n, avoid)
     url = (f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
            f"?key={GEMINI_KEY}")
     payload = {
@@ -165,6 +174,23 @@ these keys: t, d, q_mr, q_en, o_mr, o_en, a, e_mr, e_en."""
         raise ValueError(f"gemini: no candidates ({data.get('promptFeedback', data)})")
     parts = data["candidates"][0].get("content", {}).get("parts", [])
     text = "".join(p.get("text", "") for p in parts)
+    return _extract_json_array(text)
+
+
+def groq_draft(subject, topics, n, avoid):
+    """Fallback drafter once every Gemini model's daily quota is spent. Uses a different Groq
+    model than groq_blind_solve, so the blind-solve cross-check stays independent."""
+    prompt = _draft_prompt(subject, topics, n, avoid)
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    payload = {
+        "model": GROQ_DRAFT_MODEL,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.9,
+        "max_tokens": 8000,
+    }
+    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {GROQ_KEY}"}
+    data = _post_json(url, payload, headers)
+    text = data["choices"][0]["message"]["content"] or ""
     return _extract_json_array(text)
 
 

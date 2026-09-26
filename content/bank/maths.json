@@ -1634,5 +1634,787 @@
   "e_en": "1) F − 10 = 4(S − 10) → F = 4S − 30. 2) F + 10 = 2(S + 10) → 4S − 20 = 2S + 20 → S = 20. 3) F = 50 years.",
   "hook_mr": "पर्याय तपासा: 50 व 20 → 10 वर्षांपूर्वी 40, 10 (4 पट); 10 वर्षांनंतर 60, 30 (दुप्पट) ✓.",
   "hook_en": "Check: 50 & 20 → 10 yrs ago 40, 10 (4×); after 10 yrs 60, 30 (2×) ✓."
+ },
+ {
+  "id": "maths-067",
+  "s": "maths",
+  "t": "simplification",
+  "d": 1,
+  "q_mr": "दिलेले समीकरण सोडवा: 125 ÷ 5 + 15 × 2 - 10 = ?",
+  "q_en": "Solve the given equation: 125 ÷ 5 + 15 × 2 - 10 = ?",
+  "o_mr": [
+   "35",
+   "45",
+   "55",
+   "25"
+  ],
+  "o_en": [
+   "35",
+   "45",
+   "55",
+   "25"
+  ],
+  "a": 1,
+  "e_mr": "कंस व चिन्ह नियमांनुसार (BODMAS), प्रथम भागाकार: 125 ÷ 5 = 25. नंतर गुणाकार: 15 × 2 = 30. आता बेरीज व वजाबाकी: 25 + 30 - 10 = 45.",
+  "e_en": "According to the BODMAS rule, first division: 125 ÷ 5 = 25. Then multiplication: 15 × 2 = 30. Now addition and subtraction: 25 + 30 - 10 = 45."
+ },
+ {
+  "id": "maths-068",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर x + 1/x = 5 असेल, तर x² + 1/x² ची किंमत किती?",
+  "q_en": "If x + 1/x = 5, what is the value of x² + 1/x²?",
+  "o_mr": [
+   "23",
+   "25",
+   "27",
+   "21"
+  ],
+  "o_en": [
+   "23",
+   "25",
+   "27",
+   "21"
+  ],
+  "a": 0,
+  "e_mr": "(x + 1/x)² = x² + 1/x² + 2. दोन्ही बाजूंचा वर्ग केल्यास, 5² = x² + 1/x² + 2, म्हणून 25 - 2 = 23.",
+  "e_en": "We know (x + 1/x)² = x² + 1/x² + 2. Squaring both sides: 5² = x² + 1/x² + 2, therefore 25 - 2 = 23."
+ },
+ {
+  "id": "maths-069",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका समभुज त्रिकोणाची बाजू 12 सेमी आहे, तर त्याचे क्षेत्रफळ किती?",
+  "q_en": "The side of an equilateral triangle is 12 cm, what is its area?",
+  "o_mr": [
+   "36√3 चौ.सेमी",
+   "18√3 चौ.सेमी",
+   "72√3 चौ.सेमी",
+   "144√3 चौ.सेमी"
+  ],
+  "o_en": [
+   "36√3 sq.cm",
+   "18√3 sq.cm",
+   "72√3 sq.cm",
+   "144√3 sq.cm"
+  ],
+  "a": 0,
+  "e_mr": "समभुज त्रिकोणाचे क्षेत्रफळ = (√3/4) × बाजू². क्षेत्रफळ = (√3/4) × (12)² = (√3/4) × 144 = 36√3 चौ.सेमी.",
+  "e_en": "Area of an equilateral triangle = (√3/4) × side². Area = (√3/4) × (12)² = (√3/4) × 144 = 36√3 sq.cm."
+ },
+ {
+  "id": "maths-070",
+  "s": "maths",
+  "t": "mensuration",
+  "d": 2,
+  "q_mr": "एका गोलाची त्रिज्या 7 सेमी आहे, तर त्याचे पृष्ठफळ किती? (π = 22/7)",
+  "q_en": "The radius of a sphere is 7 cm, what is its surface area? (π = 22/7)",
+  "o_mr": [
+   "616 सेमी²",
+   "308 सेमी²",
+   "1232 सेमी²",
+   "154 सेमी²"
+  ],
+  "o_en": [
+   "616 cm²",
+   "308 cm²",
+   "1232 cm²",
+   "154 cm²"
+  ],
+  "a": 0,
+  "e_mr": "गोलाचे पृष्ठफळ = 4πr². = 4 × (22/7) × (7)² = 4 × (22/7) × 49 = 4 × 22 × 7 = 616 सेमी².",
+  "e_en": "Surface area of a sphere = 4πr². = 4 × (22/7) × (7)² = 4 × (22/7) × 49 = 4 × 22 × 7 = 616 cm²."
+ },
+ {
+  "id": "maths-071",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_mr": "sin 30° × cos 60° + cos 30° × sin 60° ची किंमत किती?",
+  "q_en": "What is the value of sin 30° × cos 60° + cos 30° × sin 60°?",
+  "o_mr": [
+   "1",
+   "0",
+   "1/2",
+   "√3/2"
+  ],
+  "o_en": [
+   "1",
+   "0",
+   "1/2",
+   "√3/2"
+  ],
+  "a": 0,
+  "e_mr": "हे sin(A+B) चे सूत्र आहे जिथे A = 30° आणि B = 60°. sin(30°+60°) = sin 90° = 1. किंवा किमती टाकून सोडवल्यास: (1/2 × 1/2) + (√3/2 × √3/2) = 1/4 + 3/4 = 4/4 = 1.",
+  "e_en": "This is sin(A+B) where A = 30° and B = 60°. sin(30°+60°) = sin 90° = 1. Alternatively, substituting values: (1/2 × 1/2) + (√3/2 × √3/2) = 1/4 + 3/4 = 4/4 = 1."
+ },
+ {
+  "id": "maths-072",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 2,
+  "q_mr": "एका पाई चार्टमध्ये एका कुटुंबाचा अन्नवरील खर्च 120° दर्शवतो. जर एकूण मासिक खर्च ₹36000 असेल, तर अन्नावरील खर्च किती?",
+  "q_en": "In a pie chart, expenditure on food by a family represents 120°. If the total monthly expenditure is ₹36000, what is the expenditure on food?",
+  "o_mr": [
+   "₹12000",
+   "₹10000",
+   "₹15000",
+   "₹9000"
+  ],
+  "o_en": [
+   "₹12000",
+   "₹10000",
+   "₹15000",
+   "₹9000"
+  ],
+  "a": 0,
+  "e_mr": "अन्नावरील खर्च = (120° / 360°) × 36000 = (1/3) × 36000 = ₹12000.",
+  "e_en": "Expenditure on food = (120° / 360°) × 36000 = (1/3) × 36000 = ₹12000."
+ },
+ {
+  "id": "maths-073",
+  "s": "maths",
+  "t": "time_work",
+  "d": 2,
+  "q_mr": "जर 12 पुरुष किंवा 18 स्त्रिया एक काम 14 दिवसांत करतात, तर 8 पुरुष आणि 16 स्त्रिया ते काम किती दिवसांत पूर्ण करतील?",
+  "q_en": "If 12 men or 18 women can do a work in 14 days, in how many days will 8 men and 16 women finish the same work?",
+  "o_mr": [
+   "9 दिवस",
+   "12 दिवस",
+   "10 दिवस",
+   "8 दिवस"
+  ],
+  "o_en": [
+   "9 days",
+   "12 days",
+   "10 days",
+   "8 days"
+  ],
+  "a": 0,
+  "e_mr": "12 पुरुष = 18 स्त्रिया, म्हणजेच 2 पुरुष = 3 स्त्रिया. 8 पुरुष = 12 स्त्रिया. एकूण क्षमता = 12 + 16 = 28 स्त्रिया. 18 स्त्रिया × 14 दिवस = 28 स्त्रिया × x दिवस. x = (18 × 14) / 28 = 9 दिवस.",
+  "e_en": "12 men = 18 women, meaning 2 men = 3 women. 8 men = 12 women. Total women equivalent = 12 + 16 = 28 women. 18 women × 14 days = 28 women × x days. x = (18 × 14) / 28 = 9 days."
+ },
+ {
+  "id": "maths-074",
+  "s": "maths",
+  "t": "interest",
+  "d": 2,
+  "q_mr": "कोणत्या मुद्दलाचे 5% वार्षिक दराने 2 वर्षांचे चक्रवाढ व्याज आणि सरळ व्याज यातील फरक ₹25 आहे?",
+  "q_en": "On what principal amount is the difference between compound interest and simple interest at 5% per annum for 2 years equal to ₹25?",
+  "o_mr": [
+   "₹10000",
+   "₹5000",
+   "₹20000",
+   "₹15000"
+  ],
+  "o_en": [
+   "₹10000",
+   "₹5000",
+   "₹20000",
+   "₹15000"
+  ],
+  "a": 0,
+  "e_mr": "2 वर्षांसाठी CI आणि SI मधील फरक सूत्र: Diff = P(R/100)². 25 = P × (5/100)² = P × (1/20)² = P / 400. P = 25 × 400 = ₹10000.",
+  "e_en": "For 2 years, the formula for difference between CI and SI is: Diff = P(R/100)². 25 = P × (5/100)² = P × (1/20)² = P / 400. P = 25 × 400 = ₹10000."
+ },
+ {
+  "id": "maths-075",
+  "s": "maths",
+  "t": "simplification",
+  "d": 1,
+  "q_mr": "जर 3x - 5 = 16 असेल, तर x ची किंमत किती?",
+  "q_en": "If 3x - 5 = 16, what is the value of x?",
+  "o_mr": [
+   "5",
+   "7",
+   "8",
+   "9"
+  ],
+  "o_en": [
+   "5",
+   "7",
+   "8",
+   "9"
+  ],
+  "a": 1,
+  "e_mr": "समीकरण सोडवण्यासाठी: 3x = 16 + 5 म्हणजेच 3x = 21, म्हणून x = 21 ÷ 3 = 7.",
+  "e_en": "To solve the equation: 3x = 16 + 5 which means 3x = 21, therefore x = 21 ÷ 3 = 7."
+ },
+ {
+  "id": "maths-076",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_mr": "एका परीक्षेत पास होण्यासाठी 36% गुणांची आवश्यकता आहे. एका विद्यार्थ्याला 120 गुण मिळाले आणि तो 24 गुणांनी नापास झाला, तर एकूण गुण किती?",
+  "q_en": "A student needs 36% marks to pass an examination. A student scored 120 marks and failed by 24 marks. What are the maximum marks?",
+  "o_mr": [
+   "350",
+   "400",
+   "450",
+   "500"
+  ],
+  "o_en": [
+   "350",
+   "400",
+   "450",
+   "500"
+  ],
+  "a": 1,
+  "e_mr": "पास होण्यासाठी लागणारे गुण = 120 + 24 = 144. हे गुण एकूण गुणांच्या 36% आहेत. म्हणून, (36/100) × x = 144, ज्यामुळे x = (144 × 100) ÷ 36 = 400.",
+  "e_en": "Passing marks = 120 + 24 = 144. These marks are 36% of total marks. Therefore, (36/100) × x = 144, which gives x = (144 × 100) ÷ 36 = 400."
+ },
+ {
+  "id": "maths-077",
+  "s": "maths",
+  "t": "speed",
+  "d": 2,
+  "q_mr": "एक रेल्वेगाडी ताशी 72 किमी वेगाने धावत आहे. ती 20 सेकंदात किती अंतर पार करेल?",
+  "q_en": "A train is running at a speed of 72 km/h. What distance will it cover in 20 seconds?",
+  "o_mr": [
+   "300 मीटर",
+   "350 मीटर",
+   "400 मीटर",
+   "450 मीटर"
+  ],
+  "o_en": [
+   "300 meters",
+   "350 meters",
+   "400 meters",
+   "450 meters"
+  ],
+  "a": 2,
+  "e_mr": "वेग 72 किमी/तास आहे. त्याला m/s मध्ये बदलण्यासाठी 5/18 ने गुणू: 72 × (5/18) = 20 मीटर/सेकंद. अंतर = वेग × वेळ = 20 × 20 = 400 मीटर.",
+  "e_en": "Speed is 72 km/h. To convert to m/s, multiply by 5/18: 72 × (5/18) = 20 m/s. Distance = Speed × Time = 20 × 20 = 400 meters."
+ },
+ {
+  "id": "maths-078",
+  "s": "maths",
+  "t": "interest",
+  "d": 2,
+  "q_mr": "₹4000 मुद्दलावर 5% वार्षिक दराने 2 वर्षांचे चक्रवाढ व्याज किती होईल?",
+  "q_en": "What will be the compound interest on a principal of ₹4000 at 5% per annum for 2 years?",
+  "o_mr": [
+   "₹400",
+   "₹410",
+   "₹420",
+   "₹425"
+  ],
+  "o_en": [
+   "₹400",
+   "₹410",
+   "₹420",
+   "₹425"
+  ],
+  "a": 1,
+  "e_mr": "चक्रवाढ व्याजाचे सूत्र A = P(1 + r/100)^t वापरून रास = 4000 × (1 + 5/100)^2 = 4000 × (21/20) × (21/20) = ₹4410. व्याज = 4410 - 4000 = ₹410.",
+  "e_en": "Using compound interest formula A = P(1 + r/100)^t, Amount = 4000 × (1 + 5/100)^2 = 4000 × (21/20) × (21/20) = ₹4410. Interest = 4410 - 4000 = ₹410."
+ },
+ {
+  "id": "maths-079",
+  "s": "maths",
+  "t": "time_work",
+  "d": 2,
+  "q_mr": "A आणि B मिळून एक काम 12 दिवसांत करतात, B आणि C तेच काम 15 दिवसांत करतात, तर C आणि A तेच काम 20 दिवसांत करतात. तिघे मिळून ते काम किती दिवसांत करतील?",
+  "q_en": "A and B together can do a piece of work in 12 days, B and C in 15 days, and C and A in 20 days. In how many days can all of them working together finish the work?",
+  "o_mr": [
+   "8 दिवस",
+   "10 दिवस",
+   "12 दिवस",
+   "15 दिवस"
+  ],
+  "o_en": [
+   "8 days",
+   "10 days",
+   "12 days",
+   "15 days"
+  ],
+  "a": 1,
+  "e_mr": "2(A+B+C) चे 1 दिवसाचे काम = 1/12 + 1/15 + 1/20 = (5+4+3)/60 = 12/60 = 1/5. म्हणून (A+B+C) चे 1 दिवसाचे काम = 1/10. त्यामुळे तिघे मिळून काम 10 दिवसांत संपवतील.",
+  "e_en": "1 day's work of 2(A+B+C) = 1/12 + 1/15 + 1/20 = (5+4+3)/60 = 12/60 = 1/5. Thus 1 day's work of (A+B+C) = 1/10. They will finish it in 10 days."
+ },
+ {
+  "id": "maths-080",
+  "s": "maths",
+  "t": "profit_loss",
+  "d": 1,
+  "q_mr": "एक वस्तू ₹720 ला विकल्यामुळे 20% नफा होतो, तर त्या वस्तूची खरेदी किंमत किती?",
+  "q_en": "By selling an article for ₹720, a profit of 20% is made. What is its cost price?",
+  "o_mr": [
+   "₹550",
+   "₹580",
+   "₹600",
+   "₹650"
+  ],
+  "o_en": [
+   "₹550",
+   "₹580",
+   "₹600",
+   "₹650"
+  ],
+  "a": 2,
+  "e_mr": "खरेदी किंमत = [विक्री किंमत × 100] / [100 + नफा %] = [720 × 100] / 120 = ₹600.",
+  "e_en": "Cost price = [Selling price × 100] / [100 + Profit %] = [720 × 100] / 120 = ₹600."
+ },
+ {
+  "id": "maths-081",
+  "s": "maths",
+  "t": "mensuration",
+  "d": 2,
+  "q_mr": "एका आयताची लांबी आणि रुंदीचे गुणोत्तर 4:3 असून त्याची परिमिती 56 सेमी आहे, तर आयताचे क्षेत्रफळ किती?",
+  "q_en": "The ratio of the length and breadth of a rectangle is 4:3 and its perimeter is 56 cm. What is the area of the rectangle?",
+  "o_mr": [
+   "144 चौ.सेमी",
+   "192 चौ.सेमी",
+   "216 चौ.सेमी",
+   "240 चौ.सेमी"
+  ],
+  "o_en": [
+   "144 sq.cm",
+   "192 sq.cm",
+   "216 sq.cm",
+   "240 sq.cm"
+  ],
+  "a": 1,
+  "e_mr": "लांबी 4x आणि रुंदी 3x मानू. परिमिती = 2(4x + 3x) = 56, म्हणजेच 14x = 56, x = 4. लांबी = 16 सेमी, रुंदी = 12 सेमी. क्षेत्रफळ = 16 × 12 = 192 चौ.सेमी.",
+  "e_en": "Let length be 4x and breadth 3x. Perimeter = 2(4x + 3x) = 56, so 14x = 56, x = 4. Length = 16 cm, breadth = 12 cm. Area = 16 × 12 = 192 sq.cm."
+ },
+ {
+  "id": "maths-082",
+  "s": "maths",
+  "t": "number",
+  "d": 1,
+  "q_mr": "खालीलपैकी कोणती संख्या 11 ने पूर्णपणे विभाज्य आहे?",
+  "q_en": "Which of the following numbers is completely divisible by 11?",
+  "o_mr": [
+   "1331",
+   "1341",
+   "1351",
+   "1361"
+  ],
+  "o_en": [
+   "1331",
+   "1341",
+   "1351",
+   "1361"
+  ],
+  "a": 0,
+  "e_mr": "11 ने विभाज्यतेची कसोटी: विषम स्थानांतील अंकांची बेरीज आणि सम स्थानांतील अंकांची बेरीज यांच्यातील फरक 0 किंवा 11 पटीत असावा. 1331 मध्ये: (1+3) - (3+1) = 4 - 4 = 0.",
+  "e_en": "Divisibility rule for 11: The difference between the sum of digits at odd positions and even positions must be 0 or a multiple of 11. In 1331: (1+3) - (3+1) = 4 - 4 = 0."
+ },
+ {
+  "id": "maths-083",
+  "s": "maths",
+  "t": "average",
+  "d": 1,
+  "q_mr": "पहिले 5 मूळ संख्यांची सरासरी किती?",
+  "q_en": "What is the average of the first 5 prime numbers?",
+  "o_mr": [
+   "5.2",
+   "5.6",
+   "6.0",
+   "6.4"
+  ],
+  "o_en": [
+   "5.2",
+   "5.6",
+   "6.0",
+   "6.4"
+  ],
+  "a": 1,
+  "e_mr": "पहिल्या 5 मूळ संख्या 2, 3, 5, 7 आणि 11 आहेत. त्यांची बेरीज = 2 + 3 + 5 + 7 + 11 = 28. सरासरी = 28 / 5 = 5.6.",
+  "e_en": "The first 5 prime numbers are 2, 3, 5, 7, and 11. Their sum = 2 + 3 + 5 + 7 + 11 = 28. Average = 28 / 5 = 5.6."
+ },
+ {
+  "id": "maths-084",
+  "s": "maths",
+  "t": "ratio",
+  "d": 1,
+  "q_mr": "जर a:b = 3:4 आणि b:c = 8:9 असेल, तर a:c चे गुणोत्तर किती?",
+  "q_en": "If a:b = 3:4 and b:c = 8:9, what is the ratio of a:c?",
+  "o_mr": [
+   "1:2",
+   "2:3",
+   "3:4",
+   "4:5"
+  ],
+  "o_en": [
+   "1:2",
+   "2:3",
+   "3:4",
+   "4:5"
+  ],
+  "a": 1,
+  "e_mr": "a/c = (a/b) × (b/c) = (3/4) × (8/9) = 24/36 = 2/3. म्हणून a:c चे गुणोत्तर 2:3 आहे.",
+  "e_en": "a/c = (a/b) × (b/c) = (3/4) × (8/9) = 24/36 = 2/3. Thus the ratio of a:c is 2:3."
+ },
+ {
+  "id": "maths-085",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर x - 1/x = 4 असेल, तर x³ - 1/x³ ची किंमत किती?",
+  "q_en": "If x - 1/x = 4, what is the value of x³ - 1/x³?",
+  "o_mr": [
+   "52",
+   "64",
+   "76",
+   "80"
+  ],
+  "o_en": [
+   "52",
+   "64",
+   "76",
+   "80"
+  ],
+  "a": 2,
+  "e_mr": "सूत्र वापरून: x³ - 1/x³ = (x - 1/x)³ + 3(x - 1/x). येथे 4³ + 3(4) = 64 + 12 = 76.",
+  "e_en": "Using the formula: x³ - 1/x³ = (x - 1/x)³ + 3(x - 1/x). Here 4³ + 3(4) = 64 + 12 = 76."
+ },
+ {
+  "id": "maths-086",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "जर tan θ = 4/3 असेल, तर (sin θ + cos θ) / (sin θ - cos θ) ची किंमत किती?",
+  "q_en": "If tan θ = 4/3, what is the value of (sin θ + cos θ) / (sin θ - cos θ)?",
+  "o_mr": [
+   "5",
+   "7",
+   "9",
+   "11"
+  ],
+  "o_en": [
+   "5",
+   "7",
+   "9",
+   "11"
+  ],
+  "a": 1,
+  "e_mr": "अंश व छेदाला cos θ ने भागा, म्हणजेच (tan θ + 1) / (tan θ - 1) होईल. (4/3 + 1) / (4/3 - 1) = (7/3) / (1/3) = 7.",
+  "e_en": "Divide numerator and denominator by cos θ to get (tan θ + 1) / (tan θ - 1). Thus, (4/3 + 1) / (4/3 - 1) = (7/3) / (1/3) = 7."
+ },
+ {
+  "id": "maths-087",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका वर्तुळाची त्रिज्या 14 सेमी आहे, तर त्या वर्तुळाचे क्षेत्रफळ किती सेमी² असेल? (π = 22/7)",
+  "q_en": "The radius of a circle is 14 cm, what is its area in cm²? (π = 22/7)",
+  "o_mr": [
+   "416",
+   "616",
+   "816",
+   "154"
+  ],
+  "o_en": [
+   "416",
+   "616",
+   "816",
+   "154"
+  ],
+  "a": 1,
+  "e_mr": "वर्तुळाचे क्षेत्रफळ = πr² = (22/7) × 14 × 14 = 22 × 2 × 14 = 616 सेमी².",
+  "e_en": "Area of circle = πr² = (22/7) × 14 × 14 = 22 × 2 × 14 = 616 cm²."
+ },
+ {
+  "id": "maths-088",
+  "s": "maths",
+  "t": "mensuration",
+  "d": 2,
+  "q_mr": "एका दंडगोळाची (cylinder) त्रिज्या 3.5 सेमी आणि उंची 10 सेमी आहे, तर त्याचे वक्रपृष्ठफळ किती असेल? (π = 22/7)",
+  "q_en": "A cylinder has a radius of 3.5 cm and height of 10 cm, what is its curved surface area? (π = 22/7)",
+  "o_mr": [
+   "220 सेमी²",
+   "440 सेमी²",
+   "110 सेमी²",
+   "330 सेमी²"
+  ],
+  "o_en": [
+   "220 cm²",
+   "440 cm²",
+   "110 cm²",
+   "330 cm²"
+  ],
+  "a": 0,
+  "e_mr": "वक्रपृष्ठफळ = 2πrh = 2 × (22/7) × 3.5 × 10 = 2 × (22/7) × (7/2) × 10 = 220 सेमी².",
+  "e_en": "Curved surface area = 2πrh = 2 × (22/7) × 3.5 × 10 = 2 × (22/7) × (7/2) × 10 = 220 cm²."
+ },
+ {
+  "id": "maths-089",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_mr": "एका विद्यार्थ्याने गणित, इंग्रजी, विज्ञान, इतिहास आणि मराठी विषयात अनुक्रमे 80, 70, 90, 60 आणि 75 गुण मिळवले, तर त्याचे सरासरी गुण किती?",
+  "q_en": "A student scored 80, 70, 90, 60, and 75 marks in Mathematics, English, Science, History, and Marathi respectively. What is his average score?",
+  "o_mr": [
+   "73",
+   "75",
+   "77",
+   "79"
+  ],
+  "o_en": [
+   "73",
+   "75",
+   "77",
+   "79"
+  ],
+  "a": 1,
+  "e_mr": "एकूण गुण = 80 + 70 + 90 + 60 + 75 = 375. एकूण विषय = 5. सरासरी = 375 / 5 = 75.",
+  "e_en": "Total marks = 80 + 70 + 90 + 60 + 75 = 375. Total subjects = 5. Average = 375 / 5 = 75."
+ },
+ {
+  "id": "maths-090",
+  "s": "maths",
+  "t": "number",
+  "d": 2,
+  "q_mr": "दोन संख्यांचा मसावि (HCF) 8 आणि लसावि (LCM) 48 आहे. जर पहिली संख्या 24 असेल, तर दुसरी संख्या कोणती?",
+  "q_en": "The HCF and LCM of two numbers are 8 and 48 respectively. If one number is 24, what is the other number?",
+  "o_mr": [
+   "12",
+   "16",
+   "24",
+   "32"
+  ],
+  "o_en": [
+   "12",
+   "16",
+   "24",
+   "32"
+  ],
+  "a": 1,
+  "e_mr": "सूत्र: पहिली संख्या × दुसरी संख्या = मसावि × लसावि. 24 × दुसरी संख्या = 8 × 48. दुसरी संख्या = (8 × 48) / 24 = 16.",
+  "e_en": "Formula: First number × Second number = HCF × LCM. 24 × Second number = 8 × 48. Second number = (8 × 48) / 24 = 16."
+ },
+ {
+  "id": "maths-091",
+  "s": "maths",
+  "t": "time_work",
+  "d": 2,
+  "q_mr": "एका टाकीला नळ A ने 12 तासात आणि नळ B ने 15 तासात भरता येते. जर दोन्ही नळ एकत्र उघडले, तर टाकी भरण्यासाठी किती वेळ लागेल?",
+  "q_en": "A tap A can fill a tank in 12 hours and tap B in 15 hours. If both taps are opened together, how long will it take to fill the tank?",
+  "o_mr": [
+   "6 तास 40 मिनिटε",
+   "6 तास",
+   "7 तास",
+   "5 तास 30 मिनिटे"
+  ],
+  "o_en": [
+   "6 hours 40 minutes",
+   "6 hours",
+   "7 hours",
+   "5 hours 30 minutes"
+  ],
+  "a": 0,
+  "e_mr": "एका तासाचे काम = 1/12 + 1/15 = (5+4)/60 = 9/60 = 3/20. वेळ = 20/3 तास = 6.66 तास म्हणजेच 6 तास 40 मिनिटे.",
+  "e_en": "1 hour work = 1/12 + 1/15 = 9/60 = 3/20. Time = 20/3 hours = 6 hours 40 minutes."
+ },
+ {
+  "id": "maths-092",
+  "s": "maths",
+  "t": "interest",
+  "d": 3,
+  "q_mr": "अशी कोणती मूळ रक्कम आहे जिच्यावर दरवर्षी 10% दराने 2 वर्षांचे चक्रवाढ व्याज आणि सरळ व्याज यांतील फरक 20 रुपये असेल?",
+  "q_en": "What is the principal amount on which the difference between compound interest and simple interest at 10% per annum for 2 years is ₹20?",
+  "o_mr": [
+   "₹1000",
+   "₹1500",
+   "₹2000",
+   "₹2500"
+  ],
+  "o_en": [
+   "₹1000",
+   "₹1500",
+   "₹2000",
+   "₹2500"
+  ],
+  "a": 2,
+  "e_mr": "2 वर्षांसाठी CI आणि SI मधील फरकाचे सूत्र: Difference = P(R/100)². 20 = P × (10/100)² => 20 = P × (1/100) => P = 2000.",
+  "e_en": "Formula for difference between CI and SI for 2 years: Diff = P(R/100)². 20 = P × (10/100)² => 20 = P × (1/100) => P = 2000."
+ },
+ {
+  "id": "maths-093",
+  "s": "maths",
+  "t": "ratio",
+  "d": 1,
+  "q_mr": "एका वर्गात मुले आणि मुली यांचे गुणोत्तर 4 : 3 आहे. जर वर्गात एकूण 42 विद्यार्थी असतील, तर मुलींची संख्या किती?",
+  "q_en": "The ratio of boys and girls in a class is 4 : 3. If there are a total of 42 students in the class, what is the number of girls?",
+  "o_mr": [
+   "18",
+   "24",
+   "21",
+   "14"
+  ],
+  "o_en": [
+   "18",
+   "24",
+   "21",
+   "14"
+  ],
+  "a": 0,
+  "e_mr": "गुणोत्तरांची बेरीज = 4 + 3 = 7. एका भागाचे मूल्य = 42 / 7 = 6. मुलींची संख्या = 3 × 6 = 18.",
+  "e_en": "Sum of ratios = 4 + 3 = 7. Value of one part = 42 / 7 = 6. Number of girls = 3 × 6 = 18."
+ },
+ {
+  "id": "maths-094",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर $x - \\frac{1}{x} = 3$ असेल, तर $x^2 + \\frac{1}{x^2}$ ची किंमत किती?",
+  "q_en": "If $x - \\frac{1}{x} = 3$, what is the value of $x^2 + \\frac{1}{x^2}$?",
+  "o_mr": [
+   "9",
+   "11",
+   "7",
+   "12"
+  ],
+  "o_en": [
+   "9",
+   "11",
+   "7",
+   "12"
+  ],
+  "a": 1,
+  "e_mr": "दिलेल्या समीकरणाचे दोन्ही बाजूंना वर्ग करू: $(x - 1/x)^2 = 3^2 \\implies x^2 - 2 + 1/x^2 = 9 \\implies x^2 + 1/x^2 = 9 + 2 = 11.",
+  "e_en": "Squaring both sides of the given equation: $(x - 1/x)^2 = 3^2 \\implies x^2 - 2 + 1/x^2 = 9 \\implies x^2 + 1/x^2 = 9 + 2 = 11."
+ },
+ {
+  "id": "maths-095",
+  "s": "maths",
+  "t": "geometry",
+  "d": 1,
+  "q_mr": "एका वर्तुळाची त्रिज्या 14 सेमी आहे, तर त्याचा परिघ (Circumference) किती असेल? (π = 22/7)",
+  "q_en": "The radius of a circle is 14 cm, what is its circumference? (π = 22/7)",
+  "o_mr": [
+   "88 सेमी",
+   "44 सेमी",
+   "154 सेमी",
+   "616 सेमी"
+  ],
+  "o_en": [
+   "88 cm",
+   "44 cm",
+   "154 cm",
+   "616 cm"
+  ],
+  "a": 0,
+  "e_mr": "वर्तुळाचा परिघ = $2\\pi r$ = $2 \\times (22/7) \\times 14$ = $2 \\times 22 \\times 2$ = 88 सेमी.",
+  "e_en": "Circumference of a circle = $2\\pi r$ = $2 \\times (22/7) \\times 14$ = $2 \\times 22 \\times 2$ = 88 cm."
+ },
+ {
+  "id": "maths-096",
+  "s": "maths",
+  "t": "mensuration",
+  "d": 2,
+  "q_mr": "एका अर्धगोलाची त्रिज्या 7 सेमी आहे, तर त्याचे एकूण पृष्ठफळ किती? (π = 22/7)",
+  "q_en": "The radius of a hemisphere is 7 cm, what is its total surface area? (π = 22/7)",
+  "o_mr": [
+   "308 चौ.सेमी",
+   "462 चौ.सेमी",
+   "154 चौ.सेमी",
+   "616 चौ.सेमी"
+  ],
+  "o_en": [
+   "308 sq cm",
+   "462 sq cm",
+   "154 sq cm",
+   "616 sq cm"
+  ],
+  "a": 1,
+  "e_mr": "अर्धगोलाचे एकूण पृष्ठफळ = $3\\pi r^2$ = $3 \\times (22/7) \\times 7 \\times 7$ = $3 \\times 22 \\times 7$ = 462 चौ.सेमी.",
+  "e_en": "Total surface area of a hemisphere = $3\\pi r^2$ = $3 \\times (22/7) \\times 7 \\times 7$ = $3 \\times 22 \\times 7$ = 462 sq cm."
+ },
+ {
+  "id": "maths-097",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "जर $\\sin \\theta = \\frac{3}{5}$ असेल, तर $\\cos \\theta$ ची किंमत किती?",
+  "q_en": "If $\\sin \\theta = \\frac{3}{5}$, what is the value of $\\cos \\theta$?",
+  "o_mr": [
+   "4/5",
+   "3/4",
+   "5/4",
+   "4/3"
+  ],
+  "o_en": [
+   "4/5",
+   "3/4",
+   "5/4",
+   "4/3"
+  ],
+  "a": 0,
+  "e_mr": "आपल्याला माहीत आहे की $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - (3/5)^2} = \\sqrt{1 - 9/25} = \\sqrt{16/25} = 4/5$.",
+  "e_en": "We know that $\\cos \\theta = \\sqrt{1 - \\sin^2 \\theta} = \\sqrt{1 - (3/5)^2} = \\sqrt{1 - 9/25} = \\sqrt{16/25} = 4/5$."
+ },
+ {
+  "id": "maths-098",
+  "s": "maths",
+  "t": "statistics",
+  "d": 1,
+  "q_mr": "खालील आकडेवारीचा मध्यक (Median) शोधा: 15, 8, 22, 11, 30, 19, 5",
+  "q_en": "Find the median of the following data: 15, 8, 22, 11, 30, 19, 5",
+  "o_mr": [
+   "15",
+   "19",
+   "11",
+   "18"
+  ],
+  "o_en": [
+   "15",
+   "19",
+   "11",
+   "18"
+  ],
+  "a": 0,
+  "e_mr": "पहिले आकडेवारी चढत्या क्रमाने मांडू: 5, 8, 11, 15, 19, 22, 30. एकूण संख्या $n = 7$ (विषम) आहे, त्यामुळे मध्यक $(n+1)/2$ वे पद म्हणजेच 4थे पद = 15.",
+  "e_en": "First arrange in ascending order: 5, 8, 11, 15, 19, 22, 30. Total count $n = 7$ (odd), so the median is the $((7+1)/2)$th term, which is the 4th term = 15."
+ },
+ {
+  "id": "maths-099",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 2,
+  "q_mr": "एका पाय चार्टमध्ये, खेळावरील खर्च 72° कोनाने दर्शवला जातो. जर एकूण वार्षिक खर्च ₹5,40,000 असेल, तर खेळावर किती खर्च केला जातो?",
+  "q_en": "In a pie chart, expenditure on sports is represented by an angle of 72°. If the total annual expenditure is ₹5,40,000, what is the expenditure on sports?",
+  "o_mr": [
+   "₹1,08,000",
+   "₹72,000",
+   "₹1,20,000",
+   "₹90,000"
+  ],
+  "o_en": [
+   "₹1,08,000",
+   "₹72,000",
+   "₹1,20,000",
+   "₹90,000"
+  ],
+  "a": 0,
+  "e_mr": "खेळाचा खर्च = $(72^\\circ / 360^\\circ) \\times 5,40,000 = (1/5) \\times 5,40,000 = ₹1,08,000$.",
+  "e_en": "Expenditure on sports = $(72^\\circ / 360^\\circ) \\times 5,40,000 = (1/5) \\times 5,40,000 = ₹1,08,000$."
+ },
+ {
+  "id": "maths-100",
+  "s": "maths",
+  "t": "interest",
+  "d": 2,
+  "q_mr": "₹12,000 मुδलावर वार्षिक 10% दराने 3 वर्षांचे चक्रवाढ व्याज किती होईल?",
+  "q_en": "What will be the compound interest on a principal of ₹12,000 at 10% per annum for 3 years?",
+  "o_mr": [
+   "₹3,972",
+   "₹3,600",
+   "₹4,120",
+   "₹3,850"
+  ],
+  "o_en": [
+   "₹3,972",
+   "₹3,600",
+   "₹4,120",
+   "₹3,850"
+  ],
+  "a": 0,
+  "e_mr": "रास $A = P(1 + r/100)^n = 12000 \\times (11/10)^3 = 12000 \\times 1.331 = ₹15,972$. चक्रवाढ व्याज = $15,972 - 12,000 = ₹3,972$.",
+  "e_en": "Amount $A = P(1 + r/100)^n = 12000 \\times (11/10)^3 = 12000 \\times 1.331 = ₹15,972$. Compound interest = $15,972 - 12,000 = ₹3,972$."
  }
 ]
