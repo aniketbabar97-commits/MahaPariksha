@@ -158,8 +158,14 @@ class MeScreen extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(context.tr('भरारी — उंच भरारी घ्या', 'Bharari — Fly high'),
-                  style: const TextStyle(fontWeight: FontWeight.w800)),
+              Row(children: [
+                const Image(image: AssetImage('assets/brand/logo_mark.png'), width: 32, height: 32),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(context.tr('भरारी — उंच भरारी घ्या', 'Bharari — Fly high'),
+                      style: const TextStyle(fontWeight: FontWeight.w800)),
+                ),
+              ]),
               const SizedBox(height: 6),
               Text(context.tr(
                   'भरारी हे स्वतंत्र शैक्षणिक ॲप आहे. याचा कोणत्याही शासकीय विभाग, MPSC किंवा भरती मंडळाशी संबंध नाही. अधिकृत माहितीसाठी संबंधित संकेतस्थळ पहा.',

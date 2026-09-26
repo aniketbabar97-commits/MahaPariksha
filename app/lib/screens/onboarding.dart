@@ -95,7 +95,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.flight_takeoff, color: BrandColors.sunrise, size: 40),
+              Image(image: AssetImage('assets/brand/logo_mark_white.png'), width: 56, height: 56),
               SizedBox(height: 12),
               Text('भरारी', style: TextStyle(color: Colors.white, fontSize: 36, fontWeight: FontWeight.w900)),
               Text('उंच भरारी घ्या · Fly high', style: TextStyle(color: Colors.white70, fontSize: 16)),
