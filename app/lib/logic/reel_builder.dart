@@ -5,7 +5,7 @@ import '../data/models.dart';
 import '../data/progress.dart';
 import 'quiz_builder.dart';
 
-enum ReelKind { question, flashcard, fact, motivation }
+enum ReelKind { question, flashcard, fact, motivation, adSlot }
 
 /// One card in the endless "Bharari Reel" — a single unit of bite-sized,
 /// swipe-to-next content. Only one of the typed fields is set, matching [kind].
@@ -25,6 +25,8 @@ class ReelItem {
       : kind = ReelKind.motivation, question = null, flashcard = null, fact = null, factSubject = null, factTopic = null;
   const ReelItem.fact(this.fact, this.factSubject, this.factTopic)
       : kind = ReelKind.fact, question = null, flashcard = null, motivation = null;
+  const ReelItem.adSlot()
+      : kind = ReelKind.adSlot, question = null, flashcard = null, motivation = null, fact = null, factSubject = null, factTopic = null;
 }
 
 /// Generates an endless, weighted-random mix of questions, flashcards, quick facts
@@ -70,6 +72,13 @@ class ReelBuilder {
     return pool[_rnd.nextInt(pool.length)];
   }
 
+  /// Every 8th card is an ad slot — kept as a structural placeholder (labelled
+  /// "coming soon") until a real AdMob account exists to wire in. Placing it in
+  /// the highest-frequency screen in the app is deliberate: this is the ad
+  /// inventory, not the Daily 10 / mock flows, which stay ad-free by design.
+  static const adEvery = 8;
+  int _sinceLastAd = 0;
+
   /// Generates [count] more items to append to a growing reel.
   List<ReelItem> more(int count) {
     final qPool = _questionPool();
@@ -78,6 +87,12 @@ class ReelBuilder {
     final motivations = repo.motivation;
     final items = <ReelItem>[];
     for (var i = 0; i < count; i++) {
+      _sinceLastAd++;
+      if (_sinceLastAd >= adEvery) {
+        _sinceLastAd = 0;
+        items.add(const ReelItem.adSlot());
+        continue;
+      }
       final roll = _rnd.nextDouble();
       if (roll < 0.55 && qPool.isNotEmpty) {
         items.add(ReelItem.question(_weightedQuestion(qPool)));

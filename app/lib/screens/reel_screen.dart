@@ -141,6 +141,8 @@ class _ReelCardState extends State<_ReelCard> {
         return _factCard(widget.item.fact!, widget.item.factSubject, widget.item.factTopic);
       case ReelKind.motivation:
         return _motivationCard(widget.item.motivation!);
+      case ReelKind.adSlot:
+        return _adSlotCard();
     }
   }
 
@@ -268,6 +270,17 @@ class _ReelCardState extends State<_ReelCard> {
             Text('${subject.name.of(lang)}${topic != null ? ' · ${topic.name.of(lang)}' : ''}',
                 style: const TextStyle(color: Colors.white70, fontSize: 13)),
           ],
+        ]),
+      );
+
+  Widget _adSlotCard() => _frame(
+        gradient: const LinearGradient(colors: [Color(0xFF3A3A3A), Color(0xFF5C5C5C)], begin: Alignment.topLeft, end: Alignment.bottomRight),
+        tag: widget.langMr ? '📢 जाहिरात जागा' : '📢 Ad slot',
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          const Icon(Icons.campaign_outlined, color: Colors.white54, size: 40),
+          const SizedBox(height: 14),
+          Text(widget.langMr ? 'जाहिरात लवकरच इथे येईल' : 'An ad will appear here soon',
+              textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70, fontSize: 16, fontWeight: FontWeight.w600)),
         ]),
       );
 

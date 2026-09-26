@@ -37,6 +37,9 @@ void main() {
           expect(item.fact, isNotNull);
         case ReelKind.motivation:
           expect(item.motivation, isNotNull);
+        case ReelKind.adSlot:
+          expect(item.question, isNull);
+          expect(item.flashcard, isNull);
       }
     }
   });
@@ -45,6 +48,16 @@ void main() {
     final p = Progress();
     final b = ReelBuilder(repo, p, QuizBuilder(repo, p));
     expect(b.more(30).length, 30);
+  });
+
+  test('an ad slot appears exactly every 8th card', () {
+    final p = Progress()..examId = 'police_bharti';
+    final b = ReelBuilder(repo, p, QuizBuilder(repo, p));
+    final batch = b.more(40);
+    for (var i = 0; i < batch.length; i++) {
+      final isAdPosition = (i + 1) % ReelBuilder.adEvery == 0;
+      expect(batch[i].kind == ReelKind.adSlot, isAdPosition, reason: 'index $i');
+    }
   });
 
   test('reel questions respect the reported-question exclusion', () {
