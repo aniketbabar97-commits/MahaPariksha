@@ -1,0 +1,214 @@
+[
+ {
+  "reason": "mismatch (gemini=3, groq=3, confident=False)",
+  "item": {
+   "t": "mh_gk",
+   "d": 2,
+   "q_mr": "खालीलपैकी कोणत्या जिल्ह्याला लातूर जिल्ह्याची सीमा लागलेली नाही?",
+   "q_en": "Which of the following districts does not share a border with Latur district?",
+   "o_mr": [
+    "बीड",
+    "नांदेड",
+    "उस्मानाबाद (धारशिव)",
+    "परभणी"
+   ],
+   "o_en": [
+    "Beed",
+    "Nanded",
+    "Osmanabad (Dharashiv)",
+    "Parbhani"
+   ],
+   "a": 3,
+   "e_mr": "परभणी जिल्ह्याची सीमा लातूरला लागलेली नाही.",
+   "e_en": "Parbhani district does not share a border with Latur."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "books",
+   "d": 2,
+   "q_mr": "'फासापरधी' किंवा 'उकिडवाढ' यांसारख्या ग्रामीण जीवनावरील प्रसिद्ध साहित्याचे रचनाकार कोण आहेत?",
+   "q_en": "Who is the author of well-known literature depicting rural life such as 'Ukidwadh'?",
+   "o_mr": [
+    "शंकर बाबुराव खरात",
+    "दया पवार",
+    "बाबुराव बागूल",
+    "अण्णाभाऊ साठे"
+   ],
+   "o_en": [
+    "Shankar Baburao Kharat",
+    "Daya Pawar",
+    "Baburao Bagul",
+    "Anna Bhau Sathe"
+   ],
+   "a": 0,
+   "e_mr": "शंकर बाबुराव खरात हे एक प्रख्यात दलित व ग्रामीण साहित्यिक होते. त्यांच्या आत्मचरित्रात आणि साहित्यात उपेक्षितांचे जीवन चित्रण आढळते.",
+   "e_en": "Shankar Baburao Kharat was a prominent Dalit and rural writer whose works realistically portrayed the lives of marginalized communities."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=3, confident=True)",
+  "item": {
+   "t": "mh_gk",
+   "d": 1,
+   "q_mr": "महाराष्ट्र राज्यातील कोणत्या जिल्ह्यात क्षेत्रफळाच्या दृष्टीने सर्वात मोठा जिल्हा म्हणून ओळखला जातो?",
+   "q_en": "Which district in Maharashtra is known as the largest district in terms of area?",
+   "o_mr": [
+    "पुणे",
+    "नाशिक",
+    "अहमदनगर",
+    "गडचिरोली"
+   ],
+   "o_en": [
+    "Pune",
+    "Nashik",
+    "Ahmednagar",
+    "Gadchiroli"
+   ],
+   "a": 2,
+   "e_mr": "अहमदनगर हा महाराष्ट्र राज्यातील क्षेत्रफळाच्या दृष्टीने सर्वात मोठा जिल्हा आहे.",
+   "e_en": "Ahmednagar is the largest district in Maharashtra in terms of geographical area."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "books",
+   "d": 1,
+   "q_mr": "'गीता रहस्य' हा प्रसिद्ध ग्रंथ कोणी लिहिला आहे?",
+   "q_en": "Who wrote the famous book 'Gita Rahasya'?",
+   "o_mr": [
+    "महात्मा गांधी",
+    "लोकमान्य टिळक",
+    "विनोबा भावे",
+    "स्वामी विवेकानंद"
+   ],
+   "o_en": [
+    "Mahatma Gandhi",
+    "Lokmanya Tilak",
+    "Vinoba Bhave",
+    "Swami Vivekananda"
+   ],
+   "a": 1,
+   "e_mr": "लोकमान्य बाळ गंगाधर टिळक यांनी मंडालेच्या तुरुंगात असताना 'गीता रहस्य' हा ग्रंथ लिहिला.",
+   "e_en": "Lokmanya Bal Gangadhar Tilak wrote the book 'Gita Rahasya' while imprisoned in Mandalay."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=False)",
+  "item": {
+   "t": "books",
+   "d": 2,
+   "q_mr": "'फासागद' किंवा 'श्रीमान योगी' या प्रसिद्ध ऐतिहासिक कादंबरीचे लेखक कोण आहेत?",
+   "q_en": "Who is the author of the famous historical novel 'Shriman Yogi'?",
+   "o_mr": [
+    "वि. वा. शिरवाडकर",
+    "रणजित देशमाने",
+    "रंजीत देसाई",
+    "बाबूराव बागूल"
+   ],
+   "o_en": [
+    "V. V. Shirwadkar",
+    "Ranjit Desamane",
+    "Ranjeet Desai",
+    "Baburao Bagul"
+   ],
+   "a": 2,
+   "e_mr": "'श्रीमान योगी' ही छत्रपती शिवाजी महाराजांच्या जीवनावर आधारित अत्यंत प्रसिद्ध कादंबरी रंजीत देसाई यांनी लिहिली आहे.",
+   "e_en": "'Shriman Yogi' is a very famous historical novel based on the life of Chhatrapati Shivaji Maharaj, written by Ranjeet Desai."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "awards",
+   "d": 2,
+   "q_mr": "'महाराष्ट्र भूषण' पुरस्कार सर्वप्रथम प्रसिद्ध साहित्यिक पु. ल. देशपांडे यांना १९९६ मध्ये प्रदान करण्यात आला होता.",
+   "q_en": "Who was awarded the Government of Maharashtra's highest civilian honor, 'Maharashtra Bhushan', for the first time?",
+   "o_mr": [
+    "लता मंगेशकर",
+    "पु. ल. देशपांडे",
+    "सचिन तेंडुलकर",
+    "बाबा आमटे"
+   ],
+   "o_en": [
+    "Lata Mangeshkar",
+    "Pu. La. Deshpande",
+    "Sachin Tendulkar",
+    "Baba Amte"
+   ],
+   "a": 1,
+   "e_mr": "The 'Maharashtra Bhushan' award was first conferred upon the renowned Marathi writer and humorist Pu. La. Deshpande in 1996.",
+   "e_en": "The 'Maharashtra Bhushan' award was first conferred upon the renowned Marathi writer and humorist Pu. La. Deshpande in 1996.",
+   "e_id": "awards_001"
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=False)",
+  "item": {
+   "t": "books",
+   "d": 2,
+   "q_mr": "'फासाग' या प्रसिद्ध कादंबरीचे लेखक कोण आहेत?",
+   "q_en": "Who is the author of the famous novel 'Fasag'?",
+   "o_mr": [
+    "भालचंद्र नेमाडे",
+    "विश्वास पाटील",
+    "रंगनाथ पठारे",
+    "अच्युत गोडबोले"
+   ],
+   "o_en": [
+    "Bhalchandra Nemade",
+    "Vishwas Patil",
+    "Ranganath Pathare",
+    "Achyut Godbole"
+   ],
+   "a": 2,
+   "e_mr": "'फासाग' ही प्रसिद्ध कादंबरी रंगनाथ पठारे यांनी लिहिली आहे. या कादंबरीला साहित्य अकादमी पुरस्कार मिळाला होता.",
+   "e_en": "The famous novel 'Fasag' was written by Ranganath Pathare. This novel received the Sahitya Akademi Award."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=3, confident=True)",
+  "item": {
+   "t": "mh_gk",
+   "d": 1,
+   "q_mr": "महाराष्ट्रात सर्वाधिक लांबीचा समुद्रकिनारा खालीलपैकी कोणत्या जिल्ह्याला लाभला आहे?",
+   "q_en": "Which of the following districts has the longest coastline in Maharashtra?",
+   "o_mr": [
+    "मुंबई शहर",
+    "ठाणे",
+    "रत्नागिरी",
+    "सिंधुदुर्ग"
+   ],
+   "o_en": [
+    "Mumbai City",
+    "Thane",
+    "Ratnagiri",
+    "Sindhudurg"
+   ],
+   "a": 2,
+   "e_mr": "महाराष्ट्राच्या कोकण किनारपट्टीवरील रत्नागिरी जिल्ह्याला सर्वात लांब समुद्रकिनारा (सुमारे २३७ किमी) लाभला आहे.",
+   "e_en": "Ratnagiri district on the Konkan coast of Maharashtra has the longest coastline (approx. 237 km)."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "books",
+   "d": 1,
+   "q_mr": "'गीता रहस्य' हा ग्रंथ कोणी लिहिला आहे?",
+   "q_en": "Who wrote the book 'Gita Rahasya'?",
+   "o_mr": [
+    "महात्मा गांधी",
+    "लोकमान्य टिळक",
+    "विनोबा भावे",
+    "स्वामी विवेकानंद"
+   ],
+   "o_en": "Lokmanya Bal Gangadhar Tilak wrote the famous book 'Gita Rahasya' while imprisoned in Mandalay.",
+   "a": 1,
+   "e_mr": "लोकमान्य बाळ गंगाधर टिळक यांनी मंडालेच्या तुरुंगात असताना 'गीता रहस्य' हा प्रसिद्ध ग्रंथ लिहिला.",
+   "id": "gita_rahasya"
+  }
+ }
+]

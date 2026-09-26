@@ -1,0 +1,266 @@
+[
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "mh_forests",
+   "d": 3,
+   "q_mr": "नավаगाव राष्ट्रीय उद्यान खालीलपैकी कोणत्या जिल्ह्यात आहे?",
+   "q_en": "In which of the following districts is the Nawegaon National Park located?",
+   "o_mr": [
+    "चंद्रपूर",
+    "गोंदिया",
+    "गडचिरोली",
+    "अमरावती"
+   ],
+   "o_en": [
+    "Chandrapur",
+    "Gondia",
+    "Gadchiroli",
+    "Amravati"
+   ],
+   "a": 1,
+   "e_mr": "नवेगाव राष्ट्रीय उद्यान गोंदिया जिल्ह्यात स्थित आहे.",
+   "e_en": "Nawegaon National Park is located in Gondia district."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=False)",
+  "item": {
+   "t": "mh_physical",
+   "d": 3,
+   "q_mr": "महाराष्ट्रातील 'सातमाळा' व 'अजिंठा' डोंगररांगा कोणत्या नद्यांच्या खोऱ्यांना वेगळी करतात?",
+   "q_en": "The 'Satmala' and 'Ajanta' hill ranges in Maharashtra separate the valleys of which rivers?",
+   "o_mr": [
+    "तापी आणि गोदावरी",
+    "गोदावरी आणि भीमा",
+    "भीमा आणि कृष्णा",
+    "वर्धा आणि वैनगंगा"
+   ],
+   "o_en": [
+    "Tapi and Godavari",
+    "Godavari and Bhima",
+    "Bhima and Krishna",
+    "Wardha and Wainganga"
+   ],
+   "a": 0,
+   "e_mr": "सातमाळा-अजिंठा डोंगररांग ही उत्तर महाराष्ट्रात पसरलेली असून तिच्या उत्तरेला तापी नदीचे खोरे आणि दक्षिणेला गोदावरी नदीचे खोरे आहे.",
+   "e_en": "The Satmala-Ajanta hill range spreads across northern Maharashtra, with the Tapi river basin to its north and the Godavari river basin to its south."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "mh_physical",
+   "d": 1,
+   "q_mr": "महाराष्ट्राच्या पूर्वेस कोणता डोंगर किंवा पठार विस्तारलेला आहे?",
+   "q_en": "Which hill or plateau extends to the east of Maharashtra?",
+   "o_mr": [
+    "सातपुडा पर्वत",
+    "चिमूर टेकड्या",
+    "दरड प्रदेश",
+    "यापैकी नाही"
+   ],
+   "o_en": [
+    "Satpura Range",
+    "Chimur Hills",
+    "Bhandara Plateau",
+    "None of these"
+   ],
+   "a": 1,
+   "e_mr": "महाराष्ट्राच्या उत्तरेला सातपुडा पर्वत आहे.",
+   "e_en": "Satpura range is in the north of Maharashtra."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "rivers_dams",
+   "d": 2,
+   "q_mr": "नाथसागर हे जलाशय कोणत्या धरणाशी संबंधित आहे?",
+   "q_en": "Nathsagar reservoir is associated with which dam?",
+   "o_mr": [
+    "कोयना धरण",
+    "जायकवाडी धरण",
+    "उजनी धरण",
+    "राधानगरी धरण"
+   ],
+   "o_en": [
+    "Koyna Dam",
+    "Jayakwadi Dam",
+    "Ujani Dam",
+    "Radhanagari Dam"
+   ],
+   "a": 1,
+   "e_mr": "जायकवाडी धरण औरंगाबाद (छत्रपती संभाजीनगर) जिल्ह्यात आहे.",
+   "e_en": "Jayakwadi dam is in Chhatrapati Sambhajinagar district."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=2, confident=True)",
+  "item": {
+   "t": "india",
+   "d": 1,
+   "q_mr": "खालीलपैकी कोणत्या राज्याला भारताची 'फळांचे भांडे' (Fruit Bowl) म्हणून ओळखले जाते?",
+   "q_en": "Which of the following states is known as the 'Fruit Bowl' of India?",
+   "o_mr": [
+    "पंजाब",
+    "हिमाचल प्रदेश",
+    "केरळ",
+    "सिक्कीम"
+   ],
+   "o_en": [
+    "Punjab",
+    "Himachal Pradesh",
+    "Kerala",
+    "Sikkim"
+   ],
+   "a": 1,
+   "e_mr": "हिमाचल प्रदेशमध्ये सफरचंद आणि इतर फळांचे मोठ्या प्रमाणावर उत्पादन होते, म्हणून त्याला भारताचे फळांचे भांडे म्हणतात.",
+   "e_en": "Himachal Pradesh produces apples and various other fruits on a large scale, hence it is known as the Fruit Bowl of India."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "mh_forests",
+   "d": 2,
+   "q_mr": "महाराष्ट्रात खालीलपैकी कोणत्या जिल्ह्यात वनाच्छादित क्षेत्र टक्केवारीच्या दृष्टीने सर्वाधिक आहे?",
+   "q_en": "Which district in Maharashtra has the highest forest cover percentage-wise?",
+   "o_mr": [
+    "गडचिरोली",
+    "चंद्रपूर",
+    "सिंधुदुर्ग",
+    "रत्नागिरी"
+   ],
+   "o_en": [
+    "Gadchiroli",
+    "Chandrapur",
+    "Sindhudurg",
+    "Ratnagiri"
+   ],
+   "a": 0,
+   "e_mr": "गडचिरोली जिल्ह्यामध्ये भौगोलिक क्षेत्राच्या तुलनेत वनाच्छादित प्रदेशाची टक्केवारी महाराष्ट्रात सर्वाधिक आहे.",
+   "e_en": "Gadchiroli district has the highest percentage of forest cover compared to its geographical area in Maharashtra."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=2, confident=False)",
+  "item": {
+   "t": "mh_physical",
+   "d": 2,
+   "q_mr": "सातपुडा पर्वतरांगेतील महाराष्ट्रातील सर्वात उंच शिखर कोणते आहे?",
+   "q_en": "What is the highest peak in the Satpura range within Maharashtra?",
+   "o_mr": [
+    "कळसुबाई",
+    "अस्तामाची",
+    "तोरणा",
+    "वैराट"
+   ],
+   "o_en": [
+    "Kalsubai",
+    "Astamachi",
+    "Torna",
+    "Vairat"
+   ],
+   "a": 3,
+   "e_mr": "अस्तामाची किंवा वैराट हे सातपुडा पर्वतरांगेतील (मेळघाट प्रदेश) महाराष्ट्रातील प्रमुख आणि उंच शिखर आहे.",
+   "e_en": "Vairat (or Astamachi) is one of the highest peaks in the Satpura range within the Melghat region of Maharashtra."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "mh_forests",
+   "d": 2,
+   "q_mr": "क्षेत्रफळाच्या दृष्टिकोनातून महाराष्ट्रातील सर्वाधिक वनक्षेत्र असलेला जिल्हा कोणता?",
+   "q_en": "Which district in Maharashtra has the maximum forest cover area in terms of geographical area?",
+   "o_mr": [
+    "gadchiroli",
+    "chandrapur",
+    "thane",
+    "nashik"
+   ],
+   "o_en": [
+    "Gadchiroli",
+    "Chandrapur",
+    "Thane",
+    "Nashik"
+   ],
+   "a": 0,
+   "e_mr": "गडचिरोली जिल्ह्यात महाराष्ट्रात सर्वाधिक वनक्षेत्र आणि वनांचे प्रमाण आहे.",
+   "e_en": "Gadchiroli district has the maximum forest cover and percentage of forests in Maharashtra."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=3, confident=True)",
+  "item": {
+   "t": "rivers_dams",
+   "d": 2,
+   "q_mr": "जयकवाडी धरण कोणत्या नदीवर बांधले गेले आहे?",
+   "q_en": "On which river is the Jayakwadi dam built?",
+   "o_mr": [
+    "krishna",
+    "godavari",
+    "tapi",
+    "bhima"
+   ],
+   "o_en": [
+    "Krishna",
+    "Godavari",
+    "Tapi",
+    "Bhima"
+   ],
+   "a": 1,
+   "e_mr": "जयकवाडी धरण पैठण (छत्रपती संभाजीनगर जिल्हा) येथे गोदावरी नदीवर बांधण्यात आले आहे.",
+   "e_en": "The Jayakwadi dam is built on the Godavari river at Paithan (Chhatrapati Sambhajinagar district)."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=False)",
+  "item": {
+   "t": "mh_physical",
+   "d": 2,
+   "q_mr": "महाराष्ट्रातील सातपुडा पर्वतरांगेत खालीलपैकी कोणती सर्वात उंच शिखर मानले जाते?",
+   "q_en": "Which of the following is considered the highest peak in the Satpura mountain range within Maharashtra?",
+   "o_mr": [
+    "कळसुबाई",
+    "स्तबड (अस्तंबा)",
+    "हरिश्चंद्रगड",
+    "तोरणा"
+   ],
+   "o_en": [
+    "Kalsubai",
+    "Astamba",
+    "Harishchandragad",
+    "Torna"
+   ],
+   "a": 1,
+   "e_mr": "सातपुडा पर्वतरांगेत (नंदुरबार जिल्हा) अस्तंबा (Astamba) हे महाराष्ट्रातील एक प्रमुख व उंच शिखर आहे, तर कळसुबाई हे सह्याद्रीतील सर्वात उंच शिखर आहे.",
+   "e_en": "Astamba is a prominent and high peak in the Satpura range within Maharashtra (Nandurbar district), whereas Kalsubai is the highest peak in the Sahyadris."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "mh_forests",
+   "d": 2,
+   "q_mr": "महाराष्ट्रात कोणत्या जिल्ह्यामध्ये क्षेत्रफळाच्या दृष्टीने सर्वाधिक वनाच्छादन (Forest Cover) आढळते?",
+   "q_en": "Which district in Maharashtra has the maximum forest cover area wise?",
+   "o_mr": [
+    "गडचिरोली",
+    "चंद्रपूर",
+    "ठाणे",
+    "सिंधुदुर्ग"
+   ],
+   "o_en": [
+    "Gadchiroli",
+    "Chandrapur",
+    "Thane",
+    "Sindhudurg"
+   ],
+   "a": 0,
+   "e_mr": "महाराष्ट्रात गडचिरोली जिल्ह्यात सर्वाधिक वनाच्छादन आहे, कारण या जिल्ह्याचा मोठा भाग घनदाट जंगलांनी व्यापलेला आहे.",
+   "e_en": "Gadchiroli district has the highest forest cover in Maharashtra as a large portion of this district is covered by dense forests."
+  }
+ }
+]

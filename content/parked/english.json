@@ -1,0 +1,124 @@
+[
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "para_jumble",
+   "d": 3,
+   "q_mr": "अर्थपूर्ण वाक्य तयार करण्यासाठी खालील भागांची योग्य रचना निवडा:\np: health and happiness\nq: good books\nr: are the true sources of\ns: that can bring",
+   "q_en": "Rearrange the parts to form a meaningful sentence:\np: health and happiness\nq: good books\nr: are the true sources of\ns: that can bring",
+   "o_mr": [
+    "q - s - p - r",
+    "q - r - p - s",
+    "q - s - r - p",
+    "p - r - q - s"
+   ],
+   "o_en": [
+    "q - s - p - r",
+    "q - r - p - s",
+    "q - s - r - p",
+    "p - r - q - s"
+   ],
+   "a": 0,
+   "e_mr": "योग्य रचना: 'Good books (q) that can bring (s) health and happiness (p) are the true sources of (r).' मात्र, यातील योग्य अर्थपूर्ण जोडणी 'Good books (q) are the true sources of (r)...' अशी आहे. दिलेल्या पर्यायांपैकी तपासून पहा.",
+   "e_en": "Let's assemble correctly: 'Good books that can bring...'. Actually, standard sentence: 'Good books (q) can bring (s) health and happiness (p)...' Wait, let's check standard options. Option 0 (q-s-p-r) corresponds to 'Good books that can bring health and happiness...'"
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "para_jumble",
+   "d": 3,
+   "q_mr": "अर्थपूर्ण वाक्य तयार करण्यासाठी वाक्याचे भाग जुळवा:\np: success in life\nq: hard work is\nr: the key to\ns: essential for",
+   "q_en": "Rearrange the parts to form a meaningful sentence:\np: success in life\nq: hard work is\nr: the key to\ns: essential for",
+   "o_mr": [
+    "q - r - p - s",
+    "q - s - p - r",
+    "r - p - q - s",
+    "q - r - s - p"
+   ],
+   "o_en": [
+    "q - r - p - s",
+    "q - s - p - r",
+    "r - p - q - s",
+    "q - r - s - p"
+   ],
+   "a": 0,
+   "e_mr": "योग्य क्रम लावल्यास वाक्य असे बनते: 'Hard work is the key to success in life.' (q - r - p - s).",
+   "e_en": "Arranging the parts in order gives: 'Hard work is the key to success in life.' (q - r - p - s)."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=0, confident=True)",
+  "item": {
+   "t": "para_jumble",
+   "d": 3,
+   "q_mr": "अर्थपूर्ण वाक्य तयार करण्यासाठी खालील भागांची योग्य जुळवाजुळव करा:\np: to achieve success\nq: requires continuous\nr: hard work\ns: and dedication",
+   "en_q": "Rearrange the parts to form a meaningful sentence:\np: to achieve success\nq: requires continuous\nr: hard work\ns: and dedication",
+   "q_en": "Rearrange the parts to form a meaningful sentence:\np: to achieve success\nq: requires continuous\nr: hard work\ns: and dedication",
+   "o_mr": [
+    "p, q, r, s",
+    "r, s, q, p",
+    "q, r, s, p",
+    "p, r, q, s"
+   ],
+   "o_en": [
+    "p, q, r, s",
+    "r, s, q, p",
+    "q, r, s, p",
+    "p, r, q, s"
+   ],
+   "a": 3,
+   "e_mr": "योग्य रचना: 'To achieve success (p) hard work (r) requires continuous (q) and dedication (s)' म्हणजेच वाक्य बनते: 'To achieve success hard work requires continuous and dedication' (किंवा तत्सम व्याकरण). येथे पर्याय 'p, r, q, s' जुळतो.",
+   "e_en": "The correct sequence is 'p, r, q, s', which forms a structurally coherent clause structure when analyzed grammatically."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "error",
+   "d": 2,
+   "q_mr": "खालील वाक्यातील चुकीचा भाग ओळखा: 'The committee / were divided / in its / opinion.'",
+   "q_en": "Spot the part with an error in the following sentence: 'The committee / were divided / in its / opinion.'",
+   "o_mr": [
+    "The committee",
+    "were divided",
+    "in its",
+    "opinion."
+   ],
+   "o_en": [
+    "The committee",
+    "were divided",
+    "in its",
+    "opinion."
+   ],
+   "a": 2,
+   "e_mr": "जेव्हा कमिटीतील सदस्य विभाजित (divided) असतात, तेव्हा अनेकवचनी क्रियापद 'were' आणि सर्वनाम 'their' वापरले जाते. येथे 'its' ऐवजी 'their' यायला हवे होते.",
+   "o_mr_trans": "वाक्य सुधारा: 'The committee were divided in their opinion.'",
+   "e_en": "When a collective noun like 'committee' is divided in opinion, plural verbs and pronouns are used. Therefore, 'its' should be replaced with 'their'."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "para_jumble",
+   "d": 2,
+   "q_mr": "अर्थपूर्ण वाक्य तयार करण्यासाठी दिलेले भाग क्रमाने लावा:\np: builds strong\nq: character and\nr: discipline\ns: good education",
+   "q_en": "Rearrange the parts to form a meaningful sentence:\np: builds strong\nq: character and\nr: discipline\ns: good education",
+   "o_mr": [
+    "s - p - r - q",
+    "s - p - q - r",
+    "p - q - r - s",
+    "r - s - p - q"
+   ],
+   "o_en": [
+    "s - p - r - q",
+    "s - p - q - r",
+    "p - q - r - s",
+    "r - s - p - q"
+   ],
+   "a": 0,
+   "e_mr": "योग्य क्रम लावल्यास वाक्य असे बनते: 'Good education (s) builds strong (p) discipline (r) and (q)' किंवा 'Good education (s) builds strong (p) character (q) and discipline (r)' -> योग्य क्रम s - p - q - r आहे. (Good education builds strong character and discipline).",
+   "e_en": "Arranging the parts logically forms the sentence: 'Good education (s) builds strong (p) character (q) and discipline (r)'. Thus, the correct sequence is s - p - q - r."
+  }
+ }
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "reason": "mismatch (gemini=1, groq=1, confident=False)",
+  "item": {
+   "t": "shelter_travel",
+   "d": 2,
+   "q_mr": "लेह आणि लढाख भागात घरांच्या छतांची रचना सामान्यतः कशी असते?",
+   "q_en": "How are the roofs of houses generally constructed in the Leh and Ladakh region?",
+   "o_mr": [
+    "अतिशय तीव्र उताराची आणि कौलारू",
+    "सपाट आणि लाकडाच्या जाड खोडांनी बनवलेली",
+    "काचेची",
+    "प्लॅस्टिकच्या शीटची"
+   ],
+   "o_en": [
+    "Very steep and tiled",
+    "Flat and made of thick wooden logs",
+    "Made of glass",
+    "Made of plastic sheets"
+   ],
+   "a": 1,
+   "e_mr": "लढाखमध्ये पाऊस कमी पडतो पण बर्फवृष्टी होते, त्यामुळे तेथे घरांच्या सपाट छतांचा वापर उन्हाळ्यात सुका मेवा इत्यादी वाळवण्यासाठीही केला जातो.",
+   "e_en": "Ladakh receives low rainfall but snowfall, hence flat roofs are common and also used for drying items in summer."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "evs_pedagogy",
+   "d": 3,
+   "q_mr": "इयत्ता तिसरी ते पाचवीसाठी पर्यावरण अभ्यास (EVS) हा विषय किती मुख्य विषयांमध्ये (Themes) विभागलेला आहे?",
+   "q_en": "Into how many main themes is Environmental Studies (EVS) divided for classes III to V?",
+   "o_mr": [
+    "४",
+    "५",
+    "६",
+    "८"
+   ],
+   "o_en": [
+    "4",
+    "5",
+    "6",
+    "8"
+   ],
+   "a": 2,
+   "e_mr": "NCF २००५ नुसार प्राथमिक स्तरावर EVS चे एकूण ६ मुख्य विषय (Themes) आहेत: कुटुंब आणि मित्र, अन्न, आश्रय, पाणी, प्रवास आणि आपण ज्या गोष्टी बनवतो व करतो.",
+   "e_en": "According to NCF 2005, EVS at the primary level has 6 main themes: Family and Friends, Food, Shelter, Water, Travel, and Things We Make and Do."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "shelter_travel",
+   "d": 1,
+   "q_mr": "महाराष्ट्राच्या किनारपट्टीवरून म्हणजेच कोकण प्रदेशातून जाणारी अत्यंत महत्त्वाची रेल्वे मार्गिका कोणती आहे?",
+   "q_en": "What is the name of the important railway route passing through the Konkan coastal region of Maharashtra?",
+   "o_mr": [
+    "कोकण रेल्वे",
+    "मध्य रेल्वे",
+    "पूर्व रेल्वे",
+    "उत्तर रेल्वे"
+   ],
+   "o_en": [
+    "Konkan Railway",
+    "Central Railway",
+    "Eastern Railway",
+    "Northern Railway"
+   ],
+   "a": 1,
+   "e_mr": "कोकण रेल्वे मार्ग हा महाराष्ट्राच्या किनारपट्टीवरील कोकण प्रदेशातून जातो, जो अनेक बोगदे व पुलांसाठी प्रसिद्ध आहे.",
+   "e_en": "The Konkan Railway route passes through the coastal Konkan region of Maharashtra, famous for its scenic beauty, tunnels, and bridges."
+  }
+ }
+]
