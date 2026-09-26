@@ -42,12 +42,13 @@ Add GitHub repo secrets: `ANDROID_KEYSTORE_BASE64` (contents of upload.jks.b64),
 - [ ] Add the secret `ANTHROPIC_API_KEY` (set a monthly spend limit in the Anthropic console; expected cost ≈ ₹500/month).
 - [ ] Every morning at 06:00 IST a PR with verified questions appears. Review the source links and merge; publishing is automatic.
 
-## 6c. Bulk question generation at lower cost (open-source draft model)
-- [ ] `pipeline/generate_questions.py` drafts questions with a cheap/free open-source model and verifies every one with Claude before it ships (two passes: blind-solve + fact/ambiguity critique, same pattern as §6's daily current-affairs job). Only Claude tokens for verification are billed; drafting is free or near-free.
-- [ ] Get a free API key at **console.groq.com** (default provider — fast, generous free tier, good enough for first-draft MCQ text that Claude then checks) and add it as the secret `GROQ_API_KEY`. `TOGETHER_API_KEY` / `OPENROUTER_API_KEY` / `DEEPINFRA_API_KEY` also work if you set `DRAFT_PROVIDER` to match (see `pipeline/draft_llm.py`).
-- [ ] Without any of those keys set, the script still works — it falls back to drafting with Claude too, just at higher token cost.
-- [ ] Run it per subject/topic, e.g.: `python3 pipeline/generate_questions.py --subject marathi --topic sandhi --count 200 --difficulty 2`. Rejected drafts (failed verification) print to stderr with a reason; only verified items are appended to `content/bank/<subject>.json`.
+## 6c. Bulk question generation at ~zero cost (two open-source models, no Claude)
+- [ ] `pipeline/generate_questions.py` drafts each question with one open-source model and independently cross-checks it (blind-solve, never shown the claimed answer) with a second open-source model from a different family. Only items both agree on ship to `content/bank/<subject>.json` — no Claude/paid tokens touched.
+- [ ] Get two free keys: **console.groq.com** → secret `GROQ_API_KEY` (drafts, default `openai/gpt-oss-120b`), and **aistudio.google.com** → secret `GEMINI_API_KEY` (cross-checks, `gemini-2.5-flash`). Using different providers matters — two models from the same family are more likely to share the same blind spot. New keys apply on the *next* session, not the current one.
+- [ ] Run it per subject/topic, e.g.: `python3 pipeline/generate_questions.py --subject marathi --topic sandhi --count 200 --difficulty 2`.
+- [ ] Items with a shape problem (duplicate options, etc.) or a model disagreement are NOT shipped and NOT discarded — they're written to `content/pending_review/<subject>.json` with a reason, for a later audit once you're ready to spend Claude token budget on the harder cases. Two agreeing open-source models is a real signal, not proof (see the sandhi example in `docs/review_log.md` where a single open-source pass got a real answer wrong) — a periodic Claude audit sample of what shipped, not just the parked items, is worth doing before relying on this at full scale.
 - [ ] After a run: `python3 pipeline/validate.py && python3 pipeline/check_duplicates.py && python3 pipeline/build_bundle.py`, then `flutter analyze && flutter test` in `app/` before committing.
+- [ ] `ANTHROPIC_API_KEY` is optional and untouched by this script; add it later (same way, as an environment secret) when you want to audit `content/pending_review/` or go back to the fully-verified single-model flow.
 
 ## 6b. Ads (revenue — do this once traction is proven, not before)
 - [ ] Create an AdMob account at admob.google.com, link it to the Play app once it's live (needs a real package/store listing first).
