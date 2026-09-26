@@ -7,6 +7,7 @@ import '../core/theme.dart';
 import '../widgets/common.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
+import 'reel_screen.dart';
 
 class TodayScreen extends StatelessWidget {
   final ValueChanged<int> onNavigate;
@@ -107,7 +108,41 @@ class TodayScreen extends StatelessWidget {
           ),
         ],
         const SizedBox(height: 16),
-        // Primary CTA
+        // Hero CTA — the endless swipe feed, zero setup, highest-frequency loop
+        Card(
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () => push(context, (_) => const ReelScreen()),
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xFF1A0F3D), Color(0xFF5B2E9E), BrandColors.saffron],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: Row(children: [
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(16)),
+                  child: const Icon(Icons.bolt, color: Colors.white, size: 30),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Text(context.tr('भरारी रील 🔥', 'Bharari Reel 🔥'),
+                        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                    Text(context.tr('न थांबता स्वाइप करत शिका — प्रश्न, कार्ड, प्रेरणा', 'Swipe endlessly — questions, cards, motivation'),
+                        style: const TextStyle(color: Colors.white)),
+                  ]),
+                ),
+                const Icon(Icons.keyboard_double_arrow_up, color: Colors.white, size: 28),
+              ]),
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
         Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
