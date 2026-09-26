@@ -1,7 +1,10 @@
+import 'package:bharari/core/app_scope.dart';
 import 'package:bharari/data/content_repo.dart';
 import 'package:bharari/data/progress.dart';
 import 'package:bharari/logic/quiz_builder.dart';
 import 'package:bharari/logic/reel_builder.dart';
+import 'package:bharari/screens/reel_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -67,5 +70,36 @@ void main() {
     p.report(someId);
     final batch = b.more(200);
     expect(batch.any((i) => i.kind == ReelKind.question && i.question!.id == someId), isFalse);
+  });
+
+  testWidgets('tapping an answer in ReelScreen actually records progress (regression)', (tester) async {
+    final progress = Progress()..examId = 'police_bharti';
+    await tester.pumpWidget(MaterialApp(
+      home: AppScope(
+        repo: repo,
+        progress: progress,
+        child: const ReelScreen(),
+      ),
+    ));
+    await tester.pumpAndSettle();
+
+    expect(progress.totalAnswered, 0);
+
+    // Scroll through pages until a question card with tappable options appears.
+    var foundAndAnswered = false;
+    for (var i = 0; i < 30 && !foundAndAnswered; i++) {
+      final optionFinder = find.byKey(const ValueKey('reel_option_0'));
+      if (optionFinder.evaluate().isNotEmpty) {
+        await tester.tap(optionFinder);
+        await tester.pumpAndSettle();
+        foundAndAnswered = true;
+        break;
+      }
+      await tester.drag(find.byType(PageView), const Offset(0, -600));
+      await tester.pumpAndSettle();
+    }
+
+    expect(foundAndAnswered, isTrue, reason: 'never found a question card to tap');
+    expect(progress.totalAnswered, greaterThan(0));
   });
 }

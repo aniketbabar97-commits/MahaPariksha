@@ -217,13 +217,14 @@ class _ReelCardState extends State<_ReelCard> {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: InkWell(
+        key: ValueKey('reel_option_$i'),
         borderRadius: BorderRadius.circular(14),
         onTap: isAnswered
             ? null
             : () {
                 HapticFeedback.lightImpact();
                 setState(() => selected = i);
-                final r = context.scope.progress.recordAnswer(q.id, i == q.answer);
+                final r = AppScope.read(context).progress.recordAnswer(q.id, i == q.answer);
                 if (i == q.answer) widget.onCorrect();
                 celebrate(context, r);
               },
