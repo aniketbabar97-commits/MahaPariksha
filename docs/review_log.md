@@ -112,3 +112,43 @@ Left unchanged (verified genuine): mot4-001 (Kusumagraj/V.V. Shirwadkar — this
 - batch3: 12 quotes checked, 5 downgraded to Bharari.
 - Story items: spot-checked, 0 corrections needed.
 - `python3 pipeline/validate.py`: 0 errors after edits (64 files, 2447 items).
+
+## "Too basic" content refresh — new tougher batch4 + rewrite pass (Sep 2026)
+
+Owner feedback: existing motivation content read as generic soft self-help, not the intense, no-excuses tone wanted. This pass (1) added a new tougher batch, (2) fact-checked every new attributed quote independently via WebSearch before shipping, and (3) rewrote a set of existing weak/generic items in place.
+
+### New file: `content/motivation/motivation_batch4.json` (146 items, ids `mot5-001`..`mot5-146`)
+
+Composition: 10 quotes attributed to real, verified tough figures; 8 short factual stories about the same figures; 79 Bharari-authored no-excuses tips; 48 Bharari-authored intense quotes; a further check under-counts nothing since totals were re-verified programmatically (79 tip + 55 quote + 12 story = 146, of which 10 quotes and 8 stories carry a real `by`).
+
+**Independent WebSearch fact-check of every real-person attribution in batch4** (a second pass, separate from the writing step, same standard as prior audits in this log — attribution kept only when a cited interview/speech/Wikiquote-sourced record was found; otherwise dropped or set to "Bharari"):
+
+- **Milkha Singh** — "I used to train for 7 hours everyday; I sometimes felt that I would drop dead while training. There have been times when I was put on oxygen in the hospital..." — verified, direct quote in a Sportskeeda interview. Kept (mot5-001, and reused factually in the story mot5-011).
+- **Sushil Kumar** — "The most important aspect of becoming a wrestler is discipline... A disciplined human can always produce results." — verified, Olympics.com interview. Kept (mot5-002, mot5-015).
+- **Bajrang Punia** — "In India there isn't this word 'rest'." — verified via an ESPN (africa.espn.com) Tokyo 2020 profile quoting him directly to his coach. Kept (mot5-003, mot5-016).
+- **Field Marshal Sam Manekshaw** — three lines ("If anyone tells you he is never afraid, he is a liar or he is a Gurkha"; "There will be no withdrawal without written orders and these orders shall never be issued"; the "What is Moral Courage?" passage) — all verified against Wikiquote's sourced Manekshaw page. Kept (mot5-004, mot5-005, mot5-006). Note: this is the same figure whose *other* quotes (e.g. "if an officer says the situation is impossible...") were found unverifiable and downgraded in the batch3 audit above — only the three Wikiquote-sourced lines were used here, not that earlier rejected one.
+- **Bachendri Pal** — the "problem with women in the country..." quote and the avalanche "Was I scared? Yes. Did I want to quit? No." exchange — both verified against interview coverage (Feminism in India, YourStory). Kept (mot5-007, mot5-008, mot5-013, mot5-014).
+- **Dr. Babasaheb Ambedkar** — "We must stand on our own feet and fight as best as we can for our rights. So carry on your agitation and organize your forces. Power and prestige will come to you through struggle." — verified as a widely and consistently documented Ambedkar quote (matches his Mahad-era organizing rhetoric, corroborated across quote archives citing his speeches). Kept (mot5-009).
+- **Captain Vikram Batra** — "Yeh Dil Maange More" — extremely well documented (multiple independent news retrospectives, his father's interviews) as his actual radio message after capturing Point 5140 in the Kargil War. Kept (mot5-010, mot5-012).
+- **Rejected before use, not shipped**: "Swarajya is my birthright and I shall have it" was considered for Chhatrapati Shivaji Maharaj, but WebSearch confirms this line's textual attribution to Shivaji Maharaj is disputed/undocumented — it is actually Bal Gangadhar Tilak's well-known 1916 line (already used correctly elsewhere in this content set). Not attributed to Shivaji here. "Main apni Jhansi nahin doongi" (Rani Lakshmibai) was considered and rejected — sources explicitly call it "according to legend," with no primary-source verification — so no item in batch4 attributes it to her.
+
+Story items (mot5-011..018) retell only the same facts verified above (training hours, the Manekshaw/Indira Gandhi 1971 timing account, Batra's radio call and later sacrifice, Pal's avalanche and summit, Kumar's and Punia's quotes) — no invented dialogue, dates or numbers beyond what the sources gave.
+
+All 60 remaining tip/quote/story items with no real-person attribution carry `"by": "Bharari"` or no `by` field, consistent with the schema.
+
+### Rewrite pass over existing items (in place, same `id`/schema, no real attributions touched)
+
+124 existing Bharari-authored items were rewritten for intensity — 37 in `motivation_batch2.json` (`mot3-002`..`mot3-041`, excluding the ids that keep a real attribution) and 87 in `motivation_batch1.json` (`mot2-001`, `mot2-002`, `mot2-013`, `mot2-014`, `mot2-026`, `mot2-034`, `mot2-037`, `mot2-038`, `mot2-040`, `mot2-046`, `mot2-047`, `mot2-048`, plus `mot2-051` through `mot2-120`).
+
+Two distinct problems were fixed:
+1. **Leftover impersonation**: the `mot3-002`..`mot3-041` group had already been downgraded from a real name to `"by":"Bharari"` in the earlier audit above, but the text itself was left in first person ("I never think about losing...", "Playing under pressure is an art...") — still reading as if a real athlete were speaking, just with the name quietly removed. Rewritten to general second-person/imperative Bharari statements so nothing implies a false first-person claim.
+2. **Generic self-help tone**: `mot2-051`..`mot2-120` (and the handful of former misattributed "famous quotes" `mot2-001` etc.) were soft, dictionary-motivational lines ("Be the change...", "Today's answers are tomorrow's job posting"). Rewritten with the same meaning kept where it was already exam-specific, but with sharper, more visceral, no-excuses phrasing (e.g. "टायमिंग चुकू शकतं, तयारी कधीच चुकू देऊ नकोस" / "Your timing may slip — your preparation never should").
+
+No item that carries a real named `"by"` (a verified quote or a verified real-person story) was touched in this rewrite pass. Total item count only grew (1000 → 1146); nothing was deleted.
+
+### Validation
+- `python3 pipeline/validate.py`: **65 files, 2593 items, 0 errors**.
+- `python3 pipeline/check_duplicates.py`: only pre-existing MCQ-bank duplicate groups (marathi/reasoning banks, unrelated to this change) — no new duplicates introduced.
+- `python3 pipeline/build_bundle.py`: rebuilt `app/assets/content/bundle.json` — 981 questions, 350 flashcards, **1146 motivation items** (was ~1000).
+- `flutter analyze`: no issues found.
+- `flutter test`: all 36 tests passed.
