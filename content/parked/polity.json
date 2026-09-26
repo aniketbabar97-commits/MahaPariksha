@@ -1,0 +1,146 @@
+[
+ {
+  "reason": "mismatch (gemini=1, groq=1, confident=False)",
+  "item": {
+   "t": "state",
+   "d": 2,
+   "q_mr": "विधानपरिषदेच्या निर्मिती किंवा विघटनाचा प्रस्ताव मंजूर करण्यासाठी राज्याच्या विधानसभा किती बहुमताची आवश्यकता असते?",
+   "q_en": "What majority does a state legislative assembly require to pass a resolution for the creation or abolition of a legislative council?",
+   "o_mr": [
+    "साधे बहुमत",
+    "उपस्थित व मतदान करणाऱ्या सदस्यांचे दोन-तृतियांश बहुमत",
+    "एकूण सदस्यांचे दोन-तृतियांश बहुमत",
+    "विशेष बहुमत आणि अर्ध्या राज्यांची मंजुरी"
+   ],
+   "o_en": [
+    "Simple majority",
+    "Two-thirds majority of members present and voting",
+    "Two-thirds majority of total membership",
+    "Special majority and ratification by half the states"
+   ],
+   "a": 1,
+   "e_mr": "कलम १६९ नुसार, विधानपरिषदेच्या निर्मिती किंवा विघटनासाठी विधानसभेने एकूण सदस्यांचे बहुमत आणि उपस्थित व मतदान करणाऱ्या सदस्यांचे दोन-तृतियांश (२/३) बहुमताने ठराव मंजूर करणे आवश्यक असते.",
+   "e_en": "According to Article 169, the legislative assembly must pass a resolution by a majority of the total membership of the assembly and by a majority of not less than two-thirds of the members present and voting."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=2, confident=False)",
+  "item": {
+   "t": "local",
+   "d": 1,
+   "q_mr": "महाराष्ट्रात ग्रामपंचायतीचा सचिव (ग्रामसेवक) याची नियुक्ती प्रामुख्याने कोण करते?",
+   "q_en": "Who primarily appoints the secretary of a Gram Panchayat (Gramsevak) in Maharashtra?",
+   "o_mr": [
+    "जिल्हाधिकारी",
+    "मुख्य कार्यकारी अधिकारी (CEO)",
+    "गटविकास अधिकारी (BDO)",
+    "जिल्हा परिषद अध्यक्ष"
+   ],
+   "o_en": [
+    "Collector",
+    "Chief Executive Officer (CEO)",
+    "Block Development Officer (BDO)",
+    "Zilla Parishad President"
+   ],
+   "a": 1,
+   "e_mr": "महाराष्ट्रात ग्रामसेवकाची नियुक्ती जिल्हा परिषदेचे मुख्य कार्यकारी अधिकारी (CEO) यांच्याद्वारे किंवा त्यांच्या अधिपत्याखाली केली जाते.",
+   "e_en": "In Maharashtra, the Gramsevak is appointed by or under the authority of the Chief Executive Officer (CEO) of the Zilla Parishad."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "judiciary",
+   "d": 3,
+   "q_mr": "खालीलपैकी कोणते उच्च न्यायालय एकापेक्षा जास्त राज्ये किंवा केंद्रशासित प्रदेशांसाठी अधिकारक्षेत्र राखते?",
+   "q_en": "Which of the following High Courts has jurisdiction over more than one state or union territory?",
+   "o_mr": [
+    "गुवाहाटी उच्च न्यायालय",
+    "मुंबई उच्च न्यायालय",
+    "केरळ उच्च न्यायालय",
+    "इलाहाबाद उच्च न्यायालय"
+   ],
+   "o_en": [
+    "Guwahati High Court",
+    "Mumbai High Court",
+    "Kerala High Court",
+    "Allahabad High Court"
+   ],
+   "a": 0,
+   "e_mr": "गुवाहाटी उच्च न्यायालयाचे अधिकारक्षेत्र ईशान्यकडील अनेक राज्यांवर (आसाम, नागालँड, मिझोरम, अरुणाचल प्रदेश) पसरलेले आहे.",
+   "e_en": "The Guwahati High Court has jurisdiction over multiple northeastern states (Assam, Nagaland, Mizoram, Arunachal Pradesh)."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=0, confident=True)",
+  "item": {
+   "t": "local",
+   "d": 2,
+   "q_mr": "महाराष्ट्रात ग्रामसभेच्या वर्षभरात किमान किती बैठका घेणे बंधनकारक आहे?",
+   "q_en": "How many meetings of the Gram Sabha are mandatory to be held in a year in Maharashtra?",
+   "o_mr": [
+    "दोन",
+    "तीन",
+    "चार",
+    "सहा"
+   ],
+   "o_en": [
+    "Two",
+    "Three",
+    "Four",
+    "Six"
+   ],
+   "a": 2,
+   "e_mr": "महाराष्ट्र ग्रामपंचायत अधिनियमित कायद्यानुसार ग्रामसभेच्या वर्षातून किमान चार बैठका घेणे अनिवार्य आहे.",
+   "e_en": "According to the Maharashtra Village Panchayats Act, it is mandatory to hold at least four meetings of the Gram Sabha in a year."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "local",
+   "d": 2,
+   "q_mr": "महाराष्ट्रामध्ये पंचायत राज व्यवस्थेची त्रिस्तरीय रचना कोणत्या समितीच्या शिफारशीनुसार स्वीकारण्यात आली?",
+   "q_en": "According to the recommendations of which committee was the three-tier panchayati raj system adopted in Maharashtra?",
+   "o_mr": [
+    "बलवंत राय मेहता समिती",
+    "वसंतराव नाईक समिती",
+    "अशोक मेहता समिती",
+    "एल. एम. सिंघवी समिती"
+   ],
+   "o_en": [
+    "Balwant Rai Mehta Committee",
+    "Vasantrao Naik Committee",
+    "Ashok Mehta Committee",
+    "L. M. Singhvi Committee"
+   ],
+   "a": 1,
+   "e_mr": "महाराष्ट्रात पंचायत राज स्थापनेसाठी वसंतराव नाईक समितीच्या शिफारशी स्वीकारण्यात आल्या होत्या, ज्याने त्रिस्तरीय व्यवस्थेची शिफारस केली.",
+   "e_en": "In Maharashtra, the recommendations of the Vasantrao Naik Committee were accepted for establishing the three-tier Panchayati Raj system."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "union",
+   "d": 2,
+   "q_mr": "भारताचे पंतप्रधान कोणती महत्त्वाची संस्था किंवा परिषदेचे पदसिद्ध अध्यक्ष असतात?",
+   "q_en": "The Prime Minister of India is the ex-officio chairman of which important body or council?",
+   "o_mr": [
+    "निती आयोग",
+    "वित्त आयोग",
+    "राष्ट्रीय विकास मंडळ",
+    "आंतरराज्य परिषद"
+   ],
+   "o_en": [
+    "NITI Aayog",
+    "Finance Commission",
+    "National Development Council",
+    "Inter-State Council"
+   ],
+   "a": 0,
+   "e_mr": "पंतप्रधान हे 'निती आयोगाचे' (NITI Aayog) पदसिद्ध अध्यक्ष असतात. या आयोगाची स्थापना १ जानेवारी २०१५ रोजी झाली.",
+   "e_en": "The Prime Minister is the ex-officio chairperson of 'NITI Aayog', which was established on January 1, 2015."
+  }
+ }
+]
