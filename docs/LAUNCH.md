@@ -42,6 +42,13 @@ Add GitHub repo secrets: `ANDROID_KEYSTORE_BASE64` (contents of upload.jks.b64),
 - [ ] Add the secret `ANTHROPIC_API_KEY` (set a monthly spend limit in the Anthropic console; expected cost ≈ ₹500/month).
 - [ ] Every morning at 06:00 IST a PR with verified questions appears. Review the source links and merge; publishing is automatic.
 
+## 6b. Ads (revenue — do this once traction is proven, not before)
+- [ ] Create an AdMob account at admob.google.com, link it to the Play app once it's live (needs a real package/store listing first).
+- [ ] Create one **rewarded** ad unit and, if you want it, one **native** ad unit for the Reel's placeholder slots (`app/lib/screens/reel_screen.dart`, `_adSlotCard()` — every 8th card in the Reel; Daily 10/mocks/practice stay ad-free by design).
+- [ ] Add the AdMob App ID to `app/android/app/src/main/AndroidManifest.xml` (a `<meta-data>` tag — the `google_mobile_ads` package docs show the exact line) and add `google_mobile_ads` to `pubspec.yaml`.
+- [ ] Replace the placeholder `_adSlotCard()` widget with the real `NativeAd`/`RewardedAd` widget. Test with Google's test ad unit IDs first — never ship your real ad unit ID in a debug build (Google can suspend the account for invalid traffic).
+- [ ] Do this only after Daily-10 usage and retention look healthy. Ads shown to zero real users don't do anything — get the free loop working first.
+
 ## 7. Before production launch: human QA (do not skip)
 - [ ] Two Marathi-medium aspirants (ideally one who has cleared a recent exam) review a random 100-question sample
       and every current-affairs item, and log any issue in `docs/review_log.md`.
