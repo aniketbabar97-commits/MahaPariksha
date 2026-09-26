@@ -6,7 +6,7 @@ is parked to content/parked/<subject>.json for human review, never shipped.
 
 Usage: python pipeline/generate_all.py [SUBJECT...]
 Env: GEMINI_API_KEY, GROQ_API_KEY (required)
-     GEMINI_MODEL (default gemini-2.5-flash), GROQ_MODEL (default openai/gpt-oss-120b)
+     GEMINI_MODELS (comma-separated, rotated on daily quota exhaustion), GROQ_MODEL
      TARGET_PER_SUBJECT (default 100), BATCH_SIZE (default 10), MAX_BATCHES (default 12)
 """
 import json
@@ -25,7 +25,9 @@ PARKED = CONTENT / "parked"
 
 GEMINI_KEY = os.environ["GEMINI_API_KEY"]
 GROQ_KEY = os.environ["GROQ_API_KEY"]
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODELS = os.environ.get(
+    "GEMINI_MODELS", "gemini-2.5-flash,gemini-2.5-flash-lite,gemini-flash-lite-latest,gemma-4-26b-a4b-it"
+).split(",")
 GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 TARGET = int(os.environ.get("TARGET_PER_SUBJECT", "100"))
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "10"))
@@ -36,7 +38,11 @@ SKIP_SUBJECTS = {"current_affairs"}  # handled by the daily pipeline instead
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 
 
-def _post_json(url, payload, headers, timeout=90, retries=6):
+class QuotaExhausted(Exception):
+    pass
+
+
+def _post_json(url, payload, headers, timeout=90, retries=4):
     body = json.dumps(payload).encode("utf-8")
     headers = {**headers, "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) BharariGenBot/1.0"}
     for attempt in range(retries):
@@ -45,9 +51,19 @@ def _post_json(url, payload, headers, timeout=90, retries=6):
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return json.loads(r.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
+            if e.code == 429:
+                detail = e.read().decode("utf-8", "replace")
+                if "PerDay" in detail or "generate_content_free_tier_requests" in detail:
+                    raise QuotaExhausted(detail[:200]) from None
+                if attempt == retries - 1:
+                    raise
+                wait = 15 * (attempt + 1)
+                print(f"  rate limited; retrying in {wait}s", file=sys.stderr)
+                time.sleep(wait)
+                continue
             if attempt == retries - 1:
                 raise
-            wait = 20 * (attempt + 1) if e.code == 429 else 2 ** attempt * 3
+            wait = 2 ** attempt * 3
             print(f"  request failed ({e}); retrying in {wait}s", file=sys.stderr)
             time.sleep(wait)
         except (urllib.error.URLError, TimeoutError) as e:
@@ -98,7 +114,21 @@ def _extract_json_array(text):
     return items
 
 
+_model_idx = [0]
+
+
 def gemini_draft(subject, topics, n, avoid):
+    for attempt in range(len(GEMINI_MODELS)):
+        model = GEMINI_MODELS[_model_idx[0] % len(GEMINI_MODELS)]
+        try:
+            return _gemini_draft_with_model(model, subject, topics, n, avoid)
+        except QuotaExhausted:
+            print(f"  {model}: daily quota exhausted, rotating model", file=sys.stderr)
+            _model_idx[0] += 1
+    raise QuotaExhausted("all Gemini models exhausted for today")
+
+
+def _gemini_draft_with_model(model, subject, topics, n, avoid):
     avoid_txt = ("\nDo not repeat these already-used question texts (English):\n- "
                  + "\n- ".join(avoid[:60])) if avoid else ""
     prompt = f"""You write multiple-choice questions for Marathi-medium aspirants preparing for
@@ -124,7 +154,7 @@ Rules:
 Return ONLY a JSON array (no markdown fences, no commentary) of {n} objects, each with exactly
 these keys: t, d, q_mr, q_en, o_mr, o_en, a, e_mr, e_en."""
 
-    url = (f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
+    url = (f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
            f"?key={GEMINI_KEY}")
     payload = {
         "contents": [{"role": "user", "parts": [{"text": prompt}]}],
@@ -204,6 +234,10 @@ def process_subject(subject, topics):
         n = min(BATCH_SIZE, deficit + 3)  # ask for a few extra to absorb rejects
         try:
             drafts = gemini_draft(subject, sorted(topics), n, list(seen_q))
+        except QuotaExhausted:
+            print(f"  {subject}: all Gemini models exhausted for today; stopping this run", file=sys.stderr)
+            _save_subject(subject, existing, kept, parked)
+            raise
         except Exception as e:
             print(f"  {subject}: gemini batch failed: {e}", file=sys.stderr)
             time.sleep(20)
@@ -238,6 +272,12 @@ def process_subject(subject, topics):
             deficit -= 1
             if deficit <= 0:
                 break
+    _save_subject(subject, existing, kept, parked)
+    print(f"{subject}: kept {len(kept)}, parked {len(parked)} (now {len(existing) + len(kept)}/{TARGET})")
+    return len(kept), len(parked)
+
+
+def _save_subject(subject, existing, kept, parked):
     if kept:
         BANK.mkdir(parents=True, exist_ok=True)
         (BANK / f"{subject}.json").write_text(
@@ -247,8 +287,6 @@ def process_subject(subject, topics):
         ppath = PARKED / f"{subject}.json"
         prior = json.loads(ppath.read_text(encoding="utf-8")) if ppath.exists() else []
         ppath.write_text(json.dumps(prior + parked, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"{subject}: kept {len(kept)}, parked {len(parked)} (now {len(existing) + len(kept)}/{TARGET})")
-    return len(kept), len(parked)
 
 
 def main(argv):
@@ -261,7 +299,12 @@ def main(argv):
         if subject not in subjects:
             print(f"unknown subject {subject}, skipping", file=sys.stderr)
             continue
-        k, p = process_subject(subject, subjects[subject])
+        try:
+            k, p = process_subject(subject, subjects[subject])
+        except QuotaExhausted:
+            print(f"\nAll Gemini models exhausted their daily quota; stopping the run here.")
+            print(f"TOTAL: kept {total_kept}, parked {total_parked}")
+            return 0
         total_kept += k
         total_parked += p
     print(f"\nTOTAL: kept {total_kept}, parked {total_parked}")
