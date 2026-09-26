@@ -6,6 +6,7 @@ import '../data/models.dart';
 import '../widgets/common.dart';
 import '../widgets/exam_picker.dart';
 import 'quiz_screen.dart';
+import 'topic_screen.dart';
 
 Future<void> showExamSwitcher(BuildContext context) => showModalBottomSheet(
       context: context,
@@ -176,7 +177,9 @@ class SubjectScreen extends StatelessWidget {
                   contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                   title: Text(t.name.of(lang), style: const TextStyle(fontWeight: FontWeight.w700)),
                   subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(context.tr('$n प्रश्न', '$n questions')),
+                    Text(context.tr(
+                        '$n प्रश्न${s.repo.note(subject.id, t.id) != null ? ' · नोट्स व माइंड मॅप' : ''}',
+                        '$n questions${s.repo.note(subject.id, t.id) != null ? ' · notes & mind map' : ''}')),
                     if (acc != null) ...[
                       const SizedBox(height: 6),
                       ClipRRect(
@@ -189,8 +192,11 @@ class SubjectScreen extends StatelessWidget {
                       ),
                     ],
                   ]),
-                  trailing: const Icon(Icons.play_circle, color: BrandColors.saffron, size: 32),
-                  onTap: n == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: t.id)),
+                  trailing: IconButton(
+                    icon: const Icon(Icons.play_circle, color: BrandColors.saffron, size: 34),
+                    onPressed: n == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: t.id)),
+                  ),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: t))),
                 ),
               );
             }),

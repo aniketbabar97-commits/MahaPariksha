@@ -151,7 +151,7 @@ class TodayScreen extends StatelessWidget {
         ActionCard(
           icon: Icons.timer,
           color: BrandColors.correct,
-          title: context.tr('६० सेकंद स्पीड राउंड', '60-second Speed Round'),
+          title: context.tr('60 सेकंद स्पीड राउंड', '60-second Speed Round'),
           subtitle: context.tr('सर्वोत्तम: ${p.bestSpeed} · प्रवासासाठी उत्तम', 'Best: ${p.bestSpeed} · perfect for travel'),
           onTap: () => startQuiz(context, s.builder.speed()),
         ),

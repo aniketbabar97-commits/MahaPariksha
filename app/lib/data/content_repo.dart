@@ -18,6 +18,10 @@ class ContentRepo {
   final List<Question> questions = [];
   final List<Flashcard> flashcards = [];
   final List<Motivation> motivation = [];
+  final Map<String, TopicNote> _notes = {};
+
+  TopicNote? note(String subject, String topic) => _notes['$subject/$topic'];
+  bool hasNotes(String subject) => _notes.keys.any((k) => k.startsWith('$subject/'));
 
   final Map<String, Subject> _subjectById = {};
   final Map<String, Exam> _examById = {};
@@ -115,6 +119,11 @@ class ContentRepo {
       ..clear()
       ..addAll((data['motivation'] as List).map((j) => Motivation.fromJson(j)));
 
+    _notes
+      ..clear()
+      ..addEntries(((data['notes'] as List?) ?? const [])
+          .map((j) => TopicNote.fromJson(j))
+          .map((n) => MapEntry('${n.subject}/${n.topic}', n)));
     _subjectById
       ..clear()
       ..addEntries(subjects.map((s) => MapEntry(s.id, s)));

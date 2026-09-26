@@ -40,6 +40,7 @@ def main():
         "questions": questions,
         "flashcards": load_dir("flashcards"),
         "motivation": load_dir("motivation"),
+        "notes": load_dir("notes"),
     }
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

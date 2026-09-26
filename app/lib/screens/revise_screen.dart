@@ -4,6 +4,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../widgets/common.dart';
 import 'flashcard_screen.dart';
+import 'practice_screen.dart';
 import 'quiz_screen.dart';
 
 class ReviseScreen extends StatelessWidget {
@@ -69,6 +70,40 @@ class ReviseScreen extends StatelessWidget {
           subtitle: context.tr('${p.bookmarks.length} प्रश्न', '${p.bookmarks.length} questions'),
           onTap: p.bookmarks.isEmpty ? null : () => startQuiz(context, s.builder.bookmarked()),
         ),
+        if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasNotes(sub.id))) ...[
+          SectionTitle(context.tr('नोट्स व माइंड मॅप 🧠', 'Notes & mind maps 🧠')),
+          SizedBox(
+            height: 104,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                for (final sub in s.repo.subjectsFor(exam).where((sub) => s.repo.hasNotes(sub.id)))
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: SizedBox(
+                      width: 120,
+                      child: Card(
+                        clipBehavior: Clip.antiAlias,
+                        child: InkWell(
+                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                              Icon(subjectIcon(sub.icon), color: BrandColors.saffron, size: 30),
+                              const SizedBox(height: 6),
+                              Text(sub.name.of(lang),
+                                  textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                            ]),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
         SectionTitle(context.tr('विषयानुसार फ्लॅशकार्ड', 'Flashcards by subject')),
         for (final sub in s.repo.subjectsFor(exam))
           if (cards.any((c) => c.subject == sub.id)) ...[

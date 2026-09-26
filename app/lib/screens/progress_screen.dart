@@ -141,10 +141,10 @@ class ProgressScreen extends StatelessWidget {
 
   static List<(String, String, bool)> _badges(Progress p) => [
         ('पहिलं पाऊल', 'First step', p.totalAnswered >= 1),
-        ('१०० प्रश्न', '100 questions', p.totalAnswered >= 100),
-        ('१००० प्रश्न', '1,000 questions', p.totalAnswered >= 1000),
-        ('७ दिवस स्ट्रीक', '7-day streak', p.bestStreak >= 7),
-        ('३० दिवस स्ट्रीक', '30-day streak', p.bestStreak >= 30),
+        ('100 प्रश्न', '100 questions', p.totalAnswered >= 100),
+        ('1000 प्रश्न', '1,000 questions', p.totalAnswered >= 1000),
+        ('7 दिवस स्ट्रीक', '7-day streak', p.bestStreak >= 7),
+        ('30 दिवस स्ट्रीक', '30-day streak', p.bestStreak >= 30),
         ('मॉक योद्धा', 'Mock warrior', p.mocks.length >= 5),
         ('स्पीडस्टार', 'Speedster', p.bestSpeed >= 15),
         ('चुकांवर विजय', 'Mistake crusher', p.totalAnswered >= 50 && p.mistakes.isEmpty),

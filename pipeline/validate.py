@@ -76,6 +76,31 @@ def check_motivation(m, where, errs):
         errs.append(f"{where}: empty text")
 
 
+def check_map(node, where, errs, depth=0):
+    if not (isinstance(node, dict) and nonempty(node.get("mr")) and nonempty(node.get("en"))):
+        errs.append(f"{where}: mind-map node needs mr/en")
+        return
+    if depth > 4:
+        errs.append(f"{where}: mind map deeper than 4 levels")
+    for c in node.get("children", []):
+        check_map(c, where, errs, depth + 1)
+
+
+def check_note(n, where, errs):
+    need = {"id", "s", "t", "summary_mr", "summary_en", "facts_mr", "facts_en", "map"}
+    if not need <= set(n):
+        errs.append(f"{where}: missing {sorted(need - set(n))}")
+        return
+    if n["s"] not in TOPICS or n["t"] not in TOPICS[n["s"]]:
+        errs.append(f"{where}: bad subject/topic {n['s']}/{n['t']}")
+    if not (nonempty(n["summary_mr"]) and nonempty(n["summary_en"])):
+        errs.append(f"{where}: empty summary")
+    fm, fe = n["facts_mr"], n["facts_en"]
+    if not (isinstance(fm, list) and isinstance(fe, list) and len(fm) == len(fe) and 5 <= len(fm) <= 15):
+        errs.append(f"{where}: facts_mr/facts_en must be parallel lists of 5-15")
+    check_map(n["map"], where, errs)
+
+
 def validate_file(path, seen_ids, errs):
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -86,7 +111,8 @@ def validate_file(path, seen_ids, errs):
         errs.append(f"{path}: top level must be a list")
         return 0
     kind = path.parent.name
-    checker = {"bank": check_question, "flashcards": check_flashcard, "motivation": check_motivation}.get(kind)
+    checker = {"bank": check_question, "flashcards": check_flashcard, "motivation": check_motivation,
+               "notes": check_note}.get(kind)
     if checker is None:
         return 0
     for i, item in enumerate(data):
@@ -104,7 +130,7 @@ def validate_file(path, seen_ids, errs):
 
 def main(argv):
     files = [Path(a).resolve() for a in argv] or sorted(
-        p for d in ("bank", "flashcards", "motivation") for p in (CONTENT / d).glob("*.json")
+        p for d in ("bank", "flashcards", "motivation", "notes") for p in (CONTENT / d).glob("*.json")
     )
     errs, seen, total = [], set(), 0
     for f in files:

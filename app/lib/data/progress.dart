@@ -31,10 +31,12 @@ class CardState {
   int interval;
   int due;
   int reps;
-  CardState({this.ease = 2.5, this.interval = 0, required this.due, this.reps = 0});
-  Map<String, dynamic> toJson() => {'e': ease, 'i': interval, 'd': due, 'r': reps};
-  factory CardState.fromJson(Map<String, dynamic> j) =>
-      CardState(ease: (j['e'] as num).toDouble(), interval: j['i'], due: j['d'], reps: j['r']);
+  final int firstSeen;
+  CardState({this.ease = 2.5, this.interval = 0, required this.due, this.reps = 0, int? firstSeen})
+      : firstSeen = firstSeen ?? due;
+  Map<String, dynamic> toJson() => {'e': ease, 'i': interval, 'd': due, 'r': reps, 'f': firstSeen};
+  factory CardState.fromJson(Map<String, dynamic> j) => CardState(
+      ease: (j['e'] as num).toDouble(), interval: j['i'], due: j['d'], reps: j['r'], firstSeen: j['f']);
 }
 
 class MockResult {
@@ -90,12 +92,12 @@ class Progress extends ChangeNotifier {
   Timer? _saveTimer;
 
   Future<void> load() async {
-    _file = File('${(await getApplicationSupportDirectory()).path}/progress.json');
-    if (!await _file!.exists()) return;
     try {
+      _file = File('${(await getApplicationSupportDirectory()).path}/progress.json');
+      if (!await _file!.exists()) return;
       _fromJson(jsonDecode(await _file!.readAsString()));
     } catch (_) {
-      // Keep defaults if the file is unreadable; never crash on startup.
+      // Unreadable file or no storage: start fresh rather than crash on launch.
     }
   }
 
@@ -160,9 +162,13 @@ class Progress extends ChangeNotifier {
   Future<void> _write() async {
     final f = _file;
     if (f == null) return;
-    final tmp = File('${f.path}.tmp');
-    await tmp.writeAsString(jsonEncode(_toJson()));
-    await tmp.rename(f.path);
+    try {
+      final tmp = File('${f.path}.tmp');
+      await tmp.writeAsString(jsonEncode(_toJson()));
+      await tmp.rename(f.path);
+    } catch (_) {
+      // Disk full or storage revoked: keep the in-memory state; the next save retries.
+    }
   }
 
   // ---------- Derived ----------
@@ -193,6 +199,9 @@ class Progress extends ChangeNotifier {
   int get totalAnswered => qStats.values.fold(0, (a, s) => a + s[0]);
   int get totalCorrect => qStats.values.fold(0, (a, s) => a + s[1]);
   double get accuracy => totalAnswered == 0 ? 0 : totalCorrect / totalAnswered;
+
+  static const newCardsPerDay = 20;
+  int get newCardsSeenToday => cards.values.where((c) => c.firstSeen == today()).length;
 
   int dueCardCount(Iterable<String> ids) {
     final t = today();

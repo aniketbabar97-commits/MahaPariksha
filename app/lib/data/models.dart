@@ -111,3 +111,35 @@ class Motivation {
   factory Motivation.fromJson(Map<String, dynamic> j) =>
       Motivation(j['id'], j['type'], Bi(j['mr'], j['en']), j['by']);
 }
+
+class MapNode {
+  final Bi label;
+  final List<MapNode> children;
+  const MapNode(this.label, this.children);
+
+  factory MapNode.fromJson(Map<String, dynamic> j) => MapNode(
+        Bi(j['mr'], j['en']),
+        ((j['children'] as List?) ?? const []).map((c) => MapNode.fromJson(c)).toList(),
+      );
+}
+
+class TopicNote {
+  final String subject;
+  final String topic;
+  final Bi summary;
+  final List<String> factsMr;
+  final List<String> factsEn;
+  final MapNode map;
+  const TopicNote(this.subject, this.topic, this.summary, this.factsMr, this.factsEn, this.map);
+
+  List<String> facts(String lang) => lang == 'en' ? factsEn : factsMr;
+
+  factory TopicNote.fromJson(Map<String, dynamic> j) => TopicNote(
+        j['s'],
+        j['t'],
+        Bi(j['summary_mr'], j['summary_en']),
+        List<String>.from(j['facts_mr']),
+        List<String>.from(j['facts_en']),
+        MapNode.fromJson(j['map']),
+      );
+}

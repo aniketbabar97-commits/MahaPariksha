@@ -26,7 +26,7 @@ ThemeData buildTheme(Brightness b) {
     brightness: b,
     secondary: BrandColors.saffron,
   );
-  final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b);
+  final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b, fontFamily: 'Mukta');
   return base.copyWith(
     scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFF5F7FC) : const Color(0xFF0E1320),
     cardTheme: CardThemeData(
@@ -46,7 +46,7 @@ ThemeData buildTheme(Brightness b) {
       style: FilledButton.styleFrom(
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+        textStyle: const TextStyle(fontFamily: 'Mukta', fontSize: 16, fontWeight: FontWeight.w700),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(

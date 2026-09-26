@@ -80,10 +80,14 @@ void main() {
       expect(b.mistakes().questions.map((q) => q.id), [q.id]);
     });
 
-    test('due flashcards respect the schedule', () {
-      final all = b.dueCards(limit: 9999);
-      p.cards[all.first.id] = CardState(due: today() + 3);
-      expect(b.dueCards(limit: 9999).length, all.length - 1);
+    test('due flashcards: reviews first, new cards capped per day, future cards excluded', () {
+      final first = b.dueCards(limit: 9999);
+      expect(first.length, Progress.newCardsPerDay);
+      p.cards[first[0].id] = CardState(due: today() + 3, firstSeen: today() - 5);
+      p.cards[first[1].id] = CardState(due: today() - 1, firstSeen: today() - 5);
+      final next = b.dueCards(limit: 9999);
+      expect(next.first.id, first[1].id);
+      expect(next.any((c) => c.id == first[0].id), isFalse);
     });
   });
 }

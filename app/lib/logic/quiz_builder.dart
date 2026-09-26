@@ -145,18 +145,24 @@ class QuizBuilder {
     return QuizSpec(QuizMode.bookmarks, qs.take(20).toList(), 'जतन केलेले प्रश्न', 'Saved Questions');
   }
 
+  /// Reviews that are due, then up to the daily allowance of new cards.
   List<Flashcard> dueCards({String? subject, int limit = 20}) {
     final e = exam;
     final t = today();
     Iterable<Flashcard> cs = e == null ? repo.flashcards : repo.flashcardsFor(e);
     if (subject != null) cs = cs.where((c) => c.subject == subject);
-    final list = cs.where((c) {
+    final reviews = <Flashcard>[];
+    final fresh = <Flashcard>[];
+    for (final c in cs) {
       final st = progress.cards[c.id];
-      return st == null || st.due <= t;
-    }).toList();
-    // Reviews already started come first, then new cards.
-    list.sort((a, b) => (progress.cards.containsKey(a.id) ? 0 : 1).compareTo(progress.cards.containsKey(b.id) ? 0 : 1));
-    return list.take(limit).toList();
+      if (st == null) {
+        fresh.add(c);
+      } else if (st.due <= t) {
+        reviews.add(c);
+      }
+    }
+    final allowance = (Progress.newCardsPerDay - progress.newCardsSeenToday).clamp(0, Progress.newCardsPerDay);
+    return [...reviews, ...fresh.take(allowance)].take(limit).toList();
   }
 
   Motivation? todaysMotivation() {

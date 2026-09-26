@@ -77,7 +77,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
                   Text(isSpeed ? '${widget.speedScore}' : '$correct/$total',
                       style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900)),
-                  Text(isSpeed ? context.tr('६० सेकंदात', 'in 60 sec') : '${(pct * 100).round()}%',
+                  Text(isSpeed ? context.tr('60 सेकंदात', 'in 60 sec') : '${(pct * 100).round()}%',
                       style: const TextStyle(color: Colors.white70)),
                 ]),
               ),
