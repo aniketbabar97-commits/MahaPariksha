@@ -1,0 +1,27 @@
+# Publishes the content pack to GitHub Pages so installed apps pick up new questions without a Play update.
+# Set repo variable CONTENT_URL to https://<owner>.github.io/<repo>/content.json and enable Pages (GitHub Actions source).
+name: Publish content pack
+on:
+  push:
+    branches: [main]
+    paths: ["content/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python pipeline/build_bundle.py --out site/content.json
+      - run: python pipeline/build_site.py --out site
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - uses: actions/deploy-pages@v4

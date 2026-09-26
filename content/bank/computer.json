@@ -1,0 +1,485 @@
+[
+ {
+  "id": "computer-001",
+  "s": "computer",
+  "t": "basics",
+  "d": 1,
+  "q_mr": "संगणकाचा 'मेंदू' कोणत्या भागाला म्हणतात?",
+  "q_en": "Which part is called the 'brain' of the computer?",
+  "o_mr": [
+   "RAM",
+   "CPU",
+   "हार्ड डिस्क",
+   "मॉनिटर"
+  ],
+  "o_en": [
+   "RAM",
+   "CPU",
+   "Hard disk",
+   "Monitor"
+  ],
+  "a": 1,
+  "e_mr": "CPU (Central Processing Unit) सर्व सूचना प्रक्रिया करतो, म्हणून त्याला संगणकाचा मेंदू म्हणतात. RAM ही तात्पुरती मेमरी, हार्ड डिस्क साठवणुकीचे साधन आणि मॉनिटर आउटपुट उपकरण आहे.",
+  "e_en": "The CPU processes all instructions, so it is called the brain of the computer. RAM is temporary memory, the hard disk is storage and the monitor is an output device."
+ },
+ {
+  "id": "computer-002",
+  "s": "computer",
+  "t": "basics",
+  "d": 1,
+  "q_mr": "खालीलपैकी इनपुट उपकरण कोणते?",
+  "q_en": "Which of the following is an input device?",
+  "o_mr": [
+   "कीबोर्ड",
+   "प्रिंटर",
+   "मॉनिटर",
+   "स्पीकर"
+  ],
+  "o_en": [
+   "Keyboard",
+   "Printer",
+   "Monitor",
+   "Speaker"
+  ],
+  "a": 0,
+  "e_mr": "कीबोर्डद्वारे संगणकाला माहिती दिली जाते, म्हणून ते इनपुट उपकरण आहे. प्रिंटर, मॉनिटर व स्पीकर हे संगणकाकडून निकाल देणारी आउटपुट उपकरणे आहेत.",
+  "e_en": "A keyboard feeds data into the computer, so it is an input device. Printer, monitor and speaker are output devices."
+ },
+ {
+  "id": "computer-003",
+  "s": "computer",
+  "t": "basics",
+  "d": 1,
+  "q_mr": "1 बाइट (Byte) म्हणजे किती बिट्स?",
+  "q_en": "1 byte equals how many bits?",
+  "o_mr": [
+   "4",
+   "16",
+   "1024",
+   "8"
+  ],
+  "o_en": [
+   "4",
+   "16",
+   "1024",
+   "8"
+  ],
+  "a": 3,
+  "e_mr": "1 बाइट = 8 बिट्स. 4 बिट्सला निबल म्हणतात, तर 1024 बाइट्स = 1 किलोबाइट.",
+  "e_en": "1 byte = 8 bits. 4 bits is a nibble, and 1024 bytes make 1 kilobyte."
+ },
+ {
+  "id": "computer-004",
+  "s": "computer",
+  "t": "basics",
+  "d": 2,
+  "q_mr": "वीज गेल्यावर कोणत्या मेमरीतील माहिती नष्ट होते?",
+  "q_en": "Data in which memory is lost when power goes off?",
+  "o_mr": [
+   "ROM",
+   "हार्ड डिस्क",
+   "RAM",
+   "पेन ड्राइव्ह"
+  ],
+  "o_en": [
+   "ROM",
+   "Hard disk",
+   "RAM",
+   "Pen drive"
+  ],
+  "a": 2,
+  "e_mr": "RAM ही अस्थायी (volatile) मेमरी आहे; वीज गेल्यावर तिच्यातील माहिती नष्ट होते. ROM, हार्ड डिस्क व पेन ड्राइव्ह स्थायी (non-volatile) असल्याने माहिती टिकून राहते.",
+  "e_en": "RAM is volatile, so its data is lost when power is cut. ROM, hard disk and pen drive are non-volatile and retain data."
+ },
+ {
+  "id": "computer-005",
+  "s": "computer",
+  "t": "basics",
+  "d": 2,
+  "q_mr": "संगणक आंतरिकरीत्या कोणत्या संख्यापद्धतीचा वापर करतो?",
+  "q_en": "Which number system does a computer use internally?",
+  "o_mr": [
+   "दशमान (Decimal)",
+   "द्विमान (Binary)",
+   "अष्टमान (Octal)",
+   "रोमन"
+  ],
+  "o_en": [
+   "Decimal",
+   "Binary",
+   "Octal",
+   "Roman"
+  ],
+  "a": 1,
+  "e_mr": "संगणक फक्त 0 आणि 1 या दोन अंकांची द्विमान पद्धत वापरतो. दशमान आपण दैनंदिन वापरतो; अष्टमान/षोडशमान फक्त द्विमानाचे सोपे रूप दाखवण्यासाठी वापरतात.",
+  "e_en": "Computers work internally in binary, using only 0 and 1. Decimal is for everyday human use; octal/hexadecimal are just compact ways to write binary."
+ },
+ {
+  "id": "computer-006",
+  "s": "computer",
+  "t": "basics",
+  "d": 1,
+  "q_mr": "1 KB (किलोबाइट) म्हणजे किती बाइट्स?",
+  "q_en": "1 KB (kilobyte) equals how many bytes?",
+  "o_mr": [
+   "1024",
+   "1000",
+   "512",
+   "2048"
+  ],
+  "o_en": [
+   "1024",
+   "1000",
+   "512",
+   "2048"
+  ],
+  "a": 0,
+  "e_mr": "संगणकीय गणनेत 1 KB = 2¹⁰ = 1024 बाइट्स मानले जाते. 1000 हा दशमान अंदाज आहे, पण परीक्षेत सामान्यतः 1024 हे उत्तर अपेक्षित असते.",
+  "e_en": "In computing, 1 KB = 2¹⁰ = 1024 bytes. 1000 is the decimal approximation, but exams conventionally expect 1024."
+ },
+ {
+  "id": "computer-007",
+  "s": "computer",
+  "t": "basics",
+  "d": 3,
+  "q_mr": "खालीलपैकी कोणते उपकरण इनपुट व आउटपुट दोन्ही म्हणून काम करते?",
+  "q_en": "Which device works as both input and output?",
+  "o_mr": [
+   "स्कॅनर",
+   "प्रोजेक्टर",
+   "मायक्रोफोन",
+   "टचस्क्रीन"
+  ],
+  "o_en": [
+   "Scanner",
+   "Projector",
+   "Microphone",
+   "Touchscreen"
+  ],
+  "a": 3,
+  "e_mr": "टचस्क्रीन स्पर्शाद्वारे इनपुट घेते आणि त्याच पडद्यावर आउटपुट दाखवते. स्कॅनर व मायक्रोफोन केवळ इनपुट, तर प्रोजेक्टर केवळ आउटपुट उपकरण आहे.",
+  "e_en": "A touchscreen takes touch input and shows output on the same screen. Scanner and microphone are input-only; a projector is output-only."
+ },
+ {
+  "id": "computer-008",
+  "s": "computer",
+  "t": "software",
+  "d": 1,
+  "q_mr": "खालीलपैकी ऑपरेटिंग सिस्टीम कोणती?",
+  "q_en": "Which of the following is an operating system?",
+  "o_mr": [
+   "MS Word",
+   "Google Chrome",
+   "Windows",
+   "MS Excel"
+  ],
+  "o_en": [
+   "MS Word",
+   "Google Chrome",
+   "Windows",
+   "MS Excel"
+  ],
+  "a": 2,
+  "e_mr": "Windows ही ऑपरेटिंग सिस्टीम आहे जी हार्डवेअर व इतर सॉफ्टवेअर नियंत्रित करते. MS Word, Excel हे ॲप्लिकेशन सॉफ्टवेअर आणि Chrome हा वेब ब्राउझर आहे.",
+  "e_en": "Windows is an operating system that manages hardware and other software. MS Word and Excel are application software and Chrome is a web browser."
+ },
+ {
+  "id": "computer-009",
+  "s": "computer",
+  "t": "software",
+  "d": 1,
+  "q_mr": "MS Word मध्ये मजकूर कॉपी करण्याचा शॉर्टकट कोणता?",
+  "q_en": "What is the shortcut to copy text in MS Word?",
+  "o_mr": [
+   "Ctrl + V",
+   "Ctrl + C",
+   "Ctrl + X",
+   "Ctrl + P"
+  ],
+  "o_en": [
+   "Ctrl + V",
+   "Ctrl + C",
+   "Ctrl + X",
+   "Ctrl + P"
+  ],
+  "a": 1,
+  "e_mr": "Ctrl + C मजकूर कॉपी करतो. Ctrl + V पेस्ट, Ctrl + X कट आणि Ctrl + P प्रिंटसाठी वापरतात.",
+  "e_en": "Ctrl + C copies text. Ctrl + V pastes, Ctrl + X cuts and Ctrl + P prints."
+ },
+ {
+  "id": "computer-010",
+  "s": "computer",
+  "t": "software",
+  "d": 2,
+  "q_mr": "MS Excel मध्ये संख्यांची बेरीज करण्यासाठी कोणते फंक्शन वापरतात?",
+  "q_en": "Which function adds numbers in MS Excel?",
+  "o_mr": [
+   "SUM",
+   "ADD",
+   "TOTAL",
+   "COUNT"
+  ],
+  "o_en": [
+   "SUM",
+   "ADD",
+   "TOTAL",
+   "COUNT"
+  ],
+  "a": 0,
+  "e_mr": "Excel मध्ये =SUM(A1:A10) प्रमाणे SUM फंक्शनने बेरीज होते. COUNT फक्त संख्या असलेल्या सेल्स मोजते; ADD व TOTAL ही Excel ची मानक फंक्शन्स नाहीत.",
+  "e_en": "In Excel, =SUM(A1:A10) adds values. COUNT only counts numeric cells; ADD and TOTAL are not standard Excel functions."
+ },
+ {
+  "id": "computer-011",
+  "s": "computer",
+  "t": "software",
+  "d": 2,
+  "q_mr": "MS PowerPoint प्रामुख्याने कशासाठी वापरतात?",
+  "q_en": "MS PowerPoint is mainly used for?",
+  "o_mr": [
+   "स्प्रेडशीट गणना",
+   "डेटाबेस व्यवस्थापन",
+   "ई-मेल पाठवणे",
+   "सादरीकरण (Presentation) तयार करणे"
+  ],
+  "o_en": [
+   "Spreadsheet calculations",
+   "Database management",
+   "Sending e-mail",
+   "Creating presentations"
+  ],
+  "a": 3,
+  "e_mr": "PowerPoint स्लाइड्सद्वारे सादरीकरण तयार करण्यासाठी आहे. स्प्रेडशीटसाठी Excel, डेटाबेससाठी Access आणि ई-मेलसाठी Outlook वापरतात.",
+  "e_en": "PowerPoint is for slide presentations. Excel handles spreadsheets, Access databases and Outlook e-mail."
+ },
+ {
+  "id": "computer-012",
+  "s": "computer",
+  "t": "software",
+  "d": 1,
+  "q_mr": "MS Word मध्ये शेवटची कृती रद्द (Undo) करण्याचा शॉर्टकट कोणता?",
+  "q_en": "What is the shortcut to undo the last action in MS Word?",
+  "o_mr": [
+   "Ctrl + Y",
+   "Ctrl + U",
+   "Ctrl + Z",
+   "Ctrl + A"
+  ],
+  "o_en": [
+   "Ctrl + Y",
+   "Ctrl + U",
+   "Ctrl + Z",
+   "Ctrl + A"
+  ],
+  "a": 2,
+  "e_mr": "Ctrl + Z शेवटची कृती Undo करतो. Ctrl + Y Redo, Ctrl + U अधोरेखन (Underline) आणि Ctrl + A सर्व निवडणे (Select All) यासाठी आहे.",
+  "e_en": "Ctrl + Z undoes the last action. Ctrl + Y redoes, Ctrl + U underlines and Ctrl + A selects all."
+ },
+ {
+  "id": "computer-013",
+  "s": "computer",
+  "t": "software",
+  "d": 3,
+  "q_mr": "Excel मध्ये उभ्या स्तंभाला (Column) आणि आडव्या ओळीला (Row) कसे ओळखले जाते?",
+  "q_en": "In Excel, how are columns and rows identified?",
+  "o_mr": [
+   "स्तंभ अंकांनी, ओळी अक्षरांनी",
+   "स्तंभ अक्षरांनी, ओळी अंकांनी",
+   "दोन्ही अंकांनी",
+   "दोन्ही अक्षरांनी"
+  ],
+  "o_en": [
+   "Columns by numbers, rows by letters",
+   "Columns by letters, rows by numbers",
+   "Both by numbers",
+   "Both by letters"
+  ],
+  "a": 1,
+  "e_mr": "Excel मध्ये स्तंभ A, B, C... अक्षरांनी आणि ओळी 1, 2, 3... अंकांनी ओळखल्या जातात; म्हणून सेलचा पत्ता B3 असा लिहितात. उलटा पर्याय गोंधळ निर्माण करणारा आहे.",
+  "e_en": "In Excel columns are labelled A, B, C... and rows 1, 2, 3..., so a cell address looks like B3. The reversed option is the common trap."
+ },
+ {
+  "id": "computer-014",
+  "s": "computer",
+  "t": "software",
+  "d": 2,
+  "q_mr": "खालीलपैकी ओपन सोर्स ऑपरेटिंग सिस्टीम कोणती?",
+  "q_en": "Which of the following is an open-source operating system?",
+  "o_mr": [
+   "Linux",
+   "Windows",
+   "macOS",
+   "MS-DOS"
+  ],
+  "o_en": [
+   "Linux",
+   "Windows",
+   "macOS",
+   "MS-DOS"
+  ],
+  "a": 0,
+  "e_mr": "Linux चा सोर्स कोड मुक्तपणे उपलब्ध असल्याने ती ओपन सोर्स OS आहे. Windows व MS-DOS (Microsoft) आणि macOS (Apple) या मालकी हक्काच्या प्रणाली आहेत.",
+  "e_en": "Linux's source code is freely available, making it open source. Windows and MS-DOS (Microsoft) and macOS (Apple) are proprietary."
+ },
+ {
+  "id": "computer-015",
+  "s": "computer",
+  "t": "internet",
+  "d": 1,
+  "q_mr": "WWW चे पूर्ण रूप काय?",
+  "q_en": "What is the full form of WWW?",
+  "o_mr": [
+   "World Web Wide",
+   "Wide World Web",
+   "Web World Wide",
+   "World Wide Web"
+  ],
+  "o_en": [
+   "World Web Wide",
+   "Wide World Web",
+   "Web World Wide",
+   "World Wide Web"
+  ],
+  "a": 3,
+  "e_mr": "WWW म्हणजे World Wide Web, ज्याचा शोध टिम बर्नर्स-ली यांनी लावला. इतर पर्याय शब्दक्रम बदलून तयार केलेले चुकीचे रूप आहेत.",
+  "e_en": "WWW stands for World Wide Web, invented by Tim Berners-Lee. The other options are scrambled word orders."
+ },
+ {
+  "id": "computer-016",
+  "s": "computer",
+  "t": "internet",
+  "d": 2,
+  "q_mr": "बँकेच्या नावाने येणारा बनावट ई-मेल ज्यात पासवर्ड/OTP मागितला जातो, या फसवणुकीला काय म्हणतात?",
+  "q_en": "A fake e-mail in a bank's name asking for your password/OTP is an example of?",
+  "o_mr": [
+   "फायरवॉल",
+   "बॅकअप",
+   "फिशिंग (Phishing)",
+   "कॅशे"
+  ],
+  "o_en": [
+   "Firewall",
+   "Backup",
+   "Phishing",
+   "Cache"
+  ],
+  "a": 2,
+  "e_mr": "फिशिंगमध्ये विश्वासार्ह संस्थेचे सोंग घेऊन गोपनीय माहिती चोरली जाते; बँक कधीही OTP/पासवर्ड मागत नाही. फायरवॉल हे संरक्षण साधन, बॅकअप म्हणजे माहितीची प्रत आणि कॅशे तात्पुरती साठवण आहे.",
+  "e_en": "Phishing impersonates a trusted organisation to steal secrets; banks never ask for OTP or passwords. A firewall is a protection tool, backup is a data copy and cache is temporary storage."
+ },
+ {
+  "id": "computer-017",
+  "s": "computer",
+  "t": "internet",
+  "d": 1,
+  "q_mr": "वेब पेज पाहण्यासाठी वापरल्या जाणाऱ्या सॉफ्टवेअरला काय म्हणतात?",
+  "q_en": "Software used to view web pages is called?",
+  "o_mr": [
+   "सर्च इंजिन",
+   "वेब ब्राउझर",
+   "ऑपरेटिंग सिस्टीम",
+   "कंपायलर"
+  ],
+  "o_en": [
+   "Search engine",
+   "Web browser",
+   "Operating system",
+   "Compiler"
+  ],
+  "a": 1,
+  "e_mr": "Chrome, Firefox यांसारखे वेब ब्राउझर वेब पेज उघडून दाखवतात. सर्च इंजिन (उदा. Google Search) ही माहिती शोधणारी वेबसेवा आहे, ब्राउझर नाही; कंपायलर प्रोग्राम भाषांतर करतो.",
+  "e_en": "Web browsers such as Chrome and Firefox display web pages. A search engine is a web service for finding information, not the browser itself; a compiler translates programs."
+ },
+ {
+  "id": "computer-018",
+  "s": "computer",
+  "t": "internet",
+  "d": 2,
+  "q_mr": "वेबसाईटच्या पत्त्यात 'https' मधील 's' कशाचे द्योतक आहे?",
+  "q_en": "What does the 's' in 'https' indicate?",
+  "o_mr": [
+   "Secure (सुरक्षित/एन्क्रिप्टेड जोडणी)",
+   "Speed",
+   "Server",
+   "Search"
+  ],
+  "o_en": [
+   "Secure (encrypted connection)",
+   "Speed",
+   "Server",
+   "Search"
+  ],
+  "a": 0,
+  "e_mr": "HTTPS म्हणजे HyperText Transfer Protocol Secure; यात ब्राउझर व सर्व्हरमधील माहिती एन्क्रिप्ट होते. 's' चा वेग, सर्व्हर किंवा शोधाशी संबंध नाही.",
+  "e_en": "HTTPS is HyperText Transfer Protocol Secure; data between browser and server is encrypted. The 's' has nothing to do with speed, server or search."
+ },
+ {
+  "id": "computer-019",
+  "s": "computer",
+  "t": "internet",
+  "d": 1,
+  "q_mr": "संगणकाला हानी पोहोचवणारा, स्वतःच्या प्रती तयार करून पसरणारा प्रोग्राम कोणता?",
+  "q_en": "A harmful program that copies itself and spreads is called?",
+  "o_mr": [
+   "अँटिव्हायरस",
+   "ब्राउझर",
+   "ड्रायव्हर",
+   "व्हायरस"
+  ],
+  "o_en": [
+   "Antivirus",
+   "Browser",
+   "Driver",
+   "Virus"
+  ],
+  "a": 3,
+  "e_mr": "व्हायरस हा हानिकारक प्रोग्राम (मालवेअर) असून तो स्वतःच्या प्रती तयार करून पसरतो. अँटिव्हायरस त्याला शोधून नष्ट करतो; ब्राउझर व ड्रायव्हर उपयुक्त सॉफ्टवेअर आहेत.",
+  "e_en": "A virus is malware that replicates and spreads. Antivirus detects and removes it; browsers and drivers are useful software."
+ },
+ {
+  "id": "computer-020",
+  "s": "computer",
+  "t": "internet",
+  "d": 2,
+  "q_mr": "ई-मेलमध्ये 'CC' चे पूर्ण रूप काय?",
+  "q_en": "In e-mail, what does 'CC' stand for?",
+  "o_mr": [
+   "Computer Copy",
+   "Closed Copy",
+   "Carbon Copy",
+   "Common Copy"
+  ],
+  "o_en": [
+   "Computer Copy",
+   "Closed Copy",
+   "Carbon Copy",
+   "Common Copy"
+  ],
+  "a": 2,
+  "e_mr": "CC म्हणजे Carbon Copy; यातील पत्ते सर्व प्राप्तकर्त्यांना दिसतात. BCC (Blind Carbon Copy) मधील पत्ते इतरांना दिसत नाहीत.",
+  "e_en": "CC means Carbon Copy; its addresses are visible to all recipients. BCC (Blind Carbon Copy) addresses are hidden from others."
+ },
+ {
+  "id": "computer-021",
+  "s": "computer",
+  "t": "internet",
+  "d": 3,
+  "q_mr": "अनधिकृत नेटवर्क प्रवेश रोखण्यासाठी येणारा-जाणारा ट्रॅफिक तपासणारी सुरक्षा प्रणाली कोणती?",
+  "q_en": "Which security system checks incoming and outgoing traffic to block unauthorised network access?",
+  "o_mr": [
+   "राउटर",
+   "फायरवॉल",
+   "मॉडेम",
+   "स्पॅम"
+  ],
+  "o_en": [
+   "Router",
+   "Firewall",
+   "Modem",
+   "Spam"
+  ],
+  "a": 1,
+  "e_mr": "फायरवॉल ठरावीक नियमांनुसार नेटवर्क ट्रॅफिक तपासून अनधिकृत प्रवेश अडवते. राउटर माहिती योग्य मार्गाने पाठवतो, मॉडेम सिग्नल रूपांतर करतो आणि स्पॅम म्हणजे नको असलेले ई-मेल.",
+  "e_en": "A firewall filters network traffic by rules to block unauthorised access. A router forwards data, a modem converts signals and spam is unwanted e-mail."
+ }
+]

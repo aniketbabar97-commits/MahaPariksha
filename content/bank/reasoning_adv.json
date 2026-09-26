@@ -1,0 +1,416 @@
+[
+ {
+  "id": "reasoning2-001",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 2,
+  "q_mr": "A, B, C, D, E हे पाच जण उत्तरेकडे तोंड करून एका रांगेत बसले आहेत. C मधोमध आहे. A हा C च्या लगेच उजवीकडे आहे. D हा C च्या शेजारी नाही. B एका टोकाला असून E च्या डावीकडे आहे. उजव्या टोकाला कोण आहे?",
+  "q_en": "A, B, C, D and E sit in a row facing north. C is in the middle. A is immediately to the right of C. D is not next to C. B sits at one end and to the left of E. Who sits at the right end?",
+  "o_mr": [
+   "A",
+   "B",
+   "D",
+   "E"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "D",
+   "E"
+  ],
+  "a": 2,
+  "e_mr": "C तिसऱ्या आणि A चौथ्या स्थानी आहे. D शेजारी नसल्याने तो 1 किंवा 5 वर; B टोकाला व E च्या डावीकडे म्हणून B=1, E=2, D=5. त्यामुळे क्रम B E C A D आणि उजव्या टोकाला D. A हा C च्या लगेच उजवीकडे असला तरी टोकाला नाही.",
+  "e_en": "C is 3rd and A is 4th. D, not being next to C, must be 1st or 5th; B at an end and left of E gives B=1, E=2, so D=5. The order is B E C A D, so D is at the right end. A is right of C but not at the end."
+ },
+ {
+  "id": "reasoning2-002",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 2,
+  "q_mr": "P, Q, R, S, T हे पाच मजली इमारतीत प्रत्येकी एका मजल्यावर राहतात (तळमजला = 1). Q सर्वात वरच्या मजल्यावर राहतो. P हा T च्या लगेच वरच्या मजल्यावर राहतो. S सम क्रमांकाच्या मजल्यावर राहतो. R पहिल्या मजल्यावर राहत नाही. तिसऱ्या मजल्यावर कोण राहतो?",
+  "q_en": "P, Q, R, S and T each live on a different floor of a five-floor building (lowest = 1). Q lives on the top floor. P lives immediately above T. S lives on an even-numbered floor. R does not live on floor 1. Who lives on floor 3?",
+  "o_mr": [
+   "P",
+   "R",
+   "S",
+   "T"
+  ],
+  "o_en": [
+   "P",
+   "R",
+   "S",
+   "T"
+  ],
+  "a": 1,
+  "e_mr": "Q=5. S=2 घेतल्यास T-P ही जोडी फक्त 3-4 वर बसते आणि R ला 1 मिळतो, जे चालत नाही. म्हणून S=4 आणि T=1, P=2, R=3 हा एकमेव क्रम. P किंवा T तिसऱ्या मजल्यावर घेतल्यास R पहिल्या मजल्यावर जातो.",
+  "e_en": "Q=5. If S=2, the T-P pair must take 3-4 and R is forced to floor 1, which is not allowed. So S=4, and the only arrangement is T=1, P=2, R=3. Placing P or T on floor 3 would push R to floor 1."
+ },
+ {
+  "id": "reasoning2-003",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 1,
+  "q_mr": "A हा B पेक्षा उंच आहे. C हा D पेक्षा बुटका पण A पेक्षा उंच आहे. E सर्वात बुटका आहे. उंचीनुसार खालून दुसरा कोण?",
+  "q_en": "A is taller than B. C is shorter than D but taller than A. E is the shortest. Who is second from the bottom by height?",
+  "o_mr": [
+   "A",
+   "C",
+   "B",
+   "D"
+  ],
+  "o_en": [
+   "A",
+   "C",
+   "B",
+   "D"
+  ],
+  "a": 2,
+  "e_mr": "उंचीचा क्रम D > C > A > B > E असा ठरतो. E सर्वात बुटका असल्याने खालून दुसरा B. A हा B पेक्षा उंच असल्याने तो खालून तिसरा आहे.",
+  "e_en": "The height order is D > C > A > B > E. With E the shortest, B is second from the bottom. A is taller than B, so A is third from the bottom."
+ },
+ {
+  "id": "reasoning2-004",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 1,
+  "q_mr": "A, B, C, D हे चौघे चौकोनी टेबलाभोवती मध्याकडे तोंड करून बसले आहेत. A च्या समोर B आहे. C हा A च्या लगेच डावीकडे आहे. A च्या लगेच उजवीकडे कोण आहे?",
+  "q_en": "A, B, C and D sit around a square table facing the centre. B sits opposite A. C sits immediately to the left of A. Who sits immediately to the right of A?",
+  "o_mr": [
+   "D",
+   "B",
+   "C",
+   "सांगता येत नाही"
+  ],
+  "o_en": [
+   "D",
+   "B",
+   "C",
+   "Cannot be determined"
+  ],
+  "a": 0,
+  "e_mr": "A चे दोन शेजारी आणि एक समोरील जागा आहे. B समोर आणि C डावीकडे असल्याने उरलेली उजवी जागा D ची आहे. B समोर बसल्याने तो शेजारी असू शकत नाही, त्यामुळे उत्तर निश्चित आहे.",
+  "e_en": "A has two neighbours and one seat opposite. B is opposite and C is on the left, so the remaining right-hand seat belongs to D. B cannot be a neighbour since he is opposite, so the answer is determined."
+ },
+ {
+  "id": "reasoning2-005",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 1,
+  "q_mr": "X, Y, Z या तिघांना चहा, कॉफी, दूध यांपैकी प्रत्येकी वेगळे पेय आवडते. X ला चहा किंवा कॉफी आवडत नाही. Y ला चहा आवडत नाही. चहा कोणाला आवडतो?",
+  "q_en": "X, Y and Z each like a different drink among tea, coffee and milk. X likes neither tea nor coffee. Y does not like tea. Who likes tea?",
+  "o_mr": [
+   "X",
+   "Y",
+   "Z",
+   "सांगता येत नाही"
+  ],
+  "o_en": [
+   "X",
+   "Y",
+   "Z",
+   "Cannot be determined"
+  ],
+  "a": 2,
+  "e_mr": "X ला चहा-कॉफी नको म्हणून X = दूध. Y ला चहा नको आणि दूध X ने घेतले, म्हणून Y = कॉफी. उरलेला चहा Z ला आवडतो; माहिती पुरेशी असल्याने 'सांगता येत नाही' चुकीचे.",
+  "e_en": "X rejects tea and coffee, so X = milk. Y rejects tea and milk is taken, so Y = coffee. Tea is left for Z; the data is sufficient, so 'cannot be determined' is wrong."
+ },
+ {
+  "id": "reasoning2-006",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 2,
+  "q_mr": "सोमवार ते शुक्रवार दररोज एक असे गणित (M), इतिहास (H), भूगोल (G), विज्ञान (S), इंग्रजी (E) यांचे तास होतात. G बुधवारी आहे. H हा M च्या लगेच दुसऱ्या दिवशी आहे. S सोमवारी किंवा शुक्रवारी नाही. E सोमवारी नाही. शुक्रवारी कोणता तास आहे?",
+  "q_en": "Maths (M), History (H), Geography (G), Science (S) and English (E) are taught one per day from Monday to Friday. G is on Wednesday. H is on the day right after M. S is not on Monday or Friday. E is not on Monday. Which subject is on Friday?",
+  "o_mr": [
+   "H",
+   "S",
+   "M",
+   "E"
+  ],
+  "o_en": [
+   "H",
+   "S",
+   "M",
+   "E"
+  ],
+  "a": 3,
+  "e_mr": "M-H ही जोडी सोम-मंगळ किंवा गुरु-शुक्र असू शकते. गुरु-शुक्र घेतल्यास S मंगळवारी आणि E सोमवारी येतो, जे नियमबाह्य. म्हणून M सोम, H मंगळ, G बुध, S गुरु आणि E शुक्रवारी. H शुक्रवारी मानल्यास हीच अडचण येते.",
+  "e_en": "The M-H pair is either Mon-Tue or Thu-Fri. Thu-Fri forces S to Tuesday and E to Monday, which breaks a rule. So M Mon, H Tue, G Wed, S Thu and E on Friday. Putting H on Friday hits that same contradiction."
+ },
+ {
+  "id": "reasoning2-007",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: A > B ≥ C = D < E\nनिष्कर्ष: I. A > D   II. E > C",
+  "q_en": "Statement: A > B ≥ C = D < E\nConclusions: I. A > D   II. E > C",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य",
+   "फक्त निष्कर्ष II सत्य",
+   "I आणि II दोन्ही सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 2,
+  "e_mr": "A > B ≥ C = D असल्याने A > D निश्चित. D < E आणि C = D म्हणून E > C सुद्धा निश्चित. त्यामुळे दोन्ही निष्कर्ष सत्य; एकच निवडणे अपूर्ण ठरते.",
+  "e_en": "From A > B ≥ C = D, A > D is certain. Since D < E and C = D, E > C is also certain. So both follow; picking only one is incomplete."
+ },
+ {
+  "id": "reasoning2-008",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधान: P ≥ Q > R ≤ S\nनिष्कर्ष: I. P > R   II. S > Q",
+  "q_en": "Statement: P ≥ Q > R ≤ S\nConclusions: I. P > R   II. S > Q",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य",
+   "फक्त निष्कर्ष II सत्य",
+   "I आणि II दोन्ही सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_mr": "P ≥ Q > R म्हणून P > R निश्चित. S आणि Q यांचा संबंध फक्त R मार्फत आहे आणि चिन्हे उलट दिशेची (Q > R ≤ S) आहेत, म्हणून S > Q ठरत नाही. म्हणून फक्त I सत्य.",
+  "e_en": "P ≥ Q > R gives P > R. S and Q are linked only through R with opposite signs (Q > R ≤ S), so S > Q cannot be concluded. Hence only I follows."
+ },
+ {
+  "id": "reasoning2-009",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधान: L < M ≤ N = O\nनिष्कर्ष: I. L ≥ N   II. O ≥ M",
+  "q_en": "Statement: L < M ≤ N = O\nConclusions: I. L ≥ N   II. O ≥ M",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य",
+   "फक्त निष्कर्ष II सत्य",
+   "I आणि II दोन्ही सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 1,
+  "e_mr": "L < M ≤ N म्हणून L < N; त्यामुळे L ≥ N चुकीचा. M ≤ N = O म्हणून O ≥ M निश्चित. म्हणून फक्त II सत्य.",
+  "e_en": "L < M ≤ N gives L < N, so L ≥ N is false. M ≤ N = O gives O ≥ M. Hence only II follows."
+ },
+ {
+  "id": "reasoning2-010",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधान: X ≤ Y < Z > W ≥ V\nनिष्कर्ष: I. X > W   II. Y > V",
+  "q_en": "Statement: X ≤ Y < Z > W ≥ V\nConclusions: I. X > W   II. Y > V",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य",
+   "फक्त निष्कर्ष II सत्य",
+   "I आणि II दोन्ही सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 3,
+  "e_mr": "X-W आणि Y-V यांची तुलना Z मधून होते, पण Z दोन्ही बाजूंनी मोठा (Y < Z > W) आहे. उलट दिशेच्या चिन्हांमुळे कोणताही निश्चित संबंध ठरत नाही. म्हणून दोन्ही निष्कर्ष सत्य नाहीत.",
+  "e_en": "X-W and Y-V are compared only through Z, which is larger than both sides (Y < Z > W). Opposite-facing signs give no definite relation. So neither conclusion follows."
+ },
+ {
+  "id": "reasoning2-011",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: J > K ≥ L, M < L\nनिष्कर्ष: I. J > M   II. K > M",
+  "q_en": "Statement: J > K ≥ L, M < L\nConclusions: I. J > M   II. K > M",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य",
+   "फक्त निष्कर्ष II सत्य",
+   "I आणि II दोन्ही सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 2,
+  "e_mr": "J > K ≥ L > M म्हणून J > M. K ≥ L > M म्हणून K > M. दोन्ही साखळ्या एकाच दिशेच्या आहेत, त्यामुळे दोन्ही सत्य.",
+  "e_en": "J > K ≥ L > M gives J > M. K ≥ L > M gives K > M. Both chains run in one direction, so both follow."
+ },
+ {
+  "id": "reasoning2-012",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधान: R = S ≥ T > U, V ≥ T\nनिष्कर्ष: I. V > U   II. R ≥ V",
+  "q_en": "Statement: R = S ≥ T > U, V ≥ T\nConclusions: I. V > U   II. R ≥ V",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य",
+   "फक्त निष्कर्ष II सत्य",
+   "I आणि II दोन्ही सत्य",
+   "दोन्हीपैकी एकही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_mr": "V ≥ T > U म्हणून V > U निश्चित. R ≥ T आणि V ≥ T यावरून R व V दोघेही T पेक्षा मोठे किंवा समान आहेत, पण त्यांच्यातील संबंध ठरत नाही. म्हणून फक्त I सत्य.",
+  "e_en": "V ≥ T > U gives V > U. R ≥ T and V ≥ T only say both are at least T; their mutual relation is unknown. Hence only I follows."
+ },
+ {
+  "id": "reasoning2-013",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 1,
+  "q_mr": "x ची किंमत किती?\nI. x + y = 10\nII. x − y = 2",
+  "q_en": "What is the value of x?\nI. x + y = 10\nII. x − y = 2",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक",
+   "दोन्ही एकत्र घेऊनही पुरेसे नाही"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Even both together are not sufficient"
+  ],
+  "a": 2,
+  "e_mr": "एका समीकरणात दोन अज्ञात असल्याने कोणतेही एक विधान पुरेसे नाही. दोन्ही मिळून 2x = 12, म्हणजे x = 6. म्हणून दोन्ही एकत्र आवश्यक.",
+  "e_en": "Each statement alone has two unknowns in one equation, so neither suffices alone. Together, 2x = 12, so x = 6. Both are needed together."
+ },
+ {
+  "id": "reasoning2-014",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 1,
+  "q_mr": "A, B, C पैकी सर्वात उंच कोण?\nI. A हा B आणि C दोघांपेक्षा उंच आहे.\nII. B हा C पेक्षा उंच आहे.",
+  "q_en": "Who is the tallest among A, B and C?\nI. A is taller than both B and C.\nII. B is taller than C.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक",
+   "दोन्ही एकत्र घेऊनही पुरेसे नाही"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Even both together are not sufficient"
+  ],
+  "a": 0,
+  "e_mr": "विधान I वरून थेट A सर्वात उंच हे कळते. विधान II फक्त B व C ची तुलना करते; A बद्दल काहीच सांगत नाही. म्हणून फक्त I पुरेसे.",
+  "e_en": "Statement I directly makes A the tallest. Statement II compares only B and C and says nothing about A. So I alone is sufficient."
+ },
+ {
+  "id": "reasoning2-015",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "एका महिन्याची 10 तारीख कोणत्या वारी आहे?\nI. त्या महिन्यात 31 दिवस आहेत.\nII. त्या महिन्याची 3 तारीख सोमवार आहे.",
+  "q_en": "On which day of the week is the 10th of a month?\nI. The month has 31 days.\nII. The 3rd of the month is a Monday.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक",
+   "दोन्ही एकत्र घेऊनही पुरेसे नाही"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Even both together are not sufficient"
+  ],
+  "a": 1,
+  "e_mr": "3 नंतर 7 दिवसांनी 10 तारीख येते, म्हणून तीही सोमवार; II पुरेसे. महिन्यातील दिवसांची संख्या वार ठरवत नाही, म्हणून I निरुपयोगी.",
+  "e_en": "The 10th is exactly 7 days after the 3rd, so it is also a Monday; II suffices. The number of days in the month does not fix any weekday, so I is useless."
+ },
+ {
+  "id": "reasoning2-016",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "x धन आहे का?\nI. x² = 16\nII. x हा पूर्णांक आहे.",
+  "q_en": "Is x positive?\nI. x² = 16\nII. x is an integer.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक",
+   "दोन्ही एकत्र घेऊनही पुरेसे नाही"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Even both together are not sufficient"
+  ],
+  "a": 3,
+  "e_mr": "x² = 16 वरून x = 4 किंवा −4. दोन्ही पूर्णांक आहेत, म्हणून II जोडूनही उत्तर ठरत नाही. म्हणून दोन्ही एकत्रही अपुरे.",
+  "e_en": "x² = 16 gives x = 4 or −4. Both are integers, so adding II does not decide the sign. Even both together are insufficient."
+ },
+ {
+  "id": "reasoning2-017",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "रांगेत सीताचा डावीकडून क्रमांक कोणता?\nI. सीता उजवीकडून तिसरी आहे.\nII. रांगेत एकूण 7 जण आहेत.",
+  "q_en": "What is Sita's position from the left in a row?\nI. Sita is third from the right.\nII. There are 7 people in the row.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक",
+   "दोन्ही एकत्र घेऊनही पुरेसे नाही"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Even both together are not sufficient"
+  ],
+  "a": 2,
+  "e_mr": "डावीकडून क्रमांक = एकूण − उजवीकडून क्रमांक + 1. दोन्ही माहिती मिळून 7 − 3 + 1 = 5. एकटे I किंवा एकटी II हे सूत्र पूर्ण करू शकत नाही.",
+  "e_en": "Position from left = total − position from right + 1. Together, 7 − 3 + 1 = 5. Neither statement alone completes the formula."
+ },
+ {
+  "id": "reasoning2-018",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "P आत्ता कोणत्या दिशेला तोंड करून उभा आहे?\nI. P ने आधी डावीकडे वळण घेतले होते.\nII. P ने आता 90° उजवीकडे वळल्यास तो उत्तरेकडे तोंड करेल.",
+  "q_en": "Which direction is P facing now?\nI. P had earlier taken a left turn.\nII. If P now turns 90° to the right, he will face north.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक",
+   "दोन्ही एकत्र घेऊनही पुरेसे नाही"
+  ],
+  "o_en": [
+   "Statement I alone is sufficient",
+   "Statement II alone is sufficient",
+   "Both statements together are needed",
+   "Even both together are not sufficient"
+  ],
+  "a": 1,
+  "e_mr": "उजवीकडे 90° वळून उत्तर येत असेल तर सध्याची दिशा पश्चिम; II पुरेसे. I मध्ये सुरुवातीची दिशाच माहीत नसल्याने काहीच ठरत नाही.",
+  "e_en": "If a 90° right turn leads to north, P now faces west; II suffices. I gives no starting direction, so it decides nothing."
+ }
+]

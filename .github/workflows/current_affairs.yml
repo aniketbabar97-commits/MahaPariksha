@@ -1,0 +1,33 @@
+# Drafts verified current-affairs MCQs every morning (06:00 IST) and opens a PR for human review.
+# Needs secret ANTHROPIC_API_KEY. Nothing reaches users until the PR is merged.
+name: Daily current affairs
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r pipeline/requirements.txt
+      - run: python pipeline/ca_daily.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - run: python pipeline/validate.py
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: content/current-affairs-daily
+          title: "Current affairs: ${{ github.run_id }}"
+          commit-message: "Add verified daily current-affairs questions"
+          body: |
+            Automatically drafted from news feeds. Each item passed an independent blind-solve check against its source.
+            Review the questions (source links are in `src`) and merge to publish.
+          add-paths: content/bank/current_affairs_auto.json

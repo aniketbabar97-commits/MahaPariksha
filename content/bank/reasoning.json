@@ -1,0 +1,1296 @@
+[
+ {
+  "id": "reasoning-001",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "मालिकेतील पुढील पद ओळखा: 2, 6, 12, 20, 30, ?",
+  "q_en": "Find the next term: 2, 6, 12, 20, 30, ?",
+  "o_mr": [
+   "40",
+   "36",
+   "42",
+   "44"
+  ],
+  "o_en": [
+   "40",
+   "36",
+   "42",
+   "44"
+  ],
+  "a": 2,
+  "e_mr": "1) फरक: 4, 6, 8, 10 → पुढील फरक 12. 2) 30 + 12 = 42. 3) (n × (n+1): 6 × 7 = 42).",
+  "e_en": "1) Differences: 4, 6, 8, 10 → next 12. 2) 30 + 12 = 42. 3) (n(n+1): 6 × 7 = 42).",
+  "hook_mr": "1×2, 2×3, 3×4 … असा नमुना.",
+  "hook_en": "Pattern 1×2, 2×3, 3×4 …"
+ },
+ {
+  "id": "reasoning-002",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "मालिकेतील पुढील पद ओळखा: 3, 7, 15, 31, 63, ?",
+  "q_en": "Find the next term: 3, 7, 15, 31, 63, ?",
+  "o_mr": [
+   "125",
+   "127",
+   "126",
+   "128"
+  ],
+  "o_en": [
+   "125",
+   "127",
+   "126",
+   "128"
+  ],
+  "a": 1,
+  "e_mr": "1) प्रत्येक पद = मागील × 2 + 1. 2) 63 × 2 + 1. 3) = 127.",
+  "e_en": "1) Each term = previous × 2 + 1. 2) 63 × 2 + 1. 3) = 127.",
+  "hook_mr": "पदे 2ⁿ − 1 स्वरूपात आहेत: 2⁷ − 1 = 127.",
+  "hook_en": "Terms are 2ⁿ − 1: 2⁷ − 1 = 127."
+ },
+ {
+  "id": "reasoning-003",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_mr": "अक्षरमालिकेतील पुढील अक्षर ओळखा: A, C, F, J, O, ?",
+  "q_en": "Find the next letter: A, C, F, J, O, ?",
+  "o_mr": [
+   "T",
+   "V",
+   "S",
+   "U"
+  ],
+  "o_en": [
+   "T",
+   "V",
+   "S",
+   "U"
+  ],
+  "a": 3,
+  "e_mr": "1) स्थान क्रमांक: 1, 3, 6, 10, 15. 2) फरक 2, 3, 4, 5 → पुढील 6. 3) 15 + 6 = 21 = U.",
+  "e_en": "1) Positions: 1, 3, 6, 10, 15. 2) Gaps 2, 3, 4, 5 → next 6. 3) 15 + 6 = 21 = U.",
+  "hook_mr": "EJOTY लक्षात ठेवा: E5, J10, O15, T20, Y25 → 21 = U.",
+  "hook_en": "Remember EJOTY: E5, J10, O15, T20, Y25 → 21 = U."
+ },
+ {
+  "id": "reasoning-004",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "पुढील पद ओळखा: 1, 8, 27, 64, ?",
+  "q_en": "Find the next term: 1, 8, 27, 64, ?",
+  "o_mr": [
+   "100",
+   "121",
+   "216",
+   "125"
+  ],
+  "o_en": [
+   "100",
+   "121",
+   "216",
+   "125"
+  ],
+  "a": 3,
+  "e_mr": "1) 1³, 2³, 3³, 4³. 2) पुढील 5³. 3) = 125.",
+  "e_en": "1) 1³, 2³, 3³, 4³. 2) Next is 5³. 3) = 125."
+ },
+ {
+  "id": "reasoning-005",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_mr": "पुढील पद ओळखा: 5, 11, 23, 47, ?",
+  "q_en": "Find the next term: 5, 11, 23, 47, ?",
+  "o_mr": [
+   "95",
+   "94",
+   "96",
+   "93"
+  ],
+  "o_en": [
+   "95",
+   "94",
+   "96",
+   "93"
+  ],
+  "a": 0,
+  "e_mr": "1) 5×2+1 = 11, 11×2+1 = 23, 23×2+1 = 47. 2) 47 × 2 + 1. 3) = 95.",
+  "e_en": "1) 5×2+1 = 11, 11×2+1 = 23, 23×2+1 = 47. 2) 47 × 2 + 1. 3) = 95."
+ },
+ {
+  "id": "reasoning-006",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_mr": "पुढील पद ओळखा: AZ, BY, CX, ?",
+  "q_en": "Find the next term: AZ, BY, CX, ?",
+  "o_mr": [
+   "DV",
+   "EW",
+   "CW",
+   "DW"
+  ],
+  "o_en": [
+   "DV",
+   "EW",
+   "CW",
+   "DW"
+  ],
+  "a": 3,
+  "e_mr": "1) पहिले अक्षर पुढे जाते: A, B, C → D. 2) दुसरे अक्षर मागे जाते: Z, Y, X → W. 3) उत्तर DW.",
+  "e_en": "1) First letter moves forward: A, B, C → D. 2) Second moves backward: Z, Y, X → W. 3) Answer DW.",
+  "hook_mr": "विरुद्ध अक्षर जोडी: स्थानांची बेरीज 27 (D=4, W=23).",
+  "hook_en": "Opposite-letter pairs: positions add to 27 (D=4, W=23)."
+ },
+ {
+  "id": "reasoning-007",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 1,
+  "q_mr": "जर CAT हा शब्द DBU असा लिहिला, तर DOG कसा लिहाल?",
+  "q_en": "If CAT is coded as DBU, how is DOG coded?",
+  "o_mr": [
+   "EPG",
+   "DPH",
+   "FQI",
+   "EPH"
+  ],
+  "o_en": [
+   "EPG",
+   "DPH",
+   "FQI",
+   "EPH"
+  ],
+  "a": 3,
+  "e_mr": "1) C→D, A→B, T→U: प्रत्येक अक्षर +1. 2) D→E, O→P, G→H. 3) उत्तर EPH.",
+  "e_en": "1) C→D, A→B, T→U: each letter +1. 2) D→E, O→P, G→H. 3) Answer EPH."
+ },
+ {
+  "id": "reasoning-008",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 2,
+  "q_mr": "जर ABC = ZYX, तर MAP = ?",
+  "q_en": "If ABC = ZYX, then MAP = ?",
+  "o_mr": [
+   "NZL",
+   "NZK",
+   "MZK",
+   "OZK"
+  ],
+  "o_en": [
+   "NZL",
+   "NZK",
+   "MZK",
+   "OZK"
+  ],
+  "a": 1,
+  "e_mr": "1) प्रत्येक अक्षराच्या जागी त्याचे विरुद्ध अक्षर (स्थानांची बेरीज 27). 2) M(13)→N(14), A→Z, P(16)→K(11). 3) उत्तर NZK.",
+  "e_en": "1) Each letter is replaced by its opposite (positions sum to 27). 2) M(13)→N(14), A→Z, P(16)→K(11). 3) Answer NZK.",
+  "hook_mr": "विरुद्ध जोड्या: AZ, BY, CX, … MN … PK.",
+  "hook_en": "Opposite pairs: AZ, BY, CX, … MN … PK."
+ },
+ {
+  "id": "reasoning-009",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 1,
+  "q_mr": "जर CAB = 6 (A=1, B=2, …), तर BAD = ?",
+  "q_en": "If CAB = 6 (A=1, B=2, …), then BAD = ?",
+  "o_mr": [
+   "8",
+   "6",
+   "9",
+   "7"
+  ],
+  "o_en": [
+   "8",
+   "6",
+   "9",
+   "7"
+  ],
+  "a": 3,
+  "e_mr": "1) CAB = 3 + 1 + 2 = 6 → अक्षरांच्या स्थानांची बेरीज. 2) BAD = 2 + 1 + 4. 3) = 7.",
+  "e_en": "1) CAB = 3 + 1 + 2 = 6 → sum of letter positions. 2) BAD = 2 + 1 + 4. 3) = 7."
+ },
+ {
+  "id": "reasoning-010",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 1,
+  "q_mr": "जर PENCIL हा शब्द LICNEP असा लिहिला, तर TABLE कसा लिहाल?",
+  "q_en": "If PENCIL is written as LICNEP, how is TABLE written?",
+  "o_mr": [
+   "ELTAB",
+   "EBLAT",
+   "TELBA",
+   "ELBAT"
+  ],
+  "o_en": [
+   "ELTAB",
+   "EBLAT",
+   "TELBA",
+   "ELBAT"
+  ],
+  "a": 3,
+  "e_mr": "1) LICNEP हा PENCIL चा उलटा क्रम आहे. 2) TABLE उलट लिहा. 3) ELBAT.",
+  "e_en": "1) LICNEP is PENCIL reversed. 2) Reverse TABLE. 3) ELBAT."
+ },
+ {
+  "id": "reasoning-011",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 2,
+  "q_mr": "जर MANGO = KYLEM, तर APPLE = ?",
+  "q_en": "If MANGO = KYLEM, then APPLE = ?",
+  "o_mr": [
+   "YNNJD",
+   "ZNNJC",
+   "YMNJC",
+   "YNNJC"
+  ],
+  "o_en": [
+   "YNNJD",
+   "ZNNJC",
+   "YMNJC",
+   "YNNJC"
+  ],
+  "a": 3,
+  "e_mr": "1) M→K, A→Y, N→L: प्रत्येक अक्षर 2 ने मागे. 2) A→Y, P→N, P→N, L→J, E→C. 3) उत्तर YNNJC.",
+  "e_en": "1) M→K, A→Y, N→L: each letter −2. 2) A→Y, P→N, P→N, L→J, E→C. 3) Answer YNNJC.",
+  "hook_mr": "A च्या मागे Z, Y येतात — वर्तुळाकार मोजा.",
+  "hook_en": "Before A come Z, Y — count cyclically."
+ },
+ {
+  "id": "reasoning-012",
+  "s": "reasoning",
+  "t": "coding",
+  "d": 3,
+  "q_mr": "एका सांकेतिक भाषेत 'pit na so' = 'good sweet fruit', 'na ka la' = 'fruit is red' आणि 'ka pit ma' = 'good is life'. तर 'sweet' साठी सांकेतिक शब्द कोणता?",
+  "q_en": "In a code language, 'pit na so' = 'good sweet fruit', 'na ka la' = 'fruit is red' and 'ka pit ma' = 'good is life'. What is the code for 'sweet'?",
+  "o_mr": [
+   "na",
+   "pit",
+   "so",
+   "ka"
+  ],
+  "o_en": [
+   "na",
+   "pit",
+   "so",
+   "ka"
+  ],
+  "a": 2,
+  "e_mr": "1) वाक्य 1 व 2 मध्ये fruit समान → na. 2) वाक्य 1 व 3 मध्ये good समान → pit. 3) वाक्य 1 मध्ये उरलेला sweet → so.",
+  "e_en": "1) Sentences 1 & 2 share 'fruit' → na. 2) Sentences 1 & 3 share 'good' → pit. 3) The remaining word 'sweet' in sentence 1 → so.",
+  "hook_mr": "दोन वाक्यांतील समान शब्द = समान सांकेतिक शब्द.",
+  "hook_en": "A word common to two sentences has the code common to them."
+ },
+ {
+  "id": "reasoning-013",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 1,
+  "q_mr": "एका मुलाकडे बोट दाखवत रवी म्हणाला, \"तो माझ्या वडिलांच्या एकुलत्या एका मुलाचा मुलगा आहे.\" तो मुलगा रवीचा कोण?",
+  "q_en": "Pointing to a boy, Ravi said, \"He is the son of my father's only son.\" How is the boy related to Ravi?",
+  "o_mr": [
+   "भाऊ",
+   "मुलगा",
+   "पुतण्या",
+   "चुलत भाऊ"
+  ],
+  "o_en": [
+   "Brother",
+   "Son",
+   "Nephew",
+   "Cousin"
+  ],
+  "a": 1,
+  "e_mr": "1) रवी पुरुष आहे, म्हणून वडिलांचा एकुलता एक मुलगा = रवी स्वतः. 2) त्या मुलाचा मुलगा = रवीचा मुलगा. 3) उत्तर: मुलगा.",
+  "e_en": "1) Ravi is male, so his father's only son is Ravi himself. 2) That person's son = Ravi's son. 3) Answer: son.",
+  "hook_mr": "\"माझ्या वडिलांचा एकुलता एक मुलगा\" = बोलणारा पुरुष स्वतः.",
+  "hook_en": "\"My father's only son\" = the male speaker himself."
+ },
+ {
+  "id": "reasoning-014",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 1,
+  "q_mr": "A ही B ची बहीण आहे. C ही B ची आई आहे. D हे C चे वडील आहेत. तर D हे A चे कोण?",
+  "q_en": "A is B's sister. C is B's mother. D is C's father. How is D related to A?",
+  "o_mr": [
+   "वडील",
+   "मामा",
+   "आजोबा",
+   "पणजोबा"
+  ],
+  "o_en": [
+   "Father",
+   "Uncle",
+   "Grandfather",
+   "Great-grandfather"
+  ],
+  "a": 2,
+  "e_mr": "1) C ही A व B दोघांची आई. 2) D हा C चा वडील → आईचे वडील. 3) D हा A चा आजोबा (आईचे वडील).",
+  "e_en": "1) C is the mother of both A and B. 2) D is C's father → mother's father. 3) D is A's grandfather."
+ },
+ {
+  "id": "reasoning-015",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "एका पुरुषाची ओळख करून देताना एक स्त्री म्हणाली, \"त्याची आई माझ्या आईची एकुलती एक मुलगी आहे.\" तो पुरुष त्या स्त्रीचा कोण?",
+  "q_en": "Introducing a man, a woman said, \"His mother is the only daughter of my mother.\" How is the man related to the woman?",
+  "o_mr": [
+   "भाऊ",
+   "भाचा",
+   "मामा",
+   "मुलगा"
+  ],
+  "o_en": [
+   "Brother",
+   "Nephew",
+   "Maternal uncle",
+   "Son"
+  ],
+  "a": 3,
+  "e_mr": "1) माझ्या आईची एकुलती एक मुलगी = ती स्त्री स्वतः. 2) म्हणून ती त्या पुरुषाची आई. 3) पुरुष तिचा मुलगा.",
+  "e_en": "1) My mother's only daughter = the woman herself. 2) So she is the man's mother. 3) The man is her son."
+ },
+ {
+  "id": "reasoning-016",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 1,
+  "q_mr": "P हा Q चा भाऊ आहे. R हा Q चा वडील आहे. S ही R ची बहीण आहे. तर S ही P ची कोण?",
+  "q_en": "P is Q's brother. R is Q's father. S is R's sister. How is S related to P?",
+  "o_mr": [
+   "आई",
+   "बहीण",
+   "आत्या",
+   "आजी"
+  ],
+  "o_en": [
+   "Mother",
+   "Sister",
+   "Paternal aunt",
+   "Grandmother"
+  ],
+  "a": 2,
+  "e_mr": "1) R हा P व Q दोघांचा वडील. 2) S ही वडिलांची बहीण. 3) वडिलांची बहीण = आत्या.",
+  "e_en": "1) R is the father of both P and Q. 2) S is the father's sister. 3) Father's sister = paternal aunt (आत्या)."
+ },
+ {
+  "id": "reasoning-017",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 1,
+  "q_mr": "राहुलच्या आईच्या भावाचा मुलगा राहुलचा कोण?",
+  "q_en": "How is the son of Rahul's mother's brother related to Rahul?",
+  "o_mr": [
+   "सख्खा भाऊ",
+   "मामेभाऊ",
+   "भाचा",
+   "मामा"
+  ],
+  "o_en": [
+   "Brother",
+   "Cousin",
+   "Nephew",
+   "Uncle"
+  ],
+  "a": 1,
+  "e_mr": "1) आईचा भाऊ = मामा. 2) मामाचा मुलगा. 3) = मामेभाऊ (चुलत/आते-मामे भाऊ, cousin).",
+  "e_en": "1) Mother's brother = maternal uncle. 2) His son. 3) = cousin."
+ },
+ {
+  "id": "reasoning-018",
+  "s": "reasoning",
+  "t": "blood",
+  "d": 2,
+  "q_mr": "जर 'X + Y' म्हणजे X ही Y ची आई, 'X − Y' म्हणजे X हा Y चा भाऊ, तर 'P + Q − R' मध्ये P ही R ची कोण?",
+  "q_en": "If 'X + Y' means X is the mother of Y and 'X − Y' means X is the brother of Y, then in 'P + Q − R', how is P related to R?",
+  "o_mr": [
+   "मावशी",
+   "आई",
+   "आजी",
+   "बहीण"
+  ],
+  "o_en": [
+   "Aunt",
+   "Mother",
+   "Grandmother",
+   "Sister"
+  ],
+  "a": 1,
+  "e_mr": "1) P + Q: P ही Q ची आई. 2) Q − R: Q हा R चा भाऊ. 3) म्हणून P ही R चीही आई.",
+  "e_en": "1) P + Q: P is Q's mother. 2) Q − R: Q is R's brother. 3) So P is R's mother too."
+ },
+ {
+  "id": "reasoning-019",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "सुमित उत्तरेकडे 5 किमी चालतो, उजवीकडे वळून 3 किमी चालतो, पुन्हा उजवीकडे वळून 5 किमी चालतो. तो सुरुवातीच्या ठिकाणापासून कोठे आहे?",
+  "q_en": "Sumit walks 5 km north, turns right and walks 3 km, then turns right again and walks 5 km. Where is he from the starting point?",
+  "o_mr": [
+   "3 किमी पश्चिम",
+   "5 किमी उत्तर",
+   "8 किमी पूर्व",
+   "3 किमी पूर्व"
+  ],
+  "o_en": [
+   "3 km west",
+   "5 km north",
+   "8 km east",
+   "3 km east"
+  ],
+  "a": 3,
+  "e_mr": "1) उत्तरेकडे 5 किमी. 2) उजवीकडे = पूर्व, 3 किमी. 3) पुन्हा उजवीकडे = दक्षिण 5 किमी → सुरुवातीपासून 3 किमी पूर्वेस.",
+  "e_en": "1) North 5 km. 2) Right = east, 3 km. 3) Right again = south 5 km → 3 km east of start.",
+  "hook_mr": "आकृती काढा: उत्तर-दक्षिण हालचाल रद्द होते.",
+  "hook_en": "Draw it: the north and south moves cancel."
+ },
+ {
+  "id": "reasoning-020",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "एक व्यक्ती 6 किमी उत्तरेस व नंतर 8 किमी पूर्वेस जाते. सुरुवातीच्या ठिकाणापासून तिचे थेट अंतर किती?",
+  "q_en": "A person walks 6 km north and then 8 km east. What is the straight-line distance from the start?",
+  "o_mr": [
+   "14 किमी",
+   "12 किमी",
+   "10 किमी",
+   "8 किमी"
+  ],
+  "o_en": [
+   "14 km",
+   "12 km",
+   "10 km",
+   "8 km"
+  ],
+  "a": 2,
+  "e_mr": "1) दोन्ही मार्ग काटकोनात. 2) अंतर = √(6² + 8²) = √100. 3) = 10 किमी.",
+  "e_en": "1) The paths are at right angles. 2) Distance = √(6² + 8²) = √100. 3) = 10 km.",
+  "hook_mr": "6-8-10 हे पायथागोरस त्रिकूट (3-4-5 × 2).",
+  "hook_en": "6-8-10 is a Pythagorean triplet (3-4-5 × 2)."
+ },
+ {
+  "id": "reasoning-021",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 1,
+  "q_mr": "एक व्यक्ती उत्तरेकडे तोंड करून उभी आहे. ती घड्याळाच्या दिशेने 90° वळते व नंतर 180° वळते. आता तिचे तोंड कोणत्या दिशेला आहे?",
+  "q_en": "A person faces north, turns 90° clockwise and then 180°. Which direction is the person facing now?",
+  "o_mr": [
+   "पूर्व",
+   "पश्चिम",
+   "दक्षिण",
+   "उत्तर"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "South",
+   "North"
+  ],
+  "a": 1,
+  "e_mr": "1) उत्तर → 90° घड्याळाच्या दिशेने = पूर्व. 2) पूर्व → 180° = पश्चिम. 3) उत्तर: पश्चिम.",
+  "e_en": "1) North → 90° clockwise = east. 2) East → 180° = west. 3) Answer: west.",
+  "hook_mr": "एकूण वळण 270° घड्याळाच्या दिशेने = 90° उलट दिशेने.",
+  "hook_en": "Total 270° clockwise = 90° anticlockwise."
+ },
+ {
+  "id": "reasoning-022",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 2,
+  "q_mr": "सकाळी सूर्योदयानंतर एका व्यक्तीची सावली तिच्या उजव्या बाजूला पडते. ती कोणत्या दिशेला तोंड करून उभी आहे?",
+  "q_en": "In the morning after sunrise, a person's shadow falls to his right. Which direction is he facing?",
+  "o_mr": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिण",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "South",
+   "West"
+  ],
+  "a": 2,
+  "e_mr": "1) सकाळी सूर्य पूर्वेला → सावली पश्चिमेला. 2) पश्चिम उजव्या हाताला आहे. 3) म्हणून तोंड दक्षिणेकडे.",
+  "e_en": "1) Morning sun is in the east → shadow falls west. 2) West is on his right. 3) So he faces south.",
+  "hook_mr": "सकाळी सावली पश्चिमेला, संध्याकाळी पूर्वेला.",
+  "hook_en": "Shadows fall west in the morning, east in the evening."
+ },
+ {
+  "id": "reasoning-023",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 2,
+  "q_mr": "नीता 10 मी दक्षिणेकडे चालते, डावीकडे वळून 20 मी चालते, पुन्हा डावीकडे वळून 10 मी चालते. ती सुरुवातीपासून कोठे आहे?",
+  "q_en": "Neeta walks 10 m south, turns left and walks 20 m, then turns left again and walks 10 m. Where is she from the start?",
+  "o_mr": [
+   "20 मी पूर्व",
+   "20 मी पश्चिम",
+   "10 मी उत्तर",
+   "30 मी पूर्व"
+  ],
+  "o_en": [
+   "20 m east",
+   "20 m west",
+   "10 m north",
+   "30 m east"
+  ],
+  "a": 0,
+  "e_mr": "1) दक्षिणेकडे 10 मी. 2) दक्षिणमुखी असताना डावीकडे = पूर्व, 20 मी. 3) पुन्हा डावीकडे = उत्तर 10 मी → सुरुवातीपासून 20 मी पूर्वेस.",
+  "e_en": "1) South 10 m. 2) Facing south, left = east, 20 m. 3) Left again = north 10 m → 20 m east of start."
+ },
+ {
+  "id": "reasoning-024",
+  "s": "reasoning",
+  "t": "direction",
+  "d": 2,
+  "q_mr": "अमित 4 किमी पूर्वेकडे व नंतर 3 किमी उत्तरेकडे जातो. तो सुरुवातीच्या ठिकाणापासून कोणत्या दिशेला आहे?",
+  "q_en": "Amit walks 4 km east and then 3 km north. In which direction is he from his starting point?",
+  "o_mr": [
+   "वायव्य",
+   "आग्नेय",
+   "ईशान्य",
+   "उत्तर"
+  ],
+  "o_en": [
+   "North-west",
+   "South-east",
+   "North-east",
+   "North"
+  ],
+  "a": 2,
+  "e_mr": "1) तो पूर्वेकडे (+4) आणि उत्तरेकडे (+3) सरकला. 2) दोन्ही धन → उत्तर व पूर्व यांच्या मधली दिशा. 3) ईशान्य (उत्तर-पूर्व), अंतर 5 किमी.",
+  "e_en": "1) He moved east (+4) and north (+3). 2) Both positive → between north and east. 3) North-east, 5 km away."
+ },
+ {
+  "id": "reasoning-025",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "डॉक्टर : रुग्णालय :: शिक्षक : ?",
+  "q_en": "Doctor : Hospital :: Teacher : ?",
+  "o_mr": [
+   "पुस्तक",
+   "विद्यार्थी",
+   "खडू",
+   "शाळा"
+  ],
+  "o_en": [
+   "Book",
+   "Student",
+   "Chalk",
+   "School"
+  ],
+  "a": 3,
+  "e_mr": "1) डॉक्टर रुग्णालयात काम करतो. 2) शिक्षक कोठे काम करतो? 3) शाळा.",
+  "e_en": "1) A doctor works in a hospital. 2) Where does a teacher work? 3) School."
+ },
+ {
+  "id": "reasoning-026",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "समसंबंध ओळखा: 3 : 27 :: 5 : ?",
+  "q_en": "3 : 27 :: 5 : ?",
+  "o_mr": [
+   "125",
+   "25",
+   "15",
+   "625"
+  ],
+  "o_en": [
+   "125",
+   "25",
+   "15",
+   "625"
+  ],
+  "a": 0,
+  "e_mr": "1) 3³ = 27. 2) त्याचप्रमाणे 5³. 3) = 125.",
+  "e_en": "1) 3³ = 27. 2) Similarly 5³. 3) = 125."
+ },
+ {
+  "id": "reasoning-027",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_mr": "समसंबंध ओळखा: ACE : BDF :: GIK : ?",
+  "q_en": "ACE : BDF :: GIK : ?",
+  "o_mr": [
+   "HJL",
+   "HIJ",
+   "HJK",
+   "IKM"
+  ],
+  "o_en": [
+   "HJL",
+   "HIJ",
+   "HJK",
+   "IKM"
+  ],
+  "a": 0,
+  "e_mr": "1) A→B, C→D, E→F: प्रत्येक अक्षर +1. 2) G→H, I→J, K→L. 3) HJL.",
+  "e_en": "1) A→B, C→D, E→F: each letter +1. 2) G→H, I→J, K→L. 3) HJL."
+ },
+ {
+  "id": "reasoning-028",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "समसंबंध ओळखा: 8 : 64 :: 11 : ?",
+  "q_en": "8 : 64 :: 11 : ?",
+  "o_mr": [
+   "111",
+   "132",
+   "110",
+   "121"
+  ],
+  "o_en": [
+   "111",
+   "132",
+   "110",
+   "121"
+  ],
+  "a": 3,
+  "e_mr": "1) 8² = 64. 2) त्याचप्रमाणे 11². 3) = 121.",
+  "e_en": "1) 8² = 64. 2) Similarly 11². 3) = 121."
+ },
+ {
+  "id": "reasoning-029",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "डोळा : पाहणे :: कान : ?",
+  "q_en": "Eye : See :: Ear : ?",
+  "o_mr": [
+   "ऐकणे",
+   "आवाज",
+   "संगीत",
+   "बोलणे"
+  ],
+  "o_en": [
+   "Hear",
+   "Sound",
+   "Music",
+   "Speak"
+  ],
+  "a": 0,
+  "e_mr": "1) डोळ्याचे कार्य पाहणे. 2) कानाचे कार्य? 3) ऐकणे.",
+  "e_en": "1) The function of the eye is to see. 2) Function of the ear? 3) Hear."
+ },
+ {
+  "id": "reasoning-030",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_mr": "गाय : वासरू :: कुत्रा : ?",
+  "q_en": "Cow : Calf :: Dog : ?",
+  "o_mr": [
+   "मांजराचे पिल्लू (किटन)",
+   "पिल्लू (पपी)",
+   "छावा (कब)",
+   "शिंगरू (फोल)"
+  ],
+  "o_en": [
+   "Kitten",
+   "Puppy",
+   "Cub",
+   "Foal"
+  ],
+  "a": 1,
+  "e_mr": "1) गायीचे पिल्लू वासरू. 2) कुत्र्याचे पिल्लू? 3) पिल्लू (puppy).",
+  "e_en": "1) The young of a cow is a calf. 2) The young of a dog? 3) Puppy."
+ },
+ {
+  "id": "reasoning-031",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 1,
+  "q_mr": "वेगळा पर्याय ओळखा.",
+  "q_en": "Find the odd one out.",
+  "o_mr": [
+   "3",
+   "5",
+   "7",
+   "9"
+  ],
+  "o_en": [
+   "3",
+   "5",
+   "7",
+   "9"
+  ],
+  "a": 3,
+  "e_mr": "1) 3, 5, 7 या मूळ संख्या आहेत. 2) 9 = 3 × 3. 3) 9 ही मूळ संख्या नाही.",
+  "e_en": "1) 3, 5, 7 are primes. 2) 9 = 3 × 3. 3) 9 is not prime."
+ },
+ {
+  "id": "reasoning-032",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 1,
+  "q_mr": "वेगळा पर्याय ओळखा.",
+  "q_en": "Find the odd one out.",
+  "o_mr": [
+   "16",
+   "64",
+   "48",
+   "36"
+  ],
+  "o_en": [
+   "16",
+   "64",
+   "48",
+   "36"
+  ],
+  "a": 2,
+  "e_mr": "1) 16 = 4², 64 = 8², 36 = 6². 2) 48 हा पूर्ण वर्ग नाही. 3) उत्तर 48.",
+  "e_en": "1) 16 = 4², 64 = 8², 36 = 6². 2) 48 is not a perfect square. 3) Answer 48."
+ },
+ {
+  "id": "reasoning-033",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 1,
+  "q_mr": "वेगळा पर्याय ओळखा.",
+  "q_en": "Find the odd one out.",
+  "o_mr": [
+   "गुलाब",
+   "कमळ",
+   "आंबा",
+   "मोगरा"
+  ],
+  "o_en": [
+   "Rose",
+   "Lotus",
+   "Mango",
+   "Jasmine"
+  ],
+  "a": 2,
+  "e_mr": "1) गुलाब, कमळ, मोगरा ही फुले आहेत. 2) आंबा हे फळ आहे. 3) उत्तर आंबा.",
+  "e_en": "1) Rose, lotus and jasmine are flowers. 2) Mango is a fruit. 3) Answer: mango."
+ },
+ {
+  "id": "reasoning-034",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 1,
+  "q_mr": "वेगळा पर्याय ओळखा.",
+  "q_en": "Find the odd one out.",
+  "o_mr": [
+   "पुणे",
+   "नाशिक",
+   "कोल्हापूर",
+   "इंदूर"
+  ],
+  "o_en": [
+   "Pune",
+   "Nashik",
+   "Kolhapur",
+   "Indore"
+  ],
+  "a": 3,
+  "e_mr": "1) पुणे, नाशिक, कोल्हापूर ही महाराष्ट्रातील शहरे आहेत. 2) इंदूर मध्य प्रदेशात आहे. 3) उत्तर: इंदूर.",
+  "e_en": "1) Pune, Nashik, Kolhapur are in Maharashtra. 2) Indore is in Madhya Pradesh. 3) Answer: Indore."
+ },
+ {
+  "id": "reasoning-035",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 2,
+  "q_mr": "वेगळा पर्याय ओळखा.",
+  "q_en": "Find the odd one out.",
+  "o_mr": [
+   "ACE",
+   "BDF",
+   "GIK",
+   "MOR"
+  ],
+  "o_en": [
+   "ACE",
+   "BDF",
+   "GIK",
+   "MOR"
+  ],
+  "a": 3,
+  "e_mr": "1) ACE, BDF, GIK: अक्षरांमध्ये +2, +2 अंतर. 2) MOR: +2, +3. 3) उत्तर MOR.",
+  "e_en": "1) ACE, BDF, GIK: gaps +2, +2. 2) MOR: +2, +3. 3) Answer MOR."
+ },
+ {
+  "id": "reasoning-036",
+  "s": "reasoning",
+  "t": "odd",
+  "d": 2,
+  "q_mr": "वेगळा पर्याय ओळखा.",
+  "q_en": "Find the odd one out.",
+  "o_mr": [
+   "27",
+   "343",
+   "150",
+   "125"
+  ],
+  "o_en": [
+   "27",
+   "343",
+   "150",
+   "125"
+  ],
+  "a": 2,
+  "e_mr": "1) 27 = 3³, 343 = 7³, 125 = 5³. 2) 150 हा पूर्ण घन नाही. 3) उत्तर 150.",
+  "e_en": "1) 27 = 3³, 343 = 7³, 125 = 5³. 2) 150 is not a perfect cube. 3) Answer 150."
+ },
+ {
+  "id": "reasoning-037",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "15 ऑगस्ट 1947 रोजी कोणता वार होता?",
+  "q_en": "What day of the week was 15 August 1947?",
+  "o_mr": [
+   "गुरुवार",
+   "शनिवार",
+   "शुक्रवार",
+   "रविवार"
+  ],
+  "o_en": [
+   "Thursday",
+   "Saturday",
+   "Friday",
+   "Sunday"
+  ],
+  "a": 2,
+  "e_mr": "1) 1600 नंतर 300 वर्षे (1900 पर्यंत) = 1 विषम दिवस; 1901–1946 (46 वर्षे, 11 लीप) = 46 + 11 = 57 → 1 विषम दिवस. 2) 1947 मध्ये 15 ऑगस्टपर्यंत दिवस = 227 → 3 विषम दिवस. 3) एकूण 0 + 1 + 1 + 3 = 5 → शुक्रवार.",
+  "e_en": "1) Years up to 1900 give 1 odd day; 1901–1946 (46 years, 11 leap) = 57 → 1 odd day. 2) Days in 1947 up to 15 Aug = 227 → 3 odd days. 3) Total 1 + 1 + 3 = 5 → Friday.",
+  "fact_mr": "भारताचा पहिला स्वातंत्र्यदिन शुक्रवारी होता.",
+  "fact_en": "India's first Independence Day fell on a Friday."
+ },
+ {
+  "id": "reasoning-038",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "3 वाजून 40 मिनिटांनी घड्याळाच्या तास व मिनिट काट्यांमधील कोन किती?",
+  "q_en": "What is the angle between the hour and minute hands at 3:40?",
+  "o_mr": [
+   "120°",
+   "140°",
+   "150°",
+   "130°"
+  ],
+  "o_en": [
+   "120°",
+   "140°",
+   "150°",
+   "130°"
+  ],
+  "a": 3,
+  "e_mr": "1) कोन = |30H − 5.5M|. 2) = |90 − 220|. 3) = 130°.",
+  "e_en": "1) Angle = |30H − 5.5M|. 2) = |90 − 220|. 3) = 130°.",
+  "hook_mr": "सूत्र: θ = |30H − 11M/2|; 180° पेक्षा जास्त आल्यास 360 मधून वजा करा.",
+  "hook_en": "Formula: θ = |30H − 11M/2|; if above 180°, subtract from 360."
+ },
+ {
+  "id": "reasoning-039",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 1,
+  "q_mr": "आज सोमवार आहे, तर 61 दिवसांनंतर कोणता वार असेल?",
+  "q_en": "Today is Monday. What day will it be after 61 days?",
+  "o_mr": [
+   "शुक्रवार",
+   "शनिवार",
+   "रविवार",
+   "गुरुवार"
+  ],
+  "o_en": [
+   "Friday",
+   "Saturday",
+   "Sunday",
+   "Thursday"
+  ],
+  "a": 1,
+  "e_mr": "1) 61 ÷ 7 = 8 आठवडे, बाकी 5. 2) सोमवार + 5 दिवस. 3) शनिवार.",
+  "e_en": "1) 61 ÷ 7 = 8 weeks, remainder 5. 2) Monday + 5 days. 3) Saturday.",
+  "hook_mr": "फक्त 7 ने भागून बाकी (विषम दिवस) मोजा.",
+  "hook_en": "Only the remainder after dividing by 7 (odd days) matters."
+ },
+ {
+  "id": "reasoning-040",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 1,
+  "q_mr": "लीप वर्षात किती विषम दिवस असतात?",
+  "q_en": "How many odd days are there in a leap year?",
+  "o_mr": [
+   "2",
+   "1",
+   "0",
+   "3"
+  ],
+  "o_en": [
+   "2",
+   "1",
+   "0",
+   "3"
+  ],
+  "a": 0,
+  "e_mr": "1) लीप वर्षात 366 दिवस. 2) 366 = 52 आठवडे + 2 दिवस. 3) विषम दिवस = 2.",
+  "e_en": "1) A leap year has 366 days. 2) 366 = 52 weeks + 2 days. 3) Odd days = 2.",
+  "hook_mr": "साधारण वर्ष = 1 विषम दिवस, लीप वर्ष = 2.",
+  "hook_en": "Ordinary year = 1 odd day, leap year = 2."
+ },
+ {
+  "id": "reasoning-041",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 2,
+  "q_mr": "26 जानेवारी 1950 (भारताचे संविधान लागू झाले) रोजी कोणता वार होता?",
+  "q_en": "On what day of the week did 26 January 1950 (Constitution of India came into force) fall?",
+  "o_mr": [
+   "बुधवार",
+   "शुक्रवार",
+   "गुरुवार",
+   "शनिवार"
+  ],
+  "o_en": [
+   "Wednesday",
+   "Friday",
+   "Thursday",
+   "Saturday"
+  ],
+  "a": 2,
+  "e_mr": "1) 1900 पर्यंत 1 विषम दिवस; 1901–1949 (49 वर्षे, 12 लीप) = 61 → 5 विषम दिवस. 2) 1950 मधील 26 दिवस → 5 विषम दिवस. 3) एकूण 1 + 5 + 5 = 11 → 4 → गुरुवार.",
+  "e_en": "1) Up to 1900: 1 odd day; 1901–1949 (49 years, 12 leap) = 61 → 5 odd days. 2) 26 days of 1950 → 5 odd days. 3) Total 11 → 4 → Thursday.",
+  "fact_mr": "भारताचा पहिला प्रजासत्ताक दिन गुरुवारी होता.",
+  "fact_en": "India's first Republic Day fell on a Thursday."
+ },
+ {
+  "id": "reasoning-042",
+  "s": "reasoning",
+  "t": "calendar",
+  "d": 3,
+  "q_mr": "2026 या वर्षाची दिनदर्शिका पुन्हा जशीच्या तशी कोणत्या वर्षी वापरता येईल?",
+  "q_en": "In which year will the calendar of 2026 be repeated exactly?",
+  "o_mr": [
+   "2032",
+   "2037",
+   "2036",
+   "2031"
+  ],
+  "o_en": [
+   "2032",
+   "2037",
+   "2036",
+   "2031"
+  ],
+  "a": 1,
+  "e_mr": "1) 2026 हे साधारण वर्ष; विषम दिवसांची बेरीज 0 (mod 7) व्हायला हवी. 2) 2026(1)+2027(1)+2028(2)+2029(1)+2030(1)+2031(1)+2032(2)+2033(1)+2034(1)+2035(1)+2036(2) = 14 ≡ 0. 3) म्हणून 2037 (साधारण वर्ष, 1 जानेवारी गुरुवार).",
+  "e_en": "1) 2026 is ordinary; cumulative odd days must reach 0 mod 7. 2) 2026 to 2036 odd days: 1+1+2+1+1+1+2+1+1+1+2 = 14 ≡ 0. 3) So 2037 (ordinary, starts Thursday).",
+  "hook_mr": "लीप वर्षानंतरच्या पहिल्या वर्षासाठी (उदा. 2025) +6; इतर साधारण वर्षांसाठी सहसा +11 (2026 → 2037).",
+  "hook_en": "For the year after a leap year add 6; for other ordinary years usually add 11 (2026 → 2037)."
+ },
+ {
+  "id": "reasoning-043",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 1,
+  "q_mr": "एका रांगेत राम वरून 12 वा व खालून 18 वा आहे. रांगेत एकूण किती व्यक्ती आहेत?",
+  "q_en": "In a row, Ram is 12th from the top and 18th from the bottom. How many people are in the row?",
+  "o_mr": [
+   "30",
+   "28",
+   "29",
+   "31"
+  ],
+  "o_en": [
+   "30",
+   "28",
+   "29",
+   "31"
+  ],
+  "a": 2,
+  "e_mr": "1) एकूण = वरून स्थान + खालून स्थान − 1. 2) = 12 + 18 − 1. 3) = 29.",
+  "e_en": "1) Total = rank from top + rank from bottom − 1. 2) = 12 + 18 − 1. 3) = 29.",
+  "hook_mr": "राम दोन्ही बाजूंनी मोजला गेल्यामुळे 1 वजा करा.",
+  "hook_en": "Subtract 1 because Ram is counted twice."
+ },
+ {
+  "id": "reasoning-044",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 1,
+  "q_mr": "40 विद्यार्थ्यांच्या वर्गात सीमाचा वरून 15 वा क्रमांक आहे. खालून तिचा क्रमांक किती?",
+  "q_en": "In a class of 40 students, Seema ranks 15th from the top. What is her rank from the bottom?",
+  "o_mr": [
+   "26",
+   "25",
+   "27",
+   "24"
+  ],
+  "o_en": [
+   "26",
+   "25",
+   "27",
+   "24"
+  ],
+  "a": 0,
+  "e_mr": "1) खालून क्रमांक = एकूण − वरून क्रमांक + 1. 2) = 40 − 15 + 1. 3) = 26.",
+  "e_en": "1) Rank from bottom = total − rank from top + 1. 2) = 40 − 15 + 1. 3) = 26."
+ },
+ {
+  "id": "reasoning-045",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 1,
+  "q_mr": "A हा B पेक्षा उंच आहे, B हा C पेक्षा उंच आहे आणि D हा A पेक्षा उंच आहे. सर्वात उंच कोण?",
+  "q_en": "A is taller than B, B is taller than C, and D is taller than A. Who is the tallest?",
+  "o_mr": [
+   "A",
+   "B",
+   "D",
+   "C"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "D",
+   "C"
+  ],
+  "a": 2,
+  "e_mr": "1) A > B > C. 2) D > A. 3) D > A > B > C → सर्वात उंच D.",
+  "e_en": "1) A > B > C. 2) D > A. 3) D > A > B > C → D is tallest."
+ },
+ {
+  "id": "reasoning-046",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 2,
+  "q_mr": "एका रांगेत A डावीकडून 7 वा व B उजवीकडून 10 वा आहे. त्यांनी जागांची अदलाबदल केल्यावर A डावीकडून 15 वा होतो. रांगेत एकूण किती व्यक्ती आहेत?",
+  "q_en": "In a row, A is 7th from the left and B is 10th from the right. On interchanging positions, A becomes 15th from the left. How many people are in the row?",
+  "o_mr": [
+   "24",
+   "25",
+   "23",
+   "22"
+  ],
+  "o_en": [
+   "24",
+   "25",
+   "23",
+   "22"
+  ],
+  "a": 0,
+  "e_mr": "1) अदलाबदलीनंतर A हा B च्या जागी → डावीकडून 15 वा व उजवीकडून 10 वा. 2) एकूण = 15 + 10 − 1. 3) = 24.",
+  "e_en": "1) After swapping, A takes B's place → 15th from left and 10th from right. 2) Total = 15 + 10 − 1. 3) = 24.",
+  "hook_mr": "नव्या जागेचे डावे स्थान + B चे जुने उजवे स्थान − 1.",
+  "hook_en": "New left position + B's old right position − 1."
+ },
+ {
+  "id": "reasoning-047",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 2,
+  "q_mr": "P, Q, R, S, T हे उत्तरेकडे तोंड करून एका ओळीत बसले आहेत. Q मध्यभागी आहे. R हा Q च्या लगेच डावीकडे आहे. T उजव्या टोकाला आहे. S हा Q व T यांच्यामध्ये आहे. डाव्या टोकाला कोण आहे?",
+  "q_en": "P, Q, R, S, T sit in a row facing north. Q is in the middle. R is immediately left of Q. T is at the right end. S is between Q and T. Who is at the left end?",
+  "o_mr": [
+   "R",
+   "P",
+   "S",
+   "T"
+  ],
+  "o_en": [
+   "R",
+   "P",
+   "S",
+   "T"
+  ],
+  "a": 1,
+  "e_mr": "1) 5 जागा: Q तिसऱ्या जागी, T पाचव्या. 2) R दुसऱ्या, S चौथ्या जागी. 3) उरलेली पहिली जागा → P. (क्रम: P R Q S T)",
+  "e_en": "1) 5 seats: Q 3rd, T 5th. 2) R 2nd, S 4th. 3) The remaining 1st seat → P. (Order: P R Q S T)"
+ },
+ {
+  "id": "reasoning-048",
+  "s": "reasoning",
+  "t": "ranking",
+  "d": 1,
+  "q_mr": "30 जणांच्या रांगेत A पुढून 10 वा व B पुढून 25 वा आहे. A व B यांच्यामध्ये किती व्यक्ती आहेत?",
+  "q_en": "In a queue of 30, A is 10th from the front and B is 25th from the front. How many people are between A and B?",
+  "o_mr": [
+   "15",
+   "13",
+   "16",
+   "14"
+  ],
+  "o_en": [
+   "15",
+   "13",
+   "16",
+   "14"
+  ],
+  "a": 3,
+  "e_mr": "1) स्थानांतील फरक = 25 − 10 = 15. 2) मध्ये असलेले = फरक − 1. 3) = 14.",
+  "e_en": "1) Difference in positions = 25 − 10 = 15. 2) People between = difference − 1. 3) = 14."
+ },
+ {
+  "id": "reasoning-049",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_mr": "विधाने: सर्व मांजरी प्राणी आहेत. सर्व प्राणी सजीव आहेत. यावरून कोणता निष्कर्ष निश्चितपणे निघतो?",
+  "q_en": "Statements: All cats are animals. All animals are living beings. Which conclusion definitely follows?",
+  "o_mr": [
+   "सर्व सजीव मांजरी आहेत",
+   "कोणतीही मांजर सजीव नाही",
+   "काही सजीव प्राणी नाहीत",
+   "सर्व मांजरी सजीव आहेत"
+  ],
+  "o_en": [
+   "All living beings are cats",
+   "No cat is a living being",
+   "Some living beings are not animals",
+   "All cats are living beings"
+  ],
+  "a": 3,
+  "e_mr": "1) मांजरी ⊂ प्राणी. 2) प्राणी ⊂ सजीव. 3) म्हणून मांजरी ⊂ सजीव → सर्व मांजरी सजीव आहेत.",
+  "e_en": "1) Cats ⊂ animals. 2) Animals ⊂ living beings. 3) So cats ⊂ living → all cats are living beings.",
+  "hook_mr": "\"सर्व\" + \"सर्व\" = \"सर्व\" (पहिल्या पदापासून तिसऱ्यापर्यंत).",
+  "hook_en": "All + All = All (from first term to last)."
+ },
+ {
+  "id": "reasoning-050",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_mr": "विधाने: काही पेन पुस्तके आहेत. सर्व पुस्तके कागद आहेत. निष्कर्ष: I. काही पेन कागद आहेत. II. सर्व कागद पेन आहेत.",
+  "q_en": "Statements: Some pens are books. All books are papers. Conclusions: I. Some pens are papers. II. All papers are pens.",
+  "o_mr": [
+   "फक्त II अनुसरते",
+   "फक्त I अनुसरते",
+   "I व II दोन्ही अनुसरतात",
+   "I व II पैकी एकही अनुसरत नाही"
+  ],
+  "o_en": [
+   "Only II follows",
+   "Only I follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 1,
+  "e_mr": "1) जे पेन पुस्तके आहेत ते कागदही आहेत → I अनुसरते. 2) सर्व कागद पेन असतील असे निश्चित नाही → II अनुसरत नाही. 3) फक्त I.",
+  "e_en": "1) Pens that are books are also papers → I follows. 2) Nothing says all papers are pens → II does not. 3) Only I.",
+  "hook_mr": "\"काही\" + \"सर्व\" = \"काही\".",
+  "hook_en": "Some + All = Some."
+ },
+ {
+  "id": "reasoning-051",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_mr": "विधाने: सर्व गुलाब फुले आहेत. कोणतेही फूल झाड नाही. निष्कर्ष: I. कोणताही गुलाब झाड नाही. II. काही झाडे गुलाब आहेत.",
+  "q_en": "Statements: All roses are flowers. No flower is a tree. Conclusions: I. No rose is a tree. II. Some trees are roses.",
+  "o_mr": [
+   "फक्त I अनुसरते",
+   "फक्त II अनुसरते",
+   "I व II दोन्ही अनुसरतात",
+   "I व II पैकी एकही अनुसरत नाही"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both I and II follow",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_mr": "1) गुलाब पूर्णपणे फुलांच्या गटात. 2) फुले व झाडे यांचा काहीही संबंध नाही. 3) म्हणून गुलाब व झाडे वेगळे → फक्त I.",
+  "e_en": "1) Roses lie wholly inside flowers. 2) Flowers and trees don't overlap. 3) So roses and trees don't overlap → only I.",
+  "hook_mr": "\"सर्व\" + \"कोणताही नाही\" = \"कोणताही नाही\".",
+  "hook_en": "All + No = No."
+ },
+ {
+  "id": "reasoning-052",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_mr": "विधाने: कोणताही A हा B नाही. सर्व B हे C आहेत. निष्कर्ष: I. काही C हे A नाहीत. II. कोणताही A हा C नाही.",
+  "q_en": "Statements: No A is B. All B are C. Conclusions: I. Some C are not A. II. No A is C.",
+  "o_mr": [
+   "फक्त II अनुसरते",
+   "I व II दोन्ही अनुसरतात",
+   "फक्त I अनुसरते",
+   "I व II पैकी एकही अनुसरत नाही"
+  ],
+  "o_en": [
+   "Only II follows",
+   "Both I and II follow",
+   "Only I follows",
+   "Neither I nor II follows"
+  ],
+  "a": 2,
+  "e_mr": "1) जे C हे B आहेत ते A नाहीत → I अनुसरते. 2) A व C यांचा काही भाग सामायिक असू शकतो → II निश्चित नाही. 3) फक्त I.",
+  "e_en": "1) The C's that are B are not A → I follows. 2) A and C may still overlap → II is not certain. 3) Only I.",
+  "hook_mr": "\"कोणताही नाही\" + \"सर्व\" → \"काही … नाहीत\" (उलट दिशेने).",
+  "hook_en": "No + All → Some … are not (in reverse)."
+ },
+ {
+  "id": "reasoning-053",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_mr": "विधाने: काही पक्षी मांजरी आहेत. काही मांजरी कुत्री आहेत. निष्कर्ष: I. काही पक्षी कुत्री आहेत. II. कोणताही पक्षी कुत्रा नाही.",
+  "q_en": "Statements: Some birds are cats. Some cats are dogs. Conclusions: I. Some birds are dogs. II. No bird is a dog.",
+  "o_mr": [
+   "फक्त I अनुसरते",
+   "I व II दोन्ही अनुसरतात",
+   "फक्त II अनुसरते",
+   "I किंवा II अनुसरते"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Both I and II follow",
+   "Only II follows",
+   "Either I or II follows"
+  ],
+  "a": 3,
+  "e_mr": "1) \"काही\" + \"काही\" यावरून निश्चित निष्कर्ष नाही. 2) पण I व II परस्परविरोधी (पूरक) जोडी आहे — दोन्हीपैकी एक नक्की खरे. 3) उत्तर: I किंवा II.",
+  "e_en": "1) Some + Some gives no definite conclusion. 2) But I and II form a complementary pair — exactly one must be true. 3) Answer: either I or II.",
+  "hook_mr": "\"काही\" व \"कोणताही नाही\" हे एकाच पदांबद्दल असतील तर \"किंवा\" पर्याय निवडा.",
+  "hook_en": "If 'some' and 'no' concern the same two terms, choose 'either I or II'."
+ },
+ {
+  "id": "reasoning-054",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_mr": "जर पाऊस पडला तर जमीन ओली होते. आज जमीन ओली नाही. यावरून कोणता निष्कर्ष निघतो?",
+  "q_en": "If it rains, the ground gets wet. Today the ground is not wet. What can be concluded?",
+  "o_mr": [
+   "आज पाऊस पडला",
+   "निश्चित सांगता येत नाही",
+   "आज पाऊस पडला नाही",
+   "जमीन उन्हामुळे कोरडी आहे"
+  ],
+  "o_en": [
+   "It rained today",
+   "Cannot be determined",
+   "It did not rain today",
+   "The ground is dry due to sunshine"
+  ],
+  "a": 2,
+  "e_mr": "1) पाऊस → ओली जमीन. 2) जमीन ओली नाही. 3) म्हणून पाऊस पडला नाही (प्रतिधन नियम).",
+  "e_en": "1) Rain → wet ground. 2) The ground is not wet. 3) Therefore it did not rain (modus tollens).",
+  "hook_mr": "'जर P तर Q' व 'Q नाही' ⇒ 'P नाही'. पण 'Q' वरून 'P' निघत नाही.",
+  "hook_en": "'If P then Q' and 'not Q' ⇒ 'not P'. But 'Q' alone does not imply 'P'."
+ }
+]
