@@ -42,6 +42,13 @@ Add GitHub repo secrets: `ANDROID_KEYSTORE_BASE64` (contents of upload.jks.b64),
 - [ ] Add the secret `ANTHROPIC_API_KEY` (set a monthly spend limit in the Anthropic console; expected cost ≈ ₹500/month).
 - [ ] Every morning at 06:00 IST a PR with verified questions appears. Review the source links and merge; publishing is automatic.
 
+## 6c. Bulk question generation at lower cost (open-source draft model)
+- [ ] `pipeline/generate_questions.py` drafts questions with a cheap/free open-source model and verifies every one with Claude before it ships (two passes: blind-solve + fact/ambiguity critique, same pattern as §6's daily current-affairs job). Only Claude tokens for verification are billed; drafting is free or near-free.
+- [ ] Get a free API key at **console.groq.com** (default provider — fast, generous free tier, good enough for first-draft MCQ text that Claude then checks) and add it as the secret `GROQ_API_KEY`. `TOGETHER_API_KEY` / `OPENROUTER_API_KEY` / `DEEPINFRA_API_KEY` also work if you set `DRAFT_PROVIDER` to match (see `pipeline/draft_llm.py`).
+- [ ] Without any of those keys set, the script still works — it falls back to drafting with Claude too, just at higher token cost.
+- [ ] Run it per subject/topic, e.g.: `python3 pipeline/generate_questions.py --subject marathi --topic sandhi --count 200 --difficulty 2`. Rejected drafts (failed verification) print to stderr with a reason; only verified items are appended to `content/bank/<subject>.json`.
+- [ ] After a run: `python3 pipeline/validate.py && python3 pipeline/check_duplicates.py && python3 pipeline/build_bundle.py`, then `flutter analyze && flutter test` in `app/` before committing.
+
 ## 6b. Ads (revenue — do this once traction is proven, not before)
 - [ ] Create an AdMob account at admob.google.com, link it to the Play app once it's live (needs a real package/store listing first).
 - [ ] Create one **rewarded** ad unit and, if you want it, one **native** ad unit for the Reel's placeholder slots (`app/lib/screens/reel_screen.dart`, `_adSlotCard()` — every 8th card in the Reel; Daily 10/mocks/practice stay ad-free by design).
