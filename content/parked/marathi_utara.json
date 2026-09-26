@@ -22,5 +22,533 @@
    "e_mr": "उताऱ्यात गणपतच्या वस्तू लगेच विकल्या जात होत्या, याचा अर्थ त्या 'हातोहात खपायच्या'. त्यामुळे 'एखादी वस्तू अत्यंत वेगाने विकली जाणे' हा अर्थ योग्य आहे.",
    "e_en": "The passage states that Ganpat's items sold out quickly, implying they were sold 'हातोहात खपायच्या'. Therefore, 'An item being sold very quickly' is the correct meaning."
   }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "उताऱ्यात नमूद केल्याप्रमाणे, आजच्या धावपळीच्या युगात लोक आपला बहुतांश वेळ कशावर खर्च करतात?",
+   "q_en": "As mentioned in the passage, in today's hurried life, where do people spend most of their time?",
+   "o_mr": [
+    "मोठ्या कादंबऱ्या वाचण्यात",
+    "संशोधन निबंध लिहिण्यात",
+    "लहान संदेश आणि व्हिडिओ क्लिप्स पाहण्यात",
+    "ग्रंथालयात अभ्यास करण्यात"
+   ],
+   "o_en": [
+    "Reading long novels",
+    "Writing research papers",
+    "Spending time on short messages and video clips",
+    "Studying in the library"
+   ],
+   "a": 2,
+   "e_mr": "उताऱ्यात उल्लेख आहे की आजच्या धावपळीच्या जीवनात अनेक लोक लहान संदेश आणि व्हिडिओ क्लिप्सवर वेळ घालवतात.",
+   "e_en": "The passage mentions that in today's hurried life many people spend their time on short messages and video clips."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=1, confident=False)",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "उताऱ्याच्या आधारे सांगा, दररोज किमान किती वेळ एकाग्रतेने वाचन केल्यास स्पर्धा परीक्षांसारख्या आव्हानांसाठी मन तयार होते?",
+   "q_en": "Based on the passage, reading with concentration for at least how long every day prepares the mind for challenges such as competitive exams?",
+   "o_mr": [
+    "पंधरा मिनिटे",
+    "अर्धा तास",
+    "दोन तास",
+    "पाच तास"
+   ],
+   "o_en": [
+    "Fifteen minutes",
+    "Half an hour",
+    "Two hours",
+    "Five hours"
+   ],
+   "a": 1,
+   "e_mr": "उताऱ्यात सांगितल्यानुसार दररोज किमान अर्धा तास एकाग्रतेने वाचन केल्याने शब्दसंपत्ती वाढते आणि स्पर्धा परीक्षांच्या आव्हानांसाठी मन तयार होते.",
+   "e_en": "According to the passage, reading with concentration for at least half an hour a day enlarges vocabulary and prepares the mind for competitive exams."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "पश्‍चिम घाटाच्या जंगलांना कशामध्ये 'रत्नांचं भांडार' (treasure-house of biodiversity) म्हटले गेले आहे?",
+   "q_en": "Why are the forests of the Western Ghats called a 'treasure-house of biodiversity'?",
+   "o_mr": [
+    "तेथे मौल्यवान हिरे आणि सोन्याच्या खणी आहेत.",
+    "तिथे असंख्य वनस्पती, पक्षी, फुलपाखरे आणि उभयचर आढळतात.",
+    "तिथे मोठ्या प्रमाणात व्यापारी कारखाने आहेत.",
+    "तिथे अतिशय महागडे लाकूड मिळते."
+   ],
+   "o_en": [
+    "There are valuable diamond and gold mines there.",
+    "Countless plants, birds, butterflies and amphibians are found there.",
+    "There are large-scale commercial factories there.",
+    "Very expensive timber is found there."
+   ],
+   "a": 1,
+   "e_mr": "पश्‍चिम घाटाच्या जंगलात असंख्य वनस्पती, पक्षी, फुलपाखरे आणि उभयचर आढळत असल्याने त्यांना जैवविविधतेचे भांडार म्हटले आहे.",
+   "e_en": "The forests of the Western Ghats are called a treasure-house because countless plants, birds, butterflies, and amphibians are found here."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "पश्‍चिम घाटाचे रक्षण करण्यासाठी तज्ज्ञांच्या मते कोणता उपाय योग्य आहे?",
+   "q_en": "According to experts, what is the right approach to protect the Western Ghats?",
+   "o_mr": [
+    "विकास पूर्णपणे बंद करणे",
+    "जंगलात माणसांचा प्रवेश सक्तीने प्रतिबंधित करणे",
+    "विकास निसर्गाच्या संवादात (harmony) राखणे",
+    "सर्व जंगलांचे खाजगीकरण करणे"
+   ],
+   "o_en": [
+    "Stopping development completely",
+    "Strictly restricting human entry into the forest",
+    "Keeping development in harmony with nature",
+    "Privatizing all forests"
+   ],
+   "a": 2,
+   "e_mr": "तज्ज्ञांच्या मते विकास थांबवणे हा उपाय नसून तो निसर्गाच्या संसंगतीत किंवा सुसंवादात राखला पाहिजे.",
+   "e_en": "According to experts, stopping development is not the solution; it must be kept in harmony with nature."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "गणपतचे वाक्य 'माती तीच, हात तेही; मी फक्त काळाची गरज ओळखली' याचा अर्थ काय?",
+   "q_en": "What does Ganpat's statement 'the clay is the same, the hands are the same; I only recognised the need of the times' imply?",
+   "o_mr": [
+    "उत्पादन पद्धतीत बदल न करता जुन्याच पद्धतीने काम चालू ठेवले.",
+    "कला तीच ठेवून आधुनिक युगाच्या गरजेनुसार व बाजारपेठेनुसार वस्तूंमध्ये बदल केला.",
+    "त्याने कारागीर बदलले पण माती तीच ठेवली.",
+    "त्याने व्यवसाय पूर्णपणे बंद करून शेती सुरू केली."
+   ],
+   "o_en": [
+    "He continued working in the old way without any changes.",
+    "Keeping the core art, he adapted products according to modern needs and market demands.",
+    "He changed the craftsmen but kept the clay same.",
+    "He closed the business and started farming."
+   ],
+   "a": 1,
+   "e_mr": "या वाक्याचा अर्थ असा आहे की त्याचे कौशल्य व कारागिरी तीच होती, पण त्याने काळाची पावले ओळखून नव्या स्वरूपातील उत्पादने तयार केली.",
+   "e_en": "It implies that while his core skill and craft remained the same, he adapted his products to suit contemporary market demands."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "उताऱ्यानुसार, जर स्थानिक लोकांना वनसंरक्षणामध्ये सामील करून घेतले, तर काय साध्य होऊ शकते?",
+   "q_en": "According to the passage, if local communities are involved in forest conservation, what can be achieved?",
+   "o_mr": [
+    "फक्त जंगलाचा फायदा होईल, लोकांचे नुकसान होईल.",
+    "फक्त माणसांचे हित जपता येईल, जंगलाचा नाश होईल.",
+    "जंगल आणि लोक या दोघांचेही हित साध्य होईल.",
+    "कोणाचेही हित साध्य होणार नाही."
+   ],
+   "o_en": [
+    "Only the forest will benefit, people will suffer.",
+    "Only human interests will be served, forest will be destroyed.",
+    "The interests of both the forest and people can be served.",
+    "No one's interests will be served."
+   ],
+   "a": 2,
+   "e_mr": "उताऱ्यात स्पष्ट म्हटले आहे की स्थानिक लोकांना सहभागी केल्यास जंगल आणि लोक या दोन्हीचे हित साधले जाऊ शकते.",
+   "e_en": "The passage clearly states that involving local communities can serve the interests of both the forest and the people."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "पश्चिम घाटातील नद्या कोणत्या ऋतूत महाराष्ट्रातील कोटी लोकांची तहान भागवतात?",
+   "q_en": "During which season do the rivers flowing from the Western Ghats quench the thirst of crores of people in Maharashtra?",
+   "o_mr": [
+    "उन्हाळ्यात",
+    "हिवाळ्यात",
+    "पावसाळ्यात (monsoon)",
+    "सर्व ऋतूंमध्ये समान प्रमाणात"
+   ],
+   "o_en": [
+    "In summer",
+    "In winter",
+    "In the monsoon",
+    "Equally in all seasons"
+   ],
+   "a": 2,
+   "e_mr": "उताऱ्यात उल्लेख आहे की पावसाळ्यात या टेकड्यांवरून वाहणाऱ्या नद्या करोडो लोकांची तहान भागवतात.",
+   "e_en": "The passage mentions that in the monsoon, rivers flowing from these hills quench the thirst of crores of people."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "उताऱ्यामध्ये वाचनाचे वर्णन केवळ माहिती गोळा करण्याचे साधन नसून कशाची मशागत म्हणून केले आहे?",
+   "q_en": "According to the passage, reading is not merely an act of gathering information; it is the cultivation of what?",
+   "o_mr": [
+    "मनाची",
+    "शरीराची",
+    "भाषेची",
+    "बुद्धीची"
+   ],
+   "o_en": [
+    "The mind",
+    "The body",
+    "The language",
+    "The intellect"
+   ],
+   "a": 0,
+   "e_mr": "उताऱ्याच्या सुरुवातीलाच स्पष्ट म्हटले आहे की वाचन हे मनाची मशागत (cultivation of the mind) आहे.",
+   "e_en": "The passage clearly states at the beginning that reading is the cultivation of the mind."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "पश्चिम घाटाच्या जंगलांना काय म्हटले गेले आहे?",
+   "q_en": "What are the forests of the Western Ghats called in the passage?",
+   "o_mr": [
+    "जैवविविधतेचे भांडार",
+    "खनिजांचे भांडार",
+    "फळांचे मळे",
+    "कापसाचे आगार"
+   ],
+   "o_en": [
+    "A treasure-house of biodiversity",
+    "A treasure of minerals",
+    "Fruit orchards",
+    "Cotton repository"
+   ],
+   "a": 0,
+   "e_mr": "पश्चिम घाटाच्या जंगलांना जैवविविधतेचे भांडार (treasure-house of biodiversity) म्हटले आहे.",
+   "e_en": "The forests of the Western Ghats are called a treasure-house of biodiversity."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "पश्चिम घाटातील जंगलांचे तुकडे पडण्यास (fragment) कोणती कारणे कारणीभूत आहेत?",
+   "q_en": "What factors are causing the forests of the Western Ghats to fragment?",
+   "o_mr": [
+    "खणकाम (mining), रस्ते आणि अनियंत्रित पर्यटन",
+    "फक्त मुसळधार पाऊस",
+    "जंगलातील वणवे",
+    "शेतीचा विस्तार"
+   ],
+   "o_en": [
+    "Mining, roads and uncontrolled tourism",
+    "Only heavy rainfall",
+    "Forest fires",
+    "Agricultural expansion"
+   ],
+   "a": 0,
+   "e_mr": "खणकाम, रस्ते आणि अनियंत्रित पर्यटनामुळे जंगले विखुरली जात आहेत किंवा तुकडे पडत आहेत.",
+   "e_en": "Mining, roads and uncontrolled tourism have begun to fragment the forests."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "साताराजवळील एका लहान गावात राहणाऱ्या कुंभाराचे नाव काय होते?",
+   "q_en": "What was the name of the potter who lived in a small village near Satara?",
+   "o_mr": [
+    "गणपत",
+    "मारुती",
+    "तुकाराम",
+    "सोपान"
+   ],
+   "o_en": [
+    "Ganpat",
+    "Maruti",
+    "Tukaram",
+    "Sopan"
+   ],
+   "a": 0,
+   "e_mr": "उताऱ्यात सांगितल्याप्रमाणे साताराजवळील गावात राहणाऱ्या कुंभाराचे नाव गणपत होते.",
+   "e_en": "As stated in the passage, the potter living in a village near Satara was named Ganpat."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "गणपतने आपल्या यशाचे श्रेय देताना कोणते विधान केले?",
+   "q_en": "What statement did Ganpat make regarding his success?",
+   "o_mr": [
+    "माती तीच आहे, हात तेच आहेत; मी फक्त काळाची गरज ओळखली.",
+    "माती नवीन आहे, हात नवीन आहेत.",
+    "प्लॅस्टिकचे भांडे चांगले असते.",
+    "आम्ही आता नवीन मशीन वापरतो."
+   ],
+   "o_en": [
+    "The clay is the same, the hands are the same; I only recognized the need of the times.",
+    "The clay is new, the hands are new.",
+    "Plastic vessels are better.",
+    "We now use new machines."
+   ],
+   "a": 0,
+   "e_mr": "गणपत म्हणाला की माती तीच आहे, हात तेच आहेत, मी फक्त काळाची गरज ओळखली.",
+   "e_en": "Ganpat says, 'The clay is the same, the hands are the same; I only recognized the need of the times.'"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "सध्या गणपतच्या कार्यशाळेत गावातील किती तरुण कला शिकत आहेत?",
+   "q_en": "Currently, how many young people from the village are learning the craft in Ganpat's workshop?",
+   "o_mr": [
+    "सहा तरुण",
+    "दहा तरुण",
+    "एकही नाही",
+    "पन्नास तरुण"
+   ],
+   "o_en": [
+    "Six young people",
+    "Ten young people",
+    "None",
+    "Fifty young people"
+   ],
+   "a": 0,
+   "e_mr": "उताऱ्याच्या शेवटी दिले आहे की आज गावातील सहा तरुण त्याच्या कार्यशाळेत ही कला शिकत आहेत.",
+   "e_en": "At the end of the passage, it is stated that today six young people from the village are learning the craft."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "उताऱ्यामध्ये पश्चिम घाटाच्या जंगलांना कशाचे भांडार म्हटले आहे?",
+   "q_en": "What are the forests of the Western Ghats called in the passage?",
+   "o_mr": [
+    "खनिजांचे भांडार",
+    "जैविक विविधतेचे भांडार (treasure-house of biodiversity)",
+    "पाण्याचा साठा",
+    "इंधनाचे भांडार"
+   ],
+   "o_en": [
+    "Storehouse of minerals",
+    "Treasure-house of biodiversity",
+    "Water storage",
+    "Storehouse of fuel"
+   ],
+   "a": 1,
+   "e_mr": "उताऱ्याच्या पहिल्या ओळीत स्पष्ट नमूद केले आहे की पश्चिम घाटाच्या जंगलांना जैविक विविधतेचे भांडार म्हटले जाते.",
+   "e_en": "The first line of the passage clearly states that the forests of the Western Ghats are called a treasure-house of biodiversity."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "सातारा जवळील छोट्या गावात राहणाऱ्या कुंभाराचे नाव काय होते?",
+   "q_en": "What was the name of the potter living in a small village near Satara?",
+   "o_mr": [
+    "रामू",
+    "गणपत (ganpat)",
+    "तानाजी",
+    "मल्हारी"
+   ],
+   "o_en": [
+    "Ramu",
+    "Ganpat",
+    "Tanaji",
+    "Malhari"
+   ],
+   "a": 1,
+   "e_mr": "दुसऱ्या उताऱ्याच्या सुरुवातीलाच सातारा जवळील गावात राहणाऱ्या गणपत नावाच्या कुंभाराचा उल्लेख आहे.",
+   "e_en": "The beginning of the second passage mentions a potter named Ganpat living in a village near Satara."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=1, confident=False)",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "गणपतच्या मुलीने व्यवसायाला चालना देण्यासाठी कोणती युक्ती केली?",
+   "q_en": "How did Ganpat's daughter help revive the business?",
+   "o_mr": [
+    "तिने दुकानात जाऊन भांडी विकली",
+    "तिने भांड्यांचे फोटो सोशल मीडियावर पोस्ट केले (posted photographs of them on social media)",
+    "तिने नवीन माती आणली",
+    "तिने शहरात जाऊन नवीन दुकान उघडले"
+   ],
+   "o_en": [
+    "She went to the shop and sold vessels",
+    "She posted photographs of them on social media",
+    "She brought new clay",
+    "She opened a new shop in the city"
+   ],
+   "a": 1,
+   "e_mr": "गणपतच्या मुलीने मातीच्या पाण्याच्या बाटल्या आणि रंगवलेल्या फुलदाण्यांचे फोटो सोशल मीडियावर पोस्ट केले, ज्यामुळे पुण्यातून व मुंबईतून ऑर्डर्स येऊ लागल्या.",
+   "e_en": "Ganpat's daughter posted photographs of the clay water bottles and painted flower pots on social media, leading to orders from Pune and Mumbai."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "गणपतचे हे विधान काय दर्शवते: 'माती तीच, हात तेवढेच; मी फक्त काळाची गरज ओळखली.'?",
+   "q_en": "What does Ganpat's statement 'the clay is the same, the hands are the same; i only recognised the need of the times' imply?",
+   "o_mr": [
+    "जुनी कला बदलण्याची गरज नाही",
+    "केवळ काळाप्रमाणे कौशल्यात व उत्पादनात बदल करून यश मिळवता येते",
+    "प्लॅस्टिक वापरणे योग्य आहे",
+    "पारंपारिक कला आता कधीही टिकणार नाही"
+   ],
+   "o_en": [
+    "Old art does not need to change",
+    "Success can be achieved by adapting skills and products according to the times",
+    "Using plastic is correct",
+    "Traditional art will never survive now"
+   ],
+   "a": 1,
+   "e_mr": "या विधानातून हे स्पष्ट होते की परिस्थितीनुसार स्वतःच्या कलेमध्ये व उत्पादनांत बदल केल्यास पारंपारिक art लाही नवे जीवन मिळू शकते.",
+   "e_en": "This statement implies that by adapting one's art and products to changing times, even traditional art can find new life."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "क्षणभंगूर मनोरंजन देणाऱ्या गोष्टींचा (उदा. व्हिडिओ क्लिप्स) गाभाऱ्यातील कोणत्या सवयीवर नकारात्मक परिणाम होतो?",
+   "q_en": "What negative effect do momentary entertainment sources have on deep thinking?",
+   "o_mr": [
+    "गाढ विचारांची सवय कमकुवत होते (weaken the habit of deep thinking)",
+    "वाचन अधिक वेगाने होते",
+    "शारीरिक ताकद वाढते",
+    "स्मरणशक्ती तीव्र होते"
+   ],
+   "o_en": [
+    "Weaken the habit of deep thinking",
+    "Reading becomes faster",
+    "Physical strength increases",
+    "Memory becomes sharp"
+   ],
+   "a": 0,
+   "e_mr": "उताऱ्यात स्पष्ट म्हटले आहे की छोट्या संदेशांमुळे व व्हिडिओ क्लिप्समुळे तात्पुरते मनोरंजन होते पण गाढ विचार करण्याची सवय कमकुवत होते.",
+   "e_en": "The passage clearly states that these give momentary entertainment but weaken the habit of deep thinking."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=1, confident=False)",
+  "item": {
+   "t": "utara",
+   "d": 3,
+   "q_mr": "तिसऱ्या उताऱ्याचा मुख्य संदेश (Central Idea) खालीलपैकी कोणता आहे?",
+   "q_en": "What is the central idea of the third passage?",
+   "o_mr": [
+    "केवळ परीक्षा पास होण्यासाठी वाचन करणे",
+    "वाचनाचे महत्त्व, एकाग्रता आणि मानसिक विकासासाठी पुस्तकांची गरज",
+    "मनोरंजनासाठी फक्त व्हिडिओ क्लिप्स वापरणे",
+    "केवळ सोशल मीडियावर वेळ घालवणे"
+   ],
+   "o_en": [
+    "Reading only to pass exams",
+    "The importance of reading, concentration, and the need for books for mental development",
+    "Using only video clips for entertainment",
+    "Spending time only on social media"
+   ],
+   "a": 1,
+   "e_mr": "हा उतारा वाचनाचे महत्त्व, मनाची मशागत, शब्दसंग्रह वाढवणे आणि स्पर्धा परीक्षांसाठी मानसिक तयारी यावर प्रकाश टाकतो.",
+   "e_en": "This passage highlights the importance of reading, cultivation of the mind, vocabulary building, and mental preparation for competitive exams."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "गणपत हा शेतकरी/कुंभार कोणत्या गावाजवळ राहत होता?",
+   "q_en": "Near which village did the potter named Ganpat live?",
+   "o_mr": [
+    "साताऱ्याजवळील एक लहान गाव",
+    "पुण्याजवळील एक गाव",
+    "मुंबईजवळील एक गाव",
+    "कोल्हापूरजवळील एक गाव"
+   ],
+   "o_en": [
+    "A small village near Satara",
+    "A village near Pune",
+    "A village near Mumbai",
+    "A village near Kolhapur"
+   ],
+   "a": 0,
+   "e_mr": "उताऱ्याच्या सुरुवातीलाच दिले आहे की साताऱ्याजवळील एका लहान गावात गणपत नावाचा कुंभार राहत होता.",
+   "e_en": "At the beginning of the passage, it is stated that a potter named Ganpat lived in a small village near Satara."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 1,
+   "q_mr": "वाचन म्हणजे केवळ माहिती गोळा करण्याचे साधन नाही, तर ते मनाचे काय आहे?",
+   "q_en": "Reading is not merely an act of gathering information; it is the cultivation of what?",
+   "o_mr": [
+    "संवर्धन किंवा जोपासना (मनाची मशागत)",
+    "मनोरंजन",
+    "तणावमुक्त होण्याचा मार्ग",
+    "वेळ घालवण्याचे साधन"
+   ],
+   "o_en": [
+    "The cultivation of the mind",
+    "Entertainment",
+    "A way to relieve stress",
+    "A way to pass time"
+   ],
+   "a": 0,
+   "e_mr": "उताऱ्याच्या सुरुवातीलाच स्पष्ट केले आहे की वाचन हे केवळ माहिती गोळा करण्याचे साधन नसून मनाची जोपासना (मशागत) आहे.",
+   "e_en": "The passage clearly states at the beginning that reading is not merely an act of gathering information; it is the cultivation of the mind."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "utara",
+   "d": 2,
+   "q_mr": "पश्चिम घाटातील जंगले Fragment (खंडित) होण्यास खालीलपैकी कोणती कारणे कारणीभूत आहेत?",
+   "q_en": "Which of the following factors are causing the fragmentation of the forests of the Western Ghats?",
+   "o_mr": [
+    "केवळ मुसळधार पाऊस आणि पूर",
+    "खानकाम, रस्ते आणि अनियंत्रित पर्यटन",
+    "स्थानिक लोकांकडून लाकूडतोड",
+    "वन्य प्राण्यांची वाढलेली संख्या"
+   ],
+   "o_en": [
+    "Only heavy rain and floods",
+    "Mining, roads, and uncontrolled tourism",
+    "Deforestation by local people",
+    "Increased population of wild animals"
+   ],
+   "a": 1,
+   "e_mr": "उताऱ्यात नमूद केल्यानुसार अलीकडील दशकांत खानकाम, रस्ते आणि अनियंत्रित पर्यटन यामुळे जंगले खंडित होऊ लागली आहेत.",
+   "e_en": "As mentioned in the passage, in recent decades mining, roads, and uncontrolled tourism have begun to fragment the forests."
+  }
  }
 ]
