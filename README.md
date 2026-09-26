@@ -5,8 +5,10 @@ Police Bharti, Talathi, ZP, MPSC (Rajyaseva, Group B/C), Van Rakshak, Arogya, MA
 SSC, RRB, IBPS/SBI, UPSC prelims, NDA/CDS, Agniveer and the RTO learner test.
 
 No courses, no sign-up, no hidden charges: exam-wise practice, best-in-class explanations,
-Daily 10, spaced-repetition flashcards, mistake book, timed mocks with each exam's negative
-marking, speed rounds, streaks, XP levels and daily motivation.
+Daily 10, spaced-repetition flashcards, mistake book, one-page topic notes with interactive
+mind maps, timed mocks with each exam's negative marking, speed rounds, streaks, XP levels,
+a shareable weekly report card, and daily motivation — plus optional, at-most-2-a-day
+reminder notifications.
 
 ## Repository
 

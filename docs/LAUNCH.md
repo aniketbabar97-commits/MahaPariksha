@@ -46,4 +46,7 @@ Add GitHub repo secrets: `ANDROID_KEYSTORE_BASE64` (contents of upload.jks.b64),
 - [ ] Two Marathi-medium aspirants (ideally one who has cleared a recent exam) review a random 100-question sample
       and every current-affairs item, and log any issue in `docs/review_log.md`.
 - [ ] Test on a low-end phone (2–3 GB RAM): first launch offline, Daily 10, mock submit, flashcards, dark mode.
-- [ ] Capture 8 screenshots for the listing.
+- [ ] Test notification reminders (Me tab → toggle on): allow the permission prompt, confirm both the morning
+      and evening reminders fire at the chosen time (Android 13+ requires this runtime permission — the app
+      requests it only when the user turns reminders on, never on first launch).
+- [ ] Capture 8 screenshots for the listing (in-app, from a real device or emulator — not this repo's web preview).
