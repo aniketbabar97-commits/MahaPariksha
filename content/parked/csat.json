@@ -70,5 +70,197 @@
    "e_mr": "प्रत्येक उत्पादनाची एकूण वार्षिक विक्री काढूया:\nउत्पादन P: 120 + 150 + 130 + 160 = 560 हजार युनिट्स\nउत्पादन Q: 100 + 110 + 120 + 130 = 460 हजार युनिट्स\nउत्पादन R: 140 + 130 + 150 + 140 = 560 हजार युनिट्स\nउत्पादन S: 90 + 100 + 110 + 120 = 420 हजार युनिट्स\nउत्पादन P आणि R यांची विक्री सर्वाधिक (560 हजार युनिट्स) आहे, पण पर्यायमध्ये फक्त P असल्याने, P हे उत्तर आहे.",
    "e_en": "Let's calculate the total annual sales for each product:\nProduct P: 120 + 150 + 130 + 160 = 560 thousand units\nProduct Q: 100 + 110 + 120 + 130 = 460 thousand units\nProduct R: 140 + 130 + 150 + 140 = 560 thousand units\nProduct S: 90 + 100 + 110 + 120 = 420 thousand units\nProducts P and R have the highest sales (560 thousand units). Since only P is an option, P is the answer."
   }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "basic_numeracy",
+   "d": 2,
+   "q_mr": "एका संख्येला 12, 15 आणि 20 ने भागल्यास प्रत्येक वेळी बाकी 5 उरते, तर ती लहानात लहान संख्या कोणती?",
+   "q_en": "What is the smallest number which leaves remainder 5 when divided by 12, 15 and 20?",
+   "o_mr": [
+    "125",
+    "100",
+    "125",
+    "65"
+   ],
+   "o_en": [
+    "125",
+    "100",
+    "125",
+    "65"
+   ],
+   "a": 2,
+   "e_mr": "12, 15 आणि 20 चा लसावि 60 आहे. 60 मध्ये 5 मिळवल्यास 65 ही संख्या मिळते, जी प्रत्येक वेळी 5 बाकी देते.",
+   "e_en": "The LCM of 12, 15, and 20 is 60. Adding 5 to 60 gives 65, which leaves a remainder of 5 when divided by each."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "data_interpretation",
+   "d": 2,
+   "q_mr": "**माहिती:** 2019 ते 2023 या काळात एका कारखान्याचे वार्षिक उत्पादन (टनमध्ये) खालीलप्रमाणे आहे: 2019 – 240, 2020 – 300, 2021 – 270, 2022 – 360, 2023 – 405.\n\n**प्रश्न:** कोणत्या वर्षी मागील वर्षाच्या तुलनेत टक्केवारी वाढ सर्वाधिक होती?",
+   "q_en": "**Data:** Annual output of a factory (in tonnes) from 2019 to 2023 is as follows: 2019 – 240, 2020 – 300, 2021 – 270, 2022 – 360, 2023 – 405.\n\n**Question:** In which year was the percentage increase over the previous year the highest?",
+   "o_mr": [
+    "2020",
+    "2022",
+    "2023",
+    "2021"
+   ],
+   "o_en": [
+    "2020",
+    "2022",
+    "2023",
+    "2021"
+   ],
+   "a": 2,
+   "e_mr": "2020 मध्ये (300-240)/240 * 100 = 25% वाढ. 2021 मध्ये घट झाली. 2022 मध्ये (360-270)/270 * 100 = 33.3% वाढ. 2023 मध्ये (405-360)/360 * 100 = 12.5% वाढ. त्यामुळे 2022 मध्ये सर्वाधिक वाढ झाली.",
+   "e_en": "In 2020, the increase was (300-240)/240 * 100 = 25%. There was a decrease in 2021. In 2022, the increase was (360-270)/270 * 100 = 33.3%. In 2023, the increase was (405-360)/360 * 100 = 12.5%. Therefore, the highest increase was in 2022."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=2, confident=True)",
+  "item": {
+   "t": "basic_numeracy",
+   "d": 2,
+   "q_mr": "एका संख्येला 12, 15 आणि 20 ने भागल्यास प्रत्येक वेळी 5 बाकी उरते. तर ती सर्वात लहान संख्या कोणती?",
+   "q_en": "What is the smallest number which leaves a remainder of 5 when divided by 12, 15, and 20?",
+   "o_mr": [
+    "75",
+    "105",
+    "65",
+    "125"
+   ],
+   "o_en": [
+    "75",
+    "105",
+    "65",
+    "125"
+   ],
+   "a": 1,
+   "e_mr": "12, 15 आणि 20 चा लसावि 60 आहे. 5 बाकी उरण्यासाठी, लसाविमध्ये 5 मिळवावे लागतील. म्हणून, 60 + 5 = 65 ही सर्वात लहान संख्या आहे.",
+   "e_en": "The LCM of 12, 15, and 20 is 60. To leave a remainder of 5, 5 must be added to the LCM. Therefore, 60 + 5 = 65 is the smallest number."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=1, confident=True)",
+  "item": {
+   "t": "data_interpretation",
+   "d": 2,
+   "q_mr": "खालील माहिती अभ्यासा आणि प्रश्नाचे उत्तर द्या.\nएका ताळुकातील चार शाळांमधील विद्यार्थ्यांची नोंदणी:\nशाळा अ – मुले 420, मुली 380\nशाळा ब – मुले 510, मुली 490\nशाळा क – मुले 300, मुली 360\nशाळा ड – मुले 450, मुली 450\n\nप्रश्न: शाळा क मध्ये मुलींची एकूण विद्यार्थ्यांशी टक्केवारी अंदाजे किती आहे?",
+   "q_en": "Study the following information and answer the question.\nEnrolment in four schools of a taluka:\nSchool A – boys 420, girls 380\nSchool B – boys 510, girls 490\nSchool C – boys 300, girls 360\nSchool D – boys 450, girls 450\n\nQuestion: Girls form approximately what percentage of total students in school C?",
+   "o_mr": [
+    "50%",
+    "55%",
+    "60%",
+    "65%"
+   ],
+   "o_en": [
+    "50%",
+    "55%",
+    "60%",
+    "65%"
+   ],
+   "a": 2,
+   "e_mr": "शाळा क मधील एकूण विद्यार्थी = 300 (मुले) + 360 (मुली) = 660. मुलींची टक्केवारी = (360 / 660) * 100 = 54.54% ≈ 55%. (Re-calculating: 360/660 * 100 = 54.54%. Option 2 is closest.)",
+   "e_en": "Total students in School C = 300 (boys) + 360 (girls) = 660. Percentage of girls = (360 / 660) * 100 = 54.54% ≈ 55%. (Option 2 is closest.)"
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "basic_numeracy",
+   "d": 2,
+   "q_mr": "एका वर्गात, विद्यार्थ्यांची सरासरी उंची 150 सेमी आहे. जर 10 नवीन विद्यार्थी ज्यांची सरासरी उंची 155 सेमी आहे, वर्गात सामील झाले, तर आता वर्गातील सर्व विद्यार्थ्यांची सरासरी उंची किती असेल?",
+   "q_en": "In a class, the average height of students is 150 cm. If 10 new students with an average height of 155 cm join the class, what will be the average height of all students in the class now?",
+   "o_mr": [
+    "152.5 सेमी",
+    "153 सेमी",
+    "151.5 सेमी",
+    "150.5 सेमी"
+   ],
+   "o_en": [
+    "152.5 cm",
+    "153 cm",
+    "151.5 cm",
+    "150.5 cm"
+   ],
+   "a": 0,
+   "e_mr": "नवीन विद्यार्थ्यांची एकूण उंची 10 * 155 = 1550 सेमी आहे. जुन्या विद्यार्थ्यांची एकूण उंची 150 * (संख्या) आहे. नवीन विद्यार्थ्यांच्या समावेशानंतर एकूण उंची वाढेल आणि त्यामुळे सरासरी उंची देखील वाढेल. गणितानुसार, हे 152.5 सेमी येते.",
+   "e_en": "The total height of the new students is 10 * 155 = 1550 cm. The total height of the old students is 150 * (number of students). After the inclusion of new students, the total height will increase, and therefore the average height will also increase. Mathematically, this comes to 152.5 cm."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=True)",
+  "item": {
+   "t": "basic_numeracy",
+   "d": 3,
+   "q_mr": "जर एका संख्येचे 2/3 आणि 3/4 यांपैकी मोठा फरक 8 आहे, तर ती संख्या कोणती?",
+   "q_en": "If the difference between 2/3 and 3/4 of a number is 8, what is the number?",
+   "o_mr": [
+    "96",
+    "192",
+    "48",
+    "144"
+   ],
+   "o_en": [
+    "96",
+    "192",
+    "48",
+    "144"
+   ],
+   "a": 1,
+   "e_mr": "समजा संख्या x आहे. 2x/3 आणि 3x/4 यांचा फरक 8 आहे. (3x/4) - (2x/3) = 8. लसावि काढून सोडवल्यास, (9x - 8x)/12 = 8, म्हणजेच x/12 = 8. म्हणून, x = 96. परंतु, प्रश्न 'मोठा फरक' म्हणतो. 3/4 हा 2/3 पेक्षा मोठा आहे. म्हणून 3x/4 - 2x/3 = 8. (9x - 8x)/12 = 8. x/12 = 8. x = 96. येथे उत्तर 96 आहे, परंतु पर्यायात 192 आहे. गणितात काहीतरी चूक असावी. जर फरक 8 म्हणजे (3/4 - 2/3)x = 8, म्हणजे (9-8)/12 x = 8, x/12 = 8, x = 96. जर प्रश्न '2/3 आणि 3/4 मधला फरक 8 च्या पटीत आहे' असा असेल, तर उत्तर 192 असू शकते.",
+   "e_en": "Let the number be x. The difference between 2x/3 and 3x/4 is 8. (3x/4) - (2x/3) = 8. Solving by taking LCM, (9x - 8x)/12 = 8, which means x/12 = 8. Therefore, x = 96. However, the question mentions 'larger difference'. 3/4 is greater than 2/3. So 3x/4 - 2x/3 = 8. (9x - 8x)/12 = 8. x/12 = 8. x = 96. The answer here is 96, but 192 is in the options. There might be an error in the question. If the difference is 8 meaning (3/4 - 2/3)x = 8, meaning (9-8)/12 x = 8, x/12 = 8, x = 96. If the question was 'the difference between 2/3 and 3/4 is a multiple of 8', then 192 could be a possible answer. Assuming the intended question leads to 192, let's proceed with that."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=True)",
+  "item": {
+   "t": "decision_making",
+   "d": 2,
+   "q_mr": "तुम्ही एका शासकीय योजनेचे प्रकल्प अधिकारी आहात. एका कंत्राटदाराने कामात उप-दर्जाचे साहित्य वापरले आहे हे तुम्हाला डेडलाइन जवळ आल्यावर कळले. डेडलाइन चुकल्यास तुमच्या कामावर प्रश्नचिन्ह निर्माण होईल. तुमची सर्वात योग्य पहिली कृती काय असेल?",
+   "q_en": "You are a project officer for a government scheme. You discovered that a contractor used sub-standard material near the deadline. Missing the deadline will reflect poorly on you. What will be your most appropriate first action?",
+   "o_mr": [
+    "कंत्राटदाराला तातडीने बोलावून उप-दर्जाच्या साहित्याची चौकशी करणे आणि योग्य उपाययोजना करण्यास सांगणे.",
+    "वरिष्ठांना माहिती देऊन पुढील कारवाईसाठी निर्देश घेणे.",
+    "कामाची गुणवत्ता तपासण्यासाठी तांत्रिक तज्ञांची मदत घेणे.",
+    "डेडलाइन वाढवून घेण्याचा प्रयत्न करणे."
+   ],
+   "o_en": [
+    "Immediately summon the contractor, inquire about the sub-standard material, and ask them to take appropriate corrective measures.",
+    "Inform seniors and seek instructions for further action.",
+    "Seek the help of technical experts to inspect the quality of work.",
+    "Try to get the deadline extended."
+   ],
+   "a": 0,
+   "e_mr": "पहिली आणि सर्वात महत्त्वाची कृती म्हणजे कंत्राटदाराशी थेट संपर्क साधणे, समस्येचे गांभीर्य समजावून सांगणे आणि तात्काळ सुधारणा करण्यास लावणे. यामुळे कामाची गुणवत्ता राखली जाईल आणि डेडलाइन पाळण्याचा प्रयत्न करता येईल.",
+   "e_en": "The first and most important action is to directly contact the contractor, explain the seriousness of the issue, and ensure immediate rectification. This will maintain the quality of work and allow for an attempt to meet the deadline."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "basic_numeracy",
+   "d": 2,
+   "q_mr": "एका संख्येला 7 ने भागल्यास बाकी 3 उरते. त्या संख्येला 5 ने भागल्यास बाकी किती उरेल?",
+   "q_en": "When a number is divided by 7, the remainder is 3. What will be the remainder if the same number is divided by 5?",
+   "o_mr": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "o_en": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "a": 0,
+   "e_mr": "सर्वात लहान संख्या जी 7 ने भागल्यावर 3 बाकी ठेवते ती 10 आहे (7 * 1 + 3). 10 ला 5 ने भागल्यास बाकी 0 उरते. तथापि, प्रश्न 'एका संख्येला' असे म्हणतो, ज्यामुळे अनेक संभाव्य संख्या आहेत. जर आपण 17 (7*2+3) विचारात घेतले, तर 17 ला 5 ने भागल्यास बाकी 2 उरेल. जर आपण 24 (7*3+3) विचारात घेतले, तर 24 ला 5 ने भागल्यास बाकी 4 उरेल. प्रश्न संदिग्ध आहे. मात्र, सामान्यतः अशा प्रश्नांमध्ये सर्वात लहान धन पूर्णांक विचारात घेतला जातो. 10 ला 5 ने भागल्यास 0 बाकी उरेल. जर पर्यायांमध्ये 0 नसेल, तर प्रश्न कदाचित 'सर्वात लहान संख्येऐवजी' 'कोणत्याही संख्येला' विचारात घेईल, ज्यामुळे उत्तर अनिश्चित आहे. तरीही, परीक्षांच्या दृष्टीने, आपण सर्वात लहान संख्या घेऊन पुढील तर्क करू. 10 ला 5 ने भागल्यास बाकी 0 उरते. पर्यायांमध्ये 0 नसल्यामुळे, आपण आणखी एक संख्या घेऊ. 17 ला 5 ने भागल्यास बाकी 2 उरते. 24 ला 5 ने भागल्यास बाकी 4 उरते. 31 ला 5 ने भागल्यास बाकी 1 उरते. 38 ला 5 ने भागल्यास बाकी 3 उरते. हा प्रश्न योग्यरित्या तयार केलेला नाही. तरीही, सामान्य पद्धतीनुसार, आपण 10 ही संख्या विचारात घेतल्यास, 10/5 = 2 बाकी 0. तरीही, पर्यायांमध्ये 0 नसल्यामुळे, आणि प्रश्नाची संदिग्धता पाहता, सामान्यतः अशा प्रश्नांमध्ये एक विशिष्ट नमुना असतो. आपण 10, 17, 24, 31, 38... या संख्या विचारात घेतो. 5 ने भागल्यावर बाकी 0, 2, 4, 1, 3... असे येते. यात एक विशिष्ट नमुना नाही. म्हणून, या प्रश्नात त्रुटी आहे. तरीही, जर आपण 10 ही संख्या घेतली, तर बाकी 0 येते. जर 17 घेतली, तर बाकी 2 येते. जर 24 घेतली, तर बाकी 4 येते.  जर प्रश्न अधिक स्पष्ट असता, तर योग्य उत्तर निवडणे शक्य झाले असते.  तरीही, अनेक परीक्षांमध्ये अशा प्रश्नांना '7x+3' या स्वरूपात मांडून '5' ने भागण्याचे विचारले जाते.  याचे उत्तर '7x+3 mod 5' असे होते, जे '(2x + 3) mod 5' होते.  x=1 साठी: (2*1+3) mod 5 = 5 mod 5 = 0. x=2 साठी: (2*2+3) mod 5 = 7 mod 5 = 2. x=3 साठी: (2*3+3) mod 5 = 9 mod 5 = 4. x=4 साठी: (2*4+3) mod 5 = 11 mod 5 = 1. x=5 साठी: (2*5+3) mod 5 = 13 mod 5 = 3.  म्हणून, बाकी 0, 1, 2, 3, 4 येऊ शकते.  पर्यायांमध्ये 1, 2, 3, 4 असल्याने,  आणि 10 ही सर्वात लहान संख्या विचारात घेतल्यास बाकी 0 येते, परंतु 0 पर्याय नाही.  17 विचारात घेतल्यास बाकी 2 येते, जी एक पर्याय आहे.  24 विचारात घेतल्यास बाकी 4 येते, जी एक पर्याय आहे.  24 ही संख्या 7 ने भागल्यास 3 बाकी देते (7*3+3=24) आणि 5 ने भागल्यास 4 बाकी देते (5*4+4=24).  म्हणून, 4 हे उत्तर असू शकते.  या प्रश्नाची संदिग्धता लक्षात घेता,  हे उत्तर अंदाजे आहे.  सर्वात लहान संख्या 10 आहे. 10 / 5 = 2 बाकी 0.  पर्यायांमध्ये 0 नाही.  पुढील संख्या 17 आहे. 17 / 5 = 3 बाकी 2.  पर्यायांमध्ये 2 आहे.  पुढील संख्या 24 आहे. 24 / 5 = 4 बाकी 4.  पर्यायांमध्ये 4 आहे.  पुढील संख्या 31 आहे. 31 / 5 = 6 बाकी 1.  पर्यायांमध्ये 1 आहे.  पुढील संख्या 38 आहे. 38 / 5 = 7 बाकी 3.  पर्यायांमध्ये 3 आहे.  याचा अर्थ प्रश्नात काहीतरी समस्या आहे.  परंतु, जर x=1 (म्हणजे संख्या 10) विचारात घेतले, तर बाकी 0 उरते.  जर x=2 (म्हणजे संख्या 17) विचारात घेतले, तर बाकी 2 उरते.  जर x=3 (म्हणजे संख्या 24) विचारात घेतले, तर बाकी 4 उरते.  जर x=4 (म्हणजे संख्या 31) विचारात घेतले, तर बाकी 1 उरते.  जर x=5 (म्हणजे संख्या 38) विचारात घेतले, तर बाकी 3 उरते.  सर्व पर्याय शक्य आहेत.  अशा परिस्थितीत, सर्वात लहान संख्या (10) विचारात घेऊन उत्तर 0 अपेक्षित आहे, जे पर्यायात नाही.  या प्रश्नाची रचना संदिग्ध आहे.  परीक्षेच्या दृष्टिकोनातून, या प्रश्नाला अधिक स्पष्टता आवश्यक आहे.  तरीही, जर आपण '7x+3' या स्वरूपात संख्या मांडली, आणि x=2 घेतल्यास (संख्या 17), बाकी 2 उरते.  जर x=3 घेतल्यास (संख्या 24), बाकी 4 उरते.  जर x=4 घेतल्यास (संख्या 31), बाकी 1 उरते.  जर x=5 घेतल्यास (संख्या 38), बाकी 3 उरते.  म्हणून, प्रत्येक पर्याय शक्य आहे.  परंतु, जर प्रश्न असा विचारला असता की 'कोणती बाकी शक्य आहे', तर अधिक योग्य झाले असते.  या प्रश्नात, जर आपण 10 विचारात घेतले, तर बाकी 0 येईल.  जे पर्यायात नाही.  तरीही, सर्वात लहान संभाव्य बाकी 0 आहे.  परंतु, आपल्याला दिलेल्या पर्यायांपैकी एक निवडायचा आहे.  या प्रश्नात अधिक माहितीची आवश्यकता आहे किंवा पर्याय चुकीचे आहेत.  परंतु, जर आपण 10 ही संख्या विचारात घेतली (7*1+3), तर 10 ला 5 ने भागल्यास बाकी 0 येईल.  पर्यायांमध्ये 0 नाही.  जर आपण 17 ही संख्या विचारात घेतली (7*2+3), तर 17 ला 5 ने भागल्यास बाकी 2 येईल.  पर्यायांमध्ये 2 आहे.  जर आपण 24 ही संख्या विचारात घेतली (7*3+3), तर 24 ला 5 ने भागल्यास बाकी 4 येईल.  पर्यायांमध्ये 4 आहे.  म्हणून, 2 आणि 4 दोन्ही शक्य आहेत.  या प्रश्नात त्रुटी आहे.  परंतु, जर आपण 10 ही संख्या विचारात घेतली (7*1+3), तर 10 ला 5 ने भागल्यास बाकी 0 येते.  या प्रश्नात गोंधळ आहे.  तरीही, जर आपण 7x+3 या स्वरूपात संख्या विचारात घेतली, तर 5 ने भागल्यावर बाकी (2x+3) mod 5 येते.  x=1 साठी 0, x=2 साठी 2, x=3 साठी 4, x=4 साठी 1, x=5 साठी 3.  सर्व पर्याय शक्य आहेत.  तरीही,  जर आपण 10 विचारात घेतले, तर बाकी 0 येते.  जर 17 घेतले, तर बाकी 2 येते.  जर 24 घेतले, तर बाकी 4 येते.  जर 31 घेतले, तर बाकी 1 येते.  जर 38 घेतले, तर बाकी 3 येते.  यामुळे,  सर्व पर्याय शक्य आहेत.  मात्र,  अशा प्रश्नांमध्ये सामान्यतः एक विशिष्ट उत्तर अपेक्षित असते.  सर्वात लहान संख्या 10 विचारात घेतल्यास, बाकी 0 येते.  पर्याय 1, 2, 3, 4 आहेत.  या प्रश्नात त्रुटी आहे.  परंतु, जर आपण 10 ही संख्या विचारात घेतली, तर 10 ला 5 ने भागल्यास बाकी 0 उरते.  पर्यायांमध्ये 0 नसल्यामुळे,  आपण पुढील संख्या विचारात घेऊ.  17 (7*2+3).  17 ला 5 ने भागल्यास बाकी 2 उरते.  हा एक पर्याय आहे.  24 (7*3+3).  24 ला 5 ने भागल्यास बाकी 4 उरते.  हा एक पर्याय आहे.  31 (7*4+3).  31 ला 5 ने भागल्यास बाकी 1 उरते.  हा एक पर्याय आहे.  38 (7*5+3).  38 ला 5 ने भागल्यास बाकी 3 उरते.  हा एक पर्याय आहे.  याचा अर्थ प्रश्नाची रचना संदिग्ध आहे.  तरीही,  जर आपण  10 ही संख्या विचारात घेतली, तर बाकी 0 येते.  जे पर्यायात नाही.  त्यामुळे,  आपण 17 विचारात घेऊ.  17 ला 5 ने भागल्यास बाकी 2 येते.  म्हणून,  2 हे उत्तर योग्य असू शकते.",
+   "e_en": "The smallest number that leaves a remainder of 3 when divided by 7 is 10 (7 * 1 + 3). When 10 is divided by 5, the remainder is 0. However, the question states 'a number', implying there can be multiple such numbers. If we consider the next such number, 17 (7 * 2 + 3), dividing by 5 gives a remainder of 2. If we consider 24 (7 * 3 + 3), dividing by 5 gives a remainder of 4. If we consider 31 (7 * 4 + 3), dividing by 5 gives a remainder of 1. If we consider 38 (7 * 5 + 3), dividing by 5 gives a remainder of 3. Since all options are possible depending on the chosen number, the question is technically flawed or ambiguous. However, in such questions, the smallest possible remainder when considering the pattern of remainders is often the intended answer if 0 is not an option. The pattern of remainders when divided by 5 is 0, 2, 4, 1, 3. Since 2 is the smallest possible non-zero remainder among the options derived from common test-taking logic, it is chosen."
+  }
  }
 ]
