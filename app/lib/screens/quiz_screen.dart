@@ -8,6 +8,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
 import '../logic/quiz_builder.dart';
+import '../core/transitions.dart';
 import '../widgets/celebrate.dart';
 import 'results_screen.dart';
 
@@ -19,7 +20,7 @@ void startQuiz(BuildContext context, QuizSpec spec) {
         content: Text(context.tr('या विभागात अजून प्रश्न नाहीत. लवकरच येत आहेत!', 'No questions here yet. Coming soon!'))));
     return;
   }
-  Navigator.push(context, MaterialPageRoute(builder: (_) => QuizScreen(spec: spec)));
+  push(context, (_) => QuizScreen(spec: spec));
 }
 
 const _labelsMr = ['अ', 'ब', 'क', 'ड'];
@@ -113,7 +114,7 @@ class _QuizScreenState extends State<QuizScreen> {
     if (spec.mode == QuizMode.speed) p.recordSpeed(speedCorrect);
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(
+      BharariRevealRoute(
         builder: (_) => ResultsScreen(
           spec: spec,
           answers: answers,

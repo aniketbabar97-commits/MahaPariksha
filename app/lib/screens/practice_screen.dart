@@ -1,3 +1,4 @@
+import '../core/transitions.dart';
 import 'package:flutter/material.dart';
 
 import '../core/app_scope.dart';
@@ -164,7 +165,7 @@ class _SubjectTile extends StatelessWidget {
       subtitle: acc == null
           ? context.tr('$count प्रश्न · सुरुवात करा', '$count questions · start now')
           : context.tr('$count प्रश्न · अचूकता ${(acc * 100).round()}%', '$count questions · ${(acc * 100).round()}% accuracy'),
-      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: subject))),
+      onTap: () => push(context, (_) => SubjectScreen(subject: subject)),
     );
   }
 }
@@ -261,7 +262,7 @@ class _SubjectScreenState extends State<SubjectScreen> {
                         : () => startQuiz(context,
                             s.builder.practice(subject: subject.id, topic: t.id, difficulty: difficulty)),
                   ),
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: t))),
+                  onTap: () => push(context, (_) => TopicScreen(subject: subject, topic: t)),
                 ),
               );
             }),

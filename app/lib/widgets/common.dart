@@ -150,19 +150,71 @@ class SectionTitle extends StatelessWidget {
       );
 }
 
-class EmptyState extends StatelessWidget {
+/// A branded illustration (concentric sunrise rings behind the icon) instead of
+/// a bare Material icon, so every empty/done state still feels designed.
+class EmptyState extends StatefulWidget {
   final IconData icon;
   final String text;
-  const EmptyState({super.key, required this.icon, required this.text});
+  final String? actionLabel;
+  final VoidCallback? onAction;
+  const EmptyState({super.key, required this.icon, required this.text, this.actionLabel, this.onAction});
+
+  @override
+  State<EmptyState> createState() => _EmptyStateState();
+}
+
+class _EmptyStateState extends State<EmptyState> with SingleTickerProviderStateMixin {
+  late final AnimationController c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 700))..forward();
+
+  @override
+  void dispose() {
+    c.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) => Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(icon, size: 56, color: BrandColors.saffron),
-            const SizedBox(height: 12),
-            Text(text, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyLarge),
+            ScaleTransition(
+              scale: CurvedAnimation(parent: c, curve: Curves.elasticOut),
+              child: SizedBox(
+                width: 120,
+                height: 120,
+                child: Stack(alignment: Alignment.center, children: [
+                  Container(
+                    width: 120,
+                    height: 120,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: BrandColors.saffron.withValues(alpha: 0.08)),
+                  ),
+                  Container(
+                    width: 88,
+                    height: 88,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: BrandColors.saffron.withValues(alpha: 0.14)),
+                  ),
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: const BoxDecoration(gradient: BrandColors.fireGradient, shape: BoxShape.circle),
+                    child: Icon(widget.icon, size: 30, color: Colors.white),
+                  ),
+                ]),
+              ),
+            ),
+            const SizedBox(height: 20),
+            Text(widget.text, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyLarge),
+            if (widget.actionLabel != null) ...[
+              const SizedBox(height: 18),
+              FilledButton(
+                style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+                onPressed: widget.onAction,
+                child: Text(widget.actionLabel!),
+              ),
+            ],
           ]),
         ),
       );

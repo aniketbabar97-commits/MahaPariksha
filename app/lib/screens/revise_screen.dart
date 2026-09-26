@@ -1,3 +1,4 @@
+import '../core/transitions.dart';
 import 'package:flutter/material.dart';
 
 import '../core/app_scope.dart';
@@ -33,7 +34,7 @@ class ReviseScreen extends StatelessWidget {
         Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FlashcardScreen())),
+            onTap: () => push(context, (_) => const FlashcardScreen()),
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.heroGradient),
@@ -85,7 +86,7 @@ class ReviseScreen extends StatelessWidget {
                       child: Card(
                         clipBehavior: Clip.antiAlias,
                         child: InkWell(
-                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub))),
+                          onTap: () => push(context, (_) => SubjectScreen(subject: sub)),
                           child: Padding(
                             padding: const EdgeInsets.all(12),
                             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -114,7 +115,7 @@ class ReviseScreen extends StatelessWidget {
                 subtitle: Text(context.tr('${s.builder.dueCards(subject: sub.id, limit: 9999).length} कार्ड बाकी',
                     '${s.builder.dueCards(subject: sub.id, limit: 9999).length} due')),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => FlashcardScreen(subject: sub.id))),
+                onTap: () => push(context, (_) => FlashcardScreen(subject: sub.id)),
               ),
             ),
             const SizedBox(height: 8),

@@ -1,3 +1,4 @@
+import '../core/transitions.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -135,7 +136,7 @@ class TodayScreen extends StatelessWidget {
           color: BrandColors.skyLight,
           title: context.tr('फ्लॅशकार्ड उजळणी', 'Flashcard revision'),
           subtitle: context.tr('$dueCards कार्ड आज उजळणीसाठी', '$dueCards cards due today'),
-          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FlashcardScreen())),
+          onTap: () => push(context, (_) => const FlashcardScreen()),
         ),
         const SizedBox(height: 12),
         ActionCard(
