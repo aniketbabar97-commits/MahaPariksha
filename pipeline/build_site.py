@@ -6,6 +6,7 @@ import argparse
 import html
 import json
 import os
+import shutil
 from datetime import date
 from pathlib import Path
 
@@ -35,7 +36,14 @@ def page(title, desc, body, canonical):
     return f"""<!doctype html><html lang="mr"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)}</title><meta name="description" content="{html.escape(desc)}">
-<link rel="canonical" href="{canonical}"><style>{CSS}</style></head><body>
+<link rel="canonical" href="{canonical}">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Bharari">
+<meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">
+<meta property="og:image" content="{canonical.rsplit('/', 1)[0]}/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>{CSS}</style></head><body>
 <header><div class="wrap"><a href="index.html"><strong>भरारी · Bharari</strong></a>
 <div class="tag">उंच भरारी घ्या · Fly high</div></div></header>
 <main class="wrap">{body}
@@ -136,6 +144,11 @@ location data are collected in this version.</p>
 <div class="card"><p><strong>भरारी कोणतीही वैयक्तिक माहिती गोळा करत नाही.</strong> तुमची प्रगती फक्त तुमच्या फोनमध्ये जतन होते.
 ॲप फक्त नवीन प्रश्नसंच डाउनलोड करण्यासाठी इंटरनेट वापरते.</p></div>"""
     write("privacy.html", page("Privacy Policy | Bharari", "Bharari privacy policy", privacy, f"{base}/privacy.html"))
+
+    assets_src = ROOT / "docs/store/site_assets"
+    if assets_src.exists():
+        for f in assets_src.iterdir():
+            shutil.copy(f, out / f.name)
 
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
     today = date.today().isoformat()

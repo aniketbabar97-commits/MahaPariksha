@@ -45,7 +45,7 @@ class PracticeScreen extends StatelessWidget {
       children: [
         Row(children: [
           Expanded(
-            child: Text(context.tr('सराव', 'Practice'),
+            child: Text(context.tr('सराव 📝', 'Practice 📝'),
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
           ),
           ActionChip(
@@ -63,7 +63,7 @@ class PracticeScreen extends StatelessWidget {
             child: _QuickTile(
               icon: Icons.assignment,
               color: BrandColors.sky,
-              label: context.tr('मॉक टेस्ट', 'Mock test'),
+              label: context.tr('मॉक टेस्ट 🏆', 'Mock test 🏆'),
               onTap: () => startQuiz(context, s.builder.mock()),
             ),
           ),
@@ -72,7 +72,7 @@ class PracticeScreen extends StatelessWidget {
             child: _QuickTile(
               icon: Icons.timer,
               color: BrandColors.correct,
-              label: context.tr('स्पीड राउंड', 'Speed round'),
+              label: context.tr('स्पीड राउंड ⚡', 'Speed round ⚡'),
               onTap: () => startQuiz(context, s.builder.speed()),
             ),
           ),
@@ -81,12 +81,12 @@ class PracticeScreen extends StatelessWidget {
             child: _QuickTile(
               icon: Icons.bookmark,
               color: BrandColors.saffron,
-              label: context.tr('जतन केलेले', 'Saved'),
+              label: context.tr('जतन केलेले 🔖', 'Saved 🔖'),
               onTap: () => startQuiz(context, s.builder.bookmarked()),
             ),
           ),
         ]),
-        SectionTitle(context.tr('विषयानुसार सराव', 'Practice by subject')),
+        SectionTitle(context.tr('विषयानुसार सराव 📚', 'Practice by subject 📚')),
         for (final sub in subjects) ...[
           _SubjectTile(
             subject: sub,
@@ -163,10 +163,10 @@ class SubjectScreen extends StatelessWidget {
           FilledButton.icon(
             style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
             icon: const Icon(Icons.shuffle),
-            label: Text(context.tr('सर्व घटकांतून मिश्र सराव', 'Mixed practice from all topics')),
+            label: Text(context.tr('सर्व घटकांतून मिश्र सराव 🔀', 'Mixed practice from all topics 🔀')),
             onPressed: () => startQuiz(context, s.builder.practice(subject: subject.id)),
           ),
-          SectionTitle(context.tr('घटक', 'Topics')),
+          SectionTitle(context.tr('घटक 🧩', 'Topics 🧩')),
           for (final t in subject.topics) ...[
             Builder(builder: (context) {
               final n = qs.where((q) => q.topic == t.id).length;

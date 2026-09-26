@@ -58,9 +58,9 @@ class TopicScreen extends StatelessWidget {
             indicatorColor: BrandColors.saffron,
             labelStyle: const TextStyle(fontWeight: FontWeight.w800),
             tabs: [
-              Tab(text: context.tr('नोट्स', 'Notes')),
-              Tab(text: context.tr('मुख्य मुद्दे', 'Key facts')),
-              Tab(text: context.tr('माइंड मॅप', 'Mind map')),
+              Tab(text: context.tr('नोट्स 📄', 'Notes 📄')),
+              Tab(text: context.tr('मुख्य मुद्दे 🔑', 'Key facts 🔑')),
+              Tab(text: context.tr('माइंड मॅप 🗺️', 'Mind map 🗺️')),
             ],
           ),
         ),

@@ -4,6 +4,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/notifications.dart';
+import '../core/reminders.dart';
 import '../widgets/common.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
@@ -23,8 +25,8 @@ class MeScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
       children: [
-        Text(context.tr('मी', 'Me'), style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
-        SectionTitle(context.tr('माझी तयारी', 'My preparation')),
+        Text(context.tr('मी 🙋', 'Me 🙋'), style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
+        SectionTitle(context.tr('माझी तयारी 🎯', 'My preparation 🎯')),
         Card(
           child: Column(children: [
             ListTile(
@@ -68,9 +70,36 @@ class MeScreen extends StatelessWidget {
             ),
           ]),
         ),
-        SectionTitle(context.tr('ॲप सेटिंग्ज', 'App settings')),
+        SectionTitle(context.tr('ॲप सेटिंग्ज ⚙️', 'App settings ⚙️')),
         Card(
           child: Column(children: [
+            SwitchListTile(
+              secondary: const Icon(Icons.notifications_active, color: BrandColors.sky),
+              title: Text(context.tr('रोजची आठवण 🔔', 'Daily reminders 🔔')),
+              subtitle: Text(context.tr('दिवसातून जास्तीत जास्त 2 सूचना', 'At most 2 notifications a day')),
+              value: p.reminders,
+              onChanged: (v) async {
+                if (v) await BharariNotifications.requestPermission();
+                p.update((p) => p.reminders = v);
+                await applyReminders(p);
+              },
+            ),
+            if (p.reminders)
+              ListTile(
+                leading: const Icon(Icons.schedule, color: BrandColors.sky),
+                title: Text(context.tr('सकाळची वेळ', 'Morning time')),
+                subtitle: Text('${p.reminderHour.toString().padLeft(2, '0')}:00'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () async {
+                  final t = await showTimePicker(
+                    context: context,
+                    initialTime: TimeOfDay(hour: p.reminderHour, minute: 0),
+                  );
+                  if (t == null) return;
+                  p.update((p) => p.reminderHour = t.hour);
+                  await applyReminders(p);
+                },
+              ),
             ListTile(
               leading: const Icon(Icons.translate, color: BrandColors.sky),
               title: Text(context.tr('भाषा', 'Language')),
@@ -100,12 +129,12 @@ class MeScreen extends StatelessWidget {
             ),
           ]),
         ),
-        SectionTitle(context.tr('भरारी परिवार', 'Bharari family')),
+        SectionTitle(context.tr('भरारी परिवार 🫂', 'Bharari family 🫂')),
         Card(
           child: Column(children: [
             ListTile(
               leading: const Icon(Icons.share, color: BrandColors.saffron),
-              title: Text(context.tr('मित्रांना सांगा', 'Invite friends')),
+              title: Text(context.tr('मित्रांना सांगा 📣', 'Invite friends 📣')),
               subtitle: Text(context.tr('एकत्र अभ्यास, एकत्र भरारी!', 'Study together, soar together!')),
               onTap: () => SharePlus.instance.share(ShareParams(
                   text: context.tr(
@@ -114,17 +143,17 @@ class MeScreen extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.star_rate, color: BrandColors.saffron),
-              title: Text(context.tr('ॲपला रेटिंग द्या', 'Rate the app')),
+              title: Text(context.tr('ॲपला रेटिंग द्या ⭐', 'Rate the app ⭐')),
               onTap: () => launchUrl(Uri.parse(kPlayUrl), mode: LaunchMode.externalApplication),
             ),
             ListTile(
               leading: const Icon(Icons.mail, color: BrandColors.saffron),
-              title: Text(context.tr('सूचना / संपर्क', 'Feedback / contact')),
+              title: Text(context.tr('सूचना / संपर्क 💬', 'Feedback / contact 💬')),
               onTap: () => launchUrl(Uri(scheme: 'mailto', path: kSupportEmail, query: 'subject=Bharari%20feedback')),
             ),
           ]),
         ),
-        SectionTitle(context.tr('माहिती', 'About')),
+        SectionTitle(context.tr('माहिती ℹ️', 'About ℹ️')),
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),

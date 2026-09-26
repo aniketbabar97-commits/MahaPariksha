@@ -24,10 +24,10 @@ class ReviseScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
       children: [
-        Text(context.tr('उजळणी', 'Revise'),
+        Text(context.tr('उजळणी 🔁', 'Revise 🔁'),
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
         const SizedBox(height: 4),
-        Text(context.tr('स्मार्ट उजळणी: विसरण्याआधीच आठवण!', 'Smart revision: remember before you forget!'),
+        Text(context.tr('स्मार्ट उजळणी: विसरण्याआधीच आठवण! 🧠✨', 'Smart revision: remember before you forget! 🧠✨'),
             style: TextStyle(color: Theme.of(context).hintColor)),
         const SizedBox(height: 16),
         Card(
@@ -42,7 +42,7 @@ class ReviseScreen extends StatelessWidget {
                 const SizedBox(width: 14),
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(context.tr('आजची उजळणी', "Today's review"),
+                    Text(context.tr('आजची उजळणी 🌤️', "Today's review 🌤️"),
                         style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
                     Text(context.tr('$due कार्ड बाकी · $learned/${cards.length} पक्की', '$due due · $learned/${cards.length} mastered'),
                         style: const TextStyle(color: Colors.white70)),
@@ -71,7 +71,7 @@ class ReviseScreen extends StatelessWidget {
           onTap: p.bookmarks.isEmpty ? null : () => startQuiz(context, s.builder.bookmarked()),
         ),
         if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasNotes(sub.id))) ...[
-          SectionTitle(context.tr('नोट्स व माइंड मॅप 🧠', 'Notes & mind maps 🧠')),
+          SectionTitle(context.tr('नोट्स व माइंड मॅप 🧠🗺️', 'Notes & mind maps 🧠🗺️')),
           SizedBox(
             height: 104,
             child: ListView(
@@ -104,7 +104,7 @@ class ReviseScreen extends StatelessWidget {
             ),
           ),
         ],
-        SectionTitle(context.tr('विषयानुसार फ्लॅशकार्ड', 'Flashcards by subject')),
+        SectionTitle(context.tr('विषयानुसार फ्लॅशकार्ड 🎴', 'Flashcards by subject 🎴')),
         for (final sub in s.repo.subjectsFor(exam))
           if (cards.any((c) => c.subject == sub.id)) ...[
             Card(

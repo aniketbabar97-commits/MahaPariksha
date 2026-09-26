@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'core/app_scope.dart';
+import 'core/notifications.dart';
+import 'core/reminders.dart';
 import 'core/theme.dart';
 import 'data/content_repo.dart';
 import 'data/progress.dart';
@@ -20,6 +22,8 @@ Future<void> main() async {
   }
   runApp(AppScope(repo: repo, progress: progress, child: const BharariApp()));
   repo.checkForUpdate();
+  await BharariNotifications.init();
+  if (progress.reminders) await applyReminders(progress);
 }
 
 class BharariApp extends StatelessWidget {

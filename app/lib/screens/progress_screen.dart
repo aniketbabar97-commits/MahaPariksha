@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -24,8 +25,17 @@ class ProgressScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
       children: [
-        Text(context.tr('प्रगती', 'Progress'),
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
+        Row(children: [
+          Expanded(
+            child: Text(context.tr('प्रगती 📈', 'Progress 📈'),
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
+          ),
+          OutlinedButton.icon(
+            icon: const Icon(Icons.ios_share, size: 18),
+            label: Text(context.tr('साप्ताहिक कार्ड 🗓️', 'Weekly card 🗓️')),
+            onPressed: () => _shareWeeklyCard(context, p, lang),
+          ),
+        ]),
         const SizedBox(height: 16),
         Container(
           padding: const EdgeInsets.all(20),
@@ -56,9 +66,9 @@ class ProgressScreen extends StatelessWidget {
           const SizedBox(width: 10),
           _Stat(value: '${p.bestStreak}', label: context.tr('सर्वोत्तम स्ट्रीक', 'Best streak'), icon: Icons.local_fire_department),
         ]),
-        SectionTitle(context.tr('अभ्यासाचे कॅलेंडर', 'Study calendar')),
+        SectionTitle(context.tr('अभ्यासाचे कॅलेंडर 🗓️', 'Study calendar 🗓️')),
         _Heatmap(counts: p.dayCounts, goal: p.dailyGoal),
-        SectionTitle(context.tr('विषयानुसार अचूकता', 'Accuracy by subject')),
+        SectionTitle(context.tr('विषयानुसार अचूकता 🎯', 'Accuracy by subject 🎯')),
         Card(
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -96,7 +106,7 @@ class ProgressScreen extends StatelessWidget {
           ),
         ),
         if (weak.isNotEmpty) ...[
-          SectionTitle(context.tr('सुधारणा हवी असलेले घटक 🎯', 'Topics to improve 🎯')),
+          SectionTitle(context.tr('सुधारणा हवी असलेले घटक 💪', 'Topics to improve 💪')),
           for (final t in weak.take(5))
             Card(
               margin: const EdgeInsets.only(bottom: 8),
@@ -109,7 +119,7 @@ class ProgressScreen extends StatelessWidget {
             ),
         ],
         if (examMocks.isNotEmpty) ...[
-          SectionTitle(context.tr('मॉक टेस्ट इतिहास', 'Mock test history')),
+          SectionTitle(context.tr('मॉक टेस्ट इतिहास 🏆', 'Mock test history 🏆')),
           Card(
             child: Column(children: [
               for (final m in examMocks.reversed.take(8))
@@ -122,7 +132,7 @@ class ProgressScreen extends StatelessWidget {
             ]),
           ),
         ],
-        SectionTitle(context.tr('बॅज', 'Badges')),
+        SectionTitle(context.tr('बॅज 🎖️', 'Badges 🎖️')),
         Wrap(spacing: 10, runSpacing: 10, children: [
           for (final b in _badges(p))
             Chip(
@@ -215,4 +225,27 @@ class _Heatmap extends StatelessWidget {
       ),
     );
   }
+}
+void _shareWeeklyCard(BuildContext context, Progress p, String lang) {
+  final t = today();
+  var weekCount = 0;
+  for (var d = t - 6; d <= t; d++) {
+    weekCount += p.dayCounts[d] ?? 0;
+  }
+  final acc = (p.accuracy * 100).round();
+  final streak = p.liveStreak;
+  final level = p.level;
+  final mr = 'माझा भरारी साप्ताहिक अहवाल 🗓️\n'
+      '✅ या आठवड्यात $weekCount प्रश्न सोडवले\n'
+      '🎯 एकूण अचूकता: $acc%\n'
+      '🔥 सध्याचा स्ट्रीक: $streak दिवस\n'
+      '🏅 स्तर: ${level.mr}\n\n'
+      'तुम्हीही भरारी घ्या — मोफत सराव ॲप 🚀';
+  final en = 'My Bharari weekly report 🗓️\n'
+      '✅ $weekCount questions this week\n'
+      '🎯 Overall accuracy: $acc%\n'
+      '🔥 Current streak: $streak days\n'
+      '🏅 Level: ${level.en}\n\n'
+      'Join me on Bharari — free practice app 🚀';
+  SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : mr));
 }

@@ -1,0 +1,717 @@
+[
+ {
+  "id": "note-maths-number",
+  "s": "maths",
+  "t": "number",
+  "summary_mr": "संख्याज्ञानात नैसर्गिक संख्या, पूर्णांक, अपूर्णांक, अविभाज्य संख्या (Prime), विभाज्यता नियम (Divisibility Rules), LCM-HCF यांचा समावेश होतो. 2 ने भाग जातो जर शेवटचा अंक सम असेल, 3 ने भाग जातो जर अंकांची बेरीज 3 च्या पटीत असेल, 9 साठी अंकांची बेरीज 9 च्या पटीत हवी, 5 साठी शेवटचा अंक 0 किंवा 5 हवा. LCM (लघुत्तम साधारण विभाज्य) व HCF (महत्तम साधारण विभाजक) यांचा गुणाकार दोन संख्यांच्या गुणाकाराइतका असतो. Prime numbers म्हणजे ज्यांना फक्त 1 आणि स्वतःनेच भाग जातो; 1 ही Prime किंवा Composite नाही. परीक्षेत विभाज्यता, LCM-HCF, आणि संख्यांचे वर्गीकरण यावर प्रश्न विचारले जातात.",
+  "summary_en": "Number System covers natural numbers, integers, fractions, prime numbers, divisibility rules, and LCM-HCF. A number is divisible by 2 if its last digit is even, by 3 if the digit sum is a multiple of 3, by 9 if digit sum is a multiple of 9, by 5 if the last digit is 0 or 5. LCM x HCF of two numbers equals the product of the two numbers. Prime numbers are divisible only by 1 and themselves; 1 is neither prime nor composite. Exams test divisibility, LCM-HCF, and classification of numbers.",
+  "facts_mr": [
+   "2 ने भाग: शेवटचा अंक सम (0,2,4,6,8)",
+   "3 ने भाग: अंकांची बेरीज 3 च्या पटीत",
+   "9 ने भाग: अंकांची बेरीज 9 च्या पटीत",
+   "5 ने भाग: शेवटचा अंक 0 किंवा 5",
+   "11 ने भाग: सम व विषम स्थानांच्या अंकांच्या बेरजेतील फरक 0 किंवा 11 चा पट",
+   "LCM x HCF = दोन संख्यांचा गुणाकार",
+   "1 ही संख्या Prime नाही आणि Composite नाही",
+   "2 ही एकमेव सम अविभाज्य (Prime) संख्या आहे",
+   "0 ही सर्वात लहान पूर्ण संख्या (Whole Number) आहे, पण Natural Number नाही",
+   "सर्वात लहान Prime संख्या 2 आहे"
+  ],
+  "facts_en": [
+   "Divisible by 2: last digit is even (0,2,4,6,8)",
+   "Divisible by 3: sum of digits is a multiple of 3",
+   "Divisible by 9: sum of digits is a multiple of 9",
+   "Divisible by 5: last digit is 0 or 5",
+   "Divisible by 11: difference of sums of alternate digits is 0 or a multiple of 11",
+   "LCM x HCF = product of the two numbers",
+   "1 is neither prime nor composite",
+   "2 is the only even prime number",
+   "0 is the smallest whole number, but not a natural number",
+   "The smallest prime number is 2"
+  ],
+  "map": {
+   "mr": "संख्याज्ञान",
+   "en": "Number System",
+   "children": [
+    {"mr": "संख्या प्रकार", "en": "Number types", "children": [
+      {"mr": "Natural, Whole, Integer", "en": "Natural, Whole, Integer"},
+      {"mr": "Prime व Composite", "en": "Prime & Composite"}
+    ]},
+    {"mr": "विभाज्यता नियम", "en": "Divisibility rules", "children": [
+      {"mr": "2,3,5,9,11 चे नियम", "en": "Rules for 2,3,5,9,11"}
+    ]},
+    {"mr": "LCM-HCF", "en": "LCM-HCF", "children": [
+      {"mr": "LCM x HCF = a x b", "en": "LCM x HCF = a x b"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-simplification",
+  "s": "maths",
+  "t": "simplification",
+  "summary_mr": "सरळरूप (Simplification) मध्ये BODMAS/VBODMAS नियमानुसार गणिती क्रिया करायच्या असतात - Vinculum, Brackets, Of, Division, Multiplication, Addition, Subtraction या क्रमाने सोडवावे. उदा. 10 + 2 x 5 = 10 + 10 = 20, आधी गुणाकार मग बेरीज. Fractions, Decimals, Square Roots यांचाही समावेश असतो. परीक्षेत वेळ वाचवण्यासाठी जवळपासची मूल्ये (approximation) वापरून उत्तर पडताळणे उपयुक्त ठरते. क्रम चुकल्यास संपूर्ण उत्तर चुकते, त्यामुळे कंसातील क्रिया आधी सोडवणे महत्त्वाचे आहे.",
+  "summary_en": "Simplification requires solving expressions using BODMAS/VBODMAS order - Vinculum, Brackets, Of, Division, Multiplication, Addition, Subtraction. E.g. 10 + 2 x 5 = 10 + 10 = 20, multiplication before addition. It also covers fractions, decimals and square roots. In exams, using approximate values to verify the answer saves time. Getting the order wrong makes the whole answer wrong, so solving brackets first is important.",
+  "facts_mr": [
+   "BODMAS क्रम: Brackets, Of, Division, Multiplication, Addition, Subtraction",
+   "Vinculum (रेषा) असल्यास ती सर्वात आधी सोडवा",
+   "10 + 2 x 5 = 10 + 10 = 20 (आधी गुणाकार)",
+   "Fractions जोडताना समान छेद (LCM) करा",
+   "Square root: वर्गमूळ काढताना जोड्या करून सोडवा",
+   "Decimal गुणाकारात दशांश स्थाने मोजून उत्तरात योग्य ठिकाणी बिंदू ठेवा",
+   "'Of' म्हणजे गुणाकार, Division च्या आधी सोडवावे",
+   "अंदाजे उत्तरासाठी संख्या पूर्णांकात round करून पडताळणी करा"
+  ],
+  "facts_en": [
+   "BODMAS order: Brackets, Of, Division, Multiplication, Addition, Subtraction",
+   "Solve the vinculum (bar) first if present",
+   "10 + 2 x 5 = 10 + 10 = 20 (multiplication first)",
+   "Take LCM of denominators before adding fractions",
+   "Square root: pair digits from the right to compute",
+   "In decimal multiplication, count decimal places to place the point correctly",
+   "'Of' means multiplication, solved before Division",
+   "Round numbers for a quick approximate check of the answer"
+  ],
+  "map": {
+   "mr": "सरळरूप",
+   "en": "Simplification",
+   "children": [
+    {"mr": "क्रम नियम", "en": "Order rule", "children": [
+      {"mr": "BODMAS", "en": "BODMAS"},
+      {"mr": "Vinculum आधी", "en": "Vinculum first"}
+    ]},
+    {"mr": "प्रकार", "en": "Types", "children": [
+      {"mr": "Fractions", "en": "Fractions"},
+      {"mr": "Decimals", "en": "Decimals"},
+      {"mr": "Square roots", "en": "Square roots"}
+    ]},
+    {"mr": "युक्ती", "en": "Tricks", "children": [
+      {"mr": "Approximation पडताळणी", "en": "Approximation check"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-percentage",
+  "s": "maths",
+  "t": "percentage",
+  "summary_mr": "शेकडेवारी (Percentage) म्हणजे 'प्रति शंभर' प्रमाण, x% म्हणजे x/100. कोणत्याही संख्येची टक्केवारी काढण्यासाठी संख्या x टक्के/100 करावी लागते, उदा. 80 च्या 25% = 80 x 25/100 = 20. टक्केवारीतील वाढ किंवा घट मोजताना मूळ किंमत (base) महत्त्वाची असते. Percentage चा उपयोग नफा-तोटा, व्याज, गुणोत्तर अशा अनेक विषयांमध्ये होतो, त्यामुळे हा पाया मजबूत असणे आवश्यक आहे. संख्या x% ने वाढल्यास व नंतर x% ने कमी झाल्यास मूळ संख्येपेक्षा कमीच राहते (उलट क्रमानेही असेच). Fraction-to-percentage रूपांतरण पाठ असणे वेळ वाचवते.",
+  "summary_en": "Percentage means 'per hundred'; x% equals x/100. To find x% of a number, multiply the number by x/100, e.g. 25% of 80 = 80 x 25/100 = 20. When calculating percentage increase or decrease, the base (original value) matters. Percentage underlies Profit-Loss, Interest, Ratio and more, so this foundation must be strong. If a number increases by x% and then decreases by x%, the net result is less than the original (and vice versa). Memorising fraction-to-percentage conversions saves time.",
+  "facts_mr": [
+   "x% म्हणजे x/100",
+   "80 च्या 25% = 80 x 25/100 = 20",
+   "1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 1/3 = 33.33%",
+   "संख्या x% वाढून पुन्हा x% कमी झाल्यास निव्वळ बदल = -(x^2)/100 %",
+   "टक्केवारी वाढ = (नवी-जुनी)/जुनी x 100",
+   "एका संख्येला x% ने वाढवण्यासाठी (1 + x/100) ने गुणा",
+   "एका संख्येला x% ने कमी करण्यासाठी (1 - x/100) ने गुणा",
+   "दोन क्रमवार टक्केवारी बदल एकत्र करण्यासाठी गुणाकार पद्धत वापरा, बेरीज नाही"
+  ],
+  "facts_en": [
+   "x% means x/100",
+   "25% of 80 = 80 x 25/100 = 20",
+   "1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 1/3 = 33.33%",
+   "If a number rises x% then falls x%, net change = -(x^2)/100 %",
+   "Percentage increase = (new-old)/old x 100",
+   "To increase a number by x%, multiply by (1 + x/100)",
+   "To decrease a number by x%, multiply by (1 - x/100)",
+   "Combine two successive percentage changes by multiplying factors, not adding"
+  ],
+  "map": {
+   "mr": "शेकडेवारी",
+   "en": "Percentage",
+   "children": [
+    {"mr": "मूळ सूत्र", "en": "Base formula", "children": [
+      {"mr": "x% = x/100", "en": "x% = x/100"},
+      {"mr": "25% of 80 = 20", "en": "25% of 80 = 20"}
+    ]},
+    {"mr": "रूपांतरण", "en": "Conversions", "children": [
+      {"mr": "1/4=25%, 1/8=12.5%", "en": "1/4=25%, 1/8=12.5%"}
+    ]},
+    {"mr": "वाढ-घट", "en": "Increase-decrease", "children": [
+      {"mr": "(1+x/100) गुणाकार", "en": "Multiply by (1+x/100)"},
+      {"mr": "successive change % गुणाकार पद्धत", "en": "successive % change via multiplication"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-profit_loss",
+  "s": "maths",
+  "t": "profit_loss",
+  "summary_mr": "नफा-तोटा (Profit & Loss) मध्ये Cost Price (CP), Selling Price (SP), Profit/Loss यांचे संबंध विचारले जातात. SP जास्त असल्यास नफा (Profit = SP - CP), CP जास्त असल्यास तोटा (Loss = CP - SP). नफा% = (Profit/CP) x 100, तोटा% देखील CP वरच काढला जातो, SP वर नाही. Discount (सूट) Marked Price (MP) वर दिली जाते, SP = MP - Discount. दोन वस्तू समान किमतीला विकून एकावर नफा व एकावर तितकाच तोटा झाल्यास एकूण तोटाच होतो. उदा. CP=100, SP=120 असल्यास नफा% = 20%. स्पर्धा परीक्षांत successive discount आणि false weight यांसारखे प्रश्नही येतात.",
+  "summary_en": "Profit & Loss deals with the relationship between Cost Price (CP), Selling Price (SP) and Profit/Loss. If SP is higher, Profit = SP - CP; if CP is higher, Loss = CP - SP. Profit% = (Profit/CP) x 100; Loss% is also computed on CP, not SP. Discount is given on the Marked Price (MP): SP = MP - Discount. If two items are sold at the same price, one at profit and other at equal loss %, there is always a net loss. E.g. CP=100, SP=120 gives Profit% = 20%. Exams also test successive discounts and false-weight problems.",
+  "facts_mr": [
+   "Profit = SP - CP (जेव्हा SP > CP)",
+   "Loss = CP - SP (जेव्हा CP > SP)",
+   "Profit% = (Profit/CP) x 100, नेहमी CP वर आधारित",
+   "SP = MP - Discount (Marked Price वर सूट)",
+   "SP = CP x (100+Profit%)/100",
+   "CP=100, SP=120 असल्यास Profit% = 20%",
+   "समान % नफा व तोटा दोन वस्तूंत झाल्यास एकूण नेहमी तोटाच होतो",
+   "Successive Discounts एकत्र करण्यासाठी गुणाकार पद्धत वापरा, बेरीज नाही",
+   "False weight वापरल्यास नफा% = (खरे वजन - खोटे वजन)/खोटे वजन x 100"
+  ],
+  "facts_en": [
+   "Profit = SP - CP (when SP > CP)",
+   "Loss = CP - SP (when CP > SP)",
+   "Profit% = (Profit/CP) x 100, always based on CP",
+   "SP = MP - Discount (discount is on Marked Price)",
+   "SP = CP x (100+Profit%)/100",
+   "CP=100, SP=120 gives Profit% = 20%",
+   "Selling two items at equal profit% and loss% always results in a net loss",
+   "Combine successive discounts by multiplying factors, not adding",
+   "Using false weight, Profit% = (true weight - false weight)/false weight x 100"
+  ],
+  "map": {
+   "mr": "नफा-तोटा",
+   "en": "Profit & Loss",
+   "children": [
+    {"mr": "मूळ सूत्रे", "en": "Base formulas", "children": [
+      {"mr": "Profit = SP-CP", "en": "Profit = SP-CP"},
+      {"mr": "Profit% = Profit/CP x100", "en": "Profit% = Profit/CP x100"}
+    ]},
+    {"mr": "सूट (Discount)", "en": "Discount", "children": [
+      {"mr": "SP = MP - Discount", "en": "SP = MP - Discount"},
+      {"mr": "Successive discount गुणाकार", "en": "Successive discount multiply"}
+    ]},
+    {"mr": "सापळे", "en": "Traps", "children": [
+      {"mr": "समान % नफा-तोटा = निव्वळ तोटा", "en": "equal % profit-loss = net loss"},
+      {"mr": "False weight सूत्र", "en": "False weight formula"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-interest",
+  "s": "maths",
+  "t": "interest",
+  "summary_mr": "सरळ व्याज (Simple Interest, SI) आणि चक्रवाढ व्याज (Compound Interest, CI) मुद्दल (Principal), दर (Rate) व काळ (Time) यांच्यावर आधारित असतात. SI = PRT/100, दरवर्षी सारखेच व्याज मिळते. CI = P x (1+R/100)^T - P, प्रत्येक वर्षी मागील वर्षाच्या रकमेवर व्याज मोजले जाते, त्यामुळे CI हे SI पेक्षा जास्त असते (T>1 साठी). उदा. P=1000, R=10%, T=2 वर्षे: SI=200, CI=210. दोन वर्षांसाठी CI-SI मधील फरक = P x (R/100)^2 इतका असतो. अर्धवार्षिक (Half-yearly) चक्रवाढीत दर अर्धा व काळ दुप्पट होतो.",
+  "summary_en": "Simple Interest (SI) and Compound Interest (CI) are based on Principal, Rate and Time. SI = PRT/100, same interest each year. CI = P x (1+R/100)^T - P, interest is calculated on the previous year's amount each year, so CI exceeds SI for T>1. E.g. P=1000, R=10%, T=2 years: SI=200, CI=210. For 2 years, the difference CI-SI equals P x (R/100)^2. For half-yearly compounding, the rate is halved and time doubled.",
+  "facts_mr": [
+   "SI = P x R x T / 100",
+   "CI = P x (1 + R/100)^T - P",
+   "P=1000, R=10%, T=2 वर्षे: SI=200, CI=210",
+   "2 वर्षांसाठी CI - SI = P x (R/100)^2",
+   "3 वर्षांसाठी CI - SI = P x R^2 x (300+R) / 100^3",
+   "Half-yearly चक्रवाढीत R/2 आणि 2T वापरा",
+   "Amount (CI साठी) = P x (1+R/100)^T",
+   "T=1 वर्षासाठी SI आणि CI नेहमी सारखेच असतात",
+   "Rate आणि Time वाढल्यास CI, SI पेक्षा वेगाने वाढते"
+  ],
+  "facts_en": [
+   "SI = P x R x T / 100",
+   "CI = P x (1 + R/100)^T - P",
+   "P=1000, R=10%, T=2 years: SI=200, CI=210",
+   "For 2 years, CI - SI = P x (R/100)^2",
+   "For 3 years, CI - SI = P x R^2 x (300+R) / 100^3",
+   "For half-yearly compounding use R/2 and 2T",
+   "Amount (for CI) = P x (1+R/100)^T",
+   "For T=1 year, SI and CI are always equal",
+   "As rate and time increase, CI grows faster than SI"
+  ],
+  "map": {
+   "mr": "व्याज",
+   "en": "Interest",
+   "children": [
+    {"mr": "सरळ व्याज", "en": "Simple Interest", "children": [
+      {"mr": "SI = PRT/100", "en": "SI = PRT/100"}
+    ]},
+    {"mr": "चक्रवाढ व्याज", "en": "Compound Interest", "children": [
+      {"mr": "CI = P(1+R/100)^T - P", "en": "CI = P(1+R/100)^T - P"},
+      {"mr": "Half-yearly: R/2, 2T", "en": "Half-yearly: R/2, 2T"}
+    ]},
+    {"mr": "फरक सूत्र", "en": "Difference formula", "children": [
+      {"mr": "2 वर्षे: P(R/100)^2", "en": "2 years: P(R/100)^2"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-ratio",
+  "s": "maths",
+  "t": "ratio",
+  "summary_mr": "गुणोत्तर (Ratio) म्हणजे दोन समान प्रकारच्या राशींची तुलना, a:b स्वरूपात लिहितात. प्रमाण (Proportion) म्हणजे दोन गुणोत्तरे समान असणे, a:b = c:d असल्यास a x d = b x c. एखादी रक्कम a:b प्रमाणात वाटायची असल्यास एकूण रकमेला (a+b) ने भागून a किंवा b ने गुणावे लागते, उदा. 90 रुपये 4:5 मध्ये वाटल्यास पहिला भाग = 4/9 x 90 = 40. गुणोत्तरातील दोन्ही बाजू समान संख्येने गुणल्यास किंवा भागल्यास गुणोत्तर बदलत नाही. मिश्र गुणोत्तर (Compound Ratio) व Continued Proportion हे प्रकारही परीक्षेत येतात.",
+  "summary_en": "Ratio compares two quantities of the same kind, written as a:b. Proportion means two ratios are equal: if a:b = c:d, then a x d = b x c. To divide an amount in ratio a:b, divide the total by (a+b) and multiply by a or b, e.g. dividing 90 in ratio 4:5 gives the first part = 4/9 x 90 = 40. Multiplying or dividing both terms of a ratio by the same number doesn't change it. Compound Ratio and Continued Proportion are also tested in exams.",
+  "facts_mr": [
+   "a:b = c:d असल्यास a x d = b x c (Cross multiplication)",
+   "रक्कम a:b प्रमाणात वाटताना पहिला भाग = a/(a+b) x एकूण",
+   "90 ला 4:5 मध्ये वाटल्यास पहिला भाग = 4/9 x 90 = 40",
+   "गुणोत्तराच्या दोन्ही बाजू सारख्या संख्येने गुणल्यास/भागल्यास गुणोत्तर बदलत नाही",
+   "Compound Ratio: (a:b) आणि (c:d) चा compound ratio = ac:bd",
+   "Continued Proportion: a:b = b:c असल्यास b^2 = a x c",
+   "Mean Proportional = वर्गमूळ(a x c) जर a:x = x:c",
+   "Ratio नेहमी लघुत्तम रूपात (simplest form) लिहावी"
+  ],
+  "facts_en": [
+   "If a:b = c:d, then a x d = b x c (cross multiplication)",
+   "Dividing an amount in ratio a:b: first part = a/(a+b) x total",
+   "Dividing 90 in ratio 4:5 gives first part = 4/9 x 90 = 40",
+   "Multiplying/dividing both ratio terms by the same number keeps it unchanged",
+   "Compound ratio of (a:b) and (c:d) = ac:bd",
+   "Continued proportion: if a:b = b:c, then b^2 = a x c",
+   "Mean proportional = square root(a x c) if a:x = x:c",
+   "A ratio should always be written in its simplest form"
+  ],
+  "map": {
+   "mr": "गुणोत्तर व प्रमाण",
+   "en": "Ratio & Proportion",
+   "children": [
+    {"mr": "मूळ नियम", "en": "Base rule", "children": [
+      {"mr": "Cross multiplication", "en": "Cross multiplication"},
+      {"mr": "रक्कम वाटप", "en": "Dividing amounts"}
+    ]},
+    {"mr": "प्रकार", "en": "Types", "children": [
+      {"mr": "Compound Ratio", "en": "Compound Ratio"},
+      {"mr": "Continued Proportion", "en": "Continued Proportion"}
+    ]},
+    {"mr": "उदाहरण", "en": "Example", "children": [
+      {"mr": "90 चा 4:5 -> 40,50", "en": "90 in 4:5 -> 40,50"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-average",
+  "s": "maths",
+  "t": "average",
+  "summary_mr": "सरासरी (Average) = सर्व संख्यांची बेरीज / संख्यांची संख्या. उदा. 4, 6, 8 यांची सरासरी = (4+6+8)/3 = 6. गटातील एका सदस्याची जागा बदलल्यास किंवा नवीन सदस्य सामील झाल्यास सरासरीत होणारा बदल मोजण्याचे स्वतंत्र सूत्र आहे. सलग नैसर्गिक संख्यांची सरासरी ही मधली संख्या असते (विषम संख्या असल्यास), सम संख्या असल्यास मधल्या दोन संख्यांची सरासरी घ्यावी लागते. वयवारी (Ages) आणि गतीशी (Speed) संबंधित सरासरी प्रश्नही या विषयाशी जोडलेले असतात. नवीन सदस्यामुळे सरासरी वाढल्यास/घटल्यास एकूण फरक व सदस्य संख्या यांचा संबंध वापरावा लागतो.",
+  "summary_en": "Average = sum of all numbers / count of numbers. E.g. average of 4, 6, 8 = (4+6+8)/3 = 6. There's a separate formula for the change in average when a member is replaced or a new member joins. The average of consecutive natural numbers is the middle number (if odd count), or the average of the middle two (if even count). Average questions related to Ages and Speed are also connected here. When a new member changes the average, use the relation between total difference and count of members.",
+  "facts_mr": [
+   "Average = बेरीज / संख्या",
+   "4,6,8 ची सरासरी = 18/3 = 6",
+   "एक सदस्य बदलल्यास सरासरीतील फरक x संख्या = जुना-नवा सदस्यातील फरक",
+   "सलग संख्यांची सरासरी = (पहिली + शेवटची)/2",
+   "n सलग नैसर्गिक संख्यांची सरासरी (n विषम) = मधली संख्या",
+   "नवीन सदस्य सामील झाल्यास: नवा सदस्य = नवी सरासरी x नवी संख्या - जुनी बेरीज",
+   "सरासरी वेग = एकूण अंतर / एकूण वेळ (वेगांची सरासरी नाही)",
+   "समान अंतरासाठी दोन वेगांची सरासरी = 2xy/(x+y), साधी सरासरी नाही"
+  ],
+  "facts_en": [
+   "Average = sum / count",
+   "Average of 4,6,8 = 18/3 = 6",
+   "When one member is replaced: change in average x count = difference between old and new member",
+   "Average of consecutive numbers = (first + last)/2",
+   "Average of n consecutive natural numbers (n odd) = middle number",
+   "When a new member joins: new member = new average x new count - old sum",
+   "Average speed = total distance / total time (not average of the speeds)",
+   "For equal distances, average of two speeds = 2xy/(x+y), not the simple average"
+  ],
+  "map": {
+   "mr": "सरासरी",
+   "en": "Average",
+   "children": [
+    {"mr": "मूळ सूत्र", "en": "Base formula", "children": [
+      {"mr": "Average = बेरीज/संख्या", "en": "Average = sum/count"}
+    ]},
+    {"mr": "बदल प्रकार", "en": "Change types", "children": [
+      {"mr": "सदस्य बदलणे", "en": "Replacing a member"},
+      {"mr": "नवीन सदस्य", "en": "New member joining"}
+    ]},
+    {"mr": "विशेष प्रकार", "en": "Special cases", "children": [
+      {"mr": "सरासरी वेग = अंतर/वेळ", "en": "Average speed = distance/time"},
+      {"mr": "2xy/(x+y) सूत्र", "en": "2xy/(x+y) formula"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-time_work",
+  "s": "maths",
+  "t": "time_work",
+  "summary_mr": "काळ-काम (Time & Work) मध्ये एखादे काम पूर्ण करण्यासाठी लागणारा वेळ व कार्यक्षमता (Efficiency) यांचा संबंध विचारला जातो. जर एखादी व्यक्ती काम n दिवसांत पूर्ण करत असेल, तर एका दिवसाचे काम = 1/n. दोन व्यक्ती एकत्र काम करत असल्यास त्यांचे एका दिवसाचे काम बेरीज करून एकूण दिवस काढतात - A 10 दिवसांत, B 15 दिवसांत काम करत असल्यास एकत्र काम = 1/10+1/15 = 1/6, म्हणजे 6 दिवस लागतील. जास्त कार्यक्षमता असलेली व्यक्ती कमी दिवसांत काम पूर्ण करते, म्हणजे कार्यक्षमता व दिवस व्यस्त प्रमाणात असतात. Work equivalence (Men-Days-Hours) प्रश्नांतही हेच तत्त्व वापरले जाते.",
+  "summary_en": "Time & Work tests the relationship between time taken to finish a task and efficiency. If a person completes work in n days, one day's work = 1/n. When two people work together, add their one-day work rates to find total days - if A takes 10 days and B takes 15 days, together they do 1/10+1/15 = 1/6 of work per day, so the job takes 6 days. Higher efficiency means fewer days - efficiency and days are inversely proportional. The Men-Days-Hours work equivalence principle uses the same idea.",
+  "facts_mr": [
+   "एका दिवसाचे काम = 1 / एकूण दिवस",
+   "A(10 दिवस) + B(15 दिवस) एकत्र = 1/10+1/15 = 1/6 => 6 दिवस",
+   "कार्यक्षमता व दिवस व्यस्त प्रमाणात असतात",
+   "M1D1H1/W1 = M2D2H2/W2 (Men-Days-Hours-Work समीकरण)",
+   "काम अर्धवट सोडल्यास उरलेले काम = 1 - आतापर्यंत केलेले काम",
+   "दोन व्यक्तींचे कार्यक्षमता गुणोत्तर = त्यांच्या दिवसांच्या व्यस्त गुणोत्तराइतके",
+   "Wages (मजुरी) कार्यक्षमतेच्या प्रमाणात वाटली जाते",
+   "Pipes and Cistern मध्ये outlet pipe चे काम ऋण (negative) मानले जाते"
+  ],
+  "facts_en": [
+   "One day's work = 1 / total days taken",
+   "A(10 days) + B(15 days) together = 1/10+1/15 = 1/6 => 6 days",
+   "Efficiency and days are inversely proportional",
+   "M1D1H1/W1 = M2D2H2/W2 (Men-Days-Hours-Work equation)",
+   "If work is left incomplete, remaining work = 1 - work done so far",
+   "Ratio of two people's efficiency = inverse ratio of their days",
+   "Wages are shared in proportion to efficiency",
+   "In Pipes and Cistern, an outlet pipe's work is taken as negative"
+  ],
+  "map": {
+   "mr": "काळ-काम",
+   "en": "Time & Work",
+   "children": [
+    {"mr": "मूळ सूत्र", "en": "Base formula", "children": [
+      {"mr": "1 दिवसाचे काम = 1/n", "en": "1 day's work = 1/n"}
+    ]},
+    {"mr": "एकत्र काम", "en": "Working together", "children": [
+      {"mr": "दरांची बेरीज", "en": "Add the rates"}
+    ]},
+    {"mr": "संबंधित प्रकार", "en": "Related types", "children": [
+      {"mr": "Pipes and Cistern", "en": "Pipes and Cistern"},
+      {"mr": "Wages वाटप", "en": "Wage sharing"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-speed",
+  "s": "maths",
+  "t": "speed",
+  "summary_mr": "वेळ-वेग-अंतर (Time, Speed & Distance) मध्ये अंतर = वेग x वेळ हे मूळ सूत्र वापरले जाते. km/h ला m/s मध्ये रूपांतरित करण्यासाठी 5/18 ने गुणावे, m/s ला km/h साठी 18/5 ने गुणावे - उदा. 36 km/h = 36 x 5/18 = 10 m/s. दोन वस्तू एकमेकांच्या दिशेने (opposite direction) जात असल्यास सापेक्ष वेग = बेरीज, एकाच दिशेने (same direction) असल्यास सापेक्ष वेग = फरक. रेल्वे व बोट-प्रवाह (Boats & Streams) हे उपप्रकार याच सूत्रांवर आधारित असतात - प्रवाहाच्या दिशेने वेग = बोटीचा वेग + प्रवाहाचा वेग, विरुद्ध दिशेने वेग = बोटीचा वेग - प्रवाहाचा वेग.",
+  "summary_en": "Time, Speed & Distance uses the base formula Distance = Speed x Time. To convert km/h to m/s, multiply by 5/18; for m/s to km/h, multiply by 18/5 - e.g. 36 km/h = 36 x 5/18 = 10 m/s. When two objects move towards each other, relative speed = sum of speeds; moving in the same direction, relative speed = difference of speeds. Trains and Boats & Streams are sub-topics using the same formulas - downstream speed = boat speed + stream speed, upstream speed = boat speed - stream speed.",
+  "facts_mr": [
+   "अंतर = वेग x वेळ",
+   "km/h -> m/s: x 5/18; m/s -> km/h: x 18/5",
+   "36 km/h = 36 x 5/18 = 10 m/s",
+   "विरुद्ध दिशेने जाताना सापेक्ष वेग = वेग1 + वेग2",
+   "समान दिशेने जाताना सापेक्ष वेग = वेग1 - वेग2",
+   "Downstream वेग = बोटीचा वेग + प्रवाहाचा वेग",
+   "Upstream वेग = बोटीचा वेग - प्रवाहाचा वेग",
+   "रेल्वे प्लॅटफॉर्म ओलांडताना अंतर = रेल्वेची लांबी + प्लॅटफॉर्मची लांबी",
+   "दोन रेल्वे विरुद्ध दिशेने क्रॉस होताना अंतर = दोन्ही रेल्वेंच्या लांबीची बेरीज"
+  ],
+  "facts_en": [
+   "Distance = Speed x Time",
+   "km/h to m/s: multiply by 5/18; m/s to km/h: multiply by 18/5",
+   "36 km/h = 36 x 5/18 = 10 m/s",
+   "Moving towards each other, relative speed = speed1 + speed2",
+   "Moving in the same direction, relative speed = speed1 - speed2",
+   "Downstream speed = boat speed + stream speed",
+   "Upstream speed = boat speed - stream speed",
+   "Crossing a platform, distance = length of train + length of platform",
+   "Two trains crossing in opposite directions: distance = sum of both lengths"
+  ],
+  "map": {
+   "mr": "वेळ-वेग-अंतर",
+   "en": "Time, Speed & Distance",
+   "children": [
+    {"mr": "मूळ सूत्र", "en": "Base formula", "children": [
+      {"mr": "अंतर = वेग x वेळ", "en": "Distance = Speed x Time"},
+      {"mr": "एकक रूपांतरण 5/18, 18/5", "en": "Unit conversion 5/18, 18/5"}
+    ]},
+    {"mr": "सापेक्ष वेग", "en": "Relative speed", "children": [
+      {"mr": "विरुद्ध दिशा: बेरीज", "en": "Opposite direction: sum"},
+      {"mr": "समान दिशा: फरक", "en": "Same direction: difference"}
+    ]},
+    {"mr": "उपप्रकार", "en": "Sub-types", "children": [
+      {"mr": "Boats & Streams", "en": "Boats & Streams"},
+      {"mr": "Trains crossing", "en": "Trains crossing"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-mensuration",
+  "s": "maths",
+  "t": "mensuration",
+  "summary_mr": "क्षेत्रफळ व घनफळ (Mensuration) मध्ये द्विमितीय (2D) आकारांचे क्षेत्रफळ-परिमिती व त्रिमितीय (3D) आकारांचे पृष्ठफळ-घनफळ मोजले जातात. चौरसाचे क्षेत्रफळ = बाजू2, आयताचे = लांबी x रुंदी, त्रिकोणाचे = 1/2 x पाया x उंची, वर्तुळाचे = pi x r2. घनाचे घनफळ = बाजू3, इष्टिकाचिती (Cuboid) चे घनफळ = लांबी x रुंदी x उंची, दंडगोलाचे (Cylinder) घनफळ = pi x r2 x h. pi ची किंमत साधारण 22/7 किंवा 3.14 वापरतात. उदा. r=7 असलेल्या वर्तुळाचे क्षेत्रफळ = 22/7 x 7 x 7 = 154. सूत्रे नीट लक्षात ठेवून सराव करणे आवश्यक आहे.",
+  "summary_en": "Mensuration covers area-perimeter of 2D shapes and surface area-volume of 3D shapes. Area of square = side^2, rectangle = length x breadth, triangle = 1/2 x base x height, circle = pi x r^2. Volume of cube = side^3, cuboid = length x breadth x height, cylinder = pi x r^2 x h. pi is taken as approximately 22/7 or 3.14. E.g. area of circle with r=7 = 22/7 x 7 x 7 = 154. These formulas must be memorised and practised.",
+  "facts_mr": [
+   "चौरसाचे क्षेत्रफळ = बाजू2, परिमिती = 4 x बाजू",
+   "आयताचे क्षेत्रफळ = लांबी x रुंदी, परिमिती = 2(लांबी+रुंदी)",
+   "त्रिकोणाचे क्षेत्रफळ = 1/2 x पाया x उंची",
+   "वर्तुळाचे क्षेत्रफळ = pi r2, परिघ = 2 pi r",
+   "r=7 असलेल्या वर्तुळाचे क्षेत्रफळ = 22/7x7x7 = 154",
+   "घनाचे घनफळ = बाजू3, पृष्ठफळ = 6 x बाजू2",
+   "इष्टिकाचितीचे घनफळ = लांबी x रुंदी x उंची",
+   "दंडगोलाचे घनफळ = pi r2 h, वक्रपृष्ठफळ = 2 pi r h",
+   "समलंब चौकोनाचे क्षेत्रफळ = 1/2 x (समांतर बाजूंची बेरीज) x उंची"
+  ],
+  "facts_en": [
+   "Area of square = side^2, perimeter = 4 x side",
+   "Area of rectangle = length x breadth, perimeter = 2(length+breadth)",
+   "Area of triangle = 1/2 x base x height",
+   "Area of circle = pi r^2, circumference = 2 pi r",
+   "Area of circle with r=7: 22/7x7x7 = 154",
+   "Volume of cube = side^3, surface area = 6 x side^2",
+   "Volume of cuboid = length x breadth x height",
+   "Volume of cylinder = pi r^2 h, curved surface area = 2 pi r h",
+   "Area of trapezium = 1/2 x (sum of parallel sides) x height"
+  ],
+  "map": {
+   "mr": "क्षेत्रफळ व घनफळ",
+   "en": "Mensuration",
+   "children": [
+    {"mr": "2D आकार", "en": "2D shapes", "children": [
+      {"mr": "चौरस/आयत", "en": "Square/Rectangle"},
+      {"mr": "त्रिकोण/वर्तुळ", "en": "Triangle/Circle"}
+    ]},
+    {"mr": "3D आकार", "en": "3D shapes", "children": [
+      {"mr": "घन/इष्टिकाचिती", "en": "Cube/Cuboid"},
+      {"mr": "दंडगोल", "en": "Cylinder"}
+    ]},
+    {"mr": "उदाहरण", "en": "Example", "children": [
+      {"mr": "r=7 वर्तुळ क्षेत्रफळ=154", "en": "r=7 circle area=154"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-age",
+  "s": "maths",
+  "t": "age",
+  "summary_mr": "वयवारी (Ages) प्रश्नांत सध्याचे वय, भूतकाळातील किंवा भविष्यातील वय यांच्यातील संबंध समीकरणाच्या स्वरूपात दिलेला असतो. सामान्यतः दोन व्यक्तींच्या वयांचे गुणोत्तर व काही वर्षांनंतर/आधीचे गुणोत्तर दिलेले असते, त्यावरून चल (variable) मांडून समीकरण सोडवावे लागते. उदा. सध्या वयांचे गुणोत्तर 4:5 असल्यास वये 4x आणि 5x मानावीत. n वर्षांनंतर दोघांचेही वय n ने वाढते, वयांमधील फरक कधीही बदलत नाही. हा फरक स्थिर राहणे हे या प्रश्नांचे गमक आहे, त्यामुळे समीकरण मांडताना ही युक्ती वापरल्यास वेळ वाचतो.",
+  "summary_en": "Age problems present relationships between present, past, or future ages as equations. Typically the ratio of two people's ages now and after/before some years is given, and a variable must be set up to solve. E.g. if the current ratio of ages is 4:5, take the ages as 4x and 5x. After n years, both ages increase by n, but the difference between their ages never changes. This constant difference is the key trick, saving time when setting up the equation.",
+  "facts_mr": [
+   "वयांचे गुणोत्तर 4:5 असल्यास वये 4x, 5x मानावीत",
+   "दोन व्यक्तींच्या वयांतील फरक कधीही बदलत नाही",
+   "n वर्षांनंतर दोघांचेही वय (सध्याचे वय + n) होते",
+   "n वर्षांपूर्वी वय = सध्याचे वय - n",
+   "समीकरण मांडताना दिलेल्या गुणोत्तरांना x ने गुणून वय दर्शवा",
+   "बापाचे वय व मुलाचे वय संबंधित प्रश्नांत बेरीज व फरक दोन्ही वापरतात",
+   "गुणोत्तर व फरक दोन्ही माहिती असल्यास प्रत्यक्ष वय सहज काढता येते",
+   "सरासरी वयाच्या प्रश्नांत नवीन सदस्य सामील/वगळल्यास सरासरी बदलते"
+  ],
+  "facts_en": [
+   "If age ratio is 4:5, take ages as 4x and 5x",
+   "The difference between two people's ages never changes",
+   "After n years, both ages become (present age + n)",
+   "n years ago, age = present age - n",
+   "Use the variable x with given ratios to represent ages while forming equations",
+   "Father-son age problems use both sum and difference of ages",
+   "Knowing both ratio and difference lets you find actual ages easily",
+   "In average-age problems, the average changes when a member joins or leaves"
+  ],
+  "map": {
+   "mr": "वयवारी",
+   "en": "Ages",
+   "children": [
+    {"mr": "गुणोत्तर पद्धत", "en": "Ratio method", "children": [
+      {"mr": "4x, 5x मांडणी", "en": "Setting up 4x, 5x"}
+    ]},
+    {"mr": "स्थिर फरक", "en": "Constant difference", "children": [
+      {"mr": "वयांतील फरक न बदलणे", "en": "Age difference stays constant"}
+    ]},
+    {"mr": "काळ बदल", "en": "Time shift", "children": [
+      {"mr": "n वर्षांनी +n", "en": "+n after n years"},
+      {"mr": "n वर्षांपूर्वी -n", "en": "-n years ago"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-data_interpretation",
+  "s": "maths",
+  "t": "data_interpretation",
+  "summary_mr": "माहितीचे विश्लेषण (Data Interpretation) मध्ये तक्ता (Table), स्तंभालेख (Bar Graph), वर्तुळालेख (Pie Chart) किंवा रेषालेख (Line Graph) स्वरूपात दिलेली माहिती वाचून त्यावर आधारित गणिती प्रश्न सोडवायचे असतात - सरासरी, टक्केवारी, गुणोत्तर इत्यादी. Pie Chart मध्ये संपूर्ण वर्तुळ 360 अंश किंवा 100% दर्शवते, प्रत्येक भागाचे अंश किंवा टक्केवारी दिलेली असते. Bar Graph मध्ये उंचीवरून मूल्य वाचावे लागते. डेटा नीट वाचून प्रश्नाशी संबंधित रकाने/भाग ओळखणे महत्त्वाचे आहे, चुकीचा रकाना वाचल्यास संपूर्ण उत्तर चुकते. आधीच्या टक्केवारी व सरासरीच्या सूत्रांचा वापर याच विभागात होतो.",
+  "summary_en": "Data Interpretation requires reading data given as a Table, Bar Graph, Pie Chart or Line Graph, and solving maths questions based on it - averages, percentages, ratios, etc. In a Pie Chart, the whole circle represents 360 degrees or 100%, with each slice given in degrees or percentage. In a Bar Graph, values are read off the bar heights. Reading the data carefully and picking the right row/section is crucial, since misreading leads to a wrong answer. Percentage and average formulas from earlier topics are applied here.",
+  "facts_mr": [
+   "Pie Chart: संपूर्ण वर्तुळ = 360 अंश = 100%",
+   "अंशांना टक्केवारीत बदलण्यासाठी अंश/360 x 100",
+   "Bar Graph मध्ये उंचीवरून मूल्य वाचा, अक्षावरील स्केल तपासा",
+   "Line Graph मध्ये चढ-उतार (trend) पाहून तुलना करा",
+   "Table मधून योग्य रकाना व स्तंभ काळजीपूर्वक निवडा",
+   "एकूण (Total) मूल्य दिलेले नसल्यास टक्केवारी/गुणोत्तरावरून काढा",
+   "दोन वर्षांतील तुलना प्रश्नांत फरक व टक्केवारी बदल दोन्ही मोजा",
+   "एकूण सरासरी काढताना प्रत्येक भागाचे वेटेज लक्षात घ्या"
+  ],
+  "facts_en": [
+   "Pie Chart: full circle = 360 degrees = 100%",
+   "To convert degrees to percentage: degrees/360 x 100",
+   "In a Bar Graph, read the value from bar height; check the axis scale",
+   "In a Line Graph, observe the trend (rise/fall) for comparison",
+   "Pick the correct row and column carefully from a Table",
+   "If the total isn't given, derive it from percentage/ratio data",
+   "For year-over-year comparison questions, compute both difference and % change",
+   "When finding an overall average, account for each part's weightage"
+  ],
+  "map": {
+   "mr": "माहितीचे विश्लेषण",
+   "en": "Data Interpretation",
+   "children": [
+    {"mr": "आलेख प्रकार", "en": "Graph types", "children": [
+      {"mr": "Pie Chart", "en": "Pie Chart"},
+      {"mr": "Bar/Line Graph", "en": "Bar/Line Graph"}
+    ]},
+    {"mr": "गणन पद्धत", "en": "Calculation methods", "children": [
+      {"mr": "अंश -> टक्केवारी", "en": "Degrees -> percentage"},
+      {"mr": "सरासरी व गुणोत्तर वापर", "en": "Using average & ratio"}
+    ]},
+    {"mr": "सावधानता", "en": "Caution", "children": [
+      {"mr": "योग्य रकाना निवडा", "en": "Pick correct row"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-algebra",
+  "s": "maths",
+  "t": "algebra",
+  "summary_mr": "बीजगणित (Algebra) मध्ये चल (Variables), समीकरणे (Equations) व सूत्रे (Identities) यांचा अभ्यास होतो. मूलभूत Identities लक्षात असणे आवश्यक आहे: (a+b)2 = a2+2ab+b2, (a-b)2 = a2-2ab+b2, a2-b2 = (a+b)(a-b). रेखीय समीकरणे (Linear Equations) सोडवताना दोन्ही बाजूंना समान क्रिया करून चल वेगळे काढतात. द्विघात समीकरणे (Quadratic Equations) ax2+bx+c=0 चे मूळ काढण्यासाठी सूत्र x = (-b +- वर्गमूळ(b2-4ac))/2a वापरतात. स्पर्धा परीक्षांत Identities वापरून जलद गणना करणे आणि साध्या समीकरणांचे मूल्य काढणे विचारले जाते.",
+  "summary_en": "Algebra covers variables, equations and identities. Basic identities to remember: (a+b)^2 = a^2+2ab+b^2, (a-b)^2 = a^2-2ab+b^2, a^2-b^2 = (a+b)(a-b). Linear equations are solved by performing the same operation on both sides to isolate the variable. Quadratic equations ax^2+bx+c=0 are solved using x = (-b +- sqrt(b^2-4ac))/2a. Exams test quick calculation using identities and evaluating simple equations.",
+  "facts_mr": [
+   "(a+b)2 = a2 + 2ab + b2",
+   "(a-b)2 = a2 - 2ab + b2",
+   "a2 - b2 = (a+b)(a-b)",
+   "(a+b)3 = a3 + 3a2b + 3ab2 + b3",
+   "द्विघात समीकरणाची मुळे: x = (-b +- वर्गमूळ(b2-4ac))/2a",
+   "मुळांची बेरीज = -b/a, मुळांचा गुणाकार = c/a",
+   "जर a+b=p आणि a-b=q असतील तर a2+b2 = (p2+q2)/2",
+   "रेखीय समीकरण सोडवताना दोन्ही बाजूंना समान क्रिया करा"
+  ],
+  "facts_en": [
+   "(a+b)^2 = a^2 + 2ab + b^2",
+   "(a-b)^2 = a^2 - 2ab + b^2",
+   "a^2 - b^2 = (a+b)(a-b)",
+   "(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3",
+   "Roots of a quadratic: x = (-b +- sqrt(b^2-4ac))/2a",
+   "Sum of roots = -b/a, product of roots = c/a",
+   "If a+b=p and a-b=q, then a^2+b^2 = (p^2+q^2)/2",
+   "When solving a linear equation, perform the same operation on both sides"
+  ],
+  "map": {
+   "mr": "बीजगणित",
+   "en": "Algebra",
+   "children": [
+    {"mr": "Identities", "en": "Identities", "children": [
+      {"mr": "(a+b)2, (a-b)2", "en": "(a+b)^2, (a-b)^2"},
+      {"mr": "a2-b2 = (a+b)(a-b)", "en": "a^2-b^2 = (a+b)(a-b)"}
+    ]},
+    {"mr": "समीकरणे", "en": "Equations", "children": [
+      {"mr": "Linear Equations", "en": "Linear Equations"},
+      {"mr": "Quadratic मुळे सूत्र", "en": "Quadratic roots formula"}
+    ]},
+    {"mr": "मुळांचे गुणधर्म", "en": "Root properties", "children": [
+      {"mr": "बेरीज = -b/a", "en": "Sum = -b/a"},
+      {"mr": "गुणाकार = c/a", "en": "Product = c/a"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-geometry",
+  "s": "maths",
+  "t": "geometry",
+  "summary_mr": "भूमिती (Geometry) मध्ये त्रिकोण, चौकोन, वर्तुळ यांचे गुणधर्म व प्रमेये (Theorems) विचारली जातात. त्रिकोणाच्या कोनांची बेरीज नेहमी 180 अंश असते. पायथागोरस प्रमेय (Pythagoras Theorem) काटकोन त्रिकोणात लागू होते: कर्णाचा वर्ग = इतर दोन बाजूंच्या वर्गांची बेरीज (a2+b2=c2). समभुज त्रिकोणाचे सर्व कोन 60 अंश असतात. वर्तुळाला स्पर्शिका (Tangent) त्रिज्येला लंब असते. चक्रीय चौकोनातील (Cyclic Quadrilateral) समोरील कोनांची बेरीज 180 अंश असते. परीक्षेत या मूलभूत प्रमेयांवर आधारित गणिती प्रश्न विचारले जातात.",
+  "summary_en": "Geometry covers properties and theorems of triangles, quadrilaterals and circles. The sum of a triangle's angles is always 180 degrees. Pythagoras Theorem applies to right triangles: square of hypotenuse = sum of squares of the other two sides (a^2+b^2=c^2). All angles of an equilateral triangle are 60 degrees. A tangent to a circle is perpendicular to the radius at the point of contact. In a cyclic quadrilateral, opposite angles sum to 180 degrees. Exams ask calculation-based questions built on these basic theorems.",
+  "facts_mr": [
+   "त्रिकोणाच्या कोनांची बेरीज = 180 अंश",
+   "पायथागोरस प्रमेय: a2 + b2 = c2 (काटकोन त्रिकोण)",
+   "समभुज त्रिकोणाचे सर्व कोन = 60 अंश",
+   "वर्तुळाची स्पर्शिका त्रिज्येला लंब असते",
+   "चक्रीय चौकोनातील समोरील कोनांची बेरीज = 180 अंश",
+   "समांतरभुज चौकोनाचे समोरील कोन समान असतात",
+   "वर्तुळाच्या केंद्रावर बनणारा कोन परिघावरील कोनाच्या दुप्पट असतो",
+   "एकाच चापावरील परिघीय कोन नेहमी समान असतात"
+  ],
+  "facts_en": [
+   "Sum of a triangle's angles = 180 degrees",
+   "Pythagoras Theorem: a^2 + b^2 = c^2 (right triangle)",
+   "All angles of an equilateral triangle = 60 degrees",
+   "A tangent to a circle is perpendicular to the radius",
+   "In a cyclic quadrilateral, opposite angles sum to 180 degrees",
+   "Opposite angles of a parallelogram are equal",
+   "The angle at the centre of a circle is twice the angle at the circumference",
+   "Angles in the same segment of a circle are always equal"
+  ],
+  "map": {
+   "mr": "भूमिती",
+   "en": "Geometry",
+   "children": [
+    {"mr": "त्रिकोण", "en": "Triangle", "children": [
+      {"mr": "कोन बेरीज 180", "en": "Angle sum 180"},
+      {"mr": "पायथागोरस प्रमेय", "en": "Pythagoras Theorem"}
+    ]},
+    {"mr": "चौकोन", "en": "Quadrilateral", "children": [
+      {"mr": "चक्रीय चौकोन 180", "en": "Cyclic quad 180"},
+      {"mr": "समांतरभुज कोन", "en": "Parallelogram angles"}
+    ]},
+    {"mr": "वर्तुळ", "en": "Circle", "children": [
+      {"mr": "स्पर्शिका लंब", "en": "Tangent perpendicular"},
+      {"mr": "केंद्रकोन = 2x परिघकोन", "en": "Central angle = 2x circumference angle"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-trigonometry",
+  "s": "maths",
+  "t": "trigonometry",
+  "summary_mr": "त्रिकोणमिती (Trigonometry) मध्ये काटकोन त्रिकोणातील कोन व बाजूंचे गुणोत्तर अभ्यासले जातात - sin, cos, tan इत्यादी. sin(theta) = विरुद्ध बाजू/कर्ण, cos(theta) = लगतची बाजू/कर्ण, tan(theta) = विरुद्ध बाजू/लगतची बाजू. मूलभूत Identity: sin2(theta) + cos2(theta) = 1. काही ठराविक कोनांची (0,30,45,60,90) मूल्ये पाठ असणे आवश्यक आहे. Height & Distance (उंची व अंतर) प्रश्नांत Elevation angle आणि Depression angle वापरून उंची किंवा अंतर काढले जाते. उदा. tan45 = 1 असल्याने 45 अंशाच्या Elevation वर उंची व अंतर समान असतात.",
+  "summary_en": "Trigonometry studies ratios of angles and sides in right triangles - sin, cos, tan, etc. sin(theta) = opposite/hypotenuse, cos(theta) = adjacent/hypotenuse, tan(theta) = opposite/adjacent. Basic identity: sin^2(theta) + cos^2(theta) = 1. Standard angle values (0,30,45,60,90) must be memorised. Height & Distance problems use angle of elevation and depression to find height or distance. E.g. since tan45 = 1, at a 45-degree elevation angle, height and distance are equal.",
+  "facts_mr": [
+   "sin(theta) = विरुद्ध बाजू / कर्ण",
+   "cos(theta) = लगतची बाजू / कर्ण",
+   "tan(theta) = विरुद्ध बाजू / लगतची बाजू = sin/cos",
+   "sin2(theta) + cos2(theta) = 1",
+   "sin0=0, sin30=1/2, sin45=1/वर्गमूळ2, sin60=वर्गमूळ3/2, sin90=1",
+   "tan45 = 1 (उंची = अंतर, 45 अंश Elevation वर)",
+   "Elevation angle = वर पाहताना बनणारा कोन",
+   "Depression angle = खाली पाहताना बनणारा कोन"
+  ],
+  "facts_en": [
+   "sin(theta) = opposite side / hypotenuse",
+   "cos(theta) = adjacent side / hypotenuse",
+   "tan(theta) = opposite / adjacent = sin/cos",
+   "sin^2(theta) + cos^2(theta) = 1",
+   "sin0=0, sin30=1/2, sin45=1/sqrt2, sin60=sqrt3/2, sin90=1",
+   "tan45 = 1 (height = distance, at 45-degree elevation)",
+   "Angle of elevation = angle formed looking upward",
+   "Angle of depression = angle formed looking downward"
+  ],
+  "map": {
+   "mr": "त्रिकोणमिती",
+   "en": "Trigonometry",
+   "children": [
+    {"mr": "मूळ गुणोत्तरे", "en": "Base ratios", "children": [
+      {"mr": "sin, cos, tan", "en": "sin, cos, tan"},
+      {"mr": "sin2+cos2=1", "en": "sin^2+cos^2=1"}
+    ]},
+    {"mr": "ठराविक कोन", "en": "Standard angles", "children": [
+      {"mr": "0,30,45,60,90 मूल्ये", "en": "0,30,45,60,90 values"}
+    ]},
+    {"mr": "उंची व अंतर", "en": "Height & Distance", "children": [
+      {"mr": "Elevation/Depression कोन", "en": "Elevation/Depression angle"}
+    ]}
+   ]
+  }
+ },
+ {
+  "id": "note-maths-statistics",
+  "s": "maths",
+  "t": "statistics",
+  "summary_mr": "सांख्यिकी (Statistics) मध्ये Mean (सरासरी), Median (मध्यक) व Mode (बहुलक) या केंद्रीय प्रवृत्तीच्या मापांचा अभ्यास होतो. Mean = सर्व मूल्यांची बेरीज / मूल्यांची संख्या. Median काढण्यासाठी संख्या चढत्या क्रमाने लावाव्या लागतात - विषम संख्या असल्यास मधले मूल्य, सम संख्या असल्यास मधल्या दोन मूल्यांची सरासरी घ्यावी. Mode म्हणजे सर्वाधिक वेळा येणारे मूल्य. Range = कमाल मूल्य - किमान मूल्य. या तिन्ही मापांचा उपयोग डेटा विश्लेषणात व सरासरीशी संबंधित इतर प्रश्नांतही होतो.",
+  "summary_en": "Statistics covers Mean, Median and Mode as measures of central tendency. Mean = sum of all values / number of values. To find Median, arrange numbers in ascending order - the middle value for an odd count, or the average of the middle two for an even count. Mode is the value that occurs most frequently. Range = maximum value - minimum value. All three measures are used in data analysis and other average-related questions.",
+  "facts_mr": [
+   "Mean = सर्व मूल्यांची बेरीज / मूल्यांची संख्या",
+   "Median काढण्यासाठी संख्या चढत्या क्रमाने लावा",
+   "n विषम असल्यास Median = मधले मूल्य",
+   "n सम असल्यास Median = मधल्या दोन मूल्यांची सरासरी",
+   "Mode = सर्वाधिक वेळा येणारे मूल्य",
+   "Range = कमाल मूल्य - किमान मूल्य",
+   "एका डेटा संचात एकापेक्षा जास्त Mode असू शकतात (Bimodal)",
+   "Mean सर्व मूल्यांनी प्रभावित होते, Median व Mode बाह्य मूल्यांमुळे कमी प्रभावित होतात"
+  ],
+  "facts_en": [
+   "Mean = sum of all values / number of values",
+   "To find the Median, arrange numbers in ascending order",
+   "If n is odd, Median = the middle value",
+   "If n is even, Median = average of the middle two values",
+   "Mode = the value that occurs most frequently",
+   "Range = maximum value - minimum value",
+   "A dataset can have more than one Mode (bimodal)",
+   "Mean is affected by all values; Median and Mode are less affected by outliers"
+  ],
+  "map": {
+   "mr": "सांख्यिकी",
+   "en": "Statistics",
+   "children": [
+    {"mr": "Mean", "en": "Mean", "children": [
+      {"mr": "बेरीज/संख्या", "en": "sum/count"}
+    ]},
+    {"mr": "Median", "en": "Median", "children": [
+      {"mr": "चढत्या क्रमाने मधले मूल्य", "en": "middle value in ascending order"}
+    ]},
+    {"mr": "Mode व Range", "en": "Mode & Range", "children": [
+      {"mr": "सर्वाधिक वारंवारता", "en": "highest frequency"},
+      {"mr": "Range = कमाल-किमान", "en": "Range = max-min"}
+    ]}
+   ]
+  }
+ }
+]

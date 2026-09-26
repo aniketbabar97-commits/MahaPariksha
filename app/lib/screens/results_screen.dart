@@ -63,7 +63,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
     final p = context.scope.progress;
 
     return Scaffold(
-      appBar: AppBar(title: Text(context.tr('निकाल', 'Results'))),
+      appBar: AppBar(title: Text(context.tr('निकाल 🏁', 'Results 🏁'))),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
         children: [
@@ -125,7 +125,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
             ),
           ]),
           if (!isSpeed) ...[
-            SectionTitle(context.tr('उत्तरांचा आढावा', 'Answer review')),
+            SectionTitle(context.tr('उत्तरांचा आढावा 🔍', 'Answer review 🔍')),
             for (var i = 0; i < total; i++) _ReviewTile(index: i, spec: spec, answer: widget.answers[i], lang: lang),
           ],
         ],
