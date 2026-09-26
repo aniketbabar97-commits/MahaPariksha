@@ -214,16 +214,23 @@ def shape_ok(item, topics):
         return False
 
 
-def load_bank(subject):
-    path = BANK / f"{subject}.json"
+def load_bank(file_name):
+    path = BANK / f"{file_name}.json"
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
 
 
-def process_subject(subject, topics):
-    existing = load_bank(subject)
-    deficit = TARGET - len(existing)
+def process_subject(subject, topics, file_name=None, s=None, target=None):
+    """Top up content/bank/<file_name>.json (default: <subject>.json) with items tagged s=<s>
+    (default: subject), drawing only from the given topics. Lets one file (e.g. gs_adv, which
+    spans several subjects) be filled by several calls against the same file_name."""
+    file_name = file_name or subject
+    s = s or subject
+    target = TARGET if target is None else target
+    existing = load_bank(file_name)
+    same_s = [q for q in existing if q["s"] == s]
+    deficit = target - len(same_s)
     if deficit <= 0:
-        print(f"{subject}: already has {len(existing)} >= {TARGET}, skipping")
+        print(f"{file_name}/{s}: already has {len(same_s)} >= {target}, skipping")
         return 0, 0
     seen_q = {q["q_en"].strip().lower() for q in existing}
     next_n = max([int(q["id"].split("-")[-1]) for q in existing] or [0]) + 1
@@ -233,13 +240,14 @@ def process_subject(subject, topics):
         batches += 1
         n = min(BATCH_SIZE, deficit + 3)  # ask for a few extra to absorb rejects
         try:
-            drafts = gemini_draft(subject, sorted(topics), n, list(seen_q))
+            drafts = gemini_draft(s, sorted(topics), n, list(seen_q))
         except QuotaExhausted:
-            print(f"  {subject}: all Gemini models exhausted for today; stopping this run", file=sys.stderr)
-            _save_subject(subject, existing, kept, parked)
+            print(f"  {file_name}/{s}: all Gemini models exhausted for today; stopping this run",
+                  file=sys.stderr)
+            _save_bank(file_name, existing, kept, parked)
             raise
         except Exception as e:
-            print(f"  {subject}: gemini batch failed: {e}", file=sys.stderr)
+            print(f"  {file_name}/{s}: gemini batch failed: {e}", file=sys.stderr)
             time.sleep(20)
             continue
         time.sleep(GEMINI_PACING_SECONDS)
@@ -250,7 +258,7 @@ def process_subject(subject, topics):
             q_en_key = d["q_en"].strip().lower()
             if q_en_key in seen_q:
                 continue
-            if subject != "english" and not DEVANAGARI.search(d["q_mr"]):
+            if s != "english" and not DEVANAGARI.search(d["q_mr"]):
                 parked.append({"reason": "no_devanagari", "item": d})
                 continue
             try:
@@ -264,7 +272,7 @@ def process_subject(subject, topics):
                 continue
             seen_q.add(q_en_key)
             kept.append({
-                "id": f"{subject}-{next_n:03d}", "s": subject, "t": d["t"], "d": d["d"],
+                "id": f"{file_name}-{next_n:03d}", "s": s, "t": d["t"], "d": d["d"],
                 "q_mr": d["q_mr"], "q_en": d["q_en"], "o_mr": d["o_mr"], "o_en": d["o_en"],
                 "a": d["a"], "e_mr": d["e_mr"], "e_en": d["e_en"],
             })
@@ -272,41 +280,65 @@ def process_subject(subject, topics):
             deficit -= 1
             if deficit <= 0:
                 break
-    _save_subject(subject, existing, kept, parked)
-    print(f"{subject}: kept {len(kept)}, parked {len(parked)} (now {len(existing) + len(kept)}/{TARGET})")
+    _save_bank(file_name, existing, kept, parked)
+    print(f"{file_name}/{s}: kept {len(kept)}, parked {len(parked)} "
+          f"(now {len(same_s) + len(kept)}/{target})")
     return len(kept), len(parked)
 
 
-def _save_subject(subject, existing, kept, parked):
+def _save_bank(file_name, existing, kept, parked):
     if kept:
         BANK.mkdir(parents=True, exist_ok=True)
-        (BANK / f"{subject}.json").write_text(
+        (BANK / f"{file_name}.json").write_text(
             json.dumps(existing + kept, ensure_ascii=False, indent=1), encoding="utf-8")
     if parked:
         PARKED.mkdir(parents=True, exist_ok=True)
-        ppath = PARKED / f"{subject}.json"
+        ppath = PARKED / f"{file_name}.json"
         prior = json.loads(ppath.read_text(encoding="utf-8")) if ppath.exists() else []
         ppath.write_text(json.dumps(prior + parked, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+# Files that hold extra depth/passage-based topics for a subject beyond its main taxonomy split.
+# Each entry maps a bank file to [(s, [topic ids], per-part target), ...]; s and its topics must
+# be valid per content/taxonomy.json. These top up alongside the main per-subject pass.
+SPECIAL_FILES = {
+    "english_rc": [("english", ["comprehension", "cloze", "para_jumble"], 60)],
+    "marathi_utara": [("marathi", ["utara"], 40)],
+    "maths_adv": [("maths", ["algebra", "geometry", "trigonometry", "statistics",
+                              "data_interpretation"], 60)],
+    "reasoning_adv": [("reasoning", ["puzzles", "inequality", "data_sufficiency"], 60)],
+    "gs_adv": [
+        ("geography", ["mh_forests"], 25),
+        ("economy", ["social_dev", "mh_economy"], 25),
+        ("polity", ["governance", "bodies"], 25),
+        ("science", ["sci_tech"], 25),
+    ],
+}
 
 
 def main(argv):
     taxonomy = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
     subjects = {s["id"]: [t["id"] for t in s["topics"]] for s in taxonomy["subjects"]
                 if s["id"] not in SKIP_SUBJECTS}
-    wanted = argv or sorted(subjects)
+    wanted = argv or sorted(subjects) + sorted(SPECIAL_FILES)
     total_kept = total_parked = 0
-    for subject in wanted:
-        if subject not in subjects:
-            print(f"unknown subject {subject}, skipping", file=sys.stderr)
-            continue
+    for name in wanted:
         try:
-            k, p = process_subject(subject, subjects[subject])
+            if name in SPECIAL_FILES:
+                for s, topics, part_target in SPECIAL_FILES[name]:
+                    k, p = process_subject(s, topics, file_name=name, s=s, target=part_target)
+                    total_kept += k
+                    total_parked += p
+            elif name in subjects:
+                k, p = process_subject(name, subjects[name])
+                total_kept += k
+                total_parked += p
+            else:
+                print(f"unknown subject/file {name}, skipping", file=sys.stderr)
         except QuotaExhausted:
             print(f"\nAll Gemini models exhausted their daily quota; stopping the run here.")
             print(f"TOTAL: kept {total_kept}, parked {total_parked}")
             return 0
-        total_kept += k
-        total_parked += p
     print(f"\nTOTAL: kept {total_kept}, parked {total_parked}")
     return 0
 
