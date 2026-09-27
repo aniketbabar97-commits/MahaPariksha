@@ -51,16 +51,23 @@ def main():
             for lang, val in field.items():
                 if not val.get("text"):
                     fail(f"{q['id']}.{field_name}.{lang}: empty text")
-                if val.get("translationStatus") not in ("done", "pending"):
-                    fail(f"{q['id']}.{field_name}.{lang}: bad translationStatus")
+                if val.get("translationStatus") != "done":
+                    fail(f"{q['id']}.{field_name}.{lang}: translationStatus must be 'done' (got {val.get('translationStatus')!r})")
 
         for opt in q["options"]:
             if set(opt.keys()) != EXPECTED_LANGS:
                 fail(f"{q['id']}: option missing languages")
 
-        # en/ar must be marked done (authored); others must be pending fallback
-        if q["q"]["en"]["translationStatus"] != "done" or q["q"]["ar"]["translationStatus"] != "done":
-            fail(f"{q['id']}: en/ar must be translationStatus=done")
+        # No English-fallback content ships: every language must be a real,
+        # authored translation (translationStatus == "done"), never "pending".
+        for lang in EXPECTED_LANGS:
+            if q["q"][lang]["translationStatus"] != "done":
+                fail(f"{q['id']}.q.{lang}: must be translationStatus=done (no pending fallback allowed)")
+            if q["explanation"][lang]["translationStatus"] != "done":
+                fail(f"{q['id']}.explanation.{lang}: must be translationStatus=done (no pending fallback allowed)")
+            for opt in q["options"]:
+                if opt[lang]["translationStatus"] != "done":
+                    fail(f"{q['id']}: option.{lang} must be translationStatus=done (no pending fallback allowed)")
 
     print(f"OK: {n} questions, {len(valid_categories)} categories, "
           f"{bundle['stats']['needsVerificationCount']} flagged needsVerification.")

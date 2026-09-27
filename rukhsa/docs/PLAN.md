@@ -7,7 +7,7 @@ package `app.rukhsa`, no shared code with Bharari).
 
 ## 1. Content sourcing plan
 
-This first pass (59 questions across 10 categories) was written from general
+This first pass (61 questions across 10 categories) was written from general
 public knowledge of how the Dubai RTA / Abu Dhabi (Al Ain, ADNOC) Light Motor
 Vehicle theory test is structured and what it commonly covers. It is a
 **study organiser and starter question bank, not a transcription of any
@@ -35,9 +35,10 @@ buffer policy, licence renewal cadence, etc.) that should be double-checked
 against the current official handbook/regulations before being treated as
 fact. As of this pass:
 
-- 59 total questions, 14 flagged `needsVerification: true`.
-- Run `python3 pipeline/validate.py` after building the bundle to see the
-  current counts, or filter `content/bank/*.json` for `"needsVerification": true`.
+- 61 total questions, 17 flagged `needsVerification: true`.
+- Run `python3 pipeline/build_bundle.py` to rebuild and see the current
+  per-language counts, or grep `content/questions_en.json` for
+  `"needsVerification": true`.
 - Nothing in the "verified" (unflagged) set states a specific fine amount or
   point count — those are exactly the kind of fact that is flagged instead.
 
@@ -55,25 +56,63 @@ major learner-demand coverage.
 |---|---|---|
 | English (en) | Translated | Authored (source language) |
 | Arabic (ar) | Translated | Authored (real translation) |
+| Urdu (ur) | Translated | Authored (real translation) |
+| Hindi (hi) | Translated | Authored (real translation) |
+| Tagalog (tl) | Translated | Authored (real translation) |
+| Malayalam (ml) | Translated | Authored (real translation) |
+| Bengali (bn) | Translated | Authored (real translation) |
+| Tamil (ta) | Translated | Authored (real translation) |
+| Farsi (fa) | Translated | Authored (real translation) |
+| French (fr) | Translated | Authored (real translation) |
 | Chinese, Simplified (zh) | Translated | Authored (real translation) |
 | Russian (ru) | Translated | Authored (real translation) |
-| Urdu, Hindi, Tagalog, Malayalam, Bengali, Tamil, Farsi, French | Translated | English fallback, `translationStatus: "pending"` per question/field (unless overridden by a `content/questions_<lang>.json` file) |
 
-The bundle schema (`build_bundle.py`) always carries all 12 languages per
-question so the app never has to special-case a missing key, but it is
-explicit in the data about which text is a real, reviewed translation
-(`"done"`) versus an English placeholder (`"pending"`). The next content pass
-should prioritise getting Urdu and Hindi to `"done"`, since they cover the
-largest share of the UAE's resident/expat driving-test population, before the
-remaining languages.
+**Update (this pass): the `"pending"` English-fallback approach described in
+the paragraph below has been retired at the user's explicit direction.**
+`rukhsa/content/bank/` (the old per-category source with only en/ar/zh/ru
+authored inline and the other 8 languages falling back to English) has been
+removed. The single source of truth is now flat, per-language files —
+`rukhsa/content/questions_<lang>.json` for all 12 languages, sharing ids with
+the canonical `questions_en.json` (which alone carries `category`, `sub`,
+`answer`, `needsVerification`) — rebuilt by `pipeline/build_bundle.py` into
+`app/assets/content/bundle.json` in the same shape the Flutter app already
+expects (`Localized` map of `{text, translationStatus}` per language), except
+every entry is now `translationStatus: "done"`. The build script fails loudly
+if any language file is missing or incomplete for any question id — there is
+no silent English fallback path left in the pipeline.
+
+### Self-verification pass (this pass)
+
+Every one of the 12 language files (61 questions x 4 options + explanation
+each) was authored independently, then re-read in a second, separate pass
+against the English/Arabic source meaning — checking for accuracy, natural
+phrasing, and (for RTL languages) correct directionality of quoted numbers/
+Latin terms (e.g. "Mulkiya", "Salik", km/h). Spot-checks covered every
+language at least once (Tamil, Bengali, Farsi, Chinese, Russian, Urdu,
+Tagalog, Malayalam, Hindi, French) and an automated structural pass (script,
+not just eyeballing) confirmed for all 12 language files: every question has
+exactly 4 non-empty options, a non-empty question and explanation string, and
+the shared `answer` index is in range 0-3. No `translationStatus: "pending"`
+or copied-English placeholder exists anywhere in the shipped content.
+
+Any specific number or legal fact a translator was not fully confident is
+still current — a fine amount, a black-point count, an age/height cutoff, a
+speed-limit figure — is flagged `needsVerification: true` on the English
+(canonical) record, which every language's build picks up. This flag is
+strictly about fact-checking against the official RTA handbook and is never
+used as an excuse to leave a translation undone; every flagged question still
+has a complete, real translation in all 12 languages. 17 of the 61 questions
+currently carry this flag (see `content/questions_en.json`, search
+`needsVerification`); nothing "verified" states a specific number.
 
 ## 4. Next steps
 
-- Get real (reviewed) translations for the remaining "pending" languages,
-  starting with Urdu and Hindi.
+- All 12 languages now have real, self-verified translations for every UI
+  string and question/option/explanation — no further translation-fallback
+  work is outstanding.
 - Verify every `needsVerification: true` question against the official RTA
   handbook and current fine/black-point schedule, then flip the flag.
-- Grow the bank from 59 to 300+ questions once content is verified, to
+- Grow the bank from 61 to 300+ questions once content is verified, to
   support realistic mock-exam-length sessions (25-40 questions) without
   repeats.
 - Add a "mock exam" mode (fixed-length, timed, pass/fail against the
@@ -86,9 +125,11 @@ remaining languages.
 
 ## 5. UI/product polish pass (this branch)
 
-Added on top of the existing app skeleton, all under `app/lib/`, without
-touching `content/bank/`, `content/taxonomy.json`, or the l10n `.arb` files
-(that content/translation work is owned separately):
+Added on top of the existing app skeleton, all under `app/lib/`. (At the time
+this section was written, `content/bank/`, `content/taxonomy.json` and the
+l10n `.arb` files were being worked on separately; `content/bank/` has since
+been retired in favour of the flat, fully-translated `questions_<lang>.json`
+files described in section 3 above.)
 
 - **Design system** (`core/theme.dart`, `core/design_system.dart`): brand
   color tokens (blue/gold from the logo) with a real light+dark `ColorScheme`,

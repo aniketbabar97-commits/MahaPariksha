@@ -15,14 +15,17 @@ void main() {
     expect(bundle.questions.length, greaterThanOrEqualTo(55));
   });
 
-  test('all 10 languages are present and en/ar are always done', () {
-    expect(bundle.languages.length, 10);
+  test('all 12 languages are present and fully translated (no pending)', () {
+    expect(bundle.languages.length, 12);
     for (final q in bundle.questions) {
       for (final lang in bundle.languages) {
         expect(q.q[lang], isNotNull, reason: '${q.id} missing $lang');
+        expect(q.q[lang]!.status, TranslationStatus.done, reason: '${q.id} $lang q');
+        expect(q.explanation[lang]!.status, TranslationStatus.done, reason: '${q.id} $lang explanation');
+        for (final opt in q.options) {
+          expect(opt[lang]!.status, TranslationStatus.done, reason: '${q.id} $lang option');
+        }
       }
-      expect(q.q['en']!.status, TranslationStatus.done, reason: q.id);
-      expect(q.q['ar']!.status, TranslationStatus.done, reason: q.id);
     }
   });
 

@@ -54,25 +54,28 @@ content, pipeline and docs.
 
 | Path | What |
 |---|---|
-| `rukhsa/app/` | Flutter app (`app.rukhsa`) — Material 3, RTL-aware, 10-language UI |
-| `rukhsa/content/taxonomy.json` | RTA-style categories: road signs, right of way, speed limits, fines/black points, highway/lane discipline, roundabouts, parking, seatbelts/child safety, alcohol/fatigue, vehicle docs/insurance |
-| `rukhsa/content/bank/*.json` | Source MCQs, authored in English + Arabic, 4 options each, with `needsVerification` flags |
-| `rukhsa/pipeline/author_bank.py` | Source-of-truth question authoring script |
-| `rukhsa/pipeline/build_bundle.py` | Builds `rukhsa/app/assets/content/bundle.json`, filling the 8 remaining languages with an English fallback marked `translationStatus: "pending"` |
-| `rukhsa/pipeline/validate.py` | Structural validation of the built bundle |
-| `rukhsa/pipeline/gen_arb.py`, `gen_dart_l10n.py` | Generate the ARB files and app-side localization lookup for all 10 UI languages |
-| `rukhsa/docs/PLAN.md` | Content sourcing plan, verified vs needs-verification status, language rollout, next steps |
+| `rukhsa/app/` | Flutter app (`app.rukhsa`) — Material 3, RTL-aware, 12-language UI |
+| `rukhsa/content/taxonomy.json` | RTA-style categories: road signs, right of way, speed limits, fines/black points, highway/lane discipline, roundabouts, parking, seatbelts/child safety, alcohol/fatigue, vehicle docs/insurance — fully translated into all 12 languages |
+| `rukhsa/content/questions_en.json` | Canonical question bank (id, category, answer index, `needsVerification` flags) — 61 questions across the 10 categories |
+| `rukhsa/content/questions_<lang>.json` | One file per language (ar, ur, hi, tl, ml, bn, ta, fa, fr, zh, ru) — every question, option and explanation fully and independently translated, no English fallback |
+| `rukhsa/content/ui_strings.json` | Shared UI strings translated into all 12 languages |
+| `rukhsa/pipeline/build_bundle.py` | Validates every language file against the canonical bank and builds `rukhsa/app/assets/content/bundle.json` (all `translationStatus: "done"`, no pending) |
+| `rukhsa/docs/PLAN.md` | Content sourcing plan, verified vs needs-verification status, language rollout, self-verification notes, next steps |
 
 ```bash
 cd rukhsa
-python3 pipeline/author_bank.py     # (re)write content/bank/*.json
-python3 pipeline/build_bundle.py    # refresh app/assets/content/bundle.json
-python3 pipeline/validate.py        # check the built bundle
+python3 pipeline/build_bundle.py    # validate all languages + refresh app/assets/content/bundle.json
+python3 pipeline/validate.py        # structural check of the built bundle
 cd app && flutter pub get && flutter test && flutter run
 ```
 
 Supported languages: English, Arabic, Urdu, Hindi, Tagalog, Malayalam,
-Bengali, Tamil, Farsi, French. Question content is fully authored in English
-and Arabic; the other 8 languages currently fall back to English pending real
-translation — see `rukhsa/docs/PLAN.md` for the rollout plan. Store listing
-and search-ranking (ASO) work is intentionally out of scope for now.
+Bengali, Tamil, Farsi, French, Chinese (Simplified), Russian. Every UI string
+and every question/option/explanation is fully and independently authored in
+all 12 languages (no English-fallback/"pending" content ships); each
+translation pass was followed by a second, independent self-verification
+read-through. Any specific fact (a fine amount, a numeric threshold) the
+translator wasn't fully confident is current is flagged
+`needsVerification: true` for a future check against the official RTA
+handbook — see `rukhsa/docs/PLAN.md` for details. Store listing and
+search-ranking (ASO) work is intentionally out of scope for now.
