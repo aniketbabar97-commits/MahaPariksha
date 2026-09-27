@@ -959,7 +959,7 @@
     "category": "motorcycle",
     "sub": null,
     "answer": 1,
-    "needsVerification": true,
+    "needsVerification": false,
     "q": "Under UAE traffic law, wearing an approved helmet on a motorcycle is required for:",
     "options": [
       "The rider only",
@@ -967,7 +967,7 @@
       "Only riders under 18 years old",
       "Only when riding on highways, not urban roads"
     ],
-    "explanation": "UAE traffic rules are understood to require an approved helmet for both the rider and any pillion passenger at all times; the exact statutory wording should be checked against current RTA/traffic-law text, as this was not directly confirmed in the sources used for this pass."
+    "explanation": "Confirmed in the RTA-affiliated Drive Dubai motorcycle theory-test training deck: when riding with a pillion passenger, an approved helmet is required for both the rider and the pillion passenger, not the rider alone."
   },
   {
     "id": "mc011",
@@ -1168,16 +1168,16 @@
     "id": "hv012",
     "category": "heavy_vehicle",
     "sub": null,
-    "answer": 0,
-    "needsVerification": true,
-    "q": "Rules for heavy vehicle and bus drivers on long trips in the UAE generally require:",
+    "answer": 2,
+    "needsVerification": false,
+    "q": "According to the RTA's Truck and Bus Handbook, a heavy vehicle or bus driver should never drive for more than how many hours within any 24-hour period?",
     "options": [
-      "Scheduled rest breaks after a set number of continuous driving hours",
-      "No rest requirement as long as the driver feels fine",
-      "A rest break only once every 24 hours regardless of distance driven",
-      "Rest breaks are entirely optional and left to the transport company"
+      "6 hours",
+      "8 hours",
+      "10 hours",
+      "12 hours"
     ],
-    "explanation": "Mandatory rest-break rules after a set number of continuous driving hours are standard practice for commercial/heavy-vehicle drivers, but the exact hour thresholds currently set by UAE authorities were not confirmed in the sources used for this pass, so this remains flagged."
+    "explanation": "Verified in the RTA Truck and Bus Handbook (Part 2, 'Take Breaks'): drivers should take short breaks before becoming tired and should never drive for more than 10 hours in any 24-hour period."
   },
   {
     "id": "rs011",
@@ -1507,6 +1507,576 @@
     ],
     "answer": 2,
     "explanation": "Verified in the RTA handbook's violations table: a falling or leaking load carries 21 black points, reflecting the serious hazard it creates for following traffic.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl007",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "Unless a sign states otherwise, the default speed limit on an urban single carriageway road in Dubai is:",
+    "options": [
+      "25 km/h",
+      "40 km/h",
+      "60 km/h",
+      "80 km/h"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook's speed limit table: urban single carriageway roads default to 40 km/h unless signed otherwise.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl008",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "On an urban dual carriageway in Dubai, the default speed limit (unless signed otherwise) is:",
+    "options": [
+      "40 km/h",
+      "60 km/h or 80 km/h as signed",
+      "100 km/h",
+      "120 km/h"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: urban dual carriageways are set at 60 km/h or 80 km/h, as shown by the posted sign.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl009",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "The default speed limit on rural roads in Dubai (unless a sign shows otherwise) is:",
+    "options": [
+      "60 km/h",
+      "80 km/h",
+      "100 km/h",
+      "120 km/h"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook's speed limit table: rural roads default to 100 km/h.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl010",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "On Dubai freeways, the maximum speed limit is 120 km/h for light vehicles and, for heavy vehicles, it is:",
+    "options": [
+      "60 km/h",
+      "80 km/h",
+      "100 km/h",
+      "120 km/h"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: freeways allow up to 120 km/h for light vehicles but only 80 km/h for heavy vehicles.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl011",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "On Dubai freeways, in addition to the maximum limit, there is also a minimum speed limit of:",
+    "options": [
+      "40 km/h",
+      "60 km/h",
+      "80 km/h",
+      "100 km/h"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: freeways carry a minimum speed limit of 60 km/h, alongside the maximum limits for light and heavy vehicles.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl012",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "The speed limit inside a parking area or on a service road in Dubai is typically:",
+    "options": [
+      "15 km/h",
+      "25 km/h",
+      "40 km/h",
+      "60 km/h"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook's speed limit table: parking areas and service roads default to 25 km/h.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl007",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "When overtaking another vehicle travelling in the same direction, you must pass on:",
+    "options": [
+      "Either side, whichever is clearer",
+      "The left only",
+      "The right only",
+      "The hard shoulder"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook (Article 10.5): a driver must only pass other vehicles travelling in the same direction on the left.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl008",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "If another vehicle is overtaking you, the correct response is to:",
+    "options": [
+      "Speed up so it cannot pass",
+      "Slow down and keep to the right",
+      "Move to the left lane immediately",
+      "Flash your headlights and hold your lane"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook (Article 54): if someone is overtaking you, you must slow down and keep to the right.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl009",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "According to the RTA handbook, you must NOT overtake at:",
+    "options": [
+      "A straight, clear stretch of road",
+      "Intersections and roundabouts",
+      "A dual carriageway with a broken centre line",
+      "A designated overtaking lane"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: overtaking is prohibited where the road is not clearly visible, when oncoming traffic doesn't allow it safely, and specifically at intersections and roundabouts.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl010",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "Before pulling out to overtake a vehicle on a two-way road, the handbook advises staying at least how far behind it?",
+    "options": [
+      "Half a second",
+      "Two seconds",
+      "Ten seconds",
+      "One car length only"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: you should be at least two seconds behind the vehicle you are about to overtake, giving better vision and room to build up speed.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl011",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "According to the RTA handbook, overtaking a large truck on the open road typically takes about:",
+    "options": [
+      "5 seconds",
+      "25 seconds",
+      "60 seconds",
+      "2 minutes"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: it takes about 25 seconds to overtake a large truck on the open road, which is a long time to spend on the wrong side of the road.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl012",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "You must not cross which type of line to overtake another vehicle?",
+    "options": [
+      "A single broken white line",
+      "A single solid white/yellow line dividing traffic",
+      "Lane arrows painted on the road",
+      "A pedestrian crossing's zebra markings"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook (Article 58): you must not cross a single solid line on the road which divides traffic, whether to overtake or to turn, except in an emergency.",
+    "needsVerification": false
+  },
+  {
+    "id": "ri007",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "When travelling around a roundabout in the UAE, you should keep to which side of the central island?",
+    "options": [
+      "The left",
+      "The right",
+      "Either side, no rule applies",
+      "Straddle the centre line"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: at a roundabout you should always keep to the right of the central island, travelling around it in an anti-clockwise direction.",
+    "needsVerification": false
+  },
+  {
+    "id": "ri008",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "As you are about to enter a roundabout, you must give way to:",
+    "options": [
+      "Vehicles behind you",
+      "Vehicles already in the roundabout approaching from your left",
+      "Vehicles waiting at other entrances",
+      "Pedestrians only"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: once you have selected the correct lane and are about to enter the roundabout, you must give way to all vehicles already in it moving towards you from the left.",
+    "needsVerification": false
+  },
+  {
+    "id": "ri009",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "On a two-lane roundabout, if you intend to turn right, you should:",
+    "options": [
+      "Approach and stay in the left lane",
+      "Approach in the right lane and leave in the right-hand lane",
+      "Use either lane and switch freely",
+      "Enter from the hard shoulder"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: for a two-lane roundabout, turning right means approaching in the right lane, staying in it, signalling right, and leaving in the right-hand lane.",
+    "needsVerification": false
+  },
+  {
+    "id": "ri010",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "On a three-lane roundabout, which lane is reserved only for vehicles turning left?",
+    "options": [
+      "The right-hand lane",
+      "The centre lane",
+      "The left-hand lane",
+      "Any lane may be used"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook: on a three-lane roundabout you should not choose the left-hand lane unless turning left, as that lane is reserved for left-turning vehicles only.",
+    "needsVerification": false
+  },
+  {
+    "id": "ri011",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "At an intersection without signals, where a minor road meets a main road, priority must generally be given to:",
+    "options": [
+      "Whichever vehicle arrives first",
+      "Vehicles coming from the main road",
+      "Vehicles turning left",
+      "The larger vehicle"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: at such intersections, priority of crossing must be given to vehicles coming from a main road; where there is a roundabout, priority goes to vehicles already in it.",
+    "needsVerification": false
+  },
+  {
+    "id": "af005",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "According to the RTA handbook's 2010 crash data, what proportion of crashes in Dubai were caused by drivers under the influence of alcohol?",
+    "options": [
+      "4.33%",
+      "9.5%",
+      "14.33%",
+      "25%"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook: it states that 14.33% of crashes in Dubai are caused by drivers who were under the influence of alcohol.",
+    "needsVerification": false
+  },
+  {
+    "id": "af006",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Alcohol and drugs make driving dangerous mainly because they:",
+    "options": [
+      "Improve your reaction time",
+      "Make it harder to judge risks, distance and speed, and give a false sense of confidence",
+      "Only affect your sense of smell",
+      "Have no effect on judgement, only on movement"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: alcohol and drugs make it more difficult to judge risks including distance and speed, and give a false sense of confidence that can encourage risk-taking.",
+    "needsVerification": false
+  },
+  {
+    "id": "af007",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "If you have been drinking, the safest plan before driving is to:",
+    "options": [
+      "Drink coffee and wait 10 minutes",
+      "Open the windows and drive slowly",
+      "Arrange to be picked up by someone alcohol-free, or take a taxi",
+      "Drive only on familiar roads"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook: to stay safe, plan ahead and arrange to be picked up by someone who is alcohol or drug free, or take a taxi.",
+    "needsVerification": false
+  },
+  {
+    "id": "af008",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Rumble strips on the road are especially helpful for drivers who are:",
+    "options": [
+      "Speeding",
+      "Tired or drowsy on a long drive",
+      "Reversing",
+      "Towing a trailer"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: rumble strips warn drivers approaching a hazard, and this vibration and sound is especially helpful for drivers on a long drive who may be feeling tired or sleepy.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc005",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A rear-facing infant car seat should never be placed:",
+    "options": [
+      "In the back seat",
+      "On the front passenger seat with an active airbag",
+      "Behind the driver",
+      "In the middle rear seat"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: rear-facing car seats should never be placed on the front passenger seat, as a deploying airbag can cause fatal injuries to the infant.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc006",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "According to the RTA handbook's safety guidance, children should generally ride in the back seat of a vehicle until they are:",
+    "options": [
+      "6 years old",
+      "9 years old",
+      "13 years old",
+      "16 years old"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook: it states that all children should ride in the back seat of a vehicle until 13 years old.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc007",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A belt-positioning booster seat should generally be used until a child is about:",
+    "options": [
+      "100 cm (about 2-4 years)",
+      "145 cm (about 4-8 years)",
+      "170 cm (about 12 years)",
+      "Booster seats are never needed in the UAE"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: children should use belt-positioning booster seats until they are about 145cm (4'9\") tall, roughly 4 to 8 years old.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc008",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "According to the RTA handbook, pregnant women in a vehicle should:",
+    "options": [
+      "Not wear a seatbelt to protect the baby",
+      "Wear a seatbelt, to protect both themselves and their unborn child",
+      "Only wear the lap portion of the belt",
+      "Sit in the back seat unbelted"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: pregnant women need to also use a seat belt to keep themselves and their unborn child safe.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr006",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "In Dubai's paid parking system, 'Code A' side-road parking areas allow a maximum short stay of:",
+    "options": [
+      "1 hour",
+      "4 hours",
+      "12 hours",
+      "24 hours"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: Code A refers to side-road parking areas with a short-stay maximum of 4 hours, while Code B parking yards allow up to 24 hours.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr007",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "In Dubai's paid parking system, a 'Code B' parking yard allows a long-stay of up to:",
+    "options": [
+      "4 hours",
+      "8 hours",
+      "24 hours",
+      "48 hours"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook: Code B refers to areas specifically created as a parking yard, allowing long stays of up to 24 hours.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr008",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Non-payment of parking fees or a lost paid-parking ticket in a multi-storey car park carries a fine of:",
+    "options": [
+      "AED 100",
+      "AED 150",
+      "AED 200",
+      "AED 500"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook's parking violations table: non-payment of the parking fees or a lost ticket (in an MSCP) carries a fine of AED 150.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr009",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Exceeding the paid parking duration you have paid for carries a fine of:",
+    "options": [
+      "AED 50",
+      "AED 100",
+      "AED 300",
+      "AED 600"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook's parking violations table: exceeding the paid parking duration carries a fine of AED 100.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr010",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Parking in a disabled parking bay without the appropriate permit carries a fine of:",
+    "options": [
+      "AED 100",
+      "AED 200",
+      "AED 500",
+      "AED 1000"
+    ],
+    "answer": 2,
+    "explanation": "Verified in the RTA handbook's parking violations table: parking on a disabled parking space without the appropriate permit carries a fine of AED 500, the highest of the listed parking violations.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr011",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "A 'No Parking' sign means you must not park in the area even if:",
+    "options": [
+      "It is after 10pm",
+      "You remain seated in the vehicle",
+      "You have hazard lights on",
+      "It is raining"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: for a 'No Parking' area, you must not park there, even if you are sitting in the vehicle.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs021",
+    "category": "road_signs",
+    "sub": null,
+    "q": "A 'No Stopping' sign means:",
+    "options": [
+      "You may stop briefly to drop off a passenger",
+      "You must not stop at the kerb for any reason",
+      "You may stop only during the day",
+      "You may stop if hazard lights are on"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: 'No Stopping' signs tell you that you must not stop at the curb for any reason, and you must obey them.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs022",
+    "category": "road_signs",
+    "sub": null,
+    "q": "A sign marking a loading/unloading zone means that, outside a commercial vehicle actively loading or unloading within the shown times, you must:",
+    "options": [
+      "Not park there during those times",
+      "Park there for free all day",
+      "Only park motorcycles there",
+      "Use it as a taxi rank"
+    ],
+    "answer": 0,
+    "explanation": "Verified in the RTA handbook: these areas are reserved for vehicles loading or unloading at specific times; unless you are driving a commercial vehicle doing so, you must not park there during those times.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs023",
+    "category": "road_signs",
+    "sub": null,
+    "q": "You must not cross a single solid line on the road dividing traffic. This rule comes from which article of the UAE Federal Traffic Law's Executive By-Law?",
+    "options": [
+      "Article 33",
+      "Article 36",
+      "Article 54",
+      "Article 58"
+    ],
+    "answer": 3,
+    "explanation": "Verified in the RTA handbook: Article 58 of the Executive By-Law states you must not cross a single solid line on the road which divides traffic.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs024",
+    "category": "road_signs",
+    "sub": null,
+    "q": "Diagrammatic warning signs (showing lane layouts, such as lanes merging) are typically used:",
+    "options": [
+      "Only in residential streets",
+      "On high-speed roads where a simple triangular sign wouldn't give enough detail",
+      "Only at pedestrian crossings",
+      "Instead of traffic lights"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: diagrammatic warning signs are used where the triangular advance warning sign does not allow enough room for a picture, usually on high-speed roads, for situations like an additional lane, regulated lane use, or lanes merging.",
+    "needsVerification": false
+  },
+  {
+    "id": "tr013",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "According to Article 1 of the Executive By-Law of UAE Federal Traffic Law No. 21 of 1995, every road user must:",
+    "options": [
+      "Drive as fast as conditions allow",
+      "Follow signs, signals and police instructions and behave so as not to endanger or block others",
+      "Always take priority over other vehicles",
+      "Only follow the rules when a police officer is present"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook (Article 1): every road user must respect traffic regulations, follow signs, signals and police instructions, and behave cautiously so as not to harm others, expose them to danger, or block their movement.",
+    "needsVerification": false
+  },
+  {
+    "id": "tr014",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "According to Article 36 of the Executive By-Law, when you are turning into a road, you must:",
+    "options": [
+      "Sound your horn to warn pedestrians",
+      "Give way to pedestrians crossing the road you are turning into",
+      "Only give way if pedestrians are elderly or disabled",
+      "Proceed first if your indicator was on early"
+    ],
+    "answer": 1,
+    "explanation": "Verified in the RTA handbook: Article 36 requires drivers to always give way to pedestrians who are crossing the road they are turning into.",
+    "needsVerification": false
+  },
+  {
+    "id": "mc015",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "A motorcyclist should always buy a new helmet rather than a second-hand one mainly because a second-hand helmet:",
+    "options": [
+      "Is always the wrong size",
+      "May have hidden damage that is not visible but weakens its protection",
+      "Is always an outdated design",
+      "Costs more to maintain"
+    ],
+    "answer": 1,
+    "explanation": "This is standard motorcycle-safety guidance (also used in UAE motorcycle rider training materials): a second-hand helmet may have sustained impact damage that isn't visible but that seriously reduces its ability to protect in a crash.",
     "needsVerification": false
   }
 ]

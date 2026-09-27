@@ -1,7 +1,7 @@
 {
   "language": "tl",
   "isRtl": false,
-  "questionCount": 107,
+  "questionCount": 145,
   "questions": [
     {
       "id": "rs001",
@@ -1058,7 +1058,7 @@
       "category": "motorcycle",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Sa ilalim ng batas trapiko ng UAE, ang pagsuot ng aprubadong helmet sa motorsiklo ay kinakailangan para sa:",
       "options": [
         "Rider lamang",
@@ -1066,7 +1066,7 @@
         "Mga rider na wala pang 18 taong gulang lamang",
         "Sa highway lamang, hindi sa mga kalsadang urban"
       ],
-      "explanation": "Nauunawaan na ang mga patakaran ng trapiko ng UAE ay nangangailangan ng aprubadong helmet para sa rider at sa sinumang kasakay sa likod sa lahat ng oras; dapat suriin ang eksaktong teksto ng batas laban sa kasalukuyang dokumento ng RTA dahil hindi ito direktang napatunayan sa mga source na ginamit sa pass na ito."
+      "explanation": "Napatunayan sa Drive Dubai motorcycle theory-test training deck na kaugnay ng RTA: kapag may pillion passenger, ang aprubadong helmet ay kailangan ng parehong drayber at pillion passenger, hindi lang ng drayber."
     },
     {
       "id": "mc011",
@@ -1267,16 +1267,16 @@
       "id": "hv012",
       "category": "heavy_vehicle",
       "sub": null,
-      "answer": 0,
-      "needsVerification": true,
-      "q": "Ang mga patakaran para sa mga drayber ng mabibigat na sasakyan at bus sa mahabang biyahe sa UAE ay karaniwang nangangailangan ng:",
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Ayon sa Truck and Bus Handbook ng RTA, ang isang heavy vehicle o bus driver ay hindi dapat magmaneho nang higit sa ilang oras sa loob ng anumang 24-oras na panahon?",
       "options": [
-        "Naka-iskedyul na pahinga pagkatapos ng itinakdang bilang ng oras ng tuluy-tuloy na pagmamaneho",
-        "Walang kinakailangang pahinga hangga't maayos ang pakiramdam ng drayber",
-        "Isang pahinga lamang bawat 24 oras anuman ang layo na nagawa",
-        "Ganap na opsyonal ang mga pahinga at nakadepende sa kompanya ng transportasyon"
+        "6 oras",
+        "8 oras",
+        "10 oras",
+        "12 oras"
       ],
-      "explanation": "Ang mandatoryong pahinga pagkatapos ng itinakdang bilang ng oras ng tuluy-tuloy na pagmamaneho ay karaniwang praktis para sa mga komersyal/mabigat na sasakyan na drayber, ngunit hindi napatunayan ng pass na ito ang eksaktong bilang ng oras na kasalukuyang itinakda ng mga awtoridad ng UAE, kaya nananatili itong naka-flag."
+      "explanation": "Napatunayan sa Truck and Bus Handbook ng RTA (Bahagi 2, 'Take Breaks'): dapat kumuha ng maiikling pahinga ang mga drayber bago mapagod, at hindi dapat magmaneho nang higit sa 10 oras sa loob ng anumang 24 oras."
     },
     {
       "id": "rs011",
@@ -1607,6 +1607,576 @@
         "24 black points"
       ],
       "explanation": "Napatunayan mula sa talahanayan ng paglabag ng RTA handbook: ang pagkahulog o pagtagas ng kargamento ay may parusang 21 black points, na sumasalamin sa seryosong panganib nito sa mga sasakyang sumusunod."
+    },
+    {
+      "id": "sl007",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Maliban kung may karatulang nagsasaad ng iba, ang default na speed limit sa isang urban single carriageway road sa Dubai ay:",
+      "options": [
+        "25 km/h",
+        "40 km/h",
+        "60 km/h",
+        "80 km/h"
+      ],
+      "explanation": "Napatunayan mula sa talahanayan ng speed limit sa RTA handbook: default na 40 km/h ang urban single carriageway roads maliban kung iba ang nakasaad sa karatula."
+    },
+    {
+      "id": "sl008",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sa urban dual carriageway sa Dubai, ang default na speed limit (maliban kung iba ang nakasaad sa karatula) ay:",
+      "options": [
+        "40 km/h",
+        "60 km/h o 80 km/h ayon sa karatula",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang urban dual carriageways ay 60 km/h o 80 km/h, ayon sa nakapostang karatula."
+    },
+    {
+      "id": "sl009",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Ang default na speed limit sa mga rural road sa Dubai (maliban kung iba ang nasa karatula) ay:",
+      "options": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "explanation": "Napatunayan sa talahanayan ng speed limit ng RTA handbook: 100 km/h ang default sa mga rural road."
+    },
+    {
+      "id": "sl010",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sa mga freeway ng Dubai, ang max speed limit ay 120 km/h para sa light vehicles, at para naman sa heavy vehicles ito ay:",
+      "options": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: pinapayagan ang hanggang 120 km/h para sa light vehicles ngunit 80 km/h lang para sa heavy vehicles sa mga freeway."
+    },
+    {
+      "id": "sl011",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sa mga freeway ng Dubai, bukod sa max speed limit, may minimum speed limit din na:",
+      "options": [
+        "40 km/h",
+        "60 km/h",
+        "80 km/h",
+        "100 km/h"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang mga freeway ay may minimum speed limit na 60 km/h, kasama ang max limits para sa light at heavy vehicles."
+    },
+    {
+      "id": "sl012",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang speed limit sa loob ng parking area o sa service road sa Dubai ay karaniwang:",
+      "options": [
+        "15 km/h",
+        "25 km/h",
+        "40 km/h",
+        "60 km/h"
+      ],
+      "explanation": "Napatunayan sa talahanayan ng speed limit ng RTA handbook: 25 km/h ang default sa mga parking area at service road."
+    },
+    {
+      "id": "hl007",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Kapag ino-overtake ang ibang sasakyang parehong direksyon ng takbo, dapat kang dumaan sa:",
+      "options": [
+        "Kahit anong gilid, basta malinaw",
+        "Kaliwa lang",
+        "Kanan lang",
+        "Hard shoulder"
+      ],
+      "explanation": "Napatunayan sa RTA handbook (Artikulo 10.5): dapat lang mag-overtake ang driver sa kaliwa ng mga sasakyang parehong direksyon."
+    },
+    {
+      "id": "hl008",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Kung may ibang sasakyang nag-o-overtake sa iyo, ang tamang gagawin ay:",
+      "options": [
+        "Bilisan para hindi makadaan",
+        "Bagalan at manatili sa kanan",
+        "Lumipat kaagad sa kaliwang lane",
+        "Kumindat ng headlight at manatili sa lane"
+      ],
+      "explanation": "Napatunayan sa RTA handbook (Artikulo 54): kung may umo-overtake sa iyo, dapat kang bumagal at manatili sa kanan."
+    },
+    {
+      "id": "hl009",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ayon sa RTA handbook, hindi ka dapat mag-overtake sa:",
+      "options": [
+        "Tuwid at malinaw na bahagi ng kalsada",
+        "Mga interseksyon at roundabout",
+        "Dual carriageway na may putol-putol na gitnang linya",
+        "Nakatalagang overtaking lane"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: bawal mag-overtake kung hindi malinaw ang kalsada, kapag hindi ligtas dahil sa dumarating na trapiko, at partikular na sa mga interseksyon at roundabout."
+    },
+    {
+      "id": "hl010",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Bago lumabas para mag-overtake ng sasakyan sa two-way road, ang payo ng handbook ay manatili nang hindi bababa sa:",
+      "options": [
+        "Kalahating segundo",
+        "Dalawang segundo",
+        "Sampung segundo",
+        "Isang haba lang ng kotse"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: dapat kang manatili nang hindi bababa sa dalawang segundo sa likod ng sasakyang io-overtake mo, para sa mas mahusay na paningin at espasyo para bumilis."
+    },
+    {
+      "id": "hl011",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ayon sa RTA handbook, ang pag-overtake sa malaking trak sa bukas na kalsada ay karaniwang tumatagal ng:",
+      "options": [
+        "5 segundo",
+        "25 segundo",
+        "60 segundo",
+        "2 minuto"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: umaabot ng humigit-kumulang 25 segundo ang pag-overtake sa malaking trak sa bukas na kalsada, mahabang oras para nasa maling gilid ng daan."
+    },
+    {
+      "id": "hl012",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Anong uri ng linya ang hindi mo dapat tawirin para mag-overtake ng ibang sasakyan?",
+      "options": [
+        "Isang putol-putol na puting linya",
+        "Isang solidong puti/dilaw na linyang naghahati sa trapiko",
+        "Mga arrow ng lane na nakaguhit sa kalsada",
+        "Mga guhit ng zebra crossing"
+      ],
+      "explanation": "Napatunayan sa RTA handbook (Artikulo 58): bawal tawirin ang isang solidong linya na naghahati sa trapiko, maging para mag-overtake o lumiko, maliban sa emergency."
+    },
+    {
+      "id": "ri007",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Kapag naglalakbay palibot sa isang roundabout sa UAE, sa aling gilid ng gitnang islang dapat kang manatili?",
+      "options": [
+        "Sa kaliwa",
+        "Sa kanan",
+        "Kahit saang gilid, walang patakaran",
+        "Sa gitnang linya"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sa roundabout dapat kang laging manatili sa kanan ng gitnang islang, paikot sa direksyong kontra-orasan."
+    },
+    {
+      "id": "ri008",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Kapag papasok ka na sa roundabout, dapat kang magbigay-daan sa:",
+      "options": [
+        "Mga sasakyan sa likod mo",
+        "Mga sasakyang nasa roundabout na mula sa iyong kaliwa",
+        "Mga sasakyang naghihintay sa ibang pasukan",
+        "Mga pedestrian lang"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: matapos pumili ng tamang lane at bago pumasok sa roundabout, dapat kang magbigay-daan sa lahat ng sasakyang nasa loob na papalapit mula sa kaliwa."
+    },
+    {
+      "id": "ri009",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sa dalawang-lane na roundabout, kung nais mong kumanan, dapat mong:",
+      "options": [
+        "Lumapit at manatili sa kaliwang lane",
+        "Lumapit sa kanang lane at umalis sa kanang lane",
+        "Gamitin ang kahit anong lane at malayang lumipat",
+        "Pumasok mula sa hard shoulder"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sa dalawang-lane na roundabout, ang pagkanan ay nangangahulugan ng paglapit sa kanang lane, pananatili roon, pagbibigay-senyas sa kanan, at pag-alis sa kanang lane."
+    },
+    {
+      "id": "ri010",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Sa tatlong-lane na roundabout, aling lane ang nakalaan lamang para sa mga sasakyang kumakaliwa?",
+      "options": [
+        "Kanang lane",
+        "Gitnang lane",
+        "Kaliwang lane",
+        "Kahit anong lane ay puwede"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sa tatlong-lane na roundabout, huwag piliin ang kaliwang lane maliban kung kakaliwa, dahil ang lane na iyon ay para lamang sa mga sasakyang kumakaliwa."
+    },
+    {
+      "id": "ri011",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sa interseksyong walang signal, kung saan nagtatagpo ang isang minor road at main road, karaniwang dapat bigyan ng priyoridad:",
+      "options": [
+        "Ang unang dumating na sasakyan",
+        "Mga sasakyang mula sa main road",
+        "Mga sasakyang kumakaliwa",
+        "Ang mas malaking sasakyan"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sa ganitong interseksyon, ang priyoridad sa pagtawid ay dapat ibigay sa mga sasakyang mula sa main road; kung may roundabout, ang priyoridad ay para sa mga nasa loob na."
+    },
+    {
+      "id": "af005",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Ayon sa datos ng aksidente noong 2010 sa RTA handbook, anong porsyento ng mga aksidente sa Dubai ang dulot ng mga drayber na lasing?",
+      "options": [
+        "4.33%",
+        "9.5%",
+        "14.33%",
+        "25%"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: nakasaad na 14.33% ng mga aksidente sa Dubai ay dulot ng mga drayber na nasa ilalim ng impluwensya ng alkohol."
+    },
+    {
+      "id": "af006",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang alak at droga ay nagpapanganib sa pagmamaneho lalo na dahil:",
+      "options": [
+        "Pinapabuti ang oras ng iyong reaksyon",
+        "Nagpapahirap tantiyahin ang panganib, distansya at bilis, at nagbibigay ng maling tiwala sa sarili",
+        "Naaapektuhan lang ang pang-amoy",
+        "Walang epekto sa paghusga, sa galaw lang"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang alak at droga ay nagpapahirap tantiyahin ang mga panganib kabilang ang distansya at bilis, at nagbibigay ng maling tiwala na maaaring maghikayat na kumuha ng panganib."
+    },
+    {
+      "id": "af007",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Kung ikaw ay uminom, ang pinakaligtas na plano bago magmaneho ay:",
+      "options": [
+        "Uminom ng kape at maghintay ng 10 minuto",
+        "Buksan ang bintana at magmaneho nang dahan-dahan",
+        "Magpasundo sa taong walang alak, o kumuha ng taxi",
+        "Magmaneho lang sa pamilyar na kalsada"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: para manatiling ligtas, magplano nang maaga at magpasundo sa taong walang alak o droga, o kumuha ng taxi."
+    },
+    {
+      "id": "af008",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang rumble strips sa kalsada ay lalong nakakatulong sa mga drayber na:",
+      "options": [
+        "Sumasobra sa bilis",
+        "Pagod o inaantok sa mahabang biyahe",
+        "Umaatras",
+        "Humihila ng trailer"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang rumble strips ay nagbabala sa mga drayber na papalapit sa panganib, at ang pagyanig at tunog na ito ay lalong nakakatulong sa mga drayber sa mahabang biyahe na nakakaramdam ng pagod o antok."
+    },
+    {
+      "id": "sc005",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang paatras na car seat ng sanggol ay hindi dapat ilagay sa:",
+      "options": [
+        "Likod na upuan",
+        "Harap na upuan ng pasahero na may aktibong airbag",
+        "Likod ng drayber",
+        "Gitnang likod na upuan"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: hindi dapat ilagay ang paatras na car seat sa harap na upuan ng pasahero, dahil ang pagbukas ng airbag ay maaaring magdulot ng malubhang pinsala sa sanggol."
+    },
+    {
+      "id": "sc006",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Ayon sa gabay sa kaligtasan ng RTA handbook, ang mga bata ay dapat karaniwang sumakay sa likod na upuan ng sasakyan hanggang sila ay:",
+      "options": [
+        "6 taong gulang",
+        "9 taong gulang",
+        "13 taong gulang",
+        "16 taong gulang"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: nakasaad na dapat sumakay ang lahat ng bata sa likod na upuan ng sasakyan hanggang 13 taong gulang."
+    },
+    {
+      "id": "sc007",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang booster seat ay dapat gamitin hanggang ang bata ay umabot ng humigit-kumulang:",
+      "options": [
+        "100 cm (mga 2-4 taon)",
+        "145 cm (mga 4-8 taon)",
+        "170 cm (mga 12 taon)",
+        "Hindi kailanman kinakailangan ang booster seat sa UAE"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: dapat gumamit ang mga bata ng booster seat hanggang sila ay umabot ng humigit-kumulang 145 cm, mga 4 hanggang 8 taong gulang."
+    },
+    {
+      "id": "sc008",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ayon sa RTA handbook, ang mga buntis na babae sa sasakyan ay dapat:",
+      "options": [
+        "Huwag magsuot ng seatbelt para protektahan ang sanggol",
+        "Magsuot ng seatbelt, para protektahan ang kanilang sarili at ang kanilang sanggol",
+        "Isuot lang ang ibabang bahagi ng belt",
+        "Umupo sa likod na hindi nakabelt"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: kailangan ding gumamit ng seatbelt ang mga buntis na babae para mapanatiling ligtas ang kanilang sarili at ang kanilang sanggol."
+    },
+    {
+      "id": "pr006",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sa paid parking system ng Dubai, ang 'Code A' side-road parking area ay nagpapahintulot ng maximum na maikling pananatili na:",
+      "options": [
+        "1 oras",
+        "4 oras",
+        "12 oras",
+        "24 oras"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang Code A ay tumutukoy sa side-road parking area na may maximum na 4 oras, habang ang Code B parking yard ay pinapayagan hanggang 24 oras."
+    },
+    {
+      "id": "pr007",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Sa paid parking system ng Dubai, ang 'Code B' parking yard ay nagpapahintulot ng mahabang pananatili hanggang:",
+      "options": [
+        "4 oras",
+        "8 oras",
+        "24 oras",
+        "48 oras"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang Code B ay tumutukoy sa mga lugar na partikular na ginawa bilang parking yard, na nagpapahintulot ng mahabang pananatili hanggang 24 oras."
+    },
+    {
+      "id": "pr008",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang hindi pagbabayad ng parking fee o nawalang paid-parking ticket sa multi-storey car park ay may multa na:",
+      "options": [
+        "AED 100",
+        "AED 150",
+        "AED 200",
+        "AED 500"
+      ],
+      "explanation": "Napatunayan sa talahanayan ng paglabag sa parking ng RTA handbook: ang hindi pagbabayad ng parking fee o nawalang tiket (sa MSCP) ay may multang AED 150."
+    },
+    {
+      "id": "pr009",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang paglampas sa oras ng bayad na parking na binayaran mo ay may multa na:",
+      "options": [
+        "AED 50",
+        "AED 100",
+        "AED 300",
+        "AED 600"
+      ],
+      "explanation": "Napatunayan sa talahanayan ng paglabag sa parking ng RTA handbook: ang paglampas sa bayad na parking duration ay may multang AED 100."
+    },
+    {
+      "id": "pr010",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Ang pagpaparada sa disabled parking bay nang walang angkop na permit ay may multa na:",
+      "options": [
+        "AED 100",
+        "AED 200",
+        "AED 500",
+        "AED 1000"
+      ],
+      "explanation": "Napatunayan sa talahanayan ng paglabag sa parking ng RTA handbook: ang pagpaparada sa disabled parking nang walang angkop na permit ay may multang AED 500, ang pinakamataas sa mga nakalistang paglabag sa parking."
+    },
+    {
+      "id": "pr011",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang karatulang 'No Parking' ay nangangahulugan na hindi ka dapat pumarada sa lugar kahit na:",
+      "options": [
+        "Alas-10 na ng gabi",
+        "Nakaupo ka sa loob ng sasakyan",
+        "Naka-on ang hazard lights mo",
+        "Umuulan"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sa lugar na 'No Parking', hindi ka dapat pumarada roon, kahit nakaupo ka sa loob ng sasakyan."
+    },
+    {
+      "id": "rs021",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang karatulang 'No Stopping' ay nangangahulugan:",
+      "options": [
+        "Puwede kang huminto sandali para ibaba ang pasahero",
+        "Hindi ka dapat huminto sa gilid ng kalsada anuman ang dahilan",
+        "Puwede ka lang huminto sa araw",
+        "Puwede kang huminto kung naka-on ang hazard lights"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sinasabi ng karatulang 'No Stopping' na hindi ka dapat huminto sa gilid anuman ang dahilan, at dapat mong sundin ito."
+    },
+    {
+      "id": "rs022",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Ang karatulang tumatanda ng loading/unloading zone ay nangangahulugang, maliban sa komersyal na sasakyang aktibong nagloload o nag-a-unload sa oras na ipinapakita, dapat mo:",
+      "options": [
+        "Huwag pumarada roon sa mga oras na iyon",
+        "Pumarada roon nang libre buong araw",
+        "Doon lang pumarada ang mga motorsiklo",
+        "Gamitin ito bilang taxi stand"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang mga lugar na ito ay nakalaan para sa mga sasakyang nagloload o nag-a-unload sa tinukoy na oras; maliban kung ikaw ay nagmamaneho ng komersyal na sasakyang gumagawa nito, hindi ka dapat pumarada doon sa mga oras na iyon."
+    },
+    {
+      "id": "rs023",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 3,
+      "needsVerification": false,
+      "q": "Hindi mo dapat tawirin ang isang solidong linya sa kalsada na naghahati sa trapiko. Saan galing ang tuntuning ito sa Executive By-Law ng UAE Federal Traffic Law?",
+      "options": [
+        "Artikulo 33",
+        "Artikulo 36",
+        "Artikulo 54",
+        "Artikulo 58"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: sinasabi ng Artikulo 58 ng Executive By-Law na hindi mo dapat tawirin ang isang solidong linya na naghahati sa trapiko."
+    },
+    {
+      "id": "rs024",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ang mga diagrammatic warning sign (nagpapakita ng lane layout, tulad ng pagsasama ng mga lane) ay karaniwang ginagamit:",
+      "options": [
+        "Sa mga residential street lang",
+        "Sa mga mataas ang bilis na kalsada kung saan hindi sapat ang simpleng tatsulok na karatula",
+        "Sa mga pedestrian crossing lang",
+        "Sa halip na traffic light"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: ang mga diagrammatic warning sign ay ginagamit kung saan hindi sapat ang espasyo ng tatsulok na paunang babala para sa larawan, karaniwang sa mga mataas ang bilis na kalsada, para sa mga sitwasyon tulad ng karagdagang lane, kontroladong paggamit ng lane, o pagsasama ng lane."
+    },
+    {
+      "id": "tr013",
+      "category": "traffic_rules_row",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ayon sa Artikulo 1 ng Executive By-Law ng UAE Federal Traffic Law Blg. 21 ng 1995, dapat gawin ng bawat gumagamit ng kalsada:",
+      "options": [
+        "Magmaneho nang kasing bilis ng pinapayagan ng kondisyon",
+        "Sundin ang mga karatula, senyas at tagubilin ng pulis at kumilos nang hindi nagdudulot ng panganib o humaharang sa iba",
+        "Palaging magkaroon ng priyoridad sa ibang sasakyan",
+        "Sundin ang mga tuntunin lang kapag may pulis na naroroon"
+      ],
+      "explanation": "Napatunayan sa RTA handbook (Artikulo 1): dapat igalang ng bawat gumagamit ng kalsada ang mga regulasyon sa trapiko, sundin ang mga karatula, senyas at tagubilin ng pulis, at kumilos nang maingat upang hindi makasakit sa iba, ilagay sila sa panganib, o harangan ang kanilang paggalaw."
+    },
+    {
+      "id": "tr014",
+      "category": "traffic_rules_row",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Ayon sa Artikulo 36 ng Executive By-Law, kapag ikaw ay lumiliko papasok sa isang kalsada, dapat mong:",
+      "options": [
+        "Patunugin ang busina para balaan ang mga pedestrian",
+        "Bigyan ng daan ang mga pedestriang tumatawid sa kalsadang lililiman mo",
+        "Magbigay-daan lamang kung matanda o may kapansanan ang mga pedestrian",
+        "Mauna kung maaga mong na-on ang senyas mo"
+      ],
+      "explanation": "Napatunayan sa RTA handbook: hinihiling ng Artikulo 36 sa mga drayber na laging magbigay-daan sa mga pedestriang tumatawid sa kalsadang lililiman nila."
+    },
+    {
+      "id": "mc015",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Dapat laging bumili ng bagong helmet ang isang motorsiklista sa halip na second-hand dahil lalo na ang second-hand na helmet ay:",
+      "options": [
+        "Palaging maling sukat",
+        "Maaaring may nakatagong pinsala na hindi nakikita ngunit nagpapahina sa proteksyon nito",
+        "Palaging luma ang disenyo",
+        "Mas mahal panatilihin"
+      ],
+      "explanation": "Ito ay karaniwang gabay sa kaligtasan ng motorsiklo (ginagamit din sa mga materyal ng pagsasanay ng motorsiklista sa UAE): ang second-hand na helmet ay maaaring nagkaroon ng pinsala mula sa banggaan na hindi nakikita ngunit lubos na binabawasan ang kakayahan nitong protektahan sa isang aksidente."
     }
   ]
 }

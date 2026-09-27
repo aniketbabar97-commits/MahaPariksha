@@ -1,7 +1,7 @@
 {
   "language": "fr",
   "isRtl": false,
-  "questionCount": 107,
+  "questionCount": 145,
   "questions": [
     {
       "id": "rs001",
@@ -1058,7 +1058,7 @@
       "category": "motorcycle",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Selon la loi émiratie sur la circulation, le port d'un casque homologué à moto est obligatoire pour :",
       "options": [
         "Le motard uniquement",
@@ -1066,7 +1066,7 @@
         "Uniquement les motards de moins de 18 ans",
         "Uniquement sur autoroute, pas en zone urbaine"
       ],
-      "explanation": "Il est généralement admis que la réglementation émiratie impose un casque homologué au motard et à tout passager arrière en permanence ; le texte légal exact devrait être vérifié auprès des documents actuels de la RTA, cette information n'ayant pas été directement confirmée par les sources utilisées dans cette révision."
+      "explanation": "Confirmé dans le support de formation au test théorique moto de Drive Dubai, affilié à la RTA : lorsqu'un passager arrière est présent, un casque homologué est requis à la fois pour le conducteur et le passager arrière, pas seulement pour le conducteur."
     },
     {
       "id": "mc011",
@@ -1267,16 +1267,16 @@
       "id": "hv012",
       "category": "heavy_vehicle",
       "sub": null,
-      "answer": 0,
-      "needsVerification": true,
-      "q": "Les règles pour les chauffeurs de poids lourds et de bus lors de longs trajets aux Émirats exigent généralement :",
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Selon le manuel des camions et bus de la RTA, un conducteur de poids lourd ou de bus ne devrait jamais conduire plus de combien d'heures sur une période de 24 heures ?",
       "options": [
-        "Des pauses repos programmées après un nombre fixe d'heures de conduite continue",
-        "Aucune exigence de repos tant que le chauffeur se sent bien",
-        "Une seule pause toutes les 24 heures, quelle que soit la distance parcourue",
-        "Les pauses sont entièrement facultatives et laissées à la discrétion de l'entreprise de transport"
+        "6 heures",
+        "8 heures",
+        "10 heures",
+        "12 heures"
       ],
-      "explanation": "Des pauses repos obligatoires après un nombre fixe d'heures de conduite continue sont une pratique standard pour les chauffeurs professionnels/poids lourds, mais les seuils horaires exacts actuellement fixés par les autorités émiraties n'ont pas été confirmés par les sources de cette révision, cela reste donc signalé."
+      "explanation": "Vérifié dans le manuel des camions et bus de la RTA (partie 2, « Prenez des pauses ») : les conducteurs doivent prendre de courtes pauses avant de se sentir fatigués et ne jamais conduire plus de 10 heures sur une période de 24 heures."
     },
     {
       "id": "rs011",
@@ -1607,6 +1607,576 @@
         "24 points noirs"
       ],
       "explanation": "Vérifié dans le tableau des infractions du manuel de la RTA : la chute ou la fuite d'une cargaison entraîne 21 points noirs, reflétant le danger grave que cela représente pour les véhicules suivants."
+    },
+    {
+      "id": "sl007",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sauf indication contraire d'un panneau, la limite de vitesse par défaut sur une route urbaine à une seule chaussée à Dubaï est de :",
+      "options": [
+        "25 km/h",
+        "40 km/h",
+        "60 km/h",
+        "80 km/h"
+      ],
+      "explanation": "Vérifié dans le tableau des limitations de vitesse du manuel de la RTA : les routes urbaines à chaussée unique sont limitées par défaut à 40 km/h, sauf indication contraire."
+    },
+    {
+      "id": "sl008",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sur une route urbaine à double chaussée à Dubaï, la limite de vitesse par défaut (sauf indication contraire) est :",
+      "options": [
+        "40 km/h",
+        "60 km/h ou 80 km/h selon le panneau",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les routes urbaines à double chaussée sont limitées à 60 km/h ou 80 km/h, selon le panneau affiché."
+    },
+    {
+      "id": "sl009",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "La limite de vitesse par défaut sur les routes rurales à Dubaï (sauf indication contraire) est de :",
+      "options": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "explanation": "Vérifié dans le tableau des limitations de vitesse du manuel de la RTA : les routes rurales sont limitées par défaut à 100 km/h."
+    },
+    {
+      "id": "sl010",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sur les autoroutes de Dubaï, la vitesse maximale est de 120 km/h pour les véhicules légers, et pour les poids lourds, elle est de :",
+      "options": [
+        "60 km/h",
+        "80 km/h",
+        "100 km/h",
+        "120 km/h"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les autoroutes autorisent jusqu'à 120 km/h pour les véhicules légers mais seulement 80 km/h pour les poids lourds."
+    },
+    {
+      "id": "sl011",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sur les autoroutes de Dubaï, en plus de la limite maximale, il existe aussi une limite de vitesse minimale de :",
+      "options": [
+        "40 km/h",
+        "60 km/h",
+        "80 km/h",
+        "100 km/h"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les autoroutes ont une limite de vitesse minimale de 60 km/h, en plus des limites maximales pour véhicules légers et lourds."
+    },
+    {
+      "id": "sl012",
+      "category": "speed_limits",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "La limite de vitesse à l'intérieur d'une aire de stationnement ou sur une voie de service à Dubaï est généralement de :",
+      "options": [
+        "15 km/h",
+        "25 km/h",
+        "40 km/h",
+        "60 km/h"
+      ],
+      "explanation": "Vérifié dans le tableau des limitations de vitesse du manuel de la RTA : les aires de stationnement et voies de service sont limitées par défaut à 25 km/h."
+    },
+    {
+      "id": "hl007",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Lorsque vous doublez un autre véhicule circulant dans la même direction, vous devez le dépasser :",
+      "options": [
+        "D'un côté ou de l'autre, selon la voie libre",
+        "Par la gauche uniquement",
+        "Par la droite uniquement",
+        "Par la bande d'arrêt d'urgence"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA (article 10.5) : un conducteur ne doit dépasser les véhicules circulant dans la même direction que par la gauche."
+    },
+    {
+      "id": "hl008",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Si un autre véhicule vous double, la réaction correcte est de :",
+      "options": [
+        "Accélérer pour l'empêcher de passer",
+        "Ralentir et rester à droite",
+        "Se déplacer immédiatement sur la voie de gauche",
+        "Faire des appels de phares et garder sa voie"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA (article 54) : si quelqu'un vous double, vous devez ralentir et rester à droite."
+    },
+    {
+      "id": "hl009",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Selon le manuel de la RTA, vous ne devez PAS doubler :",
+      "options": [
+        "Sur une portion de route droite et dégagée",
+        "Aux intersections et ronds-points",
+        "Sur une double chaussée avec ligne centrale discontinue",
+        "Sur une voie de dépassement désignée"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : il est interdit de doubler lorsque la route n'est pas clairement visible, quand la circulation venant en sens inverse ne le permet pas en sécurité, et en particulier aux intersections et ronds-points."
+    },
+    {
+      "id": "hl010",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Avant de vous déporter pour doubler un véhicule sur une route à double sens, le manuel conseille de rester au moins à cette distance derrière lui :",
+      "options": [
+        "Une demi-seconde",
+        "Deux secondes",
+        "Dix secondes",
+        "Une seule longueur de voiture"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : vous devez rester au moins à deux secondes du véhicule que vous vous apprêtez à doubler, pour une meilleure visibilité et de l'espace pour prendre de la vitesse."
+    },
+    {
+      "id": "hl011",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Selon le manuel de la RTA, doubler un gros camion sur route ouverte prend généralement environ :",
+      "options": [
+        "5 secondes",
+        "25 secondes",
+        "60 secondes",
+        "2 minutes"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : il faut environ 25 secondes pour doubler un gros camion sur route ouverte, un temps long à passer du mauvais côté de la route."
+    },
+    {
+      "id": "hl012",
+      "category": "highway_lane",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Quel type de ligne ne devez-vous pas franchir pour doubler un autre véhicule ?",
+      "options": [
+        "Une simple ligne blanche discontinue",
+        "Une ligne blanche/jaune continue divisant la circulation",
+        "Les flèches de voie peintes sur la route",
+        "Les bandes zébrées d'un passage piéton"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA (article 58) : vous ne devez pas franchir une ligne continue qui divise la circulation, que ce soit pour doubler ou pour tourner, sauf en cas d'urgence."
+    },
+    {
+      "id": "ri007",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "En circulant autour d'un rond-point aux Émirats, de quel côté de l'îlot central devez-vous rester ?",
+      "options": [
+        "À gauche",
+        "À droite",
+        "N'importe quel côté, aucune règle",
+        "À cheval sur la ligne centrale"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : à un rond-point, vous devez toujours rester à droite de l'îlot central, en circulant dans le sens antihoraire."
+    },
+    {
+      "id": "ri008",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Juste avant d'entrer dans un rond-point, vous devez céder le passage :",
+      "options": [
+        "Aux véhicules derrière vous",
+        "Aux véhicules déjà présents dans le rond-point venant de votre gauche",
+        "Aux véhicules qui attendent aux autres entrées",
+        "Aux piétons uniquement"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : après avoir choisi la bonne voie et juste avant d'entrer dans le rond-point, vous devez céder le passage à tous les véhicules déjà présents qui viennent de votre gauche."
+    },
+    {
+      "id": "ri009",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Sur un rond-point à deux voies, si vous avez l'intention de tourner à droite, vous devez :",
+      "options": [
+        "Approcher et rester sur la voie de gauche",
+        "Approcher sur la voie de droite et en sortir par la voie de droite",
+        "Utiliser n'importe quelle voie et changer librement",
+        "Entrer par la bande d'arrêt d'urgence"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : sur un rond-point à deux voies, tourner à droite signifie approcher sur la voie de droite, y rester, signaler à droite, et sortir par la voie de droite."
+    },
+    {
+      "id": "ri010",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Sur un rond-point à trois voies, quelle voie est réservée uniquement aux véhicules tournant à gauche ?",
+      "options": [
+        "La voie de droite",
+        "La voie centrale",
+        "La voie de gauche",
+        "N'importe quelle voie peut être utilisée"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : sur un rond-point à trois voies, il ne faut choisir la voie de gauche que pour tourner à gauche, car elle est réservée aux véhicules tournant à gauche."
+    },
+    {
+      "id": "ri011",
+      "category": "roundabouts_intersections",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "À une intersection sans feux, où une route secondaire rejoint une route principale, la priorité doit généralement être donnée :",
+      "options": [
+        "Au véhicule qui arrive en premier",
+        "Aux véhicules venant de la route principale",
+        "Aux véhicules tournant à gauche",
+        "Au véhicule le plus grand"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : à de telles intersections, la priorité de passage doit être donnée aux véhicules venant de la route principale ; s'il y a un rond-point, la priorité va aux véhicules déjà présents."
+    },
+    {
+      "id": "af005",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Selon les données d'accidents de 2010 du manuel de la RTA, quelle proportion des accidents à Dubaï était causée par des conducteurs sous l'emprise de l'alcool ?",
+      "options": [
+        "4,33 %",
+        "9,5 %",
+        "14,33 %",
+        "25 %"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : il indique que 14,33 % des accidents à Dubaï sont causés par des conducteurs sous l'emprise de l'alcool."
+    },
+    {
+      "id": "af006",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "L'alcool et les drogues rendent la conduite dangereuse principalement parce qu'ils :",
+      "options": [
+        "Améliorent votre temps de réaction",
+        "Rendent plus difficile l'évaluation des risques, de la distance et de la vitesse, et donnent un faux sentiment de confiance",
+        "N'affectent que votre odorat",
+        "N'ont aucun effet sur le jugement, seulement sur le mouvement"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : l'alcool et les drogues rendent plus difficile l'évaluation des risques, y compris la distance et la vitesse, et donnent un faux sentiment de confiance qui peut encourager la prise de risques."
+    },
+    {
+      "id": "af007",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Si vous avez bu de l'alcool, le plan le plus sûr avant de conduire est de :",
+      "options": [
+        "Boire un café et attendre 10 minutes",
+        "Ouvrir les fenêtres et conduire lentement",
+        "Organiser d'être raccompagné par une personne n'ayant pas bu, ou prendre un taxi",
+        "Conduire uniquement sur des routes familières"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : pour rester en sécurité, prévoyez à l'avance d'être raccompagné par une personne sobre, ou prenez un taxi."
+    },
+    {
+      "id": "af008",
+      "category": "alcohol_fatigue",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Les bandes rugueuses (rumble strips) sur la route sont particulièrement utiles pour les conducteurs qui sont :",
+      "options": [
+        "En excès de vitesse",
+        "Fatigués ou somnolents lors d'un long trajet",
+        "En marche arrière",
+        "En train de tracter une remorque"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les bandes rugueuses avertissent les conducteurs approchant d'un danger, et cette vibration et ce bruit sont particulièrement utiles pour les conducteurs fatigués ou somnolents lors d'un long trajet."
+    },
+    {
+      "id": "sc005",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Un siège auto pour bébé orienté vers l'arrière ne doit jamais être placé :",
+      "options": [
+        "Sur la banquette arrière",
+        "Sur le siège passager avant avec un airbag actif",
+        "Derrière le conducteur",
+        "Au milieu de la banquette arrière"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : un siège auto orienté vers l'arrière ne doit jamais être placé sur le siège passager avant, car le déploiement de l'airbag peut causer des blessures mortelles au bébé."
+    },
+    {
+      "id": "sc006",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Selon les conseils de sécurité du manuel de la RTA, les enfants doivent généralement voyager sur la banquette arrière d'un véhicule jusqu'à l'âge de :",
+      "options": [
+        "6 ans",
+        "9 ans",
+        "13 ans",
+        "16 ans"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : il indique que tous les enfants doivent voyager sur la banquette arrière d'un véhicule jusqu'à 13 ans."
+    },
+    {
+      "id": "sc007",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Un rehausseur avec ceinture doit généralement être utilisé jusqu'à ce que l'enfant mesure environ :",
+      "options": [
+        "100 cm (environ 2-4 ans)",
+        "145 cm (environ 4-8 ans)",
+        "170 cm (environ 12 ans)",
+        "Les rehausseurs ne sont jamais nécessaires aux Émirats"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les enfants doivent utiliser un rehausseur avec ceinture jusqu'à environ 145 cm, soit environ 4 à 8 ans."
+    },
+    {
+      "id": "sc008",
+      "category": "seatbelt_child_safety",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Selon le manuel de la RTA, les femmes enceintes dans un véhicule devraient :",
+      "options": [
+        "Ne pas porter de ceinture pour protéger le bébé",
+        "Porter une ceinture, pour se protéger elles-mêmes et protéger leur enfant à naître",
+        "Ne porter que la partie ventrale de la ceinture",
+        "S'asseoir à l'arrière sans ceinture"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les femmes enceintes doivent elles aussi porter une ceinture de sécurité pour se protéger ainsi que leur enfant à naître."
+    },
+    {
+      "id": "pr006",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Dans le système de stationnement payant de Dubaï, les zones de stationnement en bordure de route 'Code A' autorisent un séjour court maximal de :",
+      "options": [
+        "1 heure",
+        "4 heures",
+        "12 heures",
+        "24 heures"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : le Code A désigne les zones de stationnement en bordure de route avec un maximum de séjour court de 4 heures, tandis que les parkings Code B autorisent jusqu'à 24 heures."
+    },
+    {
+      "id": "pr007",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Dans le système de stationnement payant de Dubaï, un parking 'Code B' autorise un séjour long allant jusqu'à :",
+      "options": [
+        "4 heures",
+        "8 heures",
+        "24 heures",
+        "48 heures"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : le Code B désigne les zones spécifiquement créées comme parkings, autorisant des séjours longs allant jusqu'à 24 heures."
+    },
+    {
+      "id": "pr008",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Le non-paiement des frais de stationnement ou la perte d'un ticket de stationnement payant dans un parking à étages entraîne une amende de :",
+      "options": [
+        "100 AED",
+        "150 AED",
+        "200 AED",
+        "500 AED"
+      ],
+      "explanation": "Vérifié dans le tableau des infractions de stationnement du manuel de la RTA : le non-paiement des frais de stationnement ou la perte du ticket (dans un MSCP) entraîne une amende de 150 AED."
+    },
+    {
+      "id": "pr009",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Dépasser la durée de stationnement payée entraîne une amende de :",
+      "options": [
+        "50 AED",
+        "100 AED",
+        "300 AED",
+        "600 AED"
+      ],
+      "explanation": "Vérifié dans le tableau des infractions de stationnement du manuel de la RTA : dépasser la durée de stationnement payée entraîne une amende de 100 AED."
+    },
+    {
+      "id": "pr010",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Se garer sur une place pour personnes handicapées sans le permis approprié entraîne une amende de :",
+      "options": [
+        "100 AED",
+        "200 AED",
+        "500 AED",
+        "1000 AED"
+      ],
+      "explanation": "Vérifié dans le tableau des infractions de stationnement du manuel de la RTA : se garer sur une place handicapée sans permis approprié entraîne une amende de 500 AED, la plus élevée des infractions de stationnement listées."
+    },
+    {
+      "id": "pr011",
+      "category": "parking_rules",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Un panneau 'Stationnement interdit' signifie que vous ne devez pas vous garer dans la zone même si :",
+      "options": [
+        "Il est après 22h",
+        "Vous restez assis dans le véhicule",
+        "Vos feux de détresse sont allumés",
+        "Il pleut"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : dans une zone de 'stationnement interdit', vous ne devez pas y stationner, même si vous restez assis dans le véhicule."
+    },
+    {
+      "id": "rs021",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Un panneau 'Arrêt interdit' signifie :",
+      "options": [
+        "Vous pouvez vous arrêter brièvement pour déposer un passager",
+        "Vous ne devez pas vous arrêter au bord du trottoir pour quelque raison que ce soit",
+        "Vous ne pouvez vous arrêter que le jour",
+        "Vous pouvez vous arrêter si les feux de détresse sont allumés"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les panneaux 'arrêt interdit' indiquent que vous ne devez pas vous arrêter au bord du trottoir pour quelque raison que ce soit, et vous devez les respecter."
+    },
+    {
+      "id": "rs022",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Un panneau marquant une zone de chargement/déchargement signifie que, en dehors d'un véhicule commercial effectivement en train de charger ou décharger pendant les horaires indiqués, vous devez :",
+      "options": [
+        "Ne pas y stationner pendant ces horaires",
+        "Y stationner gratuitement toute la journée",
+        "N'y garer que des motos",
+        "L'utiliser comme station de taxis"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : ces zones sont réservées aux véhicules chargeant ou déchargeant à des horaires précis ; sauf si vous conduisez un véhicule commercial le faisant, vous ne devez pas y stationner pendant ces horaires."
+    },
+    {
+      "id": "rs023",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 3,
+      "needsVerification": false,
+      "q": "Vous ne devez pas franchir une ligne continue sur la route qui divise la circulation. Cette règle provient de quel article du règlement d'application de la loi fédérale sur la circulation des Émirats ?",
+      "options": [
+        "Article 33",
+        "Article 36",
+        "Article 54",
+        "Article 58"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : l'article 58 du règlement d'application stipule que vous ne devez pas franchir une ligne continue qui divise la circulation."
+    },
+    {
+      "id": "rs024",
+      "category": "road_signs",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Les panneaux d'avertissement schématiques (montrant la disposition des voies, comme la fusion de voies) sont généralement utilisés :",
+      "options": [
+        "Uniquement dans les rues résidentielles",
+        "Sur les routes à grande vitesse où un simple panneau triangulaire ne donnerait pas assez de détails",
+        "Uniquement aux passages piétons",
+        "À la place des feux de circulation"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : les panneaux d'avertissement schématiques sont utilisés lorsque le panneau triangulaire d'avertissement anticipé ne laisse pas assez de place pour une image, généralement sur les routes à grande vitesse, pour des situations comme une voie supplémentaire, un usage de voie réglementé, ou une fusion de voies."
+    },
+    {
+      "id": "tr013",
+      "category": "traffic_rules_row",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Selon l'article 1 du règlement d'application de la loi fédérale sur la circulation des Émirats n° 21 de 1995, tout usager de la route doit :",
+      "options": [
+        "Conduire aussi vite que les conditions le permettent",
+        "Suivre les panneaux, les signaux et les instructions de la police et se comporter de manière à ne pas mettre en danger ou gêner les autres",
+        "Toujours avoir la priorité sur les autres véhicules",
+        "Ne suivre les règles que lorsqu'un policier est présent"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA (article 1) : tout usager de la route doit respecter les réglementations de circulation, suivre les panneaux, signaux et instructions de la police, et se comporter prudemment afin de ne pas nuire aux autres, les exposer au danger, ou entraver leurs déplacements."
+    },
+    {
+      "id": "tr014",
+      "category": "traffic_rules_row",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Selon l'article 36 du règlement d'application, lorsque vous tournez pour entrer dans une route, vous devez :",
+      "options": [
+        "Klaxonner pour avertir les piétons",
+        "Céder le passage aux piétons traversant la route dans laquelle vous tournez",
+        "Céder le passage seulement si les piétons sont âgés ou handicapés",
+        "Passer en premier si votre clignotant était allumé tôt"
+      ],
+      "explanation": "Vérifié dans le manuel de la RTA : l'article 36 exige des conducteurs qu'ils cèdent toujours le passage aux piétons traversant la route dans laquelle ils tournent."
+    },
+    {
+      "id": "mc015",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Un motocycliste devrait toujours acheter un casque neuf plutôt qu'un casque d'occasion, principalement parce qu'un casque d'occasion :",
+      "options": [
+        "Est toujours de la mauvaise taille",
+        "Peut avoir des dommages cachés invisibles qui affaiblissent sa protection",
+        "Est toujours d'un design dépassé",
+        "Coûte plus cher à entretenir"
+      ],
+      "explanation": "Il s'agit d'une consigne standard de sécurité moto (également utilisée dans les supports de formation des motocyclistes aux Émirats) : un casque d'occasion peut avoir subi des dommages d'impact invisibles qui réduisent gravement sa capacité de protection en cas d'accident."
     }
   ]
 }
