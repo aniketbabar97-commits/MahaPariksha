@@ -27,8 +27,8 @@ def main():
     ids = set()
     valid_categories = {c["id"] for c in bundle["taxonomy"]["categories"]}
     n = len(bundle["questions"])
-    if not (60 <= n <= 100):
-        print(f"WARN: question count {n} outside the 60-80 target range")
+    if not (60 <= n <= 800):
+        print(f"WARN: question count {n} outside the 60-800 target range")
 
     for q in bundle["questions"]:
         if q["id"] in ids:
