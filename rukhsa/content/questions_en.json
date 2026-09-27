@@ -2288,5 +2288,350 @@
     "sub": "fatigue",
     "answer": 0,
     "needsVerification": false
+  },
+  {
+    "id": "rs025",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a horn symbol with a diagonal line through it means:",
+    "options": [
+      "Sounding your horn is prohibited in this area",
+      "Horn use is mandatory in this area",
+      "This is a hospital ahead",
+      "No entry for vehicles with trailers"
+    ],
+    "answer": 0,
+    "explanation": "A red circular prohibitory sign with a horn and a diagonal strike-through bans sounding the vehicle horn — common near hospitals, mosques, and residential areas.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs026",
+    "category": "road_signs",
+    "sub": "mandatory",
+    "q": "A blue circular sign showing a number followed by \"km/h\" with no red border generally means:",
+    "options": [
+      "This is the maximum speed allowed",
+      "This is the minimum speed required, conditions permitting",
+      "This is a suggested speed only",
+      "This speed applies only to trucks"
+    ],
+    "answer": 1,
+    "explanation": "Blue circular signs are mandatory instructions; a blue circle with a speed figure (unlike the red-ringed maximum-speed sign) sets a minimum speed drivers must maintain where conditions allow, common on fast highway lanes.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs027",
+    "category": "road_signs",
+    "sub": "mandatory",
+    "q": "A blue circular sign with a white arrow pointing to the right means:",
+    "options": [
+      "Right turn is one option among several",
+      "You must turn right; going straight or left is not allowed at this point",
+      "Right lane is closed ahead",
+      "No right turn is allowed"
+    ],
+    "answer": 1,
+    "explanation": "Blue circular mandatory signs with a directional arrow require traffic to follow that exact direction — right only, with no option to continue straight or turn left at that point.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs028",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A yellow/red triangular warning sign showing a stylised traffic light means:",
+    "options": [
+      "Traffic signals ahead — be ready to slow down and stop",
+      "All traffic signals in this area are switched off",
+      "This is a pedestrian crossing",
+      "Photo enforcement cameras are active"
+    ],
+    "answer": 0,
+    "explanation": "Triangular warning signs alert drivers to a hazard or feature ahead; a traffic-light symbol warns that a signal-controlled junction is coming up, so drivers should be prepared to slow down and stop.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs029",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A triangular warning sign showing a car with wavy skid marks means:",
+    "options": [
+      "Car wash facility ahead",
+      "The road surface ahead may be slippery — reduce speed and increase following distance",
+      "Speed bumps ahead",
+      "Vehicle testing centre ahead"
+    ],
+    "answer": 1,
+    "explanation": "This warning sign indicates the road surface may be slippery, for example after rain, sand, or oil — drivers should slow down and keep a larger following distance.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs030",
+    "category": "road_signs",
+    "sub": "informatory",
+    "q": "A blue rectangular sign showing a fuel pump symbol tells a driver that:",
+    "options": [
+      "Fuel is banned in this area",
+      "A fuel/petrol station is nearby or just ahead",
+      "Overtaking is prohibited near fuel stations",
+      "This is a truck-only route"
+    ],
+    "answer": 1,
+    "explanation": "Blue rectangular informatory signs give useful information rather than commands or warnings; a fuel-pump symbol simply shows a petrol station is nearby or ahead.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs031",
+    "category": "road_signs",
+    "sub": "priority",
+    "q": "Among standard road signs, the inverted (downward-pointing) triangle shape is reserved exclusively for:",
+    "options": [
+      "Speed limit signs",
+      "The GIVE WAY sign",
+      "Hospital signs",
+      "No entry signs"
+    ],
+    "answer": 1,
+    "explanation": "By international convention (which UAE signage follows), the downward-pointing \"inverted\" triangle shape is used only for the GIVE WAY sign — no other sign uses this shape, so its outline alone is recognisable even without reading the words.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs032",
+    "category": "road_signs",
+    "sub": null,
+    "q": "On UAE road signs, the colour red is generally used to indicate:",
+    "options": [
+      "Directions and general information",
+      "Prohibition, danger, or a mandatory stop",
+      "Temporary roadworks only",
+      "Motorway/highway routes only"
+    ],
+    "answer": 1,
+    "explanation": "Red is used internationally (and on UAE signs) for prohibition (circles with red rings/diagonal bars), danger (warning triangles' red border), and the STOP sign — a colour drivers should always read as \"restriction or hazard.\"",
+    "needsVerification": false
+  },
+  {
+    "id": "rs033",
+    "category": "road_signs",
+    "sub": null,
+    "q": "On UAE road signs, a blue background or blue circle generally indicates:",
+    "options": [
+      "A warning of danger ahead",
+      "A mandatory instruction or general travel information",
+      "A temporary condition such as roadworks",
+      "A prohibition"
+    ],
+    "answer": 1,
+    "explanation": "Blue is used for mandatory instruction signs (circles telling drivers what they must do) and for informatory/guide signs (rectangles giving directions or facilities) — never for danger warnings or prohibitions.",
+    "needsVerification": false
+  },
+  {
+    "id": "rs034",
+    "category": "road_signs",
+    "sub": "priority",
+    "q": "Among standard road sign shapes, the eight-sided (octagon) shape is reserved exclusively for:",
+    "options": [
+      "The STOP sign",
+      "Speed limit signs",
+      "Parking signs",
+      "Roundabout warning signs"
+    ],
+    "answer": 0,
+    "explanation": "The octagon is a unique shape reserved only for the STOP sign, by international convention that UAE follows — so it is recognisable by outline alone, even if a driver cannot read the word \"STOP\" or is approaching from behind (mirrored shape).",
+    "needsVerification": false
+  },
+  {
+    "id": "sc009",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A seatbelt's shoulder strap should be worn:",
+    "options": [
+      "Under the arm, across the ribs",
+      "Behind the back",
+      "Across the shoulder and chest, not under the arm or behind the back",
+      "Loosely, so it can be removed quickly if needed"
+    ],
+    "answer": 2,
+    "explanation": "A seatbelt only protects properly when the shoulder strap crosses the shoulder and chest and the lap strap sits low across the hips; wearing it under the arm or behind the back can cause serious injury in a crash instead of preventing it.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc010",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "For a young child using a car seat, which position in the vehicle is generally considered safest?",
+    "options": [
+      "Front passenger seat, facing forward",
+      "Rear seat",
+      "Front passenger seat, with the airbag switched off",
+      "It does not matter which seat is used"
+    ],
+    "answer": 1,
+    "explanation": "The rear seat is generally the safest place for a child restraint, away from the front airbags and the direct impact zone in a frontal collision.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc011",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "On a hot day, leaving a child alone and unattended inside a parked vehicle, even for a short time, is:",
+    "options": [
+      "Safe if the windows are slightly open",
+      "Dangerous — vehicle interior temperatures can rise very quickly and become life-threatening",
+      "Only a concern if the trip will be longer than one hour",
+      "Only a concern in vehicles without air conditioning"
+    ],
+    "answer": 1,
+    "explanation": "A parked vehicle's interior can heat up rapidly in the sun, even with windows cracked, and can become dangerous for a child within a short time — a child should never be left alone in a parked vehicle.",
+    "needsVerification": false
+  },
+  {
+    "id": "sc012",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A booster seat is used to raise a child so that:",
+    "options": [
+      "They can see out of the window better",
+      "The adult seatbelt fits properly across their shoulder and hips instead of their neck and stomach",
+      "They take up less space in the back seat",
+      "The car seat is easier to remove"
+    ],
+    "answer": 1,
+    "explanation": "A booster seat raises a child so the vehicle's own seatbelt sits correctly across the shoulder and hip bones — without one, the belt can sit across the neck and stomach, which is dangerous in a crash.",
+    "needsVerification": false
+  },
+  {
+    "id": "tr015",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "If another driver flashes their headlights at you to signal you can go first, you should:",
+    "options": [
+      "Always proceed immediately, since the other driver has given you right of way",
+      "Still check the situation yourself — a headlight flash is a courtesy signal, not a guarantee of safety, and you remain responsible for judging it is safe to proceed",
+      "Ignore it and never move",
+      "Flash your own headlights back before doing anything else"
+    ],
+    "answer": 1,
+    "explanation": "Right of way is determined by traffic rules, signs, and signals — not by another driver's headlight flash. It can be a helpful courtesy, but you must still confirm it is actually safe before proceeding, since the signalling driver may not have seen a hazard.",
+    "needsVerification": false
+  },
+  {
+    "id": "tr016",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "You approach a junction where the traffic lights are completely dark (a power failure) and no police officer is directing traffic. You should:",
+    "options": [
+      "Proceed at normal speed, since the lack of a red light means you have priority",
+      "Treat the junction with the same caution as an uncontrolled intersection — slow down, look carefully, and give way as needed before proceeding",
+      "Stop and wait indefinitely until the lights come back on",
+      "Sound your horn continuously while crossing"
+    ],
+    "answer": 1,
+    "explanation": "With no working signal and no officer directing traffic, a junction should be treated with the caution of an uncontrolled intersection: slow down, check all directions, and be prepared to give way, since no light is actively controlling right of way. (Flagged for verification of the exact UAE procedural rule, though the underlying caution is universal defensive-driving practice.)",
+    "needsVerification": true
+  },
+  {
+    "id": "ri012",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "In the UAE, right of way at an intersection with no traffic signals is decided mainly by:",
+    "options": [
+      "Always giving way to the vehicle approaching from your right, in every case",
+      "Signs, road markings, and which road is the major/minor road — not an automatic \"vehicle on the right\" rule",
+      "Whichever vehicle is travelling faster",
+      "Whichever vehicle arrives first, regardless of signs"
+    ],
+    "answer": 1,
+    "explanation": "Unlike some countries' blanket \"yield to the right\" convention, right of way in the UAE is set by the actual signs, road markings, and road hierarchy at that junction (e.g. a GIVE WAY or STOP sign on the minor road) rather than a fixed left/right rule — always follow what the signs and markings actually say. (Flagged for verification against the exact statutory wording, since this is a common source of confusion between different countries' conventions.)",
+    "needsVerification": true
+  },
+  {
+    "id": "ri013",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "When two lanes merge into one because of a lane closure ahead (for example, roadworks), the safer technique is generally to:",
+    "options": [
+      "Merge early and as soon as possible, regardless of the queue in the continuing lane",
+      "Use both lanes up to the merge point and take turns merging one vehicle at a time (\"zip merging\"), rather than everyone crowding into one lane early",
+      "Speed up in the closing lane to get ahead of as many vehicles as possible",
+      "Stop completely in the closing lane and wait for a gap"
+    ],
+    "answer": 1,
+    "explanation": "Taking turns merging one-for-one right at the point where a lane actually ends (rather than everyone squeezing into the continuing lane far in advance) uses the road's full capacity and reduces sudden braking and long queues — but it still requires courtesy and should never involve racing another vehicle to the merge point.",
+    "needsVerification": false
+  },
+  {
+    "id": "hl013",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "A vehicle's total stopping distance is the reaction distance (before the brakes are applied) plus the braking distance. As speed increases, this total stopping distance:",
+    "options": [
+      "Stays roughly the same regardless of speed",
+      "Increases, and increases more sharply than speed itself (not just in direct proportion)",
+      "Decreases, because faster vehicles have better brakes",
+      "Only increases on wet roads"
+    ],
+    "answer": 1,
+    "explanation": "Reaction distance increases in direct proportion to speed, but braking distance increases with the square of speed — so doubling your speed more than doubles your overall stopping distance, which is why speeding is especially dangerous.",
+    "needsVerification": false
+  },
+  {
+    "id": "sl013",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "If you double your vehicle's speed, the distance needed to brake to a stop:",
+    "options": [
+      "Stays about the same",
+      "Roughly doubles",
+      "Roughly quadruples (increases about four times), not just doubles",
+      "Roughly halves"
+    ],
+    "answer": 2,
+    "explanation": "Braking distance is related to the square of speed, so doubling your speed roughly quadruples the distance needed to stop — a key reason why even a small increase in speed can make a crash far more severe.",
+    "needsVerification": false
+  },
+  {
+    "id": "af012",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Driving while extremely fatigued mainly affects a driver because it:",
+    "options": [
+      "Has no measurable effect on driving ability",
+      "Slows reaction time and impairs judgement, in a similar way to being under the influence of alcohol",
+      "Only affects a driver's comfort, not their ability to control the vehicle",
+      "Improves concentration by keeping the driver alert to discomfort"
+    ],
+    "answer": 1,
+    "explanation": "Severe fatigue slows reaction time and impairs judgement and attention in ways that resemble alcohol impairment, even though no alcohol is involved — which is why \"drowsy driving\" is treated as seriously as drink-driving in road safety guidance.",
+    "needsVerification": false
+  },
+  {
+    "id": "pr012",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Before opening a car door after parking, a driver or passenger should:",
+    "options": [
+      "Open it quickly to save time",
+      "Check mirrors and look for approaching traffic, cyclists, or pedestrians before opening the door",
+      "Only worry about this if parked in a garage",
+      "Assume it is always safe if the engine is switched off"
+    ],
+    "answer": 1,
+    "explanation": "Opening a door without checking can cause a collision with a passing vehicle, cyclist, or pedestrian — always look before opening, especially on the side facing traffic.",
+    "needsVerification": false
+  },
+  {
+    "id": "mc016",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "A motorcyclist's protective gear should generally include:",
+    "options": [
+      "A helmet only; other gear is unnecessary",
+      "A full set of protective gear — helmet, jacket, gloves, and suitable footwear — since a crash can injure any part of the body",
+      "Sunglasses only, for glare protection",
+      "Gear is only needed for long trips, not short ones"
+    ],
+    "answer": 1,
+    "explanation": "A motorcyclist has far less physical protection than a car occupant, so a full set of protective gear (helmet, jacket, gloves, sturdy footwear) — not just a helmet — reduces the risk of injury to the whole body in a fall or crash.",
+    "needsVerification": false
   }
 ]

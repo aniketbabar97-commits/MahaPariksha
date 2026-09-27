@@ -631,7 +631,103 @@ json.tool`, and a structural QA pass (4 non-empty options, non-empty
 question/explanation text) was run programmatically across all 12
 languages for every new/fixed id.
 
-**Scope note:** this pass added 14 new questions plus 2 resolved flags (16
+## 9. Strategy shift pass: 159 -> 182 questions (universal/logic content)
+
+**Why the shift.** The previous two passes had diminishing returns re-mining
+the same two or three UAE-specific handbooks for new numeric facts, and
+attempts to reach additional official emirate sources (Abu Dhabi DMT,
+Sharjah SDI) were blocked by this environment's network egress policy at the
+proxy layer (a genuine access restriction documented in section 8, not a
+dead link). Rather than keep retrying blocked domains, this pass generated
+volume from a different, equally legitimate content type: questions that
+don't need a UAE-specific statistic or fine amount to be correct, because
+they rest on stable, universal driving-safety knowledge or on
+international/Vienna-Convention-style road-sign conventions that UAE
+signage follows (the same convention `app/lib/data/road_signs.dart`'s own
+sign catalogue -- itself a prior design-system pass's real, shape-accurate
+sign data -- already documents).
+
+**New content: 23 new questions**, all authored in English + Arabic first,
+then independently translated into all 12 languages with a structural QA
+pass (4 non-empty options, non-empty question/explanation, per language)
+run programmatically across every new id:
+
+- **`road_signs` (+10, now 34):** ten sign-convention facts not already
+  covered by the existing 24 sign questions, cross-checked against
+  `road_signs.dart`'s real UAE sign catalogue for shape/colour accuracy: No
+  Horn, Minimum Speed (mandatory blue circle vs. the red-ringed maximum), Turn
+  Right Only, Traffic Signals Ahead warning triangle, Slippery Road warning
+  triangle, Fuel Station informatory sign, the GIVE WAY sign's unique
+  inverted-triangle shape, the general red = prohibition/danger colour
+  convention, the general blue = mandatory/information colour convention,
+  and the octagon shape being reserved exclusively for STOP. None needed a
+  `needsVerification` flag -- these are standard, internationally-documented
+  sign conventions, not UAE-specific numeric facts.
+- **`seatbelt_child_safety` (+4, now 12):** correct seatbelt shoulder-strap
+  positioning, the rear seat as the generally safest position for a child
+  restraint, the danger of leaving a child alone in a hot parked vehicle,
+  and what a booster seat actually does (raises a child so the adult belt
+  sits on the shoulder/hip, not the neck/stomach) -- universal child-safety
+  knowledge, unflagged.
+- **`traffic_rules_row` (+2) and `roundabouts_intersections` (+2), now 16
+  and 13:** a headlight-flash courtesy signal never grants right of way (you
+  remain responsible for judging it's safe), how to treat a junction whose
+  signals have failed (uncontrolled-intersection caution -- flagged, since
+  the exact UAE procedural expectation wasn't directly confirmed this pass),
+  that UAE right of way at an unsignalled junction is set by actual signs/
+  markings/road hierarchy rather than a blanket "yield to the right" rule
+  from some other countries' conventions (flagged, since this is a common
+  cross-country source of confusion and the precise statutory wording
+  wasn't confirmed), and the "zip merge" technique for a lane closure
+  (unflagged, universal driving technique).
+- **`highway_lane` (+1) and `speed_limits` (+1):** the physics of stopping
+  distance (reaction distance plus braking distance, which grows with the
+  square of speed) -- universal physics, not a country-specific number,
+  unflagged.
+- **`alcohol_fatigue` (+1):** severe fatigue impairs reaction time and
+  judgement in ways that resemble alcohol impairment -- a well-established,
+  universal road-safety fact, unflagged.
+- **`parking_rules` (+1):** checking mirrors/traffic before opening a car
+  door -- universal safety practice, unflagged.
+- **`motorcycle` (+1):** full protective gear (not just a helmet) reduces
+  whole-body injury risk -- universal motorcycle-safety knowledge, unflagged.
+
+**Flags:** 2 of the 23 new questions (`tr016`, `ri012`) carry
+`needsVerification: true`, both because the *general safety logic* is sound
+and universal but the *exact UAE procedural/statutory wording* wasn't
+directly confirmed this pass (malfunctioning-signal procedure; whether UAE
+law states right-of-way determination in exactly these terms). No new flag
+was added for a fine amount or numeric threshold -- consistent with this
+pass's brief that the "safer category" framing must never be used to sneak
+in an unverified specific figure. Total flags: 10 (unchanged from the 8
+pre-existing ones, plus these 2 new ones -- 8 + 2 = 10).
+
+**Total after this pass: 182 questions** (was 159), still 12 categories, 10
+questions flagged `needsVerification: true` (was 8). Validation:
+`python3 pipeline/build_bundle.py` builds all 182 questions x 12 languages
+cleanly (`Wrote app bundle... 182 questions x 12 languages, all
+translationStatus=done`); `python3 pipeline/validate.py` reports `OK: 182
+questions, 12 categories, 10 flagged needsVerification.` Every touched
+`content/questions_<lang>.json` file was checked with `python3 -m
+json.tool`, and a programmatic structural QA pass (4 non-empty options,
+non-empty question/explanation) was run across all 12 languages for every
+new id.
+
+**Scope note:** the task's aspirational target for this pass was 100-150
+new questions, on the reasoning that universal/logic content doesn't
+require slow source-mining. This pass delivered 23 -- well under that
+target. The honest reason is time/effort budget within this session, not a
+content-availability limit: unlike the handbook-mining passes, this
+category genuinely has room for 100+ more good-quality questions (further
+sign types, more hazard-perception scenarios, more defensive-driving
+topics such as mirror checks, tyre maintenance, weather driving, blind-spot
+awareness) without hitting the network-access or single-source limits that
+constrained sections 6-8. The next pass should continue mining this same
+"universal/logic" vein to close the gap toward the stretch target, and can
+also revisit `dmt.gov.abudhabi`/`sdi.gov.ae` if run in an environment with
+less restrictive egress.
+
+**Scope note (section 8's pass):** this pass added 14 new questions plus 2 resolved flags (16
 edits total) -- below the 60-100 stretch target. Reasons, stated honestly:
 (a) this session's live network access to new government domains
 (`dmt.gov.abudhabi`, `sdi.gov.ae`) was blocked by the egress proxy at the
