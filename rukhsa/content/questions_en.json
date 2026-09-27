@@ -695,9 +695,9 @@
       "0.08%",
       "Only enforced for professional drivers"
     ],
-    "needsVerification": true,
+    "needsVerification": false,
     "answer": 1,
-    "explanation": "The UAE generally enforces a zero-tolerance policy: driving with any detectable alcohol in the system is an offence."
+    "explanation": "Dubai enforces zero tolerance for drink driving: the RTA Light Motor Vehicle Handbook states that driving under the influence of alcohol or drugs is not permitted at all, with no allowance for any detectable amount."
   },
   {
     "id": "af002",
@@ -1079,15 +1079,15 @@
     "category": "heavy_vehicle",
     "sub": null,
     "answer": 0,
-    "needsVerification": true,
-    "q": "Rocks or mud lodged between a heavy vehicle's dual (twin) tyres may cause:",
+    "needsVerification": false,
+    "q": "Rocks or mud caught in the space between a heavy vehicle's dual (twin) wheels may cause:",
     "options": [
       "A tyre to lose pressure",
       "The engine to overheat",
       "The gearbox to slip",
       "No effect on the tyres at all"
     ],
-    "explanation": "Debris trapped between dual tyres is generally understood to risk damaging a tyre and causing it to lose pressure over time, though this pass could not cross-check the exact mechanism against an authoritative technical source, so it remains flagged."
+    "explanation": "The Truck and Bus Handbook's pre-trip inspection checklist states: rocks or mud caught between dual wheels can unbalance a wheel and damage the tyre side walls and wheel bearings — which is why drivers must check the spacing between dual wheels."
   },
   {
     "id": "hv007",
@@ -2077,6 +2077,216 @@
     ],
     "answer": 1,
     "explanation": "This is standard motorcycle-safety guidance (also used in UAE motorcycle rider training materials): a second-hand helmet may have sustained impact damage that isn't visible but that seriously reduces its ability to protect in a crash.",
+    "needsVerification": false
+  },
+  {
+    "id": "hv015",
+    "q": "After you press the brake pedal on a heavy vehicle with air brakes, there is a delay before the brakes fully act. About how long is this delay?",
+    "options": [
+      "No delay at all",
+      "Up to about one second",
+      "About 10 seconds",
+      "About one minute"
+    ],
+    "explanation": "Air takes time to travel through the system after the pedal is pressed — up to about a one-second delay — so heavy-vehicle drivers must start braking earlier than in a light vehicle (Truck and Bus Handbook).",
+    "category": "heavy_vehicle",
+    "sub": "braking",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "hv016",
+    "q": "On a long downhill, continuous heavy braking causes “brake fade” because:",
+    "options": [
+      "The brake linings overheat and gradually lose their stopping power",
+      "The brake pedal physically locks in place",
+      "The tyres automatically deflate",
+      "The engine shuts off to protect itself"
+    ],
+    "explanation": "Continuous heavy braking on a long hill heats up the brake linings until they no longer slow the vehicle effectively — this is called brake fade (Truck and Bus Handbook).",
+    "category": "heavy_vehicle",
+    "sub": "braking",
+    "answer": 0,
+    "needsVerification": false
+  },
+  {
+    "id": "hv017",
+    "q": "To help prevent brake fade before starting down a long hill in a heavy vehicle, you should:",
+    "options": [
+      "Shift into a lower gear before you start going down",
+      "Shift into neutral and coast down",
+      "Turn off the engine to save fuel",
+      "Apply the handbrake fully for the whole descent"
+    ],
+    "explanation": "Shifting into a lower gear before a long descent lets engine braking help slow the vehicle, so the brakes are used less and are less likely to overheat and fade (Truck and Bus Handbook).",
+    "category": "heavy_vehicle",
+    "sub": "braking",
+    "answer": 0,
+    "needsVerification": false
+  },
+  {
+    "id": "hv018",
+    "q": "Because a heavy vehicle takes longer to slow down and stop, a driver should look ahead on the road for about how many seconds' worth of travel?",
+    "options": [
+      "2-3 seconds",
+      "12-15 seconds",
+      "30-40 seconds",
+      "Less than 1 second"
+    ],
+    "explanation": "Heavy-vehicle drivers need to know what is on the road 12 to 15 seconds ahead, since large vehicles take longer to slow down, change lanes, or stop (Truck and Bus Handbook).",
+    "category": "heavy_vehicle",
+    "sub": "observation",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "hv019",
+    "q": "When a long heavy vehicle goes around a turn, the rear wheels usually follow a shorter, tighter path than the front wheels. This is called:",
+    "options": [
+      "Cut-in",
+      "Aquaplaning",
+      "Brake fade",
+      "Double-clutching"
+    ],
+    "explanation": "This effect is called “cut-in”; the sharper the turn and the longer the vehicle, the greater the cut-in, so drivers must position their approach accordingly (Truck and Bus Handbook).",
+    "category": "heavy_vehicle",
+    "sub": "vehicle_control",
+    "answer": 0,
+    "needsVerification": false
+  },
+  {
+    "id": "hv020",
+    "q": "When reversing an articulated (trailer) heavy vehicle, the trailer:",
+    "options": [
+      "Moves in exactly the same direction the steering wheel is turned",
+      "Moves contrary to (opposite of) the direction the steering wheel is turned",
+      "Cannot move at all while reversing",
+      "Straightens itself automatically without steering input"
+    ],
+    "explanation": "The trailer moves contrary to the direction of the steering when reversing, so drivers need special technique and practice, using all mirrors and correcting drift immediately (Truck and Bus Handbook).",
+    "category": "heavy_vehicle",
+    "sub": "vehicle_control",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "vd008",
+    "q": "If you are involved in a traffic accident in Dubai, the police must be notified within:",
+    "options": [
+      "1 hour",
+      "6 hours",
+      "24 hours",
+      "48 hours"
+    ],
+    "explanation": "The RTA Light Motor Vehicle Handbook states the police must be notified within 6 hours of a crash, and you must give a truthful account of what happened.",
+    "category": "vehicle_docs_insurance",
+    "sub": "accidents",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "vd009",
+    "q": "If the police accident report finds you were at fault, before your confiscated licence is returned, you generally need to:",
+    "options": [
+      "Pay a personal fee directly to the officer",
+      "Take the accident form to your insurance company and get a letter confirming your claim, then present it to police",
+      "Wait exactly 90 days automatically with no other action",
+      "Sell your vehicle first"
+    ],
+    "explanation": "The at-fault driver's licence is taken at the scene; you must take the accident form to your insurance company, which gives you a letter you take back to the police station to get your licence returned (RTA Light Motor Vehicle Handbook).",
+    "category": "vehicle_docs_insurance",
+    "sub": "accidents",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "vd010",
+    "q": "In Dubai, after a minor crash where both vehicles are still driveable, drivers should:",
+    "options": [
+      "Leave the vehicles exactly where they stopped, no matter what",
+      "Move the vehicles to the side of the road to avoid blocking traffic — leaving them can result in a fine",
+      "Push the vehicles into the nearest police station themselves",
+      "Swap number plates with the other driver"
+    ],
+    "explanation": "If a crash occurs where both vehicles can still be driven, the handbook says they should be moved to the side of the road to stop traffic build-up; drivers who fail to move them can be fined (RTA Light Motor Vehicle Handbook).",
+    "category": "vehicle_docs_insurance",
+    "sub": "accidents",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "vd011",
+    "q": "To renew your Dubai vehicle registration (Mulkiya) through an RTA Trusted Agent (such as a selected insurer), you must first:",
+    "options": [
+      "Sell your current vehicle",
+      "Purchase vehicle insurance",
+      "Retake the practical driving test",
+      "Take a new eye test at an optician"
+    ],
+    "explanation": "Selected vehicle insurers act as RTA Trusted Agents: to renew your registration through them you must purchase vehicle insurance, and they can then register the vehicle for you (RTA Light Motor Vehicle Handbook).",
+    "category": "vehicle_docs_insurance",
+    "sub": "registration",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "vd012",
+    "q": "Under UAE Federal Traffic Law (Article 12), if you witness a traffic accident, you must:",
+    "options": [
+      "Drive away immediately to avoid being delayed",
+      "Give every possible assistance to the victims, especially the injured",
+      "Only take photographs and then leave the scene",
+      "Wait for a lawyer to arrive before doing anything"
+    ],
+    "explanation": "Article 12 of the Executive By-Law of UAE Federal Traffic Law No. 21 of 1995 requires all road users to give every possible assistance to accident victims, especially those who are injured (RTA Light Motor Vehicle Handbook).",
+    "category": "vehicle_docs_insurance",
+    "sub": "crash_duty",
+    "answer": 1,
+    "needsVerification": false
+  },
+  {
+    "id": "af009",
+    "q": "Under UAE Federal Traffic Law (Article 10.7), you must not drive your vehicle when:",
+    "options": [
+      "Tired, as you may become unable to control your car",
+      "The fuel tank is below half full",
+      "You are wearing sunglasses",
+      "You have passengers under 18"
+    ],
+    "explanation": "Article 10.7 of UAE Federal Traffic Law No. 21 of 1995 states you must not drive when tired, as you may become unable to control your car (RTA Light Motor Vehicle Handbook).",
+    "category": "alcohol_fatigue",
+    "sub": "fatigue",
+    "answer": 0,
+    "needsVerification": false
+  },
+  {
+    "id": "af010",
+    "q": "Which of the following is a warning sign that you should stop driving and rest?",
+    "options": [
+      "Constant yawning and starting to drift across your lane",
+      "Feeling fully alert and focused on the road",
+      "Driving exactly at the posted speed limit",
+      "Checking your mirrors regularly"
+    ],
+    "explanation": "The RTA Light Motor Vehicle Handbook lists constant yawning, drifting across the lane, fuzzy eyesight, and not remembering the last few kilometres driven as signs that it is time to stop and rest.",
+    "category": "alcohol_fatigue",
+    "sub": "fatigue",
+    "answer": 0,
+    "needsVerification": false
+  },
+  {
+    "id": "af011",
+    "q": "The RTA Light Motor Vehicle Handbook notes that in one month in Dubai, how many people died due to careless and sleepy driving?",
+    "options": [
+      "13",
+      "3",
+      "30",
+      "130"
+    ],
+    "explanation": "The handbook states: “In one month in Dubai alone, 13 people died due to careless and sleepy drivers,” used to underline the danger of driving while tired.",
+    "category": "alcohol_fatigue",
+    "sub": "fatigue",
+    "answer": 0,
     "needsVerification": false
   }
 ]

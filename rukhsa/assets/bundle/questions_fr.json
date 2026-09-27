@@ -1,7 +1,7 @@
 {
   "language": "fr",
   "isRtl": false,
-  "questionCount": 145,
+  "questionCount": 159,
   "questions": [
     {
       "id": "rs001",
@@ -773,15 +773,15 @@
       "category": "alcohol_fatigue",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
-      "q": "La limite légale d'alcoolémie pour conduire aux Émirats arabes unis est :",
+      "needsVerification": false,
+      "q": "Quelle est la limite légale d'alcoolémie pour conduire aux Émirats arabes unis ?",
       "options": [
         "Similaire à celle de nombreux pays occidentaux (une petite limite autorisée)",
         "Tolérance zéro - toute quantité détectable d'alcool est illégale",
         "0,08 %",
         "Appliquée uniquement aux conducteurs professionnels"
       ],
-      "explanation": "Les Émirats arabes unis appliquent généralement une politique de tolérance zéro : conduire avec toute quantité détectable d'alcool dans le système est une infraction."
+      "explanation": "Dubai applique une tolérance zéro envers la conduite en état d'ivresse : le manuel des véhicules légers de la RTA indique que conduire sous l'influence de l'alcool ou de drogues n'est pas du tout autorisé, sans aucune tolérance pour une quantité détectable."
     },
     {
       "id": "af002",
@@ -1178,15 +1178,15 @@
       "category": "heavy_vehicle",
       "sub": null,
       "answer": 0,
-      "needsVerification": true,
-      "q": "Des pierres ou de la boue coincées entre les pneus jumelés d'un poids lourd peuvent causer :",
+      "needsVerification": false,
+      "q": "Des pierres ou de la boue coincées dans l'espace entre les roues jumelées d'un poids lourd peuvent provoquer :",
       "options": [
         "La perte de pression d'un pneu",
         "La surchauffe du moteur",
         "Le patinage de la boîte de vitesses",
         "Aucun effet sur les pneus"
       ],
-      "explanation": "On considère généralement que des débris coincés entre des pneus jumelés risquent d'endommager un pneu et de lui faire perdre sa pression avec le temps, mais cette révision n'a pas pu vérifier le mécanisme exact auprès d'une source technique fiable, cela reste donc signalé."
+      "explanation": "La liste de vérification avant trajet du Truck and Bus Handbook indique : des pierres ou de la boue coincées entre des roues jumelées peuvent déséquilibrer une roue et endommager les flancs du pneu et les roulements de roue — c'est pourquoi les conducteurs doivent vérifier l'espacement entre les roues jumelées."
     },
     {
       "id": "hv007",
@@ -2177,6 +2177,216 @@
         "Coûte plus cher à entretenir"
       ],
       "explanation": "Il s'agit d'une consigne standard de sécurité moto (également utilisée dans les supports de formation des motocyclistes aux Émirats) : un casque d'occasion peut avoir subi des dommages d'impact invisibles qui réduisent gravement sa capacité de protection en cas d'accident."
+    },
+    {
+      "id": "hv015",
+      "category": "heavy_vehicle",
+      "sub": "braking",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Après avoir appuyé sur la pédale de frein d'un poids lourd à freins pneumatiques, il y a un délai avant que les freins n'agissent pleinement. Combien de temps dure environ ce délai ?",
+      "options": [
+        "Aucun délai",
+        "Jusqu'à environ une seconde",
+        "Environ 10 secondes",
+        "Environ une minute"
+      ],
+      "explanation": "L'air met du temps à circuler dans le système après l'appui sur la pédale — un délai allant jusqu'à environ une seconde — les conducteurs de poids lourds doivent donc freiner plus tôt que dans un véhicule léger (Truck and Bus Handbook)."
+    },
+    {
+      "id": "hv016",
+      "category": "heavy_vehicle",
+      "sub": "braking",
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Dans une longue descente, un freinage intense et continu provoque un « évanouissement des freins » (« brake fade ») parce que :",
+      "options": [
+        "Les garnitures de frein surchauffent et perdent progressivement leur pouvoir d'arrêt",
+        "La pédale de frein se bloque physiquement en place",
+        "Les pneus se dégonflent automatiquement",
+        "Le moteur s'arrête pour se protéger"
+      ],
+      "explanation": "Un freinage intense et continu dans une longue descente chauffe les garnitures de frein jusqu'à ce qu'elles ne ralentissent plus efficacement le véhicule — c'est ce qu'on appelle l'évanouissement des freins (Truck and Bus Handbook)."
+    },
+    {
+      "id": "hv017",
+      "category": "heavy_vehicle",
+      "sub": "braking",
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Pour éviter l'évanouissement des freins avant d'entamer une longue descente avec un poids lourd, vous devez :",
+      "options": [
+        "Rétrograder à un rapport inférieur avant de commencer à descendre",
+        "Passer au point mort et descendre en roue libre",
+        "Éteindre le moteur pour économiser du carburant",
+        "Serrer complètement le frein à main pendant toute la descente"
+      ],
+      "explanation": "Rétrograder avant une longue descente permet au frein moteur d'aider à ralentir le véhicule, de sorte que les freins sont moins sollicités et risquent moins de surchauffer (Truck and Bus Handbook)."
+    },
+    {
+      "id": "hv018",
+      "category": "heavy_vehicle",
+      "sub": "observation",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Comme un poids lourd met plus de temps à ralentir et à s'arrêter, un conducteur doit regarder devant lui sur la route sur une distance équivalente à combien de secondes de trajet ?",
+      "options": [
+        "2 à 3 secondes",
+        "12 à 15 secondes",
+        "30 à 40 secondes",
+        "Moins d'une seconde"
+      ],
+      "explanation": "Les conducteurs de poids lourds doivent savoir ce qui se trouve sur la route 12 à 15 secondes plus loin, car les grands véhicules mettent plus de temps à ralentir, changer de voie ou s'arrêter (Truck and Bus Handbook)."
+    },
+    {
+      "id": "hv019",
+      "category": "heavy_vehicle",
+      "sub": "vehicle_control",
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Lorsqu'un long poids lourd négocie un virage, les roues arrière suivent généralement une trajectoire plus courte et plus serrée que les roues avant. Cela s'appelle :",
+      "options": [
+        "Le « cut-in » (rentrée intérieure)",
+        "L'aquaplanage",
+        "L'évanouissement des freins",
+        "Le double débrayage"
+      ],
+      "explanation": "Cet effet s'appelle le « cut-in » ; plus le virage est serré et le véhicule long, plus le cut-in est important, les conducteurs doivent donc positionner leur approche en conséquence (Truck and Bus Handbook)."
+    },
+    {
+      "id": "hv020",
+      "category": "heavy_vehicle",
+      "sub": "vehicle_control",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Lors de la marche arrière d'un poids lourd articulé (avec remorque), la remorque :",
+      "options": [
+        "Se déplace exactement dans la même direction que le volant tourné",
+        "Se déplace dans la direction opposée à celle du volant tourné",
+        "Ne peut pas bouger du tout en marche arrière",
+        "Se redresse automatiquement sans action sur le volant"
+      ],
+      "explanation": "La remorque se déplace à l'opposé de la direction du volant en marche arrière, ce qui exige une technique et une pratique particulières, en utilisant tous les rétroviseurs et en corrigeant immédiatement toute dérive (Truck and Bus Handbook)."
+    },
+    {
+      "id": "vd008",
+      "category": "vehicle_docs_insurance",
+      "sub": "accidents",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Si vous êtes impliqué dans un accident de la route à Dubai, la police doit être informée dans un délai de :",
+      "options": [
+        "1 heure",
+        "6 heures",
+        "24 heures",
+        "48 heures"
+      ],
+      "explanation": "Le manuel des véhicules légers de la RTA indique que la police doit être informée dans les 6 heures suivant un accident, et vous devez fournir un récit sincère de ce qui s'est passé."
+    },
+    {
+      "id": "vd009",
+      "category": "vehicle_docs_insurance",
+      "sub": "accidents",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Si le rapport de police d'accident vous déclare responsable, avant que votre permis confisqué ne vous soit rendu, vous devez généralement :",
+      "options": [
+        "Payer des frais personnels directement à l'agent",
+        "Apporter le formulaire d'accident à votre compagnie d'assurance pour obtenir une lettre confirmant votre demande, puis la présenter à la police",
+        "Attendre automatiquement exactement 90 jours sans autre démarche",
+        "Vendre d'abord votre véhicule"
+      ],
+      "explanation": "Le permis du conducteur responsable est confisqué sur place ; vous devez apporter le formulaire d'accident à votre compagnie d'assurance, qui vous remet une lettre à ramener au poste de police pour récupérer votre permis (Manuel des véhicules légers de la RTA)."
+    },
+    {
+      "id": "vd010",
+      "category": "vehicle_docs_insurance",
+      "sub": "accidents",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "À Dubai, après un accident mineur où les deux véhicules sont encore roulants, les conducteurs doivent :",
+      "options": [
+        "Laisser les véhicules exactement là où ils se sont arrêtés, quoi qu'il arrive",
+        "Déplacer les véhicules sur le côté de la route pour éviter de bloquer la circulation — ne pas le faire peut entraîner une amende",
+        "Pousser eux-mêmes les véhicules jusqu'au poste de police le plus proche",
+        "Échanger les plaques d'immatriculation avec l'autre conducteur"
+      ],
+      "explanation": "Si un accident survient et que les deux véhicules peuvent encore rouler, le manuel indique qu'ils doivent être déplacés sur le côté de la route pour éviter d'engorger la circulation ; ceux qui ne le font pas peuvent être sanctionnés d'une amende (Manuel des véhicules légers de la RTA)."
+    },
+    {
+      "id": "vd011",
+      "category": "vehicle_docs_insurance",
+      "sub": "registration",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Pour renouveler l'immatriculation de votre véhicule à Dubai (Mulkiya) via un agent agréé de la RTA (comme un assureur sélectionné), vous devez d'abord :",
+      "options": [
+        "Vendre votre véhicule actuel",
+        "Souscrire une assurance véhicule",
+        "Repasser l'examen de conduite pratique",
+        "Passer un nouvel examen de la vue chez un opticien"
+      ],
+      "explanation": "Certains assureurs agréés agissent comme agents de confiance de la RTA : pour renouveler l'immatriculation via eux, vous devez souscrire une assurance véhicule, après quoi ils peuvent immatriculer le véhicule pour vous (Manuel des véhicules légers de la RTA)."
+    },
+    {
+      "id": "vd012",
+      "category": "vehicle_docs_insurance",
+      "sub": "crash_duty",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "En vertu de la loi fédérale sur la circulation des Émirats arabes unis (article 12), si vous êtes témoin d'un accident de la route, vous devez :",
+      "options": [
+        "Partir immédiatement pour éviter d'être retardé",
+        "Porter toute l'assistance possible aux victimes, en particulier aux blessés",
+        "Vous contenter de prendre des photos puis quitter les lieux",
+        "Attendre l'arrivée d'un avocat avant de faire quoi que ce soit"
+      ],
+      "explanation": "L'article 12 du règlement d'application de la loi fédérale sur la circulation des Émirats arabes unis n° 21 de 1995 exige que tous les usagers de la route portent toute l'assistance possible aux victimes d'accident, en particulier aux blessés (Manuel des véhicules légers de la RTA)."
+    },
+    {
+      "id": "af009",
+      "category": "alcohol_fatigue",
+      "sub": "fatigue",
+      "answer": 0,
+      "needsVerification": false,
+      "q": "En vertu de la loi fédérale sur la circulation des Émirats arabes unis (article 10.7), vous ne devez pas conduire votre véhicule lorsque vous êtes :",
+      "options": [
+        "Fatigué, car vous pourriez perdre le contrôle de votre voiture",
+        "Le réservoir de carburant est à moins de la moitié",
+        "Vous portez des lunettes de soleil",
+        "Vous avez des passagers de moins de 18 ans"
+      ],
+      "explanation": "L'article 10.7 de la loi fédérale sur la circulation des Émirats arabes unis n° 21 de 1995 indique que vous ne devez pas conduire lorsque vous êtes fatigué, car vous pourriez perdre le contrôle de votre voiture (Manuel des véhicules légers de la RTA)."
+    },
+    {
+      "id": "af010",
+      "category": "alcohol_fatigue",
+      "sub": "fatigue",
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Lequel des éléments suivants est un signe avant-coureur indiquant que vous devez arrêter de conduire et vous reposer ?",
+      "options": [
+        "Bâiller constamment et commencer à dériver dans votre voie",
+        "Se sentir pleinement alerte et concentré sur la route",
+        "Conduire exactement à la limite de vitesse affichée",
+        "Vérifier régulièrement ses rétroviseurs"
+      ],
+      "explanation": "Le manuel des véhicules légers de la RTA cite les bâillements constants, la dérive dans la voie, la vision floue et le fait de ne pas se souvenir des derniers kilomètres parcourus comme des signes qu'il est temps de s'arrêter et de se reposer."
+    },
+    {
+      "id": "af011",
+      "category": "alcohol_fatigue",
+      "sub": "fatigue",
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Le manuel des véhicules légers de la RTA note qu'en un mois à Dubai, combien de personnes sont mortes à cause d'une conduite impruden­te et somnolente ?",
+      "options": [
+        "13",
+        "3",
+        "30",
+        "130"
+      ],
+      "explanation": "Le manuel indique : « En un seul mois à Dubai, 13 personnes sont mortes à cause de conducteurs imprudents et somnolents », cité pour souligner le danger de conduire fatigué."
     }
   ]
 }

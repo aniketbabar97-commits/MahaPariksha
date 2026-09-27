@@ -534,3 +534,119 @@ with an OCR/positional-layout approach that can reliably recover its
 answer key, to safely mine `mc011`/`mc012`-type facts; and (c) keep
 looking for an Abu Dhabi/ADNOC or Sharjah driving-institute source to
 diversify beyond Dubai RTA material.
+
+## 8. Fourth deepening pass: 145 -> 159 questions
+
+**Sources re-verified this pass (from local session cache, since fresh network
+fetches of the mirrors were unreliable this pass -- see below):**
+
+- **RTA Light Motor Vehicle Handbook** (3rd ed., re-extracted text from the
+  prior pass's cached PDF) -- re-read directly; confirmed genuine again
+  (same Article citations, Part numbering, fines table). This pass mined
+  previously under-used sections: the "Your Responsibilities in a Crash"
+  page (Part 5 -- 6-hour police notification rule, Article 12 duty-to-assist,
+  moving driveable vehicles aside), the RTA Easy Licensing / registration
+  renewal section (Trusted Agents requiring insurance purchase), and the
+  "Driving When Tired" page (Article 10.7 citation and the "13 people died
+  in one month" statistic).
+- **RTA Truck and Bus Handbook** (3rd ed., re-read from cached extracted
+  text) -- mined Part 3 "Vehicle Checks" (the exact pre-trip-inspection line
+  about rocks/mud between dual wheels unbalancing a wheel and damaging tyre
+  sidewalls/wheel bearings -- this directly resolves `hv006`, see below) and
+  Part 6 "Vehicle Control" (air-brake ~1-second delay, brake fade and how to
+  prevent it, cut-in on turns, trailer reversing direction) and Part 7
+  (12-15 second look-ahead rule, aquaplaning, construction-zone caution).
+- **Drive Dubai motorcycle/heavy-vehicle decks** (re-read from cached
+  extracted slide text) -- searched again for lane-splitting and exact
+  pillion-passenger-count rules to resolve `mc011`/`mc012`; found supporting
+  context (pillion helmet requirement, general pillion safety practice) but
+  nothing that gives an unambiguous, directly-quotable statutory statement
+  for either flagged fact, so both remain honestly flagged.
+
+**New source search this pass (rejected):** attempted to reach the Abu
+Dhabi Department of Municipalities and Transport (`dmt.gov.abudhabi`) and
+Sharjah's SDI (`sdi.gov.ae`) driver-licensing pages to diversify beyond
+Dubai RTA material, as suggested. Both connections were refused by this
+session's egress proxy at the network layer (`502`/`connect_rejected`,
+organization policy) before any page content could be fetched or read, so
+neither could be verified genuine or used -- nothing was added or assumed
+from them. This should be retried in an environment with broader outbound
+access; it is a network-policy block in this session, not a dead-link
+finding about either site.
+
+### New content: 14 new questions + 2 resolved flags, all from the two
+already-verified RTA handbooks
+
+- **`heavy_vehicle` (+6, now 20):** `hv015` air-brake ~1-second lag, `hv016`
+  cause of brake fade, `hv017` shifting to a lower gear before a long
+  descent to prevent it, `hv018` the 12-15 second look-ahead rule, `hv019`
+  "cut-in" on turns, `hv020` a reversing trailer moving contrary to the
+  steering direction -- all direct Truck and Bus Handbook Part 6/7 text,
+  unflagged.
+- **`vehicle_docs_insurance` (+5, now 12):** `vd008` the 6-hour crash police
+  notification rule, `vd009` taking the accident form to your insurer for a
+  letter to get a confiscated licence back, `vd010` moving driveable
+  vehicles to the roadside after a crash (or risk a fine), `vd011`
+  purchasing insurance first to renew Mulkiya via an RTA Trusted Agent,
+  `vd012` the Article 12 duty to assist accident victims -- all direct LMV
+  Handbook Part 5/9 text, unflagged.
+- **`alcohol_fatigue` (+3, now 11):** `af009` the Article 10.7 citation
+  against driving while tired, `af010` warning signs to stop and rest
+  (yawning, lane drift, etc.), `af011` the handbook's own "13 people died in
+  one month" Dubai statistic -- all direct LMV Handbook Part 3 text,
+  unflagged.
+
+### Verification flags resolved this pass (2 of the prior 10)
+
+- **`hv006`** (rocks/mud between dual tyres) -- previously flagged since the
+  exact mechanism couldn't be cross-checked. The Truck and Bus Handbook's
+  own pre-trip-inspection checklist (Part 3, item K) states plainly: "Rocks
+  or mud caught between the wheels can unbalance a wheel and damage the
+  tyre side walls and wheel bearings." The question and all 12 language
+  explanations were rewritten to match this exact source text and the flag
+  cleared.
+- **`af001`** (UAE legal blood-alcohol limit) -- previously flagged as a
+  general "zero tolerance" claim without a direct quote. The LMV Handbook's
+  Part 3 text states outright: "Driving under the influence of alcohol or
+  drugs... there is zero tolerance for drink driving in Dubai." The
+  explanation in all 12 languages was updated to cite this line directly
+  and the flag cleared.
+- **Left flagged (8 remaining):** `sl003`, `fp005`, `fp006`, `pr003`,
+  `vd002`, `vd006`, `mc011`, `mc012` -- none of this pass's re-reads
+  (radar-tolerance policy, licence-without-a-valid-one specifics,
+  black-point expiry period, free-parking-hours specifics, expired-Mulkiya
+  driving penalty specifics, "friendly report" procedure, motorcycle
+  lane-splitting, and exact pillion-passenger limits) turned up an
+  unambiguous, directly-quotable statement in the sources re-read this
+  pass.
+
+**Total after this pass: 159 questions** (was 145), still 12 categories,
+now 8 questions flagged `needsVerification: true` (was 10). Validation:
+`python3 pipeline/build_bundle.py` builds all 159 questions x 12 languages
+cleanly (`Wrote app bundle... 159 questions x 12 languages, all
+translationStatus=done`); `python3 pipeline/validate.py` reports `OK: 159
+questions, 12 categories, 8 flagged needsVerification.` Every touched
+`content/questions_<lang>.json` file was checked with `python3 -m
+json.tool`, and a structural QA pass (4 non-empty options, non-empty
+question/explanation text) was run programmatically across all 12
+languages for every new/fixed id.
+
+**Scope note:** this pass added 14 new questions plus 2 resolved flags (16
+edits total) -- below the 60-100 stretch target. Reasons, stated honestly:
+(a) this session's live network access to new government domains
+(`dmt.gov.abudhabi`, `sdi.gov.ae`) was blocked by the egress proxy at the
+policy layer, so the planned "second independent emirate source" could not
+be added this pass; (b) the two already-verified handbooks' remaining
+unmined sections (eco-driving tips, the theory-lesson attendance record,
+detailed load-limit/coupling diagrams, bus-specific rules in Part 12) still
+have real content left for a future pass, but this pass prioritised
+correctness and full independent 12-language translation with a
+line-by-line self-QA pass over speed. The next pass should: (a) retry
+`dmt.gov.abudhabi`/`sdi.gov.ae` (and any other emirate driving-institute
+domain) from an environment with less restrictive egress, or ask the user
+for a pre-fetched copy; (b) mine the Truck and Bus Handbook's Parts 4
+(coupling/uncoupling), 5 (load limits/dimensions) and 12 (driving a bus)
+for further `heavy_vehicle` content; (c) revisit `sl003`/`fp005`/`fp006`/
+`pr003` against the RTA's public traffic-fines portal (`traffic.rta.ae`)
+if that domain is reachable, since these are exactly the kind of
+"current/official portal" facts the two static handbooks don't state.
