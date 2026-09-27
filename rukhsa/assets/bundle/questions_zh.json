@@ -1,7 +1,7 @@
 {
   "language": "zh",
   "isRtl": false,
-  "questionCount": 61,
+  "questionCount": 85,
   "questions": [
     {
       "id": "rs001",
@@ -203,7 +203,7 @@
       "category": "traffic_rules_row",
       "sub": null,
       "answer": 2,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "在阿联酋开车时手持使用手机：",
       "options": [
         "车速慢时允许",
@@ -278,7 +278,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 2,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "除非另有标示，迪拜谢赫扎耶德路的一般限速通常为：",
       "options": [
         "80公里/小时",
@@ -293,7 +293,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 0,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "阿联酋大多数住宅区内的默认限速（除非另有标示）约为：",
       "options": [
         "40公里/小时",
@@ -323,7 +323,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "在阿联酋大幅超过标示限速开车可能导致：",
       "options": [
         "仅口头警告",
@@ -383,30 +383,30 @@
       "category": "fines_penalty",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
-      "q": "如果驾驶员在规定期限内累积24分违章记分，通常的后果是：",
+      "needsVerification": false,
+      "q": "如果司机在一年内累计24个违章记分，通常的后果是：",
       "options": [
-        "仅收到警告信函",
-        "在规定期限内被吊销驾照",
-        "仅增加保险费用",
-        "没有影响，分数会自动清零"
+        "仅书面警告，不采取其他措施",
+        "首次扣留驾照3个月，再次发生扣留6个月，第三次扣留12个月（并须完成强制培训课程）",
+        "仅自动罚款，不对驾照采取任何措施",
+        "首次即永久且不可上诉地吊销驾照"
       ],
-      "explanation": "达到违章记分阈值通常会触发驾照吊销；具体阈值和期限由道路交通管理局（RTA）设定，可能变化。"
+      "explanation": "根据RTA轻型机动车手册，一年内达到24个违章记分，首次将扣留驾照3个月，一年内再次达到则扣留6个月，第三次扣留12个月（并须通过特别培训课程才能取回）。"
     },
     {
       "id": "fp003",
       "category": "fines_penalty",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "在阿联酋闯红灯通常会导致：",
       "options": [
-        "仅罚款，无违章记分",
-        "可观罚款加违章记分",
-        "初犯者仅口头警告",
-        "如果未影响其他车辆则无处罚"
+        "仅口头警告",
+        "罚款800迪拉姆并记8分",
+        "不罚款，但记24分",
+        "仅罚款，不记分"
       ],
-      "explanation": "闯红灯被视为严重违规行为，会处以高额罚款并同时记违章分。"
+      "explanation": "RTA手册的违章表将闯红灯列为罚款800迪拉姆并记8个违章分。"
     },
     {
       "id": "fp004",
@@ -712,23 +712,23 @@
       "id": "sc001",
       "category": "seatbelt_child_safety",
       "sub": null,
-      "answer": 2,
-      "needsVerification": true,
-      "q": "在阿联酋，系安全带是强制性的，适用于：",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "根据阿联酋联邦交通法（执行细则第33条），系安全带在法律上是强制要求的对象是：",
       "options": [
         "仅驾驶员",
-        "仅驾驶员和前排乘客",
-        "驾驶员和车内所有乘客",
-        "仅限高速公路"
+        "驾驶员和前排乘客",
+        "仅车内的儿童",
+        "仅当车速超过40公里/小时时的乘客"
       ],
-      "explanation": "阿联酋法律要求驾驶员和所有乘客，无论前排还是后排，在配备安全带的座位上都必须系安全带。"
+      "explanation": "1995年第21号阿联酋联邦交通法执行细则第33条规定，驾驶员及其旁边的前排乘客必须依法系安全带。RTA也强烈建议所有乘客在每次出行时都系好安全带，无论坐在哪个座位。"
     },
     {
       "id": "sc002",
       "category": "seatbelt_child_safety",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "在阿联酋，未达到一定年龄/身高的儿童通常必须：",
       "options": [
         "坐在前排乘客的腿上",
@@ -743,7 +743,7 @@
       "category": "seatbelt_child_safety",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "在阿联酋开车不系安全带可能导致：",
       "options": [
         "无处罚，因为这只是建议",
@@ -818,7 +818,7 @@
       "category": "alcohol_fatigue",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "在阿联酋因酒后驾车被抓通常会导致：",
       "options": [
         "仅小额罚款",
@@ -917,6 +917,366 @@
         "事故发生一周后才报告"
       ],
       "explanation": "许多酋长国允许对无人受伤的小型碰撞采用简化的轻微事故/“友好”报告流程；具体程序因地而异，驾驶员应确认当前的当地规定。"
+    },
+    {
+      "id": "mc001",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "如果您在骑摩托车时感到疲劳，您将：",
+      "options": [
+        "无法快速做出决定",
+        "能像平常一样迅速做出决定",
+        "不会注意到骑行有任何变化",
+        "会不自觉地更加谨慎驾驶"
+      ],
+      "explanation": "疲劳会减慢反应时间和判断力，使骑行时快速、安全地做出决定变得更困难。"
+    },
+    {
+      "id": "mc002",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "检查摩托车后刹车时，应调整为：",
+      "options": [
+        "轻按即可使摩托车停下",
+        "完全按下时使摩托车停下",
+        "无论如何都不能使摩托车完全停下",
+        "任何压力下都会立即锁死"
+      ],
+      "explanation": "正确调整的后刹车应在完全按下时使摩托车停下，而不会在轻微触碰时锁死。"
+    },
+    {
+      "id": "mc003",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "检查摩托车前刹车时，应调整为：",
+      "options": [
+        "轻按即可使摩托车停下",
+        "完全按下时使摩托车停下",
+        "即使完全按下也不能使摩托车停下",
+        "仅在发动机熄火时起作用"
+      ],
+      "explanation": "与后刹车一样，正确调整的前刹车也应在完全按下时使摩托车停下。"
+    },
+    {
+      "id": "mc004",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "摩托车上安装的每面后视镜应让骑手看到什么？",
+      "options": [
+        "主要是正后方的车流",
+        "仅相邻车道",
+        "尽可能多的相邻车道和后方车流",
+        "骑手前方什么都没有"
+      ],
+      "explanation": "摩托车后视镜应调整为尽可能多地显示相邻车道和后方车流，以覆盖盲区。"
+    },
+    {
+      "id": "mc005",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "为什么使用二手摩托车头盔是危险的？",
+      "options": [
+        "它可能有从外部看不出的损伤",
+        "它可能只是设计过时",
+        "这在社会上不被接受",
+        "它的尺寸总是不合适"
+      ],
+      "explanation": "二手头盔可能曾遭受撞击而削弱了保护性泡沫，却没有留下任何可见的外部损伤，因此其保护性能不再可靠。"
+    },
+    {
+      "id": "mc006",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "完全按下时，哪些刹车应能使静止的摩托车保持不动？",
+      "options": [
+        "仅前刹车",
+        "仅后刹车",
+        "前刹车和后刹车都可以",
+        "都不行；只有侧支架能支撑"
+      ],
+      "explanation": "前刹车和后刹车在完全按下且状态良好时，都应各自能够使摩托车保持静止不动。"
+    },
+    {
+      "id": "mc007",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "当摩托车油门完全打开后再松开时，应该：",
+      "options": [
+        "立即完全关闭",
+        "在几秒钟内逐渐关闭",
+        "保持原位直到手动关闭",
+        "短暂继续加速"
+      ],
+      "explanation": "状态良好的油门回位弹簧应在松开的瞬间使油门立即完全关闭，这是骑行前的重要安全检查。"
+    },
+    {
+      "id": "mc008",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "摩托车的传动链条应该：",
+      "options": [
+        "完全没有松弛",
+        "润滑良好且张力调节正确",
+        "无论说明书怎么说，都应始终保持10-20毫米的松弛",
+        "装好后就再也不用检查"
+      ],
+      "explanation": "链条应保持润滑，其张力应按照制造商的规格设定；过紧或过松都可能导致过早磨损或危险故障。"
+    },
+    {
+      "id": "mc009",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "转弯时，摩托车骑手应该：",
+      "options": [
+        "保持在车道中线右侧，远离对向车辆",
+        "保持在车道中线左侧，以便更容易被看到",
+        "在道路上选择能看清弯道并能被其他司机看到的位置",
+        "无论能见度如何，始终保持在车道正中间"
+      ],
+      "explanation": "良好的转弯技巧意味着在车道内调整位置，以获得穿越弯道的最佳视野，并让其他道路使用者更容易看到自己。"
+    },
+    {
+      "id": "mc010",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": true,
+      "q": "根据阿联酋交通法，骑摩托车佩戴经批准的头盔是以下哪些人的强制要求：",
+      "options": [
+        "仅骑手",
+        "骑手及任何后座乘客",
+        "仅18岁以下骑手",
+        "仅在高速公路上，市区道路不要求"
+      ],
+      "explanation": "一般理解阿联酋交通规则要求骑手和任何后座乘客在任何时候都必须佩戴经批准的头盔；由于本次审查所用来源未能直接确认，确切的法律条文应对照现行RTA文件核实。"
+    },
+    {
+      "id": "mc011",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": true,
+      "q": "在阿联酋，摩托车在停滞或缓慢行驶的车流车道之间穿行（车道分割/钻车缝）是：",
+      "options": [
+        "无论摩托车与车流的速度差多大都合法",
+        "通常不被允许；摩托车必须像其他车辆一样保持在标记车道内",
+        "仅在谢赫扎耶德路上违法",
+        "受到RTA的积极鼓励以缓解拥堵"
+      ],
+      "explanation": "阿联酋通常认为车道分割不被允许，摩托车应保持在标记车道内，但本次审查未能确认确切的法律条款，因此仍标记为待核实。"
+    },
+    {
+      "id": "mc012",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "在阿联酋摩托车搭载后座乘客时，骑手必须确保：",
+      "options": [
+        "不超过一名后座乘客，坐在合适的座位上并有脚踏，且佩戴头盔",
+        "如果摩托车足够大，最多可搭载两名后座乘客",
+        "如果行程较短，后座乘客不需要佩戴头盔",
+        "对搭载乘客人数没有限制"
+      ],
+      "explanation": "标准摩托车安全做法仅允许一名后座乘客，且必须正确就座并佩戴头盔；阿联酋确切的法律限制未能从本次审查所用来源中确认，因此仍标记为待核实。"
+    },
+    {
+      "id": "hv001",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "对于重型车辆和大巴司机来说，休息的最佳时间是：",
+      "options": [
+        "在感到疲劳之前",
+        "一感到疲劳就休息",
+        "仅在到达最终目的地后",
+        "仅在RTA规定的特定时段"
+      ],
+      "explanation": "在疲劳出现之前就计划休息，而不是等到已经感到疲劳才休息，是重型车辆司机培训中推荐的做法。"
+    },
+    {
+      "id": "hv002",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "以下哪项最可能导致驾驶重型车辆时产生困倦？",
+      "options": [
+        "服用感冒和过敏药片",
+        "患有轻微花粉热",
+        "开车前小睡片刻",
+        "开窗透气"
+      ],
+      "explanation": "许多感冒和过敏药物（抗组胺药）会产生困倦的副作用，这对司机是严重的风险；而开车前小睡实际上有助于保持警觉。"
+    },
+    {
+      "id": "hv003",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "长途旅行中，重型车辆司机最好的食物选择是：",
+      "options": [
+        "油腻的油炸食物",
+        "一袋新鲜水果",
+        "一大碗意大利面",
+        "只吃含糖零食和能量饮料"
+      ],
+      "explanation": "像水果这样清淡新鲜的食物更容易消化，比油腻或含糖食物更不容易在长途驾驶中引起困倦。"
+    },
+    {
+      "id": "hv004",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "在长途旅行中预防疲劳的最佳方法是在以下时间出行：",
+      "options": [
+        "您通常清醒的时段",
+        "仅白天，不论您平时的睡眠模式如何",
+        "仅夜间，以避开交通",
+        "出行时间没有区别"
+      ],
+      "explanation": "在您通常清醒的时段驾驶符合您的生物钟，而在通常睡眠的时段驾驶（无论白天或夜晚）都会增加疲劳风险。"
+    },
+    {
+      "id": "hv005",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "在长途旅行的休息站，做一些如伸展或触摸脚趾的轻度运动：",
+      "options": [
+        "有助于保持警觉",
+        "对警觉性没有影响",
+        "长途旅行前绝不应做",
+        "会增加疲劳"
+      ],
+      "explanation": "休息时进行轻度体力活动有助于血液循环和保持警觉，是长途旅行中管理疲劳的有效方式之一。"
+    },
+    {
+      "id": "hv006",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "卡在重型车辆双胎（并列轮胎）之间的石块或泥土可能导致：",
+      "options": [
+        "轮胎失压",
+        "发动机过热",
+        "变速箱打滑",
+        "对轮胎没有任何影响"
+      ],
+      "explanation": "一般认为，卡在双胎之间的杂物有随时间损坏轮胎并导致其失压的风险，但本次审查未能从权威技术来源核实确切机制，因此仍标记为待核实。"
+    },
+    {
+      "id": "hv007",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "根据RTA规定，重型车辆未能保持适当的车道纪律（使用不允许重型车辆行驶的车道）属于违章，处罚为：",
+      "options": [
+        "罚款600迪拉姆并记6分",
+        "罚款5000迪拉姆且不记分",
+        "不罚款，仅口头警告",
+        "自动且立即吊销驾照"
+      ],
+      "explanation": "RTA轻型机动车手册的违章表中，重型车辆车道纪律违章的处罚为罚款600迪拉姆并记6分。"
+    },
+    {
+      "id": "hv008",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "重型车辆超载，或未经许可使货物伸出车外，属于违章，处罚为：",
+      "options": [
+        "罚款500迪拉姆并记6分",
+        "不罚款，仅扣留车辆",
+        "罚款5000迪拉姆并记12分",
+        "首次违章仅警告"
+      ],
+      "explanation": "RTA手册的表格中，重型车辆超载或未经授权伸出的货物的处罚为罚款500迪拉姆并记6分。"
+    },
+    {
+      "id": "hv009",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "重型车辆的货物掉落或散落到道路上属于违章，处罚为：",
+      "options": [
+        "罚款3000迪拉姆并记21分",
+        "罚款100迪拉姆且不记分",
+        "若货物迅速被回收则不罚款",
+        "罚款但不记分"
+      ],
+      "explanation": "RTA手册的表格中，货物掉落或散落的处罚为罚款3000迪拉姆并记21分——除法院裁定的罪行外最严重的违章之一。"
+    },
+    {
+      "id": "hv010",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "卡车危险超车根据RTA规定属于违章，处罚为：",
+      "options": [
+        "罚款800迪拉姆并记24分",
+        "罚款200迪拉姆并记2分",
+        "不记分，仅罚款",
+        "仅警告，不罚款"
+      ],
+      "explanation": "RTA手册的表格中，卡车危险超车的处罚为罚款800迪拉姆并记24分——与无牌驾驶同属严重记分等级。"
+    },
+    {
+      "id": "hv011",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "在阿联酋，未遮盖卡车货物（例如散落的碎石或沙子）的处罚为：",
+      "options": [
+        "罚款3000迪拉姆",
+        "不罚款，仅口头警告",
+        "罚款50迪拉姆",
+        "仅暂停车辆注册，不罚款"
+      ],
+      "explanation": "RTA手册的表格中，未遮盖卡车货物的处罚为罚款3000迪拉姆。"
+    },
+    {
+      "id": "hv012",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "在阿联酋，重型车辆和大巴司机在长途旅行中的规定通常要求：",
+      "options": [
+        "在连续驾驶达到规定小时数后安排休息",
+        "只要司机感觉良好就无需休息",
+        "无论行驶距离多远，每24小时仅休息一次",
+        "休息完全是可选的，由运输公司自行决定"
+      ],
+      "explanation": "连续驾驶达到规定小时数后强制休息是商业/重型车辆司机的标准做法，但阿联酋当局目前设定的确切小时门槛未能从本次审查所用来源中确认，因此仍标记为待核实。"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "language": "en",
   "isRtl": false,
-  "questionCount": 61,
+  "questionCount": 85,
   "questions": [
     {
       "id": "rs001",
@@ -203,7 +203,7 @@
       "category": "traffic_rules_row",
       "sub": null,
       "answer": 2,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Using a mobile phone (handheld) while driving in the UAE is:",
       "options": [
         "Allowed if driving slowly",
@@ -278,7 +278,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 2,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Unless otherwise signed, the general speed limit on Dubai's Sheikh Zayed Road is typically:",
       "options": [
         "80 km/h",
@@ -293,7 +293,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 0,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "The default speed limit inside most residential areas in the UAE (unless posted otherwise) is around:",
       "options": [
         "40 km/h",
@@ -323,7 +323,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Driving significantly above the posted speed limit in the UAE can result in:",
       "options": [
         "A verbal warning only",
@@ -383,30 +383,30 @@
       "category": "fines_penalty",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
-      "q": "If a driver accumulates 24 black points within a specified period, the usual consequence is:",
+      "needsVerification": false,
+      "q": "If a driver accumulates 24 black points within one year, the usual consequence is:",
       "options": [
-        "A warning letter only",
-        "Licence suspension for a set period",
-        "An increase in insurance only",
-        "Nothing, points reset automatically"
+        "A written warning only, with no other action",
+        "Licence confiscation for 3 months the first time, escalating to 6 then 12 months (plus a mandatory course) for repeat occurrences",
+        "An automatic fine only, with no action against the licence",
+        "Permanent, non-appealable licence cancellation on the first occurrence"
       ],
-      "explanation": "Reaching the black-point threshold typically triggers a licence suspension; exact thresholds and periods are set by the RTA and can change."
+      "explanation": "Per the RTA Light Motor Vehicle Handbook, reaching 24 black points in a year leads to licence confiscation for three months the first time, six months if it happens again within a year, and twelve months (plus passing a special course) the third time."
     },
     {
       "id": "fp003",
       "category": "fines_penalty",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Jumping a red traffic light in the UAE typically results in:",
       "options": [
-        "A fine only, no black points",
-        "A significant fine plus black points",
-        "A verbal warning for first-time offenders",
-        "No penalty if no other vehicle was affected"
+        "A verbal warning only",
+        "A fine of AED 800 and 8 black points",
+        "No fine, but 24 black points",
+        "A fine only, with no black points added"
       ],
-      "explanation": "Running a red light is treated as a serious violation carrying both a heavy fine and black points."
+      "explanation": "The RTA Light Motor Vehicle Handbook's violations table lists jumping a red light as an AED 800 fine carrying 8 black points."
     },
     {
       "id": "fp004",
@@ -712,23 +712,23 @@
       "id": "sc001",
       "category": "seatbelt_child_safety",
       "sub": null,
-      "answer": 2,
-      "needsVerification": true,
-      "q": "In the UAE, wearing a seatbelt is mandatory for:",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Under UAE Federal Traffic Law (Article 33 of the Executive By-Law), wearing a seatbelt is a legal requirement for:",
       "options": [
         "The driver only",
-        "The driver and front-seat passenger only",
-        "The driver and all passengers in the vehicle",
-        "Only on highways"
+        "The driver and the front-seat passenger",
+        "Only children travelling in the vehicle",
+        "Only passengers when the vehicle exceeds 40 km/h"
       ],
-      "explanation": "UAE law requires the driver and all passengers, front and rear, to wear seatbelts where fitted."
+      "explanation": "Article 33 of the Executive By-Law to UAE Federal Traffic Law No. 21 of 1995 legally requires the driver and the person seated next to the driver to wear a seatbelt. The RTA also strongly recommends every occupant buckle up, every trip, regardless of seat."
     },
     {
       "id": "sc002",
       "category": "seatbelt_child_safety",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Children under a certain age/height in the UAE must generally travel:",
       "options": [
         "On the front passenger's lap",
@@ -743,7 +743,7 @@
       "category": "seatbelt_child_safety",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Not wearing a seatbelt while driving in the UAE can result in:",
       "options": [
         "No penalty since it is only a recommendation",
@@ -818,7 +818,7 @@
       "category": "alcohol_fatigue",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Being caught driving under the influence of alcohol in the UAE typically results in:",
       "options": [
         "A small fine only",
@@ -917,6 +917,366 @@
         "Only report the accident after a week"
       ],
       "explanation": "Many emirates allow a simplified minor-accident/'friendly' report process for small, no-injury collisions; procedures vary and drivers should confirm current local rules."
+    },
+    {
+      "id": "mc001",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "If you are fatigued while riding a motorcycle, you will:",
+      "options": [
+        "Not be able to make decisions quickly",
+        "Be able to make decisions just as quickly as normal",
+        "Notice no difference in your riding",
+        "Ride more cautiously without even trying"
+      ],
+      "explanation": "Fatigue slows reaction time and judgement, making it harder to make quick, safe decisions while riding."
+    },
+    {
+      "id": "mc002",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "When checking a motorcycle's rear brake, it should be adjusted so that it:",
+      "options": [
+        "Stops the motorcycle when only lightly applied",
+        "Stops the motorcycle when fully applied",
+        "Never fully stops the motorcycle",
+        "Locks immediately at any pressure"
+      ],
+      "explanation": "A correctly adjusted rear brake should bring the motorcycle to a stop when fully applied, without locking at the slightest touch."
+    },
+    {
+      "id": "mc003",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "When checking a motorcycle's front brake, it should be adjusted so that it:",
+      "options": [
+        "Stops the motorcycle when only lightly applied",
+        "Stops the motorcycle when fully applied",
+        "Does not stop the motorcycle even when fully applied",
+        "Only works when the engine is off"
+      ],
+      "explanation": "Like the rear brake, a correctly adjusted front brake should stop the motorcycle when fully applied."
+    },
+    {
+      "id": "mc004",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "What should each mirror fitted to a motorcycle let the rider see?",
+      "options": [
+        "Mainly the traffic directly behind",
+        "Only the lane next to the rider",
+        "As much as possible of the lane next to the rider and of the traffic behind",
+        "Nothing in front of the rider"
+      ],
+      "explanation": "Motorcycle mirrors should be adjusted to show as much as possible of the adjacent lane and the traffic behind, to cover blind spots."
+    },
+    {
+      "id": "mc005",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Why is it dangerous to use a second-hand (used) motorcycle helmet?",
+      "options": [
+        "It may have damage that is not visible from the outside",
+        "It may simply be an outdated design",
+        "It is not considered socially acceptable",
+        "It is always the wrong size"
+      ],
+      "explanation": "A used helmet may have suffered an impact that weakened its protective foam without leaving visible external damage, so its crash protection can no longer be trusted."
+    },
+    {
+      "id": "mc006",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "When fully applied, which brakes should be able to hold a stationary motorcycle?",
+      "options": [
+        "The front brake only",
+        "The rear brake only",
+        "Both the front and rear brakes",
+        "Neither brake; only the side stand holds the bike"
+      ],
+      "explanation": "Both the front and rear brakes, when fully applied and in good working order, should each be capable of holding the motorcycle stationary."
+    },
+    {
+      "id": "mc007",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "When a motorcycle's throttle is opened wide and then released, it should:",
+      "options": [
+        "Snap shut",
+        "Gradually close over several seconds",
+        "Remain in place until manually closed",
+        "Continue accelerating briefly"
+      ],
+      "explanation": "A healthy throttle return spring should snap the throttle fully shut as soon as it is released, which is an important pre-ride safety check."
+    },
+    {
+      "id": "mc008",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "A motorcycle's drive chain should:",
+      "options": [
+        "Have no slack at all",
+        "Be lubricated and have its tension adjusted correctly",
+        "Always have 10-20 mm of slack no matter what the manual says",
+        "Never be checked once it is fitted"
+      ],
+      "explanation": "The chain should be kept lubricated with its tension set to the manufacturer's specification; too tight or too loose can cause premature wear or a dangerous failure."
+    },
+    {
+      "id": "mc009",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "When riding through a corner, a motorcycle rider should:",
+      "options": [
+        "Stay right of centre in the lane to keep away from oncoming vehicles",
+        "Stay left of centre in the lane to be more easily seen",
+        "Position on the road so they can see through the corner and be seen by other drivers",
+        "Always ride in the exact centre of the lane regardless of visibility"
+      ],
+      "explanation": "Good cornering technique means positioning yourself in the lane for the best view through the bend and the best visibility to other road users, adjusting position as the corner requires."
+    },
+    {
+      "id": "mc010",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": true,
+      "q": "Under UAE traffic law, wearing an approved helmet on a motorcycle is required for:",
+      "options": [
+        "The rider only",
+        "The rider and any pillion (passenger)",
+        "Only riders under 18 years old",
+        "Only when riding on highways, not urban roads"
+      ],
+      "explanation": "UAE traffic rules are understood to require an approved helmet for both the rider and any pillion passenger at all times; the exact statutory wording should be checked against current RTA/traffic-law text, as this was not directly confirmed in the sources used for this pass."
+    },
+    {
+      "id": "mc011",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": true,
+      "q": "Lane splitting (riding a motorcycle between lanes of stationary or slow-moving traffic) in the UAE is:",
+      "options": [
+        "Legal at any speed difference between the motorcycle and the traffic",
+        "Generally not permitted; motorcycles must keep to a marked lane like other vehicles",
+        "Only illegal on Sheikh Zayed Road",
+        "Actively encouraged by the RTA to reduce congestion"
+      ],
+      "explanation": "UAE practice generally treats lane splitting as not permitted, with motorcycles expected to stay within a marked lane, but this pass could not confirm the exact statutory article, so it remains flagged for verification against the current traffic law text."
+    },
+    {
+      "id": "mc012",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "When carrying a pillion passenger on a motorcycle in the UAE, the rider must ensure:",
+      "options": [
+        "No more than one pillion passenger, seated on a proper seat with footrests and wearing a helmet",
+        "Up to two pillion passengers are allowed if the motorcycle is large enough",
+        "The pillion passenger does not need a helmet if the trip is short",
+        "There is no restriction on the number of passengers carried"
+      ],
+      "explanation": "Standard motorcycle safety practice limits a motorcycle to one pillion passenger, properly seated and helmeted; the exact UAE statutory limit was not directly confirmed in the sources used for this pass, so it remains flagged."
+    },
+    {
+      "id": "hv001",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "For heavy vehicle and bus drivers, the best time to take a rest break is:",
+      "options": [
+        "Before you become tired",
+        "As soon as you become tired",
+        "Only once you reach your final destination",
+        "Only during specific RTA-designated hours"
+      ],
+      "explanation": "Planning rest breaks before fatigue sets in, rather than waiting until you already feel tired, is the recommended approach in heavy-vehicle driver training."
+    },
+    {
+      "id": "hv002",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Which of the following is most likely to cause drowsiness while driving a heavy vehicle?",
+      "options": [
+        "Taking cold and allergy tablets",
+        "Suffering from mild hay fever",
+        "Taking a short nap before starting to drive",
+        "Opening a window for fresh air"
+      ],
+      "explanation": "Many cold and allergy (antihistamine) medications cause drowsiness as a side effect, which is a serious risk for a driver; a short nap before driving actually helps alertness."
+    },
+    {
+      "id": "hv003",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Which food choice is best for a heavy vehicle driver during a long trip?",
+      "options": [
+        "A heavy, fried meal",
+        "A bag of fresh fruit",
+        "A large bowl of pasta",
+        "Sugary snacks and energy drinks only"
+      ],
+      "explanation": "Light, fresh food such as fruit is easier to digest and less likely to cause the sluggishness that heavy or sugary meals can bring on during a long drive."
+    },
+    {
+      "id": "hv004",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "The best way to help prevent fatigue on a long-distance trip is to travel during:",
+      "options": [
+        "The hours you are normally awake",
+        "Daylight hours only, regardless of your normal sleep pattern",
+        "Night hours only, to avoid traffic",
+        "It makes no difference when you travel"
+      ],
+      "explanation": "Driving during your normal waking hours works with your body clock, while driving through your usual sleep hours increases the risk of fatigue regardless of whether it is day or night."
+    },
+    {
+      "id": "hv005",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "During a rest stop on a long trip, light exercise such as stretching or touching your toes:",
+      "options": [
+        "Can help keep you alert",
+        "Has no effect on alertness",
+        "Should never be done before a long trip",
+        "Increases fatigue"
+      ],
+      "explanation": "Light physical activity during a break helps circulation and alertness, making it a useful part of managing fatigue on long trips."
+    },
+    {
+      "id": "hv006",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "Rocks or mud lodged between a heavy vehicle's dual (twin) tyres may cause:",
+      "options": [
+        "A tyre to lose pressure",
+        "The engine to overheat",
+        "The gearbox to slip",
+        "No effect on the tyres at all"
+      ],
+      "explanation": "Debris trapped between dual tyres is generally understood to risk damaging a tyre and causing it to lose pressure over time, though this pass could not cross-check the exact mechanism against an authoritative technical source, so it remains flagged."
+    },
+    {
+      "id": "hv007",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Under RTA rules, a heavy vehicle failing to keep proper lane discipline (using lanes not permitted for heavy vehicles) is a violation that carries:",
+      "options": [
+        "A fine of AED 600 and 6 black points",
+        "A fine of AED 5000 and no black points",
+        "No fine, only a verbal warning",
+        "Automatic and immediate licence cancellation"
+      ],
+      "explanation": "The RTA Light Motor Vehicle Handbook's violations table lists heavy-vehicle lane discipline breaches with a fine of AED 600 and 6 black points."
+    },
+    {
+      "id": "hv008",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Overloading a heavy vehicle, or having its load protrude without permission, is a violation that carries:",
+      "options": [
+        "A fine of AED 500 and 6 black points",
+        "No fine, only vehicle impoundment",
+        "A fine of AED 5000 and 12 black points",
+        "A warning only, for the first offence"
+      ],
+      "explanation": "The RTA handbook's violations table lists overloading or an unauthorised protruding load from a heavy vehicle with a fine of AED 500 and 6 black points."
+    },
+    {
+      "id": "hv009",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "A load that falls or leaks from a heavy vehicle onto the road is a violation that carries:",
+      "options": [
+        "A fine of AED 3000 and 21 black points",
+        "A fine of AED 100 and no black points",
+        "No fine if the load is retrieved quickly",
+        "A fine, but no black points at all"
+      ],
+      "explanation": "The RTA handbook's violations table lists a falling or leaking load with a fine of AED 3000 and 21 black points -- one of the more serious violations short of court-decided offences."
+    },
+    {
+      "id": "hv010",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Dangerous overtaking by a truck is a violation under RTA rules that carries:",
+      "options": [
+        "A fine of AED 800 and 24 black points",
+        "A fine of AED 200 and 2 black points",
+        "No black points, a fine only",
+        "A warning only, no fine"
+      ],
+      "explanation": "The RTA handbook's violations table lists dangerous overtaking by trucks with a fine of AED 800 and 24 black points -- the same severe points tier as driving without number plates."
+    },
+    {
+      "id": "hv011",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Failing to cover the load of a truck (for example, loose gravel or sand) in the UAE carries:",
+      "options": [
+        "A fine of AED 3000",
+        "No fine, a verbal warning only",
+        "A fine of AED 50",
+        "Suspension of the vehicle's registration only, with no fine"
+      ],
+      "explanation": "The RTA handbook's violations table lists not covering a truck's load with a fine of AED 3000."
+    },
+    {
+      "id": "hv012",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "Rules for heavy vehicle and bus drivers on long trips in the UAE generally require:",
+      "options": [
+        "Scheduled rest breaks after a set number of continuous driving hours",
+        "No rest requirement as long as the driver feels fine",
+        "A rest break only once every 24 hours regardless of distance driven",
+        "Rest breaks are entirely optional and left to the transport company"
+      ],
+      "explanation": "Mandatory rest-break rules after a set number of continuous driving hours are standard practice for commercial/heavy-vehicle drivers, but the exact hour thresholds currently set by UAE authorities were not confirmed in the sources used for this pass, so this remains flagged."
     }
   ]
 }

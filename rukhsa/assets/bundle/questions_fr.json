@@ -1,7 +1,7 @@
 {
   "language": "fr",
   "isRtl": false,
-  "questionCount": 61,
+  "questionCount": 85,
   "questions": [
     {
       "id": "rs001",
@@ -203,7 +203,7 @@
       "category": "traffic_rules_row",
       "sub": null,
       "answer": 2,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Utiliser un téléphone portable (tenu à la main) en conduisant aux Émirats arabes unis est :",
       "options": [
         "Autorisé si l'on conduit lentement",
@@ -278,7 +278,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 2,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Sauf indication contraire, la limitation de vitesse générale sur la Sheikh Zayed Road à Dubaï est généralement :",
       "options": [
         "80 km/h",
@@ -293,7 +293,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 0,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "La limitation de vitesse par défaut dans la plupart des zones résidentielles des Émirats arabes unis (sauf indication contraire) est d'environ :",
       "options": [
         "40 km/h",
@@ -323,7 +323,7 @@
       "category": "speed_limits",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Conduire significativement au-dessus de la limitation de vitesse affichée aux Émirats arabes unis peut entraîner :",
       "options": [
         "Un simple avertissement verbal",
@@ -383,30 +383,30 @@
       "category": "fines_penalty",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
-      "q": "Si un conducteur accumule 24 points noirs dans une période donnée, la conséquence habituelle est :",
+      "needsVerification": false,
+      "q": "Si un conducteur accumule 24 points noirs en un an, la conséquence habituelle est :",
       "options": [
-        "Une simple lettre d'avertissement",
-        "Une suspension du permis pour une période déterminée",
-        "Une augmentation de l'assurance uniquement",
-        "Rien, les points sont automatiquement remis à zéro"
+        "Un simple avertissement écrit, sans autre mesure",
+        "Confiscation du permis pendant 3 mois la première fois, puis 6 puis 12 mois (avec un stage obligatoire) en cas de récidive",
+        "Une amende automatique seulement, sans mesure sur le permis",
+        "Annulation permanente et non contestable du permis dès la première fois"
       ],
-      "explanation": "Atteindre le seuil de points noirs entraîne généralement une suspension du permis ; les seuils et périodes exacts sont fixés par la RTA et peuvent changer."
+      "explanation": "Selon le manuel RTA pour véhicules légers, atteindre 24 points noirs en un an entraîne la confiscation du permis pendant 3 mois la première fois, 6 mois en cas de récidive dans l'année, et 12 mois (avec un stage spécial obligatoire) la troisième fois."
     },
     {
       "id": "fp003",
       "category": "fines_penalty",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
-      "q": "Griller un feu rouge aux Émirats arabes unis entraîne généralement :",
+      "needsVerification": false,
+      "q": "Griller un feu rouge aux Émirats entraîne généralement :",
       "options": [
-        "Une amende seulement, sans points noirs",
-        "Une amende importante plus des points noirs",
-        "Un avertissement verbal pour les contrevenants de première fois",
-        "Aucune pénalité si aucun autre véhicule n'a été affecté"
+        "Un simple avertissement verbal",
+        "Une amende de 800 AED et 8 points noirs",
+        "Aucune amende, mais 24 points noirs",
+        "Une amende uniquement, sans point noir"
       ],
-      "explanation": "Griller un feu rouge est considéré comme une infraction grave entraînant à la fois une lourde amende et des points noirs."
+      "explanation": "Le tableau des infractions du manuel RTA indique une amende de 800 AED et 8 points noirs pour le franchissement d'un feu rouge."
     },
     {
       "id": "fp004",
@@ -712,23 +712,23 @@
       "id": "sc001",
       "category": "seatbelt_child_safety",
       "sub": null,
-      "answer": 2,
-      "needsVerification": true,
-      "q": "Aux Émirats arabes unis, le port de la ceinture de sécurité est obligatoire pour :",
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Selon la loi fédérale émiratie sur la circulation (article 33 du règlement d'application), le port de la ceinture de sécurité est légalement obligatoire pour :",
       "options": [
         "Le conducteur uniquement",
-        "Le conducteur et le passager avant uniquement",
-        "Le conducteur et tous les passagers du véhicule",
-        "Sur les autoroutes uniquement"
+        "Le conducteur et le passager avant",
+        "Uniquement les enfants présents dans le véhicule",
+        "Uniquement lorsque la vitesse dépasse 40 km/h"
       ],
-      "explanation": "La loi des Émirats arabes unis exige que le conducteur et tous les passagers, à l'avant et à l'arrière, portent la ceinture là où elle est installée."
+      "explanation": "L'article 33 du règlement d'application de la loi fédérale émiratie n°21 de 1995 sur la circulation rend obligatoire le port de la ceinture pour le conducteur et la personne assise à côté de lui à l'avant. La RTA recommande aussi vivement que tous les occupants bouclent leur ceinture à chaque trajet."
     },
     {
       "id": "sc002",
       "category": "seatbelt_child_safety",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Les enfants en dessous d'un certain âge/taille aux Émirats arabes unis doivent généralement voyager :",
       "options": [
         "Sur les genoux du passager avant",
@@ -743,7 +743,7 @@
       "category": "seatbelt_child_safety",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Ne pas porter la ceinture de sécurité en conduisant aux Émirats arabes unis peut entraîner :",
       "options": [
         "Aucune pénalité car ce n'est qu'une recommandation",
@@ -818,7 +818,7 @@
       "category": "alcohol_fatigue",
       "sub": null,
       "answer": 1,
-      "needsVerification": true,
+      "needsVerification": false,
       "q": "Être surpris en train de conduire sous l'influence de l'alcool aux Émirats arabes unis entraîne généralement :",
       "options": [
         "Une petite amende uniquement",
@@ -917,6 +917,366 @@
         "Ne signaler l'accident qu'après une semaine"
       ],
       "explanation": "De nombreux émirats permettent un processus simplifié de rapport d'accident mineur/'à l'amiable' pour les petites collisions sans blessés ; les procédures varient et les conducteurs devraient confirmer les règles locales actuelles."
+    },
+    {
+      "id": "mc001",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Si vous êtes fatigué en conduisant une moto, vous :",
+      "options": [
+        "Ne pourrez pas prendre de décisions rapidement",
+        "Pourrez prendre des décisions aussi vite que d'habitude",
+        "Ne remarquerez aucune différence dans votre conduite",
+        "Conduirez automatiquement avec plus de prudence"
+      ],
+      "explanation": "La fatigue ralentit le temps de réaction et le jugement, rendant plus difficile la prise de décisions rapides et sûres en conduisant."
+    },
+    {
+      "id": "mc002",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Lors de la vérification du frein arrière d'une moto, il doit être réglé de façon à :",
+      "options": [
+        "Arrêter la moto avec une simple pression légère",
+        "Arrêter la moto lorsqu'il est complètement actionné",
+        "Ne jamais arrêter complètement la moto",
+        "Se bloquer immédiatement à toute pression"
+      ],
+      "explanation": "Un frein arrière correctement réglé doit arrêter la moto lorsqu'il est complètement actionné, sans se bloquer au moindre contact."
+    },
+    {
+      "id": "mc003",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Lors de la vérification du frein avant d'une moto, il doit être réglé de façon à :",
+      "options": [
+        "Arrêter la moto avec une simple pression légère",
+        "Arrêter la moto lorsqu'il est complètement actionné",
+        "Ne pas arrêter la moto même à pleine pression",
+        "Ne fonctionner que moteur éteint"
+      ],
+      "explanation": "Comme le frein arrière, un frein avant correctement réglé doit arrêter la moto lorsqu'il est complètement actionné."
+    },
+    {
+      "id": "mc004",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Que doit permettre de voir chaque rétroviseur installé sur une moto ?",
+      "options": [
+        "Principalement la circulation directement derrière",
+        "Uniquement la voie adjacente",
+        "Le plus possible de la voie adjacente et de la circulation derrière",
+        "Rien devant le motard"
+      ],
+      "explanation": "Les rétroviseurs de moto doivent être réglés pour montrer le plus possible de la voie adjacente et de la circulation arrière, afin de couvrir les angles morts."
+    },
+    {
+      "id": "mc005",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Pourquoi est-il dangereux d'utiliser un casque de moto d'occasion ?",
+      "options": [
+        "Il peut avoir des dommages invisibles de l'extérieur",
+        "Il peut simplement être d'un modèle dépassé",
+        "Ce n'est pas socialement acceptable",
+        "Sa taille est toujours inadaptée"
+      ],
+      "explanation": "Un casque d'occasion peut avoir subi un choc qui a affaibli sa mousse protectrice sans laisser de dommage extérieur visible, on ne peut donc plus se fier à sa protection."
+    },
+    {
+      "id": "mc006",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "Lorsqu'ils sont complètement actionnés, quels freins doivent pouvoir maintenir une moto immobile ?",
+      "options": [
+        "Le frein avant uniquement",
+        "Le frein arrière uniquement",
+        "Les freins avant et arrière tous les deux",
+        "Aucun frein ; seule la béquille latérale maintient la moto"
+      ],
+      "explanation": "Les freins avant et arrière, lorsqu'ils sont complètement actionnés et en bon état, doivent chacun être capables de maintenir la moto immobile."
+    },
+    {
+      "id": "mc007",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Lorsque la poignée des gaz d'une moto est ouverte en grand puis relâchée, elle doit :",
+      "options": [
+        "Se refermer instantanément",
+        "Se refermer progressivement sur plusieurs secondes",
+        "Rester en place jusqu'à fermeture manuelle",
+        "Continuer à accélérer brièvement"
+      ],
+      "explanation": "Un ressort de rappel des gaz en bon état doit refermer complètement la poignée dès qu'elle est relâchée ; c'est une vérification de sécurité importante avant de rouler."
+    },
+    {
+      "id": "mc008",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "La chaîne de transmission d'une moto doit :",
+      "options": [
+        "N'avoir aucun jeu du tout",
+        "Être lubrifiée et avoir une tension correctement réglée",
+        "Toujours avoir 10 à 20 mm de jeu quoi qu'en dise le manuel",
+        "Ne jamais être vérifiée une fois installée"
+      ],
+      "explanation": "La chaîne doit être maintenue lubrifiée avec une tension réglée selon les spécifications du fabricant ; trop tendue ou trop lâche, elle peut s'user prématurément ou tomber en panne dangereusement."
+    },
+    {
+      "id": "mc009",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 2,
+      "needsVerification": false,
+      "q": "En négociant un virage, un motard doit :",
+      "options": [
+        "Rester à droite du centre de la voie pour s'éloigner des véhicules venant en face",
+        "Rester à gauche du centre de la voie pour être plus visible",
+        "Se positionner sur la route de façon à voir à travers le virage et à être vu par les autres conducteurs",
+        "Toujours rouler exactement au centre de la voie quelle que soit la visibilité"
+      ],
+      "explanation": "Une bonne technique de virage consiste à se positionner dans la voie pour avoir la meilleure vue à travers le virage et la meilleure visibilité pour les autres usagers de la route."
+    },
+    {
+      "id": "mc010",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": true,
+      "q": "Selon la loi émiratie sur la circulation, le port d'un casque homologué à moto est obligatoire pour :",
+      "options": [
+        "Le motard uniquement",
+        "Le motard et tout passager arrière",
+        "Uniquement les motards de moins de 18 ans",
+        "Uniquement sur autoroute, pas en zone urbaine"
+      ],
+      "explanation": "Il est généralement admis que la réglementation émiratie impose un casque homologué au motard et à tout passager arrière en permanence ; le texte légal exact devrait être vérifié auprès des documents actuels de la RTA, cette information n'ayant pas été directement confirmée par les sources utilisées dans cette révision."
+    },
+    {
+      "id": "mc011",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": true,
+      "q": "La circulation interfiles (rouler entre des voies de circulation à l'arrêt ou lente) aux Émirats est :",
+      "options": [
+        "Légale quelle que soit la différence de vitesse avec la circulation",
+        "Généralement non autorisée ; les motos doivent rester dans une voie marquée comme les autres véhicules",
+        "Illégale uniquement sur Sheikh Zayed Road",
+        "Activement encouragée par la RTA pour réduire les embouteillages"
+      ],
+      "explanation": "Aux Émirats, la circulation interfiles est généralement considérée comme non autorisée, les motos devant rester dans une voie marquée, mais cette révision n'a pas pu confirmer l'article légal exact, donc cela reste signalé."
+    },
+    {
+      "id": "mc012",
+      "category": "motorcycle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "En transportant un passager arrière à moto aux Émirats, le motard doit s'assurer que :",
+      "options": [
+        "Il n'y a pas plus d'un passager arrière, correctement assis avec repose-pieds et casque",
+        "Jusqu'à deux passagers arrière sont autorisés si la moto est assez grande",
+        "Le passager arrière n'a pas besoin de casque pour un trajet court",
+        "Il n'y a aucune restriction sur le nombre de passagers"
+      ],
+      "explanation": "La pratique standard de sécurité moto limite à un seul passager arrière, correctement assis et casqué ; la limite légale exacte aux Émirats n'a pas été confirmée par les sources de cette révision, elle reste donc signalée."
+    },
+    {
+      "id": "hv001",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Pour les chauffeurs de poids lourds et de bus, le meilleur moment pour faire une pause repos est :",
+      "options": [
+        "Avant de devenir fatigué",
+        "Dès que la fatigue apparaît",
+        "Seulement à l'arrivée à destination finale",
+        "Uniquement aux heures spécifiques fixées par la RTA"
+      ],
+      "explanation": "Planifier les pauses avant l'apparition de la fatigue, plutôt que d'attendre de se sentir fatigué, est l'approche recommandée dans la formation des chauffeurs de poids lourds."
+    },
+    {
+      "id": "hv002",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Lequel des éléments suivants risque le plus de provoquer de la somnolence au volant d'un poids lourd ?",
+      "options": [
+        "Prendre des comprimés contre le rhume et les allergies",
+        "Souffrir d'un léger rhume des foins",
+        "Faire une courte sieste avant de commencer à conduire",
+        "Ouvrir la fenêtre pour de l'air frais"
+      ],
+      "explanation": "De nombreux médicaments contre le rhume et les allergies (antihistaminiques) provoquent de la somnolence comme effet secondaire, ce qui est un risque sérieux pour un conducteur ; une courte sieste avant de conduire aide au contraire à la vigilance."
+    },
+    {
+      "id": "hv003",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 1,
+      "needsVerification": false,
+      "q": "Quel choix alimentaire est le meilleur pour un chauffeur de poids lourd lors d'un long trajet ?",
+      "options": [
+        "Un repas lourd et frit",
+        "Un sac de fruits frais",
+        "Un grand bol de pâtes",
+        "Uniquement des collations sucrées et boissons énergisantes"
+      ],
+      "explanation": "Une nourriture légère et fraîche comme les fruits est plus facile à digérer et moins susceptible de causer la léthargie qu'un repas lourd ou sucré durant une longue conduite."
+    },
+    {
+      "id": "hv004",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "La meilleure façon de prévenir la fatigue lors d'un long trajet est de voyager pendant :",
+      "options": [
+        "Les heures où vous êtes normalement éveillé",
+        "Les heures de jour uniquement, quel que soit votre rythme de sommeil habituel",
+        "Les heures de nuit uniquement, pour éviter la circulation",
+        "Le moment du voyage ne fait aucune différence"
+      ],
+      "explanation": "Conduire pendant vos heures d'éveil habituelles correspond à votre horloge biologique, tandis que conduire pendant vos heures de sommeil habituelles augmente le risque de fatigue, de jour comme de nuit."
+    },
+    {
+      "id": "hv005",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Lors d'une pause repos pendant un long trajet, un exercice léger comme s'étirer ou toucher ses orteils :",
+      "options": [
+        "Peut aider à rester alerte",
+        "N'a aucun effet sur la vigilance",
+        "Ne devrait jamais être fait avant un long trajet",
+        "Augmente la fatigue"
+      ],
+      "explanation": "Une activité physique légère pendant une pause aide la circulation sanguine et la vigilance, ce qui en fait un élément utile de la gestion de la fatigue lors de longs trajets."
+    },
+    {
+      "id": "hv006",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "Des pierres ou de la boue coincées entre les pneus jumelés d'un poids lourd peuvent causer :",
+      "options": [
+        "La perte de pression d'un pneu",
+        "La surchauffe du moteur",
+        "Le patinage de la boîte de vitesses",
+        "Aucun effet sur les pneus"
+      ],
+      "explanation": "On considère généralement que des débris coincés entre des pneus jumelés risquent d'endommager un pneu et de lui faire perdre sa pression avec le temps, mais cette révision n'a pas pu vérifier le mécanisme exact auprès d'une source technique fiable, cela reste donc signalé."
+    },
+    {
+      "id": "hv007",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Selon les règles de la RTA, le non-respect de la discipline de voie par un poids lourd (utilisation de voies non autorisées pour les poids lourds) est une infraction sanctionnée par :",
+      "options": [
+        "Une amende de 600 AED et 6 points noirs",
+        "Une amende de 5000 AED et aucun point noir",
+        "Aucune amende, un simple avertissement verbal",
+        "L'annulation automatique et immédiate du permis"
+      ],
+      "explanation": "Le tableau des infractions du manuel RTA pour véhicules légers indique une amende de 600 AED et 6 points noirs pour le non-respect de la discipline de voie par un poids lourd."
+    },
+    {
+      "id": "hv008",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Surcharger un poids lourd, ou laisser dépasser sa charge sans autorisation, est une infraction sanctionnée par :",
+      "options": [
+        "Une amende de 500 AED et 6 points noirs",
+        "Aucune amende, seulement la mise en fourrière du véhicule",
+        "Une amende de 5000 AED et 12 points noirs",
+        "Un simple avertissement pour la première infraction"
+      ],
+      "explanation": "Le tableau du manuel RTA indique une amende de 500 AED et 6 points noirs pour la surcharge ou le dépassement non autorisé de la charge d'un poids lourd."
+    },
+    {
+      "id": "hv009",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Une charge qui tombe ou fuit d'un poids lourd sur la route est une infraction sanctionnée par :",
+      "options": [
+        "Une amende de 3000 AED et 21 points noirs",
+        "Une amende de 100 AED et aucun point",
+        "Aucune amende si la charge est récupérée rapidement",
+        "Une amende, mais aucun point noir"
+      ],
+      "explanation": "Le tableau du manuel RTA indique une amende de 3000 AED et 21 points noirs pour une charge tombée ou qui fuit -- l'une des infractions les plus graves en dehors de celles décidées par un tribunal."
+    },
+    {
+      "id": "hv010",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Un dépassement dangereux effectué par un camion est une infraction selon les règles de la RTA sanctionnée par :",
+      "options": [
+        "Une amende de 800 AED et 24 points noirs",
+        "Une amende de 200 AED et 2 points noirs",
+        "Aucun point noir, une amende seulement",
+        "Un simple avertissement, aucune amende"
+      ],
+      "explanation": "Le tableau du manuel RTA indique une amende de 800 AED et 24 points noirs pour un dépassement dangereux par des camions -- la même catégorie de points sévère que la conduite sans plaques d'immatriculation."
+    },
+    {
+      "id": "hv011",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": false,
+      "q": "Ne pas couvrir la charge d'un camion (par exemple, gravier ou sable en vrac) aux Émirats entraîne :",
+      "options": [
+        "Une amende de 3000 AED",
+        "Aucune amende, un simple avertissement verbal",
+        "Une amende de 50 AED",
+        "Uniquement la suspension de l'immatriculation du véhicule, sans amende"
+      ],
+      "explanation": "Le tableau du manuel RTA indique une amende de 3000 AED pour ne pas avoir couvert la charge d'un camion."
+    },
+    {
+      "id": "hv012",
+      "category": "heavy_vehicle",
+      "sub": null,
+      "answer": 0,
+      "needsVerification": true,
+      "q": "Les règles pour les chauffeurs de poids lourds et de bus lors de longs trajets aux Émirats exigent généralement :",
+      "options": [
+        "Des pauses repos programmées après un nombre fixe d'heures de conduite continue",
+        "Aucune exigence de repos tant que le chauffeur se sent bien",
+        "Une seule pause toutes les 24 heures, quelle que soit la distance parcourue",
+        "Les pauses sont entièrement facultatives et laissées à la discrétion de l'entreprise de transport"
+      ],
+      "explanation": "Des pauses repos obligatoires après un nombre fixe d'heures de conduite continue sont une pratique standard pour les chauffeurs professionnels/poids lourds, mais les seuils horaires exacts actuellement fixés par les autorités émiraties n'ont pas été confirmés par les sources de cette révision, cela reste donc signalé."
     }
   ]
 }

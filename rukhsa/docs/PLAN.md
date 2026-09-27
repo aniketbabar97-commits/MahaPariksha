@@ -214,3 +214,103 @@ Being honest about what's still weak after a self-review pass:
 - **Dark mode was added at the theme level** (`buildRukhsaTheme(Brightness)`)
   and spot-checked on the screens this pass touched, but every screen was
   not exhaustively re-verified pixel-by-pixel in dark mode.
+
+## 4. Source-verification pass (this pass): 61 -> 85 questions
+
+This pass fetched and read three candidate sources itself (never trusting a
+URL without opening and checking its actual content first):
+
+1. **RTA Light Motor Vehicle Handbook, 3rd Edition (Jan 2012), 78 pages** --
+   fetched from the `russiadubai.com` mirror named in the task brief (the
+   `licensing.rta.ae/handbook/lmv/lmv_en.pdf` URL does not resolve). Verified
+   genuine by extracting all 78 pages of text with PyMuPDF and reading the
+   content: real handbook text, table of contents, Article citations to UAE
+   Federal Traffic Law No. 21 of 1995, and a full "Traffic Violations, Fines
+   & Black Points" table (Part 8) with real AED amounts and black-point
+   counts. **Used, and it is the strongest source in this pack.**
+2. **Drive Dubai motorcycle theory-test slide deck** (`PTT-Motorcycle-English.ppsx`,
+   ~9.3 MB) -- found on drivedubai.ae's own download page (a real, currently
+   operating driving school), downloaded, and its slide XML parsed directly
+   (python-pptx choked on the file's declared content type, so the OOXML
+   `ppt/slides/slideN.xml` parts were read with `zipfile`/regex instead).
+   Confirmed genuine: ~180 real motorcycle theory MCQs (brakes, mirrors,
+   helmets, chain maintenance, cornering, fatigue). **Used** for authoring
+   new `motorcycle` category questions, but only for questions whose correct
+   answer is standard, uncontroversial road/motorcycle-safety knowledge --
+   the slide deck's own "Correct" marker shape could not be matched to the
+   right option with full confidence from the raw XML, so it was not relied
+   on to pick answers.
+3. **Drive Dubai Heavy Vehicle Truck/Bus deck** (`PTT-HVT-HVB-English.ppsx`)
+   -- the task brief could not locate this deck's URL up front, but it was
+   found this pass directly on drivedubai.ae's download page (not a
+   marketing PDF -- confirmed 589 real slides of theory MCQs covering
+   fatigue management, load security, dual-tyre checks, etc). **Used** for
+   the new `heavy_vehicle` category, cross-referenced against the LMV
+   handbook's fines table wherever the two overlap (lane discipline,
+   overloading, falling loads, dangerous overtaking by trucks).
+
+### Verification-flag changes on the original 61
+
+Of the 17 originally flagged `needsVerification: true` questions, cross-checked
+against the LMV handbook's fines/black-points table and rule text:
+
+- **Corrected (fact was more specific/different than originally stated,
+  updated in English + Arabic and re-translated into all 12 languages):**
+  - `fp002` (24-point consequence) -> now states the handbook's actual
+    escalation: 3 months' confiscation first time, 6 months second time,
+    12 months + mandatory course third time.
+  - `fp003` (red light) -> now states the handbook's actual figure: AED 800
+    fine + 8 black points.
+  - `sc001` (seatbelt requirement) -> the handbook's Article 33 citation
+    legally requires only the driver and front-seat passenger, not "all
+    passengers" as originally (softly) worded; corrected, with a note that
+    RTA still recommends everyone buckle up.
+- **Cleared (confirmed accurate/consistent with the handbook, no wording
+  change needed):** `tr004`, `sl001`, `sl002`, `sl004`, `sc002`, `sc003`,
+  `af004` (7 questions).
+- **Left flagged (genuinely not confirmable from the sources used this
+  pass):** `sl003` (radar tolerance), `fp005` (no-licence penalty specifics),
+  `fp006` (black-point expiry period), `pr003` (free parking hours),
+  `af001` (exact legal BAC limit), `vd002` (expired-Mulkiya specifics),
+  `vd006` ("friendly report" minor-accident procedure). None of these are
+  covered in the LMV handbook's extracted text.
+
+### New content: `motorcycle` and `heavy_vehicle` categories (+24 questions)
+
+Two new categories were added to `taxonomy.json` (translated into all 12
+languages) since the original 10 categories had no motorcycle- or
+heavy-vehicle-specific content: `motorcycle` (12 new questions: fatigue,
+brake checks, mirrors, helmet condition, throttle/chain maintenance,
+cornering position, plus UAE-specific helmet/lane-splitting/pillion rules)
+and `heavy_vehicle` (12 new questions: fatigue/rest management, food choice,
+dual-tyre debris, and five questions with real AED fine + black-point
+figures taken directly from the LMV handbook's violations table: lane
+discipline, overloading/protruding load, falling/leaking load, dangerous
+overtaking by trucks, uncovered truck loads).
+
+Of these 24, 5 remain flagged `needsVerification: true` because the exact
+UAE statutory wording was not directly confirmed in the sources used this
+pass (helmet law for pillion passengers, lane-splitting legality, pillion
+passenger limits, dual-tyre debris mechanism, and mandatory heavy-vehicle
+rest-break hour thresholds) -- each explanation says so explicitly and
+names what should be checked.
+
+All 24 new questions were authored in English and Arabic first, then
+independently translated into all 12 languages (no placeholders / no
+English-fallback), following the same standard as the original 61.
+
+**Total after this pass: 85 questions** (was 61), spanning 12 categories
+(was 10), with 12 questions still flagged `needsVerification: true` (was 17)
+-- `python3 pipeline/validate.py` confirms `OK: 85 questions, 12 categories,
+12 flagged needsVerification.` and `python3 pipeline/build_bundle.py` builds
+cleanly for all 12 languages.
+
+**Scope note:** the task's aspirational target was 150-200 new questions
+(600-800 total across several passes). This pass delivered 24 new,
+genuinely-sourced, 12-language questions plus a full fact-check/correction
+pass on the existing 61, prioritising verification quality and real
+independent translation over volume within the time available. Reaching the
+600-800 target will take further passes of the same kind (more categories,
+more per-category depth, and ideally acquiring the official RTA truck/bus
+and motorcycle handbooks directly rather than a driving school's slide
+deck, if they become available).
