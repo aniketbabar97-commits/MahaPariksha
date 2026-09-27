@@ -927,3 +927,47 @@ This pass did not touch `app/pubspec.yaml`, `app/lib/main.dart`,
 `app/lib/l10n/`, or the `android/` scaffolding from the parallel
 Android-build pass (§11) — those are UI-string/build-tooling changes,
 unrelated to question content, and were left exactly as found.
+
+## §13 — Gemini-assisted translation pipeline (token-conservation tooling)
+
+The founder's environment carries a `GEMINI_API_KEY` (Google's Gemini API)
+and `GROQ_API_KEY` (Groq, a fast-inference host for open models — easy to
+confuse with "Grok," xAI's separate, unrelated model, which this
+environment does NOT have access to). Since the 10-language translation
+work has been the largest driver of background-agent (Claude) token usage
+across passes §6-§10, `pipeline/translate_via_gemini.py` was added: a
+standalone script that authors EN+AR content (still done by a human or a
+Claude pass, since that's where judgment/verification matters) and then
+calls the Gemini API directly to translate a batch into the other 10
+languages, bypassing a full Claude agent round-trip for the mechanical
+part of the work.
+
+**First real use of this pipeline**: 12 new questions authored EN+AR by
+the orchestrating session directly (not a subagent) — `fp010-fp012`
+(previously-unused, real handbook facts: Dubai's Code A/B paid-parking
+system, MSCP hourly tariff of AED 3.00, the AED 10,000/year Salik
+violation cap — the last one kept `needsVerification: true` since it's a
+cap rather than a guaranteed per-incident amount), `pr020-pr021`
+(paper-ticket display rule, Seasonal Parking Card validity range),
+`ri020-ri021`, `af020-af021`, `sc022`, `vd026`, `hl026` (universal
+right-of-way/fatigue/safety logic, no new unsourced UAE numbers). These
+were translated into all 10 remaining languages via the script in a
+single run, then spot-checked directly (not delegated) across ur, hi, ta,
+zh, ru, fr for real semantic correctness — all six read as accurate,
+natural translations preserving option order and meaning.
+
+**Total after this pass: 305 questions**, still 12 categories, 11
+`needsVerification` flags (10 previous + 1 new, `fp012`). Validation:
+`pipeline/build_bundle.py` → `305 questions x 12 languages, all
+translationStatus=done`; `pipeline/validate.py` → `OK: 305 questions, 12
+categories, 11 flagged needsVerification`. All 12 `content/questions_
+<lang>.json` files pass `python3 -m json.tool`.
+
+**Caveat, stated honestly**: the script's translations were spot-checked
+on a sample (6 of 10 languages, 1 question), not every question in every
+language read by a human/Claude end-to-end. This is a real trade-off —
+faster and cheaper, at a lower verification depth per item than the fully
+manual passes in §6-§10. Recommended going forward: use this pipeline for
+bulk translation, but keep periodic full-sample QA passes (a Claude pass
+re-reading a rotating sample across all 12 languages) rather than trusting
+the script's output unconditionally forever.
