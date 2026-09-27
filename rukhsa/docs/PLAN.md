@@ -883,3 +883,47 @@ in `android/.gitignore`, already excluded from version control. iOS
 scaffolding was not attempted this pass (Android was prioritized as the
 first store target); a macOS build environment would be needed for that,
 which this Linux container cannot provide.
+
+## §12 — Completed interrupted translation batch: all 12 languages now at 293 questions
+
+A prior content-authoring agent was interrupted mid-task by an API rate
+limit after authoring 66 new questions (across `road_signs`,
+`traffic_rules_row`, `highway_lane`, `roundabouts_intersections`,
+`parking_rules`, `seatbelt_child_safety`, `speed_limits`, `motorcycle`,
+`vehicle_docs_insurance`, `heavy_vehicle`, and `alcohol_fatigue`) and
+translating them into English, Arabic, French, Russian, and Chinese
+(bringing those 5 files to 293 questions each), but before translating the
+same 66 questions into the remaining 7 languages (Urdu, Hindi, Tagalog,
+Malayalam, Bengali, Tamil, Farsi — left at 227). This pass:
+
+1. Verified the exact inconsistent state (5 files at 293, 7 files at 227)
+   and diffed `questions_en.json` against `questions_ur.json` to confirm
+   the precise set of 66 missing ids and pull the authored English/Arabic
+   source text for each.
+2. Produced independent, professional-quality translations of those 66
+   questions into Urdu, Hindi, Tagalog, Malayalam, Bengali, Tamil, and
+   Farsi (matching the English/Arabic meaning, not machine-copied
+   placeholders), in the same schema already used by the non-English
+   content files (`id`, `q`, `options`, `explanation` — no `answer`/
+   `category`/`sub` keys in these files; those are carried by
+   `questions_en.json` and joined by `id` at build time).
+3. Spot-checked translations across all 7 languages against the English/
+   Arabic source for semantic fidelity.
+
+**Total after this pass: 293 questions in all 12 languages** (unchanged
+question count from the interrupted pass — this pass only completed the
+missing translations, adding no new question ids). Categories: still 12.
+`needsVerification` flags: still 10 (unchanged, as expected — the 66 new
+questions carried 0 new flags). Validation:
+`python3 pipeline/build_bundle.py` builds all 293 questions x 12 languages
+cleanly (`Wrote app bundle... 293 questions x 12 languages, all
+translationStatus=done`), and `python3 pipeline/validate.py` reports
+`OK: 293 questions, 12 categories, 10 flagged needsVerification.` Every
+touched `content/questions_<lang>.json` file was checked with
+`python3 -m json.tool` for valid JSON, and id-set equality across all 12
+language files was confirmed programmatically.
+
+This pass did not touch `app/pubspec.yaml`, `app/lib/main.dart`,
+`app/lib/l10n/`, or the `android/` scaffolding from the parallel
+Android-build pass (§11) — those are UI-string/build-tooling changes,
+unrelated to question content, and were left exactly as found.

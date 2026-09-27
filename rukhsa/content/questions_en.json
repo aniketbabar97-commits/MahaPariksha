@@ -3263,5 +3263,929 @@
     ],
     "answer": 1,
     "explanation": "Many crashes happen on short, familiar trips close to home, often at moderate speeds where the difference a seatbelt makes to injury severity is still very large. Distance and trip length are not a safe reason to skip a seatbelt."
+  },
+  {
+    "id": "rs047",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A warning sign showing two arrows pointing in opposite directions (one up, one down) on the same road warns that:",
+    "options": [
+      "The road becomes one-way ahead",
+      "The road ahead carries two-way traffic (oncoming vehicles may be present)",
+      "A divided highway begins ahead",
+      "U-turns are permitted ahead"
+    ],
+    "answer": 1,
+    "explanation": "This sign warns that the road changes from a divided or one-way section to a two-way road, so oncoming traffic may now be present."
+  },
+  {
+    "id": "rs048",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A warning sign showing a road's central median/divider lines merging together warns that:",
+    "options": [
+      "A roundabout is ahead",
+      "Road works are ahead",
+      "The divided highway is ending, and opposing traffic may soon share the same carriageway",
+      "The speed limit is increasing ahead"
+    ],
+    "answer": 2,
+    "explanation": "This sign warns that the physical or painted separation between opposing traffic directions is about to end."
+  },
+  {
+    "id": "rs049",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a walking person crossed out by a diagonal line means:",
+    "options": [
+      "Pedestrians are not permitted to use this road or path",
+      "Only pedestrians may use this road",
+      "A pedestrian crossing is ahead",
+      "Children are likely to be crossing here"
+    ],
+    "answer": 0,
+    "explanation": "A prohibitory circle with a pedestrian symbol and a diagonal bar bans pedestrian use of that road or path, such as a motorway."
+  },
+  {
+    "id": "rs050",
+    "category": "road_signs",
+    "sub": "mandatory",
+    "q": "A blue circular sign showing a white arrow curving around a solid obstacle or island (such as at a traffic island) means:",
+    "options": [
+      "You may pass on either side of the obstacle",
+      "You must pass the obstacle on the side shown by the arrow (e.g., 'keep left')",
+      "The obstacle is temporary and about to be removed",
+      "U-turns are mandatory at this point"
+    ],
+    "answer": 1,
+    "explanation": "This mandatory sign directs traffic to keep to one specific side of a fixed obstacle or island, in the direction the arrow shows."
+  },
+  {
+    "id": "rs051",
+    "category": "road_signs",
+    "sub": "informatory",
+    "q": "A blue rectangular informatory sign showing a camera symbol tells a driver that:",
+    "options": [
+      "Photography is prohibited in this area",
+      "A photo studio is nearby",
+      "The road ahead is monitored by a speed or traffic camera, so the posted limit and rules should be carefully observed",
+      "A tourist attraction is ahead"
+    ],
+    "answer": 2,
+    "explanation": "This informatory sign simply reminds drivers that camera monitoring is present ahead, so they should observe the posted speed limit and other rules carefully."
+  },
+  {
+    "id": "rs052",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A warning triangle showing a road with several consecutive S-shaped bends (not just one curve) warns of:",
+    "options": [
+      "A single sharp curve only",
+      "A roundabout ahead",
+      "A dead-end road",
+      "A winding stretch of road with a series of bends ahead"
+    ],
+    "answer": 3,
+    "explanation": "This sign differs from a single sharp-curve warning: it warns of a longer winding section containing multiple successive bends, so speed should be reduced for the whole stretch."
+  },
+  {
+    "id": "rs053",
+    "category": "road_signs",
+    "sub": "priority",
+    "q": "At a narrow section or single-lane bridge marked with two opposite-pointing arrows, one bold/thick and one thin, the priority rule is that:",
+    "options": [
+      "Both directions may proceed together",
+      "The vehicle approaching from the side shown by the bold/thick arrow has priority to go first; the other side must wait",
+      "The thin arrow always has priority",
+      "Whichever vehicle arrives first has priority, regardless of the arrows"
+    ],
+    "answer": 1,
+    "explanation": "This priority sign gives right of way to the direction shown by the bold arrow; traffic on the other side must give way and wait for a gap."
+  },
+  {
+    "id": "rs054",
+    "category": "road_signs",
+    "sub": "informatory",
+    "q": "Compared with a blue informatory/direction sign, a green rectangular directional sign is generally used to indicate:",
+    "options": [
+      "A hospital or medical facility",
+      "A prohibited area",
+      "Motorway/highway or intercity route directions, as opposed to local city-street directions shown in blue",
+      "A pedestrian zone"
+    ],
+    "answer": 2,
+    "explanation": "By convention, green guide signs are used for motorway and intercity route directions, while blue guide signs are typically used for local city-street directions and general information."
+  },
+  {
+    "id": "rs055",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a plain car silhouette struck through with a diagonal line means:",
+    "options": [
+      "No parking for cars",
+      "No motor vehicles are permitted on this road or path",
+      "Only cars are permitted here",
+      "Cars must give way to other vehicles"
+    ],
+    "answer": 1,
+    "explanation": "This prohibitory sign bans motor vehicles generally from using the road or path it applies to (for example, a path reserved for cyclists or pedestrians only)."
+  },
+  {
+    "id": "rs056",
+    "category": "road_signs",
+    "sub": "informatory",
+    "q": "A small rectangular plate mounted directly below a main road sign, showing extra text, a distance, or an arrow, is generally used to:",
+    "options": [
+      "Replace the main sign above it",
+      "Give additional information about the extent, distance, direction, or exception of the main sign above it",
+      "Cancel the meaning of the main sign above it",
+      "Indicate a completely unrelated rule"
+    ],
+    "answer": 1,
+    "explanation": "A supplementary plate does not stand alone; it clarifies how far, in which direction, or under what exception the main sign above it applies."
+  },
+  {
+    "id": "tr023",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "A pedestrian starts crossing the road at a point with no marked crossing (not at a designated crossing). An approaching driver should:",
+    "options": [
+      "Ignore the pedestrian since there is no marked crossing",
+      "Slow down and be prepared to stop, since pedestrian safety comes first regardless of the exact right-of-way rule",
+      "Sound the horn continuously until the pedestrian moves away",
+      "Speed up to pass before the pedestrian reaches the road"
+    ],
+    "answer": 1,
+    "explanation": "Even where a driver technically has the right of way, safety always comes first: a driver must slow down and be ready to stop for a pedestrian already in or entering the road."
+  },
+  {
+    "id": "tr024",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "A driver wants to turn right across a marked cycle lane at a junction, and a cyclist is riding straight through the cycle lane. The driver must:",
+    "options": [
+      "Turn first since cars have priority over bicycles",
+      "Sound the horn to warn the cyclist to stop",
+      "Give way to the cyclist continuing straight through the cycle lane before turning across it",
+      "Squeeze past the cyclist quickly to complete the turn"
+    ],
+    "answer": 2,
+    "explanation": "A vehicle turning across a cycle lane is crossing the path of cyclists going straight, so it must give way to them first, just as it would give way to any straight-through traffic."
+  },
+  {
+    "id": "tr025",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "A pedestrian is standing at the edge of a marked (zebra-style) crossing, clearly waiting to cross. An approaching driver should:",
+    "options": [
+      "Continue at the same speed since the pedestrian has not stepped onto the road yet",
+      "Slow down and be prepared to stop, giving way to let the pedestrian cross",
+      "Flash the headlights and continue driving",
+      "Only stop if another vehicle has already stopped"
+    ],
+    "answer": 1,
+    "explanation": "A driver should not wait until a pedestrian has stepped into the road; slowing down and preparing to stop as soon as a pedestrian is clearly waiting is the safer response."
+  },
+  {
+    "id": "tr026",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "If the vehicle ahead brakes suddenly for a pedestrian or animal on the road, a following driver who has kept a proper safe following distance should be able to:",
+    "options": [
+      "Stop safely without colliding with the vehicle ahead",
+      "Only avoid a collision by swerving into another lane",
+      "Rely on the vehicle ahead's brake lights being visible in time regardless of distance",
+      "Brake harder than the vehicle ahead to compensate"
+    ],
+    "answer": 0,
+    "explanation": "One key purpose of keeping a safe following distance is exactly this: enough space and time to stop safely if the vehicle ahead brakes suddenly and unexpectedly."
+  },
+  {
+    "id": "tr027",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "Right-of-way rules mainly exist to:",
+    "options": [
+      "Give one type of road user an absolute privilege at all times",
+      "Slow down traffic unnecessarily",
+      "Reduce confusion at shared points on the road so drivers can predict what others will do, not to be exercised without regard for safety",
+      "Replace the need for drivers to look out for others"
+    ],
+    "answer": 2,
+    "explanation": "Even a driver who technically has the right of way must still yield if needed to avoid a collision; the rules exist to make road users' behaviour predictable, not to override basic safety judgement."
+  },
+  {
+    "id": "hl021",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "Before changing lanes on a highway, checking mirrors is not enough on its own because:",
+    "options": [
+      "Mirrors show more than a driver needs to see",
+      "A vehicle can be in a 'blind spot' that mirrors don't cover, so a shoulder check (a quick glance over the shoulder) is also needed",
+      "Mirrors are only useful at low speed",
+      "Checking mirrors takes too much time"
+    ],
+    "answer": 1,
+    "explanation": "Every vehicle has blind spots that side and rear-view mirrors don't fully cover, so a driver must also glance over the shoulder before changing lanes."
+  },
+  {
+    "id": "hl022",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "Lingering in the blind spot beside or slightly behind a large truck or bus is dangerous mainly because:",
+    "options": [
+      "The truck or bus driver may not be able to see your vehicle at all in that position",
+      "It is illegal to drive next to a truck",
+      "It saves fuel to stay close to a large vehicle",
+      "Trucks always drive faster than cars"
+    ],
+    "answer": 0,
+    "explanation": "Large vehicles have much bigger blind spots than cars; a vehicle sitting in that zone may be completely invisible to the truck or bus driver."
+  },
+  {
+    "id": "hl023",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "If you are following a large vehicle and cannot see the road ahead of it in your line of sight, you should:",
+    "options": [
+      "Move as close as possible to see under the vehicle",
+      "Overtake immediately regardless of visibility",
+      "Drop back further until you have a clearer view of the road ahead, or wait for a safe, clear opportunity to overtake",
+      "Flash your headlights until the vehicle moves aside"
+    ],
+    "answer": 2,
+    "explanation": "Reducing following distance to a large vehicle you can't see past only reduces your own reaction time; it's safer to drop back for a better view or wait for a safe overtaking gap."
+  },
+  {
+    "id": "hl024",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "Approaching a highway construction zone where lanes are narrowed and workers are present, a driver should:",
+    "options": [
+      "Maintain normal highway speed since it is still a highway",
+      "Overtake other vehicles to get through the zone quickly",
+      "Ignore temporary signs since they are not permanent",
+      "Reduce speed well in advance and follow the temporary lane markings and signs"
+    ],
+    "answer": 3,
+    "explanation": "Construction zones bring narrower lanes, workers close to traffic, and changed layouts, so speed must be reduced early and temporary signs followed carefully."
+  },
+  {
+    "id": "hl025",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "Slowing down to look at a crash or incident on the opposite side of the highway ('rubbernecking') is a hazard mainly because it:",
+    "options": [
+      "Helps other drivers understand what happened",
+      "Causes unnecessary slowdowns and distraction in your own lane, which can lead to a rear-end collision or a second crash",
+      "Is required by traffic law",
+      "Has no real effect on traffic flow"
+    ],
+    "answer": 1,
+    "explanation": "Rubbernecking distracts the driver from the road ahead and creates sudden, unnecessary braking in lanes unaffected by the original incident, which is a common cause of secondary crashes."
+  },
+  {
+    "id": "ri016",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "At a small painted 'mini-roundabout' (a flat circular marking rather than a raised island), a driver should:",
+    "options": [
+      "Ignore the normal roundabout rules since it is only painted",
+      "Still give way to traffic already on the roundabout, approaching from the right, just as at a normal roundabout",
+      "Always have priority over traffic already circulating",
+      "Stop completely before entering, regardless of traffic"
+    ],
+    "answer": 1,
+    "explanation": "A mini-roundabout works on the same give-way principle as a full-sized roundabout, even though its island is just a painted marking rather than a raised kerb."
+  },
+  {
+    "id": "ri017",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "On a multi-lane roundabout, a driver should choose the correct lane:",
+    "options": [
+      "Before entering the roundabout, based on the exit they intend to take, rather than changing lanes while inside it",
+      "Only after entering the roundabout",
+      "At random, since lane choice does not matter",
+      "Only if another driver signals to let them change"
+    ],
+    "answer": 0,
+    "explanation": "Choosing the right lane before entry avoids the need for unsafe lane changes while circulating, which is a common cause of roundabout collisions."
+  },
+  {
+    "id": "ri018",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "An emergency vehicle with sirens and lights on approaches while you are already circulating inside a roundabout. You should:",
+    "options": [
+      "Stop immediately inside the roundabout",
+      "Continue to your intended exit, then pull over safely to let the emergency vehicle pass",
+      "Reverse to let it through",
+      "Speed up to exit before it arrives"
+    ],
+    "answer": 1,
+    "explanation": "Stopping inside a roundabout blocks other traffic and creates a hazard; the safer approach is to complete the exit you were already taking, then pull over."
+  },
+  {
+    "id": "ri019",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "At a T-junction with no signals, where a minor side road ends at a main through road, priority generally belongs to:",
+    "options": [
+      "Whichever vehicle is larger",
+      "Traffic turning right, regardless of which road it is on",
+      "Traffic already travelling on the main through road, regardless of the turning direction of the joining vehicle",
+      "Whichever vehicle arrives first"
+    ],
+    "answer": 2,
+    "explanation": "At an unsignalled T-junction, traffic on the continuous main road generally has priority over traffic joining or crossing from the terminating side road."
+  },
+  {
+    "id": "pr016",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Parking a vehicle too close to a street corner or junction is a hazard mainly because it:",
+    "options": [
+      "Makes the vehicle harder to steal",
+      "Blocks the sightlines other drivers and pedestrians need to see approaching traffic at the junction",
+      "Is always cheaper than parking elsewhere",
+      "Improves traffic flow around the corner"
+    ],
+    "answer": 1,
+    "explanation": "A vehicle parked right at a corner can hide approaching traffic, pedestrians, or cyclists from each other's view, which is why parking close to junctions is restricted."
+  },
+  {
+    "id": "pr017",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Parking a vehicle so that it blocks a driveway or another vehicle's exit is a problem mainly because it:",
+    "options": [
+      "Can trap the other vehicle and prevent it leaving, which may be urgent (for example, an emergency)",
+      "Is only a minor inconvenience with no real consequence",
+      "Is allowed as long as it is only for a few minutes",
+      "Improves the appearance of the street"
+    ],
+    "answer": 0,
+    "explanation": "Blocking a driveway or another vehicle's only way out can prevent someone from leaving when they urgently need to, which is why it is treated as a serious parking violation."
+  },
+  {
+    "id": "pr018",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "When parking on level ground, in addition to applying the handbrake, a driver with a manual transmission vehicle should generally:",
+    "options": [
+      "Leave the transmission in neutral",
+      "Remove the key and leave the transmission in any gear",
+      "Leave the transmission in gear (or 'Park' for an automatic) as an extra safeguard against the vehicle rolling",
+      "Rev the engine before switching it off"
+    ],
+    "answer": 2,
+    "explanation": "Leaving a manual gearbox in gear, or an automatic in 'Park', adds a mechanical safeguard on top of the handbrake against unwanted vehicle movement."
+  },
+  {
+    "id": "pr019",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Before opening a car door on the traffic side of the road after parking, a driver or passenger should:",
+    "options": [
+      "Open the door quickly so as not to block traffic for long",
+      "Assume no cyclists or vehicles are coming since the vehicle is stationary",
+      "Only check the mirror, since a shoulder check is unnecessary",
+      "Check mirrors and look back over the shoulder for approaching traffic or cyclists before opening the door"
+    ],
+    "answer": 3,
+    "explanation": "A door opened suddenly into traffic can cause a serious collision with a passing cyclist or vehicle, so checking mirrors and looking back before opening the door is essential."
+  },
+  {
+    "id": "sc014",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A rear-facing infant car seat should never be placed in a front seat that has an active passenger airbag, mainly because:",
+    "options": [
+      "Airbags only work in the rear seats",
+      "In a crash, the airbag can deploy directly into the back of a rear-facing seat with dangerous force, right where the infant's head is",
+      "Rear-facing seats are too large for the front seat",
+      "Airbags reduce fuel efficiency"
+    ],
+    "answer": 1,
+    "explanation": "A deploying front airbag can strike the back of a rear-facing infant seat with great force, right behind where the infant's head is, causing serious injury."
+  },
+  {
+    "id": "sc015",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A seatbelt 'pretensioner' fitted in modern cars works mainly by:",
+    "options": [
+      "Instantly pulling in any slack in the belt the moment a crash begins, so the belt fits snugly against the body sooner",
+      "Loosening the belt automatically for comfort",
+      "Warning the driver with a sound if the belt is not worn",
+      "Preventing the seatbelt from being worn at all in a parked car"
+    ],
+    "answer": 0,
+    "explanation": "A pretensioner removes slack from the belt at the very start of a crash, so the occupant is held firmly and starts decelerating with the vehicle sooner, reducing injury."
+  },
+  {
+    "id": "sc016",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "Wearing the shoulder strap of a seatbelt under the arm instead of over the shoulder is dangerous mainly because:",
+    "options": [
+      "It looks untidy",
+      "It makes the belt more comfortable but less visible to police",
+      "In a crash, it can cause serious rib or internal injury and no longer properly restrains the upper body",
+      "It automatically disables the airbag"
+    ],
+    "answer": 2,
+    "explanation": "A shoulder strap worn under the arm concentrates crash forces on the ribs and abdomen instead of the strong chest/shoulder bones, and allows the upper body to move too far forward."
+  },
+  {
+    "id": "sc017",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "After installing a forward-facing child car seat, checking that it does not move more than about an inch (2-3 cm) side to side at the belt path is important because:",
+    "options": [
+      "Excess movement means the seat is not secured tightly enough to properly protect the child in a crash",
+      "A completely rigid seat with no movement at all is unsafe",
+      "This check is only needed for rear-facing seats",
+      "Movement in the seat improves comfort for the child"
+    ],
+    "answer": 0,
+    "explanation": "A child seat that shifts too much is not anchored firmly enough; in a crash it would move further before restraining the child, reducing its protection."
+  },
+  {
+    "id": "sc018",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A 5-point harness on a child car seat generally protects better than a simple 3-point adult-style belt for a young child mainly because it:",
+    "options": [
+      "Is more comfortable to wear",
+      "Costs less to manufacture",
+      "Is easier to buckle quickly",
+      "Spreads crash forces more evenly across both shoulders, the hips, and between the legs, suited to a small child's body"
+    ],
+    "answer": 3,
+    "explanation": "A 5-point harness restrains at five points (two shoulders, two hips, and between the legs), spreading crash forces more evenly across a small child's body than a 3-point belt designed for an adult frame."
+  },
+  {
+    "id": "sc019",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "A pregnant woman wearing a seatbelt should position the lap portion of the belt low, under the belly (across the hips/upper thighs), mainly because this:",
+    "options": [
+      "Makes the belt more comfortable to look at",
+      "Reduces pressure on the abdomen in a crash, lowering risk to both mother and baby",
+      "Is only a style preference with no safety effect",
+      "Is required only after the seventh month of pregnancy"
+    ],
+    "answer": 1,
+    "explanation": "A lap belt worn across the hips/upper thighs rather than across the belly reduces the risk of direct pressure on the abdomen in a sudden stop or crash."
+  },
+  {
+    "id": "sc020",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "Sharing a single seatbelt between two people, such as a child sitting on an adult's lap with the adult's belt fastened over both, is dangerous mainly because:",
+    "options": [
+      "It is more comfortable for the child",
+      "It saves space for other passengers",
+      "In a crash, the child could be crushed between the adult's body and the belt or dashboard, and the belt cannot properly restrain either person",
+      "Seatbelts are designed to support extra weight"
+    ],
+    "answer": 2,
+    "explanation": "A seatbelt is engineered to restrain one properly positioned occupant; sharing it means neither person is correctly restrained, and the adult's body can crush the child on impact."
+  },
+  {
+    "id": "sc021",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "Loose objects inside a car, such as bags or bottles, should be secured or stowed mainly because:",
+    "options": [
+      "They make the car look untidy",
+      "In a sudden stop or crash, they can fly forward with great force and injure occupants like projectiles",
+      "They are only a problem if the car is speeding",
+      "They reduce fuel efficiency if left loose"
+    ],
+    "answer": 1,
+    "explanation": "In a sudden stop, unsecured objects continue moving forward with the vehicle's original speed and can strike occupants with significant, injury-causing force."
+  },
+  {
+    "id": "sl015",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "Posted speed limits on a given road are generally set taking into account the road's design and expected traffic, mainly so that:",
+    "options": [
+      "Drivers can go as fast as their vehicle allows",
+      "Fuel consumption is minimized for all vehicles",
+      "A driver has enough distance to see hazards and stop safely under normal conditions for that road",
+      "Travel time is always the shortest possible"
+    ],
+    "answer": 2,
+    "explanation": "Speed limits are set based on factors like road design, curves, junctions, and expected hazards, so that a driver obeying the limit can generally stop safely in normal conditions."
+  },
+  {
+    "id": "sl016",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "Driving well below the normal flow of traffic for no good reason (such as weather or a hazard) can itself be a hazard because it:",
+    "options": [
+      "Increases the risk of being rear-ended and can frustrate other drivers into unsafe overtaking",
+      "Is always illegal regardless of the situation",
+      "Saves the most fuel in every situation",
+      "Has no effect on other traffic"
+    ],
+    "answer": 0,
+    "explanation": "Unreasonably slow driving disrupts the predictable flow of traffic, increasing the chance of rear-end collisions and unsafe overtaking manoeuvres by frustrated drivers behind."
+  },
+  {
+    "id": "sl017",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "On a curve, a genuinely safe speed depends on:",
+    "options": [
+      "The posted speed limit alone, regardless of conditions",
+      "The sharpness of the curve, the road surface/weather conditions, and the vehicle's own condition, not just the posted limit",
+      "Only the vehicle's top speed",
+      "How many other vehicles are on the road"
+    ],
+    "answer": 1,
+    "explanation": "The posted limit is a legal maximum, but the truly safe speed on a curve also depends on the curve's radius, road surface, weather, and vehicle condition."
+  },
+  {
+    "id": "sl018",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "In poor visibility (such as heavy fog or a sandstorm), a driver should reduce speed enough that they can:",
+    "options": [
+      "Still travel at the normal posted limit",
+      "Keep pace with other vehicles regardless of visibility",
+      "Reach their destination in the usual time",
+      "Stop safely within the distance they can actually see to be clear ahead"
+    ],
+    "answer": 3,
+    "explanation": "The fundamental rule in poor visibility is 'only drive as fast as you can stop within what you can see', since hazards may appear with very little warning."
+  },
+  {
+    "id": "sl019",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "An electronic variable speed limit sign on a highway that changes its displayed number based on conditions must be obeyed as:",
+    "options": [
+      "An optional suggestion only",
+      "Always overridden by the fixed static limit sign further back",
+      "The current legal limit for that moment, replacing the usual static limit while it is displayed",
+      "Only applicable to heavy vehicles"
+    ],
+    "answer": 2,
+    "explanation": "A variable speed limit sign displays the limit that legally applies at that moment for current conditions (such as congestion or weather), and must be obeyed like any other speed limit sign."
+  },
+  {
+    "id": "sl020",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "The idea that 'the speed limit is a maximum, not a target' means that:",
+    "options": [
+      "A driver should always drive exactly at the posted limit",
+      "A driver should choose a speed appropriate to actual conditions, which may need to be below the posted limit even though it is legal to drive up to it",
+      "A driver should always drive as close as possible to the limit to save time",
+      "Speed limits do not apply if traffic is light"
+    ],
+    "answer": 1,
+    "explanation": "The posted number is the highest speed permitted under ideal conditions; a responsible driver adjusts downward for rain, poor visibility, heavy traffic, or road condition, even though the sign allows driving up to that number."
+  },
+  {
+    "id": "mc020",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "To initiate a turn or lean at speed on a motorcycle, a rider uses 'countersteering', which means:",
+    "options": [
+      "Turning the handlebars in the same direction as the intended turn and holding them there",
+      "Briefly pushing the handlebar in the opposite direction of the intended turn, which causes the motorcycle to lean and turn that way",
+      "Only using body weight, never the handlebars",
+      "Braking hard while turning the handlebars"
+    ],
+    "answer": 1,
+    "explanation": "At riding speed, a brief push on the handlebar opposite to the intended turn direction causes the motorcycle to lean and turn in the intended direction -- the basic mechanism behind steering a two-wheeled vehicle."
+  },
+  {
+    "id": "mc021",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "When motorcyclists ride together in a group, riding in a staggered formation (offset left-right rather than side by side) mainly helps because it:",
+    "options": [
+      "Looks better to other road users",
+      "Is required by law in all cases",
+      "Gives each rider more space and a clearer view of the road ahead than riding directly side by side",
+      "Allows the group to travel faster overall"
+    ],
+    "answer": 2,
+    "explanation": "A staggered formation increases the space and sightlines between riders compared with riding directly beside one another, reducing the chance of a collision within the group."
+  },
+  {
+    "id": "mc022",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "Worn motorcycle tyre tread is especially dangerous mainly because it:",
+    "options": [
+      "Makes the motorcycle look older",
+      "Reduces grip on the road surface, especially in wet conditions, raising the risk of skidding",
+      "Only affects fuel economy",
+      "Has no effect on braking"
+    ],
+    "answer": 1,
+    "explanation": "Tread channels water away from the tyre's contact patch; worn tread cannot do this effectively, so grip and control drop sharply on a wet road."
+  },
+  {
+    "id": "mc023",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "Using engine braking (downshifting to a lower gear) as a motorcycle approaches a corner mainly helps because it:",
+    "options": [
+      "Slows the motorcycle smoothly and helps keep it stable, without relying only on the brakes",
+      "Increases the motorcycle's top speed",
+      "Is required by law before every corner",
+      "Has the same effect as applying the front brake alone"
+    ],
+    "answer": 0,
+    "explanation": "Downshifting smoothly sheds some speed through engine braking, helping keep the motorcycle stable and leaving the rider with brakes still available if needed."
+  },
+  {
+    "id": "mc024",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "A motorcyclist should generally avoid riding directly in the very centre of a traffic lane mainly because:",
+    "options": [
+      "It is against the law to ride in the centre of a lane",
+      "The centre position gives the best view of the road",
+      "Oil, grease, and debris from other vehicles tend to collect in the centre of a lane, reducing grip there",
+      "It makes the rider harder to see"
+    ],
+    "answer": 2,
+    "explanation": "Fluids and debris dropped by vehicles tend to build up in the centre of a lane, so riding slightly off-centre (while still staying clear of the lane edges) generally gives better grip and visibility."
+  },
+  {
+    "id": "mc025",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "A motorcyclist should check tyre pressure more often and carefully than most car drivers mainly because:",
+    "options": [
+      "Motorcycle tyres are always more expensive",
+      "Motorcycle tyres never need checking once fitted",
+      "Motorcycles do not have a recommended tyre pressure",
+      "A motorcycle balances on only two contact patches, so even a small pressure change has a much bigger effect on handling and stability than in a car"
+    ],
+    "answer": 3,
+    "explanation": "Because a motorcycle has only two tyre contact patches supporting its balance, incorrect pressure affects handling, stability, and grip far more noticeably than in a four-wheeled vehicle."
+  },
+  {
+    "id": "mc026",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "When carrying luggage on a motorcycle, the load should generally be:",
+    "options": [
+      "Piled as high as possible for maximum space",
+      "Kept low, close to the motorcycle's centre, and evenly balanced so it does not upset the bike's handling",
+      "Attached loosely so it can shift with the bike's movement",
+      "Placed only on one side of the motorcycle"
+    ],
+    "answer": 1,
+    "explanation": "Luggage carried high, unevenly, or loosely secured shifts the motorcycle's centre of gravity and can seriously affect its handling and balance, especially in corners."
+  },
+  {
+    "id": "mc027",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "Other drivers often misjudge a motorcycle's speed and distance mainly because:",
+    "options": [
+      "Motorcycles are always driven faster than cars",
+      "A motorcycle's smaller size and narrower profile make it harder to see and to judge accurately compared with a car",
+      "Motorcycles do not have headlights",
+      "Motorcyclists always ride in the centre of the lane"
+    ],
+    "answer": 1,
+    "explanation": "A motorcycle's smaller visual profile makes it genuinely harder for other drivers to judge its speed and distance correctly, which is why extra caution around motorcycles benefits everyone."
+  },
+  {
+    "id": "vd018",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Compared with third-party liability insurance, comprehensive vehicle insurance generally also covers:",
+    "options": [
+      "Nothing extra beyond third-party cover",
+      "Damage to your own vehicle as well (for example, from a crash, fire, or theft), not just damage caused to others",
+      "Only theft, and nothing else",
+      "Only damage caused by weather"
+    ],
+    "answer": 1,
+    "explanation": "Third-party insurance covers damage or injury you cause to others, while comprehensive insurance additionally covers damage to your own vehicle."
+  },
+  {
+    "id": "vd019",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Checking a vehicle's engine oil level regularly matters mainly because:",
+    "options": [
+      "It improves the paint's appearance",
+      "It is only necessary for older vehicles",
+      "Running an engine with too little oil can cause severe engine damage or overheating",
+      "It has no effect on the engine"
+    ],
+    "answer": 2,
+    "explanation": "Engine oil lubricates and helps cool moving engine parts; low oil levels can lead to excessive friction, overheating, and serious engine damage."
+  },
+  {
+    "id": "vd020",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Checking a tyre's tread depth (not just its pressure) is important mainly because insufficient tread:",
+    "options": [
+      "Increases stopping distance and the risk of hydroplaning, especially on a wet road",
+      "Only affects the tyre's appearance",
+      "Has no effect in dry conditions or wet conditions",
+      "Only matters for motorcycle tyres, not cars"
+    ],
+    "answer": 0,
+    "explanation": "Tread channels water away from the road surface; when tread is too worn, the tyre cannot grip as effectively, increasing stopping distance and hydroplaning risk, especially in the wet."
+  },
+  {
+    "id": "vd021",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Keeping a vehicle's spare tyre, jack, and warning triangle in working order and accessible is important mainly for:",
+    "options": [
+      "Passing an annual inspection only, with no other benefit",
+      "Improving fuel efficiency",
+      "Making the vehicle look more complete",
+      "Being able to deal safely with a roadside emergency such as a tyre puncture or breakdown"
+    ],
+    "answer": 3,
+    "explanation": "These items exist specifically to let a driver handle a roadside emergency (like a flat tyre) safely and warn other traffic while doing so."
+  },
+  {
+    "id": "vd022",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "If the engine temperature gauge shows the engine is overheating while driving, a driver should:",
+    "options": [
+      "Keep driving at the same speed until reaching the destination",
+      "Pull over safely as soon as possible, stop the engine, and let it cool rather than continuing to drive",
+      "Turn on the air conditioning to full power to cool the engine",
+      "Accelerate to increase airflow to the engine"
+    ],
+    "answer": 1,
+    "explanation": "Continuing to drive an overheating engine risks serious, expensive damage; the safe response is to pull over, switch off, and let it cool before checking further."
+  },
+  {
+    "id": "vd023",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Keeping a vehicle's registration and insurance documents current and valid is important mainly because it avoids:",
+    "options": [
+      "Only a minor paperwork inconvenience with no real consequence",
+      "Extra fuel costs",
+      "Legal penalties and ensures the vehicle has valid insurance coverage if an accident happens",
+      "Slower acceleration"
+    ],
+    "answer": 2,
+    "explanation": "Expired registration or insurance can lead to fines and legal trouble, and may leave a driver without valid coverage exactly when it is needed most, after an accident."
+  },
+  {
+    "id": "vd024",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "A roadworthy vehicle should have all of its exterior lights (headlights, brake lights, turn indicators) working properly mainly because they are essential for:",
+    "options": [
+      "Both being seen by other road users and signalling your intentions clearly, which is also a legal requirement",
+      "Decoration only, with no real safety purpose",
+      "Passing inspection only, with no everyday driving benefit",
+      "Improving fuel economy"
+    ],
+    "answer": 0,
+    "explanation": "Exterior lights let other road users see your vehicle and understand your intended actions (braking, turning), which is both a safety necessity and a legal requirement."
+  },
+  {
+    "id": "vd025",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Before a long road trip, a basic vehicle safety check should include:",
+    "options": [
+      "Only checking the fuel level",
+      "Only cleaning the exterior of the vehicle",
+      "Only checking the radio and air conditioning",
+      "Fluid levels, tyre condition and pressure, lights, and brakes"
+    ],
+    "answer": 3,
+    "explanation": "A thorough pre-trip check covers the systems most likely to cause a breakdown or safety issue on a long journey: fluids, tyres, lights, and brakes."
+  },
+  {
+    "id": "hv023",
+    "category": "heavy_vehicle",
+    "sub": null,
+    "q": "Because heavy vehicles and buses have much larger blind spots than cars, other drivers should mainly:",
+    "options": [
+      "Drive as close as possible behind them to save fuel",
+      "Avoid lingering directly beside or close behind a heavy vehicle where its driver may not be able to see them",
+      "Overtake them only on the right side, never the left",
+      "Assume the heavy vehicle driver always sees them"
+    ],
+    "answer": 1,
+    "explanation": "A car sitting in a heavy vehicle's large blind spot may be completely invisible to its driver, so it is safer to pass through such zones quickly rather than linger in them."
+  },
+  {
+    "id": "hv024",
+    "category": "heavy_vehicle",
+    "sub": null,
+    "q": "When a heavy vehicle or bus makes a wide turn, other drivers should:",
+    "options": [
+      "Try to squeeze into the gap it leaves on the inside of the turn",
+      "Overtake it during the turn to save time",
+      "Not attempt to fill the space it leaves during the turn, since the heavy vehicle needs that space to complete it safely",
+      "Sound the horn to make it turn faster"
+    ],
+    "answer": 2,
+    "explanation": "A heavy vehicle swings wide to complete a turn safely because of its length; a car squeezing into the gap it leaves risks being struck as the vehicle completes the turn."
+  },
+  {
+    "id": "hv025",
+    "category": "heavy_vehicle",
+    "sub": null,
+    "q": "A heavy vehicle's load must be properly secured mainly because an unsecured load can:",
+    "options": [
+      "Shift during braking or turning, affecting the vehicle's balance and braking, or fall onto the road and endanger other traffic",
+      "Only affect the vehicle's fuel economy",
+      "Improve the vehicle's stability if left loose",
+      "Only matter for appearance, not safety"
+    ],
+    "answer": 0,
+    "explanation": "A shifting or falling load can seriously destabilize a heavy vehicle and create a direct hazard for following or nearby traffic, which is why load security rules are strictly enforced."
+  },
+  {
+    "id": "hv026",
+    "category": "heavy_vehicle",
+    "sub": null,
+    "q": "Because heavy vehicles accelerate much more slowly than cars, a driver merging in front of one should:",
+    "options": [
+      "Merge as close as possible since heavy vehicles can always stop quickly",
+      "Allow extra space when merging in front of a heavy vehicle, since it needs more distance and time to slow down or adjust",
+      "Ignore the heavy vehicle's size since all vehicles must yield equally",
+      "Expect the heavy vehicle to speed up and create space"
+    ],
+    "answer": 1,
+    "explanation": "A heavy vehicle needs significantly more distance and time to slow down or adjust speed than a car, so a driver merging in front of one should leave extra space rather than cutting in closely."
+  },
+  {
+    "id": "af016",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Combining alcohol with fatigue (tiredness) while driving is especially dangerous because:",
+    "options": [
+      "Their effects on reaction time and judgement compound each other, making the combined impairment worse than either alone",
+      "Fatigue cancels out the effects of alcohol",
+      "Only one of the two actually affects driving ability",
+      "Alcohol only affects vision, and fatigue only affects hearing"
+    ],
+    "answer": 0,
+    "explanation": "Alcohol and fatigue each independently slow reaction time and impair judgement; together their effects add up, making a driver far more dangerous than either factor alone."
+  },
+  {
+    "id": "af017",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Some medications carry a warning that they may cause drowsiness or slower reactions. A driver taking such medication should:",
+    "options": [
+      "Ignore the warning since medication is always safe to drive on",
+      "Only worry about it if driving at night",
+      "Check the label carefully and avoid driving if warned, since the effect can resemble alcohol impairment",
+      "Take a double dose to counteract the drowsiness"
+    ],
+    "answer": 2,
+    "explanation": "Medications that cause drowsiness or slowed reactions can impair driving ability similarly to alcohol, so drivers should follow label warnings and avoid driving if warned."
+  },
+  {
+    "id": "af018",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "After a poor night's sleep, a driver's performance the next day can be:",
+    "options": [
+      "Completely unaffected as long as no alcohol was consumed",
+      "Significantly impaired, with slower reaction time and reduced concentration, even without drinking any alcohol",
+      "Only affected in the evening, never in the morning",
+      "Improved due to extra alertness from tiredness"
+    ],
+    "answer": 1,
+    "explanation": "Sleep deprivation impairs reaction time, concentration, and judgement in ways that can be as serious as alcohol impairment, regardless of whether any alcohol was consumed."
+  },
+  {
+    "id": "af019",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Drinking caffeine or an energy drink is not a real solution for driver fatigue mainly because:",
+    "options": [
+      "Caffeine has no effect on alertness at all",
+      "It is illegal to drink caffeine while driving",
+      "It permanently removes the need for sleep",
+      "It only provides temporary alertness while the underlying tiredness and its effects on reaction time remain, and the effect wears off"
+    ],
+    "answer": 3,
+    "explanation": "Caffeine can temporarily mask feelings of sleepiness, but it does not reverse the underlying impairment to reaction time and judgement, and its effect fades, sometimes leaving a driver suddenly worse off."
   }
 ]
