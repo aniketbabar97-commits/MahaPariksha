@@ -1,0 +1,1960 @@
+[
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधान: P < Q ≤ R = S, T ≥ R\nनिष्कर्ष:\nI. T > P\nII. S ≥ P\nयोग्य पर्याय निवडा.",
+   "q_en": "Statement: P < Q ≤ R = S, T ≥ R\nConclusions:\nI. T > P\nII. S ≥ P\nChoose the correct option.",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य",
+    "फक्त निष्कर्ष II सत्य",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "दोन्ही निष्कर्ष सत्य नाहीत"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "P < Q ≤ R = S आणि T ≥ R वरून, P < T म्हणजेच T > P सत्य आहे. तसेच P < Q ≤ R = S वरून S > P आहे, म्हणजेच S ≥ P देखील सत्य आहे.",
+   "e_en": "From P < Q ≤ R = S and T ≥ R, we get P < T or T > P, which is true. Also from P < Q ≤ R = S, we get S > P, which makes S ≥ P true as well."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 3,
+   "q_mr": "विधान: L > M ≥ N, O < N, P = O\nनिष्कर्ष:\nI. L > P\nII. M ≥ O\nयोग्य निष्कर्ष ओळखा.",
+   "q_en": "Statement: L > M ≥ N, O < N, P = O\nConclusions:\nI. L > P\nII. M ≥ O\nIdentify the correct conclusion.",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य",
+    "फक्त निष्कर्ष II सत्य",
+    "दोन्ही सत्य आहेत",
+    "कोणताही निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "दिलेली विधाने एकत्रित केल्यास L > M ≥ N > O = P मिळते. यावरून L > P आणि M ≥ O दोन्ही निष्कर्ष अचूक ठरतात.",
+   "e_en": "Combining the statements gives L > M ≥ N > O = P. From this, both conclusions L > P and M ≥ O are correct."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=2, confident=True)",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "A, B, C, D आणि E पैकी सर्वात हलके कोण आहे? हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत?\nविधाने:\nI. D हा A आणि C पेक्षा जड आहे पण E पेक्षा हलका आहे.\nII. B हा सर्वात जड आहे आणि A हा C पेक्षा जड आहे.",
+   "q_en": "Who is the lightest among A, B, C, D and E? Which of the following statements is/are sufficient to answer?\nStatements:\nI. D is heavier than A and C but lighter than E.\nII. B is the heaviest and A is heavier than C.",
+   "o_mr": [
+    "फक्त विधान I पुरसे आहे",
+    "फक्त विधान II पुरसे आहे",
+    "विधान I आणि II दोन्ही मिळून पुरेशी आहेत",
+    "विधान I आणि II दोन्ही मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements I and II together are sufficient",
+    "Both statements I and II together are not sufficient"
+   ],
+   "a": 3,
+   "e_mr": "विधान I वरून E > D > (A, C) मिळते. विधान II वरून B सर्वात जड आहे आणि A > C कळते. पण C आणि A मध्ये सर्वात हलके कोण हे स्पष्ट होत नाही, कारण E हा D पेक्षा जड आहे आणि B सर्वात जड आहे; तरीही A आणि C मधील क्रम अनिश्चित राहतो.",
+   "e_en": "Statement I gives E > D > (A, C). Statement II gives B is heaviest and A > C. However, the exact lightest between A and C remains undetermined even with both statements combined."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 1,
+   "q_mr": "नदीच्या प्रवाहाच्या दिशेने जाताना एका नावेचा वेग किती आहे? \nविधाने:\nI. शांत पाण्यात नावेचा वेग ताशी 12 किमी आहे.\nII. नदीचा प्रवाह ताशी 4 किमी वेगाने वाहतो.",
+   "q_en": "What is the speed of a boat downstream?\nStatements:\nI. The speed of the boat in still water is 12 km/h.\nII. The speed of the stream is 4 km/h.",
+   "o_mr": [
+    "फक्त विधान I पुरसे आहे",
+    "फक्त विधान II पुरसे आहे",
+    "एकतर I किंवा II वैयक्तिकरित्या पुरसे आहे",
+    "विधान I आणि II दोन्ही एकत्र करणे आवश्यक आहे"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Either I or II alone is sufficient",
+    "Both statements I and II together are necessary"
+   ],
+   "a": 3,
+   "e_mr": "प्रवाहाच्या दिशेने वेग काढण्यासाठी (शांत पाण्यातील वेग + प्रवाहाचा वेग) आवश्यक असतो. त्यामुळे दोन्ही विधाने एकत्र करणे गरजेचे आहे.",
+   "e_en": "To find downstream speed, both speed in still water and speed of the stream are required. Thus, both statements combined are necessary."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "एका वर्तुळाकार टेबलाभोवती बसलेल्या 5 मित्रांमध्ये (P, Q, R, S, T) केंद्राकडे तोंड करून बसताना P च्या अगदी उजवीकडे कोण आहे?\nविधाने:\nI. P च्या डावीकडे दुसऱ्या स्थानी R बसला आहे. T हा P च्या ताबडतोब डावीकडे आहे.\nII. S हा Q च्या उजवीकडे आहे आणि T हा P च्या शेजारी नाही.",
+   "q_en": "Among 5 friends (P, Q, R, S, T) sitting around a circular table facing the centre, who is sitting immediate right of P?\nStatements:\nI. R is second to the left of P. T is immediate left of P.\nII. S is to the right of Q and T is not next to P.",
+   "o_mr": [
+    "फक्त विधान I पुरसे आहे",
+    "फक्त विधान II पुरसे आहे",
+    "दोन्ही पैकी कोणतेही पुरसे नाही",
+    "दोन्ही विधाने एकत्र पुरेशी आहेत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Neither is sufficient",
+    "Both statements together are sufficient"
+   ],
+   "a": 0,
+   "e_mr": "फक्त विधान I मध्ये P च्या डावीकडे R आणि T ची स्थिती दिली आहे. 5 व्यक्तींच्या वर्तुळात जर T हा P च्या लगेच डावीकडे असेल आणि R हा डावीकडे दुसऱ्या स्थानी असेल, तर उर्वरित जागांवरून P च्या उजवीकडील व्यक्ती निश्चित करता येते.",
+   "e_en": "Statement I alone gives the relative positions of T and R with respect to P. In a circle of 5 people, knowing these positions is sufficient to determine who sits to the immediate right of P."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "शुक्रवारच्या दिवशी कोणता वार येईल (तारीख X च्या संदर्भात)?\nविधाने:\nI. महिन्याची 1 तारीख मंगळवार आहे.\nII. त्या महिन्यात एकूण 30 दिवस आहेत.",
+   "q_en": "On which date does Friday fall in month X?\nStatements:\nI. The 1st of the month is Tuesday.\nII. There are 30 days in the month.",
+   "o_mr": [
+    "फक्त विधान I पुरसे आहे",
+    "फक्त विधान II पुरसे आहे",
+    "दोन्ही विधाने एकत्र पुरेशी आहेत",
+    "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 2,
+   "e_mr": "1 तारीख मंगळवार असेल तर 4 तारीख शुक्रवार येते, आणि महिन्यातील सर्व शुक्रवार काढण्यासाठी महिन्याचे एकूण दिवस (30 दिवस) माहीत असणे आवश्यक आहे. त्यामुळे दोन्ही विधाने एकत्र करणे गरजेचे आहे.",
+   "e_en": "If the 1st is Tuesday, Friday falls on the 4th, 11th, etc. Knowing there are 30 days helps determine all Friday dates in that month. Hence both statements together are required."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच इमारतींची घरे (A, B, C, D, E) एका ओळीत उत्तर दिशेला तोंड करून उभी आहेत. C हा अगदी मध्यभागी आहे. A हा C च्या ताबडतोब डावीकडे आहे. B हा एका टोकाला आहे आणि E च्या शेजारी नाही. तर ओळीच्या उजव्या टोकाला कोण आहे?",
+   "q_en": "Five houses (A, B, C, D, E) stand in a row facing north. C is in the exact middle. A is immediately to the left of C. B is at one end and not next to E. Who is at the right end of the row?",
+   "o_mr": [
+    "B",
+    "D",
+    "E",
+    "A"
+   ],
+   "o_en": [
+    "B",
+    "D",
+    "E",
+    "A"
+   ],
+   "a": 1,
+   "e_mr": "मध्यभागी C आहे. A हा C च्या लगेच डावीकडे आहे. जागा अशा आहेत: _ _ C A _ (पहिली जागा B असू शकते कारण B एका टोकाला आहे). पण B हा E च्या शेजारी नाही म्हणून डाव्या टोकाला B असेल, तर क्रम B, E, C, A, D असा होतो. उजव्या टोकाला D येतो.",
+   "e_en": "C is in the middle, A is immediately to the left of C. Positions: _ _ C A _. Since B is at one end and not next to E, B must be at the extreme left. The order is B, E, C, A, D. Thus D is at the right end."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "सहा व्यक्ती - P, Q, R, S, T, U एका रेषेत उत्तर दिशेला तोंड करून बसले आहेत. U हा डाव्या टोकापासून दुसऱ्या स्थानी आहे. P हा T च्या शेजारी आहे आणि T हा उजव्या टोकापासून दुसऱ्या स्थानी आहे. S हा U च्या शेजारी नाही. उरलेल्या एका जागी कोणता व्यक्ती येईल आणि R च्या शेजारी कोण आहे?",
+   "q_en": "Six persons - P, Q, R, S, T, U are sitting in a row facing north. U is second from the left end. P is next to T and T is second from the right end. S is not next to U. Who sits at the remaining position and who is next to R?",
+   "o_mr": [
+    "Q आणि S",
+    "S आणि P",
+    "Q आणि U",
+    "S आणि T"
+   ],
+   "o_en": [
+    "Q and S",
+    "S and P",
+    "Q and U",
+    "S and T"
+   ],
+   "a": 0,
+   "e_mr": "जागा: 1, 2(U), 3, 4, 5(T), 6. T हा उजव्या टोकापासून दुसरा आहे (पाचवी जागा). P हा T च्या शेजारी आहे (सहावी जागा). U च्या शेजारी S नाही, म्हणून S हा तिसऱ्या किंवा चौथ्या स्थानी असेल. या कोडीनुसार Q आणि S हे उर्वरित योग्य स्थान ठरवतात.",
+   "e_en": "Positions: 1, 2(U), 3, 4, 5(T), 6. T is 2nd from right (5th position). P is next to T (6th position). Since S is not next to U, S and Q fill the middle spots accordingly."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 1,
+   "q_mr": "पाच मित्र - अनिकेत, राहुल, संकेत, विक्रम आणि दीपक वेगवेगळ्या मजल्यांवर (1 ते 5, तळापासून वर) राहतात. विक्रम सर्वात वरच्या (पाचव्या) मजल्यावर राहतो. अनिकेत हा विक्रमच्या लगेच खाली राहतो. संकेत हा तळाच्या (पहिल्या) मजल्यावर राहत नाही. तर तिसऱ्या मजल्यावर कोण राहतो?",
+   "q_en": "Five friends - Aniket, Rahul, Sanket, Vikram and Deepak live on different floors (1 to 5, bottom to top). Vikram lives on the top (5th) floor. Aniket lives immediately below Vikram. Sanket does not live on the 1st floor. Who lives on the 3rd floor?",
+   "o_mr": [
+    "राहुल किंवा दीपक",
+    "संकेत",
+    "अनिकेत",
+    "विक्रम"
+   ],
+   "o_en": [
+    "Rahul or Deepak",
+    "Sanket",
+    "Aniket",
+    "Vikram"
+   ],
+   "a": 0,
+   "e_mr": "5: विक्रम, 4: अनिकेत. आता 1, 2, 3 मजल्यांवर राहुल, संकेत आणि दीपक राहतात. संकेत पहिला मजला नाही. त्यामुळे तिसऱ्या मजल्यावर राहुल किंवा दीपक पैकी एक जण असू शकतो (माहिती अपूर्ण असल्याने पर्याय 'राहुल किंवा दीपक' योग्य ठरतो).",
+   "e_en": "Floor 5: Vikram, Floor 4: Aniket. Floors 1, 2, 3 are shared by Rahul, Sanket, and Deepak. Sanket is not on floor 1. Thus floor 3 can be Rahul or Deepak."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "चार व्यक्ती P, Q, R आणि S वर्तुळाकार टेबलाभोवती केंद्राकडे तोंड करून बसले आहेत. P हा Q च्या समोर बसला आहे. R हा P च्या ताबडतोब डावीकडे बसला आहे. तर S च्या ताबडतोब उजवीकडे कोण बसले आहे?",
+   "q_en": "Four persons P, Q, R and S are sitting around a circular table facing the centre. P sits opposite Q. R sits immediately to the left of P. Who sits immediately to the right of S?",
+   "o_mr": [
+    "P",
+    "Q",
+    "R",
+    "निश्चित सांगता येत नाही"
+   ],
+   "o_en": "Q",
+   "a": 1,
+   "e_mr": "P च्या डावीकडे R आहे. P च्या समोर Q आहे. उरलेली जागा S साठी आहे. S च्या उजवीकडे Q येतो.",
+   "e_en": "R is to the left of P. Q is opposite P. The remaining seat is for S. To the immediate right of S is Q."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधान: M > N ≥ O, P < O\nनिष्कर्ष:\nI. M > P\nII. N > P\nयोग्य पर्याय निवडा.",
+   "q_en": "Statement: M > N ≥ O, P < O\nConclusions:\nI. M > P\nII. N > P\nChoose the correct option.",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "कोणताही निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "दिलेली विधाने जोडल्यास M > N ≥ O > P असा क्रम मिळतो. यामुळे M > P आणि N > P दोन्ही निष्कर्ष सत्य ठरतात.",
+   "e_en": "Combining the statements gives M > N ≥ O > P. Therefore, both conclusions M > P and N > P are true."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच विषय - मराठी, इंग्रजी, गणित, विज्ञान आणि इतिहास एकामागून एक सोमवार ते शुक्रवार शिकवले जातात. गणित हा विषय बुधवारच्या दिवशी शिकवला जातो. इतिहास हा विषय मराठीच्या लगेच नंतरच्या दिवशी शिकवला जातो. विज्ञान हा विषय सोमवार किंवा शुक्रवार शिकवला जात नाही. तर शुक्रवारच्या दिवशी कोणता विषय असेल?",
+   "q_en": "Five subjects - Marathi, English, Maths, Science and History are taught one per day from Monday to Friday. Maths is taught on Wednesday. History is taught on the day right after Marathi. Science is not taught on Monday or Friday. Which subject is on Friday?",
+   "o_mr": [
+    "इंग्रजी",
+    "विज्ञान",
+    "इतिहास",
+    "मराठी"
+   ],
+   "o_en": [
+    "English",
+    "Science",
+    "History",
+    "Marathi"
+   ],
+   "a": 0,
+   "e_mr": "बुधवार: गणित. विज्ञान सोमवार किंवा शुक्रवार नाही, म्हणून विज्ञान मंगळवार किंवा गुरुवार असू शकते. मराठी आणि इतिहास हे लगतच्या दोन दिवशी आहेत. बुधवार गणित असल्यामुळे, मराठी आणि इतिहास सोमवार-मंगळवार किंवा गुरुवारी येऊ शकतात. सर्व मांडणी केल्यावर शुक्रवारसाठी इंग्रजी हा विषय उरतो.",
+   "e_en": "Wednesday: Maths. Science is not Monday or Friday, so it's Tuesday or Thursday. Marathi and History are consecutive. Fitting them in leaves English for Friday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधान: P > Q ≥ R = S < T\nनिष्कर्ष:\nI. P > S\nII. T > R\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: P > Q ≥ R = S < T\nConclusions:\nI. P > S\nII. T > R\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "निष्कर्ष I किंवा II सत्य आहे"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Either conclusion I or II is true"
+   ],
+   "a": 2,
+   "e_mr": "विधानानुसार P > Q ≥ R = S वरून P > S स्पष्ट मिळते (निष्कर्ष I सत्य). तसेच T > S = R वरून T > R मिळते (निष्कर्ष II सत्य). म्हणून दोन्ही निष्कर्ष सत्य आहेत.",
+   "e_en": "From the statements P > Q ≥ R = S, we get P > S (Conclusion I is true). Also, T > S = R gives T > R (Conclusion II is true). Therefore, both conclusions are true."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "सहा व्यक्ती - A, B, C, D, E आणि F एका रांगेत उत्तर दिशेकडे तोंड करून बसल्या आहेत. F हा C च्या डावीकडे तिसऱ्या स्थानावर आहे. C हा रांगेच्या एका टोकाला आहे. B हा D च्या लगेच डावीकडे आहे. A हा E च्या शेजारी नाही. रांगेच्या अगदी डाव्या टोकाला कोण बसले आहे?",
+   "q_en": "Six persons - A, B, C, D, E and F are sitting in a row facing North. F is third to the left of C. C is at one of the ends. B is immediate left of D. A is not a neighbor of E. Who is sitting at the extreme left end?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "F"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "F"
+   ],
+   "a": 3,
+   "e_mr": "C हा एका टोकाला आहे. C उत्तर पाहतोय, म्हणून F हा C च्या डावीकडे तिसऱ्या स्थानावर असल्याने C उजव्या टोकाला असेल. मांडणी: F, A, E, B, D, C अशी बनते. डाव्या टोकाला F आहे.",
+   "e_en": "C is at an end. Since C faces north and F is 3rd to the left of C, C must be at the right end. The arrangement is F, A, E, B, D, C. F is at the extreme left end."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "दिलेल्या प्रश्नाचे उत्तर देण्यासाठी कोणती विधाने पुरेशी आहेत?\nप्रश्न: A, B आणि C पैकी सर्वात मोठे कोण आहे?\nविधाने:\ni. A चे वय B आणि C च्या वयाच्या बेरजेपेक्षा जास्त आहे.\nii. B चे वय C पेक्षा जास्त आहे.",
+   "q_en": "Which statements are sufficient to answer the question?\nQuestion: Who is the eldest among A, B and C?\nStatements:\ni. A's age is greater than the sum of ages of B and C.\nii. B's age is greater than C's.",
+   "o_mr": [
+    "फक्त विधान i पुरeshे आहे",
+    "फक्त विधान ii पुरेसे आहे",
+    "दोन्ही विधाने मिळून पुरेसे आहेत",
+    "दोन्ही विधाने मिळूनही पुरेसे नाहीत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 0,
+   "e_mr": "विधान i नुसार A > B + C आहे. यावरून A हा B आणि C दोघांपेक्षा मोठा असल्याचे स्पष्ट होते, कारण B आणि C ची वय सकारात्मक आहेत. त्यामुळे केवळ विधान i पुरेसे आहे.",
+   "e_en": "From statement i, A > B + C. This clearly shows A is greater than both B and C individually since ages are positive. Thus, statement i alone is sufficient."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधान: M ≤ N < O = P ≥ Q\nनिष्कर्ष:\nI. M < P\nII. O ≥ Q\nयोग्य पर्याय निवडा:",
+   "q_en": "Statement: M ≤ N < O = P ≥ Q\nConclusions:\nI. M < P\nII. O ≥ Q\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "M ≤ N < O = P वरून M < P मिळते (निष्कर्ष I सत्य). तसेच O = P ≥ Q वरून O ≥ Q मिळते (निष्कर्ष II सत्य). त्यामुळे दोन्ही निष्कर्ष सत्य आहेत.",
+   "e_en": "From M ≤ N < O = P, we get M < P (Conclusion I is true). Also from O = P ≥ Q, we get O ≥ Q (Conclusion II is true). Therefore, both conclusions are true."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "पाच जण (P, Q, R, S, T) वेगवेगळे रंग (लाल, निळा, हिरवा, पांढरा, पिवळा) पसंद करतात. T ला पांढरा रंग आवडतो. R ला लाल किंवा पिवळा रंग आवडत नाही. S ला हिरवा रंग आवडत नाही. P ला लाल रंग आवडतो. Q ला कोणता रंग आवडतो?",
+   "q_en": "Five persons (P, Q, R, S, T) like different colors (Red, Blue, Green, White, Yellow). T likes White. R does not like Red or Yellow. S does not like Green. P likes Red. Which color does Q like?",
+   "o_mr": [
+    "निळा (Blue)",
+    "हिरवा (Green)",
+    "पिवळा (Yellow)",
+    "पांढरा (White)"
+   ],
+   "o_en": [
+    "Blue",
+    "Green",
+    "Yellow",
+    "White"
+   ],
+   "a": 1,
+   "e_mr": "T = पांढरा, P = लाल. R ला लाल किंवा पिवळा आवडत नाही आणि T ला पांढरा आहे, त्यामुळे R ला एकतर निळा किंवा हिरवा आवडेल. S ला हिरवा आवडत नाही, म्हणजे S ला निळा किंवा पिवळा आवडेल. Q साठी हिरवा रंग उरतो.",
+   "e_en": "T = White, P = Red. R cannot be Red or Yellow, and White is taken by T, so R is Blue or Green. S is not Green, so S is Blue or Yellow. Thus Q must like Green."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 1,
+   "q_mr": "दिलेल्या प्रश्नाचे उत्तर देण्यासाठी कोणती विधाने पुरेशी आहेत?\nप्रश्न: X हा Y च्या पाठीमागे किती अंतरावर आहे?\nविधाने:\ni. X आणि Y मधील अंतर ५ मीटर आहे.\nii. X हा उत्तर दिशेला तोंड करून उभा आहे.",
+   "q_en": "Which statements are sufficient to answer the question?\nQuestion: At what distance is X behind Y?\nStatements:\ni. The distance between X and Y is 5 meters.\nii. X is facing north.",
+   "o_mr": [
+    "फक्त विधान i पुरेसे आहे",
+    "फक्त विधान ii पुरेसे आहे",
+    "दोन्ही विधाने मिळून पुरेसे आहेत",
+    "दोन्ही विधाने मिळूनही पुरेसे नाहीत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 3,
+   "e_mr": "विधान i मध्ये अंतर ५ मीटर दिले आहे पण X आणि Y ची एकमेकांच्या सापेक्ष दिशा किंवा स्थिती स्पष्ट नाही. विधान ii मध्ये दिशा दिली आहे पण अंतर नाही. दोन्ही एकत्र केले तरी पाठीमागे असण्याची नेमकी स्थिती समजत नाही.",
+   "e_en": "Statement i gives the distance as 5m but not relative positions. Statement ii gives direction but no distance. Even combined, they don't give the exact relative position of being behind."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 3,
+   "q_mr": "विधान: A < B ≤ C = D, E ≥ D, F < A\nनिष्कर्ष:\nI. E > F\nII. C ≥ F\nयोग्य पर्याय निवडा:",
+   "q_en": "Statements: A < B ≤ C = D, E ≥ D, F < A\nConclusions:\nI. E > F\nII. C ≥ F\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "एकत्रित साखळी: F < A < B ≤ C = D ≤ E. यावरून F < E म्हणजेच E > F (निष्कर्ष I सत्य). तसेच F < C म्हणजेच C > F, म्हणजेच C ≥ F देखील सत्य ठरतो. त्यामुळे दोन्ही निष्कर्ष सत्य आहेत.",
+   "e_en": "Combined chain: F < A < B ≤ C = D ≤ E. From this, F < E or E > F (Conclusion I is true). Also F < C means C > F, which satisfies C ≥ F (Conclusion II is true). Both are true."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=1, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती P, Q, R, S आणि T एका वर्तुळात केंद्राकडे तोंड करून बसल्या आहेत. Q हा P च्या डावीकडे दुसऱ्या स्थानावर आहे. R हा P च्या लगेच उजवीकडे आहे. S हा Q च्या शेजारी नाही. T ची जागा कोणती?",
+   "q_en": "Five persons P, Q, R, S and T are sitting in a circle facing the center. Q is second to the left of P. R is immediate right of P. S is not a neighbor of Q. What is the position of T?",
+   "o_mr": [
+    "P च्या लगेच डावीकडे",
+    "Q च्या लगेच उजवीकडे",
+    "R च्या डावीकडे दुसऱ्या स्थानावर",
+    "S च्या लगेच उजवीकडे"
+   ],
+   "o_en": [
+    "Immediate left of P",
+    "Immediate right of Q",
+    "Second to the left of R",
+    "Immediate right of S"
+   ],
+   "a": 1,
+   "e_mr": "P केंद्रस्थानी तोंड करून बसला आहे. R हा P च्या लगेच उजवीकडे आहे. Q हा P च्या डावीकडे दुसऱ्या स्थानावर आहे. S हा Q च्या शेजारी नसल्यामुळे S हा P च्या डावीकडे बसतो. उरलेला T हा Q च्या लगेच उजवीकडे बसतो.",
+   "e_en": "P faces center. R is immediate right of P. Q is 2nd to the left of P. S is not neighbor of Q, so S is to the left of P. The remaining person T must be to the immediate right of Q."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "दिलेल्या प्रश्नाचे उत्तर देण्यासाठी कोणती विधाने पुरेशी आहेत?\nप्रश्न: A, B, C, D आणि E पैकी सर्वात हलके कोण आहे?\nविधाने:\ni. B चे वजन C आणि D पेक्षा जास्त आहे पण E पेक्षा कमी आहे.\nii. A चे वजन सर्वात कमी नाही.",
+   "q_en": "Which statements are sufficient to answer the question?\nQuestion: Who is the lightest among A, B, C, D and E?\nStatements:\ni. B's weight is more than C and D, but less than E.\nii. A's weight is not the minimum.",
+   "o_mr": [
+    "फक्त विधान i पुरेसे आहे",
+    "फक्त विधान ii पुरेसे आहे",
+    "दोन्ही विधाने मिळून पुरेसे आहेत",
+    "दोन्ही विधाने मिळूनही पुरेसे नाहीत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 3,
+   "e_mr": "विधान i मधून E > B > (C, D) समजते, पण C आणि D मधील परस्पर संबंध तसेच A चे स्थान स्पष्ट होत नाही. विधान ii नुसार A सर्वात हलका नाही. दोन्ही विधाने एकत्र केली तरी C, D आणि A यांच्या वजनाचे नेमके गूढ सुटत नाही.",
+   "e_en": "Statement i gives E > B > (C, D), but relations between C and D and A's position are unknown. Statement ii says A is not the lightest. Even combined, we cannot determine who among C, D or A is the lightest."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधान: X ≥ Y = Z > W\nनिष्कर्ष:\nI. X > W\nII. Y ≥ W\nयोग्य पर्याय निवडा:",
+   "q_en": "Statement: X ≥ Y = Z > W\nConclusions:\nI. X > W\nII. Y ≥ W\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "विधानानुसार X ≥ Y = Z > W आहे. याचा अर्थ X हा W पेक्षा मोठा आहे (निष्कर्ष I सत्य). तसेच Y हा W पेक्षा मोठा आहे म्हणजेच Y ≥ W चे पालन होते (निष्कर्ष II सत्य). दोन्ही निष्कर्ष सत्य आहेत.",
+   "e_en": "From the statement X ≥ Y = Z > W, X is strictly greater than W (Conclusion I is true). Also Y is strictly greater than W, which satisfies Y ≥ W (Conclusion II is true). Both conclusions are true."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "सोमवार ते शनिवार या सहा दिवसांत A, B, C, D, E आणि F या सहा परीक्षा एकामागून एक होतात. C ची परीक्षा D च्या लगेच नंतर आहे. A ची परीक्षा बुधवार आहे. E आणि B च्या मध्ये फक्त दोन परीक्षा आहेत. F ची परीक्षा सर्वात शेवटी (शनिवारी) नाही. सर्वात पहिली परीक्षा (सोमवारी) कोणाची आहे?",
+   "q_en": "Six exams A, B, C, D, E and F are held on six consecutive days from Monday to Saturday. C's exam is immediately after D's. A's exam is on Wednesday. Exactly two exams are between E and B. F's exam is not on Saturday. Whose exam is on Monday (the first day)?",
+   "o_mr": [
+    "B",
+    "D",
+    "E",
+    "F"
+   ],
+   "o_en": [
+    "B",
+    "D",
+    "E",
+    "F"
+   ],
+   "a": 0,
+   "e_mr": "बुधवारी A आहे. C हा D च्या लगेच नंतर आहे (D, C). E आणि B च्या मध्ये २ परीक्षा आहेत. F शनिवारी नाही. योग्य मांडणीनुसार सोमवारी B ची परीक्षा येते.",
+   "e_en": "A is on Wednesday. C is immediately after D (D, C). Two exams are between E and B. F is not on Saturday. Following the constraints, B's exam is on Monday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधान: L > M ≥ N, O < N\nनिष्कर्ष:\nI. L > O\nII. M > O\nयोग्य पर्याय निवडा:",
+   "q_en": "Statements: L > M ≥ N, O < N\nConclusions:\nI. L > O\nII. M > O\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "एकत्रित साखळी: L > M ≥ N > O. यावरून L > O स्पष्ट मिळते (निष्कर्ष I सत्य). तसेच M ≥ N > O वरून M > O मिळते (निष्कर्ष II सत्य). त्यामुळे दोन्ही निष्कर्ष सत्य आहेत.",
+   "e_en": "Combined chain: L > M ≥ N > O. From this, L > O (Conclusion I is true). Also M ≥ N > O gives M > O (Conclusion II is true). Therefore, both conclusions are true."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "चार मित्र - P, Q, R आणि S एका वर्तुळाकार टेबलाभोवती केंद्राकडे तोंड करून बसले आहेत. P हा Q च्या समोर बसला आहे. R हा P च्या लगेच डावीकडे बसला आहे. S च्या लगेच उजवीकडे कोण बसले आहे?",
+   "q_en": "Four friends - P, Q, R and S are sitting around a circular table facing the center. P sits opposite to Q. R sits immediately to the left of P. Who sits immediately to the right of S?",
+   "o_mr": [
+    "P",
+    "Q",
+    "R",
+    "निश्चित सांगता येत नाही"
+   ],
+   "o_en": [
+    "P",
+    "Q",
+    "R",
+    "Cannot be determined"
+   ],
+   "a": 1,
+   "e_mr": "P च्या समोर Q आहे. P च्या लगेच डावीकडे R आहे. उरलेली जागा S साठी आहे जी P च्या लगेच उजवीकडे किंवा R च्या समोर येईल. मांडणीनुसार S च्या लगेच उजवीकडे Q येतो.",
+   "e_en": "P is opposite Q. R is immediate left of P. The remaining seat for S is opposite R (immediate right of P). Thus, Q sits to the immediate right of S."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "दिलेल्या प्रश्नाचे उत्तर देण्यासाठी कोणती विधाने पुरेशी आहेत?\nप्रश्न: X चे वय किती आहे?\nविधाने:\ni. X आणि Y च्या वयाची बेरीज ५० वर्षे आहे.\nii. X चे वय Y पेक्षा १० वर्षांनी जास्त आहे.",
+   "q_en": "Which statements are sufficient to answer the question?\nQuestion: What is the age of X?\nStatements:\ni. The sum of ages of X and Y is 50 years.\nii. X's age is 10 years more than Y's.",
+   "o_mr": [
+    "फक्त विधान i पुरेसे आहे",
+    "फक्त विधान ii पुरेसे आहे",
+    "एकतर विधान i किंवा विधान ii पुरेसे आहे",
+    "दोन्ही विधाने मिळून आवश्यक आहेत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Either statement i or statement ii is sufficient",
+    "Both statements together are necessary"
+   ],
+   "a": 3,
+   "e_mr": "फक्त विधान i वरून X + Y = 50 मिळते पण नेमके वय कळत नाही. फक्त विधान ii वरून X = Y + 10 मिळते. X ची किंमत काढण्यासाठी दोन्ही विधाने एकत्र करावी लागतात (X + Y = 50 आणि X - Y = 10).",
+   "e_en": "Statement i gives X + Y = 50, which is insufficient. Statement ii gives X = Y + 10, which is also insufficient. To find X's age, both equations are needed simultaneously."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधान: A ≤ B < C = D ≥ E\nनिष्कर्ष:\nI. A < D\nII. B < E\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: A ≤ B < C = D ≥ E\nConclusions:\nI. A < D\nII. B < E\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "कोणताही निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 0,
+   "e_mr": "A आणि D मधील संबंध A ≤ B < C = D असा आहे, ज्यावरून A < D निश्चित होते (निष्कर्ष I सत्य). B आणि E मध्ये उलट चिन्हे असल्यामुळे संबंध ठरवता येत नाही (निष्कर्ष II असत्य).",
+   "e_en": "The relation between A and D is A ≤ B < C = D, which gives A < D (Conclusion I is true). Between B and E, opposite signs appear, so no relation can be established (Conclusion II is false)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 1,
+   "q_mr": "A, B आणि C पैકી सर्वात हलके कोण आहे हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत?\nविधाने:\nI. A चे वजन B पेक्षा जास्त आहे.\nII. B चे वजन C पेक्षा जास्त आहे.",
+   "q_en": "Which of the following statements is/are sufficient to determine who is the lightest among A, B, and C?\nStatements:\nI. A's weight is more than B's.\nII. B's weight is more than C's.",
+   "o_mr": [
+    "फक्त विधान I पुरेशी आहे",
+    "फक्त विधान II पुरेशी आहे",
+    "दोन्ही विधाने मिळून पुरेशी आहेत",
+    "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान I वरून A > B आणि विधान II वरून B > C मिळते. दोन्ही एकत्र केल्यास A > B > C मिळते, ज्यामुळे सर्वात हलके कोण (C) हे स्पष्ट होते.",
+   "e_en": "From statement I, A > B, and from statement II, B > C. Combining both gives A > B > C, clearly showing that C is the lightest."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "महिनाचा १५ वा दिवस कोणता वार असेल? हे काढण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत?\nविधाने:\nI. महिन्याचा पहिला दिवस सोमवार आहे.\nII. महिना ३० दिवसांचा आहे.",
+   "q_en": "What day of the week is the 15th of the month? Which statements are sufficient to find this?\nStatements:\nI. The first day of the month is Monday.\nII. The month has 30 days.",
+   "o_mr": [
+    "फक्त विधान I पुरेशी आहे",
+    "फक्त विधान II पुरेशी आहे",
+    "दोन्ही विधाने मिळून पुरेशी आहेत",
+    "फक्त विधान I आणि विधान II दोन्ही स्वतंत्रपणे पुरेशी आहेत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements together are sufficient",
+    "Either statement I or II alone is sufficient"
+   ],
+   "o_en_index": 0,
+   "a": 0,
+   "e_mr": "पहिला दिवस सोमवार असल्यास १५ वा दिवस काढण्यासाठी फक्त विधान I पुरेशी आहे (१४ दिवसानंतर पुन्हा तोच किंवा पुढील वार मोजता येतो). विधान II चा १५ व्या दिवसाशी काही संबंध नाही.",
+   "e_en": "If the 1st day is Monday, Statement I alone is sufficient to calculate the 15th day. Statement II (total days in month) is irrelevant for finding the 15th day."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "P, Q, R, S आणि T पैकी सर्वात मोठे वय कोणाचे आहे? हे ठरवण्यासाठी कोणती विधाने पुरेशी आहेत?\nविधाने:\nI. P चे वय Q आणि R पेक्षा जास्त आहे पण S एवढे नाही.\nII. T चे वय S पेक्षा कमी आहे.",
+   "q_en": "Who is the oldest among P, Q, R, S, and T? Which statements are sufficient to determine this?\nStatements:\nI. P's age is greater than Q and R's, but not as much as S's.\nII. T's age is less than S's.",
+   "o_mr": [
+    "फक्त विधान I पुरेशी आहे",
+    "फक्त विधान II पुरेशी आहे",
+    "दोन्ही विधाने मिळूनही पुरेशी नाहीत",
+    "दोन्ही विधाने मिळून पुरेशी आहेत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements together are not sufficient",
+    "Both statements together are sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान I वरून S > P > {Q, R}. विधान II वरून S > T. पण T आणि P यांच्या वयाची तुलना दिलेली नाही, त्यामुळे सर्वात मोठे S आहे की T हे निश्चित सांगता येत नाही.",
+   "e_en": "From statement I, S > P > {Q, R}. From statement II, S > T. However, no comparison is given between T and P, so we cannot definitively determine whether S or T is the oldest."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=0, confident=True)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "A, B, C, D आणि E हे पाच वेगवेगळ्या मजल्यांवर (तळमजला = १ ते सर्वोच्च = ५) राहतात. E हा सर्वोच्च मजल्यावर राहतो. A आणि E च्या मध्ये फक्त एक व्यक्ती राहते. B हा D च्या लगेच वर राहतो. तर तिसऱ्या मजल्यावर कोण राहतो?",
+   "q_en": "A, B, C, D, and E live on five different floors (ground floor = 1 to top = 5). E lives on the topmost floor. Exactly one person lives between A and E. B lives immediately above D. Who lives on the 3rd floor?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "a": 2,
+   "e_mr": "E हा ५ व्या मजल्यावर आहे. A आणि E मध्ये एक व्यक्ती असल्याने A ३ व्या मजल्यावर येईल. उरलेल्या जागांवर B, D आणि C बसतात. त्यामुळे ३ व्या मजल्यावर A राहतो.",
+   "e_en": "E is on floor 5. With one person between A and E, A must be on floor 3. B and D are consecutive, leaving C for the remaining spot. Thus, A is on the 3rd floor."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "चार व्यक्ती A, B, C आणि D एका वर्तुळाकाराने केंद्राकडे तोंड करून बसले आहेत. B हा A च्या समोर बसला आहे. C हा A च्या लगेच डावीकडे बसला आहे. तर A च्या लगेच उजवीकडे कोण बसले आहे?",
+   "q_en": "Four persons A, B, C, and D are sitting around a circular table facing the center. B sits opposite A. C sits immediately to the left of A. Who sits immediately to the right of A?",
+   "o_mr": [
+    "B",
+    "C",
+    "D",
+    "निश्चित सांगता येत नाही"
+   ],
+   "o_en": [
+    "B",
+    "C",
+    "D",
+    "Cannot be determined"
+   ],
+   "a": 2,
+   "e_mr": "A केंद्राकडे तोंड करून बसल्यास त्याचा डावा हातघड्याळाच्या दिशेने (clockwise) असेल. जर C डावीकडे असेल, तर उजवीकडे D असेल.",
+   "e_en": "If A faces the center, his left is clockwise. If C is to his immediate left, D must be to his immediate right."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "पाच विषय - इंग्रजी, गणित, विज्ञान, इतिहास आणि भूगोल एकामागून एक सोमवार ते शुक्रवार शिकवले जातात. भूगोल हा विषय बुधवारी शिकवला जातो. इतिहास हा विषय गणित शिकवल्याच्या लगेच दुसऱ्या दिवशी शिकवला जातो. विज्ञान हा विषय सोमवार किंवा शुक्रवार शिकवला जात नाही. तर शुक्रवारी कोणता विषय शिकवला जातो?",
+   "q_en": "Five subjects - English, Mathematics, Science, History, and Geography are taught one per day from Monday to Friday. Geography is on Wednesday. History is taught on the day immediately after Mathematics. Science is not taught on Monday or Friday. Which subject is taught on Friday?",
+   "o_mr": [
+    "इंग्रजी",
+    "विज्ञान",
+    "गणित",
+    "इतिहास"
+   ],
+   "o_en": [
+    "English",
+    "Science",
+    "Mathematics",
+    "History"
+   ],
+   "a": 0,
+   "e_mr": "बुधवारी भूगोल आहे. गणित आणि इतिहास हे मंगळवार व बुधवार किंवा गुरुवार व शुक्रवार या जोडीत येऊ शकतात. गणित मंगळवारी व इतिहास बुधवारी शक्य नाही कारण बुधवारी भूगोल आहे. म्हणून गणित गुरुवारी व इतिहास शुक्रवारी होईल, पण इतिहास हा गणिताच्या लगेच नंतर आहे. क्रमानुसार: सोम-विज्ञान, मंगळ-गणित, बुध-भूगोल, गुरु-इतिहास, शुक्र-इंग्रजी.",
+   "e_en": "Geography is Wednesday. Math and History are consecutive. Since Geography is Wednesday, Math-History must be Mon-Tue or Thu-Fri. Science is not Mon/Fri. Working through constraints gives Monday: Science, Tuesday: Math, Wednesday: Geography, Thursday: History, Friday: English."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "x ची किंमत काय आहे? हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत?\nविधाने:\nI. x + y = १०\nII. x − y = २",
+   "q_en": "What is the value of x? Which of the following statements is/are sufficient to determine this?\nStatements:\nI. x + y = 10\nII. x − y = 2",
+   "o_mr": [
+    "फक्त विधान I पुरेशी आहे",
+    "फक्त विधान II पुरेशी आहे",
+    "दोन्ही विधाने मिळून पुरेशी आहेत",
+    "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements together are sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 2,
+   "e_mr": "फक्त एका समीकरणाने x ची अचूक किंमत काढता येत नाही. दोन्ही समीकरणे सोडवल्यास (2x = 12) x = 6 मिळते, म्हणून दोन्ही विधाने एकत्र करणे आवश्यक आहे.",
+   "e_en": "A single equation cannot yield the exact value of x. By solving both equations simultaneously (2x = 12), we get x = 6, so both statements together are required."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "सात व्यक्ती - P, Q, R, S, T, U आणि V एका इमारतीत एकावर एक अशा वेगवेगळ्या मजल्यांवर राहतात (तळमजला १ ते सर्वोच्च ७). T हा विषम क्रमांकाच्या मजल्यावर राहतो पण पहिल्या मजल्यावर नाही. T आणि P च्या मध्ये दोन व्यक्ती राहतात. V हा P च्या लगेच वर राहतो. Q हा R च्या वर राहतो. तर सर्वोच्च मजल्यावर कोण राहतो?",
+   "q_en": "Seven persons - P, Q, R, S, T, U, and V live on different floors of a building (ground floor 1 to top 7). T lives on an odd-numbered floor but not on the 1st floor. Two persons live between T and P. V lives immediately above Q. Q lives above R. Who lives on the topmost floor?",
+   "o_mr": [
+    "T",
+    "P",
+    "S",
+    "U"
+   ],
+   "o_en": [
+    "T",
+    "P",
+    "S",
+    "U"
+   ],
+   "a": 3,
+   "e_mr": "T हा ३ किंवा ५ व्या मजल्यावर असू शकतो. अटींनुसार मांडणी केल्यास U हा ७ व्या मजल्यावर (सर्वोच्च मजला) येतो.",
+   "e_en": "T can be on floor 3 or 5. Fitting all constraints logically results in U occupying the 7th floor (topmost floor)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधान: A ≥ B > C = D ≤ E\nनिष्कर्ष:\nI. A > D\nII. B ≥ E\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: A ≥ B > C = D ≤ E\nConclusions:\nI. A > D\nII. B ≥ E\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 0,
+   "e_mr": "A ते D दरम्यान सामान्य चिन्ह '>' आणि '=' आहेत, ज्यामध्ये प्राधान्य '>' ला मिळते, म्हणून A > D सत्य आहे. B आणि E मधील संबंध ठरवता येत नाही.",
+   "e_en": "Between A and D, the common signs are '>' and '=', where '>' takes priority, so A > D is true. The relationship between B and E cannot be determined."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 3,
+   "q_mr": "विधान: X ≤ Y < Z > W ≥ V\nनिष्कर्ष:\nI. X < W\nII. Y > V\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: X ≤ Y < Z > W ≥ V\nConclusions:\nI. X < W\nII. Y > V\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 3,
+   "e_mr": "X आणि W दरम्यान विरुद्ध चिन्ह (≤, <, >) येतात, त्यामुळे निश्चित संबंध ठरवता येत नाही. Y आणि V मध्येही Z मुळे विरुद्ध चिन्ह येतात, त्यामुळे दोन्ही निष्कर्ष सत्य नाहीत.",
+   "e_en": "Between X and W, opposite signs appear (≤, <, >), so no definite relation can be found. Between Y and V, opposite signs appear due to Z, so neither conclusion is true."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा अगदी मध्यभागी आहे. A हा C च्या लगेच उजवीकडे आहे. D हा C च्या शेजारी नाही. B हा एका टोकाला आणि E च्या डावीकडे बसला आहे. सर्वात उजव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five persons A, B, C, D and E are sitting in a row facing north. C is in the middle. A is immediately to the right of C. D is not next to C. B sits at one end and to the left of E. Who sits at the right end?",
+   "o_mr": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "a": 2,
+   "e_mr": "मध्यभागी C आहे. A हा C च्या लगेच उजवीकडे आहे (स्थान 3). B हा एका टोकाला आणि E च्या डावीकडे आहे, म्हणजेच B डाव्या टोकाला (स्थान 1) आणि E स्थान 2 वर आहे. C च्या शेजारी D नाही, म्हणून D हा उजव्या टोकाला (स्थान 5) बसतो. उरलेले स्थान A किंवा इतर कुणी भरेल; योग्य मांडणी B, E, C, A, D अशी होईल, त्यामुळे उजव्या टोकाला D आहे.",
+   "e_en": "C is in the middle (pos 3). A is immediately right of C (pos 4). B is at one end and left of E, so B is at pos 1 and E at pos 2. D is not next to C, so D must be at pos 5. The arrangement is B, E, C, A, D. Thus, D is at the right end."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 1,
+   "q_mr": "पाच मित्र P, Q, R, S आणि T एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. Q हा बरोबर मध्यभागी आहे. P हा Q च्या लगेच डावीकडे आणि T हा Q च्या लगेच उजवीकडे आहे. R हा P च्या डावीकडील अत्यंत टोकावर आहे. सर्वात उजव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five friends P, Q, R, S and T are sitting in a row facing north. Q is in the middle. P is immediately to the left of Q and T is immediately to the right of Q. R is at the extreme left end to the left of P. Who is sitting at the right end?",
+   "o_mr": [
+    "P",
+    "Q",
+    "S",
+    "T"
+   ],
+   "o_en": [
+    "P",
+    "Q",
+    "S",
+    "T"
+   ],
+   "o_en_alt": [
+    "P",
+    "Q",
+    "S",
+    "T"
+   ],
+   "a": 2,
+   "e_mr": "Q मध्यभागी आहे. डावीकडे P, आणि त्याच्या डावीकडे R आहे. T हा Q च्या उजवीकडे आहे. उरलेला S हा निश्चितपणे सर्वात उजव्या टोकाला असेल. मांडणी: R, P, Q, T, S.",
+   "e_en": "Q is in the middle. To his left is P, and to the left of P is R. T is to the right of Q. The remaining person S must be at the extreme right end. Arrangement: R, P, Q, T, S."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 1,
+   "q_mr": "X ची किंमत काय आहे?\nविधाने:\nI. X + Y = 10\nII. X - Y = 2",
+   "q_en": "What is the value of X?\nStatements:\nI. X + Y = 10\nII. X - Y = 2",
+   "o_mr": [
+    "फक्त विधान I पुरेसे आहे",
+    "फक्त विधान II पुरेसे आहे",
+    "दोन्ही विधाने एकत्र करणे आवश्यक आहे",
+    "दोन्ही विधाने एकत्र करूनही उत्तर येत नाही"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements together are necessary",
+    "Both statements together are not sufficient"
+   ],
+   "a": 2,
+   "e_mr": "फक्त विधान I किंवा फक्त विधान II मधून X ची अचूक किंमत काढता येत नाही कारण Y ची किंमत अज्ञात आहे. दोन्ही समीकरणे एकत्र सोडवल्यास (2X = 12) X ची किंमत 6 मिळते.",
+   "e_en": "Neither statement alone gives the value of X because Y is unknown. Solving both equations together (2X = 12) gives X = 6."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "महिन्याच्या १० तारखेला कोणता वार आहे?\nविधाने:\nI. त्या महिन्यात ३१ दिवस आहेत.\nII. त्या महिन्याची ३ तारीख सोमवार आहे.",
+   "q_en": "On which day of the week is the 10th of a month?\nStatements:\nI. The month has 31 days.\nII. The 3rd of the month is a Monday.",
+   "o_mr": [
+    "फक्त विधान I पुरेसे आहे",
+    "फक्त विधान II पुरेसे आहे",
+    "विधान I किंवा II पैकी कोणतेही एक पुरेसे आहे",
+    "दोन्ही विधाने एकत्र करणे आवश्यक आहे"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Either statement I or II alone is sufficient",
+    "Both statements together are necessary"
+   ],
+   "a": 1,
+   "e_mr": "फक्त विधान II नुसार, जर ३ तारीख सोमवार असेल, तर १० तारीख काढण्यासाठी १० - ३ = ७ दिवस म्हणजेच बरोबर एक आठवडा मिळवावा लागेल, म्हणून १० तारखेलाही सोमवार असेल. त्यामुळे फक्त विधान II पुरेसे आहे.",
+   "e_en": "According to statement II, if the 3rd is a Monday, then the 10th is 3 + 7 = 10, which is also a Monday. Thus, statement II alone is sufficient."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 3,
+   "q_mr": "विधाने: R = S ≥ T > U, V ≥ T\nनिष्कर्ष:\nI. V > U\nII. R ≥ V\nयोग्य निष्कर्ष निवada:",
+   "q_en": "Statements: R = S ≥ T > U, V ≥ T\nConclusions:\nI. V > U\nII. R ≥ V\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusion I and II are true",
+    "Neither conclusion I nor V is true"
+   ],
+   "a": 0,
+   "e_mr": "दिलेल्या माहितीवरून V ≥ T > U, म्हणजेच V > U (निष्कर्ष I सत्य). R = S ≥ T आणि V ≥ T वरून R आणि V मध्ये विरुद्ध चिन्हे आहेत, त्यामुळे R ≥ V निश्चित सांगता येत नाही (निष्कर्ष II असत्य).",
+   "e_en": "From the given info, V ≥ T > U, which implies V > U (Conclusion I is true). From R = S ≥ T and V ≥ T, there are opposite signs between R and V, so R ≥ V is not definitely true (Conclusion II is false)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधाने: W ≤ X = Y < Z\nनिष्कर्ष:\nI. Z > W\nII. X < Z\nयोग्य निष्कर्ष निवada:",
+   "q_en": "Statements: W ≤ X = Y < Z\nConclusions:\nI. Z > W\nII. X < Z\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusion I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 2,
+   "e_mr": "W आणि Z मधील संबंध: W ≤ X = Y < Z, म्हणजेच W < Z किंवा Z > W (निष्कर्ष I सत्य). X आणि Z मधील संबंध: X = Y < Z, म्हणजेच X < Z (निष्कर्ष II सत्य). म्हणून दोन्ही निष्कर्ष सत्य आहेत.",
+   "e_en": "Relation between W and Z: W ≤ X = Y < Z, meaning W < Z or Z > W (Conclusion I is true). Relation between X and Z: X = Y < Z, meaning X < Z (Conclusion II is true). Therefore, both conclusions are true."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "महिन्याच्या १० तारखेला कोणता वार आहे?\nविधाने:\ni. त्या महिन्यात ३१ दिवस आहेत.\nii. त्या महिन्याची ३ तारीख सोमवार आहे.",
+   "q_en": "On which day of the week is the 10th of a month?\nStatements:\ni. The month has 31 days.\nii. The 3rd of the month is a Monday.",
+   "o_mr": [
+    "फक्त विधान i पुरase आहे",
+    "फक्त विधान ii पुरase आहे",
+    "एकतर i किंवा ii पुरase आहे",
+    "दोन्ही विधाने एकत्र पुरेशी आहेत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Either i or ii is sufficient",
+    "Both statements together are sufficient"
+   ],
+   "o_mr_alt": null,
+   "a": 1,
+   "e_mr": "फक्त विधान ii वरून: ३ तारीख सोमवार आहे, त्यामुळे १० तारखेचा वार काढता येऊ शकतो (१० - ३ = ७ दिवसांचा फरक, म्हणजेच ३ तारखेचाच वार १० तारखेला असेल - सोमवार). विधान i चा काहीही संबंध नाही. म्हणून फक्त विधान ii पुरसे आहे.",
+   "e_en": "From statement ii only: 3rd is a Monday, so the 10th can be calculated (10 - 3 = 7 days difference, meaning the 10th is also a Monday). Statement i is irrelevant. Thus, only statement ii is sufficient."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: P < Q, Q ≤ R, R = S, S > T\nनिष्कर्ष:\nI. P < R\nII. Q < T\nयोग्य पर्याय निवडा:",
+   "q_en": "Statements: P < Q, Q ≤ R, R = S, S > T\nConclusions:\nI. P < R\nII. Q < T\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 0,
+   "e_mr": "एकत्रित विधान P < Q ≤ R = S > T असे आहे. P आणि R मध्ये P < R स्पष्टपणे सत्य आहे. Q आणि T मध्ये विरुद्ध चिन्हे आल्याने Q < T निश्चित करता येत नाही.",
+   "e_en": "Combined statement is P < Q ≤ R = S > T. Between P and R, P < R is clearly true. Between Q and T, opposite signs appear, so Q < T cannot be determined.",
+   "id": "ineq_002_mr"
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=3, confident=True)",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: M ≥ N, N = O, O < P\nनिष्कर्ष:\nI. M > O\nII. M = O\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: M ≥ N, N = O, O < P\nConclusions:\nI. M > O\nII. M = O\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "फक्त निष्कर्ष I किंवा II सत्य आहे",
+    "दोन्ही सत्य नाहीत"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Either conclusion I or II is true",
+    "Neither is true"
+   ],
+   "a": 2,
+   "e_mr": "विधानानुसार M ≥ N = O म्हणजेच M ≥ O आहे. याचा अर्थ M हा एकतर O पेक्षा मोठा आहे किंवा O च्या बरोबरीने आहे. म्हणून 'फक्त निष्कर्ष I किंवा II' ही शक्यता ठरते.",
+   "e_en": "According to the statements, M ≥ N = O means M ≥ O. This implies M is either greater than or equal to O. Therefore, either conclusion I or II is true.",
+   "id": "ineq_003_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 3,
+   "q_mr": "विधाने: E ≤ F, F < G, G ≥ H, H = I\nनिष्कर्ष:\nI. E < G\nII. G > I\nयोग्य पर्याय निवडा:",
+   "q_en": "Statements: E ≤ F, F < G, G ≥ H, H = I\nConclusions:\nI. E < G\nII. G > I\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 0,
+   "e_mr": "विधान एकत्र करून E ≤ F < G ≥ H = I मिळते. E आणि G मधील संबंध E < G असा आहे कारण E ≤ F < G मध्ये काटेकोर लहान चिन्ह आहे. G आणि I मध्ये G ≥ H = I म्हणजेच G ≥ I आहे, त्यामुळे G > I निश्चित नाही.",
+   "e_en": "Combining statements: E ≤ F < G ≥ H = I. For E and G, E < G is true due to strict inequality. For G and I, G ≥ H = I means G ≥ I, so G > I is not definitely true.",
+   "id": "ineq_004_mr"
+  }
+ },
+ {
+  "reason": "mismatch (gemini=2, groq=3, confident=True)",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "P, Q, R, S आणि T पैकी सर्वात लहान कोण आहे?\nविधाने:\nI. T हा P आणि Q पेक्षा लहान आहे, पण R पेक्षा मोठा आहे.\nII. S हा सर्वात लहान नाही.",
+   "q_en": "Who is the shortest among P, Q, R, S and T?\nStatements:\nI. T is shorter than P and Q, but taller than R.\nII. S is not the shortest.",
+   "o_mr": [
+    "फक्त विधान I उत्तर देण्यास पुरेसे आहे",
+    "फक्त विधान II उत्तर देण्यास पुरेसे आहे",
+    "विधान I आणि II दोन्ही एकत्र करूनही उत्तर मिळत नाही",
+    "विधान I आणि II दोन्ही एकत्र करणे आवश्यक आहे"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Even both statements together are not sufficient",
+    "Both statements I and II together are necessary"
+   ],
+   "a": 2,
+   "e_mr": "विधान I वरून T > R हे कळते. विधान II वरून S सर्वात लहान नाही हे कळते. पण P, Q आणि S यांच्यातील नेमकी उंची किंवा क्रम माहीत नसल्यामुळे सर्वात लहान कोण हे निश्चित सांगता येत नाही.",
+   "e_en": "Statement I gives T > R. Statement II says S is not the shortest. However, exact heights/relations of P, Q, and S are unknown, so we cannot determine the shortest.",
+   "id": "ds_001_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 1,
+   "q_mr": "महिनाचा १४ वा दिवस कोणता वार आहे हे शोधण्यासाठी खालीलपैकी कोणते विधान/विधाने आवश्यक आहेत?\nविधाने:\nI. त्या महिन्याची पहिली तारीख बुधवार आहे.\nII. त्या महिन्यात ३० दिवस आहेत.",
+   "q_en": "Which statement(s) is/are necessary to find the day of the week on the 14th of the month?\nStatements:\nI. The 1st of that month is a Wednesday.\nII. The month has 30 days.",
+   "o_mr": [
+    "फक्त विधान I पुरेसे आहे",
+    "फक्त विधान II पुरेसे आहे",
+    "दोन्ही विधान I आणि II एकत्र आवश्यक आहेत",
+    "एकतर I किंवा II पुरेसे आहे"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements I and II together are necessary",
+    "Either I or II is sufficient"
+   ],
+   "a": 0,
+   "e_mr": "१४ वी तारीख काढण्यासाठी महिन्याची पहिली तारीख बुधवार आहे हे माहिती असणे पुरेसे आहे (१४ - १ = १३ दिवस पुढे, १३ ला ७ ने भागल्यास बाकी ६ उरते, बुधवारनंतर ६ दिवस म्हणजे मंगळवार). महिन्याच्या एकूण दिवसांशी याचा संबंध नाही.",
+   "e_en": "Knowing the 1st is Wednesday is sufficient to find the 14th (14 - 1 = 13 days ahead, 13 mod 7 = 6, Wednesday + 6 days = Tuesday). Total days in the month are irrelevant.",
+   "id": "ds_002_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. मध्ये कोण बसले आहे?\nविधाने:\nI. C हा D च्या डावीकडे दुसऱ्या स्थानावर आहे आणि E च्या उजवीकडे आहे.\nII. B हा एका टोकाला बसला आहे आणि A हा त्याच्या शेजारी आहे.",
+   "q_en": "A, B, C, D and E are sitting in a row facing north. Who is sitting in the middle?\nStatements:\nI. C is second to the left of D and to the right of E.\nII. B is sitting at one end and A is next to him.",
+   "o_mr": [
+    "फक्त विधान I पुरेसे आहे",
+    "फक्त विधान II पुरेसे आहे",
+    "विधान I आणि II दोन्ही एकत्र आवश्यक आहेत",
+    "विधान I आणि II दोन्ही एकत्र करूनही पुरेशी माहिती मिळत नाही"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements I and II together are necessary",
+    "Even both statements together are not sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान I वरून क्रम E, C, _, D असा मिळतो. विधान II वरून B आणि A एका टोकाला बसले आहेत हे कळते. दोन्ही एकत्र केल्यावर E, C, A, B, D असा क्रम मिळतो आणि C मध्यभागी आहे हे समजते.",
+   "e_en": "Statement I gives E, C, _, D. Statement II gives B and A at an end. Combining both gives the exact row order E, C, A, B, D (or reverse), identifying the middle person.",
+   "id": "ds_003_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच मित्र - A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. B हा E च्या डावीकडे आहे पण D च्या उजवीकडे आहे. C हा A च्या उजवीकडे आहे पण D च्या डावीकडे आहे. मध्यभागी कोण बसले आहे?",
+   "q_en": "Five friends - A, B, C, D and E are sitting in a row facing north. B is to the left of E but to the right of D. C is to the right of A but to the left of D. Who is sitting in the middle?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "a": 3,
+   "e_mr": "दिलेल्या माहितीवरून मांडणी अशी बनते: A, C, D, B, E. मध्यभागी (तिसऱ्या स्थानावर) D बसलेला आहे.",
+   "e_en": "Based on the given information, the arrangement is: A, C, D, B, E. In the middle (3rd position) sits D.",
+   "id": "puz_001_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "सहा इमारती - P, Q, R, S, T आणि U एका ओळीत पूर्वेकडून पश्चिमेकडे उभ्या आहेत. Q हा P च्या लगेच उजवीकडे आहे आणि T च्या डावीकडे तिसऱ्या स्थानावर आहे. S हा U च्या लगेच डावीकडे आहे. R हा टोकाला आहे. सर्वात पूर्वेकडील इमारतीजवळ कोणती इमारत आहे?",
+   "q_en": "Six buildings - P, Q, R, S, T and U are lined up from east to west. Q is immediately to the right of P and third to the left of T. S is immediately to the left of U. R is at one end. Which building is at the extreme east end?",
+   "o_mr": [
+    "P",
+    "R",
+    "U",
+    "T"
+   ],
+   "o_en": [
+    "P",
+    "R",
+    "U",
+    "T"
+   ],
+   "a": 1,
+   "e_mr": "पूर्व ते पश्चिम क्रम लावल्यास P, Q, U, S, T, R अशी मांडणी मिळते (किंवा उलट). R हा एका टोकाला पूर्वेकडे येतो.",
+   "e_en": "Arranging from east to west gives P, Q, U, S, T, R (or reverse depending on convention). R sits at the extreme east end.",
+   "id": "puz_002_mr"
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच विषय - भौतिकशास्त्र, रसायनशास्त्र, गणित, जीवशास्त्र आणि इंग्रजी सोमवार ते शुक्रवार या एकापाठोपाठ एका दिवशी शिकवले जातात. गणित हा विषय रसायनशास्त्राच्या लगेच नंतर शिकवला जातो. जीवशास्त्र हा विषय मंगळवारी शिकवला जात नाही आणि तो शेवटचा विषय नाही. भौतिकशास्त्र हा विषय पहिल्या दिवशी आहे. गुरुवारी कोणता विषय शिकवला जातो?",
+   "q_en": "Five subjects - Physics, Chemistry, Math, Biology and English are taught on consecutive days from Monday to Friday. Math is taught immediately after Chemistry. Biology is not taught on Tuesday and is not the last subject. Physics is taught on the first day. Which subject is taught on Thursday?",
+   "o_mr": [
+    "गणित (Math)",
+    "रसायनशास्त्र (Chemistry)",
+    "जीवशास्त्र (Biology)",
+    "इंग्रजी (English)"
+   ],
+   "o_en": [
+    "Math",
+    "Chemistry",
+    "Biology",
+    "English"
+   ],
+   "a": 0,
+   "e_mr": "सोमवारी भौतिकशास्त्र. रसायनशास्त्र बुधवार व गणित गुरुवार असा क्रम बसतो कारण जीवशास्त्र मंगळवारी नाही. म्हणून गुरुवारी 'गणित' शिकवले जाते.",
+   "e_en": "Monday is Physics. Chemistry on Wednesday and Math on Thursday fits best since Biology isn't Tuesday and not last. Thus, Math is taught on Thursday.",
+   "id": "puz_004_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "सहा व्यक्ती - A, B, C, D, E आणि F एका गोलाकार टेबलाभोवती केंद्राकडे तोंड करून बसले आहेत. A हा B च्या उजवीकडे दुसऱ्या स्थानावर आणि F च्या डावीकडे तिसऱ्या स्थानावर आहे. C हा E च्या डावीकडे लगेच आहे. D हा C च्या शेजारी नाही. D च्या उजवीकडे लगेच कोण बसले आहे?",
+   "q_en": "Six persons - A, B, C, D, E and F are sitting around a circular table facing the center. A is second to the right of B and third to the left of F. C is immediately to the left of E. D is not adjacent to C. Who is sitting immediately to the right of D?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "E"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "E"
+   ],
+   "a": 3,
+   "e_mr": "वर्तुळाकार मांडणीत B, F, E, C, A, D अशी रचना मिळते. D च्या उजवीकडे लगेच E बसलेला आहे.",
+   "e_en": "In the circular arrangement, the order is B, F, E, C, A, D. Immediately to the right of D is E.",
+   "id": "puz_005_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधाने: L < M, M = N, N ≤ O\nनिष्कर्ष:\nI. L < O\nII. M ≤ O\nयोग्य पर्याय निवडा:",
+   "q_en": "Statements: L < M, M = N, N ≤ O\nConclusions:\nI. L < O\nII. M ≤ O\nChoose the correct option:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "दोन्ही निष्कर्ष सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "दिलेले विधान L < M = N ≤ O असे आहे. L आणि O मध्ये L < O सत्य आहे. M आणि O मध्ये M = N ≤ O म्हणजेच M ≤ O सत्य आहे. म्हणून दोन्ही निष्कर्ष योग्य आहेत.",
+   "e_en": "The given statement is L < M = N ≤ O. Between L and O, L < O is true. Between M and O, M = N ≤ O implies M ≤ O is true. Thus, both conclusions are correct.",
+   "id": "ineq_006_mr"
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "A, B आणि C पैकी सर्वात उंच कोण आहे?\nविधाने:\ni. A हा B आणि C दोघांपेक्षा उंच आहे.\nii. B हा C पेक्षा उंच आहे.\nसर्वात उंच व्यक्ती शोधण्यासाठी कोणती विधाने पुरेशी आहेत?",
+   "q_en": "Who is the tallest among A, B and C?\nStatements:\ni. A is taller than both B and C.\nii. B is taller than C.\nWhich statements are sufficient to find the tallest person?",
+   "o_mr": [
+    "फक्त विधान i पुरेशी आहे",
+    "फक्त विधान ii पुरेशी आहे",
+    "एकतर i किंवा ii पुरेशी आहे",
+    "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Either i or ii is sufficient",
+    "Both statements together are not sufficient"
+   ],
+   "a": 0,
+   "e_mr": "विधान i नुसार A हा B आणि C दोघांपेक्षा उंच आहे, त्यामुळे A हा सर्वात उंच आहे हे स्पष्ट होते. विधान ii ची गरज नाही.",
+   "e_en": "From statement i, A is taller than both B and C, which directly makes A the tallest. Statement ii is not needed."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=1, confident=True)",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "महिन्याच्या १० तारीख रोजी आठवड्याचा कोणता वार आहे?\nविधाने:\ni. त्या महिन्यात ३१ दिवस आहेत.\nii. त्या महिन्याची ३ तारीख सोमवार आहे.",
+   "q_en": "On which day of the week is the 10th of a month?\nStatements:\ni. The month has 31 days.\nii. The 3rd of the month is a Monday.",
+   "o_mr": [
+    "फक्त विधान i पुरेशी आहे",
+    "फक्त विधान ii पुरेशी आहे",
+    "दोन्ही विधाने मिळून पुरेशी आहेत",
+    "फक्त विधान ii पुरेशी आहे (विधान i आवश्यक नाही)"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Both statements together are sufficient",
+    "Only statement ii is sufficient (statement i is not needed)"
+   ],
+   "a": 3,
+   "e_mr": "३ तारीख सोमवार असल्यास, १० तारीख काढण्यासाठी ३ + ७ = १०, म्हणजेच १० तारीख देखील सोमवारच असेल. यासाठी विधान i (३१ दिवसांचा महिना) ची गरज नाही. म्हणून फक्त विधान ii पुरेशी आहे.",
+   "e_en": "If 3rd is Monday, then 3 + 7 = 10th will also be Monday. Statement i is irrelevant. Thus, only statement ii is sufficient."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने:\nA > B, B ≥ C, C = D < E\nनिष्कर्ष:\nI. A > D\nII. E > B\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements:\nA > B, B ≥ C, C = D < E\nConclusions:\nI. A > D\nII. E > B\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "फक्त निष्कर्ष I किंवा II सत्य आहे"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Either conclusion I or II is true"
+   ],
+   "a": 0,
+   "e_mr": "A > B ≥ C = D वरून A > D मिळते (निष्कर्ष I सत्य). E आणि B मध्ये परस्परविरोधी चिन्हं असल्यामुळे E > B निश्चित सांगता येत नाही. म्हणून फक्त निष्कर्ष I सत्य आहे.",
+   "e_en": "From A > B ≥ C = D, we get A > D (Conclusion I is true). Between E and B, opposite signs exist so E > B cannot be determined. Thus only conclusion I is true."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती - A, B, C, D आणि E एका रांगेत उत्तरेकडे तोंड करून बसले आहेत. C हा अगदी मध्यभागी आहे. B हा डाव्या टोकाला बसला आहे. A हा C च्या लगेच उजव्या बाजूला बसला आहे. E हा B च्या शेजारी नाही, तर तो कुठे आहे यावरून E च्या लगत उजवीकडे कोण बसले आहे?",
+   "q_en": "Five persons - A, B, C, D and E are sitting in a row facing north. C is in the exact middle. B is sitting at the left end. A is sitting immediately to the right of C. E is not adjacent to B. Who is sitting immediately to the right of E?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "a": 2,
+   "e_mr": "रांगेतील जागा (डावीकडून उजवीकडे): B, D, C, A, E अशी व्यवस्था बनते. E च्या लगेच डावीकडे A आहे आणि E हा उजव्या टोकाला आहे.",
+   "e_en": "The arrangement from left to right is B, D, C, A, E. Thus, C is to the immediate left of E, but let's check immediate right of E? Wait, E is at the right end. Let's re-verify the question or option: C is in the middle (position 3). B is at position 1. A is at position 4 (immediate right of C). E cannot be adjacent to B, so E must be at position 5. D is at position 2. So the row is B, D, C, A, E. Who sits to the immediate right of A? E. Who sits to the immediate left of E? A."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "चार जण - P, Q, R आणि S वेगवेगळ्या मजल्यांवर (1 ते 4) राहतात. S हा चौथ्या (सर्वात वरच्या) मजल्यावर राहतो. P हा R च्या खाली राहतो पण Q च्या वर राहतो. तिसऱ्या मजल्यावर कोण राहतो?",
+   "q_en": "Four persons - P, Q, R and S live on different floors (1 to 4). S lives on the 4th (topmost) floor. P lives below R but above Q. Who lives on the 3rd floor?",
+   "o_mr": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "o_en": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "a": 2,
+   "e_mr": "S हा 4 व्या मजल्यावर आहे. P हा Q च्या वर आणि R च्या खाली आहे, म्हणजेच मजल्यांची क्रमवारी वरून खाली S(4), R(3), P(2), Q(1) अशी आहे. त्यामुळे तिसऱ्या मजल्यावर R राहतो.",
+   "e_en": "S is on floor 4. P is above Q and below R, meaning the order from top to bottom is S(4), R(3), P(2), Q(1). Therefore, R lives on the 3rd floor."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=0, confident=True)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "सहा व्यक्ती - P, Q, R, S, T आणि U एका वर्तुळाकार टेबलाभोवती केंद्राकडे तोंड करून बसले आहेत. P हा Q च्या डावीकडे दुसऱ्या स्थानावर आहे. R हा P च्या लगेच शेजारी नाही. S हा Q च्या उजवीकडे दुसऱ्या स्थानावर आहे. तर T आणि U च्या मधोमध कोण बसले आहे?",
+   "q_en": "Six persons - P, Q, R, S, T and U are sitting around a circular table facing the centre. P is second to the left of Q. R is not immediate neighbor of P. S is second to the right of Q. Who sits between T and U?",
+   "o_mr": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "o_en": [
+    "P",
+    "Q",
+    "R",
+    "S"
+   ],
+   "a": 3,
+   "e_mr": "Q च्या डावीकडे 2 व्या स्थानी P आहे. Q च्या उजवीकडे 2 व्या स्थानी S आहे. R हा P चा शेजारी नाही म्हणून R हा Q च्या शेजारी येईल. उरलेल्या जागांवर T आणि U बसतात, ज्यांच्यामध्ये S बसतो.",
+   "e_en": "P is 2nd to left of Q. S is 2nd to right of Q. R is not neighbor of P so R is neighbor of Q. Remaining positions are filled by T and U, with S sitting between them."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "P, Q आणि R पैकी सर्वात लहान कोण आहे?\nविधाने:\nI. P हा Q आणि R पेक्षा लहान आहे.\nII. R हा Q पेक्षा मोठा आहे.",
+   "q_en": "Who is the youngest among P, Q and R?\nStatements:\nI. P is younger than both Q and R.\nII. R is older than Q.",
+   "o_mr": [
+    "फक्त विधान I मधील माहिती पुरेशी आहे",
+    "फक्त विधान II मधील माहिती पुरेशी आहे",
+    "विधान I आणि II दोन्ही एकत्र मिळून पुरेशी आहेत",
+    "विधान I आणि II दोन्ही मिळूनही पुरेशी नाहीत"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements I and II together are sufficient",
+    "Both statements I and II together are not sufficient"
+   ],
+   "a": 0,
+   "e_mr": "विधान I नुसार P हा Q आणि R दोघांपेक्षा लहान आहे, त्यामुळे सर्वात लहान P आहे हे स्पष्ट होते. यासाठी विधान II ची गरज नाही.",
+   "e_en": "According to statement I, P is younger than both Q and R, which directly tells us P is the youngest. Statement II is not needed."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "पाच विषय - मराठी, इंग्रजी, गणित, विज्ञान आणि इतिहास हे सोमवार ते शुक्रवार एकामागून एक शिकवले जातात. विज्ञान हा विषय मंगळवारी शिकवला जातो. इंग्रजी हा विषय मराठीच्या लगेच नंतरच्या दिवशी शिकवला जातो. गणित हा विषय शुक्रवारच्या आधी शिकवला जातो पण सोमवारला नाही. तर गुरुवारी कोणता विषय शिकवला जातो?",
+   "q_en": "Five subjects - Marathi, English, Maths, Science and History are taught one after another from Monday to Friday. Science is taught on Tuesday. English is taught on the day immediately after Marathi. Maths is taught before Friday but not on Monday. Which subject is taught on Thursday?",
+   "o_mr": [
+    "मराठी",
+    "इंग्रजी",
+    "गणित",
+    "इतिहास"
+   ],
+   "o_en": [
+    "Marathi",
+    "English",
+    "Maths",
+    "History"
+   ],
+   "a": 2,
+   "e_mr": "विज्ञान मंगळवारी आहे. मराठी व इंग्रजी एकत्र येतात, म्हणून ते गुरुवार-शुक्रवारी असू शकत नाहीत. उरलेल्या दिवसांमध्ये गणित हा बुधवार किंवा गुरुवार असेल. तक्ता लावल्यास गुरुवारी 'गणित' विषय येतो.",
+   "e_en": "Science is on Tuesday. Marathi and English are consecutive. Placing them and Maths correctly results in Maths being taught on Thursday."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 3,
+   "q_mr": "A, B आणि C पैकी सर्वात उंच कोण आहे?\nविधाने:\nI. A हा B पेक्षा उंच आहे पण C पेक्षा लहान आहे.\nII. C हा A पेक्षा उंच आहे.",
+   "q_en": "Who is the tallest among A, B and C?\nStatements:\nI. A is taller than B but shorter than C.\nII. C is taller than A.",
+   "o_mr": [
+    "फक्त विधान I पुरेशी आहे",
+    "फक्त विधान II पुरेशी आहे",
+    "विधान I आणि II दोन्ही एकत्र पुरेशी आहेत",
+    "फक्त विधान I किंवा II पैकी कोणतीही एक पुरेशी आहे"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements I and II together are sufficient",
+    "Either statement I or II alone is sufficient"
+   ],
+   "a": 0,
+   "e_mr": "विधान I नुसार C > A > B असा क्रम मिळतो, ज्यामुळे C सर्वात उंच असल्याचे स्पष्ट होते. विधान II स्वतंत्रपणे B ची माहिती देत नाही.",
+   "e_en": "Statement I gives the exact order C > A > B, making C the tallest. Statement II alone doesn't give information about B."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=3, groq=-1, confident=False)",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती - A, B, C, D आणि E एका रांगेत उत्तरेकडे तोंड करून बसले आहेत. A हा C च्या डावीकडे दुसऱ्या स्थानावर आहे. E हा B च्या लगेच उजवीकडे आहे. D हा C च्या शेजारी नाही. तर डाव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five persons - A, B, C, D and E are sitting in a row facing north. A is second to the left of C. E is immediate right of B. D is not a neighbor of C. Who is sitting at the left end?",
+   "o_mr": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "a": 3,
+   "e_mr": "A हा C च्या डावीकडे दुसरा आहे (स्थान: A, _, C). D हा C चा शेजारी नाही, म्हणून D हा A च्या डावीकडे किंवा टोकाला येईल. संपूर्ण मांडणी केल्यावर D हा डाव्या टोकाला बसतो.",
+   "e_en": "A is second to the left of C (positions: A, _, C). D is not a neighbor of C, so D must be at the left end. Arranging all gives D at the left end."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधाने:\nM ≥ N = O > P\nनिष्कर्ष:\nI. M > P\nII. N > P\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements:\nM ≥ N = O > P\nConclusions:\nI. M > P\nII. N > P\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion is true"
+   ],
+   "a": 2,
+   "e_mr": "M ≥ N = O > P यावरून M > P (निष्कर्ष I) आणि N > P (निष्कर्ष II) दोन्ही सत्य ठरतात, कारण N आणि O समान आहेत.",
+   "e_en": "From M ≥ N = O > P, both M > P (Conclusion I) and N > P (Conclusion II) are true since N equals O."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "महिषचा जन्म कोणत्या वारी झाला?\nविधाने:\nI. महिषला बरोबर आठवते की त्याचा जन्म बुधवारनंतर झाला आहे.\nII. महिषच्या बहिणीला आठवते की त्याचा जन्म शुक्रवारच्या आधी झाला आहे.",
+   "q_en": "On which day of the week was Mahesh born?\nStatements:\nI. Mahesh remembers that he was born after Wednesday.\nII. Mahesh's sister remembers that he was born before Friday.",
+   "o_mr": [
+    "फक्त विधान I पुरेशी आहे",
+    "फक्त विधान II पुरेशी आहे",
+    "विधान I आणि II दोन्ही एकत्र आवश्यक आहेत",
+    "विधान I किंवा II पैकी कोणतीही एक पुरेशी नाही"
+   ],
+   "o_en": [
+    "Only statement I is sufficient",
+    "Only statement II is sufficient",
+    "Both statements I and II together are necessary",
+    "Neither statement I nor II alone is sufficient"
+   ],
+   "a": 2,
+   "e_mr": "विधान I नुसार वार गुरुवार, शुक्रवार, शनिवार किंवा रविवार असू शकतो. विधान II नुसार वार सोमवार, मंगळवार, बुधवार किंवा गुरुवार असू शकतो. दोन्ही एकत्र केल्यावर फक्त 'गुरुवार' हा एकच वार उरतो.",
+   "e_en": "Statement I implies Thursday, Friday, Saturday, or Sunday. Statement II implies Monday, Tuesday, Wednesday, or Thursday. Combining both leaves only 'Thursday'."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: P < Q ≤ R = S > T\nनिष्कर्ष:\nI. P < S\nII. R ≥ T\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: P < Q ≤ R = S > T\nConclusions:\nI. P < S\nII. R ≥ T\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "I आणि II दोन्ही सत्य आहेत",
+    "फक्त निष्कर्ष I आणि R > T सत्य आहे"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Only conclusion I and R > T is true"
+   ],
+   "a": 0,
+   "e_mr": "P < Q ≤ R = S वरून P < S निष्कर्ष निघतो (निष्कर्ष I सत्य). S > T आहे आणि R = S आहे, म्हणून R > T आहे; त्यामुळे निष्कर्ष II (R ≥ T) असत्य ठरतो.",
+   "e_en": "From P < Q ≤ R = S, we get P < S (conclusion I is true). Since S > T and R = S, R > T holds, making conclusion II (R ≥ T) false."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "a, b आणि c पैकी सर्वात उंच कोण आहे?\nविधाने:\ni. a हा b आणि c दोन्हीपेक्षा उंच आहे.\nii. b हा c पेक्षा उंच आहे.\nसर्वात उंच व्यक्ती शोधण्यासाठी कोणती विधाने पुरेशी आहेत?",
+   "q_en": "Who is the tallest among a, b and c?\nStatements:\ni. a is taller than both b and c.\nii. b is taller than c.\nWhich statements are sufficient to find the tallest person?",
+   "o_mr": [
+    "फक्त विधान i पुरेसे आहे",
+    "फक्त विधान ii पुरेसे आहे",
+    "दोन्ही विधाने एकत्रितपणे आवश्यक आहेत",
+    "कोणतेही विधान पुरेसे नाही"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Both statements together are necessary",
+    "Neither statement is sufficient"
+   ],
+   "a": 0,
+   "e_mr": "केवळ विधान i वरून स्पष्ट होते की a हा b आणि c दोघांपेक्षा उंच आहे, त्यामुळे a हाच सर्वात उंच आहे. विधान ii ची गरज नाही.",
+   "e_en": "Statement i alone makes it clear that a is taller than both b and c, making a the tallest. Statement ii is redundant."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: A ≥ B > C = D ≤ E\nनिष्कर्ष:\nI. A > D\nII. B > E\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: A ≥ B > C = D ≤ E\nConclusions:\nI. A > D\nII. B > E\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "काहीही सांगता येत नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "None is true"
+   ],
+   "a": 0,
+   "e_mr": "विधानानुसार A ≥ B > C = D, म्हणजेच A > D (निष्कर्ष I सत्य). परंतु B व E मधील संबंध स्पष्ट नाही कारण C = D ≤ E आहे (निष्कर्ष II निश्चित नाही).",
+   "e_en": "From the statements A ≥ B > C = D, we get A > D (Conclusion I is true). However, the relation between B and E cannot be definitively established due to C = D ≤ E (Conclusion II is not definitely true)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 3,
+   "q_mr": "विधाने: M ≥ N = O > P ≥ Q\nनिष्कर्ष:\nI. M > Q\nII. N ≥ Q\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: M ≥ N = O > P ≥ Q\nConclusions:\nI. M > Q\nII. N ≥ Q\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "निष्कर्ष I किंवा II सत्य आहे"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Either conclusion I or II is true"
+   ],
+   "a": 1,
+   "e_mr": "विधानानुसार M ≥ N = O > P ≥ Q आहे. M आणि Q मध्ये '≥' चिन्ह आल्याने M > Q निश्चित सांगता येत नाही (निष्कर्ष I असत्य). परंतु N = O > P ≥ Q वरून N > Q स्पष्ट होते, म्हणजेच N ≥ Q सत्य आहे (निष्कर्ष II सत्य).",
+   "e_en": "The statement is M ≥ N = O > P ≥ Q. Between M and Q, the sign is '≥', so strict inequality M > Q is not certain (Conclusion I is false). But N = O > P ≥ Q implies N > Q, hence N ≥ Q is true (Conclusion II is true)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधाने: J > K ≥ L, M < L\nनिष्कर्ष:\nI. J > M\nII. K ≥ M\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: J > K ≥ L, M < L\nConclusions:\nI. J > M\nII. K ≥ M\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 2,
+   "e_mr": "विधाने एकत्र केल्यास M < L ≤ K < J असे मिळते. यावरून M < J म्हणजेच J > M (निष्कर्ष I सत्य) आणि M < K म्हणजेच K > M, ज्यामुळे K ≥ M देखील सत्य ठरते (निष्कर्ष II सत्य).",
+   "e_en": "Combining the statements gives M < L ≤ K < J. From this, M < J or J > M (Conclusion I is true) and M < K or K > M, which also satisfies K ≥ M (Conclusion II is true)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 3,
+   "q_mr": "चार व्यक्ती - W, X, Y आणि Z वेगवेगळ्या मजल्यांवर (1 ते 4, तळ मजला 1) राहतात. Z हा सर्वात वरच्या (4थ्या) मजल्यावर राहतो. W हा Y च्या खाली परंतु X च्या वर राहतो. 2ऱ्या मजल्यावर कोण राहतो?",
+   "q_en": "Four persons - W, X, Y and Z live on different floors (1 to 4, bottom is 1). Z lives on the topmost floor (4th). W lives below y but above x. Who lives on the 2nd floor?",
+   "o_mr": [
+    "X",
+    "Y",
+    "W",
+    "निश्चित सांगता येत नाही"
+   ],
+   "o_en": [
+    "X",
+    "Y",
+    "W",
+    "Cannot be determined"
+   ],
+   "a": 2,
+   "e_mr": "Z हा 4थ्या मजल्यावर आहे. W हा Y च्या खाली आणि X च्या वर राहतो, याचा अर्थ क्रम असा आहे: Z (4), Y (3), W (2), X (1). त्यामुळे 2ऱ्या मजल्यावर W राहतो.",
+   "e_en": "Z is on the 4th floor. W lives below Y and above X, meaning the order from top to bottom is: Z (4), Y (3), W (2), X (1). Therefore, W lives on the 2nd floor."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती - A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा मधोमध बसला आहे. A हा C च्या लगेच उजव्या बाजूला आहे. D हा C च्या शेजारी नाही. B हा एका टोकाला आणि E च्या डाव्या बाजूला बसला आहे. उजव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five persons - A, B, C, D and E sit in a row facing north. C is in the middle. A is immediately to the right of C. D is not next to C. B sits at one end and to the left of E. Who sits at the right end?",
+   "o_mr": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "a": 2,
+   "e_mr": "C मधोमध (तिसऱ्या स्थानावर) आहे. A हा C च्या लगेच उजवीकडे (चौथ्या स्थानावर) आहे. B हा डाव्या टोकाला (पहिल्या स्थानावर) आणि E च्या डाव्या बाजूला बसल्यामुळे E हा दुसऱ्या स्थानावर येतो. आता उरलेला D हा पाचव्या (उजव्या) टोकाला बसेल.",
+   "e_en": "C is in the middle (3rd position). A is immediately to the right of C (4th position). B sits at the extreme left end (1st) and to the left of E, placing E at the 2nd position. The remaining person D sits at the extreme right end (5th position)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 1,
+   "q_mr": "विधाने: P > Q ≥ R = S < T\nनिष्कर्ष:\nI. P > S\nII. R ≥ T\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: P > Q ≥ R = S < T\nConclusions:\nI. P > S\nII. R ≥ T\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 0,
+   "e_mr": "विधानानुसार P > Q ≥ R = S आहे, ज्यावरून P > S निष्पन्न होते (निष्कर्ष I सत्य). परंतु S आणि T मध्ये S < T संबंध आहे, म्हणून R आणि T मधील निश्चित नाते सांगता येत नाही (निष्कर्ष II असत्य).",
+   "e_en": "According to the statements, P > Q ≥ R = S, which gives P > S (Conclusion I is true). However, since S < T, a definitive relation between R and T cannot be established (Conclusion II is false)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच मित्र - A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा अगदी मध्यभागी बसला आहे. A हा C च्या लगेच उजवीकडे बसला आहे. D हा C च्या शेजारी बसलेला नाही. B हा एका टोकाला बसला असून E च्या डावीकडे आहे. तर उजव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five friends - A, B, C, D and E are sitting in a row facing north. C is in the middle. A is immediately to the right of C. D is not next to C. B sits at one end and to the left of E. Who sits at the right end?",
+   "o_mr": [
+    "A",
+    "D",
+    "E",
+    "B"
+   ],
+   "o_en": [
+    "A",
+    "D",
+    "E",
+    "B"
+   ],
+   "a": 1,
+   "e_mr": "मध्यभागी C आहे. A हा C च्या लगेच उजवीकडे आहे (स्थान 3). B हा एका टोकाला (स्थान 1) आणि E च्या डावीकडे आहे, त्यामुळे B हा डाव्या टोकाला व E हा दुसऱ्या स्थानावर असेल. उरलेला D हा उजव्या टोकाला (स्थान 5) बसेल, कारण D हा C च्या शेजारी बसत नाही.",
+   "e_en": "C is in the middle (position 3). A is to the immediate right of C (position 4). B is at one end (position 1) to the left of E (position 2). The remaining person D sits at the extreme right end (position 5), as D is not next to C."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती - A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा मध्यभागी आहे. A हा C च्या लगेच उजवीकडे आहे. D हा C च्या शेजारी नाही. B हा एका टोकाला बसला असून E च्या डावीकडे आहे. उजव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five persons - A, B, C, D and E sit in a row facing north. C is in the middle. A is immediately to the right of C. D is not next to C. B sits at one end and to the left of E. Who sits at the right end?",
+   "o_mr": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "a": 3,
+   "e_mr": "C हा मध्यभागी आहे (स्थान ३). A हा C च्या लगेच उजवीकडे (स्थान ४) आहे. B हा डाव्या टोकाला (स्थान १) आणि E च्या डावीकडे आहे, त्यामुळे B हा स्थान १ वर आणि E हा स्थान २ वर असेल. उरलेली जागा D साठी (स्थान ५) उरते. म्हणून, उजव्या टोकाला E बसला आहे.",
+   "e_en": "C is in the middle (position 3). A is immediately to the right of C (position 4). B sits at the extreme left end (position 1) to the left of E, meaning B is at position 1 and E is at position 2. The remaining position 5 goes to D. Therefore, E sits at the right end."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_sufficiency",
+   "d": 2,
+   "q_mr": "X ची किंमत काय आहे?\nविधाने:\ni. X + Y = 15\nii. X - Y = 5\nX ची किंमत शोधण्यासाठी कोणती विधाने पुरेशी आहेत?",
+   "q_en": "What is the value of X?\nStatements:\ni. X + Y = 15\nii. X - Y = 5\nWhich statements are sufficient to find the value of X?",
+   "o_mr": [
+    "फक्त विधान i पुरेशी आहे",
+    "फक्त विधान ii पुरेशी आहे",
+    "एकतर i किंवा ii स्वतंत्रपणे पुरेशी आहे",
+    "दोन्ही विधाने i आणि ii एकत्रितपणे आवश्यक आहेत"
+   ],
+   "o_en": [
+    "Only statement i is sufficient",
+    "Only statement ii is sufficient",
+    "Either i or ii alone is sufficient",
+    "Both statements i and ii together are required"
+   ],
+   "a": 3,
+   "e_mr": "फक्त विधान i वरून X आणि Y च्या अनेक किमती शक्य आहेत. फक्त विधान ii वरूनही तीच परिस्थिती आहे. पण दोन्ही विधाने एकत्र केल्यास (X+Y=15 आणि X-Y=5), समीकरणे सोडवून X ची अचूक किंमत (10) मिळवता येते.",
+   "e_en": "From statement i alone, multiple values of X and Y are possible. Similarly from statement ii alone. However, combining both statements (X+Y=15 and X-Y=5), we can solve the simultaneous equations to find the exact value of X (which is 10)."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: P ≥ Q > R = S ≤ T\nनिष्कर्ष:\nI. P > S\nII. R ≥ T\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: P ≥ Q > R = S ≤ T\nConclusions:\nI. P > S\nII. R ≥ T\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+    "कोणताच निष्कर्ष सत्य नाही"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Both conclusions I and II are true",
+    "Neither conclusion I nor II is true"
+   ],
+   "a": 0,
+   "e_mr": "विधानानुसार P ≥ Q > R = S म्हणजेच P > S हे निश्चित ठरते, त्यामुळे निष्कर्ष I सत्य आहे. परंतु R आणि T मधील संबंध निश्चित करता येत नाही कारण R = S ≤ T आहे, म्हणून निष्कर्ष II सत्य नाही.",
+   "e_en": "According to the statements, P ≥ Q > R = S implies P > S, making conclusion I true. However, the relation between R and T cannot be uniquely determined as R = S ≤ T, so conclusion II is not true."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "puzzles",
+   "d": 2,
+   "q_mr": "पाच व्यक्ती - A, B, C, D आणि E एका रांगेत उत्तर दिशेला तोंड करून बसले आहेत. C हा अगदी मध्यभागी आहे. A हा C च्या लगेच उजवीकडे आहे. D हा C च्या शेजारी नाही. B हा एका टोकाला आणि E च्या डावीकडे बसला आहे. सर्वात उजव्या टोकाला कोण बसले आहे?",
+   "q_en": "Five persons - A, B, C, D and E are sitting in a row facing north. C is in the middle. A is immediately to the right of C. D is not next to C. B sits at one end and to the left of E. Who sits at the right end?",
+   "o_mr": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "o_en": [
+    "A",
+    "B",
+    "D",
+    "E"
+   ],
+   "a": 2,
+   "e_mr": "C मध्यभागी (तिसऱ्या स्थानावर) आहे. A हा C च्या लगेच उजवीकडे (चौथ्या स्थानावर) आहे. B हा डाव्या टोकाला (पहिल्या स्थानावर) आणि E च्या डावीकडे आहे, म्हणून E हा दुसऱ्या स्थानावर आहे. उरलेली व्यक्ती D ही पाचव्या (सर्वात उजव्या) स्थानावर येईल.",
+   "e_en": "C is in the middle (3rd position). A is immediately to the right of C (4th position). B is at the extreme left end (1st position) and to the left of E, so E is at the 2nd position. The remaining person D must be at the 5th (extreme right) position."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=3, confident=True)",
+  "item": {
+   "t": "inequality",
+   "d": 2,
+   "q_mr": "विधाने: P ≥ Q > R = S ≤ T\nनिष्कर्ष:\nI. P > S\nII. R ≤ T\nयोग्य निष्कर्ष निवडा:",
+   "q_en": "Statements: P ≥ Q > R = S ≤ T\nConclusions:\nI. P > S\nII. R ≤ T\nChoose the correct conclusion:",
+   "o_mr": [
+    "फक्त निष्कर्ष I सत्य आहे",
+    "फक्त निष्कर्ष II सत्य आहे",
+    "निष्कर्ष I किंवा II पैकी एक सत्य आहे",
+    "निष्कर्ष I आणि II दोन्ही सत्य आहेत"
+   ],
+   "o_en": [
+    "Only conclusion I is true",
+    "Only conclusion II is true",
+    "Either conclusion I or II is true",
+    "Both conclusions I and II are true"
+   ],
+   "a": 0,
+   "e_mr": "विधानानुसार P ≥ Q > R = S असल्यामुळे P > S हे निश्चितपणे सत्य आहे. परंतु R आणि T मधील संबंध R ≤ T असा आहे, ज्यामुळे निष्कर्ष II निश्चितपणे सत्य ठरत नाही. त्यामुळे फक्त निष्कर्ष I सत्य आहे.",
+   "e_en": "According to the statements, P ≥ Q > R = S, which means P > S is definitely true. However, the relation between R and T is R ≤ T, so conclusion II is not definitely true. Only conclusion I is true."
+  }
+ }
+]

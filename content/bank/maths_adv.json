@@ -855,5 +855,580 @@
   "e_en": "1) Mean = 5. 2) Squared deviations: 9, 1, 1, 9 → sum 20. 3) Variance = 20 ÷ 4 = 5. (√5 is the standard deviation.)",
   "hook_mr": "प्रसरण = x² चा मध्य − (मध्य)² = 30 − 25 = 5.",
   "hook_en": "Variance = mean of x² − (mean)² = 30 − 25 = 5."
+ },
+ {
+  "id": "maths_adv-036",
+  "s": "maths",
+  "t": "statistics",
+  "d": 1,
+  "q_mr": "खालील डेटाचा मध्यक (Median) किती आहे: 15, 8, 22, 11, 19, 25, 13?",
+  "q_en": "What is the median of the following data: 15, 8, 22, 11, 19, 25, 13?",
+  "o_mr": [
+   "15",
+   "13",
+   "19",
+   "11"
+  ],
+  "o_en": [
+   "15",
+   "13",
+   "19",
+   "11"
+  ],
+  "a": 0,
+  "e_mr": "मध्यक काढण्यासाठी, डेटा चढत्या क्रमाने लावावा लागतो: 8, 11, 13, 15, 19, 22, 25. एकूण 7 निरीक्षणे आहेत. मध्यभागी असलेले निरीक्षण 4थे आहे, जे 15 आहे.",
+  "e_en": "To find the median, the data must be arranged in ascending order: 8, 11, 13, 15, 19, 22, 25. There are a total of 7 observations. The middle observation is the 4th one, which is 15."
+ },
+ {
+  "id": "maths_adv-037",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर x - y = 5 आणि xy = 6 असेल, तर x² + y² ची किंमत किती?",
+  "q_en": "If x - y = 5 and xy = 6, then what is the value of x² + y²?",
+  "o_mr": [
+   "37",
+   "25",
+   "31",
+   "49"
+  ],
+  "o_en": [
+   "37",
+   "25",
+   "31",
+   "49"
+  ],
+  "a": 0,
+  "e_mr": "आपण (x - y)² = x² - 2xy + y² हे सूत्र वापरू शकतो. 5² = x² + y² - 2(6) => 25 = x² + y² - 12 => x² + y² = 25 + 12 = 37.",
+  "e_en": "We can use the formula (x - y)² = x² - 2xy + y². 5² = x² + y² - 2(6) => 25 = x² + y² - 12 => x² + y² = 25 + 12 = 37."
+ },
+ {
+  "id": "maths_adv-038",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका वर्तुळाचा व्यास 14 सेमी आहे. त्या वर्तुळाचे क्षेत्रफळ किती?",
+  "q_en": "The diameter of a circle is 14 cm. What is the area of that circle?",
+  "o_mr": [
+   "154 चौ. सेमी",
+   "44 चौ. सेमी",
+   "77 चौ. सेमी",
+   "154π चौ. सेमी"
+  ],
+  "o_en": [
+   "154 sq. cm",
+   "44 sq. cm",
+   "77 sq. cm",
+   "154π sq. cm"
+  ],
+  "a": 0,
+  "e_mr": "वर्तुळाची त्रिज्या (r) व्यासाच्या (d) निम्मी असते, म्हणून r = 14/2 = 7 सेमी. वर्तुळाचे क्षेत्रफळ πr² असते. म्हणून, क्षेत्रफळ = π(7)² = 49π. जर π = 22/7 घेतले, तर क्षेत्रफळ = (22/7) * 49 = 22 * 7 = 154 चौ. सेमी.",
+  "e_en": "The radius (r) of a circle is half of its diameter (d), so r = 14/2 = 7 cm. The area of a circle is πr². Therefore, Area = π(7)² = 49π. If we take π = 22/7, then Area = (22/7) * 49 = 22 * 7 = 154 sq. cm."
+ },
+ {
+  "id": "maths_adv-039",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "जर sin 2θ = cos θ असेल आणि 2θ व θ हे दोन्ही लघुकोन असतील, तर θ ची किंमत किती?",
+  "q_en": "If sin 2θ = cos θ and both 2θ and θ are acute angles, then what is the value of θ?",
+  "o_mr": [
+   "30°",
+   "15°",
+   "45°",
+   "60°"
+  ],
+  "o_en": [
+   "30°",
+   "15°",
+   "45°",
+   "60°"
+  ],
+  "a": 0,
+  "e_mr": "आपल्याला माहित आहे की sin(90° - x) = cos x. म्हणून, sin 2θ = sin(90° - θ). यावरून 2θ = 90° - θ => 3θ = 90° => θ = 30°.",
+  "e_en": "We know that sin(90° - x) = cos x. Therefore, sin 2θ = sin(90° - θ). This implies 2θ = 90° - θ => 3θ = 90° => θ = 30°."
+ },
+ {
+  "id": "maths_adv-040",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_mr": "एका शहरात 2022 मध्ये 50,000 लोक होते. 2023 मध्ये लोकसंख्या 10% ने वाढली. 2023 मध्ये शहराची लोकसंख्या किती?",
+  "q_en": "A city had a population of 50,000 in 2022. The population increased by 10% in 2023. What was the population of the city in 2023?",
+  "o_mr": [
+   "55,000",
+   "50,000",
+   "60,000",
+   "45,000"
+  ],
+  "o_en": [
+   "55,000",
+   "50,000",
+   "60,000",
+   "45,000"
+  ],
+  "a": 0,
+  "e_mr": "लोकसंख्येत 10% वाढ म्हणजे 50,000 च्या 10% = 5,000. 2023 मधील एकूण लोकसंख्या = 50,000 + 5,000 = 55,000.",
+  "e_en": "A 10% increase in population means 10% of 50,000 = 5,000. The total population in 2023 = 50,000 + 5,000 = 55,000."
+ },
+ {
+  "id": "maths_adv-041",
+  "s": "maths",
+  "t": "statistics",
+  "d": 2,
+  "q_mr": "जर 10 संख्यांचा मध्य 30 आहे. त्यापैकी एका संख्येत 15 ऐवजी 25 घेतले गेले. तर योग्य मध्य काढा.",
+  "q_en": "If the mean of 10 numbers is 30. One of the numbers was wrongly taken as 25 instead of 15. Find the correct mean.",
+  "o_mr": [
+   "29",
+   "30",
+   "31",
+   "29.5"
+  ],
+  "o_en": [
+   "29",
+   "30",
+   "31",
+   "29.5"
+  ],
+  "a": 0,
+  "e_mr": "10 संख्यांचा मध्य 30 आहे, म्हणजे त्यांची बेरीज 10 * 30 = 300 आहे. चुकीची संख्या 25 ऐवजी 15 घेतली गेली, म्हणजेच 10 ने कमी घेतली गेली. म्हणून, योग्य बेरीज 300 - (25 - 15) = 300 - 10 = 290. योग्य मध्य = 290 / 10 = 29.",
+  "e_en": "The mean of 10 numbers is 30, so their sum is 10 * 30 = 300. A number was wrongly taken as 25 instead of 15, meaning it was taken 10 less. Therefore, the correct sum is 300 - (25 - 15) = 300 - 10 = 290. The correct mean = 290 / 10 = 29."
+ },
+ {
+  "id": "maths_adv-042",
+  "s": "maths",
+  "t": "algebra",
+  "d": 1,
+  "q_mr": "जर x + 1/x = 4 असेल, तर x² + 1/x² ची किंमत किती?",
+  "q_en": "If x + 1/x = 4, then what is the value of x² + 1/x²?",
+  "o_mr": [
+   "12",
+   "14",
+   "16",
+   "18"
+  ],
+  "o_en": [
+   "12",
+   "14",
+   "16",
+   "18"
+  ],
+  "a": 1,
+  "e_mr": "(x + 1/x)² = x² + 1/x² + 2 या समीकरणाचा वापर करून, 4² = x² + 1/x² + 2, म्हणजेच 16 - 2 = 14.",
+  "e_en": "Using the identity (x + 1/x)² = x² + 1/x² + 2, we get 4² = x² + 1/x² + 2, which gives 16 - 2 = 14."
+ },
+ {
+  "id": "maths_adv-043",
+  "s": "maths",
+  "t": "geometry",
+  "d": 1,
+  "q_mr": "एका समभुज त्रिकोणाची (equilateral triangle) बाजू 6 सेमी आहे, तर त्याचे क्षेत्रफळ किती?",
+  "q_en": "The side of an equilateral triangle is 6 cm. What is its area?",
+  "o_mr": [
+   "9√3 सेमी²",
+   "18√3 सेमी²",
+   "36√3 सेमी²",
+   "6√3 सेमी²"
+  ],
+  "o_en": [
+   "9√3 cm²",
+   "18√3 cm²",
+   "36√3 cm²",
+   "6√3 cm²"
+  ],
+  "a": 0,
+  "e_mr": "समभुज त्रिकोणाचे क्षेत्रफळ = (√3/4) × बाजू². येथे बाजू 6 आहे, त्यामुळे (√3/4) × 36 = 9√3 सेमी².",
+  "e_en": "Area of an equilateral triangle = (√3/4) × side². Here side is 6, so (√3/4) × 36 = 9√3 cm²."
+ },
+ {
+  "id": "maths_adv-044",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका वर्तुळाची त्रिज्या 10 सेमी आहे. केंद्रापासून 26 सेमी अंतरावर असलेल्या बिंदूवरून काढलेल्या स्पर्शिकेची लांबी किती?",
+  "q_en": "A circle has a radius of 10 cm. What is the length of the tangent drawn from a point 26 cm away from the centre?",
+  "o_mr": [
+   "24 सेमी",
+   "25 सेमी",
+   "20 सेमी",
+   "22 सेमी"
+  ],
+  "o_en": [
+   "24 cm",
+   "25 cm",
+   "20 cm",
+   "22 cm"
+  ],
+  "a": 0,
+  "e_mr": "स्पर्शिका, त्रिज्या आणि केंद्रापासूनचे अंतर काटकोन त्रिकोण तयार करतात. पायथागोरसच्या प्रमेयानुसार, √(26² - 10²) = √(676 - 100) = √576 = 24 सेमी.",
+  "e_en": "Tangent, radius, and distance form a right-angled triangle. By Pythagoras theorem, √(26² - 10²) = √(676 - 100) = √576 = 24 cm."
+ },
+ {
+  "id": "maths_adv-045",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_mr": "(1 - sin² θ) sec² θ ची किंमत खालीलपैकी कोणती?",
+  "q_en": "What is the value of (1 - sin² θ) sec² θ?",
+  "o_mr": [
+   "0",
+   "1",
+   "-1",
+   "sin² θ"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "-1",
+   "sin² θ"
+  ],
+  "a": 1,
+  "e_mr": "(1 - sin² θ) म्हणजे cos² θ. आणि cos² θ × sec² θ = cos² θ × (1/cos² θ) = 1.",
+  "e_en": "(1 - sin² θ) is cos² θ. And cos² θ × sec² θ = cos² θ × (1/cos² θ) = 1."
+ },
+ {
+  "id": "maths_adv-046",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_mr": "एका कुटुंबाचे मासिक उत्पन्न ₹50,000 आहे. ते अन्नावर 40% खर्च करतात, तर अन्नावर होणारा खर्च किती रुपये आहे?",
+  "q_en": "A family's monthly income is ₹50,000. They spend 40% of it on food. How much money is spent on food?",
+  "o_mr": [
+   "₹15,000",
+   "₹20,000",
+   "₹25,000",
+   "₹10,000"
+  ],
+  "o_en": [
+   "₹15,000",
+   "₹20,000",
+   "₹25,000",
+   "₹10,000"
+  ],
+  "a": 1,
+  "e_mr": "अन्नावर होणारा खर्च = 50000 च्या 40% = (40 / 100) × 50000 = ₹20,000.",
+  "e_en": "Spending on food = 40% of 50,000 = (40 / 100) × 50,000 = ₹20,000."
+ },
+ {
+  "id": "maths_adv-047",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 2,
+  "q_mr": "पाय चार्टमध्ये (Pie Chart) एका क्षेत्राचा केंद्रीय कोन 72° आहे. जर एकूण मूल्य 1000 असेल, तर त्या क्षेत्राचे मूल्य किती?",
+  "q_en": "In a pie chart, the central angle of a sector is 72°. If the total value is 1000, what is the value of that sector?",
+  "o_mr": [
+   "150",
+   "200",
+   "250",
+   "300"
+  ],
+  "o_en": [
+   "150",
+   "200",
+   "250",
+   "300"
+  ],
+  "a": 1,
+  "e_mr": "क्षेत्राचे मूल्य = (केंद्रीय कोन / 360°) × एकूण मूल्य = (72° / 360°) × 1000 = (1/5) × 1000 = 200.",
+  "e_en": "Value of the sector = (Central Angle / 360°) × Total Value = (72° / 360°) × 1000 = (1/5) × 1000 = 200."
+ },
+ {
+  "id": "maths_adv-048",
+  "s": "maths",
+  "t": "algebra",
+  "d": 3,
+  "q_mr": "जर x = 3 + 2√2 असेल, तर √x + 1/√x ची किंमत किती?",
+  "q_en": "If x = 3 + 2√2, what is the value of √x + 1/√x?",
+  "o_mr": [
+   "2√2",
+   "2",
+   "√2",
+   "4"
+  ],
+  "o_en": [
+   "2√2",
+   "2",
+   "√2",
+   "4"
+  ],
+  "a": 0,
+  "e_mr": "x = (√2 + 1)², त्यामुळे √x = √2 + 1. 1/√x = √2 - 1. दोघांची बेरीज (√2 + 1) + (√2 - 1) = 2√2.",
+  "e_en": "x = (√2 + 1)², so √x = √2 + 1. 1/√x = √2 - 1. Their sum is (√2 + 1) + (√2 - 1) = 2√2."
+ },
+ {
+  "id": "maths_adv-049",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "sin² 20° + sin² 70° ची किंमत खालीलपैकी कोणती?",
+  "q_en": "What is the value of sin² 20° + sin² 70°?",
+  "o_mr": [
+   "0",
+   "1",
+   "1/2",
+   "2"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "1/2",
+   "2"
+  ],
+  "a": 1,
+  "e_mr": "sin 70° = cos 20° कारण sin(90° - θ) = cos θ. म्हणून sin² 20° + cos² 20° = 1.",
+  "e_en": "sin 70° = cos 20° since sin(90° - θ) = cos θ. Therefore, sin² 20° + cos² 20° = 1."
+ },
+ {
+  "id": "maths_adv-050",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर x + y = 7 आणि xy = 12 असेल, तर x³ + y³ ची किंमत किती?",
+  "q_en": "If x + y = 7 and xy = 12, then what is the value of x³ + y³?",
+  "o_mr": [
+   "91",
+   "81",
+   "133",
+   "75"
+  ],
+  "o_en": [
+   "91",
+   "81",
+   "133",
+   "75"
+  ],
+  "a": 0,
+  "e_mr": "सूत्र वापरून: x³ + y³ = (x + y)(x² - xy + y²) किंवा (x + y)³ - 3xy(x + y). मूल्ये ठेवल्यास: 7³ - 3(12)(7) = 343 - 252 = 91.",
+  "e_en": "Using the formula: x³ + y³ = (x + y)³ - 3xy(x + y). Substituting the values: 7³ - 3(12)(7) = 343 - 252 = 91."
+ },
+ {
+  "id": "maths_adv-051",
+  "s": "maths",
+  "t": "geometry",
+  "d": 1,
+  "q_mr": "एका चौरसाची बाजू 12 सेमी आहे, तर त्याच्या कर्णाची लांबी किती?",
+  "q_en": "The side of a square is 12 cm. What is the length of its diagonal?",
+  "o_mr": [
+   "12√2 सेमी",
+   "24 सेमी",
+   "6√2 सेमी",
+   "144 सेमी"
+  ],
+  "o_en": [
+   "12√2 cm",
+   "24 cm",
+   "6√2 cm",
+   "144 cm"
+  ],
+  "a": 0,
+  "e_mr": "चौरसाचा कर्ण = बाजू × √2 = 12 × √2 = 12√2 सेमी.",
+  "e_en": "Diagonal of a square = side × √2 = 12 × √2 = 12√2 cm."
+ },
+ {
+  "id": "maths_adv-052",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका समभुज चौकोनाचे कर्ण 16 सेमी आणि 12 सेमी आहेत, तर त्या समभुज चौकोनाची बाजू किती?",
+  "q_en": "The diagonals of a rhombus are 16 cm and 12 cm. What is the side of the rhombus?",
+  "o_mr": [
+   "10 सेमी",
+   "14 सेमी",
+   "20 सेमी",
+   "8 सेमी"
+  ],
+  "o_en": [
+   "10 cm",
+   "14 cm",
+   "20 cm",
+   "8 cm"
+  ],
+  "a": 0,
+  "e_mr": "समभुज चौकोनाचे कर्ण परस्परांना काटकोनात दुभागतात. म्हणून बाजू = √((d₁/2)² + (d₂/2)²) = √(8² + 6²) = √(64 + 36) = √100 = 10 सेमी.",
+  "e_en": "Diagonals of a rhombus bisect each other at right angles. So side = √((d₁/2)² + (d₂/2)²) = √(8² + 6²) = √(64 + 36) = √100 = 10 cm."
+ },
+ {
+  "id": "maths_adv-053",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "cos 0° × cos 30° × cos 45° × cos 60° × cos 90° ची किंमत किती?",
+  "q_en": "What is the value of cos 0° × cos 30° × cos 45° × cos 60° × cos 90°?",
+  "o_mr": [
+   "0",
+   "1",
+   "√3/4",
+   "1/2√2"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "√3/4",
+   "1/2√2"
+  ],
+  "a": 0,
+  "e_mr": "आपल्याला माहीत आहे की cos 90° = 0. गुणाकारात एक घटक 0 असल्यामुळे संपूर्ण गुणाकार 0 येतो.",
+  "e_en": "We know that cos 90° = 0. Since one of the factors in the product is 0, the entire product is 0."
+ },
+ {
+  "id": "maths_adv-054",
+  "s": "maths",
+  "t": "statistics",
+  "d": 2,
+  "q_mr": "जर काही निरीक्षणांचे प्रमाण विचलन (standard deviation) 5 असेल, तर त्याचे प्रसरण (variance) किती असेल?",
+  "q_en": "If the standard deviation of a set of observations is 5, what will be its variance?",
+  "o_mr": [
+   "25",
+   "5",
+   "10",
+   "2.23"
+  ],
+  "o_en": [
+   "25",
+   "5",
+   "10",
+   "2.23"
+  ],
+  "a": 0,
+  "e_mr": "प्रसरण (Variance) हे प्रमाण विचलनाचा वर्ग (square of standard deviation) असते. म्हणून प्रसरण = 5² = 25.",
+  "e_en": "Variance is the square of the standard deviation. Therefore, variance = 5² = 25."
+ },
+ {
+  "id": "maths_adv-055",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_mr": "एका पाई चार्टमध्ये, एका त्रिज्यखंडाचा मध्यवर्ती कोन 54° आहे. जर एकूण मूल्य 2000 असेल, तर त्या त्रिज्यखंडाचे मूल्य किती?",
+  "q_en": "In a pie chart, the central angle of a sector is 54°. If the total value is 2000, what is the value of that sector?",
+  "o_mr": [
+   "300",
+   "250",
+   "350",
+   "400"
+  ],
+  "o_en": [
+   "300",
+   "250",
+   "350",
+   "400"
+  ],
+  "a": 0,
+  "e_mr": "मूल्य = (केंद्रीय कोन / 360°) × एकूण मूल्य = (54° / 360°) × 2000 = (3 / 20) × 2000 = 300.",
+  "e_en": "Value = (Central angle / 360°) × Total value = (54° / 360°) × 2000 = (3 / 20) × 2000 = 300."
+ },
+ {
+  "id": "maths_adv-056",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 2,
+  "q_mr": "एका कुटुंबाचा मासिक खर्च (एकूण ₹36,000) खालीलप्रमाणे आहे: अन्न ₹12,000, भाडे ₹9,000, शिक्षण ₹6,000, बचत ₹9,000. बचतीचा केंद्रीय कोन पाई चार्टमध्ये किती असेल?",
+  "q_en": "A family's monthly expenditure (total ₹36,000) is: food ₹12,000, rent ₹9,000, education ₹6,000, savings ₹9,000. What will be the central angle for savings in a pie chart?",
+  "o_mr": [
+   "90°",
+   "60°",
+   "120°",
+   "75°"
+  ],
+  "o_en": [
+   "90°",
+   "60°",
+   "120°",
+   "75°"
+  ],
+  "a": 0,
+  "e_mr": "केंद्रीय कोन = (बचत / एकूण खर्च) × 360° = (9000 / 36000) × 360° = (1 / 4) × 360° = 90°.",
+  "e_en": "Central angle = (Savings / Total expenditure) × 360° = (9000 / 36000) × 360° = (1 / 4) × 360° = 90°."
+ },
+ {
+  "id": "maths_adv-057",
+  "s": "maths",
+  "t": "algebra",
+  "d": 2,
+  "q_mr": "जर समीकरण x² - kx + 12 = 0 च्या मुळांचे गुणोत्तर 1 : 3 असेल, तर k ची धन किंमत किती?",
+  "q_en": "If the roots of the equation x² - kx + 12 = 0 are in the ratio 1 : 3, then what is the positive value of k?",
+  "o_mr": [
+   "8",
+   "6",
+   "10",
+   "4"
+  ],
+  "o_en": [
+   "8",
+   "6",
+   "10",
+   "4"
+  ],
+  "a": 0,
+  "e_mr": "मुळे α आणि 3α मानू. मुळांचा गुणाकार = α × 3α = 3α² = 12, ज्यामुळे α² = 4, म्हणजेच α = 2. मुळे 2 आणि 6 आहेत. मुळांची बेरीज = 2 + 6 = 8, जी k च्या बरोबर आहे.",
+  "e_en": "Let the roots be α and 3α. Product of roots = α × 3α = 3α² = 12, giving α² = 4, so α = 2. The roots are 2 and 6. Sum of roots = 2 + 6 = 8, which equals k."
+ },
+ {
+  "id": "maths_adv-058",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_mr": "जर sin θ + cos θ = √2 sin (90° - θ) असेल, तर tan θ ची किंमत काय?",
+  "q_en": "If sin θ + cos θ = √2 sin (90° - θ), what is the value of tan θ?",
+  "o_mr": [
+   "√2 - 1",
+   "√2 + 1",
+   "1",
+   "1/√2"
+  ],
+  "o_en": [
+   "√2 - 1",
+   "√2 + 1",
+   "1",
+   "1/√2"
+  ],
+  "a": 0,
+  "e_mr": "sin(90° - θ) = cos θ आहे. समीकरण बनते: sin θ + cos θ = √2 cos θ. दोन्ही बाजूंना cos θ ने भागल्यास: tan θ + 1 = √2, म्हणजेच tan θ = √2 - 1.",
+  "e_en": "Since sin(90° - θ) = cos θ, the equation becomes sin θ + cos θ = √2 cos θ. Dividing both sides by cos θ gives tan θ + 1 = √2, so tan θ = √2 - 1."
+ },
+ {
+  "id": "maths_adv-059",
+  "s": "maths",
+  "t": "geometry",
+  "d": 2,
+  "q_mr": "एका समभुज त्रिकोणाची उंची 9√3 सेमी आहे, तर त्या त्रिकोणाची बाजू किती?",
+  "q_en": "The height of an equilateral triangle is 9√3 cm. What is the length of its side?",
+  "o_mr": [
+   "12 सेमी",
+   "15 सेमी",
+   "18 सेमी",
+   "9 सेमी"
+  ],
+  "o_en": [
+   "12 cm",
+   "15 cm",
+   "18 cm",
+   "9 cm"
+  ],
+  "a": 2,
+  "e_mr": "समभुज त्रिकोणाची उंची h = (√3/2) × बाजू असते. 9√3 = (√3/2) × बाजू, म्हणून बाजू = 9 × 2 = 18 सेमी.",
+  "e_en": "Height of an equilateral triangle is h = (√3/2) × side. 9√3 = (√3/2) × side, which means side = 9 × 2 = 18 cm."
+ },
+ {
+  "id": "maths_adv-060",
+  "s": "maths",
+  "t": "statistics",
+  "d": 1,
+  "q_mr": "जर काही निरीक्षणांचा मध्य 24 आणि बहुलक 12 असेल, तर मध्यक किती असेल?",
+  "q_en": "If the mean of a distribution is 24 and the mode is 12, what will be the median?",
+  "o_mr": [
+   "18",
+   "20",
+   "22",
+   "16"
+  ],
+  "o_en": [
+   "18",
+   "20",
+   "22",
+   "16"
+  ],
+  "a": 1,
+  "e_mr": "आनुभाविक सूत्रानुसार (Empirical formula): बहुलक = 3(मध्यक) - 2(मध्य). येथे 12 = 3(मध्यक) - 2(24). म्हणून 12 = 3(मध्यक) - 48, ज्यामुळे 3(मध्यक) = 60 आणि मध्यक = 20.",
+  "e_en": "By the empirical relation: Mode = 3(Median) - 2(Mean). Here 12 = 3(Median) - 2(24). Thus 12 = 3(Median) - 48, leading to 3(Median) = 60 and Median = 20."
  }
 ]

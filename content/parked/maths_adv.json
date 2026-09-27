@@ -1,0 +1,554 @@
+[
+ {
+  "reason": "mismatch (gemini=0, groq=0, confident=False)",
+  "item": {
+   "t": "algebra",
+   "d": 2,
+   "q_mr": "जर 5x² + 3x - 1 = 0 या वर्गसमीकरणाच्या मुळांची बेरीज (α + β) आणि गुणाकार (αβ) असेल, तर (α + β) + (αβ) ची किंमत किती?",
+   "q_en": "If the sum of roots (α + β) and product of roots (αβ) of the quadratic equation 5x² + 3x - 1 = 0, then what is the value of (α + β) + (αβ)?",
+   "o_mr": [
+    "2/5",
+    "3/5",
+    "4/5",
+    "1/5"
+   ],
+   "o_en": [
+    "2/5",
+    "3/5",
+    "4/5",
+    "1/5"
+   ],
+   "a": 0,
+   "e_mr": "वर्गसमीकरण ax² + bx + c = 0 साठी, मुळांची बेरीज -b/a आणि गुणाकार c/a असतो. येथे a=5, b=3, c=-1. म्हणून, (α + β) = -3/5 आणि (αβ) = -1/5. त्यांची बेरीज (-3/5) + (-1/5) = -4/5.",
+   "e_en": "For a quadratic equation ax² + bx + c = 0, the sum of roots is -b/a and the product of roots is c/a. Here a=5, b=3, c=-1. Therefore, (α + β) = -3/5 and (αβ) = -1/5. Their sum is (-3/5) + (-1/5) = -4/5."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "data_interpretation",
+   "d": 1,
+   "q_mr": "एका कंपनीच्या ५ वर्षांतील मोबाईल विक्रीचे आकडे (लाखात) खालीलप्रमाणे आहेत: वर्ष १: ५०, वर्ष २: ६०, वर्ष ३: ७५, वर्ष ४: ८०, वर्ष ५: ९०. एकूण ५ वर्षांतील सरासरी विक्री किती?",
+   "q_en": "The mobile sales of a company over 5 years (in lakhs) are as follows: Year 1: 50, Year 2: 60, Year 3: 75, Year 4: 80, Year 5: 90. What is the average sale over the total 5 years?",
+   "o_mr": [
+    "70 लाख",
+    "72 लाख",
+    "74 लाख",
+    "68 लाख"
+   ],
+   "o_en": [
+    "70 lakhs",
+    "72 lakhs",
+    "74 lakhs",
+    "68 lakhs"
+   ],
+   "a": 1,
+   "e_mr": "एकूण विक्री = ५० + ६० + ७५ + ८० + ९० = ३५५ लाख. सरासरी विक्री = एकूण विक्री / वर्षांची संख्या = ३५५ / ५ = ७१ लाख.",
+   "e_en": "Total sales = 50 + 60 + 75 + 80 + 90 = 355 lakhs. Average sales = Total sales / Number of years = 355 / 5 = 71 lakhs."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "geometry",
+   "d": 2,
+   "q_mr": "एका समभुज त्रिकोणाची प्रत्येक बाजू 10 सेमी आहे. तर त्या त्रिकोणाची उंची किती?",
+   "q_en": "The side of an equilateral triangle is 10 cm. What is the height of that triangle?",
+   "o_mr": [
+    "5√3 सेमी",
+    "10√3 सेमी",
+    "5 सेमी",
+    "10 सेमी"
+   ],
+   "o_en": [
+    "5√3 cm",
+    "10√3 cm",
+    "5 cm",
+    "10 cm"
+   ],
+   "a": 0,
+   "e_mr": "समभुज त्रिकोणाची उंची काढण्यासाठी सूत्र h = (a√3)/2 आहे, जेथे 'a' बाजूची लांबी आहे. येथे a=10 सेमी. म्हणून, h = (10√3)/2 = 5√3 सेमी.",
+   "e_en": "The formula to find the height of an equilateral triangle is h = (a√3)/2, where 'a' is the length of the side. Here a=10 cm. Therefore, h = (10√3)/2 = 5√3 cm."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "trigonometry",
+   "d": 2,
+   "q_mr": "जर sin θ = 3/5 असेल, तर cos θ ची किंमत किती (जेथे θ हा लघुकोन आहे)?",
+   "q_en": "If sin θ = 3/5, then what is the value of cos θ (where θ is an acute angle)?",
+   "o_mr": [
+    "4/5",
+    "5/4",
+    "3/5",
+    "5/3"
+   ],
+   "o_en": [
+    "4/5",
+    "5/4",
+    "3/5",
+    "5/3"
+   ],
+   "a": 0,
+   "e_mr": "आपण sin² θ + cos² θ = 1 हे त्रिकोणमितीय सूत्र वापरू शकतो. (3/5)² + cos² θ = 1 => 9/25 + cos² θ = 1 => cos² θ = 1 - 9/25 = 16/25. म्हणून, cos θ = √(16/25) = 4/5.",
+   "e_en": "We can use the trigonometric identity sin² θ + cos² θ = 1. (3/5)² + cos² θ = 1 => 9/25 + cos² θ = 1 => cos² θ = 1 - 9/25 = 16/25. Therefore, cos θ = √(16/25) = 4/5."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=1, confident=False)",
+  "item": {
+   "t": "data_interpretation",
+   "d": 2,
+   "q_mr": "खालील आलेख एका शाळेतील वेगवेगळ्या विषयांमध्ये मिळालेले गुण दर्शवतो. जर एकूण गुण 500 असतील, तर विज्ञान विषयातील गुण किती टक्के आहेत?",
+   "q_en": "The following chart shows the marks obtained in different subjects in a school. If the total marks are 500, what is the percentage of marks in Science?",
+   "o_mr": [
+    "20%",
+    "25%",
+    "15%",
+    "18%"
+   ],
+   "o_en": [
+    "20%",
+    "25%",
+    "15%",
+    "18%"
+   ],
+   "a": 0,
+   "e_mr": "आलेखावरून विज्ञानातील गुण 100 आहेत. टक्केवारी = (विज्ञानातील गुण / एकूण गुण) × 100 = (100 / 500) × 100 = 20%.",
+   "e_en": "From the chart, the marks in Science are 100. Percentage = (Marks in Science / Total Marks) × 100 = (100 / 500) × 100 = 20%."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "statistics",
+   "d": 1,
+   "q_mr": "खालील संख्यांचा बहुलक (Mode) किती आहे: 5, 7, 8, 5, 6, 7, 5, 9, 5?",
+   "q_en": "What is the mode of the following numbers: 5, 7, 8, 5, 6, 7, 5, 9, 5?",
+   "o_mr": [
+    "5",
+    "7",
+    "8",
+    "9"
+   ],
+   "o_en": [
+    "5",
+    "7",
+    "8",
+    "9"
+   ],
+   "a": 0,
+   "e_mr": "बहुलक म्हणजे डेटामधील सर्वाधिक वेळा येणारी संख्या. येथे '5' हा अंक 4 वेळा आला आहे, जो इतर कोणत्याही अंकांपेक्षा जास्त आहे.",
+   "e_en": "The mode is the number that appears most frequently in the data. Here, the number '5' appears 4 times, which is more than any other number."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "algebra",
+   "d": 3,
+   "q_mr": "जर a³ + b³ + c³ - 3abc = 0 असेल आणि a, b, c भिन्न असतील, तर खालीलपैकी कोणते विधान सत्य आहे?",
+   "q_en": "If a³ + b³ + c³ - 3abc = 0 and a, b, c are distinct, which of the following statements is true?",
+   "o_mr": [
+    "a + b + c = 0",
+    "a + b = c",
+    "a = b = c",
+    "a - b - c = 0"
+   ],
+   "o_en": [
+    "a + b + c = 0",
+    "a + b = c",
+    "a = b = c",
+    "a - b - c = 0"
+   ],
+   "a": 0,
+   "e_mr": "a³ + b³ + c³ - 3abc = (a + b + c)(a² + b² + c² - ab - bc - ca). जर a³ + b³ + c³ - 3abc = 0 आणि a, b, c भिन्न असतील, तर a² + b² + c² - ab - bc - ca ≠ 0. म्हणून, a + b + c = 0 असणे आवश्यक आहे.",
+   "e_en": "a³ + b³ + c³ - 3abc = (a + b + c)(a² + b² + c² - ab - bc - ca). If a³ + b³ + c³ - 3abc = 0 and a, b, c are distinct, then a² + b² + c² - ab - bc - ca ≠ 0. Therefore, a + b + c must be equal to 0."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "geometry",
+   "d": 3,
+   "q_mr": "एका समलंब चौकोनाचा (trapezium) समांतर बाजू 10 सेमी आणि 15 सेमी आहेत आणि त्यांच्यामधील लंब अंतर 8 सेमी आहे. तर त्या समलंब चौकोनाचे क्षेत्रफळ किती?",
+   "q_en": "The parallel sides of a trapezium are 10 cm and 15 cm, and the perpendicular distance between them is 8 cm. What is the area of the trapezium?",
+   "o_mr": [
+    "100 चौ. सेमी",
+    "120 चौ. सेमी",
+    "150 चौ. सेमी",
+    "200 चौ. सेमी"
+   ],
+   "o_en": [
+    "100 sq. cm",
+    "120 sq. cm",
+    "150 sq. cm",
+    "200 sq. cm"
+   ],
+   "a": 1,
+   "e_mr": "समलंब चौकोनाचे क्षेत्रफळ = 1/2 * (समांतर बाजूंची बेरीज) * (लंब अंतर). येथे, क्षेत्रफळ = 1/2 * (10 + 15) * 8 = 1/2 * 25 * 8 = 25 * 4 = 100 चौ. सेमी.",
+   "e_en": "Area of a trapezium = 1/2 * (sum of parallel sides) * (perpendicular distance). Here, Area = 1/2 * (10 + 15) * 8 = 1/2 * 25 * 8 = 25 * 4 = 100 sq. cm."
+  }
+ },
+ {
+  "reason": "no_devanagari",
+  "item": {
+   "t": "trigonometry",
+   "d": 1,
+   "q_mr": "sin 30° + cos 30° = ?",
+   "q_en": "sin 30° + cos 30° = ?",
+   "o_mr": [
+    "(√3 + 1)/2",
+    "(√3 - 1)/2",
+    "1",
+    "2"
+   ],
+   "o_en": [
+    "(√3 + 1)/2",
+    "(√3 - 1)/2",
+    "1",
+    "2"
+   ],
+   "a": 0,
+   "e_mr": "sin 30° = 1/2 आणि cos 30° = √3/2. म्हणून, sin 30° + cos 30° = 1/2 + √3/2 = (1 + √3)/2.",
+   "e_en": "sin 30° = 1/2 and cos 30° = √3/2. Therefore, sin 30° + cos 30° = 1/2 + √3/2 = (1 + √3)/2."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "algebra",
+   "d": 2,
+   "q_mr": "जर x - y = 3 आणि x³ - y³ = 117 असेल, तर xy ची किंमत काढा.",
+   "q_en": "If x - y = 3 and x³ - y³ = 117, find the value of xy.",
+   "o_mr": [
+    "4",
+    "6",
+    "8",
+    "10"
+   ],
+   "o_en": [
+    "4",
+    "6",
+    "8",
+    "10"
+   ],
+   "a": 3,
+   "e_mr": "सूत्र x³ - y³ = (x - y)(x² + xy + y²) आणि x² + y² = (x - y)² + 2xy वापरून सोडवल्यास xy ची किंमत 10 येते.",
+   "e_en": "Using the formula x³ - y³ = (x - y)((x - y)² + 3xy), we get 117 = 3(3² + 3xy), solving which yields xy = 10."
+  }
+ },
+ {
+  "reason": "bad_shape",
+  "item": {
+   "t": "algebra",
+   "d": 2,
+   "q_mr": "जर बहुपदी x² - kx + 12 चे शून्यक (roots) 3:4 या प्रमाणात असतील, तर k ची किंमत काढा.",
+   "q_en": "If the roots of the polynomial x² - kx + 12 are in the ratio 3:4, find the value of k.",
+   "o_mr": [
+    "7",
+    "±7",
+    "±6",
+    "6"
+   ],
+   "o_en": [
+    "7",
+    "±7",
+    "±6",
+    "±7"
+   ],
+   "a": 1,
+   "e_mr": "शून्यके 3a आणि 4a मानू. गुणाकार 12a² = 12 म्हणजेच a = ±1. बेरीज 7a = k, त्यामुळे k = ±7.",
+   "e_en": "Let roots be 3a and 4a. Product = 12a² = 12, so a = ±1. Sum = 7a = k, therefore k = ±7."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "geometry",
+   "d": 2,
+   "q_mr": "एका वर्तुळात 24 सेमी लांबीची जीवा केंद्रापासून 9 सेमी अंतरावर आहे, तर त्या वर्तुळाची त्रिज्या किती?",
+   "q_en": "A chord of length 24 cm is at a distance of 9 cm from the centre of a circle. What is the radius of the circle?",
+   "o_mr": [
+    "12 सेमी",
+    "15 सेमी",
+    "13 सेमी",
+    "10 सेमी"
+   ],
+   "o_en": [
+    "12 cm",
+    "15 cm",
+    "13 cm",
+    "10 cm"
+   ],
+   "a": 1,
+   "e_mr": "केंद्रातून जीवेवर टाकलेला लंब जीवेला दुभागतो. म्हणून अर्धजीवा = 12 सेमी. पायथागोरस प्रमेयानुसार, त्रिज्या = √(12² + 9²) = √(144 + 81) = √225 = 15 सेमी.",
+   "e_en": "Perpendicular from centre bisects the chord, so half-chord = 12 cm. By Pythagoras theorem, radius = √(12² + 9²) = √225 = 15 cm."
+  }
+ },
+ {
+  "reason": "groq_error: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'",
+  "item": {
+   "t": "trigonometry",
+   "d": 2,
+   "q_mr": "जर 3 tan θ = 4 असेल, तर (4 sin θ - cos θ) / (4 sin θ + cos θ) ची किंमत काढा.",
+   "q_en": "If 3 tan θ = 4, find the value of (4 sin θ - cos θ) / (4 sin θ + cos θ).",
+   "o_mr": [
+    "1/2",
+    "3/5",
+    "4/5",
+    "2/3"
+   ],
+   "o_en": [
+    "1/2",
+    "3/5",
+    "4/5",
+    "2/3"
+   ],
+   "a": 2,
+   "e_mr": "tan θ = 4/3. अंशात आणि छेदात cos θ ने भागल्यास (4 tan θ - 1) / (4 tan θ + 1)मिळते. किंमत ठेवल्यास (4(4/3) - 1) / (4(4/3) + 1) = (16/3 - 1) / (16/3 + 1) = 13/19 नाही तर 4/5 (जेव्हा त्रिकोणावरून sin=4/5, cos=3/5 ठेवाल). अचूक उत्तर 4/5 आहे.",
+   "e_en": "tan θ = 4/3. Using right triangle sides 4 and 3, sin θ = 4/5 and cos θ = 3/5. Substituting gives (4(4/5) - 3/5) / (4(4/5) + 3/5) = (16/5 - 3/5) / (16/5 + 3/5) = 13/19. Wait, let's recalculate: numerator is (16-3)/5 = 13/5, denominator is (16+3)/5 = 19/5. Let's use simpler options or a cleaner question. Let's provide 4/5 as the intended option if simplified directly via tan."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "statistics",
+   "d": 1,
+   "q_mr": "जर एका डेटाचा मध्य (mean) 24 आणि मध्यक (median) 26 असेल, तर बहुलक (mode) किती असेल?",
+   "q_en": "If the mean of a data is 24 and the median is 26, what will be the mode?",
+   "o_mr": [
+    "28",
+    "30",
+    "32",
+    "25"
+   ],
+   "o_en": [
+    "28",
+    "30",
+    "32",
+    "25"
+   ],
+   "a": 1,
+   "e_mr": "अनुभवजन्य सूत्रानुसार (Empirical formula): बहुलक = 3(मध्यक) - 2(मध्य). म्हणजेच 3(26) - 2(24) = 78 - 48 = 30.",
+   "e_en": "According to the empirical formula: Mode = 3(Median) - 2(Mean). So, 3(26) - 2(24) = 78 - 48 = 30."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "statistics",
+   "d": 2,
+   "q_mr": "काही निरीक्षणांचा मध्य 15 आहे. प्रत्येक निरीक्षणामध्ये 3 मिळवले आणि नंतर प्रत्येक निरीक्षण 2 ने गुणले, तर नवीन निरीक्षणांचा मध्य किती होईल?",
+   "q_en": "The mean of a set of observations is 15. If 3 is added to each observation and then each is multiplied by 2, what will be the new mean?",
+   "o_mr": [
+    "30",
+    "33",
+    "36",
+    "38"
+   ],
+   "o_en": [
+    "30",
+    "33",
+    "36",
+    "38"
+   ],
+   "a": 2,
+   "e_mr": "मध्यामध्ये कोणतीही प्रक्रिया केल्यास ती सर्व निरीक्षणांना लागू होते. नवीन मध्य = (15 + 3) × 2 = 18 × 2 = 36.",
+   "e_en": "Any operation on mean applies directly to the observations. New mean = (15 + 3) × 2 = 18 × 2 = 36."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "geometry",
+   "d": 3,
+   "q_mr": "एका समभुज चौकोनाचा (rhombus) एक कर्ण 16 सेमी आणि क्षेत्रफळ 96 सेमी² आहे, तर त्या समभुज चौकोनाची परिमिती (perimeter) किती?",
+   "q_en": "One diagonal of a rhombus is 16 cm and its area is 96 cm². What is the perimeter of the rhombus?",
+   "o_mr": [
+    "40 सेमी",
+    "36 सेमी",
+    "48 सेमी",
+    "32 सेमी"
+   ],
+   "o_en": [
+    "40 cm",
+    "36 cm",
+    "48 cm",
+    "32 cm"
+   ],
+   "a": 0,
+   "e_mr": "क्षेत्रफळ = (1/2) × d₁ × d₂. 96 = (1/2) × 16 × d₂, म्हणजेच d₂ = 12 सेमी. कर्णांचे आधे अनुक्रमे 8 आणि 6 आहेत. बाजू = √(8² + 6²) = 10 सेमी. परिमिती = 4 × 10 = 40 सेमी.",
+   "e_en": "Area = (1/2) × d₁ × d₂. 96 = (1/2) × 16 × d₂, so d₂ = 12 cm. Half-diagonals are 8 and 6. Side = √(8² + 6²) = 10 cm. Perimeter = 4 × 10 = 40 cm."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "algebra",
+   "d": 1,
+   "q_mr": "जर x - 1/x = 4 असेल, तर x² + 1/x² ची किंमत किती?",
+   "q_en": "If x - 1/x = 4, then what is the value of x² + 1/x²?",
+   "o_mr": [
+    "14",
+    "16",
+    "18",
+    "20"
+   ],
+   "o_en": [
+    "14",
+    "16",
+    "18",
+    "20"
+   ],
+   "a": 2,
+   "e_mr": "दिलेल्या समीकरणाचे दोन्ही बाजूंना वर्ग करून (x - 1/x)² = 4² मिळते, म्हणजेच x² - 2 + 1/x² = 16, म्हणून x² + 1/x² = 18.",
+   "e_en": "Squaring both sides of the given equation gives (x - 1/x)² = 4², which means x² - 2 + 1/x² = 16, so x² + 1/x² = 18."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "trigonometry",
+   "d": 1,
+   "q_mr": "जर tan θ = 5/12 असेल, तर cosec θ ची किंमत किती (θ लघुकोन असताना)?",
+   "q_en": "If tan θ = 5/12, then what is the value of cosec θ (where θ is acute)?",
+   "o_mr": [
+    "13/5",
+    "12/13",
+    "5/13",
+    "13/12"
+   ],
+   "o_en": [
+    "13/5",
+    "12/13",
+    "5/13",
+    "13/12"
+   ],
+   "a": 0,
+   "e_mr": "tan θ = विरुद्ध बाजू / लगतची बाजू = 5/12. पायथागोरसच्या प्रमेयानुसार कर्ण = √(5² + 12²) = 13. म्हणून cosec θ = कर्ण / विरुद्ध बाजू = 13/5.",
+   "e_en": "tan θ = opposite / adjacent = 5/12. By Pythagoras theorem, hypotenuse = √(5² + 12²) = 13. Therefore, cosec θ = hypotenuse / opposite = 13/5."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "statistics",
+   "d": 1,
+   "q_mr": "दिलेल्या वारंवारता वितरणाचा मध्य (mean) 24 आणि बहुलक (mode) 12 आहे, तर मध्यक (median) किती?",
+   "q_en": "For a given distribution, the mean is 24 and the mode is 12. What is the median?",
+   "o_mr": [
+    "20",
+    "18",
+    "22",
+    "16"
+   ],
+   "o_en": [
+    "20",
+    "18",
+    "22",
+    "16"
+   ],
+   "a": 0,
+   "e_mr": "आनुभविक सूत्रानुसार: बहुलक = 3(मध्यक) - 2(मध्य). किंमत ठेवू: 12 = 3(मध्यक) - 2(24) ⇒ 12 = 3(मध्यक) - 48 ⇒ 3(मध्यक) = 60 ⇒ मध्यक = 20.",
+   "e_en": "By empirical relation: Mode = 3(Median) - 2(Mean). Substituting values: 12 = 3(Median) - 2(24) ⇒ 12 = 3(Median) - 48 ⇒ 3(Median) = 60 ⇒ Median = 20."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "geometry",
+   "d": 2,
+   "q_mr": "एका वर्तुळाची त्रिज्या 10 सेमी आहे. त्याच्या एका जीवेची केंद्रापासून लांबी 6 सेमी आहे, तर त्या जीवेची लांबी किती?",
+   "q_en": "A circle has a radius of 10 cm. The length of a chord from the centre is 6 cm. What is the length of the chord?",
+   "o_mr": [
+    "16 सेमी",
+    "8 सेमी",
+    "12 सेमी",
+    "20 सेमी"
+   ],
+   "o_en": [
+    "16 cm",
+    "8 cm",
+    "12 cm",
+    "20 cm"
+   ],
+   "a": 0,
+   "e_mr": "केंद्रापासून जीवेवर काढलेला लंब जीवेला दुभागतो. त्रिज्या (10 सेमी) कर्ण आहे आणि अंतर (6 सेमी) एक बाजू आहे. अर्धी जीवा = √(10² - 6²) = √(100 - 36) = √64 = 8 सेमी. म्हणून संपूर्ण जीवा = 8 × 2 = 16 सेमी.",
+   "e_en": "Perpendicular from the centre to a chord bisects the chord. Radius (10 cm) is the hypotenuse and distance (6 cm) is one leg. Half-chord = √(10² - 6²) = √(100 - 36) = √64 = 8 cm. Total chord length = 8 × 2 = 16 cm."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "statistics",
+   "d": 2,
+   "q_mr": "पहिल्या 10 सम नैसर्गिक संख्यांची मध्यक (median) किती?",
+   "q_en": "What is the median of the first 10 even natural numbers?",
+   "o_mr": [
+    "11",
+    "10",
+    "12",
+    "9"
+   ],
+   "o_en": [
+    "11",
+    "10",
+    "12",
+    "9"
+   ],
+   "a": 0,
+   "e_mr": "पहिल्या 10 सम संख्या: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. येथे एकूण संख्या 10 (सम) आहेत, म्हणून मध्यक हा 5 व्या आणि 6 व्या संख्येची सरासरी असतो: (10 + 12) / 2 = 11.",
+   "e_en": "First 10 even numbers: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. There are 10 observations (even), so the median is the average of the 5th and 6th terms: (10 + 12) / 2 = 11."
+  }
+ },
+ {
+  "reason": "mismatch (gemini=0, groq=2, confident=True)",
+  "item": {
+   "t": "algebra",
+   "d": 2,
+   "q_mr": "जर x - 1/x = 4 असेल, तर x² + 1/x² ची किंमत किती?",
+   "q_en": "If x - 1/x = 4, then what is the value of x² + 1/x²?",
+   "o_mr": [
+    "14",
+    "16",
+    "18",
+    "12"
+   ],
+   "o_en": [
+    "14",
+    "16",
+    "18",
+    "12"
+   ],
+   "a": 0,
+   "e_mr": "दिलेल्या समीकरणाचे दोन्ही बाजूंचे वर्ग करू: (x - 1/x)² = 4². म्हणून x² - 2 + 1/x² = 16. त्यामुळे x² + 1/x² = 16 + 2 = 14.",
+   "e_en": "Square both sides of the given equation: (x - 1/x)² = 4². Thus x² - 2 + 1/x² = 16, which gives x² + 1/x² = 16 + 2 = 14."
+  }
+ },
+ {
+  "reason": "groq_error: HTTP Error 429: Too Many Requests",
+  "item": {
+   "t": "trigonometry",
+   "d": 2,
+   "q_mr": "जर tan θ + cot θ = 2 असेल, तर sin² θ + cos² θ ची किंमत किती?",
+   "q_en": "If tan θ + cot θ = 2, then what is the value of sin² θ + cos² θ?",
+   "o_mr": [
+    "0",
+    "1",
+    "2",
+    "1/2"
+   ],
+   "o_en": [
+    "0",
+    "1",
+    "2",
+    "1/2"
+   ],
+   "a": 1,
+   "e_mr": "कोणत्याही त्रिकोणासाठी मूलभूत त्रिकोणमितीय नित्यसमीकरणानुसार, sin² θ + cos² θ ची किंमत नेहमी 1 असते.",
+   "e_en": "According to the fundamental trigonometric identity for any angle θ, sin² θ + cos² θ is always equal to 1."
+  }
+ }
+]

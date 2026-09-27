@@ -412,5 +412,971 @@
   "a": 1,
   "e_mr": "उजवीकडे 90° वळून उत्तर येत असेल तर सध्याची दिशा पश्चिम; II पुरेसे. I मध्ये सुरुवातीची दिशाच माहीत नसल्याने काहीच ठरत नाही.",
   "e_en": "If a 90° right turn leads to north, P now faces west; II suffices. I gives no starting direction, so it decides nothing."
+ },
+ {
+  "id": "reasoning_adv-019",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: A ≥ B > C = D ≤ E\nनिष्कर्ष:\nI. A > D\nII. B ≥ E\nयोग्य निष्कर्ष निवada.",
+  "q_en": "Statement: A ≥ B > C = D ≤ E\nConclusions:\nI. A > D\nII. B ≥ E\nChoose the correct conclusion.",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 0,
+  "e_mr": "A आणि D मधील संबंध A > B > C = D असा आहे, म्हणजेच A > D सत्य आहे. B आणि E मध्ये कोणताही निश्चित संबंध नाही कारण चिन्ह विरुद्ध दिशेने आहेत, त्यामुळे निष्कर्ष II सत्य नाही.",
+  "e_en": "The relation between A and D is A > B > C = D, which means A > D is true. There is no definite relation between B and E due to opposite signs, so conclusion II is not true."
+ },
+ {
+  "id": "reasoning_adv-020",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: W ≤ X = Y < Z\nनिष्कर्ष:\nI. Z > W\nII. X < Z\nयोग्य पर्याय निवडा.",
+  "q_en": "Statement: W ≤ X = Y < Z\nConclusions:\nI. Z > W\nII. X < Z\nChoose the correct option.",
+  "o_mr": [
+   "फक्त I सत्य",
+   "फक्त II सत्य",
+   "दोन्ही सत्य",
+   "दोन्ही असत्य"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_mr": "W ≤ X = Y < Z वरून W < Z (म्हणजेच Z > W) आणि X < Z स्पष्टपणे सिद्ध होतात, म्हणून दोन्ही निष्कर्ष सत्य आहेत.",
+  "e_en": "From W ≤ X = Y < Z, both W < Z (i.e. Z > W) and X < Z are clearly established, hence both conclusions are true."
+ },
+ {
+  "id": "reasoning_adv-021",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "X आणि Y चे वय किती आहे? \nविधाने:\nI. X चे वय Y च्या वयाच्या दुप्पट आहे.\nII. 5 वर्षांपूर्वी X आणि Y च्या वयाची बेरीज 30 वर्षे होती.",
+  "q_en": "What are the ages of X and Y?\nStatements:\nI. X's age is twice Y's age.\nII. 5 years ago, the sum of ages of X and Y was 30 years.",
+  "o_mr": [
+   "फक्त विधान I पुरसे आहे",
+   "फक्त विधान II पुरसे आहे",
+   "दोन्ही विधाने एकत्र पुरेशी आहेत",
+   "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Both statements together are sufficient",
+   "Both statements together are not sufficient"
+  ],
+  "a": 2,
+  "e_mr": "विधान I वरून X = 2Y मिळते. विधान II वरून (X-5) + (Y-5) = 30 म्हणजेच X + Y = 40 मिळते. दोन्ही समीकरणे सोडवून X आणि Y ची अचूक वये काढता येतात.",
+  "e_en": "Statement I gives X = 2Y. Statement II gives (X-5) + (Y-5) = 30 or X + Y = 40. Solving both simultaneous equations gives the exact ages of X and Y."
+ },
+ {
+  "id": "reasoning_adv-022",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: P > Q ≥ R = S < T\nनिष्कर्ष:\nI. P > S\nII. R > T\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: P > Q ≥ R = S < T\nConclusions:\nI. P > S\nII. R > T\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 0,
+  "e_mr": "विधानानुसार P > Q ≥ R = S, म्हणून P > S निष्कर्ष I सत्य आहे. परंतु R आणि T मधील संबंध निश्चित नाही, म्हणून निष्कर्ष II सत्य नाही.",
+  "e_en": "According to the statement, P > Q ≥ R = S, so P > S is true (Conclusion I). However, the exact relation between R and T cannot be determined, making Conclusion II false."
+ },
+ {
+  "id": "reasoning_adv-023",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधान: M ≥ N = O > P ≥ Q\nनिष्कर्ष:\nI. M > P\nII. N ≥ Q\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: M ≥ N = O > P ≥ Q\nConclusions:\nI. M > P\nII. N ≥ Q\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "फक्त निष्कर्ष I किंवा II सत्य आहे"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Either conclusion I or II is true"
+  ],
+  "a": 2,
+  "e_mr": "M आणि P दरम्यान M ≥ N = O > P आहे, म्हणून M > P (निष्कर्ष I सत्य). N आणि Q दरम्यान N = O > P ≥ Q आहे, म्हणून N > Q म्हणजेच N ≥ Q (निष्कर्ष II सत्य).",
+  "e_en": "Between M and P, M ≥ N = O > P, so M > P (Conclusion I is true). Between N and Q, N = O > P ≥ Q, so N > Q which implies N ≥ Q (Conclusion II is true)."
+ },
+ {
+  "id": "reasoning_adv-024",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 3,
+  "q_mr": "विधान: X < Y ≤ Z, Z = W > V\nनिष्कर्ष:\nI. X < W\nII. Y ≤ V\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: X < Y ≤ Z, Z = W > V\nConclusions:\nI. X < W\nII. Y ≤ V\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही सत्य आहेत",
+   "कोणताही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both are true",
+   "Neither is true"
+  ],
+  "a": 0,
+  "e_mr": "एकत्रित विधान: X < Y ≤ Z = W > V. X आणि W मध्ये X < Y ≤ Z = W म्हणजेच X < W (निष्कर्ष I सत्य). Y आणि V मध्ये Y ≤ Z = W > V, त्यामुळे Y आणि V मधील संबंध अनिश्चित आहे (निष्कर्ष II असत्य).",
+  "e_en": "Combined statement: X < Y ≤ Z = W > V. Between X and W, X < Y ≤ Z = W means X < W (Conclusion I is true). Between Y and V, Y ≤ Z = W > V, so no definite relation exists (Conclusion II is false)."
+ },
+ {
+  "id": "reasoning_adv-025",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "एका ओळीत एकूण किती व्यक्ती आहेत? हे ठरवण्यासाठी खालीलपैकी कोणती विधाने पुरेशी आहेत?\nविधाने:\nI. राम डावीकडून ५ व्या स्थानावर आहे.\nII. श्याम उजवीकडून ७ व्या स्थानावर आहे.",
+  "q_en": "How many total persons are there in a row? Which of the following statements is/are sufficient to determine this?\nStatements:\nI. Ram is at the 5th position from the left.\nII. Shyam is at the 7th position from the right.",
+  "o_mr": [
+   "फक्त विधान I पुरेशी आहे",
+   "फक्त विधान II पुरेशी आहे",
+   "दोन्ही विधाने आवश्यक आहेत पण पुरेशी नाहीत",
+   "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Both statements are necessary but not sufficient",
+   "Both statements together are not sufficient"
+  ],
+  "a": 3,
+  "e_mr": "व्यक्तींची एकमेकांमधील सापेक्ष स्थिती किंवा एकूण ओळीतील जागेविषयी कोणतीही माहिती दिलेली नाही, त्यामुळे दोन्ही विधाने एकत्र केली तरी एकूण व्यक्ती काढता येत नाहीत.",
+  "e_en": "No relative positions or overlap information is given between Ram and Shyam, so even combined statements are not sufficient to find the total number of persons."
+ },
+ {
+  "id": "reasoning_adv-026",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 1,
+  "q_mr": "पाच मित्र P, Q, R, S आणि T एका रांगेत उत्तरेकडे तोंड करून बसले आहेत. Q हा मध्यभागी आहे. P हा Q च्या लगेच डावीकडे आहे आणि T हा Q च्या लगेच उजवीकडे आहे. R हा P च्या डावीकडे टोकाला आहे. तर उजव्या टोकाला कोण बसले आहे?",
+  "q_en": "Five friends P, Q, R, S, and T are sitting in a row facing north. Q is in the middle. P is immediately to the left of Q and T is immediately to the right of Q. R is at the extreme left end to the left of P. Who is sitting at the right end?",
+  "o_mr": [
+   "P",
+   "S",
+   "T",
+   "Q"
+  ],
+  "o_en": [
+   "P",
+   "S",
+   "T",
+   "Q"
+  ],
+  "a": 1,
+  "e_mr": "रांगेची मांडणी डावीकडून उजवीकडे अशी आहे: R, P, Q, T, S. त्यामुळे उजव्या टोकाला S बसलेला आहे.",
+  "e_en": "The arrangement from left to right is: R, P, Q, T, S. Therefore, S is sitting at the right end."
+ },
+ {
+  "id": "reasoning_adv-027",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: W ≤ X = Y < Z\nनिष्कर्ष:\nI. Z > W\nII. X < Z\nयोग्य पर्याय निवडा:",
+  "q_en": "Statements: W ≤ X = Y < Z\nConclusions:\nI. Z > W\nII. X < Z\nChoose the correct option:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही निष्कर्ष सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions are true",
+   "Neither conclusion is true"
+  ],
+  "a": 2,
+  "e_mr": "W ≤ X = Y < Z यावरून W < Z म्हणजेच Z > W हे सत्य ठरते. तसेच X = Y < Z वरून X < Z हेदेखील सत्य ठरते.",
+  "e_en": "From W ≤ X = Y < Z, we get W < Z which means Z > W (Conclusion I is true). Also, from X = Y < Z, we get X < Z (Conclusion II is true)."
+ },
+ {
+  "id": "reasoning_adv-028",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधान: P < Q ≤ R = S > T\nनिष्कर्ष:\nI. P < S\nII. R > T\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: P < Q ≤ R = S > T\nConclusions:\nI. P < S\nII. R > T\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "P आणि S मध्ये चिन्ह '<', '≤', '=' आहेत, प्राधान्य '<' ला मिळते (म्हणजे P < S). R आणि T मध्ये R > S > T वरून R > T सत्य ठरतो. दोन्ही निष्कर्ष सत्य आहेत.",
+  "e_en": "Between P and S, the signs are '<', '≤', '=', giving priority to '<' (so P < S). Between R and T, since R = S > T, R > T is true. Both conclusions are true."
+ },
+ {
+  "id": "reasoning_adv-029",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधान: J > K ≥ L, M < L\nनिष्कर्ष:\nI. J > M\nII. K > M\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: J > K ≥ L, M < L\nConclusions:\nI. J > M\nII. K > M\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "दिलेली विधाने एकत्र केल्यावर J > K ≥ L > M असे मिळते. त्यामुळे J > M आणि K > M दोन्ही निष्कर्ष पूर्णपणे सत्य आहेत.",
+  "e_en": "Combining the statements gives J > K ≥ L > M. Therefore, both J > M and K > M are completely true."
+ },
+ {
+  "id": "reasoning_adv-030",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "A, B आणि C पैकी सर्वात उंच कोण आहे?\nविधाने:\nI. A हा B आणि C दोघांपेक्षा उंच आहे.\nII. B हा C पेक्षा उंच आहे.",
+  "q_en": "Who is the tallest among A, B and C?\nStatements:\nI. A is taller than both B and C.\nII. B is taller than C.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "विधान I किंवा II पैकी कोणतेही एक पुरेसे आहे",
+   "दोन्ही विधाने मिळूनही पुरेशी नाहीत"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Either statement I or II alone is sufficient",
+   "Both statements together are not sufficient"
+  ],
+  "a": 0,
+  "e_mr": "विधान I नुसार A हा B आणि C पेक्षा उंच आहे, त्यामुळे A हा सर्वात उंच आहे हे स्पष्ट होते. विधान II फक्त B आणि C मधील तुलना सांगते. म्हणून फक्त विधान I पुरेसे आहे.",
+  "e_en": "Statement I states A is taller than both B and C, which directly identifies A as the tallest. Statement II only compares B and C. Thus, only statement I is sufficient."
+ },
+ {
+  "id": "reasoning_adv-031",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "एका रांगेत सीता डावीकडून कितव्या स्थानावर आहे?\nविधाने:\nI. सीता उजवीकडून तिसऱ्या स्थानावर आहे.\nII. रांगेत एकूण ७ व्यक्ती आहेत.",
+  "q_en": "What is Sita's position from the left in a row?\nStatements:\nI. Sita is third from the right.\nII. There are 7 people in the row.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्र करणे आवश्यक आहे",
+   "कोणतेही विधान पुरेसे नाही"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Both statements together are necessary",
+   "Neither statement is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "फक्त विधान I किंवा फक्त विधान II वरून उत्तर मिळत नाही. दोन्ही विधाने एकत्र केल्यास, एकूण लोक = (डावीकडील स्थान + उजवीकडील स्थान - 1) या सूत्रावरून 7 = डावीकडील स्थान + 3 - 1, म्हणजेच डावीकडील स्थान = 5 मिळते.",
+  "e_en": "Neither statement alone is sufficient. Combining both, Total = (Left + Right - 1), so 7 = Left + 3 - 1, giving Left = 5. Both statements are required."
+ },
+ {
+  "id": "reasoning_adv-032",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "X पॉझिटिव्ह (धन) आहे का?\nविधाने:\nI. X² = 16\nII. X हा पूर्णांक आहे.",
+  "q_en": "Is X positive?\nStatements:\nI. X² = 16\nII. X is an integer.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "दोन्ही विधाने एकत्र करणे आवश्यक आहेत",
+   "दोन्ही विधाने एकत्र करूनही उत्तर ठरवता येत नाही"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Both statements together are necessary",
+   "Both statements together are not sufficient"
+  ],
+  "a": 3,
+  "e_mr": "विधान I मधୁन X ची किंमत +4 किंवा -4 असू शकते. विधान II सांगते की तो पूर्णांक आहे, ज्याने चिन्ह स्पष्ट होत नाही. दोन्ही एकत्र केले तरी X हा +4 किंवा -4 असू शकतो, ज्यामुळे 'X पॉझिटिव्ह आहे का?' याचे निश्चित उत्तर मिळत नाही.",
+  "e_en": "Statement I gives X = +4 or -4. Statement II says X is an integer. Even combined, X can be +4 or -4, so we cannot definitively answer if X is positive."
+ },
+ {
+  "id": "reasoning_adv-033",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधाने: A ≥ B > C = D ≤ E\nनिष्कर्ष:\nI. A > D\nII. B ≥ E\nयोग्य निष्कर्ष निवada:",
+  "q_en": "Statements: A ≥ B > C = D ≤ E\nConclusions:\nI. A > D\nII. B ≥ E\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusion I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 0,
+  "e_mr": "A आणि D मधील संबंध: A ≥ B > C = D, म्हणजेच A > D (निष्कर्ष I सत्य). B आणि E मधील थेट संबंध ठरवता येत नाही कारण विरुद्ध चिन्हे आहेत (निष्कर्ष II असत्य). म्हणून फक्त निष्कर्ष I सत्य आहे.",
+  "e_en": "Relation between A and D: A ≥ B > C = D, which implies A > D (Conclusion I is true). Relation between B and E cannot be determined due to opposite signs (Conclusion II is false). Hence, only conclusion I is true."
+ },
+ {
+  "id": "reasoning_adv-034",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: X ≤ Y < Z > W ≥ V\nनिष्कर्ष:\nI. X < W\nII. Y > V\nयोग्य निष्कर्ष निवada:",
+  "q_en": "Statements: X ≤ Y < Z > W ≥ V\nConclusions:\nI. X < W\nII. Y > V\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusion I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 3,
+  "e_mr": "X आणि W दरम्यान विरुद्ध चिन्हे येतात, त्यामुळे निश्चित संबंध सांगता येत नाही (निष्कर्ष I असत्य). Y आणि V दरम्यान देखील विरुद्ध चिन्हे येतात, त्यामुळे निश्चित संबंध सांगता येत नाही (निष्कर्ष II असत्य). म्हणून कोणताही निष्कर्ष सत्य नाही.",
+  "e_en": "Between X and W, opposite signs appear, so no definite relation can be established (Conclusion I is false). Between Y and V also, opposite signs appear, so no definite relation can be determined (Conclusion II is false). Hence, neither conclusion is true."
+ },
+ {
+  "id": "reasoning_adv-035",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 1,
+  "q_mr": "x ची किंमत काय आहे?\nविधाने:\ni. x + y = 12\nii. y = 4\nx ची किंमत काढण्यासाठी कोणती विधाने पुरेशी आहेत?",
+  "q_en": "What is the value of x?\nStatements:\ni. x + y = 12\nii. y = 4\nWhich statements are sufficient to find the value of x?",
+  "o_mr": [
+   "फक्त विधान i पुरase आहे",
+   "फक्त विधान ii पुरase आहे",
+   "एकतर i किंवा ii पुरase आहे",
+   "दोन्ही विधाने एकत्र आवश्यक आहेत"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Either i or ii is sufficient",
+   "Both statements together are necessary"
+  ],
+  "a": 3,
+  "e_mr": "फक्त विधान i वरून x ची किंमत काढता येत नाही कारण y ची किंमत माहित नाही. फक्त विधान ii वरून x ची किंमत मिळत नाही. दोन्ही विधाने एकत्र केल्यावर x + 4 = 12, म्हणजेच x = 8 मिळते. म्हणून दोन्ही विधाने एकत्र आवश्यक आहेत.",
+  "e_en": "Statement i alone cannot give x because y is unknown. Statement ii alone does not give x. Combining both, x + 4 = 12, so x = 8. Thus, both statements together are necessary."
+ },
+ {
+  "id": "reasoning_adv-036",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "A, B आणि C पैકી सर्वात उंच कोण आहे?\nविधाने:\ni. A हा B आणि C पेक्षा उंच आहे.\nii. C हा B पेक्षा κονती आहे (छोटा आहे).\nसर्वात उंच व्यक्ती शोधण्यासाठी कोणती विधाने पुरेशी आहेत?",
+  "q_en": "Who is the tallest among A, B and C?\nStatements:\ni. A is taller than both B and C.\nii. C is shorter than B.\nWhich statements are sufficient to find the tallest person?",
+  "o_mr": [
+   "फक्त विधान i पुरase आहे, तर विधान ii आवश्यक नाही",
+   "फक्त विधान ii पुरase आहे, तर विधान i आवश्यक नाही",
+   "एकतर i किंवा ii पुरase आहे",
+   "दोन्ही विधाने एकत्र आवश्यक आहेत"
+  ],
+  "o_en": [
+   "Only statement i is sufficient, while statement ii is not necessary",
+   "Only statement ii is sufficient, while statement i is not necessary",
+   "Either i or ii is sufficient",
+   "Both statements together are necessary"
+  ],
+  "a": 0,
+  "e_mr": "विधान i मध्ये स्पष्ट दिले आहे की A हा B आणि C दोघांपेक्षा उंच आहे. त्यामुळे A हाच सर्वात उंच आहे हे फक्त विधान i वरूनच स्पष्ट होते. विधान ii ची गरज नाही.",
+  "e_en": "Statement i clearly states that A is taller than both B and C. Thus, A is the tallest based on statement i alone. Statement ii is not required."
+ },
+ {
+  "id": "reasoning_adv-037",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 3,
+  "q_mr": "एका ओкаीत एकूण किती व्यक्ती आहेत?\nविधाने:\ni. राम डावीकडून ५व्या स्थानी आहे.\nii. शाम उजवीकडून ७व्या स्थानी आहे आणि रामच्या उजवीकडे ३ व्यक्ती आहेत.",
+  "q_en": "How many total persons are there in a row?\nStatements:\ni. Ram is at the 5th position from the left.\nii. Shyam is at the 7th position from the right and there are 3 persons to the right of Ram.",
+  "o_mr": [
+   "फक्त विधान i पुरase आहे",
+   "फक्त विधान ii पुरase आहे",
+   "दोन्ही विधाने एकत्र पुरेशी आहेत",
+   "दोन्ही विधाने एकत्र करूनही उत्तर येत नाही"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Both statements together are sufficient",
+   "Both statements together are not sufficient"
+  ],
+  "a": 2,
+  "e_mr": "विधान i वरून राम डावीकडून ५वा आहे. विधान ii वरून रामच्या उजवीकडे ३ व्यक्ती आहेत. म्हणजेच एकूण व्यक्ती = रामचा डावीकडील क्रमांक (५) + रामच्या उजवीकडील व्यक्ती (३) = ८. म्हणून दोन्ही विधाने एकत्र पुरेशी आहेत.",
+  "e_en": "From statement i, Ram is 5th from the left. From statement ii, there are 3 persons to the right of Ram. Total persons = Ram's position from left (5) + persons to his right (3) = 8. Hence, both statements together are sufficient."
+ },
+ {
+  "id": "reasoning_adv-038",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधाने: A > B, B ≥ C, C = D\nनिष्कर्ष:\nI. A > C\nII. A > D\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: A > B, B ≥ C, C = D\nConclusions:\nI. A > C\nII. A > D\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusion I and II are true",
+   "Either conclusion I or II is true"
+  ],
+  "a": 2,
+  "e_mr": "दिलेल्या विधानांवरून A > B ≥ C = D म्हणजेच A > D किंवा A > C असा संबंध मिळतो. म्हणून दोन्ही निष्कर्ष I आणि II सत्य आहेत.",
+  "e_en": "From the given statements, we get A > B ≥ C = D, which implies A > C and A > D are both true. Thus, both conclusions I and II are true."
+ },
+ {
+  "id": "reasoning_adv-039",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधाने: X > Y, Y > Z, Z > W\nनिष्कर्ष:\nI. X > W\nII. W < Y\nयोग्य पर्याय निवडा:",
+  "q_en": "Statements: X > Y, Y > Z, Z > W\nConclusions:\nI. X > W\nII. W < Y\nChoose the correct option:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही निष्कर्ष सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions are true",
+   "Neither conclusion is true"
+  ],
+  "a": 2,
+  "e_mr": "दिलेले विधान X > Y > Z > W असे आहे. यावरून स्पष्ट होते की X > W आणि W < Y (किंवा Y > W) दोन्ही सत्य आहेत.",
+  "e_en": "The given statement is X > Y > Z > W. From this, it is clear that both X > W and W < Y (or Y > W) are true."
+ },
+ {
+  "id": "reasoning_adv-040",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "एका वर्तुळाकार टेबलाभोवती बसलेल्या ५ जणांपैकी A च्या डावीकडे कोण बसले आहे?\nविधाने:\nI. A हा B च्या उजवीकडे दुसऱ्या स्थानावर बसला आहे आणि C च्या शेजारी आहे.\nII. D हा E च्या डावीकडे बसला आहे आणि B च्या शेजारी नाही.",
+  "q_en": "Who is sitting to the immediate left of A among 5 people sitting around a circular table?\nStatements:\nI. A is sitting second to the right of B and is adjacent to C.\nII. D is sitting to the left of E and is not adjacent to B.",
+  "o_mr": [
+   "फक्त विधान I पुरेसे आहे",
+   "फक्त विधान II पुरेसे आहे",
+   "विधान I आणि II दोन्ही एकत्र करणे आवश्यक आहे",
+   "विधान I किंवा II पैकी कोणतीही एक पुरेशी नाही"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Both statements I and II together are necessary",
+   "Neither statement I nor II is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "फक्त विधान I ने सर्व ५ जागा स्पष्ट होत नाहीत. विधान II ची मदत घेतल्यास सर्व व्यक्तींची वर्तुळाकार मांडणी पूर्ण होते आणि A च्या डावीकडील व्यक्ती निश्चित होते.",
+  "e_en": "Statement I alone doesn't fix all 5 positions. Using Statement II along with I completes the circular seating arrangement and determines who sits to the left of A."
+ },
+ {
+  "id": "reasoning_adv-041",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 1,
+  "q_mr": "चार व्यक्ती - W, X, Y आणि Z वेगवेगळ्या मजल्यांवर (१ ते ४) राहतात. Z हा सर्वात वरच्या मजल्यावर राहतो. W हा Y च्या खाली राहतो पण X च्या वर राहतो. दुसր्या मजल्यावर कोण राहतो?",
+  "q_en": "Four persons - W, X, Y and Z live on different floors (1 to 4). Z lives on the topmost floor. W lives below Y but above X. Who lives on the 2nd floor?",
+  "o_mr": [
+   "W",
+   "X",
+   "Y",
+   "Z"
+  ],
+  "o_en": [
+   "W",
+   "X",
+   "Y",
+   "Z"
+  ],
+  "a": 0,
+  "e_mr": "मजल्यांची उतरती रचना (४ ते १) अशी आहे: Z (४), Y (३), W (२), X (१). त्यामुळे दुसऱ्या मजल्यावर W राहतो.",
+  "e_en": "Floor arrangement from top to bottom (4 to 1) is: Z (4), Y (3), W (2), X (1). Therefore, W lives on the 2nd floor."
+ },
+ {
+  "id": "reasoning_adv-042",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: W ≤ X = Y < Z\nनिष्कर्ष:\nI. Z > W\nII. X < Z\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: W ≤ X = Y < Z\nConclusions:\nI. Z > W\nII. X < Z\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "दोन्ही निष्कर्ष सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "W ≤ X = Y < Z वरून W < Z (म्हणजेच Z > W) आणि X < Z दोन्ही सत्य ठरतात. म्हणून दोन्ही निष्कर्ष सत्य आहेत.",
+  "e_en": "From W ≤ X = Y < Z, we get Z > W and X < Z both being true. Therefore, both conclusions are true."
+ },
+ {
+  "id": "reasoning_adv-043",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधाने:\nP ≤ Q < R = S ≥ T\nनिष्कर्ष:\nI. P < S\nII. R ≥ T\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements:\nP ≤ Q < R = S ≥ T\nConclusions:\nI. P < S\nII. R ≥ T\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "P ≤ Q < R म्हणजे P < R, आणि R = S, म्हणून P < S (निष्कर्ष I सत्य). तसेच R = S ≥ T म्हणजे R ≥ T (निष्कर्ष II सत्य). म्हणून दोन्ही निष्कर्ष सत्य आहेत.",
+  "e_en": "P ≤ Q < R implies P < R, and since R = S, P < S (Conclusion I is true). Also R = S ≥ T implies R ≥ T (Conclusion II is true). Thus both conclusions are true."
+ },
+ {
+  "id": "reasoning_adv-044",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने:\nL < M ≤ N, N = O > P\nनिष्कर्ष:\nI. L < O\nII. M ≤ P\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements:\nL < M ≤ N, N = O > P\nConclusions:\nI. L < O\nII. M ≤ P\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion is true"
+  ],
+  "a": 0,
+  "e_mr": "दिलेली विधानांची साखळी L < M ≤ N = O अशी आहे, ज्यावरून L < O मिळते (निष्कर्ष I सत्य). M आणि P मध्ये विरुद्ध चिन्हं असल्याने निष्कर्ष II सत्य ठरत नाही.",
+  "e_en": "The combined statement is L < M ≤ N = O, from which L < O follows (Conclusion I is true). Between M and P there are opposite signs, so conclusion II is false."
+ },
+ {
+  "id": "reasoning_adv-045",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 1,
+  "q_mr": "X ची किंमत किती आहे?\nविधाने:\nI. X + Y = 15\nII. Y = 7",
+  "q_en": "What is the value of X?\nStatements:\nI. X + Y = 15\nII. Y = 7",
+  "o_mr": [
+   "फक्त विधान I पुरेशी आहे",
+   "फक्त विधान II पुरेशी आहे",
+   "विधान I आणि II दोन्ही एकत्र आवश्यक आहेत",
+   "विधान I किंवा II पैकी कोणतीही एक पुरेशी नाही"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Both statements I and II together are necessary",
+   "Neither statement I nor II alone is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "X ची किंमत काढण्यासाठी X + Y = 15 मध्ये Y = 7 ठेवणे आवश्यक आहे. त्यामुळे दोन्ही विधानांची माहिती एकत्र वापरावी लागेल.",
+  "e_en": "To find X, we need to substitute Y = 7 into X + Y = 15. Therefore, both statements together are necessary."
+ },
+ {
+  "id": "reasoning_adv-046",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने:\nW < X ≤ Y, Y = Z > V\nनिष्कर्ष:\nI. W < Z\nII. X ≤ V\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements:\nW < X ≤ Y, Y = Z > V\nConclusions:\nI. W < Z\nII. X ≤ V\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion is true"
+  ],
+  "a": 0,
+  "e_mr": "W < X ≤ Y = Z यावरून W < Z निश्चित होते (निष्कर्ष I सत्य). X आणि V मध्ये विरुद्ध चिन्हं असल्याने X ≤ V निश्चित सांगता येत नाही.",
+  "e_en": "From W < X ≤ Y = Z, W < Z is definitely true (Conclusion I is true). Between X and V, opposite signs exist so X ≤ V is false."
+ },
+ {
+  "id": "reasoning_adv-047",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधाने: A > B ≥ C = D < E\nनिष्कर्ष:\nI. A > D\nII. E > C\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: A > B ≥ C = D < E\nConclusions:\nI. A > D\nII. E > C\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "I आणि II दोन्ही सत्य आहेत",
+   "I किंवा II पैकी कोणीही सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "A > B ≥ C = D वरून A > D स्पष्ट होते. तसेच C = D < E वरून E > C मिळते. त्यामुळे दोन्ही निष्कर्ष सत्य आहेत.",
+  "e_en": "From A > B ≥ C = D, we get A > D. Also, from C = D < E, we get E > C. Thus, both conclusions are true."
+ },
+ {
+  "id": "reasoning_adv-048",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: M ≥ N = O > P ≥ Q\nनिष्कर्ष:\nI. M > P\nII. M = P\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: M ≥ N = O > P ≥ Q\nConclusions:\nI. M > P\nII. M = P\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "I किंवा II पैकी एक सत्य आहे",
+   "I आणि II दोन्ही सत्य आहेत"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Either conclusion I or II is true",
+   "Both conclusions I and II are true"
+  ],
+  "a": 0,
+  "e_mr": "विधानानुसार M ≥ N = O > P आहे, ज्यामुळे M > P निश्चितपणे सत्य ठरते. M = P सत्य नाही.",
+  "e_en": "According to the statements, M ≥ N = O > P, which definitively makes M > P true. M = P is not true."
+ },
+ {
+  "id": "reasoning_adv-049",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "x ची किंमत काय आहे?\nविधाने:\ni. x + y = 15\nii. y = 7\nकोणती विधाने पुरेशी आहेत?",
+  "q_en": "What is the value of x?\nStatements:\ni. x + y = 15\nii. y = 7\nWhich statements are sufficient to find the value of x?",
+  "o_mr": [
+   "फक्त विधान i पुरेसे आहे",
+   "फक्त विधान ii पुरेसे आहे",
+   "एकतर i किंवा ii पुरेसे आहे",
+   "दोन्ही विधाने एकत्रितपणे आवश्यक आहेत"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Either i or ii is sufficient",
+   "Both statements together are necessary"
+  ],
+  "a": 3,
+  "e_mr": "फक्त i वरून x ची किंमत काढता येत नाही कारण y ची किंमत माहीत नाही. x ची किंमत काढण्यासाठी दोन्ही विधानांची गरज आहे (15 - 7 = 8).",
+  "e_en": "Statement i alone cannot determine x because y is unknown. Both statements are required together to find x (15 - 7 = 8)."
+ },
+ {
+  "id": "reasoning_adv-050",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "x पॉझिटिव्ह (धन) आहे का?\nविधाने:\ni. x² = 16\nii. x हे एक पूर्णांक आहे.\nयोग्य पर्याय निवडा:",
+  "q_en": "Is x positive?\nStatements:\ni. x² = 16\nii. x is an integer.\nChoose the correct option:",
+  "o_mr": [
+   "फक्त विधान i पुरेसे आहे",
+   "फक्त विधान ii पुरेसे आहे",
+   "दोन्ही विधाने मिळूनही पुरेसे नाहीत",
+   "एकतर i किंवा ii पुरेसे आहे"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Both statements together are not sufficient",
+   "Either i or ii is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "x² = 16 वरून x ची किंमत +4 किंवा -4 असू शकते. x हे पूर्णांक आहे ही माहिती दिल्यानेही x धन आहे की ऋण हे निश्चित होत नाही.",
+  "e_en": "From x² = 16, x can be +4 or -4. Knowing x is an integer still leaves both positive and negative possibilities, so both together are not sufficient."
+ },
+ {
+  "id": "reasoning_adv-051",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 1,
+  "q_mr": "विधाने: P < Q ≤ R = S > T\nनिष्कर्ष:\nI. P < S\nII. R ≥ T\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: P < Q ≤ R = S > T\nConclusions:\nI. P < S\nII. R ≥ T\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "निष्कर्ष I किंवा II सत्य आहे"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Either conclusion I or II is true"
+  ],
+  "a": 2,
+  "e_mr": "विधानानुसार P < Q ≤ R म्हणजेच P < R आणि R = S, म्हणून P < S (निष्कर्ष I सत्य). तसेच R = S > T म्हणजेच R > T, ज्यावरून R ≥ T देखील सत्य ठरते (निष्कर्ष II सत्य).",
+  "e_en": "According to the statements, P < Q ≤ R implies P < R, and since R = S, P < S (Conclusion I is true). Also R = S > T implies R > T, which means R ≥ T is true (Conclusion II is true)."
+ },
+ {
+  "id": "reasoning_adv-052",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: X ≤ Y < Z > W ≥ V\nनिष्कर्ष:\nI. X < Z\nII. Z > V\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: X ≤ Y < Z > W ≥ V\nConclusions:\nI. X < Z\nII. Z > V\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "कोणताच निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion I nor II is true"
+  ],
+  "a": 2,
+  "e_mr": "विधानानुसार X ≤ Y < Z आहे, म्हणजेच X < Z (निष्कर्ष I सत्य). तसेच Z > W आणि W ≥ V आहे, म्हणजेच Z > V (निष्कर्ष II सत्य).",
+  "e_en": "According to the statements, X ≤ Y < Z, which gives X < Z (Conclusion I is true). Also Z > W ≥ V, which gives Z > V (Conclusion II is true)."
+ },
+ {
+  "id": "reasoning_adv-053",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "A, B आणि C पैकी सर्वात उंच कोण आहे?\nविधाने:\ni. A हा B आणि C दोघांपेक्षा उंच आहे.\nii. B हा C पेक्षा उंच आहे.\nसर्वात उंच व्यक्ती शोधण्यासाठी कोणती विधाने पुरेशी आहेत?",
+  "q_en": "Who is the tallest among A, B and C?\nStatements:\ni. A is taller than both B and C.\nii. B is taller than C.\nWhich statements are sufficient to find the tallest person?",
+  "o_mr": [
+   "फक्त विधान i पुरेशी आहे",
+   "फक्त विधान ii पुरेशी आहे",
+   "एकतर i किंवा ii पुरेशी आहे",
+   "विधान i आणि ii दोन्ही एकत्र आवश्यक आहेत"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Either i or ii is sufficient",
+   "Both statements i and ii together are necessary"
+  ],
+  "a": 0,
+  "e_mr": "फक्त विधान i वरूनच स्पष्ट होते की A हा B आणि C दोघांपेक्षा उंच आहे, त्यामुळे A सर्वात उंच आहे. विधान ii ची गरज नाही.",
+  "e_en": "Statement i alone clearly states that A is taller than both B and C, making A the tallest. Statement ii is unnecessary."
+ },
+ {
+  "id": "reasoning_adv-054",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 2,
+  "q_mr": "चार व्यक्ती - W, X, Y आणि Z वेगवेगळ्या मजल्यांवर (१ ते ४) राहतात. Z सर्वात वरच्या मजल्यावरील (चौथ्या) मजल्यावर राहतो. W हा Y च्या खाली पण X च्या वर राहतो. दुसर्‍या मजल्यावर कोण राहतो?",
+  "q_en": "Four persons - W, X, Y and Z live on different floors (1 to 4). Z lives on the topmost floor (4th). W lives below Y but above X. Who lives on the 2nd floor?",
+  "o_mr": [
+   "W",
+   "X",
+   "Y",
+   "Z"
+  ],
+  "o_en": [
+   "W",
+   "X",
+   "Y",
+   "Z"
+  ],
+  "a": 0,
+  "e_mr": "मजल्यांचा क्रम वरून खाली असा आहे: Z (४), Y (३), W (२), X (१). W हा Y च्या खाली आणि X च्या वर राहतो, त्यामुळे W दुसऱ्या मजल्यावर आहे.",
+  "e_en": "The floor order from top to bottom is: Z (4), Y (3), W (2), X (1). Since W lives below Y and above X, W lives on the 2nd floor."
+ },
+ {
+  "id": "reasoning_adv-055",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "एका रांगेत सीताची डावीकडून कितवी स्थान आहे?\nविधाने:\ni. सीता उजवीकडून तिसरी आहे.\nii. रांगेत एकूण ७ लोक आहेत.\nकोणती विधाने पुरेशी आहेत?",
+  "q_en": "What is Sita's position from the left in a row?\nStatements:\ni. Sita is third from the right.\nii. There are 7 people in the row.\nWhich statements are sufficient to find the position?",
+  "o_mr": [
+   "फक्त विधान i पुरसे आहे",
+   "फक्त विधान ii पुरसे आहे",
+   "दोन्ही विधाने एकत्र पुरेशी आहेत",
+   "फक्त i किंवा ii पैकी कोणतेही एक पुरसे आहे"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Both statements together are sufficient",
+   "Either i or ii is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "फक्त विधान i किंवा ii स्वतंत्रपणे उत्तर देण्यासाठी अपुरी आहेत. परंतु दोन्ही विधाने एकत्र केल्यास: एकूण व्यक्ती = ७, उजवीकडून स्थान = ३. डावीकडून स्थान = (एकूण - उजवीकडून स्थान) + १ = (७ - ३) + १ = ५. त्यामुळे दोन्ही विधाने एकत्र पुरेशी आहेत.",
+  "e_en": "Statements i and ii alone are not sufficient. But combining both: Total people = 7, Position from right = 3. Position from left = (Total - Position from right) + 1 = (7 - 3) + 1 = 5. Thus, both statements together are sufficient."
+ },
+ {
+  "id": "reasoning_adv-056",
+  "s": "reasoning",
+  "t": "inequality",
+  "d": 2,
+  "q_mr": "विधाने: L < M ≤ N, N = O > P\nनिष्कर्ष:\nI. L < O\nII. M ≤ P\nयोग्य निष्कर्ष निवडा:",
+  "q_en": "Statements: L < M ≤ N, N = O > P\nConclusions:\nI. L < O\nII. M ≤ P\nChoose the correct conclusion:",
+  "o_mr": [
+   "फक्त निष्कर्ष I सत्य आहे",
+   "फक्त निष्कर्ष II सत्य आहे",
+   "निष्कर्ष I आणि II दोन्ही सत्य आहेत",
+   "कोणताही निष्कर्ष सत्य नाही"
+  ],
+  "o_en": [
+   "Only conclusion I is true",
+   "Only conclusion II is true",
+   "Both conclusions I and II are true",
+   "Neither conclusion is true"
+  ],
+  "a": 0,
+  "e_mr": "दिलेल्या विधानांवरून L < M ≤ N = O, म्हणजेच L < O हे निश्चितपणे सत्य ठरते. परंतु M आणि P मधील संबंध स्पष्ट नाही, म्हणून निष्कर्ष II सत्य नाही.",
+  "e_en": "From the given statements, L < M ≤ N = O, which gives L < O as definitely true. However, the exact relation between M and P cannot be determined, so conclusion II is not true."
+ },
+ {
+  "id": "reasoning_adv-057",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "एका रांगेत डावीकडून सीताचे स्थान काय आहे?\nविधाने:\ni. सीता उजवीकडून तिसरी आहे.\nii. रांगेत एकूण ७ व्यक्ती आहेत.\nकोणते विधान/विधाने उत्तर शोधण्यासाठी पुरेशी आहेत?",
+  "q_en": "What is Sita's position from the left in a row?\nStatements:\ni. Sita is third from the right.\nii. There are 7 people in the row.\nWhich statement(s) are sufficient to find the position?",
+  "o_mr": [
+   "फक्त विधान i पुरसे आहे",
+   "फक्त विधान ii पुरसे आहे",
+   "विधान i आणि ii दोन्ही एकत्र पुरसे आहेत",
+   "विधान i किंवा ii यांपैकी कोणतेही पुरसे नाही"
+  ],
+  "o_en": [
+   "Only statement i is sufficient",
+   "Only statement ii is sufficient",
+   "Both statements i and ii together are sufficient",
+   "Neither statement i nor ii is sufficient"
+  ],
+  "a": 2,
+  "e_mr": "एकूण व्यक्ती = ७ (विधान ii). उजवीकडून स्थान = ३ (विधान i). डावीकडून स्थान काढण्यासाठी सूत्र: (एकूण व्यक्ती - उजवीकडील स्थान + १) = (७ - ३ + १) = ५. त्यामुळे दोन्ही विधाने एकत्र आवश्यक आहेत.",
+  "e_en": "Total people = 7 (Statement ii). Position from right = 3 (Statement i). Position from left = (Total - Right Position + 1) = (7 - 3 + 1) = 5. Therefore, both statements together are necessary."
+ },
+ {
+  "id": "reasoning_adv-058",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 2,
+  "q_mr": "पाच व्यक्ती - P, Q, R, S आणि T वेगवेगळ्या मजल्यांवर (तळमजला = १ ते सर्वोच्च = ५) राहतात. Q हा सर्वात वरच्या मजल्यावर राहतो. P हा T च्या लगेच वर राहतो. S हा सम क्रमांकाच्या मजल्यावर राहतो. R हा १ व्या मजल्यावर राहत नाही. तिसऱ्या मजल्यावर कोण राहतो?",
+  "q_en": "Five persons - P, Q, R, S, and T live on different floors (ground = 1 to top = 5). Q lives on the topmost floor. P lives immediately above T. S lives on an even-numbered floor. R does not live on floor 1. Who lives on floor 3?",
+  "o_mr": [
+   "P",
+   "T",
+   "S",
+   "R"
+  ],
+  "o_en": [
+   "P",
+   "T",
+   "S",
+   "R"
+  ],
+  "a": 3,
+  "e_mr": "Q पाचव्या मजल्यावर आहे. P हा T च्या लगेच वर राहतो, त्यामुळे P आणि T अनुक्रमे ४ आणि ३ किंवा ३ आणि २ वर असू शकतात. R हा १ वर नाही. S सम क्रमांकावर (२ किंवा ४) आहे. जर S चारवर असेल, तर R हा २ वर येईल, पण त्यामुळे P आणि T साठी जागा उरत नाही. म्हणून S दोनवर, R एकवर, Q पाचवर राहतो; उरलेले P(४) आणि T(३) येतात. म्हणून तिसऱ्या मजल्यावर R राहतो.",
+  "e_en": "Q is on floor 5. P lives immediately above T, so P and T can be on (4,3) or (3,2). R is not on 1. S is on an even floor (2 or 4). If S is on 4, R is on 2, leaving no space for P and T. Thus, S is on 2, R on 1, Q on 5, leaving P on 4 and T on 3. Hence, R lives on floor 3."
+ },
+ {
+  "id": "reasoning_adv-059",
+  "s": "reasoning",
+  "t": "puzzles",
+  "d": 3,
+  "q_mr": "पाच मजल्यांच्या इमारतीत (तळमजला = १, सर्वोच्च मजला = ५) P, Q, R, S आणि T हे पाच जण वेगवेगळ्या मजल्यावर राहतात. Q हा सर्वोच्च मजल्यावर राहतो. P हा T च्या लगेच वर राहतो. S हा सम क्रमांकाच्या मजल्यावर राहतो. R हा १ ल्या मजल्यावर राहत नाही. ३ व्या मजल्यावर कोण राहतो?",
+  "q_en": "Five persons - P, Q, R, S, and t live on different floors of a five-floor building (ground = 1 to top = 5). Q lives on the topmost floor. P lives immediately above T. S lives on an even-numbered floor. R does not live on floor 1. Who lives on floor 3?",
+  "o_mr": [
+   "P",
+   "R",
+   "S",
+   "T"
+  ],
+  "o_en": [
+   "P",
+   "R",
+   "S",
+   "T"
+  ],
+  "a": 1,
+  "e_mr": "Q हा ५ व्या मजल्यावर राहतो. P हा T च्या लगेच वर राहतो, त्यामुळे ही जोडी (P, T) ही अनुक्रमे (४, ३) किंवा (२, १) वर असू शकते. पण S हा सम क्रमांकाच्या मजल्यावर राहतो (जो २ किंवा ४ असू शकतो). जर P, T अनुक्रमे ४, ३ वर असतील, तर S हा २ वर येईल आणि उरलेला R हा १ वर येईल, पण R हा १ वर राहत नाही अशी अट आहे. त्यामुळे P, T हे २ आणि १ वर असतील आणि S हा ४ वर असेल. मग R हा ३ व्या मजल्यावर राहतो.",
+  "e_en": "Q lives on floor 5. P lives immediately above T, so the pair (P, T) must be on floors (4, 3) or (2, 1). S lives on an even-numbered floor (2 or 4). If P, T are on 4, 3, then S would be on 2, leaving R for floor 1, which violates the condition that R does not live on floor 1. Thus, P and T are on 2 and 1, and S is on floor 4. Therefore, R lives on floor 3."
+ },
+ {
+  "id": "reasoning_adv-060",
+  "s": "reasoning",
+  "t": "data_sufficiency",
+  "d": 2,
+  "q_mr": "दिलेल्या प्रश्नाचे उत्तर देण्यासाठी कोणती विधाने पुरेशी आहेत?\nप्रश्न: A, B आणि C पैकी सर्वात उंच कोण आहे?\nविधाने:\nI. A हा B आणि C दोघांपेक्षा उंच आहे.\nII. B हा C पेक्षा उंच आहे.",
+  "q_en": "Which of the statements is/are sufficient to answer the question?\nQuestion: Who is the tallest among A, B, and C?\nStatements:\nI. A is taller than both B and C.\nII. B is taller than C.",
+  "o_mr": [
+   "फक्त विधान I पुरेशी आहे",
+   "फक्त विधान II पुरेशी आहे",
+   "विधान I किंवा II पैकी कोणतीही एक पुरेशी आहे",
+   "दोन्ही विधाने मिळून सुद्धा पुरेशी नाहीत"
+  ],
+  "o_en": [
+   "Only statement I is sufficient",
+   "Only statement II is sufficient",
+   "Either statement I alone is sufficient",
+   "Both statements together are not sufficient"
+  ],
+  "a": 0,
+  "e_mr": "विधान I वरून आपल्याला समजते की A हा B आणि C या दोघांपेक्षा उंच आहे, त्यामुळे A हा सर्वात उंच व्यक्ती आहे हे निश्चित होते. म्हणून फक्त विधान I हे उत्तर देण्यासाठी पुरेसे आहे.",
+  "e_en": "From statement I, it is clear that A is taller than both B and C, which means A is the tallest. Therefore, statement I alone is sufficient to answer the question."
  }
 ]
