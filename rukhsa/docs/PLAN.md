@@ -417,3 +417,120 @@ further `highway_lane`, `parking_rules`, and `roundabouts_intersections`
 content; and (c) keep hunting for a second independent, verifiable UAE
 source (Abu Dhabi/ADNOC or Sharjah driving-institute material) to
 cross-check facts against and diversify beyond the Dubai RTA handbook.
+
+## 7. Third deepening pass: 107 -> 145 questions
+
+**Sources re-verified and used this pass:**
+
+- **RTA Light Motor Vehicle Handbook** (`russiadubai.com` mirror) --
+  re-fetched and re-extracted (via `pdfminer.six`); confirmed live and
+  unchanged (3rd edition, Jan 2012). This pass specifically mined the
+  previously under-used sections: Speed Limits (Part 5, exact km/h figures
+  by road class), Changing Lanes and Overtaking, the full two-lane/
+  three-lane Roundabout procedures, Road Markings (regulatory/warning/
+  guidance, Article 58 no-passing line), Parking Control signs and the
+  Paid Parking in Dubai section (Part 6, Code A/B, fines table), and the
+  Seat Belts / Alcohol-Drugs-Medicines / child-safety pages in Part 3.
+- **`drivedubai.ae/en/download/`** -- retried this pass with a plain-UA
+  `curl` (per instructions) and this time succeeded (HTTP 200, no
+  Cloudflare challenge -- the earlier block was transient/tool-specific
+  as suspected). Downloaded and opened `PTT-Motorcycle-English.ppsx` and
+  `PTT-HVT-HVB-English.ppsx` (genuine PowerPoint/OOXML files, 547 and 590
+  slides respectively, real theory-test Q&A content branded "Motorcycle -
+  Theory Test Questions" / heavy-vehicle equivalents). Because the decks'
+  own answer-key lettering is positionally shuffled and not reliably
+  parseable, they were **not** used as a source of correct answers except
+  where a fact is self-evidently correct on ordinary road-safety grounds
+  (e.g. buying a new helmet because a second-hand one may have invisible
+  impact damage) or directly resolves an existing flagged fact via a
+  slide's plain question text (see below).
+- **New source found and verified: RTA's own `Truck and Bus Handbook`**
+  (`https://rta.ae/wpsv5/eservices/PDF_Catalog/Truck_Bus_Handbook_EN.pdf`,
+  found via web search of the `rta.ae` domain itself, not a third-party
+  mirror). Downloaded (4.9MB, 36 pages) and opened with PyMuPDF -- genuine,
+  real extractable text: "Truck and Bus Handbook, A Guide to Safe Driving,
+  3rd Edition, January 2012," with a full table of contents (Vehicle
+  Checks, Coupling/Uncoupling Trailers, Dimensions and Load Limits,
+  Sharing the Road, Vehicle Emergencies, etc.) -- not a marketing page or
+  dead link. This directly resolved one previously-flagged question (see
+  below) and is now added to the verified-sources list for future passes.
+- **Rejected:** no other candidate source turned up a genuine,
+  independently fetchable multi-page UAE driving-rules document this pass
+  beyond the two above; nothing else was added or used.
+
+**New content: 38 new questions, all sourced from the LMV handbook,**
+across the categories flagged as thin: `speed_limits` (+6: urban single/
+dual/rural/freeway km/h figures, freeway minimum speed, parking-area speed),
+`highway_lane` (+6: overtake-on-the-left rule, give-way-when-overtaken rule,
+where overtaking is banned, 2-second gap before pulling out, ~25-second
+truck-overtake duration, no-crossing-solid-line rule), `roundabouts_
+intersections` (+5: keep-right-of-island/anticlockwise rule, give-way-from-
+the-left rule, two-lane turn-right/turn-left procedures, three-lane
+left-lane-reserved-for-left-turns rule, main-road priority rule),
+`alcohol_fatigue` (+4: the handbook's 14.33% Dubai alcohol-crash figure,
+how alcohol/drugs impair risk judgement, the "arrange a sober
+driver/taxi" advice, rumble strips helping drowsy drivers), `seatbelt_
+child_safety` (+4: rear-facing seat/airbag danger, back-seat-until-13 rule,
+booster-seat-until-145cm rule, pregnant-women-must-also-buckle-up rule),
+`parking_rules` (+6: Code A/B stay limits, and four exact fine figures from
+the Paid Parking Violations table -- non-payment/lost ticket AED150,
+exceeding duration AED100, disabled-bay-without-permit AED500, plus the
+"no parking even if sitting in the vehicle" rule), `road_signs` (+4:
+No Stopping signs, loading/unloading zone signs, the Article 58 solid-line
+citation, diagrammatic warning signs), `traffic_rules_row` (+2: Article 1's
+general duty-of-care rule, Article 36's give-way-when-turning rule), and
+`motorcycle` (+1: buy-new-not-secondhand-helmet, on general safety
+grounds). All 38 were authored in English + Arabic first from the
+re-extracted handbook text, then independently translated into all 12
+languages with a self-QA read-through per language (structure, numerals,
+and meaning spot-checked against the English/Arabic source); none needed a
+`needsVerification` flag, since each is a direct, specific handbook fact
+(or, for `mc015`, uncontroversial general motorcycle-safety knowledge).
+
+**Verification flags resolved this pass (2 of the prior 12):**
+
+- `hv012` (heavy-vehicle rest-break rule) -- previously flagged as
+  "exact hour thresholds ... not confirmed." Resolved using the newly
+  found RTA Truck and Bus Handbook (Part 2, "Take Breaks"): "Never drive
+  for more than 10 hours in any 24 hour period." The question was
+  rewritten to ask this exact figure and `needsVerification` cleared, in
+  all 12 languages.
+- `mc010` (motorcycle helmet law for pillion passengers) -- previously
+  flagged since the statutory article wasn't directly confirmed. The
+  Drive Dubai motorcycle theory-test deck's plain question text confirms
+  the practical rule taught to UAE riders: "When riding with a pillion
+  passenger, helmet is required for both rider and pillion passenger."
+  The question's answer was already correct; `needsVerification` cleared
+  and the explanation updated to cite this source honestly (a training
+  deck, not the statute text itself), in all 12 languages.
+- **Left flagged (10 remaining):** `sl003`, `fp005`, `fp006`, `pr003`,
+  `af001`, `vd002`, `vd006`, `mc011`, `mc012`, `hv006` -- none of this
+  pass's sources (LMV handbook re-read, Truck and Bus Handbook, or the
+  motorcycle/heavy-vehicle decks) happened to cover these specific facts
+  with a directly citable, unambiguous statement.
+
+**Total after this pass: 145 questions** (was 107), still 12 categories,
+now 10 questions flagged `needsVerification: true` (was 12). Validation:
+`python3 pipeline/build_bundle.py` builds all 145 questions x 12 languages
+cleanly (`Build OK.`); `python3 pipeline/validate.py` reports
+`OK: 145 questions, 12 categories, 10 flagged needsVerification.` Every
+touched `content/questions_<lang>.json` file was checked with
+`python3 -m json.tool`.
+
+**`pipeline/validate.py` fix:** the question-count sanity check's `60-80`
+range was a leftover from the original scaffold and had been producing a
+misleading `WARN` since the app passed 80 questions several passes ago. It
+now warns outside `60-800` (the project's real target range from the task
+brief) instead.
+
+**Scope note (again):** the task's aim was 60-100 new questions this pass;
+38 were delivered, prioritising verified accuracy and full independent
+12-language translation over hitting the top of the range. The next pass
+should: (a) mine the remainder of the newly-found Truck and Bus Handbook
+(vehicle checks, coupling/uncoupling trailers, load limits, braking
+distances, construction-zone driving) for further `heavy_vehicle` content
+and possibly resolve `hv006`; (b) revisit the Drive Dubai motorcycle deck
+with an OCR/positional-layout approach that can reliably recover its
+answer key, to safely mine `mc011`/`mc012`-type facts; and (c) keep
+looking for an Abu Dhabi/ADNOC or Sharjah driving-institute source to
+diversify beyond Dubai RTA material.
