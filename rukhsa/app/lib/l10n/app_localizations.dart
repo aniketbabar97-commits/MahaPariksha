@@ -18,6 +18,8 @@ class AppLocalizations {
     Locale('ta'),
     Locale('fa'),
     Locale('fr'),
+    Locale('zh'),
+    Locale('ru'),
   ];
 
   static AppLocalizations of(BuildContext context) {
@@ -396,6 +398,80 @@ class AppLocalizations {
       'practiceAllMistakes': 'Revoir le contenu signalé',
       'translationPendingNote': 'Ce texte est affiché en anglais car la traduction dans cette langue est encore en attente.',
     },
+    'zh': {
+      'appTitle': 'Rukhsa',
+      'tagline': '阿联酋驾驶考试',
+      'chooseLanguageTitle': '选择您的语言',
+      'chooseLanguageSubtitle': '您可以随时在设置中更改此项',
+      'continueButton': '继续',
+      'homeTitle': '首页',
+      'categoriesTitle': '分类',
+      'startPractice': '开始练习',
+      'questionsCount': '{count} 道题',
+      'needsVerificationBadge': '审核中',
+      'questionLabel': '第 {current} 题,共 {total} 题',
+      'showExplanation': '显示解析',
+      'correctLabel': '正确',
+      'incorrectLabel': '错误',
+      'nextQuestion': '下一题',
+      'finishQuiz': '完成',
+      'retryQuiz': '重试',
+      'backToHome': '返回首页',
+      'resultsTitle': '结果',
+      'yourScore': '您的得分',
+      'passLabel': '通过',
+      'failLabel': '还未通过 - 继续练习',
+      'passMarkNote': '大多数RTA考试中心要求答对约60-70%才能通过',
+      'settingsTitle': '设置',
+      'languageSettings': '应用语言',
+      'aboutTitle': '关于 Rukhsa',
+      'aboutBody': 'Rukhsa 是一款用于阿联酋RTA驾驶理论考试的离线练习应用。它是一个独立的学习辅助工具,与任何政府机构均无关联。',
+      'exitConfirmTitle': '退出测验?',
+      'exitConfirmBody': '您在本次测验中的进度将会丢失。',
+      'yes': '是',
+      'no': '否',
+      'cancel': '取消',
+      'ok': '确定',
+      'practiceAllMistakes': '复习标记内容',
+      'translationPendingNote': '由于该语言的翻译尚未完成,此文本以英文显示。',
+    },
+    'ru': {
+      'appTitle': 'Rukhsa',
+      'tagline': 'Экзамен по вождению в ОАЭ',
+      'chooseLanguageTitle': 'Выберите ваш язык',
+      'chooseLanguageSubtitle': 'Вы можете изменить это в любое время в настройках',
+      'continueButton': 'Продолжить',
+      'homeTitle': 'Главная',
+      'categoriesTitle': 'Категории',
+      'startPractice': 'Начать практику',
+      'questionsCount': '{count} вопросов',
+      'needsVerificationBadge': 'На проверке',
+      'questionLabel': 'Вопрос {current} из {total}',
+      'showExplanation': 'Показать объяснение',
+      'correctLabel': 'Правильно',
+      'incorrectLabel': 'Неправильно',
+      'nextQuestion': 'Далее',
+      'finishQuiz': 'Завершить',
+      'retryQuiz': 'Повторить',
+      'backToHome': 'На главную',
+      'resultsTitle': 'Результаты',
+      'yourScore': 'Ваш результат',
+      'passLabel': 'Сдано',
+      'failLabel': 'Пока нет - продолжайте практиковаться',
+      'passMarkNote': 'Большинству центров RTA требуется около 60-70% правильных ответов для сдачи',
+      'settingsTitle': 'Настройки',
+      'languageSettings': 'Язык приложения',
+      'aboutTitle': 'О приложении Rukhsa',
+      'aboutBody': 'Rukhsa - это офлайн-приложение для подготовки к теоретическому экзамену по вождению RTA в ОАЭ. Это независимое учебное пособие, не связанное с какими-либо государственными органами.',
+      'exitConfirmTitle': 'Покинуть тест?',
+      'exitConfirmBody': 'Ваш прогресс в этом тесте будет потерян.',
+      'yes': 'Да',
+      'no': 'Нет',
+      'cancel': 'Отмена',
+      'ok': 'ОК',
+      'practiceAllMistakes': 'Повторить отмеченные материалы',
+      'translationPendingNote': 'Этот текст отображается на английском языке, так как перевод на этот язык пока не завершён.',
+    },
   };
 
   String _raw(String key) {
@@ -487,7 +563,7 @@ class AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const AppLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => ['en', 'ar', 'ur', 'hi', 'tl', 'ml', 'bn', 'ta', 'fa', 'fr'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => ['en', 'ar', 'ur', 'hi', 'tl', 'ml', 'bn', 'ta', 'fa', 'fr', 'zh', 'ru'].contains(locale.languageCode);
 
   @override
   Future<AppLocalizations> load(Locale locale) async =>

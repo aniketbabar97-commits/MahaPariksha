@@ -5,11 +5,16 @@ Builds rukhsa/app/assets/content/bundle.json from:
   - rukhsa/content/bank/*.json  (authored source, see author_bank.py)
 
 For every question, this script:
-  1. Keeps the authored "en" and "ar" text as-is (translationStatus: "done").
-  2. Fills the remaining 8 languages (ur, hi, tl, ml, bn, ta, fa, fr) with the
+  1. Keeps the authored text as-is (translationStatus: "done") for every
+     language that is present inline on the question object in the bank file
+     (currently "en", "ar", "zh" and "ru").
+  2. Fills any remaining languages (ur, hi, tl, ml, bn, ta, fa, fr) with the
      English text plus translationStatus: "pending", so the app can clearly
      mark/filter untranslated content instead of silently showing fake
-     translations.
+     translations. If a per-language override file
+     rukhsa/content/questions_<lang>.json (a flat list of
+     {id, q, options, explanation}) exists for one of these languages, its
+     text is used instead, with translationStatus: "done".
 
 Run: python3 rukhsa/pipeline/build_bundle.py
 """
@@ -21,45 +26,83 @@ CONTENT_DIR = os.path.join(ROOT, "content")
 BANK_DIR = os.path.join(CONTENT_DIR, "bank")
 OUT_PATH = os.path.join(ROOT, "app", "assets", "content", "bundle.json")
 
+AUTHORED_LANGS = ["en", "ar", "zh", "ru"]
 FALLBACK_LANGS = ["ur", "hi", "tl", "ml", "bn", "ta", "fa", "fr"]
-AUTHORED_LANGS = ["en", "ar"]
 ALL_LANGS = AUTHORED_LANGS + FALLBACK_LANGS
 
 
-def build_localized_field(en_value, ar_value):
-    field = {
-        "en": {"text": en_value, "translationStatus": "done"},
-        "ar": {"text": ar_value, "translationStatus": "done"},
-    }
+def load_overrides():
+    """Loads optional rukhsa/content/questions_<lang>.json override files for
+    the fallback languages, keyed by question id."""
+    overrides = {}
     for lang in FALLBACK_LANGS:
-        field[lang] = {"text": en_value, "translationStatus": "pending"}
+        path = os.path.join(CONTENT_DIR, f"questions_{lang}.json")
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            items = json.load(f)
+        overrides[lang] = {item["id"]: item for item in items if "id" in item}
+    return overrides
+
+
+def build_localized_field(en_value, authored, key):
+    field = {"en": {"text": en_value, "translationStatus": "done"}}
+    for lang in AUTHORED_LANGS:
+        if lang == "en":
+            continue
+        field[lang] = {"text": authored[lang][key], "translationStatus": "done"}
     return field
 
 
-def build_localized_list(en_list, ar_list):
+def build_localized_list(en_list, authored, key):
     out = []
     for i in range(len(en_list)):
-        out.append(build_localized_field(en_list[i], ar_list[i]))
+        item = {"en": {"text": en_list[i], "translationStatus": "done"}}
+        for lang in AUTHORED_LANGS:
+            if lang == "en":
+                continue
+            item[lang] = {"text": authored[lang][key][i], "translationStatus": "done"}
+        out.append(item)
     return out
 
 
-def transform_question(q):
+def transform_question(q, overrides):
+    authored = {lang: q[lang] for lang in AUTHORED_LANGS if lang in q}
+    q_field = build_localized_field(q["en"]["q"], authored, "q")
+    options_field = build_localized_list(q["en"]["options"], authored, "options")
+    explanation_field = build_localized_field(q["en"]["explanation"], authored, "explanation")
+
+    for lang in FALLBACK_LANGS:
+        override = overrides.get(lang, {}).get(q["id"])
+        if override:
+            q_field[lang] = {"text": override["q"], "translationStatus": "done"}
+            explanation_field[lang] = {"text": override["explanation"], "translationStatus": "done"}
+            for i, opt in enumerate(override["options"]):
+                options_field[i][lang] = {"text": opt, "translationStatus": "done"}
+        else:
+            q_field[lang] = {"text": q["en"]["q"], "translationStatus": "pending"}
+            explanation_field[lang] = {"text": q["en"]["explanation"], "translationStatus": "pending"}
+            for i, opt in enumerate(q["en"]["options"]):
+                options_field[i][lang] = {"text": opt, "translationStatus": "pending"}
+
     return {
         "id": q["id"],
         "category": q["category"],
         "subcategory": q.get("subcategory"),
         "difficulty": q.get("difficulty", 1),
         "needsVerification": q.get("needsVerification", False),
-        "q": build_localized_field(q["en"]["q"], q["ar"]["q"]),
-        "options": build_localized_list(q["en"]["options"], q["ar"]["options"]),
+        "q": q_field,
+        "options": options_field,
         "answer": q["answer"],
-        "explanation": build_localized_field(q["en"]["explanation"], q["ar"]["explanation"]),
+        "explanation": explanation_field,
     }
 
 
 def main():
     with open(os.path.join(CONTENT_DIR, "taxonomy.json"), encoding="utf-8") as f:
         taxonomy = json.load(f)
+
+    overrides = load_overrides()
 
     questions = []
     for fname in sorted(os.listdir(BANK_DIR)):
@@ -68,7 +111,7 @@ def main():
         with open(os.path.join(BANK_DIR, fname), encoding="utf-8") as f:
             data = json.load(f)
         for q in data["questions"]:
-            questions.append(transform_question(q))
+            questions.append(transform_question(q, overrides))
 
     bundle = {
         "version": 1,

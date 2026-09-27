@@ -43,17 +43,23 @@ fact. As of this pass:
 
 ## 3. Language rollout status
 
-Ten languages are wired end-to-end in both the UI (ARB files under
+Twelve languages are wired end-to-end in both the UI (ARB files under
 `app/lib/l10n/`) and the question schema: English, Arabic, Urdu, Hindi,
-Tagalog, Malayalam, Bengali, Tamil, Farsi, French.
+Tagalog, Malayalam, Bengali, Tamil, Farsi, French, Chinese (Simplified),
+Russian. This set covers every language the official Dubai RTA computer
+theory test is offered in (Arabic, English, Urdu, Hindi, Malayalam,
+Tagalog/Filipino, Farsi, French, Chinese, Russian) plus Bengali and Tamil for
+major learner-demand coverage.
 
 | Language | UI strings | Question content |
 |---|---|---|
 | English (en) | Translated | Authored (source language) |
 | Arabic (ar) | Translated | Authored (real translation) |
-| Urdu, Hindi, Tagalog, Malayalam, Bengali, Tamil, Farsi, French | Translated | English fallback, `translationStatus: "pending"` per question/field |
+| Chinese, Simplified (zh) | Translated | Authored (real translation) |
+| Russian (ru) | Translated | Authored (real translation) |
+| Urdu, Hindi, Tagalog, Malayalam, Bengali, Tamil, Farsi, French | Translated | English fallback, `translationStatus: "pending"` per question/field (unless overridden by a `content/questions_<lang>.json` file) |
 
-The bundle schema (`build_bundle.py`) always carries all 10 languages per
+The bundle schema (`build_bundle.py`) always carries all 12 languages per
 question so the app never has to special-case a missing key, but it is
 explicit in the data about which text is a real, reviewed translation
 (`"done"`) versus an English placeholder (`"pending"`). The next content pass
@@ -63,8 +69,8 @@ remaining languages.
 
 ## 4. Next steps
 
-- Get real (reviewed) translations for the 8 "pending" languages, starting
-  with Urdu and Hindi.
+- Get real (reviewed) translations for the remaining "pending" languages,
+  starting with Urdu and Hindi.
 - Verify every `needsVerification: true` question against the official RTA
   handbook and current fine/black-point schedule, then flip the flag.
 - Grow the bank from 59 to 300+ questions once content is verified, to

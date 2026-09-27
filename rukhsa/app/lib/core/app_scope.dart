@@ -8,7 +8,7 @@ import '../data/prefs.dart';
 const List<String> rtlLanguages = ['ar', 'ur', 'fa'];
 
 const List<String> supportedLanguages = [
-  'en', 'ar', 'ur', 'hi', 'tl', 'ml', 'bn', 'ta', 'fa', 'fr',
+  'en', 'ar', 'ur', 'hi', 'tl', 'ml', 'bn', 'ta', 'fa', 'fr', 'zh', 'ru',
 ];
 
 TextDirection directionFor(String lang) =>

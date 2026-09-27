@@ -16,6 +16,8 @@ const Map<String, String> _languageNativeNames = {
   'ta': 'தமிழ்',
   'fa': 'فارسی',
   'fr': 'Français',
+  'zh': '中文',
+  'ru': 'Русский',
 };
 
 /// First-launch screen: pick a UI language before entering the app.

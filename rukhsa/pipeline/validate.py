@@ -6,7 +6,7 @@ import sys
 
 ROOT = os.path.join(os.path.dirname(__file__), "..")
 BUNDLE_PATH = os.path.join(ROOT, "app", "assets", "content", "bundle.json")
-EXPECTED_LANGS = {"en", "ar", "ur", "hi", "tl", "ml", "bn", "ta", "fa", "fr"}
+EXPECTED_LANGS = {"en", "ar", "ur", "hi", "tl", "ml", "bn", "ta", "fa", "fr", "zh", "ru"}
 
 
 def fail(msg):

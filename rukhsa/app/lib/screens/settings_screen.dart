@@ -14,6 +14,8 @@ const Map<String, String> _languageNativeNames = {
   'ta': 'தமிழ்',
   'fa': 'فارسی',
   'fr': 'Français',
+  'zh': '中文',
+  'ru': 'Русский',
 };
 
 class SettingsScreen extends StatelessWidget {

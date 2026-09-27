@@ -17,7 +17,7 @@ import re
 
 L10N_DIR = os.path.join(os.path.dirname(__file__), "..", "app", "lib", "l10n")
 OUT_PATH = os.path.join(L10N_DIR, "app_localizations.dart")
-LANGS = ["en", "ar", "ur", "hi", "tl", "ml", "bn", "ta", "fa", "fr"]
+LANGS = ["en", "ar", "ur", "hi", "tl", "ml", "bn", "ta", "fa", "fr", "zh", "ru"]
 
 
 def dart_string_literal(s: str) -> str:
