@@ -1,0 +1,49 @@
+name: rukhsa
+description: "Rukhsa - offline UAE RTA driving theory test practice (Android applicationId / iOS bundle id: app.rukhsa)"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/app_icon.png"
+  # app_icon.png is rasterized from assets/icon/app_icon.svg (see
+  # rukhsa/docs/PLAN.md for the exact command). Re-run
+  # `dart run flutter_launcher_icons` after regenerating it to refresh the
+  # android/app/src/main/res/mipmap-*/ic_launcher.png files.
+  min_sdk_android: 21
+
+flutter:
+  # ARB files under lib/l10n/ are the i18n source of truth (see l10n.yaml).
+  # A Flutter SDK is now available in the build environment, and current
+  # stable Flutter (as of 3.47.x) unconditionally runs its gen_localizations
+  # build step whenever l10n.yaml is present, regardless of this flag, so
+  # `generate: false` with a hand-generated app_localizations.dart no longer
+  # builds at all. Switched to `generate: true` so `flutter gen-l10n` (run
+  # automatically as part of every build) produces lib/l10n/app_localizations.dart
+  # from the .arb files; the previous hand-generated file (built by
+  # pipeline/gen_dart_l10n.py, used only while no Flutter SDK was available)
+  # has been removed.
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/content/
