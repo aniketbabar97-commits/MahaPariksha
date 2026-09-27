@@ -39,7 +39,7 @@ class ResultsScreen extends StatelessWidget {
                 size: 72,
               ),
               const SizedBox(height: 16),
-              Text(t.yourScore, style: const TextStyle(fontSize: 16, color: Colors.black54)),
+              Text(t.yourScore, style: TextStyle(fontSize: 16, color: Theme.of(context).hintColor)),
               const SizedBox(height: 4),
               Text(
                 '$correct / $total',
@@ -58,7 +58,7 @@ class ResultsScreen extends StatelessWidget {
               Text(
                 t.passMarkNote,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 12, color: Colors.black45),
+                style: TextStyle(fontSize: 12, color: Theme.of(context).hintColor),
               ),
               const SizedBox(height: 32),
               ElevatedButton(

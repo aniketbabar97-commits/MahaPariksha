@@ -21,16 +21,26 @@ class AppScope extends ChangeNotifier {
   String _lang = 'en';
   ContentBundle? _bundle;
   bool _onboarded = false;
+  String _emirate = 'all';
+  String _vehicleType = 'car';
 
   String get lang => _lang;
   ContentBundle? get bundle => _bundle;
   bool get onboarded => _onboarded;
   bool get isLoaded => _bundle != null;
+  String get emirate => _emirate;
+  String get vehicleType => _vehicleType;
+
+  /// The question set for the current emirate/vehicle-type filters.
+  List<Question> get filteredQuestions =>
+      _bundle?.filtered(emirate: _emirate, vehicleType: _vehicleType) ?? const [];
 
   Future<void> init() async {
     final savedLang = await Prefs.getLanguage();
     _onboarded = await Prefs.hasOnboarded();
     if (savedLang != null) _lang = savedLang;
+    _emirate = await Prefs.getEmirate();
+    _vehicleType = await Prefs.getVehicleType();
     _bundle = await _repo.load();
     notifyListeners();
   }
@@ -39,6 +49,18 @@ class AppScope extends ChangeNotifier {
     _lang = lang;
     _onboarded = true;
     await Prefs.setLanguage(lang);
+    notifyListeners();
+  }
+
+  Future<void> setEmirate(String value) async {
+    _emirate = value;
+    await Prefs.setEmirate(value);
+    notifyListeners();
+  }
+
+  Future<void> setVehicleType(String value) async {
+    _vehicleType = value;
+    await Prefs.setVehicleType(value);
     notifyListeners();
   }
 }

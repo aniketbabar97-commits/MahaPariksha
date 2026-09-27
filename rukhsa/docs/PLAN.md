@@ -83,3 +83,93 @@ remaining languages.
   copy in the app's priority languages, keyword research for terms like
   "RTA test", "UAE driving theory", "Mulkiya test practice", screenshots, and
   a review-prompt strategy. Placeholder only; do not write ASO copy yet.
+
+## 5. UI/product polish pass (this branch)
+
+Added on top of the existing app skeleton, all under `app/lib/`, without
+touching `content/bank/`, `content/taxonomy.json`, or the l10n `.arb` files
+(that content/translation work is owned separately):
+
+- **Design system** (`core/theme.dart`, `core/design_system.dart`): brand
+  color tokens (blue/gold from the logo) with a real light+dark `ColorScheme`,
+  a spacing/radius/type scale, and a reusable widget kit — `AppCard`,
+  `AppBadge`, `CategoryTile`, `ProgressRing`, `StatCard`, `AppEmptyState`.
+- **App icon / brand mark** (`core/app_icon.dart` + `assets/icon/app_icon.svg`):
+  the blue-field/gold-steering-wheel/car/road logo drawn as a `CustomPainter`
+  (`RukhsaLogoMark`) plus a hand-authored SVG twin of the same design, since
+  no image-generation tool was available. The SVG is a source asset for a
+  future `flutter_launcher_icons` pass to produce real Android/iOS launcher
+  icons — it is not yet wired into a launcher-icon build.
+- **Road Sign Library** (`data/road_signs.dart`, `widgets/road_sign_painter.dart`,
+  `screens/road_signs_screen.dart`): 20 real UAE sign types across
+  priority/mandatory/prohibitory/warning/informatory categories, drawn as
+  shape- and color-accurate vectors (red triangles, blue circles, red-ringed
+  white prohibitory circles, blue/green rectangles, the STOP octagon and
+  GIVE WAY inverted triangle), tappable for name + meaning.
+- **Flashcards** (`logic/flashcard_engine.dart`, `screens/flashcards_screen.dart`):
+  cards generated from the existing question bank (front = question, back =
+  answer + explanation), tap-to-flip / swipe-to-grade UI, and a simplified
+  SM-2 scheduler persisted in `SharedPreferences`.
+- **Mind Map** (`data/topic_relations.dart`, `screens/mind_map_screen.dart`):
+  a radial diagram of how syllabus categories relate (e.g. Fines & Black
+  Points at the centre, connected to every category it penalizes), tap a
+  node to see its links and jump into practising that topic.
+- **Timed mock exam** (`logic/mock_exam.dart`, `screens/mock_exam_screen.dart`,
+  `screens/mock_exam_results_screen.dart`): 35 questions / 30-minute
+  countdown / 23-out-of-35 (65%) pass mark, weighted category sampling,
+  auto-submit on timeout, and a weakest-category-first results breakdown.
+- **Emirate + vehicle-type filters** (`data/models.dart`, `core/app_scope.dart`,
+  home screen filter bar): `Question.emirate` and `Question.vehicleType`
+  optional fields, defaulting to `"all"`/`"all"` (existing content is
+  untagged and matches every filter), plus a Dubai/Abu Dhabi/Sharjah and
+  Car/Motorcycle/Heavy Vehicle/Bus selector that narrows practice, mock
+  exams and flashcards. No content is currently tagged beyond the default,
+  so today the filters are structurally wired but functionally inert until a
+  content pass adds real per-emirate/vehicle questions.
+
+### Known gaps / not yet 10/10
+
+Being honest about what's still weak after a self-review pass:
+
+- **New-screen strings are English-only.** Road Signs, Flashcards, Mind Map
+  and Mock Exam UI chrome ("Didn't know", "Practise this topic", etc.) is
+  hard-coded English rather than routed through `AppLocalizations`/ARB files,
+  because this pass was told to avoid touching `l10n/*.arb` (owned by the
+  content/translation agent). Sign *meanings* have an English/Arabic pair
+  built in, but not the other 10 UI languages. This is the single biggest
+  remaining gap for a non-English/Arabic user and should be the next task
+  once the l10n files are free to edit.
+- **App icon is not yet a real launcher icon.** `RukhsaLogoMark` (a
+  `CustomPainter`) and `assets/icon/app_icon.svg` both encode the design, but
+  neither is wired through `flutter_launcher_icons` (or manually exported
+  PNGs) into `android/`/`ios/` launcher assets — that step needs a real
+  Flutter toolchain, which wasn't available in this environment.
+  Rasterizing the SVG (or running the painter through an offscreen canvas)
+  and running the launcher-icon generator is a follow-up.
+- **Road sign glyphs are simplified, not photorealistic.** Pictograms (e.g.
+  the roundabout-mandatory arrow, cyclist icon) are minimal vector
+  approximations, not the exact RTA artwork; shapes and category colors are
+  accurate, but a learner comparing pixel-for-pixel against the official
+  handbook will see stylistic differences.
+- **Mock exam category weights are a heuristic**, not a published RTA
+  breakdown (none is publicly documented) — flagged in
+  `logic/mock_exam.dart`'s doc comment; treat as a study heuristic to revisit
+  if better source data turns up.
+- **Emirate/vehicle-type filters have no real content behind them yet.**
+  The schema and UI are forward-compatible (every question defaults to
+  `"all"`), but until the content bank tags some questions with a specific
+  emirate or vehicle type, selecting "Abu Dhabi" or "Motorcycle" changes
+  nothing visible. This is intentional per this pass's scope (content/bank/
+  was off-limits) but should not be presented to users as a fully live
+  feature without a follow-up content pass.
+- **No automated test coverage** was added for the new logic
+  (`FlashcardScheduler`, `buildMockExam`, `Question.matchesFilters`) — only
+  manual code review, since no Flutter/Dart SDK was available in this
+  environment to run `flutter test` or even `dart analyze`. This should be
+  the first thing verified once a real toolchain is available.
+- **Mind map layout is a fixed radial diagram**, not a force-directed or
+  pannable graph — fine for 10 categories, but would need real graph layout
+  if the category count grows substantially.
+- **Dark mode was added at the theme level** (`buildRukhsaTheme(Brightness)`)
+  and spot-checked on the screens this pass touched, but every screen was
+  not exhaustively re-verified pixel-by-pixel in dark mode.

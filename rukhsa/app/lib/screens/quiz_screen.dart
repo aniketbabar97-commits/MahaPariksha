@@ -24,8 +24,8 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    final bundle = AppScopeProvider.of(context).bundle!;
-    _questions = bundle.byCategory(widget.categoryId);
+    final scope = AppScopeProvider.of(context);
+    _questions = scope.filteredQuestions.where((q) => q.category == widget.categoryId).toList();
   }
 
   Question get _current => _questions[_index];

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../core/app_icon.dart';
 import '../core/app_scope.dart';
+import '../core/design_system.dart';
 import '../core/theme.dart';
 import '../l10n/app_localizations.dart';
 import 'home_screen.dart';
@@ -37,8 +39,8 @@ class LanguagePickerScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: 24),
-              const _RukhsaWordmark(),
-              const SizedBox(height: 32),
+              const RukhsaWordmarkLockup(),
+              const SizedBox(height: AppSpacing.xxl),
               Text(
                 t.chooseLanguageTitle,
                 textAlign: TextAlign.center,
@@ -76,38 +78,6 @@ class LanguagePickerScreen extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class _RukhsaWordmark extends StatelessWidget {
-  const _RukhsaWordmark();
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 84,
-          height: 84,
-          decoration: BoxDecoration(
-            color: RukhsaColors.gold,
-            shape: BoxShape.circle,
-            border: Border.all(color: RukhsaColors.goldLight, width: 3),
-          ),
-          child: const Icon(Icons.directions_car_filled, color: RukhsaColors.blueDark, size: 44),
-        ),
-        const SizedBox(height: 12),
-        const Text(
-          'RUKHSA',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontWeight: FontWeight.w900,
-            letterSpacing: 4,
-          ),
-        ),
-      ],
     );
   }
 }

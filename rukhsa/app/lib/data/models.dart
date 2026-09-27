@@ -66,6 +66,17 @@ class Subcategory {
       Subcategory(j['id'], j['en'], j['ar']);
 }
 
+/// Emirates the question content can be scoped to. "all" (the default) means
+/// the question applies UAE-wide / is not emirate-specific.
+const List<String> emirateOptions = ['all', 'dubai', 'abu_dhabi', 'sharjah'];
+
+/// Vehicle categories the question content can be scoped to. "car" (Light
+/// Motor Vehicle) is the default and the only category the current bank
+/// covers; the others are forward-compatible slots so a future content pass
+/// can tag motorcycle/heavy-vehicle/bus-specific questions without an app
+/// change.
+const List<String> vehicleTypeOptions = ['all', 'car', 'motorcycle', 'heavy_vehicle', 'bus'];
+
 class Question {
   final String id;
   final String category;
@@ -77,6 +88,12 @@ class Question {
   final int answer;
   final Localized explanation;
 
+  /// Optional per-emirate and per-vehicle-type tagging. Defaults to "all" so
+  /// existing content (none of which sets these fields yet) is served to
+  /// every emirate/vehicle-type filter unchanged.
+  final String emirate;
+  final String vehicleType;
+
   const Question({
     required this.id,
     required this.category,
@@ -87,6 +104,8 @@ class Question {
     required this.options,
     required this.answer,
     required this.explanation,
+    this.emirate = 'all',
+    this.vehicleType = 'all',
   });
 
   factory Question.fromJson(Map<String, dynamic> j) => Question(
@@ -101,7 +120,18 @@ class Question {
             .toList(),
         answer: j['answer'],
         explanation: _localizedFromJson(j['explanation']),
+        emirate: (j['emirate'] as String?) ?? 'all',
+        vehicleType: (j['vehicleType'] as String?) ?? 'all',
       );
+
+  /// Whether this question should be served under the given [emirate]
+  /// (e.g. "dubai") and [vehicleType] (e.g. "car") filters. A question tagged
+  /// "all" always matches; "all" as the requested filter matches everything.
+  bool matchesFilters({required String emirate, required String vehicleType}) {
+    final emirateOk = this.emirate == 'all' || emirate == 'all' || this.emirate == emirate;
+    final vehicleOk = this.vehicleType == 'all' || vehicleType == 'all' || this.vehicleType == vehicleType;
+    return emirateOk && vehicleOk;
+  }
 }
 
 class ContentBundle {
@@ -113,6 +143,15 @@ class ContentBundle {
 
   List<Question> byCategory(String categoryId) =>
       questions.where((q) => q.category == categoryId).toList();
+
+  /// All questions matching the given emirate/vehicle-type filters
+  /// ("all" matches everything), optionally further restricted to a category.
+  List<Question> filtered({String emirate = 'all', String vehicleType = 'all', String? categoryId}) {
+    return questions
+        .where((q) => (categoryId == null || q.category == categoryId) &&
+            q.matchesFilters(emirate: emirate, vehicleType: vehicleType))
+        .toList();
+  }
 
   factory ContentBundle.fromJson(Map<String, dynamic> j) => ContentBundle(
         List<String>.from(j['languages']),

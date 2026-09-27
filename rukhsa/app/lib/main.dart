@@ -59,7 +59,9 @@ class _RukhsaAppState extends State<RukhsaApp> {
           return MaterialApp(
             title: 'Rukhsa',
             debugShowCheckedModeBanner: false,
-            theme: buildRukhsaTheme(),
+            theme: buildRukhsaTheme(Brightness.light),
+            darkTheme: buildRukhsaTheme(Brightness.dark),
+            themeMode: ThemeMode.system,
             locale: Locale(lang),
             supportedLocales: AppLocalizations.supportedLocales,
             localizationsDelegates: const [
