@@ -65,7 +65,7 @@ class _RukhsaAppState extends State<RukhsaApp> {
             locale: Locale(lang),
             supportedLocales: AppLocalizations.supportedLocales,
             localizationsDelegates: const [
-              AppLocalizationsDelegate(),
+              AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,

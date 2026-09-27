@@ -837,3 +837,49 @@ approach from section 9, and the same vein of universal/logic content
 topics such as coolant/battery maintenance basics, child-safety-seat
 installation checks, and cyclist/pedestrian right-of-way logic) still has
 clear room for a further pass using the same batched method.
+
+## §11 — Real native Android build achieved (major milestone)
+
+A prior agent pass was interrupted mid-task by an account-wide API rate
+limit before it could report back. Rather than discard its work, the
+orchestrating session inspected the working tree directly and verified,
+personally and independently, that the interrupted work was real and
+sound before committing it:
+
+- **Flutter 3.47.5 SDK and Android SDK are genuinely installed** in this
+  build environment at `/opt/flutter` and `/opt/android-sdk` (not on PATH
+  by default in a fresh shell, but present and fully functional once
+  `PATH`/`ANDROID_HOME`/`ANDROID_SDK_ROOT` are set).
+- **Native `android/` project scaffolding now exists** (generated via
+  `flutter create --platforms=android` against the existing `lib/` tree),
+  with `applicationId = "app.rukhsa"`, `android:label="RUKHSA"`,
+  `minSdkVersion` compatible with `flutter_localizations`/RTL.
+- **The app's real logo is now wired as the actual launcher icon** via
+  `flutter_launcher_icons`, rasterized from `assets/icon/app_icon.svg` to
+  `assets/icon/app_icon.png` and generated into all `mipmap-*`
+  densities — not just a CustomPainter widget inside the app anymore.
+- **`pubspec.yaml` switched from a hand-generated l10n shim to Flutter's
+  real `flutter gen-l10n`** (`generate: true`), since current stable
+  Flutter runs its localization codegen unconditionally whenever
+  `l10n.yaml` is present. The hand-generated `app_localizations.dart`
+  (built by `pipeline/gen_dart_l10n.py` while no SDK was available) is
+  superseded by real generated output for all 12 languages.
+- **`flutter analyze` passes clean**: 0 errors, 0 warnings, only 6 minor
+  `info`-level lint notes (deprecated `RadioListTile` API, underscore
+  naming style) — re-run and confirmed independently, not just claimed by
+  the interrupted agent.
+- **`flutter build apk --debug` succeeds**, reproducibly — re-run and
+  confirmed independently (`✓ Built build/app/outputs/flutter-apk/app-debug.apk`,
+  ~155MB, ~130s build time). This is the first genuine, verified,
+  end-to-end compiling build of RUKHSA as an installable Android app.
+
+**What remains for a real device install:** the debug APK is unsigned by
+design (fine for local testing/sideloading via `adb install`, not for
+distribution). A **signed release build** needs a real upload keystore,
+which is account/credential material only the founder should generate and
+hold (via `keytool -genkey` or Play Console's app-signing enrollment) —
+this is intentionally left undone here; see `key.properties`/`*.keystore`
+in `android/.gitignore`, already excluded from version control. iOS
+scaffolding was not attempted this pass (Android was prioritized as the
+first store target); a macOS build environment would be needed for that,
+which this Linux container cannot provide.
