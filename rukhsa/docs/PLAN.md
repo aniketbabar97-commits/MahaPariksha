@@ -314,3 +314,106 @@ independent translation over volume within the time available. Reaching the
 more per-category depth, and ideally acquiring the official RTA truck/bus
 and motorcycle handbooks directly rather than a driving school's slide
 deck, if they become available).
+
+## 6. Deepening pass (this pass): 85 -> 107 questions
+
+**Re-verification of prior sources, as instructed.** Both previously-cited
+sources were re-checked, not assumed still good:
+
+- **RTA Light Motor Vehicle Handbook** (`russiadubai.com` mirror) --
+  re-fetched this pass, and its text re-extracted (with `pdfminer.six`,
+  since PyMuPDF was not available in this environment) and read directly.
+  Confirmed genuine again: real 3rd-edition (Jan 2012) handbook text,
+  table of contents, Article citations to UAE Federal Traffic Law No. 21 of
+  1995, the full road-signs gallery (Part 5) and the "Traffic Violations,
+  Fines & Black Points" table (Part 8). **Used extensively this pass** --
+  it turned out to contain far more usable, source-backed detail (individual
+  sign types, roundabout/right-of-way procedure text, Salik toll figures,
+  the 24-point licence-confiscation escalation) than the previous pass had
+  drawn on.
+- **Drive Dubai motorcycle/heavy-vehicle decks** (`drivedubai.ae/en/download/`)
+  -- could **not** be re-verified this pass: the download page now returns
+  an HTTP 403 from Cloudflare's bot-challenge (`cf-mitigated: challenge`)
+  to this session's fetches, so its current live/genuine status could not be
+  re-confirmed today. It was not treated as fake -- no content was
+  authored from it this pass -- but its "verified" status in section 4
+  above should be re-checked with a real browser next time before citing it
+  again.
+
+**New sources searched for and explicitly rejected:** no additional
+downloadable UAE driving-school handbook or slide deck was found this pass
+that could be fetched and read in full to confirm it was a genuine
+multi-page rules document (rather than a marketing page or a dead/blocked
+link) within the session's tool access. Nothing new was added to the
+"verified sources" list as a result -- only the LMV handbook re-read above
+was used for new content this pass.
+
+### New content: 22 new questions, all sourced from the LMV handbook
+
+All 22 are grounded directly in specific handbook text (Part 5 "Rules and
+Responsibilities" for signs and right-of-way, Part 8 for fines/black points,
+and the Salik section), authored in English + Arabic first and then
+independently translated into all 12 languages, with a second self-read QA
+pass per language checking structure (4 non-empty options, non-empty
+question/explanation) and spot-reading meaning against the English source:
+
+- **`road_signs` (+10 -- now the largest category at 20):** STOP octagon,
+  No Entry, No U-turn, No Overtaking (prohibitory signs); the standard
+  triangular advance-warning shape/colour convention and chevron hazard
+  markers (warning signs); the freeway-control-sign category; the camel/
+  animal warning sign; the roundabout-direction control sign; the blue "P"
+  parking-control sign. All are common-knowledge sign shapes/colours or
+  directly described in the handbook's Part 5 sign gallery, so none needed
+  a `needsVerification` flag.
+- **`traffic_rules_row` (+4):** give-way-to-the-left at roundabouts,
+  giving way to sirens/flashing-light emergency vehicles even at a green
+  light, not passing a stopped school bus with its stop-arm/flashers
+  active, and giving way to pedestrians already on a marked crossing --
+  all direct handbook rules, unflagged.
+- **`fines_penalty` (+3):** the 24-black-point licence-confiscation
+  escalation (3/6/12 months across repeat occurrences within a year), the
+  AED 600 fine for illegal bus/taxi-lane use, and the escalating Salik
+  no-tag fine (AED 100/200/400) -- all direct figures from the handbook's
+  Part 8 table and Salik violations table, unflagged since fully sourced.
+- **`vehicle_docs_insurance` (+1):** the Salik toll amount (AED 4.00 per
+  crossing) and daily cap (AED 24.00), from the handbook's Salik section.
+- **`motorcycle` (+2):** the "leave at least one metre" overtaking-clearance
+  rule and motorcyclists'/cyclists' right to the full lane width, both
+  quoted directly from the handbook.
+- **`heavy_vehicle` (+2):** the hard-shoulder no-overtaking rule and the
+  21-black-point penalty for a falling/leaking load, both from the
+  handbook.
+
+None of the 12 pre-existing `needsVerification: true` questions were
+resolved this pass -- the handbook re-read did not happen to cover the
+specific facts they turn on (radar tolerance, black-point expiry period,
+free-parking hours, exact legal BAC limit, expired-Mulkiya specifics,
+"friendly report" procedure, or the motorcycle/heavy-vehicle specifics
+flagged from the unreachable Drive Dubai decks). They remain flagged,
+honestly, rather than guessed at.
+
+**Total after this pass: 107 questions** (was 85), still 12 categories,
+still 12 questions flagged `needsVerification: true` (unchanged, since this
+pass's new content was fully source-backed and none of the flagged ones
+happened to be covered by the sources re-read this pass). Validation:
+`python3 pipeline/build_bundle.py` builds all 107 questions x 12 languages
+cleanly; `python3 pipeline/validate.py` reports
+`OK: 107 questions, 12 categories, 12 flagged needsVerification.` (with an
+expected `WARN` that 107 is still below the 600-800 target range -- not a
+failure). Every touched `content/questions_<lang>.json` file was also
+checked with `python3 -m json.tool`.
+
+**Scope note (again):** this pass added 22 new questions -- fewer than the
+20-100 stretch goal's upper end, but each one individually traced to
+specific, re-verified handbook text and independently translated/QA'd in
+all 12 languages, rather than rushed. Road signs, traffic rules, and fines
+were prioritised as instructed since they were thinnest relative to real
+exam weighting. The next pass should: (a) re-verify `drivedubai.ae` with a
+real browser (or find an alternative mirror of its decks) since it is now
+Cloudflare-gated for automated fetches; (b) mine the remaining unused
+sections of the LMV handbook already downloaded this pass (freeways/
+interchanges, parking in Dubai, crash responsibilities, eco-driving) for
+further `highway_lane`, `parking_rules`, and `roundabouts_intersections`
+content; and (c) keep hunting for a second independent, verifiable UAE
+source (Abu Dhabi/ADNOC or Sharjah driving-institute material) to
+cross-check facts against and diversify beyond the Dubai RTA handbook.
