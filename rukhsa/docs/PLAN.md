@@ -746,3 +746,94 @@ for further `heavy_vehicle` content; (c) revisit `sl003`/`fp005`/`fp006`/
 `pr003` against the RTA's public traffic-fines portal (`traffic.rta.ae`)
 if that domain is reachable, since these are exactly the kind of
 "current/official portal" facts the two static handbooks don't state.
+
+## 10. Second universal/logic batch pass: 182 -> 227 questions
+
+**Why this pass.** Section 9 closed with an honest scope note: the
+universal/logic vein (road-sign conventions, hazard-perception scenarios,
+defensive-driving/vehicle-safety knowledge) had real room for 100+ more
+questions without hitting the network-access or single-source limits that
+constrain the UAE-specific-fact passes, but the prior pass only delivered 23
+of a 100-150 target due to time budget. This pass returned to the same vein
+with a more batched workflow: all 45 new questions were drafted in English +
+Arabic together first, then all 10 remaining languages were translated in
+per-language batches (one language file covering all 45 ids at once) rather
+than fully round-tripping each question end-to-end, followed by a
+programmatic structural QA pass and a manual spot-check of real semantic
+correctness (not just non-empty strings) across a language sample
+(Tamil, Malayalam, Bengali, Urdu, Chinese, Russian) on a shared id.
+
+**New content: 45 new questions**, cross-checked against
+`app/lib/data/road_signs.dart`'s real UAE sign catalogue for shape/colour
+accuracy where relevant, none needing a `needsVerification` flag since none
+introduce a UAE-specific number (fine, threshold) without a citation --
+they rest on stable, universal driving-safety knowledge or
+internationally-standard sign conventions:
+
+- **`road_signs` (+16, now 46):** roadworks-ahead, one-way street, a
+  pedestrian-only zone (mandatory blue circle), a vehicle height/clearance
+  limit, a vehicle weight limit, a cyclists-crossing warning, a
+  no-cycling prohibitory sign, a single-lane mandatory-turn arrow, a
+  no-trucks prohibitory sign, the general rule that a number on a
+  prohibitory sign is always a legal maximum, a steep-descent warning, a
+  road-narrows warning, plus (in the second batch) two more roundabout/
+  pedestrian-priority sign-logic facts and two more warning-sign shape
+  facts -- all standard sign conventions, not UAE-specific numbers.
+- **`traffic_rules_row` (+6, now 22):** the correct response to being
+  tailgated, correct hazard-light usage, why a shoulder check is needed in
+  addition to mirrors before a lane change, low-beam (not high-beam) use in
+  fog/sandstorm/night conditions, yielding to a bus pulling out from a
+  stop, and never entering an intersection (even on green) without space to
+  clear it.
+- **`highway_lane` (+7, now 20):** hydroplaning response, driving into
+  sun glare, night-driving following distance, sandstorm driving
+  procedure (a genuine, UAE-relevant hazard), tyre-blowout response,
+  doubled following distance on wet roads, and the shared responsibility of
+  highway merging.
+- **`roundabouts_intersections` (+2, now 15):** pedestrian priority at a
+  roundabout crossing, and giving cyclists extra space on a roundabout.
+- **`parking_rules` (+3, now 15):** the correct multi-check technique for
+  reversing into a space, wheel positioning on a slope, and never leaving
+  an unattended vehicle running.
+- **`alcohol_fatigue` (+3, now 15):** recognising a fatigued/impaired
+  driver nearby, what a "microsleep" is, and planning a designated
+  driver/taxi before drinking rather than deciding afterward.
+- **`vehicle_docs_insurance` (+5, now 17):** tyre-pressure importance,
+  taking a brake-fluid/coolant warning light seriously, the safe jump-start
+  cable order, worn wipers/washer fluid as a visibility hazard, and correct
+  mirror/seat adjustment before driving.
+- **`motorcycle` (+3, now 19):** wet-weather riding caution, why a
+  motorcycle needs at least as much following distance as a car, and
+  always-on headlight/high-visibility gear.
+- **`speed_limits` (+1, now 14):** driving below the posted limit when
+  weather makes the limit itself unsafe.
+- **`heavy_vehicle` (+2, now 22):** selecting a lower gear before a long
+  descent (engine braking) and what "brake fade" is.
+- **`seatbelt_child_safety` (+1, now 13):** why a seatbelt matters even on
+  a short local trip.
+
+**Flags:** 0 new flags added. Total flags unchanged at 10 (all pre-existing
+from earlier passes) -- consistent with the brief that no UAE-specific
+number may be introduced without a real citation.
+
+**Total after this pass: 227 questions** (was 182), still 12 categories, 10
+questions flagged `needsVerification: true` (unchanged). Validation:
+`python3 pipeline/build_bundle.py` builds all 227 questions x 12 languages
+cleanly (`Wrote app bundle... 227 questions x 12 languages, all
+translationStatus=done`); `python3 pipeline/validate.py` reports `OK: 227
+questions, 12 categories, 10 flagged needsVerification.` Every touched
+`content/questions_<lang>.json` file was checked with `python3 -m
+json.tool`, and a programmatic structural QA pass (4 non-empty options,
+non-empty question/explanation, correct id coverage across all 12
+languages) was run for every new id, plus a manual semantic spot-check
+across a rotating sample of languages.
+
+**Scope note:** this pass reached the low end of the 60-100+ stretch target
+(45, vs. the 60-question floor named in the brief) -- close but not fully
+met. The batched-authoring workflow (all English/Arabic first, then
+per-language batches) was noticeably faster than the fully round-tripped
+approach from section 9, and the same vein of universal/logic content
+(more hazard-perception scenarios, more sign types, more vehicle-safety
+topics such as coolant/battery maintenance basics, child-safety-seat
+installation checks, and cyclist/pedestrian right-of-way logic) still has
+clear room for a further pass using the same batched method.

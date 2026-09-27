@@ -2633,5 +2633,635 @@
     "answer": 1,
     "explanation": "A motorcyclist has far less physical protection than a car occupant, so a full set of protective gear (helmet, jacket, gloves, sturdy footwear) — not just a helmet — reduces the risk of injury to the whole body in a fall or crash.",
     "needsVerification": false
+  },
+  {
+    "id": "rs035",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A yellow/red triangular warning sign showing a person digging with a shovel means:",
+    "options": [
+      "A pedestrian crossing is ahead",
+      "Roadworks are ahead on the road",
+      "A construction site entrance is nearby",
+      "Parking is reserved for workers"
+    ],
+    "answer": 1,
+    "explanation": "The 'roadworks ahead' warning sign uses the standard triangle shape with a silhouette of a person digging; it tells drivers to slow down and watch for workers, machinery, and possible lane changes ahead."
+  },
+  {
+    "id": "rs036",
+    "category": "road_signs",
+    "sub": "mandatory",
+    "q": "A blue rectangular sign showing a single bold white arrow pointing straight up, placed at a street entrance, indicates:",
+    "options": [
+      "This is a one-way street; traffic may only travel in the arrow's direction",
+      "Two-way traffic is permitted on this street",
+      "This street is closed to all traffic",
+      "This is a pedestrian-only street"
+    ],
+    "answer": 0,
+    "explanation": "A one-way sign (a blue rectangle with a single directional arrow) placed at a street entrance means all traffic on that street must travel only in the direction the arrow shows."
+  },
+  {
+    "id": "rs037",
+    "category": "road_signs",
+    "sub": "mandatory",
+    "q": "A blue circular sign showing the black silhouette of a walking adult and child means:",
+    "options": [
+      "Drivers must stop for any pedestrian nearby",
+      "A school is located on this street",
+      "This area is reserved for pedestrians only; motor vehicles must not enter",
+      "Pedestrians must use the crossing ahead"
+    ],
+    "answer": 2,
+    "explanation": "A blue circle (the mandatory-sign colour/shape) with a pedestrian silhouette marks a pedestrian-only zone: it instructs that only foot traffic is permitted there and motor vehicles must not enter."
+  },
+  {
+    "id": "rs038",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a shape like a vehicle passing under a bar, with a number followed by 'm', warns that:",
+    "options": [
+      "The road ahead has a minimum speed of that many metres per second",
+      "Vehicles taller than the height shown must not pass (a height/clearance restriction)",
+      "Parking is limited to that many minutes",
+      "The road narrows to that width ahead"
+    ],
+    "answer": 1,
+    "explanation": "A red-ringed circular sign with a vehicle-under-a-bar symbol and a number in metres is a height/clearance restriction: any vehicle taller than the stated height must not attempt to pass (common before low bridges or tunnels)."
+  },
+  {
+    "id": "rs039",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a truck silhouette with a number followed by 't' warns that:",
+    "options": [
+      "Vehicles heavier than the stated total weight are not permitted",
+      "Only trucks are permitted on this road",
+      "Trucks must maintain that many metres of following distance",
+      "The road can support that many trucks at once"
+    ],
+    "answer": 0,
+    "explanation": "A weight-limit sign shows the maximum gross vehicle weight (in tonnes) allowed on that road, bridge, or route; any vehicle heavier than the stated limit must not use it."
+  },
+  {
+    "id": "rs040",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A yellow/red triangular warning sign showing a bicycle symbol placed before a junction warns drivers that:",
+    "options": [
+      "Bicycles are prohibited beyond this point",
+      "There is a bicycle repair shop ahead",
+      "A cycle race is in progress",
+      "Cyclists are likely to be crossing or joining the road ahead, so extra caution is needed"
+    ],
+    "answer": 3,
+    "explanation": "This warning triangle alerts drivers to an upcoming point where cyclists commonly cross or merge into traffic, so drivers should slow down, check mirrors and blind spots, and be ready to give way."
+  },
+  {
+    "id": "rs041",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a bicycle symbol with a diagonal red line through it means:",
+    "options": [
+      "Bicycles have priority on this road",
+      "Cyclists must dismount and walk",
+      "Cycling is prohibited on this stretch of road",
+      "Cyclists must ring a bell before proceeding"
+    ],
+    "answer": 2,
+    "explanation": "A red circle with a diagonal bar through a symbol is the standard prohibitory format; over a bicycle symbol it means cycling is not permitted on that stretch of road."
+  },
+  {
+    "id": "rs042",
+    "category": "road_signs",
+    "sub": "mandatory",
+    "q": "A small blue rectangular sign mounted above a specific lane, showing only a left-turn arrow, means:",
+    "options": [
+      "Any lane may turn left from this point",
+      "Traffic in that specific lane must turn left; it cannot go straight or right",
+      "That lane is closed ahead",
+      "Left turns are prohibited from that lane"
+    ],
+    "answer": 1,
+    "explanation": "A mandatory direction sign placed above one lane applies only to that lane: drivers already in it must follow the shown arrow (here, turn left) and cannot use it to go straight or turn right."
+  },
+  {
+    "id": "rs043",
+    "category": "road_signs",
+    "sub": "prohibitory",
+    "q": "A red-ringed circular sign showing a truck silhouette with a diagonal red line through it means:",
+    "options": [
+      "Trucks/heavy goods vehicles are not permitted on this road",
+      "Only trucks may use this road",
+      "Trucks must stop and pay a toll ahead",
+      "Trucks must reduce speed on this road"
+    ],
+    "answer": 0,
+    "explanation": "A vehicle silhouette inside a red circle with a diagonal bar is a prohibition specific to that vehicle type; showing a truck means trucks and heavy goods vehicles are banned from that road or lane."
+  },
+  {
+    "id": "rs044",
+    "category": "road_signs",
+    "sub": "informatory",
+    "q": "When a circular prohibitory sign shows a number (such as a weight or height limit), that number represents:",
+    "options": [
+      "A recommended value drivers may exceed if traffic allows",
+      "The maximum permitted value; exceeding it is not allowed",
+      "The average value most vehicles use",
+      "The minimum value required to use that road"
+    ],
+    "answer": 1,
+    "explanation": "On prohibitory signs (red-ringed circles), a numeric value is always a legal maximum, not a suggestion or an average -- vehicles or speeds exceeding that number are not permitted to use the road."
+  },
+  {
+    "id": "rs045",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A yellow/red triangular warning sign showing a truck tilted downward on an incline warns drivers of:",
+    "options": [
+      "A speed bump ahead",
+      "A road that is closed to trucks",
+      "A steep downhill gradient ahead, where heavy vehicles especially should use a lower gear",
+      "A weighbridge checkpoint ahead"
+    ],
+    "answer": 2,
+    "explanation": "The steep-descent warning sign shows a vehicle tilted nose-down on a slope; it warns of a steep downhill grade ahead where drivers, especially of heavy vehicles, should slow down and use engine braking / a lower gear rather than relying only on the brakes."
+  },
+  {
+    "id": "rs046",
+    "category": "road_signs",
+    "sub": "warning",
+    "q": "A yellow/red triangular warning sign showing two arrows -- a wide one and a narrower one pointing the same direction -- warns that:",
+    "options": [
+      "The road narrows ahead, so drivers should be ready to merge and reduce speed",
+      "Two lanes are opening up ahead",
+      "A bridge is closed ahead",
+      "Overtaking is now permitted"
+    ],
+    "answer": 0,
+    "explanation": "The 'road narrows' warning sign shows the roadway symbol tapering; it tells drivers the number of usable lanes or the road width is about to reduce ahead, so they should slow down and be ready to merge."
+  },
+  {
+    "id": "tr017",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "If another driver is tailgating you (following too closely), the safest response is to:",
+    "options": [
+      "Brake sharply to warn them off",
+      "Ease off the accelerator gradually and, when safe, let them pass or move aside",
+      "Speed up to increase the gap ahead of you",
+      "Turn on your hazard lights and stop in your lane"
+    ],
+    "answer": 1,
+    "explanation": "Braking sharply can cause the tailgater to crash into you. The safer response is to gently slow down, increase your own space ahead, and let the tailgater overtake or move aside when it is safe to do so."
+  },
+  {
+    "id": "tr018",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "Hazard warning lights (all four indicators flashing together) should be used when:",
+    "options": [
+      "Driving normally in heavy rain",
+      "Parking legally in a paid parking bay",
+      "Your vehicle has broken down or is stopped in a dangerous position, or to warn traffic behind of a sudden hazard ahead",
+      "Turning left or right at a junction"
+    ],
+    "answer": 2,
+    "explanation": "Hazard lights warn other road users of a stopped vehicle, breakdown, or a sudden hazard/slowdown ahead. They are not a substitute for turn signals and should not be used while driving normally, even in rain."
+  },
+  {
+    "id": "tr019",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "Before changing lanes, checking mirrors alone is not enough because:",
+    "options": [
+      "Mirrors show what is directly behind you only, which is all that matters",
+      "Mirrors are usually broken",
+      "Checking mirrors takes too long",
+      "Every vehicle has a 'blind spot' -- an area not visible in any mirror -- so a quick shoulder check is also needed"
+    ],
+    "answer": 3,
+    "explanation": "Every vehicle has blind spots beside and slightly behind it that mirrors cannot show. A quick glance over the shoulder toward the lane you intend to enter, in addition to mirror checks, is needed to confirm it is clear."
+  },
+  {
+    "id": "tr020",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "When visibility is badly reduced by fog or a sandstorm, especially at night, drivers should use:",
+    "options": [
+      "High-beam (full) headlights, to see as far as possible",
+      "Low-beam headlights, since high beams reflect off the fog/dust and reduce visibility further",
+      "No headlights, to avoid dazzling other drivers",
+      "Only the rear fog light, with headlights off"
+    ],
+    "answer": 1,
+    "explanation": "In fog, dust, or sandstorms, high-beam light reflects back off the airborne particles and creates glare that reduces visibility further. Low-beam headlights, reduced speed, and increased following distance are the safer approach."
+  },
+  {
+    "id": "tr021",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "A bus ahead signals it is about to pull out from a bus stop into traffic. The safest response for a driver behind it is to:",
+    "options": [
+      "Slow down and, if safe, allow the bus to merge back into the lane",
+      "Overtake the bus immediately before it moves",
+      "Sound the horn continuously until the bus stops signalling",
+      "Flash headlights to tell the bus to wait"
+    ],
+    "answer": 0,
+    "explanation": "Buses pulling away from a stop have limited ability to judge gaps behind them. Giving way when it is safe reduces the risk of a collision and is a basic courtesy expected of following drivers."
+  },
+  {
+    "id": "tr022",
+    "category": "traffic_rules_row",
+    "sub": null,
+    "q": "When approaching an intersection on a green light but traffic ahead is heavily congested, a driver should:",
+    "options": [
+      "Enter the intersection anyway since the light is green",
+      "Speed up to clear the intersection before the light changes",
+      "Not enter the intersection unless there is enough space to clear it, even on a green light, to avoid blocking cross traffic",
+      "Stop before the intersection only if a police officer is present"
+    ],
+    "answer": 2,
+    "explanation": "A green light does not guarantee you can safely cross; if the space beyond the junction is not clear, entering it anyway blocks cross traffic once the lights change and creates gridlock -- so drivers should wait for space to clear first."
+  },
+  {
+    "id": "hl014",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "On a wet road, if your vehicle begins to 'hydroplane' (skate on a film of water, losing grip), you should:",
+    "options": [
+      "Brake hard immediately to slow down",
+      "Ease off the accelerator gently, avoid braking or steering sharply, and let the vehicle slow until the tyres regain grip",
+      "Steer hard in the opposite direction of the skid",
+      "Accelerate to drive through the water faster"
+    ],
+    "answer": 1,
+    "explanation": "Hydroplaning happens when a layer of water lifts the tyres off the road surface. Sudden braking or steering can make the vehicle spin; easing off the accelerator lets the vehicle slow down gradually until the tyres reconnect with the road."
+  },
+  {
+    "id": "hl015",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "When driving directly into strong sun glare (for example at sunrise or sunset), a driver should:",
+    "options": [
+      "Stare directly at the road ahead to stay oriented",
+      "Follow the vehicle ahead as closely as possible so you can see its brake lights",
+      "Use the sun visor or sunglasses, slow down, and increase the following distance since glare can hide hazards",
+      "Turn on high-beam headlights to compensate"
+    ],
+    "answer": 2,
+    "explanation": "Strong glare can briefly blind a driver to hazards such as a stopped vehicle or a pedestrian. Using a visor/sunglasses, slowing down, and leaving extra following distance give more time to react safely."
+  },
+  {
+    "id": "hl016",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "Compared to daytime, driving at night requires:",
+    "options": [
+      "The same following distance, since speed limits do not change",
+      "A shorter following distance, since roads are usually quieter",
+      "No change in driving technique",
+      "A greater following distance, since headlights illuminate less distance than daylight allows a driver to see"
+    ],
+    "answer": 3,
+    "explanation": "Headlights typically illuminate far less distance than a driver can see clearly in daylight, so hazards are spotted later at night. Increasing the following distance gives more time to react safely."
+  },
+  {
+    "id": "hl017",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "If a sudden sandstorm severely reduces visibility while you are driving on a highway, you should:",
+    "options": [
+      "Keep your normal speed but turn on hazard lights",
+      "Reduce speed significantly, turn on low-beam headlights, and if visibility becomes extremely poor, safely move off the road (not stop in a live lane)",
+      "Accelerate to drive out of the sandstorm quickly",
+      "Stop immediately in your current lane"
+    ],
+    "answer": 1,
+    "explanation": "Sudden sandstorms are a real UAE highway hazard. Drivers should slow down well below the posted limit, use low beams (not high beams, which reflect off dust), and if visibility drops close to zero, exit the road safely rather than stopping in a live lane where following vehicles could collide with them."
+  },
+  {
+    "id": "hl018",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "If a front tyre suddenly bursts (a blowout) while driving at speed, the correct response is to:",
+    "options": [
+      "Ease off the accelerator gradually, hold the steering wheel firmly and steady, and let the vehicle slow down before braking gently",
+      "Brake hard immediately to stop as fast as possible",
+      "Steer sharply to correct the pull and swerve into another lane",
+      "Accelerate briefly to maintain control"
+    ],
+    "answer": 0,
+    "explanation": "A sudden tyre blowout can pull the vehicle toward the burst tyre. Braking hard or steering sharply can cause loss of control; easing off the accelerator and holding the wheel steady lets the vehicle slow naturally before gentle, gradual braking once it is stable."
+  },
+  {
+    "id": "hl019",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "On a wet road, the safe following distance compared to dry conditions should be:",
+    "options": [
+      "Exactly the same, since speed limits are unchanged",
+      "Slightly shorter, since wet roads encourage slower speeds anyway",
+      "At least doubled, since braking distances increase significantly on a wet surface",
+      "Irrelevant, since anti-lock brakes remove all extra stopping distance"
+    ],
+    "answer": 2,
+    "explanation": "Wet roads reduce tyre grip and significantly increase braking distance. Doubling the normal following distance (or more) gives a driver enough space and time to stop safely if the vehicle ahead brakes."
+  },
+  {
+    "id": "hl020",
+    "category": "highway_lane",
+    "sub": null,
+    "q": "When you see a vehicle signalling to merge into your lane from an on-ramp, and it is safe to do so, you should:",
+    "options": [
+      "Speed up to close the gap so the vehicle cannot merge",
+      "Ease off slightly or adjust position, if it is safe, to make room for the merging vehicle",
+      "Ignore it, since the merging driver is fully responsible for finding a gap",
+      "Flash your headlights repeatedly to warn it away"
+    ],
+    "answer": 1,
+    "explanation": "Smooth highway merging works best as a shared responsibility: while the merging driver must find a safe gap, drivers already on the highway can help by easing off slightly or moving over (when safe) to make space, reducing sudden braking and collision risk."
+  },
+  {
+    "id": "ri014",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "At a marked pedestrian crossing on the approach to or exit from a roundabout, a driver should:",
+    "options": [
+      "Give way to pedestrians already on or clearly about to use the crossing",
+      "Only give way if a police officer is directing traffic",
+      "Proceed as normal since roundabout traffic always has priority",
+      "Sound the horn to clear pedestrians from the crossing"
+    ],
+    "answer": 0,
+    "explanation": "A roundabout's circulating traffic having general priority over entering vehicles does not remove a driver's duty to give way to pedestrians at a marked crossing on the approach or exit; pedestrian safety at a crossing always comes first."
+  },
+  {
+    "id": "ri015",
+    "category": "roundabouts_intersections",
+    "sub": null,
+    "q": "When sharing a roundabout with a cyclist, a driver should:",
+    "options": [
+      "Overtake the cyclist as quickly as possible inside the roundabout",
+      "Expect the cyclist to always take the outer lane",
+      "Give the cyclist extra space, since a cyclist may hold a position in the lane rather than hug the kerb for stability and visibility",
+      "Sound the horn to encourage the cyclist to move faster"
+    ],
+    "answer": 2,
+    "explanation": "Cyclists on a roundabout often ride further from the kerb than usual for their own stability and visibility. Drivers should allow extra space and patience rather than trying to squeeze past."
+  },
+  {
+    "id": "pr013",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "When reversing your vehicle into a parking space, you should:",
+    "options": [
+      "Rely on the rear-view mirror alone, since it shows everything behind",
+      "Reverse quickly to finish before anyone walks behind you",
+      "Only use a reversing camera if the vehicle has one, and nothing else",
+      "Check all mirrors, glance over your shoulder, and reverse slowly, using a reversing camera or sensors as an aid rather than a replacement for looking"
+    ],
+    "answer": 3,
+    "explanation": "No single mirror, camera, or sensor shows everything around a reversing vehicle. Combining mirror checks, a shoulder glance, slow speed, and any camera/sensors as an aid gives the best chance of spotting a pedestrian, child, or object in time."
+  },
+  {
+    "id": "pr014",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "When parking on a slope, in addition to applying the handbrake, a driver should generally:",
+    "options": [
+      "Leave the transmission in neutral",
+      "Turn the front wheels so that if the vehicle rolls, it moves away from traffic (for example, toward the kerb) and leave it in gear or 'park'",
+      "Remove the key from the ignition only, without any other precaution",
+      "Leave the engine running"
+    ],
+    "answer": 1,
+    "explanation": "On a slope, turning the wheels toward the kerb (facing downhill) or away from traffic, and leaving the vehicle in gear ('park' for automatics, a low gear for manuals) in addition to the handbrake, reduces the risk of the vehicle rolling into traffic if the handbrake alone were to fail."
+  },
+  {
+    "id": "pr015",
+    "category": "parking_rules",
+    "sub": null,
+    "q": "Leaving a vehicle's engine running and unattended while parked (for example, to keep the air conditioning on) is generally:",
+    "options": [
+      "Unsafe and inadvisable, since an unattended running vehicle can be stolen, roll away, or pose a fire/carbon-monoxide risk",
+      "Always required by law in hot climates",
+      "The recommended way to keep passengers cool while shopping",
+      "Only a concern if children are inside"
+    ],
+    "answer": 0,
+    "explanation": "An unattended vehicle with the engine running can be driven off by a thief, can roll if a gear or handbrake fails, and running an engine in an enclosed space risks carbon-monoxide build-up. It is a basic safety habit not to leave a running vehicle unattended."
+  },
+  {
+    "id": "af013",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Signs that a nearby driver may be dangerously fatigued or impaired include weaving within the lane, drifting onto road markings, and delayed reactions to traffic changes. If you notice this, you should:",
+    "options": [
+      "Follow closely so you can react to whatever they do next",
+      "Overtake immediately regardless of conditions, to get away from them fast",
+      "Keep a generous distance, avoid overtaking alongside them, and if possible let them pass or move well away",
+      "Flash your headlights repeatedly to alert them"
+    ],
+    "answer": 2,
+    "explanation": "A vehicle weaving or reacting slowly may be driven by someone fatigued, impaired, or distracted and could behave unpredictably. Keeping extra distance and avoiding being alongside them reduces your risk if they make a sudden or dangerous move."
+  },
+  {
+    "id": "af014",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "A 'microsleep' while driving refers to:",
+    "options": [
+      "A brief nap taken safely at a rest stop",
+      "A few seconds of involuntary sleep with the eyes open or closed, occurring while still driving -- extremely dangerous since the vehicle continues uncontrolled",
+      "A short break recommended every two hours",
+      "A state of light distraction, such as glancing at the radio"
+    ],
+    "answer": 1,
+    "explanation": "A microsleep is an involuntary lapse into sleep lasting a few seconds that a fatigued person may not even notice happened, but during which a moving vehicle receives no steering or braking input -- a major cause of fatigue-related crashes."
+  },
+  {
+    "id": "af015",
+    "category": "alcohol_fatigue",
+    "sub": null,
+    "q": "Before going out somewhere you plan to drink alcohol, the safest plan is to:",
+    "options": [
+      "Arrange a designated (non-drinking) driver, a taxi, or ride-hailing service in advance",
+      "Decide later, once at the venue, whether you feel able to drive",
+      "Drink only a small amount so you can still drive carefully",
+      "Plan to sleep in the car for an hour before driving"
+    ],
+    "answer": 0,
+    "explanation": "Deciding on a safe way home before drinking removes the need to judge your own impairment later, which alcohol itself makes unreliable. Arranging a designated driver, taxi, or ride-hailing service in advance is the most reliable plan."
+  },
+  {
+    "id": "vd013",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Checking tyre pressure regularly (including before a long highway trip) is important mainly because:",
+    "options": [
+      "It is only about fuel cost, not safety",
+      "Tyre pressure never changes once set at the factory",
+      "Incorrect pressure affects grip, braking distance, fuel efficiency, and tyre wear, and can raise blowout risk, especially in hot conditions",
+      "It only matters for the front tyres"
+    ],
+    "answer": 2,
+    "explanation": "Under- or over-inflated tyres reduce grip and increase stopping distance, wear unevenly, use more fuel, and heat up faster -- raising blowout risk, which matters especially on hot road surfaces such as those common in the UAE."
+  },
+  {
+    "id": "vd014",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "If a brake-fluid or coolant warning light appears on the dashboard, a driver should:",
+    "options": [
+      "Ignore it as long as the brakes still feel normal that day",
+      "Take it seriously and have the vehicle checked promptly, since low brake fluid or coolant can lead to brake failure or engine overheating",
+      "Only worry if the light stays on for more than a week",
+      "Top up the fluid with any liquid available and continue as normal"
+    ],
+    "answer": 1,
+    "explanation": "Dashboard warning lights for brake fluid or coolant point to problems that can develop into brake failure or an overheated engine if ignored. They should be treated seriously and checked by a qualified mechanic promptly, not dismissed."
+  },
+  {
+    "id": "vd015",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "When jump-starting a vehicle with a dead battery using another vehicle's battery, the safest cable order is generally to connect:",
+    "options": [
+      "The negative terminal of the dead battery first",
+      "Both negative terminals first, then both positive terminals",
+      "Any order, since it does not matter",
+      "The positive terminal of the dead battery, then the positive of the donor battery, then negative of the donor, then last a negative/earth point on the dead vehicle away from its battery (such as an unpainted metal part)"
+    ],
+    "answer": 3,
+    "explanation": "Connecting the final negative cable to an earth point away from the dead battery, rather than directly to its negative terminal, reduces the risk of a spark igniting battery gases. The positive-first, negative-last-and-away-from-the-battery order is the standard safe practice."
+  },
+  {
+    "id": "vd016",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Worn windscreen wiper blades and a low washer-fluid level are a safety concern mainly because:",
+    "options": [
+      "They reduce visibility in rain, dust, or sandstorms exactly when clear vision matters most",
+      "They only affect the vehicle's appearance",
+      "They have no effect on visibility, only on comfort",
+      "They are only checked during the annual technical inspection"
+    ],
+    "answer": 0,
+    "explanation": "Worn wipers smear rather than clear the windscreen, and empty washer fluid means dust or bugs cannot be cleared -- both reduce visibility precisely in the conditions (rain, dust, sandstorms) where clear vision is most critical."
+  },
+  {
+    "id": "vd017",
+    "category": "vehicle_docs_insurance",
+    "sub": null,
+    "q": "Before starting to drive, mirrors and the driving seat should be adjusted mainly so that:",
+    "options": [
+      "The car looks tidy for other passengers",
+      "The radio and air conditioning are within easy reach",
+      "The driver has the clearest possible view of the road, mirrors show the maximum area around the vehicle, and the driver can reach the pedals and steering comfortably",
+      "Fuel consumption is reduced"
+    ],
+    "answer": 2,
+    "explanation": "Correctly adjusted mirrors and seating position maximise the driver's view of the road and surrounding traffic (reducing blind spots) and ensure full, comfortable control of the pedals and steering -- both essential for safe reactions."
+  },
+  {
+    "id": "mc017",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "On a wet road, a motorcycle rider should:",
+    "options": [
+      "Ride at the same speed as usual, since motorcycle tyres grip better than car tyres",
+      "Slow down, avoid sudden braking or sharp turns, and be especially cautious over painted road markings and metal surfaces, which become slicker when wet",
+      "Only worry about wet roads on a highway, not in the city",
+      "Increase speed slightly to pass through wet patches faster"
+    ],
+    "answer": 1,
+    "explanation": "A motorcycle has far less contact area with the road than a car, so it loses grip more easily on wet surfaces -- especially over painted lane markings, manhole covers, and metal grates, which become noticeably more slippery when wet."
+  },
+  {
+    "id": "mc018",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "Compared to a car, a motorcycle generally needs a following distance that is:",
+    "options": [
+      "Shorter, since motorcycles are more agile",
+      "The same, since the rules are identical for all vehicles",
+      "Irrelevant, since motorcycles can always swerve to avoid a collision",
+      "At least as long, and often longer, since a motorcycle is less stable, has less protection in a collision, and can be harder for the rider ahead to see clearly in a mirror"
+    ],
+    "answer": 3,
+    "explanation": "A motorcycle offers a rider far less protection than a car's structure does, and can be harder for other drivers to spot. A following distance at least as generous as a car's -- often more -- gives a rider more time and space to react safely."
+  },
+  {
+    "id": "mc019",
+    "category": "motorcycle",
+    "sub": null,
+    "q": "Riding with the headlight on at all times (even in daylight) and wearing high-visibility gear helps mainly because:",
+    "options": [
+      "It is only a legal requirement with no safety benefit",
+      "It improves the motorcycle's fuel efficiency",
+      "A motorcycle's smaller size makes it harder for other drivers to notice, so extra visibility measures reduce the risk of not being seen",
+      "It allows the rider to travel faster safely"
+    ],
+    "answer": 2,
+    "explanation": "A motorcycle's smaller visual profile means other drivers, especially when scanning quickly at junctions, can miss it more easily than a car. Keeping the headlight on and wearing high-visibility/reflective gear makes a rider noticeably easier to spot."
+  },
+  {
+    "id": "sl014",
+    "category": "speed_limits",
+    "sub": null,
+    "q": "If weather conditions such as heavy rain, fog, or a sandstorm make the posted speed limit unsafe, a driver should:",
+    "options": [
+      "Always drive at the posted limit regardless of conditions, since it is the legal speed",
+      "Reduce speed below the posted limit to match what is actually safe for the current conditions",
+      "Increase speed slightly to clear the hazardous area faster",
+      "Ignore the conditions unless a special sign specifically lowers the limit"
+    ],
+    "answer": 1,
+    "explanation": "A posted speed limit is always a maximum for good conditions, never a target speed that must be reached regardless of visibility, road surface, or traffic. Drivers are expected to drive below the limit whenever conditions make the limit unsafe."
+  },
+  {
+    "id": "hv021",
+    "category": "heavy_vehicle",
+    "sub": null,
+    "q": "Before descending a long, steep gradient in a heavy vehicle, a driver should:",
+    "options": [
+      "Select a lower gear before starting the descent, using engine braking to help control speed rather than relying only on the brakes",
+      "Select the highest gear to minimise engine noise",
+      "Turn off the engine to save fuel while coasting down",
+      "Apply the brakes continuously and firmly the whole way down"
+    ],
+    "answer": 0,
+    "explanation": "Riding the brakes continuously on a long descent can cause them to overheat and fade (lose stopping power). Selecting a lower gear before the descent uses engine braking to help control speed, keeping the brakes available and effective for the whole descent."
+  },
+  {
+    "id": "hv022",
+    "category": "heavy_vehicle",
+    "sub": null,
+    "q": "'Brake fade' in a heavy vehicle refers to:",
+    "options": [
+      "A brake light that flickers due to a wiring fault",
+      "The natural wear of brake pads over the vehicle's lifetime",
+      "A temporary loss of braking power, usually from overheated brakes after prolonged or heavy use (such as continuous braking down a long hill)",
+      "A legal requirement to service brakes every year"
+    ],
+    "answer": 2,
+    "explanation": "Brake fade happens when brakes overheat from prolonged or heavy use and temporarily lose stopping power. It is a serious risk for heavy vehicles on long descents, which is why engine braking and a lower gear are used to reduce reliance on the brakes."
+  },
+  {
+    "id": "sc013",
+    "category": "seatbelt_child_safety",
+    "sub": null,
+    "q": "Wearing a seatbelt on a short local trip (for example, a five-minute drive) is:",
+    "options": [
+      "Not necessary, since most serious crashes happen on long highway journeys",
+      "Just as necessary as on a long trip, since a large share of crashes and injuries happen close to home at lower speeds",
+      "Only necessary if a passenger is a child",
+      "Only necessary above a certain speed limit"
+    ],
+    "answer": 1,
+    "explanation": "Many crashes happen on short, familiar trips close to home, often at moderate speeds where the difference a seatbelt makes to injury severity is still very large. Distance and trip length are not a safe reason to skip a seatbelt."
   }
 ]
