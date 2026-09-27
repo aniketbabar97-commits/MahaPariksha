@@ -1,0 +1,35 @@
+name: rukhsa
+description: "Rukhsa - offline UAE RTA driving theory test practice (Android applicationId / iOS bundle id: app.rukhsa)"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  # ARB files under lib/l10n/ are the i18n source of truth (see l10n.yaml).
+  # `generate: true` would ask Flutter's own gen-l10n tool to build
+  # AppLocalizations from them; this repo currently ships a hand-generated
+  # equivalent (lib/l10n/app_localizations.dart, built by
+  # pipeline/gen_dart_l10n.py) because a Flutter SDK was not available in the
+  # environment that authored this app. Once `flutter gen-l10n` has been run
+  # and verified locally, flip this to true and delete the hand-generated file.
+  generate: false
+  uses-material-design: true
+  assets:
+    - assets/content/
