@@ -81,6 +81,11 @@ def valid(q):
             return False
         if len(set(norm(o) for o in q["o_en"])) != 4:
             return False
+        # norm() strips non-ASCII, so it can't check Hindi options (Devanagari would
+        # all collapse to ""); a plain exact-string dedup catches genuine duplicates
+        # (e.g. "a"/"an" both translating to the same Hindi word) without that bug.
+        if len(set(o.strip() for o in q["o_hi"])) != 4:
+            return False
         return True
     except (KeyError, TypeError):
         return False
