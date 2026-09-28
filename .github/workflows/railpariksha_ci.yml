@@ -6,6 +6,14 @@ on:
   pull_request:
     paths: ["railpariksha/**"]
 
+# Cancel a stale run for the same branch/PR when a newer push lands, instead of
+# letting every commit's run queue up independently -- rapid successive pushes
+# (e.g. an automated content pipeline) would otherwise build a large backlog of
+# runs for commits nobody needs the result of anymore.
+concurrency:
+  group: railpariksha-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   content:
     runs-on: ubuntu-latest
