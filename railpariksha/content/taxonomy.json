@@ -141,7 +141,14 @@
    "group": "rrb",
    "hi": "RRB NTPC (स्नातक/अस्नातक)",
    "en": "RRB NTPC (UG/Graduate)",
-   "subjects": ["maths", "reasoning", "gk", "current_affairs", "railway_gk", "computer"],
+   "subjects": [
+    { "id": "maths", "w": 30 },
+    { "id": "reasoning", "w": 30 },
+    { "id": "gk", "w": 15 },
+    { "id": "current_affairs", "w": 10 },
+    { "id": "railway_gk", "w": 10 },
+    { "id": "computer", "w": 5 }
+   ],
    "neg": 0.3333
   },
   {
@@ -149,7 +156,14 @@
    "group": "rrb",
    "hi": "RRB ग्रुप डी",
    "en": "RRB Group D",
-   "subjects": ["maths", "reasoning", "science", "gk", "current_affairs", "railway_gk"],
+   "subjects": [
+    { "id": "maths", "w": 25 },
+    { "id": "reasoning", "w": 30 },
+    { "id": "science", "w": 25 },
+    { "id": "gk", "w": 8 },
+    { "id": "current_affairs", "w": 6 },
+    { "id": "railway_gk", "w": 6 }
+   ],
    "neg": 0.3333
   },
   {
@@ -157,7 +171,14 @@
    "group": "rrb",
    "hi": "RRB सहायक लोको पायलट (ALP)",
    "en": "RRB Assistant Loco Pilot (ALP)",
-   "subjects": ["maths", "reasoning", "science", "current_affairs", "railway_gk"],
+   "subjects": [
+    { "id": "maths", "w": 20 },
+    { "id": "reasoning", "w": 25 },
+    { "id": "science", "w": 20 },
+    { "id": "gk", "w": 4 },
+    { "id": "current_affairs", "w": 3 },
+    { "id": "railway_gk", "w": 3 }
+   ],
    "neg": 0.3333
   },
   {
@@ -165,7 +186,14 @@
    "group": "rrb",
    "hi": "RRB तकनीशियन",
    "en": "RRB Technician",
-   "subjects": ["maths", "reasoning", "science", "current_affairs", "railway_gk"],
+   "subjects": [
+    { "id": "maths", "w": 20 },
+    { "id": "reasoning", "w": 25 },
+    { "id": "science", "w": 20 },
+    { "id": "gk", "w": 4 },
+    { "id": "current_affairs", "w": 3 },
+    { "id": "railway_gk", "w": 3 }
+   ],
    "neg": 0.3333
   },
   {
@@ -173,7 +201,14 @@
    "group": "rrb",
    "hi": "RRB जूनियर इंजीनियर",
    "en": "RRB Junior Engineer (JE)",
-   "subjects": ["maths", "reasoning", "science", "gk", "current_affairs", "computer"],
+   "subjects": [
+    { "id": "maths", "w": 30 },
+    { "id": "reasoning", "w": 25 },
+    { "id": "science", "w": 30 },
+    { "id": "gk", "w": 6 },
+    { "id": "current_affairs", "w": 5 },
+    { "id": "computer", "w": 4 }
+   ],
    "neg": 0.3333
   },
   {
@@ -181,7 +216,13 @@
    "group": "rrb",
    "hi": "RRB पैरामेडिकल",
    "en": "RRB Paramedical",
-   "subjects": ["maths", "reasoning", "science", "gk", "current_affairs"],
+   "subjects": [
+    { "id": "maths", "w": 8 },
+    { "id": "reasoning", "w": 8 },
+    { "id": "science", "w": 8 },
+    { "id": "gk", "w": 3 },
+    { "id": "current_affairs", "w": 3 }
+   ],
    "neg": 0.3333
   },
   {
@@ -189,7 +230,13 @@
    "group": "rpf",
    "hi": "RPF कांस्टेबल",
    "en": "RPF Constable",
-   "subjects": ["maths", "reasoning", "gk", "current_affairs", "railway_gk"],
+   "subjects": [
+    { "id": "maths", "w": 35 },
+    { "id": "reasoning", "w": 35 },
+    { "id": "gk", "w": 20 },
+    { "id": "current_affairs", "w": 15 },
+    { "id": "railway_gk", "w": 15 }
+   ],
    "neg": 0.25
   },
   {
@@ -197,7 +244,13 @@
    "group": "rpf",
    "hi": "RPF सब-इंस्पेक्टर",
    "en": "RPF Sub-Inspector (SI)",
-   "subjects": ["maths", "reasoning", "gk", "current_affairs", "railway_gk"],
+   "subjects": [
+    { "id": "maths", "w": 35 },
+    { "id": "reasoning", "w": 35 },
+    { "id": "gk", "w": 20 },
+    { "id": "current_affairs", "w": 15 },
+    { "id": "railway_gk", "w": 15 }
+   ],
    "neg": 0.25
   }
  ],

@@ -25,8 +25,14 @@ class Exam {
   final String group;
   final Bi name;
   final List<String> subjects;
+
+  /// Subject id -> relative weight, matching each exam's real question-count split
+  /// (e.g. RRB JE's Maths/Science-heavy pattern vs RPF's General-Awareness-heavy one).
+  /// Used by [QuizBuilder.mock] to build a mock test that mirrors the real exam,
+  /// not an even split across subjects.
+  final Map<String, int> weights;
   final double negative;
-  const Exam(this.id, this.group, this.name, this.subjects, [this.negative = 0]);
+  const Exam(this.id, this.group, this.name, this.subjects, this.weights, [this.negative = 0]);
 }
 
 class ExamGroup {

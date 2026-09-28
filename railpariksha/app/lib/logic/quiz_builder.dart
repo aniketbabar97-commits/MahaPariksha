@@ -107,6 +107,51 @@ class QuizBuilder {
     return QuizSpec(QuizMode.daily, chosen, 'आज का Daily 10', "Today's Daily 10");
   }
 
+  /// Largest-remainder allocation of `total` items across `weights`, capped per key by
+  /// `capacity`. Any amount a capped-out key can't absorb is re-run through the same
+  /// proportional method across the remaining, not-yet-capped keys — so a thin subject
+  /// (e.g. only 4 current-affairs questions in the bank) running out doesn't dump its
+  /// shortfall as flat-random noise onto whichever subject happens to have leftover; the
+  /// real subject weights keep governing where the rest goes.
+  static Map<String, int> _weightedAllocate(Map<String, int> weights, Map<String, int> capacity, int total) {
+    final result = <String, int>{for (final k in weights.keys) k: 0};
+    var remainingKeys = weights.keys.where((k) => capacity[k]! > 0).toSet();
+    var toPlace = total;
+    while (toPlace > 0 && remainingKeys.isNotEmpty) {
+      final totalWeight = remainingKeys.fold(0, (a, k) => a + weights[k]!);
+      if (totalWeight == 0) break;
+      final floor = <String, int>{};
+      final frac = <String, double>{};
+      var allocatedThisRound = 0;
+      for (final k in remainingKeys) {
+        final raw = toPlace * weights[k]! / totalWeight;
+        floor[k] = raw.floor();
+        frac[k] = raw - floor[k]!;
+        allocatedThisRound += floor[k]!;
+      }
+      final byFrac = remainingKeys.toList()..sort((a, b) => frac[b]!.compareTo(frac[a]!));
+      for (var i = 0; i < toPlace - allocatedThisRound && i < byFrac.length; i++) {
+        floor[byFrac[i]] = floor[byFrac[i]]! + 1;
+      }
+      var overflow = 0;
+      final exhausted = <String>[];
+      for (final k in remainingKeys) {
+        final room = capacity[k]! - result[k]!;
+        final give = min(floor[k]!, room);
+        result[k] = result[k]! + give;
+        overflow += floor[k]! - give;
+        if (give >= room) exhausted.add(k);
+      }
+      toPlace = overflow;
+      if (exhausted.isEmpty) break; // nothing more can be placed without a capped key freeing up
+      remainingKeys = remainingKeys.difference(exhausted.toSet());
+    }
+    return result;
+  }
+
+  /// Builds a mock test whose subject mix mirrors the real exam's question-count split
+  /// (e.g. RPF's General-Awareness-heavy pattern, RRB JE's Maths/Science-heavy one) rather
+  /// than splitting evenly across subjects.
   QuizSpec mock({int count = 25}) {
     final e = exam;
     final rnd = Random();
@@ -116,12 +161,15 @@ class QuizBuilder {
       bySubject.putIfAbsent(q.subject, () => []).add(q);
     }
     final chosen = <Question>[];
-    final subjects = bySubject.keys.toList()..shuffle(rnd);
-    var i = 0;
-    while (chosen.length < count && bySubject.values.any((l) => l.isNotEmpty)) {
-      final list = bySubject[subjects[i % subjects.length]]!;
-      if (list.isNotEmpty) chosen.add(list.removeAt(rnd.nextInt(list.length)));
-      i++;
+    if (bySubject.isNotEmpty) {
+      final weights = {for (final s in bySubject.keys) s: e?.weights[s] ?? 1};
+      final capacity = {for (final s in bySubject.keys) s: bySubject[s]!.length};
+      final alloc = _weightedAllocate(weights, capacity, count);
+      for (final s in bySubject.keys) {
+        final list = bySubject[s]!..shuffle(rnd);
+        chosen.addAll(list.take(alloc[s]!));
+      }
+      chosen.shuffle(rnd);
     }
     final negative = e?.negative ?? 0.0;
     return QuizSpec(QuizMode.mock, chosen, 'मॉक टेस्ट', 'Mock Test',

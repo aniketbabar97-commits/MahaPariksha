@@ -103,9 +103,17 @@ class ContentRepo {
           )));
     exams
       ..clear()
-      ..addAll((tax['exams'] as List).map((e) =>
-          Exam(e['id'], e['group'], Bi(e['hi'], e['en']), List<String>.from(e['subjects']),
-          (e['neg'] as num? ?? 0).toDouble())));
+      ..addAll((tax['exams'] as List).map((e) {
+        final subjectEntries = (e['subjects'] as List).cast<Map<String, dynamic>>();
+        return Exam(
+          e['id'],
+          e['group'],
+          Bi(e['hi'], e['en']),
+          subjectEntries.map((s) => s['id'] as String).toList(),
+          {for (final s in subjectEntries) s['id'] as String: (s['w'] as num?)?.toInt() ?? 1},
+          (e['neg'] as num? ?? 0).toDouble(),
+        );
+      }));
     groups
       ..clear()
       ..addAll((tax['exam_groups'] as List).map((g) => ExamGroup(g['id'], Bi(g['hi'], g['en']))));

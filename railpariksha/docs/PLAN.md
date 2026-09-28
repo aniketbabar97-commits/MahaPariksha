@@ -8,21 +8,38 @@ motivation. RailPariksha and Bharari are independent apps living in one repo (`r
 
 ## Target exams
 
-| Exam | Body | Subjects (CBT1 / common stage) | Negative marking |
-|---|---|---|---|
-| RRB NTPC (UG/Graduate) | RRB | Maths, Reasoning, GK, Current Affairs, Railway GK, Computer | 1/3 |
-| RRB Group D | RRB | Maths, Reasoning, Science, GK, Current Affairs, Railway GK | 1/3 |
-| RRB Assistant Loco Pilot (ALP) | RRB | Maths, Reasoning, Science, Current Affairs, Railway GK | 1/3 |
-| RRB Technician | RRB | Maths, Reasoning, Science, Current Affairs, Railway GK | 1/3 |
-| RRB Junior Engineer (JE) | RRB | Maths, Reasoning, Science, GK, Current Affairs, Computer | 1/3 |
-| RRB Paramedical | RRB | Maths, Reasoning, Science, GK, Current Affairs | 1/3 |
-| RPF Constable | RPF | Maths, Reasoning, GK, Current Affairs, Railway GK | 1/4 |
-| RPF Sub-Inspector (SI) | RPF | Maths, Reasoning, GK, Current Affairs, Railway GK | 1/4 |
+Mock tests are weighted to match each exam's real question-count split, not an even share across subjects —
+`QuizBuilder.mock()` reads each subject's weight from `taxonomy.json` and allocates proportionally (with a
+capped, weight-preserving fallback for thin subjects like current affairs, so a shortfall in one subject doesn't
+just get dumped randomly onto whichever subject has leftover). Weights below are the real CBT1/common-stage
+question counts (out of the exam's real total, shown in parentheses) reported consistently across RRB/RPF
+exam-prep sources (Testbook, Adda247, Careerpower, PW, Oliveboard) as of the exams' most recent CENs:
+
+| Exam | Body | Maths | Reasoning | Science | GK | Current Affairs | Railway GK | Computer | Real total | Negative marking |
+|---|---|---|---|---|---|---|---|---|---|---|
+| RRB NTPC (UG/Graduate) | RRB | 30 | 30 | — | 15 | 10 | 10 | 5 | 100 | 1/3 |
+| RRB Group D | RRB | 25 | 30 | 25 | 8 | 6 | 6 | — | 100 | 1/3 |
+| RRB ALP | RRB | 20 | 25 | 20 | 4 | 3 | 3 | — | 75 | 1/3 |
+| RRB Technician | RRB | 20 | 25 | 20 | 4 | 3 | 3 | — | 75 | 1/3 |
+| RRB Junior Engineer (JE) | RRB | 30 | 25 | 30 | 6 | 5 | — | 4 | 100 | 1/3 |
+| RRB Paramedical | RRB | 8 | 8 | 8 | 3 | 3 | — | — | 30¹ | 1/3 |
+| RPF Constable | RPF | 35 | 35 | — | 20 | 15 | 15 | — | 120 | 1/4 |
+| RPF Sub-Inspector (SI) | RPF | 35 | 35 | — | 20 | 15 | 15 | — | 120 | 1/4 |
+
+¹ RRB Paramedical's real CBT is 100 questions, but 70 of those are a category-specific professional paper (Staff
+Nurse, Pharmacist, Lab Technician, etc. each have their own) that this app doesn't cover — see "What's covered vs
+intentionally out of scope" below. The 30 shown is only the common general-knowledge portion, split evenly across
+its subjects since the exact official sub-split isn't published; treat this one row as an estimate, not a sourced
+figure like the others.
+
+RRB's official syllabus doesn't sub-divide "General Awareness" into GK/Current Affairs/Railway GK/Computer the
+way this app does for practice purposes — that four-way split (and its relative proportions within each exam's
+GA weight) is this app's own pedagogical breakdown, not an officially published sub-split.
 
 ALP and Technician are listed as separate exams (real RRB CENs run them as separate recruitment processes) even
 though their CBT1 subject pattern is identical — this matches how RRB actually structures them.
 
-Exam list, subject sets and negative-marking values live in `content/taxonomy.json`; adding a new exam means
+Exam list, subject weights and negative-marking values live in `content/taxonomy.json`; adding a new exam means
 adding one entry there.
 
 ### What's covered vs intentionally out of scope

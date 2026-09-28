@@ -104,7 +104,7 @@ def main():
     exam_cards = []
     for e in tax["exams"]:
         links = []
-        for sid in e["subjects"]:
+        for sid in [entry["id"] for entry in e["subjects"]]:
             s = subjects.get(sid)
             if not s:
                 continue

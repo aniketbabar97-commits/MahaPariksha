@@ -74,6 +74,24 @@ void main() {
       expect(m.instantFeedback, isFalse);
     });
 
+    test('mock reflects the real exam subject weightage, not an even split', () {
+      // RPF's real CBT is General-Awareness-heavy (maths/reasoning 35 each, GA subjects
+      // 50 of 120) -- a mock of it should lean the same way, not split evenly across
+      // its 5 subjects (which an even split would put at 20% each / 5 questions of 25).
+      p.examId = 'rpf_constable';
+      final m = b.mock(count: 60);
+      final bySubject = <String, int>{};
+      for (final q in m.questions) {
+        bySubject[q.subject] = (bySubject[q.subject] ?? 0) + 1;
+      }
+      final gaCount = (bySubject['gk'] ?? 0) + (bySubject['current_affairs'] ?? 0) + (bySubject['railway_gk'] ?? 0);
+      final mathsCount = bySubject['maths'] ?? 0;
+      // Real weights: GA subjects sum to 50/120, maths alone is 35/120 -- GA should clearly
+      // outweigh a single subject like maths, and far exceed an even 60/5=12-per-subject split.
+      expect(gaCount, greaterThan(mathsCount));
+      expect(gaCount, greaterThan(15));
+    });
+
     test('mistake book quiz contains only mistakes', () {
       final q = repo.questionsFor(repo.exam('rrb_group_d')!).first;
       p.recordAnswer(q.id, false);
