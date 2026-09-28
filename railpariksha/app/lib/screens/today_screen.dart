@@ -3,6 +3,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
@@ -30,6 +31,7 @@ class TodayScreen extends StatelessWidget {
     final motivation = s.builder.todaysMotivation();
     final days = p.daysToExam;
     final level = p.level;
+    final gaps = days == null ? <PacingGap>[] : s.builder.pacingGaps();
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
@@ -104,6 +106,47 @@ class TodayScreen extends StatelessWidget {
                   style: const TextStyle(fontWeight: FontWeight.w700)),
               subtitle: Text(context.tr('रुकना हार नहीं है, दोबारा शुरुआत करना ही असली जज़्बा है।',
                   'Pausing is not losing. Restarting is true grit.')),
+            ),
+          ),
+        ],
+        if (gaps.isNotEmpty) ...[
+          const SizedBox(height: 12),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Row(children: [
+                  const Icon(Icons.insights, color: BrandColors.sky, size: 20),
+                  const SizedBox(width: 8),
+                  Text(context.tr('अध्ययन योजना', 'Study plan'),
+                      style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                ]),
+                const SizedBox(height: 10),
+                for (final g in gaps)
+                  Builder(builder: (context) {
+                    final sub = s.repo.subject(g.subject);
+                    final name = sub?.name.of(lang) ?? g.subject;
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 8),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(12),
+                        onTap: () => startQuiz(context, s.builder.practice(subject: g.subject)),
+                        child: Row(children: [
+                          Icon(subjectIcon(sub?.icon ?? ''), color: BrandColors.saffron, size: 20),
+                          const SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              context.tr('आप $name में पीछे हैं — आज ~${g.recommendedDaily} प्रश्न करें',
+                                  "You're behind on $name — try ~${g.recommendedDaily} Qs today"),
+                              style: const TextStyle(fontSize: 13.5),
+                            ),
+                          ),
+                          const Icon(Icons.chevron_right, size: 18, color: Colors.grey),
+                        ]),
+                      ),
+                    );
+                  }),
+              ]),
             ),
           ),
         ],

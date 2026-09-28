@@ -29,6 +29,18 @@ class TopicStat {
   double get accuracy => attempts == 0 ? 0 : correct / attempts;
 }
 
+/// A subject the user is falling behind on relative to the exam's own weighting.
+class PacingGap {
+  final String subject;
+
+  /// How far actual practice share is below the exam's weighted share (0..1).
+  final double deficit;
+
+  /// Roughly how many of today's practice questions should go to this subject.
+  final int recommendedDaily;
+  const PacingGap(this.subject, this.deficit, this.recommendedDaily);
+}
+
 class QuizBuilder {
   final ContentRepo repo;
   final Progress progress;
@@ -91,6 +103,35 @@ class QuizBuilder {
       a[1] += s[1];
     });
     return agg;
+  }
+
+  /// Which 1-2 subjects the user has under-practised relative to the exam's own
+  /// question-count weighting — the same weights [_weightedAllocate] uses to build a
+  /// mock test. Deliberately simple and time-invariant: a subject's fair share of total
+  /// practice is `weight / totalWeight` regardless of how many days remain, so a gap here
+  /// is just "practice share vs weighted share so far". Needs at least [minAttempts]
+  /// answered questions in this exam before it says anything, so early users (where any
+  /// split looks "off") aren't nagged.
+  List<PacingGap> pacingGaps({int minAttempts = 15, double threshold = 0.08, int max = 2}) {
+    final e = exam;
+    if (e == null || e.subjects.isEmpty) return [];
+    final totalWeight = e.subjects.fold(0, (a, s) => a + (e.weights[s] ?? 1));
+    if (totalWeight <= 0) return [];
+    final stats = subjectStats();
+    final totalAnswered = e.subjects.fold(0, (a, s) => a + (stats[s]?[0] ?? 0));
+    if (totalAnswered < minAttempts) return [];
+    final gaps = <PacingGap>[];
+    for (final s in e.subjects) {
+      final expectedShare = (e.weights[s] ?? 1) / totalWeight;
+      final actualShare = (stats[s]?[0] ?? 0) / totalAnswered;
+      final deficit = expectedShare - actualShare;
+      if (deficit > threshold) {
+        final recommended = (expectedShare * progress.dailyGoal).round().clamp(1, progress.dailyGoal);
+        gaps.add(PacingGap(s, deficit, recommended));
+      }
+    }
+    gaps.sort((a, b) => b.deficit.compareTo(a.deficit));
+    return gaps.take(max).toList();
   }
 
   /// Same set all day (seeded by date + exam): 6 weak-topic, 4 mixed.
