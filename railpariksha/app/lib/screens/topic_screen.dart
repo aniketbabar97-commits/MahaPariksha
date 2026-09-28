@@ -130,8 +130,8 @@ class _MindMapViewState extends State<MindMapView> {
                 ? open.clear()
                 : open.addAll(List.generate(root.children.length, (i) => i))),
             child: Text(open.length == root.children.length
-                ? context.tr('सर्व बंद करा', 'Collapse all')
-                : context.tr('सर्व उघडा', 'Expand all')),
+                ? context.tr('सभी बंद करें', 'Collapse all')
+                : context.tr('सभी खोलें', 'Expand all')),
           ),
         ]),
         for (var i = 0; i < root.children.length; i++) _branch(i, root.children[i]),

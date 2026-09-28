@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../core/app_scope.dart';
 import '../core/theme.dart';
+import 'exam_picker.dart';
 
 class GoalRing extends StatelessWidget {
   final double progress;
@@ -62,7 +64,8 @@ class _RingPainter extends CustomPainter {
   bool shouldRepaint(_RingPainter old) => old.v != v;
 }
 
-/// Streak shown as a bird rising through "sky levels".
+/// Streak shown as a bird rising through "sky levels". Pops in with a little
+/// bounce whenever the streak count changes, so gains feel rewarding.
 class StreakWings extends StatelessWidget {
   final int streak;
   const StreakWings({super.key, required this.streak});
@@ -72,21 +75,31 @@ class StreakWings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final lvl = skyLevel(streak);
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        gradient: streak > 0 ? BrandColors.fireGradient : null,
-        color: streak > 0 ? null : Colors.white.withValues(alpha: 0.15),
-        borderRadius: BorderRadius.circular(30),
-      ),
-      child: Row(mainAxisSize: MainAxisSize.min, children: [
-        Transform.translate(
-          offset: Offset(0, -lvl.toDouble()),
-          child: Icon(lvl >= 3 ? Icons.flight : Icons.local_fire_department, color: Colors.white, size: 20),
+    return Semantics(
+      label: context.tr('स्ट्रीक $streak दिन', 'Streak: $streak days'),
+      child: TweenAnimationBuilder<double>(
+        key: ValueKey(streak),
+        tween: Tween(begin: streak > 0 ? 0.6 : 1, end: 1),
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.elasticOut,
+        builder: (context, scale, child) => Transform.scale(scale: scale, child: child),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: Spacing.md, vertical: Spacing.xs + 2),
+          decoration: BoxDecoration(
+            gradient: streak > 0 ? BrandColors.fireGradient : null,
+            color: streak > 0 ? null : Colors.white.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Row(mainAxisSize: MainAxisSize.min, children: [
+            Transform.translate(
+              offset: Offset(0, -lvl.toDouble()),
+              child: Icon(lvl >= 3 ? Icons.flight : Icons.local_fire_department, color: Colors.white, size: 20),
+            ),
+            const SizedBox(width: Spacing.xs),
+            Text('$streak', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16)),
+          ]),
         ),
-        const SizedBox(width: 4),
-        Text('$streak', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16)),
-      ]),
+      ),
     );
   }
 }
@@ -150,20 +163,65 @@ class SectionTitle extends StatelessWidget {
       );
 }
 
+/// A friendly bilingual placeholder for empty lists, missing data, or errors.
+/// [actionLabel]/[onAction] optionally offer a way forward instead of a dead end.
 class EmptyState extends StatelessWidget {
   final IconData icon;
   final String text;
-  const EmptyState({super.key, required this.icon, required this.text});
+  final String? actionLabel;
+  final VoidCallback? onAction;
+  const EmptyState({super.key, required this.icon, required this.text, this.actionLabel, this.onAction});
 
   @override
   Widget build(BuildContext context) => Center(
-        child: Padding(
-          padding: const EdgeInsets.all(32),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(Spacing.xxl + 8),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
             Icon(icon, size: 56, color: BrandColors.saffron),
-            const SizedBox(height: 12),
+            const SizedBox(height: Spacing.md),
             Text(text, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyLarge),
+            if (actionLabel != null && onAction != null) ...[
+              const SizedBox(height: Spacing.lg),
+              FilledButton(onPressed: onAction, child: Text(actionLabel!)),
+            ],
           ]),
+        ),
+      );
+}
+
+/// Shown in place of any exam-scoped screen when no exam has been selected
+/// yet (e.g. onboarding was skipped or progress was reset), instead of a
+/// blank white screen.
+class NoExamState extends StatelessWidget {
+  const NoExamState({super.key});
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        body: SafeArea(
+          child: EmptyState(
+            icon: Icons.train_outlined,
+            text: context.tr('पहले अपनी परीक्षा चुनें ताकि सही प्रश्न दिख सकें।',
+                'Pick your exam first so we can show the right questions.'),
+            actionLabel: context.tr('परीक्षा चुनें', 'Choose exam'),
+            onAction: () => showModalBottomSheet(
+              context: context,
+              isScrollControlled: true,
+              showDragHandle: true,
+              builder: (ctx) => SizedBox(
+                height: MediaQuery.of(ctx).size.height * 0.75,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: Spacing.lg),
+                  child: ExamPicker(
+                    selected: ctx.scope.progress.examId,
+                    onSelected: (id) {
+                      ctx.scope.progress.update((p) => p.examId = id);
+                      Navigator.pop(ctx);
+                    },
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       );
 }

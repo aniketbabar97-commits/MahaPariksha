@@ -1,5 +1,29 @@
 import 'package:flutter/material.dart';
 
+/// Shared spacing scale so padding/gaps stay consistent instead of scattering
+/// magic numbers across screens. Use these for new/updated layout code.
+class Spacing {
+  static const xs = 4.0;
+  static const sm = 8.0;
+  static const md = 12.0;
+  static const lg = 16.0;
+  static const xl = 20.0;
+  static const xxl = 24.0;
+}
+
+/// Shared corner-radius scale, matching the values already used by the
+/// card/button themes below.
+class Corners {
+  static const sm = 12.0;
+  static const md = 16.0;
+  static const lg = 20.0;
+  static const xl = 24.0;
+  static const xxl = 28.0;
+}
+
+/// Minimum recommended tap target size (Material accessibility guideline).
+const double kMinTapTarget = 48.0;
+
 class BrandColors {
   static const sky = Color(0xFF0B3D91);
   static const skyLight = Color(0xFF3A6FD8);

@@ -35,7 +35,7 @@ class PracticeScreen extends StatelessWidget {
     final s = context.scope;
     final exam = s.builder.exam;
     final lang = context.lang;
-    if (exam == null) return const SizedBox();
+    if (exam == null) return const NoExamState();
     final subjects = s.repo.subjectsFor(exam);
     final stats = s.builder.subjectStats();
     final pool = s.repo.questionsFor(exam);

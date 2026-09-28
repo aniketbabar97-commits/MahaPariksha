@@ -171,11 +171,14 @@ class _QuizScreenState extends State<QuizScreen> {
                 ),
               ),
             IconButton(
-              tooltip: 'हिंदी / English',
+              tooltip: context.tr('भाषा बदलें', 'Switch language'),
               icon: Text(qLang == 'en' ? 'हिं' : 'EN', style: const TextStyle(fontWeight: FontWeight.w900)),
               onPressed: () => setState(() => qLang = qLang == 'en' ? 'hi' : 'en'),
             ),
             IconButton(
+              tooltip: p.bookmarks.contains(q.id)
+                  ? context.tr('सहेजा गया, हटाएं', 'Saved, remove')
+                  : context.tr('प्रश्न सहेजें', 'Save question'),
               icon: Icon(p.bookmarks.contains(q.id) ? Icons.bookmark : Icons.bookmark_border),
               onPressed: () => p.toggleBookmark(q.id),
             ),
@@ -189,34 +192,47 @@ class _QuizScreenState extends State<QuizScreen> {
             backgroundColor: BrandColors.saffron.withValues(alpha: 0.15),
           ),
           Expanded(
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
-              children: [
-                Row(children: [
-                  Text(
-                      spec.mode == QuizMode.speed
-                          ? context.tr('सही: $speedCorrect', 'Correct: $speedCorrect')
-                          : '${index + 1} / $total',
-                      style: const TextStyle(fontWeight: FontWeight.w800)),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text('${subject?.name.of(qLang) ?? ''} · ${topic?.name.of(qLang) ?? ''}',
-                        overflow: TextOverflow.ellipsis, style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13)),
-                  ),
-                  _DifficultyDots(q.difficulty),
-                ]),
-                const SizedBox(height: 14),
-                Text(q.text.of(qLang), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w700, height: 1.45)),
-                const SizedBox(height: 18),
-                for (var i = 0; i < options.length; i++)
-                  _OptionTile(
-                    label: labels[i],
-                    text: options[i],
-                    state: _optionState(i),
-                    onTap: () => _select(i),
-                  ),
-                if (showFeedback) _Explanation(q: q, lang: qLang, correct: answers[index] == q.answer),
-              ],
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 220),
+              switchInCurve: Curves.easeOut,
+              switchOutCurve: Curves.easeIn,
+              transitionBuilder: (child, animation) => FadeTransition(
+                opacity: animation,
+                child: SlideTransition(
+                  position: Tween<Offset>(begin: const Offset(0.04, 0), end: Offset.zero).animate(animation),
+                  child: child,
+                ),
+              ),
+              child: ListView(
+                key: ValueKey(index),
+                padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+                children: [
+                  Row(children: [
+                    Text(
+                        spec.mode == QuizMode.speed
+                            ? context.tr('सही: $speedCorrect', 'Correct: $speedCorrect')
+                            : '${index + 1} / $total',
+                        style: const TextStyle(fontWeight: FontWeight.w800)),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Text('${subject?.name.of(qLang) ?? ''} · ${topic?.name.of(qLang) ?? ''}',
+                          overflow: TextOverflow.ellipsis, style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13)),
+                    ),
+                    _DifficultyDots(q.difficulty),
+                  ]),
+                  const SizedBox(height: 14),
+                  Text(q.text.of(qLang), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w700, height: 1.45)),
+                  const SizedBox(height: 18),
+                  for (var i = 0; i < options.length; i++)
+                    _OptionTile(
+                      label: labels[i],
+                      text: options[i],
+                      state: _optionState(i),
+                      onTap: () => _select(i),
+                    ),
+                  if (showFeedback) _Explanation(q: q, lang: qLang, correct: answers[index] == q.answer),
+                ],
+              ),
             ),
           ),
           if (spec.mode != QuizMode.speed)

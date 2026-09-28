@@ -59,6 +59,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
         title: Text(context.tr('फ्लैशकार्ड', 'Flashcards')),
         actions: [
           IconButton(
+            tooltip: context.tr('भाषा बदलें', 'Switch language'),
             icon: Text(cLang == 'en' ? 'हिं' : 'EN', style: const TextStyle(fontWeight: FontWeight.w900)),
             onPressed: () => setState(() => cLang = cLang == 'en' ? 'hi' : 'en'),
           ),

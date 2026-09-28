@@ -14,7 +14,7 @@ class ReviseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final s = context.scope;
     final exam = s.builder.exam;
-    if (exam == null) return const SizedBox();
+    if (exam == null) return const NoExamState();
     final lang = context.lang;
     final p = s.progress;
     final cards = s.repo.flashcardsFor(exam);
