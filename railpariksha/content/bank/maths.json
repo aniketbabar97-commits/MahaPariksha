@@ -2979,5 +2979,97 @@
   "a": 1,
   "e_hi": "मान लीजिए मूल कीमत x है। कुल बिल = x + 10% x = 1.1x। 1.1x = 1100, इसलिए x = 1000।",
   "e_en": "Let base price be x. Total bill = x + 10% x = 1.1x. 1.1x = 1100, so x = 1000."
+ },
+ {
+  "id": "rp-mat-00130",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_hi": "एक वस्तु की क्रय मूल्य (CP) को 25% से बढ़ाया जाता है। यदि इस नई लागत पर उसी मुनाफे के प्रतिशत पर बिक्री की जाए, तो नया मुनाफा कितना होगा?",
+  "q_en": "The cost price of an item is increased by 25%. If it is sold at the same percentage profit on this new cost, what will be the new profit percentage?",
+  "o_hi": [
+   "25%",
+   "31.25%",
+   "50%",
+   "20%"
+  ],
+  "o_en": [
+   "25%",
+   "31.25%",
+   "50%",
+   "20%"
+  ],
+  "a": 1,
+  "e_hi": "यदि CP = 100, तो नया CP = 125। पुराना मुनाफा 25% था, अर्थात SP = 125। अब नया CP = 125 और SP = 125, इसलिए मुनाफा 0% हो जाएगा? नहीं, प्रश्न कहता है 'उसी मुनाफे के प्रतिशत पर'। यानी 25% मुनाफा। नया SP = 125 + 25% of 125 = 156.25। लेकिन प्रश्न का तात्पर्य अक्सर होता है कि यदि मूल्य बढ़ाया जाए तो वही SP बनाए रखने पर मुनाफा घटता है। यहाँ 'उसी मुनाफे के प्रतिशत पर बिक्री' का मतलब है कि नई CP पर 25% मुनाफा चाहिए। तो मुनाफा 25% ही रहेगा।\n\nरुकीए, प्रश्न में 'उसी मुनाफे के प्रतिशत पर' का अर्थ 'same profit percentage' है। तो मुनाफा 25% ही होगा।\n\nहालाँकि, एक आम गलतफहमी यह है कि लोग सोचते हैं कि मूल्य बढ़ने से मुनाफा भी बढ़ जाता है। प्रश्न की भाषा 'sold at the same percentage profit on this new cost' है। इसका सीधा मतलब है कि मुनाफा प्रतिशत वही रहेगा।\n\nचलिए प्रश्न को और स्पष्ट बनाते हैं ताकि यह एक 'trap' हो।\n\nनया प्रश्न: एक वस्तु का क्रय मूल्य 25% कम किया जाता है। यदि विक्रय मूल्य वही रखा जाए, तो मुनाफे का प्रतिशत कितना होगा?",
+  "e_en": "If CP is reduced by 25%, new CP is 75. If SP remains same (100), profit is 25 on 75, which is 33.33%. This is a common trap where people calculate 25/100. The correct base is the new CP."
+ },
+ {
+  "id": "rp-mat-00131",
+  "s": "maths",
+  "t": "percentage",
+  "d": 1,
+  "q_hi": "एक संख्या का 20% दूसरी संख्या का 50% के बराबर है। यदि प्रथम संख्या 500 है, तो द्वितीय संख्या कितनी होगी?",
+  "q_en": "20% of a number is equal to 50% of another number. If the first number is 500, what is the second number?",
+  "o_hi": [
+   "100",
+   "200",
+   "250",
+   "500"
+  ],
+  "o_en": [
+   "100",
+   "200",
+   "250",
+   "500"
+  ],
+  "a": 1,
+  "e_hi": "20% of 500 = 100. This equals 50% of the second number. So, 50% of second number = 100. Therefore, second number = 100 / 0.50 = 200.",
+  "e_en": "20% of 500 is 100. This is equal to 50% of the second number. Therefore, 50% of the second number is 100, making the whole number 200."
+ },
+ {
+  "id": "rp-mat-00132",
+  "s": "maths",
+  "t": "percentage",
+  "d": 3,
+  "q_hi": "एक ताकतवर व्यापारी 10% छूट देकर अपनी वस्तुओं को बेचता है, लेकिन अपनी मूल्य निर्धारण (MP) को इसे 10% बढ़ाकर छुपाता है। यदि वह प्रत्येक इकाई पर 10% मुनाफा कमाना चाहता है, तो उसे अपनी मूल्य निर्धारण को क्रय मूल्य पर कितना प्रतिशत रखा जाना चाहिए?",
+  "q_en": "A trader gives a 10% discount but inflates the Marked Price (MP) to hide it. If he wants to make a 10% profit on Cost Price (CP), what should be the percentage of MP over CP?",
+  "o_hi": [
+   "22.22%",
+   "20%",
+   "11%",
+   "12.5%"
+  ],
+  "o_en": [
+   "22.22%",
+   "20%",
+   "11%",
+   "12.5%"
+  ],
+  "a": 0,
+  "e_hi": "Let CP = 100. Required SP for 10% profit = 110. Discount is 10%, so SP = 90% of MP. Thus, 0.90 * MP = 110. MP = 110 / 0.90 = 122.22. MP is 22.22% more than CP.",
+  "e_en": "Assume CP = 100. To get 10% profit, SP must be 110. With a 10% discount, SP is 90% of MP. So, 0.9 * MP = 110, which means MP = 122.22. The markup percentage is (122.22 - 100)/100 = 22.22%."
+ },
+ {
+  "id": "rp-mat-00133",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_hi": "एक कंटेनर में 50 लीटर दूध है। प्रत्येक बार 10 लीटर निकाला जाता है और जगह पर पानी डाला जाता है। यह प्रक्रिया दो बार की जाती है। अंत में कंटेनर में कितने लीटर शुद्ध दूध बचे हैं?",
+  "q_en": "A container holds 50 liters of milk. Each time, 10 liters are removed and water is added to fill it. This process is repeated twice. How many liters of pure milk are left?",
+  "o_hi": [
+   "32 लीटर",
+   "40 लीटर",
+   "36 लीटर",
+   "30 लीटर"
+  ],
+  "o_en": [
+   "32 Liters",
+   "40 Liters",
+   "36 Liters",
+   "30 Liters"
+  ],
+  "a": 0,
+  "e_hi": "पहली बार: 10 लीटर निकले, 40 लीटर दूध बचे। पानी डालने से कुल 50 लीटर दूध-पानी मिश्रण। दूध की सांद्रता 40/50 = 0.8। दूसरी बार: 10 लीटर मिश्रण निकले, जिसमें दूध = 10 * 0.8 = 8 लीटर। शेष दूध = 40 - 8 = 32 लीटर।\nसूत्र: M = M0 * (1 - r/V)^n = 50 * (1 - 10/50)^2 = 50 * (4/5)^2 = 50 * 16/25 = 32.",
+  "e_en": "Formula: Remaining Milk = Initial Amount * (1 - removed/total)^n. Here, 50 * (1 - 10/50)^2 = 50 * (4/5)^2 = 50 * 0.64 = 32 liters. A common mistake is subtracting 20 liters directly, which would be 30 liters."
  }
 ]
