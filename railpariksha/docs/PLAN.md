@@ -25,12 +25,21 @@ exam-prep sources (Testbook, Adda247, Careerpower, PW, Oliveboard) as of the exa
 | RRB Paramedical | RRB | 8 | 8 | 8 | 3 | 3 | — | — | 30¹ | 1/3 |
 | RPF Constable | RPF | 35 | 35 | — | 20 | 15 | 15 | — | 120 | 1/4 |
 | RPF Sub-Inspector (SI) | RPF | 35 | 35 | — | 20 | 15 | 15 | — | 120 | 1/4 |
+| DFCCIL Executive/Jr. Executive | DFCCIL (PSU) | 30 | 30 | 15² | 15 | — | 10² | — | 100 | 1/4 |
 
 ¹ RRB Paramedical's real CBT is 100 questions, but 70 of those are a category-specific professional paper (Staff
 Nurse, Pharmacist, Lab Technician, etc. each have their own) that this app doesn't cover — see "What's covered vs
 intentionally out of scope" below. The 30 shown is only the common general-knowledge portion, split evenly across
 its subjects since the exact official sub-split isn't published; treat this one row as an estimate, not a sourced
 figure like the others.
+
+² DFCCIL's CBT1 (the common stage every applicant sits, before any post-specific technical CBT2) reports a
+"General Awareness" section of 15 questions and a "Knowledge about Railways/DFCCIL" section of 10
+questions in its own published pattern — mapped here onto this app's `gk` and `railway_gk` subjects
+respectively, the same general/current-affairs and railway-specific split used for the RRB/RPF rows.
+See `docs/RAILWAY_EXAMS_RESEARCH.md` for the sourced breakdown and for every other railway exam
+researched (RRB SSE, Ministerial & Isolated Categories, RRC, other railway PSUs, metro rail) and why each
+either is or isn't in taxonomy.json.
 
 RRB's official syllabus doesn't sub-divide "General Awareness" into GK/Current Affairs/Railway GK/Computer the
 way this app does for practice purposes — that four-way split (and its relative proportions within each exam's
@@ -46,8 +55,11 @@ adding one entry there.
 
 Covered: the **common/general syllabus** — the sections shared across candidates for each exam, verified against
 the published subject patterns for RRB NTPC (CEN 01/2019), RRB Group D (CEN 02/2018), RRB ALP & Technician
-(CEN 01/2018), RRB JE (CEN 03/2018) and RPF Constable/SI (CEN 01-02/2018 and successors). None of these exams'
-written CBT includes a separate English-language section — RailPariksha still ships 26 English questions as
+(CEN 01/2018), RRB JE (CEN 03/2018), RPF Constable/SI (CEN 01-02/2018 and successors), and DFCCIL
+Executive/Junior Executive's CBT1 (see `docs/RAILWAY_EXAMS_RESEARCH.md` for the DFCCIL sourcing and for the
+full survey of every other railway exam/process considered — RRB SSE, Ministerial & Isolated Categories, RRC,
+other railway PSUs (IRCON, RVNL, RITES, CONCOR, IRCTC) and metro rail — and why each was or wasn't added).
+None of these exams' written CBT includes a separate English-language section — RailPariksha still ships 26 English questions as
 clearly-labelled **bonus practice** (visible in the Practice tab regardless of which exam is selected, since many
 aspirants also prepare for SSC/banking exams that do test English), but English is deliberately not attached to
 any exam's official subject list in `taxonomy.json`, so its presence never misrepresents what's actually tested.
@@ -66,8 +78,32 @@ Deliberately out of scope for now, and why:
 - **Physical Efficiency/Measurement Tests (RPF), typing tests and CBAT** (NTPC Station Master) — these are
   skill/physical tests, not written MCQ content, so there's nothing to build here.
 - **RRB "Ministerial and Isolated Categories" postings** (Stenographer, Junior Translator, Chief Law Assistant,
-  etc.) — niche, low-volume recruitment with their own distinct syllabi (including, notably, a real English/Hindi
-  language paper for some of these posts); not covered by this app's initial scope.
+  Staff Car Driver, Cost Accountant, Editor, etc.) — a single CBT, but half its marks (Professional Ability) are
+  a different, unrelated syllabus per post (shorthand for Stenographer, translation theory for Junior
+  Translator, motor-vehicle rules for Staff Car Driver, law for Chief Law Assistant...), so there's no one
+  coherent "MI" mock test to build, unlike Paramedical where every category shares the same common CBT1; niche,
+  low-volume recruitment either way.
+- **RRB Senior Section Engineer (SSE)** — its CBT mixes a 90-of-150-question discipline-specific technical
+  section (Part B) directly into the same scored test as the general section (Part A), rather than as a
+  separable later stage the way JE's CBT2 is — so, unlike JE, there's no way to build an SSE entry that covers
+  a meaningful share of the real exam without the same per-discipline technical-accuracy risk already flagged
+  above.
+- **Railway PSUs other than DFCCIL** (IRCON, RVNL, RITES, CONCOR, IRCTC) — IRCON, RVNL and RITES have no
+  publicly sourced, consistent question-count split for their general sections; CONCOR's CBT is half
+  discipline-specific Professional Knowledge (same reasoning as the technical papers above); IRCTC's regular
+  recruitment is merit-based with no written exam at all. DFCCIL is the one PSU covered — its CBT1 has a
+  specific, consistently-reported section-by-question breakdown that maps cleanly onto subjects this app
+  already has (see `docs/RAILWAY_EXAMS_RESEARCH.md`).
+- **RRC (Railway Recruitment Cell) processes** — RRC-run Level 1 recruitment uses the exact same CBT and
+  syllabus as `rrb_group_d` (RRCs just administer it per zone), so it's not a distinct exam to add; RRC Act
+  Apprentice recruitment has no written test at all (selection is by Class 10 + ITI marks only).
+- **Metro Rail corporations** (DMRC, Mumbai Metro/MMRC, Bangalore Metro/BMRCL, Chennai Metro, etc.) — commonly
+  searched alongside "railway exams" by aspirants, but legally separate state/UT corporations, not Indian
+  Railways; not recruited into by RRB/RRC/RPF. This app's Railway GK content (zones, Kavach, RRB/RPF structure)
+  is Indian-Railways-specific and doesn't transfer to a metro corporation's syllabus. DMRC is the most
+  prominent (and does run a well-documented CBT of its own) so it would be the obvious first candidate if this
+  app's scope ever deliberately broadens beyond Indian Railways — but that's a branding/positioning decision
+  for later, not something to fold in silently now.
 
 ## Subjects & why each exists
 
@@ -116,7 +152,8 @@ priciest model. See the module docstring in `pipeline/ca_daily.py` for the exact
 
 ## Roadmap
 
-- [x] Taxonomy (8 subjects incl. Environment/Culture GK topics, 8 exams incl. ALP/Technician split), starter
+- [x] Taxonomy (8 subjects incl. Environment/Culture GK topics, 9 exams incl. ALP/Technician split and DFCCIL
+      Executive/Jr. Executive), starter
       question bank grown to 40-46 per core subject (maths, reasoning, science, gk, railway_gk), 26 each for
       computer and the bonus English set, flashcards, motivation, 10 topic notes/mind-maps across 4 subjects.
 - [x] Flutter app re-skinned from Bharari's proven architecture: navy/gold "Indian Railways" theme, train-class
