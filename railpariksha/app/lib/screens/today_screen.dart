@@ -6,6 +6,7 @@ import '../core/theme.dart';
 import '../widgets/common.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
+import 'reel_screen.dart';
 
 class TodayScreen extends StatelessWidget {
   final ValueChanged<int> onNavigate;
@@ -106,6 +107,44 @@ class TodayScreen extends StatelessWidget {
           ),
         ],
         const SizedBox(height: 16),
+        // Reel Mode: the addictive endless swipe feed — most prominent CTA.
+        Card(
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ReelScreen())),
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: const BoxDecoration(gradient: BrandColors.heroGradient),
+              child: Row(children: [
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.18), borderRadius: BorderRadius.circular(14)),
+                  child: const Icon(Icons.play_circle_outline, color: Colors.white, size: 32),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Row(children: [
+                      Text(context.tr('रील मोड', 'Reel Mode'),
+                          style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                      const SizedBox(width: 8),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                        decoration: BoxDecoration(color: BrandColors.saffron, borderRadius: BorderRadius.circular(20)),
+                        child: Text(context.tr('नया', 'NEW'), style: const TextStyle(color: BrandColors.sky, fontSize: 11, fontWeight: FontWeight.w900)),
+                      ),
+                    ]),
+                    const SizedBox(height: 2),
+                    Text(context.tr('स्वाइप करें, सीखते रहें — कभी न रुकने वाला अभ्यास 🔥', 'Swipe, learn, repeat — endless bite-sized practice 🔥'),
+                        style: const TextStyle(color: Colors.white70)),
+                  ]),
+                ),
+                const Icon(Icons.chevron_right, color: Colors.white70),
+              ]),
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
         // Primary CTA
         Card(
           clipBehavior: Clip.antiAlias,
