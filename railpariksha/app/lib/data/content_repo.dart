@@ -27,6 +27,12 @@ class ContentRepo {
   final Map<String, Exam> _examById = {};
   final Map<String, Question> _questionById = {};
 
+  // Precomputed once in _apply() so subjectsFor/questionsFor/flashcardsFor don't
+  // rescan the full question/flashcard lists on every call (those are invoked from
+  // screen build() methods, so at 20,000+ questions a linear scan there would jank).
+  final Map<String, List<Question>> _questionsBySubject = {};
+  final Map<String, List<Flashcard>> _flashcardsBySubject = {};
+
   Subject? subject(String id) => _subjectById[id];
   Exam? exam(String id) => _examById[id];
   Question? question(String id) => _questionById[id];
@@ -41,18 +47,14 @@ class ContentRepo {
   List<Subject> subjectsFor(Exam e) => e.subjects
       .map((s) => _subjectById[s])
       .whereType<Subject>()
-      .where((s) => questions.any((q) => q.subject == s.id))
+      .where((s) => (_questionsBySubject[s.id] ?? const []).isNotEmpty)
       .toList();
 
-  List<Question> questionsFor(Exam e) {
-    final s = e.subjects.toSet();
-    return questions.where((q) => s.contains(q.subject)).toList();
-  }
+  List<Question> questionsFor(Exam e) =>
+      [for (final s in e.subjects) ...?_questionsBySubject[s]];
 
-  List<Flashcard> flashcardsFor(Exam e) {
-    final s = e.subjects.toSet();
-    return flashcards.where((c) => s.contains(c.subject)).toList();
-  }
+  List<Flashcard> flashcardsFor(Exam e) =>
+      [for (final s in e.subjects) ...?_flashcardsBySubject[s]];
 
   Future<File> _cacheFile() async =>
       File('${(await getApplicationSupportDirectory()).path}/content.json');
@@ -141,5 +143,13 @@ class ContentRepo {
     _questionById
       ..clear()
       ..addEntries(questions.map((q) => MapEntry(q.id, q)));
+    _questionsBySubject.clear();
+    for (final q in questions) {
+      (_questionsBySubject[q.subject] ??= []).add(q);
+    }
+    _flashcardsBySubject.clear();
+    for (final c in flashcards) {
+      (_flashcardsBySubject[c.subject] ??= []).add(c);
+    }
   }
 }
