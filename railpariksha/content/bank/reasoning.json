@@ -1,160 +1,368 @@
 [
  {
-  "id": "rp-reasoning-0001", "s": "reasoning", "t": "analogy", "d": 1,
+  "id": "rp-reasoning-0001",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
   "q_hi": "जैसे 'हाथ : उंगली' है, वैसे ही 'पेड़ : ?' है।",
   "q_en": "As 'Hand : Finger', so 'Tree : ?'",
-  "o_hi": ["जड़", "पत्ता", "मिट्टी", "फल"],
-  "o_en": ["Root", "Leaf", "Soil", "Fruit"],
+  "o_hi": [
+   "जड़",
+   "पत्ता",
+   "मिट्टी",
+   "फल"
+  ],
+  "o_en": [
+   "Root",
+   "Leaf",
+   "Soil",
+   "Fruit"
+  ],
   "a": 1,
   "e_hi": "हाथ का एक भाग उंगली है, उसी तरह पेड़ का एक भाग पत्ता है — दोनों में 'संपूर्ण से भाग' का संबंध है।",
   "e_en": "A finger is a part of a hand; similarly, a leaf is a part of a tree — both show a 'whole to part' relationship."
  },
  {
-  "id": "rp-reasoning-0002", "s": "reasoning", "t": "coding_decoding", "d": 2,
+  "id": "rp-reasoning-0002",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
   "q_hi": "यदि CAT को कोड में DBU लिखा जाता है, तो DOG को कैसे लिखा जाएगा?",
   "q_en": "If CAT is coded as DBU, how will DOG be coded?",
-  "o_hi": ["EPH", "EPI", "FQH", "EOH"],
-  "o_en": ["EPH", "EPI", "FQH", "EOH"],
+  "o_hi": [
+   "EPH",
+   "EPI",
+   "FQH",
+   "EOH"
+  ],
+  "o_en": [
+   "EPH",
+   "EPI",
+   "FQH",
+   "EOH"
+  ],
   "a": 0,
   "e_hi": "प्रत्येक अक्षर को वर्णमाला में एक स्थान आगे बढ़ाया गया है: C→D, A→B, T→U। इसी नियम से D→E, O→P, G→H, यानी EPH।",
   "e_en": "Each letter is shifted one place forward: C→D, A→B, T→U. Applying the same rule: D→E, O→P, G→H, giving EPH."
  },
  {
-  "id": "rp-reasoning-0003", "s": "reasoning", "t": "series", "d": 1,
+  "id": "rp-reasoning-0003",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
   "q_hi": "श्रृंखला में अगली संख्या क्या होगी: 2, 4, 8, 16, ?",
   "q_en": "What is the next number in the series: 2, 4, 8, 16, ?",
-  "o_hi": ["18", "24", "32", "20"],
-  "o_en": ["18", "24", "32", "20"],
+  "o_hi": [
+   "18",
+   "24",
+   "32",
+   "20"
+  ],
+  "o_en": [
+   "18",
+   "24",
+   "32",
+   "20"
+  ],
   "a": 2,
   "e_hi": "हर संख्या पिछली संख्या का दोगुना है (×2)। इसलिए 16×2 = 32।",
   "e_en": "Each number is double the previous one (×2). So 16×2 = 32."
  },
  {
-  "id": "rp-reasoning-0004", "s": "reasoning", "t": "classification", "d": 1,
+  "id": "rp-reasoning-0004",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
   "q_hi": "इनमें से कौन-सा शब्द बाकी तीनों से भिन्न है?",
   "q_en": "Which one of the following is different from the rest?",
-  "o_hi": ["गाय", "भैंस", "बकरी", "मगरमच्छ"],
-  "o_en": ["Cow", "Buffalo", "Goat", "Crocodile"],
+  "o_hi": [
+   "गाय",
+   "भैंस",
+   "बकरी",
+   "मगरमच्छ"
+  ],
+  "o_en": [
+   "Cow",
+   "Buffalo",
+   "Goat",
+   "Crocodile"
+  ],
   "a": 3,
   "e_hi": "गाय, भैंस और बकरी स्तनधारी (mammal) हैं, जबकि मगरमच्छ एक सरीसृप (reptile) है — इसलिए यह अलग है।",
   "e_en": "Cow, buffalo and goat are mammals, while a crocodile is a reptile — so it does not belong to the group."
  },
  {
-  "id": "rp-reasoning-0005", "s": "reasoning", "t": "blood_relations", "d": 2,
+  "id": "rp-reasoning-0005",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
   "q_hi": "राम, श्याम का पिता है और श्याम, मोहन का भाई है। राम का मोहन से क्या रिश्ता है?",
   "q_en": "Ram is Shyam's father, and Shyam is Mohan's brother. What is Ram's relation to Mohan?",
-  "o_hi": ["भाई", "पिता", "चाचा", "दादा"],
-  "o_en": ["Brother", "Father", "Uncle", "Grandfather"],
+  "o_hi": [
+   "भाई",
+   "पिता",
+   "चाचा",
+   "दादा"
+  ],
+  "o_en": [
+   "Brother",
+   "Father",
+   "Uncle",
+   "Grandfather"
+  ],
   "a": 1,
   "e_hi": "राम श्याम का पिता है, और श्याम-मोहन भाई हैं, तो राम मोहन का भी पिता है।",
   "e_en": "Ram is Shyam's father, and Shyam-Mohan are brothers, so Ram is Mohan's father too."
  },
  {
-  "id": "rp-reasoning-0006", "s": "reasoning", "t": "direction_sense", "d": 2,
+  "id": "rp-reasoning-0006",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
   "q_hi": "एक व्यक्ति उत्तर की ओर 5 किमी चलता है, फिर दायें मुड़कर 3 किमी चलता है। अब वह अपने शुरुआती बिंदु की किस दिशा में है?",
   "q_en": "A person walks 5 km north, then turns right and walks 3 km. In which direction is he now from the starting point?",
-  "o_hi": ["उत्तर-पूर्व", "उत्तर-पश्चिम", "दक्षिण-पूर्व", "दक्षिण-पश्चिम"],
-  "o_en": ["North-East", "North-West", "South-East", "South-West"],
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
   "a": 0,
   "e_hi": "उत्तर की ओर चलकर दायें (पूर्व) मुड़ने से वह उत्तर-पूर्व दिशा में आगे बढ़ता है, अतः शुरुआती बिंदु से वह उत्तर-पूर्व में है।",
   "e_en": "Walking north then turning right (east) moves him toward the north-east, so he is north-east of the starting point."
  },
  {
-  "id": "rp-reasoning-0007", "s": "reasoning", "t": "syllogism", "d": 3,
+  "id": "rp-reasoning-0007",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
   "q_hi": "कथन: सभी किताबें पेन हैं। सभी पेन पेंसिल हैं। निष्कर्ष: सभी किताबें पेंसिल हैं।",
   "q_en": "Statements: All books are pens. All pens are pencils. Conclusion: All books are pencils.",
-  "o_hi": ["निष्कर्ष सही है", "निष्कर्ष गलत है", "निष्कर्ष अनिश्चित है", "कुछ नहीं कहा जा सकता"],
-  "o_en": ["Conclusion is true", "Conclusion is false", "Conclusion is uncertain", "Nothing can be said"],
+  "o_hi": [
+   "निष्कर्ष सही है",
+   "निष्कर्ष गलत है",
+   "निष्कर्ष अनिश्चित है",
+   "कुछ नहीं कहा जा सकता"
+  ],
+  "o_en": [
+   "Conclusion is true",
+   "Conclusion is false",
+   "Conclusion is uncertain",
+   "Nothing can be said"
+  ],
   "a": 0,
   "e_hi": "यदि सभी A, B हैं और सभी B, C हैं, तो तार्किक रूप से सभी A, C होंगे। यहाँ किताब→पेन→पेंसिल की श्रृंखला से निष्कर्ष सही सिद्ध होता है (शब्दों के वास्तविक अर्थ पर ध्यान न देकर केवल तर्क के नियम से)।",
   "e_en": "If all A are B and all B are C, then logically all A are C. Following books→pens→pencils, the conclusion holds true by the rule of syllogism (judged purely on logic, not real-world meaning)."
  },
  {
-  "id": "rp-reasoning-0008", "s": "reasoning", "t": "alphabet_test", "d": 2,
+  "id": "rp-reasoning-0008",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
   "q_hi": "अंग्रेजी वर्णमाला में बायें से 13वाँ अक्षर कौन-सा है?",
   "q_en": "Which letter is 13th from the left in the English alphabet?",
-  "o_hi": ["K", "L", "M", "N"],
-  "o_en": ["K", "L", "M", "N"],
+  "o_hi": [
+   "K",
+   "L",
+   "M",
+   "N"
+  ],
+  "o_en": [
+   "K",
+   "L",
+   "M",
+   "N"
+  ],
   "a": 2,
   "e_hi": "A से गिनती शुरू करें: A(1) ... M(13)। वर्णमाला के बीचोंबीच का अक्षर M है (कुल 26 अक्षर)।",
   "e_en": "Counting from A: A(1) ... M(13). M is the middle letter of the 26-letter alphabet."
  },
  {
-  "id": "rp-reasoning-0009", "s": "reasoning", "t": "mirror_water_image", "d": 2,
+  "id": "rp-reasoning-0009",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
   "q_hi": "घड़ी में जब समय 3:00 बज रहा हो, तो उसका दर्पण प्रतिबिंब (mirror image) कौन-सा समय दिखाएगा?",
   "q_en": "When a clock shows 3:00, what time will its mirror image show?",
-  "o_hi": ["3:00", "6:00", "9:00", "12:00"],
-  "o_en": ["3:00", "6:00", "9:00", "12:00"],
+  "o_hi": [
+   "3:00",
+   "6:00",
+   "9:00",
+   "12:00"
+  ],
+  "o_en": [
+   "3:00",
+   "6:00",
+   "9:00",
+   "12:00"
+  ],
   "a": 2,
   "e_hi": "घड़ी के दर्पण प्रतिबिंब का सामान्य नियम है: समय को 11:60 में से घटाओ। 11:60 − 3:00 = 8:60 = 9:00।",
   "e_en": "The standard rule for a clock's mirror image: subtract the time from 11:60. 11:60 − 3:00 = 8:60 = 9:00."
  },
  {
-  "id": "rp-reasoning-0010", "s": "reasoning", "t": "mathematical_operations", "d": 2,
+  "id": "rp-reasoning-0010",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
   "q_hi": "यदि '+' का अर्थ '×' है, '×' का अर्थ '−' है, तो 6 + 3 × 2 = ?",
   "q_en": "If '+' means '×' and '×' means '−', what is 6 + 3 × 2?",
-  "o_hi": ["16", "17", "18", "12"],
-  "o_en": ["16", "17", "18", "12"],
+  "o_hi": [
+   "16",
+   "17",
+   "18",
+   "12"
+  ],
+  "o_en": [
+   "16",
+   "17",
+   "18",
+   "12"
+  ],
   "a": 0,
   "e_hi": "चिह्न बदलने पर व्यंजक बनता है: 6 × 3 − 2 = 18 − 2 = 16। गणितीय क्रम (पहले ×, फिर −) का पालन करें।",
   "e_en": "Swapping the signs gives: 6 × 3 − 2 = 18 − 2 = 16. Follow the order of operations (× before −)."
  },
  {
-  "id": "rp-reasoning-0011", "s": "reasoning", "t": "puzzle_seating", "d": 3,
+  "id": "rp-reasoning-0011",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 3,
   "q_hi": "पाँच मित्र A, B, C, D, E एक कतार में बैठे हैं। B, A के दायें और C के बायें है। यदि A सबसे बायें छोर पर है, तो B किस स्थान पर बैठा है?",
   "q_en": "Five friends A, B, C, D, E sit in a row. B is to the right of A and to the left of C. If A is at the extreme left, where does B sit?",
-  "o_hi": ["पहले स्थान पर", "दूसरे स्थान पर", "तीसरे स्थान पर", "चौथे स्थान पर"],
-  "o_en": ["1st position", "2nd position", "3rd position", "4th position"],
+  "o_hi": [
+   "पहले स्थान पर",
+   "दूसरे स्थान पर",
+   "तीसरे स्थान पर",
+   "चौथे स्थान पर"
+  ],
+  "o_en": [
+   "1st position",
+   "2nd position",
+   "3rd position",
+   "4th position"
+  ],
   "a": 1,
   "e_hi": "A सबसे बायें (स्थान 1) है। B, A के दायें यानी सीधे अगले स्थान (स्थान 2) पर बैठेगा, और C उसके आगे (स्थान 3) होगा।",
   "e_en": "A is at the extreme left (position 1). B, being right of A, sits immediately next (position 2), with C further ahead (position 3)."
  },
  {
-  "id": "rp-reasoning-0012", "s": "reasoning", "t": "statement_conclusion", "d": 2,
+  "id": "rp-reasoning-0012",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 2,
   "q_hi": "कथन: सरकार ने सभी सरकारी स्कूलों में मुफ्त पाठ्यपुस्तकें देने की घोषणा की। निष्कर्ष I: इससे गरीब विद्यार्थियों को लाभ होगा। निष्कर्ष II: अब कोई भी निजी स्कूल में नहीं पढ़ेगा।",
   "q_en": "Statement: The government announced free textbooks in all government schools. Conclusion I: This will benefit poor students. Conclusion II: No one will study in private schools now.",
-  "o_hi": ["केवल निष्कर्ष I सही है", "केवल निष्कर्ष II सही है", "दोनों सही हैं", "दोनों गलत हैं"],
-  "o_en": ["Only conclusion I follows", "Only conclusion II follows", "Both follow", "Neither follows"],
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both follow",
+   "Neither follows"
+  ],
   "a": 0,
   "e_hi": "मुफ्त पाठ्यपुस्तकें देने से गरीब विद्यार्थियों को सीधा लाभ होना तार्किक है (निष्कर्ष I)। लेकिन इससे यह नहीं निकलता कि निजी स्कूल पूरी तरह बंद हो जाएंगे (निष्कर्ष II एक अतिरेकपूर्ण अनुमान है)।",
   "e_en": "Free textbooks logically benefit poor students directly (Conclusion I). But it does not follow that private schools will be abandoned entirely (Conclusion II is an overreach)."
  },
  {
-  "id": "rp-reasoning-0013", "s": "reasoning", "t": "analogy", "d": 1,
+  "id": "rp-reasoning-0013",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
   "q_hi": "जैसे 'डॉक्टर : अस्पताल' है, वैसे ही 'शिक्षक : ?' है।",
   "q_en": "As 'Doctor : Hospital', so 'Teacher : ?'",
-  "o_hi": ["विद्यालय", "अस्पताल", "दुकान", "न्यायालय"],
-  "o_en": ["School", "Hospital", "Shop", "Court"],
+  "o_hi": [
+   "विद्यालय",
+   "अस्पताल",
+   "दुकान",
+   "न्यायालय"
+  ],
+  "o_en": [
+   "School",
+   "Hospital",
+   "Shop",
+   "Court"
+  ],
   "a": 0,
   "e_hi": "डॉक्टर जिस स्थान पर कार्य करता है वह अस्पताल है, उसी प्रकार शिक्षक जिस स्थान पर कार्य करता है वह विद्यालय है — दोनों में 'व्यक्ति-कार्यस्थल' का संबंध है।",
   "e_en": "A doctor's workplace is a hospital; similarly, a teacher's workplace is a school — both show a 'person to workplace' relationship."
  },
  {
-  "id": "rp-reasoning-0014", "s": "reasoning", "t": "analogy", "d": 2,
+  "id": "rp-reasoning-0014",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
   "q_hi": "जैसे '3 : 9' है, वैसे ही '7 : ?' है।",
   "q_en": "As '3 : 9', so '7 : ?'",
-  "o_hi": ["42", "47", "49", "56"],
-  "o_en": ["42", "47", "49", "56"],
+  "o_hi": [
+   "42",
+   "47",
+   "49",
+   "56"
+  ],
+  "o_en": [
+   "42",
+   "47",
+   "49",
+   "56"
+  ],
   "a": 2,
   "e_hi": "पहली संख्या का वर्ग दूसरी संख्या है (3² = 9)। उसी नियम से 7² = 49।",
   "e_en": "The second number is the square of the first (3² = 9). By the same rule, 7² = 49."
  },
  {
-  "id": "rp-reasoning-0015", "s": "reasoning", "t": "coding_decoding", "d": 2,
+  "id": "rp-reasoning-0015",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
   "q_hi": "यदि किसी कूट भाषा में BOOK को ZMMI लिखा जाता है, तो WORK को कैसे लिखा जाएगा?",
   "q_en": "If in a certain code BOOK is written as ZMMI, how will WORK be coded?",
-  "o_hi": ["UMPI", "TLPI", "UMPJ", "VNQI"],
-  "o_en": ["UMPI", "TLPI", "UMPJ", "VNQI"],
+  "o_hi": [
+   "UMPI",
+   "TLPI",
+   "UMPJ",
+   "VNQI"
+  ],
+  "o_en": [
+   "UMPI",
+   "TLPI",
+   "UMPJ",
+   "VNQI"
+  ],
   "a": 0,
   "e_hi": "प्रत्येक अक्षर को वर्णमाला में 2 स्थान पीछे किया गया है: B→Z, O→M, O→M, K→I। इसी नियम से W→U, O→M, R→P, K→I, अर्थात UMPI।",
   "e_en": "Each letter is shifted 2 places backward in the alphabet: B→Z, O→M, O→M, K→I. Applying the same rule: W→U, O→M, R→P, K→I, giving UMPI."
  },
  {
-  "id": "rp-reasoning-0016", "s": "reasoning", "t": "coding_decoding", "d": 3,
+  "id": "rp-reasoning-0016",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
   "q_hi": "यदि किसी कूट भाषा में MADRAS को NBESBT लिखा जाता है, तो BOMBAY को कैसे लिखा जाएगा?",
   "q_en": "If in a certain code MADRAS is written as NBESBT, how will BOMBAY be coded?",
-  "o_hi": ["CPNCBZ", "CQNCBZ", "CPNCCZ", "BPNCBZ"],
-  "o_en": ["CPNCBZ", "CQNCBZ", "CPNCCZ", "BPNCBZ"],
+  "o_hi": [
+   "CPNCBZ",
+   "CQNCBZ",
+   "CPNCCZ",
+   "BPNCBZ"
+  ],
+  "o_en": [
+   "CPNCBZ",
+   "CQNCBZ",
+   "CPNCCZ",
+   "BPNCBZ"
+  ],
   "a": 0,
   "e_hi": "प्रत्येक अक्षर को वर्णमाला में एक स्थान आगे बढ़ाया गया है: M→N, A→B, D→E, R→S, A→B, S→T। इसी नियम से B→C, O→P, M→N, B→C, A→B, Y→Z, अर्थात CPNCBZ।",
   "e_en": "Each letter is shifted one place forward in the alphabet: M→N, A→B, D→E, R→S, A→B, S→T. Applying the same rule to BOMBAY gives B→C, O→P, M→N, B→C, A→B, Y→Z, i.e., CPNCBZ.",
@@ -162,61 +370,139 @@
   "hook_en": "Remember: each letter shifts one place 'forward' — A→B, B→C..."
  },
  {
-  "id": "rp-reasoning-0017", "s": "reasoning", "t": "series", "d": 2,
+  "id": "rp-reasoning-0017",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
   "q_hi": "श्रृंखला में अगली संख्या क्या होगी: 3, 6, 11, 18, 27, ?",
   "q_en": "What is the next number in the series: 3, 6, 11, 18, 27, ?",
-  "o_hi": ["36", "38", "40", "42"],
-  "o_en": ["36", "38", "40", "42"],
+  "o_hi": [
+   "36",
+   "38",
+   "40",
+   "42"
+  ],
+  "o_en": [
+   "36",
+   "38",
+   "40",
+   "42"
+  ],
   "a": 1,
   "e_hi": "क्रमागत संख्याओं के बीच का अंतर विषम संख्याओं (3, 5, 7, 9, ...) के क्रम में बढ़ता है। अगला अंतर 11 होगा, इसलिए 27 + 11 = 38।",
   "e_en": "The differences between consecutive terms increase as odd numbers (3, 5, 7, 9, ...). The next difference is 11, so 27 + 11 = 38."
  },
  {
-  "id": "rp-reasoning-0018", "s": "reasoning", "t": "series", "d": 3,
+  "id": "rp-reasoning-0018",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
   "q_hi": "श्रृंखला में अगली संख्या क्या होगी: 2, 6, 12, 20, 30, ?",
   "q_en": "What is the next number in the series: 2, 6, 12, 20, 30, ?",
-  "o_hi": ["36", "40", "42", "48"],
-  "o_en": ["36", "40", "42", "48"],
+  "o_hi": [
+   "36",
+   "40",
+   "42",
+   "48"
+  ],
+  "o_en": [
+   "36",
+   "40",
+   "42",
+   "48"
+  ],
   "a": 2,
   "e_hi": "प्रत्येक पद n(n+1) के रूप में है: 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30। अगला पद 6×7=42 होगा।",
   "e_en": "Each term follows the pattern n(n+1): 1×2=2, 2×3=6, 3×4=12, 4×5=20, 5×6=30. The next term is 6×7=42."
  },
  {
-  "id": "rp-reasoning-0019", "s": "reasoning", "t": "classification", "d": 1,
+  "id": "rp-reasoning-0019",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
   "q_hi": "इनमें से कौन-सा शब्द बाकी तीनों से भिन्न है?",
   "q_en": "Which one of the following is different from the rest?",
-  "o_hi": ["आलू", "गाजर", "मूली", "पालक"],
-  "o_en": ["Potato", "Carrot", "Radish", "Spinach"],
+  "o_hi": [
+   "आलू",
+   "गाजर",
+   "मूली",
+   "पालक"
+  ],
+  "o_en": [
+   "Potato",
+   "Carrot",
+   "Radish",
+   "Spinach"
+  ],
   "a": 3,
   "e_hi": "आलू, गाजर और मूली भूमिगत (जड़/कंद) सब्जियाँ हैं, जबकि पालक एक पत्तेदार सब्जी है — इसलिए यह अलग है।",
   "e_en": "Potato, carrot and radish are underground (root/tuber) vegetables, while spinach is a leafy vegetable — so it does not belong to the group."
  },
  {
-  "id": "rp-reasoning-0020", "s": "reasoning", "t": "classification", "d": 2,
+  "id": "rp-reasoning-0020",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
   "q_hi": "इनमें से कौन-सी संख्या बाकी तीनों से भिन्न है?",
   "q_en": "Which one of the following numbers is different from the rest?",
-  "o_hi": ["27", "64", "125", "100"],
-  "o_en": ["27", "64", "125", "100"],
+  "o_hi": [
+   "27",
+   "64",
+   "125",
+   "100"
+  ],
+  "o_en": [
+   "27",
+   "64",
+   "125",
+   "100"
+  ],
   "a": 3,
   "e_hi": "27 (3³), 64 (4³) और 125 (5³) पूर्ण घन (perfect cubes) हैं, जबकि 100 किसी पूर्णांक का पूर्ण घन नहीं है — इसलिए यह अलग है।",
   "e_en": "27 (3³), 64 (4³) and 125 (5³) are perfect cubes, while 100 is not the perfect cube of any integer — so it is the odd one out."
  },
  {
-  "id": "rp-reasoning-0021", "s": "reasoning", "t": "blood_relations", "d": 2,
+  "id": "rp-reasoning-0021",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
   "q_hi": "सीता ने एक व्यक्ति की ओर इशारा करते हुए कहा, 'वह मेरी माँ की इकलौती बेटी का बेटा है।' यदि सीता की कोई बहन नहीं है, तो वह व्यक्ति सीता से किस रिश्ते में है?",
   "q_en": "Pointing to a man, Sita said, 'He is the son of my mother's only daughter.' If Sita has no sisters, how is the man related to Sita?",
-  "o_hi": ["पुत्र", "भाई", "पिता", "भतीजा"],
-  "o_en": ["Son", "Brother", "Father", "Nephew"],
+  "o_hi": [
+   "पुत्र",
+   "भाई",
+   "पिता",
+   "भतीजा"
+  ],
+  "o_en": [
+   "Son",
+   "Brother",
+   "Father",
+   "Nephew"
+  ],
   "a": 0,
   "e_hi": "सीता की कोई बहन नहीं है, इसलिए 'माँ की इकलौती बेटी' सीता स्वयं है। अतः वह व्यक्ति सीता का पुत्र है।",
   "e_en": "Since Sita has no sisters, 'mother's only daughter' refers to Sita herself. So the man is Sita's son."
  },
  {
-  "id": "rp-reasoning-0022", "s": "reasoning", "t": "blood_relations", "d": 3,
+  "id": "rp-reasoning-0022",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
   "q_hi": "A, B की बहन है। C, B की माँ है। D, C का पिता है। A, D से किस रिश्ते में है?",
   "q_en": "A is B's sister. C is B's mother. D is C's father. How is A related to D?",
-  "o_hi": ["नातिन", "पोती", "बेटी", "भतीजी"],
-  "o_en": ["Maternal granddaughter", "Paternal granddaughter", "Daughter", "Niece"],
+  "o_hi": [
+   "नातिन",
+   "पोती",
+   "बेटी",
+   "भतीजी"
+  ],
+  "o_en": [
+   "Maternal granddaughter",
+   "Paternal granddaughter",
+   "Daughter",
+   "Niece"
+  ],
   "a": 0,
   "e_hi": "A, B की बहन है और C, B की माँ है, इसलिए C, A की भी माँ है। D, C का पिता है, यानी D, A का नाना (माँ का पिता) है। अतः A, D की नातिन (माँ की ओर से पोती) है।",
   "e_en": "A is B's sister and C is B's mother, so C is also A's mother. D is C's father, meaning D is A's maternal grandfather. Hence A is D's maternal granddaughter.",
@@ -224,111 +510,254 @@
   "hook_en": "Build the relation chain starting from the youngest generation and work upward."
  },
  {
-  "id": "rp-reasoning-0023", "s": "reasoning", "t": "direction_sense", "d": 1,
+  "id": "rp-reasoning-0023",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
   "q_hi": "एक व्यक्ति दक्षिण की ओर 4 किमी चलता है, फिर बायें मुड़कर 4 किमी चलता है। अब वह किस दिशा की ओर मुख किए हुए है?",
   "q_en": "A man walks 4 km towards south, then turns left and walks 4 km. In which direction is he now facing?",
-  "o_hi": ["उत्तर", "दक्षिण", "पूर्व", "पश्चिम"],
-  "o_en": ["North", "South", "East", "West"],
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
   "a": 2,
   "e_hi": "दक्षिण की ओर चलते हुए बायें मुड़ने पर मुख पूर्व दिशा की ओर हो जाता है। इसलिए वह अब पूर्व की ओर मुख किए हुए है।",
   "e_en": "While facing south, turning left makes one face east. So he is now facing east."
  },
  {
-  "id": "rp-reasoning-0024", "s": "reasoning", "t": "direction_sense", "d": 3,
+  "id": "rp-reasoning-0024",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
   "q_hi": "बिंदु P, बिंदु Q से 6 किमी पश्चिम में है। बिंदु R, बिंदु P से 8 किमी उत्तर में है। Q और R के बीच की दूरी तथा R की Q से दिशा क्या है?",
   "q_en": "Point P is 6 km west of point Q. Point R is 8 km north of point P. What is the distance between Q and R, and the direction of R from Q?",
-  "o_hi": ["10 किमी, उत्तर-पश्चिम", "10 किमी, उत्तर-पूर्व", "8 किमी, उत्तर-पश्चिम", "14 किमी, उत्तर"],
-  "o_en": ["10 km, North-West", "10 km, North-East", "8 km, North-West", "14 km, North"],
+  "o_hi": [
+   "10 किमी, उत्तर-पश्चिम",
+   "10 किमी, उत्तर-पूर्व",
+   "8 किमी, उत्तर-पश्चिम",
+   "14 किमी, उत्तर"
+  ],
+  "o_en": [
+   "10 km, North-West",
+   "10 km, North-East",
+   "8 km, North-West",
+   "14 km, North"
+  ],
   "a": 0,
   "e_hi": "P, Q से 6 किमी पश्चिम में तथा R, P से 8 किमी उत्तर में है। यह एक समकोण त्रिभुज बनाता है जिसमें QR कर्ण है: √(6² + 8²) = √100 = 10 किमी। चूँकि R, Q के पश्चिम और उत्तर दोनों ओर है, अतः R, Q से उत्तर-पश्चिम दिशा में है।",
   "e_en": "P is 6 km west of Q, and R is 8 km north of P, forming a right triangle where QR is the hypotenuse: √(6² + 8²) = √100 = 10 km. Since R lies both west and north of Q, R is north-west of Q."
  },
  {
-  "id": "rp-reasoning-0025", "s": "reasoning", "t": "syllogism", "d": 2,
+  "id": "rp-reasoning-0025",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
   "q_hi": "कथन: कुछ बिल्लियाँ कुत्ते हैं। सभी कुत्ते घोड़े हैं। निष्कर्ष I: कुछ बिल्लियाँ घोड़े हैं। निष्कर्ष II: सभी घोड़े कुत्ते हैं।",
   "q_en": "Statements: Some cats are dogs. All dogs are horses. Conclusion I: Some cats are horses. Conclusion II: All horses are dogs.",
-  "o_hi": ["केवल निष्कर्ष I सही है", "केवल निष्कर्ष II सही है", "दोनों निष्कर्ष सही हैं", "दोनों निष्कर्ष गलत हैं"],
-  "o_en": ["Only conclusion I follows", "Only conclusion II follows", "Both conclusions follow", "Neither conclusion follows"],
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "दोनों निष्कर्ष गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
   "a": 0,
   "e_hi": "'कुछ बिल्लियाँ कुत्ते हैं' और 'सभी कुत्ते घोड़े हैं' से तार्किक रूप से 'कुछ बिल्लियाँ घोड़े हैं' निकलता है (निष्कर्ष I सही)। परंतु इससे यह सिद्ध नहीं होता कि सभी घोड़े कुत्ते हैं, क्योंकि घोड़ों में कुत्तों के अलावा अन्य भी शामिल हो सकते हैं (निष्कर्ष II गलत)।",
   "e_en": "From 'Some cats are dogs' and 'All dogs are horses', it logically follows that 'Some cats are horses' (Conclusion I is valid). But this does not prove all horses are dogs, since horses may include others besides dogs (Conclusion II does not follow)."
  },
  {
-  "id": "rp-reasoning-0026", "s": "reasoning", "t": "syllogism", "d": 3,
+  "id": "rp-reasoning-0026",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
   "q_hi": "कथन: सभी पेन पेंसिल हैं। कोई पेंसिल रबड़ नहीं है। निष्कर्ष I: कोई पेन रबड़ नहीं है। निष्कर्ष II: कुछ पेंसिल पेन हैं।",
   "q_en": "Statements: All pens are pencils. No pencil is an eraser. Conclusion I: No pen is an eraser. Conclusion II: Some pencils are pens.",
-  "o_hi": ["केवल निष्कर्ष I सही है", "केवल निष्कर्ष II सही है", "दोनों निष्कर्ष सही हैं", "दोनों निष्कर्ष गलत हैं"],
-  "o_en": ["Only conclusion I follows", "Only conclusion II follows", "Both conclusions follow", "Neither conclusion follows"],
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "दोनों निष्कर्ष गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
   "a": 2,
   "e_hi": "'सभी पेन पेंसिल हैं' (A) और 'कोई पेंसिल रबड़ नहीं है' (E) के संयोजन से 'कोई पेन रबड़ नहीं है' निकलता है (निष्कर्ष I सही)। साथ ही 'सभी पेन पेंसिल हैं' से प्रत्यावर्तन (conversion) द्वारा 'कुछ पेंसिल पेन हैं' भी निकलता है (निष्कर्ष II सही)। अतः दोनों निष्कर्ष सही हैं।",
   "e_en": "Combining 'All pens are pencils' (A) with 'No pencil is an eraser' (E) gives 'No pen is an eraser' (Conclusion I is valid). Also, by conversion of 'All pens are pencils', 'Some pencils are pens' follows (Conclusion II is valid). So both conclusions follow."
  },
  {
-  "id": "rp-reasoning-0027", "s": "reasoning", "t": "statement_conclusion", "d": 2,
+  "id": "rp-reasoning-0027",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 2,
   "q_hi": "कथन: कंपनी X ने इस वर्ष अपने सभी कर्मचारियों का वेतन 10% बढ़ा दिया। निष्कर्ष I: इससे कर्मचारियों का मनोबल बढ़ सकता है। निष्कर्ष II: अब सभी कंपनियाँ वेतन बढ़ाएँगी।",
   "q_en": "Statement: Company X increased the salary of all its employees by 10% this year. Conclusion I: This may boost employee morale. Conclusion II: All companies will now increase salaries.",
-  "o_hi": ["केवल निष्कर्ष I सही है", "केवल निष्कर्ष II सही है", "दोनों सही हैं", "दोनों गलत हैं"],
-  "o_en": ["Only conclusion I follows", "Only conclusion II follows", "Both follow", "Neither follows"],
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both follow",
+   "Neither follows"
+  ],
   "a": 0,
   "e_hi": "वेतन वृद्धि से कर्मचारियों का मनोबल बढ़ना एक तार्किक व सीधा परिणाम है (निष्कर्ष I)। परंतु एक कंपनी के निर्णय से यह नहीं निकलता कि सभी कंपनियाँ भी ऐसा करेंगी (निष्कर्ष II एक अतिरेकपूर्ण अनुमान है)।",
   "e_en": "A salary hike logically and directly boosts employee morale (Conclusion I). But one company's decision does not imply all companies will do the same (Conclusion II is an overreach)."
  },
  {
-  "id": "rp-reasoning-0028", "s": "reasoning", "t": "statement_conclusion", "d": 3,
+  "id": "rp-reasoning-0028",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 3,
   "q_hi": "कथन: जिन विद्यार्थियों ने नियमित रूप से अध्ययन किया, उनमें से अधिकांश ने परीक्षा में अच्छे अंक प्राप्त किए। निष्कर्ष I: नियमित अध्ययन अच्छे अंक प्राप्त करने में सहायक होता है। निष्कर्ष II: जिन विद्यार्थियों ने नियमित अध्ययन नहीं किया, वे निश्चित रूप से असफल हुए।",
   "q_en": "Statement: Most students who studied regularly scored good marks in the exam. Conclusion I: Regular study helps in scoring well. Conclusion II: Students who did not study regularly definitely failed.",
-  "o_hi": ["केवल निष्कर्ष I सही है", "केवल निष्कर्ष II सही है", "दोनों सही हैं", "दोनों गलत हैं"],
-  "o_en": ["Only conclusion I follows", "Only conclusion II follows", "Both follow", "Neither follows"],
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both follow",
+   "Neither follows"
+  ],
   "a": 0,
   "e_hi": "कथन से यह उचित निष्कर्ष निकलता है कि नियमित अध्ययन अच्छे अंक दिलाने में सहायक है (निष्कर्ष I)। परंतु 'अधिकांश' शब्द से यह सिद्ध नहीं होता कि अनियमित विद्यार्थी निश्चित रूप से असफल हुए, क्योंकि कुछ बिना नियमित अध्ययन के भी उत्तीर्ण हो सकते हैं (निष्कर्ष II गलत)।",
   "e_en": "It reasonably follows that regular study helps in scoring well (Conclusion I). But the word 'most' does not prove that irregular students definitely failed, since some could still pass without regular study (Conclusion II does not follow)."
  },
  {
-  "id": "rp-reasoning-0029", "s": "reasoning", "t": "puzzle_seating", "d": 2,
+  "id": "rp-reasoning-0029",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
   "q_hi": "चार मित्र A, B, C, D उत्तर की ओर मुख करके एक पंक्ति में बैठे हैं। B बायें छोर से दूसरे स्थान पर है। A, B के ठीक दायें बैठा है। C, B के ठीक बायें बैठा है। D एक छोर पर बैठा है। D बायें छोर से कौन-से स्थान पर बैठा है?",
   "q_en": "Four friends A, B, C, D sit in a row facing north. B is second from the left end. A sits immediately to the right of B. C sits immediately to the left of B. D sits at one of the ends. What is D's position from the left end?",
-  "o_hi": ["पहला", "दूसरा", "तीसरा", "चौथा"],
-  "o_en": ["1st", "2nd", "3rd", "4th"],
+  "o_hi": [
+   "पहला",
+   "दूसरा",
+   "तीसरा",
+   "चौथा"
+  ],
+  "o_en": [
+   "1st",
+   "2nd",
+   "3rd",
+   "4th"
+  ],
   "a": 3,
   "e_hi": "B दूसरे स्थान पर है। C, B के ठीक बायें यानी पहले स्थान पर है। A, B के ठीक दायें यानी तीसरे स्थान पर है। शेष बचा चौथा स्थान D का है, जो एक छोर (दायाँ छोर) भी है।",
   "e_en": "B is at position 2. C, immediately left of B, is at position 1. A, immediately right of B, is at position 3. The remaining position, 4th (which is also an end), belongs to D."
  },
  {
-  "id": "rp-reasoning-0030", "s": "reasoning", "t": "puzzle_seating", "d": 3,
+  "id": "rp-reasoning-0030",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 3,
   "q_hi": "पाँच व्यक्ति A, B, C, D, E एक वृत्ताकार मेज़ के चारों ओर केंद्र की ओर मुख करके बैठे हैं। C, A के ठीक दायें बैठा है। B, A से दायें ओर दूसरे स्थान पर है। D, B के ठीक दायें बैठा है। E, A के ठीक बायें बैठा है। C के दायें ओर दूसरे स्थान पर कौन बैठा है?",
   "q_en": "Five people A, B, C, D, E sit around a circular table facing the centre. C sits immediately to the right of A. B is second to the right of A. D sits immediately to the right of B. E sits immediately to the left of A. Who sits second to the right of C?",
-  "o_hi": ["A", "B", "D", "E"],
-  "o_en": ["A", "B", "D", "E"],
+  "o_hi": [
+   "A",
+   "B",
+   "D",
+   "E"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "D",
+   "E"
+  ],
   "a": 2,
   "e_hi": "घड़ी की दिशा में क्रम रखें: A, फिर C (A के ठीक दायें), फिर B (A से दायें दूसरा स्थान), फिर D (B के ठीक दायें), फिर E (A के ठीक बायें, यानी वृत्त पूरा करते हुए अंतिम स्थान)। इस प्रकार क्रम है: A-C-B-D-E-A। C के दायें ओर दूसरा स्थान गिनें: C से एक स्थान दायें B, दो स्थान दायें D। अतः उत्तर D है।",
   "e_en": "Arrange clockwise: A, then C (immediately right of A), then B (second to the right of A), then D (immediately right of B), then E (immediately left of A, completing the circle). So the order is A-C-B-D-E-A. Counting two seats to the right of C: one seat right is B, two seats right is D. So the answer is D."
  },
  {
-  "id": "rp-reasoning-0031", "s": "reasoning", "t": "alphabet_test", "d": 1,
+  "id": "rp-reasoning-0031",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
   "q_hi": "अंग्रेजी वर्णमाला में H और P के बीच कितने अक्षर हैं?",
   "q_en": "How many letters are there between H and P in the English alphabet?",
-  "o_hi": ["6", "7", "8", "9"],
-  "o_en": ["6", "7", "8", "9"],
+  "o_hi": [
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "o_en": [
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
   "a": 1,
   "e_hi": "H वर्णमाला में 8वें स्थान पर और P 16वें स्थान पर है। इनके बीच के अक्षर I, J, K, L, M, N, O हैं, यानी कुल 7 अक्षर।",
   "e_en": "H is at the 8th position and P at the 16th position in the alphabet. The letters between them are I, J, K, L, M, N, O — a total of 7 letters."
  },
  {
-  "id": "rp-reasoning-0032", "s": "reasoning", "t": "alphabet_test", "d": 3,
+  "id": "rp-reasoning-0032",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
   "q_hi": "यदि शब्द 'MARKET' के अक्षरों को वर्णानुक्रम (alphabetical order) में व्यवस्थित किया जाए, तो बायें से तीसरा अक्षर कौन-सा होगा?",
   "q_en": "If the letters of the word 'MARKET' are arranged in alphabetical order, which letter will be third from the left?",
-  "o_hi": ["E", "K", "M", "R"],
-  "o_en": ["E", "K", "M", "R"],
+  "o_hi": [
+   "E",
+   "K",
+   "M",
+   "R"
+  ],
+  "o_en": [
+   "E",
+   "K",
+   "M",
+   "R"
+  ],
   "a": 1,
   "e_hi": "MARKET के अक्षर हैं: M, A, R, K, E, T। इन्हें वर्णानुक्रम में लिखने पर: A, E, K, M, R, T। बायें से तीसरा अक्षर K है।",
   "e_en": "The letters of MARKET are M, A, R, K, E, T. Arranged alphabetically: A, E, K, M, R, T. The third letter from the left is K."
  },
  {
-  "id": "rp-reasoning-0033", "s": "reasoning", "t": "mirror_water_image", "d": 1,
+  "id": "rp-reasoning-0033",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
   "q_hi": "अक्षर 'b' का जल प्रतिबिंब (water image) क्या होगा?",
   "q_en": "What is the water image of the letter 'b'?",
-  "o_hi": ["d", "p", "q", "b"],
-  "o_en": ["d", "p", "q", "b"],
+  "o_hi": [
+   "d",
+   "p",
+   "q",
+   "b"
+  ],
+  "o_en": [
+   "d",
+   "p",
+   "q",
+   "b"
+  ],
   "a": 1,
   "e_hi": "जल प्रतिबिंब में आकृति ऊपर-नीचे (क्षैतिज अक्ष पर) पलटती है, जबकि बायाँ-दायाँ वही रहता है। 'b' में खड़ी रेखा बायें और गोलाई नीचे-दायें है; ऊपर-नीचे पलटने पर गोलाई ऊपर-दायें आ जाती है, यानी यह 'p' जैसा दिखाई देता है। ('q' तो 'b' को 180° घुमाने — दोनों दिशा में पलटने — पर मिलता है, अकेले जल प्रतिबिंब पर नहीं।)",
   "e_en": "In a water image, the figure flips top-to-bottom (about a horizontal axis) while left-right stays the same. 'b' has its vertical stroke on the left and its bowl at the bottom-right; flipping top-to-bottom moves the bowl to the top-right, which matches 'p'. ('q' is what you get by rotating 'b' 180° — flipping both axes — not from a water image alone.)",
@@ -336,41 +765,93 @@
   "hook_en": "A water image always flips 'top-bottom', while a mirror image flips 'left-right'."
  },
  {
-  "id": "rp-reasoning-0034", "s": "reasoning", "t": "mirror_water_image", "d": 3,
+  "id": "rp-reasoning-0034",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
   "q_hi": "दर्पण के सामने रखने पर शब्द 'MATH' कैसा दिखाई देगा (mirror image)?",
   "q_en": "How will the word 'MATH' appear when placed in front of a mirror (mirror image)?",
-  "o_hi": ["HTAM", "MATH", "THAM", "MTAH"],
-  "o_en": ["HTAM", "MATH", "THAM", "MTAH"],
+  "o_hi": [
+   "HTAM",
+   "MATH",
+   "THAM",
+   "MTAH"
+  ],
+  "o_en": [
+   "HTAM",
+   "MATH",
+   "THAM",
+   "MTAH"
+  ],
   "a": 0,
   "e_hi": "दर्पण प्रतिबिंब में शब्द के अक्षरों का क्रम उल्टा हो जाता है (दायें से बायें)। चूँकि M, A, T, H सभी अक्षर ऊर्ध्वाधर अक्ष पर सममित (symmetric) हैं, इसलिए प्रत्येक अक्षर वैसा ही दिखता है, केवल क्रम उलट जाता है — HTAM।",
   "e_en": "In a mirror image, the order of letters reverses (right to left). Since M, A, T, H are all letters symmetric about a vertical axis, each letter looks the same, only the order reverses — giving HTAM."
  },
  {
-  "id": "rp-reasoning-0035", "s": "reasoning", "t": "non_verbal_reasoning", "d": 1,
+  "id": "rp-reasoning-0035",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
   "q_hi": "दो त्रिभुजों (त्रिकोण) को इस प्रकार जोड़ा जाता है कि वे अपनी एक भुजा आपस में साझा करते हैं। बनी नई आकृति में बाहरी भुजाओं की कुल संख्या कितनी होगी?",
   "q_en": "Two triangles are joined such that they share one common side. How many outer sides will the resulting figure have?",
-  "o_hi": ["3", "4", "5", "6"],
-  "o_en": ["3", "4", "5", "6"],
+  "o_hi": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "o_en": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
   "a": 1,
   "e_hi": "प्रत्येक त्रिभुज की 3 भुजाएँ हैं, कुल 6 भुजाएँ। साझा भुजा बाहरी सीमा (boundary) का हिस्सा नहीं रहती और भीतर एक विकर्ण बन जाती है, इसलिए वह दोनों बार गिनती से हट जाती है: 6 − 2 = 4 बाहरी भुजाएँ, यानी चतुर्भुज बनता है।",
   "e_en": "Each triangle has 3 sides, totaling 6. The shared side no longer forms part of the outer boundary (it becomes an internal diagonal), so it is removed from both counts: 6 − 2 = 4 outer sides, forming a quadrilateral shape."
  },
  {
-  "id": "rp-reasoning-0036", "s": "reasoning", "t": "non_verbal_reasoning", "d": 2,
+  "id": "rp-reasoning-0036",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 2,
   "q_hi": "एक वर्ग (square) के चारों कोनों पर एक-एक छोटा वृत्त तथा प्रत्येक भुजा के ठीक मध्यबिंदु पर भी एक-एक वृत्त बनाया गया है। आकृति में कुल कितने वृत्त होंगे?",
   "q_en": "A square has one small circle drawn at each of its four corners, and one circle at the exact midpoint of each side. How many circles are there in the figure in total?",
-  "o_hi": ["4", "6", "8", "12"],
-  "o_en": ["4", "6", "8", "12"],
+  "o_hi": [
+   "4",
+   "6",
+   "8",
+   "12"
+  ],
+  "o_en": [
+   "4",
+   "6",
+   "8",
+   "12"
+  ],
   "a": 2,
   "e_hi": "वर्ग के 4 कोने होते हैं, अतः 4 वृत्त कोनों पर। वर्ग की 4 भुजाएँ होती हैं, अतः प्रत्येक भुजा के मध्यबिंदु पर 1-1 वृत्त, यानी 4 और वृत्त। कुल = 4 + 4 = 8 वृत्त।",
   "e_en": "A square has 4 corners, giving 4 circles at the corners. It has 4 sides, giving 1 circle at each midpoint — another 4 circles. Total = 4 + 4 = 8 circles."
  },
  {
-  "id": "rp-reasoning-0037", "s": "reasoning", "t": "non_verbal_reasoning", "d": 3,
+  "id": "rp-reasoning-0037",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 3,
   "q_hi": "माचिस की तीलियों (matchsticks) से त्रिभुजों की एक पंक्ति बनाई जाती है, जिसमें प्रत्येक अगला त्रिभुज पिछले त्रिभुज की एक भुजा साझा करता है। 1 त्रिभुज बनाने में 3 तीलियाँ, 2 त्रिभुजों की पंक्ति में 5 तीलियाँ, 3 त्रिभुजों की पंक्ति में 7 तीलियाँ लगती हैं। इसी पैटर्न में 6 त्रिभुजों की पंक्ति बनाने में कुल कितनी तीलियाँ लगेंगी?",
   "q_en": "Matchsticks are used to form a row of triangles where each new triangle shares one side with the previous one. 1 triangle needs 3 matchsticks, a row of 2 triangles needs 5, and a row of 3 triangles needs 7. Following the same pattern, how many matchsticks are needed for a row of 6 triangles?",
-  "o_hi": ["11", "12", "13", "15"],
-  "o_en": ["11", "12", "13", "15"],
+  "o_hi": [
+   "11",
+   "12",
+   "13",
+   "15"
+  ],
+  "o_en": [
+   "11",
+   "12",
+   "13",
+   "15"
+  ],
   "a": 2,
   "e_hi": "पहले त्रिभुज के बाद प्रत्येक नया त्रिभुज केवल 2 अतिरिक्त तीलियाँ जोड़ता है (एक भुजा साझा होने के कारण)। नियम है: तीलियाँ = 2n + 1, जहाँ n त्रिभुजों की संख्या है। सत्यापन: n=1→3, n=2→5, n=3→7। अतः n=6 के लिए: 2(6)+1 = 13।",
   "e_en": "After the first triangle, each additional triangle adds only 2 matchsticks (since one side is shared). The rule is sticks = 2n + 1, where n is the number of triangles. Verify: n=1→3, n=2→5, n=3→7. So for n=6: 2(6)+1 = 13.",
@@ -378,23 +859,440 @@
   "fact_en": "This is a classic 'matchstick pattern' question frequently asked in RRB exams."
  },
  {
-  "id": "rp-reasoning-0038", "s": "reasoning", "t": "mathematical_operations", "d": 1,
+  "id": "rp-reasoning-0038",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
   "q_hi": "यदि '×' का अर्थ '+' है और '+' का अर्थ '−' है, तो 8 × 4 + 2 का मान क्या होगा?",
   "q_en": "If '×' means '+' and '+' means '−', what is the value of 8 × 4 + 2?",
-  "o_hi": ["8", "10", "12", "14"],
-  "o_en": ["8", "10", "12", "14"],
+  "o_hi": [
+   "8",
+   "10",
+   "12",
+   "14"
+  ],
+  "o_en": [
+   "8",
+   "10",
+   "12",
+   "14"
+  ],
   "a": 1,
   "e_hi": "चिह्न बदलने पर व्यंजक बनता है: 8 + 4 − 2 = 12 − 2 = 10।",
   "e_en": "Swapping the signs gives the expression: 8 + 4 − 2 = 12 − 2 = 10."
  },
  {
-  "id": "rp-reasoning-0039", "s": "reasoning", "t": "mathematical_operations", "d": 3,
+  "id": "rp-reasoning-0039",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
   "q_hi": "यदि A का अर्थ '÷' है, B का अर्थ '×' है, C का अर्थ '+' है और D का अर्थ '−' है, तो 18 A 3 B 4 C 5 D 2 का मान क्या होगा?",
   "q_en": "If A means '÷', B means '×', C means '+', and D means '−', what is the value of 18 A 3 B 4 C 5 D 2?",
-  "o_hi": ["24", "25", "27", "29"],
-  "o_en": ["24", "25", "27", "29"],
+  "o_hi": [
+   "24",
+   "25",
+   "27",
+   "29"
+  ],
+  "o_en": [
+   "24",
+   "25",
+   "27",
+   "29"
+  ],
   "a": 2,
   "e_hi": "चिह्न रखने पर व्यंजक बनता है: 18 ÷ 3 × 4 + 5 − 2। गणितीय क्रम के अनुसार पहले भाग व गुणा बायें से दायें: 18÷3=6, 6×4=24। फिर जोड़-घटाव: 24+5=29, 29−2=27।",
   "e_en": "Substituting the symbols gives: 18 ÷ 3 × 4 + 5 − 2. Following order of operations, division and multiplication left to right first: 18÷3=6, 6×4=24. Then addition and subtraction: 24+5=29, 29−2=27."
+ },
+ {
+  "id": "rp-rea-o00040",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "पानी : नदी :: हवा : ?",
+  "q_en": "Water : River :: Air : ?",
+  "o_hi": [
+   "वायु",
+   "धारा",
+   "वर्षा",
+   "पवन"
+  ],
+  "o_en": [
+   "Air",
+   "Stream",
+   "Rain",
+   "Wind"
+  ],
+  "a": 0,
+  "e_hi": "पानी नदी में बहता है, उसी तरह हवा भी वायु में बहती है।",
+  "e_en": "Water flows in a river, similarly air flows in the air."
+ },
+ {
+  "id": "rp-rea-o00041",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "पुस्तक : पठन :: कागज : ?",
+  "q_en": "Book : Reading :: Paper : ?",
+  "o_hi": [
+   "लेखन",
+   "पढ़ना",
+   "सजावट",
+   "गंध"
+  ],
+  "o_en": [
+   "Writing",
+   "Reading",
+   "Decoration",
+   "Odour"
+  ],
+  "a": 0,
+  "e_hi": "कागज पर लिखना पठन के समान है।",
+  "e_en": "Writing on paper is analogous to reading a book."
+ },
+ {
+  "id": "rp-rea-o00042",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "सूरज : दिन :: चंद्रमा : ?",
+  "q_en": "Sun : Day :: Moon : ?",
+  "o_hi": [
+   "रात",
+   "शाम",
+   "सुबह",
+   "दोपहर"
+  ],
+  "o_en": [
+   "Night",
+   "Evening",
+   "Morning",
+   "Afternoon"
+  ],
+  "a": 0,
+  "e_hi": "चंद्रमा रात के समय दिखाई देता है, जैसे सूरज दिन में।",
+  "e_en": "The moon appears at night, just as the sun appears during the day."
+ },
+ {
+  "id": "rp-rea-o00043",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "नदी : तट :: पर्वत : ?",
+  "q_en": "River : Shore :: Mountain : ?",
+  "o_hi": [
+   "घाटी",
+   "शिखर",
+   "आधार",
+   "चोटी"
+  ],
+  "o_en": [
+   "Valley",
+   "Peak",
+   "Base",
+   "Summit"
+  ],
+  "a": 2,
+  "e_hi": "नदी तट के पास बहती है, उसी तरह पर्वत का आधार उसका आधार है।",
+  "e_en": "A river runs alongside its shore, similarly a mountain has a base."
+ },
+ {
+  "id": "rp-rea-o00044",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "मकान : इमारत :: पेड़ : ?",
+  "q_en": "House : Building :: Tree : ?",
+  "o_hi": [
+   "पौधा",
+   "फल",
+   "शाखा",
+   "जड़"
+  ],
+  "o_en": [
+   "Plant",
+   "Fruit",
+   "Branch",
+   "Root"
+  ],
+  "a": 0,
+  "e_hi": "पेड़ एक पौधा है, जैसे मकान एक इमारत।",
+  "e_en": "A tree is a plant, just as a house is a building."
+ },
+ {
+  "id": "rp-rea-o00045",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "वृक्ष : पत्ती :: पंखा : ?",
+  "q_en": "Tree : Leaf :: Fan : ?",
+  "o_hi": [
+   "ब्लेड",
+   "नायलॉन",
+   "हवा",
+   "रोटर"
+  ],
+  "o_en": [
+   "Blade",
+   "Nylon",
+   "Air",
+   "Rotor"
+  ],
+  "a": 0,
+  "e_hi": "पंखे के ब्लेड पत्तियों के समान होते हैं।",
+  "e_en": "The fan’s blades are analogous to leaves of a tree."
+ },
+ {
+  "id": "rp-rea-o00046",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "कुंजी : ताला :: चाबी : ?",
+  "q_en": "Key : Lock :: Chabi : ?",
+  "o_hi": [
+   "दरवाजा",
+   "गाड़ी",
+   "गाना",
+   "पेंसिल"
+  ],
+  "o_en": [
+   "Door",
+   "Car",
+   "Song",
+   "Pencil"
+  ],
+  "a": 0,
+  "e_hi": "चाबी दरवाज़े को खोलती है, जैसे कुंजी ताले को।",
+  "e_en": "A key opens a lock, just as a chabi (key) opens a door."
+ },
+ {
+  "id": "rp-rea-o00047",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "संगीत : धुन :: चित्र : ?",
+  "q_en": "Music : Tune :: Painting : ?",
+  "o_hi": [
+   "रंग",
+   "आकार",
+   "रचना",
+   "दृश्य"
+  ],
+  "o_en": [
+   "Colour",
+   "Shape",
+   "Composition",
+   "Scene"
+  ],
+  "a": 2,
+  "e_hi": "चित्र की रचना संगीत की धुन के समान है।",
+  "e_en": "The composition of a painting is analogous to the tune of music."
+ },
+ {
+  "id": "rp-rea-o00048",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "भविष्य : पूर्वानुमान :: इतिहास : ?",
+  "q_en": "Future : Forecast :: History : ?",
+  "o_hi": [
+   "स्मृति",
+   "दस्तावेज",
+   "घटना",
+   "अध्ययन"
+  ],
+  "o_en": [
+   "Memory",
+   "Document",
+   "Event",
+   "Study"
+  ],
+  "a": 1,
+  "e_hi": "इतिहास दस्तावेज़ों के माध्यम से दर्ज होता है।",
+  "e_en": "History is recorded through documents."
+ },
+ {
+  "id": "rp-rea-o00049",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "कम्प्यूटर : डेटा :: फसल : ?",
+  "q_en": "Computer : Data :: Crop : ?",
+  "o_hi": [
+   "पानी",
+   "मिट्टी",
+   "पौध",
+   "फसल"
+  ],
+  "o_en": [
+   "Water",
+   "Soil",
+   "Plant",
+   "Crop"
+  ],
+  "a": 1,
+  "e_hi": "फसल मिट्टी पर उगती है, जैसे कंप्यूटर डेटा पर कार्य करता है।",
+  "e_en": "Crops grow on soil, just as computers process data."
+ },
+ {
+  "id": "rp-rea-o00050",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "कुंजी : ताला :: चाबी : ?",
+  "q_en": "Key : lock :: Key : ?",
+  "o_hi": [
+   "दरवाज़ा",
+   "ताला",
+   "गाड़ी",
+   "कुंडा"
+  ],
+  "o_en": [
+   "door",
+   "lock",
+   "car",
+   "bottle"
+  ],
+  "a": 1,
+  "e_hi": "कुंजी ताले को खोलती है, उसी प्रकार चाबी ताले को खोलती है।",
+  "e_en": "A key opens a lock, similarly a key opens a lock."
+ },
+ {
+  "id": "rp-rea-o00051",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "पुस्तक : पृष्ठ :: पेन : ?",
+  "q_en": "Book : page :: Pen : ?",
+  "o_hi": [
+   "स्याही",
+   "कागज",
+   "रबर",
+   "रेखा"
+  ],
+  "o_en": [
+   "ink",
+   "paper",
+   "eraser",
+   "line"
+  ],
+  "a": 1,
+  "e_hi": "पुस्तक के पृष्ठ होते हैं, उसी तरह पेन के कागज पर निशान होते हैं।",
+  "e_en": "A book has pages, similarly a pen leaves marks on paper."
+ },
+ {
+  "id": "rp-rea-o00052",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "संगीत : धुन :: कविता : ?",
+  "q_en": "Music : melody :: Poetry : ?",
+  "o_hi": [
+   "तुक",
+   "शब्द",
+   "रचना",
+   "श्लोक"
+  ],
+  "o_en": [
+   "rhyme",
+   "word",
+   "composition",
+   "stanza"
+  ],
+  "a": 0,
+  "e_hi": "संगीत में धुन होती है, उसी तरह कविता में तुक होती है।",
+  "e_en": "Music has a melody, similarly poetry has a rhyme."
+ },
+ {
+  "id": "rp-rea-o00053",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "सागर : पानी :: जंगल : ?",
+  "q_en": "Ocean : water :: Forest : ?",
+  "o_hi": [
+   "पेड़",
+   "ध्वनि",
+   "हवा",
+   "जानवर"
+  ],
+  "o_en": [
+   "tree",
+   "sound",
+   "air",
+   "animal"
+  ],
+  "a": 0,
+  "e_hi": "सागर पानी से बना है, उसी तरह जंगल पेड़ों से बना है।",
+  "e_en": "The ocean is made of water, similarly the forest is made of trees."
+ },
+ {
+  "id": "rp-rea-o00054",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "दर्पण : प्रतिबिंब :: कैमरा : ?",
+  "q_en": "Mirror : reflection :: Camera : ?",
+  "o_hi": [
+   "तस्वीर",
+   "ध्वनि",
+   "प्रकाश",
+   "छाया"
+  ],
+  "o_en": [
+   "photo",
+   "sound",
+   "light",
+   "shadow"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब दिखाता है, उसी तरह कैमरा तस्वीर बनाता है।",
+  "e_en": "A mirror shows a reflection, similarly a camera makes a photo."
+ },
+ {
+  "id": "rp-rea-o00055",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "रंग : स्पेक्ट्रम :: ध्वनि : ?",
+  "q_en": "Color : spectrum :: Sound : ?",
+  "o_hi": [
+   "पिच",
+   "तरंगदैर्घ्य",
+   "आवृत्ति",
+   "संगीत"
+  ],
+  "o_en": [
+   "pitch",
+   "wavelength",
+   "frequency",
+   "music"
+  ],
+  "a": 2,
+  "e_hi": "रंग स्पेक्ट्रम का हिस्सा है, उसी तरह ध्वनि आवृत्ति स्पेक्ट्रम का हिस्सा है।",
+  "e_en": "Color is part of the spectrum, similarly sound is part of the frequency spectrum."
+ },
+ {
+  "id": "rp-rea-o00056",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "गणित : समीकरण :: भूगोल : ?",
+  "q_en": "Mathematics : equation :: Geography : ?",
+  "o_hi": [
+   "मानचित्र",
+   "परिभाषा",
+   "रचना",
+   "सिद्धांत"
+  ],
+  "o_en": [
+   "map",
+   "definition",
+   "construction",
+   "theorem"
+  ],
+  "a": 0,
+  "e_hi": "गणित में समीकरण का प्रयोग होता है, उसी तरह भूगोल में मानचित्र का प्रयोग होता है।",
+  "e_en": "Equations are used in mathematics, similarly maps are used in geography."
  }
 ]
