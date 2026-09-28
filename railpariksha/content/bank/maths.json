@@ -262,5 +262,215 @@
   "a": 1,
   "e_hi": "त्रिभुज के कोणों का योग 180° होता है। तीसरा कोण = 180° − 90° − 40° = 50°।",
   "e_en": "The angles of a triangle sum to 180°. Third angle = 180° − 90° − 40° = 50°."
+ },
+ {
+  "id": "rp-maths-0027", "s": "maths", "t": "number_system", "d": 2,
+  "q_hi": "1000 में न्यूनतम कौन-सी संख्या जोड़ी जाए ताकि परिणाम 7 से पूर्णतः विभाज्य हो जाए?",
+  "q_en": "What is the smallest number that must be added to 1000 so that the result is exactly divisible by 7?",
+  "o_hi": ["0", "1", "2", "3"],
+  "o_en": ["0", "1", "2", "3"],
+  "a": 1,
+  "e_hi": "1000 को 7 से भाग देने पर भागफल 142 और शेषफल 6 आता है (7×142=994)। पूर्ण विभाज्यता के लिए 7−6=1 जोड़ना होगा, जिससे 1001=7×143 प्राप्त होता है।",
+  "e_en": "Dividing 1000 by 7 gives quotient 142 and remainder 6 (7×142=994). To make it exactly divisible, we add 7−6=1, giving 1001=7×143.",
+  "hook_hi": "याद रखें: (भाजक − शेषफल) से न्यूनतम जोड़ी जाने वाली संख्या मिलती है।",
+  "hook_en": "Remember: (divisor − remainder) gives the smallest number that must be added."
+ },
+ {
+  "id": "rp-maths-0028", "s": "maths", "t": "hcf_lcm", "d": 2,
+  "q_hi": "दो संख्याओं का म.स.प. 6 और ल.स.प. 90 है। यदि एक संख्या 18 है, तो दूसरी संख्या क्या होगी?",
+  "q_en": "The HCF and LCM of two numbers are 6 and 90 respectively. If one number is 18, what is the other number?",
+  "o_hi": ["30", "36", "45", "54"],
+  "o_en": ["30", "36", "45", "54"],
+  "a": 0,
+  "e_hi": "दो संख्याओं का गुणनफल = HCF × LCM = 6×90 = 540। दूसरी संख्या = 540/18 = 30।",
+  "e_en": "Product of two numbers = HCF × LCM = 6×90 = 540. Other number = 540/18 = 30."
+ },
+ {
+  "id": "rp-maths-0029", "s": "maths", "t": "decimal_fraction", "d": 1,
+  "q_hi": "निम्नलिखित भिन्नों में से सबसे बड़ी भिन्न कौन-सी है: 5/8, 7/10, 2/3, 3/4?",
+  "q_en": "Which of the following fractions is the largest: 5/8, 7/10, 2/3, 3/4?",
+  "o_hi": ["5/8", "7/10", "2/3", "3/4"],
+  "o_en": ["5/8", "7/10", "2/3", "3/4"],
+  "a": 3,
+  "e_hi": "सभी भिन्नों को दशमलव में बदलने पर: 5/8=0.625, 7/10=0.7, 2/3≈0.667, 3/4=0.75। इस प्रकार 3/4 सबसे बड़ी भिन्न है।",
+  "e_en": "Converting to decimals: 5/8=0.625, 7/10=0.7, 2/3≈0.667, 3/4=0.75. Hence 3/4 is the largest fraction."
+ },
+ {
+  "id": "rp-maths-0030", "s": "maths", "t": "decimal_fraction", "d": 2,
+  "q_hi": "3/4 में से 1/6 घटाने पर परिणाम क्या होगा?",
+  "q_en": "What is the result of subtracting 1/6 from 3/4?",
+  "o_hi": ["5/12", "1/2", "7/12", "2/3"],
+  "o_en": ["5/12", "1/2", "7/12", "2/3"],
+  "a": 2,
+  "e_hi": "समान हर बनाने के लिए LCM(4,6)=12 लें। 3/4=9/12 और 1/6=2/12। अतः 9/12−2/12=7/12।",
+  "e_en": "Taking LCM(4,6)=12 as the common denominator: 3/4=9/12 and 1/6=2/12. So 9/12−2/12=7/12."
+ },
+ {
+  "id": "rp-maths-0031", "s": "maths", "t": "ratio_proportion", "d": 3,
+  "q_hi": "A और B की वर्तमान आयु का अनुपात 3:5 है। 6 वर्ष बाद यह अनुपात 2:3 हो जाएगा। A की वर्तमान आयु क्या है?",
+  "q_en": "The present ages of A and B are in the ratio 3:5. After 6 years, this ratio will become 2:3. What is A's present age?",
+  "o_hi": ["18", "21", "24", "27"],
+  "o_en": ["18", "21", "24", "27"],
+  "a": 0,
+  "e_hi": "मान लीजिए आयु 3x और 5x है। 6 वर्ष बाद: (3x+6)/(5x+6)=2/3। क्रॉस गुणा करने पर 9x+18=10x+12, अतः x=6। A की आयु = 3×6 = 18 वर्ष।",
+  "e_en": "Let the ages be 3x and 5x. After 6 years: (3x+6)/(5x+6)=2/3. Cross-multiplying gives 9x+18=10x+12, so x=6. A's age = 3×6 = 18 years.",
+  "hook_hi": "आयु के अनुपात प्रश्नों में सदैव अनुपात को 'x' गुणक मानकर समीकरण बनाएँ।",
+  "hook_en": "In ratio-of-ages problems, always treat the ratio terms as multiples of 'x' and form an equation."
+ },
+ {
+  "id": "rp-maths-0032", "s": "maths", "t": "percentage", "d": 2,
+  "q_hi": "एक चुनाव में केवल दो उम्मीदवार थे। विजेता को कुल मतों के 60% वोट मिले और वह 800 मतों से जीता। कुल मतों की संख्या कितनी थी?",
+  "q_en": "In an election with only two candidates, the winner secured 60% of the total votes and won by a margin of 800 votes. What was the total number of votes?",
+  "o_hi": ["2500", "3000", "3500", "4000"],
+  "o_en": ["2500", "3000", "3500", "4000"],
+  "a": 3,
+  "e_hi": "विजेता को 60% और हारने वाले को 40% वोट मिले, अंतर = 20% जो 800 मतों के बराबर है। अतः कुल मत = 800×(100/20) = 4000।",
+  "e_en": "The winner got 60% and the loser 40%, a difference of 20% equal to 800 votes. So total votes = 800×(100/20) = 4000."
+ },
+ {
+  "id": "rp-maths-0033", "s": "maths", "t": "average", "d": 2,
+  "q_hi": "8 विद्यार्थियों के वजन का औसत 45 किग्रा है। जब एक नया विद्यार्थी शामिल होता है, तो औसत 46 किग्रा हो जाता है। नए विद्यार्थी का वजन कितना है?",
+  "q_en": "The average weight of 8 students is 45 kg. When a new student joins, the average becomes 46 kg. What is the new student's weight?",
+  "o_hi": ["50", "54", "56", "58"],
+  "o_en": ["50", "54", "56", "58"],
+  "a": 1,
+  "e_hi": "8 विद्यार्थियों का कुल वजन = 8×45 = 360 किग्रा। 9 विद्यार्थियों का कुल वजन = 9×46 = 414 किग्रा। नए विद्यार्थी का वजन = 414−360 = 54 किग्रा।",
+  "e_en": "Total weight of 8 students = 8×45 = 360 kg. Total weight of 9 students = 9×46 = 414 kg. New student's weight = 414−360 = 54 kg."
+ },
+ {
+  "id": "rp-maths-0034", "s": "maths", "t": "profit_loss", "d": 3,
+  "q_hi": "एक दुकानदार किसी वस्तु का अंकित मूल्य क्रय मूल्य से 25% अधिक रखता है और फिर 10% की छूट देता है। उसका लाभ प्रतिशत कितना है?",
+  "q_en": "A shopkeeper marks an article's price 25% above the cost price and then offers a 10% discount. What is his profit percentage?",
+  "o_hi": ["8%", "10%", "12.5%", "15%"],
+  "o_en": ["8%", "10%", "12.5%", "15%"],
+  "a": 2,
+  "e_hi": "मान लीजिए क्रय मूल्य = 100। अंकित मूल्य = 125। 10% छूट के बाद विक्रय मूल्य = 125×0.9 = 112.5। लाभ = 12.5, अतः लाभ% = 12.5%।",
+  "e_en": "Let cost price = 100. Marked price = 125. After a 10% discount, selling price = 125×0.9 = 112.5. Profit = 12.5, so profit% = 12.5%."
+ },
+ {
+  "id": "rp-maths-0035", "s": "maths", "t": "si_ci", "d": 2,
+  "q_hi": "₹2500 पर 8% वार्षिक दर से 3 वर्ष का साधारण ब्याज कितना होगा?",
+  "q_en": "What is the simple interest on ₹2500 at 8% per annum for 3 years?",
+  "o_hi": ["₹600", "₹650", "₹700", "₹750"],
+  "o_en": ["₹600", "₹650", "₹700", "₹750"],
+  "a": 0,
+  "e_hi": "SI = (मूलधन×दर×समय)/100 = (2500×8×3)/100 = 600।",
+  "e_en": "SI = (Principal×Rate×Time)/100 = (2500×8×3)/100 = 600."
+ },
+ {
+  "id": "rp-maths-0036", "s": "maths", "t": "si_ci", "d": 3,
+  "q_hi": "₹5000 पर 10% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज (वार्षिक संयोजन) कितना होगा?",
+  "q_en": "What is the compound interest on ₹5000 at 10% per annum for 2 years, compounded annually?",
+  "o_hi": ["₹900", "₹950", "₹1000", "₹1050"],
+  "o_en": ["₹900", "₹950", "₹1000", "₹1050"],
+  "a": 3,
+  "e_hi": "2 वर्ष बाद राशि = P(1+R/100)² = 5000×(1.1)² = 5000×1.21 = 6050। CI = 6050−5000 = 1050।",
+  "e_en": "Amount after 2 years = P(1+R/100)² = 5000×(1.1)² = 5000×1.21 = 6050. CI = 6050−5000 = 1050.",
+  "fact_hi": "यदि यही राशि साधारण ब्याज पर होती, तो 2 वर्ष का ब्याज केवल ₹1000 होता — चक्रवृद्धि ब्याज सदैव साधारण ब्याज से अधिक या बराबर होता है।",
+  "fact_en": "If this sum were on simple interest, the 2-year interest would be only ₹1000 — compound interest is always greater than or equal to simple interest for the same principal, rate and time."
+ },
+ {
+  "id": "rp-maths-0037", "s": "maths", "t": "time_work", "d": 2,
+  "q_hi": "A किसी काम को 12 दिन में और B उसी काम को 24 दिन में पूरा करता है। दोनों 4 दिन साथ काम करते हैं। शेष काम कितना बचेगा?",
+  "q_en": "A can complete a work in 12 days and B in 24 days. They work together for 4 days. What fraction of the work remains?",
+  "o_hi": ["1/4", "1/2", "2/3", "3/4"],
+  "o_en": ["1/4", "1/2", "2/3", "3/4"],
+  "a": 1,
+  "e_hi": "दोनों का एक दिन का संयुक्त कार्य = 1/12+1/24 = 3/24 = 1/8। 4 दिन में = 4×1/8 = 1/2 काम पूरा हुआ। शेष काम = 1−1/2 = 1/2।",
+  "e_en": "Combined one-day work = 1/12+1/24 = 3/24 = 1/8. In 4 days, 4×1/8 = 1/2 of the work is completed. Remaining work = 1−1/2 = 1/2."
+ },
+ {
+  "id": "rp-maths-0038", "s": "maths", "t": "time_speed_distance", "d": 2,
+  "q_hi": "एक नाव धारा के अनुकूल 24 किमी की दूरी 4 घंटे में तय करती है और धारा के प्रतिकूल वही दूरी 6 घंटे में तय करती है। शांत जल में नाव की चाल क्या है?",
+  "q_en": "A boat covers 24 km downstream in 4 hours and the same distance upstream in 6 hours. What is the speed of the boat in still water?",
+  "o_hi": ["3 किमी/घंटा", "4 किमी/घंटा", "5 किमी/घंटा", "6 किमी/घंटा"],
+  "o_en": ["3 km/h", "4 km/h", "5 km/h", "6 km/h"],
+  "a": 2,
+  "e_hi": "धारा के अनुकूल चाल = 24/4 = 6 किमी/घंटा। धारा के प्रतिकूल चाल = 24/6 = 4 किमी/घंटा। शांत जल में चाल = (6+4)/2 = 5 किमी/घंटा।",
+  "e_en": "Downstream speed = 24/4 = 6 km/h. Upstream speed = 24/6 = 4 km/h. Speed in still water = (6+4)/2 = 5 km/h."
+ },
+ {
+  "id": "rp-maths-0039", "s": "maths", "t": "mensuration", "d": 2,
+  "q_hi": "7 सेमी त्रिज्या वाले एक वृत्त का क्षेत्रफल ज्ञात करें। (π = 22/7 लें)",
+  "q_en": "Find the area of a circle with radius 7 cm. (Take π = 22/7)",
+  "o_hi": ["154 सेमी²", "176 सेमी²", "198 सेमी²", "220 सेमी²"],
+  "o_en": ["154 cm²", "176 cm²", "198 cm²", "220 cm²"],
+  "a": 0,
+  "e_hi": "वृत्त का क्षेत्रफल = πr² = (22/7)×7×7 = 154 सेमी²।",
+  "e_en": "Area of circle = πr² = (22/7)×7×7 = 154 cm²."
+ },
+ {
+  "id": "rp-maths-0040", "s": "maths", "t": "mensuration", "d": 3,
+  "q_hi": "एक घन का आयतन 216 सेमी³ है। उसका सम्पूर्ण पृष्ठीय क्षेत्रफल ज्ञात करें।",
+  "q_en": "The volume of a cube is 216 cm³. Find its total surface area.",
+  "o_hi": ["180 सेमी²", "196 सेमी²", "206 सेमी²", "216 सेमी²"],
+  "o_en": ["180 cm²", "196 cm²", "206 cm²", "216 cm²"],
+  "a": 3,
+  "e_hi": "घन का आयतन = भुजा³, अतः भुजा³=216, भुजा=6 सेमी (क्योंकि 6³=216)। सम्पूर्ण पृष्ठीय क्षेत्रफल = 6×भुजा² = 6×36 = 216 सेमी²।",
+  "e_en": "Volume of cube = side³, so side³=216, side=6 cm (since 6³=216). Total surface area = 6×side² = 6×36 = 216 cm².",
+  "hook_hi": "घन के आयतन से भुजा निकालने के लिए घनमूल (cube root) लें, फिर पृष्ठीय क्षेत्रफल के लिए 6×भुजा² करें।",
+  "hook_en": "To get the side from a cube's volume, take the cube root, then use 6×side² for the total surface area."
+ },
+ {
+  "id": "rp-maths-0041", "s": "maths", "t": "algebra", "d": 2,
+  "q_hi": "समीकरण x² − 5x + 6 = 0 के मूल क्या हैं?",
+  "q_en": "What are the roots of the equation x² − 5x + 6 = 0?",
+  "o_hi": ["1 और 6", "2 और 3", "−2 और −3", "−2 और 3"],
+  "o_en": ["1 and 6", "2 and 3", "−2 and −3", "−2 and 3"],
+  "a": 1,
+  "e_hi": "x² − 5x + 6 को (x−2)(x−3) = 0 के रूप में गुणनखंडित किया जा सकता है। इसलिए x=2 या x=3, अर्थात मूल 2 और 3 हैं।",
+  "e_en": "x² − 5x + 6 can be factorised as (x−2)(x−3) = 0. So x=2 or x=3, meaning the roots are 2 and 3."
+ },
+ {
+  "id": "rp-maths-0042", "s": "maths", "t": "geometry", "d": 2,
+  "q_hi": "एक षट्भुज (hexagon) के आंतरिक कोणों का योग कितना होता है?",
+  "q_en": "What is the sum of the interior angles of a hexagon?",
+  "o_hi": ["540°", "630°", "720°", "810°"],
+  "o_en": ["540°", "630°", "720°", "810°"],
+  "a": 2,
+  "e_hi": "n भुजाओं वाले बहुभुज के आंतरिक कोणों का योग = (n−2)×180° होता है। षट्भुज में n=6, अतः योग = (6−2)×180° = 720°।",
+  "e_en": "Sum of interior angles of an n-sided polygon = (n−2)×180°. For a hexagon, n=6, so the sum = (6−2)×180° = 720°."
+ },
+ {
+  "id": "rp-maths-0043", "s": "maths", "t": "trigonometry", "d": 1,
+  "q_hi": "cos 0° का मान क्या है?",
+  "q_en": "What is the value of cos 0°?",
+  "o_hi": ["0", "1/2", "√3/2", "1"],
+  "o_en": ["0", "1/2", "√3/2", "1"],
+  "a": 3,
+  "e_hi": "cos 0° = 1 है। यह त्रिकोणमिति के मानक कोणों में से एक है, जो प्रत्यक्ष रूप से याद रखा जाता है।",
+  "e_en": "cos 0° = 1. This is one of the standard trigonometric angle values that is memorised directly."
+ },
+ {
+  "id": "rp-maths-0044", "s": "maths", "t": "trigonometry", "d": 3,
+  "q_hi": "यदि tan θ = 3/4 है, तो sec θ का मान क्या होगा?",
+  "q_en": "If tan θ = 3/4, what is the value of sec θ?",
+  "o_hi": ["4/5", "5/4", "5/3", "2"],
+  "o_en": ["4/5", "5/4", "5/3", "2"],
+  "a": 1,
+  "e_hi": "tan θ = 3/4 होने पर, एक समकोण त्रिभुज में लंब=3, आधार=4 मानें, तो कर्ण = √(3²+4²) = 5 (3-4-5 त्रिक)। sec θ = कर्ण/आधार = 5/4।",
+  "e_en": "If tan θ = 3/4, consider a right triangle with opposite=3, adjacent=4; the hypotenuse = √(3²+4²) = 5 (the 3-4-5 triple). sec θ = hypotenuse/adjacent = 5/4.",
+  "fact_hi": "3-4-5 एक पाइथागोरियन त्रिक है; ऐसे अन्य सामान्य त्रिक 5-12-13 और 8-15-17 भी त्रिकोणमिति प्रश्नों में अक्सर काम आते हैं।",
+  "fact_en": "3-4-5 is a Pythagorean triple; other common ones like 5-12-13 and 8-15-17 are also frequently useful in trigonometry problems."
+ },
+ {
+  "id": "rp-maths-0045", "s": "maths", "t": "data_interpretation", "d": 2,
+  "q_hi": "500 लोगों के एक सर्वेक्षण में 60% लोग चाय पसंद करते हैं और शेष कॉफी पसंद करते हैं। कॉफी पसंद करने वालों की संख्या कितनी है?",
+  "q_en": "In a survey of 500 people, 60% prefer tea and the rest prefer coffee. How many people prefer coffee?",
+  "o_hi": ["150", "180", "200", "220"],
+  "o_en": ["150", "180", "200", "220"],
+  "a": 2,
+  "e_hi": "कॉफी पसंद करने वालों का प्रतिशत = 100%−60% = 40%। 40% of 500 = (40/100)×500 = 200।",
+  "e_en": "Percentage preferring coffee = 100%−60% = 40%. 40% of 500 = (40/100)×500 = 200."
+ },
+ {
+  "id": "rp-maths-0046", "s": "maths", "t": "data_interpretation", "d": 3,
+  "q_hi": "एक दुकान की चार महीनों की बिक्री (इकाइयों में) इस प्रकार है: जनवरी=120, फरवरी=150, मार्च=90, अप्रैल=140। मासिक औसत बिक्री कितनी है?",
+  "q_en": "A shop's sales (in units) for four months are: January=120, February=150, March=90, April=140. What is the average monthly sales?",
+  "o_hi": ["110", "125", "130", "140"],
+  "o_en": ["110", "125", "130", "140"],
+  "a": 1,
+  "e_hi": "कुल बिक्री = 120+150+90+140 = 500 इकाइयाँ। औसत = 500/4 = 125 इकाइयाँ प्रति माह।",
+  "e_en": "Total sales = 120+150+90+140 = 500 units. Average = 500/4 = 125 units per month."
  }
 ]

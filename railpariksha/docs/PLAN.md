@@ -8,30 +8,65 @@ motivation. RailPariksha and Bharari are independent apps living in one repo (`r
 
 ## Target exams
 
-| Exam | Body | Subjects | Negative marking |
+| Exam | Body | Subjects (CBT1 / common stage) | Negative marking |
 |---|---|---|---|
 | RRB NTPC (UG/Graduate) | RRB | Maths, Reasoning, GK, Current Affairs, Railway GK, Computer | 1/3 |
 | RRB Group D | RRB | Maths, Reasoning, Science, GK, Current Affairs, Railway GK | 1/3 |
-| RRB ALP & Technician | RRB | Maths, Reasoning, Science, Current Affairs, Railway GK | 1/3 |
+| RRB Assistant Loco Pilot (ALP) | RRB | Maths, Reasoning, Science, Current Affairs, Railway GK | 1/3 |
+| RRB Technician | RRB | Maths, Reasoning, Science, Current Affairs, Railway GK | 1/3 |
 | RRB Junior Engineer (JE) | RRB | Maths, Reasoning, Science, GK, Current Affairs, Computer | 1/3 |
 | RRB Paramedical | RRB | Maths, Reasoning, Science, GK, Current Affairs | 1/3 |
 | RPF Constable | RPF | Maths, Reasoning, GK, Current Affairs, Railway GK | 1/4 |
 | RPF Sub-Inspector (SI) | RPF | Maths, Reasoning, GK, Current Affairs, Railway GK | 1/4 |
 
-Exam list, subject sets and negative-marking values live in `content/taxonomy.json`; adding a new exam (say RRB
-Ticket Collector once its own CBT syllabus is confirmed, or CBT-2 stage variants) means adding one entry there.
+ALP and Technician are listed as separate exams (real RRB CENs run them as separate recruitment processes) even
+though their CBT1 subject pattern is identical — this matches how RRB actually structures them.
+
+Exam list, subject sets and negative-marking values live in `content/taxonomy.json`; adding a new exam means
+adding one entry there.
+
+### What's covered vs intentionally out of scope
+
+Covered: the **common/general syllabus** — the sections shared across candidates for each exam, verified against
+the published subject patterns for RRB NTPC (CEN 01/2019), RRB Group D (CEN 02/2018), RRB ALP & Technician
+(CEN 01/2018), RRB JE (CEN 03/2018) and RPF Constable/SI (CEN 01-02/2018 and successors). None of these exams'
+written CBT includes a separate English-language section — RailPariksha still ships 26 English questions as
+clearly-labelled **bonus practice** (visible in the Practice tab regardless of which exam is selected, since many
+aspirants also prepare for SSC/banking exams that do test English), but English is deliberately not attached to
+any exam's official subject list in `taxonomy.json`, so its presence never misrepresents what's actually tested.
+
+Deliberately out of scope for now, and why:
+- **Trade/discipline-specific technical papers** — RRB ALP/Technician CBT2 Part B (per ITI trade: Fitter,
+  Electrician, Electronics Mechanic, Wireman, Diesel Mechanic, etc. — dozens of trades) and RRB JE CBT2's
+  discipline-specific technical section (Civil/Mechanical/Electrical/Electronics & Communication). Authoring
+  these with real accuracy needs subject-matter expertise per trade; getting a technical fact wrong is worse
+  than not covering it. A future pass could add the 4-5 most common JE disciplines and ALP trades if there's
+  demand.
+- **Paramedical category-specific professional papers** — RRB Paramedical CBT2's subject-specific paper (per
+  category: Staff Nurse, Pharmacist, Lab Technician, ECG Technician, etc.) is medical/clinical knowledge, which
+  carries real-world stakes if wrong. Only the common CBT1 syllabus (Maths, Reasoning, Science, GK, Current
+  Affairs) is covered.
+- **Physical Efficiency/Measurement Tests (RPF), typing tests and CBAT** (NTPC Station Master) — these are
+  skill/physical tests, not written MCQ content, so there's nothing to build here.
+- **RRB "Ministerial and Isolated Categories" postings** (Stenographer, Junior Translator, Chief Law Assistant,
+  etc.) — niche, low-volume recruitment with their own distinct syllabi (including, notably, a real English/Hindi
+  language paper for some of these posts); not covered by this app's initial scope.
 
 ## Subjects & why each exists
 
 - **Maths** and **General Intelligence & Reasoning** — the two subjects common to every RRB/RPF CBT.
-- **General Science** — RRB Group D/ALP/JE/Paramedical staple (physics/chemistry/biology basics, human body).
-- **General Awareness (GK)** — static GK: polity, history, geography, economy, awards, sports.
+- **General Science** — RRB Group D/ALP/Technician/JE/Paramedical staple (physics/chemistry/biology basics,
+  human body, everyday science, inventions).
+- **General Awareness (GK)** — static GK: polity, history, geography, economy, awards, books & authors, important
+  days, sports, environment & ecology, art & culture — all explicitly named in RRB's own "General Awareness"
+  syllabus wording.
 - **Current Affairs** — separately from GK because it needs a live pipeline (see below), not a fixed bank.
 - **Railway General Knowledge** — RailPariksha's differentiator versus generic GK apps: zones, gauges, notable
   trains, safety systems like Kavach, RRB/RPF's own structure. Real aspirants are tested on this and it is
   under-served by other apps.
 - **Computer & Financial Awareness** — RRB NTPC/JE specific.
-- **English** — language paper common across exams.
+- **English** — bonus practice only; see "What's covered vs intentionally out of scope" above for why it isn't
+  tied to any exam's official subject list.
 
 ## Content quality process (same standard as Bharari)
 
@@ -64,16 +99,18 @@ priciest model. See the module docstring in `pipeline/ca_daily.py` for the exact
 
 ## Roadmap
 
-- [x] Taxonomy, starter question bank (~90+ questions across all 8 subjects), flashcards, motivation, two
-      Railway GK notes/mind-maps.
+- [x] Taxonomy (8 subjects incl. Environment/Culture GK topics, 8 exams incl. ALP/Technician split), starter
+      question bank grown to 40-46 per core subject (maths, reasoning, science, gk, railway_gk), 26 each for
+      computer and the bonus English set, flashcards, motivation, 10 topic notes/mind-maps across 4 subjects.
 - [x] Flutter app re-skinned from Bharari's proven architecture: navy/gold "Indian Railways" theme, train-class
-      level progression (General → Sleeper → AC 3-Tier → AC 2-Tier → Rajdhani), Hindi/English throughout.
+      level progression (General → Sleeper → AC 3-Tier → AC 2-Tier → Rajdhani), Hindi/English throughout, a
+      bonus-practice entry point for content (English) that isn't tied to any exam's syllabus.
 - [x] CI (`railpariksha_ci.yml`), release (`railpariksha_release.yml`), content-pack build
       (`railpariksha_content_pack.yml`), daily current-affairs draft (`railpariksha_current_affairs.yml`).
-- [ ] Grow the question bank per subject (target 40-60 per subject before a public launch) — the schema and
-      pipeline already scale to this; it's an authoring/review effort, not an engineering one.
-- [ ] Notes/mind-maps for the remaining heavily-used topics (currently only 2 Railway GK topics have them; every
-      other topic falls back to the "coming soon" empty state, which is honest but not yet complete).
+- [ ] Notes/mind-maps for the remaining topics without one yet (10 of the taxonomy's ~65 topics have a note so
+      far; the rest fall back to the honest "coming soon" empty state).
+- [ ] Consider the 4-5 most common JE disciplines / ALP trades for a future technical-paper pass, if there's
+      demand — see "What's covered vs intentionally out of scope" above.
 - [ ] Wire a real hosting target for `content.json` (see `docs/LAUNCH.md` §4) so the app can update its question
       pack without a Play Store release.
 - [ ] Store listing, screenshots and the account/signing steps in `docs/LAUNCH.md`.

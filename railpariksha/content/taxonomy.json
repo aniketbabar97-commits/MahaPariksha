@@ -72,7 +72,9 @@
     { "id": "awards_honours", "hi": "पुरस्कार व सम्मान", "en": "Awards & Honours" },
     { "id": "books_authors", "hi": "पुस्तकें व लेखक", "en": "Books & Authors" },
     { "id": "important_days", "hi": "महत्वपूर्ण दिवस", "en": "Important Days" },
-    { "id": "sports_gk", "hi": "खेल सामान्य ज्ञान", "en": "Sports GK" }
+    { "id": "sports_gk", "hi": "खेल सामान्य ज्ञान", "en": "Sports GK" },
+    { "id": "environment_ecology", "hi": "पर्यावरण एवं पारिस्थितिकी", "en": "Environment & Ecology" },
+    { "id": "indian_culture", "hi": "भारतीय कला एवं संस्कृति", "en": "Indian Art & Culture" }
    ]
   },
   {
@@ -153,8 +155,16 @@
   {
    "id": "rrb_alp",
    "group": "rrb",
-   "hi": "RRB सहायक लोको पायलट व तकनीशियन",
-   "en": "RRB ALP & Technician",
+   "hi": "RRB सहायक लोको पायलट (ALP)",
+   "en": "RRB Assistant Loco Pilot (ALP)",
+   "subjects": ["maths", "reasoning", "science", "current_affairs", "railway_gk"],
+   "neg": 0.3333
+  },
+  {
+   "id": "rrb_technician",
+   "group": "rrb",
+   "hi": "RRB तकनीशियन",
+   "en": "RRB Technician",
    "subjects": ["maths", "reasoning", "science", "current_affairs", "railway_gk"],
    "neg": 0.3333
   },

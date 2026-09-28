@@ -1,0 +1,157 @@
+[
+ {
+  "id": "note-maths-number_system",
+  "s": "maths",
+  "t": "number_system",
+  "summary_hi": "संख्या पद्धति गणित की नींव है और इसमें प्राकृतिक संख्याएँ, पूर्ण संख्याएँ, पूर्णांक, परिमेय व अपरिमेय संख्याएँ तथा वास्तविक संख्याएँ शामिल हैं। परीक्षा में सबसे ज़्यादा पूछे जाने वाले भाग हैं: भाज्यता के नियम (divisibility rules), अभाज्य संख्याएँ (prime numbers), सम-विषम संख्याएँ तथा भाग एल्गोरिथम (a = bq + r)। किसी संख्या के अभाज्य होने की जाँच के लिए उसके वर्गमूल तक की सभी अभाज्य संख्याओं से भाग देकर देखा जाता है। भाज्यता के नियम बड़ी संख्याओं को बिना पूरा भाग किए जल्दी जाँचने में मदद करते हैं, जैसे किसी संख्या का 3 या 9 से विभाज्य होना उसके अंकों के योग पर निर्भर करता है। इकाई अंक (unit digit) से संबंधित प्रश्नों में घातांक के चक्र (cyclicity) का उपयोग होता है, जैसे 2 की घातों का इकाई अंक 2,4,8,6 के चक्र में दोहराता है। यह अध्याय HCF-LCM, प्रतिशत, ब्याज जैसे अन्य अध्यायों की भी नींव है, इसलिए इसकी ठोस समझ बहुत ज़रूरी है।",
+  "summary_en": "Number System is the foundation of quantitative aptitude, covering natural numbers, whole numbers, integers, rational and irrational numbers, and real numbers. The most frequently tested areas are divisibility rules, prime numbers, odd-even properties, and the division algorithm (a = bq + r). To check if a number is prime, it is tested for divisibility by all primes up to its square root. Divisibility rules let you quickly test large numbers without full division — for example, divisibility by 3 or 9 depends on the sum of digits. Unit-digit questions rely on the cyclicity of powers, such as powers of 2 repeating the unit-digit cycle 2, 4, 8, 6. This chapter also underpins other topics like HCF-LCM, percentage and interest, so a strong grasp here pays off across the exam.",
+  "facts_hi": [
+   "प्राकृतिक संख्याएँ: 1, 2, 3, ... (0 शामिल नहीं)",
+   "पूर्ण संख्याएँ: 0, 1, 2, 3, ... (0 सहित)",
+   "पूर्णांक: ऋणात्मक, शून्य व धनात्मक संख्याएँ",
+   "परिमेय संख्या: p/q रूप में लिखी जा सकने वाली संख्या (q ≠ 0)",
+   "अपरिमेय संख्या: p/q रूप में नहीं लिखी जा सकती, जैसे √2, π",
+   "1 न तो अभाज्य है न ही भाज्य (composite)",
+   "2 एकमात्र सम अभाज्य संख्या है",
+   "किसी संख्या के 2 से विभाज्य होने की शर्त: इकाई अंक 0,2,4,6,8 हो",
+   "किसी संख्या के 3 से विभाज्य होने की शर्त: अंकों का योग 3 से विभाज्य हो",
+   "किसी संख्या के 9 से विभाज्य होने की शर्त: अंकों का योग 9 से विभाज्य हो",
+   "किसी संख्या के 11 से विभाज्य होने की शर्त: विषम व सम स्थान के अंकों के योग का अंतर 0 या 11 का गुणज हो",
+   "भाग एल्गोरिथम: भाज्य = (भाजक × भागफल) + शेषफल"
+  ],
+  "facts_en": [
+   "Natural numbers: 1, 2, 3, ... (0 not included)",
+   "Whole numbers: 0, 1, 2, 3, ... (includes 0)",
+   "Integers: negative numbers, zero and positive numbers",
+   "Rational number: can be written as p/q form (q ≠ 0)",
+   "Irrational number: cannot be written as p/q, e.g. √2, π",
+   "1 is neither prime nor composite",
+   "2 is the only even prime number",
+   "Divisible by 2 when: unit digit is 0, 2, 4, 6 or 8",
+   "Divisible by 3 when: sum of digits is divisible by 3",
+   "Divisible by 9 when: sum of digits is divisible by 9",
+   "Divisible by 11 when: difference of sums of digits at odd and even places is 0 or a multiple of 11",
+   "Division algorithm: Dividend = (Divisor × Quotient) + Remainder"
+  ],
+  "map": {
+   "hi": "संख्या पद्धति",
+   "en": "Number System",
+   "children": [
+    {
+     "hi": "संख्याओं के प्रकार",
+     "en": "Types of Numbers",
+     "children": [
+      {"hi": "प्राकृतिक व पूर्ण संख्याएँ", "en": "Natural & whole numbers"},
+      {"hi": "पूर्णांक", "en": "Integers"},
+      {"hi": "परिमेय व अपरिमेय संख्याएँ", "en": "Rational & irrational numbers"}
+     ]
+    },
+    {
+     "hi": "अभाज्य संख्याएँ",
+     "en": "Prime Numbers",
+     "children": [
+      {"hi": "2 एकमात्र सम अभाज्य", "en": "2 is the only even prime"},
+      {"hi": "√n तक भाग देकर जाँच", "en": "Test by dividing up to √n"}
+     ]
+    },
+    {
+     "hi": "भाज्यता के नियम",
+     "en": "Divisibility Rules",
+     "children": [
+      {"hi": "3, 9: अंकों का योग", "en": "3, 9: sum of digits"},
+      {"hi": "11: स्थानीय योगों का अंतर", "en": "11: difference of place-sums"},
+      {"hi": "2: इकाई अंक सम", "en": "2: unit digit even"}
+     ]
+    },
+    {
+     "hi": "भाग एल्गोरिथम",
+     "en": "Division Algorithm",
+     "children": [
+      {"hi": "भाज्य = भाजक×भागफल + शेष", "en": "Dividend = Divisor×Quotient + Remainder"}
+     ]
+    },
+    {
+     "hi": "इकाई अंक व चक्रीयता",
+     "en": "Unit Digit & Cyclicity",
+     "children": [
+      {"hi": "घातों का दोहराव चक्र", "en": "Repeating cycle of powers"}
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "id": "note-maths-percentage",
+  "s": "maths",
+  "t": "percentage",
+  "summary_hi": "प्रतिशत का अर्थ है 'प्रति सौ', यानी किसी मात्रा को 100 के आधार पर व्यक्त करना। यह अध्याय लाभ-हानि, ब्याज, औसत जैसे कई अन्य अध्यायों की नींव है, इसलिए इसमें भिन्न (fraction) से प्रतिशत और प्रतिशत से भिन्न में तेज़ी से बदलाव करना आना चाहिए। यदि किसी संख्या A का x% ज्ञात करना हो तो सूत्र है (A × x)/100। किसी मात्रा में प्रतिशत वृद्धि या कमी के बाद मूल मान ज्ञात करने के लिए 'उलटा प्रतिशत' (reverse percentage) विधि उपयोगी होती है। जब कोई मात्रा पहले x% बढ़े और फिर y% घटे (या इसके विपरीत), तो शुद्ध प्रतिशत परिवर्तन का सूत्र है: x + y + (xy/100), जिसमें कमी को ऋणात्मक मान के रूप में लिया जाता है। परीक्षा में जनसंख्या वृद्धि, चुनाव में मत प्रतिशत, तथा मूल्य वृद्धि/कमी पर आधारित प्रश्न बहुत सामान्य हैं।",
+  "summary_en": "Percentage means 'per hundred' — expressing a quantity relative to a base of 100. This chapter underlies many others like Profit & Loss, Interest and Average, so quick conversion between fractions and percentages is essential (e.g. 1/4 = 25%, 1/8 = 12.5%). To find x% of a number A, use the formula (A × x)/100. To find the original value after a percentage increase or decrease, the 'reverse percentage' method is useful. When a quantity increases by x% and then decreases by y% (or vice versa), the net percentage change formula is x + y + (xy/100), taking decrease as negative. Exam questions commonly involve population growth, vote-share problems, and price increase/decrease scenarios.",
+  "facts_hi": [
+   "x% का अर्थ है x/100",
+   "A का x% = (A × x)/100",
+   "1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 1/10 = 10%",
+   "यदि मूल्य x% बढ़े, तो पुरानी मात्रा को 100/(100+x)% कम करना होगा ताकि व्यय समान रहे",
+   "यदि मूल्य x% घटे, तो खपत को 100/(100−x)% बढ़ाना होगा ताकि व्यय समान रहे",
+   "क्रमिक % परिवर्तन (x% फिर y%): शुद्ध परिवर्तन = x + y + xy/100",
+   "प्रतिशत वृद्धि = (नया मान − पुराना मान)/पुराना मान × 100",
+   "जनसंख्या n वर्ष बाद, दर r% वार्षिक वृद्धि पर = P(1 + r/100)ⁿ",
+   "यदि A, B से x% अधिक है तो B, A से [x/(100+x)]×100 % कम है",
+   "यदि A, B से x% कम है तो B, A से [x/(100−x)]×100 % अधिक है"
+  ],
+  "facts_en": [
+   "x% means x/100",
+   "x% of A = (A × x)/100",
+   "1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 1/10 = 10%",
+   "If price increases by x%, reduce consumption by 100/(100+x)% to keep expenditure same",
+   "If price decreases by x%, increase consumption by 100/(100−x)% to keep expenditure same",
+   "Successive % change (x% then y%): net change = x + y + xy/100",
+   "Percentage increase = (New value − Old value)/Old value × 100",
+   "Population after n years at r% annual growth = P(1 + r/100)ⁿ",
+   "If A is x% more than B, then B is [x/(100+x)]×100 % less than A",
+   "If A is x% less than B, then B is [x/(100−x)]×100 % more than A"
+  ],
+  "map": {
+   "hi": "प्रतिशत",
+   "en": "Percentage",
+   "children": [
+    {
+     "hi": "मूल सूत्र",
+     "en": "Basic Formula",
+     "children": [
+      {"hi": "A का x% = Ax/100", "en": "x% of A = Ax/100"},
+      {"hi": "भिन्न-प्रतिशत रूपांतरण", "en": "Fraction-percentage conversion"}
+     ]
+    },
+    {
+     "hi": "क्रमिक परिवर्तन",
+     "en": "Successive Change",
+     "children": [
+      {"hi": "x + y + xy/100", "en": "x + y + xy/100"},
+      {"hi": "कमी = ऋणात्मक मान", "en": "Decrease = negative value"}
+     ]
+    },
+    {
+     "hi": "उलटा प्रतिशत",
+     "en": "Reverse Percentage",
+     "children": [
+      {"hi": "मूल्य वृद्धि पर खपत घटाना", "en": "Reduce consumption on price rise"}
+     ]
+    },
+    {
+     "hi": "तुलनात्मक प्रतिशत",
+     "en": "Comparative Percentage",
+     "children": [
+      {"hi": "A, B से अधिक/कम होने पर सूत्र", "en": "Formula when A is more/less than B"}
+     ]
+    },
+    {
+     "hi": "जनसंख्या वृद्धि",
+     "en": "Population Growth",
+     "children": [
+      {"hi": "P(1+r/100)ⁿ", "en": "P(1+r/100)ⁿ"}
+     ]
+    }
+   ]
+  }
+ }
+]

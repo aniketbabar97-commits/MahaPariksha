@@ -95,7 +95,31 @@ class PracticeScreen extends StatelessWidget {
           ),
           const SizedBox(height: 10),
         ],
+        if (s.repo.subject('english') != null) ...[
+          SectionTitle(context.tr('बोनस अभ्यास 🎁', 'Bonus practice 🎁')),
+          _EnglishBonusTile(),
+        ],
       ],
+    );
+  }
+}
+
+/// English is not part of any RRB/RPF exam's official CBT syllabus, so it is deliberately not
+/// attached to any exam's subject list. It is offered here as always-visible bonus practice for
+/// aspirants who also prepare for exams (SSC, banking) that do test English.
+class _EnglishBonusTile extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final sub = context.scope.repo.subject('english');
+    if (sub == null) return const SizedBox();
+    final count = context.scope.repo.questions.where((q) => q.subject == 'english').length;
+    return ActionCard(
+      icon: subjectIcon(sub.icon),
+      color: BrandColors.correct,
+      title: sub.name.of(context.lang),
+      subtitle: context.tr('$count प्रश्न · परीक्षा के पाठ्यक्रम का हिस्सा नहीं, बोनस अभ्यास',
+          '$count questions · not part of the exam syllabus, bonus practice'),
+      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub))),
     );
   }
 }
