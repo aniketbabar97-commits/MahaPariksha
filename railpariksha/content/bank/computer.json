@@ -1,170 +1,391 @@
 [
  {
-  "id": "rp-comp-0001", "s": "computer", "t": "computer_fundamentals", "d": 1,
+  "id": "rp-comp-0001",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "d": 1,
   "q_hi": "CPU का पूर्ण रूप (full form) क्या है?",
   "q_en": "What is the full form of CPU?",
-  "o_hi": ["Central Processing Unit", "Computer Personal Unit", "Central Program Utility", "Central Processor Unicode"],
-  "o_en": ["Central Processing Unit", "Computer Personal Unit", "Central Program Utility", "Central Processor Unicode"],
+  "o_hi": [
+   "Central Processing Unit",
+   "Computer Personal Unit",
+   "Central Program Utility",
+   "Central Processor Unicode"
+  ],
+  "o_en": [
+   "Central Processing Unit",
+   "Computer Personal Unit",
+   "Central Program Utility",
+   "Central Processor Unicode"
+  ],
   "a": 0,
   "e_hi": "CPU का पूर्ण रूप Central Processing Unit है, जिसे कंप्यूटर का 'मस्तिष्क' कहा जाता है क्योंकि यह सभी निर्देशों को संसाधित (process) करता है।",
   "e_en": "CPU stands for Central Processing Unit, often called the 'brain' of the computer because it processes all instructions."
  },
  {
-  "id": "rp-comp-0002", "s": "computer", "t": "computer_fundamentals", "d": 2,
+  "id": "rp-comp-0002",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "d": 2,
   "q_hi": "कंप्यूटर की अस्थायी स्मृति (temporary memory), जो बिजली जाने पर डेटा खो देती है, क्या कहलाती है?",
   "q_en": "What is the computer's temporary memory called, which loses data when power is off?",
-  "o_hi": ["ROM", "RAM", "हार्ड डिस्क", "पेन ड्राइव"],
-  "o_en": ["ROM", "RAM", "Hard disk", "Pen drive"],
+  "o_hi": [
+   "ROM",
+   "RAM",
+   "हार्ड डिस्क",
+   "पेन ड्राइव"
+  ],
+  "o_en": [
+   "ROM",
+   "RAM",
+   "Hard disk",
+   "Pen drive"
+  ],
   "a": 1,
   "e_hi": "RAM (Random Access Memory) एक वोलेटाइल (volatile) मेमोरी है जो बिजली जाने पर डेटा खो देती है, जबकि ROM स्थायी (non-volatile) होती है।",
   "e_en": "RAM (Random Access Memory) is volatile memory that loses data when power is switched off, whereas ROM is non-volatile."
  },
  {
-  "id": "rp-comp-0003", "s": "computer", "t": "ms_office", "d": 1,
+  "id": "rp-comp-0003",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
   "q_hi": "MS Excel में कोशिकाओं (cells) की पंक्तियों और स्तंभों से बना ग्रिड क्या कहलाता है?",
   "q_en": "In MS Excel, what is the grid made of rows and columns of cells called?",
-  "o_hi": ["वर्कशीट (Worksheet)", "स्लाइड", "डॉक्यूमेंट", "फॉर्म"],
-  "o_en": ["Worksheet", "Slide", "Document", "Form"],
+  "o_hi": [
+   "वर्कशीट (Worksheet)",
+   "स्लाइड",
+   "डॉक्यूमेंट",
+   "फॉर्म"
+  ],
+  "o_en": [
+   "Worksheet",
+   "Slide",
+   "Document",
+   "Form"
+  ],
   "a": 0,
   "e_hi": "MS Excel में पंक्तियों (rows) और स्तंभों (columns) से बना ग्रिड 'वर्कशीट' कहलाता है, और कई वर्कशीट मिलकर एक 'वर्कबुक' बनाती हैं।",
   "e_en": "In MS Excel, the grid of rows and columns is called a 'worksheet', and multiple worksheets together form a 'workbook'."
  },
  {
-  "id": "rp-comp-0004", "s": "computer", "t": "internet_networking", "d": 2,
+  "id": "rp-comp-0004",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 2,
   "q_hi": "WWW का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of WWW?",
-  "o_hi": ["World Wide Web", "World Wide Wire", "Web Wide World", "World Web Wide"],
-  "o_en": ["World Wide Web", "World Wide Wire", "Web Wide World", "World Web Wide"],
+  "o_hi": [
+   "World Wide Web",
+   "World Wide Wire",
+   "Web Wide World",
+   "World Web Wide"
+  ],
+  "o_en": [
+   "World Wide Web",
+   "World Wide Wire",
+   "Web Wide World",
+   "World Web Wide"
+  ],
   "a": 0,
   "e_hi": "WWW का अर्थ World Wide Web है, जिसे टिम बर्नर्स-ली ने 1989 में विकसित किया था। यह इंटरनेट पर आपस में जुड़े दस्तावेज़ों (webpages) की एक प्रणाली है।",
   "e_en": "WWW stands for World Wide Web, developed by Tim Berners-Lee in 1989. It is a system of interlinked documents (webpages) accessed over the internet."
  },
  {
-  "id": "rp-comp-0005", "s": "computer", "t": "financial_awareness", "d": 2,
+  "id": "rp-comp-0005",
+  "s": "computer",
+  "t": "financial_awareness",
+  "d": 2,
   "q_hi": "भारत में तत्काल धन हस्तांतरण के लिए उपयोग होने वाली प्रणाली 'UPI' का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of UPI, used for instant money transfer in India?",
-  "o_hi": ["Unified Payments Interface", "United Payment India", "Universal Payment Identity", "Unified Public Investment"],
-  "o_en": ["Unified Payments Interface", "United Payment India", "Universal Payment Identity", "Unified Public Investment"],
+  "o_hi": [
+   "Unified Payments Interface",
+   "United Payment India",
+   "Universal Payment Identity",
+   "Unified Public Investment"
+  ],
+  "o_en": [
+   "Unified Payments Interface",
+   "United Payment India",
+   "Universal Payment Identity",
+   "Unified Public Investment"
+  ],
   "a": 0,
   "e_hi": "UPI का अर्थ Unified Payments Interface है, जिसे नेशनल पेमेंट्स कॉर्पोरेशन ऑफ इंडिया (NPCI) द्वारा विकसित किया गया है और यह बैंक खातों के बीच तत्काल धन हस्तांतरण संभव बनाता है।",
   "e_en": "UPI stands for Unified Payments Interface, developed by the National Payments Corporation of India (NPCI), enabling instant fund transfers between bank accounts."
  },
  {
-  "id": "rp-comp-0006", "s": "computer", "t": "cyber_security", "d": 2,
+  "id": "rp-comp-0006",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
   "q_hi": "किसी कंप्यूटर सिस्टम में अनधिकृत प्रवेश को रोकने के लिए उपयोग होने वाला सुरक्षा सॉफ्टवेयर/हार्डवेयर क्या कहलाता है?",
   "q_en": "What is the security software/hardware called that blocks unauthorized access to a computer system?",
-  "o_hi": ["फायरवॉल (Firewall)", "ब्राउज़र", "कंपाइलर", "स्प्रेडशीट"],
-  "o_en": ["Firewall", "Browser", "Compiler", "Spreadsheet"],
+  "o_hi": [
+   "फायरवॉल (Firewall)",
+   "ब्राउज़र",
+   "कंपाइलर",
+   "स्प्रेडशीट"
+  ],
+  "o_en": [
+   "Firewall",
+   "Browser",
+   "Compiler",
+   "Spreadsheet"
+  ],
   "a": 0,
   "e_hi": "फायरवॉल एक सुरक्षा प्रणाली है जो नेटवर्क ट्रैफ़िक की निगरानी करती है और पूर्वनिर्धारित नियमों के आधार पर अनधिकृत पहुँच को रोकती है।",
   "e_en": "A firewall is a security system that monitors network traffic and blocks unauthorized access based on predefined rules."
  },
  {
-  "id": "rp-comp-0007", "s": "computer", "t": "computer_fundamentals", "d": 1,
+  "id": "rp-comp-0007",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "d": 1,
   "q_hi": "कंप्यूटर में डेटा संग्रहण की सबसे छोटी इकाई (unit) क्या है?",
   "q_en": "What is the smallest unit of data storage in a computer?",
-  "o_hi": ["बाइट (Byte)", "बिट (Bit)", "किलोबाइट", "मेगाबाइट"],
-  "o_en": ["Byte", "Bit", "Kilobyte", "Megabyte"],
+  "o_hi": [
+   "बाइट (Byte)",
+   "बिट (Bit)",
+   "किलोबाइट",
+   "मेगाबाइट"
+  ],
+  "o_en": [
+   "Byte",
+   "Bit",
+   "Kilobyte",
+   "Megabyte"
+  ],
   "a": 1,
   "e_hi": "बिट (Bit) डेटा की सबसे छोटी इकाई है, जो केवल 0 या 1 का मान रखती है। 8 बिट मिलकर 1 बाइट बनाते हैं।",
   "e_en": "A Bit is the smallest unit of data, holding a value of either 0 or 1. 8 bits together make 1 byte."
  },
  {
-  "id": "rp-comp-0008", "s": "computer", "t": "internet_networking", "d": 2,
+  "id": "rp-comp-0008",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 2,
   "q_hi": "किसी वेबसाइट का पता (address) टाइप करने के लिए किस प्रकार का सॉफ्टवेयर उपयोग किया जाता है?",
   "q_en": "What type of software is used to type a website address and view it?",
-  "o_hi": ["वेब ब्राउज़र", "ऑपरेटिंग सिस्टम", "एंटीवायरस", "स्प्रेडशीट सॉफ्टवेयर"],
-  "o_en": ["Web browser", "Operating system", "Antivirus", "Spreadsheet software"],
+  "o_hi": [
+   "वेब ब्राउज़र",
+   "ऑपरेटिंग सिस्टम",
+   "एंटीवायरस",
+   "स्प्रेडशीट सॉफ्टवेयर"
+  ],
+  "o_en": [
+   "Web browser",
+   "Operating system",
+   "Antivirus",
+   "Spreadsheet software"
+  ],
   "a": 0,
   "e_hi": "वेब ब्राउज़र (जैसे Chrome, Firefox) वह सॉफ्टवेयर है जिससे इंटरनेट पर वेबसाइटों को खोलकर देखा जाता है।",
   "e_en": "A web browser (like Chrome, Firefox) is the software used to access and view websites on the internet."
  },
  {
-  "id": "rp-comp-0009", "s": "computer", "t": "computer_fundamentals", "d": 1,
+  "id": "rp-comp-0009",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "d": 1,
   "q_hi": "RAM का पूर्ण रूप (full form) क्या है?",
   "q_en": "What is the full form of RAM?",
-  "o_hi": ["Random Access Module", "Random Access Memory", "Read Access Memory", "Read Only Memory"],
-  "o_en": ["Random Access Module", "Random Access Memory", "Read Access Memory", "Read Only Memory"],
+  "o_hi": [
+   "Random Access Module",
+   "Random Access Memory",
+   "Read Access Memory",
+   "Read Only Memory"
+  ],
+  "o_en": [
+   "Random Access Module",
+   "Random Access Memory",
+   "Read Access Memory",
+   "Read Only Memory"
+  ],
   "a": 1,
   "e_hi": "RAM का पूर्ण रूप Random Access Memory है। यह एक अस्थायी (volatile) मेमोरी है जो CPU द्वारा प्रोसेस किए जा रहे डेटा और प्रोग्रामों को अस्थायी रूप से संग्रहीत करती है।",
   "e_en": "RAM stands for Random Access Memory. It is a volatile memory that temporarily stores data and programs currently being processed by the CPU."
  },
  {
-  "id": "rp-comp-0010", "s": "computer", "t": "computer_fundamentals", "d": 1,
+  "id": "rp-comp-0010",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "d": 1,
   "q_hi": "निम्नलिखित में से कौन-सा एक 'इनपुट डिवाइस' (input device) है?",
   "q_en": "Which of the following is an 'input device'?",
-  "o_hi": ["प्रिंटर", "मॉनिटर", "कीबोर्ड", "स्पीकर"],
-  "o_en": ["Printer", "Monitor", "Keyboard", "Speaker"],
+  "o_hi": [
+   "प्रिंटर",
+   "मॉनिटर",
+   "कीबोर्ड",
+   "स्पीकर"
+  ],
+  "o_en": [
+   "Printer",
+   "Monitor",
+   "Keyboard",
+   "Speaker"
+  ],
   "a": 2,
   "e_hi": "इनपुट डिवाइस वे उपकरण हैं जिनके द्वारा डेटा कंप्यूटर में डाला जाता है। कीबोर्ड एक इनपुट डिवाइस है, जबकि प्रिंटर, मॉनिटर और स्पीकर आउटपुट डिवाइस हैं।",
   "e_en": "Input devices are used to feed data into a computer. Keyboard is an input device, whereas printer, monitor, and speaker are all output devices."
  },
  {
-  "id": "rp-comp-0011", "s": "computer", "t": "computer_fundamentals", "d": 2,
+  "id": "rp-comp-0011",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "d": 2,
   "q_hi": "निम्नलिखित में से कौन-सा 'सिस्टम सॉफ्टवेयर' (system software) का उदाहरण है?",
   "q_en": "Which of the following is an example of 'system software'?",
-  "o_hi": ["माउस", "ऑपरेटिंग सिस्टम", "कीबोर्ड", "प्रिंटर"],
-  "o_en": ["Mouse", "Operating system", "Keyboard", "Printer"],
+  "o_hi": [
+   "माउस",
+   "ऑपरेटिंग सिस्टम",
+   "कीबोर्ड",
+   "प्रिंटर"
+  ],
+  "o_en": [
+   "Mouse",
+   "Operating system",
+   "Keyboard",
+   "Printer"
+  ],
   "a": 1,
   "e_hi": "ऑपरेटिंग सिस्टम (जैसे Windows, Linux) सिस्टम सॉफ्टवेयर है जो हार्डवेयर का प्रबंधन करता है और अन्य प्रोग्रामों को चलाने के लिए मंच प्रदान करता है, जबकि माउस, कीबोर्ड व प्रिंटर हार्डवेयर उपकरण हैं।",
   "e_en": "An operating system (such as Windows, Linux) is system software that manages hardware and provides a platform for other programs to run, whereas mouse, keyboard, and printer are hardware devices."
  },
  {
-  "id": "rp-comp-0012", "s": "computer", "t": "ms_office", "d": 1,
+  "id": "rp-comp-0012",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
   "q_hi": "MS Word में डिफ़ॉल्ट रूप से सेव की गई फ़ाइल का एक्सटेंशन क्या होता है?",
   "q_en": "By default, what file extension does MS Word use when saving a document?",
-  "o_hi": [".pptx", ".xlsx", ".docx", ".txt"],
-  "o_en": [".pptx", ".xlsx", ".docx", ".txt"],
+  "o_hi": [
+   ".pptx",
+   ".xlsx",
+   ".docx",
+   ".txt"
+  ],
+  "o_en": [
+   ".pptx",
+   ".xlsx",
+   ".docx",
+   ".txt"
+  ],
   "a": 2,
   "e_hi": "MS Word दस्तावेज़ों को डिफ़ॉल्ट रूप से '.docx' एक्सटेंशन के साथ सेव करता है, जबकि '.xlsx' Excel और '.pptx' PowerPoint फ़ाइलों के लिए प्रयोग होता है।",
   "e_en": "MS Word saves documents with the '.docx' extension by default, while '.xlsx' is used for Excel and '.pptx' for PowerPoint files."
  },
  {
-  "id": "rp-comp-0013", "s": "computer", "t": "ms_office", "d": 1,
+  "id": "rp-comp-0013",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
   "q_hi": "किसी खुले दस्तावेज़ को सेव (save) करने के लिए सामान्यतः किस शॉर्टकट कुंजी (keyboard shortcut) का प्रयोग किया जाता है?",
   "q_en": "Which keyboard shortcut is commonly used to save an open document?",
-  "o_hi": ["Ctrl+P", "Ctrl+C", "Ctrl+S", "Ctrl+V"],
-  "o_en": ["Ctrl+P", "Ctrl+C", "Ctrl+S", "Ctrl+V"],
+  "o_hi": [
+   "Ctrl+P",
+   "Ctrl+C",
+   "Ctrl+S",
+   "Ctrl+V"
+  ],
+  "o_en": [
+   "Ctrl+P",
+   "Ctrl+C",
+   "Ctrl+S",
+   "Ctrl+V"
+  ],
   "a": 2,
   "e_hi": "Ctrl+S दस्तावेज़ को सेव करने की शॉर्टकट कुंजी है। Ctrl+P प्रिंट के लिए, Ctrl+C कॉपी के लिए और Ctrl+V पेस्ट के लिए प्रयोग होती है।",
   "e_en": "Ctrl+S is the shortcut key to save a document. Ctrl+P is used for printing, Ctrl+C for copying, and Ctrl+V for pasting."
  },
  {
-  "id": "rp-comp-0014", "s": "computer", "t": "ms_office", "d": 2,
+  "id": "rp-comp-0014",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
   "q_hi": "MS Excel में कोशिकाओं (cells) की एक श्रृंखला (range) का योग (sum) निकालने के लिए किस फ़ंक्शन का प्रयोग किया जाता है?",
   "q_en": "In MS Excel, which function is used to find the sum of a range of cells?",
-  "o_hi": ["AVERAGE()", "COUNT()", "MAX()", "SUM()"],
-  "o_en": ["AVERAGE()", "COUNT()", "MAX()", "SUM()"],
+  "o_hi": [
+   "AVERAGE()",
+   "COUNT()",
+   "MAX()",
+   "SUM()"
+  ],
+  "o_en": [
+   "AVERAGE()",
+   "COUNT()",
+   "MAX()",
+   "SUM()"
+  ],
   "a": 3,
   "e_hi": "SUM() फ़ंक्शन चयनित कोशिकाओं के मानों को जोड़ता है, जैसे =SUM(A1:A5)। AVERAGE() औसत निकालता है, COUNT() संख्याओं की गिनती करता है और MAX() सबसे बड़ा मान बताता है।",
   "e_en": "The SUM() function adds the values of selected cells, e.g. =SUM(A1:A5). AVERAGE() finds the mean, COUNT() counts numeric entries, and MAX() returns the largest value."
  },
  {
-  "id": "rp-comp-0015", "s": "computer", "t": "ms_office", "d": 1,
+  "id": "rp-comp-0015",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
   "q_hi": "MS PowerPoint मुख्यतः किस कार्य के लिए प्रयोग किया जाता है?",
   "q_en": "MS PowerPoint is mainly used for which purpose?",
-  "o_hi": ["स्प्रेडशीट बनाने के लिए", "प्रस्तुतीकरण (presentation) बनाने के लिए", "डेटाबेस प्रबंधन के लिए", "दस्तावेज़ टाइप करने के लिए"],
-  "o_en": ["Creating spreadsheets", "Creating presentations", "Managing databases", "Typing documents"],
+  "o_hi": [
+   "स्प्रेडशीट बनाने के लिए",
+   "प्रस्तुतीकरण (presentation) बनाने के लिए",
+   "डेटाबेस प्रबंधन के लिए",
+   "दस्तावेज़ टाइप करने के लिए"
+  ],
+  "o_en": [
+   "Creating spreadsheets",
+   "Creating presentations",
+   "Managing databases",
+   "Typing documents"
+  ],
   "a": 1,
   "e_hi": "MS PowerPoint एक प्रस्तुतीकरण (presentation) सॉफ्टवेयर है जिसका प्रयोग स्लाइड्स के माध्यम से जानकारी को दृश्य रूप में प्रस्तुत करने के लिए किया जाता है।",
   "e_en": "MS PowerPoint is presentation software used to visually present information through slides."
  },
  {
-  "id": "rp-comp-0016", "s": "computer", "t": "ms_office", "d": 3,
+  "id": "rp-comp-0016",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 3,
   "q_hi": "MS Excel में सेल संदर्भ (cell reference) 'B5' का क्या अर्थ है?",
   "q_en": "In MS Excel, what does the cell reference 'B5' indicate?",
-  "o_hi": ["स्तंभ B और पंक्ति 5 का प्रतिच्छेदन (intersection)", "5वीं वर्कशीट", "बटन नंबर 5", "फ़ॉर्मूला बार की स्थिति"],
-  "o_en": ["The intersection of column B and row 5", "The 5th worksheet", "Button number 5", "The position of the formula bar"],
+  "o_hi": [
+   "स्तंभ B और पंक्ति 5 का प्रतिच्छेदन (intersection)",
+   "5वीं वर्कशीट",
+   "बटन नंबर 5",
+   "फ़ॉर्मूला बार की स्थिति"
+  ],
+  "o_en": [
+   "The intersection of column B and row 5",
+   "The 5th worksheet",
+   "Button number 5",
+   "The position of the formula bar"
+  ],
   "a": 0,
   "e_hi": "Excel में प्रत्येक कोशिका (cell) की पहचान उसके स्तंभ अक्षर और पंक्ति संख्या से होती है। 'B5' का अर्थ है स्तंभ B और पंक्ति 5 के प्रतिच्छेदन पर स्थित कोशिका।",
   "e_en": "In Excel, every cell is identified by its column letter and row number. 'B5' refers to the cell located at the intersection of column B and row 5."
  },
  {
-  "id": "rp-comp-0017", "s": "computer", "t": "internet_networking", "d": 1,
+  "id": "rp-comp-0017",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 1,
   "q_hi": "URL का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of URL?",
-  "o_hi": ["Universal Resource Link", "Uniform Resource Locator", "Unified Reference Locator", "Uniform Reference Link"],
-  "o_en": ["Universal Resource Link", "Uniform Resource Locator", "Unified Reference Locator", "Uniform Reference Link"],
+  "o_hi": [
+   "Universal Resource Link",
+   "Uniform Resource Locator",
+   "Unified Reference Locator",
+   "Uniform Reference Link"
+  ],
+  "o_en": [
+   "Universal Resource Link",
+   "Uniform Resource Locator",
+   "Unified Reference Locator",
+   "Uniform Reference Link"
+  ],
   "a": 1,
   "e_hi": "URL का पूर्ण रूप Uniform Resource Locator है, जो इंटरनेट पर किसी वेबसाइट या संसाधन (resource) का विशिष्ट पता (address) दर्शाता है।",
   "e_en": "URL stands for Uniform Resource Locator, which specifies the unique address of a website or resource on the internet.",
@@ -172,41 +393,93 @@
   "hook_en": "Every website has its own unique address!"
  },
  {
-  "id": "rp-comp-0018", "s": "computer", "t": "internet_networking", "d": 2,
+  "id": "rp-comp-0018",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 2,
   "q_hi": "LAN का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of LAN?",
-  "o_hi": ["Large Area Network", "Long Area Network", "Local Access Node", "Local Area Network"],
-  "o_en": ["Large Area Network", "Long Area Network", "Local Access Node", "Local Area Network"],
+  "o_hi": [
+   "Large Area Network",
+   "Long Area Network",
+   "Local Access Node",
+   "Local Area Network"
+  ],
+  "o_en": [
+   "Large Area Network",
+   "Long Area Network",
+   "Local Access Node",
+   "Local Area Network"
+  ],
   "a": 3,
   "e_hi": "LAN का पूर्ण रूप Local Area Network है, जो किसी सीमित क्षेत्र जैसे घर, कार्यालय या स्कूल में कंप्यूटरों को आपस में जोड़ता है।",
   "e_en": "LAN stands for Local Area Network, which connects computers within a limited area such as a home, office, or school."
  },
  {
-  "id": "rp-comp-0019", "s": "computer", "t": "internet_networking", "d": 3,
+  "id": "rp-comp-0019",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 3,
   "q_hi": "ईमेल भेजने के लिए मुख्य रूप से किस प्रोटोकॉल (protocol) का प्रयोग किया जाता है?",
   "q_en": "Which protocol is mainly used for sending email?",
-  "o_hi": ["HTTP", "DNS", "SMTP", "FTP"],
-  "o_en": ["HTTP", "DNS", "SMTP", "FTP"],
+  "o_hi": [
+   "HTTP",
+   "DNS",
+   "SMTP",
+   "FTP"
+  ],
+  "o_en": [
+   "HTTP",
+   "DNS",
+   "SMTP",
+   "FTP"
+  ],
   "a": 2,
   "e_hi": "SMTP (Simple Mail Transfer Protocol) का प्रयोग ईमेल भेजने के लिए किया जाता है। HTTP वेबपेज देखने के लिए, DNS डोमेन नाम को IP पते में बदलने के लिए और FTP फ़ाइल स्थानांतरण के लिए प्रयोग होता है।",
   "e_en": "SMTP (Simple Mail Transfer Protocol) is used to send email. HTTP is used to access webpages, DNS translates domain names into IP addresses, and FTP is used for file transfer."
  },
  {
-  "id": "rp-comp-0020", "s": "computer", "t": "financial_awareness", "d": 1,
+  "id": "rp-comp-0020",
+  "s": "computer",
+  "t": "financial_awareness",
+  "d": 1,
   "q_hi": "बैंकों के बीच धन हस्तांतरण के लिए प्रयोग होने वाली प्रणाली 'NEFT' का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of NEFT, a system used for transferring funds between banks?",
-  "o_hi": ["National Electronic Fund Transaction", "Net Electronic Funds Transfer", "National Electronic Funds Transfer", "National Exchange Funds Transfer"],
-  "o_en": ["National Electronic Fund Transaction", "Net Electronic Funds Transfer", "National Electronic Funds Transfer", "National Exchange Funds Transfer"],
+  "o_hi": [
+   "National Electronic Fund Transaction",
+   "Net Electronic Funds Transfer",
+   "National Electronic Funds Transfer",
+   "National Exchange Funds Transfer"
+  ],
+  "o_en": [
+   "National Electronic Fund Transaction",
+   "Net Electronic Funds Transfer",
+   "National Electronic Funds Transfer",
+   "National Exchange Funds Transfer"
+  ],
   "a": 2,
   "e_hi": "NEFT का पूर्ण रूप National Electronic Funds Transfer है। यह भारतीय रिज़र्व बैंक (RBI) द्वारा संचालित एक प्रणाली है जो एक बैंक खाते से दूसरे बैंक खाते में इलेक्ट्रॉनिक रूप से धन हस्तांतरित करती है।",
   "e_en": "NEFT stands for National Electronic Funds Transfer. It is a system operated under the Reserve Bank of India (RBI) that electronically transfers funds from one bank account to another."
  },
  {
-  "id": "rp-comp-0021", "s": "computer", "t": "financial_awareness", "d": 1,
+  "id": "rp-comp-0021",
+  "s": "computer",
+  "t": "financial_awareness",
+  "d": 1,
   "q_hi": "RBI का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of RBI?",
-  "o_hi": ["Regional Bank of India", "Royal Bank of India", "Rural Bank of India", "Reserve Bank of India"],
-  "o_en": ["Regional Bank of India", "Royal Bank of India", "Rural Bank of India", "Reserve Bank of India"],
+  "o_hi": [
+   "Regional Bank of India",
+   "Royal Bank of India",
+   "Rural Bank of India",
+   "Reserve Bank of India"
+  ],
+  "o_en": [
+   "Regional Bank of India",
+   "Royal Bank of India",
+   "Rural Bank of India",
+   "Reserve Bank of India"
+  ],
   "a": 3,
   "e_hi": "RBI का पूर्ण रूप Reserve Bank of India है, जो भारत का केंद्रीय बैंक है और मुद्रा जारी करने तथा मौद्रिक नीति को नियंत्रित करने के लिए उत्तरदायी है।",
   "e_en": "RBI stands for Reserve Bank of India, the country's central bank, responsible for issuing currency and regulating monetary policy.",
@@ -214,53 +487,601 @@
   "fact_en": "The RBI was established on 1 April 1935."
  },
  {
-  "id": "rp-comp-0022", "s": "computer", "t": "financial_awareness", "d": 2,
+  "id": "rp-comp-0022",
+  "s": "computer",
+  "t": "financial_awareness",
+  "d": 2,
   "q_hi": "IMPS, जो 24x7 तत्काल धन हस्तांतरण की सुविधा देता है, का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of IMPS, which enables instant 24x7 fund transfer?",
-  "o_hi": ["Interbank Mobile Payment Service", "Internet Money Payment System", "Immediate Payment Service", "Instant Mobile Payment Service"],
-  "o_en": ["Interbank Mobile Payment Service", "Internet Money Payment System", "Immediate Payment Service", "Instant Mobile Payment Service"],
+  "o_hi": [
+   "Interbank Mobile Payment Service",
+   "Internet Money Payment System",
+   "Immediate Payment Service",
+   "Instant Mobile Payment Service"
+  ],
+  "o_en": [
+   "Interbank Mobile Payment Service",
+   "Internet Money Payment System",
+   "Immediate Payment Service",
+   "Instant Mobile Payment Service"
+  ],
   "a": 2,
   "e_hi": "IMPS का पूर्ण रूप Immediate Payment Service है, जो 24 घंटे और सातों दिन तत्काल अंतर-बैंक इलेक्ट्रॉनिक धन हस्तांतरण की सुविधा प्रदान करता है।",
   "e_en": "IMPS stands for Immediate Payment Service, which allows instant interbank electronic fund transfer available 24x7, including holidays."
  },
  {
-  "id": "rp-comp-0023", "s": "computer", "t": "financial_awareness", "d": 2,
+  "id": "rp-comp-0023",
+  "s": "computer",
+  "t": "financial_awareness",
+  "d": 2,
   "q_hi": "ATM का पूर्ण रूप क्या है?",
   "q_en": "What is the full form of ATM?",
-  "o_hi": ["Automatic Transaction Machine", "Automated Teller Machine", "Automated Transfer Machine", "Automatic Teller Money"],
-  "o_en": ["Automatic Transaction Machine", "Automated Teller Machine", "Automated Transfer Machine", "Automatic Teller Money"],
+  "o_hi": [
+   "Automatic Transaction Machine",
+   "Automated Teller Machine",
+   "Automated Transfer Machine",
+   "Automatic Teller Money"
+  ],
+  "o_en": [
+   "Automatic Transaction Machine",
+   "Automated Teller Machine",
+   "Automated Transfer Machine",
+   "Automatic Teller Money"
+  ],
   "a": 1,
   "e_hi": "ATM का पूर्ण रूप Automated Teller Machine है, जो ग्राहकों को बिना बैंक कर्मचारी की सहायता के नकद निकासी और अन्य बुनियादी बैंकिंग कार्य करने देता है।",
   "e_en": "ATM stands for Automated Teller Machine, which allows customers to withdraw cash and perform basic banking tasks without the help of a bank staff member."
  },
  {
-  "id": "rp-comp-0024", "s": "computer", "t": "cyber_security", "d": 1,
+  "id": "rp-comp-0024",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
   "q_hi": "कंप्यूटर वायरस (virus) क्या है?",
   "q_en": "What is a computer virus?",
-  "o_hi": ["एक हार्डवेयर उपकरण", "एक इंटरनेट ब्राउज़र", "एक दुर्भावनापूर्ण (malicious) प्रोग्राम जो फ़ाइलों को नुकसान पहुँचाता है", "एक सर्च इंजन"],
-  "o_en": ["A hardware device", "An internet browser", "A malicious program that damages files", "A search engine"],
+  "o_hi": [
+   "एक हार्डवेयर उपकरण",
+   "एक इंटरनेट ब्राउज़र",
+   "एक दुर्भावनापूर्ण (malicious) प्रोग्राम जो फ़ाइलों को नुकसान पहुँचाता है",
+   "एक सर्च इंजन"
+  ],
+  "o_en": [
+   "A hardware device",
+   "An internet browser",
+   "A malicious program that damages files",
+   "A search engine"
+  ],
   "a": 2,
   "e_hi": "कंप्यूटर वायरस एक दुर्भावनापूर्ण सॉफ्टवेयर प्रोग्राम है जो स्वयं की प्रतियाँ बनाकर फैलता है और फ़ाइलों व सिस्टम को नुकसान पहुँचा सकता है। इससे बचाव के लिए एंटीवायरस सॉफ्टवेयर का प्रयोग किया जाता है।",
   "e_en": "A computer virus is a malicious software program that replicates itself and spreads, potentially damaging files and the system. Antivirus software is used to protect against it."
  },
  {
-  "id": "rp-comp-0025", "s": "computer", "t": "cyber_security", "d": 2,
+  "id": "rp-comp-0025",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
   "q_hi": "निम्नलिखित में से कौन-सी एक मजबूत (strong) पासवर्ड की विशेषता है?",
   "q_en": "Which of the following is a feature of a strong password?",
-  "o_hi": ["केवल जन्मतिथि", "अक्षरों, अंकों और विशेष चिह्नों (special characters) का मिश्रण", "केवल नाम", "'password' शब्द का प्रयोग"],
-  "o_en": ["Only a date of birth", "A mix of letters, numbers and special characters", "Only a name", "Using the word 'password'"],
+  "o_hi": [
+   "केवल जन्मतिथि",
+   "अक्षरों, अंकों और विशेष चिह्नों (special characters) का मिश्रण",
+   "केवल नाम",
+   "'password' शब्द का प्रयोग"
+  ],
+  "o_en": [
+   "Only a date of birth",
+   "A mix of letters, numbers and special characters",
+   "Only a name",
+   "Using the word 'password'"
+  ],
   "a": 1,
   "e_hi": "एक मजबूत पासवर्ड में बड़े व छोटे अक्षर, अंक और विशेष चिह्नों का मिश्रण होना चाहिए, जिससे उसे अनुमान लगाकर तोड़ना कठिन हो जाता है। जन्मतिथि या सामान्य शब्दों का प्रयोग असुरक्षित माना जाता है।",
   "e_en": "A strong password should combine uppercase and lowercase letters, numbers, and special characters, making it hard to guess or crack. Using a date of birth or common words is considered insecure."
  },
  {
-  "id": "rp-comp-0026", "s": "computer", "t": "cyber_security", "d": 3,
+  "id": "rp-comp-0026",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
   "q_hi": "'फिशिंग (Phishing)' शब्द किससे संबंधित है?",
   "q_en": "What is the term 'Phishing' related to?",
-  "o_hi": ["कंप्यूटर की गति बढ़ाना", "डेटा को कंप्रेस करना", "नेटवर्क स्पीड जाँचना", "धोखाधड़ी से व्यक्तिगत जानकारी (जैसे पासवर्ड) चुराने का प्रयास"],
-  "o_en": ["Increasing computer speed", "Compressing data", "Checking network speed", "An attempt to fraudulently steal personal information (such as passwords)"],
+  "o_hi": [
+   "कंप्यूटर की गति बढ़ाना",
+   "डेटा को कंप्रेस करना",
+   "नेटवर्क स्पीड जाँचना",
+   "धोखाधड़ी से व्यक्तिगत जानकारी (जैसे पासवर्ड) चुराने का प्रयास"
+  ],
+  "o_en": [
+   "Increasing computer speed",
+   "Compressing data",
+   "Checking network speed",
+   "An attempt to fraudulently steal personal information (such as passwords)"
+  ],
   "a": 3,
   "e_hi": "फिशिंग एक साइबर अपराध तकनीक है जिसमें अपराधी नकली ईमेल या वेबसाइट के माध्यम से उपयोगकर्ताओं को धोखा देकर उनके पासवर्ड, बैंक विवरण जैसी संवेदनशील जानकारी चुराने का प्रयास करते हैं।",
   "e_en": "Phishing is a cybercrime technique where attackers use fake emails or websites to trick users into revealing sensitive information such as passwords or bank details."
+ },
+ {
+  "id": "rp-com-o00027",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "पावरपॉइंट का निर्माण किसने किया?",
+  "q_en": "Who created PowerPoint?",
+  "o_hi": [
+   "बिल गेट्स",
+   "पॉल एलन",
+   "चार्ल्स सिमोन्यी",
+   "सत्या नडेला"
+  ],
+  "o_en": [
+   "Bill Gates",
+   "Paul Allen",
+   "Charles Simonyi",
+   "Satya Nadella"
+  ],
+  "a": 2,
+  "e_hi": "चार्ल्स सिमोन्यी ने पावरपॉइंट का विकास किया।",
+  "e_en": "Charles Simonyi developed PowerPoint."
+ },
+ {
+  "id": "rp-com-o00028",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "माइक्रोसॉफ्ट ऑफिस विंडोज़ के लिए पहली बार किस वर्ष जारी हुआ?",
+  "q_en": "In which year was Microsoft Office first released for Windows?",
+  "o_hi": [
+   "1989",
+   "1990",
+   "1991",
+   "1992"
+  ],
+  "o_en": [
+   "1989",
+   "1990",
+   "1991",
+   "1992"
+  ],
+  "a": 1,
+  "e_hi": "माइक्रोसॉफ्ट ऑफिस 1990 में विंडोज़ के लिए जारी हुआ।",
+  "e_en": "Microsoft Office was first released for Windows in 1990."
+ },
+ {
+  "id": "rp-com-o00029",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "कौन सा MS Office अनुप्रयोग मुख्य रूप से स्प्रेडशीट बनाने के लिए उपयोग किया जाता है?",
+  "q_en": "Which MS Office application is primarily used for creating spreadsheets?",
+  "o_hi": [
+   "Word",
+   "PowerPoint",
+   "Excel",
+   "Access"
+  ],
+  "o_en": [
+   "Word",
+   "PowerPoint",
+   "Excel",
+   "Access"
+  ],
+  "a": 2,
+  "e_hi": "Excel को स्प्रेडशीट बनाने और डेटा विश्लेषण के लिए विशेष रूप से डिज़ाइन किया गया है।",
+  "e_en": "Excel is specifically designed for creating spreadsheets and data analysis."
+ },
+ {
+  "id": "rp-com-o00030",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
+  "q_hi": "MS Word में, चयनित पाठ पर शीर्षक शैली लागू करने के लिए कौन सा कमांड उपयोग किया जाता है?",
+  "q_en": "In MS Word, which command is used to apply a heading style to selected text?",
+  "o_hi": [
+   "Font",
+   "Paragraph",
+   "Styles",
+   "Layout"
+  ],
+  "o_en": [
+   "Font",
+   "Paragraph",
+   "Styles",
+   "Layout"
+  ],
+  "a": 2,
+  "e_hi": "‘Styles’ टैब में शीर्षक शैली चुनने से चयनित पाठ पर पूर्वनिर्धारित फॉर्मेट लागू होता है।",
+  "e_en": "Choosing a heading style from the ‘Styles’ tab applies a predefined format to the selected text."
+ },
+ {
+  "id": "rp-com-o00031",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 3,
+  "q_hi": "Excel में फ़ंक्शन =SUMIF(range, criteria, sum_range) क्या करता है?",
+  "q_en": "In Excel, what does the function =SUMIF(range, criteria, sum_range) do?",
+  "o_hi": [
+   "सभी कोशिकाओं को जोड़ता है",
+   "निर्धारित मानदंडों को पूरा करने वाली कोशिकाओं के समकक्ष sum_range की कोशिकाओं को जोड़ता है",
+   "sum_range की कोशिकाओं को जोड़ता है जो मानदंडों को पूरा करती हैं",
+   "मानदंडों को पूरा करने वाली कोशिकाओं की संख्या लौटाता है"
+  ],
+  "o_en": [
+   "Adds all cells",
+   "Adds cells in sum_range that correspond to cells in range meeting criteria",
+   "Adds cells in sum_range that meet criteria",
+   "Returns count of cells meeting criteria"
+  ],
+  "a": 1,
+  "e_hi": "यह फ़ंक्शन उन कोशिकाओं को जोड़ता है जो निर्दिष्ट मानदंडों को पूरा करती हैं और उनके समकक्ष sum_range की कोशिकाओं का योग देता है।",
+  "e_en": "This function sums cells that meet specified criteria and returns the sum of corresponding cells in sum_range."
+ },
+ {
+  "id": "rp-com-o00032",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "PowerPoint प्रस्तुतियों के लिए कौन सा फ़ाइल एक्सटेंशन उपयोग किया जाता है?",
+  "q_en": "Which file extension is used for PowerPoint presentations?",
+  "o_hi": [
+   ".docx",
+   ".pptx",
+   ".xlsx",
+   ".pptm"
+  ],
+  "o_en": [
+   ".docx",
+   ".pptx",
+   ".xlsx",
+   ".pptm"
+  ],
+  "a": 1,
+  "e_hi": "PowerPoint प्रस्तुतियों के लिए .pptx फ़ाइल फ़ॉर्मेट मानक है।",
+  "e_en": "The .pptx file format is the standard for PowerPoint presentations."
+ },
+ {
+  "id": "rp-com-o00033",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
+  "q_hi": "Access में प्राथमिक कुंजी क्या है?",
+  "q_en": "What is a primary key in Access?",
+  "o_hi": [
+   "एक फ़ील्ड जो डुप्लिकेट मानों की अनुमति देता है",
+   "एक फ़ील्ड जो प्रत्येक रिकॉर्ड को अद्वितीय रूप से पहचानता है",
+   "एक तालिका जो डेटा रखती है",
+   "एक क्वेरी जो डेटा लौटाती है"
+  ],
+  "o_en": [
+   "A field that allows duplicate values",
+   "A field that uniquely identifies each record",
+   "A table that holds data",
+   "A query that returns data"
+  ],
+  "a": 1,
+  "e_hi": "प्राथमिक कुंजी वह फ़ील्ड है जो प्रत्येक रिकॉर्ड को अद्वितीय रूप से पहचानती है।",
+  "e_en": "A primary key is a field that uniquely identifies each record."
+ },
+ {
+  "id": "rp-com-o00034",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 3,
+  "q_hi": "Word में, दस्तावेज़ में किए गए परिवर्तनों को ट्रैक करने के लिए कौन सी सुविधा उपयोग की जाती है?",
+  "q_en": "In Word, which feature allows you to track changes made to a document?",
+  "o_hi": [
+   "Comments",
+   "Track Changes",
+   "Find & Replace",
+   "Smart Lookup"
+  ],
+  "o_en": [
+   "Comments",
+   "Track Changes",
+   "Find & Replace",
+   "Smart Lookup"
+  ],
+  "a": 1,
+  "e_hi": "‘Track Changes’ सुविधा दस्तावेज़ में किए गए सभी परिवर्तनों को दिखाती है।",
+  "e_en": "The ‘Track Changes’ feature shows all changes made in the document."
+ },
+ {
+  "id": "rp-com-o00035",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "कौन सा MS Office उपकरण चार्ट बनाने के लिए उपयोग किया जाता है?",
+  "q_en": "Which MS Office tool is used to create charts?",
+  "o_hi": [
+   "Excel",
+   "Word",
+   "PowerPoint",
+   "Outlook"
+  ],
+  "o_en": [
+   "Excel",
+   "Word",
+   "PowerPoint",
+   "Outlook"
+  ],
+  "a": 0,
+  "e_hi": "चार्ट बनाने के लिए Excel का उपयोग किया जाता है।",
+  "e_en": "Excel is used to create charts."
+ },
+ {
+  "id": "rp-com-o00036",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
+  "q_hi": "PowerPoint में, शीर्षक और उपशीर्षक के लिए कौन सा स्लाइड लेआउट सबसे उपयुक्त है?",
+  "q_en": "In PowerPoint, which slide layout is best for a title and subtitle?",
+  "o_hi": [
+   "Title Slide",
+   "Two Content",
+   "Comparison",
+   "Blank"
+  ],
+  "o_en": [
+   "Title Slide",
+   "Two Content",
+   "Comparison",
+   "Blank"
+  ],
+  "a": 0,
+  "e_hi": "‘Title Slide’ लेआउट में शीर्षक और उपशीर्षक दोनों के लिए स्थान होता है।",
+  "e_en": "The ‘Title Slide’ layout provides space for both title and subtitle."
+ },
+ {
+  "id": "rp-com-o00037",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "निम्न में से कौन सा फ़ाइल एक्सटेंशन वर्ड के डिफ़ॉल्ट फ़ाइल प्रकारों में से नहीं है?",
+  "q_en": "Which of the following is not a default file extension for Word documents?",
+  "o_hi": [
+   ".doc",
+   ".docx",
+   ".txt",
+   ".rtf"
+  ],
+  "o_en": [
+   ".doc",
+   ".docx",
+   ".txt",
+   ".rtf"
+  ],
+  "a": 2,
+  "e_hi": "वर्ड में डिफ़ॉल्ट फ़ाइल एक्सटेंशन .docx, .doc और .rtf हैं, .txt केवल साधारण टेक्स्ट के लिए इस्तेमाल होता है।",
+  "e_en": "Word defaults to .docx, .doc, and .rtf; .txt is only for plain text."
+ },
+ {
+  "id": "rp-com-o00038",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "MS Word में एक पत्र के ऊपर कंपनी का लोगो और नीचे पृष्ठ संख्या जोड़ने के लिए किस सुविधा का उपयोग किया जाता है?",
+  "q_en": "Which feature is used in MS Word to add a company logo at the top and page numbers at the bottom of a letter?",
+  "o_hi": [
+   "Insert > Header",
+   "Insert > Footer",
+   "Insert > Page Numbers",
+   "Insert > Quick Parts"
+  ],
+  "o_en": [
+   "Insert > Header",
+   "Insert > Footer",
+   "Insert > Page Numbers",
+   "Insert > Quick Parts"
+  ],
+  "a": 0,
+  "e_hi": "Header में चित्र जोड़कर और Footer में पृष्ठ संख्या डालकर यह कार्य किया जाता है।",
+  "e_en": "The Header is used to insert the company logo and the Footer to insert page numbers."
+ },
+ {
+  "id": "rp-com-o00039",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "Excel शीट में 10 पंक्तियों और 5 स्तंभों की तालिका जोड़ने के लिए कौन सा मेनू विकल्प सही है?",
+  "q_en": "Which menu option correctly inserts a table of 10 rows and 5 columns in an Excel sheet?",
+  "o_hi": [
+   "Insert > Table",
+   "Insert > Chart",
+   "Insert > PivotTable",
+   "Insert > Data Table"
+  ],
+  "o_en": [
+   "Insert > Table",
+   "Insert > Chart",
+   "Insert > PivotTable",
+   "Insert > Data Table"
+  ],
+  "a": 0,
+  "e_hi": "Insert > Table विकल्प से आप तालिका का आकार और स्थान चुन सकते हैं।",
+  "e_en": "The Insert > Table option allows you to specify the size and location of the table."
+ },
+ {
+  "id": "rp-com-o00040",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "PowerPoint में किसी स्लाइड पर सभी शीर्षकों को एक ही फ़ॉन्ट में बदलने के लिए कौन सा टूल उपयोग करें?",
+  "q_en": "Which tool in PowerPoint changes all headings on a slide to the same font?",
+  "o_hi": [
+   "Format Painter",
+   "Text Box",
+   "Replace Font",
+   "Slide Master"
+  ],
+  "o_en": [
+   "Format Painter",
+   "Text Box",
+   "Replace Font",
+   "Slide Master"
+  ],
+  "a": 2,
+  "e_hi": "Replace Font विकल्प से आप एक ही फ़ॉन्ट सभी शीर्षकों पर लागू कर सकते हैं।",
+  "e_en": "The Replace Font option allows you to apply a single font to all headings."
+ },
+ {
+  "id": "rp-com-o00041",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 1,
+  "q_hi": "OneNote में नोट को PDF के रूप में सहेजने के लिए कौन सा विकल्प चुनें?",
+  "q_en": "Which option saves a OneNote note as a PDF?",
+  "o_hi": [
+   "File > Export > PDF",
+   "File > Save As > PDF",
+   "File > Print > PDF",
+   "File > Send > PDF"
+  ],
+  "o_en": [
+   "File > Export > PDF",
+   "File > Save As > PDF",
+   "File > Print > PDF",
+   "File > Send > PDF"
+  ],
+  "a": 0,
+  "e_hi": "Export > PDF विकल्प से नोट को PDF में सहेजा जा सकता है।",
+  "e_en": "Export > PDF option saves the note as a PDF."
+ },
+ {
+  "id": "rp-com-o00042",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
+  "q_hi": "Excel में दो अलग शीट्स के बीच किसी मान को खोजने के लिए कौन सा फ़ंक्शन इस्तेमाल करें?",
+  "q_en": "Which function is used in Excel to look up a value across two different sheets?",
+  "o_hi": [
+   "VLOOKUP",
+   "HLOOKUP",
+   "INDEX",
+   "MATCH"
+  ],
+  "o_en": [
+   "VLOOKUP",
+   "HLOOKUP",
+   "INDEX",
+   "MATCH"
+  ],
+  "a": 0,
+  "e_hi": "VLOOKUP फ़ंक्शन दूसरे शीट से मान खोजकर लौटाता है।",
+  "e_en": "VLOOKUP retrieves a value from another sheet."
+ },
+ {
+  "id": "rp-com-o00043",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
+  "q_hi": "PowerPoint में सभी स्लाइड्स पर एक ही पृष्ठभूमि और फ़ॉन्ट शैली लागू करने के लिए किस सुविधा का उपयोग करें?",
+  "q_en": "Which feature applies the same background and font style to all slides in PowerPoint?",
+  "o_hi": [
+   "Theme",
+   "Slide Master",
+   "Template",
+   "Layout"
+  ],
+  "o_en": [
+   "Theme",
+   "Slide Master",
+   "Template",
+   "Layout"
+  ],
+  "a": 1,
+  "e_hi": "Slide Master में बदलाव सभी स्लाइड्स पर लागू होते हैं।",
+  "e_en": "Changes in Slide Master reflect on all slides."
+ },
+ {
+  "id": "rp-com-o00044",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 2,
+  "q_hi": "Word में एक ही विषय पर कई पते पर पत्र भेजने के लिए कौन सी सुविधा उपयोगी है?",
+  "q_en": "Which feature in Word helps send letters to multiple addresses on the same topic?",
+  "o_hi": [
+   "Mail Merge",
+   "Find and Replace",
+   "Track Changes",
+   "Spell Check"
+  ],
+  "o_en": [
+   "Mail Merge",
+   "Find and Replace",
+   "Track Changes",
+   "Spell Check"
+  ],
+  "a": 0,
+  "e_hi": "Mail Merge से एक ही पत्र को विभिन्न पते पर भेजा जा सकता है।",
+  "e_en": "Mail Merge sends the same letter to different addresses."
+ },
+ {
+  "id": "rp-com-o00045",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 3,
+  "q_hi": "Excel में एक मैक्रो लिखने के लिए कौन सी VBA कमांड का उपयोग करें, जो डेटा एंट्री को स्वचालित करे?",
+  "q_en": "Which VBA command is used to write a macro that automates data entry in Excel?",
+  "o_hi": [
+   "Sub",
+   "Function",
+   "If",
+   "For"
+  ],
+  "o_en": [
+   "Sub",
+   "Function",
+   "If",
+   "For"
+  ],
+  "a": 0,
+  "e_hi": "Sub कमांड से मैक्रो की शुरुआत होती है।",
+  "e_en": "The Sub command starts a macro."
+ },
+ {
+  "id": "rp-com-o00046",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 3,
+  "q_hi": "PowerPoint में स्लाइड्स को तेजी से पुनर्व्यवस्थित करने के लिए कौन सा दृश्य उपयोग करें?",
+  "q_en": "Which view is used in PowerPoint to quickly reorder slides?",
+  "o_hi": [
+   "Normal",
+   "Slide Sorter",
+   "Reading View",
+   "Notes Page"
+  ],
+  "o_en": [
+   "Normal",
+   "Slide Sorter",
+   "Reading View",
+   "Notes Page"
+  ],
+  "a": 1,
+  "e_hi": "Slide Sorter दृश्य में आप स्लाइड्स को ड्रैग करके पुनर्व्यवस्थित कर सकते हैं।",
+  "e_en": "In Slide Sorter view, slides can be reordered by dragging."
+ },
+ {
+  "id": "rp-com-o00047",
+  "s": "computer",
+  "t": "ms_office",
+  "d": 3,
+  "q_hi": "Word में किसी शब्द को बोल्ड फ़ॉन्ट में खोजने के लिए कौन सा विकल्प उपयोग करें?",
+  "q_en": "Which option in Word allows searching for a word that is in bold font?",
+  "o_hi": [
+   "Find",
+   "Find and Replace",
+   "Find in",
+   "Find with formatting"
+  ],
+  "o_en": [
+   "Find",
+   "Find and Replace",
+   "Find in",
+   "Find with formatting"
+  ],
+  "a": 3,
+  "e_hi": "Find with formatting विकल्प में फ़ॉन्ट फ़ॉर्मेट चुनकर खोज की जाती है।",
+  "e_en": "Find with formatting lets you search by font style."
  }
 ]
