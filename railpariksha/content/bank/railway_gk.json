@@ -19345,5 +19345,2282 @@
   "a": 2,
   "e_hi": "ट्रेन को होम सिग्नल से एडवांस्ड स्टार्टर पार करने के लिए स्टेशन की लंबाई (1.2 किमी) और ट्रेन की अपनी लंबाई (0.6 किमी) दोनों को जोड़कर कुल 1.8 किमी की दूरी तय करनी होगी।",
   "e_en": "To completely clear the section, the front of the train must travel the distance between signals (1.2 km) plus the length of the train itself (0.6 km), totaling 1.8 km."
+ },
+ {
+  "id": "rp-rai-l00842",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेल में 'कवच' (Kavach) प्रणाली किस प्रकार की तकनीक पर आधारित है?",
+  "q_en": "On what type of technology is the 'Kavach' system in Indian Railways based?",
+  "o_hi": [
+   "केवल जीपीएस आधारित ट्रैकिंग",
+   "स्वदेशी स्वचालित ट्रेन सुरक्षा (ATP) प्रणाली",
+   "उपग्रह-नियंत्रित ऑटो-ब्रेकिंग सिस्टम",
+   "केवल स्टेशन सीमा के लिए रेडियो सिग्नलिंग"
+  ],
+  "o_en": [
+   "GPS-based tracking only",
+   "Indigenous Automatic Train Protection (ATP) system",
+   "Satellite-controlled auto-braking system",
+   "Radio signaling exclusively for station limits"
+  ],
+  "a": 1,
+  "e_hi": "कवच एक स्वदेशी रूप से विकसित स्वचालित ट्रेन सुरक्षा (ATP) प्रणाली है जो ट्रेन के ओवरस्पीडिंग और सिग्नल पासिंग एट डेंजर (SPAD) को रोकती है।",
+  "e_en": "Kavach is an indigenously developed Automatic Train Protection (ATP) system that prevents train overspeeding and Signal Passing at Danger (SPAD)."
+ },
+ {
+  "id": "rp-rai-l00843",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'फॉग सेफ डिवाइस' (Fog Safe Device) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a 'Fog Safe Device' in Indian Railways?",
+  "o_hi": [
+   "कोहरे के दौरान रेलवे ट्रैक को गर्म रखना",
+   "खराब दृश्यता में लोको पायलट को आगामी सिग्नलों की दूरी पहले से बताना",
+   "स्वचालित रूप से ट्रेन की गति को शून्य करना",
+   "कोहरे में पटरियों पर दरारों की पहचान करना"
+  ],
+  "o_en": [
+   "Keeping railway tracks warm during fog",
+   "GPS-based assistance to loco pilots providing advance warning of upcoming signals in poor visibility",
+   "Automatically reducing train speed to zero",
+   "Detecting cracks on tracks in foggy weather"
+  ],
+  "a": 1,
+  "e_hi": "फॉग सेफ डिवाइस जीपीएस-आधारित उपकरण है जो लोको पायलट को घने कोहरे के दौरान आगे आने वाले सिग्नलों और समपारों की दूरी पहले से प्रदर्शित करता है।",
+  "e_en": "The Fog Safe Device is a GPS-based tool that displays the distance to upcoming signals and level crossings in advance to loco pilots during dense fog."
+ },
+ {
+  "id": "rp-rai-l00844",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि किसी रेलवे सिग्नल पर दो पीली बत्तियाँ (Double Yellow Light) जल रही हैं, तो इसका क्या अर्थ है?",
+  "q_en": "What does a 'Double Yellow Light' on a railway signal indicate?",
+  "o_hi": [
+   "गाड़ी को पूरी गति से आगे बढ़ना चाहिए",
+   "अगला सिग्नल बंद (Red) है, अतः सतर्कता से आगे बढ़ें और अगला सिग्नल पास करें",
+   "अगला सिग्नल खुला है, लेकिन गाड़ी को मध्यम गति से चलना होगा",
+   "गाड़ी को तुरंत रोकना अनिवार्य है"
+  ],
+  "o_en": [
+   "Train should proceed at full speed",
+   "Attention: the next signal is showing 'Yellow' or restrictive aspect, so prepare to stop at the next signal",
+   "The next signal is green, proceed with caution",
+   "Mandatory immediate stop of the train"
+  ],
+  "a": 1,
+  "e_hi": "डबल येलो सिग्नल लोको पायलट को यह चेतावनी देता है कि अगला सिग्नल 'येलो' (सावधान) है, इसलिए ट्रेन की गति नियंत्रित रखें ताकि अगले सिग्नल पर रोका जा सके।",
+  "e_en": "A double yellow signal warns the loco pilot that the next signal is 'Yellow' (Caution), so they must control speed to be prepared to stop at the subsequent signal."
+ },
+ {
+  "id": "rp-rai-l00845",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'SPAD' (Signal Passing at Danger) शब्द किससे संबंधित है?",
+  "q_en": "What does the term 'SPAD' (Signal Passing at Danger) relate to in Indian Railways?",
+  "o_hi": [
+   "ट्रेन का निर्धारित समय से देरी से चलना",
+   "लोको पायलट द्वारा लाल (Danger) सिग्नल को पार कर जाना",
+   "यात्रियों की सुरक्षा के लिए अलार्म जंजीर खींचना",
+   "पटरियों पर अत्यधिक कंपन दर्ज होना"
+  ],
+  "o_en": [
+   "Train running behind schedule",
+   "A train passing a red/danger signal without authorization",
+   "Pulling the alarm chain for passenger safety",
+   "Excessive vibration recorded on tracks"
+  ],
+  "a": 1,
+  "e_hi": "SPAD का अर्थ 'सिग्नल पासिंग एट डेंजर' है, जो तब होता है जब कोई ट्रेन बिना अनुमति के लाल सिग्नल को पार कर जाती है, जो एक गंभीर सुरक्षा उल्लंघन है।",
+  "e_en": "SPAD stands for 'Signal Passing at Danger', which occurs when a train passes a red signal without authorization, representing a severe safety violation."
+ },
+ {
+  "id": "rp-rai-l00846",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "रंग-हल्के सिग्नल (Color Light Signals) प्रणाली में 'फ्लैशिंग येलो' (Flashing Yellow) बत्ती का क्या संकेत है?",
+  "q_en": "What does a 'Flashing Yellow' light indicate in the Color Light Signaling system?",
+  "o_hi": [
+   "लाइन पूरी तरह साफ है, बिना रुके निकलें",
+   "सावधान रहें, अगला सिग्नल खुला है लेकिन लूप लाइन में जाना है",
+   "गाड़ी को डायवर्ट किया जा रहा है और गति धीमी करनी होगी",
+   "रास्ता बंद है, तुरंत रुकें"
+  ],
+  "o_en": [
+   "Line is completely clear, pass without stopping",
+   "Proceed via main line with caution as the next signal is restrictive",
+   "Attention: proceed via turnout or loop line at restricted speed",
+   "Path is blocked, stop immediately"
+  ],
+  "a": 2,
+  "e_hi": "फ्लैशिंग येलो आम तौर पर यह संकेत देता है कि ट्रेन को किसी टर्नआउट या लूप लाइन पर डायवर्ट किया जा रहा है और तदनुसार गति कम रखनी चाहिए।",
+  "e_en": "Flashing yellow typically indicates that the train is being routed via a turnout or loop line, requiring restricted speed accordingly."
+ },
+ {
+  "id": "rp-rai-l00847",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'टॉरपीडो' (Torpedo ladle cars) वैगन मुख्य रूप से किस सामग्री के परिवहन के लिए उपयोग किए जाते हैं?",
+  "q_en": "Torpedo ladle cars in Indian Railways are primarily used for transporting which material?",
+  "o_hi": [
+   "तरल अवस्था में पिघला हुआ कच्चा लोहा (Molten Pig Iron)",
+   "खतरनाक रसायन और ज्वलनशील ईंधन",
+   "अत्यधिक भारी सैन्य उपकरण",
+   "खुला कोयला और अयस्क"
+  ],
+  "o_en": [
+   "Molten Pig Iron",
+   "Hazardous chemicals and flammable fuel",
+   "Extremely heavy military equipment",
+   "Loose coal and ores"
+  ],
+  "a": 1,
+  "e_hi": "टॉरपीडो कारें विशेष रूप से स्टील प्लांटों के बीच पिघले हुए कच्चे लोहे को उच्च तापमान पर सुरक्षित रूप से ले जाने के लिए डिज़ाइन की गई बेलनाकार वैगन होती हैं।",
+  "e_en": "Torpedo cars are specially designed cylindrical rail wagons used to transport molten pig iron at high temperatures safely between steel plants."
+ },
+ {
+  "id": "rp-rai-l00848",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "ट्रेन संचालन के दौरान 'डेटोनेटर' (Detonators / Fog Signals) का उपयोग रेलवे सुरक्षा में किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "For what purpose are 'Detonators' (Fog Signals) used in railway safety during operations?",
+  "o_hi": [
+   "ट्रेन की पटरियों को आपस में जोड़ने के लिए",
+   "अंधेरे या कोहरे में ऑडियो चेतावनी (धमाके की आवाज) के जरिए लोको पायलट को खतरे से आगाह करना",
+   "ट्रेन के पहियों की गति मापने के लिए",
+   "इंजन में आग लगने पर आपातकालीन चेतावनी देने के लिए"
+  ],
+  "o_en": [
+   "To weld railway tracks together",
+   "To provide an audible warning (explosion sound) to loco pilots regarding an obstruction or danger ahead in poor visibility",
+   "To measure the speed of train wheels",
+   "To give an emergency warning if the engine catches fire"
+  ],
+  "a": 1,
+  "e_hi": "डेटोनेटर (जिन्हें फॉग सिग्नल भी कहते हैं) को पटरी पर रखा जाता है; जब ट्रेन का पहिया इन पर से गुजरता है, तो तेज धमाका होता है जिससे लोको पायलट तुरंत ब्रेक लगा देता है।",
+  "e_en": "Detonators (fog signals) are placed on the track; when a train wheel runs over them, they produce a loud report, alerting the loco pilot to brake immediately in emergencies."
+ },
+ {
+  "id": "rp-rai-l00849",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'लूप लाइन' (Loop Line) का मुख्य उपयोग क्या होता है?",
+  "q_en": "What is the primary use of a 'Loop Line' in Indian Railways?",
+  "o_hi": [
+   "अति-तीव्र गति से चलने वाली ट्रेनों को सीधे गुजारना",
+   "मुख्य लाइन को खाली करने के लिए मालगाड़ियों या अन्य ट्रेनों को खड़ा करना या क्रॉसिंग कराना",
+   "केवल इंजन बदलने (Loco reversal) के लिए",
+   "रेलवे वर्कशॉप तक ट्रेन ले जाने के लिए"
+  ],
+  "o_en": [
+   "To run ultra-high-speed trains directly",
+   "To stable, cross, or hold trains (like goods trains) to keep the main running line clear",
+   "Exclusively for loco reversal",
+   "To transport trains to railway workshops"
+  ],
+  "a": 1,
+  "e_hi": "लूप लाइनें स्टेशन पर मुख्य लाइन के समानांतर बनी पटरियाँ होती हैं, जिनका उपयोग ट्रेनों को पार्क करने, क्रॉसिंग कराने या मालगाड़ियों को साइड में खड़ा करने के लिए किया जाता है ताकि मुख्य लाइन निर्बाध रहे।",
+  "e_en": "Loop lines run parallel to the main running lines at stations and are used for crossing, overtaking, or holding trains to keep the main line clear."
+ },
+ {
+  "id": "rp-rai-l00850",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे प्रणाली में 'एक्स्ल काउंटर' (Axle Counter) का उपयोग सुरक्षा की दृष्टि से कहाँ और क्यों किया जाता है?",
+  "q_en": "Where and why is an 'Axle Counter' used in Indian Railway systems from a safety perspective?",
+  "o_hi": [
+   "इंजन के पहियों के घिसाव को मापने के लिए",
+   "ट्रेन के डिब्बों की गिनती कर यह सुनिश्चित करने के लिए कि कोई डिब्बा रास्ते में छूटा तो नहीं (Block section clearance)",
+   "प्लेटफॉर्म पर उतरने वाले यात्रियों की संख्या गिनने के लिए",
+   "ट्रेन की अधिकतम गति दर्ज करने के लिए"
+  ],
+  "o_en": [
+   "To measure wear and tear of engine wheels",
+   "To verify track/block section clearance by counting entering and exiting wheel axles",
+   "To count passengers alighting on platforms",
+   "To record the maximum speed of a train"
+  ],
+  "a": 1,
+  "e_hi": "एक्स्ल काउंटर ट्रैक सर्किट के विकल्प के रूप में ट्रैक खंड पर प्रवेश करने वाले और बाहर निकलने वाले पहियों (axles) की गिनती करके यह कंफर्म करते हैं कि पूरा ट्रेन खंड खाली है या नहीं।",
+  "e_en": "Axle counters are electronic devices used to verify whether a track section is clear of trains by counting the number of axles entering and leaving the section."
+ },
+ {
+  "id": "rp-rai-l00851",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "रेलवे स्टेशनों पर प्रयोग होने वाले 'इन्टरलॉकिंग' (Interlocking) सिस्टम का मुख्य सुरक्षा सिद्धांत क्या है?",
+  "q_en": "What is the core safety principle of the 'Interlocking' system used at railway stations?",
+  "o_hi": [
+   "बिजली की बचत करना",
+   "सिग्नल और पॉइंट्स (पटरियों के कांटे) के बीच ऐसा तालमेल बिठाना कि विरोधाभासी या असुरक्षित रास्ते पर सिग्नल हरा न हो सके",
+   "ट्रेनों के आगमन और प्रस्थान का समय स्वचालित रूप से रिकॉर्ड करना",
+   "केवल रात के समय सिग्नलों की चमक बढ़ाना"
+  ],
+  "o_en": [
+   "To save electricity at stations",
+   "To arrange a foolproof mechanism between signals and points so conflicting routes cannot be cleared simultaneously",
+   "To automatically record arrival and departure times",
+   "To increase signal brightness only at night"
+  ],
+  "a": 1,
+  "e_hi": "इन्टरलॉकिंग एक सुरक्षा व्यवस्था है जो यह सुनिश्चित करती है कि जब तक पॉइंट्स सही स्थिति में न हों और विरोधाभासी रास्ते बंद न हों, तब तक सिग्नल को 'Proceed' (हरा) नहीं किया जा सके।",
+  "e_en": "Interlocking is a safety arrangement ensuring that signals cannot be cleared for a train unless the points are correctly set and conflicting routes are locked against movement."
+ },
+ {
+  "id": "rp-rai-l00852",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि एक ट्रेन 72 किमी/घंटा की गति से चल रही है और चालक को 1.2 किमी दूर एक लाल सिग्नल दिखाई देता है, तो न्यूनतम मंदन (retardation) क्या होना चाहिए ताकि ट्रेन सिग्नल से ठीक पहले रुक जाए?",
+  "q_en": "If a train is running at a speed of 72 km/h and the driver spots a red signal 1.2 km ahead, what should be the minimum retardation so that the train stops just before the signal?",
+  "o_hi": [
+   "0.133 मी/से²",
+   "0.167 मी/से²",
+   "0.200 मी/से²",
+   "0.250 मी/से²"
+  ],
+  "o_en": [
+   "0.133 m/s²",
+   "0.167 m/s²",
+   "0.200 m/s²",
+   "0.250 m/s²"
+  ],
+  "a": 1,
+  "e_hi": "गति v = 72 किमी/घंटा = 20 मी/से है। सूत्र v² = u² - 2as (जहाँ अंतिम वेग v=0, प्रारंभिक वेग u=20, दूरी s=1200 मीटर) का उपयोग करने पर, a = (20)² / (2 × 1200) = 400 / 2400 = 0.167 मी/से² प्राप्त होता है।",
+  "e_en": "Speed v = 72 km/h = 20 m/s. Using the formula v² = u² - 2as (where final velocity v=0, initial velocity u=20, distance s=1200 meters), a = (20)² / (2 × 1200) = 400 / 2400 = 0.167 m/s²."
+ },
+ {
+  "id": "rp-rai-l00853",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे के नियमों के अनुसार, फॉगिंग के दौरान डेटोनेटर (पटाखे) को सामान्यतः सिग्नल से कितनी दूरी पर रखा जाता है?",
+  "q_en": "According to Indian Railways rules, at what distance from the signal are detonators generally placed during foggy weather?",
+  "o_hi": [
+   "270 मीटर",
+   "400 मीटर",
+   "540 मीटर",
+   "1200 मीटर"
+  ],
+  "o_en": [
+   "270 meters",
+   "400 meters",
+   "540 meters",
+   "1200 meters"
+  ],
+  "a": 2,
+  "e_hi": "कम दृश्यता या फॉग के दौरान, लोको पायलट को चेतावनी देने के लिए होम या आउटर सिग्नल से 540 मीटर की दूरी पर डेटोनेटर (पटाखे) लगाए जाते हैं।",
+  "e_en": "During low visibility or fog, detonators are placed at a distance of 540 meters from the home or outer signal to warn the loco pilot."
+ },
+ {
+  "id": "rp-rai-l00854",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "यदि स्वचालित सिग्नल (Automatic Signal) 'रेड' (ऑन पोजीशन) दिखाता है, तो मालगाड़ी के लोको पायलट को सिग्नल पार करने से पहले कितनी देर रुकना अनिवार्य है?",
+  "q_en": "If an automatic signal shows 'Red' (On position), how long is the loco pilot of a goods train mandatory to wait before passing the signal?",
+  "o_hi": [
+   "1 मिनट",
+   "2 मिनट",
+   "5 मिनट",
+   "10 मिनट"
+  ],
+  "o_en": [
+   "1 minute",
+   "2 minutes",
+   "5 minutes",
+   "10 minutes"
+  ],
+  "a": 1,
+  "e_hi": "सामान्य नियमों (GR 9.02) के अनुसार, स्वचालित लाल सिग्नल के सामने मालगाड़ी के चालक को 1 मिनट (और यात्री ट्रेन के मामले में 2 मिनट) रुकना पड़ता है, फिर कॉशन के साथ आगे बढ़ना होता है।",
+  "e_en": "As per General Rules (GR 9.02), a goods train driver must stop for 1 minute (and passenger train for 2 minutes) in front of an automatic red signal before proceeding with caution."
+ },
+ {
+  "id": "rp-rai-l00855",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "कवच (KAVACH) स्वचालित ट्रेन सुरक्षा प्रणाली में, यदि लोकोमोटिव निर्धारित दूरी या गति सीमा का उल्लंघन करता है, तो ब्रेक स्वतः लग जाते हैं। यह किस तकनीक पर आधारित है?",
+  "q_en": "In the KAVACH Automatic Train Protection system, brakes are applied automatically if the locomotive violates the specified distance or speed limit. This is based on which technology?",
+  "o_hi": [
+   "रेडियो फ्रीक्वेंसी आइडेंटिफिकेशन (RFID)",
+   "जीपीएस आधारित उपग्रह संचार",
+   "ऑप्टिकल फाइबर केबल ट्रांसमिशन",
+   "इलेक्ट्रोमैकेनिकल ट्रैक ट्रिप"
+  ],
+  "o_en": [
+   "Radio Frequency Identification (RFID)",
+   "GPS-based satellite communication",
+   "Optical fiber cable transmission",
+   "Electromechanical track trip"
+  ],
+  "a": 0,
+  "e_hi": "कवच प्रणाली ट्रैक पर स्थापित RFID टैग्स और लोकोमोटिव पर लगे एंटीना के माध्यम से लगातार ट्रेन की सटीक स्थिति और गति की निगरानी करती है और आवश्यकता पर स्वतः ब्रेक लगाती है।",
+  "e_en": "The KAVACH system continuously monitors the exact position and speed of the train using RFID tags installed on the track and an antenna on the locomotive, applying brakes automatically when necessary."
+ },
+ {
+  "id": "rp-rai-l00856",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में पटरी की मानक ब्रॉड गेज (BG) लाइन पर दो पटरियों के बीच की आंतरिक दूरी (Gauge) कितनी होती है?",
+  "q_en": "What is the inner distance (Gauge) between the two rails on a standard Broad Gauge (BG) line of Indian Railways?",
+  "o_hi": [
+   "1000 मिमी",
+   "1435 मिमी",
+   "1676 मिमी",
+   "1760 मिमी"
+  ],
+  "o_en": [
+   "1000 mm",
+   "1435 mm",
+   "1676 mm",
+   "1760 mm"
+  ],
+  "a": 2,
+  "e_hi": "भारतीय रेलवे में ब्रॉड गेज (BG) के लिए दो पटरियों के आंतरिक सिरों के बीच की मानक दूरी 1676 मिलीमीटर (5 फीट 6 इंच) होती है।",
+  "e_en": "The standard inner distance between the two rails for Broad Gauge (BG) in Indian Railways is 1676 millimeters (5 feet 6 inches)."
+ },
+ {
+  "id": "rp-rai-l00857",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि किसी स्टेशन पर 'अटेंशन' या 'कॉशन' आदेश के तहत गति सीमा 30 किमी/घंटा निर्धारित की गई है, तो एक 150 मीटर लंबी ट्रेन को इस गति से 450 मीटर लंबे प्लेटफॉर्म को पूरी तरह पार करने में कितना समय लगेगा?",
+  "q_en": "If a speed limit of 30 km/h is prescribed under a caution order at a station, how long will a 150-meter-long train take to completely cross a 450-meter-long platform at this speed?",
+  "o_hi": [
+   "48 सेकंड",
+   "60 सेकंड",
+   "72 सेकंड",
+   "90 सेकंड"
+  ],
+  "o_en": [
+   "48 seconds",
+   "60 seconds",
+   "72 seconds",
+   "90 seconds"
+  ],
+  "a": 2,
+  "e_hi": "कुल दूरी = ट्रेन की लंबाई + प्लेटफॉर्म की लंबाई = 150 + 450 = 600 मीटर। गति = 30 किमी/घंटा = 30 × (5/18) = 25/3 मी/से। समय = दूरी / गति = 600 / (25/3) = (600 × 3) / 25 = 72 सेकंड।",
+  "e_en": "Total distance = Train length + Platform length = 150 + 450 = 600 meters. Speed = 30 km/h = 30 × (5/18) = 25/3 m/s. Time = Distance / Speed = 600 / (25/3) = (600 × 3) / 25 = 72 seconds."
+ },
+ {
+  "id": "rp-rai-l00858",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'हैंड सिग्नल' के दौरान रात के समय 'स्टॉप' (रुकने) का संकेत देने के लिए किस रंग की बत्ती का उपयोग किया जाता है?",
+  "q_en": "Which color light is used to show a 'Stop' hand signal during night time in Indian Railways?",
+  "o_hi": [
+   "पीला (Yellow)",
+   "हरा (Green)",
+   "लाल (Red)",
+   "नीला (Blue)"
+  ],
+  "o_en": [
+   "Yellow",
+   "Green",
+   "Red",
+   "Blue"
+  ],
+  "a": 2,
+  "e_hi": "भारतीय रेलवे के सामान्य नियमों के अनुसार, रात के समय 'स्टॉप' का संकेत देने के लिए लालटेन या टॉर्च की लाल बत्ती का उपयोग किया जाता है।",
+  "e_en": "As per the General Rules of Indian Railways, a red light from a hand lamp or torch is used to indicate 'Stop' during the night."
+ },
+ {
+  "id": "rp-rai-l00859",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "एक ट्रेन 54 किमी/घंटा की गति से चल रही है। आपातकालीन ब्रेक लगाने के बाद ट्रेन 10 सेकंड में रुक जाती है। ब्रेक लगाने के बाद ट्रेन द्वारा तय की गई दूरी (stopping distance) क्या होगी?",
+  "q_en": "A train is running at a speed of 54 km/h. After applying emergency brakes, the train stops in 10 seconds. What will be the stopping distance covered by the train after applying brakes?",
+  "o_hi": [
+   "75 मीटर",
+   "150 मीटर",
+   "225 मीटर",
+   "300 मीटर"
+  ],
+  "o_en": [
+   "75 meters",
+   "150 meters",
+   "225 meters",
+   "300 meters"
+  ],
+  "a": 0,
+  "e_hi": "प्रारंभिक वेग u = 54 किमी/घंटा = 15 मी/से, अंतिम वेग v = 0, समय t = 10 सेकंड। मंदन a = (v - u)/t = -15/10 = -1.5 मी/से²। दूरी s = ut + 0.5at² = (15 × 10) + 0.5 × (-1.5) × (100) = 150 - 75 = 75 मीटर।",
+  "e_en": "Initial velocity u = 54 km/h = 15 m/s, final velocity v = 0, time t = 10 seconds. Retardation a = (v - u)/t = -1.5 m/s². Distance s = ut + 0.5at² = (15 × 10) + 0.5 × (-1.5) × (100) = 150 - 75 = 75 meters."
+ },
+ {
+  "id": "rp-rai-l00860",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "ट्रेन संचालन में सुरक्षा सुनिश्चित करने के लिए एक्सल काउंटर (Axle Counter) का मुख्य कार्य क्या होता है?",
+  "q_en": "What is the primary function of an Axle Counter in ensuring safety during train operations?",
+  "o_hi": [
+   "ट्रेन की सटीक गति मापना",
+   "यह जांचना कि ट्रैक का एक विशिष्ट खंड (Block Section) ट्रेनों से पूरी तरह खाली है या नहीं",
+   "ओवरहेड तारों के वोल्टेज को नियंत्रित करना",
+   "सिग्नल लाइटों की बैटरी चार्ज करना"
+  ],
+  "o_en": [
+   "Measuring the exact speed of a train",
+   "Checking whether a specific block section of the track is completely clear of trains",
+   "Regulating the voltage of overhead wires",
+   "Charging the batteries of signal lights"
+  ],
+  "a": 1,
+  "e_hi": "एक्सल काउंटर एक इलेक्ट्रॉनिक उपकरण है जो ट्रैक के एक निश्चित खंड में प्रवेश करने वाले और बाहर निकलने वाले पहियों (एक्सल) की गिनती करके यह सुनिश्चित करता है कि खंड ट्रेनों से पूरी तरह मुक्त है।",
+  "e_en": "An axle counter is an electronic device that counts the axles entering and leaving a specific track section to ensure that the section is completely clear of trains."
+ },
+ {
+  "id": "rp-rai-l00861",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "यदि कोई गार्ड या स्टेशन मास्टर ट्रेन के पिछले हिस्से (Rear) से खतरे का संकेत देना चाहता है, तो वह किस प्रकार का दृश्य संकेत देगा?",
+  "q_en": "If a guard or station master wants to give a danger signal from the rear end of a train, which type of visual signal will they display?",
+  "o_hi": [
+   "दिन में सफेद झंडा और रात में सफेद बत्ती",
+   "दिन में लाल झंडा और रात में लाल बत्ती",
+   "दिन में हरा झंडा और रात में हरी बत्ती",
+   "दिन में पीला झंडा और रात में पीली बत्ती"
+  ],
+  "o_en": [
+   "White flag in day and white light at night",
+   "Red flag in day and red light at night",
+   "Green flag in day and green light at night",
+   "Yellow flag in day and yellow light at night"
+  ],
+  "a": 1,
+  "e_hi": "खतरे या 'स्टॉप' का सार्वभौमिक संकेत लाल रंग है, इसलिए दिन के समय लाल झंडा और रात में लाल बत्ती का उपयोग किया जाता है।",
+  "e_en": "The universal signal for danger or 'Stop' is red, therefore a red flag is used during the day and a red light at night."
+ },
+ {
+  "id": "rp-rai-l00862",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "इनमें से कौन सा सिग्नल भारतीय रेलवे में 'कॉलिंग-ऑन' (Calling-on) सिग्नल की मुख्य विशेषता को सही ढंग से दर्शाता है?",
+  "q_en": "Which of the following correctly describes the main characteristic of a 'Calling-on' signal in Indian Railways?",
+  "o_hi": [
+   "यह मुख्य सिग्नल के खराब होने पर ट्रेन को पूरी गति से आगे बढ़ने की अनुमति देता है",
+   "यह मुख्य सिग्नल के 'ऑन' (खराब या लाल) स्थिति में होने पर भी ट्रेन को ब्लॉक सेक्शन में आगे बढ़ने की अनुमति देता है",
+   "यह केवल मालगाड़ियों के लिए मुख्य स्टेशन भवन पर लगाया जाता है",
+   "यह ट्रेन को स्वचालित रूप से अगले स्टेशन पर रोकने के लिए होता है"
+  ],
+  "o_en": [
+   "It allows the train to proceed at full speed when the main signal fails",
+   "It allows a train to be drawn past a stopped/ON main signal into an occupied line or block section",
+   "It is installed only for freight trains at the main station building",
+   "It is meant to automatically stop the train at the next station"
+  ],
+  "a": 1,
+  "e_hi": "कॉलिंग-ऑन सिग्नल का उपयोग मुख्य सिग्नल के 'ऑन' स्थिति में होने पर भी शंटिंग या ट्रेन को आगे बढ़ाने के लिए किया जाता है ताकि वह लाइन साफ होने पर आगे बढ़ सके।",
+  "e_en": "A calling-on signal is provided below a stop signal to allow a train to be drawn past it even when it is in the 'ON' (red) position, usually for entering an occupied line."
+ },
+ {
+  "id": "rp-rai-l00863",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे प्रणाली में 'ऑटोमैटिक सिग्नलिंग सेक्शन' (Automatic Signalling Section) और 'एब्सोल्यूट ब्लॉक सिस्टम' (Absolute Block System) के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the primary difference between an 'Automatic Signalling Section' and an 'Absolute Block System' in Indian Railways?",
+  "o_hi": [
+   "ऑटोमैटिक सेक्शन में एक ही ब्लॉक में एक से अधिक ट्रेनें जा सकती हैं, जबकि एब्सोल्यूट ब्लॉक में केवल एक ट्रेन की अनुमति होती है",
+   "ऑटोमैटिक सिग्नल केवल रात में काम करते हैं जबकि एब्सोल्यूट ब्लॉक दिन में",
+   "एब्सोल्यूट ब्लॉक सिस्टम में ड्राइवर को सिग्नल देखने की आवश्यकता नहीं होती है",
+   "ऑटोमैटिक सिग्नलिंग में गार्ड की कोई भूमिका नहीं होती"
+  ],
+  "o_en": [
+   "In an automatic section, multiple trains can follow each other in the same block separated by automatic signals, whereas absolute block allows only one train between stations",
+   "Automatic signals work only at night while absolute block works during the day",
+   "Drivers do not need to look at signals in the absolute block system",
+   "Guards have no role in automatic signalling"
+  ],
+  "a": 0,
+  "e_hi": "एब्सोल्यूट ब्लॉक सिस्टम में दो स्टेशनों के बीच एक समय में केवल एक ट्रेन रह सकती है, जबकि ऑटोमैटिक सिग्नलिंग में एक ही ब्लॉक सेक्शन में सिग्नल के आधार पर कई ट्रेनें दूरी बनाए रखकर चल सकती हैं।",
+  "e_en": "Under the absolute block system, only one train is permitted in the block section between two stations at a time, whereas automatic signalling permits multiple consecutive trains within the same block section governed by automatic signals."
+ },
+ {
+  "id": "rp-rai-l00864",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से किस सिग्नल को भारतीय रेलवे में 'गेट सिग्नल' (Gate Signal) के रूप में पहचाना जाता है?",
+  "q_en": "Which of the following is recognized as a 'Gate Signal' in Indian Railways signalling nomenclature?",
+  "o_hi": [
+   "प्लेटफॉर्म की शुरुआत को दर्शाने वाला सिग्नल",
+   "लेवल क्रॉसिंग गेट की सुरक्षा के लिए लगाया गया सिग्नल जिस पर 'G' मार्कर होता है",
+   "केवल रात के समय जलने वाला आपातकालीन सिग्नल",
+   "ट्रेन की लंबाई मापने वाला सिग्नल"
+  ],
+  "o_en": [
+   "A signal indicating the start of a platform",
+   "A signal provided to protect a level crossing gate and distinguished by a 'G' marker",
+   "An emergency signal that operates only at night",
+   "A signal used to measure train length"
+  ],
+  "a": 1,
+  "e_hi": "गेट सिग्नल वे सिग्नल होते हैं जो समपार (लेवल क्रॉसिंग) फाटकों की सुरक्षा के लिए लगाए जाते हैं और इन पर पीले रंग की पृष्ठभूमि पर 'G' मार्कर लगा होता है।",
+  "e_en": "Gate signals are provided for the protection of level crossing gates and are specially distinguished by a designated 'G' marker on a yellow background."
+ },
+ {
+  "id": "rp-rai-l00865",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे सुरक्षा के संदर्भ में, 'कोहासा उपकरण' (Fog Safety Device - FSD) का प्राथमिक कार्य क्या है?",
+  "q_en": "In the context of Indian Railways safety, what is the primary function of a 'Fog Safety Device' (FSD)?",
+  "o_hi": [
+   "यह कोहरे के दौरान पटरियों को गर्म रखता है",
+   "यह जीपीएस (GPS) आधारित तकनीक का उपयोग करके लोको पायलट को आगामी सिग्नल के बारे में पहले से चेतावनी देता है",
+   "यह स्वचालित रूप से ट्रेन की गति को शून्य कर देता है",
+   "यह कोहरे में ट्रेन की हेडलाइट की रोशनी को बढ़ाता है"
+  ],
+  "o_en": [
+   "It keeps the tracks warm during foggy weather",
+   "It uses GPS-based technology to warn loco pilots in advance about upcoming signals",
+   "It automatically brings the train speed to zero",
+   "It increases the headlight intensity in fog"
+  ],
+  "a": 1,
+  "e_hi": "फॉग सेफ़टी डिवाइस एक GPS आधारित उपकरण है जो लोको पायलट को कम दृश्यता (कोहरे) के दौरान आगे आने वाले सिग्नलों के बारे में पहले से ऑडियो-विजुअल चेतावनी देता है।",
+  "e_en": "The Fog Safety Device is a GPS-based unit given to loco pilots that provides audio-visual warnings in advance about upcoming fixed signals during foggy weather conditions."
+ },
+ {
+  "id": "rp-rai-l00866",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'शंटिंग सिग्नल' (Shunting Signal) और 'स्टॉप सिग्नल' (Stop Signal) के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the main difference between a 'Shunting Signal' and a 'Stop Signal' in Indian Railways?",
+  "o_hi": [
+   "शंटिंग सिग्नल केवल गाड़ियों की आवाजाही को नियंत्रित करते हैं और स्टॉप सिग्नल केवल शंटिंग के लिए होते हैं",
+   "शंटिंग सिग्नल शंटिंग संचालन (यानी डिब्बों की अदला-बदली/संचलन) के लिए होते हैं, जबकि स्टॉप सिग्नल ट्रेनों के मार्ग नियंत्रण और सुरक्षा के लिए होते हैं",
+   "शंटिंग सिग्नल हमेशा लाल रंग के होते हैं",
+   "स्टॉप सिग्नल का उपयोग केवल रात में किया जाता है"
+  ],
+  "o_en": [
+   "Shunting signals control train movements and stop signals control shunting",
+   "Shunting signals govern low-speed shunting movements of rolling stock, whereas stop signals govern train movements into block sections",
+   "Shunting signals are always colored red",
+   "Stop signals are used exclusively at night"
+  ],
+  "a": 1,
+  "e_hi": "शंटिंग सिग्नल शंटिंग ऑपरेशंस (यार्ड में डिब्बों को इधर-उधर करने) के लिए अनुमति देते हैं, जबकि स्टॉप सिग्नल मुख्य लाइन पर ट्रेनों के प्रवेश और प्रस्थान को नियंत्रित करते हैं।",
+  "e_en": "Shunting signals specifically authorize shunting movements within yards, whereas stop signals control the entry and movement of scheduled trains into block sections."
+ },
+ {
+  "id": "rp-rai-l00867",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे में 'डेटालॉर्ड' या कवच (Kavach) प्रणाली किस प्रकार की सुरक्षा तकनीक पर आधारित है?",
+  "q_en": "On what type of safety technology is the 'Kavach' Automatic Train Protection (ATP) system of Indian Railways based?",
+  "o_hi": [
+   "केवल मैनुअल ब्रेक कंट्रोल तकनीक",
+   "रेडियो फ्रिक्वेंसी आइडेंटिफ़िकेशन (RFID) और ऑटोमैटिक ब्रेक अप्लीकेशन",
+   "पटरियों पर केवल रासायनिक संवेदक (Chemical Sensors)",
+   "उपग्रह आधारित मौसम पूर्वानुमान तकनीक"
+  ],
+  "o_en": [
+   "Manual brake control technology only",
+   "Radio Frequency Identification (RFID) track-side equipment and automatic braking",
+   "Chemical sensors placed exclusively on sleepers",
+   "Satellite-only weather forecasting technology"
+  ],
+  "a": 1,
+  "e_hi": "कवच (Kavach) एक स्वदेशी एंटी-कोलिजन (टक्कर रोधी) प्रणाली है जो RFID टैग, रेडियो संचार और ऑटोमैटिक ब्रेकिंग के जरिए ट्रेन की गति को नियंत्रित करती है।",
+  "e_en": "Kavach is an indigenous Automatic Train Protection (ATP) system that utilizes RFID tags on tracks, radio frequency communication, and automatic brake application to prevent accidents."
+ },
+ {
+  "id": "rp-rai-l00868",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा सिग्नल पहलू (Signal Aspect) भारतीय रेलवे में 'सावधानी से आगे बढ़ें' (Proceed with Caution) का संकेत देता है?",
+  "q_en": "Which of the following signal aspects indicates 'Proceed with Caution' in Indian Railways signalling?",
+  "o_hi": [
+   "लाल (Red)",
+   "पीला (Yellow)",
+   "डबल पीला (Double Yellow)",
+   "हरा (Green)"
+  ],
+  "o_en": [
+   "Red",
+   "Yellow",
+   "Double Yellow",
+   "Green"
+  ],
+  "a": 1,
+  "e_hi": "एक 'पीला' (Yellow) सिग्नल पहलू लोको पायलट को यह संकेत देता है कि आगे का सिग्नल 'डेंजर' (लाल) है, इसलिए ट्रेन को सावधानी से चलाना चाहिए और अगले सिग्नल पर रुकने के लिए तैयार रहना चाहिए।",
+  "e_en": "A single 'Yellow' aspect in color light signalling indicates 'Attention', meaning the driver must proceed with caution, prepared to stop at the next signal."
+ },
+ {
+  "id": "rp-rai-l00869",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'डिस्टेंट सिग्नल' (Distant Signal) का मुख्य उद्देश्य क्या होता है?",
+  "q_en": "What is the primary purpose of a 'Distant Signal' in Indian Railways?",
+  "o_hi": [
+   "स्टेशन भवन की दूरी और समय की सटीक जानकारी देना",
+   "मुख्य स्टॉप सिग्नल की स्थिति के बारे में लोको पायलट को पहले से चेतावनी देना",
+   "ट्रेन की अधिकतम गति सीमा को अचानक शून्य करना",
+   "प्लेटफॉर्म की लंबाई की गणना करना"
+  ],
+  "o_en": [
+   "To display the exact distance and time to the station building",
+   "To warn the loco pilot in advance about the aspect of the upcoming stop signal",
+   "To suddenly reduce train speed to zero",
+   "To calculate the platform length"
+  ],
+  "a": 1,
+  "e_hi": "डिस्टेंट सिग्नल मुख्य स्टॉप सिग्नल से कुछ दूरी पहले लगाया जाता है ताकि लोको पायलट को आगे के सिग्नल (जैसे लाल या पीला) की स्थिति का पहले से पता चल सके और वह तदनुसार गति कम कर सके।",
+  "e_en": "A distant signal is placed ahead of a stop signal to give advance warning to the loco pilot about what aspect to expect at the upcoming stop signal."
+ },
+ {
+  "id": "rp-rai-l00870",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे के संदर्भ में, 'कांटा और अंतःपाशन' (Points and Interlocking) का मुख्य उद्देश्य क्या है?",
+  "q_en": "In the context of Indian Railways, what is the main purpose of 'Points and Interlocking'?",
+  "o_hi": [
+   "पटरियों की सफाई और रखरखाव को आसान बनाना",
+   "यह सुनिश्चित करना कि परस्पर विरोधी मार्ग एक साथ न खुलें और ट्रेन सुरक्षित रूप से एक ट्रैक से दूसरे ट्रैक पर जा सके",
+   "यात्रियों के बैठने की व्यवस्था को ट्रैक से जोड़ना",
+   "ट्रेनों के समय सारणी का स्वचालित मुद्रण करना"
+  ],
+  "o_en": [
+   "To make track cleaning and maintenance easier",
+   "To ensure that conflicting routes are not cleared simultaneously and trains can safely switch tracks",
+   "To connect passenger seating arrangements to the track",
+   "To automatically print railway timetables"
+  ],
+  "a": 1,
+  "e_hi": "इंटरलॉकिंग एक सुरक्षा व्यवस्था है जो यह सुनिश्चित करती है कि सिग्नलों और कांटों (Points) के बीच परस्पर विरोधी संचालन न हो सके, जिससे ट्रेन दुर्घटनाओं से बची रहें।",
+  "e_en": "Interlocking is a safety arrangement of signals and points interconnected so that their operations prevent conflicting movements and ensure safe train routing."
+ },
+ {
+  "id": "rp-rai-l00871",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे में 'अल्टीमेट स्टॉप सिग्नल' के रूप में इस्तेमाल होने वाले 'होम सिग्नल' (Home Signal) को कहाँ स्थापित किया जाता है?",
+  "q_en": "Where is a 'Home Signal' installed in Indian Railways signaling layouts?",
+  "o_hi": [
+   "स्टेशन सीमा के ठीक बाहर, जहाँ से ट्रेन स्टेशन क्षेत्र में प्रवेश करती है",
+   "दो स्टेशनों के बीच के मध्य बिंदु पर",
+   "केवल इंजन शेड के अंदर",
+   "यात्रियों के विश्राम कक्ष के पास"
+  ],
+  "o_en": [
+   "Just outside the station limits where a train enters the station yard",
+   "At the exact midpoint between two distant stations",
+   "Inside the engine shed only",
+   "Near the passenger waiting room"
+  ],
+  "a": 0,
+  "e_hi": "होम सिग्नल स्टेशन की सीमा के पास लगाया जाने वाला पहला मुख्य स्टॉप सिग्नल होता है, जो किसी ट्रेन को स्टेशन क्षेत्र में प्रवेश करने से पहले नियंत्रित करता है।",
+  "e_en": "A home signal is the first stop signal encountered by a train as it approaches a station yard, controlling its entry into the station limits."
+ },
+ {
+  "id": "rp-rai-l00872",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में उपयोग किए जाने वाले सिग्नलों को मुख्य रूप से कितने भागों में वर्गीकृत किया गया है?",
+  "q_en": "Signals used in Indian Railways are primarily classified into how many main categories?",
+  "o_hi": [
+   "दो (Two)",
+   "तीन (Three)",
+   "चार (Four)",
+   "पाँच (Five)"
+  ],
+  "o_en": [
+   "Two",
+   "Three",
+   "Four",
+   "Five"
+  ],
+  "a": 1,
+  "e_hi": "भारतीय रेलवे में सिग्नलों को मुख्य रूप से तीन श्रेणियों में वर्गीकृत किया गया है: रोक सिग्नल (Stop Signals), चेतावनी सिग्नल (Warning Signals) और सूचक सिग्नल (Indicator Signals)।",
+  "e_en": "Signals in Indian Railways are primarily classified into three main categories: Stop signals, Warning signals, and Indicator signals."
+ },
+ {
+  "id": "rp-rai-l00873",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "इनमें से कौन सा सिग्नल भारतीय रेलवे में 'रोक सिग्नल' (Stop Signal) की श्रेणी में नहीं आता है?",
+  "q_en": "Which of the following signals does not fall under the category of a 'Stop Signal' in Indian Railways?",
+  "o_hi": [
+   "होम सिग्नल (Home Signal)",
+   "स्टार्टर सिग्नल (Starter Signal)",
+   "डिस्टेंट सिग्नल (Distant Signal)",
+   "एडवांस्ड स्टार्टर (Advanced Starter)"
+  ],
+  "o_en": [
+   "Home Signal",
+   "Starter Signal",
+   "Distant Signal",
+   "Advanced Starter"
+  ],
+  "a": 2,
+  "e_hi": "डिस्टेंट सिग्नल (Distant Signal) एक चेतावनी सिग्नल है, न कि रोक सिग्नल। होम, स्टार्टर और एडवांस्ड स्टार्टर सभी रोक सिग्नल हैं।",
+  "e_en": "Distant Signal is a warning signal, not a stop signal. Home, Starter, and Advanced Starter are all stop signals."
+ },
+ {
+  "id": "rp-rai-l00874",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'हैंड सिग्नलों' (हाथ से दिखाए जाने वाले सिग्नल) के वर्गीकरण में इनमें से कौन सा रंग शामिल नहीं है?",
+  "q_en": "Which of the following colors is not included in the classification of 'Hand Signals' in Indian Railways?",
+  "o_hi": [
+   "लाल (Red)",
+   "पीला (Yellow)",
+   "हरा (Green)",
+   "नीला (Blue)"
+  ],
+  "o_en": [
+   "Red",
+   "Yellow",
+   "Green",
+   "Blue"
+  ],
+  "a": 3,
+  "e_hi": "हाथ से दिए जाने वाले सिग्नलों में मुख्य रूप से लाल (रुकें), पीला (सावधानी के साथ आगे बढ़ें) और हरा (आगे बढ़ें) रंगों का उपयोग किया जाता है। नीला रंग इसमें शामिल नहीं है।",
+  "e_en": "Hand signals primarily use Red (Stop), Yellow (Proceed with caution), and Green (Proceed) colors. Blue is not a standard hand signal color."
+ },
+ {
+  "id": "rp-rai-l00875",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "ट्रेन संचालन सुरक्षा के संदर्भ में, फॉगिंग मौसम (कोहरे) के दौरान उपयोग किए जाने वाले डेटोनेटर (Detonators) को किस प्रकार की श्रेणी में रखा जाता है?",
+  "q_en": "In the context of train operation safety, detonators used during foggy weather are classified under which category?",
+  "o_hi": [
+   "श्रव्य और दृश्य सिग्नल (Audible and Visual Signals)",
+   "धमाका और चेतावनी सिग्नल (Explosive and Warning Signals)",
+   "केवल श्रव्य सिग्नल (Audible Signals / Fog Signals)",
+   "यांत्रिक सिग्नल (Mechanical Signals)"
+  ],
+  "o_en": [
+   "Audible and Visual Signals",
+   "Explosive and Warning Signals",
+   "Audible Signals (Fog Signals)",
+   "Mechanical Signals"
+  ],
+  "a": 2,
+  "e_hi": "डेटोनेटर या फॉग सिग्नलों को श्रव्य सिग्नलों (Audible Signals) की श्रेणी में रखा जाता है, जो पहिए के नीचे आने पर तेज आवाज करते हैं और लोको पायलट को चेतावनी देते हैं।",
+  "e_en": "Detonators or fog signals are classified as audible signals that produce a loud report when run over by a wheel, warning the loco pilot."
+ },
+ {
+  "id": "rp-rai-l00876",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "स्टेशन यार्ड में ट्रेनों के संचलन (Shunting) को नियंत्रित करने के लिए विशेष रूप से किस प्रकार के सिग्नलों का उपयोग किया जाता है?",
+  "q_en": "Which type of signals are specifically used to control shunting movements of trains in station yards?",
+  "o_hi": [
+   "डिस्टेंट सिग्नल (Distant Signals)",
+   "शंट सिग्नलों (Shunt Signals)",
+   "गेट सिग्नल (Gate Signals)",
+   "सहगामी सिग्नल (Co-acting Signals)"
+  ],
+  "o_en": [
+   "Distant Signals",
+   "Shunt Signals",
+   "Gate Signals",
+   "Co-acting Signals"
+  ],
+  "a": 1,
+  "e_hi": "शंट सिग्नल (Shunt Signals) या तो डिस्क प्रकार के होते हैं या लघु स्थिति वाले (Miniature arm) सिग्नल होते हैं, जिनका उपयोग विशेष रूप से शंटिंग संचालन के लिए किया जाता है।",
+  "e_en": "Shunt signals, which can be disc-type or miniature arm signals, are specifically used to control shunting operations in yards."
+ },
+ {
+  "id": "rp-rai-l00877",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे प्रणाली में स्वचालित सिग्नलिंग (Automatic Signalling) प्रणाली को सामान्यतः किस व्यापक सुरक्षा श्रेणी के अंतर्गत वर्गीकृत किया जाता है?",
+  "q_en": "Under which broad safety and operational category is the Automatic Signalling system generally classified in the Indian Railways system?",
+  "o_hi": [
+   "पूर्णतः हस्तचालित नियंत्रण प्रणाली (Fully Manual Control System)",
+   "अनुभाग अंतःपाश नियंत्रण प्रणाली (Section Interlocking System)",
+   "चल ब्लॉक और सिग्नल प्रणाली (Moving Block and Signal System)",
+   "स्वचालित ब्लॉक सिग्नलिंग प्रणाली (Automatic Block Signalling System)"
+  ],
+  "o_en": [
+   "Fully Manual Control System",
+   "Section Interlocking System",
+   "Moving Block and Signal System",
+   "Automatic Block Signalling System"
+  ],
+  "a": 3,
+  "e_hi": "यह स्वचालित ब्लॉक सिग्नलिंग प्रणाली के अंतर्गत वर्गीकृत है, जहां ट्रेनें स्वतः ट्रैक सर्किट की स्थिति के आधार पर सिग्नलों को नियंत्रित करती हैं।",
+  "e_en": "It is classified under the Automatic Block Signalling system, where trains automatically control signals based on track circuit occupancy."
+ },
+ {
+  "id": "rp-rai-l00878",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "रेलवे सुरक्षा के नियमों में 'कोहरे के संकेतकों' (Fog Signal Posts) को किस प्रकार के वर्गीकरण में रखा गया है?",
+  "q_en": "Under which category of classification are 'Fog Signal Posts' placed in railway safety rules?",
+  "o_hi": [
+   "स्थायी सूचक (Permanent Indicators)",
+   "चेतावनी सूचक (Warning Indicators)",
+   "अस्थायी रोक सिग्नल (Temporary Stop Signals)",
+   "आपातकालीन सिग्नल (Emergency Signals)"
+  ],
+  "o_en": [
+   "Permanent Indicators",
+   "Warning Indicators",
+   "Temporary Stop Signals",
+   "Emergency Signals"
+  ],
+  "a": 1,
+  "e_hi": "कोहरा सिग्नल पोस्ट (Fog Signal Post) एक चेतावनी सूचक है जो लोको पायलट को यह बताता है कि आगे डेटोनेटर लगाए जाने वाले क्षेत्र की शुरुआत होने वाली है।",
+  "e_en": "A Fog Signal Post is classified as a warning indicator that alerts the loco pilot about the impending approach of the detonator placement zone."
+ },
+ {
+  "id": "rp-rai-l00879",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में इंटरलॉकिंग (Interlocking) प्रणालियों के आधुनिकीकरण के तहत इलेक्ट्रॉनिक इंटरलॉकिंग (EI) को किस आधुनिक श्रेणी में रखा जाता है?",
+  "q_en": "Under which modern category is Electronic Interlocking (EI) classified as part of the modernization of interlocking systems in Indian Railways?",
+  "o_hi": [
+   "यांत्रिक सिग्नलिंग प्रणाली (Mechanical Signalling System)",
+   "कंप्यूटरीकृत और सॉलिड-स्टेट सिग्नलिंग (Computerized and Solid-State Signalling)",
+   "विद्युत चुम्बकीय रिले प्रणाली (Electromagnetic Relay System)",
+   "वायवीय नियंत्रण प्रणाली (Pneumatic Control System)"
+  ],
+  "o_en": [
+   "Mechanical Signalling System",
+   "Computerized and Solid-State Signalling",
+   "Electromagnetic Relay System",
+   "Pneumatic Control System"
+  ],
+  "a": 1,
+  "e_hi": "इलेक्ट्रॉनिक इंटरलॉकिंग (EI) सॉलिड-स्टेट और कंप्यूटरीकृत तकनीक पर आधारित है, जो सुरक्षित ट्रेन संचालन के लिए आधुनिक सिग्नलिंग का मुख्य आधार है।",
+  "e_en": "Electronic Interlocking (EI) is classified under computerized and solid-state technology, forming the backbone of modern signaling for safe train operations."
+ },
+ {
+  "id": "rp-rai-l00880",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "इनमें से कौन सा सिग्नल का वर्गीकरण 'फिक्स्ड सिग्नल' (Fixed Signal) के प्रकार के अंतर्गत नहीं आता है?",
+  "q_en": "Which of the following signal classifications does not fall under the type of a 'Fixed Signal'?",
+  "o_hi": [
+   "रंग प्रकाश सिग्नल (Color Light Signal)",
+   "सेमाफोर सिग्नल (Semaphore Signal)",
+   "हाथ सिग्नल (Hand Signal)",
+   "डिस्क सिग्नल (Disc Signal)"
+  ],
+  "o_en": [
+   "Color Light Signal",
+   "Semaphore Signal",
+   "Hand Signal",
+   "Disc Signal"
+  ],
+  "a": 2,
+  "e_hi": "हाथ सिग्नल (Hand Signal) फिक्स्ड सिग्नल नहीं होते हैं क्योंकि इन्हें रेलवे कर्मचारियों द्वारा हाथ या झंडियों से अस्थायी रूप से दिखाया जाता है।",
+  "e_en": "Hand signals are not fixed signals because they are temporarily displayed by railway staff using hands or flags."
+ },
+ {
+  "id": "rp-rai-l00881",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे में सुरक्षा और चेतावनी के लिए उपयोग किए जाने वाले 'कब्शन' या 'डेटोनेटर' (Detonators) को उनकी उपयोगिता के आधार पर किस विशिष्ट श्रेणी में रखा जाता है?",
+  "q_en": "Based on their utility, 'Detonators' used for safety and warning in Indian Railways are placed under which specific category?",
+  "o_hi": [
+   "दृश्य सुरक्षा उपकरण (Visual Safety Devices)",
+   "पायरोटेक्निक आपातकालीन सिग्नल (Pyrotechnic Emergency Signals)",
+   "यांत्रिक गतिरोधक (Mechanical Obstructions)",
+   "विद्युत संसूचक (Electrical Detectors)"
+  ],
+  "o_en": [
+   "Visual Safety Devices",
+   "Pyrotechnic Emergency Signals",
+   "Mechanical Obstructions",
+   "Electrical Detectors"
+  ],
+  "a": 1,
+  "e_hi": "डेटोनेटर रासायनिक और पायरोटेक्निक प्रकृति के होते हैं जो कम दृश्यता या आपातकाल के दौरान ट्रेन को रोकने के लिए तीव्र आवाज उत्पन्न करते हैं।",
+  "e_en": "Detonators are pyrotechnic in nature, producing a loud report to warn and help stop a train during low visibility or emergencies."
+ },
+ {
+  "id": "rp-rai-l00882",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में ट्रेन संचालन के दौरान 'डबल डिस्टेंट सिग्नल' (Double Distant Signal) मुख्य रूप से किस उद्देश्य के लिए उपयोग किया जाता है?",
+  "q_en": "What is the primary purpose of a 'Double Distant Signal' during train operations in Indian Railways?",
+  "o_hi": [
+   "मुख्य सिग्नल से अधिक दूरी पहले चेतावनी देने के लिए ताकि लोको पायलट ट्रेन की गति समय पर नियंत्रित कर सके",
+   "केवल मालगाड़ियों की गति बढ़ाने के लिए",
+   "फाटक क्रॉसिंग पर सड़क यातायात को रोकने के लिए",
+   "प्लेटफॉर्म पर ट्रेन के खड़े होने की स्थिति बताने के लिए"
+  ],
+  "o_en": [
+   "To provide advance warning well before the main signal so the loco pilot can control speed in time",
+   "To increase the speed of freight trains only",
+   "To stop road traffic at level crossings",
+   "To indicate the halting status of a train on the platform"
+  ],
+  "a": 0,
+  "e_hi": "डबल डिस्टेंट सिग्नल सामान्य डिस्टेंट सिग्नल से भी पहले लगाया जाता है ताकि अत्यधिक गति वाली ट्रेनों को रोकने या नियंत्रित करने के लिए लोको पायलट को पर्याप्त ब्रेकिंग डिस्टेंस मिल सके।",
+  "e_en": "A double distant signal is placed even before a normal distant signal to provide adequate braking distance for high-speed trains to control or stop safely."
+ },
+ {
+  "id": "rp-rai-l00883",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से किस सिग्नल को भारतीय रेलवे में 'स्टॉप सिग्नल' (Stop Signal) के रूप में वर्गीकृत नहीं किया गया है?",
+  "q_en": "Which of the following signals is NOT classified as a 'Stop Signal' in Indian Railways?",
+  "o_hi": [
+   "डिस्टेंट सिग्नल (Distant Signal)",
+   "होम सिग्नल (Home Signal)",
+   "स्टार्टर सिग्नल (Starter Signal)",
+   "एडवांस्ड स्टार्टर सिग्नल (Advanced Starter Signal)"
+  ],
+  "o_en": [
+   "Distant Signal",
+   "Home Signal",
+   "Starter Signal",
+   "Advanced Starter Signal"
+  ],
+  "a": 0,
+  "e_hi": "डिस्टेंट सिग्नल एक 'परमिसिव सिग्नल' (Permissive Signal) है, जो मुख्य स्टॉप सिग्नल की स्थिति की अग्रिम चेतावनी देता है। होम, स्टार्टर और एडवांस्ड स्टार्टर स्टॉप सिग्नल हैं।",
+  "e_en": "A distant signal is a permissive signal that gives advance warning about the aspect of a stop signal ahead. Home, starter, and advanced starter are stop signals."
+ },
+ {
+  "id": "rp-rai-l00884",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "ट्रेन सुरक्षा के संदर्भ में 'TCAS' (जो अब 'कवच' के रूप में जाना जाता है) मुख्य रूप से किस तकनीक पर आधारित है?",
+  "q_en": "In the context of train safety, 'TCAS' (now known as 'Kavach') is primarily based on which technology?",
+  "o_hi": [
+   "रेडियो फ्रिक्वेंसी आइडेंटिफ़िकेशन (RFID) और माइक्रोप्रोसेसर आधारित तकनीक",
+   "केवल उपग्रह आधारित जीपीएस (GPS) तकनीक",
+   "ऑप्टिकल फाइबर केबल पर आधारित मैनुअल कंट्रोल",
+   "जमीन के नीचे बिछाई गई तांबे की तारों का सर्किट"
+  ],
+  "o_en": [
+   "Radio Frequency Identification (RFID) and microprocessor-based technology",
+   "Satellite-based GPS technology only",
+   "Manual control based on optical fiber cables",
+   "Underground copper wire circuits"
+  ],
+  "a": 0,
+  "e_hi": "स्वदेशी स्वचालित ट्रेन सुरक्षा प्रणाली 'कवच' (TCAS) ट्रैक पर लगे RFID टैग्स, ऑन-बोर्ड कंप्यूटर और रेडियो कम्युनिकेशन का उपयोग करके ट्रेनों की टक्कर को रोकती है।",
+  "e_en": "The indigenous Automatic Train Protection system 'Kavach' (TCAS) prevents collisions by using trackside RFID tags, on-board computers, and radio communication."
+ },
+ {
+  "id": "rp-rai-l00885",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'कॉलिंग-ऑन सिग्नल' (Calling-on Signal) का उपयोग सामान्यतः कब किया जाता है?",
+  "q_en": "When is a 'Calling-on Signal' generally used in Indian Railways?",
+  "o_hi": [
+   "जब मुख्य सिग्नल 'ऑन' (लाल) स्थिति में हो लेकिन ट्रेन को ब्लॉक सेक्शन या लाइन पर आगे बढ़ने की अनुमति देनी हो",
+   "जब आपातकालीन स्थिति में पूरी लाइन को तुरंत खाली कराना हो",
+   "जब स्टेशन मास्टर को गार्ड से सिग्नल का आदान-प्रदान करना हो",
+   "जब ट्रेन को बिना किसी निरीक्षण के सीधे पास करना हो"
+  ],
+  "o_en": [
+   "When the main signal is 'ON' (red) but the train needs to be permitted to proceed into an occupied line or block section",
+   "When the entire line must be cleared immediately in an emergency",
+   "When the station master needs to exchange signals with the guard",
+   "When a train is to pass without any inspection"
+  ],
+  "a": 0,
+  "e_hi": "कॉलिंग-ऑन सिग्नल एक छोटा सिग्नल होता है जो मुख्य स्टॉप सिग्नल के नीचे लगाया जाता है। मुख्य सिग्नल खराब होने या लाइन पर पहले से गाड़ी खड़ी होने पर इसे 'ऑथोरिटी टू प्रोसीड' के रूप में कम गति से आगे बढ़ने के लिए दिया जाता है।",
+  "e_en": "A calling-on signal is a small subsidiary signal placed below a main stop signal. It is used at low speeds to allow a train to proceed past a red stop signal onto an occupied line."
+ },
+ {
+  "id": "rp-rai-l00886",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "ऑटोमैटिक सिग्नलिंग सेक्शन (Automatic Signalling Section) में यदि कोई सिग्नल 'रेड' (लाल) हो जाए और लोको पायलट को पार करना पड़े, तो क्या नियम है?",
+  "q_en": "In an automatic signalling section, if a signal turns 'Red' and a loco pilot needs to pass it, what is the rule?",
+  "o_hi": [
+   "लोको पायलट ट्रेन को रोककर एक निश्चित गति से सावधानीपूर्वक आगे बढ़ता है और अगले सिग्नल तक नजर रखता है",
+   "लोको पायलट बिना रुके अधिकतम गति से निकल जाता है",
+   "लोको पायलट ट्रेन को वहीं छोड़कर स्टेशन मास्टर के आने का इंतजार करेगा",
+   "लोको पायलट केवल गार्ड की मौखिक अनुमति से ट्रेन बैक करेगा"
+  ],
+  "o_en": [
+   "The loco pilot stops, proceeds cautiously at a restricted speed, and keeps a sharp lookout up to the next signal",
+   "The loco pilot passes at maximum speed without stopping",
+   "The loco pilot leaves the train and waits for the station master",
+   "The loco pilot reverses the train only on the guard's verbal permission"
+  ],
+  "a": 0,
+  "e_hi": "ऑटोमैटिक सिग्नल प्रणाली में लाल सिग्नल (या 'ऑथोरिटी' मिलने पर) को 'रुकें और आगे बढ़ें' (Stop and Proceed) नियम के तहत एक निर्धारित कम गति पर पार किया जाता है।",
+  "e_en": "In automatic signalling, a red signal is governed by the 'Stop and Proceed' rule, where the train stops briefly and then proceeds cautiously at a restricted speed."
+ },
+ {
+  "id": "rp-rai-l00887",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'हैंड सिग्नल' (Hand Signals) के दौरान रात के समय किस रंग की बत्ती का उपयोग 'खतरनाक स्थिति में रोकने' (Danger/Stop) के लिए किया जाता है?",
+  "q_en": "During hand signalling in Indian Railways, which colored light is used at night to indicate 'Danger/Stop'?",
+  "o_hi": [
+   "लाल (Red)",
+   "पीला (Yellow)",
+   "हरा (Green)",
+   "नीला (Blue)"
+  ],
+  "o_en": [
+   "Red",
+   "Yellow",
+   "Green",
+   "Blue"
+  ],
+  "a": 0,
+  "e_hi": "रेलवे नियमों के अनुसार रात के समय हाथ से सिग्नल देते समय लाल बत्ती का अर्थ 'रोकें' (Danger/Stop) होता है, जबकि हरे रंग का अर्थ आगे बढ़ना होता है।",
+  "e_en": "According to railway rules, a red hand lamp light at night signifies 'Danger/Stop', while a green light signifies proceeding forward."
+ },
+ {
+  "id": "rp-rai-l00888",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'डेटोनेटर' (Detonator - जिन्हें फॉग सिग्नल भी कहा जाता है) का मुख्य उपयोग क्या है?",
+  "q_en": "What is the primary use of 'Detonators' (also known as fog signals) in Indian Railways?",
+  "o_hi": [
+   "धुंध या खराब मौसम में लोको पायलट को ऑडियो-विजुअल चेतावनी देने के लिए कि आगे कोई खतरा या सिग्नल है",
+   "ट्रेनों की गति मापने के लिए ट्रैक पर रखे जाने वाले इलेक्ट्रॉनिक उपकरण",
+   "रेलवे ट्रैक की चोरी रोकने के लिए अलार्म बजाना",
+   "इंजन में आग लगने पर आपातकालीन ब्रेक लगाना"
+  ],
+  "o_en": [
+   "To give an audio-visual warning to the loco pilot in foggy or poor weather that an obstruction or signal is ahead",
+   "Electronic devices placed on the track to measure train speed",
+   "To trigger alarms preventing theft of railway tracks",
+   "To apply emergency brakes if the engine catches fire"
+  ],
+  "a": 0,
+  "e_hi": "डेटोनेटर छोटे विस्फोटक उपकरण होते हैं जिन्हें पहिये के नीचे आने पर तेज आवाज और रोशनी होती है, जिससे कम विजिबिलिटी में पायलट सतर्क हो जाता है।",
+  "e_en": "Detonators are small explosive devices placed on rails that produce a loud bang and flash when run over, alerting the driver during poor visibility."
+ },
+ {
+  "id": "rp-rai-l00889",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा सिग्नल पक्ष (Aspect) तीन-पहलू (Three-Aspect) सिग्नलिंग प्रणाली में उपलब्ध नहीं होता है?",
+  "q_en": "Which of the following signal aspects is NOT available in a standard Three-Aspect signalling system?",
+  "o_hi": [
+   "डबल येलो (Double Yellow)",
+   "लाल (Red)",
+   "पीला (Yellow)",
+   "हरा (Green)"
+  ],
+  "o_en": [
+   "Double Yellow",
+   "Red",
+   "Yellow",
+   "Green"
+  ],
+  "a": 0,
+  "e_hi": "डबल येलो (Double Yellow) का पहलू केवल चार-पहलू (Four-Aspect) सिग्नलिंग प्रणाली में उपयोग किया जाता है, तीन-पहलू में केवल रेड, येलो और ग्रीन होते हैं।",
+  "e_en": "The 'Double Yellow' aspect is exclusively used in Four-Aspect signalling systems, whereas three-aspect systems only feature Red, Yellow, and Green."
+ },
+ {
+  "id": "rp-rai-l00890",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'गेट सिग्नल' (Gate Signal) की पहचान के लिए उस पर किस विशेष प्रतीक का उपयोग किया जाता है?",
+  "q_en": "Which special marker symbol is used on a 'Gate Signal' in Indian Railways for identification?",
+  "o_hi": [
+   "काले रंग का 'G' अक्षर पीले वृत्त के भीतर",
+   "सफेद रंग का 'A' अक्षर",
+   "काले रंग का 'T' अक्षर",
+   "लाल रंग का क्रॉस निशान"
+  ],
+  "o_en": [
+   "A black letter 'G' inside a yellow circle",
+   "A white letter 'A'",
+   "A black letter 'T'",
+   "A red cross mark"
+  ],
+  "a": 0,
+  "e_hi": "लेवल क्रॉसिंग गेट पर स्थित सिग्नल पर पीले रंग की पृष्ठभूमि पर काले रंग का 'G' मार्कर लगा होता है, जो लोको पायलट को बताता है कि यह गेट से संबंधित सिग्नल है।",
+  "e_en": "Signals protecting level crossings display a marker consisting of a black letter 'G' on a yellow background to indicate it is a gate signal."
+ },
+ {
+  "id": "rp-rai-l00891",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "रेलवे सुरक्षा में 'ऑक्सिलरी वार्निंग सिस्टम' (AWS) किस प्रकार सहायता करता है?",
+  "q_en": "How does the 'Auxiliary Warning System' (AWS) assist in railway safety?",
+  "o_hi": [
+   "यह कैब के भीतर सिग्नल की स्थिति दिखाता है और यदि पायलट लाल सिग्नल की अनदेखी करे तो ब्रेक लगा देता है",
+   "यह केवल प्लेटफॉर्म पर यात्रियों की भीड़ नियंत्रित करता है",
+   "यह ट्रैक के तापमान को मापता है",
+   "यह ट्रेन के डिब्बों में हवा के दबाव को नियंत्रित करता है"
+  ],
+  "o_en": [
+   "It displays signal aspects inside the cab and applies brakes if the driver ignores a red signal",
+   "It only controls passenger crowds on platforms",
+   "It measures track temperature",
+   "It regulates air pressure in train coaches"
+  ],
+  "a": 0,
+  "e_hi": "AWS ट्रैक उपकरणों और लोकोमोटिव के बीच संवाद करता है, जिससे कॉकपिट में चेतावनी मिलती है और नजरअंदाज करने पर स्वतः ब्रेक सक्रिय हो जाते हैं।",
+  "e_en": "AWS communicates between track equipment and the locomotive, giving in-cab warnings and automatically applying brakes if a warning is ignored."
+ },
+ {
+  "id": "rp-rai-l00892",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "यदि लोको पायलट को चलती ट्रेन के दौरान ट्रैक पर अचानक कोई गंभीर खतरा या क्षति दिखाई दे, तो उसे ट्रेन रोकने के लिए तुरंत कौन सा सिग्नल अपनाना चाहिए?",
+  "q_en": "If a Loco Pilot suddenly spots a severe track obstruction or damage while the train is running, which signal must they immediately execute to stop the train?",
+  "o_hi": [
+   "फॉग सिग्नल का उपयोग",
+   "खतरे का आपातकालीन ब्रेक (इमर्जन्सी ब्रेक) लगाना और फ्लैशिंग लाइट चालू करना",
+   "गार्ड को वॉकी-टॉकी पर सूचित करना और सामान्य गति बनाए रखना",
+   "स्टेशन मास्टर को कॉल करके सिग्नल बदलने का अनुरोध करना"
+  ],
+  "o_en": [
+   "Using fog signals",
+   "Applying emergency brakes and switching on flashing headlights",
+   "Informing the guard on walkie-talkie and maintaining normal speed",
+   "Calling the Station Master to request signal change"
+  ],
+  "a": 1,
+  "e_hi": "आपातकालीन स्थिति में लोको पायलट को तुरंत इमर्जन्सी ब्रेक लगाकर और फ्लैशिंग लाइट चालू करके ट्रेन रोकने का प्रयास करना चाहिए, ताकि पीछे या सामने से आने वाली ट्रेनों को भी चेतावनी मिल सके।",
+  "e_en": "In an emergency situation, the Loco Pilot must immediately apply emergency brakes and turn on flashing headlights to stop the train and warn incoming traffic."
+ },
+ {
+  "id": "rp-rai-l00893",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "स्टेशन क्षेत्र में शंटिंग संचालन (Shunting operations) के दौरान कौन सा सिग्नल मुख्य रूप से लोको पायलट को शंटिंग की अनुमति देता है?",
+  "q_en": "During shunting operations within a station yard, which specific signal primarily authorizes the loco pilot to proceed with shunting?",
+  "o_hi": [
+   "होम सिग्नल (Home Signal)",
+   "कॉलिंग-ऑन सिग्नल (Calling-on Signal)",
+   "शंट सिग्नल (Shunt Signal) या कॉलिंग-ऑन सिग्नल",
+   "स्टार्टिंग सिग्नल (Starting Signal)"
+  ],
+  "o_en": [
+   "Home Signal",
+   "Calling-on Signal",
+   "Shunt Signal or miniature arm signal",
+   "Starting Signal"
+  ],
+  "a": 2,
+  "e_hi": "यार्ड में गाड़ियों के आवागमन को अलग-अलग पटरियों पर व्यवस्थित करने के लिए शंट सिग्नलों का उपयोग किया जाता है, जो 'शंटिंग' की अनुमति देते हैं।",
+  "e_en": "Shunt signals (or miniature arm signals/position light shunt signals) are specifically used in yards to authorize shunting movements."
+ },
+ {
+  "id": "rp-rai-l00894",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि किसी ऑटोमैटिक सिग्नल (Automatic Stop Signal) पर 'ON' (लाल) स्थिति में रुका हुआ कोई ट्रेन काफी देर तक खड़ा रहे, तो लोको पायलट को आगे बढ़ने के लिए किस नियम का पालन करना चाहिए?",
+  "q_en": "If a train is held up for a long time at an Automatic Stop Signal showing an 'ON' (red) aspect, what procedure must the Loco Pilot follow to proceed?",
+  "o_hi": [
+   "तुरंत बिना अनुमति के अधिकतम गति से आगे बढ़ना",
+   "स्टेशन मास्टर से लिखित अनुमति लेना अनिवार्य है",
+   "सतर्कता के साथ आगे बढ़ना और ट्रेन की गति सीमित रखना (दिन में 15 किमी/घं और रात में 25 किमी/घं तक)",
+   "ट्रेन को पीछे की ओर स्टेशन पर वापस लाना"
+  ],
+  "o_en": [
+   "Proceed immediately at maximum speed without permission",
+   "Mandatorily take written permission from the Station Master",
+   "Proceed with caution, restricting speed (15 kmph by day, 25 kmph by night)",
+   "Reverse the train back to the station"
+  ],
+  "a": 2,
+  "e_hi": "ऑटोमैटिक सिग्नलिंग क्षेत्र में लाल सिग्नल पार करने के लिए विशिष्ट नियम हैं, जिसमें लोको पायलट को गति सीमित रखकर सतर्कता के साथ आगे बढ़ना होता है ताकि आगे रुकावट होने पर रोका जा सके।",
+  "e_en": "In automatic signalling territory, passing a red automatic signal requires the loco pilot to proceed with extreme caution at a restricted speed so as to stop short of any obstruction."
+ },
+ {
+  "id": "rp-rai-l00895",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "कोहरे (Fog) के मौसम में रेल संरक्षा सुनिश्चित करने के लिए लोको पायलट को फॉग सिग्नल (डेटोनेटर) किस दूरी पर लगाए जाते हैं?",
+  "q_en": "To ensure railway safety during foggy weather, at what distance are fog signals (detonators) typically placed on the track ahead of a stop signal?",
+  "o_hi": [
+   "सिग्नल से ठीक 10 मीटर पहले",
+   "सिग्नल से 270 मीटर की दूरी पर",
+   "सिग्नल से 1 किलोमीटर पहले",
+   "स्टेशन प्लेटफॉर्म के आरंभ में"
+  ],
+  "o_en": [
+   "Exactly 10 meters before the signal",
+   "At a distance of 270 meters before the signal",
+   "1 kilometer before the signal",
+   "At the beginning of the station platform"
+  ],
+  "a": 1,
+  "e_hi": "कम दृश्यता या कोहरे के दौरान, फॉग सिग्नलमैन सिग्नल से लगभग 270 मीटर की दूरी पर डेटोनेटर (पटाखे) रखता है, ताकि पहिया गुजरने पर तेज आवाज से लोको पायलट सतर्क हो जाए।",
+  "e_en": "During low visibility, detonators are placed on the rail at a specific distance (typically 270 meters) ahead of the stop signal to produce an audible warning when the engine passes over them."
+ },
+ {
+  "id": "rp-rai-l00896",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "जब कोई ट्रेन 'गेट सिग्नल' (Level Crossing Gate Signal) के पास पहुँचती है और वह सिग्नल 'ON' (लाल) स्थिति में है, तो लोको पायलट को क्या करना चाहिए?",
+  "q_en": "When a train approaches a Level Crossing Gate Signal and finds it displaying an 'ON' (red) aspect, what is the mandatory action for the Loco Pilot?",
+  "o_hi": [
+   "बिना रुके सिग्नल पार करना",
+   "गेट के सामने ट्रेन रोककर गेटमैन से मौखिक या विज़ुअल अनुमति मिलने के बाद ही आगे बढ़ना",
+   "सीधे स्टेशन मास्टर को फोन करना",
+   "इमर्जन्सी ब्रेक लगाकर ट्रेन को वापस ले जाना"
+  ],
+  "o_en": [
+   "Pass the signal without stopping",
+   "Stop the train short of the gate and proceed only after ensuring the gate is closed and getting proper indication/gateman's clearance",
+   "Call the Station Master directly",
+   "Apply emergency brakes and reverse the train"
+  ],
+  "a": 1,
+  "e_hi": "गेट सिग्नल पर लाल बत्ती होने का मतलब है कि समपार फाटक खुला हो सकता है। लोको पायलट को वहां रुकना चाहिए और गेट बंद होने की पुष्टि के बाद ही आगे बढ़ना चाहिए।",
+  "e_en": "A red gate signal indicates that the level crossing gates might be open. The pilot must stop and ensure the gates are safely closed before proceeding past the signal."
+ },
+ {
+  "id": "rp-rai-l00897",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि मुख्य लाइन का कोई 'स्टार्टिंग सिग्नल' (Starting Signal) खराब हो जाए और कोई कॉलिंग-ऑन सिग्नल भी उपलब्ध न हो, तो ट्रेन को आगे बढ़ाने के लिए स्टेशन मास्टर द्वारा कौन सा प्राधिकरण (Authority to Proceed) दिया जाएगा?",
+  "q_en": "If a main line Starting Signal fails and no calling-on signal is available, which Authority to Proceed is issued by the Station Master to dispatch the train?",
+  "o_hi": [
+   "टी/369(3b) या लिखित पेपर ऑथोरिटी",
+   "केवल मौखिक आदेश (Oral Permission)",
+   "ऑटोमैटिक टिकट",
+   "ब्लैक फ्लैग सिग्नल"
+  ],
+  "o_en": [
+   "T/369(3b) or written paper authority",
+   "Oral permission only",
+   "Automatic ticket",
+   "Black flag signal"
+  ],
+  "a": 0,
+  "e_hi": "सिग्नल की विफलता के मामलों में, नियमों के तहत लोको पायलट को लिखित अधिकार पत्र जैसे T/369(3b) दिया जाता है जिसके आधार पर वह खराब सिग्नल को पार करता है।",
+  "e_en": "In case of defective departure signals, specific written authorities like form T/369(3b) are handed over to the loco pilot to legally pass the defective signal at 'ON'."
+ },
+ {
+  "id": "rp-rai-l00898",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "ट्रेन संचालन के दौरान यदि गार्ड को ट्रेन के पिछले हिस्से से कोई असामान्य आवाज या चिंगारी दिखाई दे, तो वह लोको पायलट को सतर्क करने के लिए किस उपकरण या संकेत का उपयोग करेगा?",
+  "q_en": "During train operations, if the Guard notices unusual sparks or sounds from the rear portion of the train, which tool or signal should they use to alert the Loco Pilot?",
+  "o_hi": [
+   "लाल झंडी या लाल बत्ती दिखाना और वैक्यूम/एयर प्रेशर गिराना",
+   "ट्रेन से कूद जाना",
+   "केवल हॉर्न बजाना",
+   "ट्रैक पर पत्थर रखना"
+  ],
+  "o_en": [
+   "Displaying red flag/light and creating vacuum/air pressure drop",
+   "Jumping off the train",
+   "Only blowing the horn",
+   "Placing stones on the track"
+  ],
+  "a": 0,
+  "e_hi": "गार्ड आपात स्थिति में वैक्यूम ब्रेक को वैक्यूम रिलीज वाल्व खींचकर गिरा सकता है या अलार्म चेन / बीपी प्रेशर कम करके ट्रेन को रोक सकता है और लाल सिग्नल दिखा सकता है।",
+  "e_en": "The guard can alert the loco pilot by showing a red signal and intentionally causing a drop in brake pipe pressure (vacuum/air) to safely apply brakes and stop the train."
+ },
+ {
+  "id": "rp-rai-l00899",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'कवच' (Kavach) प्रणाली मुख्य रूप से किस उद्देश्य के लिए डिज़ाइन की गई है?",
+  "q_en": "What is the primary objective of the 'Kavach' (Automatic Train Protection) system implemented by Indian Railways?",
+  "o_hi": [
+   "यात्रियों के लिए वाई-फाई प्रदान करना",
+   "ट्रेनों की टक्कर (Collision) को रोकना और सिग्नल ओवरशूटिंग से बचाना",
+   "टिकट चेकिंग को स्वचालित करना",
+   "कोयले की खपत को मापना"
+  ],
+  "o_en": [
+   "Providing Wi-Fi to passengers",
+   "Preventing train collisions and signal overshoot (SPAD)",
+   "Automating ticket checking",
+   "Measuring coal consumption"
+  ],
+  "a": 1,
+  "e_hi": "स्वदेशी स्वचालित ट्रेन सुरक्षा (ATP) प्रणाली 'कवच' ट्रेन के खतरे के सिग्नल को पार करने (SPAD) और आमने-सामने या पीछे से होने वाली टक्करों को रोकने में मदद करती है।",
+  "e_en": "Kavach is an indigenous Automatic Train Protection (ATP) system designed to prevent train collisions by automatically applying brakes if a loco pilot misses a signal (SPAD)."
+ },
+ {
+  "id": "rp-rai-l00900",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि स्टेशन पर प्रवेश करते समय होम सिग्नल 'ऑफ़' (हरि या पीली स्थिति) है, लेकिन आउटर सिग्नल 'ON' (लाल) स्थिति में है, तो लोको पायलट को क्या समझना चाहिए?",
+  "q_en": "If the Home signal at a station entry is 'Off', but the Outer signal is showing 'On' (red), what should the Loco Pilot understand about the signal aspect rules?",
+  "o_hi": [
+   "सिग्नल में तकनीकी विरोधाभास है, सबसे सख्त सिग्नल (यानी आउटर का लाल) माना जाएगा और ट्रेन रोकनी होगी",
+   "होम सिग्नल वैध है, आउटर को अनदेखा कर सकते हैं",
+   "स्टेशन मास्टर ने रफ्तार बढ़ाने को कहा है",
+   "कोई सिग्नल काम नहीं कर रहा है, तेज गति से निकल जाएं"
+  ],
+  "o_en": [
+   "There is a contradiction; the stricter signal aspect (Stop) must be obeyed and the train stopped",
+   "Home signal overrides outer, outer can be ignored",
+   "Station Master permitted speeding",
+   "No signals are working, pass at high speed"
+  ],
+  "a": 0,
+  "e_hi": "भारतीय रेलवे के सामान्य नियमों के अनुसार, यदि दो जुड़े हुए सिग्नलों में विरोधाभास हो, तो लोको पायलट को हमेशा सबसे अधिक प्रतिबंधात्मक (Restrictive) सिग्नल का पालन करना चाहिए।",
+  "e_en": "According to General Rules, if there is a contradiction between signals, the Loco Pilot must obey the more restrictive signal aspect to ensure complete safety."
+ },
+ {
+  "id": "rp-rai-l00901",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "एकल लाइन (Single Line) सेक्शन पर ट्रेन भेजने से पहले स्टेशन मास्टर विपरीत दिशा से आने वाली अन्य ट्रेनों को रोकने के लिए किस महत्वपूर्ण प्रणाली या चाबी (Key) का उपयोग करते थे (पारंपरिक पद्धति में)?",
+  "q_en": "On a single line section, what traditional interlocking mechanism or authority was used by station masters to ensure no opposing train is dispatched?",
+  "o_hi": [
+   "टोकन प्रणाली (Token System) या लाइन क्लियर",
+   "स्टेशन मास्टर की मौखिक अनुमति",
+   "सिर्फ समय सारणी (Time Table)",
+   "यात्रियों की सहमति"
+  ],
+  "o_en": [
+   "Token system / Line Clear exchange",
+   "Oral permission of station master",
+   "Only timetable",
+   "Passenger consent"
+  ],
+  "a": 0,
+  "e_hi": "सिंगल लाइन पर सुरक्षित संचालन के लिए 'टोकन' प्रणाली का उपयोग किया जाता था, जहाँ लोको पायलट को सेक्शन में प्रवेश करने के लिए टोकन लेना अनिवार्य होता था।",
+  "e_en": "The Token system was traditionally used on single-line sections where a physical metal token handed to the loco pilot served as the absolute authority to enter the single line."
+ },
+ {
+  "id": "rp-rai-l00902",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "यदि एक ट्रेन 90 किमी/घंटा की गति से चल रही है और चालक को 1.2 किमी दूर डेटोनेटर (फॉग सिग्नल) का एक विस्फोट सुनाई देता है, तो ब्रेक लगाने के बाद ट्रेन को रुकने में यदि 40 सेकंड लगते हैं, तो इस अवधि के दौरान ट्रेन द्वारा तय की गई अनुमानित दूरी क्या होगी?",
+  "q_en": "If a train is running at a speed of 90 km/h and the driver hears a single detonation of a fog signal 1.2 km ahead, and it takes 40 seconds for the train to come to a complete halt after applying brakes, what is the approximate distance covered by the train during this deceleration period?",
+  "o_hi": [
+   "500 मीटर",
+   "1000 मीटर",
+   "600 मीटर",
+   "1200 मीटर"
+  ],
+  "o_en": [
+   "500 meters",
+   "1000 meters",
+   "600 meters",
+   "1200 meters"
+  ],
+  "a": 0,
+  "e_hi": "90 किमी/घंटा को मीटर/सेकंड में बदलने पर 25 मीटर/सेकंड आता है। एकसमान त्वरण/मंदन मानते हुए, औसत गति 12.5 मीटर/सेकंड होगी। 40 सेकंड में तय की गई दूरी = 12.5 × 40 = 500 मीटर होगी।",
+  "e_en": "90 km/h converts to 25 m/s. Assuming uniform deceleration to a stop, the average speed during braking is half of the initial speed, which is 12.5 m/s. Multiplying by the 40 seconds yields 500 meters."
+ },
+ {
+  "id": "rp-rai-l00903",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे के सामान्य नियमों के अनुसार, यदि एक पूर्ण ट्रेन (Complete Train) को किसी खंड में रोका जाता है, तो गार्ड को ट्रेन के पीछे कम से कम कितने मीटर की दूरी पर जाकर हैंड डेंजर सिग्नल दिखाना चाहिए?",
+  "q_en": "According to Indian Railways General Rules, if a complete train is stalled in a section, the guard must go back to protect the train by placing hand danger signals at a distance of at least how many meters in the rear?",
+  "o_hi": [
+   "400 मीटर",
+   "600 मीटर",
+   "1200 मीटर",
+   "1800 मीटर"
+  ],
+  "o_en": [
+   "400 meters",
+   "600 meters",
+   "1200 meters",
+   "1800 meters"
+  ],
+  "a": 1,
+  "e_hi": "सामान्य नियमों (GR 6.03) के अनुसार, ब्रॉड गेज पर ट्रेन के पीछे 600 मीटर की दूरी पर पहला डेटोनेटर रखा जाता है और हाथ का संकेत दिया जाता है, तथा 1200 मीटर पर दूसरा डेटोनेटर रखा जाता है।",
+  "e_en": "According to General Rules (GR 6.03), on Broad Gauge, the guard must proceed to a distance of 600 meters in the rear to show a hand danger signal and place the first detonator, followed by another at 1200 meters."
+ },
+ {
+  "id": "rp-rai-l00904",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "कोहरे के मौसम में दृश्यता कम होने पर, डेटोनेटर (फॉग सिग्नल) को सामान्यतः स्टेशन के होम सिग्नल से कितनी दूरी पर लगाया जाता है?",
+  "q_en": "During foggy weather conditions with low visibility, fog signals (detonators) are normally placed at what distance in the rear of the station's Home signal?",
+  "o_hi": [
+   "270 मीटर",
+   "180 मीटर",
+   "90 मीटर",
+   "540 मीटर"
+  ],
+  "o_en": [
+   "270 meters",
+   "180 meters",
+   "90 meters",
+   "540 meters"
+  ],
+  "a": 0,
+  "e_hi": "खराब दृश्यता या कोहरे के दौरान, लोको पायलट को चेतावनी देने के लिए होम सिग्नल से 270 मीटर की दूरी पर फॉग सिग्नल (डेटोनेटर) लगाए जाते हैं।",
+  "e_en": "During fog or low visibility, fog signals (detonators) are placed on the rail at a distance of 270 meters in the rear of the Home signal to warn the approaching loco pilot."
+ },
+ {
+  "id": "rp-rai-l00905",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "यदि दो लगातार डेटोनेटर (फॉग सिग्नल) ट्रैक पर रखे गए हैं, तो भारतीय रेलवे के नियमों के अनुसार उनके बीच की मानक दूरी कितनी होनी चाहिए?",
+  "q_en": "If two consecutive detonators (fog signals) are placed on the track, what is the prescribed standard distance between them according to Indian Railways safety rules?",
+  "o_hi": [
+   "10 मीटर",
+   "20 मीटर",
+   "30 मीटर",
+   "50 मीटर"
+  ],
+  "o_en": [
+   "10 meters",
+   "20 meters",
+   "30 meters",
+   "50 meters"
+  ],
+  "a": 0,
+  "e_hi": "सुरक्षा नियमों के तहत जब एक से अधिक डेटोनेटर लगाए जाते हैं, तो उनके बीच की मानक दूरी 10 मीटर होती है ताकि दोनों क्रमिक रूप से फट सकें।",
+  "e_en": "As per safety regulations, when multiple detonators are placed on the track as a warning signal, the standard distance maintained between two consecutive detonators is 10 meters."
+ },
+ {
+  "id": "rp-rai-l00906",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "एक ट्रेन 72 किमी/घंटा की गति से चल रही है। यदि ब्रेकिंग दूरी (बाइनेर फार्मूला या मानक मान के अनुसार) 72 किमी/घंटा के लिए आवश्यक न्यूनतम दूरी का प्रतिनिधित्व करती है, तो यदि गति दोगुनी यानी 144 किमी/घंटा कर दी जाए, तो सैद्धांतिक रूप से ब्रेकिंग दूरी का गुणांक कितना बढ़ जाएगा?",
+  "q_en": "A train is running at 72 km/h. If the kinetic energy and braking distance principles apply, and the speed is doubled to 144 km/h, by what factor will the theoretical braking distance increase, assuming constant braking force?",
+  "o_hi": [
+   "2 गुना",
+   "3 गुना",
+   "4 गुना",
+   "8 गुना"
+  ],
+  "o_en": [
+   "2 times",
+   "3 times",
+   "4 times",
+   "8 times"
+  ],
+  "a": 2,
+  "e_hi": "गतिज ऊर्जा (Kinetic Energy) वेग के वर्ग (v²) के समानुपाती होती है। जब गति दोगुनी की जाती है, तो गतिज ऊर्जा चार गुना हो जाती है, जिसके परिणामस्वरूप ब्रेकिंग दूरी भी चार गुना बढ़ जाती है।",
+  "e_en": "Kinetic energy is proportional to the square of the velocity (v²). When the speed is doubled, the kinetic energy increases by a factor of four, thereby requiring four times the braking distance to stop."
+ },
+ {
+  "id": "rp-rai-l00907",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे में स्वचालित सिग्नलिंग क्षेत्र (Automatic Signalling Section) में दो लगातार स्टॉप सिग्नलों के बीच न्यूनतम ओवरलैप या दूरी सुनिश्चित करने के लिए सामान्यतः कम से कम कितने सिग्नल होते हैं?",
+  "q_en": "In an Automatic Signalling territory on Indian Railways, how many consecutive stop signals must a train pass or encounter to ensure adequate spacing, typically defining an absolute block zone minimum?",
+  "o_hi": [
+   "केवल 1",
+   "कम से कम 2 (Caution, Stop आदि)",
+   "कम से कम 3 (Attention, Caution, Stop)",
+   "केवल 4"
+  ],
+  "o_en": [
+   "Only 1",
+   "At least 2",
+   "At least 3",
+   "Only 4"
+  ],
+  "a": 2,
+  "e_hi": "ऑटोमैटिक सिग्नलिंग प्रणाली में ट्रेन की सुरक्षा के लिए कम से कम तीन क्रमिक सिग्नल (जैसे 'कहा गया' - प्रोग्रेसिव आस्पेक्ट्स जैसे Proceed, Caution, Stop) का नियम काम करता है ताकि पीछे आ रही ट्रेन सुरक्षित दूरी पर रहे।",
+  "e_en": "In automatic signaling systems, at least three consecutive aspect indications (such as Proceed, Caution, and Stop) are used behind a train to ensure safe braking distances between successive trains."
+ },
+ {
+  "id": "rp-rai-l00908",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "यदि किसी स्टेशन पर शंटing (शंटिंग) संचालन के दौरान अधिकतम अनुमत गति 15 किमी/घंटा निर्धारित की गई है, तो मीटर प्रति सेकंड (m/s) में यह गति लगभग कितनी होगी?",
+  "q_en": "If the maximum permissible speed during shunting operations at a station is stipulated as 15 km/h, what is this speed approximately in meters per second (m/s)?",
+  "o_hi": [
+   "2.5 मीटर/सेकंड",
+   "4.17 मीटर/सेकंड",
+   "5.5 मीटर/सेकंड",
+   "7.2 मीटर/सेकंड"
+  ],
+  "o_en": [
+   "2.5 meters/second",
+   "4.17 meters/second",
+   "5.5 meters/second",
+   "7.2 meters/second"
+  ],
+  "a": 1,
+  "e_hi": "किमी/घंटा को मीटर/सेकंड में बदलने के लिए 5/18 से गुणा करते हैं। 15 × (5/18) = 75/18 = 4.17 मीटर/सेकंड।",
+  "e_en": "To convert kilometers per hour to meters per second, multiply by 5/18. Therefore, 15 × (5/18) = 4.17 m/s."
+ },
+ {
+  "id": "rp-rai-l00909",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे के सामान्य नियमों के अनुसार, यदि कोई ट्रेन किसी खंड में निर्धारित समय से अधिक समय तक बिना किसी स्पष्ट कारण के रुक जाती है, तो गार्ड को कितने मिनट के भीतर ट्रेन की सुरक्षा के लिए पीछे जाना चाहिए (यदि कोई अन्य निर्देश न हो)?",
+  "q_en": "As per general rules, if a train stops in a block section due to an accident or failure, within how many minutes must the guard proceed to protect the rear of the train, under standard basic provisions?",
+  "o_hi": [
+   "5 मिनट",
+   "10 मिनट",
+   "15 मिनट",
+   "30 मिनट"
+  ],
+  "o_en": [
+   "5 minutes",
+   "10 minutes",
+   "15 minutes",
+   "30 minutes"
+  ],
+  "a": 0,
+  "e_hi": "मानक नियमों (GR 6.03) के अनुसार, ट्रेन के रुकने के तुरंत बाद या अधिकतम 5 मिनट के भीतर (यदि सहायक इंजन या अन्य कारण से तुरंत नहीं चल रही है) गार्ड को पीछे की सुरक्षा के लिए निकलना होता है।",
+  "e_en": "According to standard general rules, if a train comes to a stand in a block section, the guard must immediately take steps to protect the train, and specifically proceed to the rear within 5 minutes if no other protection is assured."
+ },
+ {
+  "id": "rp-rai-l00910",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "एक मालगाड़ी जिसमें वैगन जुड़े हैं, को ब्रेक पावर सर्टिफिकेट (BPC) के अनुसार किसी परिचालन खंड पर चलने से पहले न्यूनतम कितने प्रतिशत ब्रेक पावर (Continuously connected brakes) की आवश्यकता होती है?",
+  "q_en": "A freight train requires a minimum percentage of active and continuous air brakes working (Break Power) as per the BPC before starting its journey on a premium or close circuit rake. What is the standard minimum percentage typically required for departure?",
+  "o_hi": [
+   "50%",
+   "75%",
+   "85%",
+   "100%"
+  ],
+  "o_en": [
+   "50%",
+   "75%",
+   "85%",
+   "100%"
+  ],
+  "a": 3,
+  "e_hi": "प्रस्थान बिंदु पर प्रीमियम रेक या क्लोज सर्किट रेक के लिए 100% ब्रेक पावर (BPC) अनिवार्य होती है ताकि ट्रेन पूरी सुरक्षा के साथ चलाई जा सके।",
+  "e_en": "At the originating station, a freight train rake (like Close Circuit or Premium rakes) generally requires 100% brake power certification to ensure complete braking efficiency before departure."
+ },
+ {
+  "id": "rp-rai-l00911",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे पर मानक ब्रॉड गेज (BG) ट्रैक पर दो पटरियों के बीच की आंतरिक दूरी (Gauge) कितनी होती है?",
+  "q_en": "What is the standard inner distance between the two running rails (Gauge) on Broad Gauge (BG) tracks across Indian Railways?",
+  "o_hi": [
+   "1000 मिमी",
+   "1435 मिमी",
+   "1676 मिमी",
+   "762 मिमी"
+  ],
+  "o_en": [
+   "1000 mm",
+   "1435 mm",
+   "1676 mm",
+   "762 mm"
+  ],
+  "a": 2,
+  "e_hi": "भारतीय रेलवे में ब्रॉड गेज की मानक ट्रैक गेज चौड़ाई 1676 मिलीमीटर (5 फीट 6 इंच) होती है।",
+  "e_en": "The standard track gauge for Broad Gauge (BG) in Indian Railways is 1676 millimeters (5 feet 6 inches)."
+ },
+ {
+  "id": "rp-rai-l00912",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे प्रणाली में 'डेटोनेटर' (Detonator) या पटाखा सिग्नल का उपयोग किस लिए किया जाता है?",
+  "q_en": "What is the use of a 'Detonator' (fog signal) in the Indian Railways system?",
+  "o_hi": [
+   "कोहरे या आपात स्थिति में लोको पायलट को खतरे की चेतावनी देने के लिए",
+   "ट्रेन के डिब्बों को आपस में जोड़ने के लिए",
+   "रात के समय स्टेशन की प्लेटफॉर्म लाइट जलाने के लिए",
+   "ट्रेनों के बीच रेडियो संपर्क स्थापित करने के लिए"
+  ],
+  "o_en": [
+   "To warn the loco pilot of danger during fog or emergency situations",
+   "To couple railway coaches together",
+   "To illuminate station platforms during the night",
+   "To establish radio communication between trains"
+  ],
+  "a": 0,
+  "e_hi": "डेटोनेटर एक प्रकार का विस्फोटक पटाखा होता है जिसे पटरी पर रखा जाता है। ट्रेन का पहिया इस पर से गुजरने पर तेज आवाज होती है, जिससे चालक को आगे खतरे या खराब मौसम की चेतावनी मिलती है।",
+  "e_en": "A detonator is an explosive device placed on the rail. When a train wheel runs over it, it produces a loud report, warning the driver of impending danger or poor visibility."
+ },
+ {
+  "id": "rp-rai-l00913",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "'ऑटोमैटिक सिग्नलिंग सिस्टम' (Automatic Signalling System) में मुख्य रूप से किस बात पर ध्यान दिया जाता है?",
+  "q_en": "What is the core principle of an 'Automatic Signalling System'?",
+  "o_hi": [
+   "सिग्नलों का संचालन ट्रेन की आवाजाही के आधार पर स्वचालित रूप से होना",
+   "स्टेशन मास्टर द्वारा हर सिग्नल को मैन्युअली खोलना",
+   "केवल रात के समय ही सिग्नलों का चालू रहना",
+   "यात्रियों द्वारा डिब्बे के अंदर से सिग्नल बदलना"
+  ],
+  "o_en": [
+   "Automatic operation of signals based on the movement of trains",
+   "Manual operation of every signal by the station master",
+   "Operation of signals exclusively during night time",
+   "Changing signals by passengers from inside the coach"
+  ],
+  "a": 0,
+  "e_hi": "ऑटोमैटिक सिग्नलिंग में ट्रैक सर्किट और एक्सल काउंटर की मदद से सिग्नल अपने आप रेड, डबल येलो या ग्रीन हो जाते हैं, जिससे ट्रेनों के बीच सुरक्षित दूरी बनी रहती है।",
+  "e_en": "In automatic signalling, track circuits and axle counters automatically govern signal aspects (red, yellow, green) based on train occupancy, maintaining safe distances."
+ },
+ {
+  "id": "rp-rai-l00914",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में 'हैंड सिग्नल' के दौरान यदि कोई कर्मचारी लाल झंडी को लहराता है, तो इसका क्या अर्थ होता है?",
+  "q_en": "In Indian Railways hand signalling, what does waving a red flag indicate?",
+  "o_hi": [
+   "तुरंत ट्रेन को रोकना (खतरा)",
+   "गाड़ी को सामान्य गति से आगे बढ़ाना",
+   "गति धीमी करना",
+   "स्टेशन पर प्रवेश की अनुमति देना"
+  ],
+  "o_en": [
+   "Stop the train immediately (Danger)",
+   "Proceed with normal speed",
+   "Reduce speed",
+   "Grant permission to enter the station"
+  ],
+  "a": 0,
+  "e_hi": "लाल रंग सार्वभौमिक रूप से खतरे का प्रतीक है। हैंड सिग्नल में लाल झंडी (दिन में) या लाल बत्ती (रात में) दिखाने का मतलब है कि लोको पायलट को तुरंत ट्रेन रोकनी होगी।",
+  "e_en": "Red is universally the symbol for danger. Displaying a red flag during the day or a red light at night requires the loco pilot to stop the train immediately."
+ },
+ {
+  "id": "rp-rai-l00915",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "रेलवे सुरक्षा शब्दावली में 'ट्रैक सर्किट' (Track Circuit) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a 'Track Circuit' in railway safety terminology?",
+  "o_hi": [
+   "एक निश्चित खंड पर ट्रेन की उपस्थिति का स्वतः पता लगाना",
+   "पटरियों के तापमान को नियंत्रित करना",
+   "ट्रेन की पटरियों की सफाई करना",
+   "ओवरहेड तारों में बिजली के वोल्टेज को मापना"
+  ],
+  "o_en": [
+   "To automatically detect the presence of a train on a specific section",
+   "To regulate the temperature of the rails",
+   "To clean railway tracks automatically",
+   "To measure voltage in overhead electric wires"
+  ],
+  "a": 0,
+  "e_hi": "ट्रैक सर्किट एक विद्युत प्रणाली है जो यह पहचानती है कि कोई ट्रेन या उसका हिस्सा किसी विशेष ट्रैक खंड पर मौजूद है या नहीं, जिससे सिग्नलिंग को नियंत्रित किया जाता है।",
+  "e_en": "A track circuit is an electrical system that detects the presence or absence of a train on a particular section of track, helping govern the signals."
+ },
+ {
+  "id": "rp-rai-l00916",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे में 'कॉशन ऑर्डर' (Caution Order) किस स्थिति में जारी किया जाता है?",
+  "q_en": "In Indian Railways, when is a 'Caution Order' issued to a loco pilot?",
+  "o_hi": [
+   "मार्ग में ट्रैक मरम्मत या अन्य जोखिम के कारण गति सीमा कम करने के लिए",
+   "स्टेशन पर मुफ्त भोजन उपलब्ध कराने के लिए",
+   "ट्रेन का मार्ग पूरी तरह से बदलने के लिए",
+   "यात्रियों की संख्या की जानकारी देने के लिए"
+  ],
+  "o_en": [
+   "To enforce restricted speed due to track maintenance or hazards along the route",
+   "To provide free meals at the station",
+   "To completely divert the train route permanently",
+   "To inform about the number of passengers onboard"
+  ],
+  "a": 0,
+  "e_hi": "कॉशन ऑर्डर एक लिखित दस्तावेज होता है जो लोको पायलट को दिया जाता है ताकि वह ट्रैक पर चल रहे काम या किसी अन्य बाधा के कारण एक निश्चित क्षेत्र में ट्रेन की गति धीमी रख सके।",
+  "e_en": "A caution order is a written notice given to the loco pilot specifying sections where the train must run at a restricted speed due to engineering works or other hazards."
+ },
+ {
+  "id": "rp-rai-l00917",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "रेलवे में 'होम सिग्नल' (Home Signal) सामान्यतः कहाँ स्थापित किया जाता है?",
+  "q_en": "Where is a 'Home Signal' typically located in a railway station layout?",
+  "o_hi": [
+   "स्टेशन या यार्ड की सीमा के ठीक पहले, जहाँ से ट्रेन प्रवेश करती है",
+   "स्टेशन के बिल्कुल बीचों-बीच प्लेटफॉर्म पर",
+   "ट्रेन की अंतिम मंजिल (डिपो) के पास",
+   "सुरंग के अंदर"
+  ],
+  "o_en": [
+   "Just outside the station or yard limits where a train enters",
+   "Right in the middle of the station platform",
+   "Near the final destination depot",
+   "Inside a tunnel"
+  ],
+  "a": 0,
+  "e_hi": "होम सिग्नल स्टेशन या यार्ड का पहला स्टॉपिंग सिग्नल होता है जो आने वाली ट्रेन को स्टेशन सीमा में प्रवेश करने की अनुमति देता है या रोकता है।",
+  "e_en": "The home signal is the first stop signal protecting a station or yard, controlling whether an incoming train is permitted to enter the station limits."
+ },
+ {
+  "id": "rp-rai-l00918",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे में 'टैक्स और सिग्नलिंग' के संदर्भ में 'एक्सेल काउंटर' (Axle Counter) का क्या उपयोग है?",
+  "q_en": "What is the function of an 'Axle Counter' in railway signaling?",
+  "o_hi": [
+   "एक निश्चित ट्रैक खंड में प्रवेश करने वाले और बाहर निकलने वाले पहियों (एक्सल) की गिनती करना",
+   "ट्रेन के कुल वजन की गणना करना",
+   "पहिए के घिसाव की जांच करना",
+   "ट्रेन की ईंधन दक्षता मापना"
+  ],
+  "o_en": [
+   "Counting the axles entering and leaving a track section to verify clearance",
+   "Calculating the total weight of the train",
+   "Checking wheel wear and tear",
+   "Measuring the fuel efficiency of the train"
+  ],
+  "a": 0,
+  "e_hi": "एक्सेल काउंटर एक इलेक्ट्रॉनिक डिवाइस है जो ट्रैक खंड में प्रवेश करने वाले और उससे बाहर निकलने वाले एक्सल की संख्या की तुलना करके यह सुनिश्चित करता है कि पूरी ट्रेन खंड से निकल चुकी है या नहीं।",
+  "e_en": "An axle counter is an electronic device that counts the axles entering and leaving a block section to verify if the entire train has cleared the section safely."
+ },
+ {
+  "id": "rp-rai-l00919",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 2,
+  "q_hi": "सिग्नलिंग भाषा में 'डबल येलो सिग्नल' (Double Yellow Signal) का क्या अर्थ है?",
+  "q_en": "What does a 'Double Yellow Signal' indicate in railway signalling?",
+  "o_hi": [
+   "सावधानी बरतें और अगले सिग्नल के लिए सतर्क रहें (Attention)",
+   "तुरंत रुक जाएं",
+   "निर्बाध गति से आगे बढ़ें",
+   "ट्रैक पूरी तरह बंद है"
+  ],
+  "o_en": [
+   "Attention: Proceed, expecting the next signal to be yellow or restricted",
+   "Stop immediately",
+   "Proceed at maximum speed",
+   "Track is completely closed"
+  ],
+  "a": 0,
+  "e_hi": "डबल येलो सिग्नल लोको पायलट को यह संकेत देता है कि अगला सिग्नल सिंगल येलो या ऐसा है जिस पर रुकना पड़ सकता है, इसलिए ट्रेन की गति को नियंत्रित रखा जाए।",
+  "e_en": "A double yellow signal warns the loco pilot that the subsequent signal requires caution, preparing them to slow down or stop at the next signal."
+ },
+ {
+  "id": "rp-rai-l00920",
+  "s": "railway_gk",
+  "t": "safety_signalling",
+  "d": 1,
+  "q_hi": "रेलवे सुरक्षा के संदर्भ में 'ब्लॉक सेक्शन' (Block Section) से क्या तात्पर्य है?",
+  "q_en": "In railway safety, what is meant by a 'Block Section'?",
+  "o_hi": [
+   "दो लगातार स्टेशनों के बीच का वह ट्रैक खंड जहाँ एक समय में केवल एक ही ट्रेन को जाने की अनुमति होती है",
+   "ट्रेन के केवल आरक्षित डिब्बों का हिस्सा",
+   "रेलवे गोदाम का वह क्षेत्र जहाँ माल रखा जाता है",
+   "इंजन शेड के भीतर मरम्मत की जगह"
+  ],
+  "o_en": [
+   "The track section between two consecutive stations permitted to hold only one train at a time",
+   "The reserved coaches portion of a train",
+   "The area in a railway godown where goods are stored",
+   "The repair bay inside an engine shed"
+  ],
+  "a": 0,
+  "e_hi": "ब्लॉक सेक्शन दो स्टेशनों के बीच का वह मार्ग होता है जिसे ब्लॉक प्रणाली द्वारा सुरक्षित किया जाता है ताकि एक ही समय में उस खंड पर दो ट्रेनें आमने-सामने या एक ही दिशा में न आ सकें।",
+  "e_en": "A block section is the portion of the running line between two consecutive block stations, protected by block signaling to ensure only one train occupies it at a time."
+ },
+ {
+  "id": "rp-rai-l00921",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे का वर्तमान में कुल कितने रेलवे जोन (क्षेत्र) में विभाजन किया गया है?",
+  "q_en": "Into how many total railway zones is the Indian Railways currently divided?",
+  "o_hi": [
+   "16",
+   "17",
+   "18",
+   "19"
+  ],
+  "o_en": [
+   "16",
+   "17",
+   "18",
+   "19"
+  ],
+  "a": 2,
+  "e_hi": "भारतीय रेलवे में वर्तमान में कुल 18 रेलवे जोन हैं। नवीनतम जोन दक्षिण तटीय रेलवे है जिसका मुख्यालय विशाखापत्तनम में है।",
+  "e_en": "Indian Railways currently has a total of 18 railway zones. The newest zone is the South Coast Railway with its headquarters at Visakhapatnam."
+ },
+ {
+  "id": "rp-rai-l00922",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 1,
+  "q_hi": "मध्य रेलवे (Central Railway) जोन का मुख्यालय कहाँ स्थित है?",
+  "q_en": "Where is the headquarters of the Central Railway zone located?",
+  "o_hi": [
+   "मुंबई चर्चगेट",
+   "मुंबई छत्रपति शिवाजी महाराज टर्मिनस (CSMT)",
+   "पुणे",
+   "नागपुर"
+  ],
+  "o_en": [
+   "Mumbai Churchgate",
+   "Mumbai Chhatrapati Shivaji Maharaj Terminus (CSMT)",
+   "Pune",
+   "Nagpur"
+  ],
+  "a": 1,
+  "e_hi": "मध्य रेलवे का मुख्यालय मुंबई के छत्रपति शिवाजी महाराज टर्मिनस (CSMT) में स्थित है। यह भारतीय रेलवे के सबसे व्यस्त जोनों में से एक है।",
+  "e_en": "The headquarters of Central Railway is located at Chhatrapati Shivaji Maharaj Terminus (CSMT) in Mumbai. It is one of the busiest zones in Indian Railways."
+ },
+ {
+  "id": "rp-rai-l00923",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 1,
+  "q_hi": "उत्तर रेलवे (Northern Railway) जोन का मुख्यालय निम्नलिखित में से किस स्थान पर है?",
+  "q_en": "At which of the following places is the headquarters of the Northern Railway zone located?",
+  "o_hi": [
+   "नई दिल्ली",
+   "लखनऊ",
+   "चंडीगढ़",
+   "कानपुर"
+  ],
+  "o_en": [
+   "New Delhi",
+   "Lucknow",
+   "Chandigarh",
+   "Kanpur"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर रेलवे जोन का मुख्यालय नई दिल्ली के बड़ौदा हाउस में स्थित है। यह क्षेत्रफल और परिचालन की दृष्टि से सबसे बड़े जोनों में से एक है।",
+  "e_en": "The headquarters of the Northern Railway zone is located at Baroda House in New Delhi. It is one of the largest zones in terms of area and operations."
+ },
+ {
+  "id": "rp-rai-l00924",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "दक्षिण पूर्व मध्य रेलवे (South East Central Railway) का मुख्यालय कहाँ स्थित है?",
+  "q_en": "Where is the headquarters of the South East Central Railway located?",
+  "o_hi": [
+   "रांची",
+   "बिलासपुर",
+   "रायपुर",
+   "नागपुर"
+  ],
+  "o_en": [
+   "Ranchi",
+   "Bilaspur",
+   "Raipur",
+   "Nagpur"
+  ],
+  "a": 1,
+  "e_hi": "दक्षिण पूर्व मध्य रेलवे (SECR) का मुख्यालय छत्तीसगढ़ के बिलासपुर में स्थित है। इस जोन की स्थापना 2003 में हुई थी।",
+  "e_en": "The headquarters of South East Central Railway (SECR) is located in Bilaspur, Chhattisgarh. This zone was established in 2003."
+ },
+ {
+  "id": "rp-rai-l00925",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "पूर्वोत्तर सीमा रेलवे (North East Frontier Railway) का मुख्यालय कहाँ स्थित है?",
+  "q_en": "Where is the headquarters of the Northeast Frontier Railway located?",
+  "o_hi": [
+   "गुवाहाटी (मालीगांव)",
+   "कोलकाता",
+   "सिलिगुड़ी",
+   "दिब्रूगढ़"
+  ],
+  "o_en": [
+   "Guwahati (Maligaon)",
+   "Kolkata",
+   "Siliguri",
+   "Dibrugarh"
+  ],
+  "a": 0,
+  "e_hi": "पूर्वोत्तर सीमा रेलवे का मुख्यालय मालीगांव, गुवाहाटी (असम) में स्थित है। यह पूर्वोत्तर भारत के राज्यों में रेल सेवाओं का संचालन करता है।",
+  "e_en": "The headquarters of the Northeast Frontier Railway is located at Maligaon, Guwahati (Assam). It operates rail services in the northeastern states of India."
+ },
+ {
+  "id": "rp-rai-l00926",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "पश्चिम मध्य रेलवे (West Central Railway) जोन का मुख्यालय किस शहर में है?",
+  "q_en": "In which city is the headquarters of the West Central Railway zone located?",
+  "o_hi": [
+   "भोपाल",
+   "जबलपुर",
+   "इंदौर",
+   "ग्वालियर"
+  ],
+  "o_en": [
+   "Bhopal",
+   "Jabalpur",
+   "Indore",
+   "Gwalior"
+  ],
+  "a": 1,
+  "e_hi": "पश्चिम मध्य रेलवे का मुख्यालय मध्य प्रदेश के जबलपुर में स्थित है। इसके अंतर्गत जबलपुर, भोपाल और कोटा मंडल आते हैं।",
+  "e_en": "The headquarters of West Central Railway is located in Jabalpur, Madhya Pradesh. It comprises Jabalpur, Bhopal, and Kota divisions."
+ },
+ {
+  "id": "rp-rai-l00927",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 3,
+  "q_hi": "कोलकाता मेट्रो (Kolkata Metro) को भारतीय रेलवे के किस क्रम के जोन के रूप में शामिल किया गया था?",
+  "q_en": "As which number railway zone of Indian Railways was the Kolkata Metro included?",
+  "o_hi": [
+   "16वां जोन",
+   "17वां जोन",
+   "18वां जोन",
+   "15वां जोन"
+  ],
+  "o_en": [
+   "16th zone",
+   "17th zone",
+   "18th zone",
+   "15th zone"
+  ],
+  "a": 1,
+  "e_hi": "कोलकाता मेट्रो को भारतीय रेलवे के 17वें जोन के रूप में 2010 में शामिल किया गया था। यह देश का पहला भूमिगत मेट्रो नेटवर्क भी है।",
+  "e_en": "Kolkata Metro was included as the 17th zone of Indian Railways in 2010. It is also the country's first underground metro network."
+ },
+ {
+  "id": "rp-rai-l00928",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 3,
+  "q_hi": "दक्षिण तटीय रेलवे (South Coast Railway) जोन, जिसकी घोषणा हाल के वर्षों में की गई थी, उसका मुख्यालय कहाँ प्रस्तावित है?",
+  "q_en": "Where is the headquarters of the South Coast Railway zone, announced in recent years, proposed to be located?",
+  "o_hi": [
+   "विशाखापत्तनम",
+   "अमरावती",
+   "विजयवाड़ा",
+   "तिरुपति"
+  ],
+  "o_en": [
+   "Visakhapatnam",
+   "Amaravati",
+   "Vijayawada",
+   "Tirupati"
+  ],
+  "a": 0,
+  "e_hi": "दक्षिण तटीय रेलवे भारतीय रेलवे का 18वां जोन है, जिसका मुख्यालय आंध्र प्रदेश के विशाखापत्तनम में स्थित है।",
+  "e_en": "South Coast Railway is the 18th zone of Indian Railways, with its headquarters located in Visakhapatnam, Andhra Pradesh."
+ },
+ {
+  "id": "rp-rai-l00929",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 3,
+  "q_hi": "इनमें से कौन सा रेलवे जोन और उसका मुख्यालय का मिलान गलत है?",
+  "q_en": "Which of the following railway zones and its headquarters matching is incorrect?",
+  "o_hi": [
+   "दक्षिण रेलवे - चेन्नई",
+   "उत्तर पश्चिम रेलवे - जयपुर",
+   "पूर्व मध्य रेलवे - हाजीपुर",
+   "दक्षिण मध्य रेलवे - बेंगलुरु"
+  ],
+  "o_en": [
+   "Southern Railway - Chennai",
+   "North Western Railway - Jaipur",
+   "East Central Railway - Hajipur",
+   "South Central Railway - Bengaluru"
+  ],
+  "a": 3,
+  "e_hi": "दक्षिण मध्य रेलवे (SCR) का मुख्यालय सिकंदराबाद में है, न कि बेंगलुरु में। बेंगलुरु दक्षिण पश्चिम रेलवे के अंतर्गत आता है।",
+  "e_en": "The headquarters of South Central Railway (SCR) is in Secunderabad, not Bengaluru. Bengaluru comes under the South Western Railway."
+ },
+ {
+  "id": "rp-rai-l00930",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "पूर्व तट रेलवे (East Coast Railway) जोन का मुख्यालय कहाँ स्थित है?",
+  "q_en": "Where is the headquarters of the East Coast Railway zone located?",
+  "o_hi": [
+   "कटक",
+   "भुवनेश्वर",
+   "पुरी",
+   "विशाखापत्तनम"
+  ],
+  "o_en": [
+   "Cuttack",
+   "Bhubaneswar",
+   "Puri",
+   "Visakhapatnam"
+  ],
+  "a": 1,
+  "e_hi": "पूर्व तट रेलवे (ECoR) का मुख्यालय ओडिशा के भुवनेश्वर में स्थित है। इसके अंतर्गत मुख्य रूप से खुर्दा रोड, संबलपुर और विशाखापत्तनम मंडल आते हैं।",
+  "e_en": "The headquarters of East Coast Railway (ECoR) is located in Bhubaneswar, Odisha. It mainly comprises Khurda Road, Sambalpur, and Waltair/Visakhapatnam divisions."
+ },
+ {
+  "id": "rp-rai-l00931",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 1,
+  "q_hi": "भारतीय रेलवे में कुल जोन और मंडलों की संख्या का योग क्या है, यदि जोन 19 और मंडल 73 हों?",
+  "q_en": "What is the sum of total zones and divisions in Indian Railways, assuming there are 19 zones and 73 divisions?",
+  "o_hi": [
+   "90",
+   "92",
+   "94",
+   "95"
+  ],
+  "o_en": [
+   "90",
+   "92",
+   "94",
+   "95"
+  ],
+  "a": 1,
+  "e_hi": "भारतीय रेलवे में 19 जोन (नवीनतम मेट्रो रेलवे सहित) और 73 मंडल हैं। 19 और 73 का योग 92 होता है।",
+  "e_en": "Indian Railways has 19 zones (including Metro Railway) and 73 divisions. The sum of 19 and 73 is 92."
+ },
+ {
+  "id": "rp-rai-l00932",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 3,
+  "q_hi": "यदि मध्य रेलवे (Central Railway) के अंतर्गत आने वाले मंडलों की संख्या 5 है और कुल रेलवे जोन 19 हैं, तो मध्य रेलवे के मंडलों की संख्या कुल जोन का कितना प्रतिशत है?",
+  "q_en": "If the number of divisions under Central Railway is 5 and the total railway zones are 19, what percentage of the total zones are Central Railway divisions?",
+  "o_hi": [
+   "26.31%",
+   "25.00%",
+   "27.50%",
+   "24.15%"
+  ],
+  "o_en": [
+   "26.31%",
+   "25.00%",
+   "27.50%",
+   "24.15%"
+  ],
+  "a": 0,
+  "e_hi": "मध्य रेलवे में 5 मंडल (मुंबई, भुसावल, पुणे, नागपुर, सोलापुर) हैं। (5 / 19) * 100 लगभग 26.31% होता है।",
+  "e_en": "Central Railway has 5 divisions. Calculating (5 / 19) * 100 gives approximately 26.31%."
+ },
+ {
+  "id": "rp-rai-l00933",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "यदि किसी विशेष जोन में 6 मंडल हैं और प्रत्येक मंडल में औसतन 150 स्टेशन आते हैं, तो उस जोन में कुल स्टेशनों की अनुमानित संख्या क्या होगी?",
+  "q_en": "If a particular zone has 6 divisions and an average of 150 stations in each division, what will be the approximate total number of stations in that zone?",
+  "o_hi": [
+   "750",
+   "900",
+   "1050",
+   "1200"
+  ],
+  "o_en": [
+   "750",
+   "900",
+   "1050",
+   "1200"
+  ],
+  "a": 1,
+  "e_hi": "कुल स्टेशनों की संख्या निकालने के लिए मंडलों की संख्या (6) को प्रति मंडल औसत स्टेशनों (150) से गुणा करते हैं, जो कि 900 होता है।",
+  "e_en": "To find the total number of stations, multiply the number of divisions (6) by the average stations per division (150), which equals 900."
+ },
+ {
+  "id": "rp-rai-l00934",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "यदि उत्तर रेलवे (Northern Railway) में मंडलों की संख्या 5 है और कुल 73 मंडलों में से इसका अनुपात निकाला जाए, तो कुल मंडलों का कितना भाग उत्तर रेलवे के पास है?",
+  "q_en": "If Northern Railway has 5 divisions, what fraction of the total 73 divisions does it account for?",
+  "o_hi": [
+   "5/73",
+   "6/73",
+   "4/73",
+   "7/73"
+  ],
+  "o_en": [
+   "5/73",
+   "6/73",
+   "4/73",
+   "7/73"
+  ],
+  "a": 0,
+  "e_hi": "भारतीय रेलवे के कुल 73 मंडलों में से उत्तर रेलवे के पास 5 मंडल (दिल्ली, अंबाला, फिरोजपुर, लखनऊ, मुरादाबाद) हैं, अतः भिन्न 5/73 है।",
+  "e_en": "Out of the total 73 divisions in Indian Railways, Northern Railway has 5 divisions, making the fraction 5/73."
+ },
+ {
+  "id": "rp-rai-l00935",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 1,
+  "q_hi": "यदि एक ट्रेन 3 अलग-अलग रेलवे जोन (प्रत्येक जोन में औसतन 400 किमी की दूरी) को पार करती है, तो उस ट्रेन द्वारा तय की गई कुल अनुमानित दूरी क्या होगी?",
+  "q_en": "If a train crosses 3 different railway zones (with an average distance of 400 km in each zone), what will be the total estimated distance covered by the train?",
+  "o_hi": [
+   "1000 किमी",
+   "1200 किमी",
+   "1500 किमी",
+   "1800 किमी"
+  ],
+  "o_en": [
+   "1000 km",
+   "1200 km",
+   "1500 km",
+   "1800 km"
+  ],
+  "a": 1,
+  "e_hi": "जोन की संख्या (3) को प्रति जोन औसत दूरी (400 किमी) से गुणा करने पर कुल दूरी 1200 किमी प्राप्त होती है।",
+  "e_en": "Multiplying the number of zones (3) by the average distance per zone (400 km) gives a total distance of 1200 km."
+ },
+ {
+  "id": "rp-rai-l00936",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "यदि दक्षिण रेलवे (Southern Railway) के 6 मंडल हैं और कुल 19 जोन में से 2 जोन समाप्त कर दिए जाएं, तो शेष जोन की संख्या का 6 मंडलों से क्या अनुपात होगा?",
+  "q_en": "If Southern Railway has 6 divisions and out of 19 total zones, 2 zones are abolished, what will be the ratio of remaining zones to the 6 divisions?",
+  "o_hi": [
+   "17:6",
+   "19:6",
+   "15:6",
+   "17:5"
+  ],
+  "o_en": [
+   "17:6",
+   "19:6",
+   "15:6",
+   "17:5"
+  ],
+  "a": 0,
+  "e_hi": "19 में से 2 जोन कम होने पर शेष जोन 17 बचेंगे। दक्षिण रेलवे के मंडल 6 हैं, अतः अनुपात 17:6 होगा।",
+  "e_en": "Subtracting 2 from 19 leaves 17 zones. With 6 divisions in Southern Railway, the ratio becomes 17:6."
+ },
+ {
+  "id": "rp-rai-l00937",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 1,
+  "q_hi": "यदि किसी काल्पनिक वर्ष में रेलवे जोन की संख्या 20 हो और प्रत्येक जोन में औसतन 4 मंडल बनाए जाएं, तो कुल मंडलों की सैद्धांतिक संख्या क्या होगी?",
+  "q_en": "If in a hypothetical year the number of railway zones is 20 and an average of 4 divisions are created in each zone, what would be the theoretical total number of divisions?",
+  "o_hi": [
+   "60",
+   "70",
+   "80",
+   "100"
+  ],
+  "o_en": [
+   "60",
+   "70",
+   "80",
+   "100"
+  ],
+  "a": 2,
+  "e_hi": "कुल मंडलों की गणना के लिए जोन की संख्या (20) को प्रति जोन मंडलों (4) से गुणा करते हैं, जिससे 80 प्राप्त होता है।",
+  "e_en": "To calculate the total divisions, multiply the number of zones (20) by divisions per zone (4), resulting in 80."
+ },
+ {
+  "id": "rp-rai-l00938",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 3,
+  "q_hi": "भारतीय रेलवे के कुल 73 मंडलों में से यदि पूर्वी क्षेत्र के 4 प्रमुख जोन (पूरे, पूमरे, पूसीरे, दूपूरे) के अंतर्गत कुल 22 मंडल आते हैं, तो अन्य सभी जोन के पास कुल कितने मंडल शेष बचते हैं?",
+  "q_en": "If out of the total 73 divisions of Indian Railways, 4 eastern sector zones account for a total of 22 divisions, how many divisions remain with all other zones combined?",
+  "o_hi": [
+   "48",
+   "51",
+   "55",
+   "58"
+  ],
+  "o_en": [
+   "48",
+   "51",
+   "55",
+   "58"
+  ],
+  "a": 1,
+  "e_hi": "कुल 73 मंडलों में से पूर्वी क्षेत्र के 22 मंडल घटाने पर 73 - 22 = 51 मंडल शेष बचते हैं।",
+  "e_en": "Subtracting the 22 eastern sector divisions from the total 73 gives 73 - 22 = 51 remaining divisions."
+ },
+ {
+  "id": "rp-rai-l00939",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 3,
+  "q_hi": "यदि मेट्रो रेलवे, कोलकाता को छोड़कर भारतीय रेलवे के अन्य जोनों की संख्या 18 है और कुल मंडल 73 हैं, तो बिना मेट्रो के प्रति जोन औसतन मंडलों की संख्या का पूर्णांक मान क्या होगा?",
+  "q_en": "If excluding Metro Railway Kolkata, the number of other zones in Indian Railways is 18 and total divisions are 73, what is the integer value of the average number of divisions per zone without Metro?",
+  "o_hi": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "o_en": [
+   "3",
+   "4",
+   "5",
+   "6"
+  ],
+  "a": 1,
+  "e_hi": "73 को 18 से विभाजित करने पर 4.05 आता है, जिसका निकटतम पूर्णांक मान 4 है (चूंकि मेट्रो का कोई मंडल नहीं है)।",
+  "e_en": "Dividing 73 by 18 gives approximately 4.05, whose integer-based average representation is around 4."
+ },
+ {
+  "id": "rp-rai-l00940",
+  "s": "railway_gk",
+  "t": "zones_divisions",
+  "d": 2,
+  "q_hi": "यदि एक सुपरफास्ट ट्रेन 5 अलग-अलग रेलवे जोन से गुजरती है और प्रत्येक जोन के अंतर्गत आने वाले मंडलों की औसत संख्या 4 है, तो यात्रा में शामिल कुल मंडलों की संख्या कितनी होगी?",
+  "q_en": "If a superfast train passes through 5 different railway zones and the average number of divisions in each of those zones is 4, what is the total number of divisions involved in the route?",
+  "o_hi": [
+   "15",
+   "20",
+   "25",
+   "30"
+  ],
+  "o_en": [
+   "15",
+   "20",
+   "25",
+   "30"
+  ],
+  "a": 1,
+  "e_hi": "जोन की संख्या (5) को प्रति जोन मंडलों की संख्या (4) से गुणा करने पर 5 * 4 = 20 प्राप्त होता है।",
+  "e_en": "Multiplying the number of zones (5) by the number of divisions per zone (4) gives 5 * 4 = 20."
  }
 ]
