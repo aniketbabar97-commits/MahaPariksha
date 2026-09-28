@@ -41,3 +41,10 @@ cd app && flutter pub get && flutter test && flutter run
 4. In the app, one tap on "Report" hides a question for that user; reports come to the team by email.
 
 Launch steps that need your accounts are in [`docs/LAUNCH.md`](docs/LAUNCH.md).
+
+## Other apps in this repository
+
+This repository also hosts **[RailPariksha](railpariksha/)** (रेलपरीक्षा), a sibling exam-practice app for Indian
+Railways recruitment (RRB NTPC, Group D, ALP, JE, Paramedical, RPF Constable & SI). It is fully self-contained
+under `railpariksha/` — its own Flutter app, content, pipelines and CI workflows (`railpariksha_*.yml`) — and
+shares no files with Bharari above.

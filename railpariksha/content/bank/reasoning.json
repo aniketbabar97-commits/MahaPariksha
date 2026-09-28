@@ -1,0 +1,122 @@
+[
+ {
+  "id": "rp-reasoning-0001", "s": "reasoning", "t": "analogy", "d": 1,
+  "q_hi": "जैसे 'हाथ : उंगली' है, वैसे ही 'पेड़ : ?' है।",
+  "q_en": "As 'Hand : Finger', so 'Tree : ?'",
+  "o_hi": ["जड़", "पत्ता", "मिट्टी", "फल"],
+  "o_en": ["Root", "Leaf", "Soil", "Fruit"],
+  "a": 1,
+  "e_hi": "हाथ का एक भाग उंगली है, उसी तरह पेड़ का एक भाग पत्ता है — दोनों में 'संपूर्ण से भाग' का संबंध है।",
+  "e_en": "A finger is a part of a hand; similarly, a leaf is a part of a tree — both show a 'whole to part' relationship."
+ },
+ {
+  "id": "rp-reasoning-0002", "s": "reasoning", "t": "coding_decoding", "d": 2,
+  "q_hi": "यदि CAT को कोड में DBU लिखा जाता है, तो DOG को कैसे लिखा जाएगा?",
+  "q_en": "If CAT is coded as DBU, how will DOG be coded?",
+  "o_hi": ["EPH", "EPI", "FQH", "EOH"],
+  "o_en": ["EPH", "EPI", "FQH", "EOH"],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर को वर्णमाला में एक स्थान आगे बढ़ाया गया है: C→D, A→B, T→U। इसी नियम से D→E, O→P, G→H, यानी EPH।",
+  "e_en": "Each letter is shifted one place forward: C→D, A→B, T→U. Applying the same rule: D→E, O→P, G→H, giving EPH."
+ },
+ {
+  "id": "rp-reasoning-0003", "s": "reasoning", "t": "series", "d": 1,
+  "q_hi": "श्रृंखला में अगली संख्या क्या होगी: 2, 4, 8, 16, ?",
+  "q_en": "What is the next number in the series: 2, 4, 8, 16, ?",
+  "o_hi": ["18", "24", "32", "20"],
+  "o_en": ["18", "24", "32", "20"],
+  "a": 2,
+  "e_hi": "हर संख्या पिछली संख्या का दोगुना है (×2)। इसलिए 16×2 = 32।",
+  "e_en": "Each number is double the previous one (×2). So 16×2 = 32."
+ },
+ {
+  "id": "rp-reasoning-0004", "s": "reasoning", "t": "classification", "d": 1,
+  "q_hi": "इनमें से कौन-सा शब्द बाकी तीनों से भिन्न है?",
+  "q_en": "Which one of the following is different from the rest?",
+  "o_hi": ["गाय", "भैंस", "बकरी", "मगरमच्छ"],
+  "o_en": ["Cow", "Buffalo", "Goat", "Crocodile"],
+  "a": 3,
+  "e_hi": "गाय, भैंस और बकरी स्तनधारी (mammal) हैं, जबकि मगरमच्छ एक सरीसृप (reptile) है — इसलिए यह अलग है।",
+  "e_en": "Cow, buffalo and goat are mammals, while a crocodile is a reptile — so it does not belong to the group."
+ },
+ {
+  "id": "rp-reasoning-0005", "s": "reasoning", "t": "blood_relations", "d": 2,
+  "q_hi": "राम, श्याम का पिता है और श्याम, मोहन का भाई है। राम का मोहन से क्या रिश्ता है?",
+  "q_en": "Ram is Shyam's father, and Shyam is Mohan's brother. What is Ram's relation to Mohan?",
+  "o_hi": ["भाई", "पिता", "चाचा", "दादा"],
+  "o_en": ["Brother", "Father", "Uncle", "Grandfather"],
+  "a": 1,
+  "e_hi": "राम श्याम का पिता है, और श्याम-मोहन भाई हैं, तो राम मोहन का भी पिता है।",
+  "e_en": "Ram is Shyam's father, and Shyam-Mohan are brothers, so Ram is Mohan's father too."
+ },
+ {
+  "id": "rp-reasoning-0006", "s": "reasoning", "t": "direction_sense", "d": 2,
+  "q_hi": "एक व्यक्ति उत्तर की ओर 5 किमी चलता है, फिर दायें मुड़कर 3 किमी चलता है। अब वह अपने शुरुआती बिंदु की किस दिशा में है?",
+  "q_en": "A person walks 5 km north, then turns right and walks 3 km. In which direction is he now from the starting point?",
+  "o_hi": ["उत्तर-पूर्व", "उत्तर-पश्चिम", "दक्षिण-पूर्व", "दक्षिण-पश्चिम"],
+  "o_en": ["North-East", "North-West", "South-East", "South-West"],
+  "a": 0,
+  "e_hi": "उत्तर की ओर चलकर दायें (पूर्व) मुड़ने से वह उत्तर-पूर्व दिशा में आगे बढ़ता है, अतः शुरुआती बिंदु से वह उत्तर-पूर्व में है।",
+  "e_en": "Walking north then turning right (east) moves him toward the north-east, so he is north-east of the starting point."
+ },
+ {
+  "id": "rp-reasoning-0007", "s": "reasoning", "t": "syllogism", "d": 3,
+  "q_hi": "कथन: सभी किताबें पेन हैं। सभी पेन पेंसिल हैं। निष्कर्ष: सभी किताबें पेंसिल हैं।",
+  "q_en": "Statements: All books are pens. All pens are pencils. Conclusion: All books are pencils.",
+  "o_hi": ["निष्कर्ष सही है", "निष्कर्ष गलत है", "निष्कर्ष अनिश्चित है", "कुछ नहीं कहा जा सकता"],
+  "o_en": ["Conclusion is true", "Conclusion is false", "Conclusion is uncertain", "Nothing can be said"],
+  "a": 0,
+  "e_hi": "यदि सभी A, B हैं और सभी B, C हैं, तो तार्किक रूप से सभी A, C होंगे। यहाँ किताब→पेन→पेंसिल की श्रृंखला से निष्कर्ष सही सिद्ध होता है (शब्दों के वास्तविक अर्थ पर ध्यान न देकर केवल तर्क के नियम से)।",
+  "e_en": "If all A are B and all B are C, then logically all A are C. Following books→pens→pencils, the conclusion holds true by the rule of syllogism (judged purely on logic, not real-world meaning)."
+ },
+ {
+  "id": "rp-reasoning-0008", "s": "reasoning", "t": "alphabet_test", "d": 2,
+  "q_hi": "अंग्रेजी वर्णमाला में बायें से 13वाँ अक्षर कौन-सा है?",
+  "q_en": "Which letter is 13th from the left in the English alphabet?",
+  "o_hi": ["K", "L", "M", "N"],
+  "o_en": ["K", "L", "M", "N"],
+  "a": 2,
+  "e_hi": "A से गिनती शुरू करें: A(1) ... M(13)। वर्णमाला के बीचोंबीच का अक्षर M है (कुल 26 अक्षर)।",
+  "e_en": "Counting from A: A(1) ... M(13). M is the middle letter of the 26-letter alphabet."
+ },
+ {
+  "id": "rp-reasoning-0009", "s": "reasoning", "t": "mirror_water_image", "d": 2,
+  "q_hi": "घड़ी में जब समय 3:00 बज रहा हो, तो उसका दर्पण प्रतिबिंब (mirror image) कौन-सा समय दिखाएगा?",
+  "q_en": "When a clock shows 3:00, what time will its mirror image show?",
+  "o_hi": ["3:00", "6:00", "9:00", "12:00"],
+  "o_en": ["3:00", "6:00", "9:00", "12:00"],
+  "a": 2,
+  "e_hi": "घड़ी के दर्पण प्रतिबिंब का सामान्य नियम है: समय को 11:60 में से घटाओ। 11:60 − 3:00 = 8:60 = 9:00।",
+  "e_en": "The standard rule for a clock's mirror image: subtract the time from 11:60. 11:60 − 3:00 = 8:60 = 9:00."
+ },
+ {
+  "id": "rp-reasoning-0010", "s": "reasoning", "t": "mathematical_operations", "d": 2,
+  "q_hi": "यदि '+' का अर्थ '×' है, '×' का अर्थ '−' है, तो 6 + 3 × 2 = ?",
+  "q_en": "If '+' means '×' and '×' means '−', what is 6 + 3 × 2?",
+  "o_hi": ["16", "17", "18", "12"],
+  "o_en": ["16", "17", "18", "12"],
+  "a": 0,
+  "e_hi": "चिह्न बदलने पर व्यंजक बनता है: 6 × 3 − 2 = 18 − 2 = 16। गणितीय क्रम (पहले ×, फिर −) का पालन करें।",
+  "e_en": "Swapping the signs gives: 6 × 3 − 2 = 18 − 2 = 16. Follow the order of operations (× before −)."
+ },
+ {
+  "id": "rp-reasoning-0011", "s": "reasoning", "t": "puzzle_seating", "d": 3,
+  "q_hi": "पाँच मित्र A, B, C, D, E एक कतार में बैठे हैं। B, A के दायें और C के बायें है। यदि A सबसे बायें छोर पर है, तो B किस स्थान पर बैठा है?",
+  "q_en": "Five friends A, B, C, D, E sit in a row. B is to the right of A and to the left of C. If A is at the extreme left, where does B sit?",
+  "o_hi": ["पहले स्थान पर", "दूसरे स्थान पर", "तीसरे स्थान पर", "चौथे स्थान पर"],
+  "o_en": ["1st position", "2nd position", "3rd position", "4th position"],
+  "a": 1,
+  "e_hi": "A सबसे बायें (स्थान 1) है। B, A के दायें यानी सीधे अगले स्थान (स्थान 2) पर बैठेगा, और C उसके आगे (स्थान 3) होगा।",
+  "e_en": "A is at the extreme left (position 1). B, being right of A, sits immediately next (position 2), with C further ahead (position 3)."
+ },
+ {
+  "id": "rp-reasoning-0012", "s": "reasoning", "t": "statement_conclusion", "d": 2,
+  "q_hi": "कथन: सरकार ने सभी सरकारी स्कूलों में मुफ्त पाठ्यपुस्तकें देने की घोषणा की। निष्कर्ष I: इससे गरीब विद्यार्थियों को लाभ होगा। निष्कर्ष II: अब कोई भी निजी स्कूल में नहीं पढ़ेगा।",
+  "q_en": "Statement: The government announced free textbooks in all government schools. Conclusion I: This will benefit poor students. Conclusion II: No one will study in private schools now.",
+  "o_hi": ["केवल निष्कर्ष I सही है", "केवल निष्कर्ष II सही है", "दोनों सही हैं", "दोनों गलत हैं"],
+  "o_en": ["Only conclusion I follows", "Only conclusion II follows", "Both follow", "Neither follows"],
+  "a": 0,
+  "e_hi": "मुफ्त पाठ्यपुस्तकें देने से गरीब विद्यार्थियों को सीधा लाभ होना तार्किक है (निष्कर्ष I)। लेकिन इससे यह नहीं निकलता कि निजी स्कूल पूरी तरह बंद हो जाएंगे (निष्कर्ष II एक अतिरेकपूर्ण अनुमान है)।",
+  "e_en": "Free textbooks logically benefit poor students directly (Conclusion I). But it does not follow that private schools will be abandoned entirely (Conclusion II is an overreach)."
+ }
+]

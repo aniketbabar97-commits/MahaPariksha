@@ -1,0 +1,26 @@
+# Builds the RailPariksha content pack and SEO site as a downloadable workflow artifact.
+# This does NOT deploy to GitHub Pages, since Pages is already wired to Bharari's site in this repo
+# (see content_pack.yml) and a repo can only have one active Pages deployment source. To publish
+# RailPariksha's pack for over-the-air updates, either serve this artifact from your own hosting and
+# set CONTENT_URL, or fold "site" into a subpath of Bharari's Pages build once both apps are ready.
+name: RailPariksha content pack
+on:
+  push:
+    branches: [main]
+    paths: ["railpariksha/content/**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults: { run: { working-directory: railpariksha } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python pipeline/build_bundle.py --out site/content.json
+      - run: python pipeline/build_site.py --out site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: railpariksha-content-site
+          path: railpariksha/site
