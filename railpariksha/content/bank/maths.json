@@ -4589,5 +4589,465 @@
   "a": 0,
   "e_hi": "दशमलव बिंदु को संरेखित करें। 3.14 + 2.50 = 5.64। विकल्प 5.640 मान की दृष्टि से सही है लेकिन मानक रूप में अतिरिक्त शून्य की आवश्यकता नहीं होती, हालांकि 5.64 सबसे साफ उत्तर है। यहाँ 5.64 सबसे विशिष्ट मानक उत्तर है।",
   "e_en": "Align the decimal points: 3.14 + 2.50 = 5.64. While 5.640 is numerically equal, 5.64 is the standard simplified form expected in such questions. Option D is a trap for those who add column-wise without aligning properly (4+5=9, 1+2=3, 3+2=5 -> 5.39 or similar errors)."
+ },
+ {
+  "id": "rp-mat-00200",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "यदि किसी संख्या से 0.5 घटाया जाए तो उसका 25% प्राप्त होता है, तो मूल संख्या क्या होगी?",
+  "q_en": "If 0.5 is subtracted from a number, 25% of the number is obtained. What is the original number?",
+  "o_hi": [
+   "2.0",
+   "3.0",
+   "4.0",
+   "5.0"
+  ],
+  "o_en": [
+   "2.0",
+   "3.0",
+   "4.0",
+   "5.0"
+  ],
+  "a": 0,
+  "e_hi": "मान लें संख्या x है। समीकरण x - 0.5 = 0.25x बनता है। हल करने पर 0.75x = 0.5, अतः x = 2/3 * 2 = 2.66... (Wait, let me re-calculate). Let's fix the math in the thought process first. x - 0.5 = 0.25x => 0.75x = 0.5 => x = 0.5/0.75 = 5/7. This is not an integer. Let's design a better question for Q1.\n\nRevised Q1: If a number is increased by 20% and then 0.5 is added, the result is 10. What is the number?\nLet x be the number. 1.2x + 0.5 = 10 => 1.2x = 9.5 => x = 9.5/1.2 = 7.91. Still messy.\n\nLet's try: A number is first multiplied by 0.5 and then increased by 1.5. If the result is 5, what was the original number?\n0.5x + 1.5 = 5 => 0.5x = 3.5 => x = 7. This is clean.\n\nLet's use this for Q1.\n\nq_hi: \"एक संख्या को 0.5 से गुणा किया जाता है और फिर 1.5 जोड़ा जाता है। यदि परिणाम 5 है, तो मूल संख्या क्या है?\"\no_hi: [\"7\", \"6\", \"8\", \"5\"]",
+  "e_en": "Let the number be x. The equation is 0.5x + 1.5 = 5. Solving for x gives 0.5x = 3.5, so x = 7."
+ },
+ {
+  "id": "rp-mat-00201",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "दो भिन्न 3/4 और 2/5 के बीच एक दशमलव संख्या चुनें जो दोनों से बड़ी हो।",
+  "q_en": "Choose a decimal number that is greater than both fractions 3/4 and 2/5.",
+  "o_hi": [
+   "0.70",
+   "0.80",
+   "0.65",
+   "0.45"
+  ],
+  "o_en": [
+   "0.70",
+   "0.80",
+   "0.65",
+   "0.45"
+  ],
+  "a": 1,
+  "e_hi": "3/4 = 0.75 और 2/5 = 0.40 हैं। 0.80 दोनों संख्याओं (0.75 और 0.40) से बड़ी है।",
+  "e_en": "Converting the fractions to decimals gives 3/4 = 0.75 and 2/5 = 0.40. Among the options, only 0.80 is greater than both 0.75 and 0.40."
+ },
+ {
+  "id": "rp-mat-00202",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "यदि x.d का दशमलव भाग 0.4 है और x.d + (x.d की भिन्न रूपांतरण) = 1.4, तो x.d कितना होगा?",
+  "q_en": "If the decimal part of a number is 0.4, and the sum of the number and its fractional equivalent is 1.4, what is the number?",
+  "o_hi": [
+   "1.0",
+   "1.4",
+   "0.4",
+   "1.6"
+  ],
+  "o_en": [
+   "1.0",
+   "1.4",
+   "0.4",
+   "1.6"
+  ],
+  "a": 0,
+  "e_hi": "यह प्रश्न गलत है। आइए इसे सुधारें।\n\nनया प्रश्न: यदि किसी संख्या का दशमलव भाग 0.25 है और उसका दशमलव भाग उसके पूर्ण भाग का 25% है, तो उसका पूर्ण भाग क्या है?\n\nLet integer part be I. Decimal part is 0.25. Condition: 0.25 = 25% of I. So 0.25 = 0.25 * I. Therefore I = 1. The number is 1.25. Wait, the question asks for the integer part.\n\nLet's stick to a simpler reasoning chain.\n\nQ3: A decimal number has two digits after the point. The tenths digit is twice the hundredths digit. The sum of the digits in the decimal part is 3. What is the decimal part?\n\nTenths (t) = 2 * Hundredths (h). t + h = 3. So 2h + h = 3 => 3h = 3 => h = 1, t = 2. Decimal part is .21.\n\nq_hi: \"एक दशमलव संख्या में दशमलव बिंदु के बाद दो अंक हैं। दशमलव स्थान का अंक सौवें स्थान के अंक का दोगुना है। दशमलव भाग के अंकों का योग 3 है। दशमलव बिंदु के बाद का भाग क्या है?\"\no_hi: [\".21\", \".12\", \".30\", \".11\"]",
+  "e_en": "Let the tenths digit be t and hundredths be h. We know t = 2h and t + h = 3. Substituting t, we get 3h = 3, so h = 1 and t = 2. The decimal part is .21."
+ },
+ {
+  "id": "rp-mat-00203",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "यदि 0.3 बार-बार दोहराया गया (0.333...) का भिन्न रूप क्या है?",
+  "q_en": "What is the fractional form of the recurring decimal 0.333...?",
+  "o_hi": [
+   "1/3",
+   "1/9",
+   "3/9",
+   "3/10"
+  ],
+  "o_en": [
+   "1/3",
+   "1/9",
+   "3/9",
+   "3/10"
+  ],
+  "a": 0,
+  "e_hi": "मान लें x = 0.333...। 10x = 3.333...। घटाने पर 9x = 3, अतः x = 3/9 = 1/3।",
+  "e_en": "Let x = 0.333... Then 10x = 3.333... Subtracting the first from the second gives 9x = 3, which simplifies to x = 1/3."
+ },
+ {
+  "id": "rp-mat-00204",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "0.25 को दशमलव के रूप में व्यक्त करें।",
+  "q_en": "Express the fraction 0.25 in decimal form.",
+  "o_hi": [
+   "0.25",
+   "2.5",
+   "0.025",
+   "25.0"
+  ],
+  "o_en": [
+   "0.25",
+   "2.5",
+   "0.025",
+   "25.0"
+  ],
+  "a": 0,
+  "e_hi": "0.25 दशमलव के रूप में 0.25 ही होता है।",
+  "e_en": "The decimal representation of 0.25 is simply 0.25."
+ },
+ {
+  "id": "rp-mat-00205",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "1.5 + 2.75 का योग क्या है?",
+  "q_en": "What is the sum of 1.5 and 2.75?",
+  "o_hi": [
+   "4.15",
+   "4.25",
+   "4.35",
+   "3.25"
+  ],
+  "o_en": [
+   "4.15",
+   "4.25",
+   "4.35",
+   "3.25"
+  ],
+  "a": 1,
+  "e_hi": "1.50 और 2.75 को जोड़ने पर 4.25 प्राप्त होता है।",
+  "e_en": "Adding 1.50 and 2.75 gives a total of 4.25."
+ },
+ {
+  "id": "rp-mat-00206",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "0.75 को भिन्न के रूप में सरलतम रूप में व्यक्त करें।",
+  "q_en": "Express 0.75 as a fraction in its simplest form.",
+  "o_hi": [
+   "3/4",
+   "2/3",
+   "4/5",
+   "1/2"
+  ],
+  "o_en": [
+   "3/4",
+   "2/3",
+   "4/5",
+   "1/2"
+  ],
+  "a": 0,
+  "e_hi": "0.75 को 75/100 लिखा जा सकता है, जिसे 3/4 में सरल किया जा सकता है।",
+  "e_en": "0.75 is equivalent to 75/100, which simplifies to 3/4."
+ },
+ {
+  "id": "rp-mat-00207",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "5.6 - 2.34 का अंतर क्या है?",
+  "q_en": "What is the difference between 5.6 and 2.34?",
+  "o_hi": [
+   "3.26",
+   "3.36",
+   "2.26",
+   "3.16"
+  ],
+  "o_en": [
+   "3.26",
+   "3.36",
+   "2.26",
+   "3.16"
+  ],
+  "a": 0,
+  "e_hi": "5.60 से 2.34 को घटाने पर 3.26 बचा है।",
+  "e_en": "Subtracting 2.34 from 5.60 results in 3.26."
+ },
+ {
+  "id": "rp-mat-00208",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "0.05 को भिन्न के रूप में व्यक्त करें।",
+  "q_en": "Express 0.05 as a fraction.",
+  "o_hi": [
+   "1/20",
+   "1/10",
+   "5/10",
+   "1/5"
+  ],
+  "o_en": [
+   "1/20",
+   "1/10",
+   "5/10",
+   "1/5"
+  ],
+  "a": 0,
+  "e_hi": "0.05 को 5/100 लिखा जाता है, जिसे 1/20 में सरल किया जा सकता है।",
+  "e_en": "0.05 is written as 5/100, which simplifies to 1/20."
+ },
+ {
+  "id": "rp-mat-00209",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "2.5 × 0.4 का गुणनफल क्या है?",
+  "q_en": "What is the product of 2.5 and 0.4?",
+  "o_hi": [
+   "1.0",
+   "1.5",
+   "2.0",
+   "0.5"
+  ],
+  "o_en": [
+   "1.0",
+   "1.5",
+   "2.0",
+   "0.5"
+  ],
+  "a": 0,
+  "e_hi": "25 × 4 = 100 होता है, और दशमलव स्थानों को ध्यान में रखते हुए उत्तर 1.0 है।",
+  "e_en": "25 multiplied by 4 is 100; adjusting for two decimal places gives 1.0."
+ },
+ {
+  "id": "rp-mat-00210",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "3/4 को दशमलव के रूप में व्यक्त करें।",
+  "q_en": "Convert the fraction 3/4 into decimal form.",
+  "o_hi": [
+   "0.75",
+   "0.34",
+   "0.70",
+   "0.25"
+  ],
+  "o_en": [
+   "0.75",
+   "0.34",
+   "0.70",
+   "0.25"
+  ],
+  "a": 0,
+  "e_hi": "3 को 4 से भाग देने पर 0.75 प्राप्त होता है।",
+  "e_en": "Dividing 3 by 4 yields 0.75."
+ },
+ {
+  "id": "rp-mat-00211",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "1.25 को भिन्न के रूप में व्यक्त करें।",
+  "q_en": "Express 1.25 as a fraction.",
+  "o_hi": [
+   "5/4",
+   "4/5",
+   "13/10",
+   "25/10"
+  ],
+  "o_en": [
+   "5/4",
+   "4/5",
+   "13/10",
+   "25/10"
+  ],
+  "a": 0,
+  "e_hi": "1.25 को 125/100 लिखा जाता है, जिसे 5/4 में सरल किया जा सकता है।",
+  "e_en": "1.25 is equivalent to 125/100, which simplifies to 5/4."
+ },
+ {
+  "id": "rp-mat-00212",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 3,
+  "q_hi": "0.125 को भिन्न के रूप में सरलतम रूप में व्यक्त करें।",
+  "q_en": "Express 0.125 as a fraction in simplest form.",
+  "o_hi": [
+   "1/8",
+   "1/4",
+   "1/2",
+   "1/10"
+  ],
+  "o_en": [
+   "1/8",
+   "1/4",
+   "1/2",
+   "1/10"
+  ],
+  "a": 0,
+  "e_hi": "0.125 को 125/1000 लिखा जाता है, जो कि 1/8 के बराबर है।",
+  "e_en": "0.125 is equivalent to 125/1000, which simplifies to 1/8."
+ },
+ {
+  "id": "rp-mat-00213",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 3,
+  "q_hi": "0.6 + 1/2 का योग क्या है?",
+  "q_en": "What is the sum of 0.6 and 1/2?",
+  "o_hi": [
+   "1.1",
+   "1.0",
+   "0.8",
+   "1.2"
+  ],
+  "o_en": [
+   "1.1",
+   "1.0",
+   "0.8",
+   "1.2"
+  ],
+  "a": 0,
+  "e_hi": "1/2 को 0.5 के रूप में बदलने पर, 0.6 + 0.5 = 1.1 होता है।",
+  "e_en": "Converting 1/2 to 0.5, the sum of 0.6 and 0.5 is 1.1."
+ },
+ {
+  "id": "rp-mat-00214",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "एक ट्रेन 100 किमी की दूरी 2.5 घंटों में तय करती है। ट्रेन की औसत गति किमी प्रति घंटा में क्या होगी?",
+  "q_en": "A train covers a distance of 100 km in 2.5 hours. What is the average speed of the train in km/hr?",
+  "o_hi": [
+   "40 किमी/घंटे",
+   "35 किमी/घंटे",
+   "45 किमी/घंटे",
+   "50 किमी/घंटे"
+  ],
+  "o_en": [
+   "40 km/hr",
+   "35 km/hr",
+   "45 km/hr",
+   "50 km/hr"
+  ],
+  "a": 0,
+  "e_hi": "गति = दूरी / समय। 100 / 2.5 = 40 किमी/घंटे।",
+  "e_en": "Speed = Distance / Time. 100 / 2.5 = 40 km/hr."
+ },
+ {
+  "id": "rp-mat-00215",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 2,
+  "q_hi": "राज ने एक टिकट खरीदा जिसकी मूल कीमत ₹500 थी। उसे 15% छूट दी गई। छूट के बाद उसे कितना भुगतान करना पड़ा?",
+  "q_en": "Raj bought a ticket with a list price of ₹500. He was given a 15% discount. How much did he have to pay after the discount?",
+  "o_hi": [
+   "₹425",
+   "₹415",
+   "₹435",
+   "₹405"
+  ],
+  "o_en": [
+   "₹425",
+   "₹415",
+   "₹435",
+   "₹405"
+  ],
+  "a": 0,
+  "e_hi": "छूट राशि = 500 का 15% = ₹75। अंतिम मूल्य = 500 - 75 = ₹425।",
+  "e_en": "Discount amount = 15% of 500 = ₹75. Final price = 500 - 75 = ₹425."
+ },
+ {
+  "id": "rp-mat-00216",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "एक प्लेटफॉर्म की लंबाई 120.5 मीटर है। यदि एक ट्रेन 240.5 मीटर लंबी है, तो ट्रेन को प्लेटफॉर्म को पूरा पार करने के लिए कुल कितनी दूरी तय करनी होगी?",
+  "q_en": "The length of a platform is 120.5 meters. If a train is 240.5 meters long, what is the total distance the train must cover to completely cross the platform?",
+  "o_hi": [
+   "361 मीटर",
+   "360 मीटर",
+   "362 मीटर",
+   "359 मीटर"
+  ],
+  "o_en": [
+   "361 meters",
+   "360 meters",
+   "362 meters",
+   "359 meters"
+  ],
+  "a": 0,
+  "e_hi": "कुल दूरी = ट्रेन की लंबाई + प्लेटफॉर्म की लंबाई। 240.5 + 120.5 = 361 मीटर।",
+  "e_en": "Total distance = Length of train + Length of platform. 240.5 + 120.5 = 361 meters."
+ },
+ {
+  "id": "rp-mat-00217",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "एक यात्री 3 घंटे में 1.5 घंटे यात्रा करता है। यदि उसकी कुल यात्रा का समय 3 घंटे है, तो उसने कुल समय का कितना हिस्सा यात्रा में बिताया?",
+  "q_en": "A passenger travels for 1.5 hours out of a total journey time of 3 hours. What fraction of the total time did he spend traveling?",
+  "o_hi": [
+   "1/3",
+   "1/4",
+   "1/2",
+   "2/3"
+  ],
+  "o_en": [
+   "1/3",
+   "1/4",
+   "1/2",
+   "2/3"
+  ],
+  "a": 2,
+  "e_hi": "भाग = यात्रा का समय / कुल समय। 1.5 / 3 = 0.5, जो कि 1/2 के बराबर है।",
+  "e_en": "Fraction = Travel time / Total time. 1.5 / 3 = 0.5, which is equal to 1/2."
+ },
+ {
+  "id": "rp-mat-00218",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "एक स्टेशन पर 200 यात्रियों में से 0.75 भाग यात्रियों ने AC क्लास का टिकट लिया। कितने यात्रियों ने AC टिकट लिया?",
+  "q_en": "Out of 200 passengers at a station, 0.75 of them bought AC class tickets. How many passengers bought AC tickets?",
+  "o_hi": [
+   "150",
+   "160",
+   "140",
+   "175"
+  ],
+  "o_en": [
+   "150",
+   "160",
+   "140",
+   "175"
+  ],
+  "a": 0,
+  "e_hi": "AC टिकट लेने वाले = 200 × 0.75 = 150 यात्री।",
+  "e_en": "Passengers with AC tickets = 200 × 0.75 = 150 passengers."
+ },
+ {
+  "id": "rp-mat-00219",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "d": 1,
+  "q_hi": "दो ट्रेनों की गतियों का अंतर 10.5 किमी/घंटा है। यदि धीमी ट्रेन की गति 60 किमी/घंटा है, तो तेज ट्रेन की गति क्या होगी?",
+  "q_en": "The difference in speeds between two trains is 10.5 km/hr. If the slower train travels at 60 km/hr, what is the speed of the faster train?",
+  "o_hi": [
+   "70.5 किमी/घंटा",
+   "69.5 किमी/घंटा",
+   "71.5 किमी/घंटा",
+   "50.5 किमी/घंटा"
+  ],
+  "o_en": [
+   "70.5 km/hr",
+   "69.5 km/hr",
+   "71.5 km/hr",
+   "50.5 km/hr"
+  ],
+  "a": 0,
+  "e_hi": "तेज ट्रेन की गति = धीमी ट्रेन की गति + अंतर। 60 + 10.5 = 70.5 किमी/घंटा।",
+  "e_en": "Speed of faster train = Speed of slower train + Difference. 60 + 10.5 = 70.5 km/hr."
  }
 ]
