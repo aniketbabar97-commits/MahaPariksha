@@ -8867,5 +8867,258 @@
   "a": 2,
   "e_hi": "दूसरा समीकरण पहले समीकरण का गुणक 2 गुना है (2*(2x + 3y) = 24)। इसका अर्थ है कि दोनों रेखाएँ समान हैं, अतः उनके पास अनंत हल हैं।",
   "e_en": "The second equation is exactly twice the first equation. This means the two lines are identical, resulting in infinitely many solutions."
+ },
+ {
+  "id": "rp-mat-00386",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "यदि एक सीधी दीवार के आधार से 10 मीटर दूर खड़े व्यक्ति के लिए दीवार का शिखर उन्नयन कोण 45° है, तो दीवार की ऊँचाई क्या होगी?",
+  "q_en": "If the angle of elevation of the top of a vertical wall is 45° from a point 10 meters away from its base, what is the height of the wall?",
+  "o_hi": [
+   "5 मीटर",
+   "10 मीटर",
+   "10√2 मीटर",
+   "20 मीटर"
+  ],
+  "o_en": [
+   "5 meters",
+   "10 meters",
+   "10√2 meters",
+   "20 meters"
+  ],
+  "a": 1,
+  "e_hi": "चूँकि tan 45° = 1 है, इसलिए विपक्षी भुजा (ऊँचाई) सन्निकट भुजा (दूरी) के बराबर होती है।",
+  "e_en": "Since tan 45° = 1, the opposite side (height) is equal to the adjacent side (distance)."
+ },
+ {
+  "id": "rp-mat-00387",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "यदि sin x = 3/5 और x एक लघु कोण है, तो cos x का मान क्या होगा?",
+  "q_en": "If sin x = 3/5 and x is an acute angle, what is the value of cos x?",
+  "o_hi": [
+   "3/5",
+   "4/5",
+   "5/4",
+   "4/3"
+  ],
+  "o_en": [
+   "3/5",
+   "4/5",
+   "5/4",
+   "4/3"
+  ],
+  "a": 1,
+  "e_hi": "त्रिकोणमितीय सर्वसमिका sin²x + cos²x = 1 का उपयोग करके, cos x = √(1 - (3/5)²) = 4/5 प्राप्त होता है।",
+  "e_en": "Using the trigonometric identity sin²x + cos²x = 1, we get cos x = √(1 - (3/5)²) = 4/5."
+ },
+ {
+  "id": "rp-mat-00388",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "एक गुंबद के शीर्ष से नीचे देखने की क्षमता किस त्रिकोणमितीय अवधारणा से संबंधित है?",
+  "q_en": "The ability to look down from the top of a dome is associated with which trigonometric concept?",
+  "o_hi": [
+   "उन्नयन कोण (Angle of Elevation)",
+   "अवनयन कोण (Angle of Depression)",
+   "दिक्कोण (Bearing)",
+   "अंतराल (Distance)"
+  ],
+  "o_en": [
+   "Angle of Elevation",
+   "Angle of Depression",
+   "Bearing",
+   "Distance"
+  ],
+  "a": 1,
+  "e_hi": "जब एक व्यक्ति ऊपर से नीचे किसी वस्तु की ओर देखता है, तो क्षैतिज रेखा के नीचे बना कोण 'अवनयन कोण' कहलाता है।",
+  "e_en": "When a person looks down at an object from above, the angle formed below the horizontal line is called the 'Angle of Depression'."
+ },
+ {
+  "id": "rp-mat-00389",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "यदि tan θ = 1/√3, तो θ का मान क्या होगा?",
+  "q_en": "If tan θ = 1/√3, what is the value of θ?",
+  "o_hi": [
+   "30°",
+   "45°",
+   "60°",
+   "90°"
+  ],
+  "o_en": [
+   "30°",
+   "45°",
+   "60°",
+   "90°"
+  ],
+  "a": 0,
+  "e_hi": "मानक त्रिकोणमितीय मानों के अनुसार, tan 30° = 1/√3 होता है।",
+  "e_en": "According to standard trigonometric values, tan 30° = 1/√3."
+ },
+ {
+  "id": "rp-mat-00390",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 3,
+  "q_hi": "यदि एक मीनार की ऊँचाई दोगुनी कर दी जाए और अवलोकन बिंदु दूरस्थ रहा, तो शिखर का उन्नयन कोण कैसे बदलेगा?",
+  "q_en": "If the height of a tower is doubled while the observation point remains stationary, how will the angle of elevation of the top change?",
+  "o_hi": [
+   "दोगुना हो जाएगा",
+   "आधा हो जाएगा",
+   "वह बढ़ेगा लेकिन दोगुना नहीं होगा",
+   "बदलेगा नहीं"
+  ],
+  "o_en": [
+   "It will double",
+   "It will halve",
+   "It will increase but not double",
+   "It will remain unchanged"
+  ],
+  "a": 2,
+  "e_hi": "उन्नयन कोण (θ) का संबंध tan θ = h/d से है। यदि h दोगुनी हो जाती है, तो tan θ दोगुना हो जाता है, लेकिन कोण θ स्वयं रैखिक रूप से दोगुना नहीं होता (tan 2θ ≠ 2 tan θ)।",
+  "e_en": "The angle of elevation (θ) is related by tan θ = h/d. If h is doubled, tan θ doubles, but the angle θ itself does not double linearly (since tan 2θ ≠ 2 tan θ)."
+ },
+ {
+  "id": "rp-mat-00391",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_hi": "एक अमूर्त वस्तु के लिए, यदि अवलोकनकर्ता का दूरी दोगुनी कर दी जाए, तो उन्नयन कोण का कोसाइन (cosine) कैसे बदलेगा?",
+  "q_en": "For a given object, if the observer's distance is doubled, how does the cosine of the angle of elevation change?",
+  "o_hi": [
+   "आधा हो जाता है",
+   "दोगुना हो जाता है",
+   "चौथाई हो जाता है",
+   "बदलाव नहीं होता"
+  ],
+  "o_en": [
+   "It becomes half",
+   "It doubles",
+   "It becomes one-fourth",
+   "It remains unchanged"
+  ],
+  "a": 0,
+  "e_hi": "यदि h ऊँचाई और d दूरी है, तो cos θ = d/√(h²+d²)। जब d को 2d किया जाता है, तो अनुपात कम हो जाता है, और सरलीकरण से पता चलता है कि यह मान लगभग आधा हो जाता है जब d >> h हो, या सामान्यतः घट जाता है। सटीक गणितीय रूप में, यदि d दोगुनी हो, तो cos θ का मान घटता है। (नोट: यह प्रश्न कारण-प्रभाव पर आधारित है)।",
+  "e_en": "If h is height and d is distance, cos θ = d/√(h²+d²). When d is doubled to 2d, the ratio changes. Mathematically, increasing the distance decreases the angle, and thus decreases the cosine value relative to the new hypotenuse. Specifically, the cosine value reduces."
+ },
+ {
+  "id": "rp-mat-00392",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "यदि sin θ = 3/5 है, तो cos θ का मान क्या होगा? (मान लीजिए कि θ एक तीव्र कोण है।)",
+  "q_en": "If sin θ = 3/5, what is the value of cos θ? (Assume θ is an acute angle.)",
+  "o_hi": [
+   "4/5",
+   "3/4",
+   "5/4",
+   "√3/2"
+  ],
+  "o_en": [
+   "4/5",
+   "3/4",
+   "5/4",
+   "√3/2"
+  ],
+  "a": 0,
+  "e_hi": "त्रिकोणमितीय सर्वसमिका sin²θ + cos²θ = 1 का उपयोग करते हुए, cos²θ = 1 - (3/5)² = 16/25 प्राप्त होता है। चूंकि θ तीव्र कोण है, cos θ धनात्मक होता है, इसलिए cos θ = 4/5।",
+  "e_en": "Using the identity sin²θ + cos²θ = 1, we get cos²θ = 1 - (3/5)² = 16/25. Since θ is an acute angle, cos θ is positive, so cos θ = 4/5."
+ },
+ {
+  "id": "rp-mat-00393",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_hi": "यदि A + B = 90° है, तो tan A का मान क्या होगा?",
+  "q_en": "If A + B = 90°, what is the value of tan A in terms of B?",
+  "o_hi": [
+   "cot B",
+   "sin B",
+   "cos B",
+   "tan B"
+  ],
+  "o_en": [
+   "cot B",
+   "sin B",
+   "cos B",
+   "tan B"
+  ],
+  "a": 0,
+  "e_hi": "यह ज्ञात है कि tan(90° - θ) = cot θ। चूंकि A = 90° - B, इसलिए tan A = tan(90° - B) = cot B।",
+  "e_en": "It is known that tan(90° - θ) = cot θ. Since A = 90° - B, therefore tan A = tan(90° - B) = cot B."
+ },
+ {
+  "id": "rp-mat-00394",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "सर्वसमिका (1 + tan²θ) का मान क्या है?",
+  "q_en": "What is the value of the expression (1 + tan²θ)?",
+  "o_hi": [
+   "sec²θ",
+   "cosec²θ",
+   "cot²θ",
+   "1"
+  ],
+  "o_en": [
+   "sec²θ",
+   "cosec²θ",
+   "cot²θ",
+   "1"
+  ],
+  "a": 0,
+  "e_hi": "त्रिकोणमितीय सर्वसमिका 1 + tan²θ = sec²θ का प्रत्यक्ष अनुप्रयोग है।",
+  "e_en": "This is a direct application of the trigonometric identity 1 + tan²θ = sec²θ."
+ },
+ {
+  "id": "rp-mat-00395",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 2,
+  "q_hi": "यदि cosec θ = 5/3 है, तो cot θ का मान क्या होगा? (मान लीजिए कि θ एक तीव्र कोण है।)",
+  "q_en": "If cosec θ = 5/3, what is the value of cot θ? (Assume θ is an acute angle.)",
+  "o_hi": [
+   "4/5",
+   "3/4",
+   "4/3",
+   "3/5"
+  ],
+  "o_en": [
+   "4/5",
+   "3/4",
+   "4/3",
+   "3/5"
+  ],
+  "a": 2,
+  "e_hi": "सर्वसमिका cosec²θ = 1 + cot²θ का उपयोग करने पर, (5/3)² = 1 + cot²θ। इससे cot²θ = 25/9 - 9/9 = 16/9 होता है। अतः cot θ = 4/3।",
+  "e_en": "Using the identity cosec²θ = 1 + cot²θ, we get (5/3)² = 1 + cot²θ. This gives cot²θ = 25/9 - 9/9 = 16/9. Therefore, cot θ = 4/3."
+ },
+ {
+  "id": "rp-mat-00396",
+  "s": "maths",
+  "t": "trigonometry",
+  "d": 1,
+  "q_hi": "tan 30° का मान क्या है?",
+  "q_en": "What is the value of tan 30°?",
+  "o_hi": [
+   "1/√3",
+   "√3",
+   "1/2",
+   "√3/2"
+  ],
+  "o_en": [
+   "1/√3",
+   "√3",
+   "1/2",
+   "√3/2"
+  ],
+  "a": 0,
+  "e_hi": "मानक त्रिकोणमितीय मानों के अनुसार, tan 30° का मान 1/√3 या √3/3 होता है।",
+  "e_en": "According to standard trigonometric values, the value of tan 30° is 1/√3 or √3/3."
  }
 ]
