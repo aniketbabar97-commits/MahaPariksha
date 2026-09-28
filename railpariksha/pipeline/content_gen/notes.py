@@ -20,7 +20,7 @@ import time
 sys.path.insert(0, os.path.dirname(__file__))
 from _providers import ask  # noqa: E402
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 SCHEMA_PROMPT = """You are writing a revision note for an Indian Railways (RRB/RPF) exam-prep app, subject
 "{subject_en}" ({subject_hi}), topic "{topic_en}" ({topic_hi}).

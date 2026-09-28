@@ -29,7 +29,7 @@ import time
 sys.path.insert(0, os.path.dirname(__file__))
 from _providers import ask, norm  # noqa: E402
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 # current_affairs is kept small: date-sensitive facts age out fast, so we don't
 # want thousands of them going stale. Everything else scales up.
