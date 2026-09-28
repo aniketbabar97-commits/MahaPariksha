@@ -3071,5 +3071,143 @@
   "a": 0,
   "e_hi": "पहली बार: 10 लीटर निकले, 40 लीटर दूध बचे। पानी डालने से कुल 50 लीटर दूध-पानी मिश्रण। दूध की सांद्रता 40/50 = 0.8। दूसरी बार: 10 लीटर मिश्रण निकले, जिसमें दूध = 10 * 0.8 = 8 लीटर। शेष दूध = 40 - 8 = 32 लीटर।\nसूत्र: M = M0 * (1 - r/V)^n = 50 * (1 - 10/50)^2 = 50 * (4/5)^2 = 50 * 16/25 = 32.",
   "e_en": "Formula: Remaining Milk = Initial Amount * (1 - removed/total)^n. Here, 50 * (1 - 10/50)^2 = 50 * (4/5)^2 = 50 * 0.64 = 32 liters. A common mistake is subtracting 20 liters directly, which would be 30 liters."
+ },
+ {
+  "id": "rp-mat-00134",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_hi": "एक ट्रेन की कीमत 10% के लाभ पर 5,500 रुपये में बिकी। यदि उसे 25% के लाभ पर बेचा जाता, तो लाभ कितना होता?",
+  "q_en": "A train ticket was sold at a 10% profit for ₹5,500. If it had been sold at a 25% profit, what would have been the profit amount?",
+  "o_hi": [
+   "1,000 रुपये",
+   "1,250 रुपये",
+   "1,500 रुपये",
+   "1,750 रुपये"
+  ],
+  "o_en": [
+   "₹1,000",
+   "₹1,250",
+   "₹1,500",
+   "₹1,750"
+  ],
+  "a": 1,
+  "e_hi": "110% कीमत = 5,500, इसलिए मूल्य = 5,000 रुपये। 25% लाभ = 5,000 का 25% = 1,250 रुपये।",
+  "e_en": "110% of cost price is 5,500, so the cost price is 5,000. A 25% profit on 5,000 is 1,250."
+ },
+ {
+  "id": "rp-mat-00135",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_hi": "एक कर्मचारी की वेतन में पहले 15% की वृद्धि की गई और फिर उसी नए वेतन पर 15% की कटौती की गई। मूल वेतन की तुलना में अंतिम वेतन में कितना प्रतिशत परिवर्तन हुआ?",
+  "q_en": "An employee's salary was increased by 15% and then decreased by 15% on the new salary. What is the net percentage change in his final salary compared to the original?",
+  "o_hi": [
+   "2.25% कमी",
+   "3.50% कमी",
+   "2.25% वृद्धि",
+   "3.00% कमी"
+  ],
+  "o_en": [
+   "2.25% decrease",
+   "3.50% decrease",
+   "2.25% increase",
+   "3.00% decrease"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र: x + y - xy/100 = 15 + (-15) - (15*-15)/100 = -2.25%। यह 2.25% कमी दर्शाता है।",
+  "e_en": "Using the formula x + y - (xy/100), where x=15 and y=-15, the result is -2.25%, indicating a 2.25% decrease."
+ },
+ {
+  "id": "rp-mat-00136",
+  "s": "maths",
+  "t": "percentage",
+  "d": 1,
+  "q_hi": "रेलवे स्टेशन पर कुल यात्रियों में से 40% महिलाएं हैं। यदि 200 यात्री महिलाएं हैं, तो कुल यात्रियों में पुरुषों की संख्या कितनी है?",
+  "q_en": "At a railway station, 40% of the total passengers are women. If there are 200 female passengers, how many male passengers are there?",
+  "o_hi": [
+   "300",
+   "350",
+   "400",
+   "450"
+  ],
+  "o_en": [
+   "300",
+   "350",
+   "400",
+   "450"
+  ],
+  "a": 0,
+  "e_hi": "कुल यात्री = 200 / 0.40 = 500। पुरुष = 500 - 200 = 300।",
+  "e_en": "Total passengers = 200 / 0.40 = 500. Male passengers = 500 - 200 = 300."
+ },
+ {
+  "id": "rp-mat-00137",
+  "s": "maths",
+  "t": "percentage",
+  "d": 1,
+  "q_hi": "एक ट्रेन के वजन में 12% की कमी होने के बाद, बचा हुआ वजन 4,400 टन है। ट्रेन का मूल वजन क्या था?",
+  "q_en": "After a 12% reduction in a train's weight, the remaining weight is 4,400 tons. What was the original weight of the train?",
+  "o_hi": [
+   "4,800 टन",
+   "5,000 टन",
+   "5,200 टन",
+   "5,500 टन"
+  ],
+  "o_en": [
+   "4,800 tons",
+   "5,000 tons",
+   "5,200 tons",
+   "5,500 tons"
+  ],
+  "a": 1,
+  "e_hi": "88% वजन = 4,400। मूल वजन = 4,400 * 100 / 88 = 5,000 टन।",
+  "e_en": "88% of the weight is 4,400. Original weight = 4,400 * 100 / 88 = 5,000 tons."
+ },
+ {
+  "id": "rp-mat-00138",
+  "s": "maths",
+  "t": "percentage",
+  "d": 1,
+  "q_hi": "एक रेलवे किट के मूल्य पर 10% की छूट दी गई। यदि कुल भुगतान 900 रुपये आया, तो छूट के बाद कितनी राशि बची?",
+  "q_en": "A 10% discount was given on the list price of a railway kit. If the final bill came to ₹900, how much was the discount amount?",
+  "o_hi": [
+   "100 रुपये",
+   "90 रुपये",
+   "110 रुपये",
+   "120 रुपये"
+  ],
+  "o_en": [
+   "₹100",
+   "₹90",
+   "₹110",
+   "₹120"
+  ],
+  "a": 0,
+  "e_hi": "90% कीमत = 900, तो मूल्य = 1,000। छूट = 1,000 - 900 = 100 रुपये।",
+  "e_en": "90% of the price is 900, so the list price is 1,000. The discount is 1,000 - 900 = 100."
+ },
+ {
+  "id": "rp-mat-00139",
+  "s": "maths",
+  "t": "percentage",
+  "d": 2,
+  "q_hi": "दो ट्रेनों A और B की गति का अनुपात 3:5 है। यदि ट्रेन A की गति 60 किमी/घंटा है, तो ट्रेन B की गति ट्रेन A की तुलना में कितने प्रतिशत अधिक है?",
+  "q_en": "The ratio of the speeds of two trains A and B is 3:5. If Train A travels at 60 km/h, by what percentage is Train B's speed higher than Train A's?",
+  "o_hi": [
+   "50%",
+   "60%",
+   "66.67%",
+   "40%"
+  ],
+  "o_en": [
+   "50%",
+   "60%",
+   "66.67%",
+   "40%"
+  ],
+  "a": 2,
+  "e_hi": "A = 3x = 60, तो x = 20। B = 5x = 100। अंतर = 40। प्रतिशत = (40/60)*100 = 66.67%।",
+  "e_en": "A = 3x = 60, so x = 20. B = 5x = 100. Difference is 40. Percentage increase = (40/60)*100 = 66.67%."
  }
 ]
