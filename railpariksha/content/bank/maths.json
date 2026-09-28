@@ -162,5 +162,105 @@
   "a": 2,
   "e_hi": "25% of 200 = (25/100)×200 = 50।",
   "e_en": "25% of 200 = (25/100)×200 = 50."
+ },
+ {
+  "id": "rp-maths-0017", "s": "maths", "t": "number_system", "d": 2,
+  "q_hi": "निम्न में से कौन-सी संख्या 11 से पूर्णतः विभाज्य है?",
+  "q_en": "Which of the following numbers is exactly divisible by 11?",
+  "o_hi": ["1221", "1222", "1223", "1224"],
+  "o_en": ["1221", "1222", "1223", "1224"],
+  "a": 0,
+  "e_hi": "विभाज्यता नियम: सम व विषम स्थानों के अंकों की बेरीज का अंतर 0 या 11 का गुणज होना चाहिए। 1221 में विषम स्थान (1+2)=3 और सम स्थान (2+1)=3, अंतर = 0, अतः यह 11 से विभाज्य है (11×111=1221)।",
+  "e_en": "Divisibility rule for 11: the difference between the sum of digits at odd and even positions must be 0 or a multiple of 11. In 1221, odd positions sum to 3 and even positions sum to 3, a difference of 0, so it is divisible (11×111=1221)."
+ },
+ {
+  "id": "rp-maths-0018", "s": "maths", "t": "ratio_proportion", "d": 1,
+  "q_hi": "दो संख्याओं का अनुपात 3:5 है। यदि उनका योग 40 है, तो बड़ी संख्या क्या है?",
+  "q_en": "Two numbers are in the ratio 3:5. If their sum is 40, what is the larger number?",
+  "o_hi": ["15", "20", "25", "30"],
+  "o_en": ["15", "20", "25", "30"],
+  "a": 2,
+  "e_hi": "कुल भाग = 3+5 = 8। एक भाग = 40/8 = 5। बड़ी संख्या = 5×5 = 25।",
+  "e_en": "Total parts = 3+5 = 8. One part = 40/8 = 5. Larger number = 5×5 = 25."
+ },
+ {
+  "id": "rp-maths-0019", "s": "maths", "t": "percentage", "d": 2,
+  "q_hi": "यदि किसी संख्या का 40%, 80 है, तो वह संख्या क्या है?",
+  "q_en": "If 40% of a number is 80, what is the number?",
+  "o_hi": ["160", "180", "200", "220"],
+  "o_en": ["160", "180", "200", "220"],
+  "a": 2,
+  "e_hi": "मान लीजिए संख्या x है। 40% of x = 80, अर्थात 0.4x = 80, तो x = 80/0.4 = 200।",
+  "e_en": "Let the number be x. 40% of x = 80, i.e. 0.4x = 80, so x = 80/0.4 = 200."
+ },
+ {
+  "id": "rp-maths-0020", "s": "maths", "t": "average", "d": 2,
+  "q_hi": "5 संख्याओं का औसत 20 है। यदि उनमें से एक संख्या हटा दी जाए तो शेष 4 संख्याओं का औसत 18 हो जाता है। हटाई गई संख्या क्या थी?",
+  "q_en": "The average of 5 numbers is 20. If one number is removed, the average of the remaining 4 becomes 18. What was the removed number?",
+  "o_hi": ["24", "26", "28", "30"],
+  "o_en": ["24", "26", "28", "30"],
+  "a": 2,
+  "e_hi": "5 संख्याओं का योग = 5×20 = 100। शेष 4 का योग = 4×18 = 72। हटाई गई संख्या = 100−72 = 28।",
+  "e_en": "Sum of 5 numbers = 5×20 = 100. Sum of remaining 4 = 4×18 = 72. Removed number = 100−72 = 28."
+ },
+ {
+  "id": "rp-maths-0021", "s": "maths", "t": "profit_loss", "d": 2,
+  "q_hi": "एक दुकानदार ने एक वस्तु 500 रुपये में बेची और उसे 50 रुपये की हानि हुई। वस्तु का क्रय मूल्य क्या था?",
+  "q_en": "A shopkeeper sold an item for ₹500 and incurred a loss of ₹50. What was the cost price of the item?",
+  "o_hi": ["₹450", "₹500", "₹550", "₹600"],
+  "o_en": ["₹450", "₹500", "₹550", "₹600"],
+  "a": 2,
+  "e_hi": "हानि होने पर क्रय मूल्य विक्रय मूल्य से अधिक होता है। क्रय मूल्य = विक्रय मूल्य + हानि = 500+50 = 550 रुपये।",
+  "e_en": "In a loss, cost price exceeds selling price. Cost price = Selling price + Loss = 500+50 = ₹550."
+ },
+ {
+  "id": "rp-maths-0022", "s": "maths", "t": "time_work", "d": 3,
+  "q_hi": "A अकेला किसी काम को 10 दिन में और B अकेला उसी काम को 15 दिन में करता है। दोनों साथ मिलकर 2 दिन काम करते हैं, फिर A काम छोड़ देता है। शेष काम B अकेले कितने दिनों में पूरा करेगा?",
+  "q_en": "A alone can do a job in 10 days and B alone in 15 days. They work together for 2 days, then A leaves. In how many more days will B alone finish the remaining work?",
+  "o_hi": ["8 दिन", "9 दिन", "10 दिन", "11 दिन"],
+  "o_en": ["8 days", "9 days", "10 days", "11 days"],
+  "a": 2,
+  "e_hi": "साथ में एक दिन का काम = 1/10+1/15 = 1/6। 2 दिन में = 2/6 = 1/3 काम पूरा हुआ। शेष काम = 1−1/3 = 2/3। B अकेले 1 दिन में 1/15 काम करता है, तो शेष काम में लगने वाले दिन = (2/3)÷(1/15) = (2/3)×15 = 10 दिन।",
+  "e_en": "Combined one-day work = 1/10+1/15 = 1/6. In 2 days, 2/6 = 1/3 of the work is done. Remaining = 2/3. B alone does 1/15 per day, so days needed = (2/3)÷(1/15) = (2/3)×15 = 10 days."
+ },
+ {
+  "id": "rp-maths-0023", "s": "maths", "t": "time_speed_distance", "d": 2,
+  "q_hi": "एक व्यक्ति 40 किमी/घंटा की चाल से 2 घंटे और 60 किमी/घंटा की चाल से 3 घंटे यात्रा करता है। उसकी औसत चाल कितनी है?",
+  "q_en": "A person travels at 40 km/h for 2 hours and 60 km/h for 3 hours. What is his average speed?",
+  "o_hi": ["48 किमी/घंटा", "50 किमी/घंटा", "52 किमी/घंटा", "55 किमी/घंटा"],
+  "o_en": ["48 km/h", "50 km/h", "52 km/h", "55 km/h"],
+  "a": 2,
+  "e_hi": "कुल दूरी = (40×2)+(60×3) = 80+180 = 260 किमी। कुल समय = 2+3 = 5 घंटे। औसत चाल = 260/5 = 52 किमी/घंटा।",
+  "e_en": "Total distance = (40×2)+(60×3) = 80+180 = 260 km. Total time = 2+3 = 5 hours. Average speed = 260/5 = 52 km/h."
+ },
+ {
+  "id": "rp-maths-0024", "s": "maths", "t": "mensuration", "d": 2,
+  "q_hi": "एक वर्ग का परिमाप 40 सेमी है। उसका क्षेत्रफल कितना है?",
+  "q_en": "The perimeter of a square is 40 cm. What is its area?",
+  "o_hi": ["80 सेमी²", "100 सेमी²", "120 सेमी²", "160 सेमी²"],
+  "o_en": ["80 cm²", "100 cm²", "120 cm²", "160 cm²"],
+  "a": 1,
+  "e_hi": "वर्ग की भुजा = परिमाप/4 = 40/4 = 10 सेमी। क्षेत्रफल = भुजा² = 10² = 100 सेमी²।",
+  "e_en": "Side of square = Perimeter/4 = 40/4 = 10 cm. Area = side² = 10² = 100 cm²."
+ },
+ {
+  "id": "rp-maths-0025", "s": "maths", "t": "algebra", "d": 2,
+  "q_hi": "यदि 2x − 3 = x + 5 है, तो x का मान क्या है?",
+  "q_en": "If 2x − 3 = x + 5, what is the value of x?",
+  "o_hi": ["6", "7", "8", "9"],
+  "o_en": ["6", "7", "8", "9"],
+  "a": 2,
+  "e_hi": "2x − x = 5 + 3, अर्थात x = 8।",
+  "e_en": "2x − x = 5 + 3, so x = 8."
+ },
+ {
+  "id": "rp-maths-0026", "s": "maths", "t": "geometry", "d": 2,
+  "q_hi": "एक समकोण त्रिभुज में एक कोण 90° और दूसरा 40° है। तीसरे कोण का मान क्या है?",
+  "q_en": "In a right-angled triangle, one angle is 90° and another is 40°. What is the third angle?",
+  "o_hi": ["40°", "50°", "60°", "70°"],
+  "o_en": ["40°", "50°", "60°", "70°"],
+  "a": 1,
+  "e_hi": "त्रिभुज के कोणों का योग 180° होता है। तीसरा कोण = 180° − 90° − 40° = 50°।",
+  "e_en": "The angles of a triangle sum to 180°. Third angle = 180° − 90° − 40° = 50°."
  }
 ]
