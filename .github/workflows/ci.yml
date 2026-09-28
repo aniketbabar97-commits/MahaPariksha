@@ -2,7 +2,13 @@ name: CI
 on:
   push:
     branches: [main]
+    paths: ["app/**", "content/**", "pipeline/**", "docs/**", ".github/workflows/ci.yml"]
   pull_request:
+    paths: ["app/**", "content/**", "pipeline/**", "docs/**", ".github/workflows/ci.yml"]
+
+concurrency:
+  group: bharari-ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   content:
