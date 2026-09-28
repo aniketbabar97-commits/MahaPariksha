@@ -7,6 +7,7 @@ import '../widgets/common.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
+import 'search_screen.dart';
 
 class TodayScreen extends StatelessWidget {
   final ValueChanged<int> onNavigate;
@@ -167,6 +168,14 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+        ),
+        const SizedBox(height: 12),
+        ActionCard(
+          icon: Icons.search,
+          color: BrandColors.sky,
+          title: context.tr('प्रश्न व नोट्स खोजें', 'Search questions & notes'),
+          subtitle: context.tr('किसी भी टॉपिक या कीवर्ड पर सीधे जाएं', 'Jump straight to any topic or keyword'),
+          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SearchScreen())),
         ),
         const SizedBox(height: 12),
         ActionCard(

@@ -23,6 +23,11 @@ class ContentRepo {
   TopicNote? note(String subject, String topic) => _notes['$subject/$topic'];
   bool hasNotes(String subject) => _notes.keys.any((k) => k.startsWith('$subject/'));
 
+  /// All topic notes, unordered. Notes aren't indexed by exam (a note is keyed by
+  /// subject/topic, not exam), so callers that need exam-scoped notes filter this
+  /// by subject id themselves (e.g. the search screen).
+  List<TopicNote> get allNotes => _notes.values.toList(growable: false);
+
   final Map<String, Subject> _subjectById = {};
   final Map<String, Exam> _examById = {};
   final Map<String, Question> _questionById = {};
