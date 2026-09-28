@@ -92,6 +92,31 @@ void main() {
       expect(gaCount, greaterThan(15));
     });
 
+    test('every exam\'s mock allocation tracks its declared subject weights', () {
+      // Broader than the RPF-specific check above: for every exam, a mock whose size
+      // is small relative to the question pool should give the subject with the
+      // highest declared weight at least as many questions as one with a much
+      // lower weight (never the reverse), so weighting isn't silently ignored for
+      // exams other than the one spot-checked above.
+      for (final e in repo.exams) {
+        p.examId = e.id;
+        final weights = e.weights;
+        if (weights.length < 2) continue;
+        final sorted = weights.entries.toList()..sort((a, b) => b.value.compareTo(a.value));
+        final top = sorted.first;
+        final bottom = sorted.last;
+        if (top.value == bottom.value) continue;
+        final m = b.mock(count: 30);
+        final bySubject = <String, int>{};
+        for (final q in m.questions) {
+          bySubject[q.subject] = (bySubject[q.subject] ?? 0) + 1;
+        }
+        expect(bySubject[top.key] ?? 0, greaterThanOrEqualTo(bySubject[bottom.key] ?? 0),
+            reason: '${e.id}: top-weight subject ${top.key} (${top.value}) should not trail '
+                'lowest-weight subject ${bottom.key} (${bottom.value})');
+      }
+    });
+
     test('mistake book quiz contains only mistakes', () {
       final q = repo.questionsFor(repo.exam('rrb_group_d')!).first;
       p.recordAnswer(q.id, false);
