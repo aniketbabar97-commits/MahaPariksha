@@ -3314,5 +3314,235 @@
   "a": 1,
   "e_hi": "ब्याज वह अतिरिक्त राशि है जो उधार लेने पर चुकानी पड़ती है।",
   "e_en": "Interest is the extra amount paid when borrowing money."
+ },
+ {
+  "id": "rp-com-o00145",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 1,
+  "q_hi": "OSI मॉडल का कौन सा स्तर रूटिंग के लिए ज़िम्मेदार है?",
+  "q_en": "Which OSI model layer is responsible for routing?",
+  "o_hi": [
+   "फिज़िकल",
+   "डेटा लिंक",
+   "नेटवर्क",
+   "ट्रांसपोर्ट"
+  ],
+  "o_en": [
+   "Physical",
+   "Data Link",
+   "Network",
+   "Transport"
+  ],
+  "a": 2,
+  "e_hi": "रूटिंग OSI मॉडल के तीसरे स्तर, यानी नेटवर्क लेयर, पर होती है।",
+  "e_en": "Routing occurs at the Network layer, which is the third layer of the OSI model."
+ },
+ {
+  "id": "rp-com-o00146",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 1,
+  "q_hi": "IP पता 192.168.1.10 किस क्लास में आता है?",
+  "q_en": "The IP address 192.168.1.10 belongs to which class?",
+  "o_hi": [
+   "क्लास A",
+   "क्लास B",
+   "क्लास C",
+   "क्लास D"
+  ],
+  "o_en": [
+   "Class A",
+   "Class B",
+   "Class C",
+   "Class D"
+  ],
+  "a": 2,
+  "e_hi": "192.168.x.x का पहला ऑक्टेट 192 होता है, जो क्लास C के रेंज में आता है।",
+  "e_en": "The first octet 192 places 192.168.x.x in Class C."
+ },
+ {
+  "id": "rp-com-o00147",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 3,
+  "q_hi": "ईमेल के लिए DNS में कौन सा रिकॉर्ड उपयोग होता है?",
+  "q_en": "Which DNS record type is used for email?",
+  "o_hi": [
+   "A",
+   "MX",
+   "CNAME",
+   "TXT"
+  ],
+  "o_en": [
+   "A",
+   "MX",
+   "CNAME",
+   "TXT"
+  ],
+  "a": 1,
+  "e_hi": "MX रिकॉर्ड मेल सर्वर को निर्दिष्ट करता है।",
+  "e_en": "MX record specifies the mail server for the domain."
+ },
+ {
+  "id": "rp-com-o00148",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 1,
+  "q_hi": "HTTPS किस सुविधा को सुनिश्चित करता है?",
+  "q_en": "What does HTTPS ensure?",
+  "o_hi": [
+   "केवल एन्क्रिप्शन",
+   "केवल ऑथेंटिकेशन",
+   "एन्क्रिप्शन और ऑथेंटिकेशन दोनों",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Encryption only",
+   "Authentication only",
+   "Both encryption and authentication",
+   "None"
+  ],
+  "a": 2,
+  "e_hi": "HTTPS TLS के ज़रिए डेटा को एन्क्रिप्ट करता है और सर्वर की पहचान सत्यापित करता है।",
+  "e_en": "HTTPS uses TLS to encrypt data and authenticate the server."
+ },
+ {
+  "id": "rp-com-o00149",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 1,
+  "q_hi": "SSH के लिए कौन सा पोर्ट इस्तेमाल होता है?",
+  "q_en": "Which port is used by SSH?",
+  "o_hi": [
+   "20",
+   "22",
+   "80",
+   "443"
+  ],
+  "o_en": [
+   "20",
+   "22",
+   "80",
+   "443"
+  ],
+  "a": 1,
+  "e_hi": "SSH डिफ़ॉल्ट रूप से पोर्ट 22 पर चलता है।",
+  "e_en": "SSH runs on port 22 by default."
+ },
+ {
+  "id": "rp-com-o00150",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 3,
+  "q_hi": "/28 सबनेट के लिए सही सबनेट मास्क क्या है?",
+  "q_en": "What is the correct subnet mask for a /28 subnet?",
+  "o_hi": [
+   "255.255.255.0",
+   "255.255.255.240",
+   "255.255.255.224",
+   "255.255.255.248"
+  ],
+  "o_en": [
+   "255.255.255.0",
+   "255.255.255.240",
+   "255.255.255.224",
+   "255.255.255.248"
+  ],
+  "a": 1,
+  "e_hi": "/28 का मास्क 255.255.255.240 होता है।",
+  "e_en": "A /28 subnet mask is 255.255.255.240."
+ },
+ {
+  "id": "rp-com-o00151",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 2,
+  "q_hi": "सुरक्षित फ़ाइल ट्रांसफ़र के लिए कौन सा प्रोटोकॉल सबसे उपयुक्त है?",
+  "q_en": "Which protocol is most suitable for secure file transfer?",
+  "o_hi": [
+   "FTP",
+   "FTPS",
+   "SFTP",
+   "SCP"
+  ],
+  "o_en": [
+   "FTP",
+   "FTPS",
+   "SFTP",
+   "SCP"
+  ],
+  "a": 2,
+  "e_hi": "SFTP SSH पर आधारित है और फ़ाइल ट्रांसफ़र के लिए सुरक्षित है।",
+  "e_en": "SFTP runs over SSH and provides secure file transfer."
+ },
+ {
+  "id": "rp-com-o00152",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 3,
+  "q_hi": "/29 सबनेट में अधिकतम कितने होस्ट हो सकते हैं?",
+  "q_en": "What is the maximum number of hosts in a /29 subnet?",
+  "o_hi": [
+   "4",
+   "6",
+   "8",
+   "14"
+  ],
+  "o_en": [
+   "4",
+   "6",
+   "8",
+   "14"
+  ],
+  "a": 1,
+  "e_hi": "/29 में 8 पते होते हैं, जिसमें 2 नेटवर्क/ब्रॉडकास्ट के लिए, इसलिए 6 होस्ट।",
+  "e_en": "A /29 has 8 addresses; 2 are reserved, leaving 6 usable hosts."
+ },
+ {
+  "id": "rp-com-o00153",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 1,
+  "q_hi": "कौन सा Wi‑Fi सुरक्षा प्रोटोकॉल अब असुरक्षित माना जाता है?",
+  "q_en": "Which Wi‑Fi security protocol is now considered insecure?",
+  "o_hi": [
+   "WPA",
+   "WPA2",
+   "WEP",
+   "WPA3"
+  ],
+  "o_en": [
+   "WPA",
+   "WPA2",
+   "WEP",
+   "WPA3"
+  ],
+  "a": 2,
+  "e_hi": "WEP में कमजोर एन्क्रिप्शन के कारण इसे असुरक्षित माना जाता है।",
+  "e_en": "WEP is insecure due to weak encryption."
+ },
+ {
+  "id": "rp-com-o00154",
+  "s": "computer",
+  "t": "internet_networking",
+  "d": 3,
+  "q_hi": "कौन सा VPN प्रकार दूरस्थ उपयोगकर्ताओं को नेटवर्क से जोड़ता है?",
+  "q_en": "Which type of VPN connects remote users to the network?",
+  "o_hi": [
+   "इंट्रानेट VPN",
+   "एक्स्ट्रानेट VPN",
+   "रिमोट एक्सेस VPN",
+   "नेटवर्क‑टू‑नेटवर्क VPN"
+  ],
+  "o_en": [
+   "Intranet VPN",
+   "Extranet VPN",
+   "Remote access VPN",
+   "Network-to-network VPN"
+  ],
+  "a": 2,
+  "e_hi": "रिमोट एक्सेस VPN दूरस्थ उपयोगकर्ताओं को कॉर्पोरेट नेटवर्क से जोड़ता है।",
+  "e_en": "Remote access VPN connects remote users to the corporate network."
  }
 ]
