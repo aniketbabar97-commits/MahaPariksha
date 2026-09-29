@@ -12564,5 +12564,396 @@
   "a": 3,
   "e_hi": "वेक्टर जोड़: (150cos30°,150sin30°)+(0,50)=(129.9,125.0). परिमाण sqrt(129.9²+125.0²)=179.7 km/h।",
   "e_en": "Vector sum: (150cos30°,150sin30°)+(0,50)=(129.9,125.0). Magnitude sqrt(129.9²+125.0²)=179.7 km/h."
+ },
+ {
+  "id": "rp-rea-s00547",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि एक व्यक्ति उत्तर दिशा में मुख करके खड़ा है, तो उसकी दाईं ओर कौन सी दिशा होगी?",
+  "q_en": "If a person is standing facing north, which direction is to his right?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "दक्षिण",
+   "उत्तर"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "South",
+   "North"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर की ओर मुख करके दाईं ओर पूर्व की दिशा होती है।",
+  "e_en": "Facing north, the right side points towards east."
+ },
+ {
+  "id": "rp-rea-s00548",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "मुंबई से दिल्ली की ओर चलने वाली ट्रेन सामान्यतः किस दिशा में यात्रा करती है?",
+  "q_en": "In which general direction does a train travel from Mumbai to Delhi?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "मुंबई से दिल्ली का मार्ग सामान्यतः उत्तर की दिशा में होता है।",
+  "e_en": "The route from Mumbai to Delhi generally goes northward."
+ },
+ {
+  "id": "rp-rea-s00549",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "दक्षिणी भाग से उत्तरी भाग की ओर चलती हुई ट्रेन किस दिशा में यात्रा कर रही है?",
+  "q_en": "A train traveling from the southern part of India to the northern part is moving in which direction?",
+  "o_hi": [
+   "दक्षिण",
+   "उत्तर",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "South",
+   "North",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "उत्तरी दिशा में यात्रा कर रही है।",
+  "e_en": "It is moving northward."
+ },
+ {
+  "id": "rp-rea-s00550",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "किसी व्यक्ति ने उत्तर दिशा में आगे बढ़ते हुए 10 किमी चलने के बाद 10 किमी पूर्व की ओर चलकर अपनी प्रारंभिक स्थिति से किस दिशा में स्थित है?",
+  "q_en": "After walking 10 km north and then 10 km east, where is the person relative to the starting point?",
+  "o_hi": [
+   "उत्तरी‑पूर्व",
+   "दक्षिण‑पूर्व",
+   "उत्तरी‑पश्चिम",
+   "दक्षिण‑पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Southeast",
+   "Northwest",
+   "Southwest"
+  ],
+  "a": 0,
+  "e_hi": "दोनों दिशाओं के योग से परिणामस्वरूप दिशा उत्तरी‑पूर्व होती है।",
+  "e_en": "The resultant direction is northeast."
+ },
+ {
+  "id": "rp-rea-s00551",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "कौन सी दिशा एक द्वितीयक (secondary) दिशा है?",
+  "q_en": "Which of the following is a secondary direction?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिण‑पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "South‑East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "द्वितीयक दिशाएँ उत्तर‑पूर्व, उत्तर‑पश्चिम, दक्षिण‑पूर्व, दक्षिण‑पश्चिम होती हैं।",
+  "e_en": "Secondary directions are northeast, northwest, southeast, and southwest."
+ },
+ {
+  "id": "rp-rea-s00552",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "किसी मानचित्र पर यदि ऊपर की ओर उत्तर दर्शाया गया है, तो बाईं ओर कौन सी दिशा होगी?",
+  "q_en": "On a standard map with north at the top, which side represents west?",
+  "o_hi": [
+   "बायाँ",
+   "दायाँ",
+   "ऊपर",
+   "नीचे"
+  ],
+  "o_en": [
+   "Left",
+   "Right",
+   "Top",
+   "Bottom"
+  ],
+  "a": 0,
+  "e_hi": "बाईं ओर पश्चिम की दिशा होती है।",
+  "e_en": "West is on the left side."
+ },
+ {
+  "id": "rp-rea-s00553",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "किसी ट्रेन को उत्तर दिशा से चलाते हुए यदि उसे बाईं ओर मोड़ने को कहा जाए तो वह किस दिशा में मुड़ जाएगी?",
+  "q_en": "If a train heading north is told to turn left, which direction will it turn?",
+  "o_hi": [
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर"
+  ],
+  "o_en": [
+   "South",
+   "East",
+   "West",
+   "North"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर दिशा में बाईं ओर मुड़ने पर वह पश्चिम की ओर मुड़ती है।",
+  "e_en": "Turning left from north points the train westward."
+ },
+ {
+  "id": "rp-rea-s00554",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 1,
+  "q_hi": "दो संख्याओं का गुणनफल 56 है और उनमें से एक संख्या 7 है।",
+  "q_en": "The product of two numbers is 56 and one of the numbers is 7.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 0,
+  "e_hi": "क्योंकि 56 ÷ 7 = 8, अतः दूसरी संख्या 8 है।",
+  "e_en": "Since 56 divided by 7 equals 8, the other number is 8."
+ },
+ {
+  "id": "rp-rea-s00555",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 1,
+  "q_hi": "तीन लगातार विषम संख्याओं का योग 45 है। निष्कर्ष: मध्य संख्या 15 है।",
+  "q_en": "Three consecutive odd numbers sum to 45. Conclusion: The middle number is 15.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 0,
+  "e_hi": "यदि संख्याएँ n‑2, n, n+2 हैं तो 3n=45 ⇒ n=15।",
+  "e_en": "Let the numbers be n‑2, n, n+2; then 3n=45 ⇒ n=15."
+ },
+ {
+  "id": "rp-rea-s00556",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 2,
+  "q_hi": "दो संख्याओं का अनुपात 5:3 है और उनका योग 64 है। बड़ी संख्या क्या है? निष्कर्ष: बड़ी संख्या 40 है।",
+  "q_en": "The ratio of two numbers is 5:3 and their sum is 64. What is the larger number? Conclusion: The larger number is 40.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 0,
+  "e_hi": "5x+3x=64 ⇒ x=8, अतः बड़ी संख्या 5x=40।",
+  "e_en": "5x+3x=64 ⇒ x=8, so the larger number is 5x=40."
+ },
+ {
+  "id": "rp-rea-s00557",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 2,
+  "q_hi": "चार संख्याओं का औसत 12 है। दो संख्याएँ 10 और 14 हैं तथा अन्य दो संख्याएँ बराबर हैं। निष्कर्ष: अन्य दो संख्याएँ प्रत्येक 12 हैं।",
+  "q_en": "The average of four numbers is 12. Two of the numbers are 10 and 14, and the other two numbers are equal. Conclusion: Each of the other two numbers is 12.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 0,
+  "e_hi": "कुल योग 4×12=48, ज्ञात 10+14=24, शेष 24 ⇒ प्रत्येक 12।",
+  "e_en": "Total sum is 4×12=48, known 10+14=24, remaining 24 ⇒ each 12."
+ },
+ {
+  "id": "rp-rea-s00558",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 3,
+  "q_hi": "एक आयत के पूर्णांक भुजाएँ हैं। परिमाप 30 है और क्षेत्रफल 48 है। निष्कर्ष: आयत 6×7 है।",
+  "q_en": "A rectangle has integer side lengths. Its perimeter is 30 and its area is 48. Conclusion: The rectangle is 6×7.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 3,
+  "e_hi": "परिमाप 2(l+w)=30 ⇒ l+w=15; क्षेत्रफल lw=48 ⇒ l(15−l)=48 ⇒ l²−15l+48=0 का हल पूर्णांक नहीं है।",
+  "e_en": "Perimeter 2(l+w)=30 ⇒ l+w=15; area lw=48 ⇒ l(15−l)=48 ⇒ l²−15l+48=0 has no integer solutions."
+ },
+ {
+  "id": "rp-rea-s00559",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 3,
+  "q_hi": "तीन संख्याएँ AP में हैं और उनका योग 30 है। प्रथम और तृतीय संख्या का गुणनफल 84 है। निष्कर्ष: मध्य संख्या 10 है।",
+  "q_en": "Three numbers are in AP and their sum is 30. The product of the first and third numbers is 84. Conclusion: The middle number is 10.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 0,
+  "e_hi": "AP में a−d, a, a+d; 3a=30 ⇒ a=10; (a−d)(a+d)=a²−d²=84 ⇒ d=4।",
+  "e_en": "In AP, numbers are a−d, a, a+d; 3a=30 ⇒ a=10; (a−d)(a+d)=a²−d²=84 ⇒ d=4."
+ },
+ {
+  "id": "rp-rea-s00560",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 3,
+  "q_hi": "एक ट्रेन 60 किमी/घंटा की गति से 2 घंटे चलती है, फिर 80 किमी/घंटा की गति से 1.5 घंटे चलती है। पूरी यात्रा का औसत वेग क्या है? निष्कर्ष: औसत वेग 68 किमी/घंटा है।",
+  "q_en": "A train travels at 60 km/h for 2 hours, then at 80 km/h for 1.5 hours. What is the average speed for the whole journey? Conclusion: The average speed is 68 km/h.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 2,
+  "e_hi": "कुल दूरी 60×2+80×1.5=240 किमी, कुल समय 3.5 घंटे ⇒ औसत = 240/3.5≈68.57 किमी/घंटा।",
+  "e_en": "Total distance 60×2+80×1.5=240 km, total time 3.5 hours ⇒ average ≈68.57 km/h."
+ },
+ {
+  "id": "rp-rea-s00561",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 3,
+  "q_hi": "दो लगातार पूर्णांकों के वर्गों का योग 325 है। निष्कर्ष: संख्याएँ 12 और 13 हैं।",
+  "q_en": "The sum of squares of two consecutive integers is 325. Conclusion: The integers are 12 and 13.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 3,
+  "e_hi": "n²+(n+1)²=325 ⇒ 2n²+2n+1=325 ⇒ n²+n−162=0 का हल पूर्णांक नहीं है।",
+  "e_en": "n²+(n+1)²=325 ⇒ 2n²+2n+1=325 ⇒ n²+n−162=0 has no integer solution."
+ },
+ {
+  "id": "rp-rea-s00562",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 2,
+  "q_hi": "किसी संख्या को 20% बढ़ाया जाता है और फिर 20% घटाया जाता है। अंतिम संख्या मूल संख्या का ____% है। निष्कर्ष: अंतिम संख्या मूल का 96% है।",
+  "q_en": "A number is increased by 20% and then decreased by 20%. The final number is ____% of the original. Conclusion: The final number is 96% of the original.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 0,
+  "e_hi": "20% बढ़ाने पर 1.2x, फिर 20% घटाने पर 0.8×1.2x=0.96x ⇒ 96%।",
+  "e_en": "Increase by 20% gives 1.2x, decrease by 20% gives 0.8×1.2x=0.96x ⇒ 96%."
+ },
+ {
+  "id": "rp-rea-s00563",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "d": 3,
+  "q_hi": "किसी संख्या को 5 से भाग देने पर शेष 3 आता है। वही संख्या 3 से भाग देने पर शेष 2 आता है। निष्कर्ष: सबसे छोटी ऐसी संख्या 13 है।",
+  "q_en": "A number leaves a remainder of 3 when divided by 5 and a remainder of 2 when divided by 3. Conclusion: The smallest such number is 13.",
+  "o_hi": [
+   "कथन और निष्कर्ष दोनों सत्य हैं तथा निष्कर्ष कथन से निकलता है।",
+   "कथन और निष्कर्ष दोनों सत्य हैं पर निष्कर्ष कथन से नहीं निकलता।",
+   "कथन सत्य है पर निष्कर्ष असत्य है।",
+   "कथन असत्य है।"
+  ],
+  "o_en": [
+   "Both the statement and conclusion are true and the conclusion follows from the statement.",
+   "Both the statement and conclusion are true but the conclusion does not follow from the statement.",
+   "The statement is true but the conclusion is false.",
+   "The statement is false."
+  ],
+  "a": 2,
+  "e_hi": "संख्या 3 mod 5 → 3,8,13,…; 8 mod 3 = 2, अतः सबसे छोटी संख्या 8।",
+  "e_en": "Numbers ≡3 (mod 5) are 3,8,13,…; 8 ≡2 (mod 3), so the smallest is 8."
  }
 ]
