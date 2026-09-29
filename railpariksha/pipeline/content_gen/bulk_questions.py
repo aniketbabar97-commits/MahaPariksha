@@ -29,6 +29,8 @@ import time
 sys.path.insert(0, os.path.dirname(__file__))
 from _providers import ask, norm  # noqa: E402
 
+DEVANAGARI = re.compile(r"[ऀ-ॿ]")
+
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 # current_affairs is kept small: date-sensitive facts age out fast, so we don't
@@ -64,12 +66,20 @@ Output ONLY a JSON object, no markdown fences, no extra text:
 CRITICAL: only state facts, figures, dates and names you are highly confident are correct and stable.
 If unsure of an exact number/date, write a question that doesn't depend on it. Do not invent statistics.
 Do not repeat well-known previous exam questions verbatim in a way that could be duplicated; vary phrasing and angle.
-Exactly 4 options each, exactly one correct answer, options must not overlap in meaning."""
+Exactly 4 options each, exactly one correct answer, options must not overlap in meaning.
+
+CRITICAL for q_hi: it must contain actual Hindi (Devanagari) words, never bare numbers/letters/symbols
+copied unchanged from q_en. This matters most for number-series, letter-series, and ratio/analogy
+questions (e.g. "2, 5, 10, 17, ?" or "3 : 9 :: 4 : ?") -- even though the sequence itself is the same
+in both languages, q_hi must still frame it in Hindi, e.g. "श्रृंखला को देखें: 2, 5, 10, 17, ?" or
+"अनुपात देखें: 3 : 9 :: 4 : ?", not just the bare sequence."""
 
 
-def valid(q):
+def valid(q, subject_id=None):
     try:
         if not (isinstance(q["q_hi"], str) and isinstance(q["q_en"], str) and q["q_hi"] and q["q_en"]):
+            return False
+        if subject_id != "english" and not DEVANAGARI.search(q["q_hi"]):
             return False
         if not (isinstance(q["o_hi"], list) and len(q["o_hi"]) == 4):
             return False
@@ -147,7 +157,7 @@ def main():
                 rounds_here += 1
                 new_items = []
                 for q in batch:
-                    if not valid(q):
+                    if not valid(q, s["id"]):
                         continue
                     key = norm(q["q_en"])
                     if key in seen_norm:
