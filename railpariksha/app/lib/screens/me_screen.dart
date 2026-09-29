@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -65,7 +66,10 @@ class MeScreen extends StatelessWidget {
                   ButtonSegment(value: 50, label: Text('50')),
                 ],
                 selected: {p.dailyGoal},
-                onSelectionChanged: (v) => p.update((p) => p.dailyGoal = v.first),
+                onSelectionChanged: (v) {
+                  HapticFeedback.selectionClick();
+                  p.update((p) => p.dailyGoal = v.first);
+                },
               ),
             ),
           ]),
@@ -79,6 +83,7 @@ class MeScreen extends StatelessWidget {
               subtitle: Text(context.tr('दिन में अधिकतम 2 सूचनाएं', 'At most 2 notifications a day')),
               value: p.reminders,
               onChanged: (v) async {
+                HapticFeedback.selectionClick();
                 if (v) await RailParikshaNotifications.requestPermission();
                 p.update((p) => p.reminders = v);
                 await applyReminders(p);
@@ -110,7 +115,10 @@ class MeScreen extends StatelessWidget {
                   ButtonSegment(value: 'en', label: Text('English')),
                 ],
                 selected: {p.lang},
-                onSelectionChanged: (v) => p.update((p) => p.lang = v.first),
+                onSelectionChanged: (v) {
+                  HapticFeedback.selectionClick();
+                  p.update((p) => p.lang = v.first);
+                },
               ),
             ),
             ListTile(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -33,22 +34,44 @@ class ReviseScreen extends StatelessWidget {
         Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FlashcardScreen())),
+            onTap: () {
+              HapticFeedback.selectionClick();
+              Navigator.push(context, MaterialPageRoute(builder: (_) => const FlashcardScreen()));
+            },
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.heroGradient),
-              child: Row(children: [
-                const Icon(Icons.style, color: BrandColors.sunrise, size: 44),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                    Text(context.tr('आज का रिवीज़न 🌤️', "Today's review 🌤️"),
-                        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
-                    Text(context.tr('$due कार्ड बाकी · $learned/${cards.length} पक्के', '$due due · $learned/${cards.length} mastered'),
-                        style: const TextStyle(color: Colors.white70)),
-                  ]),
-                ),
-                const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 36),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Row(children: [
+                  const Icon(Icons.style, color: BrandColors.sunrise, size: 44),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(context.tr('आज का रिवीज़न 🌤️', "Today's review 🌤️"),
+                          style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                      Text(context.tr('$due कार्ड बाकी · $learned/${cards.length} पक्के', '$due due · $learned/${cards.length} mastered'),
+                          style: const TextStyle(color: Colors.white70)),
+                    ]),
+                  ),
+                  const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 36),
+                ]),
+                if (cards.isNotEmpty) ...[
+                  const SizedBox(height: Spacing.md),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: TweenAnimationBuilder<double>(
+                      tween: Tween(begin: 0, end: learned / cards.length),
+                      duration: const Duration(milliseconds: 700),
+                      curve: Curves.easeOutCubic,
+                      builder: (context, v, _) => LinearProgressIndicator(
+                        value: v,
+                        minHeight: 7,
+                        backgroundColor: Colors.white24,
+                        color: BrandColors.sunrise,
+                      ),
+                    ),
+                  ),
+                ],
               ]),
             ),
           ),
@@ -60,7 +83,12 @@ class ReviseScreen extends StatelessWidget {
           title: context.tr('गलतियों की कॉपी', 'Mistake book'),
           subtitle: context.tr('${p.mistakes.length} प्रश्न · जब तक सही न हों, बार-बार आएंगे',
               '${p.mistakes.length} questions · they return until you master them'),
-          onTap: p.mistakes.isEmpty ? null : () => startQuiz(context, s.builder.mistakes()),
+          onTap: p.mistakes.isEmpty
+              ? null
+              : () {
+                  HapticFeedback.selectionClick();
+                  startQuiz(context, s.builder.mistakes());
+                },
         ),
         const SizedBox(height: 12),
         ActionCard(
@@ -68,7 +96,12 @@ class ReviseScreen extends StatelessWidget {
           color: BrandColors.saffron,
           title: context.tr('सहेजे गए प्रश्न', 'Saved questions'),
           subtitle: context.tr('${p.bookmarks.length} प्रश्न', '${p.bookmarks.length} questions'),
-          onTap: p.bookmarks.isEmpty ? null : () => startQuiz(context, s.builder.bookmarked()),
+          onTap: p.bookmarks.isEmpty
+              ? null
+              : () {
+                  HapticFeedback.selectionClick();
+                  startQuiz(context, s.builder.bookmarked());
+                },
         ),
         if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasNotes(sub.id))) ...[
           SectionTitle(context.tr('नोट्स व माइंड मैप 🧠🗺️', 'Notes & mind maps 🧠🗺️')),
@@ -85,7 +118,10 @@ class ReviseScreen extends StatelessWidget {
                       child: Card(
                         clipBehavior: Clip.antiAlias,
                         child: InkWell(
-                          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub))),
+                          onTap: () {
+                            HapticFeedback.selectionClick();
+                            Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub)));
+                          },
                           child: Padding(
                             padding: const EdgeInsets.all(12),
                             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -114,7 +150,10 @@ class ReviseScreen extends StatelessWidget {
                 subtitle: Text(context.tr('${s.builder.dueCards(subject: sub.id, limit: 9999).length} कार्ड बाकी',
                     '${s.builder.dueCards(subject: sub.id, limit: 9999).length} due')),
                 trailing: const Icon(Icons.chevron_right),
-                onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => FlashcardScreen(subject: sub.id))),
+                onTap: () {
+                  HapticFeedback.selectionClick();
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => FlashcardScreen(subject: sub.id)));
+                },
               ),
             ),
             const SizedBox(height: 8),

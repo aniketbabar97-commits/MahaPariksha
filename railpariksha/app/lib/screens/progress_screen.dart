@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
@@ -33,7 +34,10 @@ class ProgressScreen extends StatelessWidget {
           OutlinedButton.icon(
             icon: const Icon(Icons.ios_share, size: 18),
             label: Text(context.tr('साप्ताहिक कार्ड 🗓️', 'Weekly card 🗓️')),
-            onPressed: () => _shareWeeklyCard(context, p, lang),
+            onPressed: () {
+              HapticFeedback.selectionClick();
+              _shareWeeklyCard(context, p, lang);
+            },
           ),
         ]),
         const SizedBox(height: 16),
@@ -80,17 +84,24 @@ class ProgressScreen extends StatelessWidget {
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 6),
                     child: Row(children: [
-                      SizedBox(width: 110, child: Text(sub.name.of(lang), overflow: TextOverflow.ellipsis)),
+                      Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
+                      const SizedBox(width: 6),
+                      SizedBox(width: 96, child: Text(sub.name.of(lang), overflow: TextOverflow.ellipsis)),
                       Expanded(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
-                          child: LinearProgressIndicator(
-                            value: acc ?? 0,
-                            minHeight: 10,
-                            backgroundColor: Colors.grey.withValues(alpha: 0.15),
-                            color: acc == null
-                                ? Colors.transparent
-                                : (acc >= 0.7 ? BrandColors.correct : (acc >= 0.4 ? BrandColors.saffron : BrandColors.wrong)),
+                          child: TweenAnimationBuilder<double>(
+                            tween: Tween(begin: 0, end: acc ?? 0),
+                            duration: const Duration(milliseconds: 700),
+                            curve: Curves.easeOutCubic,
+                            builder: (context, v, _) => LinearProgressIndicator(
+                              value: v,
+                              minHeight: 10,
+                              backgroundColor: Colors.grey.withValues(alpha: 0.15),
+                              color: acc == null
+                                  ? Colors.transparent
+                                  : (acc >= 0.7 ? BrandColors.correct : (acc >= 0.4 ? BrandColors.saffron : BrandColors.wrong)),
+                            ),
                           ),
                         ),
                       ),
@@ -167,20 +178,39 @@ class _Stat extends StatelessWidget {
   final IconData icon;
   const _Stat({required this.value, required this.label, required this.icon});
 
+  /// Parses a leading integer off [value] (e.g. "42" or "87%") so it can be
+  /// counted up; the remaining suffix (like "%") is preserved as-is.
+  (int, String)? _numeric() {
+    final m = RegExp(r'^(\d+)(.*)$').firstMatch(value);
+    if (m == null) return null;
+    return (int.parse(m.group(1)!), m.group(2)!);
+  }
+
   @override
-  Widget build(BuildContext context) => Expanded(
-        child: Card(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
-            child: Column(children: [
-              Icon(icon, color: BrandColors.saffron),
-              const SizedBox(height: 4),
-              Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
-              Text(label, textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Theme.of(context).hintColor)),
-            ]),
-          ),
+  Widget build(BuildContext context) {
+    final parsed = _numeric();
+    return Expanded(
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
+          child: Column(children: [
+            Icon(icon, color: BrandColors.saffron),
+            const SizedBox(height: 4),
+            parsed == null
+                ? Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900))
+                : TweenAnimationBuilder<double>(
+                    tween: Tween(begin: 0, end: parsed.$1.toDouble()),
+                    duration: const Duration(milliseconds: 700),
+                    curve: Curves.easeOutCubic,
+                    builder: (context, v, _) => Text('${v.round()}${parsed.$2}',
+                        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
+                  ),
+            Text(label, textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Theme.of(context).hintColor)),
+          ]),
         ),
-      );
+      ),
+    );
+  }
 }
 
 class _Heatmap extends StatelessWidget {
