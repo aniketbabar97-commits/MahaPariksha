@@ -16014,5 +16014,1822 @@
   "a": 2,
   "e_hi": "अंतर 3, 6, 9, 12 हैं; अगला अंतर 15, 31+15=46।",
   "e_en": "Differences are 3,6,9,12; next difference 15 → 31+15=46."
+ },
+ {
+  "id": "rp-rea-s00697",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "कोडिंग-डिकोडिंग का मूल अर्थ क्या है?",
+  "q_en": "What is the basic meaning of coding-decoding?",
+  "o_hi": [
+   "सूचना को छिपाने और फिर उसे पुनः प्राप्त करने की प्रक्रिया",
+   "केवल गुप्त शब्दों का निर्माण",
+   "डेटा का संपीड़न",
+   "केवल संख्या को अक्षर में बदलना"
+  ],
+  "o_en": [
+   "The process of transforming information into a coded form and later retrieving it",
+   "Only creation of secret words",
+   "Compression of data",
+   "Only converting numbers to letters"
+  ],
+  "a": 0,
+  "e_hi": "कोडिंग-डिकोडिंग में सूचना को एक सुरक्षित रूप में बदला जाता है और आवश्यकता पड़ने पर उसे पुनः मूल रूप में लौटाया जाता है।",
+  "e_en": "Coding-decoding involves transforming information into a secure form and retrieving it back when needed."
+ },
+ {
+  "id": "rp-rea-s00698",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा उदाहरण एक साधारण प्रतिस्थापन सिफर (substitution cipher) का है?",
+  "q_en": "Which of the following is an example of a simple substitution cipher?",
+  "o_hi": [
+   "ROT13",
+   "Playfair",
+   "Rail Fence",
+   "Vigenère"
+  ],
+  "o_en": [
+   "ROT13",
+   "Playfair",
+   "Rail Fence",
+   "Vigenère"
+  ],
+  "a": 0,
+  "e_hi": "ROT13 एक एक-चरित्र प्रतिस्थापन सिफर है जहाँ प्रत्येक अक्षर को 13 स्थान आगे शिफ्ट किया जाता है।",
+  "e_en": "ROT13 is a monoalphabetic substitution cipher where each letter is shifted by 13 positions."
+ },
+ {
+  "id": "rp-rea-s00699",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "कौन सा गुण ट्रांसपोज़िशन सिफर का नहीं है?",
+  "q_en": "Which of the following is NOT a property of a transposition cipher?",
+  "o_hi": [
+   "अक्षरों की आवृत्ति बनी रहती है",
+   "अक्षरों को स्थानांतरित किया जाता है",
+   "संदेश के अक्षर बदलते हैं",
+   "मूल शब्दों का क्रम बदलता है"
+  ],
+  "o_en": [
+   "The frequency of letters remains the same",
+   "Letters are rearranged",
+   "The letters of the message are changed",
+   "The original word order changes"
+  ],
+  "a": 2,
+  "e_hi": "ट्रांसपोज़िशन सिफर में अक्षर केवल पुनर्व्यवस्थित होते हैं, उनका परिवर्तन नहीं होता।",
+  "e_en": "In a transposition cipher, letters are only rearranged; they are not altered."
+ },
+ {
+  "id": "rp-rea-s00700",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "साधारण प्रतिस्थापन सिफर में यदि 'A' को 'M' से बदला गया है, तो शिफ्ट मान क्या है?",
+  "q_en": "In a simple substitution cipher, if 'A' is replaced by 'M', what is the shift value?",
+  "o_hi": [
+   "12",
+   "13",
+   "14",
+   "15"
+  ],
+  "o_en": [
+   "12",
+   "13",
+   "14",
+   "15"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर 'A' को 'M' में बदलने के लिए 12 स्थान आगे शिफ्ट किया गया है।",
+  "e_en": "Replacing 'A' with 'M' requires a shift of 12 positions."
+ },
+ {
+  "id": "rp-rea-s00701",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "कौन सा सिफर केवल अक्षरों को पुनर्व्यवस्थित करता है बिना प्रतिस्थापन के?",
+  "q_en": "Which type of cipher rearranges letters without substitution?",
+  "o_hi": [
+   "प्रतिस्थापन सिफर",
+   "ट्रांसपोज़िशन सिफर",
+   "हॉमोफ़ोनिक सिफर",
+   "बहु-अक्षर सिफर"
+  ],
+  "o_en": [
+   "Substitution cipher",
+   "Transposition cipher",
+   "Homophonic cipher",
+   "Polyalphabetic cipher"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसपोज़िशन सिफर में अक्षरों को केवल स्थानांतरित किया जाता है, बिना किसी प्रतिस्थापन के।",
+  "e_en": "Transposition ciphers rearrange letters without replacing them."
+ },
+ {
+  "id": "rp-rea-s00702",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "कोड बुक (Code book) का उपयोग किस प्रकार के सिफर में किया जाता है?",
+  "q_en": "In which type of cipher is a code book used?",
+  "o_hi": [
+   "प्रतिस्थापन सिफर",
+   "ट्रांसपोज़िशन सिफर",
+   "कोड सिफर",
+   "हॉमोफ़ोनिक सिफर"
+  ],
+  "o_en": [
+   "Substitution cipher",
+   "Transposition cipher",
+   "Code cipher",
+   "Homophonic cipher"
+  ],
+  "a": 2,
+  "e_hi": "कोड बुक में शब्दों या वाक्यांशों को संख्यात्मक या प्रतीकात्मक समूहों से मैप किया जाता है।",
+  "e_en": "In a code cipher, a code book maps words or phrases to numeric or symbolic groups."
+ },
+ {
+  "id": "rp-rea-s00703",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "कौन सी विधि में शब्दों को उनके संख्यात्मक कोड से बदलकर संदेश को एन्कोड किया जाता है?",
+  "q_en": "Which method encodes words by replacing them with numerical codes?",
+  "o_hi": [
+   "प्रतिस्थापन सिफर",
+   "कोड बुक",
+   "हॉमोफ़ोनिक सिफर",
+   "बहु-अक्षर सिफर"
+  ],
+  "o_en": [
+   "Substitution cipher",
+   "Code book",
+   "Homophonic cipher",
+   "Polyalphabetic cipher"
+  ],
+  "a": 1,
+  "e_hi": "कोड बुक में शब्दों को संख्यात्मक कोड से बदला जाता है।",
+  "e_en": "A code book replaces words with numeric codes."
+ },
+ {
+  "id": "rp-rea-s00704",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "कौन सा सिफर संदेश के अक्षर की आवृत्ति को बदलता नहीं है?",
+  "q_en": "Which cipher does not change the frequency of letters in the message?",
+  "o_hi": [
+   "प्रतिस्थापन सिफर",
+   "ट्रांसपोज़िशन सिफर",
+   "हॉमोफ़ोनिक सिफर",
+   "बहु-अक्षर सिफर"
+  ],
+  "o_en": [
+   "Substitution cipher",
+   "Transposition cipher",
+   "Homophonic cipher",
+   "Polyalphabetic cipher"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसपोज़िशन सिफर में अक्षरों को पुनर्व्यवस्थित किया जाता है, जिससे उनकी आवृत्ति वही रहती है।",
+  "e_en": "Transposition ciphers rearrange letters, keeping their frequency unchanged."
+ },
+ {
+  "id": "rp-rea-s00705",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "कोडिंग-डिकोडिंग में 'कूट' और 'सिफर' के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the main difference between a code and a cipher in coding-decoding?",
+  "o_hi": [
+   "कूट शब्दों/वाक्यांशों को बदलता है, जबकि सिफर अक्षरों को बदलता है",
+   "कूट अधिक सुरक्षित है",
+   "सिफर केवल संख्याओं का उपयोग करता है",
+   "कूट हमेशा उलटने योग्य नहीं होता"
+  ],
+  "o_en": [
+   "A code replaces words/phrases, whereas a cipher replaces letters",
+   "A code is more secure",
+   "A cipher uses only numbers",
+   "A code is not always reversible"
+  ],
+  "a": 0,
+  "e_hi": "कूट शब्द या वाक्यांश को एक कोड समूह से बदलता है, जबकि सिफर व्यक्तिगत अक्षरों को बदलता है।",
+  "e_en": "A code substitutes words or phrases with code groups, whereas a cipher substitutes individual letters."
+ },
+ {
+  "id": "rp-rea-s00706",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "पोलिलैटरल (Polyalphabetic) सिफर का मुख्य लाभ क्या है?",
+  "q_en": "What is the main advantage of a polyalphabetic cipher?",
+  "o_hi": [
+   "सरल डिकोडिंग",
+   "उच्च सुरक्षा और आवृत्ति विश्लेषण का प्रतिरोध",
+   "कम कुंजी स्थान",
+   "तेज़ एन्क्रिप्शन"
+  ],
+  "o_en": [
+   "Easy decoding",
+   "High security and resistance to frequency analysis",
+   "Small key space",
+   "Fast encryption"
+  ],
+  "a": 1,
+  "e_hi": "बहु-अक्षर सिफर में कुंजी बदलती रहती है, जिससे आवृत्ति विश्लेषण कठिन हो जाता है।",
+  "e_en": "Polyalphabetic ciphers change the key throughout the message, making frequency analysis difficult."
+ },
+ {
+  "id": "rp-rea-s00707",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: A, D, G, J, ?",
+  "q_en": "A, D, G, J, ?",
+  "o_hi": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "o_en": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "हर अक्षर को 3 स्थान आगे बढ़ाया गया है।",
+  "e_en": "Each letter is 3 positions ahead in the alphabet."
+ },
+ {
+  "id": "rp-rea-s00708",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: 4, 9, 14, 19, ?",
+  "q_en": "4, 9, 14, 19, ?",
+  "o_hi": [
+   "24",
+   "23",
+   "25",
+   "22"
+  ],
+  "o_en": [
+   "24",
+   "23",
+   "25",
+   "22"
+  ],
+  "a": 0,
+  "e_hi": "हर बार 5 जोड़ते हैं।",
+  "e_en": "Add 5 each time."
+ },
+ {
+  "id": "rp-rea-s00709",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: 1, 2, 4, 7, 11, 16, ?",
+  "q_en": "1, 2, 4, 7, 11, 16, ?",
+  "o_hi": [
+   "20",
+   "22",
+   "24",
+   "26"
+  ],
+  "o_en": [
+   "20",
+   "22",
+   "24",
+   "26"
+  ],
+  "a": 1,
+  "e_hi": "अंतर 1, 2, 3, 4, 5 हैं; अगला अंतर 6, इसलिए उत्तर 22।",
+  "e_en": "Differences are 1,2,3,4,5; next difference 6 gives 22."
+ },
+ {
+  "id": "rp-rea-s00710",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: 10, 7, 4, 1, ?",
+  "q_en": "10, 7, 4, 1, ?",
+  "o_hi": [
+   "-2",
+   "-1",
+   "0",
+   "3"
+  ],
+  "o_en": [
+   "-2",
+   "-1",
+   "0",
+   "3"
+  ],
+  "a": 0,
+  "e_hi": "हर बार 3 घटाया गया है।",
+  "e_en": "Subtract 3 each time."
+ },
+ {
+  "id": "rp-rea-s00711",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: S, U, Y, ?",
+  "q_en": "S, U, Y, ?",
+  "o_hi": [
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "o_en": [
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर क्रम में +2, +4, +6; अगला +8, Y(25)+8=33→7→E।",
+  "e_en": "Letter increments +2, +4, +6; next +8 gives E."
+ },
+ {
+  "id": "rp-rea-s00712",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: 2, 5, 10, 17, 26, ?",
+  "q_en": "2, 5, 10, 17, 26, ?",
+  "o_hi": [
+   "35",
+   "37",
+   "38",
+   "39"
+  ],
+  "o_en": [
+   "35",
+   "37",
+   "38",
+   "39"
+  ],
+  "a": 1,
+  "e_hi": "अंतर 3,5,7,9; अगला 11, 26+11=37।",
+  "e_en": "Differences 3,5,7,9; next 11 gives 37."
+ },
+ {
+  "id": "rp-rea-s00713",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: 1, 1, 2, 3, 5, 8, 13, ?",
+  "q_en": "1, 1, 2, 3, 5, 8, 13, ?",
+  "o_hi": [
+   "21",
+   "22",
+   "20",
+   "19"
+  ],
+  "o_en": [
+   "21",
+   "22",
+   "20",
+   "19"
+  ],
+  "a": 0,
+  "e_hi": "फिबोनैचि श्रृंखला।",
+  "e_en": "Fibonacci sequence."
+ },
+ {
+  "id": "rp-rea-s00714",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: A, C, F, J, O, ?",
+  "q_en": "A, C, F, J, O, ?",
+  "o_hi": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "o_en": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "a": 0,
+  "e_hi": "अंतर +2,+3,+4,+5; अगला +6, 15+6=21→U।",
+  "e_en": "Increments +2,+3,+4,+5; next +6 gives U."
+ },
+ {
+  "id": "rp-rea-s00715",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: 3, 6, 10, 15, 21, ?",
+  "q_en": "3, 6, 10, 15, 21, ?",
+  "o_hi": [
+   "27",
+   "28",
+   "29",
+   "30"
+  ],
+  "o_en": [
+   "27",
+   "28",
+   "29",
+   "30"
+  ],
+  "a": 1,
+  "e_hi": "अंतर 3,4,5,6; अगला 7, 21+7=28।",
+  "e_en": "Differences 3,4,5,6; next 7 gives 28."
+ },
+ {
+  "id": "rp-rea-s00716",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: M, N, P, S, ?",
+  "q_en": "M, N, P, S, ?",
+  "o_hi": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "o_en": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "a": 2,
+  "e_hi": "अंतर क्रमशः +1, +2, +3, +4 हैं; अतः अगला अक्षर W।",
+  "e_en": "Increments +1, +2, +3, +4; next letter is W."
+ },
+ {
+  "id": "rp-rea-s00717",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित शब्दों में से कौन सा शब्द अन्य तीन से अलग वर्ग में आता है?",
+  "q_en": "Which of the following words belongs to a different category than the other three?",
+  "o_hi": [
+   "कुर्सी",
+   "पंछी",
+   "किताब",
+   "मेज़"
+  ],
+  "o_en": [
+   "Chair",
+   "Bird",
+   "Book",
+   "Table"
+  ],
+  "a": 1,
+  "e_hi": "पंछी एक जीव है, जबकि अन्य तीन वस्तुएँ हैं।",
+  "e_en": "Bird is a living entity, whereas the others are inanimate objects."
+ },
+ {
+  "id": "rp-rea-s00718",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "कौन सा शब्द 'संगठन' के अर्थ में अन्य शब्दों से अलग है?",
+  "q_en": "Which word is different in meaning from the others related to 'organization'?",
+  "o_hi": [
+   "संगठन",
+   "समीकरण",
+   "संग्रह",
+   "समीक्षा"
+  ],
+  "o_en": [
+   "Organization",
+   "Equation",
+   "Collection",
+   "Review"
+  ],
+  "a": 1,
+  "e_hi": "समीकरण एक गणितीय शब्द है, जबकि अन्य तीन शब्द संगठन से संबंधित हैं।",
+  "e_en": "Equation is a mathematical term, whereas the others relate to organization."
+ },
+ {
+  "id": "rp-rea-s00719",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित संख्याओं में से कौन सी संख्या अन्य से अलग है?",
+  "q_en": "Which of the following numbers is different from the others?",
+  "o_hi": [
+   "2",
+   "3",
+   "5",
+   "6"
+  ],
+  "o_en": [
+   "2",
+   "3",
+   "5",
+   "6"
+  ],
+  "a": 3,
+  "e_hi": "6 एक संयुक्त संख्या है, जबकि 2, 3 और 5 अभाज्य संख्याएँ हैं।",
+  "e_en": "6 is a composite number, whereas 2, 3, and 5 are prime numbers."
+ },
+ {
+  "id": "rp-rea-s00720",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित अक्षरों में से कौन सा अक्षर स्वर नहीं है?",
+  "q_en": "Which of the following letters is not a vowel?",
+  "o_hi": [
+   "क",
+   "ग",
+   "म",
+   "न"
+  ],
+  "o_en": [
+   "Ka",
+   "Ga",
+   "Ma",
+   "Na"
+  ],
+  "a": 0,
+  "e_hi": "क, ग, म, और न सभी व्यंजन हैं, इसलिए कोई भी स्वर नहीं है।",
+  "e_en": "All listed letters are consonants; none is a vowel."
+ },
+ {
+  "id": "rp-rea-s00721",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित शब्दों में से कौन सा शब्द 'रंग' के वर्ग से अलग है?",
+  "q_en": "Which word does not belong to the category of colors?",
+  "o_hi": [
+   "लाल",
+   "नीला",
+   "किताब",
+   "हरा"
+  ],
+  "o_en": [
+   "Red",
+   "Blue",
+   "Book",
+   "Green"
+  ],
+  "a": 2,
+  "e_hi": "किताब एक वस्तु है, जबकि अन्य तीन शब्द रंग हैं।",
+  "e_en": "Book is an object, whereas the others are colors."
+ },
+ {
+  "id": "rp-rea-s00722",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा शब्द 'संगीत' से संबंधित नहीं है?",
+  "q_en": "Which of the following words is not related to music?",
+  "o_hi": [
+   "सुर",
+   "ताली",
+   "संगीतकार",
+   "भोजन"
+  ],
+  "o_en": [
+   "Note",
+   "Clap",
+   "Composer",
+   "Food"
+  ],
+  "a": 3,
+  "e_hi": "भोजन संगीत से संबंधित नहीं है।",
+  "e_en": "Food is not related to music."
+ },
+ {
+  "id": "rp-rea-s00723",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित संख्याओं में से कौन सी संख्या एक सम संख्या है?",
+  "q_en": "Which of the following numbers is an even number?",
+  "o_hi": [
+   "7",
+   "9",
+   "10",
+   "13"
+  ],
+  "o_en": [
+   "7",
+   "9",
+   "10",
+   "13"
+  ],
+  "a": 2,
+  "e_hi": "10 एक सम संख्या है।",
+  "e_en": "10 is an even number."
+ },
+ {
+  "id": "rp-rea-s00724",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "निम्नलिखित विकल्पों में से कौन सा शब्द 'पर्यावरण' के विषय से सबसे कम संबंधित है?",
+  "q_en": "Which word is least related to the topic of environment?",
+  "o_hi": [
+   "वन",
+   "सागर",
+   "कम्प्यूटर",
+   "वायु"
+  ],
+  "o_en": [
+   "Forest",
+   "Sea",
+   "Computer",
+   "Air"
+  ],
+  "a": 2,
+  "e_hi": "कम्प्यूटर पर्यावरण से कम संबंधित है।",
+  "e_en": "Computer is least related to environment."
+ },
+ {
+  "id": "rp-rea-s00725",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा शब्द 'कला' के वर्ग से अलग है?",
+  "q_en": "Which of the following words does not belong to the category of arts?",
+  "o_hi": [
+   "चित्रकला",
+   "संगीत",
+   "गणित",
+   "नृत्य"
+  ],
+  "o_en": [
+   "Painting",
+   "Music",
+   "Mathematics",
+   "Dance"
+  ],
+  "a": 2,
+  "e_hi": "गणित कला नहीं है।",
+  "e_en": "Mathematics is not an art."
+ },
+ {
+  "id": "rp-rea-s00726",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "निम्नलिखित शब्दों में से कौन सा शब्द 'पशु' के वर्ग से अलग है?",
+  "q_en": "Which word does not belong to the category of animals?",
+  "o_hi": [
+   "सिंह",
+   "कुत्ता",
+   "किताब",
+   "भेड़िया"
+  ],
+  "o_en": [
+   "Lion",
+   "Dog",
+   "Book",
+   "Wolf"
+  ],
+  "a": 2,
+  "e_hi": "किताब एक वस्तु है, अन्य तीन पशु हैं।",
+  "e_en": "Book is an object; the others are animals."
+ },
+ {
+  "id": "rp-rea-s00727",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "यदि 1 = A, 2 = B, 3 = C, तो 4 = ?",
+  "q_en": "If 1 corresponds to A, 2 to B, 3 to C, what does 4 correspond to?",
+  "o_hi": [
+   "D",
+   "E",
+   "F",
+   "G"
+  ],
+  "o_en": [
+   "D",
+   "E",
+   "F",
+   "G"
+  ],
+  "a": 0,
+  "e_hi": "क्रम 1=A, 2=B, 3=C के अनुसार 4= D।",
+  "e_en": "The sequence follows alphabetical order starting with 1=A, so 4=D."
+ },
+ {
+  "id": "rp-rea-s00728",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "क्रम 2, 5, 11, 23, ? में अगला अंक क्या है?",
+  "q_en": "In the sequence 2, 5, 11, 23, ?, what is the next number?",
+  "o_hi": [
+   "43",
+   "41",
+   "47",
+   "45"
+  ],
+  "o_en": [
+   "43",
+   "41",
+   "47",
+   "45"
+  ],
+  "a": 2,
+  "e_hi": "जोड़ने वाला अंक हर बार दोगुना होता है: +3, +6, +12, अगले +24 से 23+24=47।",
+  "e_en": "The increment doubles each time: +3, +6, +12, next +24 gives 47."
+ },
+ {
+  "id": "rp-rea-s00729",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "यदि 'MATH' को 13 1 20 8 के रूप में लिखा गया है, तो 'CODE' को किस क्रम में लिखा जाएगा?",
+  "q_en": "If the word 'MATH' is coded as 13 1 20 8, how would 'CODE' be coded?",
+  "o_hi": [
+   "3 15 4 5",
+   "3 15 4 4",
+   "3 15 5 4",
+   "4 15 3 5"
+  ],
+  "o_en": [
+   "3 15 4 5",
+   "3 15 4 4",
+   "3 15 5 4",
+   "4 15 3 5"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर को उसके वर्णमाला क्रमांक से बदलते हैं।",
+  "e_en": "Each letter is replaced by its position in the alphabet."
+ },
+ {
+  "id": "rp-rea-s00730",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "संख्याएँ 8 5 12 12 15 किस शब्द का प्रतिनिधित्व करती हैं?",
+  "q_en": "The numbers 8 5 12 12 15 represent which word?",
+  "o_hi": [
+   "HELLO",
+   "WORLD",
+   "HOUSE",
+   "APPLE"
+  ],
+  "o_en": [
+   "HELLO",
+   "WORLD",
+   "HOUSE",
+   "APPLE"
+  ],
+  "a": 0,
+  "e_hi": "संख्या 8=H, 5=E, 12=L, 12=L, 15=O।",
+  "e_en": "8=H, 5=E, 12=L, 12=L, 15=O gives HELLO."
+ },
+ {
+  "id": "rp-rea-s00731",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "क्रम 1, 1, 2, 6, 24, 120, ?, अगले पद का मान क्या है?",
+  "q_en": "In the series 1, 1, 2, 6, 24, 120, ?, what is the next term?",
+  "o_hi": [
+   "5040",
+   "7200",
+   "720",
+   "504"
+  ],
+  "o_en": [
+   "5040",
+   "7200",
+   "720",
+   "504"
+  ],
+  "a": 0,
+  "e_hi": "यह फैक्टोरियल श्रृंखला है: 1! 2! 3! 4! 5! 6! = 720, 7! = 5040।",
+  "e_en": "This is factorial series: 1! 2! 3! 4! 5! 6! = 720, next 7! = 5040."
+ },
+ {
+  "id": "rp-rea-s00732",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "यदि 1=Z, 2=Y, 3=X, ..., 26=A (उल्टा वर्णमाला), तो 5 को किस अक्षर से बदला जाएगा?",
+  "q_en": "If 1=Z, 2=Y, 3=X, ..., 26=A (reverse alphabet), what letter corresponds to 5?",
+  "o_hi": [
+   "V",
+   "U",
+   "W",
+   "X"
+  ],
+  "o_en": [
+   "V",
+   "U",
+   "W",
+   "X"
+  ],
+  "a": 0,
+  "e_hi": "उल्टा क्रम में 5=V है।",
+  "e_en": "In reverse order, 5 corresponds to V."
+ },
+ {
+  "id": "rp-rea-s00733",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "यदि 'CODE' को 3 15 4 5 के रूप में लिखा गया है, तो 'DECO' को किस क्रम में लिखा जाएगा?",
+  "q_en": "If 'CODE' is coded as 3 15 4 5, how would 'DECO' be coded?",
+  "o_hi": [
+   "4 5 3 15",
+   "4 5 15 3",
+   "3 15 4 5",
+   "15 3 4 5"
+  ],
+  "o_en": [
+   "4 5 3 15",
+   "4 5 15 3",
+   "3 15 4 5",
+   "15 3 4 5"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर को उसी क्रम में बदलते हैं: D=4, E=5, C=3, O=15।",
+  "e_en": "Each letter is replaced by its position: D=4, E=5, C=3, O=15."
+ },
+ {
+  "id": "rp-rea-s00734",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "क्रम 2, 5, 11, 23, 47, ?, अगले पद का मान क्या है?",
+  "q_en": "In the sequence 2, 5, 11, 23, 47, ?, what is the next number?",
+  "o_hi": [
+   "95",
+   "93",
+   "97",
+   "99"
+  ],
+  "o_en": [
+   "95",
+   "93",
+   "97",
+   "99"
+  ],
+  "a": 0,
+  "e_hi": "हर पद = पिछला × 2 + 1। 47×2+1 = 95।",
+  "e_en": "Each term equals previous × 2 + 1. 47×2+1 = 95."
+ },
+ {
+  "id": "rp-rea-s00735",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "यदि 3=2, 5=4, 7=6, 9=8, तो 11 का मान क्या होगा?",
+  "q_en": "If 3=2, 5=4, 7=6, 9=8, what would 11 correspond to?",
+  "o_hi": [
+   "10",
+   "9",
+   "12",
+   "11"
+  ],
+  "o_en": [
+   "10",
+   "9",
+   "12",
+   "11"
+  ],
+  "a": 0,
+  "e_hi": "यह पैटर्न odd number minus 1 है।",
+  "e_en": "Pattern is odd number minus 1."
+ },
+ {
+  "id": "rp-rea-s00736",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "यदि 10=2, 11=3, 12=4, 13=5, तो 14 का मान क्या होगा?",
+  "q_en": "If 10=2, 11=3, 12=4, 13=5, what is the value of 14?",
+  "o_hi": [
+   "6",
+   "5",
+   "7",
+   "8"
+  ],
+  "o_en": [
+   "6",
+   "5",
+   "7",
+   "8"
+  ],
+  "a": 0,
+  "e_hi": "यह पैटर्न संख्या को उसके अंकों के योग से दर्शाता है। 14 के अंकों का योग 1+4=5, लेकिन यहाँ 14=6 (अंक 1+4=5+1=6)।",
+  "e_en": "Pattern is sum of digits plus 1. For 14, 1+4=5, +1=6."
+ },
+ {
+  "id": "rp-rea-s00737",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "यदि A=1, B=2, C=3 … Z=26 के अनुसार कोडिंग है, तो संख्या 8 5 12 12 15 कोड किस शब्द को दर्शाता है?",
+  "q_en": "If letters are coded as A=1, B=2, C=3 … Z=26, which word is represented by the numbers 8 5 12 12 15?",
+  "o_hi": [
+   "हेलो",
+   "वर्ल्ड",
+   "ग्रीट",
+   "हैप्पी"
+  ],
+  "o_en": [
+   "HELLO",
+   "WORLD",
+   "GREET",
+   "HAPPY"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर को उनके वर्णक्रमानुसार संख्या से बदला गया है; 8→H,5→E,12→L,12→L,15→O, अतः शब्द ‘HELLO’ मिलता है।",
+  "e_en": "Each letter is replaced by its position in the alphabet; 8→H,5→E,12→L,12→L,15→O, giving the word 'HELLO'."
+ },
+ {
+  "id": "rp-rea-s00738",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "एक साधारण शिफ्ट सिफर में प्रत्येक अक्षर को अगले अक्षर से बदला जाता है (A→B, B→C, …, Z→A)। यदि 'RAIL' का कोड 'SBOJ' है, तो 'TRACK' का कोड क्या होगा?",
+  "q_en": "In a simple shift cipher where each letter is replaced by the next letter (A→B, B→C, …, Z→A), if 'RAIL' is coded as 'SBOJ', what is the code for 'TRACK'?",
+  "o_hi": [
+   "TUBDL",
+   "USBDL",
+   "VTBCD",
+   "WSBCD"
+  ],
+  "o_en": [
+   "TUBDL",
+   "USBDL",
+   "VTBCD",
+   "WSBCD"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक अक्षर को एक स्थान आगे बढ़ाया गया है: T→U, R→S, A→B, C→D, K→L, अतः 'TRACK' का कोड 'USBDL' है।",
+  "e_en": "Each letter is shifted one place ahead: T→U, R→S, A→B, C→D, K→L, so the code for 'TRACK' is 'USBDL'."
+ },
+ {
+  "id": "rp-rea-s00739",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "एक वाक्य के प्रत्येक शब्द को उसके अक्षरों की संख्या से बदला गया है। यदि कोड '4 3 5' दिया गया है, तो मूल वाक्य क्या हो सकता है?",
+  "q_en": "Each word in a sentence is replaced by the number of letters it contains. If the code is '4 3 5', which of the following could be the original sentence?",
+  "o_hi": [
+   "RIDE THE TRAIN",
+   "RUN FOR SUCCESS",
+   "COME ON NOW",
+   "GO TO SCHOOL"
+  ],
+  "o_en": [
+   "RIDE THE TRAIN",
+   "RUN FOR SUCCESS",
+   "COME ON NOW",
+   "GO TO SCHOOL"
+  ],
+  "a": 0,
+  "e_hi": "4 3 5 के अनुसार शब्दों की लंबाई 4,3,5 होनी चाहिए। 'RIDE THE TRAIN' में 'RIDE' 4, 'THE' 3, 'TRAIN' 5 अक्षर हैं।",
+  "e_en": "The numbers 4 3 5 indicate word lengths of 4, 3, and 5. 'RIDE THE TRAIN' fits these lengths."
+ },
+ {
+  "id": "rp-rea-s00740",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "एक कोड में प्रत्येक अक्षर को उसके उल्टे वर्णक्रम में उसकी स्थिति से बदला जाता है (Z=1, Y=2,…, A=26)। यदि 'RAIL' का कोड '9 26 18 15' है, तो मूल शब्द क्या है?",
+  "q_en": "In a code where each letter is replaced by its position in the reverse alphabet (Z=1, Y=2,…, A=26), if 'RAIL' is coded as '9 26 18 15', what is the original word?",
+  "o_hi": [
+   "RAIL",
+   "RILE",
+   "LIRA",
+   "LARI"
+  ],
+  "o_en": [
+   "RAIL",
+   "RILE",
+   "LIRA",
+   "LARI"
+  ],
+  "a": 0,
+  "e_hi": "उल्टे वर्णक्रम में R=9, A=26, I=18, L=15। अतः कोड '9 26 18 15' से मूल शब्द 'RAIL' है।",
+  "e_en": "In reverse alphabet, R=9, A=26, I=18, L=15. Thus the code '9 26 18 15' corresponds to the word 'RAIL'."
+ },
+ {
+  "id": "rp-rea-s00741",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "प्रत्येक अक्षर को उसके वर्णक्रमानुसार संख्या से बदला जाता है और हर दूसरी स्थिति के अक्षर में 3 जोड़ दिया जाता है। उदाहरण के लिए, 'MATH' का कोड 13 4 20 11 है। इसी नियम से 13 4 20 11 कोड किस शब्द को दर्शाता है?",
+  "q_en": "Each letter is replaced by its position in the alphabet, and 3 is added to every even-position letter. For example, 'MATH' is coded as 13 4 20 11. Using this rule, which word does 13 4 20 11 represent?",
+  "o_hi": [
+   "MATH",
+   "NICE",
+   "LIFE",
+   "CODE"
+  ],
+  "o_en": [
+   "MATH",
+   "NICE",
+   "LIFE",
+   "CODE"
+  ],
+  "a": 0,
+  "e_hi": "दूसरी और चौथी स्थिति के अक्षरों में 3 जोड़ने से 13 4 20 11 कोड मिलता है, जो 'MATH' शब्द के अनुरूप है।",
+  "e_en": "Adding 3 to the 2nd and 4th letters gives 13 4 20 11, which corresponds to the word 'MATH'."
+ },
+ {
+  "id": "rp-rea-s00742",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "एक कोड में किसी शब्द के सभी अलग-अलग अक्षरों के वर्णक्रमानुसार मानों का योग किया जाता है। उदाहरण के लिए, 'HELLO' के लिए 8+5+12+15=40 है। यदि कोड 40 है, तो कौन सा 5‑अक्षरी शब्द हो सकता है?",
+  "q_en": "A word is coded by summing the alphabet positions of its distinct letters. For example, 'HELLO' gives 8+5+12+15=40. Which 5‑letter word could correspond to the code 40?",
+  "o_hi": [
+   "HELLO",
+   "WORLD",
+   "TRAIN",
+   "PLANE"
+  ],
+  "o_en": [
+   "HELLO",
+   "WORLD",
+   "TRAIN",
+   "PLANE"
+  ],
+  "a": 0,
+  "e_hi": "HELLO के अलग‑अलग अक्षरों का योग 40 है। अन्य विकल्पों का योग अलग है, अतः सही उत्तर 'HELLO' है।",
+  "e_en": "The distinct letters of 'HELLO' sum to 40. The other options do not, so the correct answer is 'HELLO'."
+ },
+ {
+  "id": "rp-rea-s00743",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "एक रेलवे तालिका में स्टेशन कोड स्टेशन के प्रथम अक्षर की वर्णक्रमानुसार स्थिति और ट्रेन के वहाँ रुकने के दिन की संख्या से बना है। उदाहरण के लिए, 'New Delhi' को 14-2 कोड मिलता है। यदि 'Kolkata' पर ट्रेन 3 दिन रुकती है, तो उसका कोड क्या होगा?",
+  "q_en": "In a railway timetable, a station code is formed by the alphabet position of its first letter and the number of days the train stops there. For example, 'New Delhi' gets 14-2. If 'Kolkata' has a 3‑day stop, what is its code?",
+  "o_hi": [
+   "11-3",
+   "11-2",
+   "14-3",
+   "14-2"
+  ],
+  "o_en": [
+   "11-3",
+   "11-2",
+   "14-3",
+   "14-2"
+  ],
+  "a": 0,
+  "e_hi": "K का वर्णक्रमानुसार क्रम 11 है और दिन 3, अतः कोड 11-3 है।",
+  "e_en": "K is the 11th letter and the train stops 3 days, so the code is 11-3."
+ },
+ {
+  "id": "rp-rea-s00744",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "नज़दीकी अभाज्य संख्या कोड में, प्रत्येक अक्षर को उसकी वर्णक्रमानुसार स्थिति के निकटतम अभाज्य संख्या से बदला जाता है। उदाहरण के लिए, J(10)→11, A(1)→2, V(22)→23। 'JAVA' का कोड क्या होगा?",
+  "q_en": "In a nearest‑prime code, each letter is replaced by the nearest prime to its alphabet position. For example, J(10)→11, A(1)→2, V(22)→23. What is the code for 'JAVA'?",
+  "o_hi": [
+   "11 2 23 2",
+   "13 2 23 2",
+   "11 2 19 2",
+   "11 2 23 3"
+  ],
+  "o_en": [
+   "11 2 23 2",
+   "13 2 23 2",
+   "11 2 19 2",
+   "11 2 23 3"
+  ],
+  "a": 0,
+  "e_hi": "J→11, A→2, V→23, A→2, अतः कोड 11 2 23 2 है।",
+  "e_en": "J→11, A→2, V→23, A→2, so the code is 11 2 23 2."
+ },
+ {
+  "id": "rp-rea-s00745",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "किसी शब्द के प्रत्येक अक्षर को उसके वर्णक्रमानुसार मान और शब्द में उसकी स्थिति के गुणनफल से बदला जाता है। उदाहरण के लिए, 'DOG' के लिए 4*1=4, 15*2=30, 7*3=21, तो कोड 4 30 21 है। 'DOG' का कोड क्या है?",
+  "q_en": "Each letter is replaced by the product of its alphabet position and its position in the word. For 'DOG', 4*1=4, 15*2=30, 7*3=21, giving code 4 30 21. What is the code for 'DOG'?",
+  "o_hi": [
+   "4 30 21",
+   "4 15 7",
+   "4 15 21",
+   "4 30 7"
+  ],
+  "o_en": [
+   "4 30 21",
+   "4 15 7",
+   "4 15 21",
+   "4 30 7"
+  ],
+  "a": 0,
+  "e_hi": "D=4*1=4, O=15*2=30, G=7*3=21, अतः कोड 4 30 21 है।",
+  "e_en": "D=4*1=4, O=15*2=30, G=7*3=21, so the code is 4 30 21."
+ },
+ {
+  "id": "rp-rea-s00746",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "किसी शब्द का कोड उसके अक्षरों के वर्णक्रमानुसार मानों के औसत से बनाया जाता है। उदाहरण के लिए, 'CAT' का औसत (3+1+20)/3=8 है। यदि कोड 8 है, तो कौन सा 3‑अक्षरी शब्द हो सकता है?",
+  "q_en": "A word is coded by taking the average of its letters' alphabet positions. For example, 'CAT' gives (3+1+20)/3=8. Which 3‑letter word could have a code of 8?",
+  "o_hi": [
+   "CAT",
+   "DOG",
+   "SUN",
+   "BEE"
+  ],
+  "o_en": [
+   "CAT",
+   "DOG",
+   "SUN",
+   "BEE"
+  ],
+  "a": 0,
+  "e_hi": "CAT के अक्षरों का औसत 8 है; अन्य विकल्पों का औसत अलग है। अतः सही उत्तर 'CAT' है।",
+  "e_en": "The average of 'CAT' letters is 8; the others differ. Hence the correct answer is 'CAT'."
+ },
+ {
+  "id": "rp-rea-s00747",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "अक्षर A का मान 1 है, B का 2, C का 3, D का 4। E का मान क्या होगा?",
+  "q_en": "If A=1, B=2, C=3, D=4, what is the value of E?",
+  "o_hi": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "o_en": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर क्रम के अनुसार E पाँचवाँ अक्षर है, इसलिए उसका मान 5 है।",
+  "e_en": "E is the fifth letter of the alphabet, so its value is 5."
+ },
+ {
+  "id": "rp-rea-s00748",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "श्रृंखला 2, 5, 10, 17, 26 में अगला संख्या क्या होगी?",
+  "q_en": "In the series 2, 5, 10, 17, 26, what is the next number?",
+  "o_hi": [
+   "35",
+   "36",
+   "37",
+   "38"
+  ],
+  "o_en": [
+   "35",
+   "36",
+   "37",
+   "38"
+  ],
+  "a": 2,
+  "e_hi": "अंतर 3, 5, 7, 9 हैं; अगला अंतर 11 होगा, अतः 26+11=37।",
+  "e_en": "The differences are 3,5,7,9; the next difference is 11, so 26+11=37."
+ },
+ {
+  "id": "rp-rea-s00749",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "शब्द PEACH के अक्षरों के वर्णानुक्रमिक मानों का योग कितना है?",
+  "q_en": "What is the sum of the alphabet positions of the word PEACH?",
+  "o_hi": [
+   "33",
+   "34",
+   "35",
+   "36"
+  ],
+  "o_en": [
+   "33",
+   "34",
+   "35",
+   "36"
+  ],
+  "a": 0,
+  "e_hi": "P=16, E=5, A=1, C=3, H=8; योग 16+5+1+3+8=33।",
+  "e_en": "P=16, E=5, A=1, C=3, H=8; sum is 33."
+ },
+ {
+  "id": "rp-rea-s00750",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "कोडिंग सिस्टम में हर अक्षर को उसके वर्णानुक्रमिक मान के 3 गुना से बदला जाता है। उदाहरण के लिए DOG का कोड 12-45-21 है। CAT का कोड क्या होगा?",
+  "q_en": "In a code where each letter is replaced by three times its alphabet position, DOG becomes 12-45-21. What is the code for CAT?",
+  "o_hi": [
+   "9-3-60",
+   "9-6-60",
+   "12-3-60",
+   "9-3-63"
+  ],
+  "o_en": [
+   "9-3-60",
+   "9-6-60",
+   "12-3-60",
+   "9-3-63"
+  ],
+  "a": 0,
+  "e_hi": "C=3×3=9, A=1×3=3, T=20×3=60।",
+  "e_en": "C=3×3=9, A=1×3=3, T=20×3=60."
+ },
+ {
+  "id": "rp-rea-s00751",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "अक्षर क्रम A, C, F, J, ? में अगला अक्षर क्या होगा?",
+  "q_en": "In the sequence A, C, F, J, ?, what is the next letter?",
+  "o_hi": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "o_en": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "a": 2,
+  "e_hi": "अंतर क्रमशः 2,3,4 हैं; अगला अंतर 5 होने से 10+5=15, जो O है।",
+  "e_en": "The gaps are +2, +3, +4; next gap +5 gives 10+5=15, which is O."
+ },
+ {
+  "id": "rp-rea-s00752",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "श्रृंखला 2, 8, 18, 32, 50 में अगला संख्या क्या होगी?",
+  "q_en": "In the series 2, 8, 18, 32, 50, what is the next number?",
+  "o_hi": [
+   "70",
+   "71",
+   "72",
+   "73"
+  ],
+  "o_en": [
+   "70",
+   "71",
+   "72",
+   "73"
+  ],
+  "a": 2,
+  "e_hi": "अंतर 6,10,14,18 हैं; अगला अंतर 22 होगा, अतः 50+22=72।",
+  "e_en": "Differences are 6,10,14,18; next difference is 22, so 50+22=72."
+ },
+ {
+  "id": "rp-rea-s00753",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "रिवर्स कोडिंग में A=26, B=25,…, Z=1। शब्द RAY का कोड 9-24-12 है। शब्द MEL का कोड क्या होगा?",
+  "q_en": "Using reverse mapping A=26, B=25,…, Z=1, RAY codes as 9-24-12. What is the code for MEL?",
+  "o_hi": [
+   "14-22-15",
+   "14-21-15",
+   "13-22-15",
+   "14-22-16"
+  ],
+  "o_en": [
+   "14-22-15",
+   "14-21-15",
+   "13-22-15",
+   "14-22-16"
+  ],
+  "a": 0,
+  "e_hi": "M=14, E=22, L=15।",
+  "e_en": "M=14, E=22, L=15."
+ },
+ {
+  "id": "rp-rea-s00754",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "कोडिंग में पहले दो अक्षरों के मानों का योग और आखिरी दो अक्षरों के मानों का योग लिखते हैं। उदाहरण: MATH → 14-28, CODE → 18-9. JAVA का कोड क्या होगा?",
+  "q_en": "In a code where you write the sum of the first two letters and the sum of the last two letters, MATH → 14-28, CODE → 18-9. What is the code for JAVA?",
+  "o_hi": [
+   "1123",
+   "1223",
+   "1124",
+   "1224"
+  ],
+  "o_en": [
+   "1123",
+   "1223",
+   "1124",
+   "1224"
+  ],
+  "a": 0,
+  "e_hi": "J+ A = 10+1 = 11; V+ A = 22+1 = 23; कोड 1123।",
+  "e_en": "J+ A = 10+1 = 11; V+ A = 22+1 = 23; code is 1123."
+ },
+ {
+  "id": "rp-rea-s00755",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "प्रत्येक अक्षर को उसके शब्द में स्थिति के गुणा से बदला जाता है। उदाहरण: BIRD → 2-18-54-16. BIRD का कोड क्या है?",
+  "q_en": "Each letter is replaced by its alphabet position multiplied by its position in the word. Example: BIRD → 2-18-54-16. What is the code for BIRD?",
+  "o_hi": [
+   "2-18-54-16",
+   "2-18-54-15",
+   "2-19-54-16",
+   "3-18-54-16"
+  ],
+  "o_en": [
+   "2-18-54-16",
+   "2-18-54-15",
+   "2-19-54-16",
+   "3-18-54-16"
+  ],
+  "a": 0,
+  "e_hi": "B=2*1=2, I=9*2=18, R=18*3=54, D=4*4=16।",
+  "e_en": "B=2*1=2, I=9*2=18, R=18*3=54, D=4*4=16."
+ },
+ {
+  "id": "rp-rea-s00756",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "प्रत्येक अक्षर के मान से उसकी शब्द में स्थिति घटाकर, परिमाण लेते हैं। उदाहरण: MATH → 12-1-17-4. RING का कोड क्या होगा?",
+  "q_en": "Subtract each letter’s alphabet position by its position in the word (absolute value). Example: MATH → 12-1-17-4. What is the code for RING?",
+  "o_hi": [
+   "17-7-11-3",
+   "18-7-11-3",
+   "17-8-11-3",
+   "17-7-12-3"
+  ],
+  "o_en": [
+   "17-7-11-3",
+   "18-7-11-3",
+   "17-8-11-3",
+   "17-7-12-3"
+  ],
+  "a": 0,
+  "e_hi": "R=18-1=17, I=9-2=7, N=14-3=11, G=7-4=3।",
+  "e_en": "R=18-1=17, I=9-2=7, N=14-3=11, G=7-4=3."
+ },
+ {
+  "id": "rp-rea-s00757",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "सादृश्यता क्या है?",
+  "q_en": "What is an analogy?",
+  "o_hi": [
+   "दो वस्तुओं के बीच समानता दर्शाने वाली तुलना",
+   "किसी वस्तु की विशेषता बताने वाला विवरण",
+   "दो शब्दों का समानार्थी संयोजन",
+   "एक गणितीय समीकरण का समाधान"
+  ],
+  "o_en": [
+   "A comparison showing similarity between two items",
+   "A description of a characteristic of a thing",
+   "A synonymous combination of two words",
+   "A solution to a mathematical equation"
+  ],
+  "a": 0,
+  "e_hi": "सादृश्यता वह तर्क है जिसमें दो वस्तुओं या विचारों के बीच समानता या संबंध को दर्शाया जाता है।",
+  "e_en": "An analogy is a reasoning method that shows similarity or relationship between two objects or ideas."
+ },
+ {
+  "id": "rp-rea-s00758",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा उदाहरण भाग‑से‑समग्र (part‑to‑whole) सादृश्यता का सही उदाहरण है?",
+  "q_en": "Which of the following is a correct example of a part-to-whole analogy?",
+  "o_hi": [
+   "पृष्ठ : पुस्तक",
+   "किसान : खेत",
+   "कुंजी : ताला",
+   "सूर्य : ग्रह"
+  ],
+  "o_en": [
+   "page : book",
+   "farmer : field",
+   "key : lock",
+   "sun : planet"
+  ],
+  "a": 0,
+  "e_hi": "पृष्ठ पुस्तक का एक भाग है, इसलिए यह भाग‑से‑समग्र सादृश्यता है।",
+  "e_en": "A page is part of a book, making it a part-to-whole analogy."
+ },
+ {
+  "id": "rp-rea-s00759",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "सादृश्य 'A : B :: C : D' में कौन सा संबंध दर्शाया जाता है?",
+  "q_en": "In the analogy 'A is to B as C is to D', what relationship is represented?",
+  "o_hi": [
+   "A और B का संबंध C और D के समान है",
+   "A और C समान हैं",
+   "B और D समान हैं",
+   "सभी विकल्प सही हैं"
+  ],
+  "o_en": [
+   "The relationship between A and B is the same as between C and D",
+   "A and C are the same",
+   "B and D are the same",
+   "All options are correct"
+  ],
+  "a": 0,
+  "e_hi": "सादृश्य में A और B के बीच का संबंध वही होता है जो C और D के बीच होता है।",
+  "e_en": "In an analogy, the relationship between A and B is the same as that between C and D."
+ },
+ {
+  "id": "rp-rea-s00760",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा सादृश्यता का प्रकार नहीं है?",
+  "q_en": "Which of the following is not a type of analogy used in reasoning tests?",
+  "o_hi": [
+   "सिलॉजिस्टिक",
+   "सेमांटिक",
+   "विज़ुअल",
+   "म्यूज़िकल"
+  ],
+  "o_en": [
+   "Syllogistic",
+   "Semantic",
+   "Visual",
+   "Musical"
+  ],
+  "a": 3,
+  "e_hi": "म्यूज़िकल सादृश्यता का प्रकार नहीं है।",
+  "e_en": "Musical is not a type of analogy used in reasoning tests."
+ },
+ {
+  "id": "rp-rea-s00761",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "कुत्ता : पिल्ला :: बिल्ली : ?",
+  "q_en": "Dog : puppy :: Cat : ?",
+  "o_hi": [
+   "बिल्ली का शिशु",
+   "बिल्ली का पिल्ला",
+   "बिल्ली का पालतू",
+   "बिल्ली का शिकार"
+  ],
+  "o_en": [
+   "cat's baby",
+   "cat's puppy",
+   "cat's pet",
+   "cat's prey"
+  ],
+  "a": 0,
+  "e_hi": "कुत्ते का पिल्ला उसके शिशु रूप को दर्शाता है, उसी तरह बिल्ली का शिशु 'बिल्ली का शिशु' होता है।",
+  "e_en": "A puppy is a young dog; similarly a kitten is the young form of a cat."
+ },
+ {
+  "id": "rp-rea-s00762",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "अभियोजन परीक्षाओं में सादृश्य प्रश्नों का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the main purpose of analogy questions in aptitude tests?",
+  "o_hi": [
+   "स्मृति शक्ति की जाँच",
+   "तर्क क्षमता और शब्दावली का मूल्यांकन",
+   "सांख्यिकीय कौशल का परीक्षण",
+   "गणितीय दक्षता का आकलन"
+  ],
+  "o_en": [
+   "Testing memory strength",
+   "Evaluating reasoning ability and vocabulary",
+   "Testing statistical skills",
+   "Assessing mathematical proficiency"
+  ],
+  "a": 1,
+  "e_hi": "सादृश्य प्रश्न तर्क और शब्दावली दोनों को मापते हैं।",
+  "e_en": "Analogy questions assess reasoning skills and vocabulary."
+ },
+ {
+  "id": "rp-rea-s00763",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "पक्षी का संबंध पंख से है, वैसे ही मछली का संबंध ? से है",
+  "q_en": "Bird is to feather as Fish is to?",
+  "o_hi": [
+   "स्केल्स",
+   "फिन्स",
+   "गिल्स",
+   "टेल"
+  ],
+  "o_en": [
+   "scales",
+   "fins",
+   "gills",
+   "tail"
+  ],
+  "a": 0,
+  "e_hi": "पक्षी के पंख उसके पंख होते हैं, उसी प्रकार मछली के स्केल्स उसके बाहरी ढाल होते हैं।",
+  "e_en": "A feather is a bird’s outer covering; similarly a fish’s scales serve the same protective role."
+ },
+ {
+  "id": "rp-rea-s00764",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "यदि 'X : Y :: Y : Z' है, तो X और Z के बीच क्या संबंध होता है?",
+  "q_en": "If 'X : Y :: Y : Z', what is the relationship between X and Z?",
+  "o_hi": [
+   "X और Y के समान",
+   "उल्टा संबंध",
+   "संचरणीय संबंध",
+   "कोई संबंध नहीं"
+  ],
+  "o_en": [
+   "Same as X and Y",
+   "Inverse relationship",
+   "Transitive relationship",
+   "No relationship"
+  ],
+  "a": 2,
+  "e_hi": "'X : Y' और 'Y : Z' के बीच समान संबंध होने से X और Z के बीच भी वही संबंध बनता है, यानी यह संचरणीय है।",
+  "e_en": "Because the relation holds between X and Y and Y and Z, it also holds between X and Z – a transitive relationship."
+ },
+ {
+  "id": "rp-rea-s00765",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "सादृश्य तर्क के बारे में निम्नलिखित में से कौन सा कथन सही है?",
+  "q_en": "Which of the following statements about analogy reasoning is true?",
+  "o_hi": [
+   "यह हमेशा बाहरी ज्ञान पर निर्भर करता है",
+   "इसे पैटर्न पहचान से हल किया जा सकता है",
+   "यह केवल शब्दों के लिए उपयोगी है",
+   "इसे केवल गणित में इस्तेमाल किया जाता है"
+  ],
+  "o_en": [
+   "It always depends on external knowledge",
+   "It can be solved by pattern recognition",
+   "It is useful only for words",
+   "It is used only in mathematics"
+  ],
+  "a": 1,
+  "e_hi": "सादृश्य तर्क अक्सर पैटर्न पहचान पर आधारित होता है।",
+  "e_en": "Analogical reasoning often relies on pattern recognition."
+ },
+ {
+  "id": "rp-rea-s00766",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "कुत्ता : पालतू जानवर :: चिड़िया : ?",
+  "q_en": "Dog is a domestic animal. Bird is a ?",
+  "o_hi": [
+   "पालतू",
+   "पक्षी",
+   "शिकार",
+   "वन्य जीव"
+  ],
+  "o_en": [
+   "Domestic",
+   "Bird",
+   "Prey",
+   "Wildlife"
+  ],
+  "a": 1,
+  "e_hi": "कुत्ता पालतू जानवर का एक उदाहरण है। उसी प्रकार, चिड़िया पक्षी वर्ग का एक उदाहरण है।",
+  "e_en": "A dog is an example of a domestic animal. Similarly, a bird is an example of the class Bird."
+ },
+ {
+  "id": "rp-rea-s00767",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "पानी : तरल :: रेत : ?",
+  "q_en": "Water is a liquid. Sand is a ?",
+  "o_hi": [
+   "गैस",
+   "ठोस",
+   "तरल",
+   "द्रव"
+  ],
+  "o_en": [
+   "Gas",
+   "Solid",
+   "Liquid",
+   "Fluid"
+  ],
+  "a": 1,
+  "e_hi": "पानी तरल अवस्था में होता है, जबकि रेत ठोस अवस्था में होती है।",
+  "e_en": "Water is in the liquid state, whereas sand is in the solid state."
+ },
+ {
+  "id": "rp-rea-s00768",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "सूर्य : तारा :: पृथ्वी : ?",
+  "q_en": "The Sun is a star. Earth is a ?",
+  "o_hi": [
+   "ग्रह",
+   "ग्रहण",
+   "उपग्रह",
+   "तारा"
+  ],
+  "o_en": [
+   "Planet",
+   "Eclipse",
+   "Satellite",
+   "Star"
+  ],
+  "a": 0,
+  "e_hi": "सूर्य एक तारा है, और पृथ्वी एक ग्रह है।",
+  "e_en": "The Sun is a star, and Earth is a planet."
+ },
+ {
+  "id": "rp-rea-s00769",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "क्वांटम : भौतिकी :: पाली : ?",
+  "q_en": "Quantum is a branch of physics. Pali is a ?",
+  "o_hi": [
+   "भाषा",
+   "धर्म",
+   "साहित्य",
+   "दर्शन"
+  ],
+  "o_en": [
+   "Language",
+   "Religion",
+   "Literature",
+   "Philosophy"
+  ],
+  "a": 0,
+  "e_hi": "क्वांटम भौतिकी की एक शाखा है। पाली एक प्राचीन भारतीय भाषा है।",
+  "e_en": "Quantum is a branch of physics. Pali is an ancient Indian language."
+ },
+ {
+  "id": "rp-rea-s00770",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "हाथी : स्तनधारी :: घोड़ा : ?",
+  "q_en": "Elephant is a mammal. Horse is a ?",
+  "o_hi": [
+   "स्तनधारी",
+   "कशेरुकी",
+   "वन्य जीव",
+   "घोड़े का परिवार"
+  ],
+  "o_en": [
+   "Mammal",
+   "Vertebrate",
+   "Wildlife",
+   "Horse family"
+  ],
+  "a": 0,
+  "e_hi": "हाथी और घोड़ा दोनों स्तनधारी हैं।",
+  "e_en": "Both elephant and horse belong to the class Mammal."
+ },
+ {
+  "id": "rp-rea-s00771",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "संगीत : कला :: गणित : ?",
+  "q_en": "Music is an art. Mathematics is a ?",
+  "o_hi": [
+   "विज्ञान",
+   "कला",
+   "धर्म",
+   "खेल"
+  ],
+  "o_en": [
+   "Science",
+   "Art",
+   "Religion",
+   "Sport"
+  ],
+  "a": 0,
+  "e_hi": "संगीत कला है, जबकि गणित विज्ञान का विषय है।",
+  "e_en": "Music is an art, whereas mathematics is a science."
+ },
+ {
+  "id": "rp-rea-s00772",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "किसान : कृषि :: डॉक्टर : ?",
+  "q_en": "Farmer is a profession in agriculture. Doctor is a profession in ?",
+  "o_hi": [
+   "चिकित्सा",
+   "इंजीनियरिंग",
+   "कानून",
+   "वास्तुकला"
+  ],
+  "o_en": [
+   "Medicine",
+   "Engineering",
+   "Law",
+   "Architecture"
+  ],
+  "a": 0,
+  "e_hi": "किसान कृषि से संबंधित है। डॉक्टर चिकित्सा से संबंधित है।",
+  "e_en": "A farmer is associated with agriculture. A doctor is associated with medicine."
+ },
+ {
+  "id": "rp-rea-s00773",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "सौरमंडल : खगोल विज्ञान :: नदियाँ : ?",
+  "q_en": "The solar system is a topic in astronomy. Rivers are a topic in ?",
+  "o_hi": [
+   "भूगोल",
+   "जीव विज्ञान",
+   "रसायन विज्ञान",
+   "भौतिकी"
+  ],
+  "o_en": [
+   "Geography",
+   "Biology",
+   "Chemistry",
+   "Physics"
+  ],
+  "a": 0,
+  "e_hi": "सौरमंडल खगोल विज्ञान का विषय है। नदियाँ भूगोल का विषय हैं।",
+  "e_en": "The solar system is a topic in astronomy. Rivers are a topic in geography."
+ },
+ {
+  "id": "rp-rea-s00774",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 3,
+  "q_hi": "कम्प्यूटर : इलेक्ट्रॉनिक उपकरण :: पेन : ?",
+  "q_en": "A computer is an electronic device. Pen is a ?",
+  "o_hi": [
+   "लेखन उपकरण",
+   "इलेक्ट्रॉनिक उपकरण",
+   "वाहन",
+   "भोजन"
+  ],
+  "o_en": [
+   "Writing instrument",
+   "Electronic device",
+   "Vehicle",
+   "Food"
+  ],
+  "a": 0,
+  "e_hi": "कम्प्यूटर इलेक्ट्रॉनिक उपकरण है। पेन एक लेखन उपकरण है।",
+  "e_en": "A computer is an electronic device. A pen is a writing instrument."
+ },
+ {
+  "id": "rp-rea-s00775",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "सागर : जलधारा :: नदी : ?",
+  "q_en": "The ocean is a large water body. River is a ?",
+  "o_hi": [
+   "छोटी जलधारा",
+   "नदी",
+   "समुद्र",
+   "तलाब"
+  ],
+  "o_en": [
+   "Small water body",
+   "River",
+   "Sea",
+   "Lake"
+  ],
+  "a": 1,
+  "e_hi": "सागर एक बड़ी जलधारा है, उसी तरह नदी एक छोटी जलधारा है।",
+  "e_en": "The ocean is a large water body, similarly a river is a smaller water body."
  }
 ]
