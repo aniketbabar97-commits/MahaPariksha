@@ -70,6 +70,7 @@ class ProgressScreen extends StatelessWidget {
           const SizedBox(width: 10),
           _Stat(value: '${p.bestStreak}', label: context.tr('सर्वश्रेष्ठ स्ट्रीक', 'Best streak'), icon: Icons.local_fire_department),
         ]),
+        _BeastBadge(p: p, lang: lang),
         SectionTitle(context.tr('अभ्यास कैलेंडर 🗓️', 'Study calendar 🗓️')),
         _Heatmap(counts: p.dayCounts, goal: p.dailyGoal),
         SectionTitle(context.tr('विषयवार सटीकता 🎯', 'Accuracy by subject 🎯')),
@@ -208,6 +209,68 @@ class _Stat extends StatelessWidget {
             Text(label, textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: Theme.of(context).hintColor)),
           ]),
         ),
+      ),
+    );
+  }
+}
+
+/// A small tier indicator for Beast Mode (see beast_mode_screen.dart), shown next to the
+/// existing _Stat tiles. Animates the same way those tiles and the accuracy bars above do:
+/// TweenAnimationBuilder<double>, 700ms, Curves.easeOutCubic.
+class _BeastBadge extends StatelessWidget {
+  final Progress p;
+  final String lang;
+  const _BeastBadge({required this.p, required this.lang});
+
+  @override
+  Widget build(BuildContext context) {
+    final tier = p.beastTier;
+    final next = tier.nextScore;
+    final into = next == null ? 1.0 : ((p.beastBestScore - tier.minScore) / (next - tier.minScore)).clamp(0.0, 1.0);
+    return Card(
+      margin: const EdgeInsets.only(top: 10),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(children: [
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(color: BrandColors.wrong.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(12)),
+            child: const Icon(Icons.bolt, color: BrandColors.wrong),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Row(children: [
+                Text(context.tr('बीस्ट मोड', 'Beast Mode'), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                const SizedBox(width: 6),
+                Text(tier.of(lang), style: const TextStyle(fontWeight: FontWeight.w900, color: BrandColors.saffron, fontSize: 13)),
+              ]),
+              const SizedBox(height: 6),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0, end: into),
+                  duration: const Duration(milliseconds: 700),
+                  curve: Curves.easeOutCubic,
+                  builder: (context, v, _) => LinearProgressIndicator(
+                    value: v,
+                    minHeight: 6,
+                    backgroundColor: Colors.grey.withValues(alpha: 0.15),
+                    color: BrandColors.wrong,
+                  ),
+                ),
+              ),
+            ]),
+          ),
+          const SizedBox(width: 10),
+          TweenAnimationBuilder<double>(
+            tween: Tween(begin: 0, end: p.beastBestScore),
+            duration: const Duration(milliseconds: 700),
+            curve: Curves.easeOutCubic,
+            builder: (context, v, _) => Text(v.toStringAsFixed(1), style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
+          ),
+        ]),
       ),
     );
   }

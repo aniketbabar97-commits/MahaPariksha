@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
+import 'beast_mode_screen.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
@@ -32,6 +34,10 @@ class TodayScreen extends StatelessWidget {
     final days = p.daysToExam;
     final level = p.level;
     final gaps = days == null ? <PacingGap>[] : s.builder.pacingGaps();
+    // Gate Beast Mode behind ~50% overall accuracy — but only once there's enough answers
+    // for accuracy to mean anything (same minAttempts spirit as pacingGaps above), so brand
+    // new users aren't locked out by a 0% accuracy that's really just "no data yet".
+    final beastUnlocked = p.totalAnswered < 20 || p.accuracy >= 0.5;
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
@@ -213,6 +219,70 @@ class TodayScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
+        // Beast Mode: a timed, streak-multiplier sprint — the "advanced" adrenaline mode,
+        // gated behind decent overall accuracy so it reads as an earned challenge.
+        Card(
+          clipBehavior: Clip.antiAlias,
+          child: InkWell(
+            onTap: () => beastUnlocked
+                ? _pickBeastDuration(context, s)
+                : _showBeastLocked(context),
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                gradient: beastUnlocked
+                    ? const LinearGradient(
+                        colors: [BrandColors.wrong, BrandColors.saffron],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight)
+                    : null,
+                color: beastUnlocked ? null : Colors.grey.withValues(alpha: 0.12),
+              ),
+              child: Row(children: [
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: beastUnlocked ? 0.18 : 0),
+                      borderRadius: BorderRadius.circular(14)),
+                  child: Icon(beastUnlocked ? Icons.bolt : Icons.lock_outline,
+                      color: beastUnlocked ? Colors.white : Colors.grey, size: 32),
+                ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Row(children: [
+                      Text(context.tr('बीस्ट मोड', 'Beast Mode'),
+                          style: TextStyle(
+                              color: beastUnlocked ? Colors.white : Theme.of(context).hintColor,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900)),
+                      if (beastUnlocked && p.beastBestScore > 0) ...[
+                        const SizedBox(width: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                          decoration:
+                              BoxDecoration(color: Colors.white.withValues(alpha: 0.22), borderRadius: BorderRadius.circular(20)),
+                          child: Text(p.beastTier.of(lang),
+                              style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w900)),
+                        ),
+                      ],
+                    ]),
+                    const SizedBox(height: 2),
+                    Text(
+                      beastUnlocked
+                          ? context.tr('टाइम्ड स्प्रिंट — स्ट्रीक मल्टीप्लायर के साथ रफ़्तार आज़माएं ⚡',
+                              'Timed sprint — test your pace with streak multipliers ⚡')
+                          : context.tr('अनलॉक के लिए 50% सटीकता चाहिए 🔒', '50% accuracy needed to unlock 🔒'),
+                      style: TextStyle(color: beastUnlocked ? Colors.white70 : Theme.of(context).hintColor),
+                    ),
+                  ]),
+                ),
+                if (beastUnlocked) const Icon(Icons.chevron_right, color: Colors.white70),
+              ]),
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
         ActionCard(
           icon: Icons.search,
           color: BrandColors.sky,
@@ -309,4 +379,53 @@ class TodayScreen extends StatelessWidget {
       ],
     );
   }
+}
+
+void _showBeastLocked(BuildContext context) {
+  HapticFeedback.selectionClick();
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(context.tr('बीस्ट मोड खोलने के लिए 50% सटीकता चाहिए। अभ्यास जारी रखें! 💪',
+          'Reach 50% accuracy to unlock Beast Mode. Keep practicing! 💪'))));
+}
+
+void _pickBeastDuration(BuildContext context, AppScope s) {
+  HapticFeedback.selectionClick();
+  showModalBottomSheet<int>(
+    context: context,
+    showDragHandle: true,
+    builder: (ctx) => SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20, 4, 20, 20),
+        child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(ctx.tr('कितनी देर की स्प्रिंट? ⏱️', 'How long a sprint? ⏱️'),
+              style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 17)),
+          const SizedBox(height: 4),
+          Text(ctx.tr('जितनी लंबी स्प्रिंट, उतना बड़ा मल्टीप्लायर बनाने का मौका',
+                  'A longer sprint gives you more room to build a big multiplier'),
+              style: TextStyle(color: Theme.of(ctx).hintColor, fontSize: 13)),
+          const SizedBox(height: 16),
+          Row(children: [
+            for (final sec in const [60, 90, 120]) ...[
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () {
+                    HapticFeedback.selectionClick();
+                    Navigator.pop(ctx, sec);
+                  },
+                  child: Column(mainAxisSize: MainAxisSize.min, children: [
+                    Text('${sec}s', style: const TextStyle(fontWeight: FontWeight.w800)),
+                    if (sec == 60) Text(ctx.tr('डिफ़ॉल्ट', 'Default'), style: const TextStyle(fontSize: 10)),
+                  ]),
+                ),
+              ),
+              if (sec != 120) const SizedBox(width: 10),
+            ],
+          ]),
+        ]),
+      ),
+    ),
+  ).then((seconds) {
+    if (seconds == null || !context.mounted) return;
+    startBeastMode(context, s.builder.beast(seconds: seconds), seconds);
+  });
 }

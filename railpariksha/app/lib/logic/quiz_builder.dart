@@ -4,7 +4,7 @@ import '../data/content_repo.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 
-enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks }
+enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast }
 
 class QuizSpec {
   final QuizMode mode;
@@ -215,6 +215,36 @@ class QuizBuilder {
     final negative = e?.negative ?? 0.0;
     return QuizSpec(QuizMode.mock, chosen, 'मॉक टेस्ट', 'Mock Test',
         timeLimit: Duration(seconds: 48 * chosen.length), negative: negative);
+  }
+
+  /// Builds a Beast Mode sprint pool: enough questions (weighted the same way [mock]
+  /// mirrors the real exam's subject split) to comfortably outlast [seconds] of rapid-fire
+  /// answering, capped by pool size. The screen itself cycles/reshuffles this list if a very
+  /// fast player exhausts it before the timer ends, so this only needs to be "plenty", not exact.
+  QuizSpec beast({int seconds = 60}) {
+    final e = exam;
+    final rnd = Random();
+    final pool = _pool();
+    final bySubject = <String, List<Question>>{};
+    for (final q in pool) {
+      bySubject.putIfAbsent(q.subject, () => []).add(q);
+    }
+    // Rough budget assuming ~2.5s per question, generously capped.
+    final count = (seconds / 2.5).ceil().clamp(15, 80);
+    final chosen = <Question>[];
+    if (bySubject.isNotEmpty) {
+      final weights = {for (final s in bySubject.keys) s: e?.weights[s] ?? 1};
+      final capacity = {for (final s in bySubject.keys) s: bySubject[s]!.length};
+      final alloc = _weightedAllocate(weights, capacity, count);
+      for (final s in bySubject.keys) {
+        final list = bySubject[s]!..shuffle(rnd);
+        chosen.addAll(list.take(alloc[s]!));
+      }
+      chosen.shuffle(rnd);
+    }
+    final negative = e?.negative ?? 0.0;
+    return QuizSpec(QuizMode.beast, chosen, 'बीस्ट मोड ⚡', 'Beast Mode ⚡',
+        timeLimit: Duration(seconds: seconds), negative: negative);
   }
 
   QuizSpec speed() {

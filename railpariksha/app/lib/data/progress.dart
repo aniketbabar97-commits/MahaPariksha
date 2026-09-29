@@ -27,6 +27,26 @@ const _levels = [
   (12000, 'राजधानी', 'Rajdhani'),
 ];
 
+class BeastTier {
+  final int index;
+  final String hi;
+  final String en;
+  final double minScore;
+  final double? nextScore;
+  const BeastTier(this.index, this.hi, this.en, this.minScore, this.nextScore);
+  String of(String lang) => lang == 'en' ? en : hi;
+}
+
+/// Beast Mode tiers, unlocked by the best sprint score achieved so far (see
+/// [Progress.beastBestScore]). Mirrors [_levels]' shape/lookup pattern.
+const _beastTiers = [
+  (0.0, 'रूकी', 'Rookie'),
+  (15.0, 'योद्धा', 'Warrior'),
+  (30.0, 'बीस्ट', 'Beast'),
+  (50.0, 'आयरन बीस्ट', 'Iron Beast'),
+  (75.0, 'एग्ज़ाम बीस्ट', 'Exam Beast'),
+];
+
 class CardState {
   double ease;
   int interval;
@@ -79,6 +99,8 @@ class Progress extends ChangeNotifier {
   int freezeTokens = 0;
   bool comeback = false;
   int bestSpeed = 0;
+  double beastBestScore = 0;
+  int beastBestStreak = 0;
   final Map<int, int> dayCounts = {};
 
   // Learning state
@@ -117,6 +139,8 @@ class Progress extends ChangeNotifier {
     lastActiveDay = j['lastActiveDay'] ?? 0;
     freezeTokens = j['freezeTokens'] ?? 0;
     bestSpeed = j['bestSpeed'] ?? 0;
+    beastBestScore = (j['beastBestScore'] as num?)?.toDouble() ?? 0;
+    beastBestStreak = j['beastBestStreak'] ?? 0;
     (j['dayCounts'] as Map? ?? {}).forEach((k, v) => dayCounts[int.parse(k)] = v);
     (j['qStats'] as Map? ?? {}).forEach((k, v) => qStats[k] = List<int>.from(v));
     mistakes.addAll(List<String>.from(j['mistakes'] ?? []));
@@ -141,6 +165,8 @@ class Progress extends ChangeNotifier {
         'lastActiveDay': lastActiveDay,
         'freezeTokens': freezeTokens,
         'bestSpeed': bestSpeed,
+        'beastBestScore': beastBestScore,
+        'beastBestStreak': beastBestStreak,
         'dayCounts': dayCounts.map((k, v) => MapEntry('$k', v)),
         'qStats': qStats,
         'mistakes': mistakes.toList(),
@@ -188,6 +214,18 @@ class Progress extends ChangeNotifier {
       }
     }
     return Level(0, _levels[0].$2, _levels[0].$3, 0, _levels[1].$1);
+  }
+
+  /// Derived from [beastBestScore], the same way [level] is derived from [xp] —
+  /// no separate stored tier field, so it can never drift out of sync with the score.
+  BeastTier get beastTier {
+    for (var i = _beastTiers.length - 1; i >= 0; i--) {
+      if (beastBestScore >= _beastTiers[i].$1) {
+        final next = i + 1 < _beastTiers.length ? _beastTiers[i + 1].$1 : null;
+        return BeastTier(i, _beastTiers[i].$2, _beastTiers[i].$3, _beastTiers[i].$1, next);
+      }
+    }
+    return BeastTier(0, _beastTiers[0].$2, _beastTiers[0].$3, 0, _beastTiers[1].$1);
   }
 
   int? get daysToExam {
@@ -295,6 +333,14 @@ class Progress extends ChangeNotifier {
     save();
   }
 
+  /// [score] is the sprint's final Beast Mode score (streak-multiplier gains minus real
+  /// negative marking); [streakRun] is the longest correct-in-a-row streak reached in that run.
+  void recordBeast(double score, int streakRun) {
+    if (score > beastBestScore) beastBestScore = score;
+    if (streakRun > beastBestStreak) beastBestStreak = streakRun;
+    save();
+  }
+
   void toggleBookmark(String id) {
     bookmarks.contains(id) ? bookmarks.remove(id) : bookmarks.add(id);
     save();
@@ -317,7 +363,8 @@ class Progress extends ChangeNotifier {
 
   Future<void> reset() async {
     final keepLang = lang;
-    xp = streak = bestStreak = lastActiveDay = freezeTokens = bestSpeed = 0;
+    xp = streak = bestStreak = lastActiveDay = freezeTokens = bestSpeed = beastBestStreak = 0;
+    beastBestScore = 0;
     for (final c in [dayCounts, qStats, cards]) {
       c.clear();
     }
