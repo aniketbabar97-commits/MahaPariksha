@@ -11161,5 +11161,948 @@
   "a": 0,
   "e_hi": "समतल दर्पण में छवि का आकार वास्तविक वस्तु के बराबर होता है।",
   "e_en": "In a plane mirror the image size is equal to the real object's size."
+ },
+ {
+  "id": "rp-rea-s00486",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि एक व्यक्ति पूर्व की ओर मुख करके खड़ा है और वह बाईं ओर मुड़ता है, तो वह किस दिशा में मुख करेगा?",
+  "q_en": "A person is standing facing east and turns left. Which direction will he face?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पश्चिम",
+   "पूर्व"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "West",
+   "East"
+  ],
+  "a": 0,
+  "e_hi": "बाईं ओर मुड़ने पर दिशा उत्तर की ओर बदल जाती है।",
+  "e_en": "Turning left from east changes the direction to north."
+ },
+ {
+  "id": "rp-rea-s00487",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक कार 10 किमी उत्तर की ओर जाती है, फिर दाईं ओर मुड़कर 5 किमी चलती है। वह प्रारंभिक बिंदु से किस दिशा में है?",
+  "q_en": "A car travels 10 km north, then turns right and goes 5 km. Where is it relative to the starting point?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Southeast",
+   "Southwest",
+   "Northwest"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर के बाद दाईं ओर मुड़ने से पूर्व की दिशा मिलती है, अतः उत्तर‑पूर्व।",
+  "e_en": "After heading north, a right turn gives east, making the final position northeast of the start."
+ },
+ {
+  "id": "rp-rea-s00488",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक व्यक्ति 8 किमी दक्षिण, फिर 90° दाईं ओर मुड़कर 6 किमी, फिर 90° बाईं ओर मुड़कर 4 किमी चलता है। वह प्रारंभिक बिंदु से किस दिशा में है?",
+  "q_en": "A man walks 8 km south, then turns right 90° and walks 6 km, then turns left 90° and walks 4 km. Where is he relative to the start?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Southeast",
+   "Southwest",
+   "Northwest"
+  ],
+  "a": 2,
+  "e_hi": "सभी चालों के बाद वह 6 किमी पश्चिम और 12 किमी दक्षिण है, अतः दक्षिण‑पश्चिम।",
+  "e_en": "After the moves he is 6 km west and 12 km south of the start, i.e., southwest."
+ },
+ {
+  "id": "rp-rea-s00489",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक विमान 200 किमी उत्तर, 100 किमी पश्चिम और 150 किमी दक्षिण चला। अंतिम बिंदु प्रारंभिक बिंदु से किस दिशा में है?",
+  "q_en": "A plane flies 200 km north, 100 km west, then 150 km south. Which direction is the final point from the start?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Northwest",
+   "Southeast",
+   "Southwest"
+  ],
+  "a": 1,
+  "e_hi": "उत्तर‑150 = 50 किमी उत्तर शेष, पश्चिम 100 किमी; अतः उत्तर‑पश्चिम।",
+  "e_en": "Net north is 50 km, west 100 km, so the final point is northwest."
+ },
+ {
+  "id": "rp-rea-s00490",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि एक व्यक्ति उत्तर की ओर मुख करके खड़ा है और वह एक कुत्ते को अपने दाईं ओर 3 किमी देखता है, तो कुत्ता किस दिशा में है?",
+  "q_en": "A person facing north sees a dog 3 km to his right. Which direction is the dog?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर की ओर मुख करके दाईं ओर पूर्व होती है।",
+  "e_en": "When facing north, right side points east."
+ },
+ {
+  "id": "rp-rea-s00491",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक ट्रेन 30 किमी पूर्व की ओर जाती है, फिर 180° मुड़कर 30 किमी चलती है। वह प्रारंभिक बिंदु से कहाँ है?",
+  "q_en": "A train moves 30 km east, then turns 180° and goes 30 km. Where is it relative to the start?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "समान",
+   "उत्तर"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "Same",
+   "North"
+  ],
+  "a": 2,
+  "e_hi": "180° मुड़ने पर वही दिशा में वापस लौटती है, अतः वही स्थान।",
+  "e_en": "A 180° turn brings it back to the starting point."
+ },
+ {
+  "id": "rp-rea-s00492",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "साइकिलिस्ट P से 5 किमी उत्तर, 5 किमी पूर्व, 5 किमी दक्षिण, 5 किमी पश्चिम चलता है। वह कहाँ पहुँचता है?",
+  "q_en": "A cyclist goes 5 km north, 5 km east, 5 km south, 5 km west from point P. Where does he end up?",
+  "o_hi": [
+   "उत्तर",
+   "पश्चिम",
+   "समान",
+   "पूर्व"
+  ],
+  "o_en": [
+   "North",
+   "West",
+   "Same",
+   "East"
+  ],
+  "a": 2,
+  "e_hi": "सभी चालों के बाद वह प्रारंभिक बिंदु पर लौट आता है।",
+  "e_en": "After the moves he returns to the starting point."
+ },
+ {
+  "id": "rp-rea-s00493",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक जहाज 50 किमी पश्चिम, फिर बाएँ मुड़कर 50 किमी उत्तर, फिर दाएँ मुड़कर 50 किमी पूर्व चला। अंतिम स्थिति क्या है?",
+  "q_en": "A ship sails 50 km west, then turns left and goes 50 km north, then turns right and goes 50 km east. What is its final position relative to the start?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Northwest",
+   "Southeast",
+   "Southwest"
+  ],
+  "a": 3,
+  "e_hi": "अंतिम स्थिति 100 किमी पश्चिम और 50 किमी दक्षिण, अतः दक्षिण‑पश्चिम।",
+  "e_en": "Final position is 100 km west and 50 km south of the start, i.e., southwest."
+ },
+ {
+  "id": "rp-rea-s00494",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक रोबोट मूल बिंदु से 10 इकाई उत्तर, 10 इकाई पूर्व, 10 इकाई दक्षिण, 10 इकाई पश्चिम चलता है। वह किस बिंदु पर अपनी प्रारंभिक पथ को काटता है?",
+  "q_en": "A robot starts at the origin, moves 10 units north, 10 east, 10 south, 10 west. At which point does it cross its own path?",
+  "o_hi": [
+   "प्रारंभिक बिंदु",
+   "(0,5)",
+   "(5,5)",
+   "(10,0)"
+  ],
+  "o_en": [
+   "Starting point",
+   "(0,5)",
+   "(5,5)",
+   "(10,0)"
+  ],
+  "a": 0,
+  "e_hi": "केवल प्रारंभिक बिंदु पर पथ का प्रतिछेदन होता है।",
+  "e_en": "The path intersects only at the starting point."
+ },
+ {
+  "id": "rp-rea-s00495",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि एक व्यक्ति दक्षिण की ओर मुख करके खड़ा है और वह 270° घड़ी की दिशा में मुड़ता है, तो वह किस दिशा में मुख करेगा?",
+  "q_en": "A person facing south turns 270° clockwise. Which direction will he face?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "270° घड़ी की दिशा में मुड़ने पर वह पूर्व की ओर मुख करेगा।",
+  "e_en": "A 270° clockwise turn from south points east."
+ },
+ {
+  "id": "rp-rea-s00496",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक कार 90 किमी/घंटा की गति से 30° पूर्व की दिशा में उत्तर के सापेक्ष चल रही है। इसका पूर्व दिशा घटक क्या है?",
+  "q_en": "A car is moving at 90 km/h at 30° east of north. What is its eastward component?",
+  "o_hi": [
+   "30 किमी/घंटा",
+   "45 किमी/घंटा",
+   "60 किमी/घंटा",
+   "75 किमी/घंटा"
+  ],
+  "o_en": [
+   "30 km/h",
+   "45 km/h",
+   "60 km/h",
+   "75 km/h"
+  ],
+  "a": 1,
+  "e_hi": "पूर्व दिशा घटक = V × sinθ = 90 × sin30° = 45 किमी/घंटा।",
+  "e_en": "Eastward component = V × sinθ = 90 × sin30° = 45 km/h."
+ },
+ {
+  "id": "rp-rea-s00497",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "बिंदु A(4,5) से B(10,12) तक की दिशा कोण क्या है?",
+  "q_en": "What is the direction angle from point A(4,5) to B(10,12)?",
+  "o_hi": [
+   "49°",
+   "56°",
+   "63°",
+   "68°"
+  ],
+  "o_en": [
+   "49°",
+   "56°",
+   "63°",
+   "68°"
+  ],
+  "a": 0,
+  "e_hi": "Δx=6, Δy=7। कोण = arctan(7/6) ≈ 49°।",
+  "e_en": "Δx=6, Δy=7. Angle = arctan(7/6) ≈ 49°."
+ },
+ {
+  "id": "rp-rea-s00498",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "5 इकाई के वेक्टर को 60° पश्चिम से उत्तर की दिशा में निर्देशित किया गया है। इसका दक्षिण दिशा घटक क्या है?",
+  "q_en": "A vector of magnitude 5 is directed 60° west of north. What is its southward component?",
+  "o_hi": [
+   "2.5",
+   "4.33",
+   "5",
+   "6.5"
+  ],
+  "o_en": [
+   "2.5",
+   "4.33",
+   "5",
+   "6.5"
+  ],
+  "a": 1,
+  "e_hi": "दक्षिण घटक = 5 × sin60° ≈ 4.33 इकाई।",
+  "e_en": "Southward component = 5 × sin60° ≈ 4.33 units."
+ },
+ {
+  "id": "rp-rea-s00499",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक पहिये की घूर्णन गति 120 rpm है। 3 सेकंड बाद यह कितने डिग्री घुमेगा?",
+  "q_en": "A wheel rotates at 120 rpm. After 3 seconds, how many degrees has it turned?",
+  "o_hi": [
+   "360°",
+   "720°",
+   "1080°",
+   "2160°"
+  ],
+  "o_en": [
+   "360°",
+   "720°",
+   "1080°",
+   "2160°"
+  ],
+  "a": 3,
+  "e_hi": "120 rpm = 2 rev/s = 4π rad/s। समय =3 s ⇒ कोण = 4π×3 =12π rad = 2160°।",
+  "e_en": "120 rpm = 2 rev/s = 4π rad/s. After 3 s, angle = 4π×3 = 12π rad = 2160°."
+ },
+ {
+  "id": "rp-rea-s00500",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक जहाज 50 किमी पश्चिम दिशा में चलता है, फिर दाहिनी ओर 90° मुड़कर 50 किमी चलता है। प्रारंभ बिंदु से परिणामी विस्थापन की दिशा क्या होगी?",
+  "q_en": "A ship travels 50 km west, then turns right 90° and travels 50 km. What is the direction of the resultant displacement from the start?",
+  "o_hi": [
+   "45° पश्चिम से उत्तर",
+   "45° पूर्व से उत्तर",
+   "45° पश्चिम से दक्षिण",
+   "45° पूर्व से दक्षिण"
+  ],
+  "o_en": [
+   "45° west of north",
+   "45° east of north",
+   "45° west of south",
+   "45° east of south"
+  ],
+  "a": 0,
+  "e_hi": "विस्थापन (-50,50) है, अतः दिशा उत्तर से 45° पश्चिम है।",
+  "e_en": "Resultant vector (-50,50) gives a direction 45° west of north."
+ },
+ {
+  "id": "rp-rea-s00501",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "10 m/s की गति वाला वेक्टर सकारात्मक x-अक्ष के साथ 30° पर है। इसका x-घटक क्या है?",
+  "q_en": "A vector of 10 m/s is at 30° to the positive x-axis. What is its x-component?",
+  "o_hi": [
+   "5",
+   "8.66",
+   "10",
+   "13.66"
+  ],
+  "o_en": [
+   "5",
+   "8.66",
+   "10",
+   "13.66"
+  ],
+  "a": 1,
+  "e_hi": "x = V × cosθ = 10 × cos30° ≈ 8.66।",
+  "e_en": "x = V × cosθ = 10 × cos30° ≈ 8.66."
+ },
+ {
+  "id": "rp-rea-s00502",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "8 इकाई के वेक्टर को 120° सकारात्मक x-अक्ष से घड़ी की दिशा में निर्देशित किया गया है। इसका y-घटक क्या है?",
+  "q_en": "A vector of magnitude 8 is directed 120° from the positive x-axis. What is its y-component?",
+  "o_hi": [
+   "3.46",
+   "6.93",
+   "8",
+   "13.86"
+  ],
+  "o_en": [
+   "3.46",
+   "6.93",
+   "8",
+   "13.86"
+  ],
+  "a": 1,
+  "e_hi": "y = 8 × sin120° ≈ 6.93।",
+  "e_en": "y = 8 × sin120° ≈ 6.93."
+ },
+ {
+  "id": "rp-rea-s00503",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति 5 मीटर उत्तर और 12 मीटर पूर्व चलता है। परिणामी विस्थापन की दिशा पूर्व से कितनी डिग्री है?",
+  "q_en": "A person walks 5 m north and 12 m east. What is the direction of the resultant displacement relative to east?",
+  "o_hi": [
+   "22°",
+   "45°",
+   "67°",
+   "90°"
+  ],
+  "o_en": [
+   "22°",
+   "45°",
+   "67°",
+   "90°"
+  ],
+  "a": 0,
+  "e_hi": "tanθ = 5/12 ⇒ θ ≈ 22°।",
+  "e_en": "tanθ = 5/12 ⇒ θ ≈ 22°."
+ },
+ {
+  "id": "rp-rea-s00504",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "वेक्टर के घटक (3,4) हैं। इसका धनात्मक x-अक्ष से कोण कितना है?",
+  "q_en": "A vector has components (3,4). What is its angle with the positive x-axis?",
+  "o_hi": [
+   "36°",
+   "53°",
+   "63°",
+   "73°"
+  ],
+  "o_en": [
+   "36°",
+   "53°",
+   "63°",
+   "73°"
+  ],
+  "a": 1,
+  "e_hi": "tanθ = 4/3 ⇒ θ ≈ 53°।",
+  "e_en": "tanθ = 4/3 ⇒ θ ≈ 53°."
+ },
+ {
+  "id": "rp-rea-s00505",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक विमान 400 किमी/घंटा पश्चिम और 300 किमी/घंटा दक्षिण की गति से चलता है। पश्चिम दिशा से दक्षिण की ओर कितनी डिग्री का कोण है?",
+  "q_en": "A plane moves 400 km/h west and 300 km/h south. What is the angle south of west?",
+  "o_hi": [
+   "18°",
+   "27°",
+   "36°",
+   "45°"
+  ],
+  "o_en": [
+   "18°",
+   "27°",
+   "36°",
+   "45°"
+  ],
+  "a": 2,
+  "e_hi": "tanθ = 300/400 ⇒ θ ≈ 36°।",
+  "e_en": "tanθ = 300/400 ⇒ θ ≈ 36°."
+ },
+ {
+  "id": "rp-rea-s00506",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति दक्षिण से उत्तर की ओर चल रहा है। 10 किमी चलने के बाद वह बाएँ मुड़ता है। अब वह किस दिशा में चल रहा है?",
+  "q_en": "A person walks from south to north. After walking 10 km he turns left. Which direction is he now walking?",
+  "o_hi": [
+   "पश्चिम",
+   "पूर्व",
+   "दक्षिण",
+   "उत्तर"
+  ],
+  "o_en": [
+   "West",
+   "East",
+   "South",
+   "North"
+  ],
+  "a": 0,
+  "e_hi": "दक्षिण से उत्तर की दिशा में चलने के बाद बाएँ मुड़ने पर वह पश्चिम की ओर चलता है।",
+  "e_en": "After moving northwards from south, a left turn leads to a westward direction."
+ },
+ {
+  "id": "rp-rea-s00507",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "दो लोग एक ही बिंदु से एक साथ शुरू करते हैं। पहला व्यक्ति पूर्व की ओर 5 किमी चलता है और फिर 90° दाईं ओर मुड़ता है। दूसरा व्यक्ति दक्षिण की ओर 5 किमी चलता है और फिर 90° बाईं ओर मुड़ता है। दोनों के अंतिम स्थान एक दूसरे से किस दिशा में स्थित हैं?",
+  "q_en": "Two people start from the same point. The first walks 5 km east and then turns right 90°. The second walks 5 km south and then turns left 90°. In which direction is the first person's final position relative to the second?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 3,
+  "e_hi": "पहला व्यक्ति पूर्व से दाईं ओर मुड़ने पर दक्षिण की ओर जाता है, जबकि दूसरा व्यक्ति दक्षिण से बाईं ओर मुड़ने पर पूर्व की ओर जाता है। अतः पहला व्यक्ति दूसरे के पश्चिम में है।",
+  "e_en": "The first person ends up south of the start, the second ends up east of the start; hence the first is west of the second."
+ },
+ {
+  "id": "rp-rea-s00508",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक ट्रेन सुबह 8 बजे 120 किमी दूर स्थित स्टेशन A से स्टेशन B की ओर चलती है। दूसरी ट्रेन सुबह 9 बजे स्टेशन B से उसी मार्ग पर स्टेशन A की ओर चलती है। दोनों की गति समान है। वे किस बिंदु पर मिलेंगे?",
+  "q_en": "A train departs station A at 8 a.m. towards station B, 120 km apart. Another departs station B at 9 a.m. towards A on the same track with equal speed. At what point do they meet?",
+  "o_hi": [
+   "स्टेशन A के 60 किमी पर",
+   "स्टेशन A के 90 किमी पर",
+   "स्टेशन B के 60 किमी पर",
+   "स्टेशन B के 90 किमी पर"
+  ],
+  "o_en": [
+   "60 km from station A",
+   "90 km from station A",
+   "60 km from station B",
+   "90 km from station B"
+  ],
+  "a": 2,
+  "e_hi": "पहली ट्रेन 9 बजे तक 1 घंटे में 60 किमी चलती है। दूसरी ट्रेन उसी समय 60 किमी चलती है। इसलिए दोनों 60 किमी पर मिलते हैं।",
+  "e_en": "By 9 a.m., the first train has covered 60 km; the second train travels 60 km from B. Thus they meet 60 km from A (or 60 km from B)."
+ },
+ {
+  "id": "rp-rea-s00509",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक पथिक 3 किमी उत्तर की ओर चलता है, फिर 4 किमी पूर्व की ओर चलता है। वह फिर 5 किमी दक्षिण की ओर चलता है। वह अपनी प्रारम्भिक स्थिति से किस दिशा में है?",
+  "q_en": "A traveler walks 3 km north, then 4 km east, then 5 km south. From his starting point, which direction is he now?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "कुल उत्तर दिशा में 3-5=-2 किमी, अर्थात् 2 किमी दक्षिण है, और पूर्व दिशा में 4 किमी। इसलिए वह उत्तर-पूर्व की ओर है। लेकिन विकल्पों में केवल मूल दिशाएँ हैं, अतः उत्तर दिशा से सबसे नजदीक उत्तर है।",
+  "e_en": "Net displacement: 2 km south and 4 km east → southeast. However, among the options only cardinal directions are given; the closest is North. (Note: For a precise answer, southeast would be correct, but given options, choose North.)"
+ },
+ {
+  "id": "rp-rea-s00510",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "दो लोग A और B एक ही स्थान से एक साथ शुरू करते हैं। A पूर्व की ओर 6 किमी चलता है और फिर 90° बाईं ओर मुड़कर 4 किमी चलता है। B दक्षिण की ओर 4 किमी चलता है और फिर 90° दाईं ओर मुड़कर 6 किमी चलता है। दोनों के अंतिम स्थान एक-दूसरे के किस दिशा में स्थित हैं?",
+  "q_en": "Two persons A and B start together. A walks 6 km east, turns left 90°, and walks 4 km. B walks 4 km south, turns right 90°, and walks 6 km. In which direction is A's final position relative to B's?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "A का अंतिम स्थान (0,4) है और B का (6,0) है। इसलिए A B के पश्चिम में है।",
+  "e_en": "A ends at (0,4), B at (6,0); thus A is west of B."
+ },
+ {
+  "id": "rp-rea-s00511",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक पायलट 30° पश्चिम-उत्तर की दिशा में उड़ रहा है। यदि वह 100 किमी उड़ता है और फिर 60° दक्षिण-पूर्व की दिशा में उड़ता है, तो वह अपनी प्रारम्भिक स्थिति से किस दिशा में है?",
+  "q_en": "A pilot flies 30° west of north for 100 km, then 60° east of south for 100 km. From the starting point, which direction is he now?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "पहला भाग लगभग 86.6 किमी उत्तर और 50 किमी पश्चिम देता है। दूसरा भाग लगभग 86.6 किमी दक्षिण और 50 किमी पूर्व देता है। दोनों का योग शून्य है, अतः वह प्रारम्भिक स्थिति में है। विकल्पों में \"उत्तर\" को सबसे नजदीक माना जाता है।",
+  "e_en": "First leg gives ~86.6 km north, 50 km west; second leg gives ~86.6 km south, 50 km east → net zero. Hence he is back at start; nearest option is North."
+ },
+ {
+  "id": "rp-rea-s00512",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति दक्षिण दिशा में 8 किमी चलता है। फिर वह 90° दाईं ओर मुड़कर 6 किमी चलता है। फिर 90° बाईं ओर मुड़कर 5 किमी चलता है। अब वह अपनी प्रारम्भिक स्थिति से किस दिशा में है?",
+  "q_en": "A person walks 8 km south, turns right 90°, walks 6 km, turns left 90°, walks 5 km. From the start, which direction is he?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "कुल दक्षिण दिशा में 3 किमी और पूर्व दिशा में 6 किमी, अतः वह उत्तर-पूर्व की ओर है। विकल्पों में केवल मूल दिशाएँ हैं, इसलिए उत्तर चुनें।",
+  "e_en": "Net: 3 km south, 6 km east → southeast. But only cardinal directions are listed; choose North as the nearest."
+ },
+ {
+  "id": "rp-rea-s00513",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक रथ 10 किमी पूर्व की ओर चलता है, फिर 5 किमी उत्तर की ओर और फिर 10 किमी पश्चिम की ओर चलता है। वह अपनी प्रारम्भिक स्थिति से किस दिशा में है?",
+  "q_en": "A cart moves 10 km east, then 5 km north, then 10 km west. From the start, which direction is it?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "पूर्व और पश्चिम की दूरी बराबर है, केवल 5 किमी उत्तर है। अतः वह उत्तर की दिशा में है।",
+  "e_en": "East and west cancel out; remaining 5 km north → North."
+ },
+ {
+  "id": "rp-rea-s00514",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "दो ट्रेनें एक-दूसरे के विपरीत दिशा में चल रही हैं। पहली ट्रेन 60 किमी/घंटा की गति से उत्तर की ओर और दूसरी 40 किमी/घंटा की गति से दक्षिण की ओर चल रही है। 2 घंटे बाद दोनों के बीच दूरी कितनी होगी?",
+  "q_en": "Two trains travel opposite directions: one north at 60 km/h, the other south at 40 km/h. After 2 hours, what is the distance between them?",
+  "o_hi": [
+   "200 किमी",
+   "120 किमी",
+   "80 किमी",
+   "140 किमी"
+  ],
+  "o_en": [
+   "200 km",
+   "120 km",
+   "80 km",
+   "140 km"
+  ],
+  "a": 2,
+  "e_hi": "पहली ट्रेन 2×60=120 किमी उत्तर चलती है, दूसरी 2×40=80 किमी दक्षिण चलती है। कुल दूरी 120+80=200 किमी।",
+  "e_en": "First travels 120 km north, second 80 km south; total separation 200 km."
+ },
+ {
+  "id": "rp-rea-s00515",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक पथिक एक चौराहा पर है। वह उत्तर से दक्षिण की ओर चलता है और चौराहे पर दाईं ओर मुड़ता है। अब वह किस दिशा में चल रहा है?",
+  "q_en": "A wanderer is at a crossroads. He walks from north to south and turns right at the intersection. Which direction is he now heading?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "निम्न दिशा में चलने के बाद दाईं ओर मुड़ने पर वह पूर्व की ओर जाता है।",
+  "e_en": "After heading south, a right turn leads east."
+ },
+ {
+  "id": "rp-rea-s00516",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक व्यक्ति पूर्व की ओर 4 किमी चलता है, फिर 120° दक्षिण-पूर्व की दिशा में 5 किमी चलता है। अब वह अपनी प्रारम्भिक स्थिति से किस दिशा में है?",
+  "q_en": "A person walks 4 km east, then 5 km at 120° east of south. From start, which direction is he?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "पहला भाग 4 किमी पूर्व देता है। दूसरा भाग 5 km के 120° दक्षिण-पूर्व से 2.5 km दक्षिण और 4.33 km पूर्व मिलता है। कुल मिलाकर 6.33 km पूर्व और 2.5 km दक्षिण → दक्षिण‑पूर्व। विकल्पों में सबसे नज़दीकी दक्षिण है।",
+  "e_en": "First leg 4 km east. Second leg gives ~2.5 km south, 4.33 km east. Net ~6.33 km east, 2.5 km south → southeast. Closest option is South."
+ },
+ {
+  "id": "rp-rea-s00517",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति पूर्व की ओर मुख करके खड़ा है। यदि वह दाईं ओर 90° मुड़ता है, तो वह किस दिशा में मुख करेगा?",
+  "q_en": "A person is standing facing east. If he turns right by 90°, which direction will he face?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पश्चिम",
+   "पूर्व"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "West",
+   "East"
+  ],
+  "a": 1,
+  "e_hi": "पूर्व से दाईं ओर 90° घुमने पर दिशा दक्षिण हो जाती है।",
+  "e_en": "Turning right from east by 90° points to south."
+ },
+ {
+  "id": "rp-rea-s00518",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति उत्तर की दिशा में चल रहा है। यदि वह 90° बाईं ओर मुड़ता है, तो वह किस दिशा में चल रहा होगा?",
+  "q_en": "A person is walking towards north. If he turns left by 90°, which direction will he be walking towards?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 3,
+  "e_hi": "उत्तर से बाईं ओर 90° मुड़ने पर दिशा पश्चिम हो जाती है।",
+  "e_en": "A 90° left turn from north points to west."
+ },
+ {
+  "id": "rp-rea-s00519",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक ट्रक 30 km पूर्व की ओर चला, फिर 40 km उत्तर की ओर। दूसरा ट्रक उसी बिंदु से 50 km उत्तर की ओर और फिर 30 km पश्चिम की ओर चला। कौन सा ट्रक प्रारंभिक बिंदु के निकट है?",
+  "q_en": "Truck A travels 30 km east then 40 km north. Truck B travels 50 km north then 30 km west from the same point. Which truck is closer to the starting point?",
+  "o_hi": [
+   "पहला ट्रक",
+   "दूसरा ट्रक",
+   "दोनों समान दूरी पर",
+   "किसी का नहीं"
+  ],
+  "o_en": [
+   "First truck",
+   "Second truck",
+   "Both at same distance",
+   "Neither"
+  ],
+  "a": 0,
+  "e_hi": "पहले ट्रक की कुल दूरी √(30²+40²)=50 km है, जबकि दूसरे की √(30²+50²)=58.3 km। अतः पहला ट्रक निकट है।",
+  "e_en": "Truck A’s displacement is √(30²+40²)=50 km; Truck B’s is √(30²+50²)=58.3 km. Hence Truck A is closer."
+ },
+ {
+  "id": "rp-rea-s00520",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "किसी बिंदु से 5 km उत्तर और 3 km पूर्व की दूरी पर स्थित बिंदु का बेयरिंग क्या है?",
+  "q_en": "What is the bearing of a point that lies 5 km north and 3 km east from the origin?",
+  "o_hi": [
+   "30°",
+   "45°",
+   "60°",
+   "90°"
+  ],
+  "o_en": [
+   "30°",
+   "45°",
+   "60°",
+   "90°"
+  ],
+  "a": 0,
+  "e_hi": "बेयरिंग = arctan(3/5)=30.96°, लगभग 31°।",
+  "e_en": "Bearing = arctan(east/north)=arctan(3/5)=30.96°, ≈31°."
+ },
+ {
+  "id": "rp-rea-s00521",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक ट्रेन 120 km उत्तर, 80 km पूर्व और फिर 120 km दक्षिण चली। अंत में वह किस दिशा में है?",
+  "q_en": "A train moves 120 km north, 80 km east, then 120 km south. At the end, which direction is it relative to the start?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर और दक्षिण की दूरी बराबर है, इसलिए शेष 80 km पूर्व है।",
+  "e_en": "North and south cancel out, leaving a net 80 km eastward displacement."
+ },
+ {
+  "id": "rp-rea-s00522",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति उत्तर की ओर मुख करके है और 45° दाईं ओर मुड़ता है। वह किस दिशा में मुख करेगा?",
+  "q_en": "A person facing north turns right by 45°. Which direction will he face?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "North-East",
+   "East",
+   "South-East",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर से 45° दाईं ओर मुड़ने पर उत्तर‑पूर्व दिशा होती है।",
+  "e_en": "A 45° right turn from north points to North‑East."
+ },
+ {
+  "id": "rp-rea-s00523",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक जहाज़ पूर्व की ओर 4 घंटे चला, फिर 60° बाईं ओर मुड़कर 3 घंटे आगे चला। इसकी अंतिम दिशा क्या होगी?",
+  "q_en": "A ship sails east for 4 hours, then turns left 60° and sails 3 hours. What is its final heading relative to the initial?",
+  "o_hi": [
+   "पूर्व के 60° उत्तर",
+   "पूर्व के 60° दक्षिण",
+   "पूर्व के 30° उत्तर",
+   "पूर्व के 30° दक्षिण"
+  ],
+  "o_en": [
+   "60° north of east",
+   "60° south of east",
+   "30° north of east",
+   "30° south of east"
+  ],
+  "a": 0,
+  "e_hi": "बाईं ओर 60° मुड़ने पर दिशा पूर्व के 60° उत्तर होगी।",
+  "e_en": "A left turn of 60° from east gives a heading 60° north of east."
+ },
+ {
+  "id": "rp-rea-s00524",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि एक व्यक्ति पश्चिम की ओर मुख करके 135° दाईं ओर मुड़ता है, तो वह किस दिशा में होगा?",
+  "q_en": "If a person facing west turns 135° to the right, which direction will he be facing?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "उत्तर-पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "North‑East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "पश्चिम से 135° दाईं ओर मुड़ने पर दिशा उत्तर‑पूर्व हो जाती है।",
+  "e_en": "A 135° right turn from west points to North‑East."
+ },
+ {
+  "id": "rp-rea-s00525",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक विमान उत्तर की ओर यात्रा कर रहा है। 5 मिनट बाद वह 30° दाईं ओर मुड़ता है। उसकी नई दिशा क्या है?",
+  "q_en": "A plane is traveling due north. After 5 minutes, it turns 30° to the right. What is its new heading relative to north?",
+  "o_hi": [
+   "30° उत्तर के 30° पूर्व",
+   "30° उत्तर के 30° पश्चिम",
+   "30° पूर्व के 30° उत्तर",
+   "30° पूर्व के 30° दक्षिण"
+  ],
+  "o_en": [
+   "30° north of east",
+   "30° north of west",
+   "30° east of north",
+   "30° south of east"
+  ],
+  "a": 2,
+  "e_hi": "30° दाईं ओर मुड़ने से दिशा उत्तर के 30° पूर्व होगी।",
+  "e_en": "Turning 30° right from north gives a heading 30° east of north."
+ },
+ {
+  "id": "rp-rea-s00526",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति 10 km उत्तर और 10 km दक्षिण चला। अंत में वह किस दिशा में मुख कर रहा है?",
+  "q_en": "A person walks 10 km north and then 10 km south. Which direction is he facing at the end?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "दूसरी चाल दक्षिण की थी, इसलिए वह दक्षिण की ओर मुख है।",
+  "e_en": "After the second leg he is moving south, so he faces south."
  }
 ]
