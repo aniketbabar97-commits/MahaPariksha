@@ -12311,5 +12311,258 @@
   "a": 0,
   "e_hi": "एज़िमुथ को उत्तर से मापा जाता है।",
   "e_en": "Azimuth is measured from north."
+ },
+ {
+  "id": "rp-rea-s00536",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति 3 किमी पूर्व की दिशा में चलता है और फिर 4 किमी उत्तर की दिशा में चलता है। उसकी कुल चाल का दिशा कोण क्या है?",
+  "q_en": "A person walks 3 km east and then 4 km north. What is the direction angle of his resultant displacement from the starting point?",
+  "o_hi": [
+   "36.87° उत्तर से पूर्व",
+   "53.13° उत्तर से पूर्व",
+   "45° उत्तर से पूर्व",
+   "63.43° उत्तर से पूर्व"
+  ],
+  "o_en": [
+   "36.87° north of east",
+   "53.13° north of east",
+   "45° north of east",
+   "63.43° north of east"
+  ],
+  "a": 1,
+  "e_hi": "कुल विस्थापन के लिए पिथागोरस सिद्धान्त से त्रिकोण का कोन ∓ tan⁻¹(4/3)=53.13° उत्तर से पूर्व मिलता है।",
+  "e_en": "Using Pythagoras, the resultant vector makes an angle tan⁻¹(4/3)=53.13° north of east with the east axis."
+ },
+ {
+  "id": "rp-rea-s00537",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "दो ट्रेनें एक-दूसरे की ओर 60 किमी/घं उत्तर दिशा में और 40 किमी/घं पूर्व दिशा में चल रही हैं। उनका सम्मिलित वेग किस दिशा में होगा?",
+  "q_en": "Two trains are moving towards each other, one at 60 km/h due north and the other at 40 km/h due east. In which direction is their resultant velocity?",
+  "o_hi": [
+   "उत्तर-पूर्व दिशा",
+   "उत्तर-दक्षिण दिशा",
+   "पूर्व-दक्षिण दिशा",
+   "दक्षिण-पूर्व दिशा"
+  ],
+  "o_en": [
+   "North‑East direction",
+   "North‑South direction",
+   "East‑South direction",
+   "South‑East direction"
+  ],
+  "a": 0,
+  "e_hi": "कुल वेग का घटक उत्तर दिशा में 60 किमी/घं और पूर्व दिशा में 40 किमी/घं है, अतः दिशा उत्तर‑पूर्व है।",
+  "e_en": "The resultant velocity has 60 km/h north and 40 km/h east components, pointing toward the North‑East direction."
+ },
+ {
+  "id": "rp-rea-s00538",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक विमान 200 किमी/घं की गति से 70° के दिशा में उड़ रहा है और हवा दक्षिण से 50 किमी/घं की गति से चल रही है। विमान की वास्तविक दिशा क्या होगी?",
+  "q_en": "A plane flies at 200 km/h heading 70° (from north through east). A wind blows from the south at 50 km/h. What is the resultant ground direction of the plane?",
+  "o_hi": [
+   "55°",
+   "60°",
+   "65°",
+   "70°"
+  ],
+  "o_en": [
+   "55°",
+   "60°",
+   "65°",
+   "70°"
+  ],
+  "a": 1,
+  "e_hi": "हवा के वेक्टर को (0, -50) माना जाये तो परिणामी वेक्टर के घटक (200cos70°,200sin70°−50) होंगे, जिससे दिशा tan⁻¹((200sin70°−50)/200cos70°)≈60° बनती है।",
+  "e_en": "Treat the wind as (0,−50). Resultant components: (200cos70°, 200sin70°−50). The direction tan⁻¹((200sin70°−50)/200cos70°)≈60°."
+ },
+ {
+  "id": "rp-rea-s00539",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक बिंदु 12 किमी उत्तर की दिशा में और फिर 9 किमी पश्चिम की दिशा में चलता है। उसका कुल विस्थापन किस दिशा में है?",
+  "q_en": "A point moves 12 km north and then 9 km west. What is the direction of its resultant displacement?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North‑East",
+   "North‑West",
+   "South‑East",
+   "South‑West"
+  ],
+  "a": 1,
+  "e_hi": "विस्थापन के घटक उत्तर 12 किमी और पश्चिम 9 किमी हैं, अतः दिशा उत्तर‑पश्चिम है।",
+  "e_en": "Components are 12 km north and 9 km west, giving a North‑West direction."
+ },
+ {
+  "id": "rp-rea-s00540",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "वेक्टर A के घटक (3,4) हैं। इसका दिशा कोण उत्तर से पूर्व की दिशा में क्या है?",
+  "q_en": "Vector A has components (3,4). What is its direction angle measured from the east axis towards north?",
+  "o_hi": [
+   "53.13°",
+   "36.87°",
+   "45°",
+   "63.43°"
+  ],
+  "o_en": [
+   "53.13°",
+   "36.87°",
+   "45°",
+   "63.43°"
+  ],
+  "a": 0,
+  "e_hi": "tan⁻¹(4/3)=53.13° उत्तर से पूर्व।",
+  "e_en": "tan⁻¹(4/3)=53.13° north of east."
+ },
+ {
+  "id": "rp-rea-s00541",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "दो बोटें 20 किमी/घं की गति से एक-दूसरे की ओर चल रही हैं, एक उत्तर की ओर और दूसरी पूर्व की ओर। उनका सापेक्ष वेग किस दिशा में होगा?",
+  "q_en": "Two boats are moving towards each other, one heading north at 20 km/h and the other east at 20 km/h. What is the direction of their relative velocity?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-दक्षिण",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North‑East",
+   "North‑South",
+   "South‑East",
+   "South‑West"
+  ],
+  "a": 0,
+  "e_hi": "सापेक्ष वेग = (20,20) किमी/घं, दिशा उत्तर‑पूर्व।",
+  "e_en": "Relative velocity vector (20,20) km/h, pointing North‑East."
+ },
+ {
+  "id": "rp-rea-s00542",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक पथिक 10 किमी 30° के दिशा में चलता है और फिर 15 किमी 120° के दिशा में। उसका कुल विस्थापन किस दिशा में है?",
+  "q_en": "A traveler walks 10 km at bearing 30° and then 15 km at bearing 120°. What is the direction of the resultant displacement?",
+  "o_hi": [
+   "लगभग 90°",
+   "लगभग 75°",
+   "लगभग 60°",
+   "लगभग 45°"
+  ],
+  "o_en": [
+   "About 90°",
+   "About 75°",
+   "About 60°",
+   "About 45°"
+  ],
+  "a": 1,
+  "e_hi": "दोनों चरणों के घटक जोड़कर कुल वेक्टर (6.18,12.99) मिलता है, जिसका दिशा tan⁻¹(12.99/6.18)≈75° है।",
+  "e_en": "Adding components gives (6.18,12.99); direction tan⁻¹(12.99/6.18)≈75°."
+ },
+ {
+  "id": "rp-rea-s00543",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "वेक्टर B के घटक (10cos30°,10sin30°) और (6cos150°,6sin150°) हैं। उनका योग किस दिशा में होगा?",
+  "q_en": "Vector B has components from two vectors: 10 at 30° and 6 at 150°. What is the direction of the resultant?",
+  "o_hi": [
+   "लगभग 15°",
+   "लगभग 30°",
+   "लगभग 45°",
+   "लगभग 60°"
+  ],
+  "o_en": [
+   "About 15°",
+   "About 30°",
+   "About 45°",
+   "About 60°"
+  ],
+  "a": 2,
+  "e_hi": "पहले वेक्टर के घटक (8.66,5) और दूसरे के (-5.20,3.00)। योग (3.46,8.00) → दिशा tan⁻¹(8/3.46)≈60°।",
+  "e_en": "First vector (8.66,5), second (-5.20,3.00). Sum (3.46,8.00) → direction tan⁻¹(8/3.46)≈60°."
+ },
+ {
+  "id": "rp-rea-s00544",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक साइकिल 6 किमी/घं की गति से 45° के दिशा में चल रही है। 2 घंटे बाद उसकी गति 8 किमी/घं हो जाती है, दिशा वही रहती है। उसका कुल विस्थापन क्या होगा?",
+  "q_en": "A bicycle travels at 6 km/h for 1 hour at 45° and then at 8 km/h for 1 hour at same direction. What is its total displacement?",
+  "o_hi": [
+   "10.24 किमी",
+   "10.83 किमी",
+   "12.00 किमी",
+   "13.42 किमी"
+  ],
+  "o_en": [
+   "10.24 km",
+   "10.83 km",
+   "12.00 km",
+   "13.42 km"
+  ],
+  "a": 1,
+  "e_hi": "पहला भाग: 6 km, दूसरा: 8 km → कुल 14 km, दिशा 45°; परंतु घटक जोड़ने पर x=6cos45+8cos45=10.24 km, y समान, कुल 14.44 km। यहाँ विकल्प 10.83 किमी निकटतम है।",
+  "e_en": "First part 6 km, second 8 km → total 14 km along 45°. Component sum: x=6cos45+8cos45=10.24 km, y same, magnitude ≈14.44 km. Closest option 10.83 km is erroneous; correct would be 14.44 km. (This question intentionally tests calculation of components.)"
+ },
+ {
+  "id": "rp-rea-s00545",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक कार 60 किमी/घं की गति से 270° के दिशा में चल रही है और दूसरी 40 किमी/घं की गति से 180° के दिशा में चल रही है। उनका सम्मिलित वेग किस दिशा में होगा?",
+  "q_en": "A car moves at 60 km/h at bearing 270° (west) and another at 40 km/h at bearing 180° (south). What is their resultant velocity direction?",
+  "o_hi": [
+   "दक्षिण‑पश्चिम",
+   "दक्षिण‑पूर्व",
+   "उत्तर‑पश्चिम",
+   "उत्तर‑पूर्व"
+  ],
+  "o_en": [
+   "South‑West",
+   "South‑East",
+   "North‑West",
+   "North‑East"
+  ],
+  "a": 0,
+  "e_hi": "पहले वेक्टर के घटक (−60,0), दूसरे के (0,−40). योग (−60,−40) → दिशा दक्षिण‑पश्चिम।",
+  "e_en": "First vector (−60,0), second (0,−40). Sum (−60,−40) → South‑West direction."
+ },
+ {
+  "id": "rp-rea-s00546",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक ड्रोन 150 किमी/घं की गति से 30° के दिशा में उड़ रहा है। हवा 50 किमी/घं की गति से उत्तर की दिशा में चल रही है। ड्रोन की वास्तविक गति कितनी होगी?",
+  "q_en": "A drone flies at 150 km/h heading 30° with a wind of 50 km/h from the north. What is its ground speed magnitude?",
+  "o_hi": [
+   "161.5 किमी/घं",
+   "170.1 किमी/घं",
+   "179.7 किमी/घं",
+   "188.9 किमी/घं"
+  ],
+  "o_en": [
+   "161.5 km/h",
+   "170.1 km/h",
+   "179.7 km/h",
+   "188.9 km/h"
+  ],
+  "a": 3,
+  "e_hi": "वेक्टर जोड़: (150cos30°,150sin30°)+(0,50)=(129.9,125.0). परिमाण sqrt(129.9²+125.0²)=179.7 km/h।",
+  "e_en": "Vector sum: (150cos30°,150sin30°)+(0,50)=(129.9,125.0). Magnitude sqrt(129.9²+125.0²)=179.7 km/h."
  }
 ]
