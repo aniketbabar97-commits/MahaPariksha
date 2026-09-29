@@ -15577,5 +15577,442 @@
   "a": 0,
   "e_hi": "2^4 × 3^2 = 16 × 9 = 144।",
   "e_en": "2^4 × 3^2 equals 16 × 9 = 144."
+ },
+ {
+  "id": "rp-rea-s00678",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of classification?",
+  "o_hi": [
+   "समान गुणों के आधार पर वस्तुओं को समूहित करना",
+   "वस्तुओं को अलग करना",
+   "वस्तुओं को गिनना",
+   "वस्तुओं को वर्णित करना"
+  ],
+  "o_en": [
+   "Group objects based on similar attributes",
+   "Separate objects",
+   "Count objects",
+   "Describe objects"
+  ],
+  "a": 0,
+  "e_hi": "वर्गीकरण में समान गुणों वाली वस्तुओं को एक साथ समूहित किया जाता है।",
+  "e_en": "Classification groups objects that share similar attributes together."
+ },
+ {
+  "id": "rp-rea-s00679",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "कौन सी विधि वर्गीकरण में श्रेणियों के बीच अंतर को मापती है?",
+  "q_en": "Which method measures the difference between categories in classification?",
+  "o_hi": [
+   "दूरी मापन",
+   "गणितीय मॉडल",
+   "सांख्यिकीय अनुमान",
+   "गुणात्मक विश्लेषण"
+  ],
+  "o_en": [
+   "Distance measurement",
+   "Mathematical modeling",
+   "Statistical inference",
+   "Qualitative analysis"
+  ],
+  "a": 0,
+  "e_hi": "अंतर को मापने के लिए दूरी मापन का उपयोग किया जाता है।",
+  "e_en": "Distance measurement is used to quantify the differences between categories."
+ },
+ {
+  "id": "rp-rea-s00680",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 3,
+  "q_hi": "क्लस्टरिंग और वर्गीकरण में क्या अंतर है?",
+  "q_en": "What is the difference between clustering and classification?",
+  "o_hi": [
+   "क्लस्टरिंग लेबल के साथ, वर्गीकरण बिना",
+   "वर्गीकरण लेबल के साथ, क्लस्टरिंग बिना",
+   "दोनों एक ही प्रक्रिया",
+   "क्लस्टरिंग केवल संख्यात्मक डेटा पर"
+  ],
+  "o_en": [
+   "Clustering is with labels, classification without",
+   "Classification is with labels, clustering without",
+   "Both are the same process",
+   "Clustering only works on numerical data"
+  ],
+  "a": 1,
+  "e_hi": "वर्गीकरण में पूर्व-निर्धारित लेबल होते हैं, जबकि क्लस्टरिंग में नहीं।",
+  "e_en": "Classification uses pre-defined labels, whereas clustering does not."
+ },
+ {
+  "id": "rp-rea-s00681",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "किस प्रकार के वर्गीकरण में पहले से ज्ञात लेबल होते हैं?",
+  "q_en": "In which type of classification are the labels already known?",
+  "o_hi": [
+   "सुपरवाइज्ड",
+   "अनसुपरवाइज्ड",
+   "क्लस्टरिंग",
+   "हाइरार्किकल"
+  ],
+  "o_en": [
+   "Supervised",
+   "Unsupervised",
+   "Clustering",
+   "Hierarchical"
+  ],
+  "a": 0,
+  "e_hi": "सुपरवाइज्ड लर्निंग में पहले से लेबलयुक्त डेटा होता है।",
+  "e_en": "In supervised learning, the data comes with pre-assigned labels."
+ },
+ {
+  "id": "rp-rea-s00682",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "सुपरवाइज्ड लर्निंग में कौन सा एल्गोरिदम वर्गीकरण के लिए सामान्यतः उपयोग किया जाता है?",
+  "q_en": "Which algorithm is commonly used for classification in supervised learning?",
+  "o_hi": [
+   "K-Nearest Neighbors",
+   "K-Means",
+   "Principal Component Analysis",
+   "Linear Regression"
+  ],
+  "o_en": [
+   "K-Nearest Neighbors",
+   "K-Means",
+   "Principal Component Analysis",
+   "Linear Regression"
+  ],
+  "a": 0,
+  "e_hi": "K-Nearest Neighbors एक लोकप्रिय वर्गीकरण एल्गोरिदम है।",
+  "e_en": "K-Nearest Neighbors is a popular classification algorithm."
+ },
+ {
+  "id": "rp-rea-s00683",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 3,
+  "q_hi": "किस मेट्रिक का उपयोग वर्गीकरण मॉडल के प्रदर्शन को मापने के लिए किया जाता है, जब श्रेणियाँ असंतुलित होती हैं?",
+  "q_en": "Which metric is used to evaluate classification performance when classes are imbalanced?",
+  "o_hi": [
+   "Accuracy",
+   "Precision",
+   "Recall",
+   "F1-score"
+  ],
+  "o_en": [
+   "Accuracy",
+   "Precision",
+   "Recall",
+   "F1-score"
+  ],
+  "a": 3,
+  "e_hi": "असंतुलित डेटा में F1-score बेहतर संतुलित माप देता है।",
+  "e_en": "In imbalanced datasets, F1-score provides a balanced measure of precision and recall."
+ },
+ {
+  "id": "rp-rea-s00684",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "किसी भी वस्तु को वर्गीकरण के किस भाग में रखा जाता है?",
+  "q_en": "In which part of classification is an item placed?",
+  "o_hi": [
+   "श्रेणी",
+   "क्लस्टर",
+   "उप-श्रेणी",
+   "उप-क्लस्टर"
+  ],
+  "o_en": [
+   "Category",
+   "Cluster",
+   "Subcategory",
+   "Subcluster"
+  ],
+  "a": 0,
+  "e_hi": "वस्तु को उसकी विशेषता के आधार पर एक श्रेणी में रखा जाता है।",
+  "e_en": "An item is placed into a category based on its attributes."
+ },
+ {
+  "id": "rp-rea-s00685",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "क्लस्टरिंग में 'हाइरार्किकल' विधि का क्या विशेषता है?",
+  "q_en": "What is a characteristic of the hierarchical method in clustering?",
+  "o_hi": [
+   "यह वृक्ष जैसी संरचना बनाती है",
+   "यह केवल एक ही क्लस्टर बनाती है",
+   "यह केवल संख्यात्मक डेटा पर काम करती है",
+   "यह लेबल की आवश्यकता रखती है"
+  ],
+  "o_en": [
+   "It forms a tree-like structure",
+   "It creates only one cluster",
+   "It works only on numerical data",
+   "It requires labels"
+  ],
+  "a": 0,
+  "e_hi": "हाइरार्किकल क्लस्टरिंग में क्लस्टर वृक्ष के रूप में व्यवस्थित होते हैं।",
+  "e_en": "Hierarchical clustering organizes clusters in a tree-like structure."
+ },
+ {
+  "id": "rp-rea-s00686",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 3,
+  "q_hi": "एक डेटा सेट में 3 वर्ग हैं और प्रत्येक वर्ग के बीच का अंतर 0.8 है, तो यह किस प्रकार का वर्गीकरण समस्या है?",
+  "q_en": "If a dataset has 3 classes with a separation of 0.8 between each, what type of classification problem is it?",
+  "o_hi": [
+   "द्विआधारी वर्गीकरण",
+   "बहु-वर्ग वर्गीकरण",
+   "क्रमिक वर्गीकरण",
+   "क्लस्टरिंग"
+  ],
+  "o_en": [
+   "Binary classification",
+   "Multiclass classification",
+   "Ordinal classification",
+   "Clustering"
+  ],
+  "a": 1,
+  "e_hi": "तीन अलग-अलग वर्ग होने के कारण यह बहु-वर्ग वर्गीकरण है।",
+  "e_en": "Having three distinct classes makes it a multiclass classification problem."
+ },
+ {
+  "id": "rp-rea-s00687",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "किस प्रकार का वर्गीकरण 'संगठन' या 'समूह' बनाने के लिए उपयोग किया जाता है जब कोई लेबल नहीं दिया गया हो?",
+  "q_en": "Which type of classification is used to form groups when no labels are given?",
+  "o_hi": [
+   "सुपरवाइज्ड",
+   "अनसुपरवाइज्ड",
+   "हाइरार्किकल",
+   "फजी"
+  ],
+  "o_en": [
+   "Supervised",
+   "Unsupervised",
+   "Hierarchical",
+   "Fuzzy"
+  ],
+  "a": 1,
+  "e_hi": "अनसुपरवाइज्ड लर्निंग में बिना लेबल के डेटा को समूहित किया जाता है।",
+  "e_en": "Unsupervised learning groups data without prior labels."
+ },
+ {
+  "id": "rp-rea-s00688",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "अक्षर अनुक्रम A, C, F, J, ? में अगला अक्षर कौन सा है?",
+  "q_en": "In the letter sequence A, C, F, J, ?, which letter comes next?",
+  "o_hi": [
+   "O",
+   "N",
+   "M",
+   "P"
+  ],
+  "o_en": [
+   "O",
+   "N",
+   "M",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "अक्षरों के बीच के अंतर क्रमशः 2, 3, 4, 5 हैं, अतः अगला O होगा।",
+  "e_en": "The gaps between letters are +2, +3, +4, +5 respectively, so the next letter is O."
+ },
+ {
+  "id": "rp-rea-s00689",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "1, 4, 9, 16, 25, ? में अगली संख्या क्या है?",
+  "q_en": "In the sequence 1, 4, 9, 16, 25, ?, what is the next number?",
+  "o_hi": [
+   "36",
+   "30",
+   "35",
+   "40"
+  ],
+  "o_en": [
+   "36",
+   "30",
+   "35",
+   "40"
+  ],
+  "a": 0,
+  "e_hi": "ये वर्ग संख्याएँ हैं (1², 2², 3², 4², 5²), अगली 6² = 36 होगी।",
+  "e_en": "These are perfect squares (1², 2², 3², 4², 5²); the next is 6² = 36."
+ },
+ {
+  "id": "rp-rea-s00690",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "अनुक्रम A, C, E, H, L, ? में अगला अक्षर कौन सा है?",
+  "q_en": "In the sequence A, C, E, H, L, ?, which letter comes next?",
+  "o_hi": [
+   "Q",
+   "R",
+   "S",
+   "T"
+  ],
+  "o_en": [
+   "Q",
+   "R",
+   "S",
+   "T"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर क्रमशः 1,3,5,8,12 हैं; अंतर +2, +2, +3, +4 हैं, अगला +5 => 17, जो Q है।",
+  "e_en": "Positions are 1,3,5,8,12 with increments +2,+2,+3,+4; next +5 gives 17, which is Q."
+ },
+ {
+  "id": "rp-rea-s00691",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 2,
+  "q_hi": "यदि CAT का मान 24 है, तो DOG का मान क्या होगा?",
+  "q_en": "If CAT is coded as 24, what is the code for DOG?",
+  "o_hi": [
+   "24",
+   "25",
+   "26",
+   "27"
+  ],
+  "o_en": [
+   "24",
+   "25",
+   "26",
+   "27"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक अक्षर की स्थिति जोड़कर कोड बनता है: C(3)+A(1)+T(20)=24; D(4)+O(15)+G(7)=26।",
+  "e_en": "Each letter’s position is summed: C(3)+A(1)+T(20)=24; D(4)+O(15)+G(7)=26."
+ },
+ {
+  "id": "rp-rea-s00692",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "1, 1, 2, 3, 5, 8, ? में अगली संख्या क्या है?",
+  "q_en": "In the sequence 1, 1, 2, 3, 5, 8, ?, what is the next number?",
+  "o_hi": [
+   "12",
+   "13",
+   "15",
+   "18"
+  ],
+  "o_en": [
+   "12",
+   "13",
+   "15",
+   "18"
+  ],
+  "a": 1,
+  "e_hi": "यह फ़िबोनैचि क्रम है; अगला 13 है।",
+  "e_en": "It’s the Fibonacci series; the next number is 13."
+ },
+ {
+  "id": "rp-rea-s00693",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "3, 9, 27, 81, ? में अगली संख्या क्या है?",
+  "q_en": "In the sequence 3, 9, 27, 81, ?, what is the next number?",
+  "o_hi": [
+   "81",
+   "162",
+   "243",
+   "324"
+  ],
+  "o_en": [
+   "81",
+   "162",
+   "243",
+   "324"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक पद 3 से गुणा होता है; अगला 81×3 = 243।",
+  "e_en": "Each term is multiplied by 3; the next is 81×3 = 243."
+ },
+ {
+  "id": "rp-rea-s00694",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "1, 3, 6, 10, 15, ? में अगली संख्या क्या है?",
+  "q_en": "In the sequence 1, 3, 6, 10, 15, ?, what is the next number?",
+  "o_hi": [
+   "18",
+   "20",
+   "21",
+   "22"
+  ],
+  "o_en": [
+   "18",
+   "20",
+   "21",
+   "22"
+  ],
+  "a": 2,
+  "e_hi": "यह त्रिभुज संख्याएँ हैं; अंतर 2,3,4,5 हैं, अगला अंतर 6, 15+6=21।",
+  "e_en": "These are triangular numbers; differences are 2,3,4,5, next difference 6 → 15+6=21."
+ },
+ {
+  "id": "rp-rea-s00695",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "A, C, F, J, O, ? में अगला अक्षर कौन सा है?",
+  "q_en": "In the sequence A, C, F, J, O, ?, which letter comes next?",
+  "o_hi": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "o_en": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर के बीच के अंतर क्रमशः +2, +3, +4, +5 हैं; अगला +6 ⇒ 15+6=21 → U।",
+  "e_en": "The gaps are +2, +3, +4, +5; next +6 gives 21 → U."
+ },
+ {
+  "id": "rp-rea-s00696",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 3,
+  "q_hi": "अनुक्रम 1, 4, 10, 19, 31, ? में अगली संख्या क्या है?",
+  "q_en": "In the sequence 1, 4, 10, 19, 31, ?, what is the next number?",
+  "o_hi": [
+   "44",
+   "45",
+   "46",
+   "47"
+  ],
+  "o_en": [
+   "44",
+   "45",
+   "46",
+   "47"
+  ],
+  "a": 2,
+  "e_hi": "अंतर 3, 6, 9, 12 हैं; अगला अंतर 15, 31+15=46।",
+  "e_en": "Differences are 3,6,9,12; next difference 15 → 31+15=46."
  }
 ]
