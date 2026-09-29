@@ -22293,5 +22293,1385 @@
   "a": 1,
   "e_hi": "दिशा 60° दक्षिण‑पूर्व ही है, क्योंकि यह उसी दिशा में चलने का वर्णन है।",
   "e_en": "The direction is 60° southeast, as given."
+ },
+ {
+  "id": "rp-rea-s00970",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक ट्रेन पश्चिम की ओर बढ़ती है और फिर 90° बाएँ मुड़ती है। वह किस दिशा में होगी?",
+  "q_en": "A train moves towards West and then turns 90° left. Which direction will it face?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "पश्चिम की दिशा में चलते हुए 90° बाएँ मुड़ने पर ट्रेन दक्षिण की ओर होगी।",
+  "e_en": "Turning left 90° from West leads to South."
+ },
+ {
+  "id": "rp-rea-s00971",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "मानक मानचित्र पर शीर्ष दिशा कौन सी होती है?",
+  "q_en": "In a standard map, which direction is at the top?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "मानक मानचित्र में शीर्ष दिशा उत्तर होती है।",
+  "e_en": "The top of a standard map corresponds to North."
+ },
+ {
+  "id": "rp-rea-s00972",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि कोई व्यक्ति दक्षिण की ओर देख रहा है और 180° घुमाता है, तो वह किस दिशा में देखेगा?",
+  "q_en": "If a person is facing South and turns 180°, which direction will they face?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "180° घुमाने पर दक्षिण से उत्तर की ओर देखेंगे।",
+  "e_en": "A 180° turn from South faces North."
+ },
+ {
+  "id": "rp-rea-s00973",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "कम्पास पर 225° किस दिशा को दर्शाता है?",
+  "q_en": "What direction does a compass bearing of 225° represent?",
+  "o_hi": [
+   "उत्तरी-पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तरी-पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Southeast",
+   "Southwest",
+   "Northwest"
+  ],
+  "a": 2,
+  "e_hi": "225° 180° से 45° दक्षिण-पश्चिम की ओर है, अतः यह दक्षिण-पश्चिम दिशा को दर्शाता है।",
+  "e_en": "225° is 45° west of south, representing Southwest."
+ },
+ {
+  "id": "rp-rea-s00974",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि कोई व्यक्ति +y दिशा में 4 इकाई और फिर -x दिशा में 4 इकाई चलता है, तो उसकी कुल दिशा क्या होगी?",
+  "q_en": "If a person moves 4 units in +y direction and then 4 units in -x direction, what is the overall direction relative to the start?",
+  "o_hi": [
+   "उत्तरी-पूर्व",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तरी-पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Southeast",
+   "Southwest",
+   "Northwest"
+  ],
+  "a": 3,
+  "e_hi": "पहले +y (उत्तर) और फिर -x (पश्चिम) चलने पर कुल दिशा उत्तर-पश्चिम होगी।",
+  "e_en": "Moving north then west results in a northwest direction."
+ },
+ {
+  "id": "rp-rea-s00975",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "किसी बिंदु से 5 किमी उत्तर और फिर 5 किमी पूर्व चलने पर परिणामी दिशा क्या होगी?",
+  "q_en": "After moving 5 km north and then 5 km east from a point, what is the resultant direction?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "उत्तरी-पूर्व",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "Northeast",
+   "South"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर और पूर्व दोनों दिशाओं में समान दूरी चलने पर परिणामी दिशा उत्तरी-पूर्व होगी।",
+  "e_en": "Equal north and east displacements give a northeast direction."
+ },
+ {
+  "id": "rp-rea-s00976",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि एक जहाज़ 270° के दिशा में आगे बढ़ रहा है, तो वह किस दिशा में है?",
+  "q_en": "If a ship is heading at a bearing of 270°, which direction is it moving?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिण",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "South",
+   "West"
+  ],
+  "a": 3,
+  "e_hi": "270° 180° से 90° पश्चिम की ओर है, अतः यह पश्चिम दिशा है।",
+  "e_en": "270° is 90° west of north, i.e., West."
+ },
+ {
+  "id": "rp-rea-s00977",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "केंद्र बिंदु से एक कदम उत्तर और एक कदम पूर्व जाने पर आप किस दिशा में होंगे?",
+  "q_en": "From a center point, after moving one step north and one step east, which direction will you be facing relative to the start?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "उत्तरी-पूर्व",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "Northeast",
+   "South"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर और पूर्व के संयोजन से आप उत्तरी-पूर्व दिशा में होंगे।",
+  "e_en": "The combination of north and east gives a northeast direction."
+ },
+ {
+  "id": "rp-rea-s00978",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "बिंदु A से बिंदु B तक की दिशा 30° पूर्व की ओर उत्तर से है। यह दिशा किस बेयरिंग से दर्शाई जाएगी?",
+  "q_en": "The direction from point A to point B is 30° east of north. Which bearing represents this?",
+  "o_hi": [
+   "उत्तर 30° पूर्व",
+   "उत्तर 60° पूर्व",
+   "दक्षिण 30° पूर्व",
+   "उत्तर 30° पश्चिम"
+  ],
+  "o_en": [
+   "N30°E",
+   "N60°E",
+   "S30°E",
+   "N30°W"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर से 30° पूर्व की दिशा को N30°E के रूप में लिखा जाता है।",
+  "e_en": "30° east of north is expressed as N30°E."
+ },
+ {
+  "id": "rp-rea-s00979",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि ए, बी के उत्तर में है, तो बी, ए के किस दिशा में है?",
+  "q_en": "If A is to the north of B, then B is in which direction relative to A?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "क्योंकि उत्तर और दक्षिण विपरीत दिशाएँ हैं, इसलिए उत्तर में स्थित ए के लिए बी दक्षिण में होगा।",
+  "e_en": "Since north and south are opposite directions, if A is north of B then B must be south of A."
+ },
+ {
+  "id": "rp-rea-s00980",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति 3 किमी उत्तर, 4 किमी पूर्व और 5 किमी दक्षिण चला। वह अपने प्रारम्भिक बिंदु से किस दिशा में है?",
+  "q_en": "A person walks 3 km north, 4 km east and then 5 km south. From the starting point, which direction is he?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिणपूर्व",
+   "दक्षिणपश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "Southeast",
+   "Southwest"
+  ],
+  "a": 2,
+  "e_hi": "कुल उत्तर-दक्षिण दूरी 3-5 = -2 km दक्षिण, पूर्व 4 km। अतः कुल स्थिति दक्षिणपूर्व में है।",
+  "e_en": "Net north‑south displacement is 3–5 = –2 km south and east 4 km, so the final position is southeast of the start."
+ },
+ {
+  "id": "rp-rea-s00981",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक ट्रेन 10 किमी पूर्व, 5 किमी उत्तर और 15 किमी पश्चिम चली। वह अपने प्रारम्भिक बिंदु से किस दिशा में है?",
+  "q_en": "A train travels 10 km east, 5 km north and then 15 km west. From its starting point, which direction is it?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिणपश्चिम",
+   "उत्तरपश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "Southwest",
+   "Northwest"
+  ],
+  "a": 3,
+  "e_hi": "पूर्व‑पश्चिम दूरी 10–15 = –5 km पश्चिम और 5 km उत्तर, अतः उत्तर‑पश्चिम दिशा।",
+  "e_en": "East‑west displacement is 10–15 = –5 km west and 5 km north, giving a northwest direction."
+ },
+ {
+  "id": "rp-rea-s00982",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि एक्स, वाई के उत्तर‑पश्चिम में है, तो वाई, एक्स के किस दिशा में है?",
+  "q_en": "If X is northwest of Y, then Y is in which direction relative to X?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "दक्षिणपूर्व"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "Southeast"
+  ],
+  "a": 3,
+  "e_hi": "उत्तर‑पश्चिम का विपरीत दिशा दक्षिण‑पूर्व है।",
+  "e_en": "The opposite of northwest is southeast."
+ },
+ {
+  "id": "rp-rea-s00983",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति 10 किमी उत्तर और 10 किमी पूर्व चलता है और फिर 10 किमी दक्षिण चलता है। वह अपने प्रारम्भिक बिंदु से किस दिशा में है?",
+  "q_en": "A person walks 10 km north, 10 km east and then 10 km south. From the starting point, which direction is he?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिण",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "South",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "उत्तर‑दक्षिण रद्द हो जाते हैं, केवल 10 किमी पूर्व शेष रहता है।",
+  "e_en": "North and south cancel out, leaving a 10 km displacement to the east."
+ },
+ {
+  "id": "rp-rea-s00984",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि ए, बी के उत्तर में है और बी, सी के पश्चिम में है, तो ए, सी के किस दिशा में है?",
+  "q_en": "If A is north of B and B is west of C, then A is in which direction relative to C?",
+  "o_hi": [
+   "उत्तरी‑पूर्व",
+   "उत्तरी‑पश्चिम",
+   "दक्षिण‑पूर्व",
+   "दक्षिण‑पश्चिम"
+  ],
+  "o_en": [
+   "Northeast",
+   "Northwest",
+   "Southeast",
+   "Southwest"
+  ],
+  "a": 1,
+  "e_hi": "ए का स्थान (−x, +y) होगा, अतः उत्तरी‑पश्चिम।",
+  "e_en": "A is northwest of C because it is north of B which is west of C."
+ },
+ {
+  "id": "rp-rea-s00985",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति 5 किमी पूर्व और 12 किमी उत्तर चला। उसी दूरी और दिशा के साथ, किस बिंदु का नाम ए के समान दूरी पर है लेकिन विपरीत दिशा में?",
+  "q_en": "A person walks 5 km east and 12 km north. Which point is at the same distance from the origin as this point but in the opposite direction?",
+  "o_hi": [
+   "5 किमी पश्चिम, 12 किमी दक्षिण",
+   "5 किमी पूर्व, 12 किमी उत्तर",
+   "12 किमी पूर्व, 5 किमी उत्तर",
+   "12 किमी पश्चिम, 5 किमी दक्षिण"
+  ],
+  "o_en": [
+   "5 km west, 12 km south",
+   "5 km east, 12 km north",
+   "12 km east, 5 km north",
+   "12 km west, 5 km south"
+  ],
+  "a": 0,
+  "e_hi": "विपरीत दिशा का अर्थ है दोनों निर्देशांकों का चिह्न बदलना, अतः 5 किमी पश्चिम और 12 किमी दक्षिण।",
+  "e_en": "Opposite direction means reversing both components, so 5 km west and 12 km south."
+ },
+ {
+  "id": "rp-rea-s00986",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "A बिंदु (2,3) पर है, B बिंदु (5,3) पर है और C बिंदु (5,7) पर है। किस बिंदु का दिशा-भेद B से D उसी तरह है जैसे C से A?",
+  "q_en": "Point A is at (2,3), B at (5,3) and C at (5,7). Which point D has the same direction from B as C has from A?",
+  "o_hi": [
+   "(8,7)",
+   "(2,7)",
+   "(8,3)",
+   "(5,10)"
+  ],
+  "o_en": [
+   "(8,7)",
+   "(2,7)",
+   "(8,3)",
+   "(5,10)"
+  ],
+  "a": 0,
+  "e_hi": "A→C का वेक्टर (3,4) है। उसी दिशा को B से जोड़ने पर D=(5,3)+(3,4)=(8,7)।",
+  "e_en": "Vector A→C is (3,4). Adding the same to B gives D=(8,7)."
+ },
+ {
+  "id": "rp-rea-s00987",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति 2 किमी दक्षिण, फिर 3 किमी पूर्व और फिर 2 किमी उत्तर चला। वह अपने प्रारम्भिक बिंदु से किस दिशा में है?",
+  "q_en": "A person walks 2 km south, then 3 km east and then 2 km north. From the starting point, which direction is he?",
+  "o_hi": [
+   "पूर्व",
+   "दक्षिणपूर्व",
+   "दक्षिणपश्चिम",
+   "पूर्व‑उत्तर"
+  ],
+  "o_en": [
+   "East",
+   "Southeast",
+   "Southwest",
+   "Northeast"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर‑दक्षिण रद्द हो जाते हैं, केवल 3 किमी पूर्व शेष रहता है।",
+  "e_en": "North and south cancel, leaving a 3 km displacement to the east."
+ },
+ {
+  "id": "rp-rea-s00988",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि एक कार 30 किमी उत्तर, 40 किमी पूर्व और 50 किमी दक्षिण चलती है, तो वह अपने प्रारम्भिक बिंदु से किस दिशा में है?",
+  "q_en": "If a car travels 30 km north, 40 km east and 50 km south, from the starting point, which direction is it?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिणपूर्व",
+   "दक्षिणपश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "Southeast",
+   "Southwest"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर‑दक्षिण 30–50 = –20 km दक्षिण, पूर्व 40 km। अतः दक्षिण‑पूर्व।",
+  "e_en": "North–south gives –20 km south and 40 km east, so southeast."
+ },
+ {
+  "id": "rp-rea-s00989",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक बिंदु A से B तक 8 किमी उत्तर‑पूर्व दिशा में गया और फिर B से C तक 8 किमी उत्तर‑पश्चिम दिशा में गया। C से A तक किस दिशा में जाना होगा?",
+  "q_en": "From point A to B, a person moves 8 km in the northeast direction and then from B to C moves 8 km in the northwest direction. Which direction must he travel from C to return to A?",
+  "o_hi": [
+   "उत्तर",
+   "पूर्व",
+   "दक्षिणपूर्व",
+   "दक्षिणपश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "East",
+   "Southeast",
+   "Southwest"
+  ],
+  "a": 3,
+  "e_hi": "NE और NW दोनों के पूर्व‑पश्चिम घटक रद्द हो जाते हैं, केवल उत्तर‑दक्षिण घटक शून्य रहता है, अतः दक्षिणपश्चिम।",
+  "e_en": "The east‑west components cancel out, leaving a net south‑west displacement, so return is southwest."
+ },
+ {
+  "id": "rp-rea-s00990",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "कौन सा अक्षर 'H' के बाद आता है?",
+  "q_en": "Which letter comes after 'H'?",
+  "o_hi": [
+   "ह",
+   "आइ",
+   "जेड",
+   "के"
+  ],
+  "o_en": [
+   "H",
+   "I",
+   "J",
+   "K"
+  ],
+  "a": 0,
+  "e_hi": "हिंदी में 'H' के बाद 'I' आता है।",
+  "e_en": "In the English alphabet, 'I' follows 'H'."
+ },
+ {
+  "id": "rp-rea-s00991",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "श्रृंखला देखें: C, F, I, L, ?",
+  "q_en": "Look at the series: C, F, I, L, ?",
+  "o_hi": [
+   "ओ",
+   "ए",
+   "बी",
+   "एड"
+  ],
+  "o_en": [
+   "O",
+   "A",
+   "B",
+   "D"
+  ],
+  "a": 0,
+  "e_hi": "हर अक्षर के बीच 3 स्थान का अंतर है: C(3)+3=F(6), F+3=I(9), I+3=L(12), L+3=O(15).",
+  "e_en": "Each letter is 3 positions ahead: C→F→I→L→O."
+ },
+ {
+  "id": "rp-rea-s00992",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला देखें: A, D, G, J, ?",
+  "q_en": "Look at the series: A, D, G, J, ?",
+  "o_hi": [
+   "M",
+   "P",
+   "L",
+   "O"
+  ],
+  "o_en": [
+   "M",
+   "P",
+   "L",
+   "O"
+  ],
+  "a": 0,
+  "e_hi": "हर अक्षर के बीच 3 स्थान का अंतर है। J(10)+3=13=M.",
+  "e_en": "Each letter is 3 places ahead; J(10)+3=13=M."
+ },
+ {
+  "id": "rp-rea-s00993",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "कौन सा अक्षर अल्फाबेट की शुरुआत से अधिक दूर है: 'T' या 'M'?",
+  "q_en": "Which letter is farther from the start of the alphabet: 'T' or 'M'?",
+  "o_hi": [
+   "T",
+   "M",
+   "दोनों समान दूरी पर हैं",
+   "उपरोक्त में से कोई नहीं"
+  ],
+  "o_en": [
+   "T",
+   "M",
+   "Both are at same distance",
+   "None of the above"
+  ],
+  "a": 0,
+  "e_hi": "'T' 20वां अक्षर है जबकि 'M' 13वां, अतः 'T' अधिक दूर है।",
+  "e_en": "'T' is the 20th letter, 'M' is the 13th, so 'T' is farther from the start."
+ },
+ {
+  "id": "rp-rea-s00994",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "इनमें से कौन सा अक्षर व्यंजन है? A, E, I, R",
+  "q_en": "Which of the following letters is a consonant? A, E, I, R",
+  "o_hi": [
+   "ए",
+   "ई",
+   "आई",
+   "आर"
+  ],
+  "o_en": [
+   "A",
+   "E",
+   "I",
+   "R"
+  ],
+  "a": 3,
+  "e_hi": "आर (R) एक व्यंजन है।",
+  "e_en": "R is a consonant."
+ },
+ {
+  "id": "rp-rea-s00995",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "समीकरण देखें: B : D :: E : ?",
+  "q_en": "Consider the analogy: B : D :: E : ?",
+  "o_hi": [
+   "G",
+   "F",
+   "H",
+   "I"
+  ],
+  "o_en": [
+   "G",
+   "F",
+   "H",
+   "I"
+  ],
+  "a": 0,
+  "e_hi": "B(2) से D(4) तक +2, इसी तरह E(5)+2=G(7).",
+  "e_en": "B(2) to D(4) is +2; E(5)+2=G(7)."
+ },
+ {
+  "id": "rp-rea-s00996",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "श्रृंखला: B, D, F, H, J, L, N में मध्य अक्षर कौन सा है?",
+  "q_en": "In the series: B, D, F, H, J, L, N, which is the middle letter?",
+  "o_hi": [
+   "H",
+   "J",
+   "L",
+   "B"
+  ],
+  "o_en": [
+   "H",
+   "J",
+   "L",
+   "B"
+  ],
+  "a": 0,
+  "e_hi": "कुल 7 अक्षर हैं, मध्य 4था है, अर्थात H.",
+  "e_en": "There are 7 letters; the 4th is H."
+ },
+ {
+  "id": "rp-rea-s00997",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला देखें: M, O, Q, S, ?",
+  "q_en": "Look at the series: M, O, Q, S, ?",
+  "o_hi": [
+   "U",
+   "W",
+   "V",
+   "X"
+  ],
+  "o_en": [
+   "U",
+   "W",
+   "V",
+   "X"
+  ],
+  "a": 0,
+  "e_hi": "हर कदम पर +2: M(13)+2=O(15), O+2=Q(17), Q+2=S(19), S+2=U(21).",
+  "e_en": "Each step adds 2: M→O→Q→S→U."
+ },
+ {
+  "id": "rp-rea-s00998",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "कौन सा अक्षर 'A' के करीब है: 'C' या 'Z'?",
+  "q_en": "Which letter is closer to 'A': 'C' or 'Z'?",
+  "o_hi": [
+   "C",
+   "Z",
+   "दोनों समान दूरी पर हैं",
+   "उपरोक्त में से कोई नहीं"
+  ],
+  "o_en": [
+   "C",
+   "Z",
+   "Both are at same distance",
+   "None of the above"
+  ],
+  "a": 0,
+  "e_hi": "C(3) से A(1) की दूरी 2 है, जबकि Z(26) से A की दूरी 25 है।",
+  "e_en": "C is 2 positions from A, Z is 25 positions away."
+ },
+ {
+  "id": "rp-rea-s00999",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "'अक्षरमाला के अंत से पाँचवाँ अक्षर कौन सा है?','",
+  "q_en": "Which letter is the fifth from the end of the alphabet?",
+  "o_hi": [
+   "व",
+   "य",
+   "उ",
+   "स"
+  ],
+  "o_en": [
+   "V",
+   "Y",
+   "U",
+   "S"
+  ],
+  "a": 0,
+  "e_hi": "अंत से पाँचवाँ अक्षर V(22) है।",
+  "e_en": "The fifth letter from the end is V (22)."
+ },
+ {
+  "id": "rp-rea-s01000",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "श्रृंखला देखें: A, C, E, G, ?",
+  "q_en": "Look at the series: A, C, E, G, ?",
+  "o_hi": [
+   "I",
+   "J",
+   "H",
+   "K"
+  ],
+  "o_en": [
+   "I",
+   "J",
+   "H",
+   "K"
+  ],
+  "a": 0,
+  "e_hi": "हर बार एक अक्षर को छोड़कर अगला अक्षर लिया गया है।",
+  "e_en": "The sequence skips one letter each time."
+ },
+ {
+  "id": "rp-rea-s01001",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "यदि 'B' को 2, 'D' को 4, 'F' को 6 माना जाए, तो 'H' का मान क्या होगा?",
+  "q_en": "If B=2, D=4, F=6, what is the value of H?",
+  "o_hi": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "o_en": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "a": 1,
+  "e_hi": "अक्षर की स्थिति को ही मान लिया गया है।",
+  "e_en": "The numeric value is the alphabet position of the letter."
+ },
+ {
+  "id": "rp-rea-s01002",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "श्रृंखला देखें: J, L, N, P, ?",
+  "q_en": "Look at the series: J, L, N, P, ?",
+  "o_hi": [
+   "R",
+   "S",
+   "T",
+   "Q"
+  ],
+  "o_en": [
+   "R",
+   "S",
+   "T",
+   "Q"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर से दो स्थान आगे बढ़ा गया है।",
+  "e_en": "Each letter is two positions ahead of the previous one."
+ },
+ {
+  "id": "rp-rea-s01003",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "श्रृंखला देखें: M, O, Q, S, U, ?",
+  "q_en": "Look at the series: M, O, Q, S, U, ?",
+  "o_hi": [
+   "W",
+   "V",
+   "X",
+   "Y"
+  ],
+  "o_en": [
+   "W",
+   "V",
+   "X",
+   "Y"
+  ],
+  "a": 0,
+  "e_hi": "हर बार एक अक्षर को छोड़कर अगला अक्षर लिया गया है।",
+  "e_en": "The sequence skips one letter each time."
+ },
+ {
+  "id": "rp-rea-s01004",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "यदि किसी शब्द के प्रत्येक अक्षर को उसके वर्णानुक्रमिक स्थान से बदला जाए तो 'R' का स्थान क्या है?",
+  "q_en": "If each letter is replaced by its alphabetical position, what is the position of 'R'?",
+  "o_hi": [
+   "18",
+   "17",
+   "19",
+   "20"
+  ],
+  "o_en": [
+   "18",
+   "17",
+   "19",
+   "20"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर R वर्णमाला में 18वां स्थान रखता है।",
+  "e_en": "Letter R is the 18th letter of the alphabet."
+ },
+ {
+  "id": "rp-rea-s01005",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला देखें: O (one), E (two), T (three), O (four), ?, N (six). क्या गायब अक्षर है?",
+  "q_en": "Look at the series: O (one), E (two), T (three), O (four), ?, N (six). What is the missing letter?",
+  "o_hi": [
+   "A",
+   "E",
+   "I",
+   "O"
+  ],
+  "o_en": [
+   "A",
+   "E",
+   "I",
+   "O"
+  ],
+  "a": 1,
+  "e_hi": "छठे शब्द के बाद पाँचवाँ शब्द 'five' है, जिसका अंतिम अक्षर 'e' है।",
+  "e_en": "The word for five ends with 'e'."
+ },
+ {
+  "id": "rp-rea-s01006",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "एक गोलाकार वर्णमाला में, यदि आप 'A' से शुरू करके 3 स्थान आगे बढ़ते हैं, फिर 4 स्थान पीछे, फिर 5 स्थान आगे, तो आप किस अक्षर पर पहुँचेंगे?",
+  "q_en": "In a circular alphabet, starting from 'A', move 3 steps forward, then 4 steps backward, then 5 steps forward. Which letter do you land on?",
+  "o_hi": [
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "o_en": [
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "a": 0,
+  "e_hi": "A+3=D, D-4=Z, Z+5=E।",
+  "e_en": "A+3=D, D-4=Z, Z+5=E."
+ },
+ {
+  "id": "rp-rea-s01007",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "अक्षर 'M' के बाद वर्णमाला में कौन सा अक्षर आता है?",
+  "q_en": "Which letter comes after 'M' in the alphabet?",
+  "o_hi": [
+   "N",
+   "O",
+   "L",
+   "P"
+  ],
+  "o_en": [
+   "N",
+   "O",
+   "L",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "M के बाद N आता है।",
+  "e_en": "N follows M."
+ },
+ {
+  "id": "rp-rea-s01008",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "यदि आप 'C' (3वां अक्षर) से शुरू करके हर बार दो अक्षर छोड़कर आगे बढ़ते हैं, तो 5वें अक्षर कौन सा होगा?",
+  "q_en": "Starting from 'C' and skipping two letters each time, what is the 5th letter?",
+  "o_hi": [
+   "O",
+   "P",
+   "Q",
+   "R"
+  ],
+  "o_en": [
+   "O",
+   "P",
+   "Q",
+   "R"
+  ],
+  "a": 0,
+  "e_hi": "C, F, I, L, O।",
+  "e_en": "C, F, I, L, O."
+ },
+ {
+  "id": "rp-rea-s01009",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "यदि किसी कोड में प्रत्येक अक्षर को उल्टे वर्णमाला क्रम में उसकी स्थिति के साथ बदला जाता है (Z=1, Y=2, ...), तो अक्षर 'G' का कोड क्या होगा?",
+  "q_en": "If each letter is replaced by its position in reverse alphabet (Z=1, Y=2, ...), what is the code for 'G'?",
+  "o_hi": [
+   "20",
+   "18",
+   "22",
+   "24"
+  ],
+  "o_en": [
+   "20",
+   "18",
+   "22",
+   "24"
+  ],
+  "a": 0,
+  "e_hi": "उल्टे क्रम में G का स्थान 20 है।",
+  "e_en": "In reverse order, G is 20."
+ },
+ {
+  "id": "rp-rea-s01010",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: A, D, G, J, ?",
+  "q_en": "Observe the series: A, D, G, J, ?",
+  "o_hi": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "o_en": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "हर बार अक्षर को 3 स्थान आगे बढ़ाया गया है। A→D (+3), D→G (+3), G→J (+3)। इसलिए अगला अक्षर M है।",
+  "e_en": "Each step advances the letter by 3 positions. A→D (+3), D→G (+3), G→J (+3). Thus the next letter is M."
+ },
+ {
+  "id": "rp-rea-s01011",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: B, E, H, K, ?",
+  "q_en": "Observe the series: B, E, H, K, ?",
+  "o_hi": [
+   "N",
+   "O",
+   "P",
+   "Q"
+  ],
+  "o_en": [
+   "N",
+   "O",
+   "P",
+   "Q"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर अंतराल लगातार 3 है: B→E (+3), E→H (+3), H→K (+3)। अगला अक्षर N (14 वाँ)।",
+  "e_en": "The step between letters is consistently 3: B→E (+3), E→H (+3), H→K (+3). The next letter is N."
+ },
+ {
+  "id": "rp-rea-s01012",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "अनुपात देखें: P : R :: T : ?",
+  "q_en": "Consider the analogy: P : R :: T : ?",
+  "o_hi": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "o_en": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "a": 1,
+  "e_hi": "P से R तक +2 है, इसी तरह T से ? तक +2। अतः उत्तर V है।",
+  "e_en": "The difference from P to R is +2; applying the same to T gives +2, yielding V."
+ },
+ {
+  "id": "rp-rea-s01013",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: A, B, D, G, K, P, ?",
+  "q_en": "Observe the series: A, B, D, G, K, P, ?",
+  "o_hi": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "o_en": [
+   "U",
+   "V",
+   "W",
+   "X"
+  ],
+  "a": 1,
+  "e_hi": "अंतराल क्रमशः +1, +2, +3, +4, +5 हैं। 16+6=22, जो V है।",
+  "e_en": "The gaps increase by 1, 2, 3, 4, 5. Adding 6 to 16 gives 22, which corresponds to V."
+ },
+ {
+  "id": "rp-rea-s01014",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: A, C, F, H, K, M, ?",
+  "q_en": "Observe the series: A, C, F, H, K, M, ?",
+  "o_hi": [
+   "N",
+   "O",
+   "P",
+   "Q"
+  ],
+  "o_en": [
+   "N",
+   "O",
+   "P",
+   "Q"
+  ],
+  "a": 2,
+  "e_hi": "अंतराल +2, +3, +2, +3, +2, +3। 13+3=16, अतः उत्तर P है।",
+  "e_en": "The gaps alternate +2, +3, +2, +3, +2, +3. Adding 3 to 13 gives 16, which is P."
+ },
+ {
+  "id": "rp-rea-s01015",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "अनुपात देखें: B : D :: G : ?",
+  "q_en": "Consider the analogy: B : D :: G : ?",
+  "o_hi": [
+   "I",
+   "J",
+   "K",
+   "L"
+  ],
+  "o_en": [
+   "I",
+   "J",
+   "K",
+   "L"
+  ],
+  "a": 0,
+  "e_hi": "B से D तक +2 है, इसी तरह G से ? तक +2। अतः I उत्तर है।",
+  "e_en": "The step from B to D is +2; applying the same to G gives I."
+ },
+ {
+  "id": "rp-rea-s01016",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: A, C, E, H, L, Q, ?",
+  "q_en": "Observe the series: A, C, E, H, L, Q, ?",
+  "o_hi": [
+   "V",
+   "W",
+   "X",
+   "Y"
+  ],
+  "o_en": [
+   "V",
+   "W",
+   "X",
+   "Y"
+  ],
+  "a": 1,
+  "e_hi": "अंतराल क्रमशः +2, +2, +3, +4, +5 हैं। 17+6=23, जो W है।",
+  "e_en": "The gaps are +2, +2, +3, +4, +5. Adding 6 to 17 yields 23, corresponding to W."
+ },
+ {
+  "id": "rp-rea-s01017",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "अनुपात देखें: D : G :: M : ?",
+  "q_en": "Consider the analogy: D : G :: M : ?",
+  "o_hi": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "o_en": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "a": 0,
+  "e_hi": "D से G तक +3 है, इसी तरह M से ? तक +3। अतः P उत्तर है।",
+  "e_en": "The step from D to G is +3; applying the same to M gives P."
+ },
+ {
+  "id": "rp-rea-s01018",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: B, D, F, I, L, Q, ?",
+  "q_en": "Observe the series: B, D, F, I, L, Q, ?",
+  "o_hi": [
+   "T",
+   "U",
+   "V",
+   "W"
+  ],
+  "o_en": [
+   "T",
+   "U",
+   "V",
+   "W"
+  ],
+  "a": 2,
+  "e_hi": "अंतराल +2, +2, +3, +3, +5 हैं। 17+5=22, जो V है।",
+  "e_en": "The gaps are +2, +2, +3, +3, +5. Adding 5 to 17 gives 22, which is V."
+ },
+ {
+  "id": "rp-rea-s01019",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "अनुपात देखें: C : F :: J : ?",
+  "q_en": "Consider the analogy: C : F :: J : ?",
+  "o_hi": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "o_en": [
+   "M",
+   "N",
+   "O",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "C से F तक +3 है, इसी तरह J से ? तक +3। अतः M उत्तर है।",
+  "e_en": "The step from C to F is +3; applying the same to J gives M."
+ },
+ {
+  "id": "rp-rea-s01020",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला को देखें: A, B, D, G, K, P, V, ?",
+  "q_en": "Observe the series: A, B, D, G, K, P, V, ?",
+  "o_hi": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "a": 2,
+  "e_hi": "अंतराल क्रमशः +1, +2, +3, +4, +5, +6, +7। 22+7=29, जो Z के बाद A पर लौटता है, अतः A उत्तर है।",
+  "e_en": "The gaps increase by 1, 2, 3, 4, 5, 6, 7. Adding 7 to 22 gives 29, which cycles back to A (1)."
+ },
+ {
+  "id": "rp-rea-s01021",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "अगर अक्षर 'M' के बाद दो स्थान आगे के अक्षर को लिया जाए तो वह क्या होगा?",
+  "q_en": "If the letter that is two positions ahead of 'M' is taken, what is it?",
+  "o_hi": [
+   "O",
+   "N",
+   "P",
+   "Q"
+  ],
+  "o_en": [
+   "O",
+   "N",
+   "P",
+   "Q"
+  ],
+  "a": 0,
+  "e_hi": "'M' के बाद दो स्थान आगे 'O' आता है।",
+  "e_en": "'M' + 2 = 'O'."
+ },
+ {
+  "id": "rp-rea-s01022",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "श्रृंखला: Z, X, V, T, ?. कौन सा अक्षर आएगा?",
+  "q_en": "Series: Z, X, V, T, ?. Which letter follows?",
+  "o_hi": [
+   "R",
+   "S",
+   "Q",
+   "U"
+  ],
+  "o_en": [
+   "R",
+   "S",
+   "Q",
+   "U"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला उल्टी दिशा में दो अक्षर छोड़कर चल रही है। इसलिए अगला अक्षर R है।",
+  "e_en": "The series decrements by 2 each step; the next is R."
+ },
+ {
+  "id": "rp-rea-s01023",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "अक्षर 'H' को दो स्थान आगे के अक्षर से बदलने पर कौन सा अक्षर मिलेगा?",
+  "q_en": "Replacing 'H' with the letter two positions ahead yields which letter?",
+  "o_hi": [
+   "J",
+   "G",
+   "K",
+   "L"
+  ],
+  "o_en": [
+   "J",
+   "G",
+   "K",
+   "L"
+  ],
+  "a": 0,
+  "e_hi": "'H' के बाद दो अक्षर आगे 'J' आता है।",
+  "e_en": "'H' + 2 = 'J'."
+ },
+ {
+  "id": "rp-rea-s01024",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला: A, D, G, J, ?. कौन सा अक्षर सही है?",
+  "q_en": "Series: A, D, G, J, ?. Which letter is correct?",
+  "o_hi": [
+   "M",
+   "N",
+   "L",
+   "O"
+  ],
+  "o_en": [
+   "M",
+   "N",
+   "L",
+   "O"
+  ],
+  "a": 0,
+  "e_hi": "हर चरण में 3 अक्षर आगे बढ़ा जा रहा है। इसलिए अगला अक्षर M है।",
+  "e_en": "Add 3 each time; the next is M."
+ },
+ {
+  "id": "rp-rea-s01025",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला: B, C, E, H, L, ?. कौन सा अक्षर सही है?",
+  "q_en": "Series: B, C, E, H, L, ?. Which letter is correct?",
+  "o_hi": [
+   "Q",
+   "R",
+   "S",
+   "T"
+  ],
+  "o_en": [
+   "Q",
+   "R",
+   "S",
+   "T"
+  ],
+  "a": 0,
+  "e_hi": "अंतर क्रमशः +1, +2, +3, +4 हैं; +5 जोड़ने पर L से Q मिलता है।",
+  "e_en": "Increments +1,+2,+3,+4; adding +5 gives Q."
+ },
+ {
+  "id": "rp-rea-s01026",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "प्रत्येक पद पर अगला अक्षर पिछले अक्षर के बाद उस संख्या के बराबर अक्षर छोड़कर प्राप्त किया जाता है, जो पद की स्थिति के बराबर है। श्रृंखला A से शुरू होती है। पाँचवाँ अक्षर क्या है?",
+  "q_en": "Each term is obtained by skipping a number of letters equal to its position in the series, starting with A. What is the fifth letter?",
+  "o_hi": [
+   "O",
+   "P",
+   "Q",
+   "R"
+  ],
+  "o_en": [
+   "O",
+   "P",
+   "Q",
+   "R"
+  ],
+  "a": 0,
+  "e_hi": "पहले अक्षर A के बाद 0 छोड़कर, फिर 1 छोड़कर, फिर 2 छोड़कर, फिर 3 छोड़कर, और इसी तरह। पाँचवाँ अक्षर O है।",
+  "e_en": "Skip 0,1,2,3,4 letters; the fifth is O."
+ },
+ {
+  "id": "rp-rea-s01027",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "श्रृंखला: P, N, L, J, ?. अगला अक्षर क्या है?",
+  "q_en": "Series: P, N, L, J, ?. What is the next letter?",
+  "o_hi": [
+   "H",
+   "G",
+   "I",
+   "K"
+  ],
+  "o_en": [
+   "H",
+   "G",
+   "I",
+   "K"
+  ],
+  "a": 0,
+  "e_hi": "हर बार 2 अक्षर घटाया जा रहा है। इसलिए अगला H होगा।",
+  "e_en": "Subtract 2 each time; the next is H."
+ },
+ {
+  "id": "rp-rea-s01028",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला: A, D, H, M, ?, ?. पाँचवाँ अक्षर कौन सा है?",
+  "q_en": "Series: A, D, H, M, ?, ?. Which is the fifth letter?",
+  "o_hi": [
+   "S",
+   "R",
+   "T",
+   "U"
+  ],
+  "o_en": [
+   "S",
+   "R",
+   "T",
+   "U"
+  ],
+  "a": 0,
+  "e_hi": "अंतर +3, +4, +5, +6 के क्रम में बढ़ रहे हैं; पाँचवाँ अक्षर S है।",
+  "e_en": "Differences +3,+4,+5,+6; the fifth is S."
+ },
+ {
+  "id": "rp-rea-s01029",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "श्रृंखला: B, D, G, K, P, ?. अगला अक्षर क्या है?",
+  "q_en": "Series: B, D, G, K, P, ?. What is the next letter?",
+  "o_hi": [
+   "V",
+   "W",
+   "U",
+   "X"
+  ],
+  "o_en": [
+   "V",
+   "W",
+   "U",
+   "X"
+  ],
+  "a": 0,
+  "e_hi": "अंतर क्रमशः +2,+3,+4,+5,+6 हैं; अगला V है।",
+  "e_en": "Add 2,3,4,5,6; the next is V."
  }
 ]
