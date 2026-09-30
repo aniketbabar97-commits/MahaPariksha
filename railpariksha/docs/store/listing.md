@@ -1,11 +1,18 @@
 # Google Play listing — RailPariksha
 
 ## en-IN (default)
-**Title (30):** RailPariksha: RRB, RPF Prep
+**Title (30):** RailPariksha: RRB NTPC, RPF
 **Short description (80):** RRB NTPC, Group D, ALP, JE, RPF mock tests & MCQs in Hindi. Free Daily 10.
 
+<!-- ASO note: title swaps generic "Prep" for "NTPC" -- RRB NTPC is consistently the
+     single highest-volume, highest-recognition railway exam name (competitor listings
+     and coverage agree it's "the most popular railway recruitment examination"), so it
+     earns a title slot over a generic word with near-zero standalone search intent.
+     Short description already carries Group D/ALP/JE/RPF/MCQ/mock test/Hindi -- the
+     full cluster of exam-name keywords competitor apps also lead with. -->
+
 **Full description:**
-RailPariksha (रेलपरीक्षा — "train to succeed") is the free, Hindi/English practice companion for every major Indian Railways recruitment exam: RRB NTPC (UG & Graduate), RRB Group D, RRB ALP & Technician, RRB Junior Engineer (JE), RRB Paramedical, RPF Constable and RPF Sub-Inspector (SI).
+RailPariksha (रेलपरीक्षा — "train to succeed") is the free, Hindi/English practice companion for every major Indian Railways recruitment exam: RRB NTPC (UG & Graduate), RRB Group D, RRB ALP & Technician, RRB Junior Engineer (JE), RRB Paramedical, RPF Constable and RPF Sub-Inspector (SI). Whether you're preparing for RRB NTPC, RRB Group D, RRB JE or RPF Constable, this RRB exam preparation app builds your practice around your actual exam's syllabus and weightage.
 
 WHY ASPIRANTS LOVE RAILPARIKSHA
 • Exam-wise, subject-wise, topic-wise MCQs — Maths, General Intelligence & Reasoning, General Science, General Awareness, Railway GK, Computer & Financial Awareness, English and more
@@ -21,14 +28,20 @@ WHY ASPIRANTS LOVE RAILPARIKSHA
 
 Every question is checked by an independent review before release. Found an error? Tap "Report" — it is hidden instantly and corrected.
 
+FREQUENTLY ASKED QUESTIONS
+Is RailPariksha free? Yes — the full question bank, mock tests, flashcards and Daily 10 are free, with no sign-up required.
+Which railway exams does RailPariksha cover? RRB NTPC, RRB Group D, RRB ALP & Technician, RRB JE (Mechanical, Civil, Electrical), RRB Paramedical, RPF Constable and RPF SI.
+Does RailPariksha work without internet? Yes — after the first download, practice, mock tests and flashcards all work fully offline.
+Is RailPariksha available in Hindi? Yes — every question, option and explanation is shown in both Hindi and English, switchable anytime.
+
 Disclaimer: RailPariksha is an independent educational app and is not affiliated with Indian Railways, RRB, RPF or any recruitment board. For official notifications, refer to the official websites.
 
 ## hi-IN
-**Title:** RailPariksha: RRB, RPF तैयारी
+**Title:** RailPariksha: RRB NTPC, RPF
 **Short description:** RRB NTPC, ग्रुप डी, ALP, JE, RPF सराव प्रश्न व मॉक टेस्ट हिंदी में — रोज़ मुफ़्त Daily 10!
 
 **Full description:**
-RailPariksha — भारतीय रेलवे भर्ती परीक्षाओं के लिए मुफ़्त, हिंदी/अंग्रेज़ी सराव ऐप! RRB NTPC, ग्रुप डी, ALP, टेक्निशियन, जूनियर इंजीनियर, पैरामेडिकल, RPF कांस्टेबल व सब-इंस्पेक्टर।
+RailPariksha — भारतीय रेलवे भर्ती परीक्षाओं के लिए मुफ़्त, हिंदी/अंग्रेज़ी सराव ऐप! RRB NTPC, ग्रुप डी, ALP, टेक्निशियन, जूनियर इंजीनियर, पैरामेडिकल, RPF कांस्टेबल व सब-इंस्पेक्टर। चाहे आप RRB NTPC, RRB ग्रुप डी, RRB JE या RPF कांस्टेबल की तैयारी कर रहे हों, यह RRB परीक्षा तैयारी ऐप आपके परीक्षा के सिलेबस व भारांश के अनुसार अभ्यास कराता है।
 • परीक्षावार, विषयवार, टॉपिकवार प्रश्न
 • हर प्रश्न का सरल व विस्तृत स्पष्टीकरण, याद रखने की तरकीबें
 • रोज़ का Daily 10 — आपके कमज़ोर टॉपिक पर खास प्रश्न
@@ -36,4 +49,10 @@ RailPariksha — भारतीय रेलवे भर्ती परीक
 • समय सीमा के साथ मॉक टेस्ट (असली नकारात्मक अंकन के नियमों के साथ)
 • स्ट्रीक, XP, ट्रेन-क्लास स्तर और रोज़ाना प्रेरणा 🔥
 • इंटरनेट के बिना चलता है · कोई पंजीकरण नहीं · कोई छुपा खर्च नहीं
+
+अक्सर पूछे जाने वाले सवाल
+क्या RailPariksha मुफ़्त है? हाँ — पूरा प्रश्न बैंक, मॉक टेस्ट, फ्लैशकार्ड व Daily 10 बिना किसी पंजीकरण के मुफ़्त हैं।
+RailPariksha किन परीक्षाओं को कवर करता है? RRB NTPC, RRB ग्रुप डी, RRB ALP व टेक्निशियन, RRB JE (मैकेनिकल, सिविल, इलेक्ट्रिकल), RRB पैरामेडिकल, RPF कांस्टेबल व SI।
+क्या RailPariksha इंटरनेट के बिना चलता है? हाँ — पहली बार डाउनलोड करने के बाद अभ्यास, मॉक टेस्ट व फ्लैशकार्ड पूरी तरह ऑफ़लाइन काम करते हैं।
+
 नोट: RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है।
