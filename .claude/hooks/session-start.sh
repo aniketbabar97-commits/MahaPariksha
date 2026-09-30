@@ -33,7 +33,10 @@ if ! running "verify_questions.py.*groq"; then
 fi
 
 if ! running "verify_questions.py.*gemini"; then
-  nohup python3 verify_questions.py --provider gemini --model gemini-3.8-flash --gemini-key-env GEMINI_API_KEY2 --batch-size 20 \
+  # Uses GEMINI_API_KEY (not KEY2 -- that one's shared with je_gaps generation
+  # above and runs its own quota thin) to keep verify_b on a key it isn't
+  # fighting another worker for.
+  nohup python3 verify_questions.py --provider gemini --model gemini-3.8-flash --gemini-key-env GEMINI_API_KEY --batch-size 20 \
     --subjects maths,current_affairs,computer,english,je_electrical,reasoning --max-calls 500 > "$LOGS/verify_b.log" 2>&1 &
   disown
 fi
