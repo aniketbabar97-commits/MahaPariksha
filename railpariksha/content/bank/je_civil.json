@@ -17133,5 +17133,1592 @@
   "a": 1,
   "e_hi": "संतृप्ति की डिग्री 1 का अर्थ है कि मिट्टी के सभी रिक्त स्थान पानी से भरे हुए हैं।",
   "e_en": "A degree of saturation of 1 means all the voids in the soil are completely filled with water."
+ },
+ {
+  "id": "rp-je_c-f00746",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "एक मृदा नमूने का जल अंश (water content) 20% है, विशिष्ट गुरुत्व 2.7 है और रिक्तता अनुपात 0.6 है। मृदा की संतृप्ति की मात्रा (degree of saturation) ज्ञात करें।",
+  "q_en": "A soil sample has a water content of 20%, specific gravity of 2.7, and void ratio of 0.6. Find the degree of saturation.",
+  "o_hi": [
+   "90%",
+   "80%",
+   "75%",
+   "95%"
+  ],
+  "o_en": [
+   "90%",
+   "80%",
+   "75%",
+   "95%"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र Se = wG का उपयोग करें। S = (0.2 * 2.7) / 0.6 = 0.9, जो 90% है।",
+  "e_en": "Using the formula Se = wG, where S = (0.2 * 2.7) / 0.6 = 0.9, which is 90%."
+ },
+ {
+  "id": "rp-je_c-f00747",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "यदि किसी मृदा का शुष्क इकाई भार 16 kN/m³ है और विशिष्ट गुरुत्व 2.65 है, तो रिक्तता अनुपात (e) की गणना करें (पानी का इकाई भार 10 kN/m³ लें)।",
+  "q_en": "If the dry unit weight of a soil is 16 kN/m³ and specific gravity is 2.65, calculate the void ratio (e) (assume unit weight of water as 10 kN/m³).",
+  "o_hi": [
+   "0.65",
+   "0.75",
+   "0.55",
+   "0.85"
+  ],
+  "o_en": [
+   "0.65",
+   "0.75",
+   "0.55",
+   "0.85"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र γd = (G * γw) / (1 + e) का उपयोग करें। 16 = (2.65 * 10) / (1 + e), जिससे e = 0.656 आता है।",
+  "e_en": "Using the formula γd = (G * γw) / (1 + e), we get 16 = (2.65 * 10) / (1 + e), resulting in e = 0.656."
+ },
+ {
+  "id": "rp-je_c-f00748",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "एक मृदा नमूने का कुल भार 150 ग्राम है और आयतन 100 cc है। यदि जल अंश 20% है, तो मृदा का शुष्क घनत्व (dry density) क्या होगा?",
+  "q_en": "A soil sample has a total weight of 150 grams and a volume of 100 cc. If the water content is 20%, what is the dry density of the soil?",
+  "o_hi": [
+   "1.25 g/cc",
+   "1.50 g/cc",
+   "1.00 g/cc",
+   "1.35 g/cc"
+  ],
+  "o_en": [
+   "1.25 g/cc",
+   "1.50 g/cc",
+   "1.00 g/cc",
+   "1.35 g/cc"
+  ],
+  "a": 0,
+  "e_hi": "शुष्क घनत्व = कुल घनत्व / (1 + w)। यहाँ 1.5 / (1 + 0.2) = 1.25 g/cc।",
+  "e_en": "Dry density = Bulk density / (1 + w). Here, 1.5 / (1 + 0.2) = 1.25 g/cc."
+ },
+ {
+  "id": "rp-je_c-f00749",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "यदि एक मृदा नमूने में वायु का आयतन 0.2 है और रिक्तियों का कुल आयतन 0.5 है, तो वायु अंश (air content) क्या होगा?",
+  "q_en": "If the volume of air in a soil sample is 0.2 and the total volume of voids is 0.5, what will be the air content?",
+  "o_hi": [
+   "0.4",
+   "0.2",
+   "0.7",
+   "0.3"
+  ],
+  "o_en": [
+   "0.4",
+   "0.2",
+   "0.7",
+   "0.3"
+  ],
+  "a": 0,
+  "e_hi": "वायु अंश = वायु का आयतन / रिक्तियों का कुल आयतन। 0.2 / 0.5 = 0.4।",
+  "e_en": "Air content = Volume of air / Volume of voids. 0.2 / 0.5 = 0.4."
+ },
+ {
+  "id": "rp-je_c-f00750",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "एक मृदा का संतृप्त इकाई भार 20 kN/m³ है और पानी का इकाई भार 10 kN/m³ है। मृदा का निमज्जित (submerged) इकाई भार क्या होगा?",
+  "q_en": "The saturated unit weight of a soil is 20 kN/m³ and the unit weight of water is 10 kN/m³. What will be the submerged unit weight of the soil?",
+  "o_hi": [
+   "10 kN/m³",
+   "30 kN/m³",
+   "20 kN/m³",
+   "5 kN/m³"
+  ],
+  "o_en": [
+   "10 kN/m³",
+   "30 kN/m³",
+   "20 kN/m³",
+   "5 kN/m³"
+  ],
+  "a": 0,
+  "e_hi": "निमज्जित इकाई भार = संतृप्त इकाई भार - पानी का इकाई भार। 20 - 10 = 10 kN/m³।",
+  "e_en": "Submerged unit weight = Saturated unit weight - Unit weight of water. 20 - 10 = 10 kN/m³."
+ },
+ {
+  "id": "rp-je_c-f00751",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "प्लास्टिसिटी इंडेक्स 15 है और लिक्विड लिमिट 40% है। यदि प्लास्टिक लिमिट 25% है, तो तरलता सूचकांक (liquidity index) ज्ञात करें यदि प्राकृतिक जल अंश 30% है।",
+  "q_en": "The plasticity index is 15 and liquid limit is 40%. If plastic limit is 25%, find the liquidity index if natural water content is 30%.",
+  "o_hi": [
+   "0.33",
+   "0.50",
+   "0.25",
+   "0.66"
+  ],
+  "o_en": [
+   "0.33",
+   "0.50",
+   "0.25",
+   "0.66"
+  ],
+  "a": 0,
+  "e_hi": "तरलता सूचकांक = (w - Wp) / Ip। (30 - 25) / 15 = 5 / 15 = 0.333।",
+  "e_en": "Liquidity index = (w - Wp) / Ip. (30 - 25) / 15 = 5 / 15 = 0.333."
+ },
+ {
+  "id": "rp-je_c-f00752",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "एक मृदा का रिक्तता अनुपात 0.8 है। यदि इसकी संतृप्ति 100% है, तो जल अंश क्या होगा? (मानें G = 2.65)",
+  "q_en": "The void ratio of a soil is 0.8. If its degree of saturation is 100%, what will be the water content? (Assume G = 2.65)",
+  "o_hi": [
+   "30.2%",
+   "25.5%",
+   "20.0%",
+   "35.5%"
+  ],
+  "o_en": [
+   "30.2%",
+   "25.5%",
+   "20.0%",
+   "35.5%"
+  ],
+  "a": 0,
+  "e_hi": "Se = wG का उपयोग करें। 1 * 0.8 = w * 2.65। w = 0.8 / 2.65 = 0.3018, यानी लगभग 30.2%。",
+  "e_en": "Use Se = wG. 1 * 0.8 = w * 2.65. w = 0.8 / 2.65 = 0.3018, which is approximately 30.2%."
+ },
+ {
+  "id": "rp-je_c-f00753",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "यदि किसी मृदा का प्रवाह सूचकांक (flow index) 10 है और 25 प्रहारों (blows) पर जल अंश 40% है, तो 10 प्रहारों पर जल अंश क्या होगा?",
+  "q_en": "If the flow index of a soil is 10 and the water content at 25 blows is 40%, what will be the water content at 10 blows?",
+  "o_hi": [
+   "44%",
+   "36%",
+   "40%",
+   "48%"
+  ],
+  "o_en": [
+   "44%",
+   "36%",
+   "40%",
+   "48%"
+  ],
+  "a": 0,
+  "e_hi": "If = (w1 - w2) / log10(N2 / N1)। 10 = (w2 - 40) / log10(25 / 10)। हल करने पर 43.97% आता है।",
+  "e_en": "If = (w1 - w2) / log10(N2 / N1). 10 = (w2 - 40) / log10(25 / 10). Solving this gives 43.97%."
+ },
+ {
+  "id": "rp-je_c-f00754",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "एक मृदा नमूने की पोरोसिटी (n) 0.4 है। इसका रिक्तता अनुपात (e) क्या होगा?",
+  "q_en": "The porosity (n) of a soil sample is 0.4. What will be its void ratio (e)?",
+  "o_hi": [
+   "0.67",
+   "0.40",
+   "0.25",
+   "0.50"
+  ],
+  "o_en": [
+   "0.67",
+   "0.40",
+   "0.25",
+   "0.50"
+  ],
+  "a": 0,
+  "e_hi": "रिक्तता अनुपात का सूत्र e = n / (1 - n) है। 0.4 / (1 - 0.4) = 0.4 / 0.6 = 0.666।",
+  "e_en": "The formula for void ratio is e = n / (1 - n). 0.4 / (1 - 0.4) = 0.4 / 0.6 = 0.666."
+ },
+ {
+  "id": "rp-je_c-f00755",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे ट्रैक पर 'क्रीप' (Creep) का सबसे सटीक अर्थ क्या है?",
+  "q_en": "What is the most accurate meaning of 'Creep' on a railway track?",
+  "o_hi": [
+   "पटरी का झुकना",
+   "पटरी का अनुदैर्ध्य विस्थापन (Longitudinal displacement)",
+   "पटरी का घिसना",
+   "पटरी का चौड़ा होना"
+  ],
+  "o_en": [
+   "Bending of rails",
+   "Longitudinal displacement of rails",
+   "Wear and tear of rails",
+   "Widening of gauge"
+  ],
+  "a": 1,
+  "e_hi": "क्रीप पटरियों का अनुदैर्ध्य दिशा में धीरे-धीरे होने वाला संचयी विस्थापन है।",
+  "e_en": "Creep is the gradual longitudinal movement or displacement of rails along the track."
+ },
+ {
+  "id": "rp-je_c-f00756",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क की ज्यामिति में 'सुपर-एलिवेशन' (Super-elevation) का मुख्य कार्य क्या है?",
+  "q_en": "What is the main function of 'Super-elevation' in road geometry?",
+  "o_hi": [
+   "घर्षण कम करना",
+   "अपकेन्द्री बल (Centrifugal force) का मुकाबला करना",
+   "ब्रेकिंग दूरी बढ़ाना",
+   "सड़क को समतल करना"
+  ],
+  "o_en": [
+   "To reduce friction",
+   "To counteract centrifugal force",
+   "To increase braking distance",
+   "To level the road"
+  ],
+  "a": 1,
+  "e_hi": "मोड़ पर वाहनों को फिसलने से रोकने के लिए बाहरी किनारे को ऊपर उठाया जाता है, जो अपकेन्द्री बल को संतुलित करता है।",
+  "e_en": "Super-elevation is the inward tilt of the road at curves to counteract the centrifugal force acting on vehicles."
+ },
+ {
+  "id": "rp-je_c-f00757",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "रेलवे में 'गेज' (Gauge) की दूरी को कैसे मापा जाता है?",
+  "q_en": "How is the 'Gauge' distance measured in railways?",
+  "o_hi": [
+   "पटरियों के बाहरी किनारों के बीच",
+   "पटरियों के केंद्र के बीच",
+   "पटरियों के आंतरिक चेहरों के बीच",
+   "स्लीपर की लंबाई के रूप में"
+  ],
+  "o_en": [
+   "Between outer edges of rails",
+   "Between center of rails",
+   "Between inner faces of rails",
+   "As the length of the sleeper"
+  ],
+  "a": 2,
+  "e_hi": "गेज को रेल के शीर्ष के आंतरिक चेहरों (inner faces) के बीच की न्यूनतम दूरी के रूप में मापा जाता है।",
+  "e_en": "Gauge is measured as the minimum distance between the inner faces of the two rails at the rail head."
+ },
+ {
+  "id": "rp-je_c-f00758",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क निर्माण में 'बिटुमिनस मैकाडम' (Bituminous Macadam) का उपयोग किस परत के लिए किया जाता है?",
+  "q_en": "In road construction, 'Bituminous Macadam' is used for which layer?",
+  "o_hi": [
+   "सब-ग्रेड (Sub-grade)",
+   "बेस कोर्स (Base course)",
+   "सब्-बेस (Sub-base)",
+   "मिट्टी की परत"
+  ],
+  "o_en": [
+   "Sub-grade",
+   "Base course",
+   "Sub-base",
+   "Soil layer"
+  ],
+  "a": 1,
+  "e_hi": "बिटुमिनस मैकाडम आमतौर पर सड़क के बेस कोर्स या बाइंडिंग कोर्स के रूप में उपयोग किया जाता है।",
+  "e_en": "Bituminous Macadam is typically used as a base course or binder course in pavement construction."
+ },
+ {
+  "id": "rp-je_c-f00759",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "रेलवे स्लीपरों का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of railway sleepers?",
+  "o_hi": [
+   "ट्रैक को सुंदर बनाना",
+   "लोड को गिट्टी (ballast) तक समान रूप से वितरित करना",
+   "ट्रेन की गति बढ़ाना",
+   "सिग्नल लगाना"
+  ],
+  "o_en": [
+   "To make the track aesthetic",
+   "To distribute load evenly to the ballast",
+   "To increase train speed",
+   "To install signals"
+  ],
+  "a": 1,
+  "e_hi": "स्लीपर पटरियों को अपनी जगह पर रखते हैं और पटरियों से आने वाले भार को गिट्टी पर समान रूप से स्थानांतरित करते हैं।",
+  "e_en": "Sleepers hold the rails in position and transfer the load from the rails to the ballast bed uniformly."
+ },
+ {
+  "id": "rp-je_c-f00760",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "ट्रैफिक इंजीनियरिंग में 'स्टॉपिंग साइट डिस्टेंस' (SSD) की गणना करते समय किस बल को अनदेखा किया जाता है?",
+  "q_en": "Which force is ignored while calculating 'Stopping Sight Distance' (SSD) in traffic engineering?",
+  "o_hi": [
+   "घर्षण बल",
+   "हवा का प्रतिरोध",
+   "ब्रेकिंग दक्षता",
+   "सड़क का ढलान"
+  ],
+  "o_en": [
+   "Frictional force",
+   "Air resistance",
+   "Braking efficiency",
+   "Road gradient"
+  ],
+  "a": 1,
+  "e_hi": "SSD की गणना में घर्षण, ढलान और प्रतिक्रिया समय को लिया जाता है, लेकिन हवा के प्रतिरोध को नगण्य मानकर छोड़ दिया जाता है।",
+  "e_en": "SSD calculation considers friction, gradient, and reaction time, but air resistance is typically ignored as negligible."
+ },
+ {
+  "id": "rp-je_c-f00761",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे ट्रैक पर 'बैलास्ट' (Ballast) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of 'Ballast' on a railway track?",
+  "o_hi": [
+   "ट्रैक को सजाना",
+   "स्लीपरों को सहारा देना और जल निकासी सुनिश्चित करना",
+   "ट्रेन को रोकना",
+   "पटरियों को जोड़ना"
+  ],
+  "o_en": [
+   "To decorate the track",
+   "To support sleepers and ensure drainage",
+   "To stop the train",
+   "To join the rails"
+  ],
+  "a": 1,
+  "e_hi": "बैलास्ट स्लीपरों को स्थिर आधार प्रदान करता है और वर्षा के पानी को आसानी से बहने देता है।",
+  "e_en": "Ballast provides a stable foundation for sleepers and facilitates effective drainage of water."
+ },
+ {
+  "id": "rp-je_c-f00762",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क में 'कर्व' (Curve) पर 'ट्रांजिशन कर्व' (Transition Curve) क्यों प्रदान किया जाता है?",
+  "q_en": "Why is a 'Transition Curve' provided on a road curve?",
+  "o_hi": [
+   "सड़क को सुंदर बनाने के लिए",
+   "अपकेन्द्री बल के धीरे-धीरे परिवर्तन के लिए",
+   "सड़क की लंबाई कम करने के लिए",
+   "केवल गति बढ़ाने के लिए"
+  ],
+  "o_en": [
+   "To make the road aesthetic",
+   "For gradual change of centrifugal force",
+   "To reduce road length",
+   "Only to increase speed"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांजिशन कर्व सीधे और घुमावदार हिस्से के बीच अपकेन्द्री बल में अचानक बदलाव को रोकने के लिए दिया जाता है।",
+  "e_en": "A transition curve is provided to ensure a gradual change in centrifugal force between straight and curved sections."
+ },
+ {
+  "id": "rp-je_c-f00763",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "रेलवे में 'टंग रेल' (Tongue rail) किसका एक हिस्सा है?",
+  "q_en": "In railways, a 'Tongue rail' is a part of which component?",
+  "o_hi": [
+   "स्लीपर",
+   "बैलास्ट",
+   "स्विच (Switch)",
+   "फिश प्लेट"
+  ],
+  "o_en": [
+   "Sleeper",
+   "Ballast",
+   "Switch",
+   "Fish plate"
+  ],
+  "a": 2,
+  "e_hi": "टंग रेल स्विच का वह हिस्सा है जो ट्रेन को एक ट्रैक से दूसरे ट्रैक पर ले जाने के लिए हिलता है।",
+  "e_en": "The tongue rail is the movable part of a railway switch used to divert trains from one track to another."
+ },
+ {
+  "id": "rp-je_c-f00764",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "नागपुर सड़क विकास योजना के अनुसार, भारत में सड़कों को कितने वर्गों में वर्गीकृत किया गया था?",
+  "q_en": "According to the Nagpur Road Development Plan, into how many categories were roads classified in India?",
+  "o_hi": [
+   "दो",
+   "तीन",
+   "चार",
+   "पांच"
+  ],
+  "o_en": [
+   "Two",
+   "Three",
+   "Four",
+   "Five"
+  ],
+  "a": 2,
+  "e_hi": "नागपुर योजना में सड़कों को राष्ट्रीय राजमार्ग, राज्य राजमार्ग, जिला सड़कें और ग्रामीण सड़कों में वर्गीकृत किया गया था।",
+  "e_en": "The Nagpur plan classified roads into National Highways, State Highways, District Roads, and Village Roads."
+ },
+ {
+  "id": "rp-je_c-f00765",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "भारतीय सड़क कांग्रेस (IRC) के अनुसार, समतल भू-भाग के लिए डिजाइन गति क्या है?",
+  "q_en": "According to the Indian Roads Congress (IRC), what is the design speed for plain terrain?",
+  "o_hi": [
+   "60 किमी/घंटा",
+   "80 किमी/घंटा",
+   "100 किमी/घंटा",
+   "120 किमी/घंटा"
+  ],
+  "o_en": [
+   "60 km/h",
+   "80 km/h",
+   "100 km/h",
+   "120 km/h"
+  ],
+  "a": 2,
+  "e_hi": "समतल भू-भाग के लिए आईआरसी द्वारा अनुशंसित डिजाइन गति 100 किमी/घंटा है।",
+  "e_en": "The design speed recommended by the IRC for plain terrain is 100 km/h."
+ },
+ {
+  "id": "rp-je_c-f00766",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "कठोर फुटपाथ (Rigid Pavement) मुख्य रूप से किसके प्रति प्रतिरोधी होता है?",
+  "q_en": "Rigid pavement is primarily resistant to which of the following?",
+  "o_hi": [
+   "लचीला विरूपण",
+   "तापमान तनाव",
+   "अपघर्षण",
+   "नमी"
+  ],
+  "o_en": [
+   "Flexible deformation",
+   "Temperature stress",
+   "Abrasion",
+   "Moisture"
+  ],
+  "a": 1,
+  "e_hi": "कठोर फुटपाथ अपनी उच्च फ्लेक्सुरल ताकत के कारण तापमान और लोड के कारण होने वाले तनाव को झेलने में सक्षम होते हैं।",
+  "e_en": "Rigid pavements are capable of resisting stresses caused by temperature and loads due to their high flexural strength."
+ },
+ {
+  "id": "rp-je_c-f00767",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क के निर्माण में 'सब-ग्रेड' का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of the 'sub-grade' in road construction?",
+  "o_hi": [
+   "भार का वितरण",
+   "जल निकासी",
+   "आधार प्रदान करना",
+   "घर्षण प्रदान करना"
+  ],
+  "o_en": [
+   "Load distribution",
+   "Drainage",
+   "Providing foundation",
+   "Providing friction"
+  ],
+  "a": 2,
+  "e_hi": "सब-ग्रेड सड़क की सबसे निचली परत है जो संपूर्ण सड़क संरचना के लिए आधार और नींव के रूप में कार्य करती है।",
+  "e_en": "The sub-grade is the bottom-most layer of the road that acts as the foundation and base for the entire road structure."
+ },
+ {
+  "id": "rp-je_c-f00768",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क के मुड़ पर 'सुपर-एलिवेशन' प्रदान करने का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of providing 'super-elevation' on road curves?",
+  "o_hi": [
+   "पानी निकालना",
+   "अपकेंद्री बल को संतुलित करना",
+   "सौंदर्य बढ़ाना",
+   "गति कम करना"
+  ],
+  "o_en": [
+   "Drainage of water",
+   "Counteracting centrifugal force",
+   "Enhancing aesthetics",
+   "Reducing speed"
+  ],
+  "a": 1,
+  "e_hi": "सुपर-एलिवेशन सड़क के बाहरी किनारे को उठाकर वाहनों पर लगने वाले अपकेंद्री बल को संतुलित करता है।",
+  "e_en": "Super-elevation balances the centrifugal force acting on vehicles by raising the outer edge of the road."
+ },
+ {
+  "id": "rp-je_c-f00769",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा फुटपाथ का प्रकार नहीं है?",
+  "q_en": "Which of the following is not a type of pavement?",
+  "o_hi": [
+   "लचीला",
+   "कठोर",
+   "अर्ध-कठोर",
+   "तरल"
+  ],
+  "o_en": [
+   "Flexible",
+   "Rigid",
+   "Semi-rigid",
+   "Liquid"
+  ],
+  "a": 3,
+  "e_hi": "सड़क इंजीनियरिंग में मुख्य रूप से लचीले और कठोर फुटपाथ होते हैं, और अर्ध-कठोर एक श्रेणी है, जबकि तरल कोई प्रकार नहीं है।",
+  "e_en": "In road engineering, there are mainly flexible and rigid pavements, and semi-rigid is a category, while liquid is not a type."
+ },
+ {
+  "id": "rp-je_c-f00770",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क की सतह की खुरदरापन को मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+  "q_en": "Which instrument is used to measure the roughness of a road surface?",
+  "o_hi": [
+   "बंप इंटीग्रेटर",
+   "थियोडोलाइट",
+   "लेवलिंग स्टाफ",
+   "कम्पास"
+  ],
+  "o_en": [
+   "Bump integrator",
+   "Theodolite",
+   "Levelling staff",
+   "Compass"
+  ],
+  "a": 0,
+  "e_hi": "बंप इंटीग्रेटर एक उपकरण है जो सड़क की सतह की अनियमितताओं को मापता है और खुरदरापन सूचकांक प्रदान करता है।",
+  "e_en": "A bump integrator is an instrument that measures road surface irregularities and provides a roughness index."
+ },
+ {
+  "id": "rp-je_c-f00771",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "लंबी दूरी की यात्रा के लिए किस प्रकार की सड़क सबसे उपयुक्त होती है?",
+  "q_en": "Which type of road is most suitable for long-distance travel?",
+  "o_hi": [
+   "ग्रामीण सड़क",
+   "जिला सड़क",
+   "राष्ट्रीय राजमार्ग",
+   "नगर पालिका सड़क"
+  ],
+  "o_en": [
+   "Village road",
+   "District road",
+   "National Highway",
+   "Municipal road"
+  ],
+  "a": 2,
+  "e_hi": "राष्ट्रीय राजमार्गों को अंतर-राज्यीय कनेक्टिविटी और लंबी दूरी के उच्च गति यातायात के लिए डिज़ाइन किया गया है।",
+  "e_en": "National Highways are designed for inter-state connectivity and high-speed long-distance traffic."
+ },
+ {
+  "id": "rp-je_c-f00772",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क के 'कैम्बर' का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of 'camber' in a road?",
+  "o_hi": [
+   "वाहनों को मोड़ना",
+   "पानी की निकासी",
+   "गति बढ़ाना",
+   "सड़क को चौड़ा करना"
+  ],
+  "o_en": [
+   "Turning vehicles",
+   "Drainage of water",
+   "Increasing speed",
+   "Widening the road"
+  ],
+  "a": 1,
+  "e_hi": "कैम्बर सड़क की सतह पर ढलान प्रदान करता है ताकि बारिश का पानी आसानी से बह जाए और सड़क को नुकसान न हो।",
+  "e_en": "Camber provides a slope on the road surface so that rainwater drains away easily to prevent damage to the road."
+ },
+ {
+  "id": "rp-je_c-f00773",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "ट्रैफिक सिग्नल में 'पीली बत्ती' का क्या अर्थ है?",
+  "q_en": "What does the 'yellow light' in a traffic signal signify?",
+  "o_hi": [
+   "रुकें",
+   "चलें",
+   "सावधान रहें और रुकने की तैयारी करें",
+   "तेजी से चलें"
+  ],
+  "o_en": [
+   "Stop",
+   "Go",
+   "Caution and prepare to stop",
+   "Drive fast"
+  ],
+  "a": 2,
+  "e_hi": "पीली बत्ती का मतलब है कि सिग्नल लाल होने वाला है, इसलिए वाहन चालकों को रुकने के लिए तैयार हो जाना चाहिए।",
+  "e_en": "The yellow light means the signal is about to turn red, so drivers should prepare to stop."
+ },
+ {
+  "id": "rp-je_c-f00774",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क के मुड़ाव पर वाहन को पलटने से बचाने के लिए बाहरी किनारे को आंतरिक किनारे से ऊपर उठाने की प्रक्रिया क्या कहलाती है?",
+  "q_en": "What is the process of raising the outer edge of a road above the inner edge at a curve to prevent vehicles from overturning called?",
+  "o_hi": [
+   "सुपर एलिवेशन",
+   "कैंबर",
+   "ग्रेडियंट",
+   "शिफ्ट"
+  ],
+  "o_en": [
+   "Super-elevation",
+   "Camber",
+   "Gradient",
+   "Shift"
+  ],
+  "a": 0,
+  "e_hi": "इसे बैंकिंग या सुपर-एलिवेशन कहा जाता है, जो केन्द्रापसारक बल के प्रभाव को कम करता है।",
+  "e_en": "This is known as banking or super-elevation, which counteracts the effect of centrifugal force."
+ },
+ {
+  "id": "rp-je_c-f00775",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "रेलवे ट्रैक में 'गेज' शब्द का अर्थ क्या है?",
+  "q_en": "What does the term 'gauge' refer to in a railway track?",
+  "o_hi": [
+   "दो रेलों के बीच की न्यूनतम क्षैतिज दूरी",
+   "दो पटरियों की लंबाई",
+   "स्लीपरों के बीच की दूरी",
+   "गिट्टी की गहराई"
+  ],
+  "o_en": [
+   "Minimum horizontal distance between two rails",
+   "Length of two tracks",
+   "Distance between sleepers",
+   "Depth of ballast"
+  ],
+  "a": 0,
+  "e_hi": "गेज दो पटरियों के आंतरिक चेहरों के बीच की सबसे छोटी दूरी होती है।",
+  "e_en": "Gauge is the minimum distance between the inner faces of the two rails."
+ },
+ {
+  "id": "rp-je_c-f00776",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क की सतह पर जल निकासी के लिए प्रदान की गई अनुप्रस्थ ढलान को क्या कहा जाता है?",
+  "q_en": "What is the transverse slope provided on the road surface for drainage called?",
+  "o_hi": [
+   "कैंबर",
+   "सुपर एलिवेशन",
+   "ढाल",
+   "घुमाव"
+  ],
+  "o_en": [
+   "Camber",
+   "Super-elevation",
+   "Gradient",
+   "Curve"
+  ],
+  "a": 0,
+  "e_hi": "कैंबर वर्षा जल को सड़क की सतह से हटाने के लिए आवश्यक होता है।",
+  "e_en": "Camber is essential for removing rainwater from the road surface."
+ },
+ {
+  "id": "rp-je_c-f00777",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे में 'स्लीपर' का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a 'sleeper' in a railway track?",
+  "o_hi": [
+   "पटरियों को सहारा देना और भार को गिट्टी पर वितरित करना",
+   "ट्रेन की गति नियंत्रित करना",
+   "पटरी को जोड़ने के लिए",
+   "पटरी को चिकना करने के लिए"
+  ],
+  "o_en": [
+   "Supporting rails and distributing load to the ballast",
+   "Controlling train speed",
+   "Connecting rails",
+   "Smoothing the rail surface"
+  ],
+  "a": 0,
+  "e_hi": "स्लीपर पटरियों को उनकी सही स्थिति में रखते हैं और भार को नीचे गिट्टी पर स्थानांतरित करते हैं।",
+  "e_en": "Sleepers hold the rails in their correct position and transfer the load to the ballast below."
+ },
+ {
+  "id": "rp-je_c-f00778",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क निर्माण में 'सब-ग्रेड' का क्या अर्थ है?",
+  "q_en": "What does 'sub-grade' mean in road construction?",
+  "o_hi": [
+   "सड़क की सबसे निचली मिट्टी की परत",
+   "सड़क की ऊपरी सतह",
+   "सड़क के किनारे की नाली",
+   "डामर की परत"
+  ],
+  "o_en": [
+   "The lowest soil layer of the road",
+   "The top surface of the road",
+   "The roadside ditch",
+   "The asphalt layer"
+  ],
+  "a": 0,
+  "e_hi": "सब-ग्रेड सड़क की नींव होती है जो पूरी संरचना का भार वहन करती है।",
+  "e_en": "The sub-grade is the foundation of the road that carries the weight of the entire structure."
+ },
+ {
+  "id": "rp-je_c-f00779",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे पटरियों के नीचे उपयोग की जाने वाली गिट्टी (Ballast) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the main purpose of using ballast under railway tracks?",
+  "o_hi": [
+   "भार को समान रूप से वितरित करना और जल निकासी में मदद करना",
+   "पटरियों को पेंट करना",
+   "ट्रेन की आवाज कम करना",
+   "पटरियों को गर्म रखना"
+  ],
+  "o_en": [
+   "Distributing load evenly and assisting in drainage",
+   "Painting the rails",
+   "Reducing train noise",
+   "Keeping the rails warm"
+  ],
+  "a": 0,
+  "e_hi": "गिट्टी स्लीपरों को स्थिरता प्रदान करती है और ट्रैक के नीचे पानी को जमा होने से रोकती है।",
+  "e_en": "Ballast provides stability to sleepers and prevents water from accumulating under the track."
+ },
+ {
+  "id": "rp-je_c-f00780",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क के क्षैतिज वक्र (Horizontal Curve) पर 'ट्रांजिशन कर्व' का मुख्य उपयोग क्या है?",
+  "q_en": "What is the main use of a 'transition curve' on a horizontal road curve?",
+  "o_hi": [
+   "सेंट्रिफ्यूगल बल को धीरे-धीरे लागू करने के लिए",
+   "सड़क को सुंदर बनाने के लिए",
+   "गति कम करने के लिए",
+   "ईंधन बचाने के लिए"
+  ],
+  "o_en": [
+   "To introduce centrifugal force gradually",
+   "To make the road beautiful",
+   "To reduce speed",
+   "To save fuel"
+  ],
+  "a": 0,
+  "e_hi": "यह सीधे और घुमावदार पथ के बीच एक सहज संक्रमण प्रदान करता है।",
+  "e_en": "It provides a smooth transition between the straight and curved path."
+ },
+ {
+  "id": "rp-je_c-f00781",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "रेलवे में 'क्रीप' (Creep) का क्या अर्थ है?",
+  "q_en": "What does 'creep' mean in the context of railways?",
+  "o_hi": [
+   "पटरियों का अनुदैर्ध्य विस्थापन",
+   "पटरी का टूटना",
+   "ट्रेन का पटरी से उतरना",
+   "स्लीपर का सड़ना"
+  ],
+  "o_en": [
+   "Longitudinal displacement of rails",
+   "Breaking of rail",
+   "Derailment of train",
+   "Decay of sleeper"
+  ],
+  "a": 0,
+  "e_hi": "क्रीप पटरियों की दिशा में होने वाली धीमी गति है जो अक्सर ब्रेक लगाने या तापमान परिवर्तन के कारण होती है।",
+  "e_en": "Creep is the slow longitudinal movement of rails, often caused by braking or temperature changes."
+ },
+ {
+  "id": "rp-je_c-f00782",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क के 'स्टॉपिंग साइट डिस्टेंस' (SSD) को प्रभावित करने वाला कारक कौन सा है?",
+  "q_en": "Which factor affects the 'Stopping Sight Distance' (SSD) of a road?",
+  "o_hi": [
+   "वाहन की गति और प्रतिक्रिया समय",
+   "सड़क का रंग",
+   "सड़क के किनारे लगे पेड़",
+   "वाहन का वजन"
+  ],
+  "o_en": [
+   "Vehicle speed and reaction time",
+   "Color of the road",
+   "Trees along the road",
+   "Weight of the vehicle"
+  ],
+  "a": 0,
+  "e_hi": "SSD वाहन की गति, ड्राइवर के प्रतिक्रिया समय और घर्षण गुणांक पर निर्भर करता है।",
+  "e_en": "SSD depends on vehicle speed, driver reaction time, and the coefficient of friction."
+ },
+ {
+  "id": "rp-je_c-f00783",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "रेलवे ट्रैक में 'सुपर-एलिवेशन' (कैंट) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the main purpose of 'super-elevation' (cant) in a railway track?",
+  "o_hi": [
+   "वक्र पर पहियों के दबाव को समान करना",
+   "ट्रेन की गति बढ़ाना",
+   "पटरी को जंग से बचाना",
+   "ईंधन की खपत कम करना"
+  ],
+  "o_en": [
+   "To equalize wheel pressure on curves",
+   "To increase train speed",
+   "To prevent rail corrosion",
+   "To reduce fuel consumption"
+  ],
+  "a": 0,
+  "e_hi": "यह घुमाव पर ट्रेन के वजन को दोनों पटरियों पर समान रूप से वितरित करने में मदद करता है।",
+  "e_en": "It helps in distributing the weight of the train equally on both rails while on a curve."
+ },
+ {
+  "id": "rp-je_c-f00784",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क के निर्माण में 'कैम्बर' (Camber) प्रदान करने का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of providing 'Camber' in road construction?",
+  "o_hi": [
+   "सड़क की मजबूती बढ़ाना",
+   "जल निकासी (Drainage) सुनिश्चित करना",
+   "वाहनों की गति नियंत्रित करना",
+   "सामग्री की बचत करना"
+  ],
+  "o_en": [
+   "To increase road strength",
+   "To ensure proper drainage",
+   "To control vehicle speed",
+   "To save construction material"
+  ],
+  "a": 1,
+  "e_hi": "कैम्बर सड़क की सतह पर पानी को जमा होने से रोकने और उसे किनारों की ओर निकालने के लिए दिया जाता है।",
+  "e_en": "Camber is provided to prevent water stagnation on the road surface and to direct it towards the drains."
+ },
+ {
+  "id": "rp-je_c-f00785",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे ट्रैक में 'स्लीपर घनत्व' (Sleeper Density) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'Sleeper Density' in a railway track?",
+  "o_hi": [
+   "प्रति रेल लंबाई में स्लीपरों की संख्या",
+   "स्लीपरों का वजन",
+   "दो स्लीपरों के बीच की चौड़ाई",
+   "रेल की मोटाई"
+  ],
+  "o_en": [
+   "Number of sleepers per rail length",
+   "Weight of the sleepers",
+   "Width between two sleepers",
+   "Thickness of the rail"
+  ],
+  "a": 0,
+  "e_hi": "स्लीपर घनत्व को 'n+x' के रूप में व्यक्त किया जाता है, जहाँ 'n' रेल की लंबाई है और 'x' स्लीपरों की अतिरिक्त संख्या है।",
+  "e_en": "Sleeper density is expressed as 'n+x', where 'n' is the length of the rail and 'x' is the number of additional sleepers."
+ },
+ {
+  "id": "rp-je_c-f00786",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क संरेखण (Road Alignment) में 'हॉरिजॉन्टल कर्व' पर प्रदान की जाने वाली आंतरिक ढलान को क्या कहते हैं?",
+  "q_en": "What is the inward slope provided on a horizontal curve in road alignment called?",
+  "o_hi": [
+   "सुपर एलिवेशन",
+   "कैम्बर",
+   "ग्रेडिएंट",
+   "सब-ग्रेड"
+  ],
+  "o_en": [
+   "Super elevation",
+   "Camber",
+   "Gradient",
+   "Sub-grade"
+  ],
+  "a": 0,
+  "e_hi": "सुपर एलिवेशन वाहनों को मोड़ पर सुरक्षित रूप से मोड़ने के लिए अभिकेंद्र बल प्रदान करता है।",
+  "e_en": "Super elevation provides the necessary centripetal force for vehicles to negotiate a curve safely."
+ },
+ {
+  "id": "rp-je_c-f00787",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "फ्लेक्सिबल पेवमेंट (Flexible Pavement) में भार का वितरण किस प्रकार होता है?",
+  "q_en": "How is the load distributed in a flexible pavement?",
+  "o_hi": [
+   "कण-दर-कण संपर्क (Grain-to-grain contact)",
+   "स्लैब क्रिया द्वारा",
+   "केवल उप-ग्रेड द्वारा",
+   "वायु दबाव द्वारा"
+  ],
+  "o_en": [
+   "Grain-to-grain contact",
+   "Through slab action",
+   "By sub-grade only",
+   "By air pressure"
+  ],
+  "a": 0,
+  "e_hi": "फ्लेक्सिबल पेवमेंट में भार ऊपर की परतों से नीचे की परतों में अनाज के कणों के संपर्क के माध्यम से स्थानांतरित होता है।",
+  "e_en": "In flexible pavement, the load is transferred from upper layers to lower layers through grain-to-grain contact."
+ },
+ {
+  "id": "rp-je_c-f00788",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे में 'क्रीप' (Creep) का क्या तात्पर्य है?",
+  "q_en": "What is meant by 'Creep' in railway tracks?",
+  "o_hi": [
+   "रेल का घिस जाना",
+   "रेल का अनुदैर्ध्य विस्थापन (Longitudinal displacement)",
+   "स्लीपर का टूटना",
+   "गिट्टी का खिसकना"
+  ],
+  "o_en": [
+   "Wear of rail",
+   "Longitudinal displacement of rail",
+   "Breaking of sleeper",
+   "Ballast displacement"
+  ],
+  "a": 1,
+  "e_hi": "क्रीप रेल की दिशा में रेल का धीरे-धीरे आगे की ओर खिसकना है, जो मुख्य रूप से ब्रेक लगाने और तापमान परिवर्तन के कारण होता है।",
+  "e_en": "Creep is the longitudinal movement of the rail in the track, primarily caused by braking forces and temperature changes."
+ },
+ {
+  "id": "rp-je_c-f00789",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क के ज्यामितीय डिजाइन में 'स्टॉपिंग साइट डिस्टेंस' (SSD) किस पर निर्भर करती है?",
+  "q_en": "On what does the 'Stopping Sight Distance' (SSD) in road geometric design depend?",
+  "o_hi": [
+   "केवल वाहन की गति",
+   "वाहन की गति और प्रतिक्रिया समय",
+   "सड़क की चौड़ाई",
+   "पेवमेंट का प्रकार"
+  ],
+  "o_en": [
+   "Vehicle speed only",
+   "Vehicle speed and reaction time",
+   "Width of the road",
+   "Type of pavement"
+  ],
+  "a": 1,
+  "e_hi": "SSD वाहन की गति, ड्राइवर के प्रतिक्रिया समय और घर्षण गुणांक पर निर्भर करती है।",
+  "e_en": "SSD depends on the speed of the vehicle, the reaction time of the driver, and the coefficient of friction."
+ },
+ {
+  "id": "rp-je_c-f00790",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "किस प्रकार के जंक्शन में दो सड़कें एक ही स्तर पर मिलती हैं?",
+  "q_en": "Which type of junction involves two roads meeting at the same level?",
+  "o_hi": [
+   "ग्रेड सेपरेटेड जंक्शन",
+   "अतलीय जंक्शन (At-grade junction)",
+   "फ्लाईओवर",
+   "इंटरचेंज"
+  ],
+  "o_en": [
+   "Grade separated junction",
+   "At-grade junction",
+   "Flyover",
+   "Interchange"
+  ],
+  "a": 1,
+  "e_hi": "अतलीय (At-grade) जंक्शनों में यातायात का प्रवाह एक ही स्तर पर होता है, जैसे कि चौराहे।",
+  "e_en": "At-grade junctions are intersections where traffic flows meet at the same level, such as crossroads."
+ },
+ {
+  "id": "rp-je_c-f00791",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क के 'सब-ग्रेड' (Sub-grade) की गुणवत्ता की जांच के लिए कौन सा परीक्षण सबसे अधिक उपयोग किया जाता है?",
+  "q_en": "Which test is most commonly used to check the quality of road 'sub-grade'?",
+  "o_hi": [
+   "ब्रिनेल टेस्ट",
+   "कैलिफोर्निया बेयरिंग रेशियो (CBR) टेस्ट",
+   "संपीड़न परीक्षण",
+   "तन्यता परीक्षण"
+  ],
+  "o_en": [
+   "Brinell test",
+   "California Bearing Ratio (CBR) test",
+   "Compression test",
+   "Tensile test"
+  ],
+  "a": 1,
+  "e_hi": "CBR परीक्षण का उपयोग मिट्टी की बियरिंग क्षमता और सब-ग्रेड की मजबूती को मापने के लिए किया जाता है।",
+  "e_en": "The CBR test is used to measure the bearing capacity of soil and the strength of the sub-grade."
+ },
+ {
+  "id": "rp-je_c-f00792",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क के निर्माण में 'कैंबर' (Camber) प्रदान करने का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary objective of providing 'Camber' in road construction?",
+  "o_hi": [
+   "सड़क की सुंदरता बढ़ाना",
+   "जल निकासी (ड्रेनेज) की सुविधा",
+   "वाहन की गति नियंत्रित करना",
+   "घर्षण कम करना"
+  ],
+  "o_en": [
+   "To enhance road aesthetics",
+   "To facilitate drainage",
+   "To control vehicle speed",
+   "To reduce friction"
+  ],
+  "a": 1,
+  "e_hi": "कैंबर सड़क की सतह को केंद्र से ढलान देकर पानी को किनारों की ओर बहाने में मदद करता है।",
+  "e_en": "Camber provides a slope to the road surface from the center, which helps in draining water towards the sides."
+ },
+ {
+  "id": "rp-je_c-f00793",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "रेलवे ट्रैक में 'गेज' (Gauge) से आप क्या समझते हैं?",
+  "q_en": "What do you understand by 'Gauge' in a railway track?",
+  "o_hi": [
+   "दो रेल पटरियों के बीच की न्यूनतम दूरी",
+   "पटरियों की कुल लंबाई",
+   "स्लीपरों के बीच की दूरी",
+   "बैलास्ट की गहराई"
+  ],
+  "o_en": [
+   "Minimum distance between two rails",
+   "Total length of tracks",
+   "Distance between sleepers",
+   "Depth of ballast"
+  ],
+  "a": 0,
+  "e_hi": "रेलवे गेज दो समानांतर पटरियों के आंतरिक किनारों के बीच की स्पष्ट लंबवत दूरी है।",
+  "e_en": "Railway gauge is the clear minimum perpendicular distance between the inner faces of two parallel rails."
+ },
+ {
+  "id": "rp-je_c-f00794",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क इंजीनियरिंग में 'सुपर-एलिवेशन' (Super-elevation) का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is 'Super-elevation' used in road engineering?",
+  "o_hi": [
+   "सड़क की चौड़ाई बढ़ाने के लिए",
+   "वाहन को मोड़ पर स्थिरता देने के लिए",
+   "सड़क पर घर्षण बढ़ाने के लिए",
+   "निर्माण लागत कम करने के लिए"
+  ],
+  "o_en": [
+   "To increase road width",
+   "To provide stability to vehicles on curves",
+   "To increase friction on road",
+   "To reduce construction cost"
+  ],
+  "a": 1,
+  "e_hi": "मोड़ पर अपकेंद्री बल (centrifugal force) को संतुलित करने के लिए बाहरी किनारे को उठाया जाता है।",
+  "e_en": "The outer edge is raised to counteract the centrifugal force acting on a vehicle while taking a curve."
+ },
+ {
+  "id": "rp-je_c-f00795",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे स्लीपरों के बीच की दूरी को क्या कहा जाता है?",
+  "q_en": "What is the distance between railway sleepers called?",
+  "o_hi": [
+   "स्लीपर घनत्व (Sleeper Density)",
+   "गेज",
+   "ट्रैक गेप",
+   "रेल पिच"
+  ],
+  "o_en": [
+   "Sleeper Density",
+   "Gauge",
+   "Track Gap",
+   "Rail Pitch"
+  ],
+  "a": 0,
+  "e_hi": "स्लीपर घनत्व एक रेल की लंबाई में उपयोग किए जाने वाले स्लीपरों की संख्या को दर्शाता है।",
+  "e_en": "Sleeper density refers to the number of sleepers used per rail length."
+ },
+ {
+  "id": "rp-je_c-f00796",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क की सतह की समतलता (Evenness) मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+  "q_en": "Which instrument is used to measure the evenness of a road surface?",
+  "o_hi": [
+   "थियोडोलाइट",
+   "बंप इंटीग्रेटर (Bump Integrator)",
+   "प्लेनिमीटर",
+   "पेंटाग्राफ"
+  ],
+  "o_en": [
+   "Theodolite",
+   "Bump Integrator",
+   "Planimeter",
+   "Pantograph"
+  ],
+  "a": 1,
+  "e_hi": "बंप इंटीग्रेटर सड़क की सतह की अनियमितताओं को मापता है और इसे 'सड़क खुरदरापन सूचकांक' में व्यक्त करता है।",
+  "e_en": "A Bump Integrator measures road surface irregularities and expresses them in the 'Road Roughness Index'."
+ },
+ {
+  "id": "rp-je_c-f00797",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे ट्रैक में 'बैलास्ट' (Ballast) का सबसे महत्वपूर्ण कार्य क्या है?",
+  "q_en": "What is the most important function of 'Ballast' in a railway track?",
+  "o_hi": [
+   "सौंदर्य बढ़ाना",
+   "भार को स्लीपर से सबग्रेड तक वितरित करना",
+   "पटरियों को पेंट करना",
+   "घास उगने से रोकना"
+  ],
+  "o_en": [
+   "To enhance aesthetics",
+   "To distribute load from sleepers to subgrade",
+   "To paint rails",
+   "To prevent grass growth"
+  ],
+  "a": 1,
+  "e_hi": "बैलास्ट भार को समान रूप से वितरित करता है और ट्रैक को स्थिरता एवं जल निकासी प्रदान करता है।",
+  "e_en": "Ballast distributes the load evenly and provides stability and drainage to the railway track."
+ },
+ {
+  "id": "rp-je_c-f00798",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क के 'स्टॉपिंग साइट डिस्टेंस' (Stopping Sight Distance) की गणना किस कारक पर निर्भर करती है?",
+  "q_en": "On which factor does the calculation of 'Stopping Sight Distance' (SSD) in roads depend?",
+  "o_hi": [
+   "केवल वाहन की गति",
+   "वाहन की गति और प्रतिक्रिया समय",
+   "सड़क की चौड़ाई",
+   "पेड़ों की संख्या"
+  ],
+  "o_en": [
+   "Only vehicle speed",
+   "Vehicle speed and reaction time",
+   "Road width",
+   "Number of trees"
+  ],
+  "a": 1,
+  "e_hi": "SSD वाहन की गति, ड्राइवर के प्रतिक्रिया समय और घर्षण गुणांक पर निर्भर करती है।",
+  "e_en": "SSD depends on the vehicle speed, driver's reaction time, and the coefficient of friction."
+ },
+ {
+  "id": "rp-je_c-f00799",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे में 'क्रीप' (Creep) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'Creep' in railways?",
+  "o_hi": [
+   "रेल का मुड़ना",
+   "पटरियों का अनुदैर्ध्य विस्थापन (Longitudinal displacement)",
+   "स्लीपर का टूटना",
+   "बैलास्ट का ढीला होना"
+  ],
+  "o_en": [
+   "Bending of rail",
+   "Longitudinal displacement of rails",
+   "Breaking of sleeper",
+   "Loosening of ballast"
+  ],
+  "a": 1,
+  "e_hi": "क्रीप रेल की दिशा में पटरियों का धीरे-धीरे आगे की ओर खिसकना है।",
+  "e_en": "Creep is the gradual longitudinal movement or displacement of the rails in the direction of traffic."
+ },
+ {
+  "id": "rp-je_c-f00800",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "जब सड़क पर वाहनों की गति बढ़ाई जाती है, तो 'सुपर-एलिवेशन' की आवश्यकता क्यों होती है?",
+  "q_en": "Why is 'super-elevation' required when the speed of vehicles on a curve is increased?",
+  "o_hi": [
+   "घर्षण कम करने के लिए",
+   "अपकेंद्री बल को संतुलित करने के लिए",
+   "ब्रेकिंग दूरी बढ़ाने के लिए",
+   "ईंधन खपत घटाने के लिए"
+  ],
+  "o_en": [
+   "To reduce friction",
+   "To counteract centrifugal force",
+   "To increase braking distance",
+   "To reduce fuel consumption"
+  ],
+  "a": 1,
+  "e_hi": "मोड़ पर अधिक गति के कारण उत्पन्न अपकेंद्री बल को संतुलित करने के लिए सड़क के बाहरी किनारे को उठाया जाता है।",
+  "e_en": "The outer edge of the road is raised to counteract the centrifugal force generated by high speed on a curve."
+ },
+ {
+  "id": "rp-je_c-f00801",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "रेलवे ट्रैक में 'क्रीप' (Creep) उत्पन्न होने का सबसे संभावित कारण क्या है?",
+  "q_en": "What is the most likely cause of 'creep' in railway tracks?",
+  "o_hi": [
+   "तापमान में परिवर्तन",
+   "ब्रेक लगाने और शुरू करने के कारण अनुदैर्ध्य बल",
+   "स्लीपरों की अधिक संख्या",
+   "बैलास्ट की अधिक गहराई"
+  ],
+  "o_en": [
+   "Temperature variations",
+   "Longitudinal forces due to braking and starting",
+   "Excessive number of sleepers",
+   "Excessive ballast depth"
+  ],
+  "a": 1,
+  "e_hi": "ट्रेन के रुकने या चलने के दौरान लगने वाले अनुदैर्ध्य बल पटरियों को आगे की ओर धकेलते हैं, जिसे क्रीप कहते हैं।",
+  "e_en": "Longitudinal forces applied during train acceleration and braking push the rails forward, a phenomenon known as creep."
+ },
+ {
+  "id": "rp-je_c-f00802",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क निर्माण में 'बिटुमेन' का उपयोग करने का मुख्य कारण क्या है?",
+  "q_en": "What is the primary reason for using 'bitumen' in road construction?",
+  "o_hi": [
+   "यह सस्ता होता है",
+   "यह जल-रोधी और चिपकने वाला होता है",
+   "यह सड़क को सफेद रंग देता है",
+   "यह कंक्रीट को मजबूत बनाता है"
+  ],
+  "o_en": [
+   "It is inexpensive",
+   "It is waterproof and adhesive",
+   "It gives the road a white color",
+   "It strengthens the concrete"
+  ],
+  "a": 1,
+  "e_hi": "बिटुमेन एक उत्कृष्ट बाइंडर है जो जल-रोधी गुण प्रदान करता है और समुच्चय (aggregates) को एक साथ पकड़ता है।",
+  "e_en": "Bitumen acts as an excellent binder that provides waterproofing properties and holds the aggregates together."
+ },
+ {
+  "id": "rp-je_c-f00803",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "यदि सड़क की सतह पर घर्षण गुणांक (coefficient of friction) कम हो जाए, तो क्या प्रभाव पड़ेगा?",
+  "q_en": "What will be the effect if the coefficient of friction on a road surface decreases?",
+  "o_hi": [
+   "ब्रेकिंग दूरी बढ़ जाएगी",
+   "वाहन की गति बढ़ जाएगी",
+   "सड़क की उम्र बढ़ जाएगी",
+   "ईंधन की खपत कम हो जाएगी"
+  ],
+  "o_en": [
+   "Braking distance will increase",
+   "Vehicle speed will increase",
+   "Road life will increase",
+   "Fuel consumption will decrease"
+  ],
+  "a": 0,
+  "e_hi": "घर्षण कम होने से पहियों और सड़क के बीच पकड़ कम हो जाती है, जिससे वाहन को रुकने में अधिक दूरी लगती है।",
+  "e_en": "Lower friction reduces the grip between tires and the road, requiring a longer distance for the vehicle to stop."
+ },
+ {
+  "id": "rp-je_c-f00804",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "रेलवे लाइन में 'बैलास्ट' (Ballast) का मुख्य कार्य क्या है?",
+  "q_en": "What is the main function of 'ballast' in a railway line?",
+  "o_hi": [
+   "पटरियों को सजाना",
+   "भार को समान रूप से वितरित करना और जल निकासी",
+   "ट्रेन की गति बढ़ाना",
+   "पटरियों को गर्म रखना"
+  ],
+  "o_en": [
+   "To decorate the tracks",
+   "To distribute load uniformly and provide drainage",
+   "To increase train speed",
+   "To keep tracks warm"
+  ],
+  "a": 1,
+  "e_hi": "बैलास्ट भार को स्लीपरों से मिट्टी (सबग्रेड) पर स्थानांतरित करता है और ट्रैक के नीचे पानी को जमा होने से रोकता है।",
+  "e_en": "Ballast transfers the load from sleepers to the subgrade and prevents water accumulation under the track."
+ },
+ {
+  "id": "rp-je_c-f00805",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "एक सड़क के घुमावदार मोड़ पर 'एक्स्ट्रा वाइडनिंग' (Extra Widening) क्यों प्रदान की जाती है?",
+  "q_en": "Why is 'extra widening' provided on a horizontal curve of a road?",
+  "o_hi": [
+   "सड़क को सुंदर बनाने के लिए",
+   "पीछे के पहियों के 'ऑफ-ट्रैकिंग' प्रभाव को समायोजित करने के लिए",
+   "निर्माण सामग्री बचाने के लिए",
+   "यातायात की गति को कम करने के लिए"
+  ],
+  "o_en": [
+   "To make the road aesthetic",
+   "To accommodate the 'off-tracking' effect of rear wheels",
+   "To save construction material",
+   "To reduce traffic speed"
+  ],
+  "a": 1,
+  "e_hi": "मोड़ पर मुड़ते समय पीछे के पहिए सामने के पहियों के पथ का अनुसरण नहीं करते, जिसे समायोजित करने के लिए चौड़ाई बढ़ाई जाती है।",
+  "e_en": "During turning, the rear wheels do not follow the same path as the front wheels; extra width accommodates this off-tracking."
+ },
+ {
+  "id": "rp-je_c-f00806",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "सड़क डिजाइन में 'स्टॉपिंग साइट डिस्टेंस' (SSD) किस कारक पर निर्भर करता है?",
+  "q_en": "Which factor determines the 'Stopping Sight Distance' (SSD) in road design?",
+  "o_hi": [
+   "वाहन का रंग",
+   "चालक की प्रतिक्रिया समय और घर्षण",
+   "सड़क के किनारे लगे पेड़",
+   "सड़क पर वाहनों की संख्या"
+  ],
+  "o_en": [
+   "Color of the vehicle",
+   "Driver reaction time and friction",
+   "Trees along the road",
+   "Number of vehicles on the road"
+  ],
+  "a": 1,
+  "e_hi": "SSD चालक द्वारा खतरे को देखने और ब्रेक लगाने के बीच के समय और वाहन को रोकने के लिए आवश्यक दूरी का योग है।",
+  "e_en": "SSD is the sum of the distance traveled during the driver's reaction time and the distance required to brake the vehicle to a stop."
+ },
+ {
+  "id": "rp-je_c-f00807",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "सड़क पर 'ट्रैफिक साइन' (Traffic Signs) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of 'traffic signs' on a road?",
+  "o_hi": [
+   "सड़क को सजाना",
+   "वाहन चालकों को चेतावनी देना और मार्गदर्शन करना",
+   "सड़क निर्माण की लागत बताना",
+   "वाहन की गति को नियंत्रित करना"
+  ],
+  "o_en": [
+   "To decorate the road",
+   "To warn and guide drivers",
+   "To state road construction costs",
+   "To control vehicle speed"
+  ],
+  "a": 1,
+  "e_hi": "ट्रैफिक साइन सड़क सुरक्षा को बढ़ावा देने और चालकों को आगे की स्थिति के बारे में जानकारी देने के लिए लगाए जाते हैं।",
+  "e_en": "Traffic signs are installed to promote road safety and provide information to drivers about upcoming conditions."
+ },
+ {
+  "id": "rp-je_c-f00808",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "भारत में नागपुर सड़क विकास योजना (1943-1961) का मुख्य उद्देश्य क्या था?",
+  "q_en": "What was the primary objective of the Nagpur Road Development Plan (1943-1961) in India?",
+  "o_hi": [
+   "सड़कों की कुल लंबाई को दोगुना करना",
+   "सड़क घनत्व में सुधार करना",
+   "राष्ट्रीय राजमार्गों का जाल बिछाना",
+   "ग्रामीण सड़कों का विकास करना"
+  ],
+  "o_en": [
+   "To double the total length of roads",
+   "To improve road density",
+   "To establish a network of National Highways",
+   "To develop rural roads"
+  ],
+  "a": 1,
+  "e_hi": "नागपुर योजना का लक्ष्य भारत में सड़क घनत्व को 16 किलोमीटर प्रति 100 वर्ग किलोमीटर तक बढ़ाना था।",
+  "e_en": "The Nagpur Plan aimed to increase the road density in India to 16 km per 100 square kilometers."
+ },
+ {
+  "id": "rp-je_c-f00809",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "बॉम्बे (अब मुंबई) और ठाणे के बीच भारत की पहली यात्री ट्रेन किस वर्ष चली थी?",
+  "q_en": "In which year did India's first passenger train run between Bombay (now Mumbai) and Thane?",
+  "o_hi": [
+   "1850",
+   "1853",
+   "1857",
+   "1860"
+  ],
+  "o_en": [
+   "1850",
+   "1853",
+   "1857",
+   "1860"
+  ],
+  "a": 1,
+  "e_hi": "भारत की पहली यात्री ट्रेन 16 अप्रैल 1853 को मुंबई और ठाणे के बीच चली थी।",
+  "e_en": "India's first passenger train ran between Mumbai and Thane on April 16, 1853."
+ },
+ {
+  "id": "rp-je_c-f00810",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 3,
+  "q_hi": "सड़क विकास की बॉम्बे योजना (1961-1981) का मुख्य जोर किस पर था?",
+  "q_en": "What was the main emphasis of the Bombay Plan (1961-1981) for road development?",
+  "o_hi": [
+   "राष्ट्रीय राजमार्गों का विस्तार",
+   "ग्रामीण सड़कों का निर्माण",
+   "सड़क घनत्व को 32 किमी प्रति 100 वर्ग किमी तक बढ़ाना",
+   "सड़कों का निजीकरण"
+  ],
+  "o_en": [
+   "Expansion of National Highways",
+   "Construction of rural roads",
+   "Increasing road density to 32 km per 100 sq km",
+   "Privatization of roads"
+  ],
+  "a": 2,
+  "e_hi": "बॉम्बे योजना का लक्ष्य भारत में सड़क घनत्व को 32 किलोमीटर प्रति 100 वर्ग किलोमीटर तक पहुंचाना था।",
+  "e_en": "The Bombay Plan aimed to increase the road density in India to 32 kilometers per 100 square kilometers."
+ },
+ {
+  "id": "rp-je_c-f00811",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "भारतीय राष्ट्रीय राजमार्ग प्राधिकरण (NHAI) की स्थापना किस अधिनियम के तहत हुई थी?",
+  "q_en": "Under which act was the National Highways Authority of India (NHAI) established?",
+  "o_hi": [
+   "NHAI अधिनियम 1988",
+   "सड़क परिवहन अधिनियम 1956",
+   "राष्ट्रीय राजमार्ग अधिनियम 1956",
+   "भारत सरकार अधिनियम 1991"
+  ],
+  "o_en": [
+   "NHAI Act 1988",
+   "Road Transport Act 1956",
+   "National Highways Act 1956",
+   "Government of India Act 1991"
+  ],
+  "a": 0,
+  "e_hi": "NHAI की स्थापना 1988 के संसद के एक अधिनियम द्वारा की गई थी और यह 1995 में पूर्णतः कार्यात्मक बनी।",
+  "e_en": "NHAI was established by an Act of Parliament in 1988 and became fully operational in 1995."
+ },
+ {
+  "id": "rp-je_c-f00812",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 2,
+  "q_hi": "किस भारतीय इंजीनियर को 'आधुनिक भारत के सिविल इंजीनियरिंग का जनक' माना जाता है?",
+  "q_en": "Which Indian engineer is considered the 'Father of Civil Engineering in modern India'?",
+  "o_hi": [
+   "सर एम. विश्वेश्वरैया",
+   "ई. श्रीधरन",
+   "सतीश धवन",
+   "विक्रम साराभाई"
+  ],
+  "o_en": [
+   "Sir M. Visvesvaraya",
+   "E. Sreedharan",
+   "Satish Dhawan",
+   "Vikram Sarabhai"
+  ],
+  "a": 0,
+  "e_hi": "सर एम. विश्वेश्वरैया एक महान इंजीनियर थे और उनके जन्मदिन (15 सितंबर) को भारत में 'अभियंता दिवस' के रूप में मनाया जाता है।",
+  "e_en": "Sir M. Visvesvaraya was a legendary engineer, and his birthday (September 15) is celebrated as 'Engineers' Day' in India."
+ },
+ {
+  "id": "rp-je_c-f00813",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "स्वर्णिम चतुर्भुज (Golden Quadrilateral) परियोजना का उद्देश्य किन शहरों को जोड़ना है?",
+  "q_en": "The Golden Quadrilateral project aims to connect which cities?",
+  "o_hi": [
+   "दिल्ली, मुंबई, चेन्नई और कोलकाता",
+   "मुंबई, बेंगलुरु, हैदराबाद और पुणे",
+   "दिल्ली, जयपुर, अहमदाबाद और मुंबई",
+   "कोलकाता, भुवनेश्वर, विशाखापत्तनम और चेन्नई"
+  ],
+  "o_en": [
+   "Delhi, Mumbai, Chennai, and Kolkata",
+   "Mumbai, Bengaluru, Hyderabad, and Pune",
+   "Delhi, Jaipur, Ahmedabad, and Mumbai",
+   "Kolkata, Bhubaneswar, Visakhapatnam, and Chennai"
+  ],
+  "a": 0,
+  "e_hi": "स्वर्णिम चतुर्भुज परियोजना भारत के चार प्रमुख महानगरीय शहरों दिल्ली, मुंबई, चेन्नई और कोलकाता को जोड़ती है।",
+  "e_en": "The Golden Quadrilateral project connects India's four major metropolitan cities: Delhi, Mumbai, Chennai, and Kolkata."
+ },
+ {
+  "id": "rp-je_c-f00814",
+  "s": "je_civil",
+  "t": "transportation_engineering",
+  "d": 1,
+  "q_hi": "रेलवे के 'गेज' (Gauge) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'Gauge' in railways?",
+  "o_hi": [
+   "दो पटरियों के बीच की न्यूनतम दूरी",
+   "रेलवे ट्रैक की कुल लंबाई",
+   "इंजन की शक्ति",
+   "सिग्नलिंग प्रणाली का प्रकार"
+  ],
+  "o_en": [
+   "The minimum distance between two rails",
+   "The total length of the railway track",
+   "Power of the engine",
+   "Type of signaling system"
+  ],
+  "a": 0,
+  "e_hi": "रेलवे में गेज का अर्थ दो पटरियों के आंतरिक किनारों के बीच की स्पष्ट दूरी है।",
+  "e_en": "In railways, gauge refers to the clear distance between the inner edges of the two rails."
  }
 ]
