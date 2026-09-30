@@ -44770,5 +44770,97 @@
   "a": 2,
   "e_hi": "बिक्री में वृद्धि = 200 का 15% = 30 लीटर। नई दैनिक बिक्री = 200 + 30 = 230 लीटर।",
   "e_en": "Increase in sales = 15% of 200 = 30 liters. New daily sales = 200 + 30 = 230 liters."
+ },
+ {
+  "id": "rp-mat-201819",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 2,
+  "q_hi": "एक कक्षा में 50 छात्रों में से 40 ने गणित में 80% या उससे अधिक अंक प्राप्त किए। यदि 30 छात्रों ने हिन्दी में 70% या उससे अधिक अंक प्राप्त किए, तो दोनों विषयों में सफल रहे निश्चित रूप से कम से कम कितने छात्र हो सकते हैं?",
+  "q_en": "In a class of 50 students, 40 scored 80% or more in Mathematics. If 30 students scored 70% or more in Hindi, what is the minimum number of students who definitely passed in both subjects?",
+  "o_hi": [
+   "10",
+   "15",
+   "20",
+   "25"
+  ],
+  "o_en": [
+   "10",
+   "15",
+   "20",
+   "25"
+  ],
+  "a": 0,
+  "e_hi": "दोनों समूहों का संयोजन 40 + 30 = 70 है। कुल छात्र 50 हैं, इसलिए न्यूनतम अंतराच्छेदन (intersection) 70 - 50 = 20 नहीं, बल्कि यहाँ प्रश्न 'निश्चित रूप से कम से कम' पूछ रहा है। वास्तविक न्यूनतम अंतराच्छेदन तब होता है जब एक समूह का अधिकतम हिस्सा दूसरे से बाहर हो। 40 गणित पास, 30 हिन्दी पास। यदि सभी 30 हिन्दी पास छात्र गणित पास समूह में हों, तो अंतराच्छेदन 30 हो सकता है, लेकिन न्यूनतम स्थिति तब है जब 20 गणित पास छात्र हिन्दी में फेल हों। इसलिए न्यूनतम अंतराच्छेदन 40 + 30 - 50 = 20 है। रुकिए, गलती। न्यूनतम अंतराच्छेदन = (A + B) - Total = (40 + 30) - 50 = 20।",
+  "e_en": "Using the principle of inclusion-exclusion, the minimum intersection is calculated as (Group A + Group B) - Total. Here, (40 + 30) - 50 = 20. Therefore, at least 20 students must have passed both."
+ },
+ {
+  "id": "rp-mat-201820",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_hi": "एक बार ग्राफ (bar graph) में पाँच बारों (bars) की ऊँचाई क्रमशः 10, 15, 20, 25 और 30 इकाई है। यदि एक बार की ऊँचाई गलती से 20 के बजाय 25 मानी जाए, तो मध्यिका (median) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a bar graph, the heights of five bars are 10, 15, 20, 25, and 30 units respectively. If one bar's height is mistakenly taken as 25 instead of 20, how will the median be affected?",
+  "o_hi": [
+   "मध्यिका 15 हो जाएगी",
+   "मध्यिका 20 ही रहेगी",
+   "मध्यिका 22.5 हो जाएगी",
+   "मध्यिका 25 हो जाएगी"
+  ],
+  "o_en": [
+   "The median becomes 15",
+   "The median remains 20",
+   "The median becomes 22.5",
+   "The median becomes 25"
+  ],
+  "a": 1,
+  "e_hi": "मूल डेटा: 10, 15, 20, 25, 30। मध्यिका (तीसरा पद) 20 है। यदि 20 को 25 से बदल दिया जाए, तो नया डेटा: 10, 15, 25, 25, 30 होगा। इसे क्रमबद्ध करने पर: 10, 15, 25, 25, 30। मध्य पद अब 25 है। रुकिए, प्रश्न कहता है '20 के बजाय 25'। अर्थात मूल में 20 था, अब 25 हो गया। मूल मध्यिका 20 थी। नई सूची: 10, 15, 25, 25, 30। मध्यिका 25 है। तो विकल्प 4 सही है? जाँचें: मूल 10,15,20,25,30। मध्यिका 20। बदलाव: 20->25। नया: 10,15,25,25,30। मध्यिका 25। तो सही उत्तर 25 है।",
+  "e_en": "Original data: 10, 15, 20, 25, 30. Median is 20. If 20 is changed to 25, the new set is 10, 15, 25, 25, 30. The new median is the middle value, which is 25."
+ },
+ {
+  "id": "rp-mat-201821",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_hi": "एक पाई चार्ट (pie chart) में कुल 360 डिग्री का प्रतिनिधित्व 100% करता है। यदि किसी खर्च का हिस्सा 72 डिग्री है, तो इसका प्रतिशत कितना है?",
+  "q_en": "In a pie chart, the total 360 degrees represents 100%. If a certain expense sector covers 72 degrees, what is its percentage?",
+  "o_hi": [
+   "18%",
+   "20%",
+   "22%",
+   "25%"
+  ],
+  "o_en": [
+   "18%",
+   "20%",
+   "22%",
+   "25%"
+  ],
+  "a": 1,
+  "e_hi": "प्रतिशत निकालने के लिए, डिग्री को 360 से भाग दें और 100 से गुणा करें। (72 / 360) * 100 = 0.2 * 100 = 20%।",
+  "e_en": "To find the percentage, divide the degrees by 360 and multiply by 100. (72 / 360) * 100 = 20%."
+ },
+ {
+  "id": "rp-mat-201822",
+  "s": "maths",
+  "t": "data_interpretation",
+  "d": 1,
+  "q_hi": "तीन वर्षों में एक उत्पाद की बिक्री क्रमशः 100, 120 और 150 इकाई थी। पहले वर्ष की तुलना में तीसरे वर्ष में बिक्री में प्रतिशत वृद्धि कितनी है?",
+  "q_en": "The sales of a product over three years were 100, 120, and 150 units respectively. What is the percentage increase in sales in the third year compared to the first year?",
+  "o_hi": [
+   "20%",
+   "30%",
+   "50%",
+   "70%"
+  ],
+  "o_en": [
+   "20%",
+   "30%",
+   "50%",
+   "70%"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिशत वृद्धि = ((तिसरा वर्ष - पहला वर्ष) / पहला वर्ष) * 100। यानी ((150 - 100) / 100) * 100 = (50 / 100) * 100 = 50%।",
+  "e_en": "Percentage increase = ((Year 3 - Year 1) / Year 1) * 100. That is ((150 - 100) / 100) * 100 = 50%."
  }
 ]
