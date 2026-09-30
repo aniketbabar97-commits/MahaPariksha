@@ -123,7 +123,7 @@ def main():
                 append_flag(sid, {"id": q["id"], "t": q["t"], "q_en": q["q_en"],
                                    "problem": result.get("problem", "")})
                 print(f"FLAGGED {q['id']}: {result.get('problem', '')}", flush=True)
-            if checked_this_run % 20 == 0:
+            if checked_this_run % 5 == 0:
                 save_state(sid, checked)
                 print(f"progress: {sid} {checked_this_run} checked this run, {flagged} flagged total", flush=True)
             time.sleep(1.5 if args.provider == "groq" else 2.0)
