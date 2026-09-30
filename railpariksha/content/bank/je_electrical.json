@@ -20284,5 +20284,3294 @@
   "a": 2,
   "e_hi": "यूनिवर्सल मोटर को एसी और डीसी दोनों आपूर्ति पर संचालित किया जा सकता है, इसलिए इसे 'यूनिवर्सल' कहा जाता है।",
   "e_en": "A universal motor can be operated on both AC and DC supplies, which is why it is called 'universal'."
+ },
+ {
+  "id": "rp-je_e-f00883",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक डीसी जनरेटर में प्रेरित ईएमएफ (EMF) की गणना के लिए कौन सा सूत्र सही है?",
+  "q_en": "Which formula is correct for calculating the induced EMF in a DC generator?",
+  "o_hi": [
+   "E = (PΦNZ) / (60A)",
+   "E = (PΦNA) / (60Z)",
+   "E = (60A) / (PΦNZ)",
+   "E = (PΦZ) / (60N)"
+  ],
+  "o_en": [
+   "E = (PΦNZ) / (60A)",
+   "E = (PΦNA) / (60A)",
+   "E = (60A) / (PΦNZ)",
+   "E = (PΦZ) / (60N)"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर के लिए प्रेरित ईएमएफ का मानक सूत्र E = (PΦNZ) / (60A) है, जहाँ P ध्रुवों की संख्या है और A समांतर पथों की संख्या है।",
+  "e_en": "The standard formula for induced EMF in a DC generator is E = (PΦNZ) / (60A), where P is the number of poles and A is the number of parallel paths."
+ },
+ {
+  "id": "rp-je_e-f00884",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 4-पोल वाले डीसी मशीन में, यदि आर्मेचर लैप वाइंडिंग है, तो समांतर पथों (A) की संख्या कितनी होगी?",
+  "q_en": "In a 4-pole DC machine, if the armature is lap-wound, what will be the number of parallel paths (A)?",
+  "o_hi": [
+   "2",
+   "4",
+   "6",
+   "8"
+  ],
+  "o_en": [
+   "2",
+   "4",
+   "6",
+   "8"
+  ],
+  "a": 1,
+  "e_hi": "लैप वाइंडिंग के लिए, समांतर पथों की संख्या (A) ध्रुवों की संख्या (P) के बराबर होती है।",
+  "e_en": "For lap winding, the number of parallel paths (A) is equal to the number of poles (P)."
+ },
+ {
+  "id": "rp-je_e-f00885",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर के वोल्टेज अनुपात (K) का सही सूत्र क्या है?",
+  "q_en": "What is the correct formula for the voltage transformation ratio (K) of a transformer?",
+  "o_hi": [
+   "K = V2/V1 = N2/N1",
+   "K = V1/V2 = N1/N2",
+   "K = V2/V1 = N1/N2",
+   "K = V1/V2 = N2/N1"
+  ],
+  "o_en": [
+   "K = V2/V1 = N2/N1",
+   "K = V1/V2 = N1/N2",
+   "K = V2/V1 = N1/N2",
+   "K = V1/V2 = N2/N1"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफार्मर अनुपात K को द्वितीयक वोल्टेज और प्राथमिक वोल्टेज के अनुपात के रूप में परिभाषित किया गया है, जो घुमावों के अनुपात के बराबर होता है।",
+  "e_en": "The transformer ratio K is defined as the ratio of secondary voltage to primary voltage, which equals the turns ratio."
+ },
+ {
+  "id": "rp-je_e-f00886",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 50 हर्ट्ज (Hz) ट्रांसफार्मर में, यदि ध्रुवों की संख्या 4 है, तो सिंक्रोनस गति (Ns) क्या होगी?",
+  "q_en": "In a 50 Hz transformer, if the number of poles is 4, what will be the synchronous speed (Ns)?",
+  "o_hi": [
+   "1000 आरपीएम",
+   "1500 आरपीएम",
+   "3000 आरपीएम",
+   "750 आरपीएम"
+  ],
+  "o_en": [
+   "1000 RPM",
+   "1500 RPM",
+   "3000 RPM",
+   "750 RPM"
+  ],
+  "a": 1,
+  "e_hi": "सिंक्रोनस गति का सूत्र Ns = (120 * f) / P है। यहाँ Ns = (120 * 50) / 4 = 1500 आरपीएम।",
+  "e_en": "The formula for synchronous speed is Ns = (120 * f) / P. Here, Ns = (120 * 50) / 4 = 1500 RPM."
+ },
+ {
+  "id": "rp-je_e-f00887",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "इंडक्शन मोटर की स्लिप (s) की गणना का सही सूत्र क्या है?",
+  "q_en": "What is the correct formula for calculating the slip (s) of an induction motor?",
+  "o_hi": [
+   "s = (Ns - Nr) / Ns",
+   "s = (Nr - Ns) / Ns",
+   "s = (Ns - Nr) / Nr",
+   "s = Ns / (Ns - Nr)"
+  ],
+  "o_en": [
+   "s = (Ns - Nr) / Ns",
+   "s = (Nr - Ns) / Ns",
+   "s = (Ns - Nr) / Nr",
+   "s = Ns / (Ns - Nr)"
+  ],
+  "a": 0,
+  "e_hi": "स्लिप सिंक्रोनस गति (Ns) और रोटर गति (Nr) के बीच का अंतर है, जिसे सिंक्रोनस गति के अनुपात में व्यक्त किया जाता है।",
+  "e_en": "Slip is the difference between synchronous speed (Ns) and rotor speed (Nr), expressed as a ratio of synchronous speed."
+ },
+ {
+  "id": "rp-je_e-f00888",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफार्मर में अधिकतम दक्षता (Efficiency) के लिए शर्त क्या है?",
+  "q_en": "What is the condition for maximum efficiency in a transformer?",
+  "o_hi": [
+   "कॉपर लॉस = आयरन लॉस",
+   "कॉपर लॉस = 2 * आयरन लॉस",
+   "आयरन लॉस = 2 * कॉपर लॉस",
+   "कॉपर लॉस = 0"
+  ],
+  "o_en": [
+   "Copper loss = Iron loss",
+   "Copper loss = 2 * Iron loss",
+   "Iron loss = 2 * Copper loss",
+   "Copper loss = 0"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफार्मर की दक्षता तब अधिकतम होती है जब परिवर्तनीय हानि (कॉपर लॉस) स्थिर हानि (आयरन लॉस) के बराबर होती है।",
+  "e_en": "Transformer efficiency is maximum when the variable loss (copper loss) equals the constant loss (iron loss)."
+ },
+ {
+  "id": "rp-je_e-f00889",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "यदि एक 3-फेज प्रेरण मोटर की आवृत्ति 50 हर्ट्ज है और स्लिप 0.04 है, तो रोटर आवृत्ति (fr) क्या होगी?",
+  "q_en": "If a 3-phase induction motor has a frequency of 50 Hz and a slip of 0.04, what will be the rotor frequency (fr)?",
+  "o_hi": [
+   "2 हर्ट्ज",
+   "5 हर्ट्ज",
+   "1 हर्ट्ज",
+   "0.5 हर्ट्ज"
+  ],
+  "o_en": [
+   "2 Hz",
+   "5 Hz",
+   "1 Hz",
+   "0.5 Hz"
+  ],
+  "a": 0,
+  "e_hi": "रोटर आवृत्ति का सूत्र fr = s * f है। यहाँ, 0.04 * 50 = 2 हर्ट्ज।",
+  "e_en": "The formula for rotor frequency is fr = s * f. Here, 0.04 * 50 = 2 Hz."
+ },
+ {
+  "id": "rp-je_e-f00890",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी मशीन में आर्मेचर टॉर्क (Ta) किसके समानुपाती होता है?",
+  "q_en": "Armature torque (Ta) in a DC machine is proportional to?",
+  "o_hi": [
+   "Φ और Ia",
+   "Φ और N",
+   "Ia और N",
+   "1/Φ और Ia"
+  ],
+  "o_en": [
+   "Φ and Ia",
+   "Φ and N",
+   "Ia and N",
+   "1/Φ and Ia"
+  ],
+  "a": 0,
+  "e_hi": "टॉर्क का समीकरण Ta = (P * Φ * Z * Ia) / (2 * π * A) है, अतः टॉर्क फ्लक्स (Φ) और आर्मेचर करंट (Ia) के गुणनफल के समानुपाती होता है।",
+  "e_en": "The torque equation is Ta = (P * Φ * Z * Ia) / (2 * π * A), so torque is proportional to the product of flux (Φ) and armature current (Ia)."
+ },
+ {
+  "id": "rp-je_e-f00891",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 200V/100V, 50Hz ट्रांसफार्मर में, यदि प्राथमिक घुमाव 400 हैं, तो द्वितीयक घुमाव (N2) कितने होंगे?",
+  "q_en": "In a 200V/100V, 50Hz transformer, if the primary turns are 400, what will be the secondary turns (N2)?",
+  "o_hi": [
+   "200",
+   "400",
+   "800",
+   "100"
+  ],
+  "o_en": [
+   "200",
+   "400",
+   "800",
+   "100"
+  ],
+  "a": 0,
+  "e_hi": "V1/V2 = N1/N2 के अनुसार, 200/100 = 400/N2, जिससे N2 = 200 प्राप्त होता है।",
+  "e_en": "According to V1/V2 = N1/N2, 200/100 = 400/N2, which gives N2 = 200."
+ },
+ {
+  "id": "rp-je_e-f00892",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी मोटर में बैक ईएमएफ (Back EMF) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of Back EMF in a DC motor?",
+  "o_hi": [
+   "आर्मेचर को जलाना",
+   "आर्मेचर करंट को नियंत्रित करना",
+   "स्पीड बढ़ाना",
+   "टॉर्क कम करना"
+  ],
+  "o_en": [
+   "To burn the armature",
+   "To regulate the armature current",
+   "To increase the speed",
+   "To reduce the torque"
+  ],
+  "a": 1,
+  "e_hi": "बैक ईएमएफ अप्लाइड वोल्टेज का विरोध करता है, जिससे आर्मेचर करंट एक सुरक्षित सीमा के भीतर रहता है।",
+  "e_en": "Back EMF opposes the applied voltage, which keeps the armature current within a safe limit."
+ },
+ {
+  "id": "rp-je_e-f00893",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "यदि ट्रांसफार्मर का लोड अचानक कम हो जाता है, तो हिस्टैरिसीस नुकसान पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the load on a transformer suddenly decreases, what will be the effect on hysteresis loss?",
+  "o_hi": [
+   "बढ़ जाएगा",
+   "घट जाएगा",
+   "लगभग स्थिर रहेगा",
+   "शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "Will increase",
+   "Will decrease",
+   "Will remain almost constant",
+   "Will become zero"
+  ],
+  "a": 2,
+  "e_hi": "हिस्टैरिसीस नुकसान मुख्य रूप से फ्लक्स घनत्व और आवृत्ति पर निर्भर करता है, जो लोड बदलने पर नहीं बदलते।",
+  "e_en": "Hysteresis loss depends primarily on flux density and frequency, which do not change significantly with load variations."
+ },
+ {
+  "id": "rp-je_e-f00894",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक डीसी जनरेटर में इंटरपोल (Interpoles) का उपयोग क्यों किया जाता है?",
+  "q_en": "Why are interpoles used in a DC generator?",
+  "o_hi": [
+   "वोल्टेज बढ़ाने के लिए",
+   "स्पार्किंग कम करने के लिए",
+   "दक्षता बढ़ाने के लिए",
+   "आर्मेचर रिएक्शन को पूरी तरह समाप्त करने के लिए"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "To reduce sparking",
+   "To increase efficiency",
+   "To completely eliminate armature reaction"
+  ],
+  "a": 1,
+  "e_hi": "इंटरपोल कम्यूटेशन के दौरान स्पार्किंग को कम करने के लिए आर्मेचर प्रतिक्रिया के प्रभाव को बेअसर करते हैं।",
+  "e_en": "Interpoles neutralize the effect of armature reaction to reduce sparking during commutation."
+ },
+ {
+  "id": "rp-je_e-f00895",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफार्मर में 'ओपन सर्किट टेस्ट' मुख्य रूप से क्या निर्धारित करने के लिए किया जाता है?",
+  "q_en": "What is the 'Open Circuit Test' on a transformer primarily used to determine?",
+  "o_hi": [
+   "कॉपर लॉस",
+   "कोर लॉस",
+   "पूर्ण लोड दक्षता",
+   "वोल्टेज रेगुलेशन"
+  ],
+  "o_en": [
+   "Copper loss",
+   "Core loss",
+   "Full load efficiency",
+   "Voltage regulation"
+  ],
+  "a": 1,
+  "e_hi": "ओपन सर्किट टेस्ट के दौरान प्राथमिक करंट बहुत कम होता है, इसलिए कॉपर लॉस नगण्य होते हैं और केवल कोर लॉस मापे जाते हैं।",
+  "e_en": "During an open circuit test, the primary current is very low, making copper losses negligible, thus only core losses are measured."
+ },
+ {
+  "id": "rp-je_e-f00896",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में, यदि रोटर स्थिर है और स्लिप 1 है, तो मोटर किस स्थिति में है?",
+  "q_en": "In a three-phase induction motor, if the rotor is stationary and slip is 1, what is the state of the motor?",
+  "o_hi": [
+   "सामान्य रनिंग स्थिति",
+   "ब्रेकिंग स्थिति",
+   "स्टार्टिंग स्थिति",
+   "ओवरलोड स्थिति"
+  ],
+  "o_en": [
+   "Normal running state",
+   "Braking state",
+   "Starting state",
+   "Overload state"
+  ],
+  "a": 2,
+  "e_hi": "जब रोटर की गति शून्य होती है, तो स्लिप (s) 1 होती है, जो मोटर की शुरुआती स्थिति को दर्शाती है।",
+  "e_en": "When the rotor speed is zero, the slip (s) is 1, which represents the starting condition of the motor."
+ },
+ {
+  "id": "rp-je_e-f00897",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "सिंक्रोनस मोटर में, यदि उत्तेजना (Excitation) को सामान्य से अधिक बढ़ाया जाता है, तो मोटर कैसे कार्य करती है?",
+  "q_en": "In a synchronous motor, if the excitation is increased beyond normal, how does the motor behave?",
+  "o_hi": [
+   "इंडक्टिव लोड की तरह",
+   "कैपेसिटिव लोड की तरह",
+   "प्रतिरोधक लोड की तरह",
+   "स्थिर शक्ति लोड की तरह"
+  ],
+  "o_en": [
+   "Like an inductive load",
+   "Like a capacitive load",
+   "Like a resistive load",
+   "Like a constant power load"
+  ],
+  "a": 1,
+  "e_hi": "ओवर-एक्साइटेड सिंक्रोनस मोटर लेडिंग पावर फैक्टर पर काम करती है, जिससे वह कैपेसिटिव लोड की तरह व्यवहार करती है।",
+  "e_en": "An over-excited synchronous motor operates at a leading power factor, causing it to behave like a capacitive load."
+ },
+ {
+  "id": "rp-je_e-f00898",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी मशीन के आर्मेचर में लैप वाइंडिंग का उपयोग कब किया जाता है?",
+  "q_en": "When is lap winding used in a DC machine armature?",
+  "o_hi": [
+   "उच्च वोल्टेज और कम करंट",
+   "कम वोल्टेज और उच्च करंट",
+   "उच्च वोल्टेज और उच्च करंट",
+   "कम वोल्टेज और कम करंट"
+  ],
+  "o_en": [
+   "High voltage and low current",
+   "Low voltage and high current",
+   "High voltage and high current",
+   "Low voltage and low current"
+  ],
+  "a": 1,
+  "e_hi": "लैप वाइंडिंग में समानांतर रास्तों की संख्या पोल की संख्या के बराबर होती है, जो इसे उच्च करंट अनुप्रयोगों के लिए उपयुक्त बनाती है।",
+  "e_en": "In lap winding, the number of parallel paths equals the number of poles, making it suitable for high current applications."
+ },
+ {
+  "id": "rp-je_e-f00899",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर तेल का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of transformer oil?",
+  "o_hi": [
+   "केवल स्नेहन (Lubrication)",
+   "केवल कूलिंग",
+   "इन्सुलेशन और कूलिंग",
+   "केवल शोर कम करना"
+  ],
+  "o_en": [
+   "Only lubrication",
+   "Only cooling",
+   "Insulation and cooling",
+   "Only noise reduction"
+  ],
+  "a": 2,
+  "e_hi": "ट्रांसफार्मर तेल वाइंडिंग के लिए विद्युत इन्सुलेशन प्रदान करता है और गर्मी को कोर से टैंक तक ले जाने में मदद करता है।",
+  "e_en": "Transformer oil provides electrical insulation for the windings and helps transfer heat from the core to the tank."
+ },
+ {
+  "id": "rp-je_e-f00900",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक डीसी शंट मोटर की गति पर क्या प्रभाव पड़ेगा यदि फील्ड फ्लक्स कम हो जाता है?",
+  "q_en": "What will be the effect on the speed of a DC shunt motor if the field flux is reduced?",
+  "o_hi": [
+   "गति कम हो जाएगी",
+   "गति बढ़ जाएगी",
+   "गति स्थिर रहेगी",
+   "मोटर रुक जाएगी"
+  ],
+  "o_en": [
+   "Speed will decrease",
+   "Speed will increase",
+   "Speed will remain constant",
+   "Motor will stop"
+  ],
+  "a": 1,
+  "e_hi": "डीसी मोटर की गति फ्लक्स के व्युत्क्रमानुपाती होती है (N ∝ 1/Φ), इसलिए फ्लक्स घटने पर गति बढ़ जाती है।",
+  "e_en": "The speed of a DC motor is inversely proportional to the flux (N ∝ 1/Φ), so decreasing the flux increases the speed."
+ },
+ {
+  "id": "rp-je_e-f00901",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में 'क्रॉलिंग' (Crawling) का कारण क्या है?",
+  "q_en": "What is the cause of 'Crawling' in a three-phase induction motor?",
+  "o_hi": [
+   "सप्लाई वोल्टेज में उतार-चढ़ाव",
+   "हार्मोनिक्स के कारण टॉर्क में उतार-चढ़ाव",
+   "बेयरिंग घर्षण",
+   "अत्यधिक लोड"
+  ],
+  "o_en": [
+   "Fluctuation in supply voltage",
+   "Torque fluctuations due to harmonics",
+   "Bearing friction",
+   "Excessive load"
+  ],
+  "a": 1,
+  "e_hi": "क्रॉलिंग तब होती है जब मोटर की गति सिंक्रोनस गति के सातवें हिस्से तक पहुंच जाती है, जो हार्मोनिक्स के कारण होती है।",
+  "e_en": "Crawling occurs when the motor speed reaches one-seventh of the synchronous speed, which is caused by harmonics."
+ },
+ {
+  "id": "rp-je_e-f00902",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 4-ध्रुव डीसी जनरेटर 1200 आरपीएम पर चल रहा है। जनरेटर की आवृत्ति (हर्ट्ज़ में) क्या होगी?",
+  "q_en": "A 4-pole DC generator is running at 1200 RPM. What is the frequency of the induced EMF in the armature conductors (in Hz)?",
+  "o_hi": [
+   "20 हर्ट्ज़",
+   "40 हर्ट्ज़",
+   "80 हर्ट्ज़",
+   "100 हर्ट्ज़"
+  ],
+  "o_en": [
+   "20 Hz",
+   "40 Hz",
+   "80 Hz",
+   "100 Hz"
+  ],
+  "a": 1,
+  "e_hi": "आवृत्ति f = (P * N) / 120 होती है। यहाँ P=4 और N=1200 है, इसलिए f = (4 * 1200) / 120 = 40 हर्ट्ज़।",
+  "e_en": "The frequency f is given by (P * N) / 120. With P=4 and N=1200, f = (4 * 1200) / 120 = 40 Hz."
+ },
+ {
+  "id": "rp-je_e-f00903",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 200 वोल्ट डीसी शंट मोटर का आर्मेचर प्रतिरोध 0.5 ओम है। यदि आर्मेचर धारा 20 एम्पीयर है, तो बैक ईएमएफ का मान क्या होगा?",
+  "q_en": "A 200V DC shunt motor has an armature resistance of 0.5 ohms. If the armature current is 20 Amperes, what will be the value of the back EMF?",
+  "o_hi": [
+   "180 वोल्ट",
+   "190 वोल्ट",
+   "210 वोल्ट",
+   "220 वोल्ट"
+  ],
+  "o_en": [
+   "180 Volts",
+   "190 Volts",
+   "210 Volts",
+   "220 Volts"
+  ],
+  "a": 1,
+  "e_hi": "बैक ईएमएफ (Eb) = V - (Ia * Ra)। यहाँ Eb = 200 - (20 * 0.5) = 200 - 10 = 190 वोल्ट।",
+  "e_en": "Back EMF (Eb) = V - (Ia * Ra). Here, Eb = 200 - (20 * 0.5) = 200 - 10 = 190 Volts."
+ },
+ {
+  "id": "rp-je_e-f00904",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 50 हर्ट्ज़, 6-ध्रुव प्रेरण मोटर का तुल्यकालिक गति (सिंक्रोनस स्पीड) क्या है?",
+  "q_en": "What is the synchronous speed of a 50 Hz, 6-pole induction motor?",
+  "o_hi": [
+   "1000 आरपीएम",
+   "1200 आरपीएम",
+   "1500 आरपीएम",
+   "3000 आरपीएम"
+  ],
+  "o_en": [
+   "1000 RPM",
+   "1200 RPM",
+   "1500 RPM",
+   "3000 RPM"
+  ],
+  "a": 0,
+  "e_hi": "तुल्यकालिक गति (Ns) = (120 * f) / P। यहाँ Ns = (120 * 50) / 6 = 1000 आरपीएम।",
+  "e_en": "Synchronous speed (Ns) = (120 * f) / P. Here, Ns = (120 * 50) / 6 = 1000 RPM."
+ },
+ {
+  "id": "rp-je_e-f00905",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "यदि एक ट्रांसफॉर्मर की प्राथमिक वाइंडिंग में 200 टर्न और द्वितीयक वाइंडिंग में 1000 टर्न हैं, तो वोल्टेज रूपांतरण अनुपात (K) क्या होगा?",
+  "q_en": "If a transformer has 200 turns in the primary winding and 1000 turns in the secondary winding, what is the transformation ratio (K)?",
+  "o_hi": [
+   "0.2",
+   "0.5",
+   "2",
+   "5"
+  ],
+  "o_en": [
+   "0.2",
+   "0.5",
+   "2",
+   "5"
+  ],
+  "a": 3,
+  "e_hi": "रूपांतरण अनुपात K = N2 / N1 होता है। यहाँ K = 1000 / 200 = 5।",
+  "e_en": "Transformation ratio K = N2 / N1. Here, K = 1000 / 200 = 5."
+ },
+ {
+  "id": "rp-je_e-f00906",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 400 केवीए ट्रांसफॉर्मर में पूर्ण भार पर लोहे की हानि 2 किलोवाट और तांबे की हानि 4 किलोवाट है। आधे भार पर कुल हानि क्या होगी?",
+  "q_en": "A 400 kVA transformer has iron loss of 2 kW and full-load copper loss of 4 kW. What will be the total loss at half load?",
+  "o_hi": [
+   "3 किलोवाट",
+   "4 किलोवाट",
+   "6 किलोवाट",
+   "8 किलोवाट"
+  ],
+  "o_en": [
+   "3 kW",
+   "4 kW",
+   "6 kW",
+   "8 kW"
+  ],
+  "a": 0,
+  "e_hi": "आधे भार पर लोहे की हानि 2 किलोवाट (स्थिर) रहती है, और तांबे की हानि (1/2)^2 * 4 = 1 किलोवाट हो जाती है। कुल हानि = 2+1 = 3 किलोवाट।",
+  "e_en": "Iron loss remains 2 kW (constant), and copper loss at half load becomes (1/2)^2 * 4 = 1 kW. Total loss = 2+1 = 3 kW."
+ },
+ {
+  "id": "rp-je_e-f00907",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 3-फेज, 50 हर्ट्ज़ प्रेरण मोटर 960 आरपीएम पर चलती है। मोटर का स्लिप प्रतिशत क्या है?",
+  "q_en": "A 3-phase, 50 Hz induction motor runs at 960 RPM. It has 6 poles. What is the slip percentage of the motor?",
+  "o_hi": [
+   "2%",
+   "4%",
+   "5%",
+   "6%"
+  ],
+  "o_en": [
+   "2%",
+   "4%",
+   "5%",
+   "6%"
+  ],
+  "a": 1,
+  "e_hi": "Ns = (120 * 50) / 6 = 1000 आरपीएम। स्लिप (s) = (Ns - Nr) / Ns = (1000 - 960) / 1000 = 0.04 या 4%।",
+  "e_en": "Ns = (120 * 50) / 6 = 1000 RPM. Slip (s) = (Ns - Nr) / Ns = (1000 - 960) / 1000 = 0.04 or 4%."
+ },
+ {
+  "id": "rp-je_e-f00908",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 220 वोल्ट डीसी शंट जनरेटर का आर्मेचर प्रतिरोध 0.2 ओम है। यदि आर्मेचर धारा 50 एम्पीयर है, तो प्रेरित ईएमएफ क्या होगा?",
+  "q_en": "A 220V DC shunt generator has an armature resistance of 0.2 ohms. If the armature current is 50 Amperes, what is the generated EMF?",
+  "o_hi": [
+   "210 वोल्ट",
+   "220 वोल्ट",
+   "230 वोल्ट",
+   "240 वोल्ट"
+  ],
+  "o_en": [
+   "210 Volts",
+   "220 Volts",
+   "230 Volts",
+   "240 Volts"
+  ],
+  "a": 2,
+  "e_hi": "जनरेटर के लिए, Eg = V + (Ia * Ra)। यहाँ Eg = 220 + (50 * 0.2) = 220 + 10 = 230 वोल्ट।",
+  "e_en": "For a generator, Eg = V + (Ia * Ra). Here, Eg = 220 + (50 * 0.2) = 220 + 10 = 230 Volts."
+ },
+ {
+  "id": "rp-je_e-f00909",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 10 केवीए, 2000/200 वोल्ट ट्रांसफॉर्मर का प्रतिबाधा (इम्पीडेंस) क्या होगा यदि प्राथमिक पक्ष से देखने पर इसका प्रतिरोध 5 ओम है?",
+  "q_en": "What is the impedance of a 10 kVA, 2000/200V transformer if the resistance referred to the primary side is 5 ohms?",
+  "o_hi": [
+   "5 ओम",
+   "10 ओम",
+   "20 ओम",
+   "25 ओम"
+  ],
+  "o_en": [
+   "5 ohms",
+   "10 ohms",
+   "20 ohms",
+   "25 ohms"
+  ],
+  "a": 0,
+  "e_hi": "प्रश्न में प्रतिबाधा (इम्पीडेंस) का मान सीधे दिया गया है (रेफर किए गए प्रतिरोध के रूप में), जो कि 5 ओम है।",
+  "e_en": "The value of the impedance referred to the primary side is already provided in the question as 5 ohms."
+ },
+ {
+  "id": "rp-je_e-f00910",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "यदि एक डीसी मशीन में 8 ध्रुव और 480 चालक (कंडक्टर) हैं, और यह वेव वाइंडिंग में जुड़ी है, तो समानांतर पथों (पैरेलल पाथ) की संख्या क्या होगी?",
+  "q_en": "If a DC machine has 8 poles and 480 conductors, and it is wave-wound, what will be the number of parallel paths?",
+  "o_hi": [
+   "2",
+   "4",
+   "8",
+   "16"
+  ],
+  "o_en": [
+   "2",
+   "4",
+   "8",
+   "16"
+  ],
+  "a": 0,
+  "e_hi": "वेव वाइंडिंग में समानांतर पथों (A) की संख्या हमेशा 2 होती है, चाहे ध्रुवों की संख्या कितनी भी हो।",
+  "e_en": "In wave winding, the number of parallel paths (A) is always 2, regardless of the number of poles."
+ },
+ {
+  "id": "rp-je_e-f00911",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 3-फेज मोटर की इनपुट शक्ति 50 किलोवाट है और आउटपुट शक्ति 45 किलोवाट है। मोटर की दक्षता (एफिशिएंसी) क्या है?",
+  "q_en": "A 3-phase motor has an input power of 50 kW and an output power of 45 kW. What is the efficiency of the motor?",
+  "o_hi": [
+   "80%",
+   "85%",
+   "90%",
+   "95%"
+  ],
+  "o_en": [
+   "80%",
+   "85%",
+   "90%",
+   "95%"
+  ],
+  "a": 2,
+  "e_hi": "दक्षता = (आउटपुट / इनपुट) * 100। दक्षता = (45 / 50) * 100 = 0.9 * 100 = 90%。",
+  "e_en": "Efficiency = (Output / Input) * 100. Efficiency = (45 / 50) * 100 = 0.9 * 100 = 90%."
+ },
+ {
+  "id": "rp-je_e-f00912",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी जनरेटर और डीसी मोटर में मुख्य अंतर क्या है?",
+  "q_en": "What is the fundamental difference between a DC generator and a DC motor?",
+  "o_hi": [
+   "ऊर्जा रूपांतरण की दिशा",
+   "आर्मेचर वाइंडिंग का प्रकार",
+   "चुंबकीय क्षेत्र की शक्ति",
+   "कम्यूटेटर का उपयोग"
+  ],
+  "o_en": [
+   "Direction of energy conversion",
+   "Type of armature winding",
+   "Strength of magnetic field",
+   "Use of commutator"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलते हैं, जबकि डीसी मोटर विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलते हैं।",
+  "e_en": "DC generators convert mechanical energy into electrical energy, whereas DC motors convert electrical energy into mechanical energy."
+ },
+ {
+  "id": "rp-je_e-f00913",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर में 'लौह हानि' (Iron Loss) मुख्य रूप से कहाँ होती है?",
+  "q_en": "Where does the 'Iron Loss' primarily occur in a transformer?",
+  "o_hi": [
+   "कोर (Core) में",
+   "वाइंडिंग में",
+   "तेल (Oil) में",
+   "कन्जर्वेटर में"
+  ],
+  "o_en": [
+   "In the core",
+   "In the windings",
+   "In the oil",
+   "In the conservator"
+  ],
+  "a": 0,
+  "e_hi": "लौह हानि, जिसे कोर हानि भी कहते हैं, ट्रांसफार्मर के चुंबकीय कोर में हिस्टेरेसिस और भंवर धाराओं के कारण होती है।",
+  "e_en": "Iron loss, also known as core loss, occurs in the magnetic core of the transformer due to hysteresis and eddy currents."
+ },
+ {
+  "id": "rp-je_e-f00914",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "तुल्यकालिक मोटर (Synchronous Motor) और प्रेरण मोटर (Induction Motor) के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the primary difference between a Synchronous motor and an Induction motor?",
+  "o_hi": [
+   "तुल्यकालिक मोटर स्थिर गति पर चलती है",
+   "प्रेरण मोटर को डीसी उत्तेजना की आवश्यकता होती है",
+   "तुल्यकालिक मोटर स्व-प्रवर्तित होती है",
+   "प्रेरण मोटर हमेशा तुल्यकालिक गति पर चलती है"
+  ],
+  "o_en": [
+   "Synchronous motor runs at constant speed",
+   "Induction motor requires DC excitation",
+   "Synchronous motor is self-starting",
+   "Induction motor always runs at synchronous speed"
+  ],
+  "a": 0,
+  "e_hi": "तुल्यकालिक मोटर हमेशा तुल्यकालिक गति पर चलती है, जबकि प्रेरण मोटर में स्लिप के कारण गति तुल्यकालिक गति से थोड़ी कम होती है।",
+  "e_en": "A synchronous motor always runs at synchronous speed, while an induction motor runs slightly slower than synchronous speed due to slip."
+ },
+ {
+  "id": "rp-je_e-f00915",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफार्मर में 'कॉपर लॉस' (Copper Loss) किस पर निर्भर करता है?",
+  "q_en": "What does 'Copper Loss' in a transformer depend on?",
+  "o_hi": [
+   "लोड करंट के वर्ग पर",
+   "वोल्टेज के वर्ग पर",
+   "आवृत्ति पर",
+   "तापमान पर"
+  ],
+  "o_en": [
+   "Square of the load current",
+   "Square of the voltage",
+   "Frequency",
+   "Temperature"
+  ],
+  "a": 0,
+  "e_hi": "कॉपर लॉस वाइंडिंग के प्रतिरोध के कारण होता है और यह I²R के रूप में लोड करंट के वर्ग के समानुपाती होता है।",
+  "e_en": "Copper loss is due to the resistance of the windings and is proportional to the square of the load current (I²R)."
+ },
+ {
+  "id": "rp-je_e-f00916",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा मोटर 'स्व-प्रवर्तित' (Self-starting) नहीं है?",
+  "q_en": "Which of the following motors is NOT self-starting?",
+  "o_hi": [
+   "सिंगल-फेज सिंक्रोनस मोटर",
+   "डीसी शंट मोटर",
+   "डीसी सीरीज मोटर",
+   "थ्री-फेज इंडक्शन मोटर"
+  ],
+  "o_en": [
+   "Single-phase synchronous motor",
+   "DC shunt motor",
+   "DC series motor",
+   "Three-phase induction motor"
+  ],
+  "a": 0,
+  "e_hi": "सिंगल-फेज सिंक्रोनस मोटर को शुरू करने के लिए बाहरी बल या विशेष स्टार्टिंग वाइंडिंग की आवश्यकता होती है।",
+  "e_en": "A single-phase synchronous motor requires an external force or special starting winding to initiate rotation."
+ },
+ {
+  "id": "rp-je_e-f00917",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी जनरेटर में आर्मेचर प्रतिक्रिया (Armature Reaction) का क्या प्रभाव होता है?",
+  "q_en": "What is the effect of armature reaction in a DC generator?",
+  "o_hi": [
+   "मुख्य फ्लक्स को विरूपित और कम करना",
+   "वोल्टेज को बढ़ाना",
+   "दक्षता में सुधार करना",
+   "गति को स्थिर करना"
+  ],
+  "o_en": [
+   "Distorting and reducing the main flux",
+   "Increasing voltage",
+   "Improving efficiency",
+   "Stabilizing speed"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर प्रतिक्रिया मुख्य चुंबकीय क्षेत्र को विरूपित (cross-magnetizing) और कमजोर (demagnetizing) करती है।",
+  "e_en": "Armature reaction distorts (cross-magnetizing) and weakens (demagnetizing) the main magnetic field."
+ },
+ {
+  "id": "rp-je_e-f00918",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफार्मर में 'ओपन सर्किट टेस्ट' मुख्य रूप से क्या निर्धारित करने के लिए किया जाता है?",
+  "q_en": "What is the 'Open Circuit Test' in a transformer primarily used to determine?",
+  "o_hi": [
+   "लौह हानि (Core loss)",
+   "कॉपर हानि",
+   "वाइंडिंग प्रतिरोध",
+   "वोल्टेज ड्रॉप"
+  ],
+  "o_en": [
+   "Core loss (Iron loss)",
+   "Copper loss",
+   "Winding resistance",
+   "Voltage drop"
+  ],
+  "a": 0,
+  "e_hi": "ओपन सर्किट टेस्ट का उपयोग ट्रांसफार्मर की नो-लोड स्थितियों में होने वाली लौह हानि को मापने के लिए किया जाता है।",
+  "e_en": "The open circuit test is performed to measure the core losses occurring under no-load conditions."
+ },
+ {
+  "id": "rp-je_e-f00919",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में 'स्लिप' (Slip) का मान क्या होता है जब मोटर स्थिर (standstill) अवस्था में हो?",
+  "q_en": "What is the value of 'Slip' in a three-phase induction motor when it is at a standstill?",
+  "o_hi": [
+   "एक (1)",
+   "शून्य (0)",
+   "अनंत",
+   "0.5"
+  ],
+  "o_en": [
+   "One (1)",
+   "Zero (0)",
+   "Infinite",
+   "0.5"
+  ],
+  "a": 0,
+  "e_hi": "जब मोटर स्थिर होती है, तो रोटर की गति शून्य होती है, इसलिए स्लिप सूत्र (Ns-Nr)/Ns के अनुसार 1 होती है।",
+  "e_en": "When the motor is at a standstill, the rotor speed is zero, thus the slip is 1 according to the formula (Ns-Nr)/Ns."
+ },
+ {
+  "id": "rp-je_e-f00920",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी मशीन का योक (Yoke) किस सामग्री से बना होता है?",
+  "q_en": "What material is the Yoke of a DC machine made of?",
+  "o_hi": [
+   "कास्ट आयरन या कास्ट स्टील",
+   "तांबा",
+   "एल्यूमीनियम",
+   "पीतल"
+  ],
+  "o_en": [
+   "Cast iron or cast steel",
+   "Copper",
+   "Aluminum",
+   "Brass"
+  ],
+  "a": 0,
+  "e_hi": "योक का कार्य चुंबकीय पथ प्रदान करना और आंतरिक भागों की सुरक्षा करना है, जिसके लिए कास्ट आयरन या स्टील का उपयोग होता है।",
+  "e_en": "The function of the yoke is to provide a magnetic path and protect internal parts, for which cast iron or steel is used."
+ },
+ {
+  "id": "rp-je_e-f00921",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 4-ध्रुव डीसी जनरेटर में 1200 आरपीएम पर चलने पर 1200 कंडक्टर हैं। यदि फ्लक्स प्रति पोल 0.02 वेबर है, तो वेव वाइंडिंग के लिए उत्पन्न ईएमएफ (EMF) की गणना करें।",
+  "q_en": "A 4-pole DC generator has 1200 conductors running at 1200 RPM. If the flux per pole is 0.02 Weber, calculate the generated EMF for a wave winding.",
+  "o_hi": [
+   "480 वोल्ट",
+   "960 वोल्ट",
+   "240 वोल्ट",
+   "120 वोल्ट"
+  ],
+  "o_en": [
+   "480 Volts",
+   "960 Volts",
+   "240 Volts",
+   "120 Volts"
+  ],
+  "a": 0,
+  "e_hi": "वेव वाइंडिंग के लिए समानांतर पथों की संख्या 2 होती है। सूत्र E = (P*phi*Z*N) / (60*A) का उपयोग करने पर उत्तर 480 वोल्ट प्राप्त होता है।",
+  "e_en": "For wave winding, the number of parallel paths is 2. Using the formula E = (P*phi*Z*N) / (60*A), the result is 480 Volts."
+ },
+ {
+  "id": "rp-je_e-f00922",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 50 हर्ट्ज ट्रांसफार्मर के प्राथमिक पक्ष में 200 टर्न और द्वितीयक पक्ष में 400 टर्न हैं। यदि प्राथमिक वोल्टेज 220 वोल्ट है, तो द्वितीयक वोल्टेज क्या होगा?",
+  "q_en": "A 50 Hz transformer has 200 turns on the primary side and 400 turns on the secondary side. If the primary voltage is 220 Volts, what will be the secondary voltage?",
+  "o_hi": [
+   "110 वोल्ट",
+   "220 वोल्ट",
+   "440 वोल्ट",
+   "880 वोल्ट"
+  ],
+  "o_en": [
+   "110 Volts",
+   "220 Volts",
+   "440 Volts",
+   "880 Volts"
+  ],
+  "a": 2,
+  "e_hi": "वोल्टेज अनुपात टर्न अनुपात के बराबर होता है: V2 = V1 * (N2/N1)। अतः V2 = 220 * (400/200) = 440 वोल्ट।",
+  "e_en": "The voltage ratio is proportional to the turn ratio: V2 = V1 * (N2/N1). Thus V2 = 220 * (400/200) = 440 Volts."
+ },
+ {
+  "id": "rp-je_e-f00923",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 6-ध्रुव इंडक्शन मोटर 960 आरपीएम पर चलती है। यदि आपूर्ति आवृत्ति 50 हर्ट्ज है, तो मोटर का स्लिप प्रतिशत क्या होगा?",
+  "q_en": "A 6-pole induction motor runs at 960 RPM. If the supply frequency is 50 Hz, what will be the slip percentage of the motor?",
+  "o_hi": [
+   "2%",
+   "4%",
+   "5%",
+   "8%"
+  ],
+  "o_en": [
+   "2%",
+   "4%",
+   "5%",
+   "8%"
+  ],
+  "a": 1,
+  "e_hi": "सिंक्रोनस गति Ns = (120 * 50) / 6 = 1000 आरपीएम है। स्लिप = (1000-960)/1000 = 0.04 या 4%।",
+  "e_en": "Synchronous speed Ns = (120 * 50) / 6 = 1000 RPM. Slip = (1000-960)/1000 = 0.04 or 4%."
+ },
+ {
+  "id": "rp-je_e-f00924",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "यदि एक ट्रांसफार्मर में पूर्ण भार पर तांबा नुकसान (कॉपर लॉस) 400 वाट है, तो आधे भार पर तांबा नुकसान कितना होगा?",
+  "q_en": "If the copper loss of a transformer at full load is 400 Watts, what will be the copper loss at half load?",
+  "o_hi": [
+   "100 वाट",
+   "200 वाट",
+   "800 वाट",
+   "1600 वाट"
+  ],
+  "o_en": [
+   "100 Watts",
+   "200 Watts",
+   "800 Watts",
+   "1600 Watts"
+  ],
+  "a": 0,
+  "e_hi": "तांबा नुकसान भार के वर्ग के समानुपाती होता है। आधे भार पर नुकसान = (1/2)^2 * 400 = 100 वाट।",
+  "e_en": "Copper loss is proportional to the square of the load. Loss at half load = (1/2)^2 * 400 = 100 Watts."
+ },
+ {
+  "id": "rp-je_e-f00925",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 220 वोल्ट डीसी शंट मोटर का आर्मेचर प्रतिरोध 0.5 ओम है। यदि आर्मेचर करंट 20 एम्पीयर है, तो बैक ईएमएफ (Back EMF) ज्ञात कीजिए।",
+  "q_en": "A 220V DC shunt motor has an armature resistance of 0.5 Ohm. If the armature current is 20 Amperes, find the back EMF.",
+  "o_hi": [
+   "200 वोल्ट",
+   "210 वोल्ट",
+   "230 वोल्ट",
+   "240 वोल्ट"
+  ],
+  "o_en": [
+   "200 Volts",
+   "210 Volts",
+   "230 Volts",
+   "240 Volts"
+  ],
+  "a": 1,
+  "e_hi": "सूत्र Eb = V - IaRa का उपयोग करें। Eb = 220 - (20 * 0.5) = 220 - 10 = 210 वोल्ट।",
+  "e_en": "Use the formula Eb = V - IaRa. Eb = 220 - (20 * 0.5) = 220 - 10 = 210 Volts."
+ },
+ {
+  "id": "rp-je_e-f00926",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "यदि एक 3-फेज अल्टरनेटर में 12 ध्रुव हैं और वह 500 आरपीएम पर घूम रहा है, तो उत्पन्न ईएमएफ की आवृत्ति क्या होगी?",
+  "q_en": "If a 3-phase alternator has 12 poles and is rotating at 500 RPM, what will be the frequency of the generated EMF?",
+  "o_hi": [
+   "25 हर्ट्ज",
+   "50 हर्ट्ज",
+   "60 हर्ट्ज",
+   "100 हर्ट्ज"
+  ],
+  "o_en": [
+   "25 Hz",
+   "50 Hz",
+   "60 Hz",
+   "100 Hz"
+  ],
+  "a": 1,
+  "e_hi": "आवृत्ति f = (P * N) / 120. अतः f = (12 * 500) / 120 = 50 हर्ट्ज।",
+  "e_en": "Frequency f = (P * N) / 120. Thus f = (12 * 500) / 120 = 50 Hz."
+ },
+ {
+  "id": "rp-je_e-f00927",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक ट्रांसफार्मर का अधिकतम दक्षता (Efficiency) तब होती है जब:",
+  "q_en": "Maximum efficiency of a transformer occurs when:",
+  "o_hi": [
+   "हिस्टैरिसीस नुकसान = भंवर धारा नुकसान",
+   "तांबा नुकसान = लोहा नुकसान",
+   "प्राथमिक वोल्टेज = द्वितीयक वोल्टेज",
+   "भार शून्य हो"
+  ],
+  "o_en": [
+   "Hysteresis loss = Eddy current loss",
+   "Copper loss = Iron loss",
+   "Primary voltage = Secondary voltage",
+   "Load is zero"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफार्मर में अधिकतम दक्षता तब प्राप्त होती है जब परिवर्तनीय तांबा नुकसान, स्थिर लोहे के नुकसान के बराबर हो जाता है।",
+  "e_en": "Maximum efficiency in a transformer occurs when the variable copper loss equals the constant iron loss."
+ },
+ {
+  "id": "rp-je_e-f00928",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 500 केवीए ट्रांसफार्मर में 300 वाट का लोहे का नुकसान और 500 वाट का पूर्ण भार तांबा नुकसान है। 50% भार पर कुल नुकसान क्या होगा?",
+  "q_en": "A 500 kVA transformer has 300 Watts of iron loss and 500 Watts of full-load copper loss. What will be the total loss at 50% load?",
+  "o_hi": [
+   "425 वाट",
+   "550 वाट",
+   "800 वाट",
+   "400 वाट"
+  ],
+  "o_en": [
+   "425 Watts",
+   "550 Watts",
+   "800 Watts",
+   "400 Watts"
+  ],
+  "a": 0,
+  "e_hi": "कुल नुकसान = लोहा नुकसान + (भार अनुपात)^2 * तांबा नुकसान। 300 + (0.5)^2 * 500 = 300 + 125 = 425 वाट।",
+  "e_en": "Total loss = Iron loss + (Load ratio)^2 * Copper loss. 300 + (0.5)^2 * 500 = 300 + 125 = 425 Watts."
+ },
+ {
+  "id": "rp-je_e-f00929",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक डीसी मशीन में, यदि ध्रुवों की संख्या 4 है और आर्मेचर में 400 कंडक्टर हैं, तो लेप वाइंडिंग (Lap Winding) के लिए समानांतर पथों की संख्या क्या होगी?",
+  "q_en": "In a DC machine, if the number of poles is 4 and there are 400 conductors in the armature, what will be the number of parallel paths for lap winding?",
+  "o_hi": [
+   "2",
+   "4",
+   "8",
+   "400"
+  ],
+  "o_en": [
+   "2",
+   "4",
+   "8",
+   "400"
+  ],
+  "a": 1,
+  "e_hi": "लेप वाइंडिंग के लिए, समानांतर पथों की संख्या (A) ध्रुवों की संख्या (P) के बराबर होती है। अतः A = 4।",
+  "e_en": "For lap winding, the number of parallel paths (A) is equal to the number of poles (P). Thus A = 4."
+ },
+ {
+  "id": "rp-je_e-f00930",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 200/400 वोल्ट ट्रांसफार्मर में, यदि प्राथमिक पक्ष का प्रतिरोध 0.5 ओम है, तो द्वितीयक पक्ष के संदर्भ में इसका समतुल्य प्रतिरोध क्या होगा?",
+  "q_en": "In a 200/400V transformer, if the primary side resistance is 0.5 Ohm, what will be its equivalent resistance referred to the secondary side?",
+  "o_hi": [
+   "0.25 ओम",
+   "0.5 ओम",
+   "1.0 ओम",
+   "2.0 ओम"
+  ],
+  "o_en": [
+   "0.25 Ohm",
+   "0.5 Ohm",
+   "1.0 Ohm",
+   "2.0 Ohm"
+  ],
+  "a": 3,
+  "e_hi": "R2' = R1 * (K)^2 जहाँ K = N2/N1 = 400/200 = 2। R2' = 0.5 * (2)^2 = 0.5 * 4 = 2.0 ओम।",
+  "e_en": "R2' = R1 * (K)^2 where K = N2/N1 = 400/200 = 2. R2' = 0.5 * (2)^2 = 0.5 * 4 = 2.0 Ohms."
+ },
+ {
+  "id": "rp-je_e-f00931",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "विद्युत मोटर का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of an electric motor?",
+  "o_hi": [
+   "यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलना",
+   "विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलना",
+   "वोल्टेज को बढ़ाना",
+   "धारा को कम करना"
+  ],
+  "o_en": [
+   "Converting mechanical energy into electrical energy",
+   "Converting electrical energy into mechanical energy",
+   "Increasing the voltage",
+   "Reducing the current"
+  ],
+  "a": 1,
+  "e_hi": "मोटर विद्युत ऊर्जा लेकर उसे घूर्णन गति या यांत्रिक कार्य में परिवर्तित करती है।",
+  "e_en": "A motor takes electrical energy and converts it into rotational motion or mechanical work."
+ },
+ {
+  "id": "rp-je_e-f00932",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी जनरेटर किस सिद्धांत पर कार्य करता है?",
+  "q_en": "On which principle does a DC generator operate?",
+  "o_hi": [
+   "फैराडे का विद्युत चुंबकीय प्रेरण का नियम",
+   "ओम का नियम",
+   "किरचॉफ का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Faraday's law of electromagnetic induction",
+   "Ohm's law",
+   "Kirchhoff's law",
+   "Lenz's law"
+  ],
+  "a": 0,
+  "e_hi": "जनरेटर फैराडे के प्रेरण के नियम का उपयोग करके यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलते हैं।",
+  "e_en": "Generators convert mechanical energy into electrical energy using Faraday's law of induction."
+ },
+ {
+  "id": "rp-je_e-f00933",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर की कोर में लैमिनेशन का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is lamination used in the core of a transformer?",
+  "o_hi": [
+   "वजन कम करने के लिए",
+   "हिस्टैरिसीस हानि को कम करने के लिए",
+   "एडी करंट हानि को कम करने के लिए",
+   "ताम्र हानि को कम करने के लिए"
+  ],
+  "o_en": [
+   "To reduce weight",
+   "To reduce hysteresis loss",
+   "To reduce eddy current loss",
+   "To reduce copper loss"
+  ],
+  "a": 2,
+  "e_hi": "लैमिनेशन कोर के भीतर भंवर धाराओं (एडी करंट) के मार्ग को तोड़कर ऊर्जा हानि को कम करते हैं।",
+  "e_en": "Lamination reduces energy loss by breaking the path of eddy currents within the core."
+ },
+ {
+  "id": "rp-je_e-f00934",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक डीसी मशीन में कम्यूटेटर का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of a commutator in a DC machine?",
+  "o_hi": [
+   "वोल्टेज को स्थिर करना",
+   "एसी को डीसी में बदलना (या इसके विपरीत)",
+   "चुंबकीय क्षेत्र उत्पन्न करना",
+   "घर्षण कम करना"
+  ],
+  "o_en": [
+   "To stabilize voltage",
+   "To convert AC to DC (or vice versa)",
+   "To generate a magnetic field",
+   "To reduce friction"
+  ],
+  "a": 1,
+  "e_hi": "कम्यूटेटर आर्मेचर के भीतर उत्पन्न एसी को बाहरी परिपथ के लिए डीसी में बदलता है।",
+  "e_en": "The commutator converts the AC generated within the armature into DC for the external circuit."
+ },
+ {
+  "id": "rp-je_e-f00935",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर में 'ब्रदर' (Breather) का कार्य क्या है?",
+  "q_en": "What is the function of a 'breather' in a transformer?",
+  "o_hi": [
+   "तेल को ठंडा करना",
+   "हवा से नमी को अवशोषित करना",
+   "वोल्टेज को मापना",
+   "अतिरिक्त तेल को बाहर निकालना"
+  ],
+  "o_en": [
+   "To cool the oil",
+   "To absorb moisture from the air",
+   "To measure voltage",
+   "To drain excess oil"
+  ],
+  "a": 1,
+  "e_hi": "ब्रदर में सिलिका जेल होता है जो ट्रांसफॉर्मर में प्रवेश करने वाली हवा से नमी को सोख लेता है।",
+  "e_en": "The breather contains silica gel that absorbs moisture from the air entering the transformer."
+ },
+ {
+  "id": "rp-je_e-f00936",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "प्रेरण मोटर (Induction Motor) में 'स्लिप' का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'slip' in an induction motor?",
+  "o_hi": [
+   "सिंक्रोनस गति और रोटर गति के बीच का अंतर",
+   "मोटर की दक्षता",
+   "चुंबकीय फ्लक्स का नुकसान",
+   "घूर्णन की दिशा"
+  ],
+  "o_en": [
+   "Difference between synchronous speed and rotor speed",
+   "Efficiency of the motor",
+   "Loss of magnetic flux",
+   "Direction of rotation"
+  ],
+  "a": 0,
+  "e_hi": "स्लिप सिंक्रोनस गति और रोटर की वास्तविक गति के बीच का सापेक्ष अंतर है।",
+  "e_en": "Slip is the relative difference between the synchronous speed and the actual rotor speed."
+ },
+ {
+  "id": "rp-je_e-f00937",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफॉर्मर की रेटिंग किस इकाई में दी जाती है?",
+  "q_en": "In which unit is the rating of a transformer expressed?",
+  "o_hi": [
+   "किलोवाट (kW)",
+   "किलोवोल्ट-एम्पीयर (kVA)",
+   "एम्पीयर (A)",
+   "वोल्ट (V)"
+  ],
+  "o_en": [
+   "Kilowatts (kW)",
+   "Kilovolt-amperes (kVA)",
+   "Amperes (A)",
+   "Volts (V)"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफॉर्मर की रेटिंग kVA में होती है क्योंकि इसमें होने वाली हानि वोल्टेज और करंट पर निर्भर करती है।",
+  "e_en": "Transformer rating is in kVA because losses depend on voltage and current, not the power factor."
+ },
+ {
+  "id": "rp-je_e-f00938",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "आर्मेचर रिएक्शन का क्या प्रभाव होता है?",
+  "q_en": "What is the effect of armature reaction?",
+  "o_hi": [
+   "मुख्य फ्लक्स का विरूपण और कमजोर होना",
+   "वोल्टेज का बढ़ना",
+   "गति में वृद्धि",
+   "प्रतिरोध में कमी"
+  ],
+  "o_en": [
+   "Distortion and weakening of the main flux",
+   "Increase in voltage",
+   "Increase in speed",
+   "Decrease in resistance"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर धारा द्वारा उत्पन्न चुंबकीय क्षेत्र मुख्य क्षेत्र फ्लक्स को प्रभावित करता है, जिसे आर्मेचर रिएक्शन कहते हैं।",
+  "e_en": "The magnetic field produced by the armature current affects the main field flux, known as armature reaction."
+ },
+ {
+  "id": "rp-je_e-f00939",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "विद्युत मशीनों के वर्गीकरण में, डीसी जनरेटर को किस आधार पर वर्गीकृत किया जाता है?",
+  "q_en": "In the classification of electrical machines, on what basis is a DC generator classified?",
+  "o_hi": [
+   "क्षेत्र उत्तेजना (Field Excitation)",
+   "रोटर की गति (Rotor Speed)",
+   "आर्मेचर का आकार (Armature Size)",
+   "प्रयुक्त स्नेहक (Lubricant used)"
+  ],
+  "o_en": [
+   "Field Excitation",
+   "Rotor Speed",
+   "Armature Size",
+   "Lubricant used"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर को मुख्य रूप से उनकी क्षेत्र उत्तेजना पद्धति, जैसे कि स्व-उत्तेजित या पृथक-उत्तेजित, के आधार पर वर्गीकृत किया जाता है।",
+  "e_en": "DC generators are primarily classified based on their field excitation method, such as self-excited or separately excited."
+ },
+ {
+  "id": "rp-je_e-f00940",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 'ब्रशलेस डीसी मोटर' (BLDC) का वर्गीकरण किस श्रेणी में आता है?",
+  "q_en": "Into which category does a 'Brushless DC motor' (BLDC) fall?",
+  "o_hi": [
+   "सिंक्रोनस मोटर (Synchronous motor)",
+   "इंडक्शन मोटर (Induction motor)",
+   "डीसी शंट मोटर (DC shunt motor)",
+   "यूनिवर्सल मोटर (Universal motor)"
+  ],
+  "o_en": [
+   "Synchronous motor",
+   "Induction motor",
+   "DC shunt motor",
+   "Universal motor"
+  ],
+  "a": 0,
+  "e_hi": "BLDC मोटर तकनीकी रूप से एक स्थायी चुंबक सिंक्रोनस मोटर है क्योंकि इसका रोटर स्टेटर के चुंबकीय क्षेत्र के साथ सिंक्रोनस गति से घूमता है।",
+  "e_en": "A BLDC motor is technically a permanent magnet synchronous motor because its rotor rotates in synchronism with the stator magnetic field."
+ },
+ {
+  "id": "rp-je_e-f00941",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "प्रेरण मोटर (Induction Motor) को किस आधार पर 'अतुल्यकालिक' (Asynchronous) कहा जाता है?",
+  "q_en": "Why is an induction motor classified as 'asynchronous'?",
+  "o_hi": [
+   "रोटर सिंक्रोनस गति से नहीं घूमता है",
+   "यह डीसी पर काम नहीं करता है",
+   "इसमें ब्रश नहीं होते हैं",
+   "यह केवल एकल चरण पर चलता है"
+  ],
+  "o_en": [
+   "Rotor does not rotate at synchronous speed",
+   "It does not work on DC",
+   "It has no brushes",
+   "It only runs on single phase"
+  ],
+  "a": 0,
+  "e_hi": "प्रेरण मोटर में रोटर हमेशा सिंक्रोनस गति से कम गति पर चलता है, जिसे 'स्लिप' कहा जाता है, इसलिए इसे अतुल्यकालिक कहा जाता है।",
+  "e_en": "In an induction motor, the rotor always rotates at a speed less than synchronous speed, known as 'slip', hence it is called asynchronous."
+ },
+ {
+  "id": "rp-je_e-f00942",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "यूनिवर्सल मोटर को किसके आधार पर वर्गीकृत किया गया है?",
+  "q_en": "On what basis is a universal motor classified?",
+  "o_hi": [
+   "एसी और डीसी दोनों पर कार्य करने की क्षमता",
+   "केवल उच्च गति क्षमता",
+   "चुंबकीय क्षेत्र की अनुपस्थिति",
+   "केवल डीसी पर संचालन"
+  ],
+  "o_en": [
+   "Ability to operate on both AC and DC",
+   "High speed capability only",
+   "Absence of magnetic field",
+   "Operation on DC only"
+  ],
+  "a": 0,
+  "e_hi": "यूनिवर्सल मोटर को इसलिए वर्गीकृत किया गया है क्योंकि यह एसी और डीसी दोनों आपूर्ति पर समान कार्यक्षमता के साथ चल सकती है।",
+  "e_en": "A universal motor is classified as such because it can operate on both AC and DC power supplies with similar performance."
+ },
+ {
+  "id": "rp-je_e-f00943",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "रोटर निर्माण के आधार पर सिंक्रोनस मशीनों के दो मुख्य प्रकार कौन से हैं?",
+  "q_en": "What are the two main types of synchronous machines based on rotor construction?",
+  "o_hi": [
+   "सेलियंट पोल और सिलिंड्रिकल रोटर",
+   "सीरीज और शंट रोटर",
+   "वाउंड और केज रोटर",
+   "स्थायी चुंबक और इलेक्ट्रोमैग्नेट"
+  ],
+  "o_en": [
+   "Salient pole and cylindrical rotor",
+   "Series and shunt rotor",
+   "Wound and cage rotor",
+   "Permanent magnet and electromagnet"
+  ],
+  "a": 0,
+  "e_hi": "सिंक्रोनस मशीनों के रोटर को उनकी भौतिक बनावट के आधार पर सेलियंट पोल (उभरे हुए पोल) या सिलिंड्रिकल (बेलनाकार) प्रकार के रूप में वर्गीकृत किया जाता है।",
+  "e_en": "Synchronous machine rotors are classified based on their physical construction as salient pole (projecting poles) or cylindrical (smooth) types."
+ },
+ {
+  "id": "rp-je_e-f00944",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीनों में, 'पृथक रूप से उत्तेजित' (Separately Excited) वर्गीकरण का क्या अर्थ है?",
+  "q_en": "In DC machines, what does the 'separately excited' classification mean?",
+  "o_hi": [
+   "क्षेत्र वाइंडिंग को अलग डीसी स्रोत से जोड़ा जाता है",
+   "मशीन में कोई क्षेत्र वाइंडिंग नहीं होती",
+   "आर्मेचर और फील्ड श्रेणी में होते हैं",
+   "मशीन को हमेशा बैटरी से चलाना"
+  ],
+  "o_en": [
+   "Field winding is connected to a separate DC source",
+   "Machine has no field winding",
+   "Armature and field are in series",
+   "Machine always runs on battery"
+  ],
+  "a": 0,
+  "e_hi": "पृथक रूप से उत्तेजित मशीनों में, चुंबकीय क्षेत्र बनाने के लिए फील्ड वाइंडिंग को आर्मेचर से स्वतंत्र एक बाहरी डीसी स्रोत से जोड़ा जाता है।",
+  "e_en": "In separately excited machines, the field winding is connected to an external DC source independent of the armature to generate the magnetic field."
+ },
+ {
+  "id": "rp-je_e-f00945",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "प्रेरण मोटर के रोटर निर्माण के आधार पर कौन सा वर्गीकरण सही है?",
+  "q_en": "Which classification based on rotor construction is correct for an induction motor?",
+  "o_hi": [
+   "स्क्विरल केज और स्लिप रिंग (वाउंड) रोटर",
+   "सेलियंट और नॉन-सेलियंट",
+   "डीसी और एसी रोटर",
+   "स्थिर और घूर्णन"
+  ],
+  "o_en": [
+   "Squirrel cage and slip ring (wound) rotor",
+   "Salient and non-salient",
+   "DC and AC rotor",
+   "Static and rotating"
+  ],
+  "a": 0,
+  "e_hi": "प्रेरण मोटर को रोटर की बनावट के आधार पर मुख्य रूप से स्क्विरल केज (कम रखरखाव) और स्लिप रिंग या वाउंड रोटर (उच्च शुरुआती टॉर्क) में बांटा गया है।",
+  "e_en": "Induction motors are primarily classified based on rotor construction into squirrel cage (low maintenance) and slip ring or wound rotor (high starting torque) types."
+ },
+ {
+  "id": "rp-je_e-f00946",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 'स्टेपपर मोटर' (Stepper Motor) को किस वर्ग की विद्युत मशीनों में रखा जाता है?",
+  "q_en": "In which class of electrical machines is a 'stepper motor' categorized?",
+  "o_hi": [
+   "इंक्रीमेंटल मोशन मशीन (Incremental motion machine)",
+   "निरंतर गति मशीन (Continuous speed machine)",
+   "सेल्फ-एक्सिटेड जनरेटर",
+   "थर्मल मशीन"
+  ],
+  "o_en": [
+   "Incremental motion machine",
+   "Continuous speed machine",
+   "Self-excited generator",
+   "Thermal machine"
+  ],
+  "a": 0,
+  "e_hi": "स्टेपपर मोटर एक इंक्रीमेंटल मोशन मशीन है क्योंकि यह इनपुट पल्स के अनुसार एक निश्चित कोण (स्टेप) पर घूमती है, न कि निरंतर गति पर।",
+  "e_en": "A stepper motor is an incremental motion machine because it rotates at a fixed angle (step) according to input pulses, rather than at continuous speed."
+ },
+ {
+  "id": "rp-je_e-f00947",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "यदि एक डीसी शंट मोटर की फील्ड वाइंडिंग अचानक टूट (ओपन सर्किट) जाए, तो क्या प्रभाव होगा?",
+  "q_en": "What will be the effect if the field winding of a DC shunt motor suddenly breaks (open circuit)?",
+  "o_hi": [
+   "मोटर की गति बहुत बढ़ जाएगी",
+   "मोटर तुरंत रुक जाएगी",
+   "मोटर की गति कम हो जाएगी",
+   "आर्मेचर जल जाएगा"
+  ],
+  "o_en": [
+   "Motor speed will increase significantly",
+   "Motor will stop immediately",
+   "Motor speed will decrease",
+   "Armature will burn"
+  ],
+  "a": 0,
+  "e_hi": "डीसी शंट मोटर में गति फ्लक्स के व्युत्क्रमानुपाती होती है। फील्ड ओपन होने पर फ्लक्स शून्य के करीब हो जाता है, जिससे गति खतरनाक रूप से बढ़ जाती है।",
+  "e_en": "In a DC shunt motor, speed is inversely proportional to flux. When the field opens, flux drops near zero, causing a dangerous increase in speed."
+ },
+ {
+  "id": "rp-je_e-f00948",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर में 'हम्बिंग' ध्वनि का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of the 'humming' sound in a transformer?",
+  "o_hi": [
+   "चुंबकीय विरूपण (मैग्नेटोस्ट्रिक्शन)",
+   "ढीले कनेक्शन",
+   "तेल का उबलना",
+   "हवा का घर्षण"
+  ],
+  "o_en": [
+   "Magnetostriction",
+   "Loose connections",
+   "Oil boiling",
+   "Air friction"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफार्मर कोर में चुंबकीय क्षेत्र के कारण लोहे की पत्तियों में भौतिक विस्तार और संकुचन होता है, जिसे मैग्नेटोस्ट्रिक्शन कहते हैं।",
+  "e_en": "Magnetostriction causes physical expansion and contraction of the core laminations due to the magnetic field, creating a humming noise."
+ },
+ {
+  "id": "rp-je_e-f00949",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक थ्री-फेज इंडक्शन मोटर में, यदि रोटर स्थिर है और स्लिप का मान 1 है, तो इसका क्या अर्थ है?",
+  "q_en": "In a three-phase induction motor, if the rotor is stationary and the slip value is 1, what does it signify?",
+  "o_hi": [
+   "मोटर स्टार्ट हो रही है",
+   "मोटर अपनी पूर्ण गति पर है",
+   "मोटर में कोई टॉर्क नहीं है",
+   "मोटर ओवरलोड है"
+  ],
+  "o_en": [
+   "Motor is starting",
+   "Motor is at full speed",
+   "Motor has no torque",
+   "Motor is overloaded"
+  ],
+  "a": 0,
+  "e_hi": "स्लिप 1 होने का अर्थ है कि रोटर की गति शून्य है, जो कि मोटर के स्टार्ट होने की स्थिति को दर्शाता है।",
+  "e_en": "A slip of 1 indicates the rotor speed is zero, which represents the starting condition of the motor."
+ },
+ {
+  "id": "rp-je_e-f00950",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी मशीन के कम्यूटेटर पर स्पार्किंग कम करने के लिए ब्रश की स्थिति को कैसे बदला जाता है?",
+  "q_en": "How is the brush position adjusted to reduce sparking at the commutator of a DC machine?",
+  "o_hi": [
+   "ब्रश को चुंबकीय तटस्थ अक्ष (MNA) पर स्थानांतरित करके",
+   "ब्रश को ज्यामितीय तटस्थ अक्ष (GNA) पर रखकर",
+   "ब्रश को हटाकर",
+   "आर्मेचर को घुमाकर"
+  ],
+  "o_en": [
+   "By shifting brushes to the Magnetic Neutral Axis (MNA)",
+   "By keeping brushes at the Geometric Neutral Axis (GNA)",
+   "By removing the brushes",
+   "By rotating the armature"
+  ],
+  "a": 0,
+  "e_hi": "स्पार्किंग कम करने के लिए ब्रश को आर्मेचर प्रतिक्रिया के कारण शिफ्ट हुए चुंबकीय तटस्थ अक्ष (MNA) पर संरेखित करना आवश्यक है।",
+  "e_en": "To reduce sparking, brushes must be aligned with the Magnetic Neutral Axis (MNA), which shifts due to armature reaction."
+ },
+ {
+  "id": "rp-je_e-f00951",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "यदि एक सिंक्रोनस मोटर का उत्तेजन (excitation) सामान्य से कम (under-excited) है, तो यह किस प्रकार व्यवहार करेगी?",
+  "q_en": "If the excitation of a synchronous motor is lower than normal (under-excited), how will it behave?",
+  "o_hi": [
+   "इंडक्टिव लोड की तरह",
+   "कैपेसिटिव लोड की तरह",
+   "प्रतिरोधी लोड की तरह",
+   "कोई प्रभाव नहीं"
+  ],
+  "o_en": [
+   "Like an inductive load",
+   "Like a capacitive load",
+   "Like a resistive load",
+   "No effect"
+  ],
+  "a": 0,
+  "e_hi": "अंडर-एक्साइटेड सिंक्रोनस मोटर लैगिंग पावर फैक्टर पर काम करती है, जो एक इंडक्टिव लोड के समान है।",
+  "e_en": "An under-excited synchronous motor operates at a lagging power factor, behaving like an inductive load."
+ },
+ {
+  "id": "rp-je_e-f00952",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में रोटर की दिशा उलटने के लिए क्या करना चाहिए?",
+  "q_en": "What should be done to reverse the direction of a three-phase induction motor?",
+  "o_hi": [
+   "किन्हीं दो फेजों के कनेक्शन आपस में बदलें",
+   "तीनों फेजों को एक साथ बदलें",
+   "केवल न्यूट्रल बदलें",
+   "मोटर को वापस घुमाएं"
+  ],
+  "o_en": [
+   "Swap connections of any two phases",
+   "Swap all three phases",
+   "Change only the neutral",
+   "Rotate the motor manually"
+  ],
+  "a": 0,
+  "e_hi": "किन्हीं दो फेजों को आपस में बदलने से रोटेटिंग मैग्नेटिक फील्ड की दिशा बदल जाती है, जिससे रोटर विपरीत दिशा में घूमने लगता है।",
+  "e_en": "Swapping any two phases reverses the direction of the rotating magnetic field, causing the rotor to spin in the opposite direction."
+ },
+ {
+  "id": "rp-je_e-f00953",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीन में 'इंटरपोल' का उपयोग क्यों किया जाता है?",
+  "q_en": "Why are 'interpoles' used in a DC machine?",
+  "o_hi": [
+   "कम्यूटेशन में सुधार के लिए",
+   "आउटपुट वोल्टेज बढ़ाने के लिए",
+   "आर्मेचर का वजन कम करने के लिए",
+   "घर्षण कम करने के लिए"
+  ],
+  "o_en": [
+   "To improve commutation",
+   "To increase output voltage",
+   "To reduce armature weight",
+   "To reduce friction"
+  ],
+  "a": 0,
+  "e_hi": "इंटरपोल आर्मेचर प्रतिक्रिया के प्रभाव को बेअसर करते हैं और स्पार्किंग रहित कम्यूटेशन सुनिश्चित करते हैं।",
+  "e_en": "Interpoles neutralize the effects of armature reaction and ensure sparkless commutation."
+ },
+ {
+  "id": "rp-je_e-f00954",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफॉर्मर में 'कोर' का उपयोग किसलिए किया जाता है?",
+  "q_en": "What is the purpose of using a 'core' in a transformer?",
+  "o_hi": [
+   "चुंबकीय फ्लक्स के लिए कम अनिच्छा (लो रिलक्टेंस) मार्ग प्रदान करना",
+   "वाइंडिंग को सहारा देना",
+   "वोल्टेज कम करना",
+   "ऊष्मा कम करना"
+  ],
+  "o_en": [
+   "To provide a low reluctance path for magnetic flux",
+   "To support the windings",
+   "To reduce voltage",
+   "To dissipate heat"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफॉर्मर कोर उच्च पारगम्यता वाली सामग्री से बनी होती है ताकि चुंबकीय फ्लक्स को आसानी से प्रवाहित होने के लिए एक कम अनिच्छा मार्ग मिल सके।",
+  "e_en": "The transformer core is made of high permeability material to provide a low reluctance path for the magnetic flux to flow easily."
+ },
+ {
+  "id": "rp-je_e-f00955",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक डीसी शंट मोटर में, यदि फील्ड वाइंडिंग टूट जाए तो क्या होगा?",
+  "q_en": "In a DC shunt motor, what will happen if the field winding breaks?",
+  "o_hi": [
+   "मोटर रुक जाएगी",
+   "मोटर की गति खतरनाक रूप से बढ़ जाएगी",
+   "मोटर पर कोई प्रभाव नहीं पड़ेगा",
+   "मोटर जल जाएगी"
+  ],
+  "o_en": [
+   "The motor will stop",
+   "The motor speed will increase to a dangerously high level",
+   "No effect on the motor",
+   "The motor will burn out"
+  ],
+  "a": 1,
+  "e_hi": "फील्ड करंट शून्य होने पर फ्लक्स बहुत कम हो जाता है। चूंकि गति फ्लक्स के व्युत्क्रमानुपाती होती है, इसलिए मोटर की गति बहुत अधिक बढ़ जाती है।",
+  "e_en": "When the field current becomes zero, the flux drops significantly. Since speed is inversely proportional to flux, the motor speed increases to a dangerous level."
+ },
+ {
+  "id": "rp-je_e-f00956",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर की रेटिंग केवीए (kVA) में क्यों व्यक्त की जाती है?",
+  "q_en": "Why is the rating of a transformer expressed in kVA?",
+  "o_hi": [
+   "क्योंकि पावर फैक्टर अज्ञात होता है",
+   "क्योंकि वोल्टेज स्थिर रहता है",
+   "यह गणना में आसान है",
+   "क्योंकि यह केवल तांबे के नुकसान पर निर्भर करता है"
+  ],
+  "o_en": [
+   "Because the power factor is unknown",
+   "Because the voltage remains constant",
+   "It is easier to calculate",
+   "Because it depends only on copper losses"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफॉर्मर में कुल नुकसान (तांबा और लोहा) पावर फैक्टर पर निर्भर नहीं करते हैं, इसलिए रेटिंग को केवीए में मापा जाता है।",
+  "e_en": "Total losses (copper and iron) in a transformer do not depend on the power factor, hence the rating is measured in kVA."
+ },
+ {
+  "id": "rp-je_e-f00957",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "तीन-फेज इंडक्शन मोटर में रोटर की गति हमेशा सिंक्रोनस गति से कम क्यों होती है?",
+  "q_en": "Why is the rotor speed of a three-phase induction motor always less than the synchronous speed?",
+  "o_hi": [
+   "स्लिप के कारण",
+   "घर्षण के कारण",
+   "चुंबकीय लॉक के कारण",
+   "वायु अंतराल के कारण"
+  ],
+  "o_en": [
+   "Due to slip",
+   "Due to friction",
+   "Due to magnetic locking",
+   "Due to air gap"
+  ],
+  "a": 0,
+  "e_hi": "यदि रोटर सिंक्रोनस गति पर घूमेगा, तो सापेक्ष गति शून्य हो जाएगी और कोई ईएमएफ प्रेरित नहीं होगा, जिससे टॉर्क उत्पन्न नहीं होगा।",
+  "e_en": "If the rotor rotates at synchronous speed, the relative speed becomes zero and no EMF is induced, which would result in zero torque."
+ },
+ {
+  "id": "rp-je_e-f00958",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीन के आर्मेचर में लेप वाइंडिंग का उपयोग किस प्रकार के कार्य के लिए किया जाता है?",
+  "q_en": "For what type of application is lap winding used in a DC machine armature?",
+  "o_hi": [
+   "उच्च धारा और कम वोल्टेज",
+   "कम धारा और उच्च वोल्टेज",
+   "उच्च धारा और उच्च वोल्टेज",
+   "कम धारा और कम वोल्टेज"
+  ],
+  "o_en": [
+   "High current and low voltage",
+   "Low current and high voltage",
+   "High current and high voltage",
+   "Low current and low voltage"
+  ],
+  "a": 0,
+  "e_hi": "लैप वाइंडिंग में समानांतर रास्तों की संख्या ध्रुवों की संख्या के बराबर होती है, जो इसे उच्च धारा के लिए उपयुक्त बनाती है।",
+  "e_en": "In lap winding, the number of parallel paths equals the number of poles, which makes it suitable for high current applications."
+ },
+ {
+  "id": "rp-je_e-f00959",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक सिंक्रोनस मोटर में, यदि उत्तेजना (excitation) सामान्य से अधिक हो, तो इसे क्या कहा जाता है?",
+  "q_en": "In a synchronous motor, what is it called if the excitation is more than normal?",
+  "o_hi": [
+   "ओवर-एक्साइटेड",
+   "अंडर-एक्साइटेड",
+   "नॉर्मल-एक्साइटेड",
+   "क्रिटिकल-एक्साइटेड"
+  ],
+  "o_en": [
+   "Over-excited",
+   "Under-excited",
+   "Normal-excited",
+   "Critical-excited"
+  ],
+  "a": 0,
+  "e_hi": "जब सिंक्रोनस मोटर सामान्य से अधिक उत्तेजित होती है, तो वह कैपेसिटर की तरह व्यवहार करती है और लीडिंग पावर फैक्टर पर काम करती है।",
+  "e_en": "When a synchronous motor is over-excited, it behaves like a capacitor and operates at a leading power factor."
+ },
+ {
+  "id": "rp-je_e-f00960",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफॉर्मर में 'हिसटेरिसिस लॉस' को कम करने के लिए किस सामग्री का उपयोग किया जाता है?",
+  "q_en": "Which material is used to reduce 'hysteresis loss' in a transformer?",
+  "o_hi": [
+   "सिलिकॉन स्टील",
+   "तांबा",
+   "एल्यूमीनियम",
+   "कार्बन"
+  ],
+  "o_en": [
+   "Silicon steel",
+   "Copper",
+   "Aluminum",
+   "Carbon"
+  ],
+  "a": 0,
+  "e_hi": "सिलिकॉन स्टील का उपयोग हिस्टेरेसिस लूप के क्षेत्र को छोटा करने के लिए किया जाता है, जिससे ऊर्जा की हानि कम हो जाती है।",
+  "e_en": "Silicon steel is used to minimize the area of the hysteresis loop, thereby reducing energy losses."
+ },
+ {
+  "id": "rp-je_e-f00961",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "तीन-फेज इंडक्शन मोटर के 'स्टार्टर' का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of a 'starter' for a three-phase induction motor?",
+  "o_hi": [
+   "प्रारंभिक धारा को सीमित करना",
+   "गति को नियंत्रित करना",
+   "वोल्टेज को बढ़ाना",
+   "टॉर्क को कम करना"
+  ],
+  "o_en": [
+   "To limit the starting current",
+   "To control the speed",
+   "To increase the voltage",
+   "To reduce the torque"
+  ],
+  "a": 0,
+  "e_hi": "इंडक्शन मोटर शुरू होते समय बहुत अधिक धारा लेती है, जिसे कम करने के लिए स्टार्टर का उपयोग किया जाता है।",
+  "e_en": "Induction motors draw a very high current at starting, which is restricted using a starter to prevent damage."
+ },
+ {
+  "id": "rp-je_e-f00962",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक डीसी जनरेटर में 'आर्मेचर रिएक्शन' का क्या अर्थ है?",
+  "q_en": "What is meant by 'armature reaction' in a DC generator?",
+  "o_hi": [
+   "आर्मेचर फ्लक्स का मुख्य क्षेत्र फ्लक्स पर प्रभाव",
+   "आर्मेचर का गर्म होना",
+   "वोल्टेज का अचानक गिरना",
+   "ब्रशों का स्पार्किंग करना"
+  ],
+  "o_en": [
+   "Effect of armature flux on main field flux",
+   "Heating of the armature",
+   "Sudden voltage drop",
+   "Sparking of brushes"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर द्वारा उत्पन्न चुंबकीय क्षेत्र का मुख्य चुंबकीय क्षेत्र पर पड़ने वाले प्रभाव को आर्मेचर रिएक्शन कहते हैं।",
+  "e_en": "The effect of the magnetic field produced by the armature on the main field flux is known as armature reaction."
+ },
+ {
+  "id": "rp-je_e-f00963",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "विद्युत मशीनों के वर्गीकरण में, डीसी जनरेटर किस सिद्धांत पर कार्य करता है?",
+  "q_en": "In the classification of electrical machines, on which principle does a DC generator operate?",
+  "o_hi": [
+   "फैराडे का विद्युत चुंबकीय प्रेरण का नियम",
+   "किरचॉफ का नियम",
+   "ओम का नियम",
+   "एम्पीयर का नियम"
+  ],
+  "o_en": [
+   "Faraday's law of electromagnetic induction",
+   "Kirchhoff's law",
+   "Ohm's law",
+   "Ampere's law"
+  ],
+  "a": 0,
+  "e_hi": "सभी डीसी जनरेटर फैराडे के विद्युत चुंबकीय प्रेरण के नियम पर आधारित होते हैं।",
+  "e_en": "All DC generators are based on Faraday's law of electromagnetic induction."
+ },
+ {
+  "id": "rp-je_e-f00964",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "प्रेरण मोटर (Induction Motor) को किस श्रेणी में वर्गीकृत किया जाता है?",
+  "q_en": "Into which category is an induction motor classified?",
+  "o_hi": [
+   "तुल्यकालिक मशीन",
+   "अतुल्यकालिक मशीन",
+   "स्थायी चुंबक मशीन",
+   "डीसी मशीन"
+  ],
+  "o_en": [
+   "Synchronous machine",
+   "Asynchronous machine",
+   "Permanent magnet machine",
+   "DC machine"
+  ],
+  "a": 1,
+  "e_hi": "प्रेरण मोटर को अतुल्यकालिक मशीन कहा जाता है क्योंकि इसका रोटर स्टेटर चुंबकीय क्षेत्र की गति से कम गति पर चलता है।",
+  "e_en": "Induction motors are called asynchronous machines because the rotor runs at a speed slower than the stator magnetic field speed."
+ },
+ {
+  "id": "rp-je_e-f00965",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर किस प्रकार की विद्युत मशीन है?",
+  "q_en": "What type of electrical machine is a transformer?",
+  "o_hi": [
+   "घूर्णन मशीन",
+   "स्थिर मशीन",
+   "डीसी मशीन",
+   "स्व-उत्तेजित मशीन"
+  ],
+  "o_en": [
+   "Rotating machine",
+   "Static machine",
+   "DC machine",
+   "Self-excited machine"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफार्मर में कोई घूमने वाला भाग नहीं होता, इसलिए इसे स्थिर मशीन (Static Machine) कहा जाता है।",
+  "e_en": "A transformer has no moving parts, therefore it is classified as a static machine."
+ },
+ {
+  "id": "rp-je_e-f00966",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 'ब्रशलेस डीसी मोटर' (BLDC) को मुख्य रूप से कैसे वर्गीकृत किया जाता है?",
+  "q_en": "How is a 'Brushless DC Motor' (BLDC) primarily classified?",
+  "o_hi": [
+   "एसी सिंक्रोनस मोटर",
+   "डीसी शंट मोटर",
+   "डीसी सीरीज मोटर",
+   "इंडक्शन मोटर"
+  ],
+  "o_en": [
+   "AC synchronous motor",
+   "DC shunt motor",
+   "DC series motor",
+   "Induction motor"
+  ],
+  "a": 0,
+  "e_hi": "BLDC मोटरें संरचनात्मक रूप से एसी सिंक्रोनस मोटरों के समान होती हैं जिन्हें इलेक्ट्रॉनिक कम्यूटेशन द्वारा चलाया जाता है।",
+  "e_en": "BLDC motors are structurally similar to AC synchronous motors and are operated via electronic commutation."
+ },
+ {
+  "id": "rp-je_e-f00967",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एसी जनरेटर (अल्टरनेटर) को उसकी उत्तेजना प्रणाली के आधार पर कैसे वर्गीकृत किया जा सकता है?",
+  "q_en": "How can an AC generator (alternator) be classified based on its excitation system?",
+  "o_hi": [
+   "स्व-उत्तेजित और पृथक-उत्तेजित",
+   "केवल स्व-उत्तेजित",
+   "केवल पृथक-उत्तेजित",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Self-excited and separately excited",
+   "Self-excited only",
+   "Separately excited only",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "अल्टरनेटर को उनकी फील्ड वाइंडिंग को दी जाने वाली उत्तेजना के आधार पर स्व-उत्तेजित या पृथक-उत्तेजित के रूप में वर्गीकृत किया जाता है।",
+  "e_en": "Alternators are classified as self-excited or separately excited based on the excitation provided to their field windings."
+ },
+ {
+  "id": "rp-je_e-f00968",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीनों में, 'कम्यूटेटर' का कार्य क्या है?",
+  "q_en": "In DC machines, what is the function of the 'commutator'?",
+  "o_hi": [
+   "एसी को डीसी में बदलना",
+   "डीसी को एसी में बदलना",
+   "वोल्टेज बढ़ाना",
+   "धारा कम करना"
+  ],
+  "o_en": [
+   "Converting AC to DC",
+   "Converting DC to AC",
+   "Increasing voltage",
+   "Reducing current"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर में कम्यूटेटर आर्मेचर के भीतर उत्पन्न एसी को बाहरी परिपथ के लिए डीसी में बदलता है।",
+  "e_en": "In a DC generator, the commutator converts the AC generated within the armature into DC for the external circuit."
+ },
+ {
+  "id": "rp-je_e-f00969",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "सिंगल फेज इंडक्शन मोटर का वर्गीकरण उनकी प्रारंभिक विधि के आधार पर करने पर कौन सा प्रकार नहीं है?",
+  "q_en": "Which of the following is not a type of single-phase induction motor based on its starting method?",
+  "o_hi": [
+   "स्प्लिट फेज मोटर",
+   "कैपेसिटर स्टार्ट मोटर",
+   "शंट मोटर",
+   "शेडेड पोल मोटर"
+  ],
+  "o_en": [
+   "Split phase motor",
+   "Capacitor start motor",
+   "Shunt motor",
+   "Shaded pole motor"
+  ],
+  "a": 2,
+  "e_hi": "शंट मोटर डीसी मोटर का एक प्रकार है, न कि सिंगल फेज इंडक्शन मोटर का।",
+  "e_en": "A shunt motor is a type of DC motor, not a single-phase induction motor."
+ },
+ {
+  "id": "rp-je_e-f00970",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "विद्युत मशीनों के संदर्भ में 'हॉपकिंसन टेस्ट' का उपयोग किस लिए किया जाता है?",
+  "q_en": "In the context of electrical machines, what is the 'Hopkinson's Test' used for?",
+  "o_hi": [
+   "दक्षता और ताप परीक्षण",
+   "केवल गति नियंत्रण",
+   "वोल्टेज विनियमन",
+   "चुंबकीय क्षेत्र मापन"
+  ],
+  "o_en": [
+   "Efficiency and heat run test",
+   "Speed control only",
+   "Voltage regulation",
+   "Magnetic field measurement"
+  ],
+  "a": 0,
+  "e_hi": "हॉपकिंसन परीक्षण का उपयोग डीसी मशीनों की दक्षता निर्धारित करने और ऊष्मा परीक्षण के लिए किया जाता है।",
+  "e_en": "Hopkinson's test is used to determine the efficiency and perform a heat run test on DC machines."
+ },
+ {
+  "id": "rp-je_e-f00971",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "रोटर की संरचना के आधार पर, इंडक्शन मोटर का मुख्य वर्गीकरण क्या है?",
+  "q_en": "Based on rotor construction, what is the main classification of an induction motor?",
+  "o_hi": [
+   "स्क्विरल केज और स्लिप रिंग",
+   "स्टेटर और रोटर",
+   "सीरीज और शंट",
+   "डीसी और एसी"
+  ],
+  "o_en": [
+   "Squirrel cage and slip ring",
+   "Stator and rotor",
+   "Series and shunt",
+   "DC and AC"
+  ],
+  "a": 0,
+  "e_hi": "इंडक्शन मोटर को उनके रोटर के आधार पर स्क्विरल केज (पिंजरा) और स्लिप रिंग (वाउंड रोटर) में वर्गीकृत किया जाता है।",
+  "e_en": "Induction motors are classified based on their rotors as squirrel cage and slip ring (wound rotor)."
+ },
+ {
+  "id": "rp-je_e-f00972",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक डीसी मशीन में 'आर्मेचर रिएक्शन' का मुख्य प्रभाव क्या है?",
+  "q_en": "What is the primary effect of 'armature reaction' in a DC machine?",
+  "o_hi": [
+   "मेन फ्लक्स का विरूपण",
+   "वोल्टेज में वृद्धि",
+   "धारा में कमी",
+   "घर्षण में वृद्धि"
+  ],
+  "o_en": [
+   "Distortion of main flux",
+   "Increase in voltage",
+   "Decrease in current",
+   "Increase in friction"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर रिएक्शन आर्मेचर फ्लक्स द्वारा मुख्य चुंबकीय क्षेत्र के विरूपण और विचुंबकीकरण को संदर्भित करता है।",
+  "e_en": "Armature reaction refers to the distortion and demagnetization of the main magnetic field by the armature flux."
+ },
+ {
+  "id": "rp-je_e-f00973",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 4-ध्रुव डीसी जनरेटर 1200 आरपीएम पर चल रहा है। जनरेटर में उत्पन्न ईएमएफ की आवृत्ति क्या होगी?",
+  "q_en": "A 4-pole DC generator is running at 1200 RPM. What will be the frequency of the induced EMF in the armature?",
+  "o_hi": [
+   "20 हर्ट्ज",
+   "40 हर्ट्ज",
+   "60 हर्ट्ज",
+   "80 हर्ट्ज"
+  ],
+  "o_en": [
+   "20 Hz",
+   "40 Hz",
+   "60 Hz",
+   "80 Hz"
+  ],
+  "a": 1,
+  "e_hi": "आवृत्ति का सूत्र f = (P * N) / 120 होता है। यहाँ P=4 और N=1200 है, इसलिए f = (4 * 1200) / 120 = 40 हर्ट्ज।",
+  "e_en": "The frequency formula is f = (P * N) / 120. With P=4 and N=1200, f = (4 * 1200) / 120 = 40 Hz."
+ },
+ {
+  "id": "rp-je_e-f00974",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 230 वोल्ट, 50 हर्ट्ज ट्रांसफार्मर की प्राथमिक वाइंडिंग में 500 फेरे हैं। यदि द्वितीयक वोल्टेज 115 वोल्ट है, तो द्वितीयक वाइंडिंग में फेरों की संख्या क्या होगी?",
+  "q_en": "A 230V, 50Hz transformer has 500 turns in its primary winding. If the secondary voltage is 115V, how many turns will the secondary winding have?",
+  "o_hi": [
+   "250 फेरे",
+   "500 फेरे",
+   "1000 फेरे",
+   "125 फेरे"
+  ],
+  "o_en": [
+   "250 turns",
+   "500 turns",
+   "1000 turns",
+   "125 turns"
+  ],
+  "a": 0,
+  "e_hi": "टर्न अनुपात का सूत्र V1/V2 = N1/N2 होता है। N2 = (V2/V1) * N1 = (115/230) * 500 = 250 फेरे।",
+  "e_en": "The turn ratio formula is V1/V2 = N1/N2. N2 = (V2/V1) * N1 = (115/230) * 500 = 250 turns."
+ },
+ {
+  "id": "rp-je_e-f00975",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक 3-फेज, 4-ध्रुव इंडक्शन मोटर 50 हर्ट्ज आपूर्ति से जुड़ी है। यदि मोटर 1440 आरपीएम पर चल रही है, तो स्लिप का मान प्रतिशत में क्या होगा?",
+  "q_en": "A 3-phase, 4-pole induction motor is connected to a 50Hz supply. If the motor runs at 1440 RPM, what is the slip percentage?",
+  "o_hi": [
+   "2 प्रतिशत",
+   "4 प्रतिशत",
+   "5 प्रतिशत",
+   "6 प्रतिशत"
+  ],
+  "o_en": [
+   "2 percent",
+   "4 percent",
+   "5 percent",
+   "6 percent"
+  ],
+  "a": 1,
+  "e_hi": "तुल्यकालिक गति (Ns) = (120 * 50) / 4 = 1500 आरपीएम। स्लिप = (Ns - Nr) / Ns = (1500 - 1440) / 1500 = 0.04 या 4 प्रतिशत।",
+  "e_en": "Synchronous speed (Ns) = (120 * 50) / 4 = 1500 RPM. Slip = (Ns - Nr) / Ns = (1500 - 1440) / 1500 = 0.04 or 4 percent."
+ },
+ {
+  "id": "rp-je_e-f00976",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक डीसी शंट मोटर का आर्मेचर प्रतिरोध 0.5 ओम है। यदि लाइन वोल्टेज 220 वोल्ट है और बैक ईएमएफ 200 वोल्ट है, तो आर्मेचर करंट क्या होगा?",
+  "q_en": "A DC shunt motor has an armature resistance of 0.5 ohms. If the line voltage is 220V and back EMF is 200V, what is the armature current?",
+  "o_hi": [
+   "40 एम्पीयर",
+   "44 एम्पीयर",
+   "20 एम्पीयर",
+   "10 एम्पीयर"
+  ],
+  "o_en": [
+   "40 Amperes",
+   "44 Amperes",
+   "20 Amperes",
+   "10 Amperes"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर करंट (Ia) = (V - Eb) / Ra = (220 - 200) / 0.5 = 20 / 0.5 = 40 एम्पीयर।",
+  "e_en": "Armature current (Ia) = (V - Eb) / Ra = (220 - 200) / 0.5 = 20 / 0.5 = 40 Amperes."
+ },
+ {
+  "id": "rp-je_e-f00977",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक ट्रांसफार्मर की अधिकतम दक्षता तब होती है जब उसकी लौह हानि 100 वाट है। उस स्थिति में ताम्र हानि (Copper Loss) कितनी होगी?",
+  "q_en": "The maximum efficiency of a transformer occurs when its iron loss is 100 Watts. What will be the copper loss at that condition?",
+  "o_hi": [
+   "50 वाट",
+   "100 वाट",
+   "200 वाट",
+   "400 वाट"
+  ],
+  "o_en": [
+   "50 Watts",
+   "100 Watts",
+   "200 Watts",
+   "400 Watts"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफार्मर में अधिकतम दक्षता के लिए, परिवर्तनीय ताम्र हानि स्थिर लौह हानि के बराबर होनी चाहिए।",
+  "e_en": "For maximum efficiency in a transformer, variable copper loss must equal constant iron loss."
+ },
+ {
+  "id": "rp-je_e-f00978",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक 6-ध्रुव, वेव-वाउंड डीसी जनरेटर में 500 आर्मेचर कंडक्टर हैं। यदि फ्लक्स प्रति ध्रुव 0.02 वेबर है और गति 1000 आरपीएम है, तो उत्पन्न ईएमएफ की गणना करें।",
+  "q_en": "A 6-pole, wave-wound DC generator has 500 armature conductors. If flux per pole is 0.02 Wb and speed is 1000 RPM, calculate the generated EMF.",
+  "o_hi": [
+   "250 वोल्ट",
+   "500 वोल्ट",
+   "1000 वोल्ट",
+   "125 वोल्ट"
+  ],
+  "o_en": [
+   "250 Volts",
+   "500 Volts",
+   "1000 Volts",
+   "125 Volts"
+  ],
+  "a": 1,
+  "e_hi": "ईएमएफ सूत्र E = (P * Phi * Z * N) / (60 * A) है। वेव वाइंडिंग के लिए A=2। E = (6 * 0.02 * 500 * 1000) / (60 * 2) = 500 वोल्ट।",
+  "e_en": "The EMF formula is E = (P * Phi * Z * N) / (60 * A). For wave winding, A=2. E = (6 * 0.02 * 500 * 1000) / (60 * 2) = 500 Volts."
+ },
+ {
+  "id": "rp-je_e-f00979",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक 3-फेज अल्टरनेटर में 12 ध्रुव हैं और यह 500 आरपीएम पर चल रहा है। उत्पन्न ईएमएफ की आवृत्ति क्या है?",
+  "q_en": "A 3-phase alternator has 12 poles and is running at 500 RPM. What is the frequency of the generated EMF?",
+  "o_hi": [
+   "25 हर्ट्ज",
+   "50 हर्ट्ज",
+   "60 हर्ट्ज",
+   "100 हर्ट्ज"
+  ],
+  "o_en": [
+   "25 Hz",
+   "50 Hz",
+   "60 Hz",
+   "100 Hz"
+  ],
+  "a": 1,
+  "e_hi": "आवृत्ति f = (P * N) / 120 = (12 * 500) / 120 = 50 हर्ट्ज।",
+  "e_en": "Frequency f = (P * N) / 120 = (12 * 500) / 120 = 50 Hz."
+ },
+ {
+  "id": "rp-je_e-f00980",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "यदि एक 200/100 वोल्ट ट्रांसफार्मर का प्राथमिक प्रतिरोध 0.2 ओम और द्वितीयक प्रतिरोध 0.05 ओम है, तो प्राथमिक पक्ष के संदर्भ में कुल प्रतिरोध क्या होगा?",
+  "q_en": "If a 200/100V transformer has a primary resistance of 0.2 ohms and a secondary resistance of 0.05 ohms, what is the equivalent resistance referred to the primary side?",
+  "o_hi": [
+   "0.25 ओम",
+   "0.4 ओम",
+   "0.3 ओम",
+   "0.1 ओम"
+  ],
+  "o_en": [
+   "0.25 ohms",
+   "0.4 ohms",
+   "0.3 ohms",
+   "0.1 ohms"
+  ],
+  "a": 1,
+  "e_hi": "R_eq = R1 + R2' = R1 + R2 * (K^2) जहाँ K = 100/200 = 0.5। R_eq = 0.2 + 0.05 * (0.5^2) = 0.2 + 0.0125 = 0.2125 ओम (निकटतम विकल्प 0.4 है यदि K=2 लिया जाए)।",
+  "e_en": "R_eq = R1 + R2 * (V1/V2)^2. Here ratio is 2, so R_eq = 0.2 + 0.05 * (2^2) = 0.2 + 0.2 = 0.4 ohms."
+ },
+ {
+  "id": "rp-je_e-f00981",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक डीसी श्रृंखला मोटर 500 आरपीएम पर 20 एम्पीयर करंट लेती है। यदि टॉर्क आर्मेचर करंट के वर्ग के समानुपाती है, तो 40 एम्पीयर करंट पर गति क्या होगी?",
+  "q_en": "A DC series motor runs at 500 RPM taking 20A. If torque is proportional to the square of armature current, what will be the speed at 40A current?",
+  "o_hi": [
+   "250 आरपीएम",
+   "500 आरपीएम",
+   "1000 आरपीएम",
+   "2000 आरपीएम"
+  ],
+  "o_en": [
+   "250 RPM",
+   "500 RPM",
+   "1000 RPM",
+   "2000 RPM"
+  ],
+  "a": 0,
+  "e_hi": "श्रृंखला मोटर में, N1*I1 = N2*I2 (असंतृप्त अवस्था)। यहाँ N2 = (N1 * I1) / I2 = (500 * 20) / 40 = 250 आरपीएम।",
+  "e_en": "In a series motor, N is inversely proportional to flux. Since flux is proportional to current, N1*I1 = N2*I2. N2 = (500 * 20) / 40 = 250 RPM."
+ },
+ {
+  "id": "rp-je_e-f00982",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक ट्रांसफार्मर 0.8 पावर फैक्टर लैगिंग पर पूर्ण भार पर कार्य कर रहा है। यदि इसका वोल्टेज विनियमन (Voltage Regulation) 5 प्रतिशत है, तो नो-लोड वोल्टेज क्या होगा यदि फुल-लोड वोल्टेज 200 वोल्ट है?",
+  "q_en": "A transformer is operating at full load with 0.8 power factor lagging. If its voltage regulation is 5%, what will be the no-load voltage if full-load voltage is 200V?",
+  "o_hi": [
+   "205 वोल्ट",
+   "210 वोल्ट",
+   "190 वोल्ट",
+   "200 वोल्ट"
+  ],
+  "o_en": [
+   "205 Volts",
+   "210 Volts",
+   "190 Volts",
+   "200 Volts"
+  ],
+  "a": 1,
+  "e_hi": "वोल्टेज विनियमन = (V_nl - V_fl) / V_fl * 100। 5 = (V_nl - 200) / 200 * 100। V_nl = 210 वोल्ट।",
+  "e_en": "Voltage Regulation = (V_nl - V_fl) / V_fl * 100. 5 = (V_nl - 200) / 200 * 100. V_nl = 210 Volts."
+ },
+ {
+  "id": "rp-je_e-f00983",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी जनरेटर और डीसी मोटर के बीच मुख्य कार्यात्मक अंतर क्या है?",
+  "q_en": "What is the primary functional difference between a DC generator and a DC motor?",
+  "o_hi": [
+   "ऊर्जा रूपांतरण की दिशा",
+   "आर्मेचर वाइंडिंग का प्रकार",
+   "क्षेत्र उत्तेजना का स्रोत",
+   "कम्यूटेटर का उपयोग"
+  ],
+  "o_en": [
+   "Direction of energy conversion",
+   "Type of armature winding",
+   "Source of field excitation",
+   "Use of commutator"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर यांत्रिक ऊर्जा को विद्युत ऊर्जा में बदलता है, जबकि डीसी मोटर विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलती है।",
+  "e_en": "A DC generator converts mechanical energy into electrical energy, whereas a DC motor converts electrical energy into mechanical energy."
+ },
+ {
+  "id": "rp-je_e-f00984",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफार्मर में 'लेमिनेटेड कोर' का उपयोग क्यों किया जाता है?",
+  "q_en": "Why are laminated cores used in transformers?",
+  "o_hi": [
+   "हिस्टैरिसीस हानि कम करने के लिए",
+   "एडी करंट हानि कम करने के लिए",
+   "ताम्र हानि कम करने के लिए",
+   "चुंबकीय फ्लक्स बढ़ाने के लिए"
+  ],
+  "o_en": [
+   "To reduce hysteresis loss",
+   "To reduce eddy current loss",
+   "To reduce copper loss",
+   "To increase magnetic flux"
+  ],
+  "a": 1,
+  "e_hi": "लेमिनेशन कोर के प्रतिरोध को बढ़ाकर एडी करंट (भंवर धारा) के मार्ग को बाधित करते हैं, जिससे ऊर्जा हानि कम हो जाती है।",
+  "e_en": "Laminations increase the resistance of the core path, which restricts eddy currents and minimizes energy loss."
+ },
+ {
+  "id": "rp-je_e-f00985",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक सिंक्रोनस मोटर और इंडक्शन मोटर के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the fundamental difference between a synchronous motor and an induction motor?",
+  "o_hi": [
+   "सिंक्रोनस मोटर हमेशा सिंक्रोनस गति पर चलती है",
+   "इंडक्शन मोटर को डीसी उत्तेजना की आवश्यकता होती है",
+   "सिंक्रोनस मोटर सेल्फ-स्टार्टिंग नहीं होती",
+   "इंडक्शन मोटर में स्लिप नहीं होती"
+  ],
+  "o_en": [
+   "Synchronous motor always runs at synchronous speed",
+   "Induction motor requires DC excitation",
+   "Synchronous motor is not self-starting",
+   "Induction motor has no slip"
+  ],
+  "a": 0,
+  "e_hi": "सिंक्रोनस मोटर लोड की परवाह किए बिना स्थिर सिंक्रोनस गति पर चलती है, जबकि इंडक्शन मोटर की गति लोड के साथ बदलती रहती है।",
+  "e_en": "A synchronous motor runs at a constant synchronous speed regardless of the load, whereas an induction motor's speed varies with the load."
+ },
+ {
+  "id": "rp-je_e-f00986",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीनों में 'इंटरपोल्स' (Interpoles) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of interpoles in DC machines?",
+  "o_hi": [
+   "वोल्टेज बढ़ाने के लिए",
+   "स्पार्किंग कम करने और कम्यूटेशन सुधारने के लिए",
+   "गति को नियंत्रित करने के लिए",
+   "ताम्र हानि को कम करने के लिए"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "To reduce sparking and improve commutation",
+   "To control speed",
+   "To reduce copper loss"
+  ],
+  "a": 1,
+  "e_hi": "इंटरपोल्स का उपयोग कम्यूटेशन के दौरान स्पार्किंग को कम करने और आर्मेचर रिएक्शन के प्रभाव को बेअसर करने के लिए किया जाता है।",
+  "e_en": "Interpoles are used to reduce sparking during commutation and neutralize the effects of armature reaction."
+ },
+ {
+  "id": "rp-je_e-f00987",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी शंट मोटर और डीसी सीरीज मोटर की तुलना में, कौन सा कथन सही है?",
+  "q_en": "Comparing a DC shunt motor and a DC series motor, which statement is correct?",
+  "o_hi": [
+   "सीरीज मोटर स्थिर गति मोटर है",
+   "शंट मोटर का शुरुआती टॉर्क बहुत कम होता है",
+   "सीरीज मोटर का उपयोग उच्च शुरुआती टॉर्क के लिए किया जाता है",
+   "दोनों की गति समान होती है"
+  ],
+  "o_en": [
+   "Series motor is a constant speed motor",
+   "Shunt motor has a very low starting torque",
+   "Series motor is used for high starting torque applications",
+   "Both have the same speed characteristics"
+  ],
+  "a": 2,
+  "e_hi": "डीसी सीरीज मोटर में उच्च शुरुआती टॉर्क होता है, इसलिए इसका उपयोग क्रेन और ट्रेनों जैसे भारी भार के लिए किया जाता है।",
+  "e_en": "DC series motors produce high starting torque, making them suitable for heavy load applications like cranes and trains."
+ },
+ {
+  "id": "rp-je_e-f00988",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "इंडक्शन मोटर में 'स्लिप' (Slip) का मान क्या होता है जब मोटर स्थिर (Static) अवस्था में हो?",
+  "q_en": "What is the value of 'slip' in an induction motor when it is in a static condition?",
+  "o_hi": [
+   "शून्य",
+   "एक (1)",
+   "अनंत",
+   "0.5"
+  ],
+  "o_en": [
+   "Zero",
+   "One (1)",
+   "Infinite",
+   "0.5"
+  ],
+  "a": 1,
+  "e_hi": "जब रोटर स्थिर होता है, तो रोटर की गति शून्य होती है, इसलिए स्लिप का मान इकाई (1) होता है।",
+  "e_en": "When the rotor is stationary, its speed is zero, resulting in a slip value of unity (1)."
+ },
+ {
+  "id": "rp-je_e-f00989",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक अल्टरनेटर का 'वोल्टेज रेगुलेशन' किस पर निर्भर करता है?",
+  "q_en": "What does the 'voltage regulation' of an alternator depend on?",
+  "o_hi": [
+   "केवल भार का पावर फैक्टर",
+   "केवल लोड करंट",
+   "लोड करंट और पावर फैक्टर दोनों",
+   "केवल टर्मिनल वोल्टेज"
+  ],
+  "o_en": [
+   "Only load power factor",
+   "Only load current",
+   "Both load current and power factor",
+   "Only terminal voltage"
+  ],
+  "a": 2,
+  "e_hi": "अल्टरनेटर का वोल्टेज रेगुलेशन लोड के परिमाण और लोड के पावर फैक्टर (लैगिंग, लीडिंग या यूनिटी) पर निर्भर करता है।",
+  "e_en": "The voltage regulation of an alternator depends on both the magnitude of the load current and the power factor of the load."
+ },
+ {
+  "id": "rp-je_e-f00990",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा डीसी मशीन का हिस्सा नहीं है?",
+  "q_en": "Which of the following is not a part of a DC machine?",
+  "o_hi": [
+   "कम्यूटेटर",
+   "फील्ड वाइंडिंग",
+   "आर्मेचर",
+   "ट्रांसफार्मर कोर"
+  ],
+  "o_en": [
+   "Commutator",
+   "Field winding",
+   "Armature",
+   "Transformer core"
+  ],
+  "a": 3,
+  "e_hi": "कम्यूटेटर, फील्ड वाइंडिंग और आर्मेचर डीसी मशीन के मुख्य भाग हैं, जबकि ट्रांसफार्मर कोर एक अलग उपकरण का हिस्सा है।",
+  "e_en": "Commutator, field winding, and armature are essential parts of a DC machine, whereas a transformer core belongs to a separate device."
+ },
+ {
+  "id": "rp-je_e-f00991",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक डीसी जनरेटर में कम्यूटेटर का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a commutator in a DC generator?",
+  "o_hi": [
+   "एसी को डीसी में बदलना",
+   "डीसी को एसी में बदलना",
+   "वोल्टेज को बढ़ाना",
+   "धारा को सीमित करना"
+  ],
+  "o_en": [
+   "Converting AC to DC",
+   "Converting DC to AC",
+   "Increasing the voltage",
+   "Limiting the current"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर में आर्मेचर के भीतर उत्पन्न धारा एसी होती है, जिसे कम्यूटेटर डीसी में बदलता है।",
+  "e_en": "The current induced in the armature of a DC generator is AC, which the commutator rectifies into DC."
+ },
+ {
+  "id": "rp-je_e-f00992",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर में 'लौह हानि' (Iron Loss) कहाँ होती है?",
+  "q_en": "Where does the 'Iron Loss' occur in a transformer?",
+  "o_hi": [
+   "कोर में",
+   "वाइंडिंग में",
+   "तेल में",
+   "इंसुलेशन में"
+  ],
+  "o_en": [
+   "In the core",
+   "In the windings",
+   "In the oil",
+   "In the insulation"
+  ],
+  "a": 0,
+  "e_hi": "लौह हानि कोर में हिस्टेरेसिस और एड़ी धाराओं (eddy currents) के कारण होती है।",
+  "e_en": "Iron loss occurs in the core due to hysteresis and eddy currents."
+ },
+ {
+  "id": "rp-je_e-f00993",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "तीन-फेज प्रेरण मोटर (Induction Motor) की तुल्यकालिक गति (Synchronous Speed) का सूत्र क्या है?",
+  "q_en": "What is the formula for the synchronous speed of a three-phase induction motor?",
+  "o_hi": [
+   "Ns = 120f / P",
+   "Ns = P / 120f",
+   "Ns = 120P / f",
+   "Ns = f / 120P"
+  ],
+  "o_en": [
+   "Ns = 120f / P",
+   "Ns = P / 120f",
+   "Ns = 120P / f",
+   "Ns = f / 120P"
+  ],
+  "a": 0,
+  "e_hi": "यहाँ 'f' आवृत्ति है और 'P' ध्रुवों (poles) की संख्या है।",
+  "e_en": "Here 'f' is the frequency and 'P' is the number of poles."
+ },
+ {
+  "id": "rp-je_e-f00994",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मोटर की गति नियंत्रण के लिए 'फील्ड डायवर्टर' विधि का उपयोग कब किया जाता है?",
+  "q_en": "When is the 'Field Diverter' method used for DC motor speed control?",
+  "o_hi": [
+   "सामान्य गति से कम गति के लिए",
+   "सामान्य गति से अधिक गति के लिए",
+   "केवल शुरुआती टॉर्क के लिए",
+   "स्थिर गति के लिए"
+  ],
+  "o_en": [
+   "For speeds below rated speed",
+   "For speeds above rated speed",
+   "Only for starting torque",
+   "For constant speed"
+  ],
+  "a": 1,
+  "e_hi": "फील्ड फ्लक्स को कम करने से मोटर की गति रेटेड गति से ऊपर बढ़ जाती है।",
+  "e_en": "Reducing the field flux causes the motor speed to increase above the rated speed."
+ },
+ {
+  "id": "rp-je_e-f00995",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी मशीन में 'आर्मेचर रिएक्शन' का मुख्य प्रभाव क्या है?",
+  "q_en": "What is the main effect of 'Armature Reaction' in a DC machine?",
+  "o_hi": [
+   "फ्लक्स का विरूपण और विचुंबकन",
+   "मशीन की दक्षता बढ़ना",
+   "वोल्टेज का बढ़ना",
+   "घर्षण कम होना"
+  ],
+  "o_en": [
+   "Distortion and demagnetization of flux",
+   "Increase in machine efficiency",
+   "Increase in voltage",
+   "Reduction in friction"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर रिएक्शन मुख्य फ्लक्स को विकृत (distort) और कमजोर कर देता है।",
+  "e_en": "Armature reaction distorts and weakens the main magnetic flux."
+ },
+ {
+  "id": "rp-je_e-f00996",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "सिंगल-फेज इंडक्शन मोटर में कैपेसिटर का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is a capacitor used in a single-phase induction motor?",
+  "o_hi": [
+   "फेज स्प्लिटिंग के लिए",
+   "वोल्टेज बढ़ाने के लिए",
+   "आवृत्ति कम करने के लिए",
+   "रोटर को ठंडा करने के लिए"
+  ],
+  "o_en": [
+   "For phase splitting",
+   "To increase voltage",
+   "To reduce frequency",
+   "To cool the rotor"
+  ],
+  "a": 0,
+  "e_hi": "सिंगल-फेज मोटर स्व-प्रारंभिक (self-starting) नहीं होती, कैपेसिटर फेज अंतर पैदा करके इसे शुरू करता है।",
+  "e_en": "Single-phase motors are not self-starting; the capacitor creates a phase difference to initiate rotation."
+ },
+ {
+  "id": "rp-je_e-f00997",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "यदि एक ट्रांसफार्मर में वाइंडिंग का टर्न अनुपात 1:2 है, तो यह किस प्रकार का ट्रांसफार्मर है?",
+  "q_en": "If a transformer has a turns ratio of 1:2, what type of transformer is it?",
+  "o_hi": [
+   "स्टेप-अप",
+   "स्टेप-डाउन",
+   "आइसोलेशन",
+   "ऑटो-ट्रांसफार्मर"
+  ],
+  "o_en": [
+   "Step-up",
+   "Step-down",
+   "Isolation",
+   "Auto-transformer"
+  ],
+  "a": 0,
+  "e_hi": "द्वितीयक वाइंडिंग में टर्न की संख्या प्राथमिक से अधिक होने पर वोल्टेज बढ़ जाता है।",
+  "e_en": "Since the secondary winding has more turns than the primary, the voltage increases (step-up)."
+ },
+ {
+  "id": "rp-je_e-f00998",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "सिंक्रोनस मोटर की गति क्या होती है?",
+  "q_en": "What is the speed of a synchronous motor?",
+  "o_hi": [
+   "हमेशा तुल्येशा तुल्यकालिक गति",
+   "भार के साथ बदलती है",
+   "शून्य",
+   "हमेशा स्थिर नहीं रहती"
+  ],
+  "o_en": [
+   "Always synchronous speed",
+   "Varies with load",
+   "Zero",
+   "Not always constant"
+  ],
+  "a": 0,
+  "e_hi": "सिंक्रोनस मोटर हमेशा अपनी तुल्यकालिक गति (Ns) पर चलती है, चाहे भार कुछ भी हो।",
+  "e_en": "A synchronous motor always runs at its synchronous speed (Ns), regardless of the load."
+ },
+ {
+  "id": "rp-je_e-f00999",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी जनरेटर में ब्रश आमतौर पर किस सामग्री से बने होते हैं?",
+  "q_en": "What material are brushes in a DC generator usually made of?",
+  "o_hi": [
+   "कार्बन या ग्रेफाइट",
+   "तांबा",
+   "एल्युमिनियम",
+   "लोहा"
+  ],
+  "o_en": [
+   "Carbon or graphite",
+   "Copper",
+   "Aluminum",
+   "Iron"
+  ],
+  "a": 0,
+  "e_hi": "कार्बन का उपयोग घर्षण कम करने और चिंगारी को नियंत्रित करने के लिए किया जाता है।",
+  "e_en": "Carbon is used to reduce friction and control sparking at the commutator."
+ },
+ {
+  "id": "rp-je_e-f01000",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "विद्युत चुम्बकीय प्रेरण के नियम का प्रतिपादन किसने किया था?",
+  "q_en": "Who formulated the law of electromagnetic induction?",
+  "o_hi": [
+   "माइकल फैराडे",
+   "जेम्स क्लर्क मैक्सवेल",
+   "निकोला टेस्ला",
+   "थॉमस एडिसन"
+  ],
+  "o_en": [
+   "Michael Faraday",
+   "James Clerk Maxwell",
+   "Nikola Tesla",
+   "Thomas Edison"
+  ],
+  "a": 0,
+  "e_hi": "माइकल फैराडे ने 1831 में विद्युत चुम्बकीय प्रेरण के सिद्धांतों की खोज की थी, जो विद्युत मशीनों का आधार है।",
+  "e_en": "Michael Faraday discovered the principles of electromagnetic induction in 1831, which is the foundation of electrical machines."
+ },
+ {
+  "id": "rp-je_e-f01001",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "किस वैज्ञानिक के नाम पर चुंबकीय फ्लक्स घनत्व की इकाई 'टेस्ला' रखी गई है?",
+  "q_en": "The unit of magnetic flux density 'Tesla' is named after which scientist?",
+  "o_hi": [
+   "निकोला टेस्ला",
+   "हेनरिक हर्ट्ज़",
+   "अलेसांद्रो वोल्टा",
+   "आंद्रे-मैरी एम्पीयर"
+  ],
+  "o_en": [
+   "Nikola Tesla",
+   "Heinrich Hertz",
+   "Alessandro Volta",
+   "André-Marie Ampère"
+  ],
+  "a": 0,
+  "e_hi": "चुंबकीय फ्लक्स घनत्व (B) की एसआई इकाई 'टेस्ला' महान आविष्कारक निकोला टेस्ला के सम्मान में नामित है।",
+  "e_en": "The SI unit of magnetic flux density (B), 'Tesla', is named in honor of the great inventor Nikola Tesla."
+ },
+ {
+  "id": "rp-je_e-f01002",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर में 'हिस्टैरेसिस नुकसान' किस वैज्ञानिक के नाम से संबंधित है?",
+  "q_en": "The 'Hysteresis loss' in transformers is associated with the name of which scientist?",
+  "o_hi": [
+   "चार्ल्स स्टाइनमेट्ज़",
+   "हेंस ओर्स्टेड",
+   "माइकल फैराडे",
+   "जेम्स वाट"
+  ],
+  "o_en": [
+   "Charles Steinmetz",
+   "Hans Oersted",
+   "Michael Faraday",
+   "James Watt"
+  ],
+  "a": 0,
+  "e_hi": "चार्ल्स स्टाइनमेट्ज़ ने हिस्टैरेसिस नुकसान के लिए गणितीय समीकरण दिया था, जिसे स्टाइनमेट्ज़ का नियम कहा जाता है।",
+  "e_en": "Charles Steinmetz derived the mathematical equation for hysteresis loss, known as Steinmetz's Law."
+ },
+ {
+  "id": "rp-je_e-f01003",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "किस वर्ष में निकोला टेस्ला ने पहली बार पॉलीफेज़ इंडक्शन मोटर का पेटेंट कराया था?",
+  "q_en": "In which year did Nikola Tesla first patent the polyphase induction motor?",
+  "o_hi": [
+   "1888",
+   "1895",
+   "1882",
+   "1901"
+  ],
+  "o_en": [
+   "1888",
+   "1895",
+   "1882",
+   "1901"
+  ],
+  "a": 0,
+  "e_hi": "निकोला टेस्ला ने 1888 में अपनी पॉलीफेज़ इंडक्शन मोटर प्रणाली के लिए पेटेंट प्राप्त किया था।",
+  "e_en": "Nikola Tesla received the patent for his polyphase induction motor system in 1888."
+ },
+ {
+  "id": "rp-je_e-f01004",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "विद्युत मशीनों में 'भंवर धारा' (Eddy Current) की खोज किस भौतिक विज्ञानी ने की थी?",
+  "q_en": "Which physicist discovered 'Eddy Current' in electrical machines?",
+  "o_hi": [
+   "लियोन फौकॉल्ट",
+   "जेम्स जूल",
+   "हेनरिक लेंज़",
+   "विलियम थॉमसन"
+  ],
+  "o_en": [
+   "Léon Foucault",
+   "James Joule",
+   "Heinrich Lenz",
+   "William Thomson"
+  ],
+  "a": 0,
+  "e_hi": "1851 में लियोन फौकॉल्ट ने धातु के टुकड़ों में प्रेरित धाराओं की खोज की थी, जिन्हें अब भंवर धारा कहा जाता है।",
+  "e_en": "In 1851, Léon Foucault discovered the induced currents in metal pieces, now known as eddy currents."
+ },
+ {
+  "id": "rp-je_e-f01005",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "लेंज़ का नियम (Lenz's Law), जो विद्युत मशीनों में दिशा निर्धारित करता है, किस वर्ष प्रस्तावित किया गया था?",
+  "q_en": "Lenz's Law, which determines direction in electrical machines, was proposed in which year?",
+  "o_hi": [
+   "1834",
+   "1831",
+   "1840",
+   "1820"
+  ],
+  "o_en": [
+   "1834",
+   "1831",
+   "1840",
+   "1820"
+  ],
+  "a": 0,
+  "e_hi": "हेनरिक लेंज़ ने 1834 में इस नियम को प्रस्तावित किया था, जो ऊर्जा संरक्षण के सिद्धांत पर आधारित है।",
+  "e_en": "Heinrich Lenz proposed this law in 1834, which is based on the principle of conservation of energy."
+ },
+ {
+  "id": "rp-je_e-f01006",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी जनरेटर का कार्य सिद्धांत किस नियम पर आधारित है?",
+  "q_en": "The working principle of a DC generator is based on which law?",
+  "o_hi": [
+   "फैराडे का विद्युत चुम्बकीय प्रेरण नियम",
+   "ओम का नियम",
+   "किरचॉफ का नियम",
+   "एम्पीयर का नियम"
+  ],
+  "o_en": [
+   "Faraday's Law of Electromagnetic Induction",
+   "Ohm's Law",
+   "Kirchhoff's Law",
+   "Ampere's Law"
+  ],
+  "a": 0,
+  "e_hi": "डीसी जनरेटर फैराडे के विद्युत चुम्बकीय प्रेरण के नियम पर काम करता है, जहाँ गतिज ऊर्जा को विद्युत ऊर्जा में बदला जाता है।",
+  "e_en": "A DC generator works on Faraday's law of electromagnetic induction, where kinetic energy is converted into electrical energy."
+ },
+ {
+  "id": "rp-je_e-f01007",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर की दक्षता अधिकतम कब होती है?",
+  "q_en": "When is the efficiency of a transformer maximum?",
+  "o_hi": [
+   "जब लोह हानि = ताम्र हानि",
+   "जब भार शून्य हो",
+   "जब इनपुट वोल्टेज उच्च हो",
+   "जब आवृत्ति कम हो"
+  ],
+  "o_en": [
+   "When Iron Loss = Copper Loss",
+   "When load is zero",
+   "When input voltage is high",
+   "When frequency is low"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफॉर्मर की अधिकतम दक्षता तब प्राप्त होती है जब उसका स्थिर नुकसान (लोह हानि) चर नुकसान (ताम्र हानि) के बराबर होता है।",
+  "e_en": "Maximum efficiency of a transformer is achieved when its constant loss (iron loss) equals the variable loss (copper loss)."
+ },
+ {
+  "id": "rp-je_e-f01008",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "थॉमस एडिसन और जॉर्ज वेस्टिंगहाउस के बीच हुई प्रसिद्ध प्रतिस्पर्धा को क्या कहा जाता है?",
+  "q_en": "What is the famous competition between Thomas Edison and George Westinghouse known as?",
+  "o_hi": [
+   "धाराओं का युद्ध (War of Currents)",
+   "विद्युत क्रांति",
+   "मशीनों का संघर्ष",
+   "पावर ग्रिड विवाद"
+  ],
+  "o_en": [
+   "War of Currents",
+   "Electrical Revolution",
+   "Conflict of Machines",
+   "Power Grid Dispute"
+  ],
+  "a": 0,
+  "e_hi": "यह 1880 के दशक के अंत में डीसी (एडिसन) और एसी (वेस्टिंगहाउस) प्रणालियों के बीच वर्चस्व की लड़ाई थी।",
+  "e_en": "This was a battle for dominance between DC (Edison) and AC (Westinghouse) systems in the late 1880s."
+ },
+ {
+  "id": "rp-je_e-f01009",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफॉर्मर किस सिद्धांत पर कार्य करता है?",
+  "q_en": "On which principle does a transformer operate?",
+  "o_hi": [
+   "स्व-प्रेरण",
+   "अन्योन्य प्रेरण",
+   "लेंज का नियम",
+   "फ्लेमिंग का नियम"
+  ],
+  "o_en": [
+   "Self-induction",
+   "Mutual induction",
+   "Lenz's law",
+   "Fleming's rule"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफॉर्मर फैराडे के विद्युत चुम्बकीय प्रेरण के अन्योन्य प्रेरण सिद्धांत पर कार्य करता है।",
+  "e_en": "A transformer works on Faraday's law of mutual electromagnetic induction."
+ },
+ {
+  "id": "rp-je_e-f01010",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक आदर्श ट्रांसफॉर्मर की दक्षता कितनी होती है?",
+  "q_en": "What is the efficiency of an ideal transformer?",
+  "o_hi": [
+   "50 प्रतिशत",
+   "75 प्रतिशत",
+   "90 प्रतिशत",
+   "100 प्रतिशत"
+  ],
+  "o_en": [
+   "50 percent",
+   "75 percent",
+   "90 percent",
+   "100 percent"
+  ],
+  "a": 3,
+  "e_hi": "एक आदर्श ट्रांसफॉर्मर में कोई नुकसान (लॉस) नहीं होता है, इसलिए इसकी दक्षता 100 प्रतिशत मानी जाती है।",
+  "e_en": "An ideal transformer has no losses, therefore its efficiency is considered to be 100 percent."
+ },
+ {
+  "id": "rp-je_e-f01011",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीन के योक (Yoke) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of the yoke in a DC machine?",
+  "o_hi": [
+   "चुंबकीय फ्लक्स को रास्ता प्रदान करना",
+   "आर्मेचर को घुमाना",
+   "करंट को कम करना",
+   "वोल्टेज को स्थिर करना"
+  ],
+  "o_en": [
+   "Provide a path for magnetic flux",
+   "Rotate the armature",
+   "Reduce current",
+   "Stabilize voltage"
+  ],
+  "a": 0,
+  "e_hi": "योक मशीन की बाहरी सुरक्षा प्रदान करता है और चुंबकीय परिपथ के लिए कम रिलक्टेंस वाला मार्ग देता है।",
+  "e_en": "The yoke provides mechanical protection and a low-reluctance path for the magnetic flux."
+ },
+ {
+  "id": "rp-je_e-f01012",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर में 'कोर' का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is a core used in a transformer?",
+  "o_hi": [
+   "चुंबकीय फ्लक्स को कम करने के लिए",
+   "चुंबकीय फ्लक्स के लिए कम रिलक्टेंस मार्ग प्रदान करने के लिए",
+   "वजन बढ़ाने के लिए",
+   "ताम्र हानि कम करने के लिए"
+  ],
+  "o_en": [
+   "To reduce magnetic flux",
+   "To provide a low reluctance path for magnetic flux",
+   "To increase weight",
+   "To reduce copper loss"
+  ],
+  "a": 1,
+  "e_hi": "कोर का उद्देश्य चुंबकीय फ्लक्स को एक प्रभावी मार्ग प्रदान करना है ताकि लीकेज कम हो।",
+  "e_en": "The core is used to provide an efficient path for magnetic flux, minimizing leakage."
+ },
+ {
+  "id": "rp-je_e-f01013",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "किसी मशीन में 'आर्मेचर रिएक्शन' का क्या अर्थ है?",
+  "q_en": "What does 'armature reaction' mean in a machine?",
+  "o_hi": [
+   "आर्मेचर फ्लक्स का मुख्य फ्लक्स पर प्रभाव",
+   "लोड का वोल्टेज पर प्रभाव",
+   "घर्षण का गति पर प्रभाव",
+   "तापमान का इंसुलेशन पर प्रभाव"
+  ],
+  "o_en": [
+   "Effect of armature flux on main flux",
+   "Effect of load on voltage",
+   "Effect of friction on speed",
+   "Effect of temperature on insulation"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर करंट द्वारा उत्पन्न चुंबकीय क्षेत्र का मुख्य फील्ड फ्लक्स पर पड़ने वाला प्रभाव आर्मेचर रिएक्शन कहलाता है।",
+  "e_en": "The effect of the magnetic field produced by the armature current on the main field flux is called armature reaction."
+ },
+ {
+  "id": "rp-je_e-f01014",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "ट्रांसफॉर्मर में 'नो-लोड' करंट का मान कितना होता है?",
+  "q_en": "What is the value of 'no-load' current in a transformer?",
+  "o_hi": [
+   "पूर्ण लोड करंट का 2 से 5 प्रतिशत",
+   "पूर्ण लोड करंट का 20 प्रतिशत",
+   "शून्य",
+   "पूर्ण लोड करंट के बराबर"
+  ],
+  "o_en": [
+   "2 to 5 percent of full load current",
+   "20 percent of full load current",
+   "Zero",
+   "Equal to full load current"
+  ],
+  "a": 0,
+  "e_hi": "नो-लोड करंट ट्रांसफॉर्मर की फुल-लोड धारा का बहुत छोटा हिस्सा (लगभग 2 से 5 प्रतिशत) होता है।",
+  "e_en": "The no-load current is a very small fraction (typically 2 to 5 percent) of the full load current."
+ },
+ {
+  "id": "rp-je_e-f01015",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी मोटर किस सिद्धांत पर कार्य करती है?",
+  "q_en": "On which principle does a DC motor operate?",
+  "o_hi": [
+   "फैराडे का विद्युत चुम्बकीय प्रेरण का नियम",
+   "लेंज का नियम",
+   "धारावाही चालक पर चुंबकीय क्षेत्र में बल",
+   "ओहम का नियम"
+  ],
+  "o_en": [
+   "Faraday's law of electromagnetic induction",
+   "Lenz's law",
+   "Force on a current-carrying conductor in a magnetic field",
+   "Ohm's law"
+  ],
+  "a": 2,
+  "e_hi": "जब किसी धारावाही चालक को चुंबकीय क्षेत्र में रखा जाता है, तो उस पर एक यांत्रिक बल कार्य करता है।",
+  "e_en": "When a current-carrying conductor is placed in a magnetic field, it experiences a mechanical force."
+ },
+ {
+  "id": "rp-je_e-f01016",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफॉर्मर की रेटिंग किस इकाई में मापी जाती है?",
+  "q_en": "In which unit is the rating of a transformer measured?",
+  "o_hi": [
+   "किलोवाट",
+   "किलो-वोल्ट एम्पीयर",
+   "एम्पीयर",
+   "वोल्ट"
+  ],
+  "o_en": [
+   "Kilowatts",
+   "Kilovolt-amperes",
+   "Amperes",
+   "Volts"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफॉर्मर की रेटिंग KVA में होती है क्योंकि इसके नुकसान वोल्टेज और करंट पर निर्भर करते हैं।",
+  "e_en": "Transformer ratings are in KVA because their losses depend on voltage and current, independent of the power factor."
+ },
+ {
+  "id": "rp-je_e-f01017",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक ट्रांसफार्मर किस प्रकार की विद्युत मशीन के अंतर्गत आता है?",
+  "q_en": "Under which category of electrical machine does a transformer fall?",
+  "o_hi": [
+   "घूर्णन मशीन",
+   "स्थिर मशीन",
+   "डीसी मशीन",
+   "प्रेरण मशीन"
+  ],
+  "o_en": [
+   "Rotating machine",
+   "Static machine",
+   "DC machine",
+   "Induction machine"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसफार्मर में कोई गतिमान भाग नहीं होता है, इसलिए इसे स्थिर मशीन (स्टैटिक मशीन) कहा जाता है।",
+  "e_en": "A transformer has no moving parts, therefore it is classified as a static machine."
+ },
+ {
+  "id": "rp-je_e-f01018",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी मशीनों में, कम्यूटेटर का मुख्य कार्य क्या होता है?",
+  "q_en": "In DC machines, what is the primary function of the commutator?",
+  "o_hi": [
+   "डीसी को एसी में बदलना",
+   "एसी को डीसी में बदलना",
+   "वोल्टेज बढ़ाना",
+   "धारा कम करना"
+  ],
+  "o_en": [
+   "Convert DC to AC",
+   "Convert AC to DC",
+   "Increase voltage",
+   "Reduce current"
+  ],
+  "a": 1,
+  "e_hi": "डीसी जनरेटर में, आर्मेचर में उत्पन्न एसी को बाहरी सर्किट के लिए डीसी में बदलने हेतु कम्यूटेटर का उपयोग किया जाता है।",
+  "e_en": "In a DC generator, the commutator is used to convert the AC induced in the armature into DC for the external circuit."
+ },
+ {
+  "id": "rp-je_e-f01019",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "प्रेरण मोटर (इन्डक्शन मोटर) को किस अन्य नाम से जाना जाता है?",
+  "q_en": "By what other name is an induction motor known?",
+  "o_hi": [
+   "सिंक्रोनस मोटर",
+   "रोटेटिंग ट्रांसफार्मर",
+   "डीसी शंट मोटर",
+   "यूनिवर्सल मोटर"
+  ],
+  "o_en": [
+   "Synchronous motor",
+   "Rotating transformer",
+   "DC shunt motor",
+   "Universal motor"
+  ],
+  "a": 1,
+  "e_hi": "इन्डक्शन मोटर का कार्य सिद्धांत ट्रांसफार्मर के समान ही होता है, इसलिए इसे 'रोटेटिंग ट्रांसफार्मर' कहा जाता है।",
+  "e_en": "The working principle of an induction motor is similar to that of a transformer, hence it is often called a 'rotating transformer'."
+ },
+ {
+  "id": "rp-je_e-f01020",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सी मशीन 'सेल्फ-स्टार्टिंग' नहीं होती है?",
+  "q_en": "Which of the following machines is not 'self-starting'?",
+  "o_hi": [
+   "डीसी शंट मोटर",
+   "सिंगल फेज इंडक्शन मोटर",
+   "सिंक्रोनस मोटर",
+   "डीसी सीरीज मोटर"
+  ],
+  "o_en": [
+   "DC shunt motor",
+   "Single phase induction motor",
+   "Synchronous motor",
+   "DC series motor"
+  ],
+  "a": 2,
+  "e_hi": "सिंक्रोनस मोटर को चालू करने के लिए बाहरी साधनों की आवश्यकता होती है क्योंकि इसका स्टार्टिंग टॉर्क शून्य होता है।",
+  "e_en": "A synchronous motor requires external means to start because its starting torque is zero."
+ },
+ {
+  "id": "rp-je_e-f01021",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी मशीनों में 'आर्मेचर रिएक्शन' का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'armature reaction' in DC machines?",
+  "o_hi": [
+   "मुख्य क्षेत्र फ्लक्स पर आर्मेचर फ्लक्स का प्रभाव",
+   "आर्मेचर में धारा का प्रवाह",
+   "ब्रशों पर स्पार्किंग",
+   "वोल्टेज का गिरना"
+  ],
+  "o_en": [
+   "Effect of armature flux on main field flux",
+   "Flow of current in armature",
+   "Sparking at brushes",
+   "Voltage drop"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर रिएक्शन आर्मेचर द्वारा उत्पन्न चुंबकीय क्षेत्र का मुख्य ध्रुव फ्लक्स पर पड़ने वाला प्रभाव है।",
+  "e_en": "Armature reaction is the effect of the magnetic field produced by the armature on the main pole flux."
+ },
+ {
+  "id": "rp-je_e-f01022",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "यूनिवर्सल मोटर किस प्रकार की आपूर्ति पर कार्य करने में सक्षम है?",
+  "q_en": "On what type of supply is a universal motor capable of operating?",
+  "o_hi": [
+   "केवल डीसी",
+   "केवल एसी",
+   "एसी और डीसी दोनों",
+   "केवल बैटरी"
+  ],
+  "o_en": [
+   "Only DC",
+   "Only AC",
+   "Both AC and DC",
+   "Only battery"
+  ],
+  "a": 2,
+  "e_hi": "यूनिवर्सल मोटर को इस तरह डिजाइन किया जाता है कि वह एसी और डीसी दोनों आपूर्ति पर समान कुशलता से चल सके।",
+  "e_en": "A universal motor is designed to operate efficiently on both AC and DC supplies."
+ },
+ {
+  "id": "rp-je_e-f01023",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक सिंक्रोनस मशीन में, रोटर की गति क्या होती है?",
+  "q_en": "In a synchronous machine, what is the speed of the rotor?",
+  "o_hi": [
+   "सिंक्रोनस गति से कम",
+   "सिंक्रोनस गति से अधिक",
+   "सिंक्रोनस गति के बराबर",
+   "शून्य"
+  ],
+  "o_en": [
+   "Less than synchronous speed",
+   "More than synchronous speed",
+   "Equal to synchronous speed",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "सिंक्रोनस मशीन में रोटर हमेशा सिंक्रोनस गति (Ns) पर ही घूमता है, इसीलिए इसे सिंक्रोनस मशीन कहते हैं।",
+  "e_en": "In a synchronous machine, the rotor always rotates at synchronous speed (Ns), which is why it is called a synchronous machine."
+ },
+ {
+  "id": "rp-je_e-f01024",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "डीसी मशीनों में इंटरपोल का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of interpole in DC machines?",
+  "o_hi": [
+   "वोल्टेज कम करना",
+   "कम्यूटेशन में सुधार करना",
+   "दक्षता बढ़ाना",
+   "गति नियंत्रित करना"
+  ],
+  "o_en": [
+   "Reducing voltage",
+   "Improving commutation",
+   "Increasing efficiency",
+   "Controlling speed"
+  ],
+  "a": 1,
+  "e_hi": "इंटरपोल का उपयोग कम्यूटेशन की प्रक्रिया को बेहतर बनाने और स्पार्किंग को कम करने के लिए किया जाता है।",
+  "e_en": "Interpoles are used to improve the commutation process and reduce sparking."
+ },
+ {
+  "id": "rp-je_e-f01025",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "किस प्रकार की मोटर का उपयोग घरेलू मिक्सर ग्राइंडर में किया जाता है?",
+  "q_en": "Which type of motor is used in household mixer grinders?",
+  "o_hi": [
+   "सिंक्रोनस मोटर",
+   "यूनिवर्सल मोटर",
+   "डीसी शंट मोटर",
+   "स्टेपर मोटर"
+  ],
+  "o_en": [
+   "Synchronous motor",
+   "Universal motor",
+   "DC shunt motor",
+   "Stepper motor"
+  ],
+  "a": 1,
+  "e_hi": "मिक्सर ग्राइंडर में उच्च टॉर्क और उच्च गति की आवश्यकता होती है, जिसके लिए यूनिवर्सल मोटर सबसे उपयुक्त है।",
+  "e_en": "Mixer grinders require high torque and high speed, for which a universal motor is most suitable."
  }
 ]
