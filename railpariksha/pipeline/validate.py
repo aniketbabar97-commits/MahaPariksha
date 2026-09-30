@@ -4,6 +4,7 @@ Usage: python pipeline/validate.py            # validate everything
        python pipeline/validate.py FILE...    # validate specific files
 Exits non-zero on any error.
 """
+import fcntl
 import json
 import re
 import sys
@@ -103,7 +104,15 @@ def check_note(n, where, errs):
 
 def validate_file(path, seen_ids, errs):
     try:
-        data = json.loads(path.read_text(encoding="utf-8"))
+        # Shared lock so a concurrent content_gen writer (which takes an exclusive
+        # lock in bulk_questions.py's flush()) can't be read mid-write -- a plain
+        # read here could otherwise see a truncated file and report a false
+        # "invalid JSON" error for a file that's actually fine on disk.
+        with open(path, encoding="utf-8") as f:
+            fcntl.flock(f, fcntl.LOCK_SH)
+            text = f.read()
+            fcntl.flock(f, fcntl.LOCK_UN)
+        data = json.loads(text)
     except json.JSONDecodeError as e:
         errs.append(f"{path}: invalid JSON: {e}")
         return 0
