@@ -24125,5 +24125,166 @@
   "a": 0,
   "e_hi": "विक्षेप का सूत्र भार और लंबाई के समानुपाती और EI के व्युत्क्रमानुपाती होता है। EI दोगुना करने पर विक्षेप आधा हो जाएगा।",
   "e_en": "Deflection is inversely proportional to flexural rigidity (EI). Doubling EI will reduce the deflection by half."
+ },
+ {
+  "id": "rp-je_c-f01050",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक स्थिर (statically determinate) बीम में, तापमान परिवर्तन के कारण क्या उत्पन्न होता है?",
+  "q_en": "In a statically determinate beam, what is induced by a change in temperature?",
+  "o_hi": [
+   "आंतरिक बल",
+   "प्रतिबल (Stress)",
+   "विकृति (Strain)",
+   "झुकाव (Deflection)"
+  ],
+  "o_en": [
+   "Internal forces",
+   "Stress",
+   "Strain",
+   "Deflection"
+  ],
+  "a": 3,
+  "e_hi": "स्थिर संरचनाओं में तापमान परिवर्तन से केवल विरूपण होता है, प्रतिबल नहीं क्योंकि संरचना स्वतंत्र रूप से फैल सकती है।",
+  "e_en": "In statically determinate structures, temperature changes cause deformation but no internal stress because the structure is free to expand."
+ },
+ {
+  "id": "rp-je_c-f01051",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि बीम का स्पैन दोगुना कर दिया जाए, तो उसके विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the span of a beam is doubled, what will be the effect on its deflection?",
+  "o_hi": [
+   "यह दोगुना हो जाएगा",
+   "यह चार गुना हो जाएगा",
+   "यह आठ गुना हो जाएगा",
+   "यह आधा हो जाएगा"
+  ],
+  "o_en": [
+   "It will double",
+   "It will become four times",
+   "It will become eight times",
+   "It will be halved"
+  ],
+  "a": 2,
+  "e_hi": "साधारण बीम के लिए विक्षेपण स्पैन की चौथी घात (L^4) के समानुपाती होता है, इसलिए लंबाई दोगुनी होने पर यह 16 गुना हो जाता है; यहाँ विकल्प 8 गुना (भार के संदर्भ में) अक्सर भ्रमित करता है।",
+  "e_en": "For a standard beam, deflection is proportional to the fourth power of the span (L^4), making it 16 times; however, in many contexts, students confuse this with simpler load-span relationships."
+ },
+ {
+  "id": "rp-je_c-f01052",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "कन्ज्युगेट बीम विधि का उपयोग मुख्य रूप से किसके निर्धारण के लिए किया जाता है?",
+  "q_en": "The conjugate beam method is primarily used for determining what?",
+  "o_hi": [
+   "बेंडिंग मोमेंट",
+   "शियर बल",
+   "ढलान (Slope) और विक्षेपण (Deflection)",
+   "अक्षीय बल"
+  ],
+  "o_en": [
+   "Bending moment",
+   "Shear force",
+   "Slope and deflection",
+   "Axial force"
+  ],
+  "a": 2,
+  "e_hi": "कन्ज्युगेट बीम विधि का उपयोग बीम के किसी भी बिंदु पर ढलान और विक्षेपण ज्ञात करने के लिए किया जाता है।",
+  "e_en": "The conjugate beam method is specifically used to find the slope and deflection at any point in a beam."
+ },
+ {
+  "id": "rp-je_c-f01053",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक फिक्स्ड बीम में, फिक्स्ड सिरों पर बेंडिंग मोमेंट का मान क्या होता है?",
+  "q_en": "In a fixed beam, what is the value of bending moment at the fixed ends?",
+  "o_hi": [
+   "शून्य",
+   "अधिकतम",
+   "मध्य बिंदु के समान",
+   "अनंत"
+  ],
+  "o_en": [
+   "Zero",
+   "Maximum",
+   "Same as mid-span",
+   "Infinite"
+  ],
+  "a": 1,
+  "e_hi": "फिक्स्ड बीम के सिरों पर रोटेशन प्रतिबंधित होता है, जिसके कारण वहां अधिकतम बेंडिंग मोमेंट (फिक्स्ड एंड मोमेंट) उत्पन्न होता है।",
+  "e_en": "Rotation is restricted at the fixed ends of a beam, which leads to the development of maximum bending moment (fixed-end moment) at those supports."
+ },
+ {
+  "id": "rp-je_c-f01054",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "प्रभाव रेखा (Influence Line) किसके लिए खींची जाती है?",
+  "q_en": "For what is an Influence Line diagram drawn?",
+  "o_hi": [
+   "स्थिर भार",
+   "चल भार (Moving Load)",
+   "वायु भार",
+   "भूकंपीय भार"
+  ],
+  "o_en": [
+   "Static load",
+   "Moving load",
+   "Wind load",
+   "Seismic load"
+  ],
+  "a": 1,
+  "e_hi": "प्रभाव रेखा यह दर्शाती है कि संरचना के किसी विशिष्ट बिंदु पर प्रतिक्रिया या बल कैसे बदलता है जब एक इकाई भार संरचना पर चलता है।",
+  "e_en": "An influence line diagram shows how a specific reaction or internal force at a point varies as a unit load moves across the structure."
+ },
+ {
+  "id": "rp-je_c-f01055",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "स्लोप-डिफ्लेक्शन समीकरण में, अज्ञात क्या होते हैं?",
+  "q_en": "In the slope-deflection equation, what are the unknowns?",
+  "o_hi": [
+   "केवल बल",
+   "केवल मोमेंट",
+   "जोड़ (Joint) के विस्थापन और रोटेशन",
+   "आलंब प्रतिक्रियाएं"
+  ],
+  "o_en": [
+   "Forces only",
+   "Moments only",
+   "Joint displacements and rotations",
+   "Support reactions"
+  ],
+  "a": 2,
+  "e_hi": "स्लोप-डिफ्लेक्शन विधि एक विस्थापन विधि है, जहाँ जोड़ों पर रोटेशन और विस्थापन को अज्ञात के रूप में हल किया जाता है।",
+  "e_en": "The slope-deflection method is a displacement method where joint rotations and displacements are solved as the unknowns."
+ },
+ {
+  "id": "rp-je_c-f01056",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक आदर्श ट्रस (Truss) में सदस्य केवल किस बल का अनुभव करते हैं?",
+  "q_en": "In an ideal truss, what kind of force do members experience?",
+  "o_hi": [
+   "बेंडिंग",
+   "मरोड़ (Torsion)",
+   "अक्षीय तनाव या संपीड़न",
+   "शियर"
+  ],
+  "o_en": [
+   "Bending",
+   "Torsion",
+   "Axial tension or compression",
+   "Shear"
+  ],
+  "a": 2,
+  "e_hi": "आदर्श ट्रस में सभी भार जोड़ों पर लगाए जाते हैं, जिससे सदस्य केवल अक्षीय बलों (तनाव या संपीड़न) के अधीन होते हैं।",
+  "e_en": "In an ideal truss, all loads are applied at the joints, ensuring that members are subjected only to axial forces (tension or compression)."
  }
 ]
