@@ -24286,5 +24286,373 @@
   "a": 2,
   "e_hi": "आदर्श ट्रस में सभी भार जोड़ों पर लगाए जाते हैं, जिससे सदस्य केवल अक्षीय बलों (तनाव या संपीड़न) के अधीन होते हैं।",
   "e_en": "In an ideal truss, all loads are applied at the joints, ensuring that members are subjected only to axial forces (tension or compression)."
+ },
+ {
+  "id": "rp-je_c-f01057",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम के मुक्त सिरे पर एक बिंदु भार (point load) लगाने पर, अधिकतम बेंडिंग मोमेंट कहाँ उत्पन्न होगा?",
+  "q_en": "When a point load is applied at the free end of a cantilever beam, where will the maximum bending moment occur?",
+  "o_hi": [
+   "मुक्त सिरे पर",
+   "मध्य बिंदु पर",
+   "फिक्स्ड सपोर्ट (आबद्ध सिरे) पर",
+   "बीम की पूरी लंबाई पर समान"
+  ],
+  "o_en": [
+   "At the free end",
+   "At the mid-span",
+   "At the fixed support",
+   "Uniform throughout the beam length"
+  ],
+  "a": 2,
+  "e_hi": "कैंटिलीवर बीम में अधिकतम बेंडिंग मोमेंट हमेशा फिक्स्ड सपोर्ट पर होता है क्योंकि यहाँ मोमेंट आर्म (दूरी) सबसे अधिक होती है।",
+  "e_en": "In a cantilever beam, the maximum bending moment always occurs at the fixed support because the moment arm is greatest at that point."
+ },
+ {
+  "id": "rp-je_c-f01058",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक सरल समर्थित बीम (simply supported beam) पर समान रूप से वितरित भार (UDL) के कारण अधिकतम बेंडिंग मोमेंट कहाँ होता है?",
+  "q_en": "Where does the maximum bending moment occur in a simply supported beam subjected to a uniformly distributed load (UDL)?",
+  "o_hi": [
+   "सपोर्ट पर",
+   "बीम के केंद्र पर",
+   "सपोर्ट से एक-तिहाई दूरी पर",
+   "मुक्त सिरे पर"
+  ],
+  "o_en": [
+   "At the supports",
+   "At the center of the beam",
+   "At one-third distance from support",
+   "At the free end"
+  ],
+  "a": 1,
+  "e_hi": "समान रूप से वितरित भार (UDL) के तहत, बेंडिंग मोमेंट आरेख एक परवलय (parabola) होता है और अधिकतम मान केंद्र में होता है।",
+  "e_en": "Under a UDL, the bending moment diagram is parabolic, and the maximum value occurs exactly at the mid-span."
+ },
+ {
+  "id": "rp-je_c-f01059",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि एक संरचना के सभी सदस्य एक ही तल में स्थित हैं और उन पर लगने वाले सभी बल भी उसी तल में हैं, तो इसे क्या कहा जाएगा?",
+  "q_en": "If all members of a structure lie in a single plane and all applied forces are also in that same plane, what is it called?",
+  "o_hi": [
+   "त्रिविमीय संरचना (3D structure)",
+   "समतलीय संरचना (Planar structure)",
+   "अंतरिक्ष संरचना (Space structure)",
+   "अस्थिर संरचना (Unstable structure)"
+  ],
+  "o_en": [
+   "3D structure",
+   "Planar structure",
+   "Space structure",
+   "Unstable structure"
+  ],
+  "a": 1,
+  "e_hi": "जब बल और सदस्य एक ही तल (plane) में होते हैं, तो इसे समतलीय या 2D संरचना कहा जाता है।",
+  "e_en": "When forces and members are confined to a single plane, it is referred to as a planar or 2D structure."
+ },
+ {
+  "id": "rp-je_c-f01060",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम के मुक्त सिरे पर 'मोमेंट' लगाने से बीम के बेंडिंग मोमेंट आरेख (BMD) का आकार क्या होगा?",
+  "q_en": "What will be the shape of the Bending Moment Diagram (BMD) for a cantilever beam subjected to a moment at its free end?",
+  "o_hi": [
+   "त्रिकोणीय",
+   "आयताकार",
+   "परवलयिक (Parabolic)",
+   "क्यूबिक"
+  ],
+  "o_en": [
+   "Triangular",
+   "Rectangular",
+   "Parabolic",
+   "Cubic"
+  ],
+  "a": 1,
+  "e_hi": "जब मुक्त सिरे पर मोमेंट लगाया जाता है, तो पूरी बीम की लंबाई में बेंडिंग मोमेंट स्थिर रहता है, जिससे आयताकार आरेख बनता है।",
+  "e_en": "When a point moment is applied at the free end, the bending moment remains constant throughout the length, resulting in a rectangular diagram."
+ },
+ {
+  "id": "rp-je_c-f01061",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक स्थिर (fixed) बीम में, यदि एक सिरा 'सिंक' (sink) हो जाता है, तो संरचना पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a fixed beam, if one support sinks, what effect will it have on the structure?",
+  "o_hi": [
+   "कोई प्रभाव नहीं पड़ेगा",
+   "अतिरिक्त बेंडिंग मोमेंट उत्पन्न होगा",
+   "केवल शेयर बल बढ़ेगा",
+   "संरचना तुरंत ढह जाएगी"
+  ],
+  "o_en": [
+   "No effect",
+   "Additional bending moments will be induced",
+   "Only shear force will increase",
+   "Structure will collapse immediately"
+  ],
+  "a": 1,
+  "e_hi": "सपोर्ट के सेटलमेंट या सिंक होने से बीम में अतिरिक्त 'द्वितीयक' (secondary) बेंडिंग मोमेंट उत्पन्न होते हैं, भले ही बाहरी भार न हो।",
+  "e_en": "Settlement of a support induces additional secondary bending moments in the beam, even in the absence of external loads."
+ },
+ {
+  "id": "rp-je_c-f01062",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "ट्रस (Truss) के विश्लेषण के लिए 'मेथड ऑफ जॉइंट्स' का उपयोग कब किया जाता है?",
+  "q_en": "When is the 'Method of Joints' used for analyzing a truss?",
+  "o_hi": [
+   "जब केवल पूरे ट्रस की प्रतिक्रिया ज्ञात करनी हो",
+   "जब किसी विशिष्ट सदस्य में बल ज्ञात करना हो",
+   "जब ट्रस अनिश्चित (indeterminate) हो",
+   "जब ट्रस पर कोई भार न हो"
+  ],
+  "o_en": [
+   "When only total truss reactions are needed",
+   "When force in a specific member is required",
+   "When the truss is indeterminate",
+   "When the truss is unloaded"
+  ],
+  "a": 1,
+  "e_hi": "मेथड ऑफ जॉइंट्स का उपयोग तब किया जाता है जब हमें ट्रस के प्रत्येक सदस्य में बल की गणना करनी होती है।",
+  "e_en": "The Method of Joints is utilized when the objective is to determine the internal forces within individual members of the truss."
+ },
+ {
+  "id": "rp-je_c-f01063",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक कैंटिलीवर बीम पर लंबाई के साथ बढ़ता हुआ भार (UDL नहीं, बल्कि Triangular load) होने पर, शेयर बल आरेख (SFD) का आकार क्या होगा?",
+  "q_en": "What will be the shape of the Shear Force Diagram (SFD) for a cantilever beam under a triangular load increasing towards the free end?",
+  "o_hi": [
+   "रैखिक (Linear)",
+   "परवलयिक (Parabolic)",
+   "क्यूबिक (Cubic)",
+   "स्थिर"
+  ],
+  "o_en": [
+   "Linear",
+   "Parabolic",
+   "Cubic",
+   "Constant"
+  ],
+  "a": 1,
+  "e_hi": "त्रिभुजाकार भार के लिए, शेयर बल आरेख भार के समाकलन (integration) के कारण परवलयिक (parabolic) होता है।",
+  "e_en": "For a triangular load, the shear force diagram follows a parabolic curve due to the integration of the loading function."
+ },
+ {
+  "id": "rp-je_c-f01064",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक बीम में 'कॉन्जुगेट बीम' (Conjugate beam) विधि का उपयोग मुख्य रूप से क्या ज्ञात करने के लिए किया जाता है?",
+  "q_en": "The 'Conjugate Beam' method is primarily used to determine which of the following in a beam?",
+  "o_hi": [
+   "बेंडिंग मोमेंट और शेयर बल",
+   "ढलान (slope) और विक्षेपण (deflection)",
+   "केवल अक्षीय बल",
+   "सपोर्ट प्रतिक्रियाएं"
+  ],
+  "o_en": [
+   "Bending moment and shear force",
+   "Slope and deflection",
+   "Only axial force",
+   "Support reactions"
+  ],
+  "a": 1,
+  "e_hi": "कॉन्जुगेट बीम विधि एक प्रभावी तरीका है जिससे किसी बीम के किसी भी बिंदु पर ढलान और विक्षेपण की गणना की जा सकती है।",
+  "e_en": "The Conjugate Beam method is an effective technique used to calculate the slope and deflection at any point in a beam."
+ },
+ {
+  "id": "rp-je_c-f01065",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी बीम की कठोरता (stiffness) दोगुनी कर दी जाए, तो समान भार के लिए विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the stiffness of a beam is doubled, what will be the effect on the deflection under the same load?",
+  "o_hi": [
+   "विक्षेपण दोगुना हो जाएगा",
+   "विक्षेपण आधा हो जाएगा",
+   "विक्षेपण में कोई बदलाव नहीं होगा",
+   "विक्षेपण चार गुना हो जाएगा"
+  ],
+  "o_en": [
+   "Deflection will double",
+   "Deflection will be halved",
+   "No change in deflection",
+   "Deflection will become four times"
+  ],
+  "a": 1,
+  "e_hi": "विक्षेपण (δ) कठोरता (EI) के व्युत्क्रमानुपाती होता है, इसलिए कठोरता दोगुनी करने पर विक्षेपण आधा हो जाता है।",
+  "e_en": "Deflection (δ) is inversely proportional to stiffness (EI); therefore, doubling the stiffness reduces the deflection by half."
+ },
+ {
+  "id": "rp-je_c-f01066",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "स्टेटिक रूप से निर्धारित संरचना (statically determinate structure) के लिए संतुलन समीकरणों की न्यूनतम संख्या कितनी होती है?",
+  "q_en": "What is the minimum number of equilibrium equations required for a statically determinate structure?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "चार"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Four"
+  ],
+  "a": 2,
+  "e_hi": "समतल संरचनाओं के लिए, संतुलन के तीन समीकरण (ΣFx=0, ΣFy=0, ΣM=0) पर्याप्त होते हैं।",
+  "e_en": "For planar structures, three equilibrium equations (ΣFx=0, ΣFy=0, ΣM=0) are sufficient to solve for reactions."
+ },
+ {
+  "id": "rp-je_c-f01067",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "वह बिंदु जहाँ बेंडिंग मोमेंट का मान शून्य हो जाता है और अपना चिह्न बदलता है, क्या कहलाता है?",
+  "q_en": "What is the point called where the bending moment becomes zero and changes its sign?",
+  "o_hi": [
+   "नति परिवर्तन बिंदु",
+   "शून्य बिंदु",
+   "अधिकतम बिंदु",
+   "स्थिर बिंदु"
+  ],
+  "o_en": [
+   "Point of contraflexure",
+   "Zero point",
+   "Maximum point",
+   "Stationary point"
+  ],
+  "a": 0,
+  "e_hi": "बेंडिंग मोमेंट डायग्राम में चिह्न परिवर्तन के बिंदु को नति परिवर्तन बिंदु (Point of Contraflexure) कहा जाता है।",
+  "e_en": "The point where the bending moment changes sign in a beam is known as the point of contraflexure."
+ },
+ {
+  "id": "rp-je_c-f01068",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण में 'डिग्री ऑफ फ्रीडम' (degree of freedom) क्या दर्शाता है?",
+  "q_en": "What does 'degree of freedom' represent in structural analysis?",
+  "o_hi": [
+   "आंतरिक बल",
+   "स्वतंत्र विस्थापन",
+   "अज्ञात प्रतिक्रियाएं",
+   "संरचना की लंबाई"
+  ],
+  "o_en": [
+   "Internal forces",
+   "Independent displacements",
+   "Unknown reactions",
+   "Length of structure"
+  ],
+  "a": 1,
+  "e_hi": "डिग्री ऑफ फ्रीडम एक संरचना के नोड्स के स्वतंत्र विस्थापन या रोटेशन की संख्या को संदर्भित करता है।",
+  "e_en": "Degree of freedom refers to the number of independent displacements or rotations possible at the nodes of a structure."
+ },
+ {
+  "id": "rp-je_c-f01069",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम का मुक्त सिरा (free end) किस प्रकार का समर्थन प्रदान करता है?",
+  "q_en": "What type of support does the free end of a cantilever beam provide?",
+  "o_hi": [
+   "कोई प्रतिक्रिया नहीं",
+   "केवल ऊर्ध्वाधर प्रतिक्रिया",
+   "केवल मोमेंट प्रतिक्रिया",
+   "पूर्ण संयम"
+  ],
+  "o_en": [
+   "No reaction",
+   "Vertical reaction only",
+   "Moment reaction only",
+   "Full restraint"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर का मुक्त सिरा किसी भी बल या मोमेंट का विरोध नहीं करता है।",
+  "e_en": "The free end of a cantilever beam does not offer resistance to any force or moment."
+ },
+ {
+  "id": "rp-je_c-f01070",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "काइनेमेटिक इंडिटरमिनेसी (Kinematic Indeterminacy) का अन्य नाम क्या है?",
+  "q_en": "What is another name for Kinematic Indeterminacy?",
+  "o_hi": [
+   "स्टेटिक इंडिटरमिनेसी",
+   "डिग्री ऑफ फ्रीडम",
+   "संरचनात्मक कठोरता",
+   "संतुलन की स्थिति"
+  ],
+  "o_en": [
+   "Static Indeterminacy",
+   "Degree of freedom",
+   "Structural stiffness",
+   "Equilibrium state"
+  ],
+  "a": 1,
+  "e_hi": "काइनेमेटिक इंडिटरमिनेसी को संरचना की स्वतंत्रता की डिग्री (Degree of Freedom) भी कहा जाता है।",
+  "e_en": "Kinematic indeterminacy is synonymous with the degree of freedom of a structure."
+ },
+ {
+  "id": "rp-je_c-f01071",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "मैक्सवेल का व्युत्क्रम प्रमेय (Maxwell's Reciprocal Theorem) किस पर लागू होता है?",
+  "q_en": "To what does Maxwell's Reciprocal Theorem apply?",
+  "o_hi": [
+   "केवल प्लास्टिक संरचनाएं",
+   "अरेखीय लोचदार संरचनाएं",
+   "रैखिक लोचदार संरचनाएं",
+   "अस्थिर संरचनाएं"
+  ],
+  "o_en": [
+   "Plastic structures only",
+   "Non-linear elastic structures",
+   "Linear elastic structures",
+   "Unstable structures"
+  ],
+  "a": 2,
+  "e_hi": "मैक्सवेल का प्रमेय केवल रैखिक लोचदार (linear elastic) और हुक के नियम का पालन करने वाली संरचनाओं के लिए मान्य है।",
+  "e_en": "Maxwell's theorem is valid only for linear elastic structures that obey Hooke's Law."
+ },
+ {
+  "id": "rp-je_c-f01072",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "जब किसी बीम पर केवल 'पॉइंट लोड' लगाया जाता है, तो बेंडिंग मोमेंट का आकार कैसा होता है?",
+  "q_en": "What is the shape of the bending moment diagram when a beam is subjected only to a point load?",
+  "o_hi": [
+   "त्रिभुजाकार",
+   "परवलयिक",
+   "आयताकार",
+   "घनीय"
+  ],
+  "o_en": [
+   "Triangular",
+   "Parabolic",
+   "Rectangular",
+   "Cubic"
+  ],
+  "a": 0,
+  "e_hi": "पॉइंट लोड के कारण बेंडिंग मोमेंट बीम की लंबाई के साथ रैखिक रूप से बदलता है, जिससे त्रिभुजाकार आकार बनता है।",
+  "e_en": "A point load causes the bending moment to vary linearly along the beam, resulting in a triangular shape."
  }
 ]
