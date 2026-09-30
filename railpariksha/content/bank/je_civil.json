@@ -21066,5 +21066,879 @@
   "a": 2,
   "e_hi": "फिक्स्ड बीम के सिरों पर रोटेशन और विस्थापन दोनों प्रतिबंधित होते हैं, इसलिए वहां ऊर्ध्वाधर बल और आघूर्ण (moment) दोनों उत्पन्न होते हैं।",
   "e_en": "In a fixed beam, rotation and displacement are restricted at both ends, resulting in both vertical reactions and moments."
+ },
+ {
+  "id": "rp-je_c-f00917",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर (statically determinate) बीम में, यदि तापमान में वृद्धि होती है, तो संरचना पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a statically determinate beam, what is the effect of a uniform temperature increase on the internal reactions?",
+  "o_hi": [
+   "कोई प्रतिक्रिया नहीं होगी",
+   "आंतरिक बल बढ़ेंगे",
+   "संरचना अस्थिर हो जाएगी",
+   "झुकाव (deflection) शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "No reactions are induced",
+   "Internal forces will increase",
+   "Structure becomes unstable",
+   "Deflection becomes zero"
+  ],
+  "a": 0,
+  "e_hi": "स्थिर संरचनाओं में, तापमान विस्तार को बिना किसी प्रतिरोध के होने दिया जाता है, इसलिए कोई अतिरिक्त बल उत्पन्न नहीं होता।",
+  "e_en": "In statically determinate structures, thermal expansion is free to occur without restraint, hence no additional internal forces are induced."
+ },
+ {
+  "id": "rp-je_c-f00918",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी बीम का 'डिग्री ऑफ इंडिटरमिनेसी' (Degree of Indeterminacy) 2 है, तो इसका अर्थ क्या है?",
+  "q_en": "If the degree of static indeterminacy of a beam is 2, what does this imply?",
+  "o_hi": [
+   "दो अतिरिक्त प्रतिक्रियाएं मौजूद हैं",
+   "संरचना दो बार अस्थिर है",
+   "दो सदस्यों में बल शून्य हैं",
+   "दो बल ज्ञात करने के लिए संतुलन समीकरण पर्याप्त हैं"
+  ],
+  "o_en": [
+   "Two redundant reactions exist",
+   "The structure is twice unstable",
+   "Forces in two members are zero",
+   "Two equilibrium equations are sufficient to find forces"
+  ],
+  "a": 0,
+  "e_hi": "डिग्री ऑफ इंडिटरमिनेसी का अर्थ है कि संतुलन के समीकरणों (equilibrium equations) के अलावा दो अतिरिक्त अज्ञात बल मौजूद हैं।",
+  "e_en": "The degree of static indeterminacy represents the number of unknown forces exceeding the available equilibrium equations."
+ },
+ {
+  "id": "rp-je_c-f00919",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "दो-हिंज आर्च (two-hinged arch) के बारे में क्या सत्य है?",
+  "q_en": "Which statement is true regarding a two-hinged arch?",
+  "o_hi": [
+   "यह statically indeterminate है",
+   "यह statically determinate है",
+   "इसमें तापमान परिवर्तन का कोई प्रभाव नहीं पड़ता",
+   "इसमें तीन हिंज होते हैं"
+  ],
+  "o_en": [
+   "It is statically indeterminate",
+   "It is statically determinate",
+   "Temperature changes have no effect",
+   "It has three hinges"
+  ],
+  "a": 0,
+  "e_hi": "दो-हिंज आर्च में क्षैतिज प्रतिक्रिया (horizontal thrust) को निकालने के लिए संतुलन समीकरण पर्याप्त नहीं होते, इसलिए यह statically indeterminate है।",
+  "e_en": "A two-hinged arch is statically indeterminate to the first degree because equilibrium equations alone cannot determine the horizontal thrust."
+ },
+ {
+  "id": "rp-je_c-f00920",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "मुलर-ब्रस्लॉ सिद्धांत (Muller-Breslau principle) का उपयोग मुख्य रूप से किसके लिए किया जाता है?",
+  "q_en": "The Muller-Breslau principle is primarily used for finding what?",
+  "o_hi": [
+   "इन्फ्लुएंस लाइन डायग्राम (ILD) बनाने के लिए",
+   "बीम का वजन मापने के लिए",
+   "कंक्रीट की ताकत जांचने के लिए",
+   "मिट्टी का दबाव निकालने के लिए"
+  ],
+  "o_en": [
+   "Constructing Influence Line Diagrams (ILD)",
+   "Measuring beam weight",
+   "Testing concrete strength",
+   "Calculating soil pressure"
+  ],
+  "a": 0,
+  "e_hi": "मुलर-ब्रस्लॉ सिद्धांत का उपयोग संरचनाओं में किसी विशेष बिंदु पर प्रतिक्रिया या बल के लिए इन्फ्लुएंस लाइन बनाने के लिए किया जाता है।",
+  "e_en": "The Muller-Breslau principle is used to determine the shape of influence lines for reactions, shear forces, or bending moments."
+ },
+ {
+  "id": "rp-je_c-f00921",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी संरचना में 'डिग्री ऑफ काइनेमेटिक इंडिटरमिनेसी' अधिक है, तो इसका क्या अर्थ है?",
+  "q_en": "If a structure has a high degree of kinematic indeterminacy, what does it imply?",
+  "o_hi": [
+   "अधिक 'डिग्री ऑफ फ्रीडम' (DOF) मौजूद हैं",
+   "संरचना अधिक मजबूत है",
+   "संरचना में भार वहन क्षमता कम है",
+   "संरचना का विश्लेषण सरल है"
+  ],
+  "o_en": [
+   "More degrees of freedom (DOF) are present",
+   "The structure is stronger",
+   "The load-bearing capacity is lower",
+   "Analysis of the structure is simple"
+  ],
+  "a": 0,
+  "e_hi": "काइनेमेटिक इंडिटरमिनेसी सीधे जोड़ों (joints) पर उपलब्ध स्वतंत्र विस्थापन (displacements) की संख्या से जुड़ी होती है।",
+  "e_en": "Kinematic indeterminacy corresponds to the number of independent nodal displacements, which represents the degrees of freedom in the structure."
+ },
+ {
+  "id": "rp-je_c-f00922",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "स्लोप-डिफ्लेक्शन विधि (Slope-Deflection Method) में किसे अज्ञात माना जाता है?",
+  "q_en": "In the Slope-Deflection method, which parameters are considered unknowns?",
+  "o_hi": [
+   "जोड़ों का रोटेशन और विस्थापन",
+   "केवल भार",
+   "केवल समर्थन प्रतिक्रियाएं",
+   "केवल बीम की लंबाई"
+  ],
+  "o_en": [
+   "Joint rotations and displacements",
+   "Only loads",
+   "Only support reactions",
+   "Only beam lengths"
+  ],
+  "a": 0,
+  "e_hi": "स्लोप-डिफ्लेक्शन विधि एक विस्थापन विधि (displacement method) है, जिसमें जोड़ों के कोण और विस्थापन को अज्ञात मानकर समीकरण हल किए जाते हैं।",
+  "e_en": "The slope-deflection method is a displacement-based approach where joint rotations and displacements are treated as primary unknowns."
+ },
+ {
+  "id": "rp-je_c-f00923",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "ट्रस (truss) में 'जीरो फोर्स मेम्बर' का क्या कारण हो सकता है?",
+  "q_en": "What is a common reason for a 'zero force member' in a truss?",
+  "o_hi": [
+   "सदस्यों का ज्यामितीय विन्यास और भार का स्थान",
+   "सदस्य का बहुत कमजोर होना",
+   "सदस्य का कंक्रीट से बना होना",
+   "ट्रस का बहुत भारी होना"
+  ],
+  "o_en": [
+   "Geometric arrangement of members and load placement",
+   "The member being too weak",
+   "The member being made of concrete",
+   "The truss being too heavy"
+  ],
+  "a": 0,
+  "e_hi": "कुछ ज्यामितीय स्थितियों में, जोड़ों पर संतुलन बनाए रखने के लिए किसी सदस्य में बल शून्य हो जाता है, ताकि संरचना स्थिर रहे।",
+  "e_en": "Zero force members occur due to specific geometric configurations where equilibrium at a joint requires zero internal force in certain members."
+ },
+ {
+  "id": "rp-je_c-f00924",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "किसी बीम के लिए बेंडिंग मोमेंट और शेयर बल के बीच क्या संबंध है?",
+  "q_en": "What is the relationship between bending moment and shear force in a beam?",
+  "o_hi": [
+   "शेयर बल, बेंडिंग मोमेंट का डेरिवेटिव (derivative) है",
+   "बेंडिंग मोमेंट, शेयर बल का उत्पाद है",
+   "कोई संबंध नहीं है",
+   "शेयर बल हमेशा बेंडिंग मोमेंट के बराबर होता है"
+  ],
+  "o_en": [
+   "Shear force is the derivative of the bending moment",
+   "Bending moment is the product of shear force",
+   "There is no relationship",
+   "Shear force is always equal to bending moment"
+  ],
+  "a": 0,
+  "e_hi": "गणितीय रूप से, शेयर बल (V) बेंडिंग मोमेंट (M) का x के सापेक्ष प्रथम अवकलन (derivative) होता है, यानी V = dM/dx।",
+  "e_en": "Mathematically, the shear force at any section is the derivative of the bending moment with respect to the distance, expressed as V = dM/dx."
+ },
+ {
+  "id": "rp-je_c-f00925",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक निश्चित स्थिर बीम (Fixed Beam) के मध्य बिंदु पर केंद्रित भार (Point Load) P लगाने पर, बीम के सिरों पर उत्पन्न होने वाला स्थिर आघूर्ण (Fixed End Moment) क्या होगा, यदि बीम की लंबाई L है?",
+  "q_en": "For a fixed beam of length L subjected to a point load P at its mid-span, what is the fixed end moment generated at the supports?",
+  "o_hi": [
+   "PL/4",
+   "PL/8",
+   "PL/2",
+   "PL/12"
+  ],
+  "o_en": [
+   "PL/4",
+   "PL/8",
+   "PL/2",
+   "PL/12"
+  ],
+  "a": 1,
+  "e_hi": "मध्य बिंदु पर केंद्रित भार के लिए, फिक्स्ड एंड मोमेंट का सूत्र PL/8 होता है।",
+  "e_en": "For a point load at the center of a fixed beam, the formula for fixed end moment is PL/8."
+ },
+ {
+  "id": "rp-je_c-f00926",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम की लंबाई L है और उस पर पूरे विस्तार में समरूप वितरित भार (Uniformly Distributed Load) w कार्य कर रहा है। मुक्त सिरे पर विक्षेप (Deflection) का मान क्या होगा?",
+  "q_en": "A cantilever beam of length L is subjected to a uniformly distributed load w over its entire span. What is the deflection at the free end?",
+  "o_hi": [
+   "wL^4/8EI",
+   "wL^3/3EI",
+   "wL^4/3EI",
+   "wL^3/8EI"
+  ],
+  "o_en": [
+   "wL^4/8EI",
+   "wL^3/3EI",
+   "wL^4/3EI",
+   "wL^3/8EI"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम के मुक्त सिरे पर UDL के कारण विक्षेप का मानक सूत्र wL^4/8EI है।",
+  "e_en": "The standard formula for deflection at the free end of a cantilever beam under UDL is wL^4/8EI."
+ },
+ {
+  "id": "rp-je_c-f00927",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "स्ट्रेन एनर्जी (Strain Energy) का सूत्र क्या है, जब एक छड़ (Bar) पर अक्षीय भार P लगाया जाता है (जहाँ L लंबाई, A क्षेत्रफल और E यंग मापांक है)?",
+  "q_en": "What is the formula for strain energy stored in a bar subjected to an axial load P (where L is length, A is area, and E is Young's modulus)?",
+  "o_hi": [
+   "P^2L/2AE",
+   "PL^2/2AE",
+   "P^2L/AE",
+   "PL/2AE"
+  ],
+  "o_en": [
+   "P^2L/2AE",
+   "PL^2/2AE",
+   "P^2L/AE",
+   "PL/2AE"
+  ],
+  "a": 0,
+  "e_hi": "स्ट्रेन एनर्जी का मान बल के वर्ग और लंबाई के गुणनफल को 2AE से विभाजित करने पर प्राप्त होता है।",
+  "e_en": "Strain energy is calculated as the square of the load multiplied by length, divided by 2AE."
+ },
+ {
+  "id": "rp-je_c-f00928",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक तीन-हिंज्ड आर्च (Three-hinged arch) के लिए, यदि उस पर कोई भी भार नहीं है, तो क्षैतिज प्रतिक्रिया (Horizontal Thrust) का मान क्या होगा?",
+  "q_en": "For a three-hinged arch, if there is no load acting on it, what is the value of horizontal thrust?",
+  "o_hi": [
+   "शून्य",
+   "अधिकतम",
+   "भार के बराबर",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Zero",
+   "Maximum",
+   "Equal to load",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "बिना किसी भार के, तीन-हिंज्ड आर्च में कोई आंतरिक बल या क्षैतिज प्रतिक्रिया उत्पन्न नहीं होती है।",
+  "e_en": "In the absence of any load, there is no internal force or horizontal thrust generated in a three-hinged arch."
+ },
+ {
+  "id": "rp-je_c-f00929",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक बीम में 'मोमेंट ऑफ इनर्शिया' (Moment of Inertia) I और 'यंग्स मॉडुलस' E के गुणनफल (EI) को क्या कहा जाता है?",
+  "q_en": "What is the product of Moment of Inertia (I) and Young's Modulus (E) in a beam called?",
+  "o_hi": [
+   "फ्लेक्सुरल रिजिडिटी",
+   "टोरशनल रिजिडिटी",
+   "शियर रिजिडिटी",
+   "एक्सियल रिजिडिटी"
+  ],
+  "o_en": [
+   "Flexural rigidity",
+   "Torsional rigidity",
+   "Shear rigidity",
+   "Axial rigidity"
+  ],
+  "a": 0,
+  "e_hi": "EI को नमन दृढ़ता या फ्लेक्सुरल रिजिडिटी के रूप में जाना जाता है।",
+  "e_en": "The product EI is known as flexural rigidity."
+ },
+ {
+  "id": "rp-je_c-f00930",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "ऑयलर के सूत्र के अनुसार, एक दोनों सिरों पर कब्जेदार (Pinned) कॉलम की बकलिंग लोड (Buckling Load) का मान क्या है?",
+  "q_en": "According to Euler's formula, what is the buckling load for a column pinned at both ends?",
+  "o_hi": [
+   "π^2EI/L^2",
+   "4π^2EI/L^2",
+   "π^2EI/4L^2",
+   "2π^2EI/L^2"
+  ],
+  "o_en": [
+   "π^2EI/L^2",
+   "4π^2EI/L^2",
+   "π^2EI/4L^2",
+   "2π^2EI/L^2"
+  ],
+  "a": 0,
+  "e_hi": "दोनों सिरों पर पिन किए गए कॉलम के लिए प्रभावी लंबाई L होती है, जिससे ऑयलर लोड π^2EI/L^2 होता है।",
+  "e_en": "For a column pinned at both ends, the effective length is L, resulting in an Euler load of π^2EI/L^2."
+ },
+ {
+  "id": "rp-je_c-f00931",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "स्लोप-डिफ्लेक्शन समीकरण (Slope-Deflection equation) में, यदि एक बीम का सिरा फिक्स्ड है, तो उस सिरे पर स्लोप (θ) का मान क्या होगा?",
+  "q_en": "In the slope-deflection equation, if one end of a beam is fixed, what is the value of the slope (θ) at that end?",
+  "o_hi": [
+   "0",
+   "1",
+   "अनंत",
+   "कोई निश्चित नहीं"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "Infinity",
+   "Not defined"
+  ],
+  "a": 0,
+  "e_hi": "फिक्स्ड सपोर्ट पर घुमाव या स्लोप हमेशा शून्य होता है क्योंकि वहां रोटेशन संभव नहीं है।",
+  "e_en": "At a fixed support, the slope or rotation is always zero because rotation is restricted."
+ },
+ {
+  "id": "rp-je_c-f00932",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक बीम के लिए 'कंजुगेट बीम विधि' (Conjugate Beam Method) में, यदि वास्तविक बीम का सिरा 'हिंज्ड' है, तो कंजुगेट बीम का सिरा कैसा होगा?",
+  "q_en": "In the 'Conjugate Beam Method' for a beam, if the real beam end is 'hinged', what will the conjugate beam end be?",
+  "o_hi": [
+   "हिंज्ड",
+   "फिक्स्ड",
+   "मुक्त",
+   "रोलर"
+  ],
+  "o_en": [
+   "Hinged",
+   "Fixed",
+   "Free",
+   "Roller"
+  ],
+  "a": 0,
+  "e_hi": "कंजुगेट बीम विधि में, हिंज्ड या पिन सपोर्ट कंजुगेट बीम में भी हिंज्ड या पिन ही रहते हैं।",
+  "e_en": "In the conjugate beam method, a hinged or pinned support remains hinged or pinned in the conjugate beam."
+ },
+ {
+  "id": "rp-je_c-f00933",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी बीम में अज्ञात प्रतिक्रियाओं की संख्या संतुलन के उपलब्ध समीकरणों (Equations of equilibrium) से अधिक है, तो उसे क्या कहा जाता है?",
+  "q_en": "If the number of unknown reactions in a beam exceeds the available equations of equilibrium, what is it called?",
+  "o_hi": [
+   "स्थिर रूप से अनिश्चित (Statically Indeterminate)",
+   "स्थिर रूप से निश्चित (Statically Determinate)",
+   "अस्थिर (Unstable)",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Statically Indeterminate",
+   "Statically Determinate",
+   "Unstable",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "जब अज्ञात बल समीकरणों से अधिक हों, तो संरचना को 'स्थिर रूप से अनिश्चित' कहा जाता है।",
+  "e_en": "When unknowns exceed equilibrium equations, the structure is termed 'statically indeterminate'."
+ },
+ {
+  "id": "rp-je_c-f00934",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "मैक्सवेल के पारस्परिक प्रमेय (Maxwell's Reciprocal Theorem) के अनुसार, बिंदु A पर इकाई भार के कारण बिंदु B पर विक्षेप किसके बराबर होता है?",
+  "q_en": "According to Maxwell's Reciprocal Theorem, the deflection at point B due to a unit load at point A is equal to what?",
+  "o_hi": [
+   "बिंदु A पर विक्षेप, जब भार बिंदु B पर हो",
+   "बिंदु A पर विक्षेप, जब भार बिंदु A पर हो",
+   "बिंदु B पर विक्षेप, जब भार बिंदु B पर हो",
+   "शून्य"
+  ],
+  "o_en": [
+   "Deflection at A due to unit load at B",
+   "Deflection at A due to unit load at A",
+   "Deflection at B due to unit load at B",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "मैक्सवेल का प्रमेय कहता है कि A पर भार के कारण B का विक्षेप, B पर भार के कारण A के विक्षेप के बराबर होता है।",
+  "e_en": "Maxwell's theorem states that the deflection at B due to a load at A is equal to the deflection at A due to the same load at B."
+ },
+ {
+  "id": "rp-je_c-f00935",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर (statically determinate) और एक अनिश्चित (statically indeterminate) संरचना के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the primary difference between a statically determinate and a statically indeterminate structure?",
+  "o_hi": [
+   "समीकरणों की संख्या का उपयोग",
+   "प्रतिक्रिया बलों की गणना केवल संतुलन समीकरणों से की जा सकती है",
+   "विफलता का तरीका",
+   "सामग्री की लागत"
+  ],
+  "o_en": [
+   "Number of equations used",
+   "Reaction forces can be calculated using only equilibrium equations",
+   "Mode of failure",
+   "Material cost"
+  ],
+  "a": 1,
+  "e_hi": "स्थिर संरचनाओं में, सभी बलों और प्रतिक्रियाओं को केवल संतुलन समीकरणों (Static equilibrium equations) का उपयोग करके निर्धारित किया जा सकता है।",
+  "e_en": "In determinate structures, all reactions and internal forces can be determined using only static equilibrium equations."
+ },
+ {
+  "id": "rp-je_c-f00936",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा संरचनात्मक विश्लेषण का 'बल विधि' (Force Method) का दूसरा नाम है?",
+  "q_en": "Which of the following is an alternative name for the 'Force Method' of structural analysis?",
+  "o_hi": [
+   "विस्थापन विधि",
+   "सुसंगत विरूपण विधि (Method of Consistent Deformation)",
+   "कठोरता विधि",
+   "वितरण विधि"
+  ],
+  "o_en": [
+   "Displacement method",
+   "Method of Consistent Deformation",
+   "Stiffness method",
+   "Distribution method"
+  ],
+  "a": 1,
+  "e_hi": "बल विधि में अज्ञात बल प्राथमिक चर होते हैं, और इसे सुसंगत विरूपण विधि के रूप में भी जाना जाता है।",
+  "e_en": "In the force method, unknown forces are primary variables, and it is also known as the method of consistent deformation."
+ },
+ {
+  "id": "rp-je_c-f00937",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "कैनिलीवर बीम की तुलना में एक फिक्स्ड बीम (Fixed beam) के बारे में क्या सत्य है?",
+  "q_en": "What is true about a fixed beam compared to a cantilever beam?",
+  "o_hi": [
+   "यह अधिक स्थिर है",
+   "यह कम स्थिर है",
+   "यह अधिक लचीला है",
+   "यह कम विक्षेपण (deflection) पैदा करता है"
+  ],
+  "o_en": [
+   "It is more stable",
+   "It is less stable",
+   "It is more flexible",
+   "It produces less deflection"
+  ],
+  "a": 3,
+  "e_hi": "फिक्स्ड बीम के दोनों सिरों पर फिक्सेशन के कारण, यह समान भार के तहत कैनिलीवर बीम की तुलना में काफी कम विक्षेपण पैदा करता है।",
+  "e_en": "Due to fixation at both ends, a fixed beam produces significantly less deflection compared to a cantilever beam under similar loading."
+ },
+ {
+  "id": "rp-je_c-f00938",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "स्लोप-डिफ्लेक्शन समीकरण (Slope-deflection equation) किस विधि का आधार है?",
+  "q_en": "The slope-deflection equation is the basis for which method?",
+  "o_hi": [
+   "बल विधि",
+   "विस्थापन विधि (Displacement Method)",
+   "ऊर्जा विधि",
+   "ग्राफिकल विधि"
+  ],
+  "o_en": [
+   "Force method",
+   "Displacement method",
+   "Energy method",
+   "Graphical method"
+  ],
+  "a": 1,
+  "e_hi": "स्लोप-डिफ्लेक्शन विधि विस्थापन विधि का एक प्रकार है जहाँ विस्थापन को अज्ञात के रूप में माना जाता है।",
+  "e_en": "The slope-deflection method is a type of displacement method where displacements are considered as unknowns."
+ },
+ {
+  "id": "rp-je_c-f00939",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "संरचनात्मक विश्लेषण में 'म्यूलर-ब्रेसला सिद्धांत' (Muller-Breslau principle) का मुख्य रूप से उपयोग क्या है?",
+  "q_en": "What is the primary use of the 'Muller-Breslau principle' in structural analysis?",
+  "o_hi": [
+   "झुकाव ज्ञात करना",
+   "प्रभाव रेखाएं (Influence lines) खींचना",
+   "विफलता लोड ज्ञात करना",
+   "तनाव वितरण"
+  ],
+  "o_en": [
+   "Finding slope",
+   "Drawing influence lines",
+   "Finding failure load",
+   "Stress distribution"
+  ],
+  "a": 1,
+  "e_hi": "म्यूलर-ब्रेसला सिद्धांत का उपयोग संरचनाओं के लिए प्रभाव रेखा आरेख (ILD) को गुणात्मक रूप से निर्धारित करने के लिए किया जाता है।",
+  "e_en": "The Muller-Breslau principle is used to qualitatively determine the influence line diagrams (ILD) for structures."
+ },
+ {
+  "id": "rp-je_c-f00940",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा 'कठोरता' (Stiffness) को सही ढंग से परिभाषित करता है?",
+  "q_en": "Which of the following correctly defines 'Stiffness'?",
+  "o_hi": [
+   "इकाई विक्षेपण के लिए आवश्यक बल",
+   "इकाई बल के लिए विक्षेपण",
+   "विफलता के लिए आवश्यक भार",
+   "क्षेत्रफल का अनुपात"
+  ],
+  "o_en": [
+   "Force required for unit deflection",
+   "Deflection for unit force",
+   "Load required for failure",
+   "Ratio of area"
+  ],
+  "a": 0,
+  "e_hi": "कठोरता (k) वह बल है जो संरचना में इकाई विस्थापन या विक्षेपण उत्पन्न करने के लिए आवश्यक होता है।",
+  "e_en": "Stiffness (k) is the force required to produce a unit displacement or deflection in a structure."
+ },
+ {
+  "id": "rp-je_c-f00941",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "मोमेंट डिस्ट्रीब्यूशन विधि (Moment Distribution Method) किसके लिए उपयुक्त है?",
+  "q_en": "The Moment Distribution Method is most suitable for which type of structure?",
+  "o_hi": [
+   "कैनिलीवर बीम",
+   "स्थिर रूप से निर्धारित बीम",
+   "स्थिर रूप से अनिश्चित बीम (Indeterminate beams)",
+   "ट्रस"
+  ],
+  "o_en": [
+   "Cantilever beam",
+   "Statically determinate beams",
+   "Statically indeterminate beams",
+   "Truss"
+  ],
+  "a": 2,
+  "e_hi": "मोमेंट डिस्ट्रीब्यूशन विधि विशेष रूप से स्थिर रूप से अनिश्चित बीम और फ्रेम्स के विश्लेषण के लिए प्रभावी है।",
+  "e_en": "The moment distribution method is particularly effective for analyzing statically indeterminate beams and frames."
+ },
+ {
+  "id": "rp-je_c-f00942",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "ट्रस (Truss) के विश्लेषण में 'जोड़ विधि' (Method of Joints) के लिए क्या आवश्यक है?",
+  "q_en": "What is required for the 'Method of Joints' in truss analysis?",
+  "o_hi": [
+   "हर जोड़ पर दो से अधिक अज्ञात बल नहीं होने चाहिए",
+   "सभी जोड़ कठोर होने चाहिए",
+   "ट्रस स्थिर होना चाहिए",
+   "केवल बाहरी बल"
+  ],
+  "o_en": [
+   "No more than two unknown forces at each joint",
+   "All joints must be rigid",
+   "Truss must be stable",
+   "Only external forces"
+  ],
+  "a": 0,
+  "e_hi": "जोड़ विधि का उपयोग करते समय, संतुलन के दो समीकरणों (समीकरण ΣFx=0 और ΣFy=0) के कारण प्रत्येक जोड़ पर अधिकतम दो अज्ञात बल होने चाहिए।",
+  "e_en": "When using the method of joints, there must be no more than two unknown forces at each joint due to the two equilibrium equations (ΣFx=0 and ΣFy=0)."
+ },
+ {
+  "id": "rp-je_c-f00943",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "संरचनात्मक विश्लेषण में 'कैस्टिग्लियानो का प्रमेय' (Castigliano's Theorem) किस पर आधारित है?",
+  "q_en": "Castigliano's Theorem in structural analysis is based on?",
+  "o_hi": [
+   "न्यूटन का नियम",
+   "ऊर्जा संरक्षण (Strain energy)",
+   "हुक का नियम",
+   "थर्मोडायनामिक्स"
+  ],
+  "o_en": [
+   "Newton's law",
+   "Conservation of energy (Strain energy)",
+   "Hooke's law",
+   "Thermodynamics"
+  ],
+  "a": 1,
+  "e_hi": "कैस्टिग्लियानो का प्रमेय विकृति ऊर्जा (Strain Energy) के आंशिक अवकलन पर आधारित है।",
+  "e_en": "Castigliano's theorem is based on the partial derivative of strain energy."
+ },
+ {
+  "id": "rp-je_c-f00944",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 'आदर्श' पिन-जोइंटेड ट्रस में, सदस्य केवल क्या वहन करते हैं?",
+  "q_en": "In an 'ideal' pin-jointed truss, members carry only which type of load?",
+  "o_hi": [
+   "झुकाव (Bending)",
+   "टोरसन (Torsion)",
+   "अक्षीय बल (Axial force)",
+   "कतरनी (Shear)"
+  ],
+  "o_en": [
+   "Bending",
+   "Torsion",
+   "Axial force",
+   "Shear"
+  ],
+  "a": 2,
+  "e_hi": "आदर्श ट्रस में, भार केवल जोड़ों पर लगाया जाता है, जिससे सदस्य केवल तनाव या संपीड़न (अक्षीय बल) का अनुभव करते हैं।",
+  "e_en": "In an ideal truss, loads are applied only at the joints, causing members to experience only tension or compression (axial force)."
+ },
+ {
+  "id": "rp-je_c-f00945",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक संरचनात्मक सदस्य में 'स्थैतिक अनिश्चितता' (Static Indeterminacy) का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of 'Static Indeterminacy' in a structural member?",
+  "o_hi": [
+   "अधिक प्रतिक्रिया बल",
+   "सामग्री का लचीलापन",
+   "संरचना का भार",
+   "आकार में परिवर्तन"
+  ],
+  "o_en": [
+   "Excess reaction forces",
+   "Material elasticity",
+   "Structural load",
+   "Change in shape"
+  ],
+  "a": 0,
+  "e_hi": "जब संतुलन के समीकरणों द्वारा सभी प्रतिक्रिया बलों का निर्धारण नहीं किया जा सकता है, तो संरचना को स्थैतिक रूप से अनिश्चित कहा जाता है।",
+  "e_en": "A structure is statically indeterminate when all reaction forces cannot be determined using the equations of static equilibrium."
+ },
+ {
+  "id": "rp-je_c-f00946",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "कौन सी संरचना 'पूर्णतः दृढ़' (Perfectly Rigid) मानी जाती है यदि उसमें विरूपण शून्य है?",
+  "q_en": "Which structure is considered 'Perfectly Rigid' if the deformation is zero?",
+  "o_hi": [
+   "आदर्श संरचना",
+   "वास्तविक संरचना",
+   "लचीली संरचना",
+   "प्लास्टिक संरचना"
+  ],
+  "o_en": [
+   "Ideal structure",
+   "Real structure",
+   "Flexible structure",
+   "Plastic structure"
+  ],
+  "a": 0,
+  "e_hi": "आदर्श संरचनात्मक विश्लेषण में, एक पूर्णतः दृढ़ निकाय वह है जिसमें भार के अधीन कोई विरूपण नहीं होता है।",
+  "e_en": "In ideal structural analysis, a perfectly rigid body is one that undergoes no deformation under load."
+ },
+ {
+  "id": "rp-je_c-f00947",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 'कैंटिलीवर बीम' (Cantilever Beam) में स्वतंत्र सिरों की संख्या कितनी होती है?",
+  "q_en": "How many free ends does a standard 'Cantilever Beam' have?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "शून्य"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम का एक सिरा स्थिर (fixed) होता है और दूसरा सिरा स्वतंत्र होता है।",
+  "e_en": "A cantilever beam is fixed at one end and free at the other end."
+ },
+ {
+  "id": "rp-je_c-f00948",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण में 'सुपरपोजिशन का सिद्धांत' (Principle of Superposition) केवल किस पर लागू होता है?",
+  "q_en": "The 'Principle of Superposition' in structural analysis is applicable only to which condition?",
+  "o_hi": [
+   "रैखिक लोचदार सामग्री",
+   "प्लास्टिक सामग्री",
+   "गैर-रैखिक सामग्री",
+   "अत्यधिक विरूपण"
+  ],
+  "o_en": [
+   "Linear elastic materials",
+   "Plastic materials",
+   "Non-linear materials",
+   "Large deformation"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन का सिद्धांत मानता है कि प्रभाव भार के सीधे आनुपातिक है, जो केवल रैखिक लोचदार प्रणालियों के लिए सत्य है।",
+  "e_en": "The principle of superposition assumes that effects are directly proportional to loads, which is only true for linear elastic systems."
+ },
+ {
+  "id": "rp-je_c-f00949",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 'पिन-जॉइंटेड' (Pin-jointed) ट्रस में सदस्यों पर किस प्रकार का बल कार्य करता है?",
+  "q_en": "What type of force acts on the members of a 'Pin-jointed' truss?",
+  "o_hi": [
+   "केवल अक्षीय बल",
+   "झुकने वाला बल",
+   "मरोड़ बल",
+   "कतरनी बल"
+  ],
+  "o_en": [
+   "Axial force only",
+   "Bending force",
+   "Torsional force",
+   "Shear force"
+  ],
+  "a": 0,
+  "e_hi": "पिन-जॉइंटेड ट्रस में, सदस्यों को केवल तनाव (tension) या संपीड़न (compression) के अधीन माना जाता है।",
+  "e_en": "In a pin-jointed truss, members are assumed to be subjected only to tension or compression."
+ },
+ {
+  "id": "rp-je_c-f00950",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण में 'डिग्री ऑफ फ्रीडम' (Degree of Freedom) क्या दर्शाता है?",
+  "q_en": "What does the 'Degree of Freedom' represent in structural analysis?",
+  "o_hi": [
+   "स्वतंत्र विस्थापन",
+   "कुल भार",
+   "सामग्री की ताकत",
+   "समर्थन की संख्या"
+  ],
+  "o_en": [
+   "Independent displacements",
+   "Total load",
+   "Material strength",
+   "Number of supports"
+  ],
+  "a": 0,
+  "e_hi": "डिग्री ऑफ फ्रीडम उन स्वतंत्र निर्देशांकों की संख्या है जो संरचना के विरूपित आकार को परिभाषित करने के लिए आवश्यक हैं।",
+  "e_en": "Degrees of freedom represent the number of independent coordinates required to define the deformed shape of a structure."
+ },
+ {
+  "id": "rp-je_c-f00951",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि किसी बीम में 'हिंज' (Hinge) जोड़ा जाता है, तो वह क्या प्रदान करता है?",
+  "q_en": "What does a 'Hinge' provide when added to a beam structure?",
+  "o_hi": [
+   "आघूर्ण मुक्त बिंदु",
+   "अक्षीय कठोरता",
+   "निश्चित समर्थन",
+   "कतरनी प्रतिरोध"
+  ],
+  "o_en": [
+   "Moment-free point",
+   "Axial stiffness",
+   "Fixed support",
+   "Shear resistance"
+  ],
+  "a": 0,
+  "e_hi": "एक आंतरिक हिंज उस बिंदु पर बेंडिंग मोमेंट को शून्य कर देता है, जिससे संरचना की अनिश्चितता कम हो जाती है।",
+  "e_en": "An internal hinge makes the bending moment at that point zero, thereby reducing the indeterminacy of the structure."
+ },
+ {
+  "id": "rp-je_c-f00952",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "संरचनात्मक विश्लेषण में 'मैक्सवेल का व्युत् reciprocal प्रमेय' (Maxwell's Reciprocal Theorem) किसके लिए वैध है?",
+  "q_en": "Maxwell's Reciprocal Theorem in structural analysis is valid for which type of structures?",
+  "o_hi": [
+   "रैखिक लोचदार संरचनाएं",
+   "गैर-लोचदार संरचनाएं",
+   "अस्थिर संरचनाएं",
+   "प्लास्टिक संरचनाएं"
+  ],
+  "o_en": [
+   "Linear elastic structures",
+   "Non-elastic structures",
+   "Unstable structures",
+   "Plastic structures"
+  ],
+  "a": 0,
+  "e_hi": "यह प्रमेय बताता है कि बिंदु A पर भार के कारण बिंदु B का विस्थापन, बिंदु B पर उसी भार के कारण बिंदु A के विस्थापन के बराबर होता है।",
+  "e_en": "This theorem states that the displacement at point B due to a load at point A equals the displacement at point A due to the same load at point B."
+ },
+ {
+  "id": "rp-je_c-f00953",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 'स्थिर रूप से निर्धारित' (Statically Determinate) बीम में प्रतिक्रियाओं की संख्या कितनी होती है?",
+  "q_en": "How many reaction components can be determined in a statically determinate beam using equilibrium equations?",
+  "o_hi": [
+   "तीन",
+   "चार",
+   "पांच",
+   "छह"
+  ],
+  "o_en": [
+   "Three",
+   "Four",
+   "Five",
+   "Six"
+  ],
+  "a": 0,
+  "e_hi": "समतल संरचनाओं के लिए, साम्य के तीन समीकरण (H=0, V=0, M=0) होते हैं, जिससे तीन अज्ञात प्रतिक्रियाओं का समाधान किया जा सकता है।",
+  "e_en": "For planar structures, there are three equilibrium equations (H=0, V=0, M=0), which allow solving for three unknown reactions."
+ },
+ {
+  "id": "rp-je_c-f00954",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "संरचनात्मक विश्लेषण में 'कठोरता' (Stiffness) को कैसे परिभाषित किया जाता है?",
+  "q_en": "How is 'Stiffness' defined in structural analysis?",
+  "o_hi": [
+   "इकाई विस्थापन के लिए आवश्यक बल",
+   "भार के प्रति प्रतिरोध",
+   "सामग्री का घनत्व",
+   "संरचना की लंबाई"
+  ],
+  "o_en": [
+   "Force required for unit displacement",
+   "Resistance to load",
+   "Material density",
+   "Length of structure"
+  ],
+  "a": 0,
+  "e_hi": "कठोरता वह बल है जो किसी संरचना में इकाई विस्थापन या रोटेशन उत्पन्न करने के लिए आवश्यक होता है।",
+  "e_en": "Stiffness is defined as the force required to produce a unit displacement or rotation in a structure."
  }
 ]
