@@ -26402,5 +26402,833 @@
   "a": 1,
   "e_hi": "फिक्स्ड बीम में 6 प्रतिक्रियाएँ होती हैं और 3 संतुलन समीकरण होते हैं, इसलिए यह 3 डिग्री तक अनिश्चित है।",
   "e_en": "A fixed beam has 6 reactions and 3 equilibrium equations, making it statically indeterminate to the 3rd degree."
+ },
+ {
+  "id": "rp-je_c-f01149",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम की लंबाई 'L' है और उस पर मुक्त सिरे पर 'P' भार लगा है। मुक्त सिरे पर विक्षेपण (deflection) का मान क्या होगा?",
+  "q_en": "A cantilever beam of length 'L' is subjected to a point load 'P' at its free end. What is the value of the deflection at the free end?",
+  "o_hi": [
+   "PL³/3EI",
+   "PL²/2EI",
+   "PL³/6EI",
+   "PL/EI"
+  ],
+  "o_en": [
+   "PL³/3EI",
+   "PL²/2EI",
+   "PL³/6EI",
+   "PL/EI"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम के मुक्त सिरे पर बिंदु भार के लिए विक्षेपण का मानक सूत्र PL³/3EI होता है।",
+  "e_en": "The standard formula for deflection at the free end of a cantilever beam carrying a point load is PL³/3EI."
+ },
+ {
+  "id": "rp-je_c-f01150",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक स्थिर (fixed) बीम जिसकी लंबाई 'L' है, उस पर पूरे विस्तार में 'w' तीव्रता का समान रूप से वितरित भार (UDL) लगा है। बीम के सिरों पर बेंडिंग मोमेंट क्या होगा?",
+  "q_en": "A fixed beam of length 'L' is subjected to a uniformly distributed load (UDL) of intensity 'w' over its entire span. What is the bending moment at the fixed supports?",
+  "o_hi": [
+   "wL²/8",
+   "wL²/12",
+   "wL²/24",
+   "wL²/16"
+  ],
+  "o_en": [
+   "wL²/8",
+   "wL²/12",
+   "wL²/24",
+   "wL²/16"
+  ],
+  "a": 1,
+  "e_hi": "एक फिक्स्ड बीम के सिरों पर बेंडिंग मोमेंट का मान wL²/12 होता है।",
+  "e_en": "For a fixed beam with UDL over the entire span, the fixed-end moments are equal to wL²/12."
+ },
+ {
+  "id": "rp-je_c-f01151",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि किसी बीम में बेंडिंग मोमेंट शून्य है, तो उस बिंदु को क्या कहा जाता है?",
+  "q_en": "If the bending moment in a beam is zero at a point, what is that point called?",
+  "o_hi": [
+   "प्लास्टिक हिंग",
+   "पॉइंट ऑफ कॉन्ट्राफ्लेक्चर",
+   "न्यूट्रल एक्सिस",
+   "शेयर सेंटर"
+  ],
+  "o_en": [
+   "Plastic hinge",
+   "Point of contraflexure",
+   "Neutral axis",
+   "Shear center"
+  ],
+  "a": 1,
+  "e_hi": "जिस बिंदु पर बेंडिंग मोमेंट अपना चिह्न बदलता है या शून्य होता है, उसे पॉइंट ऑफ कॉन्ट्राफ्लेक्चर कहते हैं।",
+  "e_en": "The point where the bending moment changes sign or becomes zero is known as the point of contraflexure."
+ },
+ {
+  "id": "rp-je_c-f01152",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 4 मीटर लंबी साधारण समर्थित (simply supported) बीम के केंद्र पर 20 kN का बिंदु भार लगा है। अधिकतम बेंडिंग मोमेंट का मान ज्ञात करें।",
+  "q_en": "A simply supported beam of span 4 meters is subjected to a point load of 20 kN at its center. Calculate the maximum bending moment.",
+  "o_hi": [
+   "10 kNm",
+   "20 kNm",
+   "40 kNm",
+   "80 kNm"
+  ],
+  "o_en": [
+   "10 kNm",
+   "20 kNm",
+   "40 kNm",
+   "80 kNm"
+  ],
+  "a": 1,
+  "e_hi": "साधारण समर्थित बीम के लिए केंद्र पर भार होने पर अधिकतम बेंडिंग मोमेंट (WL/4) = (20*4)/4 = 20 kNm होता है।",
+  "e_en": "For a simply supported beam with a central point load, the maximum bending moment is WL/4 = (20*4)/4 = 20 kNm."
+ },
+ {
+  "id": "rp-je_c-f01153",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "स्ट्रेन एनर्जी (Strain Energy) का सूत्र क्या है, यदि 'P' भार और 'Δ' विक्षेपण है?",
+  "q_en": "What is the formula for strain energy, given load 'P' and deflection 'Δ'?",
+  "o_hi": [
+   "P*Δ",
+   "P*Δ / 2",
+   "P*Δ / 3",
+   "2*P*Δ"
+  ],
+  "o_en": [
+   "P*Δ",
+   "P*Δ / 2",
+   "P*Δ / 3",
+   "2*P*Δ"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्यास्थ सीमा के भीतर, स्ट्रेन एनर्जी का मान भार और विक्षेपण के गुणनफल का आधा होता है।",
+  "e_en": "Within the elastic limit, the strain energy is equal to half the product of the load and the deflection."
+ },
+ {
+  "id": "rp-je_c-f01154",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक कैंटिलीवर बीम पर पूरे विस्तार में 'w' तीव्रता का UDL लगा है। स्वतंत्र सिरे पर ढलान (slope) का मान क्या होगा?",
+  "q_en": "A cantilever beam is subjected to a UDL of intensity 'w' over its entire span. What is the value of the slope at the free end?",
+  "o_hi": [
+   "wL³/6EI",
+   "wL³/3EI",
+   "wL²/2EI",
+   "wL³/24EI"
+  ],
+  "o_en": [
+   "wL³/6EI",
+   "wL³/3EI",
+   "wL²/2EI",
+   "wL³/24EI"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम पर UDL के लिए ढलान का मानक सूत्र θ = wL³/6EI होता है।",
+  "e_en": "The standard formula for the slope at the free end of a cantilever beam with a UDL is θ = wL³/6EI."
+ },
+ {
+  "id": "rp-je_c-f01155",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि किसी बीम की लंबाई दोगुनी कर दी जाए (अन्य पैरामीटर समान रखते हुए), तो उसके विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the length of a beam is doubled (keeping other parameters constant), what will be the effect on its deflection?",
+  "o_hi": [
+   "2 गुना बढ़ जाएगा",
+   "4 गुना बढ़ जाएगा",
+   "8 गुना बढ़ जाएगा",
+   "समान रहेगा"
+  ],
+  "o_en": [
+   "Increases by 2 times",
+   "Increases by 4 times",
+   "Increases by 8 times",
+   "Remains same"
+  ],
+  "a": 2,
+  "e_hi": "विक्षेपण (δ) लंबाई के घन (L³) के समानुपाती होता है, इसलिए 2³ = 8 गुना वृद्धि होगी।",
+  "e_en": "Deflection (δ) is proportional to the cube of the length (L³), so doubling the length results in a 2³ = 8 times increase."
+ },
+ {
+  "id": "rp-je_c-f01156",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक बीम में 'शेयर फोर्स' (Shear Force) शून्य होने पर बेंडिंग मोमेंट का मान कैसा होता है?",
+  "q_en": "What is the nature of the bending moment when the shear force in a beam is zero?",
+  "o_hi": [
+   "शून्य",
+   "न्यूनतम",
+   "अधिकतम",
+   "अपरिवर्तित"
+  ],
+  "o_en": [
+   "Zero",
+   "Minimum",
+   "Maximum",
+   "Constant"
+  ],
+  "a": 2,
+  "e_hi": "जहाँ शेयर फोर्स अपना चिह्न बदलता है (शून्य होता है), वहाँ बेंडिंग मोमेंट का मान अधिकतम (या न्यूनतम) होता है।",
+  "e_en": "The point where the shear force changes sign (becomes zero) corresponds to the point of maximum (or minimum) bending moment."
+ },
+ {
+  "id": "rp-je_c-f01157",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक साधारण समर्थित बीम पर 'M' आघूर्ण (moment) उसके एक सिरे पर लगाया गया है। दूसरे सिरे पर प्रतिक्रिया (reaction) का मान क्या होगा?",
+  "q_en": "A moment 'M' is applied at one end of a simply supported beam of length 'L'. What is the reaction at the other end?",
+  "o_hi": [
+   "M/L",
+   "M/2L",
+   "M",
+   "शून्य"
+  ],
+  "o_en": [
+   "M/L",
+   "M/2L",
+   "M",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "आघूर्ण संतुलन के लिए, दोनों सिरों पर विपरीत दिशा में M/L की ऊर्ध्वाधर प्रतिक्रियाएं उत्पन्न होंगी।",
+  "e_en": "For moment equilibrium, vertical reactions of M/L are generated at both supports in opposite directions."
+ },
+ {
+  "id": "rp-je_c-f01158",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक संरचनात्मक ढांचा जिसमें संतुलन के लिए आवश्यक समीकरणों की संख्या अज्ञात प्रतिक्रियाओं की संख्या से कम होती है, उसे क्या कहा जाता है?",
+  "q_en": "A structural frame where the number of equilibrium equations is less than the number of unknown reactions is classified as:",
+  "o_hi": [
+   "स्थिर रूप से निर्धारित",
+   "अस्थिर",
+   "स्थिर रूप से अनिर्धारित",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Statically determinate",
+   "Unstable",
+   "Statically indeterminate",
+   "None of these"
+  ],
+  "a": 2,
+  "e_hi": "जब अज्ञात प्रतिक्रियाएं संतुलन समीकरणों से अधिक होती हैं, तो संरचना को स्थिर रूप से अनिर्धारित कहा जाता है।",
+  "e_en": "When the number of unknown reactions exceeds the number of equilibrium equations, the structure is classified as statically indeterminate."
+ },
+ {
+  "id": "rp-je_c-f01159",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक बीम जिसके दोनों सिरे स्थिर (fixed) होते हैं, उसे किस श्रेणी में रखा जाता है?",
+  "q_en": "A beam with both ends fixed is classified as which of the following?",
+  "o_hi": [
+   "कैंटिलीवर बीम",
+   "सिंपली सपोर्टेड बीम",
+   "फिक्स्ड बीम",
+   "ओवरहैंगिंग बीम"
+  ],
+  "o_en": [
+   "Cantilever beam",
+   "Simply supported beam",
+   "Fixed beam",
+   "Overhanging beam"
+  ],
+  "a": 2,
+  "e_hi": "दोनों सिरों पर फिक्स्ड सपोर्ट होने के कारण इसे फिक्स्ड बीम कहा जाता है, जो पूरी तरह से प्रतिबंधित (restrained) होती है।",
+  "e_en": "A beam with fixed supports at both ends is categorized as a fixed beam, which is fully restrained."
+ },
+ {
+  "id": "rp-je_c-f01160",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण के संदर्भ में, 'डिग्री ऑफ फ्रीडम' का क्या अर्थ है?",
+  "q_en": "In the context of structural analysis, what does 'degree of freedom' represent?",
+  "o_hi": [
+   "सदस्यों की संख्या",
+   "नोड्स के विस्थापन की संख्या",
+   "लोड का प्रकार",
+   "सामग्री की मजबूती"
+  ],
+  "o_en": [
+   "Number of members",
+   "Number of independent nodal displacements",
+   "Type of load",
+   "Material strength"
+  ],
+  "a": 1,
+  "e_hi": "डिग्री ऑफ फ्रीडम उन स्वतंत्र विस्थापनों को संदर्भित करता है जो एक संरचना के नोड्स पर हो सकते हैं।",
+  "e_en": "Degree of freedom refers to the number of independent displacements possible at the nodes of a structure."
+ },
+ {
+  "id": "rp-je_c-f01161",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी बीम में प्रतिक्रियाओं की संख्या 3 है और संतुलन समीकरण भी 3 हैं, तो वह किस प्रकार की संरचना है?",
+  "q_en": "If a beam has 3 reactions and 3 equilibrium equations, what type of structure is it?",
+  "o_hi": [
+   "स्थिर रूप से निर्धारित",
+   "स्थिर रूप से अनिर्धारित",
+   "अस्थिर",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Statically determinate",
+   "Statically indeterminate",
+   "Unstable",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "जब अज्ञात प्रतिक्रियाओं की संख्या संतुलन समीकरणों के बराबर होती है, तो संरचना स्थिर रूप से निर्धारित होती है।",
+  "e_en": "When the number of unknown reactions equals the number of equilibrium equations, the structure is statically determinate."
+ },
+ {
+  "id": "rp-je_c-f01162",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "कैनोनिकल संरचना (canonical structure) में, यदि किसी नोड पर कोई भी मूवमेंट प्रतिबंधित नहीं है, तो उसे क्या कहा जाएगा?",
+  "q_en": "In a structural node, if no movement is restricted, what is it called?",
+  "o_hi": [
+   "फिक्स्ड सपोर्ट",
+   "हिंज्ड सपोर्ट",
+   "रोलर सपोर्ट",
+   "फ्री एंड"
+  ],
+  "o_en": [
+   "Fixed support",
+   "Hinged support",
+   "Roller support",
+   "Free end"
+  ],
+  "a": 3,
+  "e_hi": "फ्री एंड वह होता है जहां किसी भी प्रकार का कोई प्रतिबंध (restraint) नहीं होता है।",
+  "e_en": "A free end is a point where no displacement or rotation is restrained."
+ },
+ {
+  "id": "rp-je_c-f01163",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "प्लेन फ्रेम (plane frame) के लिए स्थैतिक अनिर्धार्यता (static indeterminacy) का सूत्र क्या है?",
+  "q_en": "What is the formula for static indeterminacy of a plane frame?",
+  "o_hi": [
+   "Ds = m - 2j + r",
+   "Ds = 3m + r - 3j",
+   "Ds = m + r - 2j",
+   "Ds = r - 3"
+  ],
+  "o_en": [
+   "Ds = m - 2j + r",
+   "Ds = 3m + r - 3j",
+   "Ds = m + r - 2j",
+   "Ds = r - 3"
+  ],
+  "a": 1,
+  "e_hi": "प्लेन फ्रेम के लिए कुल अनिर्धार्यता सदस्यों की संख्या, नोड्स और प्रतिक्रियाओं के बीच के संबंधों से निर्धारित होती है।",
+  "e_en": "For a plane frame, the static indeterminacy is determined by the relationship between members, nodes, and reactions, given by Ds = 3m + r - 3j."
+ },
+ {
+  "id": "rp-je_c-f01164",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण में 'कठोरता' (stiffness) का क्या अर्थ है?",
+  "q_en": "What does 'stiffness' mean in structural analysis?",
+  "o_hi": [
+   "इकाई विस्थापन के लिए आवश्यक बल",
+   "इकाई बल के लिए विस्थापन",
+   "सामग्री का घनत्व",
+   "भार सहने की कुल क्षमता"
+  ],
+  "o_en": [
+   "Force required for unit displacement",
+   "Displacement for unit force",
+   "Density of material",
+   "Total load capacity"
+  ],
+  "a": 0,
+  "e_hi": "कठोरता वह बल है जो संरचना में इकाई विस्थापन उत्पन्न करने के लिए आवश्यक होता है।",
+  "e_en": "Stiffness is defined as the force required to produce a unit displacement in a structure."
+ },
+ {
+  "id": "rp-je_c-f01165",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "कैंटिलीवर बीम के लिए स्थैतिक अनिर्धार्यता (static indeterminacy) क्या है?",
+  "q_en": "What is the static indeterminacy of a cantilever beam?",
+  "o_hi": [
+   "शून्य",
+   "एक",
+   "दो",
+   "तीन"
+  ],
+  "o_en": [
+   "Zero",
+   "One",
+   "Two",
+   "Three"
+  ],
+  "a": 0,
+  "e_hi": "एक कैंटिलीवर बीम में 3 प्रतिक्रियाएं होती हैं और 3 संतुलन समीकरण होते हैं, इसलिए यह शून्य अनिर्धारित है।",
+  "e_en": "A cantilever beam has 3 reactions and 3 equilibrium equations, resulting in a static indeterminacy of zero (it is determinate)."
+ },
+ {
+  "id": "rp-je_c-f01166",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम के मुक्त सिरे पर बिंदु भार लगाने पर अधिकतम बेंडिंग मोमेंट कहाँ उत्पन्न होगा?",
+  "q_en": "Where will the maximum bending moment occur in a cantilever beam when a point load is applied at its free end?",
+  "o_hi": [
+   "मुक्त सिरे पर",
+   "मध्य बिंदु पर",
+   "आलंब (fixed end) पर",
+   "कहीं नहीं"
+  ],
+  "o_en": [
+   "At the free end",
+   "At the midpoint",
+   "At the fixed end",
+   "Nowhere"
+  ],
+  "a": 2,
+  "e_hi": "कैंटिलीवर बीम में अधिकतम बेंडिंग मोमेंट हमेशा फिक्स्ड एंड पर होता है क्योंकि वहाँ सबसे अधिक आघूर्ण बल कार्य करता है।",
+  "e_en": "In a cantilever beam, the maximum bending moment always occurs at the fixed end due to the maximum lever arm distance."
+ },
+ {
+  "id": "rp-je_c-f01167",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि एक सरल समर्थित बीम (simply supported beam) के केंद्र पर भार लगाया जाए, तो अधिकतम विक्षेपण (deflection) कहाँ होगा?",
+  "q_en": "If a point load is applied at the center of a simply supported beam, where will the maximum deflection occur?",
+  "o_hi": [
+   "आलंब पर",
+   "बीम के केंद्र पर",
+   "एक तिहाई दूरी पर",
+   "मुक्त सिरे पर"
+  ],
+  "o_en": [
+   "At the supports",
+   "At the center of the beam",
+   "At one-third distance",
+   "At the free end"
+  ],
+  "a": 1,
+  "e_hi": "सममित भारण (symmetric loading) के कारण, सरल समर्थित बीम का अधिकतम विक्षेपण हमेशा केंद्र में होता है।",
+  "e_en": "Due to symmetric loading, the maximum deflection of a simply supported beam always occurs at the center."
+ },
+ {
+  "id": "rp-je_c-f01168",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर संरचना (statically determinate structure) के लिए संतुलन के कुल कितने समीकरण आवश्यक होते हैं?",
+  "q_en": "How many total equations of equilibrium are required for a statically determinate structure?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "चार"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Four"
+  ],
+  "a": 2,
+  "e_hi": "समतल संरचनाओं के लिए तीन संतुलन समीकरण होते हैं: क्षैतिज बलों का योग, ऊर्ध्वाधर बलों का योग और आघूर्ण का योग शून्य होना।",
+  "e_en": "For planar structures, there are three equilibrium equations: sum of horizontal forces, vertical forces, and moments must be zero."
+ },
+ {
+  "id": "rp-je_c-f01169",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक बीम में 'इन्फ्लेक्शन बिंदु' (point of contraflexure) वह स्थान है जहाँ:",
+  "q_en": "The 'point of contraflexure' in a beam is the location where:",
+  "o_hi": [
+   "बेंडिंग मोमेंट शून्य होता है",
+   "बेंडिंग मोमेंट अधिकतम होता है",
+   "शीयर फोर्स शून्य होता है",
+   "विक्षेपण अधिकतम होता है"
+  ],
+  "o_en": [
+   "Bending moment is zero",
+   "Bending moment is maximum",
+   "Shear force is zero",
+   "Deflection is maximum"
+  ],
+  "a": 0,
+  "e_hi": "इन्फ्लेक्शन बिंदु वह स्थान है जहाँ बेंडिंग मोमेंट अपना चिन्ह बदलता है, अर्थात वह शून्य हो जाता है।",
+  "e_en": "The point of contraflexure is the location where the bending moment changes its sign, meaning it passes through zero."
+ },
+ {
+  "id": "rp-je_c-f01170",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी बीम पर केवल 'यूनिफ़ॉर्मली डिस्ट्रीब्यूटेड लोड' (UDL) लगा हो, तो शीयर फोर्स का आरेख (SFD) कैसा दिखेगा?",
+  "q_en": "If a beam is subjected only to a 'Uniformly Distributed Load' (UDL), what will the Shear Force Diagram (SFD) look like?",
+  "o_hi": [
+   "क्षैतिज रेखा",
+   "त्रिभुजाकार",
+   "परवलयाकार (parabolic)",
+   "तिरछी रेखा (inclined)"
+  ],
+  "o_en": [
+   "Horizontal line",
+   "Triangular",
+   "Parabolic",
+   "Inclined line"
+  ],
+  "a": 3,
+  "e_hi": "UDL के मामले में, शीयर फोर्स रैखिक रूप से बदलता है, इसलिए आरेख एक तिरछी रेखा बनता है।",
+  "e_en": "In the case of a UDL, the shear force varies linearly, resulting in an inclined line for the SFD."
+ },
+ {
+  "id": "rp-je_c-f01171",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक बीम की 'स्टिफ़नेस' (stiffness) को परिभाषित किया जाता है:",
+  "q_en": "The 'stiffness' of a beam is defined as:",
+  "o_hi": [
+   "इकाई विक्षेपण उत्पन्न करने के लिए आवश्यक बल",
+   "बीम का कुल भार",
+   "बीम की लंबाई",
+   "सामग्री का घनत्व"
+  ],
+  "o_en": [
+   "Force required to produce unit deflection",
+   "Total load on beam",
+   "Length of beam",
+   "Density of material"
+  ],
+  "a": 0,
+  "e_hi": "स्टिफ़नेस का अर्थ है किसी संरचना का विरूपण के प्रति प्रतिरोध। यह इकाई विस्थापन के लिए आवश्यक बल है।",
+  "e_en": "Stiffness represents a structure's resistance to deformation. It is the force required to produce a unit displacement."
+ },
+ {
+  "id": "rp-je_c-f01172",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "कॉलम की 'इफेक्टिव लंबाई' (effective length) का मान सबसे कम कब होता है?",
+  "q_en": "When is the 'effective length' of a column at its minimum?",
+  "o_hi": [
+   "दोनों सिरे कब्जेदार (hinged) हों",
+   "दोनों सिरे फिक्स्ड हों",
+   "एक सिरा फिक्स्ड और दूसरा मुक्त हो",
+   "एक सिरा फिक्स्ड और दूसरा कब्जेदार हो"
+  ],
+  "o_en": [
+   "Both ends hinged",
+   "Both ends fixed",
+   "One end fixed and one free",
+   "One end fixed and one hinged"
+  ],
+  "a": 1,
+  "e_hi": "जब दोनों सिरे फिक्स्ड होते हैं, तो कॉलम की प्रभावी लंबाई सबसे कम (L/2) होती है, जिससे उसकी भार वहन क्षमता बढ़ जाती है।",
+  "e_en": "When both ends are fixed, the effective length of the column is at its minimum (L/2), which increases its load-carrying capacity."
+ },
+ {
+  "id": "rp-je_c-f01173",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "क्यूबिक बीम थ्योरी के अनुसार, बेंडिंग स्ट्रेस (bending stress) का वितरण बीम की गहराई के साथ कैसा होता है?",
+  "q_en": "According to beam theory, how does the bending stress distribution vary with the depth of the beam?",
+  "o_hi": [
+   "स्थिर",
+   "रैखिक (linear)",
+   "परवलयाकार",
+   "अतिपरवलयाकार (hyperbolic)"
+  ],
+  "o_en": [
+   "Constant",
+   "Linear",
+   "Parabolic",
+   "Hyperbolic"
+  ],
+  "a": 1,
+  "e_hi": "बेंडिंग स्ट्रेस न्यूट्रल एक्सिस से दूरी के सीधे समानुपाती होता है, इसलिए यह रैखिक रूप से बदलता है।",
+  "e_en": "Bending stress is directly proportional to the distance from the neutral axis, hence it varies linearly."
+ },
+ {
+  "id": "rp-je_c-f01174",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "कैस्टिग्लियानो का प्रमेय (Castigliano's theorem) मुख्य रूप से किसके निर्धारण के लिए उपयोग किया जाता है?",
+  "q_en": "Castigliano's theorem is primarily used for the determination of:",
+  "o_hi": [
+   "सामग्री का घनत्व",
+   "विक्षेपण और ढलान (deflection and slope)",
+   "बीम का वजन",
+   "सतह का क्षेत्रफल"
+  ],
+  "o_en": [
+   "Density of material",
+   "Deflection and slope",
+   "Weight of beam",
+   "Surface area"
+  ],
+  "a": 1,
+  "e_hi": "कैस्टिग्लियानो का प्रमेय संरचनाओं में विरूपण, विशेष रूप से विक्षेपण और ढलान की गणना करने के लिए एक ऊर्जा विधि है।",
+  "e_en": "Castigliano's theorem is an energy method used to calculate deformations in structures, specifically deflection and slope."
+ },
+ {
+  "id": "rp-je_c-f01175",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "यदि एक जल उपचार संयंत्र में 10 MLD जल का उपचार किया जा रहा है और फिटकरी (Alum) की खुराक 20 mg/L है, तो प्रतिदिन आवश्यक फिटकरी की कुल मात्रा किलोग्राम में क्या होगी?",
+  "q_en": "If a water treatment plant processes 10 MLD of water and the alum dosage is 20 mg/L, what is the total quantity of alum required per day in kilograms?",
+  "o_hi": [
+   "100 किलोग्राम",
+   "200 किलोग्राम",
+   "400 किलोग्राम",
+   "500 किलोग्राम"
+  ],
+  "o_en": [
+   "100 kg",
+   "200 kg",
+   "400 kg",
+   "500 kg"
+  ],
+  "a": 1,
+  "e_hi": "दैनिक मात्रा = (प्रवाह दर) × (खुराक) = 10,000,000 लीटर/दिन × 20 मिलीग्राम/लीटर = 200,000,000 मिलीग्राम = 200 किलोग्राम।",
+  "e_en": "Daily quantity = (Flow rate) × (Dosage) = 10,000,000 Liters/day × 20 mg/L = 200,000,000 mg = 200 kg."
+ },
+ {
+  "id": "rp-je_c-f01176",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "एक सीवेज नमूने में 5 दिनों का BOD (BOD5) 200 mg/L है। यदि BOD दर स्थिरांक (k) 0.1 प्रति दिन (base 10) है, तो अंतिम BOD (Ultimate BOD) का मान क्या होगा?",
+  "q_en": "In a sewage sample, the 5-day BOD (BOD5) is 200 mg/L. If the BOD rate constant (k) is 0.1 per day (base 10), what will be the Ultimate BOD value?",
+  "o_hi": [
+   "250 mg/L",
+   "292 mg/L",
+   "300 mg/L",
+   "333 mg/L"
+  ],
+  "o_en": [
+   "250 mg/L",
+   "292 mg/L",
+   "300 mg/L",
+   "333 mg/L"
+  ],
+  "a": 1,
+  "e_hi": "सूत्र: BODt = Lo(1 - 10^(-kt))। यहाँ 200 = Lo(1 - 10^(-0.5))। हल करने पर Lo लगभग 292 mg/L आता है।",
+  "e_en": "Formula: BODt = Lo(1 - 10^(-kt)). Here 200 = Lo(1 - 10^(-0.5)). Solving this, Lo is approximately 292 mg/L."
+ },
+ {
+  "id": "rp-je_c-f01177",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "एक गोलाकार अवसादन टैंक (sedimentation tank) का व्यास 10 मीटर है। यदि सतह का भार (surface loading rate) 30 m3/m2/day है, तो टैंक की डिजाइन क्षमता क्या होगी?",
+  "q_en": "A circular sedimentation tank has a diameter of 10 meters. If the surface loading rate is 30 m3/m2/day, what will be the design capacity of the tank?",
+  "o_hi": [
+   "2356 m3/day",
+   "3141 m3/day",
+   "4500 m3/day",
+   "785 m3/day"
+  ],
+  "o_en": [
+   "2356 m3/day",
+   "3141 m3/day",
+   "4500 m3/day",
+   "785 m3/day"
+  ],
+  "a": 0,
+  "e_hi": "क्षेत्रफल = π/4 × (10)^2 = 78.54 m2। क्षमता = क्षेत्रफल × दर = 78.54 × 30 ≈ 2356 m3/day।",
+  "e_en": "Area = π/4 × (10)^2 = 78.54 m2. Capacity = Area × rate = 78.54 × 30 ≈ 2356 m3/day."
+ },
+ {
+  "id": "rp-je_c-f01178",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "यदि पानी में 100 mg/L कैल्शियम कार्बोनेट (CaCO3) है, तो पानी की कठोरता (hardness) 'डिग्री क्लार्क' में कितनी होगी?",
+  "q_en": "If the water contains 100 mg/L of Calcium Carbonate (CaCO3), what will be the hardness of the water in 'degrees Clark'?",
+  "o_hi": [
+   "7 डिग्री क्लार्क",
+   "10 डिग्री क्लार्क",
+   "14.3 डिग्री क्लार्क",
+   "5.6 डिग्री क्लार्क"
+  ],
+  "o_en": [
+   "7 degrees Clark",
+   "10 degrees Clark",
+   "14.3 degrees Clark",
+   "5.6 degrees Clark"
+  ],
+  "a": 0,
+  "e_hi": "1 डिग्री क्लार्क = 14.3 mg/L CaCO3। अतः, 100/14.3 ≈ 7 डिग्री क्लार्क।",
+  "e_en": "1 degree Clark = 14.3 mg/L CaCO3. Thus, 100/14.3 ≈ 7 degrees Clark."
+ },
+ {
+  "id": "rp-je_c-f01179",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "एक क्लोरीन की खुराक 0.5 mg/L है। यदि उपचारित पानी की मात्रा 2,000,000 लीटर है, तो ब्लीचिंग पाउडर (जिसमें 30% उपलब्ध क्लोरीन है) की आवश्यक मात्रा कितनी होगी?",
+  "q_en": "Chlorine dosage is 0.5 mg/L. If the volume of treated water is 2,000,000 liters, what is the required quantity of bleaching powder (containing 30% available chlorine)?",
+  "o_hi": [
+   "1.66 kg",
+   "3.33 kg",
+   "5.00 kg",
+   "0.50 kg"
+  ],
+  "o_en": [
+   "1.66 kg",
+   "3.33 kg",
+   "5.00 kg",
+   "0.50 kg"
+  ],
+  "a": 1,
+  "e_hi": "शुद्ध क्लोरीन = 2,000,000 × 0.5 mg = 1000 gm = 1 kg। ब्लीचिंग पाउडर = 1 / 0.30 ≈ 3.33 kg।",
+  "e_en": "Pure chlorine = 2,000,000 × 0.5 mg = 1000 gm = 1 kg. Bleaching powder = 1 / 0.30 ≈ 3.33 kg."
+ },
+ {
+  "id": "rp-je_c-f01180",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "एक पाइप की लंबाई 1 किमी है और उसका व्यास 20 सेमी है। यदि घर्षण गुणांक (f) 0.02 है, तो 0.05 m3/s के प्रवाह के लिए हेड लॉस (head loss) की गणना डार्सी-वीसबाक समीकरण का उपयोग करके करें (g = 9.81 m/s2)?",
+  "q_en": "A pipe is 1 km long with a diameter of 20 cm. If the friction factor (f) is 0.02, calculate the head loss for a flow of 0.05 m3/s using the Darcy-Weisbach equation (g = 9.81 m/s2)?",
+  "o_hi": [
+   "8.15 मीटर",
+   "12.5 मीटर",
+   "16.3 मीटर",
+   "20.4 मीटर"
+  ],
+  "o_en": [
+   "8.15 meters",
+   "12.5 meters",
+   "16.3 meters",
+   "20.4 meters"
+  ],
+  "a": 0,
+  "e_hi": "hL = (f L v^2) / (2 g D)। वेग v = Q/A = 0.05 / (π/4 × 0.2^2) ≈ 1.59 m/s। मान रखने पर hL ≈ 8.15 मीटर।",
+  "e_en": "hL = (f L v^2) / (2 g D). Velocity v = Q/A = 0.05 / (π/4 × 0.2^2) ≈ 1.59 m/s. Substituting values, hL ≈ 8.15 meters."
+ },
+ {
+  "id": "rp-je_c-f01181",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "यदि पानी का pH मान 8 है, तो उसमें हाइड्रोजन आयनों (H+) की सांद्रता क्या होगी?",
+  "q_en": "If the pH value of water is 8, what will be the concentration of hydrogen ions (H+) in it?",
+  "o_hi": [
+   "10^-6 mol/L",
+   "10^-7 mol/L",
+   "10^-8 mol/L",
+   "10^-9 mol/L"
+  ],
+  "o_en": [
+   "10^-6 mol/L",
+   "10^-7 mol/L",
+   "10^-8 mol/L",
+   "10^-9 mol/L"
+  ],
+  "a": 2,
+  "e_hi": "pH = -log10[H+]। अतः, 8 = -log10[H+] जिसका अर्थ है [H+] = 10^-8 mol/L।",
+  "e_en": "pH = -log10[H+]. Thus, 8 = -log10[H+] which means [H+] = 10^-8 mol/L."
+ },
+ {
+  "id": "rp-je_c-f01182",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक जनसंख्या का प्रारंभिक मान 50,000 है और 10 वर्षों के बाद यह 60,000 हो जाता है। अंकगणितीय वृद्धि (arithmetic increase) पद्धति का उपयोग करके अगले 10 वर्षों के बाद जनसंख्या क्या होगी?",
+  "q_en": "Initial population is 50,000 and it becomes 60,000 after 10 years. Using the arithmetic increase method, what will be the population after the next 10 years?",
+  "o_hi": [
+   "65,000",
+   "70,000",
+   "75,000",
+   "80,000"
+  ],
+  "o_en": [
+   "65,000",
+   "70,000",
+   "75,000",
+   "80,000"
+  ],
+  "a": 1,
+  "e_hi": "अंकगणितीय वृद्धि प्रति दशक = 60,000 - 50,000 = 10,000। अगली जनसंख्या = 60,000 + 10,000 = 70,000।",
+  "e_en": "Arithmetic increase per decade = 60,000 - 50,000 = 10,000. Next population = 60,000 + 10,000 = 70,000."
+ },
+ {
+  "id": "rp-je_c-f01183",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक सीवेज उपचार संयंत्र में, प्राथमिक क्लेरिफायर में निलंबित ठोस पदार्थों (suspended solids) की सांद्रता 300 mg/L से घटकर 100 mg/L हो जाती है। हटाने की दक्षता (efficiency) क्या है?",
+  "q_en": "In a sewage treatment plant, the concentration of suspended solids in the primary clarifier reduces from 300 mg/L to 100 mg/L. What is the removal efficiency?",
+  "o_hi": [
+   "33.3%",
+   "50%",
+   "66.7%",
+   "75%"
+  ],
+  "o_en": [
+   "33.3%",
+   "50%",
+   "66.7%",
+   "75%"
+  ],
+  "a": 2,
+  "e_hi": "दक्षता = [(इनलेट - आउटलेट) / इनलेट] × 100 = [(300 - 100) / 300] × 100 = 200/300 × 100 = 66.7%。",
+  "e_en": "Efficiency = [(Inlet - Outlet) / Inlet] × 100 = [(300 - 100) / 300] × 100 = 200/300 × 100 = 66.7%."
+ },
+ {
+  "id": "rp-je_c-f01184",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "यदि 2 लीटर पानी में 5 मिलीलीटर सीवेज मिलाया जाता है, तो तनुकरण कारक (dilution factor) क्या होगा?",
+  "q_en": "If 5 ml of sewage is mixed in 2 liters of water, what will be the dilution factor?",
+  "o_hi": [
+   "200",
+   "400",
+   "401",
+   "500"
+  ],
+  "o_en": [
+   "200",
+   "400",
+   "401",
+   "500"
+  ],
+  "a": 2,
+  "e_hi": "तनुकरण कारक = (सीवेज का आयतन + पानी का आयतन) / सीवेज का आयतन = (5 ml + 2000 ml) / 5 ml = 2005 / 5 = 401।",
+  "e_en": "Dilution factor = (Volume of sewage + Volume of water) / Volume of sewage = (5 ml + 2000 ml) / 5 ml = 2005 / 5 = 401."
  }
 ]
