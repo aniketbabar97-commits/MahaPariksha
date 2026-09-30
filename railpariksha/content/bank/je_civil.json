@@ -27874,5 +27874,879 @@
   "a": 1,
   "e_hi": "सक्रिय कीचड़ प्रक्रिया एक जैविक प्रक्रिया है जिसका उपयोग अपशिष्ट जल से कार्बनिक पदार्थों को हटाने के लिए द्वितीयक उपचार में किया जाता है।",
   "e_en": "The Activated Sludge Process is a biological process used in secondary treatment to remove organic matter from wastewater."
+ },
+ {
+  "id": "rp-je_c-f01213",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक जल उपचार संयंत्र में, यदि डिस्चार्ज 0.5 घन मीटर प्रति सेकंड है और डिटेंशन समय 2 घंटे है, तो टैंक का आयतन क्या होगा?",
+  "q_en": "In a water treatment plant, if the discharge is 0.5 cubic meters per second and the detention time is 2 hours, what will be the volume of the tank?",
+  "o_hi": [
+   "1800 घन मीटर",
+   "3600 घन मीटर",
+   "720 घन मीटर",
+   "1000 घन मीटर"
+  ],
+  "o_en": [
+   "1800 cubic meters",
+   "3600 cubic meters",
+   "720 cubic meters",
+   "1000 cubic meters"
+  ],
+  "a": 1,
+  "e_hi": "आयतन बराबर होता है डिस्चार्ज गुणा समय। 0.5 * (2 * 3600) = 3600 घन मीटर।",
+  "e_en": "Volume equals discharge multiplied by time. 0.5 * (2 * 3600) = 3600 cubic meters."
+ },
+ {
+  "id": "rp-je_c-f01214",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "5 दिनों के 20 डिग्री सेल्सियस पर बीओडी (BOD) का मान 200 मिलीग्राम प्रति लीटर है। यदि डी-ऑक्सीजन स्थिरांक 0.1 प्रति दिन है, तो अंतिम बीओडी (BODu) की गणना करें।",
+  "q_en": "The 5-day BOD at 20 degrees Celsius is 200 mg/L. If the deoxygenation constant is 0.1 per day, calculate the ultimate BOD (BODu).",
+  "o_hi": [
+   "250 मिलीग्राम प्रति लीटर",
+   "292.5 मिलीग्राम प्रति लीटर",
+   "300 मिलीग्राम प्रति लीटर",
+   "350 मिलीग्राम प्रति लीटर"
+  ],
+  "o_en": [
+   "250 mg/L",
+   "292.5 mg/L",
+   "300 mg/L",
+   "350 mg/L"
+  ],
+  "a": 1,
+  "e_hi": "सूत्र: BODt = BODu * (1 - 10^(-kt)) का उपयोग करें। यहाँ गणना करने पर मान 292.5 आता है।",
+  "e_en": "Use the formula: BODt = BODu * (1 - 10^(-kt)). Calculating this yields 292.5 mg/L."
+ },
+ {
+  "id": "rp-je_c-f01215",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "एक सीवेज नमूने का 2 मिलीलीटर, 300 मिलीलीटर की बीओडी बोतल में लिया जाता है। यदि प्रारंभिक घुलित ऑक्सीजन 8 मिलीग्राम प्रति लीटर है और 5 दिनों के बाद 2 मिलीग्राम प्रति लीटर है, तो बीओडी का मान क्या है?",
+  "q_en": "2 mL of a sewage sample is taken in a 300 mL BOD bottle. If the initial dissolved oxygen is 8 mg/L and after 5 days it is 2 mg/L, what is the BOD value?",
+  "o_hi": [
+   "600 मिलीग्राम प्रति लीटर",
+   "900 मिलीग्राम प्रति लीटर",
+   "1200 मिलीग्राम प्रति लीटर",
+   "1500 मिलीग्राम प्रति लीटर"
+  ],
+  "o_en": [
+   "600 mg/L",
+   "900 mg/L",
+   "1200 mg/L",
+   "1500 mg/L"
+  ],
+  "a": 1,
+  "e_hi": "बीओडी = (DO_initial - DO_final) * (Dilution Factor)। यहाँ डाइल्यूशन फैक्टर 300/2 = 150 है। 6 * 150 = 900 मिलीग्राम प्रति लीटर।",
+  "e_en": "BOD = (DO_initial - DO_final) * (Dilution Factor). Here, dilution factor is 300/2 = 150. 6 * 150 = 900 mg/L."
+ },
+ {
+  "id": "rp-je_c-f01216",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "यदि किसी जल स्रोत में क्लोराइड की सांद्रता 250 मिलीग्राम प्रति लीटर है और पानी की कुल कठोरता 300 मिलीग्राम प्रति लीटर है, तो कठोरता का अंश (डिग्री में) क्या होगा?",
+  "q_en": "If the chloride concentration in a water source is 250 mg/L and total hardness is 300 mg/L, what is the hardness fraction?",
+  "o_hi": [
+   "0.54",
+   "0.83",
+   "1.20",
+   "0.45"
+  ],
+  "o_en": [
+   "0.54",
+   "0.83",
+   "1.20",
+   "0.45"
+  ],
+  "a": 1,
+  "e_hi": "कठोरता का अंश निकालने के लिए कठोरता को कुल घुलित ठोस या मानक सांद्रता से विभाजित किया जाता है। यहाँ सीधे अनुपात 250/300 है, लेकिन प्रश्न में कठोरता का मान ही मुख्य आधार है।",
+  "e_en": "Hardness fraction is calculated by dividing hardness by total dissolved solids. Here, the ratio is 250/300."
+ },
+ {
+  "id": "rp-je_c-f01217",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "एक गोलाकार सीवर का व्यास 1 मीटर है। यदि यह आधा भरा हुआ है, तो हाइड्रोलिक रेडियस (R) का मान क्या होगा?",
+  "q_en": "The diameter of a circular sewer is 1 meter. If it is flowing half-full, what will be the value of the hydraulic radius (R)?",
+  "o_hi": [
+   "0.25 मीटर",
+   "0.50 मीटर",
+   "0.75 मीटर",
+   "1.00 मीटर"
+  ],
+  "o_en": [
+   "0.25 meters",
+   "0.50 meters",
+   "0.75 meters",
+   "1.00 meters"
+  ],
+  "a": 0,
+  "e_hi": "आधा भरे गोलाकार सीवर के लिए, हाइड्रोलिक रेडियस व्यास का एक-चौथाई होता है (D/4)। 1/4 = 0.25 मीटर।",
+  "e_en": "For a half-full circular sewer, the hydraulic radius is one-fourth of the diameter (D/4). 1/4 = 0.25 meters."
+ },
+ {
+  "id": "rp-je_c-f01218",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक अवसादन टैंक (sedimentation tank) का सतही भरण दर (surface overflow rate) 40 घन मीटर प्रति वर्ग मीटर प्रति दिन है। यदि टैंक की सतह का क्षेत्रफल 50 वर्ग मीटर है, तो उपचारित जल की कुल मात्रा (डिस्चार्ज) क्या होगी?",
+  "q_en": "The surface overflow rate of a sedimentation tank is 40 cubic meters per square meter per day. If the surface area of the tank is 50 square meters, what will be the total discharge of treated water?",
+  "o_hi": [
+   "2000 घन मीटर प्रति दिन",
+   "4000 घन मीटर प्रति दिन",
+   "1000 घन मीटर प्रति दिन",
+   "500 घन मीटर प्रति दिन"
+  ],
+  "o_en": [
+   "2000 cubic meters per day",
+   "4000 cubic meters per day",
+   "1000 cubic meters per day",
+   "500 cubic meters per day"
+  ],
+  "a": 0,
+  "e_hi": "डिस्चार्ज = सतही भरण दर * सतही क्षेत्रफल। 40 * 50 = 2000 घन मीटर प्रति दिन।",
+  "e_en": "Discharge = Surface overflow rate * Surface area. 40 * 50 = 2000 cubic meters per day."
+ },
+ {
+  "id": "rp-je_c-f01219",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "एक फिल्टर की फिल्टरिंग दर 100 लीटर प्रति मिनट प्रति वर्ग मीटर है। यदि फिल्टर का क्षेत्रफल 10 वर्ग मीटर है, तो 1 घंटे में कितना पानी फिल्टर होगा?",
+  "q_en": "The filtering rate of a filter is 100 liters per minute per square meter. If the area of the filter is 10 square meters, how much water will be filtered in 1 hour?",
+  "o_hi": [
+   "1000 लीटर",
+   "6000 लीटर",
+   "60000 लीटर",
+   "600000 लीटर"
+  ],
+  "o_en": [
+   "1000 liters",
+   "6000 liters",
+   "60000 liters",
+   "600000 liters"
+  ],
+  "a": 2,
+  "e_hi": "प्रति मिनट फिल्टर क्षमता = 100 * 10 = 1000 लीटर। 1 घंटे (60 मिनट) में = 1000 * 60 = 60,000 लीटर।",
+  "e_en": "Filter capacity per minute = 100 * 10 = 1000 liters. In 1 hour (60 minutes) = 1000 * 60 = 60,000 liters."
+ },
+ {
+  "id": "rp-je_c-f01220",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "यदि किसी सीवेज का बीओडी5, 200 मिलीग्राम प्रति लीटर है और डी-ऑक्सीजन स्थिरांक (k) 0.23 प्रति दिन है, तो अंतिम बीओडी की गणना करें (आधार e का उपयोग करते हुए)।",
+  "q_en": "If the BOD5 of a sewage is 200 mg/L and the deoxygenation constant (k) is 0.23 per day, calculate the ultimate BOD (using base e).",
+  "o_hi": [
+   "285.5 मिलीग्राम प्रति लीटर",
+   "300 मिलीग्राम प्रति लीटर",
+   "315.5 मिलीग्राम प्रति लीटर",
+   "350 मिलीग्राम प्रति लीटर"
+  ],
+  "o_en": [
+   "285.5 mg/L",
+   "300 mg/L",
+   "315.5 mg/L",
+   "350 mg/L"
+  ],
+  "a": 0,
+  "e_hi": "BOD5 = BODu * (1 - e^(-kt))। 200 = BODu * (1 - e^(-0.23 * 5))। हल करने पर BODu लगभग 285.5 प्राप्त होता है।",
+  "e_en": "BOD5 = BODu * (1 - e^(-kt)). 200 = BODu * (1 - e^(-0.23 * 5)). Solving this yields BODu approximately 285.5 mg/L."
+ },
+ {
+  "id": "rp-je_c-f01221",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "एक जल वितरण प्रणाली में, पाइप के घर्षण के कारण हेड लॉस (head loss) 5 मीटर है। यदि पाइप की लंबाई 1000 मीटर और व्यास 0.5 मीटर है, तो डार्सी-वेसबैक समीकरण के अनुसार घर्षण गुणांक का अनुमान लगाएं (मान लें वेग 2 मीटर प्रति सेकंड है)।",
+  "q_en": "In a water distribution system, the head loss due to pipe friction is 5 meters. If the pipe length is 1000 meters and diameter is 0.5 meters, estimate the friction factor according to the Darcy-Weisbach equation (assume velocity is 2 m/s).",
+  "o_hi": [
+   "0.015",
+   "0.025",
+   "0.035",
+   "0.045"
+  ],
+  "o_en": [
+   "0.015",
+   "0.025",
+   "0.035",
+   "0.045"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र: hf = (f * L * v^2) / (2 * g * D * d)। मान रखने पर (5 * 2 * 9.81 * 0.5) / (1000 * 4) = f। f = 0.01225 लगभग 0.015 के करीब है।",
+  "e_en": "Formula: hf = (f * L * v^2) / (2 * g * D). Substituting values gives f = 0.01225, which is closest to 0.015."
+ },
+ {
+  "id": "rp-je_c-f01222",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "यदि किसी जल उपचार संयंत्र में 100 मिलीग्राम प्रति लीटर की सांद्रता के साथ 10 एमएलडी (MLD) पानी का उपचार किया जा रहा है, तो प्रति दिन आवश्यक क्लोरीन की कुल मात्रा क्या होगी?",
+  "q_en": "If a water treatment plant treats 10 MLD of water with a chlorine dosage of 100 mg/L, what is the total amount of chlorine required per day?",
+  "o_hi": [
+   "100 किलोग्राम",
+   "1000 किलोग्राम",
+   "10 किलोग्राम",
+   "10000 किलोग्राम"
+  ],
+  "o_en": [
+   "100 kg",
+   "1000 kg",
+   "10 kg",
+   "10000 kg"
+  ],
+  "a": 1,
+  "e_hi": "आवश्यक क्लोरीन की मात्रा = प्रवाह दर × खुराक = 10 × 10^6 लीटर/दिन × 100 मिलीग्राम/लीटर = 1000 किलोग्राम/दिन।",
+  "e_en": "Chlorine required = Flow rate × Dosage = 10 × 10^6 L/day × 100 mg/L = 1000 kg/day."
+ },
+ {
+  "id": "rp-je_c-f01223",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "स्टोक्स के नियम के अनुसार, तलछट टैंक में कण के निस्तारण का वेग किसके समानुपाती होता है?",
+  "q_en": "According to Stokes' Law, the settling velocity of a particle in a sedimentation tank is proportional to which of the following?",
+  "o_hi": [
+   "कण के व्यास का वर्ग",
+   "कण के व्यास का घन",
+   "कण के व्यास का वर्गमूल",
+   "कण का व्यास"
+  ],
+  "o_en": [
+   "Square of particle diameter",
+   "Cube of particle diameter",
+   "Square root of particle diameter",
+   "Particle diameter"
+  ],
+  "a": 0,
+  "e_hi": "स्टोक्स के नियम के अनुसार, निस्तारण वेग (Vs) कण के व्यास के वर्ग (d^2) के सीधे समानुपाती होता है।",
+  "e_en": "According to Stokes' Law, settling velocity (Vs) is directly proportional to the square of the particle diameter (d^2)."
+ },
+ {
+  "id": "rp-je_c-f01224",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "एक सीवेज नमूने में 5-दिवसीय BOD 200 मिलीग्राम प्रति लीटर है। यदि BOD दर स्थिरांक (k) 0.1 प्रति दिन है, तो अंतिम BOD (BODu) की गणना करें।",
+  "q_en": "A sewage sample has a 5-day BOD of 200 mg/L. If the BOD rate constant (k) is 0.1 per day, calculate the ultimate BOD (BODu).",
+  "o_hi": [
+   "292.5 मिलीग्राम/लीटर",
+   "350.5 मिलीग्राम/लीटर",
+   "400.0 मिलीग्राम/लीटर",
+   "250.2 मिलीग्राम/लीटर"
+  ],
+  "o_en": [
+   "292.5 mg/L",
+   "350.5 mg/L",
+   "400.0 mg/L",
+   "250.2 mg/L"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र: BODt = BODu(1 - 10^(-kt))। 200 = BODu(1 - 10^(-0.5))। हल करने पर BODu लगभग 292.5 प्राप्त होता है।",
+  "e_en": "Formula: BODt = BODu(1 - 10^(-kt)). 200 = BODu(1 - 10^(-0.5)). Solving this yields BODu approximately 292.5."
+ },
+ {
+  "id": "rp-je_c-f01225",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक वर्गाकार तलछट टैंक के लिए, सतह अधिभार दर (Surface Overflow Rate) की गणना का सही सूत्र क्या है?",
+  "q_en": "For a square sedimentation tank, what is the correct formula for calculating the Surface Overflow Rate (SOR)?",
+  "o_hi": [
+   "प्रवाह / सतह क्षेत्र",
+   "सतह क्षेत्र / प्रवाह",
+   "प्रवाह / आयतन",
+   "आयतन / प्रवाह"
+  ],
+  "o_en": [
+   "Flow / Surface Area",
+   "Surface Area / Flow",
+   "Flow / Volume",
+   "Volume / Flow"
+  ],
+  "a": 0,
+  "e_hi": "सतह अधिभार दर (SOR) को टैंक के कुल प्रवाह को उसके सतह क्षेत्र से विभाजित करके निकाला जाता है।",
+  "e_en": "Surface Overflow Rate (SOR) is calculated by dividing the total flow of the tank by its surface area."
+ },
+ {
+  "id": "rp-je_c-f01226",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "हेजन-विलियम्स समीकरण का उपयोग मुख्य रूप से किस गणना के लिए किया जाता है?",
+  "q_en": "The Hazen-Williams equation is primarily used for the calculation of which of the following?",
+  "o_hi": [
+   "पाइप में घर्षण हानि",
+   "पानी का पीएच",
+   "कणों का निस्तारण",
+   "कठोरता का स्तर"
+  ],
+  "o_en": [
+   "Friction loss in pipes",
+   "pH of water",
+   "Settling of particles",
+   "Hardness level"
+  ],
+  "a": 0,
+  "e_hi": "हेजन-विलियम्स समीकरण का उपयोग पाइपों में जल प्रवाह के कारण होने वाली घर्षण हानि (head loss) ज्ञात करने के लिए किया जाता है।",
+  "e_en": "The Hazen-Williams equation is used to determine the friction head loss due to water flow in pipes."
+ },
+ {
+  "id": "rp-je_c-f01227",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "यदि एक शहर की जनसंख्या 50,000 है और प्रति व्यक्ति दैनिक जल मांग 150 लीटर है, तो कुल दैनिक जल मांग क्या होगी?",
+  "q_en": "If the population of a city is 50,000 and the daily water demand per capita is 150 liters, what is the total daily water demand?",
+  "o_hi": [
+   "7.5 MLD",
+   "5.0 MLD",
+   "10.0 MLD",
+   "15.0 MLD"
+  ],
+  "o_en": [
+   "7.5 MLD",
+   "5.0 MLD",
+   "10.0 MLD",
+   "15.0 MLD"
+  ],
+  "a": 0,
+  "e_hi": "कुल मांग = जनसंख्या × प्रति व्यक्ति मांग = 50,000 × 150 = 7,500,000 लीटर/दिन = 7.5 MLD।",
+  "e_en": "Total demand = Population × Demand per capita = 50,000 × 150 = 7,500,000 liters/day = 7.5 MLD."
+ },
+ {
+  "id": "rp-je_c-f01228",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "आर्द्र-भार (Wet Weight) और शुष्क-भार (Dry Weight) के आधार पर कीचड़ (Sludge) की सांद्रता ज्ञात करने का सही संबंध क्या है?",
+  "q_en": "What is the correct relationship to determine sludge concentration based on wet weight and dry weight?",
+  "o_hi": [
+   "(शुष्क भार / आर्द्र भार) × 100",
+   "(आर्द्र भार / शुष्क भार) × 100",
+   "आर्द्र भार - शुष्क भार",
+   "शुष्क भार + आर्द्र भार"
+  ],
+  "o_en": [
+   "(Dry weight / Wet weight) × 100",
+   "(Wet weight / Dry weight) × 100",
+   "Wet weight - Dry weight",
+   "Dry weight + Wet weight"
+  ],
+  "a": 0,
+  "e_hi": "कीचड़ की सांद्रता (ठोस प्रतिशत) को शुष्क ठोस भार और कुल आर्द्र भार के अनुपात के रूप में व्यक्त किया जाता है।",
+  "e_en": "Sludge concentration (percent solids) is expressed as the ratio of the dry weight of solids to the total wet weight."
+ },
+ {
+  "id": "rp-je_c-f01229",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक फिल्टर की निस्पंदन दर (Filtration Rate) 100 लीटर प्रति घंटा प्रति वर्ग मीटर है। यदि फिल्टर का क्षेत्रफल 50 वर्ग मीटर है, तो कुल निस्पंदन क्षमता क्या होगी?",
+  "q_en": "The filtration rate of a filter is 100 liters per hour per square meter. If the filter area is 50 square meters, what is the total filtration capacity?",
+  "o_hi": [
+   "5000 लीटर/घंटा",
+   "500 लीटर/घंटा",
+   "1000 लीटर/घंटा",
+   "2500 लीटर/घंटा"
+  ],
+  "o_en": [
+   "5000 liters/hour",
+   "500 liters/hour",
+   "1000 liters/hour",
+   "2500 liters/hour"
+  ],
+  "a": 0,
+  "e_hi": "कुल क्षमता = निस्पंदन दर × क्षेत्रफल = 100 × 50 = 5000 लीटर/घंटा।",
+  "e_en": "Total capacity = Filtration rate × Area = 100 × 50 = 5000 liters/hour."
+ },
+ {
+  "id": "rp-je_c-f01230",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "यदि किसी जल स्रोत में कठोरता 200 मिलीग्राम प्रति लीटर (CaCO3 के रूप में) है, तो इसे कितने 'डिग्री क्लार्क' में मापा जाएगा?",
+  "q_en": "If the hardness in a water source is 200 mg/L (as CaCO3), what will be its value measured in 'degrees Clark'?",
+  "o_hi": [
+   "14 डिग्री क्लार्क",
+   "20 डिग्री क्लार्क",
+   "10 डिग्री क्लार्क",
+   "7 डिग्री क्लार्क"
+  ],
+  "o_en": [
+   "14 degrees Clark",
+   "20 degrees Clark",
+   "10 degrees Clark",
+   "7 degrees Clark"
+  ],
+  "a": 0,
+  "e_hi": "1 डिग्री क्लार्क = 14.3 मिलीग्राम/लीटर। अतः 200 / 14.3 लगभग 14 डिग्री क्लार्क के बराबर होता है।",
+  "e_en": "1 degree Clark = 14.3 mg/L. Therefore, 200 / 14.3 is approximately 14 degrees Clark."
+ },
+ {
+  "id": "rp-je_c-f01231",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक जल उपचार संयंत्र में, यदि पानी का pH मान 7 से काफी कम है, तो किस रसायन का उपयोग करके इसे संतुलित किया जाएगा?",
+  "q_en": "In a water treatment plant, if the pH of water is significantly lower than 7, which chemical should be added to balance it?",
+  "o_hi": [
+   "एलम",
+   "चूना (Lime)",
+   "ब्लीचिंग पाउडर",
+   "सक्रिय कार्बन"
+  ],
+  "o_en": [
+   "Alum",
+   "Lime",
+   "Bleaching powder",
+   "Activated carbon"
+  ],
+  "a": 1,
+  "e_hi": "पानी का pH कम होने पर वह अम्लीय हो जाता है। चूना एक क्षारीय पदार्थ है जो pH को बढ़ाने में मदद करता है।",
+  "e_en": "Low pH indicates acidic water. Lime is an alkaline substance used to raise the pH level."
+ },
+ {
+  "id": "rp-je_c-f01232",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "सीवेज उपचार के दौरान, प्राथमिक अवसादन टैंक (Primary Sedimentation Tank) का मुख्य उद्देश्य क्या है?",
+  "q_en": "During sewage treatment, what is the primary objective of the Primary Sedimentation Tank?",
+  "o_hi": [
+   "कार्बनिक पदार्थों का जैविक अपघटन",
+   "निलंबित ठोस पदार्थों को हटाना",
+   "नाइट्रोजन को हटाना",
+   "पानी को कीटाणुरहित करना"
+  ],
+  "o_en": [
+   "Biological decomposition of organic matter",
+   "Removal of suspended solids",
+   "Removal of nitrogen",
+   "Disinfection of water"
+  ],
+  "a": 1,
+  "e_hi": "प्राथमिक उपचार का उद्देश्य गुरुत्वाकर्षण के माध्यम से भारी निलंबित ठोस पदार्थों को नीचे बैठाकर अलग करना है।",
+  "e_en": "The purpose of primary treatment is to remove settleable suspended solids through gravity sedimentation."
+ },
+ {
+  "id": "rp-je_c-f01233",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "यदि किसी सतह के जल (Surface Water) में अत्यधिक शैवाल (Algae) मौजूद हैं, तो जल उपचार संयंत्र में कौन सी समस्या उत्पन्न होने की सबसे अधिक संभावना है?",
+  "q_en": "If excessive algae are present in surface water, what problem is most likely to occur in the water treatment plant?",
+  "o_hi": [
+   "फिल्टर का जल्दी बंद होना (Clogging)",
+   "पानी का pH बहुत अधिक बढ़ना",
+   "पाइपों का संक्षारण",
+   "कठोरता में कमी"
+  ],
+  "o_en": [
+   "Rapid clogging of filters",
+   "Excessive rise in pH",
+   "Corrosion of pipes",
+   "Reduction in hardness"
+  ],
+  "a": 0,
+  "e_hi": "अत्यधिक शैवाल फिल्टर मीडिया के छिद्रों को जल्दी भर देते हैं, जिससे फिल्टर का 'हेड लॉस' बढ़ जाता है और वे जल्दी बंद हो जाते हैं।",
+  "e_en": "Excessive algae accumulate on filter media, leading to rapid head loss and clogging of the filters."
+ },
+ {
+  "id": "rp-je_c-f01234",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "जल वितरण प्रणाली में 'रेसिड्यूअल क्लोरीन' (Residual Chlorine) की जांच क्यों की जाती है?",
+  "q_en": "Why is 'Residual Chlorine' tested in a water distribution system?",
+  "o_hi": [
+   "पानी का रंग साफ करने के लिए",
+   "बैक्टीरिया के पुन: पनपने से रोकने के लिए",
+   "पानी की कठोरता कम करने के लिए",
+   "गंध को हटाने के लिए"
+  ],
+  "o_en": [
+   "To clear the color of water",
+   "To prevent re-growth of bacteria",
+   "To reduce water hardness",
+   "To remove odor"
+  ],
+  "a": 1,
+  "e_hi": "वितरण पाइपों में पानी की शुद्धता बनाए रखने और बाद में होने वाले संदूषण से बचने के लिए अवशिष्ट क्लोरीन आवश्यक है।",
+  "e_en": "Residual chlorine is necessary to maintain water safety and prevent re-contamination within the distribution pipes."
+ },
+ {
+  "id": "rp-je_c-f01235",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "एक सक्रिय कीचड़ प्रक्रिया (Activated Sludge Process) में 'F/M अनुपात' का क्या अर्थ है?",
+  "q_en": "What does the 'F/M ratio' signify in an Activated Sludge Process?",
+  "o_hi": [
+   "भोजन और सूक्ष्मजीवों का अनुपात",
+   "फिल्टर और मीडिया का अनुपात",
+   "प्रवाह और मिश्रण का अनुपात",
+   "पंप और मोटर का अनुपात"
+  ],
+  "o_en": [
+   "Food to Microorganisms ratio",
+   "Filter to Media ratio",
+   "Flow to Mixture ratio",
+   "Pump to Motor ratio"
+  ],
+  "a": 0,
+  "e_hi": "F/M अनुपात यह बताता है कि सूक्ष्मजीवों की मात्रा के सापेक्ष भोजन (कार्बनिक भार) कितना उपलब्ध है।",
+  "e_en": "The F/M ratio indicates the amount of food (organic load) available relative to the mass of microorganisms."
+ },
+ {
+  "id": "rp-je_c-f01236",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "यदि पानी में क्लोराइड की मात्रा अनुमेय सीमा से अधिक है, तो इसका क्या संकेत मिलता है?",
+  "q_en": "If the chloride content in water exceeds the permissible limit, what does it indicate?",
+  "o_hi": [
+   "औद्योगिक कचरे का मिलना",
+   "सीवेज का प्रदूषण",
+   "पाइप में जंग लगना",
+   "कैल्शियम की अधिकता"
+  ],
+  "o_en": [
+   "Industrial waste contamination",
+   "Sewage pollution",
+   "Corrosion in pipes",
+   "Excess of calcium"
+  ],
+  "a": 1,
+  "e_hi": "पानी में क्लोराइड की उच्च मात्रा अक्सर मानव अपशिष्ट या सीवेज के प्रवेश का संकेत देती है।",
+  "e_en": "High chloride content in water is often an indicator of contamination by human waste or sewage."
+ },
+ {
+  "id": "rp-je_c-f01237",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "कठोर जल (Hard Water) के कारण बॉयलर में 'स्केल' (Scale) बनने की समस्या को कैसे रोका जा सकता है?",
+  "q_en": "How can the problem of scale formation in boilers due to hard water be prevented?",
+  "o_hi": [
+   "क्लोरीनीकरण",
+   "पानी का मृदुकरण (Softening)",
+   "वातन (Aeration)",
+   "स्कंदन (Coagulation)"
+  ],
+  "o_en": [
+   "Chlorination",
+   "Water softening",
+   "Aeration",
+   "Coagulation"
+  ],
+  "a": 1,
+  "e_hi": "पानी का मृदुकरण कैल्शियम और मैग्नीशियम के लवणों को हटा देता है, जिससे बॉयलर में परत नहीं जमती।",
+  "e_en": "Water softening removes calcium and magnesium salts, preventing the formation of deposits (scale) in boilers."
+ },
+ {
+  "id": "rp-je_c-f01238",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "सीवेज उपचार में 'ट्रिकलिंग फिल्टर' (Trickling Filter) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a 'Trickling Filter' in sewage treatment?",
+  "o_hi": [
+   "निलंबित ठोस को छानना",
+   "जैविक ऑक्सीकरण (Biological Oxidation)",
+   "पानी को छानना",
+   "कीचड़ सुखाना"
+  ],
+  "o_en": [
+   "Filtering suspended solids",
+   "Biological oxidation",
+   "Water filtration",
+   "Sludge drying"
+  ],
+  "a": 1,
+  "e_hi": "ट्रिकलिंग फिल्टर एक संलग्न विकास प्रक्रिया है जहाँ सूक्ष्मजीव सतह पर फिल्म बनाकर कार्बनिक पदार्थों का ऑक्सीकरण करते हैं।",
+  "e_en": "Trickling filters are attached growth processes where microorganisms form a biofilm to oxidize organic matter."
+ },
+ {
+  "id": "rp-je_c-f01239",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "जल उपचार में 'ब्रेक-पॉइंट क्लोरीनीकरण' का क्या अर्थ है?",
+  "q_en": "What does 'Break-point chlorination' mean in water treatment?",
+  "o_hi": [
+   "क्लोरीन की वह मात्रा जहाँ गंध खत्म हो जाती है",
+   "क्लोरीन की वह मात्रा जहाँ सभी बैक्टीरिया मर जाते हैं",
+   "क्लोरीन की वह मात्रा जहाँ संयुक्त क्लोरीन का ऑक्सीकरण पूरा हो जाता है",
+   "क्लोरीन की वह मात्रा जहाँ pH 7 हो जाता है"
+  ],
+  "o_en": [
+   "Amount where odor disappears",
+   "Amount where all bacteria die",
+   "Amount where combined chlorine is fully oxidized",
+   "Amount where pH becomes 7"
+  ],
+  "a": 2,
+  "e_hi": "ब्रेक-पॉइंट पर पहुँचने के बाद ही पानी में 'मुक्त अवशिष्ट क्लोरीन' (Free residual chlorine) मौजूद रहता है।",
+  "e_en": "Free residual chlorine only persists in water after the break-point is reached, ensuring effective disinfection."
+ },
+ {
+  "id": "rp-je_c-f01240",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "पर्यावरण इंजीनियरिंग में 'BOD' परीक्षण सामान्यतः कितने दिनों के लिए किया जाता है?",
+  "q_en": "For how many days is the 'BOD' test typically conducted in environmental engineering?",
+  "o_hi": [
+   "3 दिन",
+   "5 दिन",
+   "7 दिन",
+   "10 दिन"
+  ],
+  "o_en": [
+   "3 days",
+   "5 days",
+   "7 days",
+   "10 days"
+  ],
+  "a": 1,
+  "e_hi": "BOD5 (5-दिवसीय जैविक ऑक्सीजन मांग) परीक्षण मानक है क्योंकि इस समय तक अधिकांश कार्बनिक पदार्थ विघटित हो जाते हैं।",
+  "e_en": "BOD5 (5-day Biochemical Oxygen Demand) is the standard test duration as most organic matter decomposes by this time."
+ },
+ {
+  "id": "rp-je_c-f01241",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "एक जल उपचार संयंत्र में, यदि पानी में अत्यधिक गंध (Odour) है, तो इसे हटाने के लिए सबसे प्रभावी उपचार कौन सा होगा?",
+  "q_en": "In a water treatment plant, which method is most effective for removing intense odor from raw water?",
+  "o_hi": [
+   "स्कंदन (Coagulation)",
+   "अवसादन (Sedimentation)",
+   "वातन (Aeration)",
+   "क्लोरीनीकरण (Chlorination)"
+  ],
+  "o_en": [
+   "Coagulation",
+   "Sedimentation",
+   "Aeration",
+   "Chlorination"
+  ],
+  "a": 2,
+  "e_hi": "वातन प्रक्रिया पानी में घुलित गैसों को बाहर निकालकर गंध को प्रभावी ढंग से हटाती है।",
+  "e_en": "Aeration effectively removes odor by exposing water to air, which helps in stripping out dissolved gases like hydrogen sulfide."
+ },
+ {
+  "id": "rp-je_c-f01242",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "सीवर लाइनों में 'सेल्फ-क्लींजिंग वेलोसिटी' का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of maintaining 'self-cleansing velocity' in sewer lines?",
+  "o_hi": [
+   "पानी के प्रवाह को तेज करना",
+   "सीवर में ठोस पदार्थों के जमाव को रोकना",
+   "पाइप के रिसाव की जांच करना",
+   "सीवर गैसों का उत्पादन बढ़ाना"
+  ],
+  "o_en": [
+   "To increase water flow rate",
+   "To prevent deposition of solids in the sewer",
+   "To check for pipe leakage",
+   "To increase production of sewer gases"
+  ],
+  "a": 1,
+  "e_hi": "सेल्फ-क्लींजिंग वेलोसिटी यह सुनिश्चित करती है कि सीवेज में मौजूद ठोस कण नीचे न बैठें और पाइप में रुकावट न आए।",
+  "e_en": "Self-cleansing velocity ensures that solids remain in suspension, preventing them from settling and causing blockages in the pipes."
+ },
+ {
+  "id": "rp-je_c-f01243",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "एक शहर के लिए जल वितरण प्रणाली डिजाइन करते समय, अग्निशमन (Fire fighting) के लिए किस प्रकार की मांग (Demand) को ध्यान में रखा जाता है?",
+  "q_en": "When designing a water distribution system for a city, which type of demand is considered for fire fighting purposes?",
+  "o_hi": [
+   "औसत दैनिक मांग",
+   "अधिकतम दैनिक मांग",
+   "आकस्मिक मांग (Coincidental demand)",
+   "न्यूनतम दैनिक मांग"
+  ],
+  "o_en": [
+   "Average daily demand",
+   "Maximum daily demand",
+   "Coincidental demand",
+   "Minimum daily demand"
+  ],
+  "a": 2,
+  "e_hi": "अग्निशमन मांग को अक्सर अधिकतम दैनिक मांग या अधिकतम प्रति घंटा मांग के साथ मिलाकर आकस्मिक मांग के रूप में डिजाइन किया जाता है।",
+  "e_en": "Fire demand is typically added to the maximum daily demand to calculate the coincidental draft for distribution system design."
+ },
+ {
+  "id": "rp-je_c-f01244",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "अपशिष्ट जल उपचार में सक्रिय कीचड़ प्रक्रिया (Activated Sludge Process) में 'MLSS' का क्या अर्थ है?",
+  "q_en": "What does 'MLSS' stand for in the context of the Activated Sludge Process in wastewater treatment?",
+  "o_hi": [
+   "मिश्रित तरल निलंबित ठोस (Mixed Liquor Suspended Solids)",
+   "अधिकतम तरल घुलनशील ठोस",
+   "न्यूनतम लिक्विड सीवेज सॉलिड्स",
+   "मिश्रित तरल घुलित साल्ट"
+  ],
+  "o_en": [
+   "Mixed Liquor Suspended Solids",
+   "Maximum Liquid Soluble Solids",
+   "Minimum Liquid Sewage Solids",
+   "Mixed Liquor Soluble Salts"
+  ],
+  "a": 0,
+  "e_hi": "MLSS एयरोशन टैंक में मौजूद सूक्ष्मजीवों और निलंबित ठोस पदार्थों की सांद्रता को दर्शाता है।",
+  "e_en": "MLSS represents the concentration of suspended solids (biomass) in the aeration tank of an activated sludge system."
+ },
+ {
+  "id": "rp-je_c-f01245",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "यदि पानी की कठोरता (Hardness) को दूर करने के लिए जिओलाइट प्रक्रिया का उपयोग किया जाता है, तो अंत में पानी में किसकी सांद्रता बढ़ जाती है?",
+  "q_en": "If the zeolite process is used to remove water hardness, which element's concentration increases in the treated water?",
+  "o_hi": [
+   "कैल्शियम",
+   "मैग्नीशियम",
+   "सोडियम",
+   "आयरन"
+  ],
+  "o_en": [
+   "Calcium",
+   "Magnesium",
+   "Sodium",
+   "Iron"
+  ],
+  "a": 2,
+  "e_hi": "जिओलाइट प्रक्रिया कैल्शियम और मैग्नीशियम आयनों को हटाकर उन्हें सोडियम आयनों से बदल देती है।",
+  "e_en": "The zeolite process works by ion exchange, replacing calcium and magnesium ions with sodium ions."
+ },
+ {
+  "id": "rp-je_c-f01246",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "पाइप नेटवर्क में 'हॉर्डी क्रॉस विधि' (Hardy Cross Method) का उपयोग किस लिए किया जाता है?",
+  "q_en": "What is the primary application of the 'Hardy Cross Method' in pipe networks?",
+  "o_hi": [
+   "पाइप का व्यास ज्ञात करने के लिए",
+   "नेटवर्क में प्रवाह और दबाव वितरण के संतुलन के लिए",
+   "पानी की गुणवत्ता जांचने के लिए",
+   "पाइप की लंबाई मापने के लिए"
+  ],
+  "o_en": [
+   "To determine pipe diameter",
+   "To balance flow and pressure distribution in the network",
+   "To test water quality",
+   "To measure pipe length"
+  ],
+  "a": 1,
+  "e_hi": "यह विधि लूप वाले पाइप नेटवर्क में प्रवाह वितरण की गणना करने के लिए एक पुनरावृत्ति (iterative) प्रक्रिया है।",
+  "e_en": "The Hardy Cross method is an iterative procedure used to balance the flow and pressure distribution in pipe network loops."
+ },
+ {
+  "id": "rp-je_c-f01247",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 3,
+  "q_hi": "एक जल उपचार संयंत्र में, फिल्टर मीडिया के 'प्रभावी आकार' (Effective Size) का क्या अर्थ है?",
+  "q_en": "In a water treatment plant, what does the 'Effective Size' of filter media refer to?",
+  "o_hi": [
+   "D10 का आकार",
+   "D50 का आकार",
+   "D60 का आकार",
+   "D90 का आकार"
+  ],
+  "o_en": [
+   "Size of D10",
+   "Size of D50",
+   "Size of D60",
+   "Size of D90"
+  ],
+  "a": 0,
+  "e_hi": "प्रभावी आकार (D10) वह व्यास है जिससे 10% कण छोटे होते हैं।",
+  "e_en": "Effective size, denoted as D10, is the sieve size through which 10% of the particles by weight will pass."
+ },
+ {
+  "id": "rp-je_c-f01248",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 1,
+  "q_hi": "ठोस कचरा प्रबंधन में, 'लीचेट' (Leachate) क्या है?",
+  "q_en": "In solid waste management, what is 'Leachate'?",
+  "o_hi": [
+   "कचरे से निकलने वाला तरल",
+   "कचरे की गैस",
+   "कचरे का ठोस अवशेष",
+   "पुनर्चक्रण योग्य प्लास्टिक"
+  ],
+  "o_en": [
+   "Liquid generated from waste",
+   "Gas from waste",
+   "Solid residue of waste",
+   "Recyclable plastic"
+  ],
+  "a": 0,
+  "e_hi": "लीचेट वह तरल है जो लैंडफिल में कचरे के माध्यम से रिसने और अपघटन के दौरान बनता है।",
+  "e_en": "Leachate is the liquid that drains or 'leaches' from a landfill, containing dissolved and suspended materials from the waste."
+ },
+ {
+  "id": "rp-je_c-f01249",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "पानी के शुद्धिकरण में 'ब्रेक-पॉइंट क्लोरीनीकरण' का क्या तात्पर्य है?",
+  "q_en": "What is the significance of 'Break-point Chlorination' in water purification?",
+  "o_hi": [
+   "क्लोरीन की वह मात्रा जहाँ अवशिष्ट क्लोरीन मिलना शुरू हो जाता है",
+   "क्लोरीन की मात्रा को कम करना",
+   "पानी का pH स्तर बढ़ाना",
+   "बैक्टीरिया को मारना"
+  ],
+  "o_en": [
+   "The chlorine dosage where residual chlorine begins to appear",
+   "Reducing chlorine dosage",
+   "Increasing water pH",
+   "Killing bacteria"
+  ],
+  "a": 0,
+  "e_hi": "ब्रेक-पॉइंट क्लोरीनीकरण वह बिंदु है जिसके आगे क्लोरीन मिलाने पर वह मुक्त अवशिष्ट क्लोरीन के रूप में उपलब्ध रहता है।",
+  "e_en": "Break-point chlorination is the point at which enough chlorine is added to satisfy the chlorine demand, leaving free residual chlorine."
+ },
+ {
+  "id": "rp-je_c-f01250",
+  "s": "je_civil",
+  "t": "environmental_engineering",
+  "d": 2,
+  "q_hi": "यदि किसी सीवर का व्यास 300 मिमी है, तो उसे साफ करने के लिए कौन सा उपकरण सबसे उपयुक्त होगा?",
+  "q_en": "If a sewer has a diameter of 300 mm, which equipment would be most suitable for cleaning it?",
+  "o_hi": [
+   "सीवर बॉल (Sewer Ball)",
+   "स्क्रैपर (Scraper)",
+   "फ्लशिंग टैंक",
+   "रॉड (Rodding)"
+  ],
+  "o_en": [
+   "Sewer Ball",
+   "Scraper",
+   "Flushing tank",
+   "Rodding"
+  ],
+  "a": 3,
+  "e_hi": "छोटे व्यास के सीवर (आमतौर पर 300 मिमी तक) के लिए रॉडिंग सबसे प्रभावी तरीका है।",
+  "e_en": "Rodding is the most effective and common method for cleaning small diameter sewers, typically up to 300 mm."
  }
 ]
