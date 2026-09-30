@@ -147,6 +147,9 @@ def main():
     p.add_argument("--max-calls", type=int, default=200)
     p.add_argument("--subjects", help="comma-separated subject ids to restrict to (required when running "
                                        "alongside another instance -- see module docstring)")
+    p.add_argument("--topics", help="comma-separated topic ids to further restrict to, e.g. to fill in "
+                                     "specific zero-coverage topics within --subjects without also "
+                                     "re-topping-up topics that already have content")
     p.add_argument("--id-prefix-suffix", default="", help="appended to the generated id's subject prefix, "
                                                             "e.g. 'g' for Gemini runs, to keep ids distinguishable")
     p.add_argument("--gemini-key-env", default="GEMINI_API_KEY", help="env var holding the Gemini API key to use "
@@ -157,6 +160,7 @@ def main():
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
     codes = subject_codes(tax)
     only = set(args.subjects.split(",")) if args.subjects else None
+    only_topics = set(args.topics.split(",")) if args.topics else None
     calls = 0
     added_total = 0
 
@@ -178,7 +182,7 @@ def main():
         existing_ids = [int(m.group(1)) for q in items if (m := re.search(r"(\d+)$", q["id"]))]
         next_num = (max(existing_ids) + 1) if existing_ids else 1
 
-        topics = list(s["topics"])
+        topics = [t for t in s["topics"] if only_topics is None or t["id"] in only_topics]
         random.shuffle(topics)
         for t in topics:
             if calls >= args.max_calls:
