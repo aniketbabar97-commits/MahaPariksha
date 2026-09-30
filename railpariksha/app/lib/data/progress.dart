@@ -259,9 +259,11 @@ class Progress extends ChangeNotifier {
     final gap = t - lastActiveDay;
     if (gap == 1) {
       streak += 1;
+      comeback = false;
     } else if (gap == 2 && freezeTokens > 0) {
       freezeTokens -= 1;
       streak += 1;
+      comeback = false;
     } else {
       comeback = lastActiveDay != 0;
       streak = 1;

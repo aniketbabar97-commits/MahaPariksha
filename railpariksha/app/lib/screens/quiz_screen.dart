@@ -54,13 +54,25 @@ class _QuizScreenState extends State<QuizScreen> {
     qLang = AppScope.read(context).progress.lang;
     if (spec.mode == QuizMode.mock) InterstitialAdManager.preload();
     remaining = spec.timeLimit?.inSeconds ?? 0;
-    if (spec.timeLimit != null) {
-      timer = Timer.periodic(const Duration(seconds: 1), (_) {
-        if (!mounted) return;
-        setState(() => remaining--);
-        if (remaining <= 0) _finish();
-      });
-    }
+    _startTimer();
+  }
+
+  void _startTimer() {
+    if (spec.timeLimit == null) return;
+    timer = Timer.periodic(const Duration(seconds: 1), (_) {
+      if (!mounted) return;
+      setState(() => remaining--);
+      if (remaining <= 0) _finish();
+    });
+  }
+
+  /// Stops the countdown while a confirmation dialog is open, so [_finish]
+  /// (which does a Navigator.pushReplacement) can never fire while that
+  /// dialog's route is on top of QuizScreen's -- it would replace the dialog
+  /// instead of the quiz, leaving the quiz route stuck underneath Results.
+  void _pauseTimer() {
+    timer?.cancel();
+    timer = null;
   }
 
   @override
@@ -129,6 +141,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<bool> _confirmExit() async {
     if (answers.every((a) => a == null)) return true;
+    _pauseTimer();
     final r = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -140,7 +153,9 @@ class _QuizScreenState extends State<QuizScreen> {
         ],
       ),
     );
-    return r ?? false;
+    final exiting = r ?? false;
+    if (!exiting && !_finished) _startTimer();
+    return exiting;
   }
 
   @override
@@ -270,6 +285,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<void> _confirmSubmit() async {
     final unanswered = answers.where((a) => a == null).length;
+    _pauseTimer();
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -283,7 +299,11 @@ class _QuizScreenState extends State<QuizScreen> {
         ],
       ),
     );
-    if (ok == true) _finish();
+    if (ok == true) {
+      _finish();
+    } else if (!_finished) {
+      _startTimer();
+    }
   }
 
   _OptState _optionState(int i) {

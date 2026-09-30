@@ -37,12 +37,13 @@ class RailParikshaNotifications {
     ),
   );
 
-  /// [id] 1 = morning Daily 10 nudge, 2 = evening streak nudge.
+  /// [id] 1 = morning Daily 10 nudge, 2 = evening streak nudge. [title]/[body]
+  /// are already resolved to the user's chosen language by the caller.
   static Future<void> scheduleDaily({
     required int id,
     required int hour,
-    required String titleHi,
-    required String bodyHi,
+    required String title,
+    required String body,
   }) async {
     await init();
     final now = tz.TZDateTime.now(tz.local);
@@ -52,8 +53,8 @@ class RailParikshaNotifications {
       id: id,
       scheduledDate: when,
       notificationDetails: _details,
-      title: titleHi,
-      body: bodyHi,
+      title: title,
+      body: body,
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
       matchDateTimeComponents: DateTimeComponents.time,
     );

@@ -31002,5 +31002,1132 @@
   "a": 1,
   "e_hi": "डैम्पिंग का उपयोग यह सुनिश्चित करने के लिए किया जाता है कि पॉइंटर बिना अधिक दोलन के जल्दी से स्थिर स्थिति में आ जाए।",
   "e_en": "Damping is used to ensure that the pointer comes to its steady position quickly without excessive oscillations."
+ },
+ {
+  "id": "rp-je_e-f01349",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक चल-कुंडल (Moving Coil) मीटर को डीसी परिपथ में जोड़ते समय यदि ध्रुवीयता (Polarity) उलट दी जाए, तो क्या होगा?",
+  "q_en": "What happens if the polarity is reversed when connecting a moving-coil meter in a DC circuit?",
+  "o_hi": [
+   "मीटर क्षतिग्रस्त हो जाएगा",
+   "मीटर रीडिंग उल्टी दिशा में जाएगी",
+   "मीटर पर कोई प्रभाव नहीं पड़ेगा",
+   "मीटर का प्रतिरोध बढ़ जाएगा"
+  ],
+  "o_en": [
+   "The meter will be damaged",
+   "The meter reading will deflect in the reverse direction",
+   "There will be no effect on the meter",
+   "The resistance of the meter will increase"
+  ],
+  "a": 1,
+  "e_hi": "चल-कुंडल मीटर ध्रुवीयता-संवेदनशील होते हैं, इसलिए विपरीत कनेक्शन से सूचक विपरीत दिशा में मुड़ जाता है।",
+  "e_en": "Moving-coil meters are polarity-sensitive, so reverse connection causes the pointer to deflect in the opposite direction."
+ },
+ {
+  "id": "rp-je_e-f01350",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "उच्च वोल्टेज ट्रांसमिशन लाइनों में वोल्टेज मापने के लिए किस उपकरण का उपयोग किया जाता है?",
+  "q_en": "Which instrument is used to measure voltage in high-voltage transmission lines?",
+  "o_hi": [
+   "पोटेंशियल ट्रांसफार्मर (PT)",
+   "करंट ट्रांसफार्मर (CT)",
+   "शंट रेसिस्टर",
+   "थर्मोकपल"
+  ],
+  "o_en": [
+   "Potential Transformer (PT)",
+   "Current Transformer (CT)",
+   "Shunt Resistor",
+   "Thermocouple"
+  ],
+  "a": 0,
+  "e_hi": "पोटेंशियल ट्रांसफार्मर का उपयोग उच्च वोल्टेज को मापने योग्य निम्न मानों में बदलने के लिए किया जाता है।",
+  "e_en": "Potential transformers are used to step down high voltages to measurable low values."
+ },
+ {
+  "id": "rp-je_e-f01351",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "यदि एक एमीटर का शंट प्रतिरोध (Shunt Resistance) हटा दिया जाए, तो क्या होगा?",
+  "q_en": "What will happen if the shunt resistance of an ammeter is removed?",
+  "o_hi": [
+   "मीटर रीडिंग सही रहेगी",
+   "मीटर जल जाएगा",
+   "मीटर की रेंज बढ़ जाएगी",
+   "कुछ नहीं होगा"
+  ],
+  "o_en": [
+   "Meter reading will remain correct",
+   "The meter will burn out",
+   "The range of the meter will increase",
+   "Nothing will happen"
+  ],
+  "a": 1,
+  "e_hi": "शंट प्रतिरोध मीटर की कुंडली को अत्यधिक धारा से बचाता है; इसके बिना अधिक धारा कुंडली को जला देगी।",
+  "e_en": "The shunt resistor protects the meter coil from excess current; without it, excessive current will burn the coil."
+ },
+ {
+  "id": "rp-je_e-f01352",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "मेगर (Megger) का उपयोग मुख्य रूप से किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "For what primary purpose is a Megger used?",
+  "o_hi": [
+   "कम प्रतिरोध मापने के लिए",
+   "उच्च इन्सुलेशन प्रतिरोध मापने के लिए",
+   "धारा मापने के लिए",
+   "आवृत्ति मापने के लिए"
+  ],
+  "o_en": [
+   "To measure low resistance",
+   "To measure high insulation resistance",
+   "To measure current",
+   "To measure frequency"
+  ],
+  "a": 1,
+  "e_hi": "मेगर एक विशेष उपकरण है जिसका उपयोग विद्युत केबलों और मशीनों के इन्सुलेशन प्रतिरोध को मापने के लिए किया जाता है।",
+  "e_en": "A Megger is a specialized device used to measure the insulation resistance of electrical cables and machines."
+ },
+ {
+  "id": "rp-je_e-f01353",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक वाटमीटर में 'प्रेशर कॉइल' (Pressure Coil) को लोड के साथ कैसे जोड़ा जाता है?",
+  "q_en": "How is the 'pressure coil' connected with the load in a wattmeter?",
+  "o_hi": [
+   "श्रेणी में",
+   "समानांतर में",
+   "सीरीज-पैरेलल मिश्रण",
+   "किसी से नहीं"
+  ],
+  "o_en": [
+   "In series",
+   "In parallel",
+   "Series-parallel mix",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "वाटमीटर की प्रेशर कॉइल या वोल्टेज कॉइल को हमेशा लोड के समानांतर जोड़ा जाता है ताकि वोल्टेज मापा जा सके।",
+  "e_en": "The pressure coil or voltage coil of a wattmeter is always connected in parallel with the load to measure voltage."
+ },
+ {
+  "id": "rp-je_e-f01354",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "यदि एक ओममीटर (Ohmmeter) को लाइव परिपथ (Live Circuit) में जोड़ा जाए, तो क्या होगा?",
+  "q_en": "What will happen if an ohmmeter is connected to a live circuit?",
+  "o_hi": [
+   "सटीक रीडिंग मिलेगी",
+   "ओममीटर क्षतिग्रस्त हो सकता है",
+   "परिपथ की शक्ति बढ़ जाएगी",
+   "कोई प्रभाव नहीं"
+  ],
+  "o_en": [
+   "Accurate reading will be obtained",
+   "The ohmmeter may get damaged",
+   "Circuit power will increase",
+   "No effect"
+  ],
+  "a": 1,
+  "e_hi": "ओममीटर का अपना आंतरिक वोल्टेज स्रोत होता है; बाहरी वोल्टेज स्रोत से इसे जोड़ने पर उपकरण जल सकता है।",
+  "e_en": "An ohmmeter has its own internal voltage source; connecting it to an external live circuit can damage the instrument."
+ },
+ {
+  "id": "rp-je_e-f01355",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "केल्विन डबल ब्रिज (Kelvin Double Bridge) का उपयोग मुख्य रूप से किस मापन के लिए किया जाता है?",
+  "q_en": "For what primary measurement is the Kelvin Double Bridge used?",
+  "o_hi": [
+   "उच्च प्रतिरोध",
+   "बहुत कम प्रतिरोध",
+   "मध्यम प्रतिरोध",
+   "कैपेसिटेंस"
+  ],
+  "o_en": [
+   "High resistance",
+   "Very low resistance",
+   "Medium resistance",
+   "Capacitance"
+  ],
+  "a": 1,
+  "e_hi": "केल्विन डबल ब्रिज का उपयोग विशेष रूप से बहुत कम प्रतिरोध मानों (जैसे 1 ओम से कम) को सटीकता से मापने के लिए किया जाता है।",
+  "e_en": "The Kelvin double bridge is specifically used for the accurate measurement of very low resistance values (e.g., less than 1 ohm)."
+ },
+ {
+  "id": "rp-je_e-f01356",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक इंडक्शन टाइप एनर्जी मीटर में 'ब्रेकिंग मैग्नेट' (Braking Magnet) का कार्य क्या है?",
+  "q_en": "What is the function of the 'braking magnet' in an induction-type energy meter?",
+  "o_hi": [
+   "गति बढ़ाना",
+   "डिस्क की गति को नियंत्रित करना",
+   "वोल्टेज मापना",
+   "घर्षण कम करना"
+  ],
+  "o_en": [
+   "To increase speed",
+   "To control the speed of the disc",
+   "To measure voltage",
+   "To reduce friction"
+  ],
+  "a": 1,
+  "e_hi": "ब्रेकिंग मैग्नेट डिस्क में एड़ी धाराओं (eddy currents) को प्रेरित करके उसकी गति को नियंत्रित और स्थिर करता है।",
+  "e_en": "The braking magnet induces eddy currents in the disc to control and stabilize its speed."
+ },
+ {
+  "id": "rp-je_e-f01357",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "विद्युत परिपथ में 'अर्थ लीकेज' (Earth Leakage) का पता लगाने के लिए सबसे उपयुक्त उपकरण कौन सा है?",
+  "q_en": "Which device is most suitable for detecting 'earth leakage' in an electrical circuit?",
+  "o_hi": [
+   "एमीटर",
+   "वोल्टमीटर",
+   "अर्थ लीकेज सर्किट ब्रेकर (ELCB)",
+   "वाटमीटर"
+  ],
+  "o_en": [
+   "Ammeter",
+   "Voltmeter",
+   "Earth Leakage Circuit Breaker (ELCB)",
+   "Wattmeter"
+  ],
+  "a": 2,
+  "e_hi": "ELCB एक सुरक्षा उपकरण है जो अर्थ लीकेज धारा को पहचानता है और परिपथ को तुरंत बंद कर देता है।",
+  "e_en": "An ELCB is a safety device that detects earth leakage current and automatically disconnects the circuit."
+ },
+ {
+  "id": "rp-je_e-f01358",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "सीटी (Current Transformer) का उपयोग करते समय सेकेंडरी वाइंडिंग को कभी भी खुला नहीं छोड़ना चाहिए, क्योंकि:",
+  "q_en": "The secondary winding of a Current Transformer (CT) should never be left open while in use because:",
+  "o_hi": [
+   "यह वोल्टेज को खतरनाक स्तर तक बढ़ा देगा",
+   "धारा शून्य हो जाएगी",
+   "मीटर खराब हो जाएगा",
+   "कोई नुकसान नहीं होगा"
+  ],
+  "o_en": [
+   "It will increase the voltage to dangerous levels",
+   "Current will become zero",
+   "The meter will malfunction",
+   "There will be no harm"
+  ],
+  "a": 0,
+  "e_hi": "खुली सेकेंडरी वाइंडिंग के कारण कोर में अत्यधिक चुंबकीय फ्लक्स उत्पन्न होता है, जिससे उच्च वोल्टेज पैदा होता है जो जानलेवा हो सकता है।",
+  "e_en": "An open secondary winding causes excessive flux in the core, inducing a dangerously high voltage that can be lethal."
+ },
+ {
+  "id": "rp-je_e-f01359",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "चल-लौह (Moving Iron) उपकरण का उपयोग किस धारा को मापने के लिए किया जाता है?",
+  "q_en": "Moving Iron (MI) instruments are used to measure which type of current?",
+  "o_hi": [
+   "केवल दिष्ट धारा",
+   "केवल प्रत्यावर्ती धारा",
+   "दिष्ट और प्रत्यावर्ती दोनों",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Direct current only",
+   "Alternating current only",
+   "Both DC and AC",
+   "None of these"
+  ],
+  "a": 2,
+  "e_hi": "चल-लौह उपकरण प्रत्यावर्ती और दिष्ट धारा दोनों के लिए उपयुक्त होते हैं क्योंकि इनका विक्षेपण धारा के वर्ग के समानुपाती होता है।",
+  "e_en": "Moving Iron instruments are suitable for both AC and DC measurements as the deflection is proportional to the square of the current."
+ },
+ {
+  "id": "rp-je_e-f01360",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "विभवमापी (Potentiometer) का उपयोग मुख्य रूप से किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "What is the primary purpose of a potentiometer?",
+  "o_hi": [
+   "धारा मापने",
+   "विभवांतर मापने",
+   "प्रतिरोध मापने",
+   "आवृत्ति मापने"
+  ],
+  "o_en": [
+   "To measure current",
+   "To measure potential difference",
+   "To measure resistance",
+   "To measure frequency"
+  ],
+  "a": 1,
+  "e_hi": "विभवमापी एक सटीक उपकरण है जिसका उपयोग अज्ञात वोल्टेज की तुलना मानक स्रोत से करके उसे मापने के लिए किया जाता है।",
+  "e_en": "A potentiometer is a precision instrument used to measure an unknown voltage by comparing it with a standard source."
+ },
+ {
+  "id": "rp-je_e-f01361",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "मेगर (Megger) का उपयोग किस मान को मापने के लिए किया जाता है?",
+  "q_en": "What is measured using a Megger?",
+  "o_hi": [
+   "निम्न प्रतिरोध",
+   "मध्यम प्रतिरोध",
+   "उच्च इंसुलेशन प्रतिरोध",
+   "प्रेरकत्व"
+  ],
+  "o_en": [
+   "Low resistance",
+   "Medium resistance",
+   "High insulation resistance",
+   "Inductance"
+  ],
+  "a": 2,
+  "e_hi": "मेगर एक प्रकार का ओहममीटर है जिसका उपयोग विद्युत केबलों और मशीनों के उच्च इंसुलेशन प्रतिरोध को मापने के लिए किया जाता है।",
+  "e_en": "A Megger is a type of ohmmeter used to measure high insulation resistance of electrical cables and machines."
+ },
+ {
+  "id": "rp-je_e-f01362",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "ऊर्जा मीटर (Energy Meter) में क्रीपिंग (Creeping) दोष को कैसे कम किया जा सकता है?",
+  "q_en": "How can creeping error in an energy meter be minimized?",
+  "o_hi": [
+   "डिस्क में छेद करके",
+   "चुंबक हटाकर",
+   "वोल्टेज बढ़ाकर",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "By drilling holes in the disc",
+   "By removing the magnet",
+   "By increasing voltage",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "डिस्क के व्यास के विपरीत दिशा में दो छोटे छेद करने से क्रीपिंग दोष को कम किया जाता है।",
+  "e_en": "Creeping error is minimized by drilling two small holes in the disc on opposite sides of the spindle."
+ },
+ {
+  "id": "rp-je_e-f01363",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "वाटमीटर किस शक्ति का मापन करता है?",
+  "q_en": "Which power does a wattmeter measure?",
+  "o_hi": [
+   "आभासी शक्ति",
+   "प्रतिक्रियाशील शक्ति",
+   "वास्तविक शक्ति",
+   "कुल शक्ति"
+  ],
+  "o_en": [
+   "Apparent power",
+   "Reactive power",
+   "Real (Active) power",
+   "Total power"
+  ],
+  "a": 2,
+  "e_hi": "वाटमीटर विद्युत परिपथ में व्यय होने वाली वास्तविक शक्ति (Active Power) को मापता है।",
+  "e_en": "A wattmeter measures the real or active power consumed in an electrical circuit."
+ },
+ {
+  "id": "rp-je_e-f01364",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "केल्विन डबल ब्रिज का उपयोग मुख्य रूप से किस मापन के लिए किया जाता है?",
+  "q_en": "What is the primary use of a Kelvin's double bridge?",
+  "o_hi": [
+   "उच्च प्रतिरोध",
+   "बहुत कम प्रतिरोध",
+   "मध्यम प्रतिरोध",
+   "धारिता"
+  ],
+  "o_en": [
+   "High resistance",
+   "Very low resistance",
+   "Medium resistance",
+   "Capacitance"
+  ],
+  "a": 1,
+  "e_hi": "केल्विन डबल ब्रिज का उपयोग अत्यंत कम प्रतिरोध (1 ओम से कम) के सटीक मापन के लिए किया जाता है।",
+  "e_en": "Kelvin's double bridge is used for the precise measurement of very low resistance (less than 1 Ohm)."
+ },
+ {
+  "id": "rp-je_e-f01365",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "सीआरओ (CRO) में समय आधार (Time base) संकेत किस तरंग के होते हैं?",
+  "q_en": "What type of waveform is the time base signal in a CRO?",
+  "o_hi": [
+   "साइन तरंग",
+   "वर्गाकार तरंग",
+   "आरी-दांत तरंग (Sawtooth)",
+   "स्पंदन"
+  ],
+  "o_en": [
+   "Sine wave",
+   "Square wave",
+   "Sawtooth wave",
+   "Pulse"
+  ],
+  "a": 2,
+  "e_hi": "सीआरओ में एक्स-अक्ष पर स्वीप वोल्टेज के लिए आरी-दांत (Sawtooth) तरंग का उपयोग किया जाता है।",
+  "e_en": "A sawtooth waveform is used as the sweep voltage on the X-axis in a CRO."
+ },
+ {
+  "id": "rp-je_e-f01366",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक आदर्श वोल्टमीटर का प्रतिरोध कितना होता है?",
+  "q_en": "What is the resistance of an ideal voltmeter?",
+  "o_hi": [
+   "शून्य",
+   "बहुत कम",
+   "मध्यम",
+   "अनंत"
+  ],
+  "o_en": [
+   "Zero",
+   "Very low",
+   "Medium",
+   "Infinite"
+  ],
+  "a": 3,
+  "e_hi": "आदर्श वोल्टमीटर का प्रतिरोध अनंत होता है ताकि वह परिपथ से कोई धारा न ले।",
+  "e_en": "An ideal voltmeter has infinite resistance so that it draws no current from the circuit."
+ },
+ {
+  "id": "rp-je_e-f01367",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक आदर्श अमीटर का आंतरिक प्रतिरोध कितना होता है?",
+  "q_en": "What is the internal resistance of an ideal ammeter?",
+  "o_hi": [
+   "अनंत",
+   "शून्य",
+   "उच्च",
+   "बहुत कम"
+  ],
+  "o_en": [
+   "Infinite",
+   "Zero",
+   "High",
+   "Very low"
+  ],
+  "a": 1,
+  "e_hi": "एक आदर्श अमीटर का प्रतिरोध शून्य होना चाहिए ताकि सर्किट में कोई वोल्टेज ड्रॉप न हो।",
+  "e_en": "An ideal ammeter must have zero resistance to ensure no voltage drop occurs across it in a circuit."
+ },
+ {
+  "id": "rp-je_e-f01368",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "पीएमएमसी (PMMC) उपकरण किस प्रकार के संकेतों को मापने के लिए उपयुक्त हैं?",
+  "q_en": "PMMC instruments are suitable for measuring which type of signals?",
+  "o_hi": [
+   "केवल एसी",
+   "केवल डीसी",
+   "एसी और डीसी दोनों",
+   "उच्च आवृत्ति एसी"
+  ],
+  "o_en": [
+   "AC only",
+   "DC only",
+   "Both AC and DC",
+   "High frequency AC"
+  ],
+  "a": 1,
+  "e_hi": "पीएमएमसी उपकरण केवल डीसी पर काम करते हैं क्योंकि एसी के लिए टॉर्क का औसत शून्य हो जाता है।",
+  "e_en": "PMMC instruments work only on DC because the average torque for AC signals becomes zero."
+ },
+ {
+  "id": "rp-je_e-f01369",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "यदि एक वोल्टमीटर की रेंज बढ़ानी है, तो उसे क्या जोड़ना चाहिए?",
+  "q_en": "To increase the range of a voltmeter, what should be added?",
+  "o_hi": [
+   "श्रृंखला में उच्च प्रतिरोध",
+   "समानांतर में उच्च प्रतिरोध",
+   "श्रृंखला में कम प्रतिरोध",
+   "समानांतर में कम प्रतिरोध"
+  ],
+  "o_en": [
+   "High resistance in series",
+   "High resistance in parallel",
+   "Low resistance in series",
+   "Low resistance in parallel"
+  ],
+  "a": 0,
+  "e_hi": "वोल्टमीटर की रेंज बढ़ाने के लिए उसके साथ श्रृंखला में एक उच्च प्रतिरोध (मल्टीप्लायर) जोड़ा जाता है।",
+  "e_en": "To extend the range of a voltmeter, a high resistance called a multiplier is connected in series with it."
+ },
+ {
+  "id": "rp-je_e-f01370",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "क्रम्पिंग एरर (Creeping error) किस मीटर में एक सामान्य समस्या है?",
+  "q_en": "Creeping error is a common issue in which type of meter?",
+  "o_hi": [
+   "मूविंग आयरन मीटर",
+   "पीएमएमसी मीटर",
+   "इंडक्शन टाइप एनर्जी मीटर",
+   "डायनामोमीटर"
+  ],
+  "o_en": [
+   "Moving iron meter",
+   "PMMC meter",
+   "Induction type energy meter",
+   "Dynamometer"
+  ],
+  "a": 2,
+  "e_hi": "क्रम्पिंग तब होती है जब ऊर्जा मीटर की डिस्क बिना किसी लोड के धीरे-धीरे घूमती है, जो आमतौर पर घर्षण क्षतिपूर्ति के कारण होती है।",
+  "e_en": "Creeping occurs when the energy meter disc rotates slowly without any load, usually due to over-compensation of friction."
+ },
+ {
+  "id": "rp-je_e-f01371",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "व्हीटस्टोन ब्रिज का उपयोग किसे मापने के लिए किया जाता है?",
+  "q_en": "A Wheatstone bridge is used to measure which of the following?",
+  "o_hi": [
+   "उच्च प्रतिरोध",
+   "मध्यम प्रतिरोध",
+   "अति निम्न प्रतिरोध",
+   "धारिता"
+  ],
+  "o_en": [
+   "High resistance",
+   "Medium resistance",
+   "Very low resistance",
+   "Capacitance"
+  ],
+  "a": 1,
+  "e_hi": "व्हीटस्टोन ब्रिज का उपयोग मुख्य रूप से 1 ओम से लेकर 100 किलो-ओम तक के मध्यम प्रतिरोधों को सटीक रूप से मापने के लिए किया जाता है।",
+  "e_en": "The Wheatstone bridge is primarily used for the accurate measurement of medium resistances ranging from 1 ohm to 100 kilo-ohms."
+ },
+ {
+  "id": "rp-je_e-f01372",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक मूविंग आयरन (MI) मीटर का स्केल कैसा होता है?",
+  "q_en": "What is the nature of the scale of a Moving Iron (MI) meter?",
+  "o_hi": [
+   "समान (Uniform)",
+   "गैर-समान (Non-uniform)",
+   "लघुगणकीय (Logarithmic)",
+   "घातांकीय (Exponential)"
+  ],
+  "o_en": [
+   "Uniform",
+   "Non-uniform",
+   "Logarithmic",
+   "Exponential"
+  ],
+  "a": 1,
+  "e_hi": "एमआई मीटर में विक्षेपण टॉर्क धारा के वर्ग के समानुपाती होता है, जिससे स्केल गैर-समान (संकुचित) हो जाता है।",
+  "e_en": "In MI meters, the deflecting torque is proportional to the square of the current, resulting in a non-uniform (cramped) scale."
+ },
+ {
+  "id": "rp-je_e-f01373",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एनालॉग मीटर में डैम्पिंग टॉर्क का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of damping torque in an analog meter?",
+  "o_hi": [
+   "पॉइंटर को गति देना",
+   "पॉइंटर के दोलनों को नियंत्रित करना",
+   "घर्षण को बढ़ाना",
+   "सटीकता घटाना"
+  ],
+  "o_en": [
+   "To move the pointer",
+   "To control oscillations of the pointer",
+   "To increase friction",
+   "To reduce accuracy"
+  ],
+  "a": 1,
+  "e_hi": "डैम्पिंग टॉर्क पॉइंटर को जल्दी से अपनी अंतिम स्थिति पर स्थिर करने और दोलनों को रोकने में मदद करता है।",
+  "e_en": "Damping torque helps the pointer settle quickly at its final position by suppressing oscillations."
+ },
+ {
+  "id": "rp-je_e-f01374",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "किसी सर्किट में वाटमीटर को कैसे जोड़ा जाता है?",
+  "q_en": "How is a wattmeter connected in a circuit?",
+  "o_hi": [
+   "केवल श्रृंखला में",
+   "केवल समानांतर में",
+   "करंट कॉइल श्रृंखला में, प्रेशर कॉइल समानांतर में",
+   "करंट कॉइल समानांतर में, प्रेशर कॉइल श्रृंखला में"
+  ],
+  "o_en": [
+   "Series only",
+   "Parallel only",
+   "Current coil in series, Pressure coil in parallel",
+   "Current coil in parallel, Pressure coil in series"
+  ],
+  "a": 2,
+  "e_hi": "वाटमीटर में एक करंट कॉइल होती है जिसे भार के साथ श्रृंखला में और एक प्रेशर कॉइल होती है जिसे समानांतर में जोड़ा जाता है।",
+  "e_en": "A wattmeter has a current coil connected in series with the load and a pressure coil connected in parallel."
+ },
+ {
+  "id": "rp-je_e-f01375",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "किसी मापन उपकरण का 'यथार्थता' (Accuracy) से क्या तात्पर्य है?",
+  "q_en": "What does the term 'Accuracy' refer to in a measuring instrument?",
+  "o_hi": [
+   "माप की पुनरावृत्ति",
+   "मापे गए मान का वास्तविक मान के निकट होना",
+   "उपकरण की संवेदनशीलता",
+   "पैमाने का न्यूनतम मान"
+  ],
+  "o_en": [
+   "Repeatability of measurement",
+   "Closeness of a measured value to the true value",
+   "Sensitivity of the instrument",
+   "Least count of the scale"
+  ],
+  "a": 1,
+  "e_hi": "यथार्थता यह दर्शाती है कि मापा गया मान वास्तविक या मानक मान के कितना करीब है।",
+  "e_en": "Accuracy indicates how close the measured value is to the true or standard value."
+ },
+ {
+  "id": "rp-je_e-f01376",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "मापन उपकरणों में 'हिस्टैरिसीस' (Hysteresis) का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of 'Hysteresis' in measuring instruments?",
+  "o_hi": [
+   "घर्षण और सामग्री की लोच",
+   "तापमान में परिवर्तन",
+   "आंतरिक प्रतिरोध",
+   "वोल्टेज का उतार-चढ़ाव"
+  ],
+  "o_en": [
+   "Friction and material elasticity",
+   "Change in temperature",
+   "Internal resistance",
+   "Voltage fluctuations"
+  ],
+  "a": 0,
+  "e_hi": "हिस्टैरिसीस तब होता है जब इनपुट बढ़ने और घटने पर आउटपुट अलग होता है, जो अक्सर यांत्रिक घर्षण के कारण होता है।",
+  "e_en": "Hysteresis occurs when the output differs for increasing and decreasing inputs, often caused by mechanical friction."
+ },
+ {
+  "id": "rp-je_e-f01377",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक 'शंट' (Shunt) प्रतिरोध का उपयोग एमीटर की रेंज बढ़ाने के लिए कैसे किया जाता है?",
+  "q_en": "How is a 'Shunt' resistor used to extend the range of an ammeter?",
+  "o_hi": [
+   "एमीटर के साथ श्रेणी में जोड़कर",
+   "एमीटर के साथ समानांतर में जोड़कर",
+   "वोल्टमीटर के साथ श्रेणी में जोड़कर",
+   "एमीटर के साथ सीधे जोड़कर"
+  ],
+  "o_en": [
+   "Connected in series with the ammeter",
+   "Connected in parallel with the ammeter",
+   "Connected in series with a voltmeter",
+   "Connected directly to the ammeter"
+  ],
+  "a": 1,
+  "e_hi": "एमीटर की रेंज बढ़ाने के लिए एक बहुत कम मान का प्रतिरोध (शंट) उसके समानांतर में जोड़ा जाता है।",
+  "e_en": "To extend the range of an ammeter, a very low-value resistor (shunt) is connected in parallel with it."
+ },
+ {
+  "id": "rp-je_e-f01378",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "किसी उपकरण की 'संवेदनशीलता' (Sensitivity) क्या दर्शाती है?",
+  "q_en": "What does the 'Sensitivity' of an instrument indicate?",
+  "o_hi": [
+   "आउटपुट में परिवर्तन और इनपुट में परिवर्तन का अनुपात",
+   "उपकरण का कुल वजन",
+   "उपकरण की अधिकतम रेंज",
+   "उपकरण की लागत"
+  ],
+  "o_en": [
+   "Ratio of change in output to change in input",
+   "Total weight of the instrument",
+   "Maximum range of the instrument",
+   "Cost of the instrument"
+  ],
+  "a": 0,
+  "e_hi": "संवेदनशीलता इनपुट में बदलाव के प्रति उपकरण की प्रतिक्रिया की दर को मापती है।",
+  "e_en": "Sensitivity measures the rate of response of an instrument to changes in input."
+ },
+ {
+  "id": "rp-je_e-f01379",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "किस प्रकार के उपकरणों में 'डैम्पिंग' (Damping) की आवश्यकता होती है?",
+  "q_en": "In which type of instruments is 'Damping' required?",
+  "o_hi": [
+   "स्थिर उपकरणों में",
+   "सूचक (Indicating) उपकरणों में",
+   "केवल डिजिटल उपकरणों में",
+   "किसी में भी नहीं"
+  ],
+  "o_en": [
+   "In static instruments",
+   "In indicating instruments",
+   "In digital instruments only",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "डैम्पिंग का उपयोग सूचक उपकरणों में सुई के दोलनों को रोकने और उसे जल्दी से स्थिर मान पर लाने के लिए किया जाता है।",
+  "e_en": "Damping is used in indicating instruments to stop oscillations of the pointer and bring it to a steady value quickly."
+ },
+ {
+  "id": "rp-je_e-f01380",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "'मल्टीमीटर' का उपयोग किन राशियों को मापने के लिए किया जाता है?",
+  "q_en": "What quantities is a 'Multimeter' used to measure?",
+  "o_hi": [
+   "केवल वोल्टेज",
+   "केवल धारा",
+   "वोल्टेज, धारा और प्रतिरोध",
+   "केवल आवृत्ति"
+  ],
+  "o_en": [
+   "Voltage only",
+   "Current only",
+   "Voltage, current, and resistance",
+   "Frequency only"
+  ],
+  "a": 2,
+  "e_hi": "मल्टीमीटर एक बहु-कार्यात्मक उपकरण है जो वोल्टेज, करंट और प्रतिरोध को मापने में सक्षम है।",
+  "e_en": "A multimeter is a multi-functional instrument capable of measuring voltage, current, and resistance."
+ },
+ {
+  "id": "rp-je_e-f01381",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "मापन में 'सिस्टमैटिक एरर' (Systematic Error) का मुख्य स्रोत क्या है?",
+  "q_en": "What is the main source of 'Systematic Error' in measurements?",
+  "o_hi": [
+   "उपकरण की खराबी या अंशांकन त्रुटि",
+   "मानवीय भूल",
+   "अचानक तापमान परिवर्तन",
+   "शोर (Noise)"
+  ],
+  "o_en": [
+   "Instrumental fault or calibration error",
+   "Human error",
+   "Sudden temperature change",
+   "Noise"
+  ],
+  "a": 0,
+  "e_hi": "सिस्टमैटिक एरर आमतौर पर उपकरण की डिजाइन या अंशांकन (calibration) में कमी के कारण होते हैं।",
+  "e_en": "Systematic errors are usually caused by flaws in the design or calibration of the instrument."
+ },
+ {
+  "id": "rp-je_e-f01382",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "किसी मापन उपकरण (Measuring Instrument) में 'डैम्पिंग टॉर्क' का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of the 'damping torque' in a measuring instrument?",
+  "o_hi": [
+   "पॉइंटर को शून्य पर लाना",
+   "पॉइंटर के दोलनों को रोकना",
+   "पॉइंटर को विक्षेपित करना",
+   "घर्षण को कम करना"
+  ],
+  "o_en": [
+   "To bring the pointer to zero",
+   "To suppress oscillations of the pointer",
+   "To deflect the pointer",
+   "To reduce friction"
+  ],
+  "a": 1,
+  "e_hi": "डैम्पिंग टॉर्क का उपयोग पॉइंटर के कंपन को नियंत्रित करने और उसे जल्दी स्थिर स्थिति में लाने के लिए किया जाता है।",
+  "e_en": "Damping torque is used to control the oscillations of the pointer and bring it to a steady position quickly."
+ },
+ {
+  "id": "rp-je_e-f01383",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एनालॉग उपकरणों में 'कंट्रोलिंग टॉर्क' (Controlling Torque) प्रदान करने की सबसे सामान्य विधि कौन सी है?",
+  "q_en": "What is the most common method of providing 'controlling torque' in analog instruments?",
+  "o_hi": [
+   "स्प्रिंग कंट्रोल",
+   "गुरुत्वाकर्षण नियंत्रण",
+   "हवा का दबाव",
+   "चुंबकीय क्षेत्र"
+  ],
+  "o_en": [
+   "Spring control",
+   "Gravity control",
+   "Air pressure",
+   "Magnetic field"
+  ],
+  "a": 0,
+  "e_hi": "स्प्रिंग कंट्रोल विधि का उपयोग अधिकांश पोर्टेबल उपकरणों में किया जाता है क्योंकि यह अधिक सटीक और सुविधाजनक है।",
+  "e_en": "The spring control method is used in most portable instruments because it is more accurate and convenient."
+ },
+ {
+  "id": "rp-je_e-f01384",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक उपकरण की 'सटीकता' (Accuracy) को कैसे परिभाषित किया जाता है?",
+  "q_en": "How is the 'accuracy' of an instrument defined?",
+  "o_hi": [
+   "मापे गए मान का वास्तविक मान के निकट होना",
+   "उपकरण की कीमत",
+   "उपकरण का आकार",
+   "उपकरण की आयु"
+  ],
+  "o_en": [
+   "Closeness of measured value to the true value",
+   "Cost of the instrument",
+   "Size of the instrument",
+   "Age of the instrument"
+  ],
+  "a": 0,
+  "e_hi": "सटीकता यह दर्शाती है कि मापा गया परिणाम वास्तविक या मानक मान के कितना करीब है।",
+  "e_en": "Accuracy indicates how close the measured result is to the actual or true value."
+ },
+ {
+  "id": "rp-je_e-f01385",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "'हिस्टैरिसीस त्रुटि' (Hysteresis Error) मुख्य रूप से किस कारण होती है?",
+  "q_en": "What is the primary cause of 'hysteresis error'?",
+  "o_hi": [
+   "तापमान में बदलाव",
+   "चुंबकीय पदार्थों में अवशिष्ट चुंबकत्व",
+   "स्प्रिंग का ढीला होना",
+   "घर्षण"
+  ],
+  "o_en": [
+   "Temperature changes",
+   "Residual magnetism in magnetic materials",
+   "Loosening of the spring",
+   "Friction"
+  ],
+  "a": 1,
+  "e_hi": "हिस्टैरिसीस चुंबकीय पदार्थों के अवशिष्ट गुणों के कारण उत्पन्न होता है जिससे रीडिंग में अंतर आता है।",
+  "e_en": "Hysteresis arises due to the residual properties of magnetic materials, causing a difference in readings."
+ },
+ {
+  "id": "rp-je_e-f01386",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "मूविंग आयरन (Moving Iron) उपकरण किस प्रकार की विद्युत धारा के लिए उपयोग किए जा सकते हैं?",
+  "q_en": "For which type of current can Moving Iron instruments be used?",
+  "o_hi": [
+   "केवल डीसी",
+   "केवल एसी",
+   "एसी और डीसी दोनों",
+   "केवल उच्च आवृत्ति एसी"
+  ],
+  "o_en": [
+   "DC only",
+   "AC only",
+   "Both AC and DC",
+   "High-frequency AC only"
+  ],
+  "a": 2,
+  "e_hi": "मूविंग आयरन उपकरण एसी और डीसी दोनों धाराओं को मापने में सक्षम होते हैं क्योंकि इनका विक्षेपण धारा के वर्ग पर निर्भर करता है।",
+  "e_en": "Moving Iron instruments are capable of measuring both AC and DC because their deflection depends on the square of the current."
+ },
+ {
+  "id": "rp-je_e-f01387",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "वोल्टमीटर को हमेशा सर्किट के साथ किस क्रम में जोड़ा जाता है?",
+  "q_en": "In which configuration is a voltmeter always connected to the circuit?",
+  "o_hi": [
+   "श्रेणी क्रम (Series)",
+   "समांतर क्रम (Parallel)",
+   "मिश्रित क्रम",
+   "किसी भी क्रम में नहीं"
+  ],
+  "o_en": [
+   "Series",
+   "Parallel",
+   "Mixed connection",
+   "None of the above"
+  ],
+  "a": 1,
+  "e_hi": "वोल्टमीटर को वोल्टेज मापने के लिए दो बिंदुओं के बीच समांतर क्रम में जोड़ा जाता है ताकि वह पूरे वोल्टेज को माप सके।",
+  "e_en": "A voltmeter is connected in parallel between two points to measure voltage so that it can measure the full potential difference."
+ },
+ {
+  "id": "rp-je_e-f01388",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "उपकरणों के अंशांकन (Calibration) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of instrument calibration?",
+  "o_hi": [
+   "उपकरण को साफ करना",
+   "उपकरण की सटीकता सुनिश्चित करना",
+   "उपकरण की शक्ति बढ़ाना",
+   "उपकरण को छोटा करना"
+  ],
+  "o_en": [
+   "Cleaning the instrument",
+   "Ensuring the accuracy of the instrument",
+   "Increasing the power of the instrument",
+   "Making the instrument compact"
+  ],
+  "a": 1,
+  "e_hi": "अंशांकन एक प्रक्रिया है जिससे यह सुनिश्चित किया जाता है कि उपकरण का आउटपुट मानकों के अनुसार सही है।",
+  "e_en": "Calibration is a process to ensure that the output of the instrument is correct according to standard values."
+ },
+ {
+  "id": "rp-je_e-f01389",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "डायनेमोमीटर प्रकार के वाटमीटर का उपयोग मुख्य रूप से किस शक्ति को मापने के लिए किया जाता है?",
+  "q_en": "Dynamometer-type wattmeters are primarily used to measure which type of power?",
+  "o_hi": [
+   "केवल डीसी पावर",
+   "केवल आरएमएस पावर",
+   "एसी पावर (सक्रिय शक्ति)",
+   "प्रतिक्रियाशील शक्ति"
+  ],
+  "o_en": [
+   "DC power only",
+   "RMS power only",
+   "AC power (Active power)",
+   "Reactive power"
+  ],
+  "a": 2,
+  "e_hi": "डायनेमोमीटर वाटमीटर एसी सर्किट में सक्रिय शक्ति (Active Power) को मापने के लिए सबसे उपयुक्त होते हैं।",
+  "e_en": "Dynamometer wattmeters are most suitable for measuring active power in AC circuits."
+ },
+ {
+  "id": "rp-je_e-f01390",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "मापन में 'रिज़ॉल्यूशन' (Resolution) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'resolution' in measurement?",
+  "o_hi": [
+   "सबसे छोटा परिवर्तन जिसे मापा जा सके",
+   "उपकरण की कुल सीमा",
+   "माप की गति",
+   "त्रुटि का प्रतिशत"
+  ],
+  "o_en": [
+   "The smallest change that can be measured",
+   "Total range of the instrument",
+   "Speed of measurement",
+   "Percentage of error"
+  ],
+  "a": 0,
+  "e_hi": "रिज़ॉल्यूशन किसी उपकरण द्वारा पहचाने जाने वाले इनपुट मान में सबसे छोटा परिवर्तन है।",
+  "e_en": "Resolution is the smallest change in the input value that can be detected by an instrument."
+ },
+ {
+  "id": "rp-je_e-f01391",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "स्थायी चुंबक चल कुंडली (PMMC) उपकरण की तुलना में चल लोहा (Moving Iron) उपकरण का मुख्य लाभ क्या है?",
+  "q_en": "What is the primary advantage of a Moving Iron instrument compared to a PMMC instrument?",
+  "o_hi": [
+   "यह केवल एसी पर काम करता है",
+   "यह एसी और डीसी दोनों पर काम कर सकता है",
+   "इसमें कोई हिस्टैरिसीस त्रुटि नहीं होती",
+   "यह अधिक संवेदनशील होता है"
+  ],
+  "o_en": [
+   "It works only on AC",
+   "It can work on both AC and DC",
+   "It has no hysteresis error",
+   "It is more sensitive"
+  ],
+  "a": 1,
+  "e_hi": "चल लोहा उपकरण एसी और डीसी दोनों धाराओं को माप सकते हैं क्योंकि इनका विक्षेपण बल धारा की दिशा पर निर्भर नहीं करता है।",
+  "e_en": "Moving iron instruments can measure both AC and DC currents because their deflecting torque is independent of the direction of the current."
+ },
+ {
+  "id": "rp-je_e-f01392",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "विद्युत ऊर्जा मीटर (Energy Meter) में 'क्रीपिंग' त्रुटि को कम करने के लिए क्या किया जाता है?",
+  "q_en": "What is done to reduce 'creeping' error in an electrical energy meter?",
+  "o_hi": [
+   "डिस्क पर दो छेद किए जाते हैं",
+   "चुंबक को हटा दिया जाता है",
+   "वोल्टेज कम किया जाता है",
+   "डिस्क को भारी बनाया जाता है"
+  ],
+  "o_en": [
+   "Two holes are drilled in the disc",
+   "The magnet is removed",
+   "Voltage is reduced",
+   "The disc is made heavier"
+  ],
+  "a": 0,
+  "e_hi": "क्रीपिंग त्रुटि को रोकने के लिए डिस्क के विपरीत किनारों पर दो छोटे छेद किए जाते हैं ताकि डिस्क घूमे नहीं जब लोड शून्य हो।",
+  "e_en": "To prevent creeping error, two small holes are drilled on opposite sides of the disc to prevent rotation when the load is zero."
+ },
+ {
+  "id": "rp-je_e-f01393",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "किसी एमीटर (Ammeter) की रेंज बढ़ाने के लिए किसका उपयोग किया जाता है?",
+  "q_en": "What is used to extend the range of an ammeter?",
+  "o_hi": [
+   "एक शंट प्रतिरोध समानांतर में",
+   "एक मल्टीप्लायर प्रतिरोध श्रेणी में",
+   "एक कैपेसिटर समानांतर में",
+   "एक इंडक्टर श्रेणी में"
+  ],
+  "o_en": [
+   "A shunt resistor in parallel",
+   "A multiplier resistor in series",
+   "A capacitor in parallel",
+   "An inductor in series"
+  ],
+  "a": 0,
+  "e_hi": "एमीटर की सीमा बढ़ाने के लिए उसके साथ समानांतर में एक कम मान का प्रतिरोध, जिसे शंट कहते हैं, जोड़ा जाता है।",
+  "e_en": "To extend the range of an ammeter, a low-value resistor called a shunt is connected in parallel with it."
+ },
+ {
+  "id": "rp-je_e-f01394",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "वोल्टमीटर और एमीटर की तुलना में, वोल्टमीटर का प्रतिरोध कैसा होना चाहिए?",
+  "q_en": "Compared to an ammeter, what should be the resistance of a voltmeter?",
+  "o_hi": [
+   "बहुत कम",
+   "बहुत उच्च",
+   "एमीटर के बराबर",
+   "शून्य"
+  ],
+  "o_en": [
+   "Very low",
+   "Very high",
+   "Equal to ammeter",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "वोल्टमीटर को समानांतर में जोड़ा जाता है, इसलिए सर्किट से न्यूनतम धारा खींचने के लिए इसका प्रतिरोध बहुत उच्च होना चाहिए।",
+  "e_en": "A voltmeter is connected in parallel, so it must have a very high resistance to draw minimal current from the circuit."
+ },
+ {
+  "id": "rp-je_e-f01395",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "विद्युत मापन में 'एनालॉग' और 'डिजिटल' उपकरणों में कौन सा कथन सही है?",
+  "q_en": "Which statement is true regarding 'analog' and 'digital' instruments in electrical measurement?",
+  "o_hi": [
+   "डिजिटल उपकरण पढ़ने में आसान होते हैं",
+   "एनालॉग उपकरण अधिक सटीक होते हैं",
+   "डिजिटल उपकरणों में पैरालैक्स त्रुटि होती है",
+   "एनालॉग उपकरण हमेशा डिजिटल से महंगे होते हैं"
+  ],
+  "o_en": [
+   "Digital instruments are easier to read",
+   "Analog instruments are more accurate",
+   "Digital instruments have parallax error",
+   "Analog instruments are always more expensive than digital"
+  ],
+  "a": 0,
+  "e_hi": "डिजिटल उपकरण सीधे अंकीय मान प्रदर्शित करते हैं, जिससे मानवीय त्रुटि कम होती है और उन्हें पढ़ना आसान होता है।",
+  "e_en": "Digital instruments display numerical values directly, reducing human error and making them easier to read."
+ },
+ {
+  "id": "rp-je_e-f01396",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "व्हीटस्टोन ब्रिज (Wheatstone Bridge) का उपयोग मुख्य रूप से किसके मापन के लिए किया जाता है?",
+  "q_en": "What is a Wheatstone Bridge primarily used to measure?",
+  "o_hi": [
+   "मध्यम प्रतिरोध",
+   "बहुत कम प्रतिरोध",
+   "बहुत उच्च प्रतिरोध",
+   "एसी प्रतिबाधा"
+  ],
+  "o_en": [
+   "Medium resistance",
+   "Very low resistance",
+   "Very high resistance",
+   "AC impedance"
+  ],
+  "a": 0,
+  "e_hi": "व्हीटस्टोन ब्रिज का उपयोग मध्यम प्रतिरोध (1 ओम से 100 किलो-ओम) के सटीक मापन के लिए किया जाता है।",
+  "e_en": "The Wheatstone bridge is used for the precise measurement of medium resistance (1 ohm to 100 kilo-ohms)."
+ },
+ {
+  "id": "rp-je_e-f01397",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "डायनेमोमीटर प्रकार के वाटमीटर में 'प्रेशर कॉइल' (Pressure Coil) के बारे में कौन सा सही है?",
+  "q_en": "Which is true about the 'Pressure Coil' in a dynamometer-type wattmeter?",
+  "o_hi": [
+   "यह श्रेणी में जुड़ी होती है",
+   "यह बहुत कम प्रतिरोध वाली होती है",
+   "यह उच्च प्रतिरोध वाली होती है",
+   "यह केवल धारा मापती है"
+  ],
+  "o_en": [
+   "It is connected in series",
+   "It has very low resistance",
+   "It has high resistance",
+   "It measures only current"
+  ],
+  "a": 2,
+  "e_hi": "डायनेमोमीटर वाटमीटर में प्रेशर कॉइल को वोल्टेज के समानांतर जोड़ा जाता है, इसलिए धारा को सीमित करने के लिए इसमें उच्च प्रतिरोध होता है।",
+  "e_en": "In a dynamometer wattmeter, the pressure coil is connected in parallel with the voltage, hence it has high resistance to limit current."
  }
 ]

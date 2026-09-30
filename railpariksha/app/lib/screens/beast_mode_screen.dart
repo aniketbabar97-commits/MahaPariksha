@@ -210,6 +210,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
       onPopInvokedWithResult: (didPop, _) async {
         if (didPop) return;
         timer?.cancel();
+        timer = null;
         if (await _confirmExit() && context.mounted) {
           Navigator.pop(context);
         } else if (!_finished) {
