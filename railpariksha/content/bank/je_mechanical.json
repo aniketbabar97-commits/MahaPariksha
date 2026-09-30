@@ -2298,5 +2298,2052 @@
   "a": 0,
   "e_hi": "इंजन इंडिकेटर का उपयोग P-V आरेख खींचने और IMEP निर्धारित करने के लिए किया जाता है।",
   "e_en": "An engine indicator is used to draw the P-V diagram and determine the IMEP."
+ },
+ {
+  "id": "rp-je_-f00101",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक ऑटो चक्र की दक्षता (eta) का सूत्र क्या है, जहाँ 'r' संपीड़न अनुपात (compression ratio) है और 'gamma' विशिष्ट ऊष्मा अनुपात है?",
+  "q_en": "What is the formula for the efficiency of an Otto cycle, where 'r' is the compression ratio and 'gamma' is the ratio of specific heats?",
+  "o_hi": [
+   "1 - (1/r^(gamma-1))",
+   "1 - (1/r^gamma)",
+   "1 - (r^(gamma-1))",
+   "1 - (r^gamma)"
+  ],
+  "o_en": [
+   "1 - (1/r^(gamma-1))",
+   "1 - (1/r^gamma)",
+   "1 - (r^(gamma-1))",
+   "1 - (r^gamma)"
+  ],
+  "a": 0,
+  "e_hi": "ऑटो चक्र की तापीय दक्षता संपीड़न अनुपात 'r' और विशिष्ट ऊष्मा अनुपात 'gamma' पर निर्भर करती है।",
+  "e_en": "The thermal efficiency of an Otto cycle is a function of the compression ratio 'r' and the adiabatic index 'gamma'."
+ },
+ {
+  "id": "rp-je_-f00102",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "यदि एक प्रशीतन प्रणाली का प्रशीतन प्रभाव 10 किलोवाट है और कार्य इनपुट 2 किलोवाट है, तो उसका COP क्या होगा?",
+  "q_en": "If the refrigeration effect of a system is 10 kW and the work input is 2 kW, what will be its COP?",
+  "o_hi": [
+   "2",
+   "5",
+   "8",
+   "20"
+  ],
+  "o_en": [
+   "2",
+   "5",
+   "8",
+   "20"
+  ],
+  "a": 1,
+  "e_hi": "COP की गणना प्रशीतन प्रभाव को कार्य इनपुट से विभाजित करके की जाती है (10/2 = 5)।",
+  "e_en": "COP is calculated by dividing the refrigeration effect by the work input (10/2 = 5)."
+ },
+ {
+  "id": "rp-je_-f00103",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "डीजल चक्र की दक्षता किस कारक के बढ़ने पर कम हो जाती है?",
+  "q_en": "The efficiency of a Diesel cycle decreases with an increase in which factor?",
+  "o_hi": [
+   "संपीड़न अनुपात",
+   "कट-ऑफ अनुपात",
+   "विशिष्ट ऊष्मा",
+   "दबाव अनुपात"
+  ],
+  "o_en": [
+   "Compression ratio",
+   "Cut-off ratio",
+   "Specific heat",
+   "Pressure ratio"
+  ],
+  "a": 1,
+  "e_hi": "डीजल चक्र में, कट-ऑफ अनुपात बढ़ने से दक्षता कम हो जाती है क्योंकि विस्तार अनुपात कम हो जाता है।",
+  "e_en": "In a Diesel cycle, an increase in cut-off ratio decreases efficiency because it reduces the effective expansion ratio."
+ },
+ {
+  "id": "rp-je_-f00104",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक कार्नोट इंजन 300K और 600K के बीच कार्य कर रहा है। इसकी अधिकतम तापीय दक्षता क्या होगी?",
+  "q_en": "A Carnot engine operates between 300K and 600K. What will be its maximum thermal efficiency?",
+  "o_hi": [
+   "25 प्रतिशत",
+   "50 प्रतिशत",
+   "75 प्रतिशत",
+   "100 प्रतिशत"
+  ],
+  "o_en": [
+   "25 percent",
+   "50 percent",
+   "75 percent",
+   "100 percent"
+  ],
+  "a": 1,
+  "e_hi": "कार्नोट दक्षता = 1 - (TL/TH) = 1 - (300/600) = 0.5 या 50 प्रतिशत।",
+  "e_en": "Carnot efficiency = 1 - (TL/TH) = 1 - (300/600) = 0.5 or 50 percent."
+ },
+ {
+  "id": "rp-je_-f00105",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "ब्रेक हॉर्सपावर (BHP) की गणना करने के लिए किस उपकरण का उपयोग किया जाता है?",
+  "q_en": "Which device is used to measure the Brake Horsepower (BHP) of an engine?",
+  "o_hi": [
+   "बैरोमीटर",
+   "मैनोमीटर",
+   "डायनेमोमीटर",
+   "टैकोमीटर"
+  ],
+  "o_en": [
+   "Barometer",
+   "Manometer",
+   "Dynamometer",
+   "Tachometer"
+  ],
+  "a": 2,
+  "e_hi": "डायनेमोमीटर का उपयोग इंजन द्वारा उत्पन्न टॉर्क और पावर को मापने के लिए किया जाता है।",
+  "e_en": "A dynamometer is used to measure the torque and power produced by an engine."
+ },
+ {
+  "id": "rp-je_-f00106",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "यदि एक इंजन का इंडिकेटेड पावर (IP) 50 किलोवाट है और फ्रिक्शन पावर (FP) 10 किलोवाट है, तो ब्रेक पावर (BP) क्या होगी?",
+  "q_en": "If the Indicated Power (IP) of an engine is 50 kW and the Friction Power (FP) is 10 kW, what will be the Brake Power (BP)?",
+  "o_hi": [
+   "60 किलोवाट",
+   "40 किलोवाट",
+   "500 किलोवाट",
+   "5 किलोवाट"
+  ],
+  "o_en": [
+   "60 kW",
+   "40 kW",
+   "500 kW",
+   "5 kW"
+  ],
+  "a": 1,
+  "e_hi": "ब्रेक पावर = इंडिकेटेड पावर - फ्रिक्शन पावर (50 - 10 = 40 किलोवाट)।",
+  "e_en": "Brake Power = Indicated Power - Friction Power (50 - 10 = 40 kW)."
+ },
+ {
+  "id": "rp-je_-f00107",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन में 'टन' का अर्थ क्या है?",
+  "q_en": "What is the meaning of a 'ton' in refrigeration?",
+  "o_hi": [
+   "1000 किलोग्राम बर्फ",
+   "24 घंटे में 1 टन बर्फ पिघलाने की ऊष्मा",
+   "मशीन का वजन",
+   "द्रव का आयतन"
+  ],
+  "o_en": [
+   "1000 kg of ice",
+   "Heat to melt 1 ton of ice in 24 hours",
+   "Weight of the machine",
+   "Volume of fluid"
+  ],
+  "a": 1,
+  "e_hi": "एक टन प्रशीतन वह ऊष्मा है जो 24 घंटे में 0 डिग्री सेल्सियस पर 1 टन बर्फ पिघलाने के लिए आवश्यक है।",
+  "e_en": "One ton of refrigeration is the heat required to melt 1 ton of ice at 0 degrees Celsius in 24 hours."
+ },
+ {
+  "id": "rp-je_-f00108",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "यदि एक इंजन का प्रति लीटर ईंधन की खपत कम हो जाती है, तो विशिष्ट ईंधन खपत (SFC) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the fuel consumption per liter of an engine decreases, what will be the effect on Specific Fuel Consumption (SFC)?",
+  "o_hi": [
+   "बढ़ जाएगी",
+   "कम हो जाएगी",
+   "समान रहेगी",
+   "अनिश्चित"
+  ],
+  "o_en": [
+   "Will increase",
+   "Will decrease",
+   "Will remain same",
+   "Uncertain"
+  ],
+  "a": 1,
+  "e_hi": "विशिष्ट ईंधन खपत (SFC) ईंधन की खपत और पावर आउटपुट का अनुपात है। यदि खपत कम होती है, तो SFC कम होगा।",
+  "e_en": "SFC is the ratio of fuel mass flow rate to power output. If consumption decreases, SFC decreases."
+ },
+ {
+  "id": "rp-je_-f00109",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "एक ऑटो चक्र की दक्षता 50 प्रतिशत है। यदि चक्र का संपीड़न अनुपात 4 है, तो विशिष्ट ऊष्मा अनुपात (गामा) का मान क्या होगा?",
+  "q_en": "An Otto cycle has an efficiency of 50%. If the compression ratio of the cycle is 4, what is the value of the specific heat ratio (gamma)?",
+  "o_hi": [
+   "1.2",
+   "1.3",
+   "1.4",
+   "1.5"
+  ],
+  "o_en": [
+   "1.2",
+   "1.3",
+   "1.4",
+   "1.5"
+  ],
+  "a": 2,
+  "e_hi": "दक्षता का सूत्र 1 - (1/r^(gamma-1)) है। 0.5 = 1 - (1/4^(gamma-1)) को हल करने पर गामा का मान 1.4 प्राप्त होता है।",
+  "e_en": "The efficiency formula is 1 - (1/r^(gamma-1)). Solving 0.5 = 1 - (1/4^(gamma-1)) gives the value of gamma as 1.4."
+ },
+ {
+  "id": "rp-je_-f00110",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक चार-स्ट्रोक इंजन 2000 आरपीएम पर चल रहा है। इंजन में प्रति मिनट होने वाले शक्ति स्ट्रोक की संख्या कितनी होगी?",
+  "q_en": "A four-stroke engine is running at 2000 RPM. What will be the number of power strokes per minute in the engine?",
+  "o_hi": [
+   "500",
+   "1000",
+   "2000",
+   "4000"
+  ],
+  "o_en": [
+   "500",
+   "1000",
+   "2000",
+   "4000"
+  ],
+  "a": 1,
+  "e_hi": "चार-स्ट्रोक इंजन में, प्रत्येक दो चक्कर में एक शक्ति स्ट्रोक होता है। इसलिए, शक्ति स्ट्रोक की संख्या आरपीएम की आधी होगी।",
+  "e_en": "In a four-stroke engine, there is one power stroke for every two revolutions. Therefore, the number of power strokes is half the RPM."
+ },
+ {
+  "id": "rp-je_-f00111",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक प्रशीतन प्रणाली का सीओपी (COP) 3 है। यदि यह 10 किलोवाट की कूलिंग क्षमता प्रदान करती है, तो आवश्यक कार्य इनपुट क्या होगा?",
+  "q_en": "The COP of a refrigeration system is 3. If it provides a cooling capacity of 10 kW, what will be the required work input?",
+  "o_hi": [
+   "3.33 किलोवाट",
+   "30 किलोवाट",
+   "13 किलोवाट",
+   "7 किलोवाट"
+  ],
+  "o_en": [
+   "3.33 kW",
+   "30 kW",
+   "13 kW",
+   "7 kW"
+  ],
+  "a": 0,
+  "e_hi": "सीओपी कूलिंग क्षमता और कार्य इनपुट का अनुपात है। 10 को 3 से विभाजित करने पर 3.33 किलोवाट प्राप्त होता है।",
+  "e_en": "COP is the ratio of cooling capacity to work input. Dividing 10 by 3 gives 3.33 kW."
+ },
+ {
+  "id": "rp-je_-f00112",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "यदि एक डीजल इंजन का कट-ऑफ अनुपात 2 है और संपीड़न अनुपात 15 है, तो इंजन की वायु-मानक दक्षता क्या होगी? (गामा = 1.4 लें)",
+  "q_en": "If the cut-off ratio of a diesel engine is 2 and the compression ratio is 15, what will be the air-standard efficiency? (Take gamma = 1.4)",
+  "o_hi": [
+   "55 प्रतिशत",
+   "60 प्रतिशत",
+   "45 प्रतिशत",
+   "50 प्रतिशत"
+  ],
+  "o_en": [
+   "55%",
+   "60%",
+   "45%",
+   "50%"
+  ],
+  "a": 0,
+  "e_hi": "डीजल चक्र दक्षता का सूत्र संपीड़न अनुपात और कट-ऑफ अनुपात पर निर्भर करता है। गणना करने पर यह लगभग 55 प्रतिशत आता है।",
+  "e_en": "Diesel cycle efficiency depends on compression ratio and cut-off ratio. Calculating gives approximately 55%."
+ },
+ {
+  "id": "rp-je_-f00113",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक इंजन का ब्रेक पावर 20 किलोवाट है और इंडिकेटेड पावर 25 किलोवाट है। इंजन की मैकेनिकल दक्षता क्या है?",
+  "q_en": "The brake power of an engine is 20 kW and the indicated power is 25 kW. What is the mechanical efficiency of the engine?",
+  "o_hi": [
+   "80 प्रतिशत",
+   "75 प्रतिशत",
+   "90 प्रतिशत",
+   "85 प्रतिशत"
+  ],
+  "o_en": [
+   "80%",
+   "75%",
+   "90%",
+   "85%"
+  ],
+  "a": 0,
+  "e_hi": "मैकेनिकल दक्षता ब्रेक पावर और इंडिकेटेड पावर का अनुपात है। 20/25 = 0.8 या 80 प्रतिशत।",
+  "e_en": "Mechanical efficiency is the ratio of brake power to indicated power. 20/25 = 0.8 or 80%."
+ },
+ {
+  "id": "rp-je_-f00114",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक कार्नोट प्रशीतक का तापमान सीमा 250 केल्विन से 300 केल्विन है। इस प्रशीतक का सीओपी (COP) क्या होगा?",
+  "q_en": "A Carnot refrigerator operates between a temperature range of 250 K and 300 K. What will be the COP of this refrigerator?",
+  "o_hi": [
+   "5",
+   "6",
+   "4",
+   "3"
+  ],
+  "o_en": [
+   "5",
+   "6",
+   "4",
+   "3"
+  ],
+  "a": 0,
+  "e_hi": "कार्नोट सीओपी का सूत्र T_low / (T_high - T_low) है। 250 / (300 - 250) = 250/50 = 5।",
+  "e_en": "The formula for Carnot COP is T_low / (T_high - T_low). 250 / (300 - 250) = 250/50 = 5."
+ },
+ {
+  "id": "rp-je_-f00115",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "एक इंजन की ईंधन खपत 0.25 किलोग्राम प्रति किलोवाट-घंटा है। यदि ईंधन का कैलोरी मान 40,000 किलो जूल प्रति किलोग्राम है, तो ब्रेक थर्मल दक्षता क्या होगी?",
+  "q_en": "The fuel consumption of an engine is 0.25 kg/kWh. If the calorific value of the fuel is 40,000 kJ/kg, what will be the brake thermal efficiency?",
+  "o_hi": [
+   "30 प्रतिशत",
+   "36 प्रतिशत",
+   "40 प्रतिशत",
+   "45 प्रतिशत"
+  ],
+  "o_en": [
+   "30%",
+   "36%",
+   "40%",
+   "45%"
+  ],
+  "a": 1,
+  "e_hi": "दक्षता = 3600 / (ईंधन खपत * कैलोरी मान)। 3600 / (0.25 * 40000) = 3600 / 10000 = 0.36 या 36 प्रतिशत।",
+  "e_en": "Efficiency = 3600 / (fuel consumption * calorific value). 3600 / (0.25 * 40000) = 3600 / 10000 = 0.36 or 36%."
+ },
+ {
+  "id": "rp-je_-f00116",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक इंजन का विस्थापन आयतन (swept volume) 500 सीसी है और क्लीयरेंस आयतन 50 सीसी है। संपीड़न अनुपात क्या होगा?",
+  "q_en": "An engine has a swept volume of 500 cc and a clearance volume of 50 cc. What will be the compression ratio?",
+  "o_hi": [
+   "8:1",
+   "10:1",
+   "11:1",
+   "12:1"
+  ],
+  "o_en": [
+   "8:1",
+   "10:1",
+   "11:1",
+   "12:1"
+  ],
+  "a": 2,
+  "e_hi": "संपीड़न अनुपात = (विस्थापन आयतन + क्लीयरेंस आयतन) / क्लीयरेंस आयतन। (500+50)/50 = 11:1।",
+  "e_en": "Compression ratio = (Swept volume + Clearance volume) / Clearance volume. (500+50)/50 = 11:1."
+ },
+ {
+  "id": "rp-je_-f00117",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "यदि एक इंजन का औसत प्रभावी दबाव 10 बार है और इंजन की गति 1000 आरपीएम है, तो प्रति चक्र कार्य का संकेत क्या होगा यदि विस्थापन आयतन 0.1 मीटर क्यूब है?",
+  "q_en": "If the mean effective pressure of an engine is 10 bar and the engine speed is 1000 RPM, what will be the indicated work per cycle if the swept volume is 0.1 cubic meters?",
+  "o_hi": [
+   "100 किलो जूल",
+   "1000 किलो जूल",
+   "50 किलो जूल",
+   "10 किलो जूल"
+  ],
+  "o_en": [
+   "100 kJ",
+   "1000 kJ",
+   "50 kJ",
+   "10 kJ"
+  ],
+  "a": 0,
+  "e_hi": "कार्य = दबाव * आयतन। 10 बार = 1000 किलो पास्कल। 1000 * 0.1 = 100 किलो जूल।",
+  "e_en": "Work = Pressure * Volume. 10 bar = 1000 kPa. 1000 * 0.1 = 100 kJ."
+ },
+ {
+  "id": "rp-je_-f00118",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक प्रशीतन प्रणाली में, यदि वाष्पीकरण तापमान कम हो जाता है, तो सीओपी (COP) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a refrigeration system, if the evaporation temperature decreases, what will be the effect on the COP?",
+  "o_hi": [
+   "बढ़ेगा",
+   "घटेगा",
+   "समान रहेगा",
+   "अनिश्चित"
+  ],
+  "o_en": [
+   "Increases",
+   "Decreases",
+   "Remains same",
+   "Uncertain"
+  ],
+  "a": 1,
+  "e_hi": "वाष्पीकरण तापमान कम होने से कार्य इनपुट बढ़ जाता है और कूलिंग क्षमता घट जाती है, जिससे सीओपी कम हो जाता है।",
+  "e_en": "Decreasing evaporation temperature increases work input and decreases cooling capacity, thereby reducing the COP."
+ },
+ {
+  "id": "rp-je_-f00119",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "आईसी इंजन में 'नॉकिंग' (knocking) होने का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of 'knocking' in an IC engine?",
+  "o_hi": [
+   "ईंधन का बहुत देर से जलना",
+   "ईंधन का स्वतः प्रज्वलन (auto-ignition)",
+   "पिस्टन की गति बहुत कम होना",
+   "कूलिंग सिस्टम का विफल होना"
+  ],
+  "o_en": [
+   "Delayed combustion of fuel",
+   "Auto-ignition of fuel",
+   "Very low piston speed",
+   "Failure of cooling system"
+  ],
+  "a": 1,
+  "e_hi": "नॉकिंग तब होती है जब दहन कक्ष में ईंधन-वायु मिश्रण का अंतिम भाग बहुत तेजी से स्वतः प्रज्वलित हो जाता है।",
+  "e_en": "Knocking occurs when the end gas in the combustion chamber undergoes auto-ignition, causing rapid pressure rise."
+ },
+ {
+  "id": "rp-je_-f00120",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "यदि एक रेफ्रिजरेशन प्रणाली में कंडेंसर का तापमान बढ़ जाए, तो रेफ्रिजरेशन प्रभाव (refrigeration effect) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the condenser temperature increases in a refrigeration system, what will be the effect on the refrigeration effect?",
+  "o_hi": [
+   "रेफ्रिजरेशन प्रभाव बढ़ जाएगा",
+   "रेफ्रिजरेशन प्रभाव कम हो जाएगा",
+   "कोई परिवर्तन नहीं होगा",
+   "प्रणाली बंद हो जाएगी"
+  ],
+  "o_en": [
+   "Refrigeration effect will increase",
+   "Refrigeration effect will decrease",
+   "No change",
+   "System will stop"
+  ],
+  "a": 1,
+  "e_hi": "कंडेंसर का तापमान बढ़ने से रेफ्रिजरेंट का उप-शीतलन (sub-cooling) कम हो जाता है, जिससे शुद्ध रेफ्रिजरेशन क्षमता घट जाती है।",
+  "e_en": "Increased condenser temperature reduces sub-cooling of the refrigerant, which leads to a decrease in the net refrigeration capacity."
+ },
+ {
+  "id": "rp-je_-f00121",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "आईसी इंजन में 'स्कैवेंजिंग' (scavenging) प्रक्रिया का क्या अर्थ है?",
+  "q_en": "What is the meaning of the 'scavenging' process in an IC engine?",
+  "o_hi": [
+   "ईंधन को इंजेक्ट करना",
+   "जली हुई गैसों को बाहर निकालना",
+   "पिस्टन को लुब्रिकेट करना",
+   "इंजन को ठंडा करना"
+  ],
+  "o_en": [
+   "Injecting the fuel",
+   "Removing burnt gases",
+   "Lubricating the piston",
+   "Cooling the engine"
+  ],
+  "a": 1,
+  "e_hi": "स्कैवेंजिंग वह प्रक्रिया है जिसमें जली हुई गैसों को सिलेंडर से बाहर निकाला जाता है और ताजी हवा या मिश्रण भरा जाता है।",
+  "e_en": "Scavenging is the process of flushing out the exhaust gases from the cylinder and replacing them with a fresh charge."
+ },
+ {
+  "id": "rp-je_-f00122",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक आदर्श वाष्प संपीड़न प्रशीतन चक्र (Vapour Compression Refrigeration Cycle) में, संपीड़न (compression) किस प्रकार का होता है?",
+  "q_en": "In an ideal Vapour Compression Refrigeration Cycle, what type of compression takes place?",
+  "o_hi": [
+   "आइसोथर्मल संपीड़न",
+   "आइसेंट्रोपिक संपीड़न",
+   "आइसोबेरिक संपीड़न",
+   "आइसोकोरिक संपीड़न"
+  ],
+  "o_en": [
+   "Isothermal compression",
+   "Isentropic compression",
+   "Isobaric compression",
+   "Isochoric compression"
+  ],
+  "a": 1,
+  "e_hi": "आदर्श चक्र में, कंप्रेसर के भीतर संपीड़न प्रक्रिया को घर्षण रहित और एडियाबेटिक माना जाता है, जिसे आइसेंट्रोपिक कहते हैं।",
+  "e_en": "In an ideal cycle, the compression process inside the compressor is assumed to be frictionless and adiabatic, termed isentropic."
+ },
+ {
+  "id": "rp-je_-f00123",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "इंजन में 'वाल्व ओवरलैप' (valve overlap) का क्या कारण है?",
+  "q_en": "What is the reason for 'valve overlap' in an engine?",
+  "o_hi": [
+   "इंजन की गति बढ़ाने के लिए",
+   "गैसों के बेहतर निकास और प्रवेश के लिए",
+   "ईंधन की खपत कम करने के लिए",
+   "पिस्टन के घर्षण को रोकने के लिए"
+  ],
+  "o_en": [
+   "To increase engine speed",
+   "For better scavenging and charging",
+   "To reduce fuel consumption",
+   "To prevent piston friction"
+  ],
+  "a": 1,
+  "e_hi": "वाल्व ओवरलैप के दौरान इनलेट और एग्जॉस्ट दोनों वाल्व एक साथ खुले रहते हैं ताकि जली हुई गैसें बाहर निकलें और ताजी हवा अंदर आए।",
+  "e_en": "During valve overlap, both valves are open to facilitate the exit of exhaust gases and the entry of fresh charge."
+ },
+ {
+  "id": "rp-je_-f00124",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "यदि किसी इंजन का 'वायु-ईंधन अनुपात' (Air-Fuel Ratio) बहुत अधिक (lean mixture) हो, तो क्या होगा?",
+  "q_en": "What happens if the Air-Fuel Ratio of an engine is too high (lean mixture)?",
+  "o_hi": [
+   "इंजन ओवरहीट हो सकता है",
+   "ईंधन की खपत कम हो जाएगी",
+   "शक्ति बढ़ जाएगी",
+   "इंजन स्टार्ट नहीं होगा"
+  ],
+  "o_en": [
+   "Engine may overheat",
+   "Fuel consumption will decrease",
+   "Power will increase",
+   "Engine will not start"
+  ],
+  "a": 0,
+  "e_hi": "लीन मिश्रण के जलने की गति धीमी होती है, जिससे दहन प्रक्रिया लंबी खिंचती है और इंजन के पुर्जे गर्म हो सकते हैं।",
+  "e_en": "A lean mixture burns slowly, leading to a prolonged combustion process that can cause the engine components to overheat."
+ },
+ {
+  "id": "rp-je_-f00125",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "रेफ्रिजरेंट का 'ओजोन क्षरण क्षमता' (ODP) कम रखने का क्या कारण है?",
+  "q_en": "What is the reason for keeping the 'Ozone Depletion Potential' (ODP) of a refrigerant low?",
+  "o_hi": [
+   "वायुमंडल की ओजोन परत को बचाने के लिए",
+   "इंजन की शक्ति बढ़ाने के लिए",
+   "रेफ्रिजरेंट की लागत कम करने के लिए",
+   "कंप्रेसर का जीवन बढ़ाने के लिए"
+  ],
+  "o_en": [
+   "To protect the ozone layer of the atmosphere",
+   "To increase engine power",
+   "To reduce refrigerant cost",
+   "To extend compressor life"
+  ],
+  "a": 0,
+  "e_hi": "उच्च ODP वाले रेफ्रिजरेंट जैसे CFCs ओजोन परत को नष्ट करते हैं, इसलिए पर्यावरण सुरक्षा हेतु कम ODP वाले विकल्प चुने जाते हैं।",
+  "e_en": "High ODP refrigerants like CFCs deplete the ozone layer; hence, low ODP alternatives are selected for environmental safety."
+ },
+ {
+  "id": "rp-je_-f00126",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "मल्टी-सिलेंडर इंजन में 'फायरिंग ऑर्डर' (firing order) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the main purpose of the 'firing order' in a multi-cylinder engine?",
+  "o_hi": [
+   "इंजन का संतुलन बनाए रखने के लिए",
+   "ईंधन बचाने के लिए",
+   "अधिक गति प्राप्त करने के लिए",
+   "कूलिंग सिस्टम को सरल बनाने के लिए"
+  ],
+  "o_en": [
+   "To maintain engine balance",
+   "To save fuel",
+   "To achieve higher speed",
+   "To simplify the cooling system"
+  ],
+  "a": 0,
+  "e_hi": "फायरिंग ऑर्डर का उपयोग इंजन के कंपन को कम करने और रोटेटिंग भागों पर भार को संतुलित करने के लिए किया जाता है।",
+  "e_en": "The firing order is used to minimize engine vibrations and balance the loads on the rotating parts."
+ },
+ {
+  "id": "rp-je_-f00127",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "पेट्रोल इंजन और डीजल इंजन के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the fundamental difference between a petrol engine and a diesel engine?",
+  "o_hi": [
+   "ईंधन की गुणवत्ता",
+   "ज्वलन की विधि",
+   "पिस्टन की गति",
+   "सिलेंडर की संख्या"
+  ],
+  "o_en": [
+   "Fuel quality",
+   "Method of ignition",
+   "Piston speed",
+   "Number of cylinders"
+  ],
+  "a": 1,
+  "e_hi": "पेट्रोल इंजन स्पार्क प्लग द्वारा प्रज्वलित होते हैं, जबकि डीजल इंजन संपीड़न (कम्प्रेशन) द्वारा प्रज्वलित होते हैं।",
+  "e_en": "Petrol engines use spark ignition, whereas diesel engines utilize compression ignition."
+ },
+ {
+  "id": "rp-je_-f00128",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन चक्र में, विस्तार वाल्व (Expansion Valve) का मुख्य कार्य क्या है?",
+  "q_en": "In a refrigeration cycle, what is the primary function of the expansion valve?",
+  "o_hi": [
+   "दबाव बढ़ाना",
+   "तापमान कम करना",
+   "द्रव को वाष्पित करना",
+   "प्रशीतक को संकुचित करना"
+  ],
+  "o_en": [
+   "To increase pressure",
+   "To lower the temperature",
+   "To evaporate the liquid",
+   "To compress the refrigerant"
+  ],
+  "a": 1,
+  "e_hi": "विस्तार वाल्व उच्च दबाव वाले तरल प्रशीतक के दबाव को कम करता है, जिससे उसका तापमान गिर जाता है।",
+  "e_en": "The expansion valve reduces the pressure of high-pressure liquid refrigerant, causing its temperature to drop."
+ },
+ {
+  "id": "rp-je_-f00129",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा चक्र कार्नोट चक्र के सबसे करीब है?",
+  "q_en": "Which of the following cycles is closest to the Carnot cycle?",
+  "o_hi": [
+   "ऑटो चक्र",
+   "डीजल चक्र",
+   "स्टर्लिंग चक्र",
+   "ब्रेटन चक्र"
+  ],
+  "o_en": [
+   "Otto cycle",
+   "Diesel cycle",
+   "Stirling cycle",
+   "Brayton cycle"
+  ],
+  "a": 2,
+  "e_hi": "स्टर्लिंग चक्र में उत्क्रमणीय (reversible) प्रक्रियाएं होती हैं जो इसे सैद्धांतिक रूप से कार्नोट चक्र के समान कुशल बनाती हैं।",
+  "e_en": "The Stirling cycle consists of reversible processes that make it theoretically as efficient as the Carnot cycle."
+ },
+ {
+  "id": "rp-je_-f00130",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "रेफ्रिजरेटर में 'सीओपी' (COP) का पूर्ण रूप क्या है?",
+  "q_en": "What is the full form of 'COP' in refrigeration?",
+  "o_hi": [
+   "कोफिशिएंट ऑफ परफॉर्मेंस",
+   "कंट्रोल ऑफ प्रेशर",
+   "कूलिंग ऑफ पावर",
+   "कन्वर्जन ऑफ पार्टिकल"
+  ],
+  "o_en": [
+   "Coefficient of Performance",
+   "Control of Pressure",
+   "Cooling of Power",
+   "Conversion of Particle"
+  ],
+  "a": 0,
+  "e_hi": "सीओपी रेफ्रिजरेटर की दक्षता को मापने का अनुपात है, जो प्राप्त कूलिंग और किए गए कार्य का अनुपात है।",
+  "e_en": "COP is the ratio used to measure the efficiency of a refrigerator, defined as cooling effect divided by work input."
+ },
+ {
+  "id": "rp-je_-f00131",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "डीजल इंजन में 'नॉक' (Knock) की प्रवृत्ति कैसे कम की जा सकती है?",
+  "q_en": "How can the tendency of 'knock' in a diesel engine be reduced?",
+  "o_hi": [
+   "संपीड़न अनुपात कम करके",
+   "इग्निशन देरी कम करके",
+   "स्पीड बढ़ाकर",
+   "हवा का तापमान बढ़ाकर"
+  ],
+  "o_en": [
+   "By lowering compression ratio",
+   "By reducing ignition delay",
+   "By increasing speed",
+   "By increasing air temperature"
+  ],
+  "a": 1,
+  "e_hi": "डीजल इंजन में नॉक इग्निशन देरी के कारण होता है, जिसे कम करने से दहन सुचारू हो जाता है।",
+  "e_en": "Knock in diesel engines is caused by ignition delay; reducing this delay ensures smoother combustion."
+ },
+ {
+  "id": "rp-je_-f00132",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा प्रशीतक (Refrigerant) ओजोन परत को सबसे कम नुकसान पहुँचाता है?",
+  "q_en": "Which of the following refrigerants causes the least damage to the ozone layer?",
+  "o_hi": [
+   "R-12",
+   "R-22",
+   "R-134a",
+   "अमोनिया"
+  ],
+  "o_en": [
+   "R-12",
+   "R-22",
+   "R-134a",
+   "Ammonia"
+  ],
+  "a": 3,
+  "e_hi": "अमोनिया (R-717) का ओजोन रिक्तीकरण क्षमता (ODP) शून्य है, इसलिए यह पर्यावरण के अनुकूल है।",
+  "e_en": "Ammonia (R-717) has zero Ozone Depletion Potential (ODP), making it environmentally friendly."
+ },
+ {
+  "id": "rp-je_-f00133",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "ऑटो चक्र (Otto cycle) मुख्य रूप से किस पर आधारित है?",
+  "q_en": "The Otto cycle is primarily based on which process?",
+  "o_hi": [
+   "स्थिर दबाव दहन",
+   "स्थिर आयतन दहन",
+   "समतापीय दहन",
+   "रुद्धोष्म दहन"
+  ],
+  "o_en": [
+   "Constant pressure combustion",
+   "Constant volume combustion",
+   "Isothermal combustion",
+   "Adiabatic combustion"
+  ],
+  "a": 1,
+  "e_hi": "ऑटो चक्र में गर्मी का योग (heat addition) स्थिर आयतन पर होता है, जो पेट्रोल इंजनों का आधार है।",
+  "e_en": "In the Otto cycle, heat addition occurs at constant volume, which is the basis for petrol engines."
+ },
+ {
+  "id": "rp-je_-f00134",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक आदर्श गैस के लिए, यदि तापमान स्थिर रखा जाए, तो दबाव और आयतन का संबंध क्या होगा?",
+  "q_en": "For an ideal gas, if the temperature is held constant, what is the relationship between pressure and volume?",
+  "o_hi": [
+   "समानुपाती",
+   "व्युत्क्रमानुपाती",
+   "स्थिर",
+   "कोई संबंध नहीं"
+  ],
+  "o_en": [
+   "Directly proportional",
+   "Inversely proportional",
+   "Constant",
+   "No relationship"
+  ],
+  "a": 1,
+  "e_hi": "बॉयल के नियम के अनुसार, स्थिर तापमान पर दबाव और आयतन एक-दूसरे के व्युत्क्रमानुपाती होते हैं।",
+  "e_en": "According to Boyle's Law, at constant temperature, pressure and volume are inversely proportional to each other."
+ },
+ {
+  "id": "rp-je_-f00135",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "डीजल चक्र की दक्षता मुख्य रूप से किस पर निर्भर करती है?",
+  "q_en": "The efficiency of a Diesel cycle primarily depends on which factor?",
+  "o_hi": [
+   "ईंधन की मात्रा",
+   "कट-ऑफ अनुपात",
+   "हवा का दबाव",
+   "इंजन का आकार"
+  ],
+  "o_en": [
+   "Fuel quantity",
+   "Cut-off ratio",
+   "Air pressure",
+   "Engine size"
+  ],
+  "a": 1,
+  "e_hi": "डीजल चक्र की तापीय दक्षता संपीड़न अनुपात और कट-ऑफ अनुपात दोनों पर निर्भर करती है।",
+  "e_en": "The thermal efficiency of a Diesel cycle depends on both the compression ratio and the cut-off ratio."
+ },
+ {
+  "id": "rp-je_-f00136",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक आदर्श ऑटो चक्र में, यदि संपीड़न अनुपात (compression ratio) बढ़ाया जाता है, तो तापीय दक्षता (thermal efficiency) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In an ideal Otto cycle, what is the effect on thermal efficiency if the compression ratio is increased?",
+  "o_hi": [
+   "दक्षता घट जाएगी",
+   "दक्षता बढ़ जाएगी",
+   "दक्षता अपरिवर्तित रहेगी",
+   "दक्षता पहले बढ़ेगी फिर घटेगी"
+  ],
+  "o_en": [
+   "Efficiency will decrease",
+   "Efficiency will increase",
+   "Efficiency will remain unchanged",
+   "Efficiency will first increase then decrease"
+  ],
+  "a": 1,
+  "e_hi": "ऑटो चक्र की दक्षता संपीड़न अनुपात के बढ़ने के साथ सीधे बढ़ती है। यह एक सामान्य गलतफहमी है कि यह केवल एक सीमा तक बढ़ती है।",
+  "e_en": "The efficiency of an Otto cycle increases directly with an increase in compression ratio. It is a common misconception that there is an optimal limit for this relationship in the ideal cycle."
+ },
+ {
+  "id": "rp-je_-f00137",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "प्रशीतन प्रणाली (refrigeration system) में 'टन' (ton) का क्या अर्थ है?",
+  "q_en": "What does a 'ton' refer to in a refrigeration system?",
+  "o_hi": [
+   "प्रशीतक का वजन",
+   "24 घंटे में 1 टन बर्फ पिघलाने की शीतलन क्षमता",
+   "उपकरण का कुल वजन",
+   "प्रशीतक का आयतन"
+  ],
+  "o_en": [
+   "Weight of the refrigerant",
+   "Cooling capacity to melt 1 ton of ice in 24 hours",
+   "Total weight of the equipment",
+   "Volume of the refrigerant"
+  ],
+  "a": 1,
+  "e_hi": "एक टन प्रशीतन का अर्थ है 24 घंटे में 0 डिग्री सेल्सियस पर एक टन पानी को 0 डिग्री सेल्सियस पर बर्फ में बदलने के लिए आवश्यक शीतलन दर।",
+  "e_en": "One ton of refrigeration is defined as the cooling rate required to freeze one ton of water at 0°C into ice at 0°C in 24 hours."
+ },
+ {
+  "id": "rp-je_-f00138",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "डीजल इंजन में 'नॉक' (knock) को कम करने के लिए, इग्निशन विलंब (ignition delay) कैसा होना चाहिए?",
+  "q_en": "To reduce 'knock' in a diesel engine, how should the ignition delay be?",
+  "o_hi": [
+   "अधिकतम",
+   "न्यूनतम",
+   "शून्य",
+   "अपरिवर्तित"
+  ],
+  "o_en": [
+   "Maximum",
+   "Minimum",
+   "Zero",
+   "Unchanged"
+  ],
+  "a": 1,
+  "e_hi": "डीजल इंजन में, इग्निशन विलंब कम होने से दहन कक्ष में ईंधन का संचय कम होता है, जिससे नॉक की प्रवृत्ति घटती है।",
+  "e_en": "In diesel engines, shorter ignition delay reduces the accumulation of fuel in the combustion chamber, thereby decreasing the tendency to knock."
+ },
+ {
+  "id": "rp-je_-f00139",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक वेपर कम्प्रेशन रेफ्रिजरेशन चक्र में, कंप्रेसर के इनलेट पर रेफ्रिजरेंट की अवस्था क्या होती है?",
+  "q_en": "In a vapor compression refrigeration cycle, what is the state of the refrigerant at the compressor inlet?",
+  "o_hi": [
+   "संतृप्त द्रव",
+   "अति-तप्त वाष्प",
+   "गीली वाष्प",
+   "उप-शीतित द्रव"
+  ],
+  "o_en": [
+   "Saturated liquid",
+   "Superheated vapor",
+   "Wet vapor",
+   "Subcooled liquid"
+  ],
+  "a": 1,
+  "e_hi": "कंप्रेसर की सुरक्षा के लिए, इनलेट पर रेफ्रिजरेंट को आमतौर पर थोड़ा अति-तप्त (superheated) रखा जाता है ताकि द्रव के कण अंदर न जाएं।",
+  "e_en": "For the safety of the compressor, the refrigerant at the inlet is usually kept slightly superheated to prevent liquid droplets from entering."
+ },
+ {
+  "id": "rp-je_-f00140",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "दो स्ट्रोक इंजन की तुलना में चार स्ट्रोक इंजन की तापीय दक्षता कैसी होती है?",
+  "q_en": "How does the thermal efficiency of a four-stroke engine compare to a two-stroke engine?",
+  "o_hi": [
+   "कम होती है",
+   "अधिक होती है",
+   "समान होती है",
+   "इंजन की गति पर निर्भर नहीं करती"
+  ],
+  "o_en": [
+   "Lower",
+   "Higher",
+   "Equal",
+   "Independent of engine speed"
+  ],
+  "a": 1,
+  "e_hi": "चार स्ट्रोक इंजन में दहन और निकास की प्रक्रियाएं अधिक प्रभावी होती हैं, जिससे वे समान परिस्थितियों में दो स्ट्रोक की तुलना में अधिक कुशल होते हैं।",
+  "e_en": "Four-stroke engines are generally more thermally efficient because the gas exchange process is more complete compared to two-stroke engines."
+ },
+ {
+  "id": "rp-je_-f00141",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन में 'COP' का मान क्या कभी 1 से अधिक हो सकता है?",
+  "q_en": "Can the value of 'COP' in refrigeration ever be greater than 1?",
+  "o_hi": [
+   "नहीं, यह हमेशा 1 से कम होता है",
+   "हाँ, यह 1 से अधिक हो सकता है",
+   "केवल सर्दियों में 1 से अधिक होता है",
+   "यह हमेशा 1 के बराबर होता है"
+  ],
+  "o_en": [
+   "No, it is always less than 1",
+   "Yes, it can be greater than 1",
+   "Only in winter it is greater than 1",
+   "It is always equal to 1"
+  ],
+  "a": 1,
+  "e_hi": "प्रशीतन चक्र का COP (निष्पादन गुणांक) अक्सर 1 से अधिक होता है क्योंकि यह कार्य इनपुट की तुलना में अधिक ऊष्मा को स्थानांतरित करता है।",
+  "e_en": "The Coefficient of Performance (COP) of a refrigeration cycle is often greater than 1 because it transfers more heat than the work input provided."
+ },
+ {
+  "id": "rp-je_-f00142",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "रेफ्रिजरेशन सिस्टम में 'एक्सपेंशन वाल्व' का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of the 'expansion valve' in a refrigeration system?",
+  "o_hi": [
+   "दबाव बढ़ाना",
+   "तापमान बढ़ाना",
+   "दबाव कम करना",
+   "रेफ्रिजरेंट का घनत्व बढ़ाना"
+  ],
+  "o_en": [
+   "To increase pressure",
+   "To increase temperature",
+   "To reduce pressure",
+   "To increase density of refrigerant"
+  ],
+  "a": 2,
+  "e_hi": "एक्सपेंशन वाल्व रेफ्रिजरेंट के दबाव और तापमान को अचानक कम कर देता है, जिससे वह वाष्पीकरण के लिए तैयार हो जाता है।",
+  "e_en": "The expansion valve drastically reduces the pressure and temperature of the refrigerant, preparing it for the evaporation process."
+ },
+ {
+  "id": "rp-je_-f00143",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "पेट्रोल इंजन में 'प्री-इग्निशन' (pre-ignition) का मुख्य कारण क्या है?",
+  "q_en": "What is the main cause of 'pre-ignition' in a petrol engine?",
+  "o_hi": [
+   "स्पार्क प्लग का जल्दी चलना",
+   "दहन कक्ष में गर्म धब्बों (hot spots) का होना",
+   "ईंधन का उच्च ऑक्टेन मान",
+   "कम संपीड़न अनुपात"
+  ],
+  "o_en": [
+   "Spark plug firing early",
+   "Presence of hot spots in the combustion chamber",
+   "High octane rating of fuel",
+   "Low compression ratio"
+  ],
+  "a": 1,
+  "e_hi": "दहन कक्ष के अंदर गर्म कार्बन जमाव या अन्य गर्म सतहें समय से पहले मिश्रण को जला देती हैं, जिसे प्री-इग्निशन कहा जाता है।",
+  "e_en": "Hot carbon deposits or overheated components inside the combustion chamber ignite the mixture prematurely, which is known as pre-ignition."
+ },
+ {
+  "id": "rp-je_-f00144",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "एक कार्नोट इंजन की दक्षता किस पर निर्भर करती है?",
+  "q_en": "The efficiency of a Carnot engine depends on?",
+  "o_hi": [
+   "कार्यकारी पदार्थ की प्रकृति",
+   "केवल उच्च तापमान पर",
+   "स्रोत और सिंक के तापमान पर",
+   "इंजन के आकार पर"
+  ],
+  "o_en": [
+   "Nature of the working substance",
+   "Only on the high temperature",
+   "Temperature of source and sink",
+   "Size of the engine"
+  ],
+  "a": 2,
+  "e_hi": "कार्नोट चक्र की दक्षता केवल स्रोत (source) और सिंक (sink) के पूर्ण तापमान (absolute temperature) पर निर्भर करती है।",
+  "e_en": "The efficiency of a Carnot cycle depends exclusively on the absolute temperatures of the source and the sink."
+ },
+ {
+  "id": "rp-je_-f00145",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक आदर्श ऑटो चक्र (Otto Cycle) में, संपीड़न अनुपात (Compression Ratio) बढ़ाने पर तापीय दक्षता (Thermal Efficiency) पर क्या प्रभाव पड़ता है?",
+  "q_en": "In an ideal Otto cycle, what is the effect of increasing the compression ratio on thermal efficiency?",
+  "o_hi": [
+   "दक्षता बढ़ती है",
+   "दक्षता घटती है",
+   "दक्षता स्थिर रहती है",
+   "पहले बढ़ती है फिर घटती है"
+  ],
+  "o_en": [
+   "Efficiency increases",
+   "Efficiency decreases",
+   "Efficiency remains constant",
+   "Efficiency increases then decreases"
+  ],
+  "a": 0,
+  "e_hi": "ऑटो चक्र की तापीय दक्षता संपीड़न अनुपात के बढ़ने के साथ सीधे बढ़ती है। यह संबंध 1 - (1/r^(γ-1)) सूत्र द्वारा दिया जाता है।",
+  "e_en": "The thermal efficiency of an Otto cycle increases directly with the compression ratio. This relationship is defined by the formula 1 - (1/r^(γ-1))."
+ },
+ {
+  "id": "rp-je_-f00146",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन के संदर्भ में, 'टन' (Ton of Refrigeration) का अर्थ क्या है?",
+  "q_en": "In the context of refrigeration, what does a 'Ton of Refrigeration' signify?",
+  "o_hi": [
+   "मशीन का वजन",
+   "24 घंटे में 1 टन बर्फ पिघलाने की ऊष्मा अवशोषण क्षमता",
+   "सिस्टम का कुल शीतलन भार",
+   "रेफ्रिजरेंट का द्रव्यमान"
+  ],
+  "o_en": [
+   "Weight of the machine",
+   "Heat extraction rate required to melt 1 ton of ice in 24 hours",
+   "Total cooling load of the system",
+   "Mass of the refrigerant"
+  ],
+  "a": 1,
+  "e_hi": "एक टन प्रशीतन का अर्थ वह ऊष्मा दर है जो 24 घंटे में 0 डिग्री सेल्सियस पर 1 टन (2000 पाउंड) बर्फ को पानी में बदलने के लिए आवश्यक होती है।",
+  "e_en": "One ton of refrigeration is the rate of heat extraction required to melt 1 ton (2000 lbs) of ice at 0°C in 24 hours."
+ },
+ {
+  "id": "rp-je_-f00147",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "डीजल इंजन में, ईंधन का प्रज्वलन (Ignition) कैसे होता है?",
+  "q_en": "In a diesel engine, how does ignition of fuel occur?",
+  "o_hi": [
+   "स्पार्क प्लग द्वारा",
+   "संपीड़ित वायु के उच्च तापमान द्वारा",
+   "इलेक्ट्रिक हीटर द्वारा",
+   "ईंधन के दबाव द्वारा"
+  ],
+  "o_en": [
+   "By spark plug",
+   "By high temperature of compressed air",
+   "By electric heater",
+   "By fuel pressure"
+  ],
+  "a": 1,
+  "e_hi": "डीजल इंजन 'संपीड़न प्रज्वलन' (Compression Ignition) सिद्धांत पर काम करते हैं, जहां संपीड़ित वायु का तापमान ईंधन के स्वतः-प्रज्वलन बिंदु से अधिक हो जाता है।",
+  "e_en": "Diesel engines operate on the 'Compression Ignition' principle, where the temperature of the compressed air exceeds the auto-ignition temperature of the fuel."
+ },
+ {
+  "id": "rp-je_-f00148",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "दो-स्ट्रोक इंजन में, एक चक्र में क्रैंकशाफ्ट कितने चक्कर लगाता है?",
+  "q_en": "In a two-stroke engine, how many revolutions does the crankshaft make in one cycle?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "चार",
+   "आधा"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Four",
+   "Half"
+  ],
+  "a": 0,
+  "e_hi": "दो-स्ट्रोक इंजन में, पिस्टन के दो स्ट्रोक एक क्रैंकशाफ्ट चक्कर (360 डिग्री) के भीतर पूरे हो जाते हैं।",
+  "e_en": "In a two-stroke engine, the two strokes of the piston are completed within one revolution (360 degrees) of the crankshaft."
+ },
+ {
+  "id": "rp-je_-f00149",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "रेफ्रिजरेशन सिस्टम में 'सब-कूलिंग' (Sub-cooling) का मुख्य लाभ क्या है?",
+  "q_en": "What is the main benefit of 'sub-cooling' in a refrigeration system?",
+  "o_hi": [
+   "कंप्रेसर का कार्य बढ़ता है",
+   "प्रशीतन प्रभाव (Refrigeration Effect) बढ़ता है",
+   "कंडेंसर का आकार बढ़ता है",
+   "रेफ्रिजरेंट का दबाव बढ़ता है"
+  ],
+  "o_en": [
+   "Increases compressor work",
+   "Increases refrigeration effect",
+   "Increases condenser size",
+   "Increases refrigerant pressure"
+  ],
+  "a": 1,
+  "e_hi": "सब-कूलिंग से वाष्पीकरण (Evaporator) में प्रवेश करने वाले रेफ्रिजरेंट की तरल मात्रा बढ़ जाती है, जिससे प्रशीतन प्रभाव में सुधार होता है।",
+  "e_en": "Sub-cooling increases the liquid content of the refrigerant entering the evaporator, thereby improving the refrigeration effect."
+ },
+ {
+  "id": "rp-je_-f00150",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा इंजन के 'वाल्व ओवरलैप' (Valve Overlap) का सही अर्थ है?",
+  "q_en": "Which of the following correctly defines 'valve overlap' in an engine?",
+  "o_hi": [
+   "इनलेट और एग्जॉस्ट वाल्व का एक साथ खुला रहना",
+   "पिस्टन का टॉप डेड सेंटर पर होना",
+   "स्पार्क प्लग का जल्दी चलना",
+   "इंजन का अत्यधिक गर्म होना"
+  ],
+  "o_en": [
+   "Inlet and exhaust valves remaining open simultaneously",
+   "Piston being at Top Dead Center",
+   "Spark plug firing early",
+   "Engine overheating"
+  ],
+  "a": 0,
+  "e_hi": "वाल्व ओवरलैप वह स्थिति है जब इनलेट और एग्जॉस्ट वाल्व दोनों एक ही समय में खुले होते हैं, आमतौर पर एग्जॉस्ट स्ट्रोक के अंत और इनलेट स्ट्रोक की शुरुआत में।",
+  "e_en": "Valve overlap is the period when both inlet and exhaust valves are open simultaneously, typically at the end of the exhaust stroke and start of the inlet stroke."
+ },
+ {
+  "id": "rp-je_-f00151",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "डीजल इंजन में 'डीजल नॉक' (Diesel Knock) को कम करने का सबसे प्रभावी तरीका कौन सा है?",
+  "q_en": "Which is the most effective way to reduce 'Diesel Knock' in a diesel engine?",
+  "o_hi": [
+   "संपीड़न अनुपात कम करना",
+   "संपीड़न अनुपात बढ़ाना",
+   "इंजन की गति कम करना",
+   "इंजन का आकार बढ़ाना"
+  ],
+  "o_en": [
+   "Reducing compression ratio",
+   "Increasing compression ratio",
+   "Reducing engine speed",
+   "Increasing engine size"
+  ],
+  "a": 1,
+  "e_hi": "संपीड़न अनुपात बढ़ाने से हवा का तापमान बढ़ता है, जिससे प्रज्वलन देरी (Ignition Delay) कम होती है और नॉक में कमी आती है।",
+  "e_en": "Increasing the compression ratio raises the air temperature, which reduces ignition delay and consequently decreases diesel knock."
+ },
+ {
+  "id": "rp-je_-f00152",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रुडोल्फ डीजल ने किस वर्ष में अपने प्रसिद्ध डीजल इंजन का पेटेंट प्राप्त किया था?",
+  "q_en": "In which year did Rudolf Diesel receive the patent for his famous diesel engine?",
+  "o_hi": [
+   "1885",
+   "1892",
+   "1901",
+   "1910"
+  ],
+  "o_en": [
+   "1885",
+   "1892",
+   "1901",
+   "1910"
+  ],
+  "a": 1,
+  "e_hi": "रुडोल्फ डीजल ने 1892 में अपने संपीड़न प्रज्वलन इंजन (compression-ignition engine) के लिए पेटेंट प्राप्त किया था।",
+  "e_en": "Rudolf Diesel received the patent for his compression-ignition engine in 1892."
+ },
+ {
+  "id": "rp-je_-f00153",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "प्रशीतन (Refrigeration) के क्षेत्र में 'कार्नोट चक्र' के सिद्धांत का प्रतिपादन किसने किया था?",
+  "q_en": "Who proposed the principle of the 'Carnot cycle' in the field of refrigeration?",
+  "o_hi": [
+   "सादी कार्नोट",
+   "जेम्स वॉट",
+   "निकोलस ओटो",
+   "रुडोल्फ डीजल"
+  ],
+  "o_en": [
+   "Sadi Carnot",
+   "James Watt",
+   "Nikolaus Otto",
+   "Rudolf Diesel"
+  ],
+  "a": 0,
+  "e_hi": "निकोलस लियोनार्ड सादी कार्नोट ने 1824 में कार्नोट चक्र का सैद्धांतिक वर्णन किया था।",
+  "e_en": "Nicolas Léonard Sadi Carnot provided the theoretical description of the Carnot cycle in 1824."
+ },
+ {
+  "id": "rp-je_-f00154",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "निकोलस ओटो ने किस प्रकार के इंजन के लिए प्रसिद्ध 'ओटो चक्र' का विकास किया था?",
+  "q_en": "For which type of engine did Nicolaus Otto develop the famous 'Otto cycle'?",
+  "o_hi": [
+   "भाप इंजन",
+   "पेट्रोल इंजन",
+   "डीजल इंजन",
+   "गैस टर्बाइन"
+  ],
+  "o_en": [
+   "Steam engine",
+   "Petrol engine",
+   "Diesel engine",
+   "Gas turbine"
+  ],
+  "a": 1,
+  "e_hi": "ओटो चक्र चार-स्ट्रोक पेट्रोल (स्पार्क इग्निशन) इंजन के संचालन का आधार है।",
+  "e_en": "The Otto cycle serves as the basis for the operation of a four-stroke petrol (spark-ignition) engine."
+ },
+ {
+  "id": "rp-je_-f00155",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "प्रशीतक (Refrigerant) के रूप में 'फ्रेयॉन-12' का रासायनिक नाम क्या है?",
+  "q_en": "What is the chemical name of 'Freon-12' used as a refrigerant?",
+  "o_hi": [
+   "डाइक्लोरोडाइफ्लोरोमेथेन",
+   "क्लोरोफ्लोरोकार्बन",
+   "अमोनिया",
+   "सल्फर डाइऑक्साइड"
+  ],
+  "o_en": [
+   "Dichlorodifluoromethane",
+   "Chlorofluorocarbon",
+   "Ammonia",
+   "Sulfur dioxide"
+  ],
+  "a": 0,
+  "e_hi": "फ्रेयॉन-12 का वैज्ञानिक नाम डाइक्लोरोडाइफ्लोरोमेथेन (CCl2F2) है।",
+  "e_en": "The scientific name for Freon-12 is Dichlorodifluoromethane (CCl2F2)."
+ },
+ {
+  "id": "rp-je_-f00156",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "वाष्प संपीड़न प्रशीतन प्रणाली (Vapour Compression Refrigeration System) में 'विस्तार वाल्व' (Expansion Valve) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of the 'Expansion Valve' in a Vapour Compression Refrigeration System?",
+  "o_hi": [
+   "दाब कम करना",
+   "दाब बढ़ाना",
+   "तापमान बढ़ाना",
+   "द्रव को वाष्पित करना"
+  ],
+  "o_en": [
+   "To reduce pressure",
+   "To increase pressure",
+   "To increase temperature",
+   "To vaporize liquid"
+  ],
+  "a": 0,
+  "e_hi": "विस्तार वाल्व उच्च दाब वाले तरल प्रशीतक के दाब को कम करके उसे कम तापमान वाले मिश्रण में बदल देता है।",
+  "e_en": "The expansion valve reduces the pressure of the high-pressure liquid refrigerant, converting it into a low-temperature mixture."
+ },
+ {
+  "id": "rp-je_-f00157",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "किस वैज्ञानिक ने 1850 के दशक में 'एयर रेफ्रिजरेशन साइकिल' (बेल-कोलमैन चक्र) का विकास किया था?",
+  "q_en": "Which scientist developed the 'Air Refrigeration Cycle' (Bell-Coleman cycle) in the 1850s?",
+  "o_hi": [
+   "जेम्स बेल और जोसेफ कोलमैन",
+   "थॉमस न्यूकोमेन",
+   "रुडोल्फ डीजल",
+   "सादी कार्नोट"
+  ],
+  "o_en": [
+   "James Bell and Joseph Coleman",
+   "Thomas Newcomen",
+   "Rudolf Diesel",
+   "Sadi Carnot"
+  ],
+  "a": 0,
+  "e_hi": "बेल-कोलमैन चक्र का उपयोग मुख्य रूप से विमानन प्रशीतन (aircraft refrigeration) में किया जाता है।",
+  "e_en": "The Bell-Coleman cycle is primarily used in aircraft refrigeration systems."
+ },
+ {
+  "id": "rp-je_-f00158",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "आईसी इंजन में 'नॉकिंग' (Knocking) को रोकने के लिए पेट्रोल में मिलाए जाने वाले एंटी-नॉकिंग एजेंट का नाम बताएं।",
+  "q_en": "Name the anti-knocking agent added to petrol to prevent 'knocking' in IC engines.",
+  "o_hi": [
+   "टेट्रा एथिल लेड",
+   "बेंजीन",
+   "एथेनॉल",
+   "मेथेनॉल"
+  ],
+  "o_en": [
+   "Tetraethyl lead",
+   "Benzene",
+   "Ethanol",
+   "Methanol"
+  ],
+  "a": 0,
+  "e_hi": "टेट्रा एथिल लेड (TEL) का उपयोग ईंधन की ऑक्टेन रेटिंग बढ़ाने और नॉकिंग कम करने के लिए किया जाता था।",
+  "e_en": "Tetraethyl lead (TEL) was used to increase the octane rating of fuel and reduce knocking."
+ },
+ {
+  "id": "rp-je_-f00159",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "डीजल इंजन में दहन (combustion) किस प्रक्रिया द्वारा शुरू होता है?",
+  "q_en": "By which process does combustion start in a diesel engine?",
+  "o_hi": [
+   "स्पार्क प्लग द्वारा",
+   "संपीड़न द्वारा उत्पन्न उच्च तापमान",
+   "ईंधन को गर्म करके",
+   "कार्बोरेटर द्वारा"
+  ],
+  "o_en": [
+   "By spark plug",
+   "High temperature generated by compression",
+   "By heating the fuel",
+   "By carburetor"
+  ],
+  "a": 1,
+  "e_hi": "डीजल इंजन में हवा के उच्च संपीड़न से उत्पन्न गर्मी के कारण ईंधन स्वतः प्रज्वलित हो जाता है।",
+  "e_en": "In a diesel engine, the fuel auto-ignites due to the high temperature generated by the compression of air."
+ },
+ {
+  "id": "rp-je_-f00160",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "प्रशीतन चक्र में COP (Coefficient of Performance) का मान सदैव क्या होता है?",
+  "q_en": "What is the value of COP (Coefficient of Performance) in a refrigeration cycle always?",
+  "o_hi": [
+   "1 से कम",
+   "1 के बराबर",
+   "1 से अधिक",
+   "शून्य"
+  ],
+  "o_en": [
+   "Less than 1",
+   "Equal to 1",
+   "Greater than 1",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "प्रशीतन प्रणाली के लिए COP का मान आमतौर पर 1 से अधिक होता है क्योंकि यह कार्य के इनपुट से अधिक ऊष्मा को स्थानांतरित करता है।",
+  "e_en": "The COP of a refrigeration system is usually greater than 1 because it transfers more heat than the work input."
+ },
+ {
+  "id": "rp-je_-f00161",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "आईसी इंजन में 'स्कैवेंजिंग' (Scavenging) प्रक्रिया का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of the 'Scavenging' process in an IC engine?",
+  "o_hi": [
+   "ईंधन डालना",
+   "जली हुई गैसों को बाहर निकालना",
+   "पिस्टन को ठंडा करना",
+   "हवा को संकुचित करना"
+  ],
+  "o_en": [
+   "To inject fuel",
+   "To remove burnt gases",
+   "To cool the piston",
+   "To compress air"
+  ],
+  "a": 1,
+  "e_hi": "स्कैवेंजिंग वह प्रक्रिया है जिसमें सिलेंडर से जली हुई गैसों को बाहर निकालकर ताजी हवा या मिश्रण भरा जाता है।",
+  "e_en": "Scavenging is the process of removing the burnt gases from the cylinder and replacing them with fresh air or mixture."
+ },
+ {
+  "id": "rp-je_-f00162",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक आदर्श ऑटो चक्र (Otto Cycle) में, संपीड़न अनुपात (Compression Ratio) बढ़ाने का क्या प्रभाव होता है?",
+  "q_en": "In an ideal Otto cycle, what is the effect of increasing the compression ratio?",
+  "o_hi": [
+   "थर्मल दक्षता घटती है",
+   "थर्मल दक्षता बढ़ती है",
+   "थर्मल दक्षता पर कोई प्रभाव नहीं पड़ता",
+   "इंजन का टॉर्क कम हो जाता है"
+  ],
+  "o_en": [
+   "Thermal efficiency decreases",
+   "Thermal efficiency increases",
+   "No effect on thermal efficiency",
+   "Engine torque decreases"
+  ],
+  "a": 1,
+  "e_hi": "ऑटो चक्र की दक्षता संपीड़न अनुपात के बढ़ने के साथ बढ़ती है। यह एक सामान्य भ्रम है कि यह हमेशा घटती है।",
+  "e_en": "The efficiency of an Otto cycle increases as the compression ratio increases. It is a common misconception that it always decreases."
+ },
+ {
+  "id": "rp-je_-f00163",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "डीजल इंजन में 'नॉकिंग' (Knocking) को कम करने के लिए क्या किया जाना चाहिए?",
+  "q_en": "What should be done to reduce 'knocking' in a diesel engine?",
+  "o_hi": [
+   "संपीड़न अनुपात घटाना",
+   "संपीड़न अनुपात बढ़ाना",
+   "ईंधन का ऑक्टेन नंबर बढ़ाना",
+   "इंजन की गति कम करना"
+  ],
+  "o_en": [
+   "Decrease compression ratio",
+   "Increase compression ratio",
+   "Increase octane number of fuel",
+   "Decrease engine speed"
+  ],
+  "a": 1,
+  "e_hi": "डीजल इंजन में नॉकिंग को कम करने के लिए संपीड़न अनुपात बढ़ाया जाता है ताकि देरी की अवधि (delay period) कम हो जाए।",
+  "e_en": "In diesel engines, increasing the compression ratio reduces knocking by shortening the ignition delay period."
+ },
+ {
+  "id": "rp-je_-f00164",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन में COP (Coefficient of Performance) का मान क्या 1 से अधिक हो सकता है?",
+  "q_en": "Can the COP (Coefficient of Performance) in refrigeration be greater than 1?",
+  "o_hi": [
+   "नहीं, यह हमेशा 1 से कम होता है",
+   "हाँ, यह 1 से अधिक हो सकता है",
+   "यह हमेशा 1 के बराबर होता है",
+   "यह केवल शून्य हो सकता है"
+  ],
+  "o_en": [
+   "No, it is always less than 1",
+   "Yes, it can be greater than 1",
+   "It is always equal to 1",
+   "It can only be zero"
+  ],
+  "a": 1,
+  "e_hi": "रेफ्रिजरेटर के लिए COP का मान 1 से अधिक हो सकता है क्योंकि यह एक ऊष्मा पंप की तरह कार्य करता है जो कार्य इनपुट से अधिक ऊष्मा स्थानांतरित करता है।",
+  "e_en": "The COP of a refrigerator can be greater than 1 because it acts as a heat pump transferring more heat than the work input."
+ },
+ {
+  "id": "rp-je_-f00165",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "दो-स्ट्रोक इंजन में, एक चक्र पूरा होता है:",
+  "q_en": "In a two-stroke engine, one cycle is completed in:",
+  "o_hi": [
+   "पिस्टन के दो स्ट्रोक और क्रैंकशाफ्ट के दो चक्कर",
+   "पिस्टन के दो स्ट्रोक और क्रैंकशाफ्ट का एक चक्कर",
+   "पिस्टन का एक स्ट्रोक और क्रैंकशाफ्ट का एक चक्कर",
+   "पिस्टन के चार स्ट्रोक और क्रैंकशाफ्ट के दो चक्कर"
+  ],
+  "o_en": [
+   "Two strokes of piston and two revolutions of crankshaft",
+   "Two strokes of piston and one revolution of crankshaft",
+   "One stroke of piston and one revolution of crankshaft",
+   "Four strokes of piston and two revolutions of crankshaft"
+  ],
+  "a": 1,
+  "e_hi": "दो-स्ट्रोक इंजन में क्रैंकशाफ्ट के प्रत्येक चक्कर (360 डिग्री) में एक पावर स्ट्रोक होता है।",
+  "e_en": "In a two-stroke engine, there is one power stroke for every revolution (360 degrees) of the crankshaft."
+ },
+ {
+  "id": "rp-je_-f00166",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "कार्नोट चक्र (Carnot Cycle) में सभी प्रक्रियाएं कैसी होती हैं?",
+  "q_en": "In a Carnot cycle, how are all the processes characterized?",
+  "o_hi": [
+   "सभी अपरिवर्तनीय (Irreversible)",
+   "सभी प्रतिवर्ती (Reversible)",
+   "केवल विस्तार प्रतिवर्ती है",
+   "केवल संपीड़न प्रतिवर्ती है"
+  ],
+  "o_en": [
+   "All are irreversible",
+   "All are reversible",
+   "Only expansion is reversible",
+   "Only compression is reversible"
+  ],
+  "a": 1,
+  "e_hi": "कार्नोट चक्र एक आदर्श चक्र है जिसमें सभी चार प्रक्रियाएं पूर्णतः प्रतिवर्ती (reversible) मानी जाती हैं।",
+  "e_en": "The Carnot cycle is an ideal cycle where all four processes are considered perfectly reversible."
+ },
+ {
+  "id": "rp-je_-f00167",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "इंटरकूलिंग (Intercooling) का उपयोग बहु-चरणीय (Multi-stage) कंप्रेशर में क्यों किया जाता है?",
+  "q_en": "Why is intercooling used in a multi-stage compressor?",
+  "o_hi": [
+   "कार्य इनपुट बढ़ाने के लिए",
+   "संपीड़न का कार्य घटाने के लिए",
+   "वायु का दाब बढ़ाने के लिए",
+   "इंजन की दक्षता घटाने के लिए"
+  ],
+  "o_en": [
+   "To increase work input",
+   "To decrease the work of compression",
+   "To increase air pressure",
+   "To decrease engine efficiency"
+  ],
+  "a": 1,
+  "e_hi": "इंटरकूलिंग से गैस का घनत्व बढ़ जाता है और संपीड़न के लिए आवश्यक कुल कार्य कम हो जाता है।",
+  "e_en": "Intercooling increases gas density and reduces the total work required for compression."
+ },
+ {
+  "id": "rp-je_-f00168",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "वेपर कंप्रेशन रेफ्रिजरेशन चक्र में, रेफ्रिजरेंट कंप्रेशर में किस अवस्था में प्रवेश करता है?",
+  "q_en": "In a vapor compression refrigeration cycle, in what state does the refrigerant enter the compressor?",
+  "o_hi": [
+   "उच्च दाब तरल",
+   "कम दाब वाष्प",
+   "संतृप्त वाष्प",
+   "गीली वाष्प"
+  ],
+  "o_en": [
+   "High pressure liquid",
+   "Low pressure vapor",
+   "Saturated vapor",
+   "Wet vapor"
+  ],
+  "a": 2,
+  "e_hi": "आदर्श रूप से, कंप्रेसर में प्रवेश करने वाला रेफ्रिजरेंट 'ड्राई सैचुरेटेड वेपर' (संतृप्त वाष्प) होना चाहिए ताकि कंप्रेसर सुरक्षित रहे।",
+  "e_en": "Ideally, the refrigerant entering the compressor should be 'dry saturated vapor' to ensure compressor safety."
+ },
+ {
+  "id": "rp-je_-f00169",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "डीजल चक्र की दक्षता किस पर निर्भर करती है?",
+  "q_en": "The efficiency of a Diesel cycle depends on:",
+  "o_hi": [
+   "केवल संपीड़न अनुपात",
+   "केवल कट-ऑफ अनुपात",
+   "संपीड़न अनुपात और कट-ऑफ अनुपात दोनों",
+   "केवल ईंधन के प्रकार"
+  ],
+  "o_en": [
+   "Compression ratio only",
+   "Cut-off ratio only",
+   "Both compression ratio and cut-off ratio",
+   "Fuel type only"
+  ],
+  "a": 2,
+  "e_hi": "डीजल चक्र की तापीय दक्षता संपीड़न अनुपात और कट-ऑफ अनुपात (जिस बिंदु पर ईंधन जलना बंद होता है) दोनों पर निर्भर करती है।",
+  "e_en": "The thermal efficiency of a Diesel cycle depends on both the compression ratio and the cut-off ratio."
+ },
+ {
+  "id": "rp-je_-f00170",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक डीजल इंजन में, यदि ईंधन का इंजेक्शन बहुत जल्दी (एडवांस) हो जाता है, तो इंजन पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a diesel engine, what is the effect if fuel injection occurs too early (advanced injection)?",
+  "o_hi": [
+   "इंजन का शोर और कंपन बढ़ जाएगा",
+   "ईंधन की खपत कम हो जाएगी",
+   "इंजन की शक्ति बढ़ जाएगी",
+   "निकास तापमान कम हो जाएगा"
+  ],
+  "o_en": [
+   "Engine noise and vibration will increase",
+   "Fuel consumption will decrease",
+   "Engine power will increase",
+   "Exhaust temperature will decrease"
+  ],
+  "a": 0,
+  "e_hi": "जल्दी इंजेक्शन से सिलेंडर के अंदर अत्यधिक दबाव बढ़ जाता है, जिससे 'डीजल नॉक' (शोर) और कंपन पैदा होता है।",
+  "e_en": "Early injection causes excessive pressure rise inside the cylinder, leading to 'diesel knock' (noise) and increased vibration."
+ },
+ {
+  "id": "rp-je_-f00171",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "रेफ्रिजरेशन चक्र में, विस्तार वाल्व (Expansion Valve) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of an expansion valve in a refrigeration cycle?",
+  "o_hi": [
+   "रेफ्रिजरेंट के दबाव को कम करना",
+   "रेफ्रिजरेंट को वाष्पित करना",
+   "रेफ्रिजरेंट को कंप्रेस करना",
+   "रेफ्रिजरेंट को ठंडा करना"
+  ],
+  "o_en": [
+   "To reduce the pressure of the refrigerant",
+   "To evaporate the refrigerant",
+   "To compress the refrigerant",
+   "To cool the refrigerant"
+  ],
+  "a": 0,
+  "e_hi": "विस्तार वाल्व उच्च दबाव वाले तरल रेफ्रिजरेंट के दबाव को कम करता है ताकि वह इवेपोरेटर में आसानी से वाष्पित हो सके।",
+  "e_en": "The expansion valve reduces the pressure of the high-pressure liquid refrigerant so that it can easily evaporate in the evaporator."
+ },
+ {
+  "id": "rp-je_-f00172",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक फोर-स्ट्रोक पेट्रोल इंजन में, स्पार्क प्लग किस स्ट्रोक के अंत में सक्रिय होता है?",
+  "q_en": "In a four-stroke petrol engine, at the end of which stroke does the spark plug trigger?",
+  "o_hi": [
+   "संपीड़न (कम्प्रेशन) स्ट्रोक",
+   "सक्शन स्ट्रोक",
+   "पावर स्ट्रोक",
+   "निकास (एग्जॉस्ट) स्ट्रोक"
+  ],
+  "o_en": [
+   "Compression stroke",
+   "Suction stroke",
+   "Power stroke",
+   "Exhaust stroke"
+  ],
+  "a": 0,
+  "e_hi": "पेट्रोल इंजन में, संपीड़न स्ट्रोक के अंत में जब हवा-ईंधन मिश्रण पूरी तरह दब जाता है, तब स्पार्क प्लग चिंगारी छोड़ता है।",
+  "e_en": "In a petrol engine, the spark plug fires at the end of the compression stroke when the air-fuel mixture is fully compressed."
+ },
+ {
+  "id": "rp-je_-f00173",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "यदि किसी रेफ्रिजरेशन सिस्टम में रेफ्रिजरेंट की मात्रा कम हो जाए, तो इवेपोरेटर पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the refrigerant charge in a refrigeration system is low, what will be the effect on the evaporator?",
+  "o_hi": [
+   "बर्फ जमने की समस्या या कम शीतलन",
+   "कंप्रेसर की गति बढ़ जाएगी",
+   "कंडेंसर का तापमान बढ़ जाएगा",
+   "सिस्टम ओवरहीट हो जाएगा"
+  ],
+  "o_en": [
+   "Frosting issues or reduced cooling",
+   "Compressor speed will increase",
+   "Condenser temperature will rise",
+   "System will overheat"
+  ],
+  "a": 0,
+  "e_hi": "कम रेफ्रिजरेंट के कारण इवेपोरेटर का दबाव गिर जाता है, जिससे पाइपों पर बर्फ जम सकती है और शीतलन क्षमता घट जाती है।",
+  "e_en": "Low refrigerant causes the evaporator pressure to drop, which can lead to ice formation (frosting) on coils and reduced cooling capacity."
+ },
+ {
+  "id": "rp-je_-f00174",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "इंजन में 'वॉल्व ओवरलैप' की स्थिति क्या है?",
+  "q_en": "What is the condition of 'valve overlap' in an engine?",
+  "o_hi": [
+   "इनलेट और एग्जॉस्ट दोनों वॉल्व का एक साथ खुला होना",
+   "दोनों वॉल्व का पूरी तरह बंद होना",
+   "केवल इनलेट वॉल्व का खुला होना",
+   "केवल एग्जॉस्ट वॉल्व का खुला होना"
+  ],
+  "o_en": [
+   "Both inlet and exhaust valves are open simultaneously",
+   "Both valves are fully closed",
+   "Only the inlet valve is open",
+   "Only the exhaust valve is open"
+  ],
+  "a": 0,
+  "e_hi": "वॉल्व ओवरलैप वह समय है जब सक्शन स्ट्रोक की शुरुआत में इनलेट और एग्जॉस्ट दोनों वॉल्व थोड़े समय के लिए खुले रहते हैं।",
+  "e_en": "Valve overlap is the period at the beginning of the suction stroke when both the inlet and exhaust valves remain open for a brief time."
+ },
+ {
+  "id": "rp-je_-f00175",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "वाष्प संपीड़न प्रशीतन चक्र (VCR) का मुख्य घटक जो ऊष्मा को बाहर निकालता है, वह कौन सा है?",
+  "q_en": "Which main component of the Vapor Compression Refrigeration (VCR) cycle rejects heat to the surroundings?",
+  "o_hi": [
+   "कंडेंसर",
+   "इवेपोरेटर",
+   "कंप्रेसर",
+   "विस्तार वाल्व"
+  ],
+  "o_en": [
+   "Condenser",
+   "Evaporator",
+   "Compressor",
+   "Expansion valve"
+  ],
+  "a": 0,
+  "e_hi": "कंडेंसर का कार्य कंप्रेसर से आने वाली गर्म वाष्प को ठंडा करके उसे तरल में बदलना है, जिससे ऊष्मा बाहर निकलती है।",
+  "e_en": "The function of the condenser is to cool the hot vapor from the compressor and turn it into liquid, thereby rejecting heat to the surroundings."
+ },
+ {
+  "id": "rp-je_-f00176",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "डीजल इंजन में 'डीजल नॉक' को कम करने के लिए क्या किया जाना चाहिए?",
+  "q_en": "What should be done to reduce 'diesel knock' in a diesel engine?",
+  "o_hi": [
+   "ईंधन का सिटेन नंबर बढ़ाना",
+   "कंप्रेशन अनुपात कम करना",
+   "इंजन की गति बढ़ाना",
+   "इंजेक्शन का समय देरी से करना"
+  ],
+  "o_en": [
+   "Increase the cetane number of the fuel",
+   "Decrease the compression ratio",
+   "Increase the engine speed",
+   "Delay the injection timing"
+  ],
+  "a": 0,
+  "e_hi": "उच्च सिटेन नंबर वाला ईंधन जल्दी प्रज्वलित होता है, जिससे इग्निशन डिले कम हो जाता है और डीजल नॉक कम हो जाता है।",
+  "e_en": "High cetane number fuel ignites faster, which reduces ignition delay and consequently reduces diesel knock."
+ },
+ {
+  "id": "rp-je_-f00177",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "रेफ्रिजरेशन सिस्टम में 'सक-सक' (Compressor flooding) की समस्या क्यों होती है?",
+  "q_en": "Why does 'compressor flooding' occur in a refrigeration system?",
+  "o_hi": [
+   "तरल रेफ्रिजरेंट का सीधे कंप्रेसर में प्रवेश करना",
+   "गैस का अत्यधिक दबाव",
+   "कंप्रेसर तेल का खत्म होना",
+   "इवेपोरेटर में अधिक हवा का होना"
+  ],
+  "o_en": [
+   "Liquid refrigerant entering the compressor directly",
+   "Excessive gas pressure",
+   "Loss of compressor oil",
+   "Excess air in the evaporator"
+  ],
+  "a": 0,
+  "e_hi": "यदि तरल रेफ्रिजरेंट वाष्पित हुए बिना कंप्रेसर में पहुंचता है, तो यह कंप्रेसर के वाल्वों को नुकसान पहुंचा सकता है।",
+  "e_en": "If liquid refrigerant reaches the compressor without evaporating, it can cause severe damage to the compressor valves."
+ },
+ {
+  "id": "rp-je_-f00178",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक इंजन में 'स्कैवेंजिंग' (Scavenging) की प्रक्रिया का क्या अर्थ है?",
+  "q_en": "What does the process of 'scavenging' mean in an engine?",
+  "o_hi": [
+   "जली हुई गैसों को सिलेंडर से बाहर निकालना",
+   "ईंधन को इंजेक्ट करना",
+   "हवा को कंप्रेस करना",
+   "पिस्टन को लुब्रिकेट करना"
+  ],
+  "o_en": [
+   "Removing burnt gases from the cylinder",
+   "Injecting fuel",
+   "Compressing air",
+   "Lubricating the piston"
+  ],
+  "a": 0,
+  "e_hi": "स्कैवेंजिंग वह प्रक्रिया है जिसमें ताजी हवा या मिश्रण का उपयोग करके जली हुई गैसों को सिलेंडर से बाहर धकेला जाता है।",
+  "e_en": "Scavenging is the process of using fresh air or mixture to push out the burnt exhaust gases from the cylinder."
+ },
+ {
+  "id": "rp-je_-f00179",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "रेफ्रिजरेटर के इवेपोरेटर में 'सुपरहीटिंग' (Superheating) का लाभ क्या है?",
+  "q_en": "What is the advantage of 'superheating' in a refrigerator's evaporator?",
+  "o_hi": [
+   "यह सुनिश्चित करना कि कंप्रेसर में केवल वाष्प जाए",
+   "शीतलन क्षमता को कम करना",
+   "कंप्रेसर का दबाव बढ़ाना",
+   "कंडेंसर को गर्म करना"
+  ],
+  "o_en": [
+   "Ensuring only vapor enters the compressor",
+   "Reducing cooling capacity",
+   "Increasing compressor pressure",
+   "Heating the condenser"
+  ],
+  "a": 0,
+  "e_hi": "सुपरहीटिंग यह सुनिश्चित करती है कि इवेपोरेटर से निकलने वाली रेफ्रिजरेंट पूरी तरह से वाष्प अवस्था में हो, जिससे कंप्रेसर सुरक्षित रहता है।",
+  "e_en": "Superheating ensures that the refrigerant leaving the evaporator is completely in vapor state, which protects the compressor from liquid damage."
+ },
+ {
+  "id": "rp-je_-f00180",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक बंद प्रणाली (closed system) में, यदि गैस का आयतन स्थिर रहता है, तो प्रणाली द्वारा किया गया कार्य कितना होगा?",
+  "q_en": "In a closed system, if the volume of the gas remains constant, what will be the work done by the system?",
+  "o_hi": [
+   "शून्य",
+   "धनात्मक",
+   "ऋणात्मक",
+   "अनंत"
+  ],
+  "o_en": [
+   "Zero",
+   "Positive",
+   "Negative",
+   "Infinite"
+  ],
+  "a": 0,
+  "e_hi": "स्थिर आयतन प्रक्रिया (आइसोकोरिक प्रक्रिया) में, विस्थापन कार्य (PdV) शून्य होता है क्योंकि आयतन में परिवर्तन शून्य है।",
+  "e_en": "In a constant volume process (isochoric process), displacement work (PdV) is zero because the change in volume is zero."
+ },
+ {
+  "id": "rp-je_-f00181",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेटर के दरवाजे को एक बंद कमरे में खुला छोड़ देने पर कमरे के तापमान पर क्या प्रभाव पड़ेगा?",
+  "q_en": "What will be the effect on the room temperature if the refrigerator door is left open in a closed room?",
+  "o_hi": [
+   "कमरा ठंडा हो जाएगा",
+   "कमरे का तापमान बढ़ जाएगा",
+   "कमरे का तापमान स्थिर रहेगा",
+   "कमरे में नमी बढ़ जाएगी"
+  ],
+  "o_en": [
+   "The room will cool down",
+   "The room temperature will increase",
+   "The room temperature will remain constant",
+   "Humidity in the room will increase"
+  ],
+  "a": 1,
+  "e_hi": "रेफ्रिजरेटर का कंप्रेसर कमरे में ऊष्मा छोड़ता है, जो रेफ्रिजरेटर के अंदर से निकाली गई ऊष्मा से अधिक होती है, जिससे नेट तापमान बढ़ जाता है।",
+  "e_en": "The refrigerator compressor releases heat into the room which is greater than the heat extracted from inside, resulting in a net increase in temperature."
+ },
+ {
+  "id": "rp-je_-f00182",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "थर्मोडायनामिक्स का कौन सा नियम ऊर्जा संरक्षण के सिद्धांत (Law of Conservation of Energy) पर आधारित है?",
+  "q_en": "Which law of thermodynamics is based on the Law of Conservation of Energy?",
+  "o_hi": [
+   "शून्य नियम",
+   "प्रथम नियम",
+   "द्वितीय नियम",
+   "तृतीय नियम"
+  ],
+  "o_en": [
+   "Zeroth Law",
+   "First Law",
+   "Second Law",
+   "Third Law"
+  ],
+  "a": 1,
+  "e_hi": "ऊष्मागतिकी का प्रथम नियम बताता है कि ऊर्जा न तो बनाई जा सकती है और न ही नष्ट की जा सकती है, केवल रूपांतरित की जा सकती है।",
+  "e_en": "The first law of thermodynamics states that energy can neither be created nor destroyed, only transformed."
+ },
+ {
+  "id": "rp-je_-f00183",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक इंजन की दक्षता (efficiency) 100% होने के लिए सिंक (sink) का तापमान कितना होना चाहिए?",
+  "q_en": "What should be the temperature of the sink for an engine to have 100% efficiency?",
+  "o_hi": [
+   "100 डिग्री सेल्सियस",
+   "0 डिग्री सेल्सियस",
+   "0 केल्विन",
+   "अपरिभाषित"
+  ],
+  "o_en": [
+   "100 degree Celsius",
+   "0 degree Celsius",
+   "0 Kelvin",
+   "Undefined"
+  ],
+  "a": 2,
+  "e_hi": "कार्नोट प्रमेय के अनुसार, दक्षता 100% तभी संभव है जब सिंक का तापमान पूर्ण शून्य (0 K) हो, जो व्यावहारिक रूप से असंभव है।",
+  "e_en": "According to Carnot's theorem, 100% efficiency is only possible if the sink temperature is absolute zero (0 K), which is practically impossible."
+ },
+ {
+  "id": "rp-je_-f00184",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक आदर्श गैस के लिए, एन्थैल्पी (Enthalpy) केवल किसका फलन है?",
+  "q_en": "For an ideal gas, enthalpy is a function of which parameter only?",
+  "o_hi": [
+   "दबाव",
+   "आयतन",
+   "तापमान",
+   "एन्ट्रॉपी"
+  ],
+  "o_en": [
+   "Pressure",
+   "Volume",
+   "Temperature",
+   "Entropy"
+  ],
+  "a": 2,
+  "e_hi": "आदर्श गैस के लिए, आंतरिक ऊर्जा और एन्थैल्पी केवल तापमान पर निर्भर करती है क्योंकि अणुओं के बीच कोई अंतःक्रिया बल नहीं होता।",
+  "e_en": "For an ideal gas, internal energy and enthalpy depend only on temperature because there are no intermolecular forces."
+ },
+ {
+  "id": "rp-je_-f00185",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "पॉलीट्रोपिक प्रक्रिया (Polytropic process) में, यदि सूचकांक (n) का मान 1 हो, तो प्रक्रिया क्या कहलाती है?",
+  "q_en": "In a polytropic process, if the index (n) value is 1, what is the process called?",
+  "o_hi": [
+   "आइसोथर्मल (समतापीय)",
+   "आइसोबारिक (समदाबी)",
+   "एडियाबेटिक (रुद्धोष्म)",
+   "आइसोकोरिक (समआयतनिक)"
+  ],
+  "o_en": [
+   "Isothermal",
+   "Isobaric",
+   "Adiabatic",
+   "Isochoric"
+  ],
+  "a": 0,
+  "e_hi": "जब पॉलीट्रोपिक सूचकांक n = 1 होता है, तो PV = C, जो कि समतापीय प्रक्रिया का समीकरण है।",
+  "e_en": "When the polytropic index n = 1, PV = C, which is the equation for an isothermal process."
+ },
+ {
+  "id": "rp-je_-f00186",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "भाप इंजन के संचालन में, कंडेंसर (condenser) का मुख्य उद्देश्य क्या है?",
+  "q_en": "In the operation of a steam engine, what is the primary purpose of the condenser?",
+  "o_hi": [
+   "दबाव बढ़ाना",
+   "भाप को ठंडा करके पानी में बदलना",
+   "ईंधन बचाना",
+   "इंजन की गति बढ़ाना"
+  ],
+  "o_en": [
+   "To increase pressure",
+   "To convert steam to water by cooling",
+   "To save fuel",
+   "To increase engine speed"
+  ],
+  "a": 1,
+  "e_hi": "कंडेंसर का कार्य निकास भाप को ठंडा करना और उसे कंडेंसेट में बदलना है, जिससे निकास पर कम दबाव बनता है और कार्य क्षमता बढ़ती है।",
+  "e_en": "The condenser cools the exhaust steam and converts it into condensate, creating low pressure at the exhaust and improving efficiency."
+ },
+ {
+  "id": "rp-je_-f00187",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "ऊष्मागतिकी का कौन सा नियम 'एन्ट्रॉपी' (Entropy) की अवधारणा को परिभाषित करता है?",
+  "q_en": "Which law of thermodynamics defines the concept of 'Entropy'?",
+  "o_hi": [
+   "शून्य नियम",
+   "प्रथम नियम",
+   "द्वितीय नियम",
+   "तृतीय नियम"
+  ],
+  "o_en": [
+   "Zeroth Law",
+   "First Law",
+   "Second Law",
+   "Third Law"
+  ],
+  "a": 2,
+  "e_hi": "द्वितीय नियम बताता है कि एक पृथक प्रणाली की कुल एन्ट्रॉपी समय के साथ कभी कम नहीं हो सकती।",
+  "e_en": "The second law states that the total entropy of an isolated system can never decrease over time."
+ },
+ {
+  "id": "rp-je_-f00188",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 3,
+  "q_hi": "यदि किसी गैस को अचानक संकुचित (compress) किया जाता है, तो यह किस प्रकार की प्रक्रिया का उदाहरण है?",
+  "q_en": "If a gas is compressed suddenly, what type of process is this an example of?",
+  "o_hi": [
+   "समतापीय",
+   "समदाबी",
+   "रुद्धोष्म (एडियाबेटिक)",
+   "समआयतनिक"
+  ],
+  "o_en": [
+   "Isothermal",
+   "Isobaric",
+   "Adiabatic",
+   "Isochoric"
+  ],
+  "a": 2,
+  "e_hi": "अचानक होने वाली प्रक्रियाएं इतनी तेज होती हैं कि ऊष्मा का आदान-प्रदान नहीं हो पाता, इसलिए उन्हें एडियाबेटिक माना जाता है।",
+  "e_en": "Sudden processes occur so quickly that there is no time for heat exchange, hence they are considered adiabatic."
+ },
+ {
+  "id": "rp-je_-f00189",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक कारनोट चक्र (Carnot cycle) में कितने चरण (processes) होते हैं?",
+  "q_en": "How many processes are there in a Carnot cycle?",
+  "o_hi": [
+   "दो",
+   "तीन",
+   "चार",
+   "छह"
+  ],
+  "o_en": [
+   "Two",
+   "Three",
+   "Four",
+   "Six"
+  ],
+  "a": 2,
+  "e_hi": "कारनोट चक्र में चार प्रतिवर्ती प्रक्रियाएं होती हैं: दो समतापीय और दो रुद्धोष्म प्रक्रियाएं।",
+  "e_en": "A Carnot cycle consists of four reversible processes: two isothermal and two adiabatic processes."
  }
 ]
