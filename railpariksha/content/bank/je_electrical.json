@@ -9865,5 +9865,465 @@
   "a": 2,
   "e_hi": "बी.जे.टी. (Bipolar Junction Transistor) में कलेक्टर धारा बेस धारा द्वारा नियंत्रित होती है।",
   "e_en": "In a BJT (Bipolar Junction Transistor), the collector current is controlled by the base current, hence it is current-controlled."
+ },
+ {
+  "id": "rp-je_e-f00430",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "SCR (सिलिकॉन कंट्रोल्ड रेक्टिफायर) में गेट करंट का मान बढ़ाने पर 'लैचिंग करंट' (Latching Current) पर क्या प्रभाव पड़ता है?",
+  "q_en": "What is the effect on the 'latching current' of an SCR when the gate current is increased?",
+  "o_hi": [
+   "लैचिंग करंट बढ़ता है",
+   "लैचिंग करंट घटता है",
+   "लैचिंग करंट स्थिर रहता है",
+   "लैचिंग करंट शून्य हो जाता है"
+  ],
+  "o_en": [
+   "Latching current increases",
+   "Latching current decreases",
+   "Latching current remains constant",
+   "Latching current becomes zero"
+  ],
+  "a": 1,
+  "e_hi": "गेट करंट बढ़ाने से आंतरिक जंक्शनों के सक्रिय होने में मदद मिलती है, जिससे डिवाइस को ऑन बनाए रखने के लिए आवश्यक न्यूनतम करंट (लैचिंग करंट) कम हो जाता है।",
+  "e_en": "Increasing the gate current helps in activating the internal junctions more easily, thereby reducing the minimum current (latching current) required to keep the device in the ON state."
+ },
+ {
+  "id": "rp-je_e-f00431",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "एक पावर ट्रांजिस्टर में 'सेकेंडरी ब्रेकडाउन' (Secondary Breakdown) का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of 'secondary breakdown' in a power transistor?",
+  "o_hi": [
+   "वोल्टेज में अचानक वृद्धि",
+   "करंट का स्थानीयकृत संकेंद्रण (Hot spots)",
+   "गेट वोल्टेज का कम होना",
+   "तापमान में अत्यधिक गिरावट"
+  ],
+  "o_en": [
+   "Sudden increase in voltage",
+   "Localized current concentration (Hot spots)",
+   "Decrease in gate voltage",
+   "Excessive drop in temperature"
+  ],
+  "a": 1,
+  "e_hi": "सेकेंडरी ब्रेकडाउन तब होता है जब करंट चिप के एक छोटे हिस्से में केंद्रित हो जाता है, जिससे 'हॉट स्पॉट' बनते हैं और डिवाइस विफल हो जाता है।",
+  "e_en": "Secondary breakdown occurs when current concentrates in a small area of the chip, creating 'hot spots' that lead to device failure."
+ },
+ {
+  "id": "rp-je_e-f00432",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "थाइरिस्टर में 'होल्डिंग करंट' (Holding Current) और 'लैचिंग करंट' (Latching Current) के बीच सही संबंध क्या है?",
+  "q_en": "What is the correct relationship between 'holding current' and 'latching current' in a thyristor?",
+  "o_hi": [
+   "लैचिंग करंट हमेशा होल्डिंग करंट से कम होता है",
+   "लैचिंग करंट हमेशा होल्डिंग करंट से अधिक होता है",
+   "दोनों हमेशा बराबर होते हैं",
+   "इनका आपस में कोई निश्चित संबंध नहीं है"
+  ],
+  "o_en": [
+   "Latching current is always less than holding current",
+   "Latching current is always greater than holding current",
+   "Both are always equal",
+   "There is no fixed relationship between them"
+  ],
+  "a": 1,
+  "e_hi": "लैचिंग करंट डिवाइस को चालू करने के लिए आवश्यक है, जबकि होल्डिंग करंट उसे चालू रखने के लिए। आमतौर पर, लैचिंग करंट होल्डिंग करंट से अधिक होता है।",
+  "e_en": "Latching current is required to turn the device on, while holding current is required to keep it on. Typically, latching current is greater than holding current."
+ },
+ {
+  "id": "rp-je_e-f00433",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "यदि एक SCR का गेट सिग्नल हटा दिया जाए, तो क्या वह चालू रहेगा?",
+  "q_en": "If the gate signal of an SCR is removed, will it remain ON?",
+  "o_hi": [
+   "हाँ, यदि एनोड करंट लैचिंग करंट से अधिक है",
+   "नहीं, वह तुरंत बंद हो जाएगा",
+   "हाँ, यदि वोल्टेज शून्य है",
+   "नहीं, केवल तब जब तापमान बहुत अधिक हो"
+  ],
+  "o_en": [
+   "Yes, if the anode current is greater than the latching current",
+   "No, it will turn off immediately",
+   "Yes, if the voltage is zero",
+   "No, only if the temperature is very high"
+  ],
+  "a": 0,
+  "e_hi": "SCR एक बार चालू होने के बाद गेट सिग्नल पर निर्भर नहीं रहता, जब तक कि उसका एनोड करंट होल्डिंग करंट से ऊपर बना रहे।",
+  "e_en": "Once an SCR is turned ON, it does not rely on the gate signal as long as the anode current remains above the holding current."
+ },
+ {
+  "id": "rp-je_e-f00434",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "डायोड में 'रिवर्स रिकवरी टाइम' (Reverse Recovery Time) का क्या अर्थ है?",
+  "q_en": "What is the significance of 'reverse recovery time' in a diode?",
+  "o_hi": [
+   "फॉरवर्ड कंडक्शन के दौरान लगने वाला समय",
+   "डायोड के बंद होने के बाद करंट के शून्य होने तक का समय",
+   "गेट को ट्रिगर करने में लगा समय",
+   "वोल्टेज के बढ़ने का समय"
+  ],
+  "o_en": [
+   "Time taken during forward conduction",
+   "Time taken for current to reach zero after turn-off",
+   "Time taken to trigger the gate",
+   "Time taken for voltage to rise"
+  ],
+  "a": 1,
+  "e_hi": "रिवर्स रिकवरी टाइम वह समय है जो जंक्शन से संचित आवेश (stored charge) को हटाने में लगता है ताकि डायोड ब्लॉक कर सके।",
+  "e_en": "Reverse recovery time is the time required to remove the stored charge from the junction so that the diode can block current."
+ },
+ {
+  "id": "rp-je_e-f00435",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "MOSFET को 'वोल्टेज कंट्रोल्ड डिवाइस' क्यों कहा जाता है?",
+  "q_en": "Why is a MOSFET called a 'voltage-controlled device'?",
+  "o_hi": [
+   "क्योंकि इसमें गेट करंट शून्य होता है",
+   "क्योंकि गेट वोल्टेज आउटपुट करंट को नियंत्रित करता है",
+   "क्योंकि ड्रेन करंट इनपुट करंट पर निर्भर है",
+   "क्योंकि यह केवल डीसी पर चलता है"
+  ],
+  "o_en": [
+   "Because its gate current is zero",
+   "Because gate voltage controls the output current",
+   "Because drain current depends on input current",
+   "Because it only operates on DC"
+  ],
+  "a": 1,
+  "e_hi": "MOSFET में गेट टर्मिनल एक इंसुलेटर (SiO2) द्वारा अलग होता है, इसलिए कोई करंट प्रवाहित नहीं होता; केवल गेट वोल्टेज ड्रेन-सोर्स चैनल को नियंत्रित करता है।",
+  "e_en": "In a MOSFET, the gate terminal is isolated by an insulator (SiO2), so no current flows; the gate voltage simply controls the drain-source channel."
+ },
+ {
+  "id": "rp-je_e-f00436",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक 'फ्री-व्हीलिंग डायोड' (Freewheeling Diode) का उपयोग इंडक्टिव लोड के साथ क्यों किया जाता है?",
+  "q_en": "Why is a 'freewheeling diode' used with an inductive load?",
+  "o_hi": [
+   "वोल्टेज स्पाइक्स को रोकने के लिए",
+   "लोड करंट को बढ़ाने के लिए",
+   "पावर फैक्टर सुधारने के लिए",
+   "रेक्टिफिकेशन के लिए"
+  ],
+  "o_en": [
+   "To prevent voltage spikes",
+   "To increase load current",
+   "To improve power factor",
+   "For rectification"
+  ],
+  "a": 0,
+  "e_hi": "इंडक्टिव लोड करंट को अचानक बदलने नहीं देते। स्विच ऑफ होने पर, डायोड संचित ऊर्जा के लिए एक रास्ता प्रदान करता है, जिससे हाई वोल्टेज स्पाइक्स से सर्किट बच जाता है।",
+  "e_en": "Inductive loads resist sudden changes in current. When the switch opens, the diode provides a path for the stored energy, protecting the circuit from high voltage spikes."
+ },
+ {
+  "id": "rp-je_e-f00437",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "IGBT में कौन से दो उपकरणों के गुण मौजूद होते हैं?",
+  "q_en": "Which two devices' characteristics are present in an IGBT?",
+  "o_hi": [
+   "BJT और MOSFET",
+   "SCR और डायोड",
+   "MOSFET और SCR",
+   "BJT और डायोड"
+  ],
+  "o_en": [
+   "BJT and MOSFET",
+   "SCR and diode",
+   "MOSFET and SCR",
+   "BJT and diode"
+  ],
+  "a": 0,
+  "e_hi": "IGBT में MOSFET का इनपुट गेट (हाई इम्पीडेंस) और BJT का आउटपुट (लो ऑन-स्टेट वोल्टेज) गुण होता है।",
+  "e_en": "An IGBT combines the high input impedance of a MOSFET with the low on-state voltage drop characteristics of a BJT."
+ },
+ {
+  "id": "rp-je_e-f00438",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "यदि चॉपर (Chopper) की फ्रीक्वेंसी बढ़ाई जाए, तो क्या होगा?",
+  "q_en": "What happens if the frequency of a chopper is increased?",
+  "o_hi": [
+   "आउटपुट वोल्टेज कम हो जाएगा",
+   "स्विचिंग लॉस बढ़ जाएगा",
+   "रिपल (Ripple) बढ़ जाएगा",
+   "सर्किट की दक्षता कम हो जाएगी"
+  ],
+  "o_en": [
+   "Output voltage will decrease",
+   "Switching losses will increase",
+   "Ripple will increase",
+   "Circuit efficiency will decrease"
+  ],
+  "a": 1,
+  "e_hi": "उच्च फ्रीक्वेंसी पर, स्विचिंग क्रियाएं बार-बार होती हैं, जिससे प्रत्येक चक्र में स्विचिंग लॉस बढ़ जाता है, हालांकि रिपल कम हो जाता है।",
+  "e_en": "At higher frequencies, switching actions occur more frequently, leading to higher switching losses per cycle, although the ripple current decreases."
+ },
+ {
+  "id": "rp-je_e-f00439",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में 'स्नबर सर्किट' (Snubber Circuit) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of a 'snubber circuit' in power electronics?",
+  "o_hi": [
+   "वोल्टेज और करंट के dv/dt और di/dt को नियंत्रित करना",
+   "आउटपुट करंट को बढ़ाना",
+   "इनपुट वोल्टेज को फिल्टर करना",
+   "डिवाइस को ठंडा करना"
+  ],
+  "o_en": [
+   "To control dv/dt and di/dt of voltage and current",
+   "To increase output current",
+   "To filter input voltage",
+   "To cool the device"
+  ],
+  "a": 0,
+  "e_hi": "स्नबर सर्किट का उपयोग थाइरिस्टर जैसे उपकरणों को वोल्टेज के तेजी से बढ़ने (dv/dt) से बचाने के लिए किया जाता है ताकि वे अनचाहे चालू न हों।",
+  "e_en": "Snubber circuits are used to protect devices like thyristors from rapid voltage rise (dv/dt) to prevent accidental turn-on."
+ },
+ {
+  "id": "rp-je_e-f00440",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में थाइरिस्टर (SCR) किस प्रकार का उपकरण है?",
+  "q_en": "What type of device is a Thyristor (SCR) in power electronics?",
+  "o_hi": [
+   "अर्ध-नियंत्रित उपकरण",
+   "पूर्ण-नियंत्रित उपकरण",
+   "अनियंत्रित उपकरण",
+   "द्वि-दिशात्मक उपकरण"
+  ],
+  "o_en": [
+   "Semi-controlled device",
+   "Fully-controlled device",
+   "Uncontrolled device",
+   "Bidirectional device"
+  ],
+  "a": 0,
+  "e_hi": "SCR को गेट पल्स द्वारा चालू किया जा सकता है, लेकिन इसे गेट सिग्नल से बंद नहीं किया जा सकता, इसलिए यह अर्ध-नियंत्रित है।",
+  "e_en": "SCR can be turned on by a gate pulse but cannot be turned off by a gate signal, making it semi-controlled."
+ },
+ {
+  "id": "rp-je_e-f00441",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक पावर डायोड में कितने टर्मिनल होते हैं?",
+  "q_en": "How many terminals does a power diode have?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "चार"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Four"
+  ],
+  "a": 1,
+  "e_hi": "पावर डायोड में दो टर्मिनल होते हैं जिन्हें एनोड और कैथोड कहा जाता है।",
+  "e_en": "A power diode has two terminals known as the anode and the cathode."
+ },
+ {
+  "id": "rp-je_e-f00442",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में 'कम्यूटेशन' (Commutation) प्रक्रिया का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of the 'commutation' process in power electronics?",
+  "o_hi": [
+   "वोल्टेज को बढ़ाना",
+   "SCR को बंद करना",
+   "आवृत्ति को मापना",
+   "करंट को फिल्टर करना"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "To turn off the SCR",
+   "To measure frequency",
+   "To filter current"
+  ],
+  "a": 1,
+  "e_hi": "कम्यूटेशन वह प्रक्रिया है जिसके द्वारा एक थाइरिस्टर को उसकी संचालन अवस्था से बंद अवस्था में लाया जाता है।",
+  "e_en": "Commutation is the process of bringing a thyristor from its conducting state to its non-conducting state."
+ },
+ {
+  "id": "rp-je_e-f00443",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "इनमें से कौन सा उपकरण पूर्ण-नियंत्रित (Fully-controlled) है?",
+  "q_en": "Which of these devices is fully-controlled?",
+  "o_hi": [
+   "SCR",
+   "डायोड",
+   "GTO",
+   "DIAC"
+  ],
+  "o_en": [
+   "SCR",
+   "Diode",
+   "GTO",
+   "DIAC"
+  ],
+  "a": 2,
+  "e_hi": "GTO (गेट टर्न-ऑफ थाइरिस्टर) को गेट सिग्नल के माध्यम से चालू और बंद दोनों किया जा सकता है।",
+  "e_en": "GTO (Gate Turn-Off thyristor) can be both turned on and turned off via gate signals."
+ },
+ {
+  "id": "rp-je_e-f00444",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "पावर ट्रांजिस्टर का मुख्य उपयोग किस क्षेत्र में होता है?",
+  "q_en": "In which area is a power transistor primarily used?",
+  "o_hi": [
+   "केवल स्विचिंग",
+   "केवल प्रवर्धन",
+   "स्विचिंग और प्रवर्धन दोनों",
+   "वोल्टेज नियामक"
+  ],
+  "o_en": [
+   "Switching only",
+   "Amplification only",
+   "Both switching and amplification",
+   "Voltage regulator"
+  ],
+  "a": 2,
+  "e_hi": "पावर ट्रांजिस्टर का उपयोग उच्च शक्ति वाले अनुप्रयोगों में स्विच और एम्पलीफायर दोनों के रूप में किया जा सकता है।",
+  "e_en": "Power transistors can be used as both switches and amplifiers in high-power applications."
+ },
+ {
+  "id": "rp-je_e-f00445",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "TRIAC एक कैसा उपकरण है?",
+  "q_en": "What type of device is a TRIAC?",
+  "o_hi": [
+   "एक-दिशात्मक",
+   "द्वि-दिशात्मक",
+   "नियंत्रित नहीं",
+   "केवल डीसी के लिए"
+  ],
+  "o_en": [
+   "Unidirectional",
+   "Bidirectional",
+   "Uncontrolled",
+   "For DC only"
+  ],
+  "a": 1,
+  "e_hi": "TRIAC एक द्वि-दिशात्मक उपकरण है जो एसी (AC) के दोनों अर्ध-चक्रों में धारा प्रवाहित कर सकता है।",
+  "e_en": "A TRIAC is a bidirectional device that can conduct current in both half-cycles of AC."
+ },
+ {
+  "id": "rp-je_e-f00446",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में 'इन्वर्टर' का कार्य क्या है?",
+  "q_en": "What is the function of an 'inverter' in power electronics?",
+  "o_hi": [
+   "AC को DC में बदलना",
+   "DC को AC में बदलना",
+   "वोल्टेज को स्थिर करना",
+   "आवृत्ति को कम करना"
+  ],
+  "o_en": [
+   "Convert AC to DC",
+   "Convert DC to AC",
+   "Stabilize voltage",
+   "Decrease frequency"
+  ],
+  "a": 1,
+  "e_hi": "इन्वर्टर एक पावर इलेक्ट्रॉनिक सर्किट है जो डीसी इनपुट को एसी आउटपुट में परिवर्तित करता है।",
+  "e_en": "An inverter is a power electronic circuit that converts DC input into AC output."
+ },
+ {
+  "id": "rp-je_e-f00447",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "थाइरिस्टर के 'होल्डिंग करंट' (Holding Current) का मान 'लैचिंग करंट' (Latching Current) से कैसा होता है?",
+  "q_en": "How is the 'holding current' value of a thyristor compared to its 'latching current'?",
+  "o_hi": [
+   "अधिक",
+   "कम",
+   "समान",
+   "दो गुना"
+  ],
+  "o_en": [
+   "Higher",
+   "Lower",
+   "Equal",
+   "Double"
+  ],
+  "a": 1,
+  "e_hi": "थाइरिस्टर के लिए हमेशा होल्डिंग करंट का मान लैचिंग करंट से कम होता है।",
+  "e_en": "For a thyristor, the holding current value is always lower than the latching current."
+ },
+ {
+  "id": "rp-je_e-f00448",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में 'रेक्टिफायर' का क्या कार्य है?",
+  "q_en": "What is the function of a 'rectifier' in power electronics?",
+  "o_hi": [
+   "DC को AC में बदलना",
+   "AC को DC में बदलना",
+   "वोल्टेज बढ़ाना",
+   "करंट बढ़ाना"
+  ],
+  "o_en": [
+   "Convert DC to AC",
+   "Convert AC to DC",
+   "Increase voltage",
+   "Increase current"
+  ],
+  "a": 1,
+  "e_hi": "रेक्टिफायर एक ऐसा सर्किट है जो प्रत्यावर्ती धारा (AC) को दिष्ट धारा (DC) में परिवर्तित करता है।",
+  "e_en": "A rectifier is a circuit that converts alternating current (AC) into direct current (DC)."
+ },
+ {
+  "id": "rp-je_e-f00449",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "UJT (यूनिजंक्शन ट्रांजिस्टर) का उपयोग मुख्य रूप से किसमें किया जाता है?",
+  "q_en": "What is UJT (Unijunction Transistor) primarily used for?",
+  "o_hi": [
+   "पावर एम्पलीफायर",
+   "ट्रिगरिंग सर्किट",
+   "वोल्टेज रेगुलेटर",
+   "रेक्टिफायर"
+  ],
+  "o_en": [
+   "Power amplifier",
+   "Triggering circuit",
+   "Voltage regulator",
+   "Rectifier"
+  ],
+  "a": 1,
+  "e_hi": "UJT की नकारात्मक प्रतिरोध विशेषता के कारण इसका उपयोग थाइरिस्टर के लिए ट्रिगरिंग पल्स उत्पन्न करने में होता है।",
+  "e_en": "Due to its negative resistance characteristic, UJT is used to generate triggering pulses for thyristors."
  }
 ]
