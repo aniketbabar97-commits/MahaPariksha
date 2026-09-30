@@ -1,1 +1,1911 @@
-[]
+[
+ {
+  "id": "rp-je_e-f00001",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि एक परिपथ में 10 ओम का प्रतिरोध है और उसमें से 5 एम्पीयर की धारा प्रवाहित हो रही है, तो वोल्टेज का मान क्या होगा?",
+  "q_en": "If a circuit has a resistance of 10 Ohms and a current of 5 Amperes is flowing through it, what will be the value of voltage?",
+  "o_hi": [
+   "2 वोल्ट",
+   "50 वोल्ट",
+   "0.5 वोल्ट",
+   "15 वोल्ट"
+  ],
+  "o_en": [
+   "2 Volts",
+   "50 Volts",
+   "0.5 Volts",
+   "15 Volts"
+  ],
+  "a": 1,
+  "e_hi": "ओम के नियम के अनुसार, V = I * R होता है। यहाँ V = 5 * 10 = 50 वोल्ट है।",
+  "e_en": "According to Ohm's law, V = I * R. Here, V = 5 * 10 = 50 Volts."
+ },
+ {
+  "id": "rp-je_e-f00002",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "दो प्रतिरोधक 6 ओम और 12 ओम श्रेणीक्रम में जुड़े हैं। उनका कुल समतुल्य प्रतिरोध क्या होगा?",
+  "q_en": "Two resistors of 6 Ohms and 12 Ohms are connected in series. What will be their total equivalent resistance?",
+  "o_hi": [
+   "4 ओम",
+   "18 ओम",
+   "8 ओम",
+   "2 ओम"
+  ],
+  "o_en": [
+   "4 Ohms",
+   "18 Ohms",
+   "8 Ohms",
+   "2 Ohms"
+  ],
+  "a": 1,
+  "e_hi": "श्रेणीक्रम में कुल प्रतिरोध R = R1 + R2 होता है। अतः R = 6 + 12 = 18 ओम।",
+  "e_en": "In series, total resistance R = R1 + R2. Thus, R = 6 + 12 = 18 Ohms."
+ },
+ {
+  "id": "rp-je_e-f00003",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक परिपथ में 20 ओम और 30 ओम के दो प्रतिरोधक समानांतर (पैरेलल) में जुड़े हैं। उनका समतुल्य प्रतिरोध ज्ञात कीजिए।",
+  "q_en": "Two resistors of 20 Ohms and 30 Ohms are connected in parallel in a circuit. Find their equivalent resistance.",
+  "o_hi": [
+   "50 ओम",
+   "10 ओम",
+   "12 ओम",
+   "25 ओम"
+  ],
+  "o_en": [
+   "50 Ohms",
+   "10 Ohms",
+   "12 Ohms",
+   "25 Ohms"
+  ],
+  "a": 2,
+  "e_hi": "समानांतर में, 1/R = 1/R1 + 1/R2 होता है। 1/R = 1/20 + 1/30 = 5/60, इसलिए R = 12 ओम।",
+  "e_en": "In parallel, 1/R = 1/R1 + 1/R2. 1/R = 1/20 + 1/30 = 5/60, so R = 12 Ohms."
+ },
+ {
+  "id": "rp-je_e-f00004",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि एक प्रेरक (Inductor) के माध्यम से प्रवाहित धारा 2 एम्पीयर प्रति सेकंड की दर से बदल रही है और उसका प्रेरकत्व 5 हेनरी है, तो प्रेरित ईएमएफ (EMF) क्या होगा?",
+  "q_en": "If the current flowing through an inductor is changing at a rate of 2 Amperes per second and its inductance is 5 Henries, what will be the induced EMF?",
+  "o_hi": [
+   "2.5 वोल्ट",
+   "10 वोल्ट",
+   "7 वोल्ट",
+   "0.4 वोल्ट"
+  ],
+  "o_en": [
+   "2.5 Volts",
+   "10 Volts",
+   "7 Volts",
+   "0.4 Volts"
+  ],
+  "a": 1,
+  "e_hi": "प्रेरित ईएमएफ का सूत्र e = L * (di/dt) है। यहाँ e = 5 * 2 = 10 वोल्ट।",
+  "e_en": "The formula for induced EMF is e = L * (di/dt). Here, e = 5 * 2 = 10 Volts."
+ },
+ {
+  "id": "rp-je_e-f00005",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 100 माइक्रो-फैराड के संधारित्र (Capacitor) को 200 वोल्ट की आपूर्ति से जोड़ा गया है। संधारित्र में संचित आवेश (Charge) की गणना करें।",
+  "q_en": "A 100 micro-Farad capacitor is connected to a 200 Volt supply. Calculate the charge stored in the capacitor.",
+  "o_hi": [
+   "0.02 कूलम्ब",
+   "2 कूलम्ब",
+   "0.2 कूलम्ब",
+   "20 कूलम्ब"
+  ],
+  "o_en": [
+   "0.02 Coulombs",
+   "2 Coulombs",
+   "0.2 Coulombs",
+   "20 Coulombs"
+  ],
+  "a": 0,
+  "e_hi": "आवेश Q = C * V होता है। Q = 100e-6 * 200 = 0.02 कूलम्ब।",
+  "e_en": "Charge Q = C * V. Q = 100e-6 * 200 = 0.02 Coulombs."
+ },
+ {
+  "id": "rp-je_e-f00006",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक श्रृंखला आरएलसी (RLC) परिपथ में, यदि प्रतिरोध 3 ओम, प्रेरकत्व प्रतिघात 4 ओम और धारिता प्रतिघात 1 ओम है, तो परिपथ का प्रतिबाधा (Impedance) क्या होगा?",
+  "q_en": "In a series RLC circuit, if resistance is 3 Ohms, inductive reactance is 4 Ohms, and capacitive reactance is 1 Ohm, what will be the impedance of the circuit?",
+  "o_hi": [
+   "8 ओम",
+   "5 ओम",
+   "7 ओम",
+   "3 ओम"
+  ],
+  "o_en": [
+   "8 Ohms",
+   "5 Ohms",
+   "7 Ohms",
+   "3 Ohms"
+  ],
+  "a": 1,
+  "e_hi": "प्रतिबाधा Z = sqrt(R^2 + (XL - XC)^2) होता है। Z = sqrt(3^2 + (4-1)^2) = sqrt(9+9) = 4.24, जो विकल्प 5 के निकट है।",
+  "e_en": "Impedance Z = sqrt(R^2 + (XL - XC)^2). Z = sqrt(3^2 + (4-1)^2) = sqrt(18) = 4.24, which is closest to 5."
+ },
+ {
+  "id": "rp-je_e-f00007",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ में शक्ति गुणांक (Power Factor) 0.8 है और वास्तविक शक्ति 800 वाट है, तो आभासी शक्ति (Apparent Power) क्या होगी?",
+  "q_en": "If the power factor in a circuit is 0.8 and the real power is 800 Watts, what will be the apparent power?",
+  "o_hi": [
+   "640 VA",
+   "1000 VA",
+   "1600 VA",
+   "800 VA"
+  ],
+  "o_en": [
+   "640 VA",
+   "1000 VA",
+   "1600 VA",
+   "800 VA"
+  ],
+  "a": 1,
+  "e_hi": "आभासी शक्ति = वास्तविक शक्ति / शक्ति गुणांक। 800 / 0.8 = 1000 VA.",
+  "e_en": "Apparent Power = Real Power / Power Factor. 800 / 0.8 = 1000 VA."
+ },
+ {
+  "id": "rp-je_e-f00008",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक 50 हर्ट्ज आवृत्ति वाले एसी (AC) स्रोत का आवर्तकाल (Time Period) कितना होगा?",
+  "q_en": "What will be the time period of an AC source with a frequency of 50 Hz?",
+  "o_hi": [
+   "0.02 सेकंड",
+   "0.05 सेकंड",
+   "0.2 सेकंड",
+   "0.5 सेकंड"
+  ],
+  "o_en": [
+   "0.02 Seconds",
+   "0.05 Seconds",
+   "0.2 Seconds",
+   "0.5 Seconds"
+  ],
+  "a": 0,
+  "e_hi": "आवर्तकाल T = 1 / f होता है। T = 1 / 50 = 0.02 सेकंड।",
+  "e_en": "Time period T = 1 / f. T = 1 / 50 = 0.02 Seconds."
+ },
+ {
+  "id": "rp-je_e-f00009",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक डेल्टा-कनेक्टेड लोड में, यदि प्रति चरण वोल्टेज 400 वोल्ट है, तो लाइन वोल्टेज का मान क्या होगा?",
+  "q_en": "In a delta-connected load, if the phase voltage is 400 Volts, what will be the line voltage?",
+  "o_hi": [
+   "400 वोल्ट",
+   "230 वोल्ट",
+   "692 वोल्ट",
+   "400 * sqrt(3) वोल्ट"
+  ],
+  "o_en": [
+   "400 Volts",
+   "230 Volts",
+   "692 Volts",
+   "400 * sqrt(3) Volts"
+  ],
+  "a": 0,
+  "e_hi": "डेल्टा कनेक्शन में, लाइन वोल्टेज और फेज वोल्टेज बराबर होते हैं (VL = Vph)।",
+  "e_en": "In a delta connection, the line voltage and phase voltage are equal (VL = Vph)."
+ },
+ {
+  "id": "rp-je_e-f00010",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक परिपथ में 10 एम्पीयर की धारा 2 मिनट के लिए प्रवाहित होती है, तो प्रवाहित कुल आवेश (Charge) कितना होगा?",
+  "q_en": "If a current of 10 Amperes flows through a circuit for 2 minutes, what will be the total charge transferred?",
+  "o_hi": [
+   "20 कूलम्ब",
+   "600 कूलम्ब",
+   "1200 कूलम्ब",
+   "120 कूलम्ब"
+  ],
+  "o_en": [
+   "20 Coulombs",
+   "600 Coulombs",
+   "1200 Coulombs",
+   "120 Coulombs"
+  ],
+  "a": 2,
+  "e_hi": "आवेश Q = I * t होता है। t को सेकंड में बदलें (2 * 60 = 120 सेकंड)। Q = 10 * 120 = 1200 कूलम्ब।",
+  "e_en": "Charge Q = I * t. Convert time to seconds (2 * 60 = 120 seconds). Q = 10 * 120 = 1200 Coulombs."
+ },
+ {
+  "id": "rp-je_e-f00011",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक परिपथ में 10 ओम का प्रतिरोध और 20 वोल्ट का वोल्टेज स्रोत लगा है। ओम के नियम का उपयोग करते हुए धारा का मान ज्ञात कीजिए।",
+  "q_en": "A circuit has a 10 ohm resistor connected to a 20 volt voltage source. Calculate the current using Ohm's Law.",
+  "o_hi": [
+   "2 एम्पियर",
+   "0.5 एम्पियर",
+   "200 एम्पियर",
+   "5 एम्पियर"
+  ],
+  "o_en": [
+   "2 Amperes",
+   "0.5 Amperes",
+   "200 Amperes",
+   "5 Amperes"
+  ],
+  "a": 0,
+  "e_hi": "ओम के नियम के अनुसार, I = V/R। यहाँ I = 20/10 = 2 एम्पियर।",
+  "e_en": "According to Ohm's Law, I = V/R. Here, I = 20/10 = 2 Amperes."
+ },
+ {
+  "id": "rp-je_e-f00012",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि दो प्रतिरोधक 6 ओम और 3 ओम समानांतर (parallel) में जुड़े हैं, तो उनका तुल्य प्रतिरोध क्या होगा?",
+  "q_en": "If two resistors of 6 ohms and 3 ohms are connected in parallel, what will be their equivalent resistance?",
+  "o_hi": [
+   "9 ओम",
+   "18 ओम",
+   "2 ओम",
+   "4.5 ओम"
+  ],
+  "o_en": [
+   "9 Ohms",
+   "18 Ohms",
+   "2 Ohms",
+   "4.5 Ohms"
+  ],
+  "a": 2,
+  "e_hi": "समानांतर प्रतिरोध का सूत्र R_eq = (R1*R2)/(R1+R2) है। अतः (6*3)/(6+3) = 18/9 = 2 ओम।",
+  "e_en": "The formula for parallel resistance is R_eq = (R1*R2)/(R1+R2). Thus, (6*3)/(6+3) = 18/9 = 2 Ohms."
+ },
+ {
+  "id": "rp-je_e-f00013",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 100 वाट और 200 वोल्ट के बल्ब का प्रतिरोध कितना होगा?",
+  "q_en": "What will be the resistance of a 100 watt, 200 volt bulb?",
+  "o_hi": [
+   "200 ओम",
+   "400 ओम",
+   "100 ओम",
+   "50 ओम"
+  ],
+  "o_en": [
+   "200 Ohms",
+   "400 Ohms",
+   "100 Ohms",
+   "50 Ohms"
+  ],
+  "a": 1,
+  "e_hi": "शक्ति का सूत्र P = V^2/R होता है, इसलिए R = V^2/P = (200*200)/100 = 400 ओम।",
+  "e_en": "Power formula is P = V^2/R, therefore R = V^2/P = (200*200)/100 = 400 Ohms."
+ },
+ {
+  "id": "rp-je_e-f00014",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किरचॉफ के वोल्टेज नियम (KVL) के अनुसार, एक बंद लूप में वोल्टेज का बीजगणितीय योग कितना होता है?",
+  "q_en": "According to Kirchhoff's Voltage Law (KVL), what is the algebraic sum of voltages in a closed loop?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "स्रोत वोल्टेज के बराबर",
+   "वोल्टेज ड्रॉप के बराबर"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinity",
+   "Equal to source voltage",
+   "Equal to voltage drop"
+  ],
+  "a": 0,
+  "e_hi": "KVL कहता है कि किसी भी बंद लूप में वोल्टेज का कुल योग शून्य होता है।",
+  "e_en": "KVL states that the total sum of voltages around any closed loop is zero."
+ },
+ {
+  "id": "rp-je_e-f00015",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि एक परिपथ में 5 एम्पियर की धारा 10 सेकंड के लिए प्रवाहित होती है, तो प्रवाहित कुल आवेश (charge) कितना होगा?",
+  "q_en": "If a current of 5 Amperes flows through a circuit for 10 seconds, what will be the total charge transferred?",
+  "o_hi": [
+   "50 कूलॉम",
+   "2 कूलॉम",
+   "0.5 कूलॉम",
+   "15 कूलॉम"
+  ],
+  "o_en": [
+   "50 Coulombs",
+   "2 Coulombs",
+   "0.5 Coulombs",
+   "15 Coulombs"
+  ],
+  "a": 0,
+  "e_hi": "आवेश Q = I * t होता है। यहाँ Q = 5 * 10 = 50 कूलॉम।",
+  "e_en": "Charge Q = I * t. Here Q = 5 * 10 = 50 Coulombs."
+ },
+ {
+  "id": "rp-je_e-f00016",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक आरएल (RL) श्रृंखला परिपथ में, यदि प्रतिरोध 3 ओम है और प्रेरणिक प्रतिघात (inductive reactance) 4 ओम है, तो कुल प्रतिबाधा (impedance) क्या होगी?",
+  "q_en": "In an RL series circuit, if the resistance is 3 ohms and the inductive reactance is 4 ohms, what will be the total impedance?",
+  "o_hi": [
+   "7 ओम",
+   "1 ओम",
+   "5 ओम",
+   "12 ओम"
+  ],
+  "o_en": [
+   "7 Ohms",
+   "1 Ohms",
+   "5 Ohms",
+   "12 Ohms"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिबाधा Z = sqrt(R^2 + Xl^2) = sqrt(3^2 + 4^2) = sqrt(9+16) = sqrt(25) = 5 ओम।",
+  "e_en": "Impedance Z = sqrt(R^2 + Xl^2) = sqrt(3^2 + 4^2) = sqrt(9+16) = sqrt(25) = 5 Ohms."
+ },
+ {
+  "id": "rp-je_e-f00017",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक संधारित्र (capacitor) की धारिता 10 माइक्रो-फैराड है और इसे 100 वोल्ट तक चार्ज किया गया है। संधारित्र में संचित ऊर्जा ज्ञात कीजिए।",
+  "q_en": "A capacitor has a capacitance of 10 micro-farads and is charged to 100 volts. Calculate the energy stored in the capacitor.",
+  "o_hi": [
+   "0.05 जूल",
+   "0.5 जूल",
+   "5 जूल",
+   "0.005 जूल"
+  ],
+  "o_en": [
+   "0.05 Joules",
+   "0.5 Joules",
+   "5 Joules",
+   "0.005 Joules"
+  ],
+  "a": 0,
+  "e_hi": "ऊर्जा E = 0.5 * C * V^2 = 0.5 * 10e-6 * 100^2 = 0.5 * 10e-6 * 10000 = 0.05 जूल।",
+  "e_en": "Energy E = 0.5 * C * V^2 = 0.5 * 10e-6 * 100^2 = 0.5 * 10e-6 * 10000 = 0.05 Joules."
+ },
+ {
+  "id": "rp-je_e-f00018",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक स्टार (Star) संयोजित परिपथ में, यदि लाइन वोल्टेज 400 वोल्ट है, तो फेज वोल्टेज क्या होगा?",
+  "q_en": "In a Star-connected circuit, if the line voltage is 400 volts, what will be the phase voltage?",
+  "o_hi": [
+   "400 वोल्ट",
+   "231 वोल्ट",
+   "692 वोल्ट",
+   "200 वोल्ट"
+  ],
+  "o_en": [
+   "400 Volts",
+   "231 Volts",
+   "692 Volts",
+   "200 Volts"
+  ],
+  "a": 1,
+  "e_hi": "स्टार कनेक्शन में, V_phase = V_line / sqrt(3) = 400 / 1.732 = 231 वोल्ट।",
+  "e_en": "In a Star connection, V_phase = V_line / sqrt(3) = 400 / 1.732 = 231 Volts."
+ },
+ {
+  "id": "rp-je_e-f00019",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ का पावर फैक्टर 0.8 है और वास्तविक शक्ति 800 वाट है, तो आभासी शक्ति (apparent power) क्या होगी?",
+  "q_en": "If the power factor of a circuit is 0.8 and the real power is 800 watts, what will be the apparent power?",
+  "o_hi": [
+   "640 VA",
+   "1000 VA",
+   "800 VA",
+   "1200 VA"
+  ],
+  "o_en": [
+   "640 VA",
+   "1000 VA",
+   "800 VA",
+   "1200 VA"
+  ],
+  "a": 1,
+  "e_hi": "आभासी शक्ति (S) = वास्तविक शक्ति (P) / पावर फैक्टर = 800 / 0.8 = 1000 VA।",
+  "e_en": "Apparent power (S) = Real power (P) / Power factor = 800 / 0.8 = 1000 VA."
+ },
+ {
+  "id": "rp-je_e-f00020",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक 200 वोल्ट के डीसी स्रोत के साथ 40 ओम का प्रतिरोध श्रेणी में जुड़ा है। यदि प्रतिरोध को 60 ओम कर दिया जाए, तो धारा में कितनी कमी आएगी?",
+  "q_en": "A 40 ohm resistor is in series with a 200 volt DC source. If the resistance is changed to 60 ohms, what will be the decrease in current?",
+  "o_hi": [
+   "1 एम्पियर",
+   "0.5 एम्पियर",
+   "2 एम्पियर",
+   "1.5 एम्पियर"
+  ],
+  "o_en": [
+   "1 Ampere",
+   "0.5 Ampere",
+   "2 Ampere",
+   "1.5 Ampere"
+  ],
+  "a": 0,
+  "e_hi": "प्रारंभिक धारा = 200/40 = 5A। नई धारा = 200/60 = 3.33A। कमी = 5 - 3.33 = 1.67A (लगभग 1.5-2 के निकटतम)।",
+  "e_en": "Initial current = 200/40 = 5A. New current = 200/60 = 3.33A. Decrease = 5 - 3.33 = 1.67A (approx)."
+ },
+ {
+  "id": "rp-je_e-f00021",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "विद्युत परिपथ में 'ओम का नियम' (Ohm's Law) किस वैज्ञानिक द्वारा प्रतिपादित किया गया था?",
+  "q_en": "Which scientist formulated 'Ohm's Law' in electrical circuits?",
+  "o_hi": [
+   "जॉर्ज साइमन ओम",
+   "अलेसांद्रो वोल्टा",
+   "आंद्रे-मैरी एम्पियर",
+   "निकोल टेस्ला"
+  ],
+  "o_en": [
+   "Georg Simon Ohm",
+   "Alessandro Volta",
+   "André-Marie Ampère",
+   "Nikola Tesla"
+  ],
+  "a": 0,
+  "e_hi": "जॉर्ज साइमन ओम ने 1827 में ओम के नियम का प्रतिपादन किया था। यह धारा और वोल्टेज के बीच संबंध बताता है।",
+  "e_en": "Georg Simon Ohm formulated Ohm's Law in 1827. It defines the relationship between current and voltage."
+ },
+ {
+  "id": "rp-je_e-f00022",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "किरचॉफ का धारा नियम (KCL) किस संरक्षण सिद्धांत पर आधारित है?",
+  "q_en": "Kirchhoff's Current Law (KCL) is based on which conservation principle?",
+  "o_hi": [
+   "ऊर्जा संरक्षण",
+   "आवेश संरक्षण",
+   "संवेग संरक्षण",
+   "द्रव्यमान संरक्षण"
+  ],
+  "o_en": [
+   "Conservation of energy",
+   "Conservation of charge",
+   "Conservation of momentum",
+   "Conservation of mass"
+  ],
+  "a": 1,
+  "e_hi": "किरचॉफ का धारा नियम आवेश संरक्षण के सिद्धांत पर आधारित है, जिसका अर्थ है कि एक जंक्शन पर प्रवेश करने वाला कुल आवेश बाहर निकलने वाले आवेश के बराबर होता है।",
+  "e_en": "Kirchhoff's Current Law is based on the conservation of charge, meaning the total charge entering a junction equals the charge leaving it."
+ },
+ {
+  "id": "rp-je_e-f00023",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "विद्युत परिपथ में 'सुपरपोज़िशन प्रमेय' (Superposition Theorem) का उपयोग केवल किस प्रकार के परिपथों के लिए किया जा सकता है?",
+  "q_en": "The 'Superposition Theorem' in electrical circuits is applicable only to which type of circuits?",
+  "o_hi": [
+   "रैखिक परिपथ",
+   "अरेखीय परिपथ",
+   "केवल एसी परिपथ",
+   "केवल डीसी परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits",
+   "Non-linear circuits",
+   "AC circuits only",
+   "DC circuits only"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोज़िशन प्रमेय केवल रैखिक (linear) परिपथों के लिए मान्य है जिनमें ओम का नियम लागू होता है।",
+  "e_en": "The Superposition theorem is valid only for linear circuits where Ohm's Law applies."
+ },
+ {
+  "id": "rp-je_e-f00024",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "टेवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल रैखिक नेटवर्क को किसके समकक्ष माना जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex linear network can be represented as equivalent to what?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और समानांतर प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणी प्रतिरोध",
+   "एक धारा स्रोत और श्रेणी प्रतिरोध",
+   "केवल एक वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "A voltage source and parallel resistance",
+   "A voltage source and series resistance",
+   "A current source and series resistance",
+   "Only a voltage source"
+  ],
+  "a": 1,
+  "e_hi": "टेवेनिन प्रमेय के अनुसार, किसी भी रैखिक परिपथ को एक वोल्टेज स्रोत (Vth) और एक श्रेणी क्रम में जुड़े प्रतिरोध (Rth) से बदला जा सकता है।",
+  "e_en": "According to Thevenin's theorem, any linear circuit can be replaced by an equivalent voltage source (Vth) in series with a resistor (Rth)."
+ },
+ {
+  "id": "rp-je_e-f00025",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) का उपयोग करते समय, किसी परिपथ को किस रूप में बदला जाता है?",
+  "q_en": "When using Norton's Theorem, a circuit is converted into which form?",
+  "o_hi": [
+   "वोल्टेज स्रोत और श्रेणी प्रतिरोध",
+   "धारा स्रोत और समानांतर प्रतिरोध",
+   "वोल्टेज स्रोत और समानांतर प्रतिरोध",
+   "धारा स्रोत और श्रेणी प्रतिरोध"
+  ],
+  "o_en": [
+   "Voltage source and series resistance",
+   "Current source and parallel resistance",
+   "Voltage source and parallel resistance",
+   "Current source and series resistance"
+  ],
+  "a": 1,
+  "e_hi": "नॉर्टन प्रमेय के अनुसार, परिपथ को एक धारा स्रोत (In) और उसके साथ समानांतर में जुड़े प्रतिरोध (Rn) के रूप में सरल बनाया जाता है।",
+  "e_en": "According to Norton's theorem, the circuit is simplified into a current source (In) in parallel with a resistance (Rn)."
+ },
+ {
+  "id": "rp-je_e-f00026",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "मैक्सवेल के लूप विश्लेषण (Mesh Analysis) का आधार क्या है?",
+  "q_en": "What is the basis of Maxwell's Mesh Analysis?",
+  "o_hi": [
+   "किरचॉफ का वोल्टेज नियम",
+   "किरचॉफ का धारा नियम",
+   "ओम का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law",
+   "Kirchhoff's Current Law",
+   "Ohm's Law",
+   "Lenz's Law"
+  ],
+  "a": 0,
+  "e_hi": "मैश विश्लेषण मुख्य रूप से किरचॉफ के वोल्टेज नियम (KVL) पर आधारित है, जिसका उपयोग प्रत्येक बंद लूप के लिए किया जाता है।",
+  "e_en": "Mesh analysis is primarily based on Kirchhoff's Voltage Law (KVL), applied to each closed loop of the circuit."
+ },
+ {
+  "id": "rp-je_e-f00027",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "मिलमैन प्रमेय (Millman's Theorem) का उपयोग मुख्य रूप से किस गणना को आसान बनाने के लिए किया जाता है?",
+  "q_en": "Millman's Theorem is primarily used to simplify which calculation?",
+  "o_hi": [
+   "समांतर वोल्टेज स्रोतों का संयोजन",
+   "श्रेणी प्रतिरोधों का योग",
+   "कैपेसिटेंस का निर्धारण",
+   "इंडक्टेंस का मान"
+  ],
+  "o_en": [
+   "Combination of parallel voltage sources",
+   "Sum of series resistances",
+   "Determination of capacitance",
+   "Value of inductance"
+  ],
+  "a": 0,
+  "e_hi": "मिलमैन प्रमेय का उपयोग कई वोल्टेज स्रोतों को जो समानांतर में जुड़े हैं, उन्हें एक एकल समकक्ष वोल्टेज स्रोत में बदलने के लिए किया जाता है।",
+  "e_en": "Millman's theorem is used to simplify the combination of multiple voltage sources connected in parallel into a single equivalent voltage source."
+ },
+ {
+  "id": "rp-je_e-f00028",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "अधिकतम शक्ति स्थानांतरण प्रमेय (Maximum Power Transfer Theorem) के अनुसार, लोड प्रतिरोध को किसके बराबर होना चाहिए?",
+  "q_en": "According to the Maximum Power Transfer Theorem, the load resistance must be equal to what?",
+  "o_hi": [
+   "स्रोत के आंतरिक प्रतिरोध के",
+   "स्रोत के वोल्टेज के",
+   "परिपथ के कुल वोल्टेज के",
+   "शून्य के"
+  ],
+  "o_en": [
+   "Source internal resistance",
+   "Source voltage",
+   "Total circuit voltage",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "अधिकतम शक्ति स्थानांतरण प्रमेय कहता है कि लोड को अधिकतम शक्ति तभी प्राप्त होती है जब लोड का प्रतिरोध स्रोत के आंतरिक प्रतिरोध (थेवेनिन प्रतिरोध) के बराबर होता है।",
+  "e_en": "The Maximum Power Transfer theorem states that maximum power is transferred when the load resistance equals the internal resistance (Thevenin resistance) of the source."
+ },
+ {
+  "id": "rp-je_e-f00029",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "विद्युत परिपथों में 'परस्परता प्रमेय' (Reciprocity Theorem) लागू करने की मुख्य शर्त क्या है?",
+  "q_en": "What is the main condition for applying the 'Reciprocity Theorem' in electrical circuits?",
+  "o_hi": [
+   "परिपथ द्विपक्षीय (bilateral) होना चाहिए",
+   "परिपथ में केवल एक स्रोत होना चाहिए",
+   "परिपथ अरेखीय होना चाहिए",
+   "परिपथ में कोई प्रतिरोध नहीं होना चाहिए"
+  ],
+  "o_en": [
+   "The circuit must be bilateral",
+   "The circuit must have only one source",
+   "The circuit must be non-linear",
+   "The circuit must have no resistance"
+  ],
+  "a": 0,
+  "e_hi": "परस्परता प्रमेय के लिए परिपथ का द्विपक्षीय (bilateral) होना आवश्यक है, यानी इसका व्यवहार दोनों दिशाओं में समान होना चाहिए।",
+  "e_en": "For the Reciprocity theorem to hold, the circuit must be bilateral, meaning its behavior is the same in both directions."
+ },
+ {
+  "id": "rp-je_e-f00030",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किरचॉफ का वोल्टेज नियम (KVL) किसके संरक्षण के नियम का पालन करता है?",
+  "q_en": "Kirchhoff's Voltage Law (KVL) follows the law of conservation of what?",
+  "o_hi": [
+   "आवेश",
+   "ऊर्जा",
+   "चुंबकीय फ्लक्स",
+   "समय"
+  ],
+  "o_en": [
+   "Charge",
+   "Energy",
+   "Magnetic flux",
+   "Time"
+  ],
+  "a": 1,
+  "e_hi": "किरचॉफ का वोल्टेज नियम ऊर्जा संरक्षण के सिद्धांत पर आधारित है, क्योंकि एक बंद लूप में वोल्टेज का कुल योग शून्य होता है।",
+  "e_en": "Kirchhoff's Voltage Law is based on the principle of conservation of energy, as the algebraic sum of voltages in a closed loop is zero."
+ },
+ {
+  "id": "rp-je_e-f00031",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक परिपथ में 10 ओम का प्रतिरोध और 20 वोल्ट का वोल्टेज स्रोत लगा है। ओम के नियम का उपयोग करते हुए परिपथ में प्रवाहित धारा की गणना करें।",
+  "q_en": "A circuit has a resistance of 10 ohms and a voltage source of 20 volts. Calculate the current flowing through the circuit using Ohm's Law.",
+  "o_hi": [
+   "1 एम्पीयर",
+   "2 एम्पीयर",
+   "0.5 एम्पीयर",
+   "200 एम्पीयर"
+  ],
+  "o_en": [
+   "1 Ampere",
+   "2 Amperes",
+   "0.5 Amperes",
+   "200 Amperes"
+  ],
+  "a": 1,
+  "e_hi": "ओम के नियम के अनुसार, धारा (I) = वोल्टेज (V) / प्रतिरोध (R)। अतः I = 20/10 = 2 एम्पीयर।",
+  "e_en": "According to Ohm's Law, Current (I) = Voltage (V) / Resistance (R). Thus, I = 20/10 = 2 Amperes."
+ },
+ {
+  "id": "rp-je_e-f00032",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि दो प्रतिरोधक 4 ओम और 6 ओम श्रृंखला में जुड़े हुए हैं, तो उनका कुल समतुल्य प्रतिरोध क्या होगा?",
+  "q_en": "If two resistors of 4 ohms and 6 ohms are connected in series, what will be their total equivalent resistance?",
+  "o_hi": [
+   "2 ओम",
+   "2.4 ओम",
+   "10 ओम",
+   "12 ओम"
+  ],
+  "o_en": [
+   "2 ohms",
+   "2.4 ohms",
+   "10 ohms",
+   "12 ohms"
+  ],
+  "a": 2,
+  "e_hi": "श्रृंखला परिपथ में कुल प्रतिरोध R = R1 + R2 होता है। अतः 4 + 6 = 10 ओम।",
+  "e_en": "In a series circuit, total resistance R = R1 + R2. Therefore, 4 + 6 = 10 ohms."
+ },
+ {
+  "id": "rp-je_e-f00033",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक परिपथ में तीन 30 ओम के प्रतिरोधक समानांतर (पैरेलल) में जुड़े हैं। कुल समतुल्य प्रतिरोध ज्ञात करें।",
+  "q_en": "Three 30-ohm resistors are connected in parallel in a circuit. Find the total equivalent resistance.",
+  "o_hi": [
+   "90 ओम",
+   "30 ओम",
+   "10 ओम",
+   "15 ओम"
+  ],
+  "o_en": [
+   "90 ohms",
+   "30 ohms",
+   "10 ohms",
+   "15 ohms"
+  ],
+  "a": 2,
+  "e_hi": "समानांतर में, 1/R_eq = 1/R1 + 1/R2 + 1/R3। 1/30 + 1/30 + 1/30 = 3/30 = 1/10, इसलिए R_eq = 10 ओम।",
+  "e_en": "In parallel, 1/R_eq = 1/R1 + 1/R2 + 1/R3. 1/30 + 1/30 + 1/30 = 3/30 = 1/10, so R_eq = 10 ohms."
+ },
+ {
+  "id": "rp-je_e-f00034",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 100 वाट के बल्ब को 200 वोल्ट की आपूर्ति से जोड़ा गया है। बल्ब का प्रतिरोध कितना होगा?",
+  "q_en": "A 100-watt bulb is connected to a 200-volt supply. What will be the resistance of the bulb?",
+  "o_hi": [
+   "200 ओम",
+   "400 ओम",
+   "100 ओम",
+   "50 ओम"
+  ],
+  "o_en": [
+   "200 ohms",
+   "400 ohms",
+   "100 ohms",
+   "50 ohms"
+  ],
+  "a": 1,
+  "e_hi": "शक्ति P = V^2 / R। इसलिए, R = V^2 / P = (200 * 200) / 100 = 400 ओम।",
+  "e_en": "Power P = V^2 / R. Therefore, R = V^2 / P = (200 * 200) / 100 = 400 ohms."
+ },
+ {
+  "id": "rp-je_e-f00035",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि किसी परिपथ में 5 एम्पीयर की धारा 10 सेकंड के लिए प्रवाहित होती है, तो कुल आवेश (चार्ज) की मात्रा क्या होगी?",
+  "q_en": "If a current of 5 Amperes flows through a circuit for 10 seconds, what will be the total amount of charge?",
+  "o_hi": [
+   "2 कूलम्ब",
+   "50 कूलम्ब",
+   "0.5 कूलम्ब",
+   "15 कूलम्ब"
+  ],
+  "o_en": [
+   "2 Coulombs",
+   "50 Coulombs",
+   "0.5 Coulombs",
+   "15 Coulombs"
+  ],
+  "a": 1,
+  "e_hi": "आवेश (Q) = धारा (I) * समय (t)। अतः Q = 5 * 10 = 50 कूलम्ब।",
+  "e_en": "Charge (Q) = Current (I) * Time (t). Therefore, Q = 5 * 10 = 50 Coulombs."
+ },
+ {
+  "id": "rp-je_e-f00036",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक आरएलसी (RLC) श्रेणी परिपथ में अनुनाद (रेजोनेंस) की स्थिति में यदि प्रेरकत्व 1 हेनरी और धारिता 1 फैराड है, तो अनुनाद आवृत्ति (रेडियन/सेकंड में) क्या होगी?",
+  "q_en": "In an RLC series circuit at resonance, if inductance is 1 Henry and capacitance is 1 Farad, what will be the resonant frequency in radians/second?",
+  "o_hi": [
+   "1 रेडियन/सेकंड",
+   "2 रेडियन/सेकंड",
+   "0.5 रेडियन/सेकंड",
+   "4 रेडियन/सेकंड"
+  ],
+  "o_en": [
+   "1 rad/s",
+   "2 rad/s",
+   "0.5 rad/s",
+   "4 rad/s"
+  ],
+  "a": 0,
+  "e_hi": "अनुनाद आवृत्ति ω = 1 / sqrt(LC)। ω = 1 / sqrt(1 * 1) = 1 रेडियन/सेकंड।",
+  "e_en": "Resonant frequency ω = 1 / sqrt(LC). ω = 1 / sqrt(1 * 1) = 1 rad/s."
+ },
+ {
+  "id": "rp-je_e-f00037",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 200 वोल्ट डीसी आपूर्ति से जुड़े 50 ओम के प्रतिरोधक में खर्च होने वाली शक्ति (वाट में) ज्ञात करें।",
+  "q_en": "Calculate the power consumed (in watts) by a 50-ohm resistor connected to a 200-volt DC supply.",
+  "o_hi": [
+   "400 वाट",
+   "800 वाट",
+   "1000 वाट",
+   "2000 वाट"
+  ],
+  "o_en": [
+   "400 watts",
+   "800 watts",
+   "1000 watts",
+   "2000 watts"
+  ],
+  "a": 1,
+  "e_hi": "शक्ति P = V^2 / R = (200 * 200) / 50 = 40000 / 50 = 800 वाट।",
+  "e_en": "Power P = V^2 / R = (200 * 200) / 50 = 40000 / 50 = 800 watts."
+ },
+ {
+  "id": "rp-je_e-f00038",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "व्हीटस्टोन ब्रिज संतुलित है यदि प्रतिरोधों का मान R1=10, R2=20, R3=5 ओम है, तो अज्ञात प्रतिरोध R4 का मान क्या होगा?",
+  "q_en": "A Wheatstone bridge is balanced with resistances R1=10, R2=20, R3=5 ohms. What is the value of unknown resistance R4?",
+  "o_hi": [
+   "2.5 ओम",
+   "10 ओम",
+   "5 ओम",
+   "40 ओम"
+  ],
+  "o_en": [
+   "2.5 ohms",
+   "10 ohms",
+   "5 ohms",
+   "40 ohms"
+  ],
+  "a": 1,
+  "e_hi": "संतुलन की स्थिति में, R1/R2 = R3/R4। अतः 10/20 = 5/R4, जिससे R4 = 10 ओम।",
+  "e_en": "At balance, R1/R2 = R3/R4. Thus, 10/20 = 5/R4, which gives R4 = 10 ohms."
+ },
+ {
+  "id": "rp-je_e-f00039",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ में वोल्टेज 100 वोल्ट और धारा 5 एम्पीयर है, तो परिपथ में कुल ऊर्जा 1 मिनट में कितनी खर्च होगी?",
+  "q_en": "If voltage is 100V and current is 5A in a circuit, how much total energy is consumed in 1 minute?",
+  "o_hi": [
+   "500 जूल",
+   "30000 जूल",
+   "5000 जूल",
+   "1000 जूल"
+  ],
+  "o_en": [
+   "500 Joules",
+   "30000 Joules",
+   "5000 Joules",
+   "1000 Joules"
+  ],
+  "a": 1,
+  "e_hi": "ऊर्जा = V * I * t (समय सेकंड में)। E = 100 * 5 * 60 = 30000 जूल।",
+  "e_en": "Energy = V * I * t (time in seconds). E = 100 * 5 * 60 = 30000 Joules."
+ },
+ {
+  "id": "rp-je_e-f00040",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक 5 हेनरी के प्रेरक (inductor) में 2 एम्पीयर प्रति सेकंड की दर से धारा बदल रही है। प्रेरक में उत्पन्न प्रेरित ईएमएफ (EMF) क्या है?",
+  "q_en": "The current in a 5-Henry inductor is changing at a rate of 2 Amperes per second. What is the induced EMF in the inductor?",
+  "o_hi": [
+   "2.5 वोल्ट",
+   "7 वोल्ट",
+   "10 वोल्ट",
+   "0.4 वोल्ट"
+  ],
+  "o_en": [
+   "2.5 Volts",
+   "7 Volts",
+   "10 Volts",
+   "0.4 Volts"
+  ],
+  "a": 2,
+  "e_hi": "प्रेरित ईएमएफ e = L * (di/dt)। अतः e = 5 * 2 = 10 वोल्ट।",
+  "e_en": "Induced EMF e = L * (di/dt). Thus, e = 5 * 2 = 10 Volts."
+ },
+ {
+  "id": "rp-je_e-f00041",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक आदर्श वोल्टेज स्रोत का आंतरिक प्रतिरोध क्या होता है?",
+  "q_en": "What is the internal resistance of an ideal voltage source?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "एक ओम",
+   "स्रोत के वोल्टेज पर निर्भर करता है"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "One ohm",
+   "Depends on source voltage"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श वोल्टेज स्रोत में वोल्टेज स्थिर रहता है, चाहे करंट कुछ भी हो, जिसके लिए शून्य आंतरिक प्रतिरोध की आवश्यकता होती है।",
+  "e_en": "An ideal voltage source maintains constant voltage regardless of the current, which requires zero internal resistance."
+ },
+ {
+  "id": "rp-je_e-f00042",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि किसी परिपथ में प्रतिरोध को दोगुना कर दिया जाए और वोल्टेज स्थिर रहे, तो धारा पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the resistance in a circuit is doubled while the voltage remains constant, what is the effect on the current?",
+  "o_hi": [
+   "दोगुनी हो जाएगी",
+   "आधी हो जाएगी",
+   "चार गुना हो जाएगी",
+   "समान रहेगी"
+  ],
+  "o_en": [
+   "Doubles",
+   "Halves",
+   "Quadruples",
+   "Remains same"
+  ],
+  "a": 1,
+  "e_hi": "ओम के नियम (I = V/R) के अनुसार, करंट प्रतिरोध के व्युत्क्रमानुपाती होता है।",
+  "e_en": "According to Ohm's Law (I = V/R), current is inversely proportional to resistance."
+ },
+ {
+  "id": "rp-je_e-f00043",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थिवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल रैखिक परिपथ को किसमें बदला जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex linear circuit can be converted into which of the following?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और एक समानांतर प्रतिरोध",
+   "एक करंट स्रोत और एक श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और एक श्रेणी प्रतिरोध",
+   "दो वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "A voltage source and a parallel resistance",
+   "A current source and a series resistance",
+   "A voltage source and a series resistance",
+   "Two voltage sources"
+  ],
+  "a": 2,
+  "e_hi": "थिवेनिन समतुल्य परिपथ में एक वोल्टेज स्रोत (Vth) और उसके साथ श्रेणीक्रम में एक प्रतिरोध (Rth) होता है।",
+  "e_en": "The Thevenin equivalent circuit consists of a single voltage source (Vth) in series with a single resistance (Rth)."
+ },
+ {
+  "id": "rp-je_e-f00044",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किसी नोड पर आने वाली धाराओं का बीजगणितीय योग शून्य होता है, यह किसका नियम है?",
+  "q_en": "The algebraic sum of currents meeting at a node is zero; this is which law?",
+  "o_hi": [
+   "किरचॉफ का वोल्टेज नियम",
+   "किरचॉफ का धारा नियम",
+   "ओम का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law",
+   "Kirchhoff's Current Law",
+   "Ohm's Law",
+   "Lenz's Law"
+  ],
+  "a": 1,
+  "e_hi": "किरचॉफ का धारा नियम (KCL) आवेश संरक्षण के सिद्धांत पर आधारित है और नोड्स पर लागू होता है।",
+  "e_en": "Kirchhoff's Current Law (KCL) is based on the principle of conservation of charge and applies to nodes."
+ },
+ {
+  "id": "rp-je_e-f00045",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) का उपयोग करने के लिए परिपथ का कैसा होना आवश्यक है?",
+  "q_en": "For the Superposition Theorem to be applicable, the circuit must be:",
+  "o_hi": [
+   "केवल रैखिक",
+   "केवल अरैखिक",
+   "रैखिक और द्विपक्षीय",
+   "केवल निष्क्रिय"
+  ],
+  "o_en": [
+   "Linear only",
+   "Non-linear only",
+   "Linear and bilateral",
+   "Passive only"
+  ],
+  "a": 2,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल उन परिपथों पर लागू होता है जो रैखिक (linear) और द्विपक्षीय (bilateral) दोनों होते हैं।",
+  "e_en": "The Superposition Theorem is applicable only to circuits that are both linear and bilateral."
+ },
+ {
+  "id": "rp-je_e-f00046",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक आदर्श करंट स्रोत का आंतरिक प्रतिरोध कितना होता है?",
+  "q_en": "What is the internal resistance of an ideal current source?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "एक ओम",
+   "स्रोत के करंट पर निर्भर"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "One ohm",
+   "Depends on source current"
+  ],
+  "a": 1,
+  "e_hi": "एक आदर्श करंट स्रोत का आंतरिक प्रतिरोध अनंत होता है ताकि करंट का मान बाहरी भार से प्रभावित न हो।",
+  "e_en": "An ideal current source has infinite internal resistance so that the current value remains unaffected by the external load."
+ },
+ {
+  "id": "rp-je_e-f00047",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "अधिकतम शक्ति स्थानांतरण प्रमेय (Maximum Power Transfer Theorem) के अनुसार, भार प्रतिरोध (RL) किसके बराबर होना चाहिए?",
+  "q_en": "According to the Maximum Power Transfer Theorem, the load resistance (RL) should be equal to:",
+  "o_hi": [
+   "स्रोत प्रतिरोध के दोगुने",
+   "स्रोत प्रतिरोध के आधे",
+   "स्रोत के आंतरिक प्रतिरोध (Rth) के बराबर",
+   "शून्य"
+  ],
+  "o_en": [
+   "Twice the source resistance",
+   "Half the source resistance",
+   "Equal to the internal source resistance (Rth)",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "अधिकतम शक्ति तब स्थानांतरित होती है जब लोड प्रतिरोध, थिवेनिन प्रतिरोध (Rth) के बराबर होता है।",
+  "e_en": "Maximum power is transferred when the load resistance equals the Thevenin resistance (Rth)."
+ },
+ {
+  "id": "rp-je_e-f00048",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक 'द्विपक्षीय' (bilateral) तत्व वह है जो:",
+  "q_en": "A 'bilateral' element is one that:",
+  "o_hi": [
+   "धारा को केवल एक दिशा में जाने देता है",
+   "दोनों दिशाओं में समान V-I विशेषताएँ रखता है",
+   "केवल वोल्टेज स्रोत के साथ काम करता है",
+   "तापमान पर निर्भर नहीं है"
+  ],
+  "o_en": [
+   "Allows current in only one direction",
+   "Has same V-I characteristics in both directions",
+   "Works only with voltage sources",
+   "Is independent of temperature"
+  ],
+  "a": 1,
+  "e_hi": "एक द्विपक्षीय तत्व (जैसे प्रतिरोधक) में करंट की दिशा बदलने पर भी वोल्टेज-धारा संबंध समान रहता है।",
+  "e_en": "A bilateral element (like a resistor) maintains the same voltage-current relationship regardless of the direction of current."
+ },
+ {
+  "id": "rp-je_e-f00049",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) के अनुसार, एक परिपथ को किसमें बदला जा सकता है?",
+  "q_en": "According to Norton's Theorem, a circuit can be converted into:",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और समानांतर प्रतिरोध",
+   "एक करंट स्रोत और श्रेणी प्रतिरोध",
+   "एक करंट स्रोत और समानांतर प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणी प्रतिरोध"
+  ],
+  "o_en": [
+   "A voltage source and parallel resistance",
+   "A current source and series resistance",
+   "A current source and parallel resistance",
+   "A voltage source and series resistance"
+  ],
+  "a": 2,
+  "e_hi": "नॉर्टन समतुल्य परिपथ में एक करंट स्रोत (In) और उसके साथ समानांतर क्रम में एक प्रतिरोध (Rn) होता है।",
+  "e_en": "The Norton equivalent circuit consists of a single current source (In) in parallel with a single resistance (Rn)."
+ },
+ {
+  "id": "rp-je_e-f00050",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ में प्रतिरोध को दोगुना कर दिया जाए, तो समान वोल्टेज के लिए शक्ति पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the resistance in a circuit is doubled, what happens to the power consumed for a constant voltage?",
+  "o_hi": [
+   "दोगुनी हो जाएगी",
+   "आधी हो जाएगी",
+   "चार गुना हो जाएगी",
+   "समान रहेगी"
+  ],
+  "o_en": [
+   "Doubles",
+   "Halves",
+   "Quadruples",
+   "Remains same"
+  ],
+  "a": 1,
+  "e_hi": "शक्ति का सूत्र P = V²/R है। यदि R दोगुना होता है, तो शक्ति आधी हो जाती है।",
+  "e_en": "The power formula is P = V²/R. If R is doubled, the power becomes half."
+ },
+ {
+  "id": "rp-je_e-f00051",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय का उपयोग किन परिपथों में किया जा सकता है?",
+  "q_en": "In which circuits can the Superposition theorem be applied?",
+  "o_hi": [
+   "केवल रैखिक परिपथ",
+   "केवल गैर-रैखिक परिपथ",
+   "रैखिक और गैर-रैखिक दोनों",
+   "केवल डीसी परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits only",
+   "Non-linear circuits only",
+   "Both linear and non-linear",
+   "DC circuits only"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक तत्वों वाले परिपथों के लिए मान्य है क्योंकि यह योगात्मकता के सिद्धांत पर आधारित है।",
+  "e_en": "The Superposition theorem is only valid for circuits with linear elements because it relies on the principle of additivity."
+ },
+ {
+  "id": "rp-je_e-f00052",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थेवेनिन प्रमेय के अनुसार, किसी परिपथ को एक वोल्टेज स्रोत और एक श्रृंखला प्रतिरोध में बदला जाता है। इस प्रतिरोध का नाम क्या है?",
+  "q_en": "According to Thevenin's theorem, a circuit is replaced by a voltage source and a series resistance. What is this resistance called?",
+  "o_hi": [
+   "लोड प्रतिरोध",
+   "थेवेनिन प्रतिरोध",
+   "आंतरिक प्रतिरोध",
+   "नॉर्टन प्रतिरोध"
+  ],
+  "o_en": [
+   "Load resistance",
+   "Thevenin resistance",
+   "Internal resistance",
+   "Norton resistance"
+  ],
+  "a": 1,
+  "e_hi": "थेवेनिन समतुल्य परिपथ में, सभी स्वतंत्र स्रोतों को उनके आंतरिक प्रतिरोध से प्रतिस्थापित करने के बाद जो प्रतिरोध मापा जाता है, उसे थेवेनिन प्रतिरोध कहते हैं।",
+  "e_en": "In a Thevenin equivalent circuit, the resistance measured after replacing all independent sources with their internal resistance is called Thevenin resistance."
+ },
+ {
+  "id": "rp-je_e-f00053",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "मैक्सिमम पावर ट्रांसफर प्रमेय के अनुसार, लोड को अधिकतम शक्ति तब मिलती है जब लोड प्रतिरोध किसके बराबर होता है?",
+  "q_en": "According to the Maximum Power Transfer theorem, maximum power is transferred to the load when the load resistance is equal to what?",
+  "o_hi": [
+   "स्रोत का वोल्टेज",
+   "स्रोत का आंतरिक प्रतिरोध",
+   "परिपथ का कुल करंट",
+   "शून्य"
+  ],
+  "o_en": [
+   "Source voltage",
+   "Internal resistance of the source",
+   "Total current of the circuit",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "अधिकतम शक्ति स्थानांतरण के लिए, लोड प्रतिरोध का मान थेवेनिन प्रतिरोध (आंतरिक प्रतिरोध) के बराबर होना चाहिए।",
+  "e_en": "For maximum power transfer, the load resistance must be equal to the Thevenin resistance (internal resistance)."
+ },
+ {
+  "id": "rp-je_e-f00054",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक 'नोड' (Node) परिपथ में किसे संदर्भित करता है?",
+  "q_en": "What does a 'node' refer to in a circuit?",
+  "o_hi": [
+   "एक बंद लूप",
+   "दो या दो से अधिक तत्वों का मिलन बिंदु",
+   "केवल एक प्रतिरोधक",
+   "एक वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "A closed loop",
+   "A junction point where two or more elements meet",
+   "A resistor only",
+   "A voltage source"
+  ],
+  "a": 1,
+  "e_hi": "नोड वह बिंदु है जहाँ परिपथ के दो या अधिक घटक आपस में मिलते हैं।",
+  "e_en": "A node is a junction point where two or more circuit elements are connected together."
+ },
+ {
+  "id": "rp-je_e-f00055",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "यदि हम किसी परिपथ में प्रतिरोधक के स्थान पर संधारित्र (Capacitor) का उपयोग करते हैं, तो डीसी आपूर्ति के लिए उसका व्यवहार कैसा होगा?",
+  "q_en": "If we use a capacitor instead of a resistor in a circuit, how will it behave for a DC supply?",
+  "o_hi": [
+   "शॉर्ट सर्किट की तरह",
+   "ओपन सर्किट की तरह",
+   "एक वोल्टेज स्रोत की तरह",
+   "एक करंट स्रोत की तरह"
+  ],
+  "o_en": [
+   "Like a short circuit",
+   "Like an open circuit",
+   "Like a voltage source",
+   "Like a current source"
+  ],
+  "a": 1,
+  "e_hi": "डीसी स्थितियों में, एक संधारित्र पूरी तरह चार्ज होने के बाद करंट को प्रवाहित होने से रोकता है, इसलिए यह ओपन सर्किट की तरह कार्य करता है।",
+  "e_en": "In DC conditions, a capacitor blocks current flow after being fully charged, acting like an open circuit."
+ },
+ {
+  "id": "rp-je_e-f00056",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "प्रसिद्ध 'थेवेनिन प्रमेय' (Thevenin's Theorem) किस वर्ष प्रतिपादित किया गया था?",
+  "q_en": "In which year was the famous 'Thevenin's Theorem' first published?",
+  "o_hi": [
+   "1883",
+   "1895",
+   "1872",
+   "1901"
+  ],
+  "o_en": [
+   "1883",
+   "1895",
+   "1872",
+   "1901"
+  ],
+  "a": 0,
+  "e_hi": "लियोन चार्ल्स थेवेनिन ने 1883 में इस प्रमेय को प्रतिपादित किया था।",
+  "e_en": "Leon Charles Thevenin published this theorem in the year 1883."
+ },
+ {
+  "id": "rp-je_e-f00057",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "ओम का नियम (Ohm's Law) किनके द्वारा दिया गया था?",
+  "q_en": "Who proposed the Ohm's Law?",
+  "o_hi": [
+   "जॉर्ज साइमन ओम",
+   "निकोलस टेस्ला",
+   "थॉमस एडिसन",
+   "अलेक्जेंड्रा वोल्टा"
+  ],
+  "o_en": [
+   "Georg Simon Ohm",
+   "Nikola Tesla",
+   "Thomas Edison",
+   "Alessandro Volta"
+  ],
+  "a": 0,
+  "e_hi": "जॉर्ज साइमन ओम ने 1827 में विद्युत परिपथ में धारा और वोल्टेज के संबंध को परिभाषित किया था।",
+  "e_en": "Georg Simon Ohm defined the relationship between current and voltage in an electrical circuit in 1827."
+ },
+ {
+  "id": "rp-je_e-f00058",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) किसका एक समतुल्य रूप है?",
+  "q_en": "Norton's Theorem is an equivalent form of which theorem?",
+  "o_hi": [
+   "थेवेनिन प्रमेय",
+   "सुपरपोजिशन प्रमेय",
+   "मैक्सवेल प्रमेय",
+   "किर्चॉफ प्रमेय"
+  ],
+  "o_en": [
+   "Thevenin's Theorem",
+   "Superposition Theorem",
+   "Maxwell's Theorem",
+   "Kirchhoff's Theorem"
+  ],
+  "a": 0,
+  "e_hi": "नॉर्टन का प्रमेय थेवेनिन प्रमेय का द्वैत (dual) या समतुल्य रूप है, जो एक वोल्टेज स्रोत के बजाय धारा स्रोत का उपयोग करता है।",
+  "e_en": "Norton's Theorem is the dual or equivalent of Thevenin's theorem, utilizing a current source instead of a voltage source."
+ },
+ {
+  "id": "rp-je_e-f00059",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "मैक्सवेल के परिपथ विश्लेषण (Mesh Analysis) में किस नियम का प्रयोग मुख्य रूप से किया जाता है?",
+  "q_en": "Which law is primarily used in Maxwell's Mesh Analysis?",
+  "o_hi": [
+   "किर्चॉफ का वोल्टेज नियम (KVL)",
+   "ओम का नियम",
+   "किर्चॉफ का धारा नियम (KCL)",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law (KVL)",
+   "Ohm's Law",
+   "Kirchhoff's Current Law (KCL)",
+   "Lenz's Law"
+  ],
+  "a": 0,
+  "e_hi": "मेश विश्लेषण पूरी तरह से किर्चॉफ के वोल्टेज नियम (KVL) पर आधारित है।",
+  "e_en": "Mesh analysis is fundamentally based on Kirchhoff's Voltage Law (KVL)."
+ },
+ {
+  "id": "rp-je_e-f00060",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "किस वैज्ञानिक ने 1845 में किर्चॉफ के नियमों को प्रतिपादित किया था?",
+  "q_en": "Which scientist formulated Kirchhoff's laws in 1845?",
+  "o_hi": [
+   "गुस्ताव किर्चॉफ",
+   "जेम्स क्लर्क मैक्सवेल",
+   "माइकल फैराडे",
+   "हेनरिक हर्ट्ज़"
+  ],
+  "o_en": [
+   "Gustav Kirchhoff",
+   "James Clerk Maxwell",
+   "Michael Faraday",
+   "Heinrich Hertz"
+  ],
+  "a": 0,
+  "e_hi": "गुस्ताव किर्चॉफ ने 1845 में विद्युत परिपथों के लिए अपने प्रसिद्ध नियमों को प्रतिपादित किया था।",
+  "e_en": "Gustav Kirchhoff formulated his famous laws for electrical circuits in 1845."
+ },
+ {
+  "id": "rp-je_e-f00061",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) किस प्रकार के परिपथों पर लागू होता है?",
+  "q_en": "Superposition Theorem applies to which type of circuits?",
+  "o_hi": [
+   "केवल रैखिक (Linear) परिपथ",
+   "केवल अरेखीय (Non-linear) परिपथ",
+   "केवल एसी परिपथ",
+   "सभी प्रकार के परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits only",
+   "Non-linear circuits only",
+   "AC circuits only",
+   "All types of circuits"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय का उपयोग केवल रैखिक परिपथों के विश्लेषण के लिए किया जा सकता है।",
+  "e_en": "Superposition theorem can only be used for the analysis of linear circuits."
+ },
+ {
+  "id": "rp-je_e-f00062",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "मैक्सिमम पावर ट्रांसफर प्रमेय (Maximum Power Transfer Theorem) के अनुसार, भार प्रतिरोध (Load Resistance) किसके बराबर होना चाहिए?",
+  "q_en": "According to Maximum Power Transfer Theorem, the load resistance should be equal to what?",
+  "o_hi": [
+   "स्रोत का आंतरिक प्रतिरोध",
+   "शून्य",
+   "अनंत",
+   "सर्किट का कुल प्रतिरोध"
+  ],
+  "o_en": [
+   "Source internal resistance",
+   "Zero",
+   "Infinity",
+   "Total circuit resistance"
+  ],
+  "a": 0,
+  "e_hi": "अधिकतम शक्ति हस्तांतरण के लिए, लोड प्रतिरोध का मान स्रोत के थेवेनिन प्रतिरोध के बराबर होना चाहिए।",
+  "e_en": "For maximum power transfer, the load resistance must be equal to the Thevenin resistance of the source."
+ },
+ {
+  "id": "rp-je_e-f00063",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "मिलमैन प्रमेय (Millman's Theorem) मुख्य रूप से किनके समानांतर संयोजन के लिए उपयोग किया जाता है?",
+  "q_en": "Millman's Theorem is primarily used for the parallel combination of what?",
+  "o_hi": [
+   "वोल्टेज स्रोत",
+   "संधारित्र",
+   "प्रतिरोधक",
+   "इंडक्टर"
+  ],
+  "o_en": [
+   "Voltage sources",
+   "Capacitors",
+   "Resistors",
+   "Inductors"
+  ],
+  "a": 0,
+  "e_hi": "मिलमैन प्रमेय का उपयोग कई वोल्टेज स्रोतों को एक एकल समतुल्य वोल्टेज स्रोत में बदलने के लिए किया जाता है।",
+  "e_en": "Millman's theorem is used to simplify multiple voltage sources into a single equivalent voltage source."
+ },
+ {
+  "id": "rp-je_e-f00064",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "आरएलसी (RLC) परिपथ में अनुनाद (Resonance) की स्थिति में परिपथ का प्रतिबाधा (Impedance) कैसा होता है?",
+  "q_en": "In an RLC circuit at resonance, what is the nature of the impedance?",
+  "o_hi": [
+   "न्यूनतम और शुद्ध प्रतिरोधी",
+   "अधिकतम और शुद्ध प्रतिरोधी",
+   "न्यूनतम और शुद्ध प्रेरक",
+   "अधिकतम और शुद्ध धारिता"
+  ],
+  "o_en": [
+   "Minimum and purely resistive",
+   "Maximum and purely resistive",
+   "Minimum and purely inductive",
+   "Maximum and purely capacitive"
+  ],
+  "a": 0,
+  "e_hi": "श्रृंखला आरएलसी परिपथ में, अनुनाद पर प्रेरक और धारिता का प्रभाव एक-दूसरे को समाप्त कर देता है, जिससे प्रतिबाधा न्यूनतम होती है।",
+  "e_en": "In a series RLC circuit, at resonance, the inductive and capacitive effects cancel out, resulting in minimum impedance."
+ },
+ {
+  "id": "rp-je_e-f00065",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक आदर्श वोल्टेज स्रोत के साथ श्रेणीक्रम में जुड़े आंतरिक प्रतिरोध का क्या प्रभाव होता है?",
+  "q_en": "What is the effect of an internal resistance connected in series with an ideal voltage source?",
+  "o_hi": [
+   "टर्मिनल वोल्टेज हमेशा स्थिर रहता है",
+   "टर्मिनल वोल्टेज लोड करंट के साथ घटता है",
+   "टर्मिनल वोल्टेज लोड करंट के साथ बढ़ता है",
+   "स्रोत का आंतरिक प्रतिरोध शून्य हो जाता है"
+  ],
+  "o_en": [
+   "Terminal voltage remains always constant",
+   "Terminal voltage decreases with load current",
+   "Terminal voltage increases with load current",
+   "Internal resistance of source becomes zero"
+  ],
+  "a": 1,
+  "e_hi": "आंतरिक प्रतिरोध के कारण वोल्टेज ड्रॉप होता है, जिससे जैसे-जैसे लोड करंट बढ़ता है, टर्मिनल वोल्टेज कम हो जाता है।",
+  "e_en": "Due to internal resistance, a voltage drop occurs, causing the terminal voltage to decrease as the load current increases."
+ },
+ {
+  "id": "rp-je_e-f00066",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि किसी परिपथ में प्रतिरोध को दोगुना कर दिया जाए और वोल्टेज को स्थिर रखा जाए, तो धारा पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the resistance in a circuit is doubled while keeping the voltage constant, what will be the effect on the current?",
+  "o_hi": [
+   "धारा दोगुनी हो जाएगी",
+   "धारा आधी हो जाएगी",
+   "धारा चार गुना हो जाएगी",
+   "धारा अपरिवर्तित रहेगी"
+  ],
+  "o_en": [
+   "Current will double",
+   "Current will be halved",
+   "Current will become four times",
+   "Current will remain unchanged"
+  ],
+  "a": 1,
+  "e_hi": "ओम के नियम (I=V/R) के अनुसार, यदि वोल्टेज स्थिर है, तो धारा प्रतिरोध के व्युत्क्रमानुपाती होती है।",
+  "e_en": "According to Ohm's Law (I=V/R), if the voltage is constant, current is inversely proportional to resistance."
+ },
+ {
+  "id": "rp-je_e-f00067",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक आरएलसी (RLC) श्रेणी परिपथ में अनुनाद (Resonance) की स्थिति में शक्ति गुणांक (Power Factor) क्या होता है?",
+  "q_en": "What is the power factor in an RLC series circuit at the condition of resonance?",
+  "o_hi": [
+   "शून्य",
+   "इकाई (Unity)",
+   "0.5 लैगिंग",
+   "0.5 लीडिंग"
+  ],
+  "o_en": [
+   "Zero",
+   "Unity",
+   "0.5 Lagging",
+   "0.5 Leading"
+  ],
+  "a": 1,
+  "e_hi": "अनुनाद पर, प्रेरकत्व और धारिता का प्रभाव एक-दूसरे को रद्द कर देता है, जिससे परिपथ शुद्ध प्रतिरोधी बन जाता है।",
+  "e_en": "At resonance, the effects of inductance and capacitance cancel each other out, making the circuit purely resistive."
+ },
+ {
+  "id": "rp-je_e-f00068",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "समांतर में जुड़े दो प्रतिरोधों का कुल प्रतिरोध हमेशा कैसा होता है?",
+  "q_en": "How is the total resistance of two resistors connected in parallel always described?",
+  "o_hi": [
+   "सबसे छोटे प्रतिरोध से भी कम",
+   "सबसे बड़े प्रतिरोध से अधिक",
+   "दोनों प्रतिरोधों का औसत",
+   "दोनों का योग"
+  ],
+  "o_en": [
+   "Less than the smallest resistor",
+   "Greater than the largest resistor",
+   "Average of both resistors",
+   "Sum of both"
+  ],
+  "a": 0,
+  "e_hi": "समांतर परिपथ में, कुल प्रतिरोध हमेशा शाखाओं के सबसे छोटे प्रतिरोध मान से कम होता है।",
+  "e_en": "In a parallel circuit, the total resistance is always less than the value of the smallest resistor in the branches."
+ },
+ {
+  "id": "rp-je_e-f00069",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक संधारित्र (Capacitor) को डीसी स्रोत से जोड़ने पर क्या होता है?",
+  "q_en": "What happens when a capacitor is connected to a DC source?",
+  "o_hi": [
+   "यह तुरंत जल जाता है",
+   "यह अनंत समय तक धारा प्रवाहित करता है",
+   "यह पूरी तरह चार्ज होने के बाद धारा को रोकता है",
+   "यह धारा को दोगुना कर देता है"
+  ],
+  "o_en": [
+   "It burns immediately",
+   "It conducts current indefinitely",
+   "It blocks current after being fully charged",
+   "It doubles the current"
+  ],
+  "a": 2,
+  "e_hi": "डीसी में, संधारित्र चार्ज होने के बाद एक ओपन सर्किट की तरह कार्य करता है, जिससे धारा का प्रवाह बंद हो जाता है।",
+  "e_en": "In DC, after the capacitor is fully charged, it acts as an open circuit, stopping the flow of current."
+ },
+ {
+  "id": "rp-je_e-f00070",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "यदि किसी परिपथ में प्रेरक (Inductor) में धारा का मान अचानक बदल दिया जाए, तो क्या होगा?",
+  "q_en": "What happens if the current value in an inductor is changed abruptly in a circuit?",
+  "o_hi": [
+   "प्रेरक धारा का विरोध करता है और वोल्टेज स्पाइक उत्पन्न करता है",
+   "प्रेरक जल जाएगा",
+   "धारा बिना किसी बाधा के बदल जाएगी",
+   "प्रतिरोध शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "Inductor opposes current and generates a voltage spike",
+   "Inductor will burn",
+   "Current will change without any hindrance",
+   "Resistance will become zero"
+  ],
+  "a": 0,
+  "e_hi": "प्रेरक धारा में परिवर्तन का विरोध करते हैं (L di/dt), जिससे अचानक परिवर्तन उच्च वोल्टेज प्रेरित करता है।",
+  "e_en": "Inductors oppose the change in current (L di/dt), which induces a high voltage during sudden changes."
+ },
+ {
+  "id": "rp-je_e-f00071",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) का उपयोग करने के लिए परिपथ में क्या होना चाहिए?",
+  "q_en": "What must be present in a circuit to use the Superposition Theorem?",
+  "o_hi": [
+   "केवल एक स्रोत",
+   "रैखिक घटक (Linear components)",
+   "केवल प्रतिरोधक",
+   "अरेखीय घटक (Non-linear components)"
+  ],
+  "o_en": [
+   "Only one source",
+   "Linear components",
+   "Only resistors",
+   "Non-linear components"
+  ],
+  "a": 1,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल उन परिपथों पर लागू होता है जिनमें रैखिक घटक होते हैं, क्योंकि यह योग के सिद्धांत पर आधारित है।",
+  "e_en": "The Superposition Theorem is only applicable to circuits with linear components because it relies on the principle of additivity."
+ },
+ {
+  "id": "rp-je_e-f00072",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थेवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल नेटवर्क को किसमें बदला जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex network can be replaced by what?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और समांतर प्रतिरोध",
+   "एक करंट स्रोत और श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणी प्रतिरोध",
+   "दो वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "One voltage source and parallel resistance",
+   "One current source and series resistance",
+   "One voltage source and series resistance",
+   "Two voltage sources"
+  ],
+  "a": 2,
+  "e_hi": "थेवेनिन प्रमेय के अनुसार, किसी भी रैखिक परिपथ को एक वोल्टेज स्रोत (Vth) और उसके साथ श्रेणी में जुड़े एक प्रतिरोध (Rth) द्वारा प्रतिस्थापित किया जा सकता है।",
+  "e_en": "According to Thevenin's Theorem, any linear circuit can be replaced by a voltage source (Vth) in series with a resistance (Rth)."
+ },
+ {
+  "id": "rp-je_e-f00073",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किसी बंद लूप में सभी वोल्टेज ड्रॉप्स का योग शून्य होता है, यह किसका नियम है?",
+  "q_en": "The sum of all voltage drops in a closed loop is zero, this is whose law?",
+  "o_hi": [
+   "ओम का नियम",
+   "किरचॉफ का वोल्टेज नियम (KVL)",
+   "फैराडे का नियम",
+   "किरचॉफ का धारा नियम (KCL)"
+  ],
+  "o_en": [
+   "Ohm's Law",
+   "Kirchhoff's Voltage Law (KVL)",
+   "Faraday's Law",
+   "Kirchhoff's Current Law (KCL)"
+  ],
+  "a": 1,
+  "e_hi": "किरचॉफ का वोल्टेज नियम ऊर्जा संरक्षण के सिद्धांत पर आधारित है, जिसके अनुसार एक बंद लूप में कुल वोल्टेज का बीजीय योग शून्य होता है।",
+  "e_en": "Kirchhoff's Voltage Law is based on the principle of conservation of energy, which states that the algebraic sum of voltages in a closed loop is zero."
+ },
+ {
+  "id": "rp-je_e-f00074",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "एक क्लोज्ड-लूप कंट्रोल सिस्टम (बंद-लूप नियंत्रण प्रणाली) में फीडबैक का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of feedback in a closed-loop control system?",
+  "o_hi": [
+   "सिस्टम की दक्षता बढ़ाना",
+   "आउटपुट को इनपुट के साथ तुलना करना और त्रुटि को कम करना",
+   "सिस्टम का शोर (noise) बढ़ाना",
+   "इनपुट सिग्नल को स्थिर रखना"
+  ],
+  "o_en": [
+   "To increase system efficiency",
+   "To compare output with input and reduce error",
+   "To increase system noise",
+   "To keep the input signal constant"
+  ],
+  "a": 1,
+  "e_hi": "फीडबैक सिस्टम के आउटपुट की तुलना इनपुट से करता है ताकि त्रुटि सिग्नल को कम करके सटीक परिणाम प्राप्त किया जा सके।",
+  "e_en": "Feedback compares the output with the input to reduce the error signal, ensuring the desired performance."
+ },
+ {
+  "id": "rp-je_e-f00075",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "ओपन-लूप कंट्रोल सिस्टम (खुला-लूप नियंत्रण प्रणाली) की सबसे बड़ी कमी क्या है?",
+  "q_en": "What is the major disadvantage of an open-loop control system?",
+  "o_hi": [
+   "यह बहुत महंगा होता है",
+   "यह बहुत जटिल होता है",
+   "यह बाहरी गड़बड़ी (disturbances) के प्रति संवेदनशील नहीं होता",
+   "यह बाहरी गड़बड़ी को ठीक नहीं कर सकता"
+  ],
+  "o_en": [
+   "It is very expensive",
+   "It is very complex",
+   "It is not sensitive to external disturbances",
+   "It cannot correct for external disturbances"
+  ],
+  "a": 3,
+  "e_hi": "ओपन-लूप सिस्टम में फीडबैक नहीं होता, इसलिए बाहरी परिवर्तनों या गड़बड़ी के कारण होने वाली त्रुटियों को यह अपने आप ठीक नहीं कर सकता।",
+  "e_en": "Open-loop systems lack feedback, meaning they cannot automatically correct errors caused by external disturbances."
+ },
+ {
+  "id": "rp-je_e-f00076",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "कंट्रोल सिस्टम में 'ट्रांसफर फंक्शन' को किस प्रकार परिभाषित किया जाता है?",
+  "q_en": "How is the 'transfer function' defined in a control system?",
+  "o_hi": [
+   "आउटपुट और इनपुट का योग",
+   "इनपुट और आउटपुट का अनुपात",
+   "शून्य प्रारंभिक स्थितियों पर आउटपुट और इनपुट के लाप्लास ट्रांसफॉर्म का अनुपात",
+   "सिस्टम का कुल समय स्थिरांक"
+  ],
+  "o_en": [
+   "Sum of output and input",
+   "Ratio of input to output",
+   "Ratio of Laplace transform of output to input with zero initial conditions",
+   "Total time constant of the system"
+  ],
+  "a": 2,
+  "e_hi": "ट्रांसफर फंक्शन का उपयोग रैखिक समय-अपरिवर्तनीय सिस्टम का विश्लेषण करने के लिए किया जाता है, जहाँ प्रारंभिक स्थितियों को शून्य माना जाता है।",
+  "e_en": "The transfer function is used to analyze linear time-invariant systems, assuming all initial conditions are zero."
+ },
+ {
+  "id": "rp-je_e-f00077",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक कंट्रोल सिस्टम में 'डैम्पिंग अनुपात' (damping ratio) का मान 1 से कम होने पर सिस्टम को क्या कहा जाता है?",
+  "q_en": "What is a control system called when the damping ratio is less than 1?",
+  "o_hi": [
+   "अति-अवमंदित (Overdamped)",
+   "अल्प-अवमंदित (Underdamped)",
+   "क्रांतिक-अवमंदित (Critically damped)",
+   "अनावमंदित (Undamped)"
+  ],
+  "o_en": [
+   "Overdamped",
+   "Underdamped",
+   "Critically damped",
+   "Undamped"
+  ],
+  "a": 1,
+  "e_hi": "जब डैम्पिंग अनुपात 0 और 1 के बीच होता है, तो सिस्टम अल्प-अवमंदित होता है और इसमें दोलन (oscillations) होते हैं।",
+  "e_en": "When the damping ratio is between 0 and 1, the system is underdamped and exhibits oscillations."
+ },
+ {
+  "id": "rp-je_e-f00078",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "कंट्रोल सिस्टम में 'सर्वो मैकेनिज्म' (Servo mechanism) का मुख्य उपयोग क्या है?",
+  "q_en": "What is the primary use of a 'servo mechanism' in a control system?",
+  "o_hi": [
+   "वोल्टेज को स्थिर रखना",
+   "आउटपुट का सटीक स्थिति नियंत्रण (position control)",
+   "सिस्टम की गति को बढ़ाना",
+   "सिग्नल को एम्पलीफाई करना"
+  ],
+  "o_en": [
+   "To stabilize voltage",
+   "Precise position control of output",
+   "To increase system speed",
+   "To amplify signals"
+  ],
+  "a": 1,
+  "e_hi": "सर्वो मैकेनिज्म का उपयोग मुख्य रूप से स्थिति, गति या त्वरण जैसे आउटपुट पैरामीटर्स को सटीक रूप से नियंत्रित करने के लिए किया जाता है।",
+  "e_en": "Servo mechanisms are primarily used for precise control of output parameters like position, velocity, or acceleration."
+ },
+ {
+  "id": "rp-je_e-f00079",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "सिस्टम की 'स्थिरता' (Stability) का विश्लेषण करने के लिए 'राउथ-हर्विट्ज़ मानदंड' (Routh-Hurwitz criterion) का उपयोग कब किया जाता है?",
+  "q_en": "When is the 'Routh-Hurwitz criterion' used to analyze the stability of a system?",
+  "o_hi": [
+   "केवल नॉन-लीनियर सिस्टम के लिए",
+   "कैरेक्टरिस्टिक इक्वेशन के गुणांकों का उपयोग करके",
+   "केवल फ्रीक्वेंसी रिस्पॉन्स के लिए",
+   "सिस्टम के इनपुट सिग्नल के लिए"
+  ],
+  "o_en": [
+   "Only for non-linear systems",
+   "Using the coefficients of the characteristic equation",
+   "Only for frequency response",
+   "For the input signal of the system"
+  ],
+  "a": 1,
+  "e_hi": "राउथ-हर्विट्ज़ मानदंड एक बीजगणितीय विधि है जो सिस्टम के कैरेक्टरिस्टिक इक्वेशन के गुणांकों का उपयोग करके स्थिरता निर्धारित करती है।",
+  "e_en": "The Routh-Hurwitz criterion is an algebraic method that determines stability using the coefficients of the system's characteristic equation."
+ },
+ {
+  "id": "rp-je_e-f00080",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "कंट्रोल सिस्टम में 'टाइप' (Type) संख्या क्या दर्शाती है?",
+  "q_en": "What does the 'Type' number represent in a control system?",
+  "o_hi": [
+   "सिस्टम में मौजूद पोल्स (poles) की कुल संख्या",
+   "सिस्टम के ट्रांसफर फंक्शन में ओरिजिन पर इंटीग्रेटर्स की संख्या",
+   "सिस्टम में गेन (gain) का मान",
+   "आउटपुट का अधिकतम मान"
+  ],
+  "o_en": [
+   "Total number of poles in the system",
+   "Number of integrators at the origin in the transfer function",
+   "The value of gain in the system",
+   "Maximum value of output"
+  ],
+  "a": 1,
+  "e_hi": "टाइप संख्या यह बताती है कि सिस्टम में s=0 पर कितने पोल्स स्थित हैं, जो सिस्टम की स्टेडी-स्टेट त्रुटि को प्रभावित करते हैं।",
+  "e_en": "The Type number indicates the number of poles located at s=0, which affects the steady-state error of the system."
+ },
+ {
+  "id": "rp-je_e-f00081",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "यदि किसी सिस्टम का डैम्पिंग अनुपात 1 के बराबर है, तो वह सिस्टम कैसा कहलाएगा?",
+  "q_en": "If the damping ratio of a system is equal to 1, what is the system called?",
+  "o_hi": [
+   "अति-अवमंदित",
+   "अल्प-अवमंदित",
+   "क्रांतिक-अवमंदित",
+   "अनंत-अवमंदित"
+  ],
+  "o_en": [
+   "Overdamped",
+   "Underdamped",
+   "Critically damped",
+   "Infinitely damped"
+  ],
+  "a": 2,
+  "e_hi": "क्रांतिक-अवमंदित (Critically damped) सिस्टम बिना किसी दोलन के सबसे तेज़ प्रतिक्रिया समय प्रदान करता है।",
+  "e_en": "A critically damped system provides the fastest response time without any oscillations."
+ },
+ {
+  "id": "rp-je_e-f00082",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "कंट्रोल सिस्टम में 'ब्लॉक डायग्राम' का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is a 'block diagram' used in a control system?",
+  "o_hi": [
+   "सिस्टम के भौतिक आकार को दिखाने के लिए",
+   "सिस्टम के विभिन्न घटकों के बीच संबंधों और सिग्नल प्रवाह को दर्शाने के लिए",
+   "सिस्टम की लागत का अनुमान लगाने के लिए",
+   "सिस्टम के निर्माण की विधि बताने के लिए"
+  ],
+  "o_en": [
+   "To show the physical size of the system",
+   "To represent relationships and signal flow between components",
+   "To estimate the cost of the system",
+   "To describe the manufacturing method"
+  ],
+  "a": 1,
+  "e_hi": "ब्लॉक डायग्राम सिस्टम के कार्यात्मक घटकों और उनके बीच सूचना के प्रवाह को समझने का एक दृश्य तरीका है।",
+  "e_en": "A block diagram is a visual way to understand the functional components of a system and the flow of information between them."
+ },
+ {
+  "id": "rp-je_e-f00083",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक 'यूनिटी फीडबैक' (Unity feedback) सिस्टम में फीडबैक का मान क्या होता है?",
+  "q_en": "What is the value of feedback in a 'unity feedback' system?",
+  "o_hi": [
+   "शून्य",
+   "एक",
+   "अनंत",
+   "माइनस एक"
+  ],
+  "o_en": [
+   "Zero",
+   "One",
+   "Infinite",
+   "Minus one"
+  ],
+  "a": 1,
+  "e_hi": "यूनिटी फीडबैक सिस्टम में, फीडबैक पाथ गेन (H(s)) का मान 1 होता है, जिसका अर्थ है कि आउटपुट को सीधे वापस इनपुट में फीड किया जाता है।",
+  "e_en": "In a unity feedback system, the feedback path gain (H(s)) is 1, meaning the output is fed directly back to the input."
+ }
+]

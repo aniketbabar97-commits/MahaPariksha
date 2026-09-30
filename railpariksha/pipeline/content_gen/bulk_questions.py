@@ -122,6 +122,24 @@ def valid(q, subject_id=None):
         return False
 
 
+def subject_codes(tax):
+    """Map each subject id to a short, GLOBALLY-unique id-prefix code. Plain s['id'][:3]
+    isn't safe on its own -- e.g. je_mechanical/je_civil/je_electrical all truncate to
+    'je_', and validate.py checks id uniqueness across ALL bank files, not per-file, so
+    a naive truncation silently produces colliding ids across different subjects (this
+    bit us once; see git history for the "fix je_* id collision" commit). Starts every
+    code at 3 chars and extends any that collide until they're all distinct."""
+    codes = {}
+    for s in tax["subjects"]:
+        n = 3
+        code = s["id"][:n]
+        while code in codes.values():
+            n += 1
+            code = s["id"][:n]
+        codes[s["id"]] = code
+    return codes
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--provider", required=True, choices=["groq", "gemini"])
@@ -137,6 +155,7 @@ def main():
     args = p.parse_args()
 
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
+    codes = subject_codes(tax)
     only = set(args.subjects.split(",")) if args.subjects else None
     calls = 0
     added_total = 0
@@ -190,7 +209,7 @@ def main():
                     if key in seen_norm:
                         continue
                     seen_norm.add(key)
-                    q2 = {"id": f"rp-{s['id'][:3]}-{args.id_prefix_suffix}{next_num:05d}", "s": s["id"], "t": t["id"],
+                    q2 = {"id": f"rp-{codes[s['id']]}-{args.id_prefix_suffix}{next_num:05d}", "s": s["id"], "t": t["id"],
                           "d": q["d"] if q.get("d") in (1, 2, 3) else 2,
                           "q_hi": q["q_hi"], "q_en": q["q_en"], "o_hi": q["o_hi"], "o_en": q["o_en"],
                           "a": q["a"], "e_hi": q["e_hi"], "e_en": q["e_en"]}
