@@ -109,55 +109,72 @@ def main():
     flagged = 0
     checked_this_run = 0
 
+    # Round-robin across subjects (one batch per subject per cycle) instead of
+    # exhausting one subject's whole queue before starting the next. A single
+    # large subject otherwise starves every later subject when restarts keep
+    # interrupting progress before that first subject ever finishes.
+    queues = {}  # sid -> (checked_set, list of pending batches, topic_names)
     for f in sorted(glob.glob(f"{ROOT}/content/bank/*.json")):
         sid = os.path.splitext(os.path.basename(f))[0]
         if only is not None and sid not in only:
             continue
-        if calls >= args.max_calls:
-            break
         items = json.load(open(f, encoding="utf-8"))
         checked = load_state(sid)
         pending = [q for q in items if q["id"] not in checked]
-        t_names = topic_names.get(sid, {})
+        if not pending:
+            continue
+        queues[sid] = [checked, list(chunks(pending, args.batch_size)), topic_names.get(sid, {})]
 
-        for batch in chunks(pending, args.batch_size):
-            if calls >= args.max_calls:
+    active = list(queues.keys())
+    idx = 0
+    while active and calls < args.max_calls:
+        sid = active[idx % len(active)]
+        checked, batches, t_names = queues[sid]
+        if not batches:
+            active.remove(sid)
+            if not active:
                 break
-            by_id = {q["id"]: q for q in batch}
-            items_text = "\n".join(format_item(q, t_names) for q in batch)
-            prompt = BATCH_PROMPT.format(n=len(batch), subject_en=subj_names.get(sid, sid), items=items_text)
-            try:
-                kw = {"api_key_env": args.gemini_key_env} if args.provider == "gemini" else {}
-                result = ask(args.provider, args.model, prompt, temperature=0.1, **kw)
-            except Exception as e:
-                print(f"ERROR verifying batch ({sid}, {len(batch)} qs): {e}", file=sys.stderr, flush=True)
-                time.sleep(3)
-                continue
-            calls += 1
-            results = result.get("results", [])
-            seen_ids = set()
-            for r in results:
-                qid = r.get("id")
-                if qid not in by_id or qid in seen_ids:
-                    continue  # ignore hallucinated/duplicate ids not in this batch
-                seen_ids.add(qid)
-                checked.add(qid)
-                checked_this_run += 1
-                if not r.get("ok", True):
-                    flagged += 1
-                    q = by_id[qid]
-                    append_flag(sid, {"id": qid, "t": q["t"], "q_en": q["q_en"],
-                                       "problem": r.get("problem", "")})
-                    print(f"FLAGGED {qid}: {r.get('problem', '')}", flush=True)
-            missing = set(by_id) - seen_ids
-            if missing:
-                print(f"WARNING: model returned no verdict for {len(missing)}/{len(batch)} "
-                      f"questions in this batch, re-queued for next run: {sorted(missing)[:5]}...",
-                      file=sys.stderr, flush=True)
-            save_state(sid, checked)
-            print(f"progress: {sid} batch of {len(batch)} ({len(seen_ids)} judged), "
-                  f"{checked_this_run} checked this run, {flagged} flagged total", flush=True)
-            time.sleep(1.5 if args.provider == "groq" else 2.0)
+            idx %= max(len(active), 1)
+            continue
+        batch = batches.pop(0)
+        by_id = {q["id"]: q for q in batch}
+        items_text = "\n".join(format_item(q, t_names) for q in batch)
+        prompt = BATCH_PROMPT.format(n=len(batch), subject_en=subj_names.get(sid, sid), items=items_text)
+        try:
+            kw = {"api_key_env": args.gemini_key_env} if args.provider == "gemini" else {}
+            result = ask(args.provider, args.model, prompt, temperature=0.1, **kw)
+        except Exception as e:
+            print(f"ERROR verifying batch ({sid}, {len(batch)} qs): {e}", file=sys.stderr, flush=True)
+            batches.insert(0, batch)  # retry this batch next time it's this subject's turn
+            time.sleep(3)
+            idx += 1
+            continue
+        calls += 1
+        results = result.get("results", [])
+        seen_ids = set()
+        for r in results:
+            qid = r.get("id")
+            if qid not in by_id or qid in seen_ids:
+                continue  # ignore hallucinated/duplicate ids not in this batch
+            seen_ids.add(qid)
+            checked.add(qid)
+            checked_this_run += 1
+            if not r.get("ok", True):
+                flagged += 1
+                q = by_id[qid]
+                append_flag(sid, {"id": qid, "t": q["t"], "q_en": q["q_en"],
+                                   "problem": r.get("problem", "")})
+                print(f"FLAGGED {qid}: {r.get('problem', '')}", flush=True)
+        missing = set(by_id) - seen_ids
+        if missing:
+            print(f"WARNING: model returned no verdict for {len(missing)}/{len(batch)} "
+                  f"questions in this batch, re-queued for next run: {sorted(missing)[:5]}...",
+                  file=sys.stderr, flush=True)
+        save_state(sid, checked)
+        print(f"progress: {sid} batch of {len(batch)} ({len(seen_ids)} judged), "
+              f"{checked_this_run} checked this run, {flagged} flagged total", flush=True)
+        time.sleep(1.5 if args.provider == "groq" else 2.0)
+        idx += 1
     print(f"done, {checked_this_run} questions checked this run, {flagged} flagged")
 
 
