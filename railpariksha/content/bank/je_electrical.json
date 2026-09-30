@@ -9635,5 +9635,235 @@
   "a": 0,
   "e_hi": "डीसी में कोई स्किन इफेक्ट नहीं होता, जिससे कंडक्टर का पूरा क्रॉस-सेक्शनल क्षेत्र करंट ले जाने के लिए उपयोग किया जा सकता है।",
   "e_en": "DC has no skin effect, allowing the entire cross-sectional area of the conductor to be utilized for carrying current."
+ },
+ {
+  "id": "rp-je_e-f00420",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में, किस उपकरण को 'पूर्णतः नियंत्रित स्विच' (Fully Controlled Switch) के रूप में वर्गीकृत किया गया है?",
+  "q_en": "In power electronics, which device is classified as a 'Fully Controlled Switch'?",
+  "o_hi": [
+   "डायोड",
+   "एस.सी.आर.",
+   "जी.टी.ओ.",
+   "डायैक"
+  ],
+  "o_en": [
+   "Diode",
+   "SCR",
+   "GTO",
+   "DIAC"
+  ],
+  "a": 2,
+  "e_hi": "जी.टी.ओ. (Gate Turn-Off Thyristor) को गेट सिग्नल द्वारा चालू और बंद दोनों किया जा सकता है।",
+  "e_en": "GTO (Gate Turn-Off Thyristor) can be turned on and off by gate signals, making it a fully controlled device."
+ },
+ {
+  "id": "rp-je_e-f00421",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "निम्न में से कौन सा उपकरण 'अनियंत्रित स्विच' (Uncontrolled Switch) की श्रेणी में आता है?",
+  "q_en": "Which of the following devices falls under the category of an 'Uncontrolled Switch'?",
+  "o_hi": [
+   "डायोड",
+   "ट्रांजिस्टर",
+   "एस.सी.आर.",
+   "मोसफेट"
+  ],
+  "o_en": [
+   "Diode",
+   "Transistor",
+   "SCR",
+   "MOSFET"
+  ],
+  "a": 0,
+  "e_hi": "डायोड एक अनियंत्रित उपकरण है क्योंकि इसे चालू या बंद करने के लिए कोई कंट्रोल टर्मिनल नहीं होता।",
+  "e_en": "A diode is an uncontrolled device because it lacks a control terminal to initiate turn-on or turn-off."
+ },
+ {
+  "id": "rp-je_e-f00422",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "पावर ट्रांजिस्टर का वर्गीकरण किस आधार पर किया जाता है?",
+  "q_en": "On what basis are power transistors classified?",
+  "o_hi": [
+   "केवल धारा नियंत्रण",
+   "केवल वोल्टेज नियंत्रण",
+   "धारा और वोल्टेज दोनों नियंत्रण",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Current control only",
+   "Voltage control only",
+   "Both current and voltage control",
+   "None of these"
+  ],
+  "a": 2,
+  "e_hi": "पावर ट्रांजिस्टर जैसे बी.जे.टी. धारा नियंत्रित हैं, जबकि मोसफेट और आई.जी.बी.टी. वोल्टेज नियंत्रित उपकरण हैं।",
+  "e_en": "Power transistors like BJT are current-controlled, whereas MOSFETs and IGBTs are voltage-controlled devices."
+ },
+ {
+  "id": "rp-je_e-f00423",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एस.सी.आर. (SCR) को किस प्रकार के स्विच के रूप में वर्गीकृत किया जाता है?",
+  "q_en": "How is an SCR (Silicon Controlled Rectifier) classified in terms of switching?",
+  "o_hi": [
+   "पूर्णतः नियंत्रित",
+   "अर्ध-नियंत्रित",
+   "अनियंत्रित",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Fully controlled",
+   "Semi-controlled",
+   "Uncontrolled",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "एस.सी.आर. को अर्ध-नियंत्रित कहा जाता है क्योंकि इसे गेट सिग्नल द्वारा चालू तो किया जा सकता है, लेकिन बंद नहीं।",
+  "e_en": "An SCR is called semi-controlled because it can be turned on by a gate signal but cannot be turned off by it."
+ },
+ {
+  "id": "rp-je_e-f00424",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "निम्न में से कौन सा उपकरण 'वोल्टेज कंट्रोल्ड डिवाइस' (Voltage Controlled Device) है?",
+  "q_en": "Which of the following devices is a 'Voltage Controlled Device'?",
+  "o_hi": [
+   "बी.जे.टी.",
+   "मोसफेट",
+   "एस.सी.आर.",
+   "जी.टी.ओ."
+  ],
+  "o_en": [
+   "BJT",
+   "MOSFET",
+   "SCR",
+   "GTO"
+  ],
+  "a": 1,
+  "e_hi": "मोसफेट (MOSFET) गेट-सोर्स वोल्टेज द्वारा नियंत्रित होता है, इसलिए यह वोल्टेज कंट्रोल्ड है।",
+  "e_en": "A MOSFET is controlled by the gate-source voltage, hence it is classified as a voltage-controlled device."
+ },
+ {
+  "id": "rp-je_e-f00425",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में 'थायरिस्टर परिवार' का सबसे बुनियादी उपकरण कौन सा है?",
+  "q_en": "Which is the most fundamental device of the 'Thyristor family' in power electronics?",
+  "o_hi": [
+   "एस.सी.आर.",
+   "ट्रायैक",
+   "डायैक",
+   "यू.जे.टी."
+  ],
+  "o_en": [
+   "SCR",
+   "TRIAC",
+   "DIAC",
+   "UJT"
+  ],
+  "a": 0,
+  "e_hi": "एस.सी.आर. थायरिस्टर परिवार का सबसे प्रमुख और आधारभूत सदस्य है।",
+  "e_en": "The SCR is the most prominent and fundamental member of the thyristor family."
+ },
+ {
+  "id": "rp-je_e-f00426",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "आई.जी.बी.टी. (IGBT) किन दो उपकरणों का संयोजन है?",
+  "q_en": "An IGBT is a combination of which two devices?",
+  "o_hi": [
+   "बी.जे.टी. और मोसफेट",
+   "एस.सी.आर. और बी.जे.टी.",
+   "डायोड और मोसफेट",
+   "यू.जे.टी. और एस.सी.आर."
+  ],
+  "o_en": [
+   "BJT and MOSFET",
+   "SCR and BJT",
+   "Diode and MOSFET",
+   "UJT and SCR"
+  ],
+  "a": 0,
+  "e_hi": "आई.जी.बी.टी. में मोसफेट का इनपुट गेट और बी.जे.टी. का आउटपुट करैक्टरिस्टिक होता है।",
+  "e_en": "An IGBT combines the high-impedance gate of a MOSFET and the low on-state conduction loss of a BJT."
+ },
+ {
+  "id": "rp-je_e-f00427",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "द्वि-दिशात्मक (Bidirectional) स्विच का उदाहरण कौन सा है?",
+  "q_en": "Which of the following is an example of a bidirectional switch?",
+  "o_hi": [
+   "एस.सी.आर.",
+   "मोसफेट",
+   "ट्रायैक",
+   "बी.जे.टी."
+  ],
+  "o_en": [
+   "SCR",
+   "MOSFET",
+   "TRIAC",
+   "BJT"
+  ],
+  "a": 2,
+  "e_hi": "ट्रायैक (TRIAC) दोनों दिशाओं में धारा प्रवाहित कर सकता है, इसलिए यह द्वि-दिशात्मक है।",
+  "e_en": "A TRIAC can conduct current in both directions, making it a bidirectional power switch."
+ },
+ {
+  "id": "rp-je_e-f00428",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स कन्वर्टर्स में 'कम्यूटेशन' की आवश्यकता के आधार पर स्विच को कैसे वर्गीकृत किया जाता है?",
+  "q_en": "How are switches classified based on the need for commutation in power electronic converters?",
+  "o_hi": [
+   "प्राकृतिक और जबरन (फोर्स्ड) कम्यूटेशन स्विच",
+   "केवल स्थिर स्विच",
+   "केवल डिजिटल स्विच",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Natural and forced commutation switches",
+   "Static switches only",
+   "Digital switches only",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "थायरिस्टर आधारित कन्वर्टर्स को कम्यूटेशन विधि के आधार पर प्राकृतिक या फोर्स्ड श्रेणियों में बांटा जाता है।",
+  "e_en": "Thyristor-based converters are classified into natural or forced commutation categories based on the turn-off method."
+ },
+ {
+  "id": "rp-je_e-f00429",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "निम्न में से कौन सा उपकरण 'करंट कंट्रोल्ड डिवाइस' (Current Controlled Device) है?",
+  "q_en": "Which of the following is a 'Current Controlled Device'?",
+  "o_hi": [
+   "मोसफेट",
+   "आई.जी.बी.टी.",
+   "बी.जे.टी.",
+   "इनमें से सभी"
+  ],
+  "o_en": [
+   "MOSFET",
+   "IGBT",
+   "BJT",
+   "All of these"
+  ],
+  "a": 2,
+  "e_hi": "बी.जे.टी. (Bipolar Junction Transistor) में कलेक्टर धारा बेस धारा द्वारा नियंत्रित होती है।",
+  "e_en": "In a BJT (Bipolar Junction Transistor), the collector current is controlled by the base current, hence it is current-controlled."
  }
 ]
