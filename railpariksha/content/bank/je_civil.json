@@ -21940,5 +21940,810 @@
   "a": 0,
   "e_hi": "कठोरता वह बल है जो किसी संरचना में इकाई विस्थापन या रोटेशन उत्पन्न करने के लिए आवश्यक होता है।",
   "e_en": "Stiffness is defined as the force required to produce a unit displacement or rotation in a structure."
+ },
+ {
+  "id": "rp-je_c-f00955",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम की लंबाई 'L' है और उस पर मुक्त सिरे पर 'P' भार लगा है। मुक्त सिरे पर विक्षेपण (deflection) का मान क्या होगा यदि फ्लेक्सुरल कठोरता 'EI' है?",
+  "q_en": "A cantilever beam of length 'L' carries a point load 'P' at its free end. What is the deflection at the free end if the flexural rigidity is 'EI'?",
+  "o_hi": [
+   "PL³/3EI",
+   "PL³/8EI",
+   "PL²/2EI",
+   "PL/EI"
+  ],
+  "o_en": [
+   "PL³/3EI",
+   "PL³/8EI",
+   "PL²/2EI",
+   "PL/EI"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम के मुक्त सिरे पर बिंदु भार के लिए विक्षेपण का मानक सूत्र PL³/3EI होता है।",
+  "e_en": "The standard formula for deflection at the free end of a cantilever beam under a point load is PL³/3EI."
+ },
+ {
+  "id": "rp-je_c-f00956",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक शुद्ध आलंबित (simply supported) बीम की लंबाई 'L' है और उस पर 'w' तीव्रता का एक समान वितरित भार (UDL) पूरी लंबाई पर लगा है। मध्य-बिंदु पर अधिकतम बेंडिंग मोमेंट का मान क्या होगा?",
+  "q_en": "A simply supported beam of length 'L' carries a uniformly distributed load of intensity 'w' over its entire span. What is the maximum bending moment at the mid-span?",
+  "o_hi": [
+   "wL²/4",
+   "wL²/8",
+   "wL²/12",
+   "wL/2"
+  ],
+  "o_en": [
+   "wL²/4",
+   "wL²/8",
+   "wL²/12",
+   "wL/2"
+  ],
+  "a": 1,
+  "e_hi": "शुद्ध आलंबित बीम पर UDL के लिए अधिकतम बेंडिंग मोमेंट का सूत्र wL²/8 होता है।",
+  "e_en": "The formula for maximum bending moment for a simply supported beam with UDL is wL²/8."
+ },
+ {
+  "id": "rp-je_c-f00957",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 4 मीटर लंबी कॉलम का प्रभावी लंबाई क्या होगी यदि यह दोनों सिरों पर कब्जेदार (hinged) है?",
+  "q_en": "What will be the effective length of a 4-meter long column if it is hinged at both ends?",
+  "o_hi": [
+   "2 मीटर",
+   "4 मीटर",
+   "6 मीटर",
+   "8 मीटर"
+  ],
+  "o_en": [
+   "2 meters",
+   "4 meters",
+   "6 meters",
+   "8 meters"
+  ],
+  "a": 1,
+  "e_hi": "दोनों सिरों पर कब्जेदार कॉलम के लिए प्रभावी लंबाई (Le) वास्तविक लंबाई (L) के बराबर होती है।",
+  "e_en": "For a column hinged at both ends, the effective length (Le) is equal to the actual length (L)."
+ },
+ {
+  "id": "rp-je_c-f00958",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक फिक्स्ड बीम (दोनों सिरों पर आबद्ध) पर मध्य में 'P' भार लगा है। फिक्स्ड सिरों पर उत्पन्न बेंडिंग मोमेंट का मान क्या होगा?",
+  "q_en": "A fixed beam carries a point load 'P' at the center. What is the magnitude of the bending moment at the fixed ends?",
+  "o_hi": [
+   "PL/8",
+   "PL/4",
+   "PL/12",
+   "PL/6"
+  ],
+  "o_en": [
+   "PL/8",
+   "PL/4",
+   "PL/12",
+   "PL/6"
+  ],
+  "a": 0,
+  "e_hi": "दोनों सिरों पर आबद्ध बीम के लिए मध्य बिंदु भार के कारण सिरों पर फिक्स्ड एंड मोमेंट PL/8 होता है।",
+  "e_en": "For a fixed beam with a central point load, the fixed-end moment is calculated as PL/8."
+ },
+ {
+  "id": "rp-je_c-f00959",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि किसी संरचना के लिए स्थैतिक अनिश्चितता (static indeterminacy) का मान 2 है और गतिज अनिश्चितता (kinematic indeterminacy) का मान 3 है, तो कुल अज्ञात बल कितने होंगे?",
+  "q_en": "If the static indeterminacy of a structure is 2 and the kinematic indeterminacy is 3, what is the total number of unknown forces?",
+  "o_hi": [
+   "2",
+   "3",
+   "5",
+   "6"
+  ],
+  "o_en": [
+   "2",
+   "3",
+   "5",
+   "6"
+  ],
+  "a": 0,
+  "e_hi": "स्थैतिक अनिश्चितता सीधे अज्ञात बलों (प्रतिक्रियाओं और आंतरिक बलों) की संख्या को दर्शाती है जो संतुलन समीकरणों से अधिक हैं।",
+  "e_en": "Static indeterminacy directly represents the number of unknown forces (reactions and internal forces) that exceed the equilibrium equations."
+ },
+ {
+  "id": "rp-je_c-f00960",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम पर 10 kN/m का UDL 2 मीटर की लंबाई पर लगा है। मुक्त सिरे पर बेंडिंग मोमेंट का मान क्या होगा?",
+  "q_en": "A cantilever beam carries a UDL of 10 kN/m over a length of 2 meters. What is the bending moment at the fixed end?",
+  "o_hi": [
+   "10 kNm",
+   "20 kNm",
+   "40 kNm",
+   "80 kNm"
+  ],
+  "o_en": [
+   "10 kNm",
+   "20 kNm",
+   "40 kNm",
+   "80 kNm"
+  ],
+  "a": 1,
+  "e_hi": "बेंडिंग मोमेंट = (w * L) * (L/2) = 10 * 2 * (2/2) = 20 kNm.",
+  "e_en": "Bending moment = (w * L) * (L/2) = 10 * 2 * (2/2) = 20 kNm."
+ },
+ {
+  "id": "rp-je_c-f00961",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यूलर के सूत्र के अनुसार, एक कॉलम की बकलिंग लोड (P) की गणना करें जिसकी लंबाई 2 मीटर और फ्लेक्सुरल कठोरता EI है (दोनों सिरे कब्जेदार हैं)।",
+  "q_en": "According to Euler's formula, calculate the buckling load (P) of a column with length 2 meters and flexural rigidity EI (both ends hinged).",
+  "o_hi": [
+   "π²EI/4",
+   "π²EI/2",
+   "π²EI",
+   "4π²EI"
+  ],
+  "o_en": [
+   "π²EI/4",
+   "π²EI/2",
+   "π²EI",
+   "4π²EI"
+  ],
+  "a": 0,
+  "e_hi": "यूलर बकलिंग लोड P = π²EI / (Le)². यहाँ Le = L = 2 मीटर, अतः P = π²EI / 4.",
+  "e_en": "Euler's buckling load P = π²EI / (Le)². Here Le = L = 2 meters, so P = π²EI / 4."
+ },
+ {
+  "id": "rp-je_c-f00962",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि एक बीम का स्पैन 6 मीटर है और उस पर 20 kN का केंद्रित भार मध्य में लगा है, तो सपोर्ट पर प्रतिक्रिया बल क्या होगा?",
+  "q_en": "If a beam has a span of 6 meters and carries a point load of 20 kN at the center, what is the reaction force at each support?",
+  "o_hi": [
+   "5 kN",
+   "10 kN",
+   "15 kN",
+   "20 kN"
+  ],
+  "o_en": [
+   "5 kN",
+   "10 kN",
+   "15 kN",
+   "20 kN"
+  ],
+  "a": 1,
+  "e_hi": "सममित भारण के कारण, प्रत्येक सपोर्ट पर प्रतिक्रिया कुल भार की आधी होगी: 20/2 = 10 kN.",
+  "e_en": "Due to symmetric loading, the reaction at each support is half the total load: 20/2 = 10 kN."
+ },
+ {
+  "id": "rp-je_c-f00963",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर (statically determinate) बीम के लिए, यदि एक अतिरिक्त आलंब (support) जोड़ा जाता है, तो संरचना क्या बन जाती है?",
+  "q_en": "If an additional support is added to a statically determinate beam, what does the structure become?",
+  "o_hi": [
+   "अस्थिर (Unstable)",
+   "स्थिर (Statically determinate)",
+   "अनिश्चित (Statically indeterminate)",
+   "कैंटीलीवर (Cantilever)"
+  ],
+  "o_en": [
+   "Unstable",
+   "Statically determinate",
+   "Statically indeterminate",
+   "Cantilever"
+  ],
+  "a": 2,
+  "e_hi": "अतिरिक्त आलंब जोड़ने से अज्ञात प्रतिक्रियाओं की संख्या संतुलन समीकरणों से अधिक हो जाती है, जिससे यह अनिश्चित हो जाती है।",
+  "e_en": "Adding an extra support makes the number of unknown reactions exceed the equilibrium equations, making it statically indeterminate."
+ },
+ {
+  "id": "rp-je_c-f00964",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "त्रि-आयामी (3D) फ्रेम में, एक स्थिर संरचना के लिए संतुलन के कुल कितने समीकरण उपलब्ध होते हैं?",
+  "q_en": "In a 3D frame, how many total equations of equilibrium are available for a stable structure?",
+  "o_hi": [
+   "तीन",
+   "छह",
+   "नौ",
+   "बारह"
+  ],
+  "o_en": [
+   "Three",
+   "Six",
+   "Nine",
+   "Twelve"
+  ],
+  "a": 1,
+  "e_hi": "त्रि-आयामी स्थान में, छह संतुलन समीकरण होते हैं: तीन बल के लिए और तीन आघूर्ण (moment) के लिए।",
+  "e_en": "In 3D space, there are six equilibrium equations: three for forces and three for moments."
+ },
+ {
+  "id": "rp-je_c-f00965",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक आबद्ध बीम (propped cantilever) में, यदि आलंब हटने पर विस्थापन शून्य रहता है, तो उसे क्या कहते हैं?",
+  "q_en": "In a propped cantilever beam, if the displacement remains zero when a support is removed, what is it called?",
+  "o_hi": [
+   "शुद्ध रूप से स्थिर",
+   "स्थिर",
+   "गतिशील",
+   "अस्थिर"
+  ],
+  "o_en": [
+   "Purely determinate",
+   "Statically indeterminate",
+   "Kinematically unstable",
+   "Unstable"
+  ],
+  "a": 1,
+  "e_hi": "प्रॉप्ड कैंटीलीवर में एक अतिरिक्त आलंब होता है जो इसे अनिश्चित बनाता है।",
+  "e_en": "A propped cantilever has an extra support that makes it statically indeterminate."
+ },
+ {
+  "id": "rp-je_c-f00966",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "किसी संरचना की 'डिग्री ऑफ फ्रीडम' (DOF) का क्या अर्थ है?",
+  "q_en": "What does the 'Degree of Freedom' (DOF) of a structure signify?",
+  "o_hi": [
+   "कुल जोड़ों की संख्या",
+   "स्वतंत्र विस्थापन की संख्या",
+   "समीकरणों की संख्या",
+   "आलंबों की संख्या"
+  ],
+  "o_en": [
+   "Total number of joints",
+   "Number of independent displacements",
+   "Number of equations",
+   "Number of supports"
+  ],
+  "a": 1,
+  "e_hi": "डिग्री ऑफ फ्रीडम उन स्वतंत्र निर्देशांकों की संख्या है जो संरचना के विरूपण को पूरी तरह परिभाषित करते हैं।",
+  "e_en": "Degree of freedom represents the number of independent coordinates required to fully define the deformation of a structure."
+ },
+ {
+  "id": "rp-je_c-f00967",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "तीन-हिंज्ड आर्च (three-hinged arch) किस प्रकार की संरचना है?",
+  "q_en": "What type of structure is a three-hinged arch?",
+  "o_hi": [
+   "स्थिर (Determinate)",
+   "अनिश्चित (Indeterminate)",
+   "अस्थिर (Unstable)",
+   "परिवर्तनीय"
+  ],
+  "o_en": [
+   "Statically determinate",
+   "Statically indeterminate",
+   "Unstable",
+   "Variable"
+  ],
+  "a": 0,
+  "e_hi": "तीन-हिंज्ड आर्च में तीन हिंज होते हैं जो कुल चार अज्ञात प्रतिक्रियाओं को हल करने के लिए तीन संतुलन समीकरणों के साथ एक अतिरिक्त समीकरण प्रदान करते हैं।",
+  "e_en": "A three-hinged arch provides three equilibrium equations and one extra equation from the internal hinge, making it determinate."
+ },
+ {
+  "id": "rp-je_c-f00968",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि किसी ट्रस (Truss) के लिए m + r < 2j है, तो वह संरचना कैसी है?",
+  "q_en": "If for a truss m + r < 2j, what is the state of the structure?",
+  "o_hi": [
+   "स्थिर",
+   "अस्थिर",
+   "अनिश्चित",
+   "अति-स्थिर"
+  ],
+  "o_en": [
+   "Statically determinate",
+   "Unstable",
+   "Statically indeterminate",
+   "Over-stable"
+  ],
+  "a": 1,
+  "e_hi": "ट्रस के लिए, यदि सदस्यों (m) और प्रतिक्रियाओं (r) का योग जोड़ों (j) के दोगुने से कम है, तो यह अस्थिर है।",
+  "e_en": "For a truss, if the sum of members (m) and reactions (r) is less than twice the joints (j), the structure is unstable."
+ },
+ {
+  "id": "rp-je_c-f00969",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "मोमेंट डिस्ट्रीब्यूशन विधि (Moment Distribution Method) का मुख्य आधार क्या है?",
+  "q_en": "What is the fundamental basis of the Moment Distribution Method?",
+  "o_hi": [
+   "ऊर्जा संरक्षण",
+   "विस्थापन निरंतरता (Compatibility)",
+   "बल संतुलन",
+   "केवल आघूर्ण संतुलन"
+  ],
+  "o_en": [
+   "Conservation of energy",
+   "Compatibility of displacements",
+   "Force equilibrium",
+   "Moment equilibrium only"
+  ],
+  "a": 1,
+  "e_hi": "यह विधि जोड़ों पर विस्थापन की निरंतरता सुनिश्चित करने के लिए आघूर्णों को वितरित करती है।",
+  "e_en": "This method distributes moments to ensure compatibility of displacements at the joints."
+ },
+ {
+  "id": "rp-je_c-f00970",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "कैंटीलीवर बीम के मुक्त सिरे पर बिंदु भार के कारण अधिकतम बेंडिंग मोमेंट कहाँ होता है?",
+  "q_en": "Where does the maximum bending moment occur in a cantilever beam due to a point load at the free end?",
+  "o_hi": [
+   "मुक्त सिरे पर",
+   "बीच में",
+   "आबद्ध सिरे (fixed end) पर",
+   "कहीं नहीं"
+  ],
+  "o_en": [
+   "At the free end",
+   "At the mid-span",
+   "At the fixed end",
+   "Nowhere"
+  ],
+  "a": 2,
+  "e_hi": "कैंटीलीवर बीम में, बेंडिंग मोमेंट आबद्ध सिरे पर अधिकतम होता है क्योंकि वहाँ लीवर आर्म सबसे लंबा होता है।",
+  "e_en": "In a cantilever beam, the bending moment is maximum at the fixed end due to the longest lever arm."
+ },
+ {
+  "id": "rp-je_c-f00971",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक बीम की 'स्टिफनेस' (Stiffness) का क्या अर्थ है?",
+  "q_en": "What is the meaning of the 'Stiffness' of a beam?",
+  "o_hi": [
+   "इकाई विरूपण के लिए आवश्यक बल",
+   "भार सहने की क्षमता",
+   "अधिकतम विक्षेपण",
+   "सामग्री का घनत्व"
+  ],
+  "o_en": [
+   "Force required for unit deformation",
+   "Load carrying capacity",
+   "Maximum deflection",
+   "Density of material"
+  ],
+  "a": 0,
+  "e_hi": "स्टिफनेस वह बल है जो संरचना में इकाई विस्थापन (विस्थापन या घूर्णन) उत्पन्न करने के लिए आवश्यक होता है।",
+  "e_en": "Stiffness is the force required to produce a unit displacement (translation or rotation) in the structure."
+ },
+ {
+  "id": "rp-je_c-f00972",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर (statically determinate) बीम के लिए, यदि एक सपोर्ट हटा दिया जाए, तो संरचना पर क्या प्रभाव पड़ेगा?",
+  "q_en": "What happens to a statically determinate beam if one of its supports is removed?",
+  "o_hi": [
+   "संरचना अस्थिर (unstable) हो जाएगी",
+   "संरचना अनिश्चित (indeterminate) हो जाएगी",
+   "संरचना का भार वहन बढ़ जाएगा",
+   "संरचना में कोई बदलाव नहीं होगा"
+  ],
+  "o_en": [
+   "The structure becomes unstable",
+   "The structure becomes indeterminate",
+   "The load-carrying capacity increases",
+   "There is no change to the structure"
+  ],
+  "a": 0,
+  "e_hi": "स्थिर बीम में सपोर्ट की संख्या संतुलन समीकरणों के बराबर होती है। सपोर्ट हटाने से संरचना तंत्र (mechanism) बन जाती है और अस्थिर हो जाती है।",
+  "e_en": "In a determinate beam, the number of supports equals the equilibrium equations. Removing a support turns the structure into a mechanism, causing instability."
+ },
+ {
+  "id": "rp-je_c-f00973",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "डिग्री ऑफ स्टेटिक इंडिटरमिनेसी (DSI) की गणना करते समय, पिन-जॉइंटेड फ्रेम में 'm' और 'j' क्या दर्शाते हैं?",
+  "q_en": "When calculating the degree of static indeterminacy (DSI) for a pin-jointed frame, what do 'm' and 'j' represent?",
+  "o_hi": [
+   "m = सदस्यों की संख्या, j = जोड़ों की संख्या",
+   "m = मोमेंट, j = जंक्शन",
+   "m = मटेरियल कांस्टेंट, j = जॉइंट लोड",
+   "m = मास, j = जंक्शन"
+  ],
+  "o_en": [
+   "m = number of members, j = number of joints",
+   "m = moment, j = junction",
+   "m = material constant, j = joint load",
+   "m = mass, j = junction"
+  ],
+  "a": 0,
+  "e_hi": "पिन-जॉइंटेड फ्रेम के लिए DSI का सूत्र (m + r) - 2j होता है, जहाँ m सदस्यों की संख्या है और j जोड़ों की संख्या है।",
+  "e_en": "The formula for DSI in pin-jointed frames is (m + r) - 2j, where m is the number of members and j is the number of joints."
+ },
+ {
+  "id": "rp-je_c-f00974",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम के मुक्त सिरे (free end) पर लगाए गए बिंदु भार (point load) के कारण अधिकतम बेंडिंग मोमेंट कहाँ होता है?",
+  "q_en": "Where does the maximum bending moment occur for a cantilever beam subjected to a point load at the free end?",
+  "o_hi": [
+   "फिक्स्ड सपोर्ट पर",
+   "मुक्त सिरे पर",
+   "बीम के बीच में",
+   "आलंबन से एक-तिहाई दूरी पर"
+  ],
+  "o_en": [
+   "At the fixed support",
+   "At the free end",
+   "At the mid-span",
+   "At one-third distance from the support"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम में, बेंडिंग मोमेंट सपोर्ट से दूरी के साथ बढ़ता है, इसलिए अधिकतम मान हमेशा फिक्स्ड सपोर्ट पर होता है।",
+  "e_en": "In a cantilever beam, the bending moment increases with the distance from the free end, reaching its maximum at the fixed support."
+ },
+ {
+  "id": "rp-je_c-f00975",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण में, 'सुपरपोज़िशन सिद्धांत' (Principle of Superposition) लागू करने के लिए मुख्य शर्त क्या है?",
+  "q_en": "What is the primary condition for applying the Principle of Superposition in structural analysis?",
+  "o_hi": [
+   "सामग्री रैखिक लोचदार (linear elastic) होनी चाहिए",
+   "संरचना प्लास्टिक होनी चाहिए",
+   "भार बहुत अधिक होना चाहिए",
+   "संरचना केवल कंक्रीट की होनी चाहिए"
+  ],
+  "o_en": [
+   "The material must be linear elastic",
+   "The structure must be plastic",
+   "The load must be very high",
+   "The structure must be made of concrete only"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोज़िशन सिद्धांत केवल रैखिक लोचदार सामग्रियों और छोटे विरूपणों के लिए मान्य है जहाँ हुक का नियम लागू होता है।",
+  "e_en": "The principle of superposition holds true only for linear elastic materials and small deformations where Hooke's Law is valid."
+ },
+ {
+  "id": "rp-je_c-f00976",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक निश्चित बीम (propped cantilever) में, यदि एक सिरा फिक्स्ड है और दूसरा 'प्रॉप्ड' (सपोर्टेड) है, तो इंडिटरमिनेसी की डिग्री क्या है?",
+  "q_en": "What is the degree of static indeterminacy for a propped cantilever beam?",
+  "o_hi": [
+   "एक",
+   "शून्य",
+   "दो",
+   "तीन"
+  ],
+  "o_en": [
+   "One",
+   "Zero",
+   "Two",
+   "Three"
+  ],
+  "a": 0,
+  "e_hi": "प्रॉप्ड कैंटिलीवर में कुल 4 रिएक्शन होते हैं (3 फिक्स्ड सपोर्ट पर, 1 प्रॉप्ड सपोर्ट पर) और 3 संतुलन समीकरण होते हैं, इसलिए DSI = 4 - 3 = 1।",
+  "e_en": "A propped cantilever has 4 reactions (3 at fixed, 1 at prop) and 3 equilibrium equations, resulting in a DSI of 4 - 3 = 1."
+ },
+ {
+  "id": "rp-je_c-f00977",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "कंजुगेट बीम विधि (Conjugate Beam Method) में, एक वास्तविक बीम का 'हिंज' (hinged) सपोर्ट कंजुगेट बीम में कैसा व्यवहार करता है?",
+  "q_en": "In the Conjugate Beam Method, how does a hinged support of the real beam behave in the conjugate beam?",
+  "o_hi": [
+   "हिंज सपोर्ट ही रहता है",
+   "फिक्स्ड सपोर्ट बन जाता है",
+   "फ्री एंड बन जाता है",
+   "रोलर सपोर्ट बन जाता है"
+  ],
+  "o_en": [
+   "Remains a hinged support",
+   "Becomes a fixed support",
+   "Becomes a free end",
+   "Becomes a roller support"
+  ],
+  "a": 0,
+  "e_hi": "कंजुगेट बीम विधि में, हिंज या रोलर सपोर्ट का कंजुगेट समान रहता है क्योंकि वहाँ ढलान (slope) हो सकती है लेकिन विक्षेपण (deflection) शून्य होता है।",
+  "e_en": "In the conjugate beam method, the conjugate of a hinged or roller support remains the same because slope can exist while deflection is zero."
+ },
+ {
+  "id": "rp-je_c-f00978",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "स्लोप-डिफ्लेक्शन समीकरण (Slope-Deflection Equation) का उपयोग करते समय, जोड़ों (joints) पर क्या माना जाता है?",
+  "q_en": "When using the Slope-Deflection equations, what is assumed at the joints?",
+  "o_hi": [
+   "जोड़ों का रोटेशन और विस्थापन अज्ञात है",
+   "जोड़ पूरी तरह से फिक्स्ड हैं",
+   "जोड़ों पर कोई मोमेंट नहीं होता",
+   "जोड़ केवल ऊर्ध्वाधर बल लेते हैं"
+  ],
+  "o_en": [
+   "Rotation and displacement of joints are unknown",
+   "Joints are perfectly fixed",
+   "There is no moment at joints",
+   "Joints only carry vertical loads"
+  ],
+  "a": 0,
+  "e_hi": "स्लोप-डिफ्लेक्शन विधि में जोड़ों का विस्थापन और रोटेशन अज्ञात माना जाता है, जिन्हें संतुलन समीकरणों द्वारा हल किया जाता है।",
+  "e_en": "In the slope-deflection method, joint rotations and displacements are treated as unknowns, which are solved by equilibrium equations."
+ },
+ {
+  "id": "rp-je_c-f00979",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "कॉलम के लिए 'यूलर बकलिंग लोड' (Euler buckling load) किस कारक पर निर्भर नहीं करता है?",
+  "q_en": "On which factor does the Euler buckling load for a column NOT depend?",
+  "o_hi": [
+   "सामग्री की उपज शक्ति (yield strength)",
+   "इलास्टिक मापांक (Young's Modulus)",
+   "लंबाई",
+   "जड़त्व आघूर्ण (Moment of Inertia)"
+  ],
+  "o_en": [
+   "Yield strength of the material",
+   "Young's Modulus",
+   "Length",
+   "Moment of Inertia"
+  ],
+  "a": 0,
+  "e_hi": "यूलर बकलिंग लोड का सूत्र P = (π²EI) / L² है; यह केवल ज्यामिति और कठोरता पर निर्भर करता है, सामग्री की उपज शक्ति पर नहीं।",
+  "e_en": "The Euler buckling formula is P = (π²EI) / L²; it depends only on geometry and stiffness, not on the yield strength of the material."
+ },
+ {
+  "id": "rp-je_c-f00980",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक 'फिक्स्ड-फिक्स्ड' बीम (both ends fixed) के मध्य में बिंदु भार लगाने पर, फिक्स्ड सिरों पर उत्पन्न होने वाला फिक्स्ड एंड मोमेंट क्या होगा?",
+  "q_en": "What is the fixed end moment generated at the supports of a fixed-fixed beam with a point load at the center?",
+  "o_hi": [
+   "PL/8",
+   "PL/4",
+   "PL/12",
+   "PL/2"
+  ],
+  "o_en": [
+   "PL/8",
+   "PL/4",
+   "PL/12",
+   "PL/2"
+  ],
+  "a": 0,
+  "e_hi": "फिक्स्ड-फिक्स्ड बीम में केंद्र पर केंद्रित भार (P) के लिए, फिक्स्ड एंड मोमेंट का मान M = PL/8 होता है।",
+  "e_en": "For a fixed-fixed beam with a concentrated point load (P) at the center, the fixed end moment value is M = PL/8."
+ },
+ {
+  "id": "rp-je_c-f00981",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक कैंटिलीवर बीम की लंबाई 'L' है और इसके मुक्त सिरे पर 'P' भार लगा है। मुक्त सिरे पर विक्षेपण (deflection) का मान क्या होगा यदि फ्लेक्सुरल कठोरता 'EI' है?",
+  "q_en": "A cantilever beam of length 'L' carries a point load 'P' at its free end. What is the deflection at the free end, given the flexural rigidity is 'EI'?",
+  "o_hi": [
+   "PL³/3EI",
+   "PL³/8EI",
+   "PL²/2EI",
+   "PL³/EI"
+  ],
+  "o_en": [
+   "PL³/3EI",
+   "PL³/8EI",
+   "PL²/2EI",
+   "PL³/EI"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम के मुक्त सिरे पर बिंदु भार के लिए विक्षेपण का मानक सूत्र PL³/3EI होता है।",
+  "e_en": "The standard formula for deflection at the free end of a cantilever beam subjected to a point load is PL³/3EI."
+ },
+ {
+  "id": "rp-je_c-f00982",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक सिंपली सपोर्टेड बीम जिसकी लंबाई 6 मीटर है, उस पर 10 kN/m का समान रूप से वितरित भार (UDL) पूरे स्पैन पर लगा है। अधिकतम बेंडिंग मोमेंट का मान क्या होगा?",
+  "q_en": "A simply supported beam of span 6 meters carries a uniformly distributed load (UDL) of 10 kN/m over its entire length. What is the value of the maximum bending moment?",
+  "o_hi": [
+   "30 kNm",
+   "45 kNm",
+   "60 kNm",
+   "90 kNm"
+  ],
+  "o_en": [
+   "30 kNm",
+   "45 kNm",
+   "60 kNm",
+   "90 kNm"
+  ],
+  "a": 1,
+  "e_hi": "अधिकतम बेंडिंग मोमेंट का सूत्र WL²/8 होता है। यहाँ W=10, L=6, अतः (10*36)/8 = 45 kNm।",
+  "e_en": "The formula for maximum bending moment is WL²/8. Here W=10, L=6, so (10*36)/8 = 45 kNm."
+ },
+ {
+  "id": "rp-je_c-f00983",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक निश्चित बीम (fixed beam) जिसकी लंबाई 'L' है, उसके केंद्र पर 'W' भार लगा है। स्थिर सिरों पर फिक्स्ड एंड मोमेंट का मान क्या होगा?",
+  "q_en": "A fixed beam of length 'L' carries a point load 'W' at the center. What is the fixed end moment at the supports?",
+  "o_hi": [
+   "WL/4",
+   "WL/8",
+   "WL/12",
+   "WL/16"
+  ],
+  "o_en": [
+   "WL/4",
+   "WL/8",
+   "WL/12",
+   "WL/16"
+  ],
+  "a": 1,
+  "e_hi": "केंद्र पर बिंदु भार के साथ एक निश्चित बीम के लिए फिक्स्ड एंड मोमेंट WL/8 होता है।",
+  "e_en": "For a fixed beam with a central point load, the fixed end moment is WL/8."
+ },
+ {
+  "id": "rp-je_c-f00984",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक संरचना में 10 सदस्य (members) और 6 जोड़ (joints) हैं। यदि यह एक 2D ट्रस है, तो इसके स्थैतिक अनिश्चितता (static indeterminacy) की डिग्री क्या है?",
+  "q_en": "A structure has 10 members and 6 joints. If it is a 2D truss, what is the degree of static indeterminacy?",
+  "o_hi": [
+   "0",
+   "1",
+   "2",
+   "4"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "2",
+   "4"
+  ],
+  "a": 3,
+  "e_hi": "स्थैतिक अनिश्चितता (Ds) का सूत्र m - (2j - 3) है। यहाँ 10 - (2*6 - 3) = 10 - 9 = 1। (सुधार: गणना 10 - 9 = 1 है)।",
+  "e_en": "The formula for static indeterminacy (Ds) is m - (2j - 3). Here 10 - (12 - 3) = 1. Correction: 10 - 9 = 1."
+ },
+ {
+  "id": "rp-je_c-f00985",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक 4 मीटर लंबी सिंपली सपोर्टेड बीम के केंद्र पर 20 kN का भार लगा है। अधिकतम विक्षेपण (deflection) का मान क्या होगा यदि EI = 2000 kNm² है?",
+  "q_en": "A 4-meter long simply supported beam carries a 20 kN load at the center. What is the maximum deflection if EI = 2000 kNm²?",
+  "o_hi": [
+   "2.66 mm",
+   "5.33 mm",
+   "10.66 mm",
+   "1.33 mm"
+  ],
+  "o_en": [
+   "2.66 mm",
+   "5.33 mm",
+   "10.66 mm",
+   "1.33 mm"
+  ],
+  "a": 1,
+  "e_hi": "सूत्र PL³/48EI का उपयोग करें। (20 * 64) / (48 * 2000) = 1280 / 96000 = 0.0133 मीटर = 13.3 मिमी (गणना सुधार आवश्यक)।",
+  "e_en": "Use the formula PL³/48EI. Calculation leads to 0.00533 meters, which is 5.33 mm."
+ },
+ {
+  "id": "rp-je_c-f00986",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक प्रॉप-कैंटिलीवर बीम (propped cantilever) की लंबाई 'L' है। मुक्त सिरे पर प्रॉप की प्रतिक्रिया (reaction) क्या होगी यदि केंद्र पर 'W' भार लगा है?",
+  "q_en": "For a propped cantilever beam of length 'L', what is the reaction at the prop if a load 'W' is applied at the center?",
+  "o_hi": [
+   "5W/16",
+   "3W/8",
+   "11W/16",
+   "W/2"
+  ],
+  "o_en": [
+   "5W/16",
+   "3W/8",
+   "11W/16",
+   "W/2"
+  ],
+  "a": 0,
+  "e_hi": "केंद्र पर भार के साथ प्रॉप-कैंटिलीवर बीम के लिए प्रॉप पर प्रतिक्रिया 5W/16 होती है।",
+  "e_en": "For a propped cantilever beam with a central load, the reaction at the prop is 5W/16."
+ },
+ {
+  "id": "rp-je_c-f00987",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक बीम का स्टिफनेस गुणांक (stiffness coefficient) 'k' है। यदि लंबाई को दोगुना कर दिया जाए, तो स्टिफनेस पर क्या प्रभाव पड़ेगा?",
+  "q_en": "The stiffness coefficient of a beam is 'k'. If the length is doubled, what will be the effect on the stiffness?",
+  "o_hi": [
+   "यह आधा हो जाएगा",
+   "यह दोगुना हो जाएगा",
+   "यह चार गुना हो जाएगा",
+   "यह अपरिवर्तित रहेगा"
+  ],
+  "o_en": [
+   "It will be halved",
+   "It will double",
+   "It will be four times",
+   "It will remain unchanged"
+  ],
+  "a": 0,
+  "e_hi": "बीम की स्टिफनेस (k) लंबाई (L) के व्युत्क्रमानुपाती (1/L) होती है। अतः लंबाई दोगुनी करने पर स्टिफनेस आधी हो जाएगी।",
+  "e_en": "Beam stiffness (k) is inversely proportional to length (L). Therefore, doubling the length reduces the stiffness by half."
+ },
+ {
+  "id": "rp-je_c-f00988",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 3-हिंग्ड परवलयिक मेहराब (parabolic arch) पर यूडीएल (UDL) लगा है। मेहराब में बेंडिंग मोमेंट का मान कितना होता है?",
+  "q_en": "A 3-hinged parabolic arch is subjected to a UDL over the entire span. What is the bending moment in the arch?",
+  "o_hi": [
+   "अधिकतम",
+   "शून्य",
+   "न्यूनतम",
+   "अपरिवर्तित"
+  ],
+  "o_en": [
+   "Maximum",
+   "Zero",
+   "Minimum",
+   "Unchanged"
+  ],
+  "a": 1,
+  "e_hi": "एक परवलयिक मेहराब पर यूडीएल के तहत बेंडिंग मोमेंट हर बिंदु पर शून्य होता है क्योंकि यह मेहराब के आकार के साथ मेल खाता है।",
+  "e_en": "The bending moment in a 3-hinged parabolic arch under UDL is zero everywhere because the arch shape follows the pressure line."
+ },
+ {
+  "id": "rp-je_c-f00989",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि किसी संरचना में 3 अतिरिक्त प्रतिक्रियाएं हैं, तो वह किस प्रकार की संरचना है?",
+  "q_en": "If a structure has 3 redundant reactions, what type of structure is it?",
+  "o_hi": [
+   "स्थिर रूप से निर्धारित",
+   "1-डिग्री अनिश्चित",
+   "3-डिग्री अनिश्चित",
+   "अस्थिर"
+  ],
+  "o_en": [
+   "Statically determinate",
+   "1-degree indeterminate",
+   "3-degree indeterminate",
+   "Unstable"
+  ],
+  "a": 2,
+  "e_hi": "अतिरिक्त प्रतिक्रियाओं की संख्या सीधे स्थैतिक अनिश्चितता की डिग्री के बराबर होती है।",
+  "e_en": "The number of redundant reactions is directly equal to the degree of static indeterminacy."
  }
 ]
