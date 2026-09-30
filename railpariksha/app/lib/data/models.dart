@@ -135,10 +135,17 @@ class TopicNote {
   final Bi summary;
   final List<String> factsHi;
   final List<String> factsEn;
+  final List<String> tipsHi;
+  final List<String> tipsEn;
   final MapNode map;
-  const TopicNote(this.subject, this.topic, this.summary, this.factsHi, this.factsEn, this.map);
+  const TopicNote(this.subject, this.topic, this.summary, this.factsHi, this.factsEn, this.map,
+      {this.tipsHi = const [], this.tipsEn = const []});
 
   List<String> facts(String lang) => lang == 'en' ? factsEn : factsHi;
+
+  /// Empty for notes drafted before the tips schema addition, until backfilled.
+  List<String> tips(String lang) => lang == 'en' ? tipsEn : tipsHi;
+  bool get hasTips => tipsHi.isNotEmpty;
 
   factory TopicNote.fromJson(Map<String, dynamic> j) => TopicNote(
         j['s'],
@@ -147,5 +154,7 @@ class TopicNote {
         List<String>.from(j['facts_hi']),
         List<String>.from(j['facts_en']),
         MapNode.fromJson(j['map']),
+        tipsHi: List<String>.from(j['tips_hi'] ?? const []),
+        tipsEn: List<String>.from(j['tips_en'] ?? const []),
       );
 }

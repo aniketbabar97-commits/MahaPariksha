@@ -50,17 +50,19 @@ class TopicScreen extends StatelessWidget {
     }
 
     return DefaultTabController(
-      length: 3,
+      length: note.hasTips ? 4 : 3,
       child: Scaffold(
         appBar: AppBar(
           title: Text(topic.name.of(lang)),
           bottom: TabBar(
+            isScrollable: note.hasTips,
             indicatorColor: BrandColors.saffron,
             labelStyle: const TextStyle(fontWeight: FontWeight.w800),
             tabs: [
               Tab(text: context.tr('नोट्स 📄', 'Notes 📄')),
               Tab(text: context.tr('मुख्य मुद्दे 🔑', 'Key facts 🔑')),
               Tab(text: context.tr('माइंड मैप 🗺️', 'Mind map 🗺️')),
+              if (note.hasTips) Tab(text: context.tr('टिप्स 💡', 'Tips 💡')),
             ],
           ),
         ),
@@ -89,6 +91,19 @@ class TopicScreen extends StatelessWidget {
             ),
           ),
           MindMapView(root: note.map, lang: lang),
+          if (note.hasTips)
+            ListView.separated(
+              padding: const EdgeInsets.all(16),
+              itemCount: note.tips(lang).length,
+              separatorBuilder: (_, _) => const SizedBox(height: 8),
+              itemBuilder: (context, i) => Card(
+                color: BrandColors.saffron.withValues(alpha: 0.08),
+                child: ListTile(
+                  leading: const Icon(Icons.lightbulb, color: BrandColors.saffron),
+                  title: Text(note.tips(lang)[i], style: const TextStyle(height: 1.45, fontWeight: FontWeight.w600)),
+                ),
+              ),
+            ),
         ]),
         bottomNavigationBar: practice,
       ),

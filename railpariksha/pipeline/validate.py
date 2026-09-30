@@ -99,6 +99,10 @@ def check_note(n, where, errs):
     fh, fe = n["facts_hi"], n["facts_en"]
     if not (isinstance(fh, list) and isinstance(fe, list) and len(fh) == len(fe) and 5 <= len(fh) <= 15):
         errs.append(f"{where}: facts_hi/facts_en must be parallel lists of 5-15")
+    if "tips_hi" in n or "tips_en" in n:
+        th, te = n.get("tips_hi"), n.get("tips_en")
+        if not (isinstance(th, list) and isinstance(te, list) and len(th) == len(te) and 3 <= len(th) <= 6):
+            errs.append(f"{where}: tips_hi/tips_en must be parallel lists of 3-6")
     check_map(n["map"], where, errs)
 
 

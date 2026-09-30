@@ -41214,5 +41214,810 @@
   "a": 0,
   "e_hi": "ट्रांजिएंट रिस्पॉन्स समय के साथ सिस्टम के उस व्यवहार को दर्शाता है जो स्थिर अवस्था (steady state) तक पहुँचने से पहले होता है।",
   "e_en": "Transient response refers to the temporary behavior of a system as it moves from one state to another before reaching steady state."
+ },
+ {
+  "id": "rp-je_e-f01793",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "किसी सिस्टम के 'ट्रांसफर फंक्शन' को कैसे परिभाषित किया जाता है?",
+  "q_en": "How is the 'transfer function' of a system defined?",
+  "o_hi": [
+   "आउटपुट का लाप्लास और इनपुट का लाप्लास का अनुपात",
+   "इनपुट का लाप्लास और आउटपुट का लाप्लास का अनुपात",
+   "आउटपुट का समय डोमेन और इनपुट का समय डोमेन का अनुपात",
+   "केवल सिस्टम का लाभ"
+  ],
+  "o_en": [
+   "Ratio of Laplace of output to Laplace of input",
+   "Ratio of Laplace of input to Laplace of output",
+   "Ratio of time domain output to time domain input",
+   "Gain of the system only"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफर फंक्शन शून्य प्रारंभिक स्थितियों के साथ आउटपुट और इनपुट के लाप्लास रूपांतरणों का अनुपात होता है।",
+  "e_en": "The transfer function is defined as the ratio of the Laplace transform of the output to the Laplace transform of the input, assuming zero initial conditions."
+ },
+ {
+  "id": "rp-je_e-f01794",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "यदि किसी सिस्टम का डैम्पिंग अनुपात शून्य के बराबर है, तो सिस्टम को क्या कहा जाएगा?",
+  "q_en": "If the damping ratio of a system is equal to zero, what is the system called?",
+  "o_hi": [
+   "अधो-अवमंदित (Under-damped)",
+   "अति-अवमंदित (Over-damped)",
+   "अन-अवमंदित (Undamped)",
+   "क्रांतिक रूप से अवमंदित (Critically damped)"
+  ],
+  "o_en": [
+   "Under-damped",
+   "Over-damped",
+   "Undamped",
+   "Critically damped"
+  ],
+  "a": 2,
+  "e_hi": "जब डैम्पिंग अनुपात शून्य होता है, तो सिस्टम में कोई ऊर्जा हानि नहीं होती और वह लगातार दोलन करता रहता है।",
+  "e_en": "When the damping ratio is zero, there is no energy dissipation, and the system oscillates continuously."
+ },
+ {
+  "id": "rp-je_e-f01795",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "सिस्टम की स्थिरता निर्धारित करने के लिए 'राउथ-हर्विट्ज़' मानदंड का उपयोग किया जाता है, यह किस पर आधारित है?",
+  "q_en": "The 'Routh-Hurwitz' criterion is used to determine system stability; what is it based on?",
+  "o_hi": [
+   "कैरेक्टरिस्टिक इक्वेशन के गुणांक",
+   "आउटपुट वेवफॉर्म",
+   "इनपुट फ्रीक्वेंसी",
+   "सिस्टम का आकार"
+  ],
+  "o_en": [
+   "Coefficients of the characteristic equation",
+   "Output waveform",
+   "Input frequency",
+   "System size"
+  ],
+  "a": 0,
+  "e_hi": "राउथ-हर्विट्ज़ मानदंड कैरेक्टरिस्टिक इक्वेशन के गुणांकों का उपयोग करके यह बताता है कि क्या सिस्टम स्थिर है।",
+  "e_en": "The Routh-Hurwitz criterion determines system stability by analyzing the coefficients of the characteristic equation."
+ },
+ {
+  "id": "rp-je_e-f01796",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "एक 'यूनिटी फीडबैक' सिस्टम में, फीडबैक तत्व का मान क्या होता है?",
+  "q_en": "In a 'unity feedback' system, what is the value of the feedback element?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "एक",
+   "दो"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "One",
+   "Two"
+  ],
+  "a": 2,
+  "e_hi": "यूनिटी फीडबैक सिस्टम में फीडबैक पाथ गेन (H(s)) का मान हमेशा एक (1) होता है।",
+  "e_en": "In a unity feedback system, the feedback path gain (H(s)) is always equal to one (1)."
+ },
+ {
+  "id": "rp-je_e-f01797",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "सिस्टम के 'बैंडविड्थ' और 'राइज टाइम' के बीच क्या संबंध है?",
+  "q_en": "What is the relationship between 'bandwidth' and 'rise time' of a system?",
+  "o_hi": [
+   "दोनों सीधे आनुपातिक हैं",
+   "दोनों व्युत्क्रमानुपाती हैं",
+   "कोई संबंध नहीं है",
+   "बैंडविड्थ राइज टाइम का वर्ग है"
+  ],
+  "o_en": [
+   "Directly proportional",
+   "Inversely proportional",
+   "No relationship",
+   "Bandwidth is square of rise time"
+  ],
+  "a": 1,
+  "e_hi": "बैंडविड्थ और राइज टाइम एक-दूसरे के व्युत्क्रमानुपाती होते हैं; यानी उच्च बैंडविड्थ का अर्थ है तेज राइज टाइम।",
+  "e_en": "Bandwidth and rise time are inversely proportional; a higher bandwidth typically results in a faster rise time."
+ },
+ {
+  "id": "rp-je_e-f01798",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "यदि एक सिस्टम का गेन मार्जिन धनात्मक (Positive) है, तो सिस्टम के बारे में क्या निष्कर्ष निकाला जा सकता है?",
+  "q_en": "If the gain margin of a system is positive, what can be concluded about the system?",
+  "o_hi": [
+   "सिस्टम अस्थिर है",
+   "सिस्टम स्थिर है",
+   "सिस्टम सीमांत स्थिर है",
+   "सिस्टम का आउटपुट शून्य है"
+  ],
+  "o_en": [
+   "System is unstable",
+   "System is stable",
+   "System is marginally stable",
+   "System output is zero"
+  ],
+  "a": 1,
+  "e_hi": "धनात्मक गेन मार्जिन एक स्थिर सिस्टम का संकेत देता है, जिसका अर्थ है कि सिस्टम दोलन करने से पहले और गेन वृद्धि को सहन कर सकता है।",
+  "e_en": "A positive gain margin indicates a stable system, meaning the system can tolerate further gain increase before becoming unstable."
+ },
+ {
+  "id": "rp-je_e-f01799",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "पार्श्व (Integral) कंट्रोलर का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of an Integral controller?",
+  "o_hi": [
+   "स्थिर-अवस्था त्रुटि (Steady-state error) को कम करना",
+   "सिस्टम की गति बढ़ाना",
+   "शोर कम करना",
+   "सिस्टम का गेन कम करना"
+  ],
+  "o_en": [
+   "To reduce steady-state error",
+   "To increase system speed",
+   "To reduce noise",
+   "To reduce system gain"
+  ],
+  "a": 0,
+  "e_hi": "इंटीग्रल कंट्रोलर सिस्टम की स्थिर-अवस्था त्रुटि को समाप्त करने या कम करने के लिए प्रभावी है।",
+  "e_en": "An integral controller is effective in eliminating or reducing the steady-state error of a system."
+ },
+ {
+  "id": "rp-je_e-f01800",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "यदि किसी सिस्टम के ट्रांसफर फंक्शन का ध्रुव (Pole) दाईं ओर (Right-half of s-plane) स्थित है, तो सिस्टम का व्यवहार कैसा होगा?",
+  "q_en": "If a pole of a system's transfer function lies on the right-half of the s-plane, how will the system behave?",
+  "o_hi": [
+   "सिस्टम स्थिर होगा",
+   "सिस्टम अस्थिर होगा",
+   "सिस्टम तटस्थ (Marginally stable) होगा",
+   "सिस्टम का आउटपुट शून्य होगा"
+  ],
+  "o_en": [
+   "System will be stable",
+   "System will be unstable",
+   "System will be marginally stable",
+   "System output will be zero"
+  ],
+  "a": 1,
+  "e_hi": "S-प्लेन के दाईं ओर स्थित ध्रुव सिस्टम को अस्थिर बनाते हैं क्योंकि समय के साथ प्रतिक्रिया घातीय रूप से बढ़ती है।",
+  "e_en": "Poles located on the right-half of the s-plane make the system unstable as the response grows exponentially over time."
+ },
+ {
+  "id": "rp-je_e-f01801",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "एक सेकंड-ऑर्डर सिस्टम में, डैम्पिंग अनुपात (Damping ratio) का मान 1 से कम होने पर सिस्टम को क्या कहा जाता है?",
+  "q_en": "In a second-order system, what is the system called when the damping ratio is less than 1?",
+  "o_hi": [
+   "अंडर-डैम्प्ड (Under-damped)",
+   "ओवर-डैम्प्ड (Over-damped)",
+   "क्रिटिकली डैम्प्ड (Critically damped)",
+   "अन-डैम्प्ड (Un-damped)"
+  ],
+  "o_en": [
+   "Under-damped",
+   "Over-damped",
+   "Critically damped",
+   "Un-damped"
+  ],
+  "a": 0,
+  "e_hi": "जब डैम्पिंग अनुपात (zeta) 0 और 1 के बीच होता है, तो सिस्टम अंडर-डैम्प्ड कहलाता है और इसमें दोलन (oscillations) होते हैं।",
+  "e_en": "When the damping ratio (zeta) is between 0 and 1, the system is called under-damped and exhibits oscillations."
+ },
+ {
+  "id": "rp-je_e-f01802",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "कंट्रोल सिस्टम में 'राउथ-हर्वित्ज़' (Routh-Hurwitz) मानदंड का उपयोग मुख्य रूप से किस लिए किया जाता है?",
+  "q_en": "What is the Routh-Hurwitz criterion primarily used for in control systems?",
+  "o_hi": [
+   "सिस्टम की सटीकता मापने के लिए",
+   "सिस्टम की स्थिरता निर्धारित करने के लिए",
+   "ट्रांसिएंट रिस्पॉन्स की गणना के लिए",
+   "सिस्टम का गेन मार्जिन ज्ञात करने के लिए"
+  ],
+  "o_en": [
+   "To measure system accuracy",
+   "To determine system stability",
+   "To calculate transient response",
+   "To find the gain margin of the system"
+  ],
+  "a": 1,
+  "e_hi": "राउथ-हर्वित्ज़ मानदंड एक बीजगणितीय विधि है जिसका उपयोग यह जांचने के लिए किया जाता है कि क्या किसी बहुपद के सभी मूल बाईं ओर स्थित हैं।",
+  "e_en": "The Routh-Hurwitz criterion is an algebraic method used to check if all roots of a polynomial lie in the left-half of the s-plane."
+ },
+ {
+  "id": "rp-je_e-f01803",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक कंट्रोल सिस्टम में 'सर्वो-मैकेनिज्म' (Servo-mechanism) किस प्रकार का सिस्टम है?",
+  "q_en": "What type of system is a 'servo-mechanism' in control systems?",
+  "o_hi": [
+   "ओपन-लूप सिस्टम",
+   "क्लोज्ड-लूप पोजिशन कंट्रोल सिस्टम",
+   "लीनियर टाइम-इनवेरिएंट सिस्टम",
+   "नॉन-लीनियर सिस्टम"
+  ],
+  "o_en": [
+   "Open-loop system",
+   "Closed-loop position control system",
+   "Linear time-invariant system",
+   "Non-linear system"
+  ],
+  "a": 1,
+  "e_hi": "सर्वो-मैकेनिज्म एक क्लोज्ड-लूप सिस्टम है जो आउटपुट की स्थिति को इनपुट कमांड के अनुसार नियंत्रित करता है।",
+  "e_en": "A servo-mechanism is a closed-loop system designed to control the position of an output according to an input command."
+ },
+ {
+  "id": "rp-je_e-f01804",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "सिस्टम के 'बैंडविड्थ' (Bandwidth) और 'राइज टाइम' (Rise time) के बीच क्या संबंध होता है?",
+  "q_en": "What is the relationship between the 'bandwidth' and 'rise time' of a system?",
+  "o_hi": [
+   "दोनों सीधे आनुपातिक हैं",
+   "दोनों व्युत्क्रमानुपाती (Inversely proportional) हैं",
+   "कोई संबंध नहीं है",
+   "बैंडविड्थ बढ़ने पर राइज टाइम भी बढ़ता है"
+  ],
+  "o_en": [
+   "Both are directly proportional",
+   "Both are inversely proportional",
+   "No relationship exists",
+   "Rise time increases as bandwidth increases"
+  ],
+  "a": 1,
+  "e_hi": "एक उच्च बैंडविड्थ का अर्थ है तेज प्रतिक्रिया, जिसका अर्थ है कि राइज टाइम कम हो जाता है।",
+  "e_en": "A higher bandwidth implies a faster response, which means the rise time decreases."
+ },
+ {
+  "id": "rp-je_e-f01805",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "यदि किसी कंट्रोल सिस्टम का 'गैन मार्जिन' (Gain Margin) ऋणात्मक (Negative) है, तो सिस्टम क्या होगा?",
+  "q_en": "If the 'gain margin' of a control system is negative, what will be the state of the system?",
+  "o_hi": [
+   "स्थिर",
+   "अस्थिर",
+   "तटस्थ रूप से स्थिर",
+   "परिवर्तनशील"
+  ],
+  "o_en": [
+   "Stable",
+   "Unstable",
+   "Marginally stable",
+   "Variable"
+  ],
+  "a": 1,
+  "e_hi": "गैन मार्जिन का ऋणात्मक होना यह दर्शाता है कि सिस्टम अस्थिर है क्योंकि सिस्टम का गेन क्रिटिकल मान से अधिक है।",
+  "e_en": "A negative gain margin indicates that the system is unstable because the system gain exceeds the critical value."
+ },
+ {
+  "id": "rp-je_e-f01806",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "प्रोपोर्शनल-इंटीग्रल-डेरिवेटिव (PID) कंट्रोलर में 'इंटीग्रल' (Integral) मोड का क्या कार्य है?",
+  "q_en": "What is the function of the 'Integral' mode in a Proportional-Integral-Derivative (PID) controller?",
+  "o_hi": [
+   "सिस्टम की गति बढ़ाना",
+   "स्टेडी-स्टेट त्रुटि (Steady-state error) को खत्म करना",
+   "सिस्टम का रिस्पॉन्स धीमा करना",
+   "शोर (Noise) को कम करना"
+  ],
+  "o_en": [
+   "To increase system speed",
+   "To eliminate steady-state error",
+   "To slow down system response",
+   "To reduce noise"
+  ],
+  "a": 1,
+  "e_hi": "इंटीग्रल एक्शन समय के साथ संचित त्रुटि को जोड़ता है और उसे शून्य करने का प्रयास करता है, जिससे स्टेडी-स्टेट त्रुटि समाप्त हो जाती है।",
+  "e_en": "Integral action accumulates the error over time and attempts to drive it to zero, effectively eliminating steady-state error."
+ },
+ {
+  "id": "rp-je_e-f01807",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "एक कंट्रोल सिस्टम में 'ट्रांसफर फंक्शन' की परिभाषा क्या है?",
+  "q_en": "What is the definition of a 'transfer function' in a control system?",
+  "o_hi": [
+   "आउटपुट और इनपुट का अनुपात (लाप्लास डोमेन में)",
+   "इनपुट और आउटपुट का योग",
+   "सिस्टम का समय स्थिरांक",
+   "सिस्टम के ध्रुवों की संख्या"
+  ],
+  "o_en": [
+   "Ratio of output to input (in Laplace domain)",
+   "Sum of input and output",
+   "System time constant",
+   "Number of system poles"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफर फंक्शन शून्य प्रारंभिक स्थितियों के साथ आउटपुट के लाप्लास रूपांतरण और इनपुट के लाप्लास रूपांतरण का अनुपात है।",
+  "e_en": "The transfer function is the ratio of the Laplace transform of the output to the Laplace transform of the input, assuming zero initial conditions."
+ },
+ {
+  "id": "rp-je_e-f01808",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "किसी कंट्रोल सिस्टम में 'फेज मार्जिन' (Phase Margin) का क्या महत्व है?",
+  "q_en": "What is the significance of 'Phase Margin' in a control system?",
+  "o_hi": [
+   "सिस्टम की लागत मापना",
+   "सापेक्ष स्थिरता (Relative stability) का आकलन करना",
+   "सिस्टम का अधिकतम तापमान ज्ञात करना",
+   "इनपुट आवृत्ति को नियंत्रित करना"
+  ],
+  "o_en": [
+   "Measuring system cost",
+   "Assessing relative stability",
+   "Finding maximum system temperature",
+   "Controlling input frequency"
+  ],
+  "a": 1,
+  "e_hi": "फेज मार्जिन यह मापता है कि सिस्टम अपनी स्थिरता खोने से कितना दूर है, जो सापेक्ष स्थिरता का एक प्रमुख सूचक है।",
+  "e_en": "Phase margin measures how far the system is from losing its stability, acting as a key indicator of relative stability."
+ },
+ {
+  "id": "rp-je_e-f01809",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "एक प्रथम कोटि प्रणाली (first-order system) का समय स्थिरांक (time constant) 2 सेकंड है। इसका स्थानांतरण फलन (transfer function) क्या होगा?",
+  "q_en": "A first-order system has a time constant of 2 seconds. What will be its transfer function?",
+  "o_hi": [
+   "1 / (2s + 1)",
+   "2 / (s + 1)",
+   "1 / (s + 2)",
+   "s / (2s + 1)"
+  ],
+  "o_en": [
+   "1 / (2s + 1)",
+   "2 / (s + 1)",
+   "1 / (s + 2)",
+   "s / (2s + 1)"
+  ],
+  "a": 0,
+  "e_hi": "प्रथम कोटि प्रणाली का मानक रूप 1/(Ts + 1) होता है, जहाँ T समय स्थिरांक है। यहाँ T = 2 है।",
+  "e_en": "The standard form of a first-order system is 1/(Ts + 1), where T is the time constant. Here, T = 2."
+ },
+ {
+  "id": "rp-je_e-f01810",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक द्वितीय कोटि प्रणाली (second-order system) के लिए, यदि डैम्पिंग अनुपात (damping ratio) 0.5 है और प्राकृतिक आवृत्ति (natural frequency) 4 रेडियन/सेकंड है, तो डैम्प्ड आवृत्ति (damped frequency) क्या होगी?",
+  "q_en": "For a second-order system, if the damping ratio is 0.5 and the natural frequency is 4 rad/sec, what will be the damped frequency?",
+  "o_hi": [
+   "2 रेडियन/सेकंड",
+   "3.46 रेडियन/सेकंड",
+   "4 रेडियन/सेकंड",
+   "2.5 रेडियन/सेकंड"
+  ],
+  "o_en": [
+   "2 rad/sec",
+   "3.46 rad/sec",
+   "4 rad/sec",
+   "2.5 rad/sec"
+  ],
+  "a": 1,
+  "e_hi": "डैम्प्ड आवृत्ति का सूत्र ωd = ωn * sqrt(1 - ζ^2) है। यहाँ ωn=4 और ζ=0.5 रखने पर 4 * sqrt(0.75) ≈ 3.46 प्राप्त होता है।",
+  "e_en": "The formula for damped frequency is ωd = ωn * sqrt(1 - ζ^2). Substituting ωn=4 and ζ=0.5 gives 4 * sqrt(0.75) ≈ 3.46."
+ },
+ {
+  "id": "rp-je_e-f01811",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "यदि एक सिस्टम का गेन मार्जिन 10 dB है और फेज मार्जिन 30 डिग्री है, तो सिस्टम की स्थिरता (stability) कैसी होगी?",
+  "q_en": "If a system has a gain margin of 10 dB and a phase margin of 30 degrees, what is the stability of the system?",
+  "o_hi": [
+   "अस्थिर",
+   "स्थिर",
+   "सीमांत स्थिर",
+   "अनिश्चित"
+  ],
+  "o_en": [
+   "Unstable",
+   "Stable",
+   "Marginally stable",
+   "Indeterminate"
+  ],
+  "a": 1,
+  "e_hi": "जब गेन मार्जिन और फेज मार्जिन दोनों धनात्मक (positive) होते हैं, तो सिस्टम स्थिर होता है।",
+  "e_en": "When both gain margin and phase margin are positive, the system is considered stable."
+ },
+ {
+  "id": "rp-je_e-f01812",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक फीडबैक नियंत्रण प्रणाली में, यदि फॉरवर्ड पाथ गेन G(s) = 10 और फीडबैक गेन H(s) = 0.1 है, तो क्लोज्ड लूप गेन क्या होगा?",
+  "q_en": "In a feedback control system, if the forward path gain G(s) = 10 and the feedback gain H(s) = 0.1, what will be the closed-loop gain?",
+  "o_hi": [
+   "5",
+   "10",
+   "1",
+   "0.5"
+  ],
+  "o_en": [
+   "5",
+   "10",
+   "1",
+   "0.5"
+  ],
+  "a": 0,
+  "e_hi": "क्लोज्ड लूप गेन T = G / (1 + GH) होता है। 10 / (1 + 10*0.1) = 10 / 2 = 5।",
+  "e_en": "Closed-loop gain T = G / (1 + GH). Calculation: 10 / (1 + 10*0.1) = 10 / 2 = 5."
+ },
+ {
+  "id": "rp-je_e-f01813",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक सिस्टम का स्थानांतरण फलन 1 / (s^2 + 2s + 1) है। इसकी डैम्पिंग अनुपात (damping ratio) क्या है?",
+  "q_en": "The transfer function of a system is 1 / (s^2 + 2s + 1). What is its damping ratio?",
+  "o_hi": [
+   "0.5",
+   "1",
+   "0",
+   "2"
+  ],
+  "o_en": [
+   "0.5",
+   "1",
+   "0",
+   "2"
+  ],
+  "a": 1,
+  "e_hi": "मानक रूप s^2 + 2ζωn*s + ωn^2 से तुलना करने पर, 2ζωn = 2 और ωn^2 = 1, जिससे ζ = 1 मिलता है।",
+  "e_en": "Comparing with s^2 + 2ζωn*s + ωn^2, we get 2ζωn = 2 and ωn^2 = 1, which results in ζ = 1."
+ },
+ {
+  "id": "rp-je_e-f01814",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "यदि एक सिस्टम का करैक्टरिस्टिक इक्वेशन s^3 + 3s^2 + 2s + 5 = 0 है, तो राउथ टेबल (Routh table) के पहले कॉलम में कितने चिह्न परिवर्तन (sign changes) होंगे?",
+  "q_en": "If the characteristic equation of a system is s^3 + 3s^2 + 2s + 5 = 0, how many sign changes will there be in the first column of the Routh table?",
+  "o_hi": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "a": 2,
+  "e_hi": "राउथ टेबल बनाने पर पहले कॉलम के मान 1, 3, 0.33, 5 होते हैं। यहाँ दो बार चिह्न बदलता है (3 से 0.33 और 0.33 से 5 नहीं, बल्कि 3 से 0.33 और फिर 0.33 के बाद धनात्मक)।",
+  "e_en": "Constructing the Routh table, the first column values are 1, 3, 0.33, 5. There are two sign changes in the sequence."
+ },
+ {
+  "id": "rp-je_e-f01815",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक यूनिटी फीडबैक सिस्टम के लिए ओपन लूप गेन G(s) = 5 / s(s+2) है। स्थिर अवस्था त्रुटि (steady-state error) क्या होगी यदि इनपुट एक यूनिट स्टेप सिग्नल है?",
+  "q_en": "For a unity feedback system, the open-loop gain is G(s) = 5 / s(s+2). What will be the steady-state error if the input is a unit step signal?",
+  "o_hi": [
+   "0",
+   "1",
+   "0.5",
+   "अनंत"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "0.5",
+   "Infinity"
+  ],
+  "a": 0,
+  "e_hi": "यूनिटी फीडबैक सिस्टम में टाइप-1 प्रणाली के लिए स्टेप इनपुट के साथ स्थिर अवस्था त्रुटि हमेशा शून्य होती है।",
+  "e_en": "For a unity feedback system, the steady-state error for a type-1 system with a unit step input is always zero."
+ },
+ {
+  "id": "rp-je_e-f01816",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "यदि एक द्वितीय कोटि प्रणाली का डैम्पिंग अनुपात 0.707 है, तो पीक ओवरशूट (peak overshoot) का मान क्या होगा?",
+  "q_en": "If the damping ratio of a second-order system is 0.707, what will be the value of the peak overshoot?",
+  "o_hi": [
+   "5%",
+   "10%",
+   "4.3%",
+   "20%"
+  ],
+  "o_en": [
+   "5%",
+   "10%",
+   "4.3%",
+   "20%"
+  ],
+  "a": 2,
+  "e_hi": "पीक ओवरशूट का सूत्र e^(-πζ / sqrt(1-ζ^2)) है। ζ = 0.707 रखने पर यह लगभग 4.3% आता है।",
+  "e_en": "The peak overshoot formula is e^(-πζ / sqrt(1-ζ^2)). Substituting ζ = 0.707 yields approximately 4.3%."
+ },
+ {
+  "id": "rp-je_e-f01817",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "एक सिस्टम का गेन 20 है और यह एक लैग-लीड कंपनसेटर (lag-lead compensator) का उपयोग करता है। यदि सिस्टम का ध्रुव (pole) -2 पर है, तो इसका टाइम कांस्टेंट क्या होगा?",
+  "q_en": "A system has a gain of 20 and uses a lag-lead compensator. If the pole of the system is at -2, what will be its time constant?",
+  "o_hi": [
+   "0.5 सेकंड",
+   "2 सेकंड",
+   "1 सेकंड",
+   "0.25 सेकंड"
+  ],
+  "o_en": [
+   "0.5 sec",
+   "2 sec",
+   "1 sec",
+   "0.25 sec"
+  ],
+  "a": 0,
+  "e_hi": "समय स्थिरांक T = 1/|pole| होता है। 1/2 = 0.5 सेकंड।",
+  "e_en": "The time constant T = 1/|pole|. 1/2 = 0.5 seconds."
+ },
+ {
+  "id": "rp-je_e-f01818",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "एक सिस्टम का स्थानांतरण फलन G(s) = 100 / (s+10) है। इसकी डीसी गेन (DC gain) का मान क्या है?",
+  "q_en": "The transfer function of a system is G(s) = 100 / (s+10). What is the value of its DC gain?",
+  "o_hi": [
+   "10",
+   "100",
+   "1",
+   "0.1"
+  ],
+  "o_en": [
+   "10",
+   "100",
+   "1",
+   "0.1"
+  ],
+  "a": 0,
+  "e_hi": "डीसी गेन निकालने के लिए s = 0 रखें। G(0) = 100 / 10 = 10।",
+  "e_en": "To find the DC gain, set s = 0. G(0) = 100 / 10 = 10."
+ },
+ {
+  "id": "rp-je_e-f01819",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "नियंत्रण प्रणालियों में 'निकोल्स चार्ट' (Nichols Chart) का विकास किस वैज्ञानिक के नाम पर किया गया था?",
+  "q_en": "The 'Nichols Chart' in control systems was developed by which scientist?",
+  "o_hi": [
+   "हेनरी निकोल्स",
+   "नाथन बी. निकोल्स",
+   "जेम्स निकोल्स",
+   "विलियम निकोल्स"
+  ],
+  "o_en": [
+   "Henry Nichols",
+   "Nathan B. Nichols",
+   "James Nichols",
+   "William Nichols"
+  ],
+  "a": 1,
+  "e_hi": "निकोल्स चार्ट का नाम नाथन बी. निकोल्स के नाम पर रखा गया है, जिन्होंने इसे आवृत्ति प्रतिक्रिया विश्लेषण के लिए विकसित किया था।",
+  "e_en": "The Nichols Chart is named after Nathan B. Nichols, who developed it for frequency response analysis."
+ },
+ {
+  "id": "rp-je_e-f01820",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "नियंत्रण प्रणाली इंजीनियरिंग में 'रूट लोकस' (Root Locus) तकनीक का प्रतिपादन किसने किया था?",
+  "q_en": "Who introduced the 'Root Locus' technique in control systems engineering?",
+  "o_hi": [
+   "हैरी नाइक्विस्ट",
+   "वाल्टर आर. इवांस",
+   "हेनरिक बोडे",
+   "रूडोल्फ कालमन"
+  ],
+  "o_en": [
+   "Harry Nyquist",
+   "Walter R. Evans",
+   "Hendrik Bode",
+   "Rudolf Kalman"
+  ],
+  "a": 1,
+  "e_hi": "रूट लोकस तकनीक 1948 में वाल्टर आर. इवांस द्वारा पेश की गई थी।",
+  "e_en": "The root locus technique was introduced by Walter R. Evans in 1948."
+ },
+ {
+  "id": "rp-je_e-f01821",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "नाइक्विस्ट स्थिरता मानदंड (Nyquist Stability Criterion) का नाम किस बेल लैब्स इंजीनियर के सम्मान में रखा गया है?",
+  "q_en": "The 'Nyquist Stability Criterion' is named after which Bell Labs engineer?",
+  "o_hi": [
+   "हैरी नाइक्विस्ट",
+   "जॉन नाइक्विस्ट",
+   "रॉबर्ट नाइक्विस्ट",
+   "एरिक नाइक्विस्ट"
+  ],
+  "o_en": [
+   "Harry Nyquist",
+   "John Nyquist",
+   "Robert Nyquist",
+   "Eric Nyquist"
+  ],
+  "a": 0,
+  "e_hi": "हैरी नाइक्विस्ट बेल लैब्स के एक प्रसिद्ध इंजीनियर थे जिन्होंने स्थिरता विश्लेषण के लिए यह मानदंड दिया था।",
+  "e_en": "Harry Nyquist was a famous Bell Labs engineer who provided this criterion for stability analysis."
+ },
+ {
+  "id": "rp-je_e-f01822",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "आधुनिक नियंत्रण सिद्धांत (Modern Control Theory) में 'स्टेट-स्पेस' (State-Space) विश्लेषण के जनक के रूप में किसे जाना जाता है?",
+  "q_en": "Who is known as the father of 'State-Space' analysis in modern control theory?",
+  "o_hi": [
+   "रूडोल्फ कालमन",
+   "हेंड्रिक बोडे",
+   "नॉर्मन नाइस",
+   "के. ओगाटा"
+  ],
+  "o_en": [
+   "Rudolf Kalman",
+   "Hendrik Bode",
+   "Norman Nise",
+   "K. Ogata"
+  ],
+  "a": 0,
+  "e_hi": "रूडोल्फ कालमन ने 1960 के दशक में कालमन फिल्टर और स्टेट-स्पेस प्रतिनिधित्व के माध्यम से आधुनिक नियंत्रण का आधार रखा।",
+  "e_en": "Rudolf Kalman laid the foundation for modern control through the Kalman filter and state-space representation in the 1960s."
+ },
+ {
+  "id": "rp-je_e-f01823",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 1,
+  "q_hi": "बोडे प्लॉट (Bode Plot) का उपयोग आवृत्ति प्रतिक्रिया प्रदर्शित करने के लिए किया जाता है। इसका नाम किस वैज्ञानिक के नाम पर है?",
+  "q_en": "Bode plots are used to display frequency response. They are named after which scientist?",
+  "o_hi": [
+   "हेंड्रिक बोडे",
+   "हेंस बोडे",
+   "विलियम बोडे",
+   "आर्थर बोडे"
+  ],
+  "o_en": [
+   "Hendrik Bode",
+   "Hans Bode",
+   "William Bode",
+   "Arthur Bode"
+  ],
+  "a": 0,
+  "e_hi": "हेंड्रिक बोडे बेल लैब्स के एक वैज्ञानिक थे जिन्होंने नियंत्रण प्रणाली में आवृत्ति प्रतिक्रिया के लिए ग्राफिकल विधियाँ विकसित कीं।",
+  "e_en": "Hendrik Bode was a Bell Labs scientist who developed graphical methods for frequency response in control systems."
+ },
+ {
+  "id": "rp-je_e-f01824",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "नियंत्रण प्रणालियों में 'आर.एच. मानदंड' (Routh-Hurwitz Criterion) किन दो वैज्ञानिकों के नाम पर आधारित है?",
+  "q_en": "The 'Routh-Hurwitz Criterion' in control systems is based on the names of which two scientists?",
+  "o_hi": [
+   "एडवर्ड राउथ और एडॉल्फ हुरविट्ज़",
+   "एलिजा राउथ और अल्बर्ट हुरविट्ज़",
+   "एडवर्ड राउथ और आर्थर हुरविट्ज़",
+   "इवान राउथ और एडॉल्फ हुरविट्ज़"
+  ],
+  "o_en": [
+   "Edward Routh and Adolf Hurwitz",
+   "Eliza Routh and Albert Hurwitz",
+   "Edward Routh and Arthur Hurwitz",
+   "Ivan Routh and Adolf Hurwitz"
+  ],
+  "a": 0,
+  "e_hi": "यह मानदंड एडवर्ड राउथ और एडॉल्फ हुरविट्ज़ द्वारा स्वतंत्र रूप से विकसित किया गया था ताकि प्रणाली की स्थिरता जांची जा सके।",
+  "e_en": "This criterion was developed independently by Edward Routh and Adolf Hurwitz to check system stability."
+ },
+ {
+  "id": "rp-je_e-f01825",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "किस दशक में 'हॉइगेंस' (Huygens) के सिद्धांतों का उपयोग करते हुए नियंत्रण प्रणाली के शुरुआती फीडबैक सिद्धांतों पर कार्य हुआ था?",
+  "q_en": "In which decade was early work on feedback principles in control systems performed using concepts related to Huygens?",
+  "o_hi": [
+   "17वीं शताब्दी",
+   "18वीं शताब्दी",
+   "19वीं शताब्दी",
+   "20वीं शताब्दी"
+  ],
+  "o_en": [
+   "17th century",
+   "18th century",
+   "19th century",
+   "20th century"
+  ],
+  "a": 1,
+  "e_hi": "जेम्स वाट के गवर्नर (1788) के साथ 18वीं शताब्दी में फीडबैक नियंत्रण के शुरुआती व्यावहारिक अनुप्रयोग देखे गए थे।",
+  "e_en": "Early practical applications of feedback control were seen in the 18th century with James Watt's governor (1788)."
+ },
+ {
+  "id": "rp-je_e-f01826",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 2,
+  "q_hi": "नियंत्रण प्रणालियों में 'लैपलेस ट्रांसफॉर्म' (Laplace Transform) का उपयोग किसके नाम पर है?",
+  "q_en": "The use of 'Laplace Transform' in control systems is named after whom?",
+  "o_hi": [
+   "पियरे-साइमन लैपलेस",
+   "लुई लैपलेस",
+   "जीन लैपलेस",
+   "चार्ल्स लैपलेस"
+  ],
+  "o_en": [
+   "Pierre-Simon Laplace",
+   "Louis Laplace",
+   "Jean Laplace",
+   "Charles Laplace"
+  ],
+  "a": 0,
+  "e_hi": "पियरे-साइमन लैपलेस एक फ्रांसीसी विद्वान थे जिनके गणितीय ट्रांसफॉर्म का उपयोग आज नियंत्रण प्रणालियों को हल करने में होता है।",
+  "e_en": "Pierre-Simon Laplace was a French scholar whose mathematical transform is used today to solve control systems."
+ },
+ {
+  "id": "rp-je_e-f01827",
+  "s": "je_electrical",
+  "t": "control_systems",
+  "d": 3,
+  "q_hi": "नियंत्रण प्रणाली में 'सर्वो-मैकेनिज्म' (Servomechanism) शब्द का पहली बार उपयोग किस दशक के आसपास लोकप्रिय हुआ?",
+  "q_en": "Around which decade did the term 'Servomechanism' become popular in control systems?",
+  "o_hi": [
+   "1920 का दशक",
+   "1940 का दशक",
+   "1960 का दशक",
+   "1980 का दशक"
+  ],
+  "o_en": [
+   "1920s",
+   "1940s",
+   "1960s",
+   "1980s"
+  ],
+  "a": 1,
+  "e_hi": "दूसरे विश्व युद्ध के दौरान और उसके आसपास (1940 के दशक) रडार और हथियार नियंत्रण के लिए सर्वो-मैकेनिज्म तकनीक का विकास हुआ।",
+  "e_en": "Servomechanism technology developed significantly during and around World War II (1940s) for radar and fire control."
  }
 ]

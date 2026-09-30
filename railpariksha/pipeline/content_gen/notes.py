@@ -31,6 +31,8 @@ Output ONLY a JSON object, no markdown fences, no extra text, with this exact sh
   "summary_en": "the same content in natural English, not a literal translation",
   "facts_hi": ["8 to 12 short punchy revision facts in Hindi"],
   "facts_en": ["the same facts in English, same order, same count as facts_hi"],
+  "tips_hi": ["3 to 6 memory tricks / shortcuts / common-trap warnings in Hindi, exam-taker-focused"],
+  "tips_en": ["the same tips in English, same order, same count as tips_hi"],
   "map": {{
     "hi": "root label in Hindi", "en": "root label in English",
     "children": [
@@ -42,7 +44,70 @@ Output ONLY a JSON object, no markdown fences, no extra text, with this exact sh
 
 CRITICAL: only include facts, figures and claims you are highly confident are correct and stable
 (formulas, definitions, established rules, well-documented history). If you are not sure of a specific
-number or name, phrase that point more generally instead of guessing. Do not invent statistics."""
+number or name, phrase that point more generally instead of guessing. Do not invent statistics.
+
+For tips_hi/tips_en specifically: these are practical exam-hall aids, distinct from facts_hi/facts_en.
+Good examples: a mnemonic for remembering an ordered list, a shortcut calculation method, a commonly
+confused pair of terms/options examiners like to swap as a trap, or a "always check X before answering"
+habit. Bad examples: restating a fact from facts_hi/facts_en, or a generic non-actionable tip like
+"study regularly"."""
+
+
+TIPS_PROMPT = """You are adding "tips & tricks" to an existing revision note for an Indian Railways
+(RRB/RPF) exam-prep app, subject "{subject_en}" ({subject_hi}), topic "{topic_en}" ({topic_hi}).
+
+Here is the note's existing content for context (do not repeat these as tips):
+Summary: {summary_en}
+Facts: {facts_en}
+
+Output ONLY a JSON object, no markdown fences, no extra text:
+{{"tips_hi": ["3 to 6 memory tricks / shortcuts / common-trap warnings in Hindi, exam-taker-focused"],
+  "tips_en": ["the same tips in English, same order, same count as tips_hi"]}}
+
+Good tips: a mnemonic for remembering an ordered list, a shortcut calculation method, a commonly
+confused pair of terms/options examiners like to swap as a trap, or a "always check X before
+answering" habit. Bad tips: restating a fact already listed above, or a generic non-actionable tip
+like "study regularly". Only state tips you are highly confident are accurate -- do not invent
+statistics or rules."""
+
+
+def augment_tips(provider, model, subjects_filter):
+    """Backfill tips_hi/tips_en into existing notes that predate that field
+    (written before this schema addition)."""
+    tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
+    subj_names = {s["id"]: (s["hi"], s["en"]) for s in tax["subjects"]}
+    topic_names = {s["id"]: {t["id"]: (t["hi"], t["en"]) for t in s["topics"]} for s in tax["subjects"]}
+
+    only = set(subjects_filter.split(",")) if subjects_filter else None
+    updated = 0
+    for f in sorted(glob.glob(f"{ROOT}/content/notes/*.json")):
+        sid = os.path.splitext(os.path.basename(f))[0]
+        if only is not None and sid not in only:
+            continue
+        notes = json.load(open(f, encoding="utf-8"))
+        changed = False
+        for n in notes:
+            if n.get("tips_hi"):
+                continue
+            s_hi, s_en = subj_names.get(n["s"], (n["s"], n["s"]))
+            t_hi, t_en = topic_names.get(n["s"], {}).get(n["t"], (n["t"], n["t"]))
+            prompt = TIPS_PROMPT.format(
+                subject_en=s_en, subject_hi=s_hi, topic_en=t_en, topic_hi=t_hi,
+                summary_en=n.get("summary_en", ""), facts_en="; ".join(n.get("facts_en", [])))
+            try:
+                tips = ask(provider, model, prompt, temperature=0.3)
+                n["tips_hi"] = tips["tips_hi"]
+                n["tips_en"] = tips["tips_en"]
+            except Exception as e:
+                print(f"ERROR tips for {n['id']}: {e}", file=sys.stderr, flush=True)
+                continue
+            changed = True
+            updated += 1
+            print(f"tips added {updated}: {n['id']}", flush=True)
+            time.sleep(1.5 if provider == "groq" else 2.0)
+        if changed:
+            json.dump(notes, open(f, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    print(f"done, {updated} notes got tips backfilled")
 
 
 def main():
@@ -51,7 +116,14 @@ def main():
     p.add_argument("--model", required=True)
     p.add_argument("--limit", type=int, default=60)
     p.add_argument("--subjects", help="comma-separated subject ids to restrict to")
+    p.add_argument("--augment-tips", action="store_true",
+                    help="backfill tips_hi/tips_en into existing notes that predate that field, "
+                         "instead of drafting new notes")
     args = p.parse_args()
+
+    if args.augment_tips:
+        augment_tips(args.provider, args.model, args.subjects)
+        return
 
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
     have = set()
