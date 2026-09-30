@@ -88,7 +88,7 @@ class ProgressScreen extends StatelessWidget {
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
-                      SizedBox(width: 96, child: Text(sub.name.of(lang), overflow: TextOverflow.ellipsis)),
+                      SizedBox(width: 96, child: Text(sub.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis)),
                       Expanded(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
