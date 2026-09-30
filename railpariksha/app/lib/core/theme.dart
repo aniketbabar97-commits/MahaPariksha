@@ -107,6 +107,9 @@ IconData subjectIcon(String name) {
     'insights': Icons.insights,
     'park': Icons.park_outlined,
     'train': Icons.train_outlined,
+    'build': Icons.build_outlined,
+    'construction': Icons.construction_outlined,
+    'bolt': Icons.bolt,
   };
   return map[name] ?? Icons.menu_book_outlined;
 }
