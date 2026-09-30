@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/progress.dart';
@@ -43,6 +44,10 @@ class _ResultsScreenState extends State<ResultsScreen> {
       _recorded = true;
       final p = AppScope.read(context).progress;
       p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));
+      // Natural break point: results are already recorded, so showing (or
+      // skipping, if not preloaded in time) the ad here never blocks or
+      // delays anything the user is waiting on.
+      InterstitialAdManager.showIfReady();
     }
   }
 

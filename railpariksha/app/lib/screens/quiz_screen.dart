@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
@@ -51,6 +52,7 @@ class _QuizScreenState extends State<QuizScreen> {
   void initState() {
     super.initState();
     qLang = AppScope.read(context).progress.lang;
+    if (spec.mode == QuizMode.mock) InterstitialAdManager.preload();
     remaining = spec.timeLimit?.inSeconds ?? 0;
     if (spec.timeLimit != null) {
       timer = Timer.periodic(const Duration(seconds: 1), (_) {

@@ -7,6 +7,12 @@
         android:label="RailPariksha"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- AdMob app ID. Safe to ship as-is even while ad unit ids are still
+             pointed at Google's test values (see lib/core/ads_config.dart);
+             the App ID alone doesn't serve ads. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9100209280220037~3428622385"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

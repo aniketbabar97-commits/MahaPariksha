@@ -42,8 +42,8 @@ jobs:
           printf 'storeFile=../upload.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' "$STORE_PW" "$ALIAS" "$KEY_PW" > android/key.properties
       - name: Version from run number
         run: echo "BUILD_NUMBER=$((100 + ${{ github.run_number }}))" >> $GITHUB_ENV
-      - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }}
-      - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }}
+      - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
       - name: Upload to Google Play
         if: ${{ env.PLAY_JSON != '' }}
         uses: r0adkll/upload-google-play@v1

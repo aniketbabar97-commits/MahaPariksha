@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/progress.dart';
@@ -152,6 +153,8 @@ class ProgressScreen extends StatelessWidget {
               label: Text(lang == 'en' ? b.$2 : b.$1),
             ),
         ]),
+        const SizedBox(height: 16),
+        const Center(child: AdBanner()),
       ],
     );
   }

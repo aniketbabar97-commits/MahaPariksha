@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'core/ads.dart';
 import 'core/app_scope.dart';
 import 'core/notifications.dart';
 import 'core/reminders.dart';
@@ -22,6 +23,7 @@ Future<void> main() async {
   }
   runApp(AppScope(repo: repo, progress: progress, child: const RailParikshaApp()));
   repo.checkForUpdate();
+  initAds();
   await RailParikshaNotifications.init();
   if (progress.reminders) await applyReminders(progress);
 }
