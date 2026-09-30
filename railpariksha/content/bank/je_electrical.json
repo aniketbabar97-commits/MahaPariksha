@@ -15385,5 +15385,304 @@
   "a": 0,
   "e_hi": "जीटीओ (Gate Turn-Off Thyristor) को गेट पर ऋणात्मक पल्स देकर बंद किया जा सकता है, जबकि एससीआर में ऐसा नहीं होता।",
   "e_en": "A GTO (Gate Turn-Off Thyristor) can be turned off by applying a negative pulse to the gate, unlike a standard SCR."
+ },
+ {
+  "id": "rp-je_e-f00670",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक ट्रांसमिशन लाइन का प्रतिरोध 10 ओम और प्रतिघात 20 ओम है। यदि लाइन से 50 एम्पीयर की धारा प्रवाहित हो रही है, तो लाइन में होने वाली वोल्टेज गिरावट (वोल्टेज ड्रॉप) क्या होगी?",
+  "q_en": "A transmission line has a resistance of 10 ohms and reactance of 20 ohms. If a current of 50 amperes is flowing through the line, what will be the voltage drop in the line?",
+  "o_hi": [
+   "500 वोल्ट",
+   "1000 वोल्ट",
+   "1118 वोल्ट",
+   "1500 वोल्ट"
+  ],
+  "o_en": [
+   "500 volts",
+   "1000 volts",
+   "1118 volts",
+   "1500 volts"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिबाधा Z = वर्गमूल (R^2 + X^2) = वर्गमूल (100 + 400) = 22.36 ओम। वोल्टेज ड्रॉप = I * Z = 50 * 22.36 = 1118 वोल्ट।",
+  "e_en": "Impedance Z = sqrt(R^2 + X^2) = sqrt(100 + 400) = 22.36 ohms. Voltage drop = I * Z = 50 * 22.36 = 1118 volts."
+ },
+ {
+  "id": "rp-je_e-f00671",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि एक ट्रांसफार्मर में 200 प्राथमिक टर्न और 50 द्वितीयक टर्न हैं, और प्राथमिक वोल्टेज 400 वोल्ट है, तो द्वितीयक वोल्टेज क्या होगा?",
+  "q_en": "If a transformer has 200 primary turns and 50 secondary turns, and the primary voltage is 400 volts, what will be the secondary voltage?",
+  "o_hi": [
+   "100 वोल्ट",
+   "200 वोल्ट",
+   "1600 वोल्ट",
+   "50 वोल्ट"
+  ],
+  "o_en": [
+   "100 volts",
+   "200 volts",
+   "1600 volts",
+   "50 volts"
+  ],
+  "a": 0,
+  "e_hi": "वोल्टेज अनुपात सूत्र V2/V1 = N2/N1 का उपयोग करें। V2 = 400 * (50/200) = 100 वोल्ट।",
+  "e_en": "Use the voltage ratio formula V2/V1 = N2/N1. V2 = 400 * (50/200) = 100 volts."
+ },
+ {
+  "id": "rp-je_e-f00672",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक 3-फेज सिस्टम में लाइन वोल्टेज 440 वोल्ट है। स्टार कनेक्शन में फेज वोल्टेज का मान क्या होगा?",
+  "q_en": "In a 3-phase system, the line voltage is 440 volts. What will be the phase voltage value in a star connection?",
+  "o_hi": [
+   "440 वोल्ट",
+   "762 वोल्ट",
+   "254 वोल्ट",
+   "220 वोल्ट"
+  ],
+  "o_en": [
+   "440 volts",
+   "762 volts",
+   "254 volts",
+   "220 volts"
+  ],
+  "a": 2,
+  "e_hi": "स्टार कनेक्शन में, फेज वोल्टेज = लाइन वोल्टेज / वर्गमूल 3। 440 / 1.732 = 254 वोल्ट।",
+  "e_en": "In a star connection, Phase voltage = Line voltage / sqrt(3). 440 / 1.732 = 254 volts."
+ },
+ {
+  "id": "rp-je_e-f00673",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि किसी ट्रांसमिशन लाइन की लंबाई 100 किमी है और प्रति किमी प्रतिरोध 0.1 ओम है, तो कुल लूप प्रतिरोध क्या होगा?",
+  "q_en": "If the length of a transmission line is 100 km and the resistance per km is 0.1 ohm, what will be the total loop resistance?",
+  "o_hi": [
+   "10 ओम",
+   "20 ओम",
+   "5 ओम",
+   "100 ओम"
+  ],
+  "o_en": [
+   "10 ohms",
+   "20 ohms",
+   "5 ohms",
+   "100 ohms"
+  ],
+  "a": 1,
+  "e_hi": "लूप प्रतिरोध में जाने और आने वाला दोनों रास्ता शामिल होता है, इसलिए 2 * लंबाई * प्रतिरोध प्रति किमी = 2 * 100 * 0.1 = 20 ओम।",
+  "e_en": "Loop resistance includes both outgoing and return paths, so 2 * length * resistance per km = 2 * 100 * 0.1 = 20 ohms."
+ },
+ {
+  "id": "rp-je_e-f00674",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक पावर सिस्टम में लोड का शक्ति गुणांक (पावर फैक्टर) 0.8 लैगिंग है। यदि वास्तविक शक्ति 80 किलोवाट है, तो आभासी शक्ति (केवीए) क्या होगी?",
+  "q_en": "In a power system, the power factor of the load is 0.8 lagging. If the real power is 80 kW, what will be the apparent power (kVA)?",
+  "o_hi": [
+   "64 केवीए",
+   "80 केवीए",
+   "100 केवीए",
+   "120 केवीए"
+  ],
+  "o_en": [
+   "64 kVA",
+   "80 kVA",
+   "100 kVA",
+   "120 kVA"
+  ],
+  "a": 2,
+  "e_hi": "आभासी शक्ति = वास्तविक शक्ति / शक्ति गुणांक। 80 / 0.8 = 100 केवीए।",
+  "e_en": "Apparent power = Real power / Power factor. 80 / 0.8 = 100 kVA."
+ },
+ {
+  "id": "rp-je_e-f00675",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "एक ट्रांसमिशन लाइन की प्रतिबाधा 2 + j4 ओम है। यदि लाइन में धारा 10 एम्पीयर है, तो लाइन द्वारा खपत की गई वास्तविक शक्ति (वाट में) क्या है?",
+  "q_en": "The impedance of a transmission line is 2 + j4 ohms. If the current in the line is 10 amperes, what is the real power consumed by the line (in watts)?",
+  "o_hi": [
+   "200 वाट",
+   "400 वाट",
+   "600 वाट",
+   "2000 वाट"
+  ],
+  "o_en": [
+   "200 watts",
+   "400 watts",
+   "600 watts",
+   "2000 watts"
+  ],
+  "a": 0,
+  "e_hi": "वास्तविक शक्ति केवल प्रतिरोध में खपत होती है: P = I^2 * R = 10^2 * 2 = 100 * 2 = 200 वाट।",
+  "e_en": "Real power is only consumed in resistance: P = I^2 * R = 10^2 * 2 = 100 * 2 = 200 watts."
+ },
+ {
+  "id": "rp-je_e-f00676",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "यदि एक 3-फेज संतुलित लोड में प्रत्येक फेज का प्रतिरोध 10 ओम है और यह डेल्टा में जुड़ा है, तो स्टार में समतुल्य प्रतिरोध क्या होगा?",
+  "q_en": "If each phase of a 3-phase balanced load has a resistance of 10 ohms and it is connected in delta, what will be the equivalent resistance in star?",
+  "o_hi": [
+   "30 ओम",
+   "10 ओम",
+   "3.33 ओम",
+   "0.33 ओम"
+  ],
+  "o_en": [
+   "30 ohms",
+   "10 ohms",
+   "3.33 ohms",
+   "0.33 ohms"
+  ],
+  "a": 2,
+  "e_hi": "डेल्टा से स्टार में बदलने के लिए, प्रत्येक प्रतिरोध का मान 3 से विभाजित होता है: R(star) = R(delta) / 3 = 10 / 3 = 3.33 ओम।",
+  "e_en": "To convert from delta to star, each resistance value is divided by 3: R(star) = R(delta) / 3 = 10 / 3 = 3.33 ohms."
+ },
+ {
+  "id": "rp-je_e-f00677",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "एक ट्रांसफार्मर की दक्षता 95% है। यदि आउटपुट शक्ति 19 किलोवाट है, तो इनपुट शक्ति क्या होगी?",
+  "q_en": "The efficiency of a transformer is 95%. If the output power is 19 kW, what will be the input power?",
+  "o_hi": [
+   "18.05 किलोवाट",
+   "19.95 किलोवाट",
+   "20 किलोवाट",
+   "21 किलोवाट"
+  ],
+  "o_en": [
+   "18.05 kW",
+   "19.95 kW",
+   "20 kW",
+   "21 kW"
+  ],
+  "a": 2,
+  "e_hi": "दक्षता = आउटपुट / इनपुट। इनपुट = 19 / 0.95 = 20 किलोवाट।",
+  "e_en": "Efficiency = Output / Input. Input = 19 / 0.95 = 20 kW."
+ },
+ {
+  "id": "rp-je_e-f00678",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक तीन-चरण (थ्री-फेज) संतुलित प्रणाली में, कुल सक्रिय शक्ति का सूत्र क्या है यदि लाइन वोल्टेज 'वी' और लाइन धारा 'आई' है और पावर फैक्टर 'कॉस फाई' है?",
+  "q_en": "In a three-phase balanced system, what is the formula for total active power if line voltage is 'V', line current is 'I', and power factor is 'cos phi'?",
+  "o_hi": [
+   "वी गुणा आई गुणा कॉस फाई",
+   "तीन गुणा वी गुणा आई गुणा कॉस फाई",
+   "वर्गमूल तीन गुणा वी गुणा आई गुणा कॉस फाई",
+   "वी बटा वर्गमूल तीन गुणा आई गुणा कॉस फाई"
+  ],
+  "o_en": [
+   "V * I * cos phi",
+   "3 * V * I * cos phi",
+   "sqrt(3) * V * I * cos phi",
+   "V / sqrt(3) * I * cos phi"
+  ],
+  "a": 2,
+  "e_hi": "थ्री-फेज संतुलित प्रणाली में सक्रिय शक्ति पी बराबर वर्गमूल तीन गुणा वी गुणा आई गुणा कॉस फाई होती है।",
+  "e_en": "In a balanced three-phase system, the active power is given by P = sqrt(3) * V * I * cos phi."
+ },
+ {
+  "id": "rp-je_e-f00679",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक सिंक्रोनस जनरेटर के लिए, यदि पोल की संख्या 'पी' है और आवृत्ति 'एफ' है, तो सिंक्रोनस गति 'एनएस' का सूत्र क्या है?",
+  "q_en": "For a synchronous generator, if the number of poles is 'P' and frequency is 'f', what is the formula for synchronous speed 'Ns'?",
+  "o_hi": [
+   "120 गुणा एफ बटा पी",
+   "120 गुणा पी बटा एफ",
+   "पी गुणा एफ बटा 120",
+   "60 गुणा एफ बटा पी"
+  ],
+  "o_en": [
+   "120 * f / P",
+   "120 * P / f",
+   "P * f / 120",
+   "60 * f / P"
+  ],
+  "a": 0,
+  "e_hi": "सिंक्रोनस गति का मानक सूत्र एनएस बराबर 120 एफ बटा पी (आरपीएम में) होता है।",
+  "e_en": "The standard formula for synchronous speed is Ns = 120 * f / P (in RPM)."
+ },
+ {
+  "id": "rp-je_e-f00680",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक 50 हर्ट्ज की आपूर्ति के लिए, कोणीय आवृत्ति (ओमेगा) का मान रेडियन प्रति सेकंड में क्या होगा?",
+  "q_en": "For a 50 Hz supply, what will be the value of angular frequency (omega) in radians per second?",
+  "o_hi": [
+   "50 पाई",
+   "100 पाई",
+   "25 पाई",
+   "200 पाई"
+  ],
+  "o_en": [
+   "50 pi",
+   "100 pi",
+   "25 pi",
+   "200 pi"
+  ],
+  "a": 1,
+  "e_hi": "कोणीय आवृत्ति का सूत्र ओमेगा बराबर 2 पाई एफ होता है। 2 गुणा पाई गुणा 50 बराबर 100 पाई।",
+  "e_en": "The formula for angular frequency is omega = 2 * pi * f. Substituting 50 Hz gives 100 * pi."
+ },
+ {
+  "id": "rp-je_e-f00681",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "थ्री-फेज सिस्टम में प्रति फेज पावर का मान कुल पावर का कितना हिस्सा होता है?",
+  "q_en": "In a three-phase system, what fraction of the total power is the power per phase?",
+  "o_hi": [
+   "एक तिहाई",
+   "आधा",
+   "दो तिहाई",
+   "बराबर"
+  ],
+  "o_en": [
+   "One-third",
+   "Half",
+   "Two-thirds",
+   "Equal"
+  ],
+  "a": 0,
+  "e_hi": "संतुलित थ्री-फेज प्रणाली में, कुल शक्ति तीन फेजों के योग के बराबर होती है, इसलिए प्रति फेज पावर कुल का एक तिहाई है।",
+  "e_en": "In a balanced three-phase system, total power is the sum of three phases, thus power per phase is one-third of the total."
+ },
+ {
+  "id": "rp-je_e-f00682",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "यदि एक ट्रांसमिशन लाइन के दो सिरों के बीच वोल्टेज 'वी1' और 'वी2' है और उनके बीच का कोण 'डेल्टा' है, तो प्रेषित वास्तविक शक्ति का सूत्र क्या है?",
+  "q_en": "If the voltages at the two ends of a transmission line are 'V1' and 'V2' with a phase angle 'delta' between them, what is the formula for transmitted real power?",
+  "o_hi": [
+   "पी बराबर (वी1 वी2 / एक्स) गुणा साइन डेल्टा",
+   "पी बराबर (वी1 वी2 / एक्स) गुणा कॉस डेल्टा",
+   "पी बराबर (वी1 वर्ग / एक्स) गुणा साइन डेल्टा",
+   "पी बराबर (वी2 वर्ग / एक्स) गुणा साइन डेल्टा"
+  ],
+  "o_en": [
+   "P = (V1 * V2 / X) * sin delta",
+   "P = (V1 * V2 / X) * cos delta",
+   "P = (V1^2 / X) * sin delta",
+   "P = (V2^2 / X) * sin delta"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसमिशन लाइन की पावर ट्रांसफर समीकरण पी बराबर (वी1 वी2 / एक्स) साइन डेल्टा होती है, जहाँ एक्स लाइन का रिएक्टेंस है।",
+  "e_en": "The power transfer equation for a transmission line is P = (V1 * V2 / X) * sin delta, where X is the line reactance."
  }
 ]
