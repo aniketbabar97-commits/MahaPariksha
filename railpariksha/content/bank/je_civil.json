@@ -23389,5 +23389,212 @@
   "a": 0,
   "e_hi": "कठोरता यह मापती है कि कोई संरचना विरूपण का कितना विरोध करती है।",
   "e_en": "Stiffness measures how much a structure resists deformation."
+ },
+ {
+  "id": "rp-je_c-f01018",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर (statically determinate) बीम के लिए, यदि एक अतिरिक्त समर्थन (support) जोड़ा जाता है, तो संरचना क्या बन जाती है?",
+  "q_en": "For a statically determinate beam, if an additional support is added, what does the structure become?",
+  "o_hi": [
+   "अस्थिर (Unstable)",
+   "स्थिर (Determinate)",
+   "अनिश्चित (Indeterminate)",
+   "कैंटिलीवर (Cantilever)"
+  ],
+  "o_en": [
+   "Unstable",
+   "Determinate",
+   "Indeterminate",
+   "Cantilever"
+  ],
+  "a": 2,
+  "e_hi": "अतिरिक्त समर्थन जोड़ने से अज्ञात प्रतिक्रियाओं की संख्या बढ़ जाती है, जिससे बीम 'स्टैटिकली इंडिटरमिनेट' हो जाती है।",
+  "e_en": "Adding an extra support increases the number of unknown reactions, making the beam statically indeterminate."
+ },
+ {
+  "id": "rp-je_c-f01019",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "त्रि-आयामी (3D) फ्रेम में, कुल संतुलन समीकरणों (equilibrium equations) की संख्या कितनी होती है?",
+  "q_en": "In a three-dimensional (3D) frame, what is the total number of equilibrium equations available?",
+  "o_hi": [
+   "तीन",
+   "चार",
+   "छह",
+   "नौ"
+  ],
+  "o_en": [
+   "Three",
+   "Four",
+   "Six",
+   "Nine"
+  ],
+  "a": 2,
+  "e_hi": "3D संरचनाओं के लिए, तीन बल समीकरण (Fx, Fy, Fz) और तीन आघूर्ण समीकरण (Mx, My, Mz) होते हैं।",
+  "e_en": "For 3D structures, there are three force equations (Fx, Fy, Fz) and three moment equations (Mx, My, Mz)."
+ },
+ {
+  "id": "rp-je_c-f01020",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 'पिन-जॉइंटेड' ट्रस में सदस्यों (members) के बीच बल का संचरण किस रूप में होता है?",
+  "q_en": "In a pin-jointed truss, how is the force transmitted between members?",
+  "o_hi": [
+   "केवल बेंडिंग मोमेंट",
+   "केवल अक्षीय बल (Axial force)",
+   "अक्षीय बल और शियर",
+   "टोरसन"
+  ],
+  "o_en": [
+   "Bending moment only",
+   "Axial force only",
+   "Axial force and shear",
+   "Torsion"
+  ],
+  "a": 1,
+  "e_hi": "आदर्श पिन-जॉइंटेड ट्रस में, सदस्य केवल तनाव या संपीड़न (अक्षीय बल) का अनुभव करते हैं।",
+  "e_en": "In an ideal pin-jointed truss, members experience only tension or compression (axial force)."
+ },
+ {
+  "id": "rp-je_c-f01021",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "मोमेंट डिस्ट्रीब्यूशन विधि (Moment Distribution Method) में, एक 'फिक्स्ड एंड' के लिए 'स्टिफनेस फैक्टर' (stiffness factor) का मान क्या होता है?",
+  "q_en": "In the Moment Distribution Method, what is the value of the stiffness factor for a fixed end?",
+  "o_hi": [
+   "4EI/L",
+   "3EI/L",
+   "2EI/L",
+   "शून्य"
+  ],
+  "o_en": [
+   "4EI/L",
+   "3EI/L",
+   "2EI/L",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "फिक्स्ड एंड के लिए स्टिफनेस 4EI/L होती है, जबकि हिंज्ड एंड के लिए यह 3EI/L होती है।",
+  "e_en": "The stiffness factor for a fixed end is 4EI/L, whereas for a hinged end it is 3EI/L."
+ },
+ {
+  "id": "rp-je_c-f01022",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि किसी संरचना की 'डिग्री ऑफ फ्रीडम' (degree of freedom) शून्य से कम है, तो वह संरचना क्या कहलाती है?",
+  "q_en": "If the degree of freedom of a structure is less than zero, what is the structure called?",
+  "o_hi": [
+   "स्थिर (Stable)",
+   "अस्थिर (Unstable)",
+   "ओवर-स्टिफ़ (Over-stiff/Redundant)",
+   "तंत्र (Mechanism)"
+  ],
+  "o_en": [
+   "Stable",
+   "Unstable",
+   "Over-stiff/Redundant",
+   "Mechanism"
+  ],
+  "a": 2,
+  "e_hi": "नकारात्मक डिग्री ऑफ फ्रीडम का अर्थ है कि संरचना में आवश्यक से अधिक प्रतिबंध (constraints) हैं।",
+  "e_en": "A negative degree of freedom indicates that the structure has more constraints than necessary."
+ },
+ {
+  "id": "rp-je_c-f01023",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "'कॉलम एनालॉजी विधि' (Column Analogy Method) का उपयोग मुख्य रूप से किसके विश्लेषण के लिए किया जाता है?",
+  "q_en": "The Column Analogy Method is primarily used for the analysis of which of the following?",
+  "o_hi": [
+   "सरल बीम",
+   "स्थिर फ्रेम",
+   "अनिश्चित फ्रेम (Indeterminate frames)",
+   "ट्रस"
+  ],
+  "o_en": [
+   "Simple beams",
+   "Determinate frames",
+   "Indeterminate frames",
+   "Trusses"
+  ],
+  "a": 2,
+  "e_hi": "यह विधि विशेष रूप से स्थिर रूप से अनिश्चित (statically indeterminate) संरचनाओं के विश्लेषण के लिए प्रभावी है।",
+  "e_en": "This method is particularly effective for analyzing statically indeterminate structures."
+ },
+ {
+  "id": "rp-je_c-f01024",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 'थ्री-हिंग्ड आर्च' (three-hinged arch) के बारे में क्या सत्य है?",
+  "q_en": "What is true about a three-hinged arch?",
+  "o_hi": [
+   "यह एक अनिश्चित संरचना है",
+   "यह एक स्थिर संरचना है",
+   "इसमें कोई मोमेंट नहीं होता",
+   "इसमें चार प्रतिक्रियाएं होती हैं"
+  ],
+  "o_en": [
+   "It is an indeterminate structure",
+   "It is a determinate structure",
+   "It has no moment",
+   "It has four reactions"
+  ],
+  "a": 1,
+  "e_hi": "थ्री-हिंग्ड आर्च में तीन हिंग (hinges) होते हैं, जो इसे स्टैटिकली डिटरमिनेट बनाते हैं।",
+  "e_en": "A three-hinged arch has three hinges, which makes it statically determinate."
+ },
+ {
+  "id": "rp-je_c-f01025",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "मुलर-ब्रेशलाऊ सिद्धांत (Muller-Breslau Principle) का उपयोग किसके निर्माण के लिए किया जाता है?",
+  "q_en": "The Muller-Breslau Principle is used to construct which of the following?",
+  "o_hi": [
+   "बेंडिंग मोमेंट डायग्राम",
+   "प्रभाव रेखाएं (Influence Lines)",
+   "शियर फोर्स डायग्राम",
+   "स्ट्रेस-स्ट्रेन कर्व"
+  ],
+  "o_en": [
+   "Bending Moment Diagrams",
+   "Influence Lines",
+   "Shear Force Diagrams",
+   "Stress-Strain Curves"
+  ],
+  "a": 1,
+  "e_hi": "मुलर-ब्रेशलाऊ सिद्धांत का उपयोग अनिश्चित संरचनाओं के लिए प्रभाव रेखाओं को निर्धारित करने के लिए किया जाता है।",
+  "e_en": "The Muller-Breslau principle is used to determine influence lines for indeterminate structures."
+ },
+ {
+  "id": "rp-je_c-f01026",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "संरचनात्मक विश्लेषण में, 'फ्लेक्सिबिलिटी' (flexibility) किसका व्युत्क्रम (inverse) है?",
+  "q_en": "In structural analysis, flexibility is the inverse of which of the following?",
+  "o_hi": [
+   "स्ट्रेस (Stress)",
+   "स्ट्रेन (Strain)",
+   "स्टिफ़नेस (Stiffness)",
+   "आघूर्ण (Moment)"
+  ],
+  "o_en": [
+   "Stress",
+   "Strain",
+   "Stiffness",
+   "Moment"
+  ],
+  "a": 2,
+  "e_hi": "स्टिफ़नेस इकाई विस्थापन उत्पन्न करने के लिए आवश्यक बल है, जबकि फ्लेक्सिबिलिटी इकाई बल के कारण विस्थापन है।",
+  "e_en": "Stiffness is the force required to produce unit displacement, while flexibility is the displacement due to unit force."
  }
 ]
