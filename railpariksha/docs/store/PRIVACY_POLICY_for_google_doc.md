@@ -1,6 +1,6 @@
 # RailPariksha — Privacy Policy
 
-_Last updated: [fill in today's date when you publish this]_
+_Last updated: 30 September 2026_
 
 RailPariksha does not collect personal data. There is no sign-up or account creation.
 
@@ -18,7 +18,7 @@ RailPariksha does not collect personal data. There is no sign-up or account crea
 
 **Changes to this policy.** If this policy changes (for example, when ads or an account system are added), the "Last updated" date above will change and the new version will be posted at this same link.
 
-**Contact:** [YOUR REAL EMAIL ADDRESS HERE]
+**Contact:** asbshield@proton.me
 
 ---
 
@@ -32,4 +32,4 @@ RailPariksha कोई व्यक्तिगत जानकारी एक�
 
 RailPariksha एक स्वतंत्र शैक्षणिक ऐप है और भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है।
 
-संपर्क: [आपका वास्तविक ईमेल यहाँ]
+संपर्क: asbshield@proton.me
