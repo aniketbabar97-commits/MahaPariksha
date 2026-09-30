@@ -31163,5 +31163,235 @@
   "a": 1,
   "e_hi": "सही वाक्य \"The new policy will have a big effect on the economy.\" है क्योंकि 'effect' यहाँ संज्ञा है।",
   "e_en": "The correct sentence is \"The new policy will have a big effect on the economy.\" because 'effect' is a noun here."
+ },
+ {
+  "id": "rp-eng-s01356",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 1,
+  "q_hi": "एक ट्रेन 240 किलोमीटर की दूरी 4 घंटे में तय करती है। कथन कहता है कि इसका औसत वेग 65 किलोमीटर प्रति घंटे है। सही औसत वेग कौन सा है?",
+  "q_en": "A train covers a distance of 240 kilometres in 4 hours. The statement claims its average speed is 65 kilometres per hour. Which of the following is the correct average speed?",
+  "o_hi": [
+   "50 किमी/घंटा",
+   "60 किमी/घंटा",
+   "65 किमी/घंटा",
+   "70 किमी/घंटा"
+  ],
+  "o_en": [
+   "50 km/h",
+   "60 km/h",
+   "65 km/h",
+   "70 km/h"
+  ],
+  "a": 1,
+  "e_hi": "औसत वेग = दूरी ÷ समय = 240 ÷ 4 = 60 किमी/घंटा। इसलिए 60 किमी/घंटा सही है।",
+  "e_en": "Average speed = distance ÷ time = 240 ÷ 4 = 60 km/h. Hence 60 km/h is correct."
+ },
+ {
+  "id": "rp-eng-s01357",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 1,
+  "q_hi": "एक लोकोमोटिव 100 किलोमीटर की दूरी तय करने के लिए 15 लीटर डीजल का उपयोग करता है। कथन कहता है कि वही दूरी तय करने में 12 लीटर लगते हैं। सही इंधन खपत कौन सी है?",
+  "q_en": "A locomotive consumes 15 litres of diesel to cover 100 kilometres. The statement says it consumes 12 litres for the same distance. Which option gives the correct fuel consumption?",
+  "o_hi": [
+   "10 लीटर",
+   "12 लीटर",
+   "15 लीटर",
+   "18 लीटर"
+  ],
+  "o_en": [
+   "10 litres",
+   "12 litres",
+   "15 litres",
+   "18 litres"
+  ],
+  "a": 2,
+  "e_hi": "इंधन खपत = 15 लीटर ÷ 100 किमी = 0.15 लीटर/किमी, अतः 100 किमी के लिये 15 लीटर आवश्यक है।",
+  "e_en": "Fuel consumption = 15 litres ÷ 100 km = 0.15 litre/km, thus 15 litres is required for 100 km."
+ },
+ {
+  "id": "rp-eng-s01358",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 2,
+  "q_hi": "एक ट्रेन 70 किलोमीटर प्रति घंटे की गति से 5 घंटे 30 मिनट में शहर X से शहर Y तक जाती है। कथन कहता है कि दोनों शहरों के बीच दूरी 440 किमी है। सही दूरी कौन सी है?",
+  "q_en": "A train travels from City X to City Y at a constant speed of 70 km/h. The journey takes 5 hours and 30 minutes. The statement claims the distance between the cities is 440 km. Which option gives the correct distance?",
+  "o_hi": [
+   "385 किमी",
+   "400 किमी",
+   "440 किमी",
+   "470 किमी"
+  ],
+  "o_en": [
+   "385 km",
+   "400 km",
+   "440 km",
+   "470 km"
+  ],
+  "a": 0,
+  "e_hi": "दूरी = वेग × समय = 70 × 5.5 = 385 किमी।",
+  "e_en": "Distance = speed × time = 70 × 5.5 = 385 km."
+ },
+ {
+  "id": "rp-eng-s01359",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 2,
+  "q_hi": "एक ट्रेन 80 किलोमीटर प्रति घंटे की गति से चल रही है। कथन इसे 25 मीटर प्रति सेकंड में परिवर्तित करता है। सही परिवर्तन क्या है?",
+  "q_en": "A train moves at a speed of 80 km/h. The statement converts this speed to 25 m/s. Which option gives the correct conversion?",
+  "o_hi": [
+   "22.2 मी/से",
+   "20 मी/से",
+   "25 मी/से",
+   "30 मी/से"
+  ],
+  "o_en": [
+   "22.2 m/s",
+   "20 m/s",
+   "25 m/s",
+   "30 m/s"
+  ],
+  "a": 0,
+  "e_hi": "80 km/h = (80 × 1000) ÷ 3600 ≈ 22.2 मी/से।",
+  "e_en": "80 km/h = (80 × 1000) ÷ 3600 ≈ 22.2 m/s."
+ },
+ {
+  "id": "rp-eng-s01360",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 3,
+  "q_hi": "एक ट्रेन 6:00 पूर्वाह्न को स्टेशन A से प्रस्थान करती है, 2 घंटे बाद स्टेशन B पहुँचती है, 30 मिनट के लिए रुकती है, फिर 3 घंटे बाद स्टेशन C पहुँचती है। कुल दूरी 300 किमी है। कथन कहता है कि पूरी यात्रा (रुकावट सहित) का औसत वेग 80 किमी/घंटा है। सही औसत वेग कौन सा है?",
+  "q_en": "A train departs from Station A at 6:00 AM, reaches Station B after 2 hours, stops for 30 minutes, then reaches Station C after 3 hours. The total distance covered is 300 km. The statement claims the average speed for the entire journey (including the stop) is 80 km/h. Which option gives the correct average speed?",
+  "o_hi": [
+   "50 किमी/घंटा",
+   "54.5 किमी/घंटा",
+   "60 किमी/घंटा",
+   "70 किमी/घंटा"
+  ],
+  "o_en": [
+   "50 km/h",
+   "54.5 km/h",
+   "60 km/h",
+   "70 km/h"
+  ],
+  "a": 1,
+  "e_hi": "कुल समय = 2 + 0.5 + 3 = 5.5 घंटे। औसत वेग = 300 ÷ 5.5 ≈ 54.5 किमी/घंटा।",
+  "e_en": "Total time = 2 + 0.5 + 3 = 5.5 hours. Average speed = 300 ÷ 5.5 ≈ 54.5 km/h."
+ },
+ {
+  "id": "rp-eng-s01361",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 3,
+  "q_hi": "एक ट्रेन 120 किमी माइल M से N तक 60 किमी/घंटा की गति से जाती है, फिर उसी दूरी को 80 किमी/घंटा की गति से वापस लौटती है। कथन कहता है कि राउंड ट्रिप का औसत वेग 70 किमी/घंटा है। सही औसत वेग कौन सा है?",
+  "q_en": "A train travels 120 km from City M to City N at 60 km/h, then returns to City M covering the same distance at 80 km/h. The statement claims the average speed for the round trip is 70 km/h. Which option gives the correct average speed?",
+  "o_hi": [
+   "68 किमी/घंटा",
+   "70 किमी/घंटा",
+   "72 किमी/घंटा",
+   "75 किमी/घंटा"
+  ],
+  "o_en": [
+   "68 km/h",
+   "70 km/h",
+   "72 km/h",
+   "75 km/h"
+  ],
+  "a": 0,
+  "e_hi": "पहली दूरी का समय 120 ÷ 60 = 2 घंटे, दूसरी दूरी का समय 120 ÷ 80 = 1.5 घंटे। कुल समय 3.5 घंटे, कुल दूरी 240 किमी। औसत वेग = 240 ÷ 3.5 ≈ 68.6 किमी/घंटा।",
+  "e_en": "Time for first leg = 120 ÷ 60 = 2 hrs, second leg = 120 ÷ 80 = 1.5 hrs. Total time 3.5 hrs, total distance 240 km. Average speed = 240 ÷ 3.5 ≈ 68.6 km/h."
+ },
+ {
+  "id": "rp-eng-s01362",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 3,
+  "q_hi": "एक ट्रेन 180 किमी 3 घंटे में तय करती है, 15 मिनट के लिए रुकती है, फिर 60 किमी को 60 किमी/घंटा की गति से आगे बढ़ती है। कथन कहता है कि कुल समय 4 घंटे है। सही कुल समय कौन सा है?",
+  "q_en": "A train covers 180 km in 3 hours. It then stops for 15 minutes before continuing at a speed of 60 km/h to cover the remaining distance. The statement claims total time taken is 4 hours. Which option gives the correct total time?",
+  "o_hi": [
+   "4 घंटे",
+   "4.25 घंटे",
+   "4.5 घंटे",
+   "5 घंटे"
+  ],
+  "o_en": [
+   "4 hours",
+   "4.25 hours",
+   "4.5 hours",
+   "5 hours"
+  ],
+  "a": 1,
+  "e_hi": "बचे हुए 60 किमी का समय 60 ÷ 60 = 1 घंटे। कुल समय = 3 + 0.25 + 1 = 4.25 घंटे।",
+  "e_en": "Remaining 60 km takes 60 ÷ 60 = 1 hour. Total time = 3 + 0.25 + 1 = 4.25 hours."
+ },
+ {
+  "id": "rp-eng-s01363",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 2,
+  "q_hi": "दो स्टेशनों के बीच की दूरी 150 किमी है। कथन इसे 15,000 मीटर में परिवर्तित करता है। सही परिवर्तन क्या है?",
+  "q_en": "The distance between two stations is 150 kilometres. The statement converts this distance to 15,000 meters. Which option gives the correct conversion?",
+  "o_hi": [
+   "15,000 मीटर",
+   "150,000 मीटर",
+   "1,500,000 मीटर",
+   "15,000,000 मीटर"
+  ],
+  "o_en": [
+   "15,000 m",
+   "150,000 m",
+   "1,500,000 m",
+   "15,000,000 m"
+  ],
+  "a": 1,
+  "e_hi": "150 किमी = 150 × 1000 = 150,000 मीटर।",
+  "e_en": "150 km = 150 × 1000 = 150,000 m."
+ },
+ {
+  "id": "rp-eng-s01364",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 1,
+  "q_hi": "एक ट्रेन 120 किमी उत्तर की ओर, फिर 80 किमी दक्षिण की ओर चलती है। कथन कहता है कि शुद्ध विस्थापन 200 किमी है। सही शुद्ध विस्थापन क्या है?",
+  "q_en": "A train travels 120 km north, then 80 km south. The statement claims the net displacement is 200 km. Which option gives the correct net displacement?",
+  "o_hi": [
+   "40 किमी",
+   "200 किमी",
+   "0 किमी",
+   "80 किमी"
+  ],
+  "o_en": [
+   "40 km",
+   "200 km",
+   "0 km",
+   "80 km"
+  ],
+  "a": 0,
+  "e_hi": "शुद्ध विस्थापन = 120 – 80 = 40 किमी।",
+  "e_en": "Net displacement = 120 – 80 = 40 km."
+ },
+ {
+  "id": "rp-eng-s01365",
+  "s": "english",
+  "t": "error_spotting",
+  "d": 2,
+  "q_hi": "एक ट्रेन में 10 यात्री डिब्बे हैं, प्रत्येक की क्षमता 90 यात्रियों की है। कथन कहता है कि ट्रेन की कुल यात्री क्षमता 850 है। सही क्षमता कौन सी है?",
+  "q_en": "A train has 10 passenger cars each with a capacity of 90 passengers. The statement claims that the total passenger capacity of the train is 850 passengers. Which option gives the correct capacity?",
+  "o_hi": [
+   "800",
+   "850",
+   "900",
+   "950"
+  ],
+  "o_en": [
+   "800",
+   "850",
+   "900",
+   "950"
+  ],
+  "a": 2,
+  "e_hi": "कुल क्षमता = 10 × 90 = 900 यात्रियों की।",
+  "e_en": "Total capacity = 10 × 90 = 900 passengers."
  }
 ]
