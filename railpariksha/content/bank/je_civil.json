@@ -11015,5 +11015,695 @@
   "a": 1,
   "e_hi": "सापेक्ष घनत्व का सूत्र (e_max - e) / (e_max - e_min) होता है, जो घनत्व की सघनता बताता है।",
   "e_en": "The formula for relative density is (e_max - e) / (e_max - e_min), representing the relative compactness of granular soil."
+ },
+ {
+  "id": "rp-je_c-f00480",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "मृदा का वह कौन सा गुण है जो कणों के आकार के वितरण को दर्शाता है?",
+  "q_en": "Which property of soil describes the distribution of particle sizes?",
+  "o_hi": [
+   "सुघट्यता",
+   "कण आकार वितरण",
+   "पारगम्यता",
+   "सघनता"
+  ],
+  "o_en": [
+   "Plasticity",
+   "Particle size distribution",
+   "Permeability",
+   "Compaction"
+  ],
+  "a": 1,
+  "e_hi": "कण आकार वितरण यह बताता है कि मृदा में विभिन्न आकारों के कण किस अनुपात में मौजूद हैं।",
+  "e_en": "Particle size distribution indicates the proportion of different sized particles present in a soil sample."
+ },
+ {
+  "id": "rp-je_c-f00481",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मृदा यांत्रिकी में 'शून्य रिक्ति' (Zero Air Voids) रेखा का क्या अर्थ है?",
+  "q_en": "What does the 'Zero Air Voids' line represent in soil mechanics?",
+  "o_hi": [
+   "पूरी तरह सूखी मृदा",
+   "पूर्ण संतृप्त मृदा",
+   "न्यूनतम सघनता",
+   "अधिकतम पारगम्यता"
+  ],
+  "o_en": [
+   "Completely dry soil",
+   "Fully saturated soil",
+   "Minimum density",
+   "Maximum permeability"
+  ],
+  "a": 1,
+  "e_hi": "शून्य रिक्ति रेखा तब प्राप्त होती है जब मृदा के सभी रिक्त स्थान जल से भरे होते हैं, अर्थात संतृप्ति 100% होती है।",
+  "e_en": "The zero air voids line occurs when all soil voids are filled with water, meaning 100% saturation."
+ },
+ {
+  "id": "rp-je_c-f00482",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "मृदा का 'प्लास्टिसिटी इंडेक्स' (PI) किन दो सीमाओं के बीच का अंतर है?",
+  "q_en": "The 'Plasticity Index' (PI) of soil is the difference between which two limits?",
+  "o_hi": [
+   "तरल सीमा और प्लास्टिक सीमा",
+   "प्लास्टिक सीमा और संकुचन सीमा",
+   "तरल सीमा और संकुचन सीमा",
+   "प्राकृतिक नमी और तरल सीमा"
+  ],
+  "o_en": [
+   "Liquid limit and Plastic limit",
+   "Plastic limit and Shrinkage limit",
+   "Liquid limit and Shrinkage limit",
+   "Natural moisture and Liquid limit"
+  ],
+  "a": 0,
+  "e_hi": "प्लास्टिसिटी इंडेक्स (PI) तरल सीमा (LL) और प्लास्टिक सीमा (PL) का अंतर होता है।",
+  "e_en": "Plasticity Index (PI) is calculated as the numerical difference between the Liquid Limit (LL) and the Plastic Limit (PL)."
+ },
+ {
+  "id": "rp-je_c-f00483",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "यदि मृदा का रिक्ति अनुपात (Void Ratio) 1 है, तो सरंध्रता (Porosity) का मान क्या होगा?",
+  "q_en": "If the void ratio of a soil is 1, what will be the value of porosity?",
+  "o_hi": [
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "o_en": [
+   "0.25",
+   "0.50",
+   "0.75",
+   "1.00"
+  ],
+  "a": 1,
+  "e_hi": "सरंध्रता (n) का सूत्र n = e / (1+e) होता है। यदि e=1 है, तो n = 1/(1+1) = 0.50 होगा।",
+  "e_en": "The formula for porosity (n) is n = e / (1+e). Substituting e=1 gives n = 1/(1+1) = 0.50."
+ },
+ {
+  "id": "rp-je_c-f00484",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मृदा के किस परीक्षण द्वारा उसकी 'कतरनी शक्ति' (Shear Strength) ज्ञात की जाती है?",
+  "q_en": "Which test is used to determine the shear strength of soil?",
+  "o_hi": [
+   "प्रॉक्टर परीक्षण",
+   "ट्रायक्सियल संपीड़न परीक्षण",
+   "सीव विश्लेषण",
+   "विशिष्ट गुरुत्व परीक्षण"
+  ],
+  "o_en": [
+   "Proctor test",
+   "Triaxial compression test",
+   "Sieve analysis",
+   "Specific gravity test"
+  ],
+  "a": 1,
+  "e_hi": "ट्रायक्सियल संपीड़न परीक्षण मृदा की कतरनी शक्ति के मापदंडों (कोहेसन और घर्षण कोण) को निर्धारित करने के लिए सबसे सटीक परीक्षण है।",
+  "e_en": "The Triaxial compression test is the most accurate method to determine shear strength parameters like cohesion and angle of internal friction."
+ },
+ {
+  "id": "rp-je_c-f00485",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "मृदा के 'संतृप्ति की डिग्री' (Degree of Saturation) का अधिकतम मान कितना हो सकता है?",
+  "q_en": "What is the maximum possible value for the degree of saturation of soil?",
+  "o_hi": [
+   "0.5",
+   "1.0",
+   "1.5",
+   "2.0"
+  ],
+  "o_en": [
+   "0.5",
+   "1.0",
+   "1.5",
+   "2.0"
+  ],
+  "a": 1,
+  "e_hi": "संतृप्ति की डिग्री रिक्तियों में पानी के आयतन और कुल रिक्तियों के आयतन का अनुपात है, जो अधिकतम 1.0 (या 100%) हो सकती है।",
+  "e_en": "Degree of saturation is the ratio of the volume of water to the volume of voids, which can be at most 1.0 (or 100%)."
+ },
+ {
+  "id": "rp-je_c-f00486",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "कंकाल मृदा (Skeletal Soil) में मुख्य रूप से क्या मौजूद होता है?",
+  "q_en": "What is primarily present in skeletal soil?",
+  "o_hi": [
+   "मिट्टी के कण",
+   "बड़े पत्थर और बजरी",
+   "कार्बनिक पदार्थ",
+   "केवल बारीक गाद"
+  ],
+  "o_en": [
+   "Clay particles",
+   "Large stones and gravel",
+   "Organic matter",
+   "Only fine silt"
+  ],
+  "a": 1,
+  "e_hi": "कंकाल मृदा में मोटे कणों जैसे पत्थर और बजरी की प्रधानता होती है।",
+  "e_en": "Skeletal soils are characterized by a high proportion of coarse particles like stones and gravel."
+ },
+ {
+  "id": "rp-je_c-f00487",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मृदा में 'केशिका क्रिया' (Capillarity) का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of capillarity in soil?",
+  "o_hi": [
+   "सतह तनाव",
+   "गुरुत्वाकर्षण",
+   "दाब का अंतर",
+   "मृदा की सघनता"
+  ],
+  "o_en": [
+   "Surface tension",
+   "Gravity",
+   "Pressure difference",
+   "Soil density"
+  ],
+  "a": 0,
+  "e_hi": "मृदा के सूक्ष्म रंध्रों में पानी का ऊपर चढ़ना सतह तनाव (Surface Tension) के कारण होता है।",
+  "e_en": "The rise of water in the fine pores of soil occurs due to surface tension."
+ },
+ {
+  "id": "rp-je_c-f00488",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "डार्सी का नियम (Darcy's Law) मृदा के किस गुण के अध्ययन के लिए उपयोग किया जाता है?",
+  "q_en": "Darcy's Law is used to study which property of soil?",
+  "o_hi": [
+   "सघनता",
+   "पारगम्यता",
+   "सुघट्यता",
+   "कतरनी शक्ति"
+  ],
+  "o_en": [
+   "Compaction",
+   "Permeability",
+   "Plasticity",
+   "Shear strength"
+  ],
+  "a": 1,
+  "e_hi": "डार्सी का नियम मृदा के माध्यम से पानी के प्रवाह (पारगम्यता) के दर को निर्धारित करता है।",
+  "e_en": "Darcy's Law defines the rate of flow of water through soil, which is used to study its permeability."
+ },
+ {
+  "id": "rp-je_c-f00489",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "निम्न में से कौन सी मृदा 'असंगत' (Cohesionless) मानी जाती है?",
+  "q_en": "Which of the following soils is considered 'cohesionless'?",
+  "o_hi": [
+   "चिकनी मिट्टी (Clay)",
+   "गाद (Silt)",
+   "रेत (Sand)",
+   "पीट (Peat)"
+  ],
+  "o_en": [
+   "Clay",
+   "Silt",
+   "Sand",
+   "Peat"
+  ],
+  "a": 2,
+  "e_hi": "रेत में कणों के बीच कोई कोहेसन (आसंजक बल) नहीं होता है, इसलिए इसे असंगत मृदा कहा जाता है।",
+  "e_en": "Sand lacks cohesion between its particles, which is why it is classified as cohesionless soil."
+ },
+ {
+  "id": "rp-je_c-f00490",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "एक निर्माण स्थल पर मिट्टी का परीक्षण करने पर पता चलता है कि मिट्टी में कार्बनिक पदार्थों की मात्रा बहुत अधिक है। ऐसी मिट्टी पर नींव बनाने के लिए सबसे उपयुक्त विकल्प क्या होगा?",
+  "q_en": "Soil testing at a construction site reveals a very high content of organic matter. What is the most suitable option for constructing a foundation on such soil?",
+  "o_hi": [
+   "उथली नींव (Shallow foundation)",
+   "मिट्टी को हटाकर प्रतिस्थापित करना (Excavation and replacement)",
+   "सीधे नींव बनाना (Direct foundation)",
+   "कोई कार्रवाई आवश्यक नहीं (No action needed)"
+  ],
+  "o_en": [
+   "Shallow foundation",
+   "Excavation and replacement",
+   "Direct foundation",
+   "No action needed"
+  ],
+  "a": 1,
+  "e_hi": "कार्बनिक मिट्टी की धारण क्षमता कम होती है और यह अत्यधिक संकुचित होती है, इसलिए इसे हटाना या प्रतिस्थापित करना आवश्यक है।",
+  "e_en": "Organic soil has low bearing capacity and is highly compressible, making excavation and replacement necessary."
+ },
+ {
+  "id": "rp-je_c-f00491",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "यदि किसी रेलवे ट्रैक के तटबंध (Embankment) के निर्माण के दौरान मिट्टी की नमी इष्टतम नमी सामग्री (OMC) से काफी अधिक है, तो इसका क्या प्रभाव पड़ेगा?",
+  "q_en": "If the moisture content of the soil is significantly higher than the Optimum Moisture Content (OMC) during the construction of a railway embankment, what will be the effect?",
+  "o_hi": [
+   "अधिकतम शुष्क घनत्व प्राप्त होगा",
+   "मिट्टी में स्थिरता बढ़ेगी",
+   "मिट्टी में छिद्र-जल दबाव (Pore water pressure) बढ़ेगा",
+   "मिट्टी की पारगम्यता कम हो जाएगी"
+  ],
+  "o_en": [
+   "Maximum dry density will be achieved",
+   "Soil stability will increase",
+   "Pore water pressure in the soil will increase",
+   "Soil permeability will decrease"
+  ],
+  "a": 2,
+  "e_hi": "OMC से अधिक नमी होने पर, मिट्टी में छिद्र-जल दबाव बढ़ता है, जिससे मिट्टी की कतरनी शक्ति (Shear strength) कम हो जाती है।",
+  "e_en": "When moisture exceeds OMC, pore water pressure increases, which reduces the shear strength of the soil."
+ },
+ {
+  "id": "rp-je_c-f00492",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "रेत के टीले पर भारी संरचना बनाने के लिए नींव का चयन करते समय सबसे महत्वपूर्ण कारक क्या है?",
+  "q_en": "What is the most critical factor when selecting a foundation for a heavy structure on a sand dune?",
+  "o_hi": [
+   "मिट्टी का रंग",
+   "सापेक्ष घनत्व (Relative density)",
+   "मिट्टी का पीएच मान",
+   "मिट्टी का तापमान"
+  ],
+  "o_en": [
+   "Color of the soil",
+   "Relative density",
+   "pH value of the soil",
+   "Temperature of the soil"
+  ],
+  "a": 1,
+  "e_hi": "रेत की धारण क्षमता उसके सापेक्ष घनत्व पर निर्भर करती है, जो नींव की स्थिरता निर्धारित करने के लिए महत्वपूर्ण है।",
+  "e_en": "The bearing capacity of sand depends on its relative density, which is crucial for determining foundation stability."
+ },
+ {
+  "id": "rp-je_c-f00493",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "एक क्षेत्र में मिट्टी की पारगम्यता (Permeability) बहुत अधिक है। वहां भूजल स्तर को नियंत्रित करने के लिए कौन सी विधि अपनाई जानी चाहिए?",
+  "q_en": "A region has soil with very high permeability. Which method should be adopted to control the groundwater level there?",
+  "o_hi": [
+   "ग्राउटिंग (Grouting)",
+   "वेल पॉइंट सिस्टम (Well point system)",
+   "मिट्टी का स्थिरीकरण (Soil stabilization)",
+   "मिट्टी की खुदाई"
+  ],
+  "o_en": [
+   "Grouting",
+   "Well point system",
+   "Soil stabilization",
+   "Excavation"
+  ],
+  "a": 1,
+  "e_hi": "उच्च पारगम्यता वाली मिट्टी में भूजल को नीचे करने के लिए वेल पॉइंट सिस्टम सबसे प्रभावी होता है।",
+  "e_en": "The well point system is the most effective method for lowering the groundwater level in soils with high permeability."
+ },
+ {
+  "id": "rp-je_c-f00494",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मिट्टी की संकुचन सीमा (Shrinkage limit) परीक्षण का उपयोग मुख्य रूप से किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "For what purpose is the shrinkage limit test of soil primarily used?",
+  "o_hi": [
+   "मिट्टी की कुल ताकत जानने के लिए",
+   "मिट्टी के आयतन में परिवर्तन का आकलन करने के लिए",
+   "मिट्टी के रंग की जांच के लिए",
+   "मिट्टी के घनत्व के लिए"
+  ],
+  "o_en": [
+   "To determine total soil strength",
+   "To assess volume change in soil",
+   "To check soil color",
+   "For soil density"
+  ],
+  "a": 1,
+  "e_hi": "संकुचन सीमा का उपयोग मिट्टी के उन व्यवहारों को समझने के लिए किया जाता है जहाँ नमी कम होने पर आयतन में बदलाव आता है।",
+  "e_en": "The shrinkage limit test is used to understand soil behavior where volume changes as moisture content decreases."
+ },
+ {
+  "id": "rp-je_c-f00495",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "यदि नींव के नीचे की मिट्टी 'फुलाने वाली मिट्टी' (Expansive soil) है, तो किस प्रकार की नींव सबसे सुरक्षित होगी?",
+  "q_en": "If the soil beneath a foundation is expansive soil, which type of foundation would be the safest?",
+  "o_hi": [
+   "उथली नींव",
+   "अंडर-रीम्ड पाइल नींव (Under-reamed pile foundation)",
+   "मैट फाउंडेशन",
+   "स्ट्रिप नींव"
+  ],
+  "o_en": [
+   "Shallow foundation",
+   "Under-reamed pile foundation",
+   "Mat foundation",
+   "Strip foundation"
+  ],
+  "a": 1,
+  "e_hi": "अंडर-रीम्ड पाइल नींव फुलाने वाली मिट्टी के ऊपर उठने और सिकुड़ने के प्रभाव को रोकने में मदद करती है।",
+  "e_en": "Under-reamed pile foundations help mitigate the heave and shrinkage effects caused by expansive soils."
+ },
+ {
+  "id": "rp-je_c-f00496",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मिट्टी की कतरनी शक्ति (Shear strength) का परीक्षण करने के लिए कौन सा उपकरण सबसे उपयुक्त है यदि मिट्टी अत्यधिक चिपचिपी (Clayey) है?",
+  "q_en": "Which apparatus is most suitable for testing the shear strength of soil if the soil is highly clayey?",
+  "o_hi": [
+   "वैन शियर टेस्ट (Vane shear test)",
+   "मानक पेनेट्रेशन टेस्ट",
+   "सीव विश्लेषण",
+   "हाइड्रोमीटर परीक्षण"
+  ],
+  "o_en": [
+   "Vane shear test",
+   "Standard penetration test",
+   "Sieve analysis",
+   "Hydrometer test"
+  ],
+  "a": 0,
+  "e_hi": "वैन शियर टेस्ट का उपयोग नरम और चिपचिपी मिट्टी की अपरूपण शक्ति को मापने के लिए किया जाता है।",
+  "e_en": "The Vane shear test is used to measure the shear strength of soft and cohesive clayey soils."
+ },
+ {
+  "id": "rp-je_c-f00497",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मिट्टी के स्थिरीकरण (Soil stabilization) के लिए चूने (Lime) का उपयोग किस प्रकार की मिट्टी के लिए सबसे प्रभावी है?",
+  "q_en": "For which type of soil is the use of lime most effective for soil stabilization?",
+  "o_hi": [
+   "रेतीली मिट्टी",
+   "बजरी (Gravel)",
+   "अत्यधिक प्लास्टिक वाली मिट्टी (Highly plastic clay)",
+   "चट्टानी मिट्टी"
+  ],
+  "o_en": [
+   "Sandy soil",
+   "Gravel",
+   "Highly plastic clay",
+   "Rocky soil"
+  ],
+  "a": 2,
+  "e_hi": "चूना उच्च प्लास्टिसिटी वाली मिट्टी के साथ रासायनिक प्रतिक्रिया करता है, जिससे उसकी कार्यक्षमता और शक्ति में सुधार होता है।",
+  "e_en": "Lime reacts chemically with highly plastic soils, improving their workability and structural strength."
+ },
+ {
+  "id": "rp-je_c-f00498",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "नींव की खुदाई के दौरान अचानक भूजल का रिसाव होने पर सबसे पहले क्या किया जाना चाहिए?",
+  "q_en": "What should be the first step if there is a sudden seepage of groundwater during foundation excavation?",
+  "o_hi": [
+   "खुदाई जारी रखें",
+   "पंपिंग द्वारा जल निकासी (Dewatering)",
+   "मिट्टी को वहीं छोड़ दें",
+   "सीमेंट डाल दें"
+  ],
+  "o_en": [
+   "Continue excavation",
+   "Dewatering",
+   "Leave the soil as is",
+   "Pour cement"
+  ],
+  "a": 1,
+  "e_hi": "खुदाई क्षेत्र में काम करने के लिए पानी को निकालना (Dewatering) अनिवार्य है ताकि नींव का निर्माण सुरक्षित हो सके।",
+  "e_en": "Dewatering the excavation area is mandatory to ensure the safety and feasibility of foundation construction."
+ },
+ {
+  "id": "rp-je_c-f00499",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "एक मृदा नमूने में रिक्तियों का अनुपात (Void ratio) 0.5 है। इसकी सरंध्रता (Porosity) क्या होगी?",
+  "q_en": "A soil sample has a void ratio of 0.5. What will be its porosity?",
+  "o_hi": [
+   "0.33",
+   "0.50",
+   "0.66",
+   "1.00"
+  ],
+  "o_en": [
+   "0.33",
+   "0.50",
+   "0.66",
+   "1.00"
+  ],
+  "a": 0,
+  "e_hi": "सरंध्रता (n) का सूत्र n = e / (1+e) है। अतः 0.5 / (1+0.5) = 0.33 होगा।",
+  "e_en": "The formula for porosity (n) is n = e / (1+e). Therefore, 0.5 / (1+0.5) = 0.33."
+ },
+ {
+  "id": "rp-je_c-f00500",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "मृदा का कौन सा गुण 'प्लास्टिसिटी इंडेक्स' (PI) द्वारा मापा जाता है?",
+  "q_en": "Which property of soil is measured by the 'Plasticity Index' (PI)?",
+  "o_hi": [
+   "मृदा की जल धारण क्षमता",
+   "मृदा के कणों का आकार",
+   "मृदा की प्लास्टिसिटी की सीमा",
+   "मृदा की पारगम्यता"
+  ],
+  "o_en": [
+   "Water holding capacity of soil",
+   "Particle size of soil",
+   "Range of soil plasticity",
+   "Permeability of soil"
+  ],
+  "a": 2,
+  "e_hi": "प्लास्टिसिटी इंडेक्स तरल सीमा (LL) और प्लास्टिक सीमा (PL) के बीच का अंतर है, जो मिट्टी के व्यवहार को दर्शाता है।",
+  "e_en": "Plasticity Index is the difference between Liquid Limit (LL) and Plastic Limit (PL), indicating the range over which soil exhibits plastic behavior."
+ },
+ {
+  "id": "rp-je_c-f00501",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "एक मृदा नमूने के लिए, यदि 'डिग्री ऑफ सैचुरेशन' शून्य है, तो मृदा को क्या कहा जाएगा?",
+  "q_en": "For a soil sample, if the 'Degree of Saturation' is zero, what is the soil called?",
+  "o_hi": [
+   "पूर्णतः संतृप्त",
+   "पूरी तरह से शुष्क",
+   "आंशिक रूप से संतृप्त",
+   "जलमग्न"
+  ],
+  "o_en": [
+   "Fully saturated",
+   "Completely dry",
+   "Partially saturated",
+   "Submerged"
+  ],
+  "a": 1,
+  "e_hi": "डिग्री ऑफ सैचुरेशन शून्य होने का अर्थ है कि रिक्तियों में पानी बिल्कुल नहीं है, अर्थात मृदा पूरी तरह शुष्क है।",
+  "e_en": "A degree of saturation of zero means there is no water in the voids, implying the soil is completely dry."
+ },
+ {
+  "id": "rp-je_c-f00502",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "कणों के आकार के आधार पर 'सिल्ट' (Silt) के लिए भारतीय मानक वर्गीकरण के अनुसार आकार सीमा क्या है?",
+  "q_en": "According to the Indian Standard classification based on particle size, what is the size range for 'Silt'?",
+  "o_hi": [
+   "0.075 मिमी से 2 मिमी",
+   "0.002 मिमी से 0.075 मिमी",
+   "0.002 मिमी से कम",
+   "2 मिमी से अधिक"
+  ],
+  "o_en": [
+   "0.075 mm to 2 mm",
+   "0.002 mm to 0.075 mm",
+   "Less than 0.002 mm",
+   "Greater than 2 mm"
+  ],
+  "a": 1,
+  "e_hi": "भारतीय मानक के अनुसार, सिल्ट का आकार 0.002 मिमी और 0.075 मिमी के बीच होता है।",
+  "e_en": "According to the Indian Standard, the particle size of silt ranges between 0.002 mm and 0.075 mm."
+ },
+ {
+  "id": "rp-je_c-f00503",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "यदि मृदा की 'वॉइड रेशियो' (e) 1 है, तो 'पोरॉसिटी' (n) का मान क्या होगा?",
+  "q_en": "If the 'Void Ratio' (e) of a soil is 1, what will be the value of 'Porosity' (n)?",
+  "o_hi": [
+   "0.5",
+   "1",
+   "0.25",
+   "0.75"
+  ],
+  "o_en": [
+   "0.5",
+   "1",
+   "0.25",
+   "0.75"
+  ],
+  "a": 0,
+  "e_hi": "पोरॉसिटी (n) का सूत्र n = e / (1 + e) है। यदि e = 1 है, तो n = 1 / (1 + 1) = 0.5 होगा।",
+  "e_en": "The formula for porosity (n) is n = e / (1 + e). If e = 1, then n = 1 / (1 + 1) = 0.5."
+ },
+ {
+  "id": "rp-je_c-f00504",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "कंसोलिडेशन (Consolidation) की प्रक्रिया मुख्य रूप से किस प्रकार की मृदा में होती है?",
+  "q_en": "The process of consolidation occurs primarily in which type of soil?",
+  "o_hi": [
+   "रेतीली मृदा",
+   "बजरी (Gravel)",
+   "संतृप्त चिकनी मिट्टी (Saturated Clay)",
+   "सूखी रेत"
+  ],
+  "o_en": [
+   "Sandy soil",
+   "Gravel",
+   "Saturated Clay",
+   "Dry sand"
+  ],
+  "a": 2,
+  "e_hi": "कंसोलिडेशन समय के साथ पानी के बाहर निकलने के कारण होने वाला आयतन संकुचन है, जो मुख्य रूप से चिकनी मिट्टी में होता है।",
+  "e_en": "Consolidation is the time-dependent reduction in volume due to water expulsion, which occurs primarily in fine-grained saturated clay."
+ },
+ {
+  "id": "rp-je_c-f00505",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "मृदा यांत्रिकी में 'क्विक सैंड' (Quick Sand) की स्थिति तब होती है जब:",
+  "q_en": "In soil mechanics, the 'Quick Sand' condition occurs when:",
+  "o_hi": [
+   "मृदा का घनत्व बहुत अधिक हो",
+   "बाहरी जल का दबाव मृदा के प्रभावी तनाव को शून्य कर दे",
+   "मृदा में रेत की मात्रा बहुत अधिक हो",
+   "मृदा पूरी तरह सूखी हो"
+  ],
+  "o_en": [
+   "Soil density is very high",
+   "Upward seepage pressure makes effective stress zero",
+   "Sand content is very high",
+   "Soil is completely dry"
+  ],
+  "a": 1,
+  "e_hi": "क्विक सैंड एक स्थिति है न कि मिट्टी का प्रकार, जहाँ ऊपर की ओर बहने वाले पानी का दबाव प्रभावी तनाव को शून्य कर देता है।",
+  "e_en": "Quick sand is a condition, not a soil type, occurring when upward seepage pressure counteracts the soil's effective stress, reducing it to zero."
+ },
+ {
+  "id": "rp-je_c-f00506",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मृदा की 'पारगम्यता' (Permeability) किस परीक्षण द्वारा प्रयोगशाला में सबसे सटीक मापी जाती है?",
+  "q_en": "Which test is used to measure the 'Permeability' of soil most accurately in a laboratory?",
+  "o_hi": [
+   "डायरेक्ट शीयर टेस्ट",
+   "ट्राइएक्सियल टेस्ट",
+   "कांस्टेंट हेड या फॉलिंग हेड टेस्ट",
+   "प्रोक्टर टेस्ट"
+  ],
+  "o_en": [
+   "Direct Shear Test",
+   "Triaxial Test",
+   "Constant Head or Falling Head Test",
+   "Proctor Test"
+  ],
+  "a": 2,
+  "e_hi": "प्रयोगशाला में मृदा की पारगम्यता निर्धारित करने के लिए निरंतर शीर्ष (Constant Head) या गिरते शीर्ष (Falling Head) विधि का उपयोग किया जाता है।",
+  "e_en": "The Constant Head or Falling Head permeability test is the standard laboratory method to determine the coefficient of permeability."
+ },
+ {
+  "id": "rp-je_c-f00507",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 3,
+  "q_hi": "न्यू मार्क का 'इन्फ्लुएंस चार्ट' (Influence Chart) किसके निर्धारण के लिए उपयोग किया जाता है?",
+  "q_en": "Newmark's 'Influence Chart' is used to determine what?",
+  "o_hi": [
+   "मृदा की धारण क्षमता",
+   "मृदा में वर्टिकल स्ट्रेस (Vertical Stress)",
+   "मृदा का संकुचन",
+   "मृदा का वर्गीकरण"
+  ],
+  "o_en": [
+   "Bearing capacity of soil",
+   "Vertical Stress in soil",
+   "Soil shrinkage",
+   "Soil classification"
+  ],
+  "a": 1,
+  "e_hi": "न्यू मार्क का चार्ट किसी भी आकार के लोडिंग के कारण मृदा के अंदर वर्टिकल स्ट्रेस की गणना करने के लिए उपयोग किया जाता है।",
+  "e_en": "Newmark's influence chart is a graphical method used to calculate the vertical stress increment at any point below a loaded area of any shape."
+ },
+ {
+  "id": "rp-je_c-f00508",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 2,
+  "q_hi": "मृदा के 'कम्पैक्शन' (Compaction) परीक्षण में 'ऑप्टिमम मॉइस्चर कंटेंट' (OMC) क्या दर्शाता है?",
+  "q_en": "In a soil 'Compaction' test, what does the 'Optimum Moisture Content' (OMC) indicate?",
+  "o_hi": [
+   "न्यूनतम शुष्क घनत्व",
+   "अधिकतम शुष्क घनत्व",
+   "शून्य वायु रिक्तियां",
+   "अधिकतम पारगम्यता"
+  ],
+  "o_en": [
+   "Minimum dry density",
+   "Maximum dry density",
+   "Zero air voids",
+   "Maximum permeability"
+  ],
+  "a": 1,
+  "e_hi": "OMC वह नमी की मात्रा है जिस पर मृदा को एक विशिष्ट कॉम्पैक्टिव प्रयास के साथ अधिकतम शुष्क घनत्व पर संकुचित किया जा सकता है।",
+  "e_en": "OMC is the water content at which a specific compactive effort achieves the maximum dry density of the soil."
+ },
+ {
+  "id": "rp-je_c-f00509",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation",
+  "d": 1,
+  "q_hi": "यदि किसी मृदा में 'प्लास्टिसिटी इंडेक्स' का मान 0 है, तो वह मृदा कौन सी होगी?",
+  "q_en": "If the 'Plasticity Index' value of a soil is 0, what type of soil is it?",
+  "o_hi": [
+   "चिकनी मिट्टी (Clay)",
+   "गाद (Silt)",
+   "रेत (Sand)",
+   "दोमट मिट्टी"
+  ],
+  "o_en": [
+   "Clay",
+   "Silt",
+   "Sand",
+   "Loam"
+  ],
+  "a": 2,
+  "e_hi": "प्लास्टिसिटी इंडेक्स का मान 0 होने का अर्थ है कि मृदा में प्लास्टिसिटी का गुण नहीं है, जो रेत की विशेषता है।",
+  "e_en": "A plasticity index of 0 indicates that the soil lacks plastic behavior, which is a characteristic of sand."
  }
 ]
