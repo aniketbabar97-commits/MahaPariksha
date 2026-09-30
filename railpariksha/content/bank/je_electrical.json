@@ -17340,5 +17340,2949 @@
   "a": 2,
   "e_hi": "फेरेंटी प्रभाव तब होता है जब रिसीविंग एंड का वोल्टेज सेंडिंग एंड के वोल्टेज से अधिक हो जाता है, जो नो-लोड स्थिति में होता है।",
   "e_en": "Ferranti effect occurs when the receiving end voltage exceeds the sending end voltage, typically happening at no-load conditions."
+ },
+ {
+  "id": "rp-je_e-f00755",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "यदि ट्रांसमिशन लाइन की लंबाई दोगुनी कर दी जाए, तो उसकी 'सर्ज प्रतिबाधा' (Surge Impedance) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the length of a transmission line is doubled, what will be the effect on its Surge Impedance?",
+  "o_hi": [
+   "दोगुनी हो जाएगी",
+   "आधी हो जाएगी",
+   "कोई परिवर्तन नहीं होगा",
+   "चार गुना हो जाएगी"
+  ],
+  "o_en": [
+   "It will double",
+   "It will be halved",
+   "No change",
+   "It will be four times"
+  ],
+  "a": 2,
+  "e_hi": "सर्ज प्रतिबाधा ट्रांसमिशन लाइन की ज्यामिति और माध्यम पर निर्भर करती है, यह लाइन की लंबाई पर निर्भर नहीं करती है।",
+  "e_en": "Surge impedance is a property of the transmission line geometry and medium; it is independent of the length of the line."
+ },
+ {
+  "id": "rp-je_e-f00756",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पावर सिस्टम में 'बंडल कंडक्टर' (Bundled Conductors) का उपयोग क्यों किया जाता है?",
+  "q_en": "Why are 'Bundled Conductors' used in power systems?",
+  "o_hi": [
+   "लाइन की लागत कम करने के लिए",
+   "कोरोना प्रभाव और रिएक्टेंस कम करने के लिए",
+   "केवल वोल्टेज बढ़ाने के लिए",
+   "प्रतिरोध बढ़ाने के लिए"
+  ],
+  "o_en": [
+   "To reduce line cost",
+   "To reduce corona effect and reactance",
+   "To increase voltage only",
+   "To increase resistance"
+  ],
+  "a": 1,
+  "e_hi": "बंडल कंडक्टर का उपयोग प्रभावी त्रिज्या बढ़ाने के लिए किया जाता है, जिससे रिएक्टेंस कम होता है और कोरोना हानि घटती है।",
+  "e_en": "Bundled conductors are used to increase the effective radius, which reduces line reactance and minimizes corona loss."
+ },
+ {
+  "id": "rp-je_e-f00757",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "एक शॉर्ट ट्रांसमिशन लाइन में वोल्टेज रेगुलेशन ऋणात्मक (Negative) कब हो सकता है?",
+  "q_en": "When can the voltage regulation of a short transmission line become negative?",
+  "o_hi": [
+   "यूनिटी पावर फैक्टर लोड पर",
+   "लैगिंग पावर फैक्टर लोड पर",
+   "लीडिंग पावर फैक्टर लोड पर",
+   "शून्य लोड पर"
+  ],
+  "o_en": [
+   "At unity power factor load",
+   "At lagging power factor load",
+   "At leading power factor load",
+   "At no load"
+  ],
+  "a": 2,
+  "e_hi": "लीडिंग पावर फैक्टर लोड (कैपेसिटिव लोड) के मामले में, प्राप्त वोल्टेज (Receiving end voltage) भेजने वाले वोल्टेज (Sending end voltage) से अधिक हो सकता है।",
+  "e_en": "In the case of a leading power factor load (capacitive load), the receiving end voltage can be higher than the sending end voltage."
+ },
+ {
+  "id": "rp-je_e-f00758",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "सर्किट ब्रेकर में 'आर्क' (Arc) बुझाने के लिए उपयोग किया जाने वाला माध्यम क्या सुनिश्चित करता है?",
+  "q_en": "What does the medium used in a circuit breaker ensure for extinguishing an arc?",
+  "o_hi": [
+   "उच्च चालकता",
+   "उच्च परावैद्युत शक्ति और तेजी से रिकवरी",
+   "कम वोल्टेज ड्रॉप",
+   "अत्यधिक चुंबकीय रिसाव"
+  ],
+  "o_en": [
+   "High conductivity",
+   "High dielectric strength and fast recovery",
+   "Low voltage drop",
+   "Excessive magnetic leakage"
+  ],
+  "a": 1,
+  "e_hi": "सर्किट ब्रेकर का माध्यम आर्क को बुझाने के लिए तेजी से परावैद्युत शक्ति बहाल करता है ताकि करंट का प्रवाह रुक सके।",
+  "e_en": "The medium in a circuit breaker must restore dielectric strength rapidly to quench the arc and interrupt current flow."
+ },
+ {
+  "id": "rp-je_e-f00759",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "फेरेंटी प्रभाव (Ferranti Effect) किस प्रकार की ट्रांसमिशन लाइनों में देखा जाता है?",
+  "q_en": "In which type of transmission lines is the Ferranti Effect observed?",
+  "o_hi": [
+   "केवल छोटी लाइनों में",
+   "केवल मध्यम लाइनों में",
+   "लंबी लाइनों में (नो-लोड या हल्के लोड पर)",
+   "केवल डीसी लाइनों में"
+  ],
+  "o_en": [
+   "Only in short lines",
+   "Only in medium lines",
+   "In long lines (at no-load or light load)",
+   "Only in DC lines"
+  ],
+  "a": 2,
+  "e_hi": "लंबी लाइनों में कैपेसिटेंस प्रभाव के कारण नो-लोड पर प्राप्त वोल्टेज, भेजने वाले वोल्टेज से अधिक हो जाता है, जिसे फेरेंटी प्रभाव कहते हैं।",
+  "e_en": "Due to capacitance effects in long lines, the receiving end voltage exceeds the sending end voltage at no-load, known as the Ferranti Effect."
+ },
+ {
+  "id": "rp-je_e-f00760",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "पावर सिस्टम में 'जड़त्व' (Inertia) का मुख्य स्रोत क्या है?",
+  "q_en": "What is the primary source of 'Inertia' in a power system?",
+  "o_hi": [
+   "ट्रांसफॉर्मर",
+   "सिंक्रोनस जनरेटर का रोटर",
+   "सर्किट ब्रेकर",
+   "ट्रांसमिशन लाइन"
+  ],
+  "o_en": [
+   "Transformer",
+   "Rotor of synchronous generator",
+   "Circuit breaker",
+   "Transmission line"
+  ],
+  "a": 1,
+  "e_hi": "सिंक्रोनस जनरेटर के घूमने वाले द्रव्यमान (Rotating mass) में संग्रहीत गतिज ऊर्जा पावर सिस्टम को जड़त्व प्रदान करती है।",
+  "e_en": "The kinetic energy stored in the rotating mass of synchronous generators provides inertia to the power system."
+ },
+ {
+  "id": "rp-je_e-f00761",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "ट्रांसमिशन लाइन में 'स्किन इफेक्ट' (Skin Effect) किस पर निर्भर करता है?",
+  "q_en": "What does the 'Skin Effect' in a transmission line depend on?",
+  "o_hi": [
+   "केवल वोल्टेज",
+   "केवल लंबाई",
+   "आवृत्ति (Frequency) और चालक का व्यास",
+   "केवल इंसुलेशन"
+  ],
+  "o_en": [
+   "Voltage only",
+   "Length only",
+   "Frequency and conductor diameter",
+   "Insulation only"
+  ],
+  "a": 2,
+  "e_hi": "स्किन इफेक्ट के कारण एसी करंट कंडक्टर की सतह पर केंद्रित हो जाता है, यह आवृत्ति और कंडक्टर के आकार के साथ बढ़ता है।",
+  "e_en": "Skin effect causes AC current to concentrate near the surface of the conductor; it increases with frequency and conductor diameter."
+ },
+ {
+  "id": "rp-je_e-f00762",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "सुरक्षा के लिए 'अर्थिंग' (Earthing) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of 'Earthing' for safety?",
+  "o_hi": [
+   "वोल्टेज स्थिर करना",
+   "उपकरणों के धातु के हिस्सों को शून्य विभव पर रखना",
+   "करंट को बढ़ाना",
+   "पावर फैक्टर सुधारना"
+  ],
+  "o_en": [
+   "To stabilize voltage",
+   "To maintain metallic parts of equipment at zero potential",
+   "To increase current",
+   "To improve power factor"
+  ],
+  "a": 1,
+  "e_hi": "अर्थिंग यह सुनिश्चित करती है कि यदि कोई फॉल्ट हो, तो उपकरण का बाहरी ढांचा जमीन के संपर्क में रहे और विभव शून्य बना रहे।",
+  "e_en": "Earthing ensures that in the event of a fault, the metallic frame of equipment remains at ground potential, preventing electric shock."
+ },
+ {
+  "id": "rp-je_e-f00763",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पावर सिस्टम में 'लोड शेडिंग' (Load Shedding) कब की जाती है?",
+  "q_en": "When is 'Load Shedding' performed in a power system?",
+  "o_hi": [
+   "जब आवृत्ति बहुत अधिक हो",
+   "जब मांग आपूर्ति से अधिक हो जाए",
+   "जब वोल्टेज बहुत अधिक हो",
+   "जब लाइन में कोई फॉल्ट न हो"
+  ],
+  "o_en": [
+   "When frequency is too high",
+   "When demand exceeds supply",
+   "When voltage is too high",
+   "When there is no fault in the line"
+  ],
+  "a": 1,
+  "e_hi": "सिस्टम की स्थिरता बनाए रखने के लिए जब बिजली की मांग उपलब्ध उत्पादन क्षमता से अधिक हो जाती है, तो लोड शेडिंग की जाती है।",
+  "e_en": "Load shedding is performed when electricity demand exceeds available generation capacity to maintain system stability."
+ },
+ {
+  "id": "rp-je_e-f00764",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "पारेषण लाइन में कोरोना प्रभाव के कारण कौन सी समस्या उत्पन्न होती है?",
+  "q_en": "Which problem is caused by the corona effect in a transmission line?",
+  "o_hi": [
+   "ऊर्जा की हानि",
+   "वोल्टेज में वृद्धि",
+   "धारा में कमी",
+   "इन्सुलेशन में सुधार"
+  ],
+  "o_en": [
+   "Power loss",
+   "Increase in voltage",
+   "Decrease in current",
+   "Improvement in insulation"
+  ],
+  "a": 0,
+  "e_hi": "कोरोना प्रभाव के कारण हवा का आयनीकरण होता है, जिससे ध्वनि, ओजोन गैस और विद्युत ऊर्जा की हानि होती है।",
+  "e_en": "Corona effect causes ionization of air, resulting in audible noise, ozone production, and loss of electrical power."
+ },
+ {
+  "id": "rp-je_e-f00765",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "केबल में 'ग्रेडिंग' का उपयोग किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "What is the purpose of using 'grading' in a cable?",
+  "o_hi": [
+   "इन्सुलेशन की मोटाई कम करने के लिए",
+   "धारा क्षमता बढ़ाने के लिए",
+   "डायलेक्ट्रिक तनाव को समान करने के लिए",
+   "केबल की लंबाई बढ़ाने के लिए"
+  ],
+  "o_en": [
+   "To reduce insulation thickness",
+   "To increase current capacity",
+   "To make dielectric stress uniform",
+   "To increase cable length"
+  ],
+  "a": 2,
+  "e_hi": "केबल में ग्रेडिंग का उपयोग डायलेक्ट्रिक तनाव को केबल के क्रॉस-सेक्शन में समान रूप से वितरित करने के लिए किया जाता है।",
+  "e_en": "Grading in cables is used to achieve a uniform distribution of dielectric stress throughout the cross-section of the insulation."
+ },
+ {
+  "id": "rp-je_e-f00766",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "एक लघु पारेषण लाइन (Short Transmission Line) की लंबाई सामान्यतः कितनी होती है?",
+  "q_en": "What is the typical length of a short transmission line?",
+  "o_hi": [
+   "80 किलोमीटर से कम",
+   "80 से 150 किलोमीटर के बीच",
+   "150 से 250 किलोमीटर",
+   "250 किलोमीटर से अधिक"
+  ],
+  "o_en": [
+   "Less than 80 km",
+   "Between 80 and 150 km",
+   "Between 150 and 250 km",
+   "More than 250 km"
+  ],
+  "a": 0,
+  "e_hi": "80 किलोमीटर से कम लंबाई वाली पारेषण लाइनों को लघु पारेषण लाइन माना जाता है, जहाँ धारिता (capacitance) नगण्य होती है।",
+  "e_en": "Transmission lines with lengths less than 80 km are considered short lines, where capacitance is usually neglected."
+ },
+ {
+  "id": "rp-je_e-f00767",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पारेषण लाइन में 'स्किन इफेक्ट' किस कारक पर निर्भर करता है?",
+  "q_en": "On which factor does the 'skin effect' in a transmission line depend?",
+  "o_hi": [
+   "केवल चालक के व्यास पर",
+   "केवल आवृत्ति पर",
+   "चालक की सामग्री और आवृत्ति पर",
+   "केवल चालक की लंबाई पर"
+  ],
+  "o_en": [
+   "Only on conductor diameter",
+   "Only on frequency",
+   "On conductor material and frequency",
+   "Only on conductor length"
+  ],
+  "a": 2,
+  "e_hi": "स्किन इफेक्ट आवृत्ति, चालक के आकार और सामग्री की पारगम्यता (permeability) पर निर्भर करता है।",
+  "e_en": "Skin effect depends on the frequency of the current, the size of the conductor, and the magnetic permeability of the material."
+ },
+ {
+  "id": "rp-je_e-f00768",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "यदि एक ट्रांसमिशन लाइन की वोल्टेज दोगुनी कर दी जाए, तो समान शक्ति संचारण के लिए आवश्यक चालक का आयतन कितना हो जाएगा?",
+  "q_en": "If the voltage of a transmission line is doubled, what will be the volume of conductor required for the same power transmission?",
+  "o_hi": [
+   "आधा (1/2)",
+   "दोगुना (2)",
+   "चौथाई (1/4)",
+   "चार गुना (4)"
+  ],
+  "o_en": [
+   "Half (1/2)",
+   "Double (2)",
+   "One-fourth (1/4)",
+   "Four times (4)"
+  ],
+  "a": 2,
+  "e_hi": "चालक का आयतन वोल्टेज के वर्ग के व्युत्क्रमानुपाती होता है। वोल्टेज दोगुनी करने पर आयतन 1/4 रह जाता है।",
+  "e_en": "The volume of conductor material is inversely proportional to the square of the voltage. Doubling the voltage reduces the volume to one-fourth."
+ },
+ {
+  "id": "rp-je_e-f00769",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पारेषण लाइन में 'फेरांटी प्रभाव' (Ferranti Effect) कब होता है?",
+  "q_en": "When does the 'Ferranti Effect' occur in a transmission line?",
+  "o_hi": [
+   "पूर्ण भार पर",
+   "अति-भार पर",
+   "लाइट लोड या नो लोड पर",
+   "केवल शॉर्ट सर्किट पर"
+  ],
+  "o_en": [
+   "At full load",
+   "At overload",
+   "At light load or no load",
+   "Only at short circuit"
+  ],
+  "a": 2,
+  "e_hi": "फेरांटी प्रभाव के कारण नो-लोड या हल्के भार की स्थिति में प्राप्त सिरे का वोल्टेज भेजने वाले सिरे के वोल्टेज से अधिक हो जाता है।",
+  "e_en": "Ferranti effect causes the receiving end voltage to be higher than the sending end voltage during light load or no-load conditions."
+ },
+ {
+  "id": "rp-je_e-f00770",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "इन्सुलेटर का 'स्ट्रिंग दक्षता' (String Efficiency) बढ़ाने का सबसे प्रभावी तरीका क्या है?",
+  "q_en": "What is the most effective way to increase the 'string efficiency' of an insulator?",
+  "o_hi": [
+   "क्रॉस-आर्म की लंबाई बढ़ाकर",
+   "गार्ड रिंग का उपयोग करके",
+   "इन्सुलेटर की डिस्क कम करके",
+   "इन्सुलेटर की सामग्री बदलकर"
+  ],
+  "o_en": [
+   "By increasing cross-arm length",
+   "By using a guard ring",
+   "By reducing insulator discs",
+   "By changing insulator material"
+  ],
+  "a": 1,
+  "e_hi": "गार्ड रिंग का उपयोग करने से वोल्टेज वितरण समान हो जाता है, जिससे स्ट्रिंग दक्षता में सुधार होता है।",
+  "e_en": "Using a guard ring makes the voltage distribution uniform across the string, which improves string efficiency."
+ },
+ {
+  "id": "rp-je_e-f00771",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पारेषण लाइनों में 'ट्रांसपोज़िशन' (Transposition) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary objective of 'transposition' in transmission lines?",
+  "o_hi": [
+   "वोल्टेज ड्रॉप कम करना",
+   "हस्तक्षेप (interference) कम करना",
+   "इन्सुलेशन लागत कम करना",
+   "कोरोना हानि कम करना"
+  ],
+  "o_en": [
+   "To reduce voltage drop",
+   "To reduce interference",
+   "To reduce insulation cost",
+   "To reduce corona loss"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसपोज़िशन का उपयोग निकटवर्ती संचार लाइनों में विद्युत-चुंबकीय हस्तक्षेप को कम करने के लिए किया जाता है।",
+  "e_en": "Transposition is used to balance the line parameters and reduce electromagnetic interference with nearby communication lines."
+ },
+ {
+  "id": "rp-je_e-f00772",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक 'बंडल कंडक्टर' का उपयोग करने का मुख्य लाभ क्या है?",
+  "q_en": "What is the main advantage of using a 'bundled conductor'?",
+  "o_hi": [
+   "कोरोना प्रभाव को कम करना",
+   "चालक का वजन बढ़ाना",
+   "प्रतिरोध बढ़ाना",
+   "इन्सुलेशन की आवश्यकता बढ़ाना"
+  ],
+  "o_en": [
+   "To reduce corona effect",
+   "To increase conductor weight",
+   "To increase resistance",
+   "To increase insulation requirement"
+  ],
+  "a": 0,
+  "e_hi": "बंडल कंडक्टर प्रभावी व्यास बढ़ाते हैं, जिससे कोरोना हानि कम हो जाती है और लाइन की धारिता बढ़ जाती है।",
+  "e_en": "Bundled conductors increase the effective diameter, which reduces corona loss and increases the line capacitance."
+ },
+ {
+  "id": "rp-je_e-f00773",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि पारेषण लाइन की लंबाई 80 किलोमीटर से कम है, तो इसे किस प्रकार वर्गीकृत किया जाता है?",
+  "q_en": "If the length of a transmission line is less than 80 kilometers, how is it classified?",
+  "o_hi": [
+   "अति लघु लाइन",
+   "लघु पारेषण लाइन",
+   "मध्यम पारेषण लाइन",
+   "लंबी पारेषण लाइन"
+  ],
+  "o_en": [
+   "Ultra-short line",
+   "Short transmission line",
+   "Medium transmission line",
+   "Long transmission line"
+  ],
+  "a": 1,
+  "e_hi": "80 किलोमीटर से कम लंबाई वाली लाइनों को लघु पारेषण लाइन माना जाता है, जहाँ कैपेसिटेंस प्रभाव नगण्य होता है।",
+  "e_en": "Lines less than 80 km in length are considered short transmission lines, where capacitance effects are negligible."
+ },
+ {
+  "id": "rp-je_e-f00774",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "कोरोना हानि (Corona loss) को कम करने का सबसे प्रभावी तरीका क्या है?",
+  "q_en": "What is the most effective way to reduce corona loss?",
+  "o_hi": [
+   "चालक की लंबाई बढ़ाकर",
+   "चालक के व्यास को बढ़ाकर",
+   "इंसुलेशन हटाकर",
+   "आवृत्ति कम करके"
+  ],
+  "o_en": [
+   "Increasing conductor length",
+   "Increasing the diameter of the conductor",
+   "Removing insulation",
+   "Reducing frequency"
+  ],
+  "a": 1,
+  "e_hi": "चालक का व्यास बढ़ाने से सतह पर विद्युत क्षेत्र की तीव्रता कम हो जाती है, जिससे कोरोना हानि कम होती है।",
+  "e_en": "Increasing the conductor diameter reduces the electric field intensity at the surface, thereby decreasing corona loss."
+ },
+ {
+  "id": "rp-je_e-f00775",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पावर सिस्टम में 'फेरेंटी प्रभाव' (Ferranti Effect) किस स्थिति में देखा जाता है?",
+  "q_en": "Under what condition is the 'Ferranti Effect' observed in a power system?",
+  "o_hi": [
+   "भारी लोड पर",
+   "शॉर्ट सर्किट के दौरान",
+   "नो-लोड या बहुत हल्के लोड पर",
+   "उच्च आवृत्ति पर"
+  ],
+  "o_en": [
+   "At heavy load",
+   "During short circuit",
+   "At no-load or very light load",
+   "At high frequency"
+  ],
+  "a": 2,
+  "e_hi": "फेरेंटी प्रभाव तब होता है जब लंबी ट्रांसमिशन लाइन के प्राप्त सिरे का वोल्टेज भेजने वाले सिरे से अधिक हो जाता है।",
+  "e_en": "The Ferranti effect occurs when the receiving end voltage of a long transmission line exceeds the sending end voltage."
+ },
+ {
+  "id": "rp-je_e-f00776",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "विद्युत वितरण प्रणाली में 'फीडर' का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of a 'feeder' in an electrical distribution system?",
+  "o_hi": [
+   "वोल्टेज को स्टेप-अप करना",
+   "सबस्टेशन से वितरण केंद्रों तक बिजली पहुँचाना",
+   "उपभोक्ता के मीटर को नियंत्रित करना",
+   "वोल्टेज को स्थिर करना"
+  ],
+  "o_en": [
+   "To step up the voltage",
+   "To carry power from substation to distribution points",
+   "To control consumer meters",
+   "To stabilize voltage"
+  ],
+  "a": 1,
+  "e_hi": "फीडर एक कंडक्टर है जो सबस्टेशन से वितरण ट्रांसफार्मर या वितरण केंद्रों तक बिजली पहुँचाता है।",
+  "e_en": "A feeder is a conductor that carries electrical power from a substation to distribution transformers or distribution points."
+ },
+ {
+  "id": "rp-je_e-f00777",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "पारेषण लाइन में 'ट्रांसपोज़िशन' (Transposition) का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is 'transposition' used in transmission lines?",
+  "o_hi": [
+   "वोल्टेज बढ़ाने के लिए",
+   "इंडक्टेंस को संतुलित करने के लिए",
+   "कोरोना हानि बढ़ाने के लिए",
+   "इंसुलेशन की लागत कम करने के लिए"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "To balance inductance",
+   "To increase corona loss",
+   "To reduce insulation cost"
+  ],
+  "a": 1,
+  "e_hi": "ट्रांसपोज़िशन का उपयोग तीन-चरण लाइनों में इंडक्टेंस और कैपेसिटेंस को संतुलित करने के लिए किया जाता है, जिससे असंतुलन कम हो।",
+  "e_en": "Transposition is used in three-phase lines to balance inductance and capacitance, thereby reducing unbalance."
+ },
+ {
+  "id": "rp-je_e-f00778",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "ग्रिड प्रणाली में 'स्लैक बस' (Slack Bus) को और किस नाम से जाना जाता है?",
+  "q_en": "What is another name for a 'Slack Bus' in a grid system?",
+  "o_hi": [
+   "लोड बस",
+   "जनरेटर बस",
+   "स्विंग बस",
+   "वोल्टेज नियंत्रित बस"
+  ],
+  "o_en": [
+   "Load bus",
+   "Generator bus",
+   "Swing bus",
+   "Voltage controlled bus"
+  ],
+  "a": 2,
+  "e_hi": "स्लैक बस को 'स्विंग बस' भी कहा जाता है, जिसका उपयोग पावर फ्लो अध्ययन में संदर्भ बस के रूप में होता है।",
+  "e_en": "The slack bus is also known as the 'swing bus' and is used as a reference bus in power flow studies."
+ },
+ {
+  "id": "rp-je_e-f00779",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "डिस्ट्रीब्यूशन ट्रांसफार्मर में कौन सा कनेक्शन आमतौर पर उपयोग किया जाता है?",
+  "q_en": "Which connection is commonly used in distribution transformers?",
+  "o_hi": [
+   "डेल्टा-डेल्टा",
+   "स्टार-स्टार",
+   "डेल्टा-स्टार",
+   "स्टार-डेल्टा"
+  ],
+  "o_en": [
+   "Delta-Delta",
+   "Star-Star",
+   "Delta-Star",
+   "Star-Delta"
+  ],
+  "a": 2,
+  "e_hi": "डेल्टा-स्टार कनेक्शन का उपयोग वितरण के लिए किया जाता है क्योंकि यह न्यूट्रल पॉइंट प्रदान करता है।",
+  "e_en": "Delta-Star connection is commonly used for distribution because it provides a neutral point."
+ },
+ {
+  "id": "rp-je_e-f00780",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "भारत में विद्युत पारेषण के लिए उपयोग की जाने वाली उच्च वोल्टेज डीसी (HVDC) प्रणाली का मुख्य लाभ क्या है?",
+  "q_en": "What is the primary advantage of using High Voltage Direct Current (HVDC) systems for power transmission in India?",
+  "o_hi": [
+   "कम तापीय हानि",
+   "त्वचा प्रभाव का अभाव",
+   "आसान वोल्टेज रूपांतरण",
+   "कम लागत"
+  ],
+  "o_en": [
+   "Lower thermal losses",
+   "Absence of skin effect",
+   "Easier voltage conversion",
+   "Lower initial cost"
+  ],
+  "a": 1,
+  "e_hi": "HVDC प्रणाली में त्वचा प्रभाव (skin effect) नहीं होता है, जिससे चालक की पूरी अनुप्रस्थ काट का प्रभावी ढंग से उपयोग किया जा सकता है।",
+  "e_en": "HVDC systems do not experience skin effect, allowing for the effective use of the entire cross-section of the conductor."
+ },
+ {
+  "id": "rp-je_e-f00781",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "वितरण प्रणाली में 'फीडर' का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of a 'feeder' in a power distribution system?",
+  "o_hi": [
+   "उपभोक्ता को सीधे बिजली देना",
+   "सबस्टेशन से वितरण बिंदुओं तक बिजली पहुंचाना",
+   "वोल्टेज को नियंत्रित करना",
+   "बिजली का भंडारण करना"
+  ],
+  "o_en": [
+   "To supply power directly to consumers",
+   "To transport power from substations to distribution points",
+   "To regulate voltage",
+   "To store electricity"
+  ],
+  "a": 1,
+  "e_hi": "फीडर एक ऐसा चालक है जो सबस्टेशन को वितरण ट्रांसफार्मर या वितरण बिंदुओं से जोड़ता है, इसमें कोई टैपिंग नहीं होती है।",
+  "e_en": "A feeder is a conductor that connects the substation to the distribution transformers or distribution points and has no tappings along its length."
+ },
+ {
+  "id": "rp-je_e-f00782",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पारेषण लाइनों में 'कोरोना' प्रभाव किसके कारण होता है?",
+  "q_en": "What causes the 'corona' effect in transmission lines?",
+  "o_hi": [
+   "उच्च धारा",
+   "उच्च वोल्टेज",
+   "कम तापमान",
+   "वायुमंडलीय दबाव में कमी"
+  ],
+  "o_en": [
+   "High current",
+   "High voltage",
+   "Low temperature",
+   "Decrease in atmospheric pressure"
+  ],
+  "a": 1,
+  "e_hi": "जब पारेषण लाइनों के बीच का वोल्टेज एक निश्चित स्तर से अधिक हो जाता है, तो आसपास की हवा का आयनीकरण हो जाता है, जिससे कोरोना प्रभाव उत्पन्न होता है।",
+  "e_en": "When the voltage between transmission lines exceeds a certain limit, the surrounding air becomes ionized, causing the corona effect."
+ },
+ {
+  "id": "rp-je_e-f00783",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "निम्न में से कौन सी पारेषण लाइन 'अति-उच्च वोल्टेज' (EHV) श्रेणी में आती है?",
+  "q_en": "Which of the following transmission lines falls under the 'Extra High Voltage' (EHV) category?",
+  "o_hi": [
+   "11 केवी",
+   "33 केवी",
+   "400 केवी",
+   "440 वोल्ट"
+  ],
+  "o_en": [
+   "11 kV",
+   "33 kV",
+   "400 kV",
+   "440 V"
+  ],
+  "a": 2,
+  "e_hi": "सामान्यतः 400 केवी और उससे ऊपर के वोल्टेज स्तर को अति-उच्च वोल्टेज (EHV) के रूप में वर्गीकृत किया जाता है।",
+  "e_en": "Typically, voltage levels of 400 kV and above are classified as Extra High Voltage (EHV)."
+ },
+ {
+  "id": "rp-je_e-f00784",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "केबल में 'आर्मरिंग' (Armouring) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of 'armouring' in a cable?",
+  "o_hi": [
+   "इन्सुलेशन की रक्षा करना",
+   "यांत्रिक चोटों से सुरक्षा प्रदान करना",
+   "नमी को रोकना",
+   "वोल्टेज ड्रॉप कम करना"
+  ],
+  "o_en": [
+   "To protect insulation",
+   "To provide protection against mechanical injuries",
+   "To prevent moisture",
+   "To reduce voltage drop"
+  ],
+  "a": 1,
+  "e_hi": "आर्मरिंग का उपयोग केबल को बिछाते समय या बाद में होने वाली यांत्रिक क्षति से बचाने के लिए किया जाता है।",
+  "e_en": "Armouring is used to protect the cable from mechanical damage during installation or operation."
+ },
+ {
+  "id": "rp-je_e-f00785",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "पावर सिस्टम में 'शंट कैपेसिटर' का उपयोग किस लिए किया जाता है?",
+  "q_en": "What is the purpose of using 'shunt capacitors' in a power system?",
+  "o_hi": [
+   "वोल्टेज बढ़ाने के लिए",
+   "पावर फैक्टर सुधारने के लिए",
+   "धारा कम करने के लिए",
+   "आवृत्ति नियंत्रित करने के लिए"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "To improve power factor",
+   "To reduce current",
+   "To control frequency"
+  ],
+  "a": 1,
+  "e_hi": "शंट कैपेसिटर का उपयोग मुख्य रूप से प्रेरक भार (inductive loads) द्वारा उत्पन्न लैगिंग पावर फैक्टर को सुधारने के लिए किया जाता है।",
+  "e_en": "Shunt capacitors are primarily used to improve the lagging power factor caused by inductive loads in the system."
+ },
+ {
+  "id": "rp-je_e-f00786",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "एक 'रिंग मेन' वितरण प्रणाली की मुख्य विशेषता क्या है?",
+  "q_en": "What is the main characteristic of a 'ring main' distribution system?",
+  "o_hi": [
+   "यह सस्ता है",
+   "इसमें आपूर्ति की विश्वसनीयता अधिक है",
+   "यह कम वोल्टेज प्रदान करता है",
+   "इसमें कोई ट्रांसफार्मर नहीं होता"
+  ],
+  "o_en": [
+   "It is cheaper",
+   "It has higher supply reliability",
+   "It provides lower voltage",
+   "It does not use transformers"
+  ],
+  "a": 1,
+  "e_hi": "रिंग मेन प्रणाली में, यदि एक फीडर खराब हो जाता है, तो उपभोक्ता को दूसरे मार्ग से बिजली मिलती रहती है, जिससे विश्वसनीयता बढ़ जाती है।",
+  "e_en": "In a ring main system, if one feeder fails, the consumer continues to receive power through another path, thereby increasing reliability."
+ },
+ {
+  "id": "rp-je_e-f00787",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "पारेषण लाइनों में 'फेरांटी प्रभाव' (Ferranti effect) किस स्थिति में देखा जाता है?",
+  "q_en": "Under what condition is the 'Ferranti effect' observed in transmission lines?",
+  "o_hi": [
+   "भारी भार पर",
+   "पूर्ण भार पर",
+   "बिना भार या बहुत हल्के भार पर",
+   "शॉर्ट सर्किट के दौरान"
+  ],
+  "o_en": [
+   "At heavy load",
+   "At full load",
+   "At no load or very light load",
+   "During short circuit"
+  ],
+  "a": 2,
+  "e_hi": "फेरांटी प्रभाव तब होता है जब लंबी पारेषण लाइन पर प्राप्त वोल्टेज, भेजने वाले वोल्टेज से अधिक हो जाता है, विशेष रूप से हल्के भार की स्थिति में।",
+  "e_en": "The Ferranti effect occurs when the receiving end voltage exceeds the sending end voltage on long transmission lines, especially under light load conditions."
+ },
+ {
+  "id": "rp-je_e-f00788",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "वितरण ट्रांसफार्मर आमतौर पर किस प्रकार के कनेक्शन का उपयोग करते हैं?",
+  "q_en": "Which type of connection do distribution transformers typically use?",
+  "o_hi": [
+   "डेल्टा-डेल्टा",
+   "स्टार-स्टार",
+   "डेल्टा-स्टार",
+   "स्टार-डेल्टा"
+  ],
+  "o_en": [
+   "Delta-Delta",
+   "Star-Star",
+   "Delta-Star",
+   "Star-Delta"
+  ],
+  "a": 2,
+  "e_hi": "वितरण ट्रांसफार्मर में डेल्टा-स्टार कनेक्शन का उपयोग किया जाता है ताकि तीन-चरण और एकल-चरण दोनों भारों की आपूर्ति की जा सके।",
+  "e_en": "Delta-Star connection is used in distribution transformers to provide both three-phase and single-phase supply to consumers."
+ },
+ {
+  "id": "rp-je_e-f00789",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "विद्युत प्रणाली में 'सर्ज़ वोल्टेज' (Surge voltage) को कम करने के लिए किसका उपयोग किया जाता है?",
+  "q_en": "What is used to reduce 'surge voltage' in an electrical system?",
+  "o_hi": [
+   "सर्ज़ अरेस्टर (तड़ित चालक)",
+   "आइसोलेटर",
+   "फ्यूज",
+   "रिले"
+  ],
+  "o_en": [
+   "Surge arrester (Lightning arrester)",
+   "Isolator",
+   "Fuse",
+   "Relay"
+  ],
+  "a": 0,
+  "e_hi": "सर्ज़ अरेस्टर का मुख्य कार्य वोल्टेज के अचानक बढ़ने (जैसे बिजली गिरने पर) के दौरान अतिरिक्त ऊर्जा को जमीन में भेजकर उपकरणों की रक्षा करना है।",
+  "e_en": "The primary function of a surge arrester is to protect equipment by diverting excess energy to the ground during voltage surges, such as lightning strikes."
+ },
+ {
+  "id": "rp-je_e-f00790",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक ट्रांसमिशन लाइन का संचरण वोल्टेज यदि दोगुना कर दिया जाए, तो समान शक्ति संचारित करने के लिए लाइन में होने वाला वोल्टेज ड्रॉप (प्रतिशत में) कितना हो जाएगा?",
+  "q_en": "If the transmission voltage of a line is doubled, what will be the percentage voltage drop for transmitting the same amount of power?",
+  "o_hi": [
+   "25 प्रतिशत",
+   "50 प्रतिशत",
+   "100 प्रतिशत",
+   "200 प्रतिशत"
+  ],
+  "o_en": [
+   "25 percent",
+   "50 percent",
+   "100 percent",
+   "200 percent"
+  ],
+  "a": 0,
+  "e_hi": "वोल्टेज ड्रॉप का प्रतिशत वोल्टेज के वर्ग के व्युत्क्रमानुपाती होता है। वोल्टेज दोगुना करने पर ड्रॉप चार गुना कम हो जाता है।",
+  "e_en": "The percentage voltage drop is inversely proportional to the square of the voltage. Doubling the voltage reduces the drop to one-fourth."
+ },
+ {
+  "id": "rp-je_e-f00791",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि किसी केबल की धारिता (कैपेसिटेंस) सी है, तो केबल की लंबाई दोगुनी करने पर उसकी कुल धारिता क्या होगी?",
+  "q_en": "If the capacitance of a cable is C, what will be the total capacitance if the length of the cable is doubled?",
+  "o_hi": [
+   "सी/2",
+   "सी",
+   "2 सी",
+   "4 सी"
+  ],
+  "o_en": [
+   "C/2",
+   "C",
+   "2C",
+   "4C"
+  ],
+  "a": 2,
+  "e_hi": "केबल की धारिता उसकी लंबाई के सीधे आनुपातिक होती है, इसलिए लंबाई दोगुनी करने पर धारिता भी दोगुनी हो जाएगी।",
+  "e_en": "The capacitance of a cable is directly proportional to its length, so doubling the length doubles the capacitance."
+ },
+ {
+  "id": "rp-je_e-f00792",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "एक तीन-चरण वाली ट्रांसमिशन लाइन में प्रति चरण वोल्टेज वी है, तो लाइन वोल्टेज का मान क्या होगा?",
+  "q_en": "In a three-phase transmission line, if the phase voltage is V, what will be the line voltage value?",
+  "o_hi": [
+   "वी",
+   "वी/वर्गमूल 3",
+   "वर्गमूल 3 गुना वी",
+   "3 गुना वी"
+  ],
+  "o_en": [
+   "V",
+   "V/sqrt(3)",
+   "sqrt(3) * V",
+   "3 * V"
+  ],
+  "a": 2,
+  "e_hi": "स्टार कनेक्शन में लाइन वोल्टेज, चरण वोल्टेज का वर्गमूल तीन गुना होता है।",
+  "e_en": "In a star connection, the line voltage is the square root of three times the phase voltage."
+ },
+ {
+  "id": "rp-je_e-f00793",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "यदि ट्रांसमिशन लाइन की लंबाई 'एल' है और प्रतिरोध 'आर' है, तो त्वचा प्रभाव (स्किन इफेक्ट) के कारण प्रतिरोध पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the length of a transmission line is 'L' and resistance is 'R', how does the skin effect impact the resistance?",
+  "o_hi": [
+   "घट जाएगा",
+   "बढ़ जाएगा",
+   "समान रहेगा",
+   "शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "It will decrease",
+   "It will increase",
+   "It will remain same",
+   "It will become zero"
+  ],
+  "a": 1,
+  "e_hi": "स्किन इफेक्ट के कारण धारा केवल चालक की सतह पर प्रवाहित होती है, जिससे प्रभावी अनुप्रस्थ काट का क्षेत्रफल कम हो जाता है और प्रतिरोध बढ़ जाता है।",
+  "e_en": "Skin effect causes current to flow only on the surface of the conductor, reducing the effective cross-sectional area and thus increasing resistance."
+ },
+ {
+  "id": "rp-je_e-f00794",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक सिंक्रोनस कंडेंसर का उपयोग पावर सिस्टम में किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "For what purpose is a synchronous condenser used in a power system?",
+  "o_hi": [
+   "वोल्टेज विनियमन",
+   "शक्ति गुणांक सुधार",
+   "आवृत्ति नियंत्रण",
+   "धारा सीमित करना"
+  ],
+  "o_en": [
+   "Voltage regulation",
+   "Power factor correction",
+   "Frequency control",
+   "Current limiting"
+  ],
+  "a": 1,
+  "e_hi": "सिंक्रोनस कंडेंसर एक ओवर-एक्साइटेड सिंक्रोनस मोटर है जो पावर फैक्टर सुधारने के लिए रिएक्टिव पावर प्रदान करती है।",
+  "e_en": "A synchronous condenser is an over-excited synchronous motor used to provide reactive power for power factor correction."
+ },
+ {
+  "id": "rp-je_e-f00795",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि ट्रांसफार्मर में फेरों की संख्या प्राथमिक पक्ष में एन1 और द्वितीयक में एन2 है, तो वोल्टेज का अनुपात क्या होगा?",
+  "q_en": "If the number of turns in the primary side of a transformer is N1 and in the secondary is N2, what is the voltage ratio?",
+  "o_hi": [
+   "वी1/वी2 = एन1/एन2",
+   "वी1/वी2 = एन2/एन1",
+   "वी1/वी2 = (एन1/एन2)^2",
+   "वी1/वी2 = वर्गमूल(एन1/एन2)"
+  ],
+  "o_en": [
+   "V1/V2 = N1/N2",
+   "V1/V2 = N2/N1",
+   "V1/V2 = (N1/N2)^2",
+   "V1/V2 = sqrt(N1/N2)"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफार्मर के रूपांतरण अनुपात के अनुसार, वोल्टेज का अनुपात फेरों की संख्या के अनुपात के बराबर होता है।",
+  "e_en": "According to the transformation ratio of a transformer, the ratio of voltages is equal to the ratio of the number of turns."
+ },
+ {
+  "id": "rp-je_e-f00796",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 3,
+  "q_hi": "यदि एक ट्रांसमिशन लाइन का प्रतिबाधा (इम्पीडेंस) जेड है, तो उसकी सर्ज इम्पीडेंस लोडिंग (SIL) किसके व्युत्क्रमानुपाती होती है?",
+  "q_en": "If the impedance of a transmission line is Z, to what is the Surge Impedance Loading (SIL) inversely proportional?",
+  "o_hi": [
+   "जेड",
+   "जेड का वर्ग",
+   "वर्गमूल जेड",
+   "1/जेड"
+  ],
+  "o_en": [
+   "Z",
+   "Z squared",
+   "sqrt(Z)",
+   "1/Z"
+  ],
+  "a": 0,
+  "e_hi": "सर्ज इम्पीडेंस लोडिंग (SIL) का सूत्र (kV^2)/Zc होता है, जहाँ Zc सर्ज इम्पीडेंस है।",
+  "e_en": "The formula for Surge Impedance Loading (SIL) is (kV^2)/Zc, where Zc is the surge impedance."
+ },
+ {
+  "id": "rp-je_e-f00797",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "कोरोना हानि (Corona loss) मुख्य रूप से किस पर निर्भर करती है?",
+  "q_en": "On what factor does corona loss mainly depend?",
+  "o_hi": [
+   "चालक का प्रतिरोध",
+   "आवृत्ति और वोल्टेज",
+   "केवल धारा",
+   "तापमान"
+  ],
+  "o_en": [
+   "Resistance of conductor",
+   "Frequency and voltage",
+   "Only current",
+   "Temperature"
+  ],
+  "a": 1,
+  "e_hi": "कोरोना हानि सीधे आवृत्ति और वोल्टेज के वर्ग (वी-वीसी) पर निर्भर करती है।",
+  "e_en": "Corona loss depends directly on the frequency and the square of the voltage (V-Vc)."
+ },
+ {
+  "id": "rp-je_e-f00798",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि किसी सिस्टम में 50 हर्ट्ज की आवृत्ति है, तो समय अवधि (टाइम पीरियड) क्या होगी?",
+  "q_en": "If a system has a frequency of 50 Hz, what will be the time period?",
+  "o_hi": [
+   "0.01 सेकंड",
+   "0.02 सेकंड",
+   "0.05 सेकंड",
+   "0.2 सेकंड"
+  ],
+  "o_en": [
+   "0.01 seconds",
+   "0.02 seconds",
+   "0.05 seconds",
+   "0.2 seconds"
+  ],
+  "a": 1,
+  "e_hi": "समय अवधि टी = 1/एफ होता है। 1/50 का मान 0.02 सेकंड होता है।",
+  "e_en": "The time period is T = 1/f. The value of 1/50 is 0.02 seconds."
+ },
+ {
+  "id": "rp-je_e-f00799",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक SCR (सिलिकॉन कंट्रोल्ड रेक्टिफायर) को चालू करने के लिए गेट करंट की क्या आवश्यकता होती है?",
+  "q_en": "What is the requirement of gate current to turn on an SCR (Silicon Controlled Rectifier)?",
+  "o_hi": [
+   "निरंतर गेट करंट",
+   "केवल टर्न-ऑन के लिए पल्स",
+   "नेगेटिव गेट करंट",
+   "कोई गेट करंट नहीं"
+  ],
+  "o_en": [
+   "Continuous gate current",
+   "Pulse for turn-on only",
+   "Negative gate current",
+   "No gate current"
+  ],
+  "a": 1,
+  "e_hi": "SCR एक बार चालू होने के बाद, गेट करंट की आवश्यकता समाप्त हो जाती है। इसे चालू रखने के लिए केवल एक पल्स पर्याप्त है।",
+  "e_en": "Once an SCR is turned on, the gate current is no longer required. A short pulse is sufficient to trigger the device."
+ },
+ {
+  "id": "rp-je_e-f00800",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "SCR के लिए 'होल्डिंग करंट' और 'लैचिंग करंट' के बीच सही संबंध क्या है?",
+  "q_en": "What is the correct relationship between 'holding current' and 'latching current' for an SCR?",
+  "o_hi": [
+   "होल्डिंग करंट > लैचिंग करंट",
+   "लैचिंग करंट > होल्डिंग करंट",
+   "दोनों बराबर हैं",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Holding current > Latching current",
+   "Latching current > Holding current",
+   "Both are equal",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "लैचिंग करंट वह न्यूनतम धारा है जो उपकरण को चालू करने के लिए चाहिए, जबकि होल्डिंग करंट उसे चालू रखने के लिए आवश्यक न्यूनतम धारा है। लैचिंग हमेशा होल्डिंग से अधिक होती है।",
+  "e_en": "Latching current is the minimum current to turn the device on, while holding current is the minimum to keep it on. Latching is always greater than holding current."
+ },
+ {
+  "id": "rp-je_e-f00801",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक डायक (DIAC) का उपयोग मुख्य रूप से किसमें किया जाता है?",
+  "q_en": "A DIAC is primarily used in which of the following applications?",
+  "o_hi": [
+   "एम्प्लीफिकेशन",
+   "TRIAC को ट्रिगर करने में",
+   "रेक्टिफिकेशन",
+   "वोल्टेज रेगुलेशन"
+  ],
+  "o_en": [
+   "Amplification",
+   "Triggering a TRIAC",
+   "Rectification",
+   "Voltage regulation"
+  ],
+  "a": 1,
+  "e_hi": "डायक का उपयोग मुख्य रूप से TRIAC को ट्रिगर करने के लिए एक स्विचिंग डिवाइस के रूप में किया जाता है, विशेष रूप से लाइट डिमर सर्किट में।",
+  "e_en": "A DIAC is primarily used as a switching device to trigger a TRIAC, commonly seen in light dimmer circuits."
+ },
+ {
+  "id": "rp-je_e-f00802",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "MOSFET में गेट टर्मिनल का क्या गुण होता है?",
+  "q_en": "What is the property of the gate terminal in a MOSFET?",
+  "o_hi": [
+   "कम इनपुट प्रतिबाधा",
+   "अत्यधिक उच्च इनपुट प्रतिबाधा",
+   "करंट कंट्रोल्ड डिवाइस",
+   "इसमें कोई गेट नहीं होता"
+  ],
+  "o_en": [
+   "Low input impedance",
+   "Extremely high input impedance",
+   "Current controlled device",
+   "It has no gate"
+  ],
+  "a": 1,
+  "e_hi": "MOSFET एक वोल्टेज कंट्रोल्ड डिवाइस है और इसका गेट टर्मिनल इंसुलेटेड होता है, जिससे इसकी इनपुट प्रतिबाधा बहुत अधिक होती है।",
+  "e_en": "A MOSFET is a voltage-controlled device with an insulated gate terminal, resulting in an extremely high input impedance."
+ },
+ {
+  "id": "rp-je_e-f00803",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "क्या एक SCR को रिवर्स बायस में चालू किया जा सकता है?",
+  "q_en": "Can an SCR be turned on in reverse bias mode?",
+  "o_hi": [
+   "हाँ, गेट करंट द्वारा",
+   "नहीं, यह नष्ट हो जाएगा",
+   "हाँ, हाई वोल्टेज द्वारा",
+   "केवल एसी पर"
+  ],
+  "o_en": [
+   "Yes, by gate current",
+   "No, it will be destroyed",
+   "Yes, by high voltage",
+   "Only on AC"
+  ],
+  "a": 1,
+  "e_hi": "SCR रिवर्स ब्लॉकिंग मोड में काम करता है। यदि रिवर्स वोल्टेज ब्रेकडाउन वोल्टेज से अधिक हो जाता है, तो डिवाइस नष्ट हो सकता है।",
+  "e_en": "An SCR operates in reverse blocking mode. If the reverse voltage exceeds the breakdown voltage, the device will be destroyed."
+ },
+ {
+  "id": "rp-je_e-f00804",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक आदर्श स्विच में टर्न-ऑन और टर्न-ऑफ समय क्या होना चाहिए?",
+  "q_en": "What should be the turn-on and turn-off time in an ideal switch?",
+  "o_hi": [
+   "शून्य (Zero)",
+   "अनंत (Infinite)",
+   "बहुत अधिक",
+   "मिलीसेकंड में"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "Very high",
+   "In milliseconds"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श स्विच तुरंत चालू और बंद होना चाहिए, जिसका अर्थ है कि इसका स्विचिंग समय शून्य होना चाहिए।",
+  "e_en": "An ideal switch must turn on and off instantaneously, meaning its switching time should be zero."
+ },
+ {
+  "id": "rp-je_e-f00805",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "IGBT में कौन सी दो डिवाइस का संयोजन होता है?",
+  "q_en": "Which two devices are combined in an IGBT?",
+  "o_hi": [
+   "BJT और MOSFET",
+   "SCR और डायोड",
+   "DIAC और TRIAC",
+   "BJT और SCR"
+  ],
+  "o_en": [
+   "BJT and MOSFET",
+   "SCR and diode",
+   "DIAC and TRIAC",
+   "BJT and SCR"
+  ],
+  "a": 0,
+  "e_hi": "IGBT (इंसुलेटेड गेट बाइपोलर ट्रांजिस्टर) में MOSFET का इनपुट गेट और BJT का आउटपुट कैरेक्टरिस्टिक होता है।",
+  "e_en": "An IGBT (Insulated Gate Bipolar Transistor) combines the input characteristics of a MOSFET and the output characteristics of a BJT."
+ },
+ {
+  "id": "rp-je_e-f00806",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "कनवर्टर सर्किट में 'फ्री-व्हीलिंग डायोड' का मुख्य कार्य क्या है?",
+  "q_en": "What is the main function of a 'free-wheeling diode' in converter circuits?",
+  "o_hi": [
+   "वोल्टेज बढ़ाने के लिए",
+   "इंडक्टिव लोड करंट को रास्ता देने के लिए",
+   "रेक्टिफिकेशन के लिए",
+   "वोल्टेज को ब्लॉक करने के लिए"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "To provide a path for inductive load current",
+   "For rectification",
+   "To block voltage"
+  ],
+  "a": 1,
+  "e_hi": "फ्री-व्हीलिंग डायोड इंडक्टिव लोड में जमा ऊर्जा को डिस्चार्ज करने का रास्ता प्रदान करता है, जिससे सर्किट सुरक्षित रहता है।",
+  "e_en": "A free-wheeling diode provides a path for the energy stored in an inductive load to discharge, protecting the circuit."
+ },
+ {
+  "id": "rp-je_e-f00807",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक TRIAC का उपयोग किस तरह के लोड के लिए किया जाता है?",
+  "q_en": "What type of load is a TRIAC used for?",
+  "o_hi": [
+   "केवल डीसी लोड",
+   "केवल बैटरी चार्जिंग",
+   "एसी लोड",
+   "हाइ-फ्रीक्वेंसी डीसी"
+  ],
+  "o_en": [
+   "DC loads only",
+   "Battery charging only",
+   "AC loads",
+   "High-frequency DC"
+  ],
+  "a": 2,
+  "e_hi": "TRIAC एक बाई-डायरेक्शनल डिवाइस है, इसलिए इसका उपयोग मुख्य रूप से एसी पावर कंट्रोल (जैसे पंखे की गति या लाइट) के लिए किया जाता है।",
+  "e_en": "A TRIAC is a bi-directional device, making it primarily suitable for AC power control applications like fan speed or light dimming."
+ },
+ {
+  "id": "rp-je_e-f00808",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "थाइरिस्टर (SCR) में कितने जंक्शन होते हैं?",
+  "q_en": "How many junctions are present in a Thyristor (SCR)?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "चार"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Four"
+  ],
+  "a": 2,
+  "e_hi": "एक थाइरिस्टर (SCR) चार-परत वाला उपकरण है जिसमें तीन PN जंक्शन होते हैं।",
+  "e_en": "A Thyristor (SCR) is a four-layer device that contains three PN junctions."
+ },
+ {
+  "id": "rp-je_e-f00809",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "निम्न में से कौन सा उपकरण 'सेमी-कंट्रोल्ड' स्विच है?",
+  "q_en": "Which of the following devices is a 'semi-controlled' switch?",
+  "o_hi": [
+   "डायोड",
+   "थाइरिस्टर",
+   "बीजेटी",
+   "मोसफेट"
+  ],
+  "o_en": [
+   "Diode",
+   "Thyristor",
+   "BJT",
+   "MOSFET"
+  ],
+  "a": 1,
+  "e_hi": "थाइरिस्टर को केवल चालू किया जा सकता है, इसे गेट सिग्नल से बंद नहीं किया जा सकता, इसलिए यह सेमी-कंट्रोल्ड है।",
+  "e_en": "Thyristors are semi-controlled devices because they can be turned on by a gate signal but cannot be turned off by it."
+ },
+ {
+  "id": "rp-je_e-f00810",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक आदर्श स्विच की 'ऑफ' स्थिति में प्रतिरोध क्या होना चाहिए?",
+  "q_en": "What should be the resistance of an ideal switch in the 'OFF' state?",
+  "o_hi": [
+   "शून्य",
+   "न्यूनतम",
+   "अनंत",
+   "100 ओम"
+  ],
+  "o_en": [
+   "Zero",
+   "Minimum",
+   "Infinite",
+   "100 Ohms"
+  ],
+  "a": 2,
+  "e_hi": "एक आदर्श स्विच 'ऑफ' स्थिति में ओपन सर्किट की तरह कार्य करता है, जिसका प्रतिरोध अनंत होता है।",
+  "e_en": "An ideal switch acts as an open circuit in the 'OFF' state, implying infinite resistance."
+ },
+ {
+  "id": "rp-je_e-f00811",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "थाइरिस्टर का 'लैचिंग करंट' (Latching Current) उसके 'होल्डिंग करंट' (Holding Current) से कैसा होता है?",
+  "q_en": "How does the 'Latching Current' of a thyristor compare to its 'Holding Current'?",
+  "o_hi": [
+   "कम",
+   "अधिक",
+   "बराबर",
+   "शून्य"
+  ],
+  "o_en": [
+   "Less",
+   "Higher",
+   "Equal",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "लैचिंग करंट वह न्यूनतम धारा है जो थाइरिस्टर को चालू करने के लिए आवश्यक है, और यह हमेशा होल्डिंग करंट से अधिक होती है।",
+  "e_en": "Latching current is the minimum current required to turn on the thyristor and is always higher than the holding current."
+ },
+ {
+  "id": "rp-je_e-f00812",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "डीसी चॉपर (DC Chopper) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a DC Chopper?",
+  "o_hi": [
+   "एसी को डीसी में बदलना",
+   "डीसी वोल्टेज स्तर को बदलना",
+   "डीसी को एसी में बदलना",
+   "आवृत्ति को बदलना"
+  ],
+  "o_en": [
+   "Convert AC to DC",
+   "Change DC voltage level",
+   "Convert DC to AC",
+   "Change frequency"
+  ],
+  "a": 1,
+  "e_hi": "डीसी चॉपर एक स्थैतिक उपकरण है जो डीसी इनपुट वोल्टेज को सीधे डीसी आउटपुट वोल्टेज में परिवर्तित करता है।",
+  "e_en": "A DC chopper is a static device that converts a fixed DC input voltage to a variable DC output voltage."
+ },
+ {
+  "id": "rp-je_e-f00813",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "इनवर्टर (Inverter) का उपयोग किस रूपांतरण के लिए किया जाता है?",
+  "q_en": "Which conversion is an Inverter used for?",
+  "o_hi": [
+   "डीसी से डीसी",
+   "एसी से एसी",
+   "डीसी से एसी",
+   "एसी से डीसी"
+  ],
+  "o_en": [
+   "DC to DC",
+   "AC to AC",
+   "DC to AC",
+   "AC to DC"
+  ],
+  "a": 2,
+  "e_hi": "इनवर्टर एक पावर इलेक्ट्रॉनिक सर्किट है जो डीसी पावर को एसी पावर में परिवर्तित करता है।",
+  "e_en": "An inverter is a power electronic circuit that converts DC power into AC power."
+ },
+ {
+  "id": "rp-je_e-f00814",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "थाइरिस्टर को चालू करने की सबसे सामान्य विधि कौन सी है?",
+  "q_en": "What is the most common method to turn on a thyristor?",
+  "o_hi": [
+   "गेट ट्रिगरिंग",
+   "लाइट ट्रिगरिंग",
+   "थर्मल ट्रिगरिंग",
+   "वोल्टेज ट्रिगरिंग"
+  ],
+  "o_en": [
+   "Gate triggering",
+   "Light triggering",
+   "Thermal triggering",
+   "Voltage triggering"
+  ],
+  "a": 0,
+  "e_hi": "गेट ट्रिगरिंग थाइरिस्टर को चालू करने की सबसे प्रभावी और नियंत्रित व्यावसायिक विधि है।",
+  "e_en": "Gate triggering is the most widely used and controlled method for turning on a thyristor in industrial applications."
+ },
+ {
+  "id": "rp-je_e-f00815",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "मोसफेट (MOSFET) के तीन टर्मिनल कौन से हैं?",
+  "q_en": "What are the three terminals of a MOSFET?",
+  "o_hi": [
+   "बेस, एमीटर, कलेक्टर",
+   "गेट, ड्रेन, सोर्स",
+   "एनोड, कैथोड, गेट",
+   "गेट, एमीटर, कलेक्टर"
+  ],
+  "o_en": [
+   "Base, Emitter, Collector",
+   "Gate, Drain, Source",
+   "Anode, Cathode, Gate",
+   "Gate, Emitter, Collector"
+  ],
+  "a": 1,
+  "e_hi": "मोसफेट (Metal-Oxide-Semiconductor Field-Effect Transistor) में गेट, ड्रेन और सोर्स नामक तीन टर्मिनल होते हैं।",
+  "e_en": "A MOSFET has three terminals known as the Gate, Drain, and Source."
+ },
+ {
+  "id": "rp-je_e-f00816",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "थाइरिस्टर में 'dv/dt' सुरक्षा के लिए किस सर्किट का उपयोग किया जाता है?",
+  "q_en": "Which circuit is used for 'dv/dt' protection in a thyristor?",
+  "o_hi": [
+   "स्नबर सर्किट (Snubber circuit)",
+   "फ्लाईव्हील डायोड",
+   "कम्प्यूटेशन सर्किट",
+   "फिल्टर सर्किट"
+  ],
+  "o_en": [
+   "Snubber circuit",
+   "Flywheel diode",
+   "Commutation circuit",
+   "Filter circuit"
+  ],
+  "a": 0,
+  "e_hi": "स्नबर सर्किट, जिसमें एक प्रतिरोध और संधारित्र श्रेणी में होते हैं, थाइरिस्टर को उच्च dv/dt से बचाने के लिए उपयोग किया जाता है।",
+  "e_en": "A snubber circuit, consisting of a resistor and capacitor in series, is used to protect the thyristor from high rates of voltage rise (dv/dt)."
+ },
+ {
+  "id": "rp-je_e-f00817",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "थाइरिस्टर (SCR) को चालू करने के लिए गेट सिग्नल की प्रकृति क्या होनी चाहिए?",
+  "q_en": "What should be the nature of the gate signal required to trigger a Thyristor (SCR)?",
+  "o_hi": [
+   "निरंतर डीसी सिग्नल",
+   "उच्च वोल्टेज, कम धारा वाला पल्स",
+   "उच्च धारा, कम वोल्टेज वाला पल्स",
+   "एसी साइन वेव"
+  ],
+  "o_en": [
+   "Continuous DC signal",
+   "High voltage, low current pulse",
+   "High current, low voltage pulse",
+   "AC sine wave"
+  ],
+  "a": 2,
+  "e_hi": "SCR को चालू करने के लिए गेट पर कम वोल्टेज पर उच्च धारा पल्स की आवश्यकता होती है ताकि जंक्शन तेजी से फॉरवर्ड बायस हो सके।",
+  "e_en": "To trigger an SCR, a high current pulse at a low voltage is required to ensure rapid forward biasing of the internal junctions."
+ },
+ {
+  "id": "rp-je_e-f00818",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक आदर्श थाइरिस्टर (SCR) में फॉरवर्ड ब्लॉकिंग अवस्था के दौरान धारा का मान क्या होता है?",
+  "q_en": "What is the value of current in an ideal Thyristor (SCR) during the forward blocking state?",
+  "o_hi": [
+   "शून्य",
+   "होल्डिंग धारा के बराबर",
+   "लैचिंग धारा के बराबर",
+   "नगण्य लेकिन शून्य नहीं"
+  ],
+  "o_en": [
+   "Zero",
+   "Equal to holding current",
+   "Equal to latching current",
+   "Negligible but not zero"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श स्विच के रूप में, ब्लॉकिंग अवस्था में SCR शून्य धारा प्रवाहित करता है। वास्तविक SCR में यह लीकेज धारा होती है।",
+  "e_en": "As an ideal switch, an SCR conducts zero current in the blocking state. In practical SCRs, this is referred to as leakage current."
+ },
+ {
+  "id": "rp-je_e-f00819",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "थाइरिस्टर के 'होल्डिंग करंट' और 'लैचिंग करंट' के बीच सही संबंध क्या है?",
+  "q_en": "What is the correct relationship between 'Holding Current' and 'Latching Current' of a Thyristor?",
+  "o_hi": [
+   "होल्डिंग करंट > लैचिंग करंट",
+   "लैचिंग करंट > होल्डिंग करंट",
+   "दोनों बराबर हैं",
+   "इनका कोई निश्चित संबंध नहीं है"
+  ],
+  "o_en": [
+   "Holding Current > Latching Current",
+   "Latching Current > Holding Current",
+   "Both are equal",
+   "No specific relationship"
+  ],
+  "a": 1,
+  "e_hi": "लैचिंग करंट वह न्यूनतम धारा है जो SCR को चालू रखती है, जबकि होल्डिंग करंट वह न्यूनतम धारा है जो उसे चालू बनाए रखती है। लैचिंग हमेशा होल्डिंग से अधिक होती है।",
+  "e_en": "Latching current is the minimum current to turn the SCR ON, while holding current is the minimum current to keep it ON. Latching is always greater than holding."
+ },
+ {
+  "id": "rp-je_e-f00820",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "डाईक (DIAC) का उपयोग मुख्य रूप से किस अनुप्रयोग में किया जाता है?",
+  "q_en": "What is the primary application of a DIAC?",
+  "o_hi": [
+   "एम्प्लीफिकेशन",
+   "ट्रायक को ट्रिगर करने के लिए",
+   "सिग्नल रेक्टिफिकेशन",
+   "वोल्टेज रेगुलेशन"
+  ],
+  "o_en": [
+   "Amplification",
+   "Triggering a TRIAC",
+   "Signal rectification",
+   "Voltage regulation"
+  ],
+  "a": 1,
+  "e_hi": "DIAC एक द्विदिश स्विचिंग डिवाइस है जिसका उपयोग मुख्य रूप से TRIAC को ट्रिगर करने के लिए किया जाता है।",
+  "e_en": "A DIAC is a bidirectional switching device used primarily to provide a trigger pulse to a TRIAC."
+ },
+ {
+  "id": "rp-je_e-f00821",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक पावर ट्रांजिस्टर (BJT) में, 'सैचुरेशन' क्षेत्र का क्या अर्थ है?",
+  "q_en": "In a power transistor (BJT), what does the 'saturation' region signify?",
+  "o_hi": [
+   "ट्रांजिस्टर बंद है",
+   "ट्रांजिस्टर एक खुले स्विच की तरह व्यवहार करता है",
+   "ट्रांजिस्टर एक बंद स्विच (ON) की तरह व्यवहार करता है",
+   "ट्रांजिस्टर सक्रिय क्षेत्र में है"
+  ],
+  "o_en": [
+   "Transistor is OFF",
+   "Transistor acts as an open switch",
+   "Transistor acts as a closed switch (ON)",
+   "Transistor is in active region"
+  ],
+  "a": 2,
+  "e_hi": "सैचुरेशन क्षेत्र में, BJT पूरी तरह से चालू (ON) होता है और न्यूनतम वोल्टेज ड्रॉप के साथ अधिकतम धारा प्रवाहित करता है।",
+  "e_en": "In the saturation region, the BJT is fully ON and allows maximum current flow with minimum voltage drop."
+ },
+ {
+  "id": "rp-je_e-f00822",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "IGBT के मुख्य लाभ क्या हैं जो इसे पावर इलेक्ट्रॉनिक्स में लोकप्रिय बनाते हैं?",
+  "q_en": "What are the main advantages that make IGBT popular in power electronics?",
+  "o_hi": [
+   "उच्च इनपुट प्रतिबाधा और कम स्विचिंग हानि",
+   "केवल कम वोल्टेज संचालन",
+   "बहुत उच्च रिसाव धारा",
+   "जटिल गेट ड्राइव सर्किट"
+  ],
+  "o_en": [
+   "High input impedance and low switching losses",
+   "Only low voltage operation",
+   "Very high leakage current",
+   "Complex gate drive circuits"
+  ],
+  "a": 0,
+  "e_hi": "IGBT में MOSFET की तरह उच्च इनपुट प्रतिबाधा और BJT की तरह कम चालन हानि का संयोजन होता है।",
+  "e_en": "An IGBT combines the high input impedance of a MOSFET with the low conduction loss characteristics of a BJT."
+ },
+ {
+  "id": "rp-je_e-f00823",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "थाइरिस्टर की 'dv/dt' सुरक्षा के लिए आमतौर पर किस सर्किट का उपयोग किया जाता है?",
+  "q_en": "Which circuit is commonly used for 'dv/dt' protection of a Thyristor?",
+  "o_hi": [
+   "स्नबर सर्किट",
+   "फ्री-व्हीलिंग डायोड",
+   "सीरीज इंडक्टर",
+   "पैरेलल ट्रांजिस्टर"
+  ],
+  "o_en": [
+   "Snubber circuit",
+   "Free-wheeling diode",
+   "Series inductor",
+   "Parallel transistor"
+  ],
+  "a": 0,
+  "e_hi": "स्नबर सर्किट में एक कैपेसिटर और रेजिस्टर सीरीज में होते हैं, जो वोल्टेज के अचानक परिवर्तन (dv/dt) को सीमित करते हैं।",
+  "e_en": "A snubber circuit consists of a capacitor and resistor in series, which limits the rate of rise of voltage (dv/dt) across the device."
+ },
+ {
+  "id": "rp-je_e-f00824",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "यदि थाइरिस्टर के गेट का करंट हटा दिया जाए, तो क्या होगा?",
+  "q_en": "If the gate current of a thyristor is removed after it has been turned ON, what happens?",
+  "o_hi": [
+   "थाइरिस्टर तुरंत बंद हो जाएगा",
+   "थाइरिस्टर चालू रहेगा",
+   "थाइरिस्टर डैमेज हो जाएगा",
+   "थाइरिस्टर केवल आधी साइकिल के लिए चलेगा"
+  ],
+  "o_en": [
+   "Thyristor will turn OFF immediately",
+   "Thyristor will remain ON",
+   "Thyristor will get damaged",
+   "Thyristor will conduct only for half cycle"
+  ],
+  "a": 1,
+  "e_hi": "एक बार जब SCR चालू हो जाता है, तो गेट का नियंत्रण समाप्त हो जाता है। इसे बंद करने के लिए मुख्य धारा को होल्डिंग करंट से कम करना पड़ता है।",
+  "e_en": "Once the SCR is triggered ON, the gate loses control. To turn it OFF, the main anode current must be reduced below the holding current."
+ },
+ {
+  "id": "rp-je_e-f00825",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक SCR (सिलिकॉन कंट्रोल्ड रेक्टिफायर) को चालू करने के लिए गेट करंट की क्या आवश्यकता होती है?",
+  "q_en": "What is the requirement for gate current to turn on an SCR (Silicon Controlled Rectifier)?",
+  "o_hi": [
+   "निरंतर गेट करंट",
+   "केवल टर्न-ऑन के लिए पल्स",
+   "नेगेटिव गेट करंट",
+   "उच्च वोल्टेज"
+  ],
+  "o_en": [
+   "Continuous gate current",
+   "Pulse for turn-on only",
+   "Negative gate current",
+   "High voltage"
+  ],
+  "a": 1,
+  "e_hi": "SCR को चालू करने के लिए गेट पर केवल एक छोटी पल्स की आवश्यकता होती है, निरंतर करंट की नहीं।",
+  "e_en": "An SCR only requires a short pulse at the gate to turn on; continuous current is not necessary."
+ },
+ {
+  "id": "rp-je_e-f00826",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "SCR के 'होल्डिंग करंट' और 'लैचिंग करंट' के बीच सही संबंध क्या है?",
+  "q_en": "What is the correct relationship between the 'holding current' and 'latching current' of an SCR?",
+  "o_hi": [
+   "लैचिंग करंट हमेशा होल्डिंग करंट से अधिक होता है",
+   "होल्डिंग करंट हमेशा लैचिंग करंट से अधिक होता है",
+   "दोनों हमेशा बराबर होते हैं",
+   "इनका कोई निश्चित संबंध नहीं है"
+  ],
+  "o_en": [
+   "Latching current is always greater than holding current",
+   "Holding current is always greater than latching current",
+   "Both are always equal",
+   "They have no fixed relationship"
+  ],
+  "a": 0,
+  "e_hi": "लैचिंग करंट वह न्यूनतम धारा है जो SCR को 'ऑन' स्थिति में लाने के लिए चाहिए, जबकि होल्डिंग करंट उसे 'ऑन' रखने के लिए चाहिए।",
+  "e_en": "Latching current is the minimum current required to switch the SCR 'on', while holding current is needed to maintain it in the 'on' state."
+ },
+ {
+  "id": "rp-je_e-f00827",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक डायक (DIAC) का उपयोग मुख्य रूप से किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "For what primary purpose is a DIAC (Diode for Alternating Current) used?",
+  "o_hi": [
+   "एम्प्लीफिकेशन",
+   "रेक्टिफिकेशन",
+   "ट्रायक को ट्रिगर करने के लिए",
+   "वोल्टेज रेगुलेशन"
+  ],
+  "o_en": [
+   "Amplification",
+   "Rectification",
+   "Triggering a TRIAC",
+   "Voltage regulation"
+  ],
+  "a": 2,
+  "e_hi": "डायक का उपयोग अक्सर ट्रायक (TRIAC) को ट्रिगर करने के लिए एक स्विचिंग डिवाइस के रूप में किया जाता है।",
+  "e_en": "A DIAC is commonly used as a switching device to trigger a TRIAC."
+ },
+ {
+  "id": "rp-je_e-f00828",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "MOSFET में 'पिंच-ऑफ वोल्टेज' का क्या अर्थ है?",
+  "q_en": "What does 'pinch-off voltage' mean in a MOSFET?",
+  "o_hi": [
+   "वह वोल्टेज जिस पर ड्रेन करंट शून्य हो जाता है",
+   "वह वोल्टेज जिस पर ड्रेन करंट स्थिर (सैचुरेट) हो जाता है",
+   "वह वोल्टेज जिस पर डिवाइस जल जाता है",
+   "वह वोल्टेज जिस पर गेट करंट बढ़ता है"
+  ],
+  "o_en": [
+   "Voltage at which drain current becomes zero",
+   "Voltage at which drain current saturates",
+   "Voltage at which the device burns",
+   "Voltage at which gate current increases"
+  ],
+  "a": 1,
+  "e_hi": "पिंच-ऑफ वोल्टेज वह बिंदु है जिसके बाद ड्रेन-टू-सोर्स वोल्टेज बढ़ाने पर भी ड्रेन करंट नहीं बढ़ता।",
+  "e_en": "Pinch-off voltage is the point beyond which the drain current remains constant even if the drain-to-source voltage is increased."
+ },
+ {
+  "id": "rp-je_e-f00829",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "क्यूटर्न-ऑफ (Turn-off) के दौरान SCR के जंक्शन से चार्ज हटाने की प्रक्रिया को क्या कहते हैं?",
+  "q_en": "What is the process of removing charge from the junctions of an SCR during turn-off called?",
+  "o_hi": [
+   "कम्यूटेशन",
+   "रेक्टिफिकेशन",
+   "इनवर्जन",
+   "एम्प्लीफिकेशन"
+  ],
+  "o_en": [
+   "Commutation",
+   "Rectification",
+   "Inversion",
+   "Amplification"
+  ],
+  "a": 0,
+  "e_hi": "SCR को बंद करने के लिए करंट को होल्डिंग करंट से नीचे लाने की प्रक्रिया को कम्यूटेशन कहा जाता है।",
+  "e_en": "The process of bringing the current below the holding current to turn off an SCR is called commutation."
+ },
+ {
+  "id": "rp-je_e-f00830",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा उपकरण पूर्णतः नियंत्रित स्विच (fully controlled switch) नहीं है?",
+  "q_en": "Which of the following devices is not a fully controlled switch?",
+  "o_hi": [
+   "आईजीबीटी (IGBT)",
+   "थाइरिस्टर (SCR)",
+   "जीटीओ (GTO)",
+   "एमओएसएफईटी (MOSFET)"
+  ],
+  "o_en": [
+   "IGBT",
+   "Thyristor (SCR)",
+   "GTO",
+   "MOSFET"
+  ],
+  "a": 1,
+  "e_hi": "थाइरिस्टर (SCR) एक अर्ध-नियंत्रित उपकरण है क्योंकि इसे केवल गेट सिग्नल द्वारा चालू किया जा सकता है, बंद नहीं।",
+  "e_en": "A Thyristor (SCR) is a semi-controlled device because it can be turned on by a gate signal but cannot be turned off by it."
+ },
+ {
+  "id": "rp-je_e-f00831",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में, एससीआर (SCR) और डायोड की तुलना में, एमओएसएफईटी (MOSFET) की स्विचिंग गति कैसी होती है?",
+  "q_en": "In power electronics, how does the switching speed of a MOSFET compare to an SCR or a diode?",
+  "o_hi": [
+   "बहुत धीमी",
+   "समान",
+   "बहुत तेज",
+   "अनिश्चित"
+  ],
+  "o_en": [
+   "Very slow",
+   "Same",
+   "Very fast",
+   "Uncertain"
+  ],
+  "a": 2,
+  "e_hi": "एमओएसएफईटी एक मेजॉरिटी कैरियर डिवाइस है, इसलिए इसमें कोई चार्ज स्टोरेज प्रभाव नहीं होता, जिससे इसकी स्विचिंग गति बहुत अधिक होती है।",
+  "e_en": "MOSFET is a majority carrier device and does not have charge storage effects, which allows for very high switching speeds."
+ },
+ {
+  "id": "rp-je_e-f00832",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक आईजीबीटी (IGBT) किन दो उपकरणों के गुणों का संयोजन है?",
+  "q_en": "An IGBT is a combination of the properties of which two devices?",
+  "o_hi": [
+   "बीजेटी और एससीआर",
+   "एमओएसएफईटी और बीजेटी",
+   "जेएफईटी और एससीआर",
+   "डायोड और बीजेटी"
+  ],
+  "o_en": [
+   "BJT and SCR",
+   "MOSFET and BJT",
+   "JFET and SCR",
+   "Diode and BJT"
+  ],
+  "a": 1,
+  "e_hi": "आईजीबीटी में एमओएसएफईटी का इनपुट गेट (वोल्टेज नियंत्रण) और बीजेटी का आउटपुट (उच्च करंट क्षमता) होता है।",
+  "e_en": "An IGBT combines the input gate characteristics of a MOSFET (voltage control) with the output characteristics of a BJT (high current capability)."
+ },
+ {
+  "id": "rp-je_e-f00833",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा उपकरण 'वोल्टेज-नियंत्रित' (voltage-controlled) नहीं है?",
+  "q_en": "Which of the following devices is not 'voltage-controlled'?",
+  "o_hi": [
+   "आईजीबीटी",
+   "बीजेटी",
+   "एमओएसएफईटी",
+   "जेएफईटी"
+  ],
+  "o_en": [
+   "IGBT",
+   "BJT",
+   "MOSFET",
+   "JFET"
+  ],
+  "a": 1,
+  "e_hi": "बीजेटी (BJT) करंट-नियंत्रित है, जबकि आईजीबीटी, एमओएसएफईटी और जेएफईटी वोल्टेज द्वारा नियंत्रित होते हैं।",
+  "e_en": "BJT is current-controlled, while IGBT, MOSFET, and JFET are controlled by voltage."
+ },
+ {
+  "id": "rp-je_e-f00834",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक एससीआर (SCR) में कितने पी-एन (P-N) जंक्शन होते हैं?",
+  "q_en": "How many P-N junctions does an SCR have?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "चार"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Four"
+  ],
+  "a": 2,
+  "e_hi": "एससीआर एक चार-परत (P-N-P-N) उपकरण है, जिसमें तीन जंक्शन (J1, J2, J3) होते हैं।",
+  "e_en": "An SCR is a four-layer (P-N-P-N) device containing three junctions (J1, J2, J3)."
+ },
+ {
+  "id": "rp-je_e-f00835",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स अनुप्रयोगों में, 'स्नबर सर्किट' (Snubber circuit) का उपयोग मुख्य रूप से किसके लिए किया जाता है?",
+  "q_en": "In power electronics applications, a 'snubber circuit' is primarily used for what purpose?",
+  "o_hi": [
+   "वोल्टेज स्पाइक्स को सीमित करने",
+   "करंट को बढ़ाने",
+   "स्विचिंग गति कम करने",
+   "तापमान नियंत्रण"
+  ],
+  "o_en": [
+   "Limiting voltage spikes",
+   "Increasing current",
+   "Reducing switching speed",
+   "Temperature control"
+  ],
+  "a": 0,
+  "e_hi": "स्नबर सर्किट का उपयोग डीवी/डीटी (dv/dt) सुरक्षा प्रदान करने और स्विचिंग के दौरान उत्पन्न वोल्टेज स्पाइक्स को कम करने के लिए किया जाता है।",
+  "e_en": "A snubber circuit is used to provide dv/dt protection and to suppress voltage spikes generated during switching."
+ },
+ {
+  "id": "rp-je_e-f00836",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "जीटीओ (GTO) और एससीआर (SCR) के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the primary difference between a GTO and an SCR?",
+  "o_hi": [
+   "जीटीओ को गेट सिग्नल से बंद किया जा सकता है",
+   "एससीआर की दक्षता अधिक है",
+   "जीटीओ केवल एसी के लिए है",
+   "एससीआर में गेट नहीं होता"
+  ],
+  "o_en": [
+   "GTO can be turned off by gate signal",
+   "SCR has higher efficiency",
+   "GTO is only for AC",
+   "SCR has no gate"
+  ],
+  "a": 0,
+  "e_hi": "जीटीओ (Gate Turn-Off Thyristor) को नकारात्मक गेट करंट द्वारा बंद किया जा सकता है, जबकि सामान्य एससीआर को नहीं।",
+  "e_en": "A GTO (Gate Turn-Off Thyristor) can be turned off by a negative gate current, whereas a standard SCR cannot."
+ },
+ {
+  "id": "rp-je_e-f00837",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा उपकरण उच्च आवृत्ति (high frequency) स्विचिंग अनुप्रयोगों के लिए सबसे उपयुक्त है?",
+  "q_en": "Which of the following devices is best suited for high-frequency switching applications?",
+  "o_hi": [
+   "एससीआर",
+   "जीटीओ",
+   "एमओएसएफईटी",
+   "डायोड"
+  ],
+  "o_en": [
+   "SCR",
+   "GTO",
+   "MOSFET",
+   "Diode"
+  ],
+  "a": 2,
+  "e_hi": "एमओएसएफईटी में स्विचिंग नुकसान बहुत कम होते हैं, इसलिए यह उच्च आवृत्ति वाले अनुप्रयोगों (जैसे एसएमपीएस) में सबसे अच्छा है।",
+  "e_en": "MOSFETs have very low switching losses, making them the best choice for high-frequency applications like SMPS."
+ },
+ {
+  "id": "rp-je_e-f00838",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक थाइरिस्टर के लिए, यदि लैचिंग करंट (Latching Current) 20 mA है, तो होल्डिंग करंट (Holding Current) का मान आमतौर पर कितना होता है?",
+  "q_en": "For a thyristor, if the Latching Current is 20 mA, what is the typical value of the Holding Current?",
+  "o_hi": [
+   "20 mA से अधिक",
+   "20 mA के बराबर",
+   "20 mA से कम",
+   "शून्य"
+  ],
+  "o_en": [
+   "Greater than 20 mA",
+   "Equal to 20 mA",
+   "Less than 20 mA",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "होल्डिंग करंट हमेशा लैचिंग करंट से कम होता है, क्योंकि लैचिंग करंट डिवाइस को 'चालू' करने के लिए आवश्यक है जबकि होल्डिंग करंट इसे 'चालू' बनाए रखने के लिए आवश्यक है।",
+  "e_en": "Holding current is always lower than latching current, as latching current is required to turn the device 'on', while holding current is needed to keep it 'on'."
+ },
+ {
+  "id": "rp-je_e-f00839",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक हाफ-वेव कंट्रोल्ड रेक्टिफायर में, आउटपुट वोल्टेज का औसत मान क्या होगा यदि फायरिंग एंगल 90 डिग्री है?",
+  "q_en": "In a half-wave controlled rectifier, what is the average output voltage value if the firing angle is 90 degrees?",
+  "o_hi": [
+   "Vm/π",
+   "Vm/2π",
+   "Vm/(2π) * (1+cos 90°)",
+   "शून्य"
+  ],
+  "o_en": [
+   "Vm/π",
+   "Vm/2π",
+   "Vm/(2π) * (1+cos 90°)",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "हाफ-वेव रेक्टिफायर के लिए औसत वोल्टेज का सूत्र Vm/(2π)(1+cos α) है। 90 डिग्री पर, cos 90 डिग्री शून्य होता है, जिससे उत्तर Vm/(2π) प्राप्त होता है।",
+  "e_en": "The average voltage formula for a half-wave rectifier is Vm/(2π)(1+cos α). At 90 degrees, cos 90° is zero, resulting in Vm/(2π)."
+ },
+ {
+  "id": "rp-je_e-f00840",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक सिंगल-फेज फुल-वेव मिड-पॉइंट कनवर्टर के लिए रिपल फ्रीक्वेंसी (Ripple Frequency) का इनपुट फ्रीक्वेंसी (f) से क्या संबंध है?",
+  "q_en": "What is the relationship between the ripple frequency and the input frequency (f) for a single-phase full-wave mid-point converter?",
+  "o_hi": [
+   "f",
+   "2f",
+   "3f",
+   "4f"
+  ],
+  "o_en": [
+   "f",
+   "2f",
+   "3f",
+   "4f"
+  ],
+  "a": 1,
+  "e_hi": "फुल-वेव रेक्टिफायर में, आउटपुट में प्रति चक्र दो पल्स होते हैं, इसलिए रिपल फ्रीक्वेंसी इनपुट फ्रीक्वेंसी की दोगुनी होती है।",
+  "e_en": "In a full-wave rectifier, there are two pulses per cycle in the output, therefore the ripple frequency is twice the input frequency."
+ },
+ {
+  "id": "rp-je_e-f00841",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "यदि एक चॉपर (Chopper) का ड्यूटी साइकिल 0.4 है और इनपुट वोल्टेज 100V है, तो आउटपुट वोल्टेज क्या होगा?",
+  "q_en": "If the duty cycle of a chopper is 0.4 and the input voltage is 100V, what will be the output voltage?",
+  "o_hi": [
+   "40V",
+   "60V",
+   "100V",
+   "250V"
+  ],
+  "o_en": [
+   "40V",
+   "60V",
+   "100V",
+   "250V"
+  ],
+  "a": 0,
+  "e_hi": "स्टेप-डाउन चॉपर के लिए आउटपुट वोल्टेज का सूत्र V_out = Duty Cycle * V_in है। अतः 0.4 * 100 = 40V।",
+  "e_en": "The output voltage formula for a step-down chopper is V_out = Duty Cycle * V_in. Thus, 0.4 * 100 = 40V."
+ },
+ {
+  "id": "rp-je_e-f00842",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "एक थ्री-फेज हाफ-वेव कंट्रोल्ड रेक्टिफायर में, आउटपुट वोल्टेज का औसत मान क्या है (जहाँ Vm अधिकतम वोल्टेज है)?",
+  "q_en": "In a three-phase half-wave controlled rectifier, what is the average output voltage (where Vm is the maximum voltage)?",
+  "o_hi": [
+   "(3 * Vm * cos α) / (2π)",
+   "(3 * Vm * cos α) / π",
+   "(3 * sqrt(3) * Vm * cos α) / (2π)",
+   "Vm / π"
+  ],
+  "o_en": [
+   "(3 * Vm * cos α) / (2π)",
+   "(3 * Vm * cos α) / π",
+   "(3 * sqrt(3) * Vm * cos α) / (2π)",
+   "Vm / π"
+  ],
+  "a": 2,
+  "e_hi": "थ्री-फेज हाफ-वेव रेक्टिफायर के लिए औसत आउटपुट वोल्टेज का मानक सूत्र (3 * sqrt(3) * Vm * cos α) / (2π) है।",
+  "e_en": "The standard formula for the average output voltage of a three-phase half-wave rectifier is (3 * sqrt(3) * Vm * cos α) / (2π)."
+ },
+ {
+  "id": "rp-je_e-f00843",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "एक इन्वर्टर में, यदि आउटपुट फ्रीक्वेंसी 50 Hz है, तो टाइम पीरियड (Time Period) क्या होगा?",
+  "q_en": "In an inverter, if the output frequency is 50 Hz, what will be the time period?",
+  "o_hi": [
+   "0.01 सेकंड",
+   "0.02 सेकंड",
+   "0.05 सेकंड",
+   "0.2 सेकंड"
+  ],
+  "o_en": [
+   "0.01 seconds",
+   "0.02 seconds",
+   "0.05 seconds",
+   "0.2 seconds"
+  ],
+  "a": 1,
+  "e_hi": "टाइम पीरियड (T) फ्रीक्वेंसी (f) का व्युत्क्रम होता है (T = 1/f)। 1/50 = 0.02 सेकंड।",
+  "e_en": "The time period (T) is the reciprocal of frequency (f) (T = 1/f). 1/50 = 0.02 seconds."
+ },
+ {
+  "id": "rp-je_e-f00844",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक सिंगल-फेज फुल-ब्रिज रेक्टिफायर में, प्रत्येक डायोड के माध्यम से प्रवाहित होने वाला औसत करंट (Average Current) क्या है यदि लोड करंट Id है?",
+  "q_en": "In a single-phase full-bridge rectifier, what is the average current flowing through each diode if the load current is Id?",
+  "o_hi": [
+   "Id",
+   "Id/2",
+   "Id/4",
+   "2*Id"
+  ],
+  "o_en": [
+   "Id",
+   "Id/2",
+   "Id/4",
+   "2*Id"
+  ],
+  "a": 1,
+  "e_hi": "फुल-ब्रिज रेक्टिफायर में, लोड करंट दो डायोड के माध्यम से साझा किया जाता है, इसलिए प्रत्येक डायोड का औसत करंट Id/2 होता है।",
+  "e_en": "In a full-bridge rectifier, the load current is shared by two diodes, so the average current of each diode is Id/2."
+ },
+ {
+  "id": "rp-je_e-f00845",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक एसी वोल्टेज कंट्रोलर में, यदि फायरिंग एंगल 0 डिग्री है, तो आरएमएस (RMS) आउटपुट वोल्टेज क्या होगा?",
+  "q_en": "In an AC voltage controller, if the firing angle is 0 degrees, what will be the RMS output voltage?",
+  "o_hi": [
+   "Vs",
+   "Vs / sqrt(2)",
+   "Vs / 2",
+   "शून्य"
+  ],
+  "o_en": [
+   "Vs",
+   "Vs / sqrt(2)",
+   "Vs / 2",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "जब फायरिंग एंगल 0 डिग्री होता है, तो एसी वोल्टेज कंट्रोलर पूर्ण इनपुट वोल्टेज (Vs) को लोड तक जाने देता है।",
+  "e_en": "When the firing angle is 0 degrees, the AC voltage controller allows the full input voltage (Vs) to pass to the load."
+ },
+ {
+  "id": "rp-je_e-f00846",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "यदि एक बूस्ट कनवर्टर (Boost Converter) में ड्यूटी साइकिल (D) 0.5 है, तो आउटपुट वोल्टेज और इनपुट वोल्टेज का अनुपात क्या होगा?",
+  "q_en": "If the duty cycle (D) in a boost converter is 0.5, what will be the ratio of output voltage to input voltage?",
+  "o_hi": [
+   "0.5",
+   "1",
+   "2",
+   "4"
+  ],
+  "o_en": [
+   "0.5",
+   "1",
+   "2",
+   "4"
+  ],
+  "a": 2,
+  "e_hi": "बूस्ट कनवर्टर के लिए V_out/V_in का सूत्र 1 / (1-D) होता है। यहाँ 1 / (1-0.5) = 1/0.5 = 2 है।",
+  "e_en": "The formula for V_out/V_in in a boost converter is 1 / (1-D). Here, 1 / (1-0.5) = 1/0.5 = 2."
+ },
+ {
+  "id": "rp-je_e-f00847",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "एक थाइरिस्टर के टर्न-ऑफ समय (Turn-off time) के दौरान, डिवाइस के माध्यम से प्रवाहित होने वाला करंट क्या कहलाता है?",
+  "q_en": "During the turn-off time of a thyristor, what is the current flowing through the device called?",
+  "o_hi": [
+   "रिवर्स रिकवरी करंट (Reverse Recovery Current)",
+   "गेट करंट",
+   "लैचिंग करंट",
+   "होल्डिंग करंट"
+  ],
+  "o_en": [
+   "Reverse Recovery Current",
+   "Gate Current",
+   "Latching Current",
+   "Holding Current"
+  ],
+  "a": 0,
+  "e_hi": "थाइरिस्टर के टर्न-ऑफ चरण के दौरान, जंक्शन से चार्ज हटाने के लिए जो करंट विपरीत दिशा में बहता है, उसे रिवर्स रिकवरी करंट कहा जाता है।",
+  "e_en": "During the turn-off phase of a thyristor, the current that flows in the opposite direction to remove charge from the junction is called reverse recovery current."
+ },
+ {
+  "id": "rp-je_e-f00848",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स में डायोड का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a diode in power electronics?",
+  "o_hi": [
+   "वोल्टेज बढ़ाना",
+   "करंट को नियंत्रित करना",
+   "एकदिशीय धारा प्रवाह सुनिश्चित करना",
+   "सिग्नल को स्विच करना"
+  ],
+  "o_en": [
+   "Increasing voltage",
+   "Controlling current",
+   "Ensuring unidirectional current flow",
+   "Switching signals"
+  ],
+  "a": 2,
+  "e_hi": "डायोड एक अनियंत्रित स्विच की तरह कार्य करता है जो केवल एक दिशा में धारा को प्रवाहित होने देता है।",
+  "e_en": "A diode acts as an uncontrolled switch that allows current to flow in only one direction."
+ },
+ {
+  "id": "rp-je_e-f00849",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा उपकरण उच्च आवृत्ति (High Frequency) स्विचिंग के लिए सबसे उपयुक्त है?",
+  "q_en": "Which of the following devices is most suitable for high-frequency switching?",
+  "o_hi": [
+   "एससीआर (SCR)",
+   "जीटीओ (GTO)",
+   "मोसफेट (MOSFET)",
+   "डायोड"
+  ],
+  "o_en": [
+   "SCR",
+   "GTO",
+   "MOSFET",
+   "Diode"
+  ],
+  "a": 2,
+  "e_hi": "मोसफेट में स्विचिंग गति बहुत अधिक होती है, इसलिए इसका उपयोग उच्च आवृत्ति वाले अनुप्रयोगों में किया जाता है।",
+  "e_en": "MOSFETs have very high switching speeds, making them ideal for high-frequency applications."
+ },
+ {
+  "id": "rp-je_e-f00850",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "थाइरिस्टर के संदर्भ में 'होल्डिंग करंट' क्या है?",
+  "q_en": "What is 'holding current' in the context of a thyristor?",
+  "o_hi": [
+   "अधिकतम धारा जिसे उपकरण सहन कर सकता है",
+   "न्यूनतम धारा जो उपकरण को 'चालू' स्थिति में रखती है",
+   "गेट चालू करने के लिए आवश्यक धारा",
+   "वोल्टेज को स्थिर रखने वाली धारा"
+  ],
+  "o_en": [
+   "Maximum current the device can withstand",
+   "Minimum current required to keep the device in the 'on' state",
+   "Current required to trigger the gate",
+   "Current that stabilizes the voltage"
+  ],
+  "a": 1,
+  "e_hi": "होल्डिंग करंट वह न्यूनतम एनोड करंट है जिसके नीचे गिरने पर थाइरिस्टर स्वतः बंद हो जाता है।",
+  "e_en": "Holding current is the minimum anode current below which the thyristor automatically turns off."
+ },
+ {
+  "id": "rp-je_e-f00851",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 1,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the main objective of power electronics?",
+  "o_hi": [
+   "सिग्नल का प्रसंस्करण",
+   "विद्युत शक्ति का रूपांतरण और नियंत्रण",
+   "यांत्रिक ऊर्जा का उत्पादन",
+   "चुंबकीय क्षेत्र का मापन"
+  ],
+  "o_en": [
+   "Signal processing",
+   "Conversion and control of electrical power",
+   "Generation of mechanical energy",
+   "Measurement of magnetic fields"
+  ],
+  "a": 1,
+  "e_hi": "पावर इलेक्ट्रॉनिक्स का उपयोग विद्युत ऊर्जा के रूप (जैसे AC से DC) को नियंत्रित और परिवर्तित करने के लिए किया जाता है।",
+  "e_en": "Power electronics is used to control and convert electrical energy from one form to another, such as AC to DC."
+ },
+ {
+  "id": "rp-je_e-f00852",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "जीटीओ (GTO) का पूरा नाम क्या है?",
+  "q_en": "What is the full form of GTO?",
+  "o_hi": [
+   "गेट टर्न-ऑफ थाइरिस्टर",
+   "जनरल थाइरिस्टर ऑपरेशन",
+   "गेट ट्रांजिस्टर ऑसिलेटर",
+   "ग्रिड टर्न-ऑफ थाइरिस्टर"
+  ],
+  "o_en": [
+   "Gate Turn-Off Thyristor",
+   "General Thyristor Operation",
+   "Gate Transistor Oscillator",
+   "Grid Turn-Off Thyristor"
+  ],
+  "a": 0,
+  "e_hi": "जीटीओ एक प्रकार का थाइरिस्टर है जिसे गेट टर्मिनल पर नकारात्मक करंट देकर बंद किया जा सकता है।",
+  "e_en": "A GTO is a type of thyristor that can be turned off by applying a negative current to the gate terminal."
+ },
+ {
+  "id": "rp-je_e-f00853",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 3,
+  "q_hi": "पावर इलेक्ट्रॉनिक्स सर्किट में 'स्नबर सर्किट' (Snubber Circuit) का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is a 'snubber circuit' used in power electronics?",
+  "o_hi": [
+   "वोल्टेज को बढ़ाने के लिए",
+   "dv/dt सुरक्षा के लिए",
+   "सिग्नल को फिल्टर करने के लिए",
+   "दक्षता घटाने के लिए"
+  ],
+  "o_en": [
+   "To increase voltage",
+   "For dv/dt protection",
+   "To filter signals",
+   "To reduce efficiency"
+  ],
+  "a": 1,
+  "e_hi": "स्नबर सर्किट मुख्य रूप से थाइरिस्टर को उच्च dv/dt (वोल्टेज परिवर्तन की दर) से होने वाली क्षति से बचाने के लिए उपयोग किया जाता है।",
+  "e_en": "A snubber circuit is primarily used to protect thyristors from damage caused by high dv/dt (rate of change of voltage)."
+ },
+ {
+  "id": "rp-je_e-f00854",
+  "s": "je_electrical",
+  "t": "power_electronics",
+  "d": 2,
+  "q_hi": "एक चॉपर (Chopper) सर्किट किस प्रकार का कनवर्टर है?",
+  "q_en": "What type of converter is a chopper circuit?",
+  "o_hi": [
+   "DC से DC",
+   "AC से DC",
+   "DC से AC",
+   "AC से AC"
+  ],
+  "o_en": [
+   "DC to DC",
+   "AC to DC",
+   "DC to AC",
+   "AC to AC"
+  ],
+  "a": 0,
+  "e_hi": "चॉपर एक स्थिर DC इनपुट वोल्टेज को चर DC आउटपुट वोल्टेज में परिवर्तित करता है।",
+  "e_en": "A chopper converts a fixed DC input voltage into a variable DC output voltage."
+ },
+ {
+  "id": "rp-je_e-f00855",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक डीसी शंट मोटर पर अचानक भार (load) हटा दिया जाता है, तो मोटर की गति पर क्या प्रभाव पड़ेगा?",
+  "q_en": "What happens to the speed of a DC shunt motor if the load is suddenly removed?",
+  "o_hi": [
+   "गति में मामूली वृद्धि होगी",
+   "गति अपरिवर्तित रहेगी",
+   "गति खतरनाक रूप से बढ़ जाएगी",
+   "मोटर रुक जाएगी"
+  ],
+  "o_en": [
+   "Speed will increase slightly",
+   "Speed will remain unchanged",
+   "Speed will increase dangerously",
+   "Motor will stop"
+  ],
+  "a": 0,
+  "e_hi": "डीसी शंट मोटर का फ्लक्स लगभग स्थिर रहता है, इसलिए भार हटने पर गति में केवल मामूली वृद्धि होती है।",
+  "e_en": "The flux of a DC shunt motor remains nearly constant, so there is only a slight increase in speed when the load is removed."
+ },
+ {
+  "id": "rp-je_e-f00856",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर में 'हम्बिंग' (humming) ध्वनि का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of 'humming' noise in a transformer?",
+  "o_hi": [
+   "चुंबकीय विरूपण (Magnetostriction)",
+   "ढीले कनेक्शन",
+   "कूलिंग फैन का शोर",
+   "वाइंडिंग में शॉर्ट सर्किट"
+  ],
+  "o_en": [
+   "Magnetostriction",
+   "Loose connections",
+   "Cooling fan noise",
+   "Short circuit in windings"
+  ],
+  "a": 0,
+  "e_hi": "कोर में चुंबकीय विरूपण के कारण लैमिनेशन्स में कंपन होता है, जिससे हम्मिंग ध्वनि उत्पन्न होती है।",
+  "e_en": "Magnetostriction in the core causes vibrations in the laminations, which produces the humming sound."
+ },
+ {
+  "id": "rp-je_e-f00857",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "यदि थ्री-फेज इंडक्शन मोटर के किन्हीं दो फेजों को आपस में बदल दिया जाए, तो क्या होगा?",
+  "q_en": "What happens if any two phases of a three-phase induction motor are interchanged?",
+  "o_hi": [
+   "मोटर जल जाएगी",
+   "मोटर की दिशा उलट जाएगी",
+   "मोटर की गति बढ़ जाएगी",
+   "मोटर पर कोई प्रभाव नहीं पड़ेगा"
+  ],
+  "o_en": [
+   "Motor will burn",
+   "Direction of rotation will reverse",
+   "Speed will increase",
+   "No effect on the motor"
+  ],
+  "a": 1,
+  "e_hi": "फेज अनुक्रम बदलने से चुंबकीय क्षेत्र की दिशा उलट जाती है, जिससे रोटर विपरीत दिशा में घूमने लगता है।",
+  "e_en": "Changing the phase sequence reverses the direction of the rotating magnetic field, causing the rotor to rotate in the opposite direction."
+ },
+ {
+  "id": "rp-je_e-f00858",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक अल्टरनेटर की वोल्टेज रेगुलेशन का मान क्या होना चाहिए?",
+  "q_en": "What should be the value of voltage regulation for an ideal alternator?",
+  "o_hi": [
+   "अधिकतम",
+   "शून्य",
+   "इकाई",
+   "अनंत"
+  ],
+  "o_en": [
+   "Maximum",
+   "Zero",
+   "Unity",
+   "Infinite"
+  ],
+  "a": 1,
+  "e_hi": "आदर्श स्थिति में, नो-लोड और फुल-लोड वोल्टेज समान होने चाहिए, इसलिए रेगुलेशन शून्य होना चाहिए।",
+  "e_en": "In an ideal condition, no-load and full-load voltages should be equal, so the regulation should be zero."
+ },
+ {
+  "id": "rp-je_e-f00859",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर का ओपन सर्किट टेस्ट मुख्य रूप से किसे ज्ञात करने के लिए किया जाता है?",
+  "q_en": "Open circuit test on a transformer is primarily conducted to determine which parameter?",
+  "o_hi": [
+   "कॉपर लॉस",
+   "कोर लॉस",
+   "वाइंडिंग प्रतिरोध",
+   "लीकेज रिएक्टेंस"
+  ],
+  "o_en": [
+   "Copper loss",
+   "Core loss",
+   "Winding resistance",
+   "Leakage reactance"
+  ],
+  "a": 1,
+  "e_hi": "ओपन सर्किट टेस्ट में वोल्टेज रेटेड होता है, जिससे कोर (आयरन) लॉस का सटीक निर्धारण होता है।",
+  "e_en": "In an open circuit test, rated voltage is applied, which allows for the accurate determination of core (iron) loss."
+ },
+ {
+  "id": "rp-je_e-f00860",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी सीरीज मोटर को कभी भी बिना भार के स्टार्ट नहीं करना चाहिए, क्यों?",
+  "q_en": "Why should a DC series motor never be started without a load?",
+  "o_hi": [
+   "यह बहुत शोर करती है",
+   "यह बहुत अधिक करंट लेती है",
+   "गति खतरनाक रूप से उच्च हो सकती है",
+   "यह तुरंत जल जाएगी"
+  ],
+  "o_en": [
+   "It makes too much noise",
+   "It draws too much current",
+   "Speed can become dangerously high",
+   "It will burn instantly"
+  ],
+  "a": 2,
+  "e_hi": "बिना भार के, फ्लक्स बहुत कम हो जाता है जिससे गति अत्यधिक बढ़ जाती है और मोटर को नुकसान हो सकता है।",
+  "e_en": "Without a load, the flux becomes very low, causing the speed to increase excessively, which can damage the motor."
+ },
+ {
+  "id": "rp-je_e-f00861",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक सिंक्रोनस मोटर में 'हंटिंग' (hunting) को कैसे कम किया जा सकता है?",
+  "q_en": "How can 'hunting' be reduced in a synchronous motor?",
+  "o_hi": [
+   "डैम्पर वाइंडिंग का उपयोग करके",
+   "फ्लाइव्हील का उपयोग करके",
+   "आर्मेचर करंट कम करके",
+   "वोल्टेज बढ़ाकर"
+  ],
+  "o_en": [
+   "By using damper windings",
+   "By using a flywheel",
+   "By reducing armature current",
+   "By increasing voltage"
+  ],
+  "a": 0,
+  "e_hi": "डैम्पर वाइंडिंग रोटर के दोलनों को कम करने में मदद करती है, जिसे हंटिंग कहा जाता है।",
+  "e_en": "Damper windings help in reducing the oscillations of the rotor, which is known as hunting."
+ },
+ {
+  "id": "rp-je_e-f00862",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "यदि ट्रांसफॉर्मर की फ्रीक्वेंसी बढ़ा दी जाए, तो उस पर क्या प्रभाव पड़ेगा?",
+  "q_en": "What will be the effect if the frequency of a transformer is increased?",
+  "o_hi": [
+   "आयरन लॉस कम हो जाएगा",
+   "आयरन लॉस बढ़ जाएगा",
+   "कॉपर लॉस बढ़ जाएगा",
+   "आउटपुट वोल्टेज कम हो जाएगा"
+  ],
+  "o_en": [
+   "Iron loss will decrease",
+   "Iron loss will increase",
+   "Copper loss will increase",
+   "Output voltage will decrease"
+  ],
+  "a": 0,
+  "e_hi": "फ्रीक्वेंसी बढ़ने से हिस्टैरिसीस लॉस कम हो जाता है, जिससे कुल आयरन लॉस में कमी आती है।",
+  "e_en": "Increasing the frequency reduces hysteresis loss, which leads to a decrease in the total iron loss."
+ },
+ {
+  "id": "rp-je_e-f00863",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी मशीन में कम्यूटेटर का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of a commutator in a DC machine?",
+  "o_hi": [
+   "डीसी को एसी में बदलना",
+   "एसी को डीसी में बदलना",
+   "वोल्टेज बढ़ाना",
+   "घर्षण कम करना"
+  ],
+  "o_en": [
+   "Convert DC to AC",
+   "Convert AC to DC",
+   "Increase voltage",
+   "Reduce friction"
+  ],
+  "a": 1,
+  "e_hi": "कम्यूटेटर एक मैकेनिकल रेक्टिफायर के रूप में कार्य करता है जो आर्मेचर के अंदर उत्पन्न एसी को डीसी में बदलता है।",
+  "e_en": "The commutator acts as a mechanical rectifier that converts the AC generated inside the armature into DC."
+ },
+ {
+  "id": "rp-je_e-f00864",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक थ्री-फेज इंडक्शन मोटर का रोटर कभी भी सिंक्रोनस गति पर क्यों नहीं पहुंच पाता?",
+  "q_en": "Why does the rotor of a three-phase induction motor never reach synchronous speed?",
+  "o_hi": [
+   "घर्षण के कारण",
+   "स्लिप के कारण",
+   "चुंबकीय क्षेत्र के रुकने के कारण",
+   "वाइंडिंग के प्रतिरोध के कारण"
+  ],
+  "o_en": [
+   "Due to friction",
+   "Due to slip",
+   "Due to magnetic field stopping",
+   "Due to winding resistance"
+  ],
+  "a": 1,
+  "e_hi": "यदि रोटर सिंक्रोनस गति पर पहुंच जाए, तो सापेक्ष गति शून्य हो जाएगी और टॉर्क उत्पन्न नहीं होगा।",
+  "e_en": "If the rotor reaches synchronous speed, the relative speed becomes zero, and no torque will be produced."
+ },
+ {
+  "id": "rp-je_e-f00865",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "एक डीसी शंट मोटर में, यदि क्षेत्र फ्लक्स (field flux) अचानक कम हो जाता है, तो मोटर की गति पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a DC shunt motor, if the field flux suddenly decreases, what will be the effect on the motor speed?",
+  "o_hi": [
+   "गति कम हो जाएगी",
+   "गति बढ़ जाएगी",
+   "गति स्थिर रहेगी",
+   "मोटर रुक जाएगी"
+  ],
+  "o_en": [
+   "Speed will decrease",
+   "Speed will increase",
+   "Speed will remain constant",
+   "Motor will stop"
+  ],
+  "a": 1,
+  "e_hi": "डीसी मोटर की गति फ्लक्स के व्युत्क्रमानुपाती होती है। फ्लक्स कम होने से बैक ईएमएफ घटता है, जिससे गति बढ़ जाती है।",
+  "e_en": "The speed of a DC motor is inversely proportional to the flux. A decrease in flux reduces back EMF, causing the speed to increase."
+ },
+ {
+  "id": "rp-je_e-f00866",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "ट्रांसफार्मर के कोर को लैमिनेटेड (laminated) क्यों किया जाता है?",
+  "q_en": "Why is the core of a transformer laminated?",
+  "o_hi": [
+   "वजन कम करने के लिए",
+   "हिस्ट्रेसिस हानि कम करने के लिए",
+   "एडी करंट हानि कम करने के लिए",
+   "ताम्र हानि कम करने के लिए"
+  ],
+  "o_en": [
+   "To reduce weight",
+   "To reduce hysteresis loss",
+   "To reduce eddy current loss",
+   "To reduce copper loss"
+  ],
+  "a": 2,
+  "e_hi": "लैमिनेशन कोर के भीतर प्रेरित एडी धाराओं के मार्ग को बाधित करता है, जिससे ऊर्जा की हानि कम होती है।",
+  "e_en": "Lamination interrupts the path of induced eddy currents within the core, thereby reducing energy losses."
+ },
+ {
+  "id": "rp-je_e-f00867",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में, यदि रोटर पूरी तरह से सिंक्रोनस गति पर घूमता है, तो रोटर करंट क्या होगा?",
+  "q_en": "In a three-phase induction motor, if the rotor rotates at synchronous speed, what will be the rotor current?",
+  "o_hi": [
+   "शून्य",
+   "अधिकतम",
+   "रेटेड करंट का आधा",
+   "रेटेड करंट के बराबर"
+  ],
+  "o_en": [
+   "Zero",
+   "Maximum",
+   "Half of rated current",
+   "Equal to rated current"
+  ],
+  "a": 0,
+  "e_hi": "सिंक्रोनस गति पर, रोटर और स्टेटर चुंबकीय क्षेत्र के बीच कोई सापेक्ष गति नहीं होती, जिससे रोटर में कोई ईएमएफ प्रेरित नहीं होता।",
+  "e_en": "At synchronous speed, there is no relative motion between the rotor and stator magnetic field, resulting in no induced EMF in the rotor."
+ },
+ {
+  "id": "rp-je_e-f00868",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी जनरेटर में 'आर्मेचर रिएक्शन' का मुख्य प्रभाव क्या है?",
+  "q_en": "What is the primary effect of 'armature reaction' in a DC generator?",
+  "o_hi": [
+   "मुख्य फ्लक्स का विरूपण और कम होना",
+   "वोल्टेज में वृद्धि",
+   "घर्षण में वृद्धि",
+   "तापमान में कमी"
+  ],
+  "o_en": [
+   "Distortion and weakening of main flux",
+   "Increase in voltage",
+   "Increase in friction",
+   "Decrease in temperature"
+  ],
+  "a": 0,
+  "e_hi": "आर्मेचर करंट द्वारा उत्पन्न चुंबकीय क्षेत्र मुख्य क्षेत्र फ्लक्स को विकृत और कमजोर कर देता है।",
+  "e_en": "The magnetic field produced by the armature current distorts and weakens the main field flux."
+ },
+ {
+  "id": "rp-je_e-f00869",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफार्मर में 'ओपन सर्किट टेस्ट' मुख्य रूप से किसके निर्धारण के लिए किया जाता है?",
+  "q_en": "The 'open circuit test' in a transformer is primarily conducted to determine what?",
+  "o_hi": [
+   "कॉपर लॉस",
+   "आयरन लॉस",
+   "कुल दक्षता",
+   "वोल्टेज विनियमन"
+  ],
+  "o_en": [
+   "Copper loss",
+   "Iron loss",
+   "Total efficiency",
+   "Voltage regulation"
+  ],
+  "a": 1,
+  "e_hi": "ओपन सर्किट टेस्ट के दौरान, प्राथमिक करंट बहुत कम होता है, जिससे कॉपर लॉस नगण्य हो जाता है और केवल आयरन लॉस मापा जाता है।",
+  "e_en": "During an open circuit test, the primary current is very low, making copper loss negligible and allowing measurement of iron loss only."
+ },
+ {
+  "id": "rp-je_e-f00870",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "सिंक्रोनस मोटर में 'हंटिंग' (hunting) का कारण क्या है?",
+  "q_en": "What is the cause of 'hunting' in a synchronous motor?",
+  "o_hi": [
+   "लोड में अचानक परिवर्तन",
+   "वोल्टेज का स्थिर होना",
+   "उच्च गति",
+   "कम तापमान"
+  ],
+  "o_en": [
+   "Sudden change in load",
+   "Steady voltage",
+   "High speed",
+   "Low temperature"
+  ],
+  "a": 0,
+  "e_hi": "लोड में अचानक बदलाव के कारण रोटर अपनी संतुलित स्थिति के आसपास दोलन करने लगता है, जिसे हंटिंग कहते हैं।",
+  "e_en": "Sudden changes in load cause the rotor to oscillate around its equilibrium position, a phenomenon known as hunting."
+ },
+ {
+  "id": "rp-je_e-f00871",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "डीसी मोटर का 'बैक ईएमएफ' (Back EMF) किस पर निर्भर करता है?",
+  "q_en": "The 'Back EMF' of a DC motor depends on what?",
+  "o_hi": [
+   "केवल वोल्टेज",
+   "केवल करंट",
+   "फ्लक्स और गति",
+   "केवल प्रतिरोध"
+  ],
+  "o_en": [
+   "Voltage only",
+   "Current only",
+   "Flux and speed",
+   "Resistance only"
+  ],
+  "a": 2,
+  "e_hi": "बैक ईएमएफ का सूत्र Eb = PΦNZ/60A है, जहाँ यह फ्लक्स (Φ) और गति (N) के सीधे समानुपाती है।",
+  "e_en": "The formula for back EMF is Eb = PΦNZ/60A, where it is directly proportional to flux (Φ) and speed (N)."
+ },
+ {
+  "id": "rp-je_e-f00872",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "यदि एक ट्रांसफार्मर में सेकेंडरी वाइंडिंग को शॉर्ट-सर्किट कर दिया जाए, तो क्या होगा?",
+  "q_en": "What will happen if the secondary winding of a transformer is short-circuited?",
+  "o_hi": [
+   "वोल्टेज बढ़ जाएगा",
+   "अत्यधिक करंट बहेगा और वाइंडिंग जल सकती है",
+   "ट्रांसफार्मर पर कोई प्रभाव नहीं पड़ेगा",
+   "करंट शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "Voltage will increase",
+   "Excessive current will flow and may burn the winding",
+   "No effect on the transformer",
+   "Current will become zero"
+  ],
+  "a": 1,
+  "e_hi": "शॉर्ट-सर्किट से सेकेंडरी में अत्यधिक करंट प्रवाहित होता है, जो वाइंडिंग को गर्म करके जला सकता है।",
+  "e_en": "A short circuit causes excessive current to flow in the secondary, which can heat and burn the winding."
+ },
+ {
+  "id": "rp-je_e-f00873",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में 'स्लिप' (slip) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'slip' in a three-phase induction motor?",
+  "o_hi": [
+   "सिंक्रोनस और रोटर गति के बीच का अंतर",
+   "मोटर की घर्षण शक्ति",
+   "वोल्टेज का नुकसान",
+   "करंट का प्रवाह"
+  ],
+  "o_en": [
+   "Difference between synchronous and rotor speed",
+   "Frictional power of motor",
+   "Voltage loss",
+   "Flow of current"
+  ],
+  "a": 0,
+  "e_hi": "स्लिप सिंक्रोनस गति और रोटर की वास्तविक गति के बीच का अंतर है, जो मोटर के टॉर्क उत्पादन के लिए आवश्यक है।",
+  "e_en": "Slip is the difference between synchronous speed and the actual rotor speed, which is necessary for torque production."
+ },
+ {
+  "id": "rp-je_e-f00874",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "एक अल्टरनेटर में वोल्टेज विनियमन (voltage regulation) का मान ऋणात्मक (negative) कब हो सकता है?",
+  "q_en": "When can the voltage regulation of an alternator be negative?",
+  "o_hi": [
+   "यूनिटी पावर फैक्टर पर",
+   "लैगिंग पावर फैक्टर पर",
+   "लीडिंग पावर फैक्टर पर",
+   "शून्य पावर फैक्टर पर"
+  ],
+  "o_en": [
+   "At unity power factor",
+   "At lagging power factor",
+   "At leading power factor",
+   "At zero power factor"
+  ],
+  "a": 2,
+  "e_hi": "लीडिंग पावर फैक्टर लोड के दौरान, आर्मेचर रिएक्शन के कारण टर्मिनल वोल्टेज रेटेड वोल्टेज से अधिक हो सकता है, जिससे विनियमन ऋणात्मक हो जाता है।",
+  "e_en": "During leading power factor loads, terminal voltage can exceed rated voltage due to armature reaction, resulting in negative regulation."
+ },
+ {
+  "id": "rp-je_e-f00875",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "एक डीसी जनरेटर और एक डीसी मोटर के बीच मुख्य संरचनात्मक अंतर क्या है?",
+  "q_en": "What is the primary structural difference between a DC generator and a DC motor?",
+  "o_hi": [
+   "कोई अंतर नहीं है",
+   "दिशा का अंतर",
+   "कार्य सिद्धांत का अंतर",
+   "सामग्री का अंतर"
+  ],
+  "o_en": [
+   "There is no difference",
+   "Direction of energy flow",
+   "Principle of operation",
+   "Material composition"
+  ],
+  "a": 1,
+  "e_hi": "संरचनात्मक रूप से वे समान होते हैं, लेकिन ऊर्जा रूपांतरण की दिशा बदल जाती है।",
+  "e_en": "Structurally, they are identical; the primary difference lies in the direction of energy conversion."
+ },
+ {
+  "id": "rp-je_e-f00876",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर की तुलना में इंडक्शन मोटर में कौन सा घटक अनुपस्थित होता है?",
+  "q_en": "Which component is absent in an induction motor compared to a transformer?",
+  "o_hi": [
+   "कोर",
+   "वाइंडिंग",
+   "कम्यूटेटर",
+   "इंसुलेशन"
+  ],
+  "o_en": [
+   "Core",
+   "Winding",
+   "Commutator",
+   "Insulation"
+  ],
+  "a": 2,
+  "e_hi": "इंडक्शन मोटर और ट्रांसफॉर्मर दोनों में कम्यूटेटर नहीं होता है, लेकिन विकल्प के अनुसार कम्यूटेटर डीसी मशीनों में होता है।",
+  "e_en": "Neither induction motors nor transformers use commutators; however, commutators are distinct features of DC machines."
+ },
+ {
+  "id": "rp-je_e-f00877",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर में 'कोर' का मुख्य कार्य क्या है?",
+  "q_en": "What is the main function of the 'core' in a transformer?",
+  "o_hi": [
+   "विद्युत इन्सुलेशन प्रदान करना",
+   "चुंबकीय फ्लक्स के लिए कम अनिच्छा वाला मार्ग प्रदान करना",
+   "वाइंडिंग को ठंडा करना",
+   "वोल्टेज को नियंत्रित करना"
+  ],
+  "o_en": [
+   "To provide electrical insulation",
+   "To provide a low reluctance path for magnetic flux",
+   "To cool the windings",
+   "To regulate voltage"
+  ],
+  "a": 1,
+  "e_hi": "कोर का उपयोग चुंबकीय फ्लक्स को एक वाइंडिंग से दूसरी वाइंडिंग तक कुशलतापूर्वक पहुँचाने के लिए किया जाता है।",
+  "e_en": "The core is used to provide a low reluctance path for the magnetic flux to link the windings efficiently."
+ },
+ {
+  "id": "rp-je_e-f00878",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "डीसी शंट मोटर और डीसी सीरीज मोटर के टॉर्क-स्पीड अभिलक्षणों की तुलना में क्या सत्य है?",
+  "q_en": "Which is true regarding the torque-speed characteristics of a DC shunt motor versus a DC series motor?",
+  "o_hi": [
+   "शंट मोटर स्थिर गति मोटर है",
+   "सीरीज मोटर स्थिर गति मोटर है",
+   "दोनों के समान अभिलक्षण हैं",
+   "शंट मोटर का टॉर्क बहुत अधिक है"
+  ],
+  "o_en": [
+   "Shunt motor is a constant speed motor",
+   "Series motor is a constant speed motor",
+   "Both have identical characteristics",
+   "Shunt motor has very high starting torque"
+  ],
+  "a": 0,
+  "e_hi": "डीसी शंट मोटर को एक स्थिर गति वाली मोटर माना जाता है क्योंकि भार के साथ इसकी गति में थोड़ा ही परिवर्तन होता है।",
+  "e_en": "A DC shunt motor is considered a constant speed motor because its speed varies very little with changes in load."
+ },
+ {
+  "id": "rp-je_e-f00879",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "अल्टरनेटर और डीसी जनरेटर के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the main difference between an alternator and a DC generator?",
+  "o_hi": [
+   "अल्टरनेटर में आर्मेचर स्थिर होता है",
+   "डीसी जनरेटर का आकार बड़ा होता है",
+   "अल्टरनेटर डीसी उत्पन्न करता है",
+   "डीसी जनरेटर में कम्यूटेटर नहीं होता"
+  ],
+  "o_en": [
+   "Alternator has a stationary armature",
+   "DC generator is larger in size",
+   "Alternator generates DC",
+   "DC generator lacks a commutator"
+  ],
+  "a": 0,
+  "e_hi": "अधिकांश बड़े अल्टरनेटरों में आर्मेचर स्टेटर पर स्थिर होता है और क्षेत्र रोटर पर घूमता है।",
+  "e_en": "In most large alternators, the armature is stationary on the stator while the field rotates on the rotor."
+ },
+ {
+  "id": "rp-je_e-f00880",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 3,
+  "q_hi": "थ्री-फेज इंडक्शन मोटर में स्लिप का मान शून्य कब होता है?",
+  "q_en": "When is the slip value zero in a three-phase induction motor?",
+  "o_hi": [
+   "जब मोटर रुकी हुई हो",
+   "जब मोटर तुल्यकालिक गति पर चले",
+   "जब मोटर रेटेड गति से कम पर चले",
+   "कभी नहीं"
+  ],
+  "o_en": [
+   "When the motor is at standstill",
+   "When the motor runs at synchronous speed",
+   "When the motor runs below rated speed",
+   "Never"
+  ],
+  "a": 1,
+  "e_hi": "यदि रोटर तुल्यकालिक गति पर घूमता है, तो सापेक्ष गति शून्य होती है, जिससे स्लिप भी शून्य हो जाती है।",
+  "e_en": "If the rotor rotates at synchronous speed, the relative speed is zero, resulting in zero slip."
+ },
+ {
+  "id": "rp-je_e-f00881",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 2,
+  "q_hi": "ट्रांसफॉर्मर के 'ओपन सर्किट टेस्ट' से क्या निर्धारित किया जाता है?",
+  "q_en": "What is determined by the 'open circuit test' of a transformer?",
+  "o_hi": [
+   "कॉपर लॉस",
+   "आयरन लॉस",
+   "कुल दक्षता",
+   "वोल्टेज रेगुलेशन"
+  ],
+  "o_en": [
+   "Copper loss",
+   "Iron loss",
+   "Total efficiency",
+   "Voltage regulation"
+  ],
+  "a": 1,
+  "e_hi": "ओपन सर्किट टेस्ट मुख्य रूप से नो-लोड स्थितियों के तहत आयरन लॉस (कोर लॉस) को मापने के लिए किया जाता है।",
+  "e_en": "The open circuit test is primarily performed to measure iron loss (core loss) under no-load conditions."
+ },
+ {
+  "id": "rp-je_e-f00882",
+  "s": "je_electrical",
+  "t": "electrical_machines",
+  "d": 1,
+  "q_hi": "कौन सी मोटर 'यूनिवर्सल मोटर' के रूप में जानी जाती है?",
+  "q_en": "Which motor is known as a 'universal motor'?",
+  "o_hi": [
+   "केवल एसी मोटर",
+   "केवल डीसी मोटर",
+   "एसी और डीसी दोनों पर चलने वाली मोटर",
+   "स्टेपपर मोटर"
+  ],
+  "o_en": [
+   "AC motor only",
+   "DC motor only",
+   "Motor that runs on both AC and DC",
+   "Stepper motor"
+  ],
+  "a": 2,
+  "e_hi": "यूनिवर्सल मोटर को एसी और डीसी दोनों आपूर्ति पर संचालित किया जा सकता है, इसलिए इसे 'यूनिवर्सल' कहा जाता है।",
+  "e_en": "A universal motor can be operated on both AC and DC supplies, which is why it is called 'universal'."
  }
 ]
