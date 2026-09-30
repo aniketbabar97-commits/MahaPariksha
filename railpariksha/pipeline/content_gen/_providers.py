@@ -52,8 +52,8 @@ def groq_ask(model, prompt, retries=5, temperature=0.7):
             raise
 
 
-def gemini_ask(model, prompt, retries=5, temperature=0.7):
-    api_key = os.environ["GEMINI_API_KEY"]
+def gemini_ask(model, prompt, retries=5, temperature=0.7, api_key_env="GEMINI_API_KEY"):
+    api_key = os.environ[api_key_env]
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
     body = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],

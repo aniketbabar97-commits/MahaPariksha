@@ -10,15 +10,16 @@ Usage:
     python3 bulk_questions.py --provider groq --model qwen/qwen3.8-27b \
         --max-calls 500 --subjects maths,reasoning,gk
 
-IMPORTANT: when running the Groq and Gemini variants of this script at the same
-time, always pass disjoint --subjects lists to each. Both write into the same
-content/bank/<subject>.json files with a read-modify-write cycle and no file
-locking; running two processes against the *same* subject concurrently is a
-race condition that silently drops or duplicates entries (this bit us once --
-see git history for the "dedupe science bank" / "dedupe notes race condition"
-commits).
+Safe to run multiple instances against the SAME subject now: each save takes an
+exclusive flock on the bank file, re-reads the latest on-disk content, dedups
+against it, and writes -- so two processes sharing a subject no longer silently
+drop each other's work (this used to be a real race; see git history for the
+"dedupe science bank" / "dedupe notes race condition" / "eliminate worker
+subject-overlap race" commits). Still prefer disjoint --subjects where
+possible since it's simpler to reason about and avoids lock contention.
 """
 import argparse
+import fcntl
 import json
 import os
 import random
@@ -75,6 +76,26 @@ in both languages, q_hi must still frame it in Hindi, e.g. "श्रृंख�
 "अनुपात देखें: 3 : 9 :: 4 : ?", not just the bare sequence."""
 
 
+def flush(path, new_items):
+    """Merge new_items into path under an exclusive lock, re-reading the latest
+    on-disk content first -- safe even when another process is writing the same
+    file concurrently. Returns how many of new_items actually landed (after
+    dedup against whatever the other process already saved)."""
+    with open(path, "r+", encoding="utf-8") as f:
+        fcntl.flock(f, fcntl.LOCK_EX)
+        f.seek(0)
+        current = json.load(f)
+        seen_ids = {q["id"] for q in current}
+        seen_q = {norm(q["q_en"]) for q in current}
+        to_add = [q for q in new_items if q["id"] not in seen_ids and norm(q["q_en"]) not in seen_q]
+        current.extend(to_add)
+        f.seek(0)
+        f.truncate()
+        json.dump(current, f, ensure_ascii=False, indent=1)
+        fcntl.flock(f, fcntl.LOCK_UN)
+    return len(to_add)
+
+
 def valid(q, subject_id=None):
     try:
         if not (isinstance(q["q_hi"], str) and isinstance(q["q_en"], str) and q["q_hi"] and q["q_en"]):
@@ -110,6 +131,9 @@ def main():
                                        "alongside another instance -- see module docstring)")
     p.add_argument("--id-prefix-suffix", default="", help="appended to the generated id's subject prefix, "
                                                             "e.g. 'g' for Gemini runs, to keep ids distinguishable")
+    p.add_argument("--gemini-key-env", default="GEMINI_API_KEY", help="env var holding the Gemini API key to use "
+                                                                       "(e.g. GEMINI_API_KEY2 for a second key, so "
+                                                                       "two Gemini workers don't share one quota)")
     args = p.parse_args()
 
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
@@ -125,7 +149,9 @@ def main():
             break
         target = TARGETS.get(s["id"], DEFAULT_TARGET)
         path = f"{ROOT}/content/bank/{s['id']}.json"
-        items = json.load(open(path, encoding="utf-8")) if os.path.exists(path) else []
+        if not os.path.exists(path):
+            json.dump([], open(path, "w", encoding="utf-8"))
+        items = json.load(open(path, encoding="utf-8"))
         seen_norm = {norm(q["q_en"]) for q in items}
         by_topic = {}
         for q in items:
@@ -145,7 +171,8 @@ def main():
                 prompt = PROMPT.format(subject_en=s["en"], subject_hi=s["hi"], topic_en=t["en"],
                                         topic_hi=t["hi"], angle=angle, n=BATCH)
                 try:
-                    result = ask(args.provider, args.model, prompt)
+                    kw = {"api_key_env": args.gemini_key_env} if args.provider == "gemini" else {}
+                    result = ask(args.provider, args.model, prompt, **kw)
                     batch = result.get("questions", [])
                 except Exception as e:
                     print(f"ERROR {s['id']}/{t['id']}: {e}", file=sys.stderr, flush=True)
@@ -170,12 +197,11 @@ def main():
                     next_num += 1
                     new_items.append(q2)
                 if new_items:
-                    items.extend(new_items)
+                    landed = flush(path, new_items)
                     by_topic.setdefault(t["id"], []).extend(new_items)
                     count = len(by_topic[t["id"]])
-                    added_total += len(new_items)
-                    json.dump(items, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-                    print(f"{s['id']}/{t['id']}: +{len(new_items)} (topic now {count}/{target}, "
+                    added_total += landed
+                    print(f"{s['id']}/{t['id']}: +{landed} (topic now {count}/{target}, "
                           f"call {calls}/{args.max_calls}, total added {added_total})", flush=True)
                 time.sleep(1.5 if args.provider == "groq" else 2.0)
 
