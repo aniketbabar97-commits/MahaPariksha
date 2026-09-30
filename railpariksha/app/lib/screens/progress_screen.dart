@@ -216,7 +216,7 @@ class _Stat extends StatelessWidget {
 
 /// A small tier indicator for Beast Mode (see beast_mode_screen.dart), shown next to the
 /// existing _Stat tiles. Animates the same way those tiles and the accuracy bars above do:
-/// TweenAnimationBuilder<double>, 700ms, Curves.easeOutCubic.
+/// `TweenAnimationBuilder<double>`, 700ms, Curves.easeOutCubic.
 class _BeastBadge extends StatelessWidget {
   final Progress p;
   final String lang;

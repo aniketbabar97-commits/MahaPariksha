@@ -7,7 +7,6 @@ import 'package:share_plus/share_plus.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
-import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 

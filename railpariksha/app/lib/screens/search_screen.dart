@@ -64,7 +64,6 @@ class _SearchScreenState extends State<SearchScreen> {
     final s = context.scope;
     final exam = s.builder.exam;
     if (exam == null) return const NoExamState();
-    final lang = context.lang;
 
     final needle = _query.toLowerCase();
     List<Question> questionResults = const [];
