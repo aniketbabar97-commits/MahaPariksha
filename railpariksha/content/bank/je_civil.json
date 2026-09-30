@@ -23596,5 +23596,189 @@
   "a": 2,
   "e_hi": "स्टिफ़नेस इकाई विस्थापन उत्पन्न करने के लिए आवश्यक बल है, जबकि फ्लेक्सिबिलिटी इकाई बल के कारण विस्थापन है।",
   "e_en": "Stiffness is the force required to produce unit displacement, while flexibility is the displacement due to unit force."
+ },
+ {
+  "id": "rp-je_c-f01027",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि किसी बीम पर लगाया गया भार दोगुना कर दिया जाए, तो बीम के मध्य-बिंदु पर विक्षेप (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the load applied on a beam is doubled, what will be the effect on the deflection at the center of the beam?",
+  "o_hi": [
+   "विक्षेप आधा हो जाएगा",
+   "विक्षेप दोगुना हो जाएगा",
+   "विक्षेप चार गुना हो जाएगा",
+   "विक्षेप अपरिवर्तित रहेगा"
+  ],
+  "o_en": [
+   "Deflection will be halved",
+   "Deflection will be doubled",
+   "Deflection will be quadrupled",
+   "Deflection will remain unchanged"
+  ],
+  "a": 1,
+  "e_hi": "सरल बीम के लिए विक्षेप सीधे भार के समानुपाती होता है। इसलिए, भार दोगुना करने पर विक्षेप भी दोगुना हो जाता है।",
+  "e_en": "For a simple beam, deflection is directly proportional to the applied load. Thus, doubling the load doubles the deflection."
+ },
+ {
+  "id": "rp-je_c-f01028",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक स्थिर (statically determinate) संरचना के लिए, यदि हम एक अतिरिक्त समर्थन (support) जोड़ते हैं, तो संरचना क्या बन जाती है?",
+  "q_en": "For a statically determinate structure, if we add an extra support, what does the structure become?",
+  "o_hi": [
+   "स्थिर (Determinate)",
+   "अस्थिर (Unstable)",
+   "अनिश्चित (Indeterminate)",
+   "स्वतंत्र (Independent)"
+  ],
+  "o_en": [
+   "Determinate",
+   "Unstable",
+   "Indeterminate",
+   "Independent"
+  ],
+  "a": 2,
+  "e_hi": "अतिरिक्त समर्थन संरचना की कोटि को बढ़ा देता है, जिससे वह सांख्यिकीय रूप से अनिश्चित (statically indeterminate) हो जाती है।",
+  "e_en": "Adding an extra support increases the degree of redundancy, making the structure statically indeterminate."
+ },
+ {
+  "id": "rp-je_c-f01029",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक बीम में 'पॉइंट ऑफ कॉन्ट्राफ्लेक्सचर' (point of contraflexure) वह बिंदु है जहाँ:",
+  "q_en": "In a beam, the 'point of contraflexure' is the point where:",
+  "o_hi": [
+   "बेंडिंग मोमेंट अधिकतम होता है",
+   "बेंडिंग मोमेंट शून्य होता है",
+   "कतरनी बल (shear force) अधिकतम होता है",
+   "विक्षेप शून्य होता है"
+  ],
+  "o_en": [
+   "Bending moment is maximum",
+   "Bending moment is zero",
+   "Shear force is maximum",
+   "Deflection is zero"
+  ],
+  "a": 1,
+  "e_hi": "पॉइंट ऑफ कॉन्ट्राफ्लेक्सचर वह स्थान है जहाँ बेंडिंग मोमेंट अपना चिह्न बदलता है और शून्य से गुजरता है।",
+  "e_en": "The point of contraflexure is the location where the bending moment changes sign and passes through zero."
+ },
+ {
+  "id": "rp-je_c-f01030",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि बीम की लंबाई दोगुनी कर दी जाए (अन्य पैरामीटर समान रखते हुए), तो इसके मध्य-बिंदु पर विक्षेप (deflection) कितना बदल जाएगा?",
+  "q_en": "If the length of a beam is doubled (keeping other parameters constant), how will the deflection at the center change?",
+  "o_hi": [
+   "2 गुना",
+   "4 गुना",
+   "8 गुना",
+   "16 गुना"
+  ],
+  "o_en": [
+   "2 times",
+   "4 times",
+   "8 times",
+   "16 times"
+  ],
+  "a": 2,
+  "e_hi": "बीम का विक्षेप लंबाई के घन (cube) के समानुपाती होता है (L^3)। यदि लंबाई 2L हो जाए, तो विक्षेप 2^3 = 8 गुना बढ़ेगा।",
+  "e_en": "Deflection of a beam is proportional to the cube of the length (L^3). If length becomes 2L, deflection increases by 2^3 = 8 times."
+ },
+ {
+  "id": "rp-je_c-f01031",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक ओवरहैंगिंग बीम में, यदि भार को बीम के एक सिरे से दूसरे सिरे पर स्थानांतरित किया जाता है, तो बेंडिंग मोमेंट आरेख पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In an overhanging beam, if the load is shifted from one end to the other, what will be the effect on the bending moment diagram?",
+  "o_hi": [
+   "यह अपरिवर्तित रहेगा",
+   "यह दर्पण प्रतिबिंब (mirror image) बन जाएगा",
+   "यह दोगुना हो जाएगा",
+   "यह आधा हो जाएगा"
+  ],
+  "o_en": [
+   "It will remain unchanged",
+   "It will become a mirror image",
+   "It will double",
+   "It will be halved"
+  ],
+  "a": 1,
+  "e_hi": "भार की स्थिति बदलने से आरेख का ज्यामितीय आकार समान रहता है लेकिन उसका स्वरूप विपरीत (mirror) हो जाता है।",
+  "e_en": "Shifting the load changes the configuration, resulting in a mirror image of the original bending moment diagram."
+ },
+ {
+  "id": "rp-je_c-f01032",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "कॉलम की 'बकलिंग' (buckling) मुख्य रूप से किस पर निर्भर करती है?",
+  "q_en": "Buckling of a column primarily depends on which factor?",
+  "o_hi": [
+   "केवल सामग्री की ताकत",
+   "न्यूनतम जड़त्व आघूर्ण (moment of inertia)",
+   "कॉलम का रंग",
+   "कॉलम का भार वहन करने का समय"
+  ],
+  "o_en": [
+   "Material strength only",
+   "Minimum moment of inertia",
+   "Color of the column",
+   "Time of load bearing"
+  ],
+  "a": 1,
+  "e_hi": "यूलर के सिद्धांत के अनुसार, कॉलम की बकलिंग क्षमता न्यूनतम जड़त्व आघूर्ण और कॉलम की लंबाई के वर्ग पर निर्भर करती है।",
+  "e_en": "According to Euler's theory, the buckling capacity of a column depends on the minimum moment of inertia and the square of its length."
+ },
+ {
+  "id": "rp-je_c-f01033",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक स्थिर बीम पर समान रूप से वितरित भार (UDL) के कारण बेंडिंग मोमेंट आरेख का आकार क्या होता है?",
+  "q_en": "What is the shape of the bending moment diagram for a simply supported beam carrying a uniformly distributed load (UDL)?",
+  "o_hi": [
+   "त्रिभुजाकार",
+   "परवलयिक (parabolic)",
+   "आयताकार",
+   "वृत्ताकार"
+  ],
+  "o_en": [
+   "Triangular",
+   "Parabolic",
+   "Rectangular",
+   "Circular"
+  ],
+  "a": 1,
+  "e_hi": "UDL के तहत, बेंडिंग मोमेंट समीकरण में दूरी का वर्ग होता है, जिससे वक्र एक परवलय (parabola) बनाता है।",
+  "e_en": "Under a UDL, the bending moment equation involves the square of the distance, resulting in a parabolic curve."
+ },
+ {
+  "id": "rp-je_c-f01034",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि किसी संरचना में जोड़ों (joints) की संख्या और सदस्यों की संख्या का अनुपात '2j - 3 = m' है, तो वह संरचना है:",
+  "q_en": "If the ratio of joints (j) and members (m) in a structure follows '2j - 3 = m', then the structure is:",
+  "o_hi": [
+   "अस्थिर",
+   "पूर्ण (perfectly rigid)",
+   "अनिश्चित",
+   "अति-स्थिर"
+  ],
+  "o_en": [
+   "Unstable",
+   "Perfectly rigid",
+   "Indeterminate",
+   "Hyper-stable"
+  ],
+  "a": 1,
+  "e_hi": "यह एक ट्रस के लिए पूर्ण संरचना की स्थिति है, जहाँ सदस्यों की संख्या जोड़ों के लिए आवश्यक न्यूनतम संख्या के बराबर होती है।",
+  "e_en": "This is the condition for a perfect truss, where the number of members is exactly sufficient for the given number of joints."
  }
 ]
