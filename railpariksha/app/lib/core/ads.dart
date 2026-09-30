@@ -33,7 +33,10 @@ class _AdBannerState extends State<AdBanner> {
           if (!mounted) return;
           setState(() => _loaded = true);
         },
-        onAdFailedToLoad: (ad, error) => ad.dispose(),
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          _ad = null;
+        },
       ),
     );
     ad.load();

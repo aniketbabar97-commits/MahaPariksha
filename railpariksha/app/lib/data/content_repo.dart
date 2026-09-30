@@ -38,6 +38,12 @@ class ContentRepo {
   final Map<String, List<Question>> _questionsBySubject = {};
   final Map<String, List<Flashcard>> _flashcardsBySubject = {};
 
+  /// Whether this subject has ANY flashcards at all, regardless of what's due
+  /// today. A newly-added subject (before flashcards are generated for it)
+  /// has none -- distinct from "has cards, just none due right now", which
+  /// callers should tell apart in their empty-state copy.
+  bool hasFlashcards(String subject) => (_flashcardsBySubject[subject] ?? const []).isNotEmpty;
+
   Subject? subject(String id) => _subjectById[id];
   Exam? exam(String id) => _examById[id];
   Question? question(String id) => _questionById[id];

@@ -4,7 +4,7 @@ _Last updated: 30 September 2026_
 
 RailPariksha does not collect personal data. There is no sign-up or account creation.
 
-**Your progress is stored only on your device.** Your answers, streaks, XP, Beast Mode scores, and settings are saved locally on your phone and are deleted automatically when you uninstall the app or use "Reset progress" in Settings.
+**Your progress is stored only on your device.** Your answers, streaks, XP, Beast Mode scores, and settings are saved locally on your phone. Uninstalling the app deletes all of it. "Reset progress" in Settings clears your answers, streaks, XP, Beast Mode scores, and exam selection, but keeps your app preferences (language, theme, daily goal, reminder times) so you don't have to redo them.
 
 **Internet use.** The app connects to the internet only to download updated question packs. In this version, no analytics, advertising identifiers, or location data are collected.
 
@@ -26,7 +26,7 @@ RailPariksha does not collect personal data. There is no sign-up or account crea
 
 RailPariksha कोई व्यक्तिगत जानकारी एकत्र नहीं करता। कोई पंजीकरण या खाता बनाने की आवश्यकता नहीं है।
 
-आपकी प्रगति (उत्तर, स्ट्रीक, XP, सेटिंग्स) केवल आपके फ़ोन में सहेजी जाती है और ऐप अनइंस्टॉल करने या "Reset progress" उपयोग करने पर स्वतः हट जाती है।
+आपकी प्रगति (उत्तर, स्ट्रीक, XP, सेटिंग्स) केवल आपके फ़ोन में सहेजी जाती है। ऐप अनइंस्टॉल करने पर सब कुछ हट जाता है। "Reset progress" आपके उत्तर, स्ट्रीक, XP और परीक्षा चयन हटाता है, लेकिन भाषा, थीम व रिमाइंडर जैसी सेटिंग्स रखता है।
 
 ऐप केवल नए प्रश्न पैक डाउनलोड करने के लिए इंटरनेट का उपयोग करता है। इस संस्करण में कोई एनालिटिक्स, विज्ञापन पहचानकर्ता या लोकेशन डेटा एकत्र नहीं किया जाता।
 

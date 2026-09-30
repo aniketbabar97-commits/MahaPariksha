@@ -84,9 +84,16 @@ class MeScreen extends StatelessWidget {
               value: p.reminders,
               onChanged: (v) async {
                 HapticFeedback.selectionClick();
-                if (v) await RailParikshaNotifications.requestPermission();
-                p.update((p) => p.reminders = v);
+                // Only actually turn reminders on if the OS permission is granted --
+                // otherwise the switch would show "on" while nothing ever fires.
+                final granted = v ? await RailParikshaNotifications.requestPermission() : true;
+                p.update((p) => p.reminders = v && granted);
                 await applyReminders(p);
+                if (v && !granted && context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(context.tr('सूचना अनुमति नहीं मिली। सेटिंग्स में इसे चालू करें।',
+                          'Notification permission denied. Enable it in system settings.'))));
+                }
               },
             ),
             if (p.reminders)

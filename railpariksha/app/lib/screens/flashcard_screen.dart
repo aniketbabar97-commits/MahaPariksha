@@ -54,6 +54,11 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
   @override
   Widget build(BuildContext context) {
     final done = index >= deck.length;
+    // "No cards at all for this subject yet" (e.g. a brand-new subject whose
+    // flashcards haven't been generated) reads very differently from "you
+    // cleared today's queue" -- the first is a content gap, the second is a
+    // reason to celebrate. Don't conflate them.
+    final neverHasCards = widget.subject != null && !context.scope.repo.hasFlashcards(widget.subject!);
     return Scaffold(
       appBar: AppBar(
         title: Text(context.tr('फ्लैशकार्ड', 'Flashcards')),
@@ -67,8 +72,10 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
       ),
       body: deck.isEmpty
           ? EmptyState(
-              icon: Icons.celebration,
-              text: context.tr('आज रिवीज़न के लिए कोई कार्ड बाकी नहीं! कल फिर आएं। 🎉', 'No cards due today! Come back tomorrow. 🎉'))
+              icon: neverHasCards ? Icons.hourglass_empty : Icons.celebration,
+              text: neverHasCards
+                  ? context.tr('इस विषय के लिए फ्लैशकार्ड जल्द आ रहे हैं! 🚧', 'Flashcards for this subject are coming soon! 🚧')
+                  : context.tr('आज रिवीज़न के लिए कोई कार्ड बाकी नहीं! कल फिर आएं। 🎉', 'No cards due today! Come back tomorrow. 🎉'))
           : done
               ? _summary(context)
               : _deck(context),

@@ -65,6 +65,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
   bool _locked = false;
   int? _flashAnswer;
   bool _finished = false;
+  bool _dialogOpen = false;
 
   QuizSpec get spec => widget.spec;
   Question get q => queue[qi];
@@ -116,30 +117,41 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     } else {
       HapticFeedback.vibrate();
     }
-    Future.delayed(const Duration(milliseconds: 280), () {
-      if (!mounted || _finished) return;
-      if (consecutiveWrong >= _kKnockoutAt) {
-        _finish(knockedOut: true);
-        return;
-      }
-      setState(() {
-        _locked = false;
-        _flashAnswer = null;
-        if (qi + 1 < queue.length) {
-          qi++;
-        } else {
-          // Exhausted the pool before the timer ran out: reshuffle and keep going,
-          // nudging the previous last question out of the very next slot.
-          final last = queue[qi];
-          queue = List.of(spec.questions)..shuffle();
-          if (queue.length > 1 && queue.first == last) {
-            final tmp = queue[0];
-            queue[0] = queue[1];
-            queue[1] = tmp;
-          }
-          qi = 0;
+    Future.delayed(const Duration(milliseconds: 280), _afterAnswerDelay);
+  }
+
+  /// Split out of [_select]'s delayed callback so [_confirmExit] can also call
+  /// this once its dialog closes, if the 280ms window landed while that dialog
+  /// was open -- otherwise a back-press right after a knockout-triggering wrong
+  /// answer could pop a results bottom sheet on top of the still-open "Stop the
+  /// sprint?" dialog (two stacked modals, confusing flash for the user).
+  void _afterAnswerDelay() {
+    // _locked guard makes this safe to call twice for the same answer (once
+    // from the delayed Future, once from _confirmExit re-checking after its
+    // dialog closes) -- whichever runs first flips _locked/_finished, so the
+    // second call becomes a no-op.
+    if (!mounted || _finished || _dialogOpen || !_locked) return;
+    if (consecutiveWrong >= _kKnockoutAt) {
+      _finish(knockedOut: true);
+      return;
+    }
+    setState(() {
+      _locked = false;
+      _flashAnswer = null;
+      if (qi + 1 < queue.length) {
+        qi++;
+      } else {
+        // Exhausted the pool before the timer ran out: reshuffle and keep going,
+        // nudging the previous last question out of the very next slot.
+        final last = queue[qi];
+        queue = List.of(spec.questions)..shuffle();
+        if (queue.length > 1 && queue.first == last) {
+          final tmp = queue[0];
+          queue[0] = queue[1];
+          queue[1] = tmp;
         }
-      });
+        qi = 0;
+      }
     });
   }
 
@@ -183,6 +195,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
 
   Future<bool> _confirmExit() async {
     if (correctCount == 0 && wrongCount == 0) return true;
+    _dialogOpen = true;
     final r = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -194,6 +207,11 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
         ],
       ),
     );
+    _dialogOpen = false;
+    // If the 280ms post-answer window elapsed while this dialog was open,
+    // _afterAnswerDelay bailed out without advancing/finishing -- run it now
+    // that the dialog is closed (idempotent if it already ran on its own).
+    _afterAnswerDelay();
     return r ?? false;
   }
 
@@ -211,9 +229,15 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
         if (didPop) return;
         timer?.cancel();
         timer = null;
-        if (await _confirmExit() && context.mounted) {
+        final wantsExit = await _confirmExit();
+        // _confirmExit() can itself trigger _finish() (a deferred knockout that
+        // landed while its dialog was open, see _afterAnswerDelay) -- in that
+        // case the results sheet is already showing on top of this screen, so
+        // don't ALSO pop here: that would immediately close the sheet we just
+        // opened instead of the screen underneath it.
+        if (wantsExit && context.mounted && !_finished) {
           Navigator.pop(context);
-        } else if (!_finished) {
+        } else if (!wantsExit && !_finished) {
           timer ??= Timer.periodic(const Duration(seconds: 1), (_) {
             if (!mounted) return;
             setState(() => remaining--);

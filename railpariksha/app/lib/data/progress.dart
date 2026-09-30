@@ -376,6 +376,7 @@ class Progress extends ChangeNotifier {
     mocks.clear();
     onboarded = false;
     examId = null;
+    examDate = null;
     lang = keepLang;
     save(now: true);
   }
