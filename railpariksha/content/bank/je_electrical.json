@@ -34360,5 +34360,1730 @@
   "a": 2,
   "e_hi": "वोल्टेज स्रोत एक सक्रिय (active) अवयव है क्योंकि यह परिपथ को ऊर्जा प्रदान करता है।",
   "e_en": "A voltage source is an active element because it is capable of delivering energy to the circuit."
+ },
+ {
+  "id": "rp-je_e-f01495",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक आदर्श वोल्टेज स्रोत और एक आदर्श धारा स्रोत के आंतरिक प्रतिरोध का सही क्रम क्या है?",
+  "q_en": "What is the correct order of internal resistance for an ideal voltage source and an ideal current source?",
+  "o_hi": [
+   "शून्य और अनंत",
+   "अनंत और शून्य",
+   "शून्य और शून्य",
+   "अनंत और अनंत"
+  ],
+  "o_en": [
+   "Zero and Infinity",
+   "Infinity and Zero",
+   "Zero and Zero",
+   "Infinity and Infinity"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श वोल्टेज स्रोत का आंतरिक प्रतिरोध शून्य होता है, जबकि एक आदर्श धारा स्रोत का आंतरिक प्रतिरोध अनंत होता है।",
+  "e_en": "An ideal voltage source has zero internal resistance, whereas an ideal current source has infinite internal resistance."
+ },
+ {
+  "id": "rp-je_e-f01496",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा परिपथ घटक ऊर्जा को केवल अवशोषित (dissipate) करता है?",
+  "q_en": "Which of the following circuit components only dissipates energy?",
+  "o_hi": [
+   "संधारित्र (Capacitor)",
+   "प्रेरक (Inductor)",
+   "प्रतिरोधक (Resistor)",
+   "आदर्श बैटरी"
+  ],
+  "o_en": [
+   "Capacitor",
+   "Inductor",
+   "Resistor",
+   "Ideal Battery"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिरोधक एकमात्र ऐसा घटक है जो विद्युत ऊर्जा को ऊष्मा के रूप में नष्ट करता है, जबकि संधारित्र और प्रेरक ऊर्जा का भंडारण करते हैं।",
+  "e_en": "A resistor is the only component that dissipates electrical energy as heat, whereas capacitors and inductors store energy."
+ },
+ {
+  "id": "rp-je_e-f01497",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थेवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल परिपथ को किसके द्वारा प्रतिस्थापित किया जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex circuit can be replaced by which of the following?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और समांतर प्रतिरोध",
+   "एक धारा स्रोत और श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणी प्रतिरोध",
+   "एक धारा स्रोत और समांतर प्रतिरोध"
+  ],
+  "o_en": [
+   "A voltage source and parallel resistance",
+   "A current source and series resistance",
+   "A voltage source and series resistance",
+   "A current source and parallel resistance"
+  ],
+  "a": 2,
+  "e_hi": "थेवेनिन प्रमेय के अनुसार, किसी भी रैखिक परिपथ को एक वोल्टेज स्रोत (Vth) और एक श्रेणी प्रतिरोध (Rth) के संयोजन से बदला जा सकता है।",
+  "e_en": "According to Thevenin's Theorem, any linear circuit can be replaced by a voltage source (Vth) in series with a resistor (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01498",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) का उपयोग करने के लिए परिपथ का कैसा होना आवश्यक है?",
+  "q_en": "To apply the Superposition Theorem, what must be the nature of the circuit?",
+  "o_hi": [
+   "रैखिक (Linear)",
+   "अरेखीय (Non-linear)",
+   "केवल ए.सी. (AC only)",
+   "केवल डी.सी. (DC only)"
+  ],
+  "o_en": [
+   "Linear",
+   "Non-linear",
+   "AC only",
+   "DC only"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक परिपथों पर लागू होता है क्योंकि यह प्रतिवर्तीता और योगात्मकता के सिद्धांतों पर आधारित है।",
+  "e_en": "The Superposition Theorem applies only to linear circuits because it is based on the principles of reversibility and additivity."
+ },
+ {
+  "id": "rp-je_e-f01499",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) के अनुसार, एक परिपथ को किसके द्वारा दर्शाया जाता है?",
+  "q_en": "According to Norton's Theorem, a circuit is represented by which of the following?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और श्रेणी प्रतिरोध",
+   "एक धारा स्रोत और समांतर प्रतिरोध",
+   "एक वोल्टेज स्रोत और समांतर प्रतिरोध",
+   "एक धारा स्रोत और श्रेणी प्रतिरोध"
+  ],
+  "o_en": [
+   "A voltage source and series resistance",
+   "A current source and parallel resistance",
+   "A voltage source and parallel resistance",
+   "A current source and series resistance"
+  ],
+  "a": 1,
+  "e_hi": "नॉर्टन प्रमेय के अनुसार, एक परिपथ को एक नॉर्टन धारा स्रोत (In) और उसके समांतर जुड़े प्रतिरोध (Rn) से प्रतिस्थापित किया जाता है।",
+  "e_en": "According to Norton's Theorem, a circuit is replaced by a Norton current source (In) in parallel with a resistor (Rn)."
+ },
+ {
+  "id": "rp-je_e-f01500",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "श्रेणी अनुनाद (Series Resonance) परिपथ में, अनुनाद की स्थिति में प्रतिबाधा (Impedance) का मान क्या होता है?",
+  "q_en": "In a series resonance circuit, what is the value of impedance at the resonance condition?",
+  "o_hi": [
+   "अधिकतम",
+   "न्यूनतम",
+   "अनंत",
+   "शून्य"
+  ],
+  "o_en": [
+   "Maximum",
+   "Minimum",
+   "Infinite",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "श्रेणी अनुनाद में, प्रेरक प्रतिघात और धारितीय प्रतिघात एक-दूसरे को रद्द कर देते हैं, जिससे प्रतिबाधा केवल प्रतिरोध (R) के बराबर और न्यूनतम होती है।",
+  "e_en": "In series resonance, inductive reactance and capacitive reactance cancel each other out, making the impedance equal to resistance (R), which is the minimum value."
+ },
+ {
+  "id": "rp-je_e-f01501",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "स्टार और डेल्टा रूपांतरण में, यदि स्टार के तीनों प्रतिरोध 'R' हैं, तो डेल्टा में उनका मान क्या होगा?",
+  "q_en": "In star-to-delta conversion, if all three resistances in star are 'R', what will be their value in delta?",
+  "o_hi": [
+   "R/3",
+   "R",
+   "3R",
+   "9R"
+  ],
+  "o_en": [
+   "R/3",
+   "R",
+   "3R",
+   "9R"
+  ],
+  "a": 2,
+  "e_hi": "स्टार से डेल्टा में बदलने के लिए, प्रत्येक प्रतिरोध का मान तीन गुना हो जाता है, अर्थात 3R।",
+  "e_en": "To convert from star to delta, the value of each resistance becomes three times, i.e., 3R."
+ },
+ {
+  "id": "rp-je_e-f01502",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "मैक्सवेल का लूप विश्लेषण (Mesh Analysis) किस नियम पर आधारित है?",
+  "q_en": "Maxwell's mesh analysis is based on which law?",
+  "o_hi": [
+   "किरचॉफ का धारा नियम (KCL)",
+   "किरचॉफ का वोल्टेज नियम (KVL)",
+   "ओम का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Current Law (KCL)",
+   "Kirchhoff's Voltage Law (KVL)",
+   "Ohm's Law",
+   "Lenz's Law"
+  ],
+  "a": 1,
+  "e_hi": "मैश विश्लेषण बंद लूपों में वोल्टेज के योग के सिद्धांत पर कार्य करता है, जो कि किरचॉफ का वोल्टेज नियम है।",
+  "e_en": "Mesh analysis works on the principle of the sum of voltages in closed loops, which is Kirchhoff's Voltage Law."
+ },
+ {
+  "id": "rp-je_e-f01503",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा कथन 'सक्रिय घटक' (Active Component) के लिए सही है?",
+  "q_en": "Which of the following statements is true for an 'Active Component'?",
+  "o_hi": [
+   "यह ऊर्जा प्रदान करता है",
+   "यह ऊर्जा अवशोषित करता है",
+   "यह ऊर्जा का भंडारण करता है",
+   "यह ऊर्जा को नष्ट करता है"
+  ],
+  "o_en": [
+   "It delivers energy",
+   "It absorbs energy",
+   "It stores energy",
+   "It dissipates energy"
+  ],
+  "a": 0,
+  "e_hi": "सक्रिय घटक जैसे ट्रांजिस्टर या वोल्टेज स्रोत परिपथ में ऊर्जा प्रदान करने की क्षमता रखते हैं।",
+  "e_en": "Active components like transistors or voltage sources have the capability to deliver energy to the circuit."
+ },
+ {
+  "id": "rp-je_e-f01504",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक आदर्श संधारित्र (Capacitor) के लिए, डी.सी. (DC) स्रोत पर प्रतिरोध का मान क्या होगा?",
+  "q_en": "For an ideal capacitor, what will be the value of resistance across a DC source?",
+  "o_hi": [
+   "शून्य",
+   "न्यूनतम",
+   "अनंत",
+   "परिवर्तनीय"
+  ],
+  "o_en": [
+   "Zero",
+   "Minimum",
+   "Infinite",
+   "Variable"
+  ],
+  "a": 2,
+  "e_hi": "एक आदर्श संधारित्र डी.सी. धारा को ब्लॉक करता है क्योंकि इसका धारितीय प्रतिघात (Xc = 1/2πfC) अनंत होता है जब आवृत्ति (f) शून्य हो।",
+  "e_en": "An ideal capacitor blocks DC current because its capacitive reactance (Xc = 1/2πfC) becomes infinite when the frequency (f) is zero."
+ },
+ {
+  "id": "rp-je_e-f01505",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक विद्युत परिपथ जो समय के साथ अपने मापदंडों को नहीं बदलता है, उसे क्या कहा जाता है?",
+  "q_en": "What is an electrical circuit called that does not change its parameters over time?",
+  "o_hi": [
+   "समय-अपरिवर्ती परिपथ",
+   "अरेखीय परिपथ",
+   "सक्रिय परिपथ",
+   "द्विपक्षीय परिपथ"
+  ],
+  "o_en": [
+   "Time-invariant circuit",
+   "Non-linear circuit",
+   "Active circuit",
+   "Bilateral circuit"
+  ],
+  "a": 0,
+  "e_hi": "जिन परिपथों के पैरामीटर (जैसे प्रतिरोध, प्रेरकत्व) समय के साथ नहीं बदलते, उन्हें समय-अपरिवर्ती परिपथ कहते हैं।",
+  "e_en": "Circuits whose parameters (like resistance, inductance) do not change with time are called time-invariant circuits."
+ },
+ {
+  "id": "rp-je_e-f01506",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "वह कौन सा तत्व है जो ऊर्जा उत्पन्न करने में सक्षम है?",
+  "q_en": "Which element is capable of generating energy?",
+  "o_hi": [
+   "सक्रिय तत्व",
+   "निष्क्रिय तत्व",
+   "रैखिक तत्व",
+   "द्विपक्षीय तत्व"
+  ],
+  "o_en": [
+   "Active element",
+   "Passive element",
+   "Linear element",
+   "Bilateral element"
+  ],
+  "a": 0,
+  "e_hi": "सक्रिय तत्व जैसे वोल्टेज स्रोत और करंट स्रोत परिपथ में ऊर्जा प्रदान कर सकते हैं।",
+  "e_en": "Active elements like voltage sources and current sources can provide energy to the circuit."
+ },
+ {
+  "id": "rp-je_e-f01507",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ में वोल्टेज और करंट के बीच का संबंध सीधा (Linear) नहीं है, तो उसे किस प्रकार का परिपथ माना जाएगा?",
+  "q_en": "If the relationship between voltage and current in a circuit is not linear, what type of circuit is it considered?",
+  "o_hi": [
+   "अरेखीय परिपथ",
+   "रैखिक परिपथ",
+   "समय-परिवर्ती परिपथ",
+   "द्विपक्षीय परिपथ"
+  ],
+  "o_en": [
+   "Non-linear circuit",
+   "Linear circuit",
+   "Time-variant circuit",
+   "Bilateral circuit"
+  ],
+  "a": 0,
+  "e_hi": "अरेखीय परिपथ वे हैं जिनमें वोल्टेज और करंट का अनुपात स्थिर नहीं रहता, जैसे कि डायोड।",
+  "e_en": "Non-linear circuits are those where the ratio of voltage to current does not remain constant, such as in a diode."
+ },
+ {
+  "id": "rp-je_e-f01508",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक द्विपक्षीय (Bilateral) परिपथ की मुख्य विशेषता क्या है?",
+  "q_en": "What is the main characteristic of a bilateral circuit?",
+  "o_hi": [
+   "धारा दोनों दिशाओं में समान रूप से प्रवाहित हो सकती है",
+   "यह केवल एक दिशा में कार्य करता है",
+   "इसमें कोई प्रतिरोध नहीं होता",
+   "यह ऊर्जा संचित नहीं करता"
+  ],
+  "o_en": [
+   "Current can flow equally in both directions",
+   "It works in only one direction",
+   "It has no resistance",
+   "It does not store energy"
+  ],
+  "a": 0,
+  "e_hi": "द्विपक्षीय परिपथ में वोल्टेज के ध्रुवीयता बदलने पर धारा का व्यवहार नहीं बदलता, जैसे प्रतिरोधक।",
+  "e_en": "In a bilateral circuit, the current behavior does not change when voltage polarity is reversed, such as in a resistor."
+ },
+ {
+  "id": "rp-je_e-f01509",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा एक निष्क्रिय (Passive) तत्व का उदाहरण है?",
+  "q_en": "Which of the following is an example of a passive element?",
+  "o_hi": [
+   "संधारित्र (Capacitor)",
+   "ट्रांजिस्टर",
+   "वोल्टेज स्रोत",
+   "ऑपरेशनल एम्पलीफायर"
+  ],
+  "o_en": [
+   "Capacitor",
+   "Transistor",
+   "Voltage source",
+   "Operational amplifier"
+  ],
+  "a": 0,
+  "e_hi": "निष्क्रिय तत्व ऊर्जा का उपभोग या संचयन करते हैं, लेकिन उत्पन्न नहीं कर सकते; संधारित्र एक उदाहरण है।",
+  "e_en": "Passive elements consume or store energy but cannot generate it; a capacitor is an example."
+ },
+ {
+  "id": "rp-je_e-f01510",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 'यूनिलैटरल' (Unilateral) नेटवर्क की पहचान कैसे की जाती है?",
+  "q_en": "How is a 'unilateral' network identified?",
+  "o_hi": [
+   "इसका व्यवहार एक दिशा में अलग होता है",
+   "यह हमेशा रैखिक होता है",
+   "यह ऊर्जा उत्पन्न करता है",
+   "इसमें केवल प्रतिरोध होते हैं"
+  ],
+  "o_en": [
+   "Its behavior is different in one direction",
+   "It is always linear",
+   "It generates energy",
+   "It contains only resistors"
+  ],
+  "a": 0,
+  "e_hi": "यूनिलैटरल नेटवर्क में धारा का प्रवाह केवल एक दिशा में ही संभव होता है, जैसे डायोड।",
+  "e_en": "In a unilateral network, current flow is possible only in one direction, such as in a diode."
+ },
+ {
+  "id": "rp-je_e-f01511",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "वितरित पैरामीटर (Distributed Parameter) परिपथ का सबसे सटीक उदाहरण कौन सा है?",
+  "q_en": "What is the most accurate example of a distributed parameter circuit?",
+  "o_hi": [
+   "ट्रांसमिशन लाइन",
+   "प्रतिरोधक",
+   "संधारित्र",
+   "प्रेरक"
+  ],
+  "o_en": [
+   "Transmission line",
+   "Resistor",
+   "Capacitor",
+   "Inductor"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसमिशन लाइन में प्रतिरोध और प्रेरकत्व पूरी लंबाई में फैले होते हैं, इसलिए इसे वितरित पैरामीटर नेटवर्क कहते हैं।",
+  "e_en": "In a transmission line, resistance and inductance are spread along the entire length, hence it is called a distributed parameter network."
+ },
+ {
+  "id": "rp-je_e-f01512",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "लम्पड (Lumped) नेटवर्क किसे कहते हैं?",
+  "q_en": "What is a lumped network called?",
+  "o_hi": [
+   "जहाँ सभी तत्व भौतिक रूप से अलग-अलग पहचाने जा सकें",
+   "जहाँ सभी तत्व एक बिंदु पर केंद्रित हों",
+   "जहाँ कोई ऊर्जा स्रोत न हो",
+   "जहाँ केवल अरेखीय तत्व हों"
+  ],
+  "o_en": [
+   "Where all elements can be physically identified separately",
+   "Where all elements are concentrated at a point",
+   "Where there is no energy source",
+   "Where there are only non-linear elements"
+  ],
+  "a": 0,
+  "e_hi": "लम्पड नेटवर्क में प्रत्येक तत्व (जैसे R, L, C) को एक अलग इकाई के रूप में माना जा सकता है।",
+  "e_en": "In a lumped network, each element (like R, L, C) can be considered as a separate discrete unit."
+ },
+ {
+  "id": "rp-je_e-f01513",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ का आउटपुट इनपुट के अनुपात में सीधे बदलता है, तो उसे क्या कहा जाता है?",
+  "q_en": "If the output of a circuit changes directly in proportion to the input, what is it called?",
+  "o_hi": [
+   "रैखिक नेटवर्क",
+   "अरेखीय नेटवर्क",
+   "सक्रिय नेटवर्क",
+   "समय-परिवर्ती नेटवर्क"
+  ],
+  "o_en": [
+   "Linear network",
+   "Non-linear network",
+   "Active network",
+   "Time-variant network"
+  ],
+  "a": 0,
+  "e_hi": "रैखिक नेटवर्क में अध्यारोपण (Superposition) और समरूपता (Homogeneity) के सिद्धांत लागू होते हैं।",
+  "e_en": "In a linear network, the principles of superposition and homogeneity apply."
+ },
+ {
+  "id": "rp-je_e-f01514",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक डीसी परिपथ में यदि किसी प्रतिरोधक के सिरों पर विभवांतर दोगुना कर दिया जाए, तो शक्ति व्यय (power dissipation) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the voltage across a resistor in a DC circuit is doubled, what will be the effect on the power dissipation?",
+  "o_hi": [
+   "शक्ति चार गुना हो जाएगी",
+   "शक्ति आधी हो जाएगी",
+   "शक्ति अपरिवर्तित रहेगी",
+   "शक्ति दोगुनी हो जाएगी"
+  ],
+  "o_en": [
+   "Power will become four times",
+   "Power will become half",
+   "Power will remain unchanged",
+   "Power will double"
+  ],
+  "a": 0,
+  "e_hi": "शक्ति का सूत्र P = V²/R है। यदि V को 2V किया जाता है, तो P, 4 गुना हो जाता है।",
+  "e_en": "The formula for power is P = V²/R. If V is doubled to 2V, the power becomes four times the original value."
+ },
+ {
+  "id": "rp-je_e-f01515",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक विद्युत परिपथ में 'ओपन सर्किट' की स्थिति में धारा का मान कितना होता है?",
+  "q_en": "What is the value of current in an 'open circuit' condition in an electrical circuit?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "अधिकतम",
+   "स्रोत वोल्टेज के समान"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "Maximum",
+   "Same as source voltage"
+  ],
+  "a": 0,
+  "e_hi": "ओपन सर्किट में परिपथ का प्रतिरोध अनंत होता है, जिससे धारा का प्रवाह रुक जाता है और मान शून्य हो जाता है।",
+  "e_en": "In an open circuit, the resistance is infinite, which stops the flow of current, making its value zero."
+ },
+ {
+  "id": "rp-je_e-f01516",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि तीन प्रतिरोधक 10 ओम, 20 ओम और 30 ओम श्रेणीक्रम (series) में जुड़े हैं, तो कुल प्रतिरोध क्या होगा?",
+  "q_en": "If three resistors of 10 ohms, 20 ohms, and 30 ohms are connected in series, what will be the total resistance?",
+  "o_hi": [
+   "60 ओम",
+   "5.45 ओम",
+   "30 ओम",
+   "10 ओम"
+  ],
+  "o_en": [
+   "60 ohms",
+   "5.45 ohms",
+   "30 ohms",
+   "10 ohms"
+  ],
+  "a": 0,
+  "e_hi": "श्रेणीक्रम में कुल प्रतिरोध R = R1 + R2 + R3 होता है। 10 + 20 + 30 = 60 ओम।",
+  "e_en": "In series connection, total resistance R = R1 + R2 + R3. 10 + 20 + 30 = 60 ohms."
+ },
+ {
+  "id": "rp-je_e-f01517",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि परिपथ में समानांतर (parallel) में जुड़े दो प्रतिरोधक समान मान के हैं, तो कुल प्रतिरोध क्या होगा?",
+  "q_en": "If two resistors of equal value are connected in parallel in a circuit, what will be the total resistance?",
+  "o_hi": [
+   "प्रत्येक प्रतिरोध का आधा",
+   "प्रत्येक प्रतिरोध के बराबर",
+   "प्रत्येक प्रतिरोध का दोगुना",
+   "शून्य"
+  ],
+  "o_en": [
+   "Half of each resistor",
+   "Equal to each resistor",
+   "Double of each resistor",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "समानांतर में समान प्रतिरोध R के लिए, R_eq = R/n होता है। यहाँ n=2 है, अतः R/2।",
+  "e_en": "For equal resistors R connected in parallel, R_eq = R/n. Here n=2, so it becomes R/2."
+ },
+ {
+  "id": "rp-je_e-f01518",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "व्हीटस्टोन ब्रिज का उपयोग मुख्य रूप से किस राशि को मापने के लिए किया जाता है?",
+  "q_en": "A Wheatstone bridge is primarily used to measure which quantity?",
+  "o_hi": [
+   "अज्ञात प्रतिरोध",
+   "उच्च वोल्टेज",
+   "धारा",
+   "आवृत्ति"
+  ],
+  "o_en": [
+   "Unknown resistance",
+   "High voltage",
+   "Current",
+   "Frequency"
+  ],
+  "a": 0,
+  "e_hi": "व्हीटस्टोन ब्रिज का उपयोग एक ज्ञात प्रतिरोध के संदर्भ में अज्ञात प्रतिरोध का सटीक मान निकालने के लिए किया जाता है।",
+  "e_en": "A Wheatstone bridge is used to accurately determine the value of an unknown resistance by comparing it with a known resistance."
+ },
+ {
+  "id": "rp-je_e-f01519",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) का उपयोग करने के लिए परिपथ में क्या होना आवश्यक है?",
+  "q_en": "What must the circuit contain to apply the Superposition Theorem?",
+  "o_hi": [
+   "रैखिक अवयव (linear elements)",
+   "केवल एक स्रोत",
+   "गैर-रैखिक अवयव",
+   "केवल प्रतिरोधक"
+  ],
+  "o_en": [
+   "Linear elements",
+   "Only one source",
+   "Non-linear elements",
+   "Only resistors"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक परिपथों पर लागू होता है, जहाँ अवयव जैसे प्रतिरोधक, संधारित्र और प्रेरक रैखिक व्यवहार करते हैं।",
+  "e_en": "The Superposition Theorem is applicable only to linear circuits, where components like resistors, capacitors, and inductors behave linearly."
+ },
+ {
+  "id": "rp-je_e-f01520",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "थिवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल परिपथ को किस रूप में बदला जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex circuit can be replaced by which equivalent circuit?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत श्रेणीक्रम में एक प्रतिरोधक",
+   "एक वोल्टेज स्रोत समानांतर में एक प्रतिरोधक",
+   "एक धारा स्रोत श्रेणीक्रम में एक प्रतिरोधक",
+   "दो वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "A voltage source in series with a resistor",
+   "A voltage source in parallel with a resistor",
+   "A current source in series with a resistor",
+   "Two voltage sources"
+  ],
+  "a": 0,
+  "e_hi": "थिवेनिन प्रमेय किसी भी दो-टर्मिनल रैखिक परिपथ को एक वोल्टेज स्रोत (Vth) और एक श्रेणीक्रम प्रतिरोध (Rth) द्वारा प्रतिस्थापित करता है।",
+  "e_en": "Thevenin's theorem replaces any two-terminal linear circuit with a voltage source (Vth) in series with a resistor (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01521",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किरचॉफ का धारा नियम",
+  "q_en": "The algebraic sum of voltages in a closed loop is always zero. This statement belongs to which law?",
+  "o_hi": [
+   "किरचॉफ का धारा नियम",
+   "किरचॉफ का वोल्टेज नियम",
+   "ओम का नियम",
+   "नॉर्टन का प्रमेय"
+  ],
+  "o_en": [
+   "Kirchhoff's Current Law",
+   "Kirchhoff's Voltage Law",
+   "Ohm's Law",
+   "Norton's Theorem"
+  ],
+  "a": 1,
+  "e_hi": "किरचॉफ का वोल्टेज नियम (KVL) ऊर्जा संरक्षण पर आधारित है और कहता है कि बंद लूप में वोल्टेज का योग शून्य होता है।",
+  "e_en": "Kirchhoff's Voltage Law (KVL) is based on energy conservation and states that the sum of voltages around any closed loop is zero."
+ },
+ {
+  "id": "rp-je_e-f01522",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थेवेनिन प्रमेय के अनुसार, एक जटिल नेटवर्क को किसमें बदला जा सकता है?",
+  "q_en": "According to Thevenin's theorem, a complex network can be reduced to what?",
+  "o_hi": [
+   "केवल एक वोल्टेज स्रोत",
+   "एक वोल्टेज स्रोत और एक समानांतर प्रतिरोध",
+   "एक वोल्टेज स्रोत और एक श्रेणीक्रम प्रतिरोध",
+   "केवल एक करंट स्रोत"
+  ],
+  "o_en": [
+   "Only a voltage source",
+   "One voltage source and a parallel resistor",
+   "One voltage source and a series resistor",
+   "Only a current source"
+  ],
+  "a": 2,
+  "e_hi": "थेवेनिन समतुल्य परिपथ में एक वोल्टेज स्रोत (Vth) और उसके साथ श्रेणीक्रम में जुड़ा एक प्रतिरोध (Rth) होता है।",
+  "e_en": "A Thevenin equivalent circuit consists of a single voltage source (Vth) in series with a single resistor (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01523",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय का उपयोग करने के लिए परिपथ कैसा होना चाहिए?",
+  "q_en": "For Superposition theorem to be applicable, the circuit must be?",
+  "o_hi": [
+   "अरेखीय (Non-linear)",
+   "रेखीय (Linear)",
+   "समय-परिवर्तनीय",
+   "केवल डीसी (DC)"
+  ],
+  "o_en": [
+   "Non-linear",
+   "Linear",
+   "Time-variant",
+   "DC only"
+  ],
+  "a": 1,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रेखीय और द्विपक्षीय परिपथों पर ही लागू होता है।",
+  "e_en": "Superposition theorem is strictly applicable only to linear and bilateral circuits."
+ },
+ {
+  "id": "rp-je_e-f01524",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "मैक्सिमम पावर ट्रांसफर प्रमेय के अनुसार, लोड प्रतिरोध का मान कितना होना चाहिए?",
+  "q_en": "According to the Maximum Power Transfer theorem, what should be the value of the load resistance?",
+  "o_hi": [
+   "स्रोत प्रतिरोध से कम",
+   "स्रोत प्रतिरोध के बराबर",
+   "स्रोत प्रतिरोध से अधिक",
+   "शून्य"
+  ],
+  "o_en": [
+   "Less than source resistance",
+   "Equal to source resistance",
+   "Greater than source resistance",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "अधिकतम शक्ति हस्तांतरण तब होता है जब लोड प्रतिरोध का मान स्रोत के थेवेनिन प्रतिरोध (Rth) के बराबर होता है।",
+  "e_en": "Maximum power transfer occurs when the load resistance equals the internal Thevenin resistance of the source."
+ },
+ {
+  "id": "rp-je_e-f01525",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "स्टार (Star) कनेक्शन से डेल्टा (Delta) कनेक्शन में बदलने पर प्रतिरोध का मान क्या होता है?",
+  "q_en": "When converting from Star to Delta connection, how does the resistance value change?",
+  "o_hi": [
+   "कम हो जाता है",
+   "बढ़ जाता है",
+   "समान रहता है",
+   "शून्य हो जाता है"
+  ],
+  "o_en": [
+   "Decreases",
+   "Increases",
+   "Remains the same",
+   "Becomes zero"
+  ],
+  "a": 1,
+  "e_hi": "स्टार से डेल्टा रूपांतरण में, समतुल्य डेल्टा प्रतिरोध स्टार प्रतिरोधों के संयोजनों के गुणनफल के योग से प्राप्त होता है, जो मान बढ़ाता है।",
+  "e_en": "In Star to Delta transformation, the equivalent delta resistance is calculated by summing products of star resistors, resulting in a higher value."
+ },
+ {
+  "id": "rp-je_e-f01526",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नोडल विश्लेषण (Nodal Analysis) किस नियम पर आधारित है?",
+  "q_en": "Nodal analysis is based on which law?",
+  "o_hi": [
+   "किरचॉफ का वोल्टेज नियम (KVL)",
+   "ओम का नियम",
+   "किरचॉफ का धारा नियम (KCL)",
+   "लेन्ज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law (KVL)",
+   "Ohm's Law",
+   "Kirchhoff's Current Law (KCL)",
+   "Lenz's Law"
+  ],
+  "a": 2,
+  "e_hi": "नोडल विश्लेषण में हम नोड्स पर धाराओं का योग शून्य मानते हैं, जो कि किरचॉफ का धारा नियम है।",
+  "e_en": "Nodal analysis involves applying Kirchhoff's Current Law at various nodes in the circuit."
+ },
+ {
+  "id": "rp-je_e-f01527",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "विद्युत परिपथ में 'किरचॉफ का वोल्टेज नियम' (KVL) किस संरक्षण सिद्धांत पर आधारित है?",
+  "q_en": "Which conservation principle is the basis for Kirchhoff's Voltage Law (KVL) in electrical circuits?",
+  "o_hi": [
+   "आवेश संरक्षण",
+   "ऊर्जा संरक्षण",
+   "द्रव्यमान संरक्षण",
+   "संवेग संरक्षण"
+  ],
+  "o_en": [
+   "Conservation of Charge",
+   "Conservation of Energy",
+   "Conservation of Mass",
+   "Conservation of Momentum"
+  ],
+  "a": 1,
+  "e_hi": "किरचॉफ का वोल्टेज नियम ऊर्जा के संरक्षण के सिद्धांत पर आधारित है, क्योंकि यह एक बंद लूप में विभव के योग के बारे में बताता है।",
+  "e_en": "Kirchhoff's Voltage Law is based on the principle of conservation of energy, as it relates to the sum of potentials in a closed loop."
+ },
+ {
+  "id": "rp-je_e-f01528",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल रैखिक परिपथ को किस रूप में सरल किया जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, how can a complex linear circuit be simplified?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और एक समानांतर प्रतिरोध",
+   "एक धारा स्रोत और एक श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और एक श्रेणी प्रतिरोध",
+   "दो वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "A voltage source and a parallel resistor",
+   "A current source and a series resistor",
+   "A voltage source and a series resistor",
+   "Two voltage sources"
+  ],
+  "a": 2,
+  "e_hi": "थवेनिन प्रमेय के अनुसार, किसी भी रैखिक परिपथ को एक वोल्टेज स्रोत (Vth) और उसके साथ श्रेणी में जुड़े एक प्रतिरोध (Rth) द्वारा प्रतिस्थापित किया जा सकता है।",
+  "e_en": "According to Thevenin's theorem, any linear circuit can be replaced by a voltage source (Vth) in series with a resistor (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01529",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "विद्युत परिपथ में 'नोडल विश्लेषण' (Nodal Analysis) किस नियम का उपयोग करता है?",
+  "q_en": "Which law is primarily used in Nodal Analysis of an electrical circuit?",
+  "o_hi": [
+   "किरचॉफ का वोल्टेज नियम (KVL)",
+   "किरचॉफ का धारा नियम (KCL)",
+   "ओम का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law (KVL)",
+   "Kirchhoff's Current Law (KCL)",
+   "Ohm's Law",
+   "Lenz's Law"
+  ],
+  "a": 1,
+  "e_hi": "नोडल विश्लेषण परिपथ में नोड्स पर धाराओं के योग के लिए किरचॉफ के धारा नियम (KCL) का उपयोग करता है।",
+  "e_en": "Nodal analysis utilizes Kirchhoff's Current Law (KCL) to sum currents at nodes within a circuit."
+ },
+ {
+  "id": "rp-je_e-f01530",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किस वैज्ञानिक ने 'विद्युत प्रतिरोध' के संबंध में प्रसिद्ध नियम दिया था जिसे 'ओम का नियम' कहा जाता है?",
+  "q_en": "Which scientist proposed the famous law regarding electrical resistance known as 'Ohm's Law'?",
+  "o_hi": [
+   "गुस्ताव किरचॉफ",
+   "जॉर्ज साइमन ओम",
+   "आंद्रे-मैरी एम्पीयर",
+   "जेम्स क्लर्क मैक्सवेल"
+  ],
+  "o_en": [
+   "Gustav Kirchhoff",
+   "Georg Simon Ohm",
+   "André-Marie Ampère",
+   "James Clerk Maxwell"
+  ],
+  "a": 1,
+  "e_hi": "जॉर्ज साइमन ओम ने 1827 में ओम के नियम का प्रतिपादन किया था, जो वोल्टेज, धारा और प्रतिरोध के बीच संबंध बताता है।",
+  "e_en": "Georg Simon Ohm formulated Ohm's Law in 1827, which defines the relationship between voltage, current, and resistance."
+ },
+ {
+  "id": "rp-je_e-f01531",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) के अनुसार, एक रैखिक परिपथ को किस रूप में बदला जा सकता है?",
+  "q_en": "According to Norton's Theorem, a linear circuit can be converted into which equivalent form?",
+  "o_hi": [
+   "एक धारा स्रोत और समानांतर प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणी प्रतिरोध",
+   "दो धारा स्रोत",
+   "एक वोल्टेज स्रोत और समानांतर प्रतिरोध"
+  ],
+  "o_en": [
+   "A current source and parallel resistor",
+   "A voltage source and series resistor",
+   "Two current sources",
+   "A voltage source and parallel resistor"
+  ],
+  "a": 0,
+  "e_hi": "नॉर्टन प्रमेय के अनुसार, एक जटिल नेटवर्क को एक धारा स्रोत (In) और उसके साथ समानांतर में जुड़े प्रतिरोध (Rn) के रूप में सरल किया जा सकता है।",
+  "e_en": "Norton's theorem states that a complex network can be simplified into a current source (In) in parallel with a resistor (Rn)."
+ },
+ {
+  "id": "rp-je_e-f01532",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "मिलमैन का प्रमेय (Millman's Theorem) मुख्य रूप से किसके गणना में सहायक है?",
+  "q_en": "Millman's Theorem is primarily useful for calculating what?",
+  "o_hi": [
+   "किसी नोड पर वोल्टेज",
+   "कुल शक्ति व्यय",
+   "सर्किट में धारा का मान",
+   "प्रेरकत्व का मान"
+  ],
+  "o_en": [
+   "Voltage at a node",
+   "Total power dissipation",
+   "Current value in circuit",
+   "Inductance value"
+  ],
+  "a": 0,
+  "e_hi": "मिलमैन का प्रमेय समानांतर में जुड़े कई वोल्टेज स्रोतों वाले परिपथ में नोड वोल्टेज ज्ञात करने के लिए उपयोग किया जाता है।",
+  "e_en": "Millman's theorem is used to find the node voltage in a circuit containing multiple voltage sources in parallel."
+ },
+ {
+  "id": "rp-je_e-f01533",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "टेलेगन का प्रमेय (Tellegen's Theorem) किस पर लागू होता है?",
+  "q_en": "Tellegen's Theorem is applicable to which of the following?",
+  "o_hi": [
+   "केवल रैखिक परिपथ",
+   "केवल अरेखीय परिपथ",
+   "किसी भी प्रकार के लम्पड (Lumped) परिपथ",
+   "केवल निष्क्रिय परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits only",
+   "Non-linear circuits only",
+   "Any type of lumped circuits",
+   "Passive circuits only"
+  ],
+  "a": 2,
+  "e_hi": "टेलेगन का प्रमेय किसी भी लम्पड परिपथ पर लागू होता है, चाहे वह रैखिक, अरेखीय, सक्रिय या निष्क्रिय हो।",
+  "e_en": "Tellegen's theorem applies to any lumped circuit, regardless of whether it is linear, non-linear, active, or passive."
+ },
+ {
+  "id": "rp-je_e-f01534",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "पारस्परिकता प्रमेय (Reciprocity Theorem) के अनुसार, यदि वोल्टेज स्रोत और एमीटर को आपस में बदल दिया जाए, तो क्या होगा?",
+  "q_en": "According to the Reciprocity Theorem, what happens if the voltage source and the ammeter are interchanged?",
+  "o_hi": [
+   "धारा का मान बदल जाएगा",
+   "धारा का मान वही रहेगा",
+   "परिपथ जल जाएगा",
+   "प्रतिरोध शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "Current value will change",
+   "Current value will remain the same",
+   "Circuit will burn",
+   "Resistance will become zero"
+  ],
+  "a": 1,
+  "e_hi": "पारस्परिकता प्रमेय के अनुसार, रैखिक नेटवर्क में स्रोत और प्रतिक्रिया की स्थिति बदलने पर भी धारा और वोल्टेज का अनुपात स्थिर रहता है।",
+  "e_en": "According to the Reciprocity theorem, the ratio of voltage to current remains constant even if the source and response positions are interchanged in a linear network."
+ },
+ {
+  "id": "rp-je_e-f01535",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक ऐसा परिपथ जो स्रोत के मान के आधार पर अपने आउटपुट को नियंत्रित करता है, उसे क्या कहा जाता है?",
+  "q_en": "What is a circuit called that controls its output based on the value of the source?",
+  "o_hi": [
+   "सक्रिय परिपथ",
+   "निष्क्रिय परिपथ",
+   "रैखिक परिपथ",
+   "द्विपक्षीय परिपथ"
+  ],
+  "o_en": [
+   "Active circuit",
+   "Passive circuit",
+   "Linear circuit",
+   "Bilateral circuit"
+  ],
+  "a": 0,
+  "e_hi": "सक्रिय परिपथ में ऊर्जा स्रोत होते हैं जो वोल्टेज या धारा को नियंत्रित कर सकते हैं।",
+  "e_en": "Active circuits contain energy sources that can control voltage or current."
+ },
+ {
+  "id": "rp-je_e-f01536",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ के अवयव का गुण धारा की दिशा बदलने पर नहीं बदलता है, तो उसे क्या कहते हैं?",
+  "q_en": "If the property of a circuit element does not change when the direction of current is reversed, what is it called?",
+  "o_hi": [
+   "अदिश",
+   "एकदिश",
+   "द्विपक्षीय",
+   "अरेखीय"
+  ],
+  "o_en": [
+   "Scalar",
+   "Unilateral",
+   "Bilateral",
+   "Non-linear"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिरोधक जैसे द्विपक्षीय अवयव धारा की दिशा बदलने पर समान व्यवहार करते हैं।",
+  "e_en": "Bilateral elements like resistors behave the same regardless of current direction."
+ },
+ {
+  "id": "rp-je_e-f01537",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "इनमें से कौन सा एक 'पैसिव' (निष्क्रिय) घटक है?",
+  "q_en": "Which of the following is a 'passive' component?",
+  "o_hi": [
+   "ट्रांजिस्टर",
+   "ऑपरेशनल एम्पलीफायर",
+   "संधारित्र",
+   "वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "Transistor",
+   "Operational amplifier",
+   "Capacitor",
+   "Voltage source"
+  ],
+  "a": 2,
+  "e_hi": "संधारित्र (कैपेसिटर) ऊर्जा को संचित करता है लेकिन उसे उत्पन्न या प्रवर्धित नहीं कर सकता।",
+  "e_en": "A capacitor stores energy but cannot generate or amplify it."
+ },
+ {
+  "id": "rp-je_e-f01538",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "वह परिपथ जिसमें वोल्टेज और धारा के बीच का संबंध रैखिक (linear) नहीं होता, उसे क्या कहते हैं?",
+  "q_en": "What is a circuit called where the relationship between voltage and current is not linear?",
+  "o_hi": [
+   "रैखिक परिपथ",
+   "अरेखीय परिपथ",
+   "समय-अपरिवर्तनीय परिपथ",
+   "वितरित परिपथ"
+  ],
+  "o_en": [
+   "Linear circuit",
+   "Non-linear circuit",
+   "Time-invariant circuit",
+   "Distributed circuit"
+  ],
+  "a": 1,
+  "e_hi": "अरेखीय परिपथ में ओम का नियम लागू नहीं होता, जैसे कि डायोड में।",
+  "e_en": "Non-linear circuits do not follow Ohm's law, such as those involving diodes."
+ },
+ {
+  "id": "rp-je_e-f01539",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "समय के साथ बदलने वाले मापदंडों वाले परिपथ को किस श्रेणी में रखा जाता है?",
+  "q_en": "In which category is a circuit with parameters that change over time placed?",
+  "o_hi": [
+   "समय-अपरिवर्तनीय",
+   "समय-परिवर्तनीय",
+   "स्थिर परिपथ",
+   "लंपड परिपथ"
+  ],
+  "o_en": [
+   "Time-invariant",
+   "Time-variant",
+   "Static circuit",
+   "Lumped circuit"
+  ],
+  "a": 1,
+  "e_hi": "यदि परिपथ के घटक समय के साथ परिवर्तित होते हैं, तो इसे समय-परिवर्तनीय कहा जाता है।",
+  "e_en": "If circuit parameters change with time, it is referred to as time-variant."
+ },
+ {
+  "id": "rp-je_e-f01540",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक 'लंपड' (Lumped) परिपथ की मुख्य विशेषता क्या है?",
+  "q_en": "What is the main characteristic of a 'lumped' circuit?",
+  "o_hi": [
+   "घटक बिखरे हुए होते हैं",
+   "घटक भौतिक रूप से छोटे होते हैं",
+   "तरंग दैर्ध्य बहुत लंबी होती है",
+   "ऊर्जा का क्षय नहीं होता"
+  ],
+  "o_en": [
+   "Components are scattered",
+   "Components are physically small",
+   "Wavelength is very long",
+   "No energy loss"
+  ],
+  "a": 1,
+  "e_hi": "लंपड परिपथ में घटकों का आकार तरंग दैर्ध्य की तुलना में नगण्य माना जाता है।",
+  "e_en": "In lumped circuits, the size of components is considered negligible compared to the wavelength."
+ },
+ {
+  "id": "rp-je_e-f01541",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "डायोड किस प्रकार के परिपथ अवयव का उदाहरण है?",
+  "q_en": "The diode is an example of which type of circuit element?",
+  "o_hi": [
+   "द्विपक्षीय",
+   "एकदिश",
+   "रेखीय",
+   "सक्रिय"
+  ],
+  "o_en": [
+   "Bilateral",
+   "Unilateral",
+   "Linear",
+   "Active"
+  ],
+  "a": 1,
+  "e_hi": "डायोड केवल एक दिशा में धारा प्रवाहित होने देता है, इसलिए यह एकदिश (unilateral) है।",
+  "e_en": "A diode allows current to flow in only one direction, making it unilateral."
+ },
+ {
+  "id": "rp-je_e-f01542",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "वह परिपथ जिसमें ऊर्जा का भंडारण या क्षय नहीं होता, उसे क्या कहते हैं?",
+  "q_en": "What is a circuit called that does not store or dissipate energy?",
+  "o_hi": [
+   "आदर्श परिपथ",
+   "प्रतिरोधी परिपथ",
+   "प्रतिक्रियाशील परिपथ",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Ideal circuit",
+   "Resistive circuit",
+   "Reactive circuit",
+   "None of these"
+  ],
+  "a": 3,
+  "e_hi": "वास्तविक परिपथ में हमेशा कुछ न कुछ ऊर्जा का क्षय (प्रतिरोध) या भंडारण (प्रेरक/संधारित्र) होता है।",
+  "e_en": "In reality, every circuit has some energy dissipation (resistance) or storage (inductor/capacitor)."
+ },
+ {
+  "id": "rp-je_e-f01543",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "आदर्श वोल्टेज स्रोत और आदर्श धारा स्रोत के आंतरिक प्रतिरोध का सही संयोजन क्या है?",
+  "q_en": "What is the correct combination of the internal resistance of an ideal voltage source and an ideal current source?",
+  "o_hi": [
+   "शून्य और अनंत",
+   "अनंत और शून्य",
+   "शून्य और शून्य",
+   "अनंत और अनंत"
+  ],
+  "o_en": [
+   "Zero and Infinite",
+   "Infinite and Zero",
+   "Zero and Zero",
+   "Infinite and Infinite"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श वोल्टेज स्रोत का आंतरिक प्रतिरोध शून्य होता है, जबकि आदर्श धारा स्रोत का आंतरिक प्रतिरोध अनंत होता है।",
+  "e_en": "An ideal voltage source has zero internal resistance, whereas an ideal current source has infinite internal resistance."
+ },
+ {
+  "id": "rp-je_e-f01544",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा परिपथ घटक ऊर्जा को अवशोषित करने के बजाय केवल संचित (store) करता है?",
+  "q_en": "Which of the following circuit elements only stores energy instead of dissipating it?",
+  "o_hi": [
+   "प्रतिरोधक",
+   "संधारित्र",
+   "ट्रांजिस्टर",
+   "डायोड"
+  ],
+  "o_en": [
+   "Resistor",
+   "Capacitor",
+   "Transistor",
+   "Diode"
+  ],
+  "a": 1,
+  "e_hi": "संधारित्र (Capacitor) और प्रेरक (Inductor) ऊर्जा संचित करते हैं, जबकि प्रतिरोधक ऊर्जा का क्षय करते हैं।",
+  "e_en": "Capacitors and inductors store energy, whereas resistors dissipate energy as heat."
+ },
+ {
+  "id": "rp-je_e-f01545",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थवेनिन प्रमेय (Thevenin's Theorem) और नॉर्टन प्रमेय (Norton's Theorem) के बीच संबंध के बारे में क्या सत्य है?",
+  "q_en": "What is true about the relationship between Thevenin's Theorem and Norton's Theorem?",
+  "o_hi": [
+   "नॉर्टन धारा, थवेनिन वोल्टेज और प्रतिरोध का अनुपात है",
+   "थवेनिन वोल्टेज, नॉर्टन धारा और प्रतिरोध का गुणनफल है",
+   "दोनों प्रमेय केवल रैखिक परिपथों के लिए लागू नहीं हैं",
+   "दोनों में आंतरिक प्रतिरोध अलग होता है"
+  ],
+  "o_en": [
+   "Norton current is the ratio of Thevenin voltage and resistance",
+   "Thevenin voltage is the product of Norton current and resistance",
+   "Both theorems are not applicable to linear circuits",
+   "Both have different internal resistances"
+  ],
+  "a": 1,
+  "e_hi": "थवेनिन वोल्टेज (Vth) = नॉर्टन धारा (I_n) × नॉर्टन प्रतिरोध (Rn), जहाँ Rn और Rth समान होते हैं।",
+  "e_en": "Thevenin voltage (Vth) is the product of Norton current (In) and Norton resistance (Rn), where Rn equals Rth."
+ },
+ {
+  "id": "rp-je_e-f01546",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) का उपयोग करने के लिए परिपथ का कैसा होना आवश्यक है?",
+  "q_en": "What is the requirement for a circuit to use the Superposition Theorem?",
+  "o_hi": [
+   "केवल रैखिक (Linear)",
+   "केवल गैर-रैखिक (Non-linear)",
+   "केवल अ-द्विपक्षीय (Non-bilateral)",
+   "केवल सक्रिय (Active)"
+  ],
+  "o_en": [
+   "Linear only",
+   "Non-linear only",
+   "Non-bilateral only",
+   "Active only"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक परिपथों पर लागू होता है जिनमें एक से अधिक स्वतंत्र स्रोत होते हैं।",
+  "e_en": "The superposition theorem is only applicable to linear circuits containing more than one independent source."
+ },
+ {
+  "id": "rp-je_e-f01547",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "किसी श्रेणी R-L-C परिपथ में अनुनाद (Resonance) की स्थिति में, निम्नलिखित में से कौन सा कथन सही है?",
+  "q_en": "In a series R-L-C circuit at resonance, which of the following statements is correct?",
+  "o_hi": [
+   "प्रतिबाधा अधिकतम होती है",
+   "धारा न्यूनतम होती है",
+   "शक्ति कारक (Power factor) इकाई होता है",
+   "प्रेरक प्रतिघात संधारित्र प्रतिघात से अधिक होता है"
+  ],
+  "o_en": [
+   "Impedance is maximum",
+   "Current is minimum",
+   "Power factor is unity",
+   "Inductive reactance is greater than capacitive reactance"
+  ],
+  "a": 2,
+  "e_hi": "अनुनाद पर, प्रेरक प्रतिघात (XL) और संधारित्र प्रतिघात (XC) बराबर होते हैं, जिससे परिपथ शुद्ध प्रतिरोधी बन जाता है।",
+  "e_en": "At resonance, inductive reactance (XL) equals capacitive reactance (XC), making the circuit purely resistive with unity power factor."
+ },
+ {
+  "id": "rp-je_e-f01548",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "मैश विश्लेषण (Mesh Analysis) मुख्य रूप से किस नियम पर आधारित है?",
+  "q_en": "Mesh analysis is primarily based on which law?",
+  "o_hi": [
+   "किरचॉफ का धारा नियम (KCL)",
+   "किरचॉफ का वोल्टेज नियम (KVL)",
+   "ओम का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Current Law (KCL)",
+   "Kirchhoff's Voltage Law (KVL)",
+   "Ohm's Law",
+   "Lenz's Law"
+  ],
+  "a": 1,
+  "e_hi": "मैश विश्लेषण बंद लूपों में वोल्टेज के योग पर आधारित होता है, जो किरचॉफ का वोल्टेज नियम है।",
+  "e_en": "Mesh analysis is based on the summation of voltages around closed loops, which is Kirchhoff's Voltage Law."
+ },
+ {
+  "id": "rp-je_e-f01549",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "नोडल विश्लेषण (Nodal Analysis) के लिए कौन सा नियम सबसे उपयुक्त है?",
+  "q_en": "Which law is most suitable for Nodal Analysis?",
+  "o_hi": [
+   "किरचॉफ का वोल्टेज नियम",
+   "किरचॉफ का धारा नियम",
+   "फैराडे का नियम",
+   "मैक्सवेल का समीकरण"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law",
+   "Kirchhoff's Current Law",
+   "Faraday's Law",
+   "Maxwell's Equation"
+  ],
+  "a": 1,
+  "e_hi": "नोडल विश्लेषण नोड्स पर धाराओं के बीजगणितीय योग पर आधारित है, जो किरचॉफ का धारा नियम है।",
+  "e_en": "Nodal analysis is based on the algebraic sum of currents at a node, which is Kirchhoff's Current Law."
+ },
+ {
+  "id": "rp-je_e-f01550",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 'सक्रिय' (Active) घटक और 'निष्क्रिय' (Passive) घटक के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the main difference between an 'active' component and a 'passive' component?",
+  "o_hi": [
+   "सक्रिय घटक ऊर्जा प्रदान करते हैं, निष्क्रिय नहीं",
+   "निष्क्रिय घटक ऊर्जा प्रदान करते हैं, सक्रिय नहीं",
+   "सक्रिय घटक केवल प्रतिरोध दिखाते हैं",
+   "निष्क्रिय घटक प्रवर्धन (Amplification) करते हैं"
+  ],
+  "o_en": [
+   "Active components provide energy, passive do not",
+   "Passive components provide energy, active do not",
+   "Active components only show resistance",
+   "Passive components perform amplification"
+  ],
+  "a": 0,
+  "e_hi": "सक्रिय घटक जैसे ट्रांजिस्टर ऊर्जा उत्पन्न या प्रवर्धित कर सकते हैं, जबकि निष्क्रिय घटक ऊर्जा का उपयोग या भंडारण करते हैं।",
+  "e_en": "Active components like transistors can generate or amplify energy, whereas passive components consume or store energy."
+ },
+ {
+  "id": "rp-je_e-f01551",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "अधिकतम शक्ति स्थानांतरण प्रमेय (Maximum Power Transfer Theorem) के अनुसार, स्रोत का आंतरिक प्रतिरोध किसके बराबर होना चाहिए?",
+  "q_en": "According to the Maximum Power Transfer Theorem, the internal resistance of the source should be equal to what?",
+  "o_hi": [
+   "लोड प्रतिरोध के",
+   "लोड प्रतिबाधा के",
+   "शून्य के",
+   "अनंत के"
+  ],
+  "o_en": [
+   "Load resistance",
+   "Load impedance",
+   "Zero",
+   "Infinite"
+  ],
+  "a": 1,
+  "e_hi": "अधिकतम शक्ति स्थानांतरण के लिए, लोड प्रतिबाधा को स्रोत की प्रतिबाधा के सम्मिश्र संयुग्मी (complex conjugate) के बराबर होना चाहिए।",
+  "e_en": "For maximum power transfer, the load impedance must be equal to the complex conjugate of the source impedance."
+ },
+ {
+  "id": "rp-je_e-f01552",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "द्विपक्षीय (Bilateral) परिपथ का क्या अर्थ है?",
+  "q_en": "What does a 'bilateral' circuit mean?",
+  "o_hi": [
+   "धारा दोनों दिशाओं में समान रूप से प्रवाहित हो सकती है",
+   "धारा केवल एक दिशा में बहती है",
+   "परिपथ में कोई प्रतिरोध नहीं है",
+   "परिपथ रैखिक नहीं है"
+  ],
+  "o_en": [
+   "Current can flow equally in both directions",
+   "Current flows only in one direction",
+   "Circuit has no resistance",
+   "Circuit is non-linear"
+  ],
+  "a": 0,
+  "e_hi": "एक द्विपक्षीय परिपथ वह है जिसमें वोल्टेज और धारा का संबंध दिशा बदलने पर भी नहीं बदलता (जैसे प्रतिरोधक)।",
+  "e_en": "A bilateral circuit is one where the relationship between voltage and current remains the same regardless of direction (e.g., resistors)."
+ },
+ {
+  "id": "rp-je_e-f01553",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि एक परिपथ में 5 ओम के तीन प्रतिरोधक श्रेणीक्रम में जुड़े हैं, तो कुल प्रतिरोध क्या होगा?",
+  "q_en": "If three 5-ohm resistors are connected in series in a circuit, what will be the total resistance?",
+  "o_hi": [
+   "5 ओम",
+   "10 ओम",
+   "15 ओम",
+   "20 ओम"
+  ],
+  "o_en": [
+   "5 ohms",
+   "10 ohms",
+   "15 ohms",
+   "20 ohms"
+  ],
+  "a": 2,
+  "e_hi": "श्रेणीक्रम में कुल प्रतिरोध सभी प्रतिरोधों का योग होता है, अर्थात 5 + 5 + 5 = 15 ओम।",
+  "e_en": "In series connection, total resistance is the sum of all resistances, i.e., 5 + 5 + 5 = 15 ohms."
+ },
+ {
+  "id": "rp-je_e-f01554",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक 10 वोल्ट के स्रोत से जुड़े 2 ओम के प्रतिरोधक में प्रवाहित धारा का मान क्या होगा?",
+  "q_en": "What will be the value of current flowing through a 2-ohm resistor connected to a 10-volt source?",
+  "o_hi": [
+   "5 एम्पीयर",
+   "20 एम्पीयर",
+   "8 एम्पीयर",
+   "0.2 एम्पीयर"
+  ],
+  "o_en": [
+   "5 Amperes",
+   "20 Amperes",
+   "8 Amperes",
+   "0.2 Amperes"
+  ],
+  "a": 0,
+  "e_hi": "ओम के नियम (I = V/R) के अनुसार, 10 वोल्ट / 2 ओम = 5 एम्पीयर।",
+  "e_en": "According to Ohm's Law (I = V/R), 10 volts / 2 ohms = 5 Amperes."
+ },
+ {
+  "id": "rp-je_e-f01555",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "समानांतर क्रम में जुड़े 6 ओम और 3 ओम के दो प्रतिरोधकों का समतुल्य प्रतिरोध ज्ञात कीजिए।",
+  "q_en": "Find the equivalent resistance of two resistors of 6 ohms and 3 ohms connected in parallel.",
+  "o_hi": [
+   "9 ओम",
+   "2 ओम",
+   "4.5 ओम",
+   "18 ओम"
+  ],
+  "o_en": [
+   "9 ohms",
+   "2 ohms",
+   "4.5 ohms",
+   "18 ohms"
+  ],
+  "a": 1,
+  "e_hi": "समानांतर सूत्र (R1*R2)/(R1+R2) का उपयोग करने पर: (6*3)/(6+3) = 18/9 = 2 ओम।",
+  "e_en": "Using the parallel formula (R1*R2)/(R1+R2): (6*3)/(6+3) = 18/9 = 2 ohms."
+ },
+ {
+  "id": "rp-je_e-f01556",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक परिपथ में 100 वाट का बल्ब 200 वोल्ट की आपूर्ति पर कार्य करता है। बल्ब का प्रतिरोध क्या होगा?",
+  "q_en": "A 100-watt bulb operates at a 200-volt supply in a circuit. What will be the resistance of the bulb?",
+  "o_hi": [
+   "200 ओम",
+   "400 ओम",
+   "100 ओम",
+   "50 ओम"
+  ],
+  "o_en": [
+   "200 ohms",
+   "400 ohms",
+   "100 ohms",
+   "50 ohms"
+  ],
+  "a": 1,
+  "e_hi": "शक्ति का सूत्र P = V²/R है, इसलिए R = V²/P = (200*200)/100 = 400 ओम।",
+  "e_en": "The power formula is P = V²/R, therefore R = V²/P = (200*200)/100 = 400 ohms."
+ },
+ {
+  "id": "rp-je_e-f01557",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि एक संधारित्र (कैपेसिटर) की धारिता 10 माइक्रो-फैराड है और इसे 50 वोल्ट पर आवेशित किया जाता है, तो संचित आवेश कितना होगा?",
+  "q_en": "If a capacitor has a capacitance of 10 micro-farads and is charged to 50 volts, what will be the stored charge?",
+  "o_hi": [
+   "500 माइक्रो-कूलम्ब",
+   "5 माइक्रो-कूलम्ब",
+   "0.5 माइक्रो-कूलम्ब",
+   "5000 माइक्रो-कूलम्ब"
+  ],
+  "o_en": [
+   "500 micro-coulombs",
+   "5 micro-coulombs",
+   "0.5 micro-coulombs",
+   "5000 micro-coulombs"
+  ],
+  "a": 0,
+  "e_hi": "आवेश का सूत्र Q = C * V है। 10 * 50 = 500 माइक्रो-कूलम्ब।",
+  "e_en": "The formula for charge is Q = C * V. 10 * 50 = 500 micro-coulombs."
+ },
+ {
+  "id": "rp-je_e-f01558",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 5 हेनरी के प्रेरक (इंडक्टर) में धारा 2 एम्पीयर प्रति सेकंड की दर से बदल रही है। प्रेरित ईएमएफ (EMF) क्या होगा?",
+  "q_en": "Current in a 5-henry inductor is changing at a rate of 2 amperes per second. What will be the induced EMF?",
+  "o_hi": [
+   "2.5 वोल्ट",
+   "7 वोल्ट",
+   "10 वोल्ट",
+   "0.4 वोल्ट"
+  ],
+  "o_en": [
+   "2.5 volts",
+   "7 volts",
+   "10 volts",
+   "0.4 volts"
+  ],
+  "a": 2,
+  "e_hi": "प्रेरित ईएमएफ का सूत्र e = L * (di/dt) है। 5 * 2 = 10 वोल्ट।",
+  "e_en": "The formula for induced EMF is e = L * (di/dt). 5 * 2 = 10 volts."
+ },
+ {
+  "id": "rp-je_e-f01559",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक आरएलसी (RLC) श्रेणी परिपथ में अनुनाद (रेजोनेंस) की स्थिति में, यदि प्रेरकत्व 1 मिली-हेनरी और धारिता 1 माइक्रो-फैराड है, तो अनुनादी आवृत्ति लगभग क्या होगी?",
+  "q_en": "In an RLC series circuit at resonance, if inductance is 1 mH and capacitance is 1 uF, what will be the approximate resonant frequency?",
+  "o_hi": [
+   "5033 हर्ट्ज",
+   "159 हर्ट्ज",
+   "1000 हर्ट्ज",
+   "314 हर्ट्ज"
+  ],
+  "o_en": [
+   "5033 Hz",
+   "159 Hz",
+   "1000 Hz",
+   "314 Hz"
+  ],
+  "a": 0,
+  "e_hi": "f = 1 / (2 * pi * sqrt(L*C)) का उपयोग करें। गणना करने पर परिणाम लगभग 5033 हर्ट्ज आता है।",
+  "e_en": "Use f = 1 / (2 * pi * sqrt(L*C)). Upon calculation, the result is approximately 5033 Hz."
+ },
+ {
+  "id": "rp-je_e-f01560",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि एक 3-चरण स्टार-कनेक्टेड सिस्टम में लाइन वोल्टेज 400 वोल्ट है, तो फेज वोल्टेज क्या होगा?",
+  "q_en": "If the line voltage in a 3-phase star-connected system is 400 volts, what will be the phase voltage?",
+  "o_hi": [
+   "400 वोल्ट",
+   "692 वोल्ट",
+   "231 वोल्ट",
+   "115 वोल्ट"
+  ],
+  "o_en": [
+   "400 volts",
+   "692 volts",
+   "231 volts",
+   "115 volts"
+  ],
+  "a": 2,
+  "e_hi": "स्टार कनेक्शन में, फेज वोल्टेज = लाइन वोल्टेज / वर्गमूल 3 होता है। 400 / 1.732 = 231 वोल्ट।",
+  "e_en": "In star connection, phase voltage = line voltage / sqrt(3). 400 / 1.732 = 231 volts."
+ },
+ {
+  "id": "rp-je_e-f01561",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक परिपथ में 4 ओम का वास्तविक प्रतिरोध और 3 ओम का प्रेरणिक प्रतिघात (इंडक्टिव रिएक्टेंस) श्रेणी में है। परिपथ का कुल प्रतिबाधा (इम्पीडेंस) क्या है?",
+  "q_en": "A circuit has a 4-ohm real resistance and a 3-ohm inductive reactance in series. What is the total impedance of the circuit?",
+  "o_hi": [
+   "7 ओम",
+   "1 ओम",
+   "5 ओम",
+   "12 ओम"
+  ],
+  "o_en": [
+   "7 ohms",
+   "1 ohm",
+   "5 ohms",
+   "12 ohms"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिबाधा Z = sqrt(R² + X²) है। sqrt(4² + 3²) = sqrt(16 + 9) = 5 ओम।",
+  "e_en": "Impedance Z = sqrt(R² + X²). sqrt(4² + 3²) = sqrt(16 + 9) = 5 ohms."
+ },
+ {
+  "id": "rp-je_e-f01562",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "दो प्रतिरोधक R1 (10 ओम) और R2 (20 ओम) समानांतर में जुड़े हैं। यदि कुल धारा 3 एम्पीयर है, तो R1 से प्रवाहित होने वाली धारा क्या होगी?",
+  "q_en": "Two resistors R1 (10 ohms) and R2 (20 ohms) are connected in parallel. If the total current is 3 Amperes, what will be the current flowing through R1?",
+  "o_hi": [
+   "1 एम्पीयर",
+   "2 एम्पीयर",
+   "1.5 एम्पीयर",
+   "0.5 एम्पीयर"
+  ],
+  "o_en": [
+   "1 Ampere",
+   "2 Amperes",
+   "1.5 Amperes",
+   "0.5 Amperes"
+  ],
+  "a": 1,
+  "e_hi": "करंट डिवाइडर नियम के अनुसार, I1 = I * (R2 / (R1 + R2)) = 3 * (20 / 30) = 2 एम्पीयर।",
+  "e_en": "According to the current divider rule, I1 = I * (R2 / (R1 + R2)) = 3 * (20 / 30) = 2 Amperes."
+ },
+ {
+  "id": "rp-je_e-f01563",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थेवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल नेटवर्क को किसमें बदला जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex network can be reduced to which equivalent?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और समांतर प्रतिरोध",
+   "दो वोल्टेज स्रोत और एक प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणीक्रम में एक प्रतिरोध",
+   "एक धारा स्रोत और श्रेणीक्रम में एक प्रतिरोध"
+  ],
+  "o_en": [
+   "A voltage source and a parallel resistor",
+   "Two voltage sources and one resistor",
+   "A voltage source and a series resistor",
+   "A current source and a series resistor"
+  ],
+  "a": 2,
+  "e_hi": "थेवेनिन प्रमेय के अनुसार, किसी भी रैखिक परिपथ को एक वोल्टेज स्रोत (Vth) और उसके साथ श्रेणीक्रम में जुड़े एक प्रतिरोध (Rth) से बदला जा सकता है।",
+  "e_en": "Thevenin's Theorem states that any linear circuit can be replaced by an equivalent circuit consisting of a voltage source (Vth) in series with a resistor (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01564",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "शुद्ध प्रेरक (Pure Inductor) में औसत शक्ति खपत कितनी होती है?",
+  "q_en": "What is the average power consumption in a pure inductor?",
+  "o_hi": [
+   "शून्य",
+   "अधिकतम",
+   "असीमित",
+   "पावर फैक्टर के बराबर"
+  ],
+  "o_en": [
+   "Zero",
+   "Maximum",
+   "Unlimited",
+   "Equal to power factor"
+  ],
+  "a": 0,
+  "e_hi": "एक शुद्ध प्रेरक में धारा और वोल्टेज के बीच 90 डिग्री का कला अंतर होता है, जिससे औसत शक्ति शून्य हो जाती है।",
+  "e_en": "In a pure inductor, there is a 90-degree phase shift between current and voltage, resulting in zero average power consumption."
+ },
+ {
+  "id": "rp-je_e-f01565",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) का उपयोग किसके समतुल्य परिपथ बनाने के लिए किया जाता है?",
+  "q_en": "Norton's Theorem is used to create an equivalent circuit consisting of what?",
+  "o_hi": [
+   "एक धारा स्रोत और समांतर प्रतिरोध",
+   "एक वोल्टेज स्रोत और श्रेणीक्रम प्रतिरोध",
+   "केवल एक संधारित्र",
+   "एक वोल्टेज स्रोत और समांतर प्रतिरोध"
+  ],
+  "o_en": [
+   "A current source and a parallel resistor",
+   "A voltage source and a series resistor",
+   "Only a capacitor",
+   "A voltage source and a parallel resistor"
+  ],
+  "a": 0,
+  "e_hi": "नॉर्टन प्रमेय के अनुसार, एक रैखिक परिपथ को एक धारा स्रोत (In) और उसके साथ समांतर में जुड़े एक प्रतिरोध (Rn) से बदला जा सकता है।",
+  "e_en": "Norton's Theorem states that a linear circuit can be replaced by an equivalent circuit consisting of a current source (In) in parallel with a resistor (Rn)."
+ },
+ {
+  "id": "rp-je_e-f01566",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) केवल किस प्रकार के परिपथों पर लागू होता है?",
+  "q_en": "The Superposition Theorem is applicable only to which type of circuits?",
+  "o_hi": [
+   "रैखिक परिपथ (Linear)",
+   "अरेखीय परिपथ (Non-linear)",
+   "केवल ए.सी. परिपथ",
+   "केवल डी.सी. परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits",
+   "Non-linear circuits",
+   "AC circuits only",
+   "DC circuits only"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक परिपथों के लिए मान्य है जहाँ वोल्टेज और धारा के बीच का संबंध रैखिक होता है।",
+  "e_en": "The Superposition Theorem is valid only for linear circuits where the relationship between voltage and current is linear."
+ },
+ {
+  "id": "rp-je_e-f01567",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "किसी परिपथ में 'नोड' किसे कहते हैं?",
+  "q_en": "What is defined as a 'node' in a circuit?",
+  "o_hi": [
+   "दो या दो से अधिक तत्वों का मिलन बिंदु",
+   "केवल एक प्रतिरोध का सिरा",
+   "परिपथ का बंद लूप",
+   "वोल्टेज स्रोत का टर्मिनल"
+  ],
+  "o_en": [
+   "A junction point of two or more elements",
+   "Only the end of a resistor",
+   "A closed loop of a circuit",
+   "Terminal of a voltage source"
+  ],
+  "a": 0,
+  "e_hi": "एक नोड परिपथ का वह बिंदु है जहाँ दो या दो से अधिक परिपथ घटक आपस में मिलते हैं।",
+  "e_en": "A node is a point in a circuit where two or more circuit components join together."
+ },
+ {
+  "id": "rp-je_e-f01568",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "अधिकतम शक्ति स्थानांतरण प्रमेय (Maximum Power Transfer Theorem) के अनुसार, लोड प्रतिरोध का मान किसके बराबर होना चाहिए?",
+  "q_en": "According to the Maximum Power Transfer Theorem, the load resistance should be equal to what?",
+  "o_hi": [
+   "स्रोत के आंतरिक प्रतिरोध के",
+   "स्रोत के वोल्टेज के",
+   "परिपथ के कुल वोल्टेज के",
+   "शून्य के"
+  ],
+  "o_en": [
+   "Source internal resistance",
+   "Source voltage",
+   "Total circuit voltage",
+   "Zero"
+  ],
+  "a": 0,
+  "e_hi": "अधिकतम शक्ति स्थानांतरण के लिए, लोड प्रतिरोध का मान स्रोत के थेवेनिन प्रतिरोध (आंतरिक प्रतिरोध) के बराबर होना चाहिए।",
+  "e_en": "For maximum power transfer, the load resistance must be equal to the Thevenin resistance (internal resistance) of the source."
+ },
+ {
+  "id": "rp-je_e-f01569",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "मिलर प्रमेय (Miller Theorem) मुख्य रूप से किस प्रकार के परिपथों के विश्लेषण में सहायक है?",
+  "q_en": "Miller Theorem is primarily useful in the analysis of which type of circuits?",
+  "o_hi": [
+   "फीडबैक वाले परिपथ",
+   "शुद्ध प्रतिरोधक परिपथ",
+   "केवल डी.सी. परिपथ",
+   "चुंबकीय परिपथ"
+  ],
+  "o_en": [
+   "Circuits with feedback",
+   "Pure resistive circuits",
+   "DC circuits only",
+   "Magnetic circuits"
+  ],
+  "a": 0,
+  "e_hi": "मिलर प्रमेय का उपयोग फीडबैक परिपथों में प्रतिबाधा (impedance) को सरल बनाने के लिए किया जाता है, विशेष रूप से एम्पलीफायर विश्लेषण में।",
+  "e_en": "Miller Theorem is used to simplify impedance in feedback circuits, which is particularly useful in amplifier analysis."
  }
 ]
