@@ -32911,5 +32911,1454 @@
   "a": 2,
   "e_hi": "शून्य प्रकार के उपकरणों में, मापी जाने वाली मात्रा को ज्ञात मात्रा के विरुद्ध संतुलित किया जाता है, जैसे पोटेंशियोमीटर।",
   "e_en": "In null-type instruments, the quantity to be measured is balanced against a known quantity, such as in a potentiometer."
+ },
+ {
+  "id": "rp-je_e-f01432",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक चल-लौह (Moving Iron) उपकरण का उपयोग करते समय, यदि आप इसे डीसी (DC) परिपथ में माप के लिए उपयोग करते हैं, तो क्या होगा?",
+  "q_en": "When using a Moving Iron (MI) instrument for measurement in a DC circuit, what will be the effect?",
+  "o_hi": [
+   "यह केवल एसी के लिए काम करेगा",
+   "यह डीसी के लिए भी काम करेगा",
+   "उपकरण जल जाएगा",
+   "कोई विक्षेप नहीं होगा"
+  ],
+  "o_en": [
+   "It will work only for AC",
+   "It will work for DC as well",
+   "The instrument will burn out",
+   "There will be no deflection"
+  ],
+  "a": 1,
+  "e_hi": "चल-लौह उपकरण धारा के चुंबकीय प्रभाव पर आधारित होते हैं, जो डीसी और एसी दोनों के लिए समान रूप से कार्य करते हैं।",
+  "e_en": "Moving iron instruments operate on the magnetic effect of current, which functions identically for both AC and DC."
+ },
+ {
+  "id": "rp-je_e-f01433",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक वोल्टमीटर की रेंज बढ़ाने के लिए, श्रेणी (series) में कौन सा घटक जोड़ा जाना चाहिए?",
+  "q_en": "To extend the range of a voltmeter, which component must be connected in series?",
+  "o_hi": [
+   "निम्न मान का प्रतिरोध (Low resistance)",
+   "उच्च मान का प्रतिरोध (High resistance)",
+   "कैपेसिटर",
+   "इंडक्टर"
+  ],
+  "o_en": [
+   "Low resistance",
+   "High resistance",
+   "Capacitor",
+   "Inductor"
+  ],
+  "a": 1,
+  "e_hi": "वोल्टमीटर की सीमा बढ़ाने के लिए श्रेणी में एक उच्च मान का प्रतिरोध, जिसे मल्टीप्लायर कहते हैं, जोड़ा जाता है।",
+  "e_en": "A high value resistor, known as a multiplier, is connected in series to increase the range of a voltmeter."
+ },
+ {
+  "id": "rp-je_e-f01434",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "मेगर (Megger) का उपयोग मुख्य रूप से किस परीक्षण के लिए किया जाता है?",
+  "q_en": "What is a Megger primarily used for testing?",
+  "o_hi": [
+   "उच्च धारा",
+   "निम्न वोल्टेज",
+   "इन्सुलेशन प्रतिरोध",
+   "आवृत्ति"
+  ],
+  "o_en": [
+   "High current",
+   "Low voltage",
+   "Insulation resistance",
+   "Frequency"
+  ],
+  "a": 2,
+  "e_hi": "मेगर का उपयोग केबल और विद्युत मशीनों के इन्सुलेशन प्रतिरोध को मापने के लिए किया जाता है।",
+  "e_en": "A Megger is specifically designed to measure high values of insulation resistance in cables and electrical machines."
+ },
+ {
+  "id": "rp-je_e-f01435",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक वाटमीटर की रीडिंग में 'क्रिपिंग' (Creeping) त्रुटि को कम करने के लिए डिस्क में क्या किया जाता है?",
+  "q_en": "What is done to the disc to reduce 'creeping' error in a wattmeter reading?",
+  "o_hi": [
+   "दो छेद किए जाते हैं",
+   "डिस्क को भारी बनाया जाता है",
+   "चुंबक हटा दिया जाता है",
+   "वोल्टेज बढ़ाया जाता है"
+  ],
+  "o_en": [
+   "Two holes are drilled",
+   "The disc is made heavier",
+   "The magnet is removed",
+   "Voltage is increased"
+  ],
+  "a": 0,
+  "e_hi": "एनर्जी मीटर में क्रिपिंग को रोकने के लिए डिस्क के विपरीत किनारों पर दो छेद किए जाते हैं ताकि डिस्क रुक जाए।",
+  "e_en": "Two diametrically opposite holes are drilled in the disc of an energy meter to prevent rotation when no load is present."
+ },
+ {
+  "id": "rp-je_e-f01436",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "यदि एक एमीटर का शंट प्रतिरोध (shunt resistance) बहुत कम हो जाए, तो मीटर पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the shunt resistance of an ammeter becomes extremely low, what will be the effect on the meter?",
+  "o_hi": [
+   "मीटर की रेंज बढ़ जाएगी",
+   "मीटर जल जाएगा",
+   "सटीकता बढ़ जाएगी",
+   "कोई बदलाव नहीं होगा"
+  ],
+  "o_en": [
+   "The meter range will increase",
+   "The meter will burn out",
+   "Accuracy will increase",
+   "No change"
+  ],
+  "a": 0,
+  "e_hi": "शंट प्रतिरोध का मान कम होने से मुख्य धारा का अधिक हिस्सा शंट से होकर जाता है, जिससे मीटर की सीमा बढ़ जाती है।",
+  "e_en": "Reducing the shunt resistance allows more current to bypass the meter, thereby increasing its measurement range."
+ },
+ {
+  "id": "rp-je_e-f01437",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "केल्विन डबल ब्रिज का उपयोग सबसे सटीक रूप से किसे मापने के लिए किया जाता है?",
+  "q_en": "Kelvin double bridge is most accurately used to measure which of the following?",
+  "o_hi": [
+   "उच्च प्रतिरोध",
+   "बहुत कम प्रतिरोध",
+   "मध्यम प्रतिरोध",
+   "प्रेरकत्व"
+  ],
+  "o_en": [
+   "High resistance",
+   "Very low resistance",
+   "Medium resistance",
+   "Inductance"
+  ],
+  "a": 1,
+  "e_hi": "केल्विन डबल ब्रिज का डिज़ाइन विशेष रूप से बहुत कम प्रतिरोध (जैसे 1 ओम से कम) को सटीक रूप से मापने के लिए किया गया है।",
+  "e_en": "The Kelvin double bridge is specifically designed to accurately measure very low resistance values, typically below 1 ohm."
+ },
+ {
+  "id": "rp-je_e-f01438",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "सीआरओ (CRO) में 'टाइम बेस' का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of the 'time base' in a CRO?",
+  "o_hi": [
+   "वोल्टेज मापना",
+   "समय के साथ बीम को क्षैतिज रूप से हटाना",
+   "आवृत्ति को नियंत्रित करना",
+   "बीम की चमक बढ़ाना"
+  ],
+  "o_en": [
+   "Measuring voltage",
+   "Moving the beam horizontally with time",
+   "Controlling frequency",
+   "Increasing beam brightness"
+  ],
+  "a": 1,
+  "e_hi": "टाइम बेस जनरेटर इलेक्ट्रॉन बीम को स्क्रीन पर बाएं से दाएं एक स्थिर दर पर ले जाता है, जिससे तरंग रूप (waveform) दिखाई देता है।",
+  "e_en": "The time base generator moves the electron beam horizontally across the screen at a constant rate to display the waveform against time."
+ },
+ {
+  "id": "rp-je_e-f01439",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक मल्टीमीटर में डीसी वोल्टेज मापने के दौरान यदि टर्मिनल उल्टे लगा दिए जाएं, तो क्या होगा?",
+  "q_en": "What happens if terminals are reversed while measuring DC voltage with a multimeter?",
+  "o_hi": [
+   "मीटर जल जाएगा",
+   "रीडिंग शून्य आएगी",
+   "पॉइंटर विपरीत दिशा में विक्षेपित होगा",
+   "कोई त्रुटि नहीं होगी"
+  ],
+  "o_en": [
+   "The meter will burn out",
+   "Reading will be zero",
+   "The pointer will deflect in the opposite direction",
+   "No error will occur"
+  ],
+  "a": 2,
+  "e_hi": "एनालॉग मल्टीमीटर में डीसी ध्रुवीयता के प्रति संवेदनशील होते हैं, इसलिए विपरीत कनेक्शन से सुई पीछे की ओर मुड़ती है।",
+  "e_en": "Analog multimeters are polarity sensitive; reversing the leads causes the pointer to deflect backward against the stop."
+ },
+ {
+  "id": "rp-je_e-f01440",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "इंडक्शन प्रकार के वाटमीटर का उपयोग किस आपूर्ति पर किया जा सकता है?",
+  "q_en": "Induction type wattmeters can be used for which supply?",
+  "o_hi": [
+   "केवल डीसी",
+   "केवल एसी",
+   "एसी और डीसी दोनों",
+   "उच्च आवृत्ति एसी"
+  ],
+  "o_en": [
+   "DC only",
+   "AC only",
+   "Both AC and DC",
+   "High frequency AC"
+  ],
+  "a": 1,
+  "e_hi": "इंडक्शन प्रकार के मीटर केवल एसी पर कार्य करते हैं क्योंकि उन्हें काम करने के लिए चुंबकीय क्षेत्र में परिवर्तन की आवश्यकता होती है।",
+  "e_en": "Induction type instruments rely on the interaction of alternating magnetic fields and thus only operate on AC supplies."
+ },
+ {
+  "id": "rp-je_e-f01441",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "यदि एक वाटमीटर की प्रेशर कॉइल (Pressure Coil) का प्रतिरोध बहुत अधिक है, तो मीटर की सटीकता पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the resistance of a wattmeter's pressure coil is extremely high, how will it affect the meter's accuracy?",
+  "o_hi": [
+   "सटीकता कम होगी",
+   "सटीकता बढ़ेगी",
+   "कोई प्रभाव नहीं पड़ेगा",
+   "मीटर काम करना बंद कर देगा"
+  ],
+  "o_en": [
+   "Accuracy will decrease",
+   "Accuracy will increase",
+   "No effect",
+   "Meter will stop working"
+  ],
+  "a": 1,
+  "e_hi": "प्रेशर कॉइल का प्रतिरोध जितना अधिक होगा, वह परिपथ से उतनी ही कम धारा लेगी, जिससे मापन में त्रुटि कम होगी।",
+  "e_en": "A higher resistance in the pressure coil reduces the current drawn from the circuit, thereby minimizing measurement error."
+ },
+ {
+  "id": "rp-je_e-f01442",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "चल-लौह (Moving Iron) उपकरणों में विक्षेपण टॉर्क किसके समानुपाती होता है?",
+  "q_en": "In Moving Iron instruments, the deflecting torque is proportional to:",
+  "o_hi": [
+   "धारा के वर्ग के",
+   "धारा के",
+   "वोल्टेज के वर्ग के",
+   "आवृत्ति के"
+  ],
+  "o_en": [
+   "Square of the current",
+   "Current",
+   "Square of the voltage",
+   "Frequency"
+  ],
+  "a": 0,
+  "e_hi": "चल-लौह उपकरणों में टॉर्क धारा के वर्ग के समानुपाती होता है, इसलिए वे AC और DC दोनों के लिए उपयुक्त हैं।",
+  "e_en": "In moving iron instruments, the torque is proportional to the square of the current, making them suitable for both AC and DC measurements."
+ },
+ {
+  "id": "rp-je_e-f01443",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "विद्युत मापन उपकरणों में नियंत्रण स्प्रिंग के लिए किस सामग्री का उपयोग किया जाता है?",
+  "q_en": "Which material is used for the control springs in electrical measuring instruments?",
+  "o_hi": [
+   "तांबा",
+   "एल्यूमीनियम",
+   "फॉस्फर ब्रोंज",
+   "स्टील"
+  ],
+  "o_en": [
+   "Copper",
+   "Aluminum",
+   "Phosphor Bronze",
+   "Steel"
+  ],
+  "a": 2,
+  "e_hi": "फॉस्फर ब्रोंज का उपयोग इसके उच्च स्थायित्व और कम हिस्टैरिसीस गुणों के कारण किया जाता है।",
+  "e_en": "Phosphor bronze is used due to its high durability, low hysteresis, and good mechanical properties."
+ },
+ {
+  "id": "rp-je_e-f01444",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "एक वोल्टमीटर की संवेदनशीलता (Sensitivity) की इकाई क्या है?",
+  "q_en": "What is the unit of sensitivity for a voltmeter?",
+  "o_hi": [
+   "ओहम",
+   "वोल्ट/ओहम",
+   "ओहम/वोल्ट",
+   "एम्पीयर/वोल्ट"
+  ],
+  "o_en": [
+   "Ohms",
+   "Volts/Ohm",
+   "Ohms/Volt",
+   "Amperes/Volt"
+  ],
+  "a": 2,
+  "e_hi": "वोल्टमीटर की संवेदनशीलता को ओहम प्रति वोल्ट में मापा जाता है।",
+  "e_en": "Sensitivity of a voltmeter is defined as the resistance per unit of full-scale voltage, measured in Ohms/Volt."
+ },
+ {
+  "id": "rp-je_e-f01445",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "किस प्रकार के उपकरण केवल DC मापन के लिए उपयोग किए जाते हैं?",
+  "q_en": "Which type of instrument is used only for DC measurements?",
+  "o_hi": [
+   "मूविंग कॉइल (PMMC)",
+   "मूविंग आयरन",
+   "इलेक्ट्रोडायनामोमीटर",
+   "हॉट वायर"
+  ],
+  "o_en": [
+   "Moving Coil (PMMC)",
+   "Moving Iron",
+   "Electrodynamometer",
+   "Hot Wire"
+  ],
+  "a": 0,
+  "e_hi": "स्थायी चुंबक मूविंग कॉइल (PMMC) उपकरण केवल DC पर कार्य करते हैं क्योंकि उनकी ध्रुवीयता स्थिर होती है।",
+  "e_en": "Permanent Magnet Moving Coil (PMMC) instruments operate only on DC because the direction of torque depends on current polarity."
+ },
+ {
+  "id": "rp-je_e-f01446",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "इंडक्शन टाइप ऊर्जा मीटर में 'क्रीपिंग' दोष को कैसे रोका जा सकता है?",
+  "q_en": "How can the 'creeping' error in an induction-type energy meter be prevented?",
+  "o_hi": [
+   "डिस्क में छोटे छेद करके",
+   "डिस्क का वजन बढ़ाकर",
+   "वोल्टेज कम करके",
+   "चुंबक हटाकर"
+  ],
+  "o_en": [
+   "By drilling small holes in the disc",
+   "By increasing disc weight",
+   "By reducing voltage",
+   "By removing the magnet"
+  ],
+  "a": 0,
+  "e_hi": "डिस्क के विपरीत सिरों पर दो छोटे छेद करने से क्रीपिंग (बिना लोड के डिस्क का घूमना) रुक जाता है।",
+  "e_en": "Creeping, the slow rotation of the disc without load, is prevented by drilling two diametrically opposite holes in the disc."
+ },
+ {
+  "id": "rp-je_e-f01447",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "एंडरसन ब्रिज का उपयोग किसके मापन के लिए किया जाता है?",
+  "q_en": "Anderson bridge is used for the measurement of which parameter?",
+  "o_hi": [
+   "कैपेसिटेंस",
+   "इंडक्टेंस",
+   "फ्रीक्वेंसी",
+   "म्यूचुअल इंडक्टेंस"
+  ],
+  "o_en": [
+   "Capacitance",
+   "Inductance",
+   "Frequency",
+   "Mutual Inductance"
+  ],
+  "a": 1,
+  "e_hi": "एंडरसन ब्रिज का उपयोग स्व-प्रेरकत्व (Self-inductance) को सटीक रूप से मापने के लिए किया जाता है।",
+  "e_en": "The Anderson bridge is a modified version of the Maxwell bridge used for precise measurement of self-inductance."
+ },
+ {
+  "id": "rp-je_e-f01448",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "कैथोड रे ऑसिलोस्कोप (CRO) में इलेक्ट्रॉन बीम को विक्षेपित करने के लिए क्या उपयोग किया जाता है?",
+  "q_en": "What is used to deflect the electron beam in a Cathode Ray Oscilloscope (CRO)?",
+  "o_hi": [
+   "चुंबकीय क्षेत्र",
+   "विद्युत क्षेत्र",
+   "मैकेनिकल लीवर",
+   "थर्मल प्रभाव"
+  ],
+  "o_en": [
+   "Magnetic field",
+   "Electric field",
+   "Mechanical lever",
+   "Thermal effect"
+  ],
+  "a": 1,
+  "e_hi": "CRO में इलेक्ट्रॉन बीम को विक्षेपित करने के लिए इलेक्ट्रोस्टैटिक डिफ्लेक्शन (विद्युत क्षेत्र) का उपयोग होता है।",
+  "e_en": "In a standard CRO, electrostatic deflection plates are used to control the path of the electron beam."
+ },
+ {
+  "id": "rp-je_e-f01449",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "वाटमीटर किस सिद्धांत पर कार्य करता है?",
+  "q_en": "On what principle does a wattmeter operate?",
+  "o_hi": [
+   "फैराडे का नियम",
+   "इलेक्ट्रोडायनामोमीटर सिद्धांत",
+   "ओम का नियम",
+   "लेनज़ का नियम"
+  ],
+  "o_en": [
+   "Faraday's law",
+   "Electrodynamometer principle",
+   "Ohm's law",
+   "Lenz's law"
+  ],
+  "a": 1,
+  "e_hi": "वाटमीटर इलेक्ट्रोडायनामोमीटर सिद्धांत पर कार्य करता है, जिसमें एक स्थिर और एक गतिशील कॉइल होती है।",
+  "e_en": "A wattmeter operates on the electrodynamometer principle, utilizing fixed and moving coils to measure real power."
+ },
+ {
+  "id": "rp-je_e-f01450",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एनालॉग उपकरणों में 'डैम्पिंग टॉर्क' (Damping Torque) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of 'Damping Torque' in analog instruments?",
+  "o_hi": [
+   "पॉइंटर को शून्य पर लाना",
+   "दोलनों को समाप्त करना",
+   "पॉइंटर को आगे बढ़ाना",
+   "घर्षण कम करना"
+  ],
+  "o_en": [
+   "Bringing the pointer to zero",
+   "Eliminating oscillations",
+   "Advancing the pointer",
+   "Reducing friction"
+  ],
+  "a": 1,
+  "e_hi": "डैम्पिंग टॉर्क पॉइंटर के दोलनों को कम करके उसे जल्दी से स्थिर मान पर लाता है।",
+  "e_en": "Damping torque reduces the oscillations of the pointer and brings it to a steady state quickly."
+ },
+ {
+  "id": "rp-je_e-f01451",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "मापन प्रणाली में 'हिस्टेरेसिस' (Hysteresis) त्रुटि का क्या कारण है?",
+  "q_en": "What causes the 'Hysteresis' error in a measurement system?",
+  "o_hi": [
+   "तापमान में परिवर्तन",
+   "यांत्रिक घर्षण और चुंबकीय गुण",
+   "रीडिंग लेने में देरी",
+   "अस्थिर वोल्टेज"
+  ],
+  "o_en": [
+   "Temperature changes",
+   "Mechanical friction and magnetic properties",
+   "Delay in taking readings",
+   "Unstable voltage"
+  ],
+  "a": 1,
+  "e_hi": "हिस्टेरेसिस तब होता है जब इनपुट को बढ़ाने या घटाने पर आउटपुट अलग-अलग मान देता है।",
+  "e_en": "Hysteresis occurs when the output differs depending on whether the input is increasing or decreasing."
+ },
+ {
+  "id": "rp-je_e-f01452",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "एक उपकरण की 'सेंसिटिविटी' (Sensitivity) को कैसे परिभाषित किया जाता है?",
+  "q_en": "How is the 'Sensitivity' of an instrument defined?",
+  "o_hi": [
+   "आउटपुट में परिवर्तन का इनपुट में परिवर्तन से अनुपात",
+   "इनपुट का आउटपुट से गुणनफल",
+   "कुल मापन सीमा",
+   "उपकरण का वजन"
+  ],
+  "o_en": [
+   "Ratio of change in output to change in input",
+   "Product of input and output",
+   "Total measurement range",
+   "Weight of the instrument"
+  ],
+  "a": 0,
+  "e_hi": "सेंसिटिविटी मापती है कि इनपुट में थोड़ा सा बदलाव करने पर आउटपुट में कितना बदलाव आता है।",
+  "e_en": "Sensitivity measures how much the output changes in response to a small change in input."
+ },
+ {
+  "id": "rp-je_e-f01453",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "स्थिर त्रुटि (Static Error) का क्या अर्थ है?",
+  "q_en": "What is meant by 'Static Error'?",
+  "o_hi": [
+   "मापे गए मान और वास्तविक मान के बीच का अंतर",
+   "उपकरण की खराबी",
+   "पर्यावरण का प्रभाव",
+   "समय के साथ मान में बदलाव"
+  ],
+  "o_en": [
+   "Difference between measured and true value",
+   "Instrument malfunction",
+   "Environmental effect",
+   "Change in value over time"
+  ],
+  "a": 0,
+  "e_hi": "स्थिर त्रुटि किसी मापन के दौरान मापे गए मान और वास्तविक मान का अंतर होती है।",
+  "e_en": "Static error is the difference between the measured value and the true value during a measurement."
+ },
+ {
+  "id": "rp-je_e-f01454",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "पी.एम.एम.सी (PMMC) उपकरण का उपयोग केवल किस धारा के लिए किया जा सकता है?",
+  "q_en": "For which current can a PMMC instrument be used?",
+  "o_hi": [
+   "केवल ए.सी.",
+   "केवल डी.सी.",
+   "ए.सी. और डी.सी. दोनों",
+   "उच्च आवृत्ति वाली धारा"
+  ],
+  "o_en": [
+   "Only AC",
+   "Only DC",
+   "Both AC and DC",
+   "High-frequency current"
+  ],
+  "a": 1,
+  "e_hi": "पी.एम.एम.सी उपकरण स्थायी चुंबक के सिद्धांत पर कार्य करते हैं, इसलिए ये केवल डी.सी. मापते हैं।",
+  "e_en": "PMMC instruments work on the principle of permanent magnets, hence they measure only DC."
+ },
+ {
+  "id": "rp-je_e-f01455",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "मापन उपकरण में 'स्केल का रैखिक होना' (Linear Scale) क्या दर्शाता है?",
+  "q_en": "What does a 'Linear Scale' in a measuring instrument indicate?",
+  "o_hi": [
+   "पॉइंटर का वक्र गति करना",
+   "आउटपुट इनपुट के समानुपाती होना",
+   "पैमाना गोलाकार होना",
+   "उपकरण का महंगा होना"
+  ],
+  "o_en": [
+   "Pointer moving in a curve",
+   "Output is proportional to input",
+   "Scale being circular",
+   "Instrument being expensive"
+  ],
+  "a": 1,
+  "e_hi": "रैखिक पैमाने में, इनपुट और आउटपुट के बीच का संबंध एक सीधी रेखा बनाता है।",
+  "e_en": "In a linear scale, the relationship between input and output forms a straight line."
+ },
+ {
+  "id": "rp-je_e-f01456",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 2,
+  "q_hi": "'प्रीसिजन' (Precision) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'Precision'?",
+  "o_hi": [
+   "सटीकता का स्तर",
+   "मानों की पुनरावृत्ति और निकटता",
+   "उपकरण की मजबूती",
+   "मापने की गति"
+  ],
+  "o_en": [
+   "Level of accuracy",
+   "Repeatability and closeness of values",
+   "Durability of instrument",
+   "Speed of measurement"
+  ],
+  "a": 1,
+  "e_hi": "प्रीसिजन का मतलब है कि बार-बार मापने पर मान एक-दूसरे के कितने करीब आते हैं।",
+  "e_en": "Precision refers to how close repeated measurements are to each other."
+ },
+ {
+  "id": "rp-je_e-f01457",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 3,
+  "q_hi": "इलेक्ट्रोडायनेमिक प्रकार के उपकरण किस सिद्धांत पर कार्य करते हैं?",
+  "q_en": "On what principle do electrodynamic type instruments work?",
+  "o_hi": [
+   "दो कॉइल्स के बीच बल",
+   "चुंबकीय आकर्षण",
+   "तापमान प्रभाव",
+   "स्थैतिक विद्युत"
+  ],
+  "o_en": [
+   "Force between two coils",
+   "Magnetic attraction",
+   "Temperature effect",
+   "Static electricity"
+  ],
+  "a": 0,
+  "e_hi": "ये उपकरण एक स्थिर और एक गतिशील कॉइल के बीच उत्पन्न बल के सिद्धांत पर काम करते हैं।",
+  "e_en": "These instruments operate on the principle of force generated between a fixed and a moving coil."
+ },
+ {
+  "id": "rp-je_e-f01458",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation",
+  "d": 1,
+  "q_hi": "मापन उपकरण में 'कैलिब्रेशन' (Calibration) क्यों आवश्यक है?",
+  "q_en": "Why is 'Calibration' necessary in a measuring instrument?",
+  "o_hi": [
+   "उपकरण को साफ करने के लिए",
+   "मानक के साथ तुलना करके सटीकता सुनिश्चित करने के लिए",
+   "उपकरण की उम्र बढ़ाने के लिए",
+   "उपकरण का रंग बदलने के लिए"
+  ],
+  "o_en": [
+   "To clean the instrument",
+   "To ensure accuracy by comparing with a standard",
+   "To increase the lifespan",
+   "To change the color of the instrument"
+  ],
+  "a": 1,
+  "e_hi": "कैलिब्रेशन यह सुनिश्चित करता है कि उपकरण सही और विश्वसनीय रीडिंग दे रहा है।",
+  "e_en": "Calibration ensures that the instrument is providing correct and reliable readings."
+ },
+ {
+  "id": "rp-je_e-f01459",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "आदर्श वोल्टेज स्रोत और आदर्श धारा स्रोत के आंतरिक प्रतिरोध का सही मान क्या है?",
+  "q_en": "What is the correct value of internal resistance for an ideal voltage source and an ideal current source, respectively?",
+  "o_hi": [
+   "शून्य और अनंत",
+   "अनंत और शून्य",
+   "शून्य और शून्य",
+   "अनंत और अनंत"
+  ],
+  "o_en": [
+   "Zero and Infinite",
+   "Infinite and Zero",
+   "Zero and Zero",
+   "Infinite and Infinite"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श वोल्टेज स्रोत का आंतरिक प्रतिरोध शून्य होता है, जबकि एक आदर्श धारा स्रोत का आंतरिक प्रतिरोध अनंत होता है।",
+  "e_en": "An ideal voltage source has zero internal resistance, whereas an ideal current source has infinite internal resistance."
+ },
+ {
+  "id": "rp-je_e-f01460",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा परिपथ घटक ऊर्जा को संचित (Store) करने में सक्षम है?",
+  "q_en": "Which of the following circuit elements is capable of storing energy?",
+  "o_hi": [
+   "केवल प्रतिरोधक",
+   "केवल संधारित्र",
+   "संधारित्र और प्रेरक",
+   "केवल आदर्श वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "Resistor only",
+   "Capacitor only",
+   "Capacitor and Inductor",
+   "Ideal voltage source only"
+  ],
+  "a": 2,
+  "e_hi": "संधारित्र विद्युत क्षेत्र के रूप में ऊर्जा संचित करता है और प्रेरक चुंबकीय क्षेत्र के रूप में ऊर्जा संचित करता है।",
+  "e_en": "Capacitors store energy in an electric field, and inductors store energy in a magnetic field."
+ },
+ {
+  "id": "rp-je_e-f01461",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थेवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक रैखिक द्वि-टर्मिनल नेटवर्क को किसमें बदला जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a linear two-terminal network can be replaced by which of the following?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और एक समानांतर प्रतिरोध",
+   "एक धारा स्रोत और एक श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और एक श्रेणी प्रतिरोध",
+   "एक धारा स्रोत और एक समानांतर धारा स्रोत"
+  ],
+  "o_en": [
+   "A voltage source and a parallel resistor",
+   "A current source and a series resistor",
+   "A voltage source and a series resistor",
+   "A current source and a parallel current source"
+  ],
+  "a": 2,
+  "e_hi": "थेवेनिन प्रमेय के अनुसार, किसी भी जटिल रैखिक परिपथ को एक वोल्टेज स्रोत और उसके साथ श्रेणीक्रम में जुड़े प्रतिरोध द्वारा दर्शाया जा सकता है।",
+  "e_en": "Thevenin's theorem states that any complex linear circuit can be represented by a single voltage source in series with a resistor."
+ },
+ {
+  "id": "rp-je_e-f01462",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोजिशन प्रमेय का उपयोग केवल किस प्रकार के परिपथों के लिए किया जा सकता है?",
+  "q_en": "Superposition theorem can be applied only to which type of circuits?",
+  "o_hi": [
+   "रैखिक (Linear) परिपथ",
+   "अरेखीय (Non-linear) परिपथ",
+   "समय-परिवर्तनीय परिपथ",
+   "उच्च आवृत्ति वाले परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits",
+   "Non-linear circuits",
+   "Time-varying circuits",
+   "High-frequency circuits"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक परिपथों पर लागू होता है क्योंकि यह प्रतिवर्तीता और योग के सिद्धांतों पर आधारित है।",
+  "e_en": "Superposition theorem is applicable only to linear circuits as it relies on the principles of additivity and homogeneity."
+ },
+ {
+  "id": "rp-je_e-f01463",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नोडल विश्लेषण (Nodal Analysis) मुख्य रूप से किस नियम पर आधारित है?",
+  "q_en": "Nodal analysis is primarily based on which law?",
+  "o_hi": [
+   "किरचॉफ का वोल्टेज नियम (KVL)",
+   "किरचॉफ का धारा नियम (KCL)",
+   "ओम का नियम",
+   "लेंज का नियम"
+  ],
+  "o_en": [
+   "Kirchhoff's Voltage Law (KVL)",
+   "Kirchhoff's Current Law (KCL)",
+   "Ohm's Law",
+   "Lenz's Law"
+  ],
+  "a": 1,
+  "e_hi": "नोडल विश्लेषण में हम नोड्स पर धाराओं का योग शून्य मानते हैं, जो किरचॉफ के धारा नियम का अनुप्रयोग है।",
+  "e_en": "Nodal analysis involves summing currents at nodes to zero, which is an application of Kirchhoff's Current Law."
+ },
+ {
+  "id": "rp-je_e-f01464",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "मैश विश्लेषण (Mesh Analysis) का उपयोग करते समय, हम मुख्य रूप से किस नियम का पालन करते हैं?",
+  "q_en": "When performing mesh analysis, which law do we primarily follow?",
+  "o_hi": [
+   "किरचॉफ का धारा नियम",
+   "किरचॉफ का वोल्टेज नियम",
+   "फैराडे का नियम",
+   "नॉर्टन का प्रमेय"
+  ],
+  "o_en": [
+   "Kirchhoff's Current Law",
+   "Kirchhoff's Voltage Law",
+   "Faraday's Law",
+   "Norton's Theorem"
+  ],
+  "a": 1,
+  "e_hi": "मैश विश्लेषण एक बंद लूप में वोल्टेज के बीजीय योग को शून्य के बराबर मानकर किया जाता है, जो KVL है।",
+  "e_en": "Mesh analysis is performed by setting the algebraic sum of voltages in a closed loop to zero, which is KVL."
+ },
+ {
+  "id": "rp-je_e-f01465",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "नॉर्टन प्रमेय (Norton's Theorem) के अनुसार, एक नेटवर्क को किसमें बदला जा सकता है?",
+  "q_en": "According to Norton's Theorem, a network can be replaced by which of the following?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और एक श्रेणी प्रतिरोध",
+   "एक धारा स्रोत और एक समानांतर प्रतिरोध",
+   "एक धारा स्रोत और एक श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और एक समानांतर प्रतिरोध"
+  ],
+  "o_en": [
+   "A voltage source and a series resistor",
+   "A current source and a parallel resistor",
+   "A current source and a series resistor",
+   "A voltage source and a parallel resistor"
+  ],
+  "a": 1,
+  "e_hi": "नॉर्टन प्रमेय थेवेनिन का दोहरा रूप है, जिसमें एक धारा स्रोत के साथ समानांतर में प्रतिरोध होता है।",
+  "e_en": "Norton's theorem is the dual of Thevenin's, consisting of a current source in parallel with a resistor."
+ },
+ {
+  "id": "rp-je_e-f01466",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "एक आदर्श परिपथ में, यदि किसी नोड पर तीन धाराएं आ रही हैं, तो किरचॉफ के धारा नियम (KCL) के अनुसार उनका योग क्या होगा?",
+  "q_en": "In an ideal circuit, if three currents are entering a node, what will be their sum according to Kirchhoff's Current Law (KCL)?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "धाराओं का गुणनफल",
+   "एक"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "Product of currents",
+   "One"
+  ],
+  "a": 0,
+  "e_hi": "KCL के अनुसार, किसी नोड पर मिलने वाली सभी धाराओं का बीजगणितीय योग शून्य होता है।",
+  "e_en": "According to KCL, the algebraic sum of all currents meeting at a node is zero."
+ },
+ {
+  "id": "rp-je_e-f01467",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "किस प्रकार के परिपथ में 'सक्रिय' (Active) तत्व मौजूद होते हैं?",
+  "q_en": "In which type of circuit are 'active' elements present?",
+  "o_hi": [
+   "सक्रिय परिपथ",
+   "निष्क्रिय परिपथ",
+   "प्रतिरोधक परिपथ",
+   "कैपेसिटिव परिपथ"
+  ],
+  "o_en": [
+   "Active circuit",
+   "Passive circuit",
+   "Resistive circuit",
+   "Capacitive circuit"
+  ],
+  "a": 0,
+  "e_hi": "सक्रिय परिपथ वे होते हैं जिनमें ऊर्जा उत्पन्न करने वाले स्रोत (जैसे ट्रांजिस्टर या वोल्टेज स्रोत) मौजूद होते हैं।",
+  "e_en": "Active circuits are those that contain energy-generating sources such as transistors or voltage sources."
+ },
+ {
+  "id": "rp-je_e-f01468",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक डीसी परिपथ में, यदि प्रतिरोध का मान आधा कर दिया जाए और वोल्टेज को दोगुना कर दिया जाए, तो धारा (करंट) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "In a DC circuit, if the resistance is halved and the voltage is doubled, what will be the effect on the current?",
+  "o_hi": [
+   "धारा चार गुना हो जाएगी",
+   "धारा समान रहेगी",
+   "धारा आधी हो जाएगी",
+   "धारा दोगुनी हो जाएगी"
+  ],
+  "o_en": [
+   "Current will become four times",
+   "Current will remain the same",
+   "Current will become half",
+   "Current will become double"
+  ],
+  "a": 0,
+  "e_hi": "ओम के नियम (I=V/R) के अनुसार, यदि V को 2V और R को R/2 किया जाए, तो नया करंट I' = 2V / (R/2) = 4(V/R) = 4I होगा।",
+  "e_en": "According to Ohm's Law (I=V/R), if V is doubled and R is halved, the new current I' = 2V / (R/2) = 4(V/R) = 4I."
+ },
+ {
+  "id": "rp-je_e-f01469",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक रेलवे सिग्नलिंग सिस्टम में, यदि दो 10 ओम के प्रतिरोध समानांतर (parallel) में जुड़े हैं, तो उनका कुल प्रभावी प्रतिरोध क्या होगा?",
+  "q_en": "In a railway signaling system, if two 10-ohm resistors are connected in parallel, what will be their total effective resistance?",
+  "o_hi": [
+   "20 ओम",
+   "10 ओम",
+   "5 ओम",
+   "2.5 ओम"
+  ],
+  "o_en": [
+   "20 ohms",
+   "10 ohms",
+   "5 ohms",
+   "2.5 ohms"
+  ],
+  "a": 2,
+  "e_hi": "समानांतर में जुड़े समान प्रतिरोधों के लिए, कुल प्रतिरोध R_eq = R/n होता है। यहाँ 10/2 = 5 ओम।",
+  "e_en": "For identical resistors in parallel, the total resistance is R_eq = R/n. Here, 10/2 = 5 ohms."
+ },
+ {
+  "id": "rp-je_e-f01470",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "किसी एसी परिपथ में शक्ति गुणांक (Power Factor) के इकाई (Unity) होने का क्या अर्थ है?",
+  "q_en": "What does it mean for the power factor to be unity in an AC circuit?",
+  "o_hi": [
+   "परिपथ पूरी तरह से प्रेरक (inductive) है",
+   "परिपथ पूरी तरह से प्रतिरोधी (resistive) है",
+   "परिपथ पूरी तरह से धारिता (capacitive) है",
+   "परिपथ में कोई धारा नहीं है"
+  ],
+  "o_en": [
+   "The circuit is purely inductive",
+   "The circuit is purely resistive",
+   "The circuit is purely capacitive",
+   "There is no current in the circuit"
+  ],
+  "a": 1,
+  "e_hi": "इकाई शक्ति गुणांक का अर्थ है कि वोल्टेज और धारा के बीच का कोण शून्य है, जो शुद्ध प्रतिरोधी भार (purely resistive load) को दर्शाता है।",
+  "e_en": "A unity power factor means the phase angle between voltage and current is zero, indicating a purely resistive load."
+ },
+ {
+  "id": "rp-je_e-f01471",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि एक परिपथ में वोल्टेज का स्रोत 230V है और कुल प्रतिरोध 46 ओम है, तो परिपथ में प्रवाहित होने वाली धारा का मान क्या होगा?",
+  "q_en": "If the voltage source in a circuit is 230V and the total resistance is 46 ohms, what will be the value of the current flowing through the circuit?",
+  "o_hi": [
+   "2 एम्पीयर",
+   "5 एम्पीयर",
+   "10 एम्पीयर",
+   "0.5 एम्पीयर"
+  ],
+  "o_en": [
+   "2 Amperes",
+   "5 Amperes",
+   "10 Amperes",
+   "0.5 Amperes"
+  ],
+  "a": 1,
+  "e_hi": "ओम के नियम का उपयोग करते हुए: I = V / R = 230 / 46 = 5 एम्पीयर।",
+  "e_en": "Using Ohm's Law: I = V / R = 230 / 46 = 5 Amperes."
+ },
+ {
+  "id": "rp-je_e-f01472",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थिवेनिन प्रमेय (Thevenin's Theorem) का मुख्य उपयोग किस उद्देश्य के लिए किया जाता है?",
+  "q_en": "What is the main purpose of using Thevenin's Theorem?",
+  "o_hi": [
+   "एक जटिल नेटवर्क को एक वोल्टेज स्रोत और श्रृंखला प्रतिरोध में सरल बनाने के लिए",
+   "परिपथ की कुल शक्ति मापने के लिए",
+   "केवल एसी परिपथों के लिए",
+   "प्रतिरोधों को श्रेणी में जोड़ने के लिए"
+  ],
+  "o_en": [
+   "To simplify a complex network into a voltage source and a series resistance",
+   "To measure the total power of a circuit",
+   "Only for AC circuits",
+   "To connect resistors in series"
+  ],
+  "a": 0,
+  "e_hi": "थिवेनिन प्रमेय जटिल रैखिक नेटवर्क को एक एकल वोल्टेज स्रोत (Vth) और एक एकल श्रृंखला प्रतिरोध (Rth) में कम करने में मदद करता है।",
+  "e_en": "Thevenin's theorem helps reduce complex linear networks into a single voltage source (Vth) and a single series resistance (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01473",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "यदि एक आरएलसी (RLC) श्रेणी परिपथ अनुनाद (resonance) की स्थिति में है, तो परिपथ का प्रतिबाधा (impedance) क्या होगा?",
+  "q_en": "If an RLC series circuit is in a state of resonance, what will be the impedance of the circuit?",
+  "o_hi": [
+   "अधिकतम (Maximum)",
+   "न्यूनतम (Minimum)",
+   "शून्य (Zero)",
+   "अनंत (Infinity)"
+  ],
+  "o_en": [
+   "Maximum",
+   "Minimum",
+   "Zero",
+   "Infinity"
+  ],
+  "a": 1,
+  "e_hi": "अनुनाद पर, प्रेरकत्व और धारिता का प्रतिघात एक-दूसरे को रद्द कर देते हैं, जिससे प्रतिबाधा केवल प्रतिरोध (R) के बराबर रह जाती है, जो कि न्यूनतम होती है।",
+  "e_en": "At resonance, inductive and capacitive reactances cancel each other out, leaving impedance equal to resistance (R), which is the minimum value."
+ },
+ {
+  "id": "rp-je_e-f01474",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक संधारित्र (Capacitor) डीसी परिपथ में किस तरह का व्यवहार प्रदर्शित करता है?",
+  "q_en": "How does a capacitor behave in a DC circuit?",
+  "o_hi": [
+   "एक शॉर्ट सर्किट की तरह",
+   "एक ओपन सर्किट की तरह",
+   "एक चर प्रतिरोध की तरह",
+   "एक वोल्टेज स्रोत की तरह"
+  ],
+  "o_en": [
+   "Like a short circuit",
+   "Like an open circuit",
+   "Like a variable resistor",
+   "Like a voltage source"
+  ],
+  "a": 1,
+  "e_hi": "स्थिर डीसी पर, संधारित्र पूरी तरह चार्ज हो जाता है और धारा का प्रवाह रोक देता है, इसलिए यह ओपन सर्किट जैसा कार्य करता है।",
+  "e_en": "At steady-state DC, a capacitor becomes fully charged and blocks current flow, thus acting as an open circuit."
+ },
+ {
+  "id": "rp-je_e-f01475",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "किसी सर्किट में 'सुपरपोजीशन प्रमेय' (Superposition Theorem) का उपयोग कब किया जा सकता है?",
+  "q_en": "When can the 'Superposition Theorem' be used in a circuit?",
+  "o_hi": [
+   "केवल गैर-रैखिक परिपथों के लिए",
+   "केवल रैखिक (linear) परिपथों के लिए",
+   "केवल एसी परिपथों के लिए",
+   "किसी भी प्रकार के परिपथ के लिए"
+  ],
+  "o_en": [
+   "Only for non-linear circuits",
+   "Only for linear circuits",
+   "Only for AC circuits",
+   "For any type of circuit"
+  ],
+  "a": 1,
+  "e_hi": "सुपरपोजीशन प्रमेय केवल रैखिक (linear) परिपथों पर लागू होता है जिनमें एक से अधिक स्वतंत्र स्रोत होते हैं।",
+  "e_en": "The superposition theorem is applicable only to linear circuits that contain more than one independent source."
+ },
+ {
+  "id": "rp-je_e-f01476",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "यदि किसी परिपथ में प्रतिरोध को दोगुना कर दिया जाए और वोल्टेज स्थिर रहे, तो धारा पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the resistance in a circuit is doubled while the voltage remains constant, what will be the effect on the current?",
+  "o_hi": [
+   "धारा दोगुनी हो जाएगी",
+   "धारा आधी हो जाएगी",
+   "धारा अपरिवर्तित रहेगी",
+   "धारा चार गुना हो जाएगी"
+  ],
+  "o_en": [
+   "Current will double",
+   "Current will be halved",
+   "Current will remain unchanged",
+   "Current will become four times"
+  ],
+  "a": 1,
+  "e_hi": "ओम के नियम (I=V/R) के अनुसार, धारा प्रतिरोध के व्युत्क्रमानुपाती होती है। इसलिए प्रतिरोध दोगुना करने पर धारा आधी हो जाती है।",
+  "e_en": "According to Ohm's Law (I=V/R), current is inversely proportional to resistance. Doubling the resistance results in the current being halved."
+ },
+ {
+  "id": "rp-je_e-f01477",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक श्रेणी परिपथ (series circuit) में यदि एक बल्ब फ्यूज हो जाता है, तो अन्य बल्बों का क्या होगा?",
+  "q_en": "In a series circuit, if one bulb blows out, what will happen to the other bulbs?",
+  "o_hi": [
+   "सभी बल्ब जलते रहेंगे",
+   "अन्य बल्ब अधिक चमकेंगे",
+   "सभी बल्ब बुझ जाएंगे",
+   "केवल निकटतम बल्ब बुझेगा"
+  ],
+  "o_en": [
+   "All bulbs will remain lit",
+   "Other bulbs will glow brighter",
+   "All bulbs will go out",
+   "Only the nearest bulb will go out"
+  ],
+  "a": 2,
+  "e_hi": "श्रेणी परिपथ में धारा के लिए केवल एक ही मार्ग होता है। एक बल्ब के फ्यूज होने पर परिपथ टूट जाता है, जिससे विद्युत प्रवाह रुक जाता है।",
+  "e_en": "A series circuit provides only one path for the current. When one bulb blows, the circuit is broken, stopping the flow of electricity to all bulbs."
+ },
+ {
+  "id": "rp-je_e-f01478",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक शुद्ध प्रेरक (pure inductor) में प्रत्यावर्ती धारा (AC) वोल्टेज से कितनी पीछे रहती है?",
+  "q_en": "In a pure inductor, by what angle does the alternating current (AC) lag behind the voltage?",
+  "o_hi": [
+   "90 डिग्री",
+   "45 डिग्री",
+   "0 डिग्री",
+   "180 डिग्री"
+  ],
+  "o_en": [
+   "90 degrees",
+   "45 degrees",
+   "0 degrees",
+   "180 degrees"
+  ],
+  "a": 0,
+  "e_hi": "शुद्ध प्रेरक में वोल्टेज धारा से 90 डिग्री आगे होता है, जिसका अर्थ है कि धारा वोल्टेज से 90 डिग्री पीछे रहती है।",
+  "e_en": "In a pure inductor, the voltage leads the current by 90 degrees, meaning the current lags behind the voltage by 90 degrees."
+ },
+ {
+  "id": "rp-je_e-f01479",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी समांतर परिपथ (parallel circuit) में एक अतिरिक्त शाखा जोड़ी जाती है, तो कुल प्रतिरोध पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If an additional branch is added to a parallel circuit, what will be the effect on the total resistance?",
+  "o_hi": [
+   "कुल प्रतिरोध बढ़ेगा",
+   "कुल प्रतिरोध घटेगा",
+   "कुल प्रतिरोध स्थिर रहेगा",
+   "कुल प्रतिरोध शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "Total resistance will increase",
+   "Total resistance will decrease",
+   "Total resistance will remain constant",
+   "Total resistance will become zero"
+  ],
+  "a": 1,
+  "e_hi": "समांतर परिपथ में अतिरिक्त शाखा जोड़ने से धारा के लिए एक और मार्ग मिल जाता है, जिससे परिपथ का कुल प्रभावी प्रतिरोध कम हो जाता है।",
+  "e_en": "Adding an extra branch in a parallel circuit provides an additional path for current, which decreases the total effective resistance of the circuit."
+ },
+ {
+  "id": "rp-je_e-f01480",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "सुपरपोजिशन प्रमेय (Superposition Theorem) का उपयोग करने के लिए परिपथ में क्या होना आवश्यक है?",
+  "q_en": "What is required in a circuit to apply the Superposition Theorem?",
+  "o_hi": [
+   "परिपथ रैखिक (linear) होना चाहिए",
+   "परिपथ केवल डीसी होना चाहिए",
+   "परिपथ में केवल एक स्रोत होना चाहिए",
+   "परिपथ में कोई प्रतिरोध नहीं होना चाहिए"
+  ],
+  "o_en": [
+   "Circuit must be linear",
+   "Circuit must be DC only",
+   "Circuit must contain only one source",
+   "Circuit must have no resistance"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन प्रमेय केवल रैखिक परिपथों पर लागू होता है जिनमें एक से अधिक स्वतंत्र स्रोत होते हैं।",
+  "e_en": "The Superposition Theorem is applicable only to linear circuits that contain more than one independent source."
+ },
+ {
+  "id": "rp-je_e-f01481",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "थवेनिन प्रमेय (Thevenin's Theorem) के अनुसार, एक जटिल नेटवर्क को किसमें बदला जा सकता है?",
+  "q_en": "According to Thevenin's Theorem, a complex network can be replaced by which of the following?",
+  "o_hi": [
+   "एक वोल्टेज स्रोत और एक समांतर प्रतिरोध",
+   "एक धारा स्रोत और एक श्रेणी प्रतिरोध",
+   "एक वोल्टेज स्रोत और एक श्रेणी प्रतिरोध",
+   "दो वोल्टेज स्रोत"
+  ],
+  "o_en": [
+   "A voltage source and a parallel resistance",
+   "A current source and a series resistance",
+   "A voltage source and a series resistance",
+   "Two voltage sources"
+  ],
+  "a": 2,
+  "e_hi": "थवेनिन प्रमेय के अनुसार, किसी भी रैखिक नेटवर्क को एक वोल्टेज स्रोत (Vth) और उसके साथ श्रेणी में जुड़े एक प्रतिरोध (Rth) द्वारा प्रतिस्थापित किया जा सकता है।",
+  "e_en": "Thevenin's Theorem states that any linear network can be replaced by an equivalent circuit consisting of a voltage source (Vth) in series with a resistance (Rth)."
+ },
+ {
+  "id": "rp-je_e-f01482",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि संधारित्र (capacitor) की प्लेटों के बीच की दूरी बढ़ाई जाती है, तो उसकी धारिता (capacitance) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the distance between the plates of a capacitor is increased, what will be the effect on its capacitance?",
+  "o_hi": [
+   "धारिता बढ़ जाएगी",
+   "धारिता घट जाएगी",
+   "धारिता अपरिवर्तित रहेगी",
+   "धारिता दोगुनी हो जाएगी"
+  ],
+  "o_en": [
+   "Capacitance will increase",
+   "Capacitance will decrease",
+   "Capacitance will remain unchanged",
+   "Capacitance will double"
+  ],
+  "a": 1,
+  "e_hi": "धारिता (C = εA/d) दूरी (d) के व्युत्क्रमानुपाती होती है, इसलिए दूरी बढ़ाने पर धारिता कम हो जाती है।",
+  "e_en": "Capacitance (C = εA/d) is inversely proportional to the distance (d) between the plates; thus, increasing the distance decreases the capacitance."
+ },
+ {
+  "id": "rp-je_e-f01483",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "उच्च आवृत्ति (high frequency) पर, एक आदर्श संधारित्र (ideal capacitor) कैसा व्यवहार करता है?",
+  "q_en": "At high frequency, how does an ideal capacitor behave?",
+  "o_hi": [
+   "खुले परिपथ की तरह",
+   "लघु परिपथ (short circuit) की तरह",
+   "शुद्ध प्रतिरोध की तरह",
+   "अत्यधिक उच्च प्रतिबाधा की तरह"
+  ],
+  "o_en": [
+   "Like an open circuit",
+   "Like a short circuit",
+   "Like a pure resistor",
+   "Like a very high impedance"
+  ],
+  "a": 1,
+  "e_hi": "संधारित्र का प्रतिघात (Xc = 1/2πfC) आवृत्ति के साथ घटता है। बहुत उच्च आवृत्ति पर, प्रतिघात शून्य के करीब हो जाता है, जिससे यह शॉर्ट सर्किट जैसा व्यवहार करता है।",
+  "e_en": "Capacitive reactance (Xc = 1/2πfC) decreases as frequency increases. At very high frequencies, the reactance approaches zero, behaving like a short circuit."
+ },
+ {
+  "id": "rp-je_e-f01484",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "मैक्सिमम पावर ट्रांसफर प्रमेय (Maximum Power Transfer Theorem) के अनुसार, लोड को अधिकतम शक्ति कब स्थानांतरित होती है?",
+  "q_en": "According to the Maximum Power Transfer Theorem, when is maximum power transferred to the load?",
+  "o_hi": [
+   "जब लोड प्रतिरोध स्रोत प्रतिरोध के बराबर हो",
+   "जब लोड प्रतिरोध स्रोत प्रतिरोध से अधिक हो",
+   "जब लोड प्रतिरोध शून्य हो",
+   "जब लोड प्रतिरोध अनंत हो"
+  ],
+  "o_en": [
+   "When load resistance equals source resistance",
+   "When load resistance is greater than source resistance",
+   "When load resistance is zero",
+   "When load resistance is infinite"
+  ],
+  "a": 0,
+  "e_hi": "अधिकतम शक्ति स्थानांतरण तब होता है जब लोड का प्रतिरोध (RL) स्रोत के आंतरिक प्रतिरोध (Rs) के बराबर होता है।",
+  "e_en": "Maximum power transfer occurs when the load resistance (RL) is equal to the internal source resistance (Rs)."
+ },
+ {
+  "id": "rp-je_e-f01485",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "एक परिपथ जिसमें अवयवों का मान समय के साथ नहीं बदलता है, उसे क्या कहा जाता है?",
+  "q_en": "A circuit in which the values of the components do not change with time is classified as?",
+  "o_hi": [
+   "समय-परिवर्तनीय",
+   "रैखिक",
+   "समय-अपरिवर्तनीय",
+   "सक्रिय"
+  ],
+  "o_en": [
+   "Time-variant",
+   "Linear",
+   "Time-invariant",
+   "Active"
+  ],
+  "a": 2,
+  "e_hi": "जिन परिपथों के पैरामीटर समय के साथ स्थिर रहते हैं, उन्हें समय-अपरिवर्तनीय (Time-invariant) परिपथ कहा जाता है।",
+  "e_en": "Circuits whose parameters remain constant over time are classified as time-invariant circuits."
+ },
+ {
+  "id": "rp-je_e-f01486",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "वोल्टेज स्रोत जो लोड की परवाह किए बिना टर्मिनल पर एक निश्चित वोल्टेज प्रदान करता है, उसे क्या कहते हैं?",
+  "q_en": "A voltage source that provides a fixed voltage at the terminals regardless of the load is classified as?",
+  "o_hi": [
+   "आदर्श वोल्टेज स्रोत",
+   "वास्तविक वोल्टेज स्रोत",
+   "आदर्श धारा स्रोत",
+   "निर्भर स्रोत"
+  ],
+  "o_en": [
+   "Ideal voltage source",
+   "Practical voltage source",
+   "Ideal current source",
+   "Dependent source"
+  ],
+  "a": 0,
+  "e_hi": "एक आदर्श वोल्टेज स्रोत का आंतरिक प्रतिरोध शून्य होता है, जिससे यह लोड के बावजूद स्थिर वोल्टेज देता है।",
+  "e_en": "An ideal voltage source has zero internal resistance, ensuring a constant voltage output regardless of the load."
+ },
+ {
+  "id": "rp-je_e-f01487",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा एक 'द्विपक्षीय' (bilateral) अवयव का उदाहरण है?",
+  "q_en": "Which of the following is an example of a 'bilateral' element?",
+  "o_hi": [
+   "डायोड",
+   "ट्रांजिस्टर",
+   "प्रतिरोधक",
+   "थायरिस्टर"
+  ],
+  "o_en": [
+   "Diode",
+   "Transistor",
+   "Resistor",
+   "Thyristor"
+  ],
+  "a": 2,
+  "e_hi": "प्रतिरोधक (resistor) एक द्विपक्षीय अवयव है क्योंकि इसमें धारा दोनों दिशाओं में समान व्यवहार करती है।",
+  "e_en": "A resistor is a bilateral element because the current-voltage relationship is the same in both directions."
+ },
+ {
+  "id": "rp-je_e-f01488",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "वह परिपथ जिसमें कम से कम एक ऊर्जा स्रोत होता है, उसे किस श्रेणी में रखा जाता है?",
+  "q_en": "A circuit that contains at least one energy source is classified into which category?",
+  "o_hi": [
+   "निष्क्रिय परिपथ",
+   "सक्रिय परिपथ",
+   "रैखिक परिपथ",
+   "द्विपक्षीय परिपथ"
+  ],
+  "o_en": [
+   "Passive circuit",
+   "Active circuit",
+   "Linear circuit",
+   "Bilateral circuit"
+  ],
+  "a": 1,
+  "e_hi": "सक्रिय परिपथ (active circuit) में ऊर्जा स्रोत (जैसे बैटरी या जनरेटर) मौजूद होता है जो ऊर्जा प्रदान कर सकता है।",
+  "e_en": "An active circuit contains an energy source, such as a battery or generator, capable of delivering power."
+ },
+ {
+  "id": "rp-je_e-f01489",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "सुपरपोज़िशन प्रमेय का उपयोग किस प्रकार के परिपथों के लिए किया जा सकता है?",
+  "q_en": "Superposition theorem can be applied to which type of circuits?",
+  "o_hi": [
+   "केवल रैखिक परिपथ",
+   "केवल अरेखीय परिपथ",
+   "केवल सक्रिय परिपथ",
+   "सभी प्रकार के परिपथ"
+  ],
+  "o_en": [
+   "Linear circuits only",
+   "Non-linear circuits only",
+   "Active circuits only",
+   "All types of circuits"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोज़िशन प्रमेय केवल रैखिक (linear) परिपथों पर लागू होता है क्योंकि यह अध्यारोपण के सिद्धांत पर आधारित है।",
+  "e_en": "Superposition theorem is applicable only to linear circuits because it relies on the principle of additivity."
+ },
+ {
+  "id": "rp-je_e-f01490",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "यदि किसी परिपथ में धारा और वोल्टेज के बीच का संबंध समय के साथ नहीं बदलता, तो वह कहलाता है:",
+  "q_en": "If the relationship between current and voltage in a circuit does not change with time, it is called:",
+  "o_hi": [
+   "अस्थिर परिपथ",
+   "स्थिर परिपथ",
+   "समय-अपरिवर्तनीय परिपथ",
+   "सक्रिय परिपथ"
+  ],
+  "o_en": [
+   "Unstable circuit",
+   "Stable circuit",
+   "Time-invariant circuit",
+   "Active circuit"
+  ],
+  "a": 2,
+  "e_hi": "समय-अपरिवर्तनीय (time-invariant) परिपथ वह है जिसके अवयव मान स्थिर रहते हैं।",
+  "e_en": "A time-invariant circuit is one where the component values do not change with time."
+ },
+ {
+  "id": "rp-je_e-f01491",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 'एकदिशीय' (unilateral) नेटवर्क की मुख्य विशेषता क्या है?",
+  "q_en": "What is the primary characteristic of a 'unilateral' network?",
+  "o_hi": [
+   "धारा दोनों दिशाओं में बहती है",
+   "धारा एक ही दिशा में बहती है",
+   "कोई ऊर्जा स्रोत नहीं होता",
+   "प्रतिरोध शून्य होता है"
+  ],
+  "o_en": [
+   "Current flows in both directions",
+   "Current flows in only one direction",
+   "No energy source exists",
+   "Resistance is zero"
+  ],
+  "a": 1,
+  "e_hi": "एकदिशीय नेटवर्क में V-I गुण एक दिशा में भिन्न होते हैं, जैसे डायोड में।",
+  "e_en": "A unilateral network has different V-I characteristics depending on the direction of current flow, such as in a diode."
+ },
+ {
+  "id": "rp-je_e-f01492",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 3,
+  "q_hi": "वितरित पैरामीटर (distributed parameters) वाले परिपथों को क्या कहा जाता है?",
+  "q_en": "Circuits with distributed parameters are classified as?",
+  "o_hi": [
+   "लम्पड पैरामीटर परिपथ",
+   "वितरित परिपथ",
+   "रैखिक परिपथ",
+   "अरेखीय परिपथ"
+  ],
+  "o_en": [
+   "Lumped parameter circuits",
+   "Distributed circuits",
+   "Linear circuits",
+   "Non-linear circuits"
+  ],
+  "a": 1,
+  "e_hi": "वितरित परिपथ (distributed circuits) में प्रतिरोध और प्रेरकत्व जैसे गुण पूरी लंबाई में फैले होते हैं, जैसे ट्रांसमिशन लाइन।",
+  "e_en": "Distributed circuits have properties like resistance and inductance spread along the physical length, such as in transmission lines."
+ },
+ {
+  "id": "rp-je_e-f01493",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 2,
+  "q_hi": "एक 'अरेखीय' (non-linear) अवयव की पहचान कैसे की जाती है?",
+  "q_en": "How is a 'non-linear' element identified?",
+  "o_hi": [
+   "ओह्म के नियम का पालन करता है",
+   "V-I वक्र एक सीधी रेखा होती है",
+   "V-I वक्र एक सीधी रेखा नहीं होती",
+   "यह हमेशा ऊर्जा नष्ट करता है"
+  ],
+  "o_en": [
+   "Follows Ohm's law",
+   "V-I curve is a straight line",
+   "V-I curve is not a straight line",
+   "It always dissipates energy"
+  ],
+  "a": 2,
+  "e_hi": "अरेखीय अवयव ओह्म के नियम का पालन नहीं करते, इसलिए उनका V-I ग्राफ वक्र (curve) होता है।",
+  "e_en": "Non-linear elements do not follow Ohm's law, resulting in a non-linear or curved V-I characteristic."
+ },
+ {
+  "id": "rp-je_e-f01494",
+  "s": "je_electrical",
+  "t": "circuit_theory",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा 'निष्क्रिय' (passive) अवयव नहीं है?",
+  "q_en": "Which of the following is NOT a 'passive' element?",
+  "o_hi": [
+   "संधारित्र",
+   "प्रेरकत्व",
+   "वोल्टेज स्रोत",
+   "प्रतिरोधक"
+  ],
+  "o_en": [
+   "Capacitor",
+   "Inductor",
+   "Voltage source",
+   "Resistor"
+  ],
+  "a": 2,
+  "e_hi": "वोल्टेज स्रोत एक सक्रिय (active) अवयव है क्योंकि यह परिपथ को ऊर्जा प्रदान करता है।",
+  "e_en": "A voltage source is an active element because it is capable of delivering energy to the circuit."
  }
 ]
