@@ -36,8 +36,10 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 # current_affairs is kept small: date-sensitive facts age out fast, so we don't
 # want thousands of them going stale. Everything else scales up.
+# DEFAULT_TARGET=311 makes the full bank land at exactly 25,000 questions
+# (80 non-current_affairs topics x 311 + 8 current_affairs topics x 15).
 TARGETS = {"current_affairs": 15}
-DEFAULT_TARGET = 300
+DEFAULT_TARGET = 311
 BATCH = 10
 
 ANGLES = [
