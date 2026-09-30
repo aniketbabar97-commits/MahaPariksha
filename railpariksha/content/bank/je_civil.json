@@ -23182,5 +23182,212 @@
   "a": 0,
   "e_hi": "सुपरपोजिशन का सिद्धांत तभी मान्य है जब संरचना रैखिक हो और हुक के नियम का पालन करती हो।",
   "e_en": "The principle of superposition is valid only when the structure behaves linearly and follows Hooke's law."
+ },
+ {
+  "id": "rp-je_c-f01009",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक संरचनात्मक सदस्य जो मुख्य रूप से अक्षीय तनाव बल का वहन करता है, उसे क्या कहा जाता है?",
+  "q_en": "What is a structural member that primarily carries axial tensile forces called?",
+  "o_hi": [
+   "स्तंभ",
+   "टाई",
+   "बीम",
+   "स्ट्रट"
+  ],
+  "o_en": [
+   "Column",
+   "Tie",
+   "Beam",
+   "Strut"
+  ],
+  "a": 1,
+  "e_hi": "टाई एक ऐसा सदस्य है जो तनाव में होता है, जबकि स्ट्रट संपीड़न में होता है।",
+  "e_en": "A tie is a member in tension, whereas a strut is in compression."
+ },
+ {
+  "id": "rp-je_c-f01010",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "स्थैतिक रूप से निर्धारित संरचना के लिए, प्रतिक्रियाओं और आंतरिक बलों की गणना के लिए केवल किन समीकरणों का उपयोग पर्याप्त है?",
+  "q_en": "For a statically determinate structure, which equations are sufficient to calculate reactions and internal forces?",
+  "o_hi": [
+   "केवल संतुलन के समीकरण",
+   "केवल विरूपण समीकरण",
+   "ऊर्जा संरक्षण के समीकरण",
+   "उपर्युक्त में से कोई नहीं"
+  ],
+  "o_en": [
+   "Equations of equilibrium only",
+   "Compatibility equations only",
+   "Energy conservation equations",
+   "None of the above"
+  ],
+  "a": 0,
+  "e_hi": "स्थैतिक रूप से निर्धारित संरचनाओं में, संतुलन के समीकरण (ΣFx=0, ΣFy=0, ΣM=0) अज्ञात प्रतिक्रियाओं को हल करने के लिए पर्याप्त होते हैं।",
+  "e_en": "In statically determinate structures, the equations of equilibrium are sufficient to solve for unknown reactions."
+ },
+ {
+  "id": "rp-je_c-f01011",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "किसी बीम के लिए 'बेंडिंग मोमेंट' शून्य होने वाले बिंदु को क्या कहा जाता है?",
+  "q_en": "What is the point where the bending moment in a beam becomes zero called?",
+  "o_hi": [
+   "नति परिवर्तन बिंदु (Point of Contraflexure)",
+   "अधिकतम विक्षेपण बिंदु",
+   "न्यूट्रल एक्सिस",
+   "सपोर्ट बिंदु"
+  ],
+  "o_en": [
+   "Point of Contraflexure",
+   "Point of maximum deflection",
+   "Neutral axis",
+   "Support point"
+  ],
+  "a": 0,
+  "e_hi": "नति परिवर्तन बिंदु वह स्थान है जहाँ बेंडिंग मोमेंट अपना चिह्न बदलता है और शून्य से गुजरता है।",
+  "e_en": "The point of contraflexure is the location where the bending moment changes sign and passes through zero."
+ },
+ {
+  "id": "rp-je_c-f01012",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक 'कैंटिलीवर' बीम में स्वतंत्रता की डिग्री (Degree of freedom) कितनी होती है?",
+  "q_en": "What is the degree of freedom of a cantilever beam fixed at one end?",
+  "o_hi": [
+   "एक",
+   "दो",
+   "तीन",
+   "शून्य"
+  ],
+  "o_en": [
+   "One",
+   "Two",
+   "Three",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "एक कैंटिलीवर बीम में तीन स्वतंत्रता की डिग्री होती है: ऊर्ध्वाधर विस्थापन, क्षैतिज विस्थापन और रोटेशन।",
+  "e_en": "A cantilever beam has three degrees of freedom: vertical displacement, horizontal displacement, and rotation."
+ },
+ {
+  "id": "rp-je_c-f01013",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "संरचनात्मक विश्लेषण में 'सुपरपोजिशन का सिद्धांत' किस प्रकार की संरचनाओं के लिए मान्य है?",
+  "q_en": "The 'Principle of Superposition' in structural analysis is valid for which type of structures?",
+  "o_hi": [
+   "रैखिक प्रत्यास्थ संरचनाएं",
+   "प्लास्टिक संरचनाएं",
+   "गैर-रैखिक संरचनाएं",
+   "उपर्युक्त सभी"
+  ],
+  "o_en": [
+   "Linear elastic structures",
+   "Plastic structures",
+   "Non-linear structures",
+   "All of the above"
+  ],
+  "a": 0,
+  "e_hi": "सुपरपोजिशन का सिद्धांत केवल उन संरचनाओं पर लागू होता है जो हुक के नियम का पालन करती हैं और जिनमें छोटे विरूपण होते हैं।",
+  "e_en": "The principle of superposition applies only to structures that obey Hooke's law and undergo small deformations."
+ },
+ {
+  "id": "rp-je_c-f01014",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि किसी बीम के दोनों सिरे फिक्स (आबद्ध) हैं, तो उसे क्या कहा जाता है?",
+  "q_en": "What is a beam called if both its ends are fixed?",
+  "o_hi": [
+   "सिंपली सपोर्टेड बीम",
+   "ओवरहैंगिंग बीम",
+   "फिक्स्ड बीम",
+   "कंटीन्यूअस बीम"
+  ],
+  "o_en": [
+   "Simply supported beam",
+   "Overhanging beam",
+   "Fixed beam",
+   "Continuous beam"
+  ],
+  "a": 2,
+  "e_hi": "फिक्स्ड बीम के दोनों सिरों पर रोटेशन और विस्थापन प्रतिबंधित होते हैं।",
+  "e_en": "In a fixed beam, both rotation and displacement are restricted at the ends."
+ },
+ {
+  "id": "rp-je_c-f01015",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "संरचनात्मक विश्लेषण में 'काइनेमैटिक इंडिटरमिनेसी' का अर्थ क्या है?",
+  "q_en": "What does 'Kinematic Indeterminacy' mean in structural analysis?",
+  "o_hi": [
+   "अज्ञात प्रतिक्रियाओं की संख्या",
+   "अज्ञात विस्थापन घटकों की संख्या",
+   "संरचना की कठोरता",
+   "कुल जोड़ों की संख्या"
+  ],
+  "o_en": [
+   "Number of unknown reactions",
+   "Number of unknown displacement components",
+   "Stiffness of the structure",
+   "Total number of joints"
+  ],
+  "a": 1,
+  "e_hi": "काइनेमैटिक इंडिटरमिनेसी संरचना में उन विस्थापन घटकों की संख्या को दर्शाती है जिन्हें हल करने की आवश्यकता होती है।",
+  "e_en": "Kinematic indeterminacy represents the number of displacement components in a structure that need to be solved."
+ },
+ {
+  "id": "rp-je_c-f01016",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 'पिन-जॉइंटेड' फ्रेम में सदस्य किस प्रकार के बल का अनुभव करते हैं?",
+  "q_en": "What type of forces do members in a pin-jointed frame experience?",
+  "o_hi": [
+   "केवल बेंडिंग",
+   "केवल अक्षीय बल (तनाव या संपीड़न)",
+   "अक्षीय और कतरनी बल",
+   "टोरसन"
+  ],
+  "o_en": [
+   "Bending only",
+   "Axial forces (tension or compression) only",
+   "Axial and shear forces",
+   "Torsion"
+  ],
+  "a": 1,
+  "e_hi": "पिन-जॉइंटेड फ्रेम में, जोड़ क्षण (moment) का प्रतिरोध नहीं करते, इसलिए सदस्य केवल अक्षीय बलों को वहन करते हैं।",
+  "e_en": "In a pin-jointed frame, joints cannot resist moments, so members carry only axial forces."
+ },
+ {
+  "id": "rp-je_c-f01017",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "संरचनात्मक विश्लेषण में 'कठोरता' (Stiffness) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'Stiffness' in structural analysis?",
+  "o_hi": [
+   "इकाई विरूपण उत्पन्न करने के लिए आवश्यक बल",
+   "संरचना की विफलता की शक्ति",
+   "सामग्री का घनत्व",
+   "कुल भार वहन क्षमता"
+  ],
+  "o_en": [
+   "Force required to produce unit deformation",
+   "Strength of structural failure",
+   "Density of material",
+   "Total load carrying capacity"
+  ],
+  "a": 0,
+  "e_hi": "कठोरता यह मापती है कि कोई संरचना विरूपण का कितना विरोध करती है।",
+  "e_en": "Stiffness measures how much a structure resists deformation."
  }
 ]
