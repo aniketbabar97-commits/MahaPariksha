@@ -22,11 +22,14 @@ Live, checkable version: https://claude.ai/artifact/Y2Xo461VWazb8ie762PYdi
 
 ## My checklist (repo side)
 
-- [ ] Push the 46 held commits + update the PR — blocked until the Oct 1 Actions-minutes quota resets.
+- [ ] Push held commits + update the PR — blocked until the Oct 1 Actions-minutes quota resets.
 - [ ] Tag a `railpariksha-vX.Y.Z` release once the 4 keystore secrets are in place — produces the signed `.aab`.
 - [ ] Final pre-tag smoke pass — validate content bank + compile-check before tagging, so the first upload isn't wasted on an avoidable bug.
-- [ ] Keep content generation running — close the reasoning/maths/JE gaps toward target.
-- [ ] Push verification coverage further — grow past the current thin sample so more of the 16k+ bank is actually fact-checked before production launch.
+- [ ] Generate remaining questions to 25,000 — currently ~16,000; reasoning, maths, science and JE mechanical are the biggest remaining gaps.
+- [ ] Generate notes/mind-maps for the 27 topics missing them — all 18 JE topics plus scattered GK/Computer/English ones currently have quiz questions but no notes page.
+- [ ] Generate flashcards for the 5 subjects with zero — current_affairs, english, je_mechanical, je_civil, je_electrical; the Revise tab shows nothing for these today.
+- [ ] Finish tips & tricks backfill on existing notes — adds exam-hall mnemonics/shortcuts to notes that predate the `tips_hi`/`tips_en` field.
+- [ ] Resume + grow verification coverage — paused for now to prioritize closing the content gap; resume once generation nears 25,000.
 - [ ] Ship daily current-affairs freshness automation — so that one date-sensitive subject doesn't go stale after launch.
 - [ ] Deploy the SEO/AEO site once a domain exists — `pipeline/build_site.py` already produces 111 pages with structured data; just needs hosting.
 
