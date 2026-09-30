@@ -23780,5 +23780,143 @@
   "a": 1,
   "e_hi": "यह एक ट्रस के लिए पूर्ण संरचना की स्थिति है, जहाँ सदस्यों की संख्या जोड़ों के लिए आवश्यक न्यूनतम संख्या के बराबर होती है।",
   "e_en": "This is the condition for a perfect truss, where the number of members is exactly sufficient for the given number of joints."
+ },
+ {
+  "id": "rp-je_c-f01035",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "यदि एक बीम के दोनों सिरों पर आलंब स्थिर हैं, तो उस बीम को किस प्रकार का बीम कहा जाएगा?",
+  "q_en": "What type of beam is it called if both ends are supported by fixed supports?",
+  "o_hi": [
+   "कैंटिलीवर बीम",
+   "सिंपली सपोर्टेड बीम",
+   "फिक्स्ड बीम",
+   "ओवरहैंगिंग बीम"
+  ],
+  "o_en": [
+   "Cantilever beam",
+   "Simply supported beam",
+   "Fixed beam",
+   "Overhanging beam"
+  ],
+  "a": 2,
+  "e_hi": "जब बीम के दोनों सिरों पर रोटेशन और डिस्प्लेसमेंट को पूरी तरह रोक दिया जाता है, तो उसे फिक्स्ड बीम कहते हैं।",
+  "e_en": "When both rotation and displacement at the ends of a beam are fully restricted, it is called a fixed beam."
+ },
+ {
+  "id": "rp-je_c-f01036",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक त्रि-हिंज्ड आर्च (Three-hinged arch) संरचनात्मक रूप से कैसी होती है?",
+  "q_en": "What is the structural nature of a three-hinged arch?",
+  "o_hi": [
+   "स्थिर रूप से निर्धारित (Statically Determinate)",
+   "स्थिर रूप से अनिश्चित (Statically Indeterminate)",
+   "अस्थिर (Unstable)",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Statically Determinate",
+   "Statically Indeterminate",
+   "Unstable",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "त्रि-हिंज्ड आर्च में तीन हिंज होते हैं, जिससे अज्ञात प्रतिक्रियाओं की संख्या उपलब्ध संतुलन समीकरणों के बराबर हो जाती है।",
+  "e_en": "A three-hinged arch has three hinges, making the number of unknown reactions equal to the available equilibrium equations."
+ },
+ {
+  "id": "rp-je_c-f01037",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम पर एकसमान वितरित भार (UDL) के कारण अधिकतम शीयर बल कहाँ होता है?",
+  "q_en": "Where does the maximum shear force occur on a cantilever beam due to a Uniformly Distributed Load (UDL)?",
+  "o_hi": [
+   "मुक्त सिरे पर",
+   "आलंब (सपोर्ट) के निकट",
+   "बीम के केंद्र पर",
+   "कहीं भी नहीं"
+  ],
+  "o_en": [
+   "At the free end",
+   "Near the support",
+   "At the center of the beam",
+   "Nowhere"
+  ],
+  "a": 1,
+  "e_hi": "कैंटिलीवर बीम में, कुल भार का संचय फिक्स्ड सपोर्ट के पास सबसे अधिक होता है, जिससे शीयर बल वहाँ अधिकतम होता है।",
+  "e_en": "In a cantilever beam, the accumulation of total load is highest near the fixed support, resulting in maximum shear force there."
+ },
+ {
+  "id": "rp-je_c-f01038",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि एक संरचना में अज्ञात प्रतिक्रियाओं की संख्या संतुलन समीकरणों से अधिक है, तो उसे क्या कहा जाता है?",
+  "q_en": "What is it called if the number of unknown reactions in a structure exceeds the equilibrium equations?",
+  "o_hi": [
+   "स्थिर रूप से निर्धारित",
+   "स्थिर रूप से अनिश्चित",
+   "यथार्थ संरचना",
+   "असंगत संरचना"
+  ],
+  "o_en": [
+   "Statically determinate",
+   "Statically indeterminate",
+   "Exact structure",
+   "Inconsistent structure"
+  ],
+  "a": 1,
+  "e_hi": "ऐसी संरचनाओं को हल करने के लिए संतुलन के अलावा विरूपण (compatibility) समीकरणों की आवश्यकता होती है।",
+  "e_en": "Such structures require compatibility equations in addition to equilibrium to be solved."
+ },
+ {
+  "id": "rp-je_c-f01039",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "प्रभाव रेखा (Influence Line) का उपयोग मुख्य रूप से किस लिए किया जाता है?",
+  "q_en": "What is the Influence Line primarily used for?",
+  "o_hi": [
+   "स्थिर भार के लिए प्रतिक्रिया ज्ञात करने हेतु",
+   "चल भार (moving load) के प्रभाव का विश्लेषण करने हेतु",
+   "बीम की लंबाई मापने हेतु",
+   "सामग्री की ताकत ज्ञात करने हेतु"
+  ],
+  "o_en": [
+   "To find reactions for static loads",
+   "To analyze the effect of moving loads",
+   "To measure beam length",
+   "To determine material strength"
+  ],
+  "a": 1,
+  "e_hi": "प्रभाव रेखा यह दर्शाती है कि संरचना के किसी विशिष्ट बिंदु पर प्रतिक्रिया या मोमेंट कैसे बदलता है जब एक इकाई भार बीम पर चलता है।",
+  "e_en": "The influence line shows how a reaction or moment at a specific point in a structure changes as a unit load moves across the beam."
+ },
+ {
+  "id": "rp-je_c-f01040",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "बीम में विक्षेपण (Deflection) ज्ञात करने के लिए 'मोमेंट एरिया विधि' किन बीमों के लिए सबसे उपयुक्त है?",
+  "q_en": "For which beams is the 'Moment Area Method' most suitable for determining deflection?",
+  "o_hi": [
+   "अत्यधिक जटिल संरचनाएं",
+   "कैंटिलीवर और सरल बीम",
+   "केवल गोलाकार बीम",
+   "केवल कंक्रीट बीम"
+  ],
+  "o_en": [
+   "Highly complex structures",
+   "Cantilever and simple beams",
+   "Circular beams only",
+   "Concrete beams only"
+  ],
+  "a": 1,
+  "e_hi": "मोमेंट एरिया विधि सरल ज्यामिति वाली बीमों के लिए बहुत प्रभावी और तेज है।",
+  "e_en": "The moment area method is very effective and fast for beams with simple geometry."
  }
 ]
