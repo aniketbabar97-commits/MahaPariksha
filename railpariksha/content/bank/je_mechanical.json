@@ -9497,5 +9497,465 @@
   "a": 1,
   "e_hi": "वास्तविक गैसों के लिए, तापमान बढ़ने के साथ कंपन ऊर्जा के स्तरों के उत्तेजित होने के कारण विशिष्ट ऊष्मा बढ़ती है।",
   "e_en": "For real gases, specific heat increases with temperature due to the excitation of vibrational energy modes."
+ },
+ {
+  "id": "rp-je_-f00414",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक 2 मीटर लंबे स्टील के तार पर 10 किलोन्यूटन का भार लगाया जाता है। यदि तार का अनुप्रस्थ काट क्षेत्रफल 50 वर्ग मिलीमीटर है, तो तार में उत्पन्न प्रतिबल (Stress) की गणना करें।",
+  "q_en": "A 2-meter long steel wire is subjected to a load of 10 kN. If the cross-sectional area of the wire is 50 mm², calculate the stress induced in the wire.",
+  "o_hi": [
+   "100 मेगापास्कल",
+   "200 मेगापास्कल",
+   "50 मेगापास्कल",
+   "400 मेगापास्कल"
+  ],
+  "o_en": [
+   "100 MPa",
+   "200 MPa",
+   "50 MPa",
+   "400 MPa"
+  ],
+  "a": 1,
+  "e_hi": "प्रतिबल = भार/क्षेत्रफल। यहाँ 10000 न्यूटन / 50 वर्ग मिलीमीटर = 200 न्यूटन/वर्ग मिलीमीटर (मेगापास्कल)।",
+  "e_en": "Stress = Force/Area. Here, 10000 N / 50 mm² = 200 N/mm² (MPa)."
+ },
+ {
+  "id": "rp-je_-f00415",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक छड़ जिसकी लंबाई 1 मीटर है, उसे 2 मिलीमीटर से खींचा जाता है। छड़ में उत्पन्न विकृति (Strain) का मान क्या होगा?",
+  "q_en": "A rod of 1-meter length is stretched by 2 millimeters. What will be the value of the strain produced in the rod?",
+  "o_hi": [
+   "0.001",
+   "0.002",
+   "0.02",
+   "0.2"
+  ],
+  "o_en": [
+   "0.001",
+   "0.002",
+   "0.02",
+   "0.2"
+  ],
+  "a": 1,
+  "e_hi": "विकृति = लंबाई में परिवर्तन / मूल लंबाई। 2 मिलीमीटर / 1000 मिलीमीटर = 0.002।",
+  "e_en": "Strain = Change in length / Original length. 2 mm / 1000 mm = 0.002."
+ },
+ {
+  "id": "rp-je_-f00416",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी पदार्थ का यंग मापांक (Young's Modulus) 200 गीगापास्कल है और विकृति 0.001 है, तो हुक के नियम के अनुसार प्रतिबल क्या होगा?",
+  "q_en": "If the Young's Modulus of a material is 200 GPa and the strain is 0.001, what will be the stress according to Hooke's Law?",
+  "o_hi": [
+   "200 मेगापास्कल",
+   "20 मेगापास्कल",
+   "2000 मेगापास्कल",
+   "2 गीगापास्कल"
+  ],
+  "o_en": [
+   "200 MPa",
+   "20 MPa",
+   "2000 MPa",
+   "2 GPa"
+  ],
+  "a": 0,
+  "e_hi": "हुक का नियम: प्रतिबल = यंग मापांक × विकृति। 200,000 मेगापास्कल × 0.001 = 200 मेगापास्कल।",
+  "e_en": "Hooke's Law: Stress = Young's Modulus × Strain. 200,000 MPa × 0.001 = 200 MPa."
+ },
+ {
+  "id": "rp-je_-f00417",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक वृत्ताकार शाफ्ट जिसका व्यास 20 मिलीमीटर है, उस पर 3140 न्यूटन का अक्षीय बल लग रहा है। शाफ्ट में उत्पन्न प्रतिबल (मेगापास्कल में) ज्ञात करें। (पाई का मान 3.14 लें)",
+  "q_en": "A circular shaft of 20 mm diameter is subjected to an axial force of 3140 N. Calculate the stress induced in the shaft (in MPa). (Take pi = 3.14)",
+  "o_hi": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "o_en": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "a": 1,
+  "e_hi": "क्षेत्रफल = (पाई/4) × व्यास का वर्ग = 0.785 × 400 = 314 वर्ग मिलीमीटर। प्रतिबल = 3140/314 = 10 मेगापास्कल।",
+  "e_en": "Area = (pi/4) × diameter² = 0.785 × 400 = 314 mm². Stress = 3140/314 = 10 MPa."
+ },
+ {
+  "id": "rp-je_-f00418",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "एक बार (Bar) पर 50 किलोन्यूटन का तन्य भार (Tensile load) लग रहा है। यदि बार का क्षेत्रफल 250 वर्ग मिलीमीटर है, तो इसमें उत्पन्न विकृति क्या होगी यदि यंग मापांक 200 गीगापास्कल है?",
+  "q_en": "A bar is subjected to a tensile load of 50 kN. If the area of the bar is 250 mm², what will be the strain if the Young's Modulus is 200 GPa?",
+  "o_hi": [
+   "0.001",
+   "0.002",
+   "0.0005",
+   "0.005"
+  ],
+  "o_en": [
+   "0.001",
+   "0.002",
+   "0.0005",
+   "0.005"
+  ],
+  "a": 0,
+  "e_hi": "प्रतिबल = 50000/250 = 200 मेगापास्कल। विकृति = प्रतिबल/यंग मापांक = 200/200000 = 0.001।",
+  "e_en": "Stress = 50000/250 = 200 MPa. Strain = Stress/Young's Modulus = 200/200000 = 0.001."
+ },
+ {
+  "id": "rp-je_-f00419",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "यदि किसी पदार्थ का पॉइसन अनुपात (Poisson's ratio) 0.25 है, तो उसके आयतन मापांक (Bulk Modulus) और यंग मापांक के बीच का अनुपात क्या होगा?",
+  "q_en": "If the Poisson's ratio of a material is 0.25, what will be the ratio between its Bulk Modulus and Young's Modulus?",
+  "o_hi": [
+   "1/3",
+   "2/3",
+   "1",
+   "4/3"
+  ],
+  "o_en": [
+   "1/3",
+   "2/3",
+   "1",
+   "4/3"
+  ],
+  "a": 1,
+  "e_hi": "संबंध: K = E / 3(1-2v)। यहाँ v = 0.25, अतः K = E / 3(1-0.5) = E/1.5 = 2E/3।",
+  "e_en": "Relation: K = E / 3(1-2v). Here v = 0.25, so K = E / 3(1-0.5) = E/1.5 = 2E/3."
+ },
+ {
+  "id": "rp-je_-f00420",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक 500 मिलीमीटर लंबी छड़ को 0.5 मिलीमीटर तक खींचा जाता है। यदि छड़ का अनुप्रस्थ काट 100 वर्ग मिलीमीटर है, तो विकृति का मान क्या है?",
+  "q_en": "A 500 mm long rod is stretched by 0.5 mm. If the cross-section of the rod is 100 mm², what is the value of strain?",
+  "o_hi": [
+   "0.001",
+   "0.01",
+   "0.0001",
+   "0.1"
+  ],
+  "o_en": [
+   "0.001",
+   "0.01",
+   "0.0001",
+   "0.1"
+  ],
+  "a": 0,
+  "e_hi": "विकृति = लंबाई में परिवर्तन / मूल लंबाई = 0.5 / 500 = 0.001।",
+  "e_en": "Strain = Change in length / Original length = 0.5 / 500 = 0.001."
+ },
+ {
+  "id": "rp-je_-f00421",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक 10 मीटर लंबे तार में 5 मिलीमीटर का विस्तार (Extension) होता है जब उस पर 20 किलोन्यूटन का भार लगाया जाता है। तार की कठोरता (Stiffness) की गणना करें।",
+  "q_en": "A 10-meter long wire experiences an extension of 5 mm when a load of 20 kN is applied. Calculate the stiffness of the wire.",
+  "o_hi": [
+   "2 kN/mm",
+   "4 kN/mm",
+   "5 kN/mm",
+   "10 kN/mm"
+  ],
+  "o_en": [
+   "2 kN/mm",
+   "4 kN/mm",
+   "5 kN/mm",
+   "10 kN/mm"
+  ],
+  "a": 1,
+  "e_hi": "कठोरता (Stiffness) = भार / विस्तार। 20 किलोन्यूटन / 5 मिलीमीटर = 4 किलोन्यूटन/मिलीमीटर।",
+  "e_en": "Stiffness = Load / Extension. 20 kN / 5 mm = 4 kN/mm."
+ },
+ {
+  "id": "rp-je_-f00422",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "यदि किसी पदार्थ का यंग मापांक (E) 210 गीगापास्कल है और दृढ़ता मापांक (G) 80 गीगापास्कल है, तो पॉइसन अनुपात (v) क्या होगा?",
+  "q_en": "If the Young's Modulus (E) of a material is 210 GPa and the Shear Modulus (G) is 80 GPa, what will be the Poisson's ratio (v)?",
+  "o_hi": [
+   "0.3125",
+   "0.25",
+   "0.33",
+   "0.4"
+  ],
+  "o_en": [
+   "0.3125",
+   "0.25",
+   "0.33",
+   "0.4"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र: E = 2G(1+v)। 210 = 160(1+v) -> 1.3125 = 1+v -> v = 0.3125।",
+  "e_en": "Formula: E = 2G(1+v). 210 = 160(1+v) -> 1.3125 = 1+v -> v = 0.3125."
+ },
+ {
+  "id": "rp-je_-f00423",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक 200 मिलीमीटर लंबी छड़ पर 100 मेगापास्कल का प्रतिबल लगाया जाता है। यदि यंग मापांक 200 गीगापास्कल है, तो छड़ की लंबाई में वृद्धि कितनी होगी?",
+  "q_en": "A 200 mm long rod is subjected to a stress of 100 MPa. If the Young's Modulus is 200 GPa, what will be the increase in length of the rod?",
+  "o_hi": [
+   "0.05 मिमी",
+   "0.1 मिमी",
+   "0.2 मिमी",
+   "0.5 मिमी"
+  ],
+  "o_en": [
+   "0.05 mm",
+   "0.1 mm",
+   "0.2 mm",
+   "0.5 mm"
+  ],
+  "a": 1,
+  "e_hi": "विकृति = प्रतिबल/यंग मापांक = 100/200000 = 0.0005। लंबाई में वृद्धि = विकृति × मूल लंबाई = 0.0005 × 200 = 0.1 मिलीमीटर।",
+  "e_en": "Strain = Stress/Young's Modulus = 100/200000 = 0.0005. Extension = Strain × Original length = 0.0005 × 200 = 0.1 mm."
+ },
+ {
+  "id": "rp-je_-f00424",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से किस पदार्थ का पॉइसन अनुपात (Poisson's ratio) सबसे अधिक होता है?",
+  "q_en": "Which of the following materials has the highest Poisson's ratio?",
+  "o_hi": [
+   "स्टील",
+   "एल्यूमीनियम",
+   "रबर",
+   "कांस्य"
+  ],
+  "o_en": [
+   "Steel",
+   "Aluminium",
+   "Rubber",
+   "Bronze"
+  ],
+  "a": 2,
+  "e_hi": "रबर एक अत्यधिक प्रत्यास्थ पदार्थ है, जिसका पॉइसन अनुपात 0.5 के करीब होता है।",
+  "e_en": "Rubber is a highly elastic material with a Poisson's ratio close to 0.5."
+ },
+ {
+  "id": "rp-je_-f00425",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम (Cantilever beam) और एक उसी लंबाई की सिंपली सपोर्टेड बीम (Simply supported beam) पर समान बिंदु भार लगाने पर, किसमें अधिकतम विक्षेपण (deflection) अधिक होगा?",
+  "q_en": "For a cantilever beam and a simply supported beam of the same length subjected to the same point load, which will have higher maximum deflection?",
+  "o_hi": [
+   "कैंटिलीवर बीम",
+   "सिंपली सपोर्टेड बीम",
+   "दोनों बराबर",
+   "निर्धारित नहीं किया जा सकता"
+  ],
+  "o_en": [
+   "Cantilever beam",
+   "Simply supported beam",
+   "Both are equal",
+   "Cannot be determined"
+  ],
+  "a": 0,
+  "e_hi": "कैंटिलीवर बीम का अधिकतम विक्षेपण (PL^3/3EI) सिंपली सपोर्टेड बीम (PL^3/48EI) की तुलना में बहुत अधिक होता है।",
+  "e_en": "The maximum deflection of a cantilever beam (PL^3/3EI) is significantly higher than that of a simply supported beam (PL^3/48EI)."
+ },
+ {
+  "id": "rp-je_-f00426",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "शुद्ध बंकन (Pure Bending) की स्थिति में, बीम की उदासीन सतह (Neutral axis) पर प्रतिबल (stress) का मान क्या होता है?",
+  "q_en": "In a state of pure bending, what is the value of stress at the neutral axis of the beam?",
+  "o_hi": [
+   "अधिकतम",
+   "शून्य",
+   "न्यूनतम",
+   "अनंत"
+  ],
+  "o_en": [
+   "Maximum",
+   "Zero",
+   "Minimum",
+   "Infinite"
+  ],
+  "a": 1,
+  "e_hi": "बंकन समीकरण के अनुसार, उदासीन सतह पर दूरी शून्य होती है, इसलिए प्रतिबल भी शून्य होता है।",
+  "e_en": "According to the bending equation, the distance from the neutral axis is zero, hence the stress is zero."
+ },
+ {
+  "id": "rp-je_-f00427",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "मृदु इस्पात (Mild steel) के लिए प्रतिबल-विकृति (Stress-Strain) आरेख में 'अल्टीमेट स्ट्रेंथ' बिंदु कहाँ स्थित होता है?",
+  "q_en": "In the stress-strain diagram for mild steel, where is the 'ultimate strength' point located?",
+  "o_hi": [
+   "प्रत्यास्थ सीमा के पहले",
+   "परावभव बिंदु के ठीक बाद",
+   "भंजन बिंदु के बाद",
+   "परावभव बिंदु और भंजन बिंदु के बीच"
+  ],
+  "o_en": [
+   "Before elastic limit",
+   "Immediately after yield point",
+   "After fracture point",
+   "Between yield point and fracture point"
+  ],
+  "a": 3,
+  "e_hi": "अल्टीमेट स्ट्रेंथ बिंदु वह अधिकतम प्रतिबल है जो पदार्थ भंजन से पहले सहन कर सकता है, जो परावभव के बाद आता है।",
+  "e_en": "The ultimate strength point is the maximum stress a material can withstand before failure, occurring after the yield point."
+ },
+ {
+  "id": "rp-je_-f00428",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी छड़ का व्यास दोगुना कर दिया जाए, तो उसकी अक्षीय कठोरता (Axial Stiffness) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the diameter of a rod is doubled, what will be the effect on its axial stiffness?",
+  "o_hi": [
+   "दो गुना हो जाएगी",
+   "चार गुना हो जाएगी",
+   "आठ गुना हो जाएगी",
+   "कोई परिवर्तन नहीं होगा"
+  ],
+  "o_en": [
+   "Becomes double",
+   "Becomes four times",
+   "Becomes eight times",
+   "No change"
+  ],
+  "a": 1,
+  "e_hi": "अक्षीय कठोरता (AE/L) क्षेत्रफल पर निर्भर करती है। व्यास दुगुना होने पर क्षेत्रफल चार गुना हो जाता है।",
+  "e_en": "Axial stiffness (AE/L) depends on the cross-sectional area. Doubling the diameter increases the area by four times."
+ },
+ {
+  "id": "rp-je_-f00429",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा संबंध यंग मापांक (E), रिजिडिटी मापांक (G), और पॉइसन अनुपात (μ) के बीच सही है?",
+  "q_en": "Which of the following relations is correct between Young's modulus (E), Modulus of rigidity (G), and Poisson's ratio (μ)?",
+  "o_hi": [
+   "E = 2G(1+μ)",
+   "E = 3G(1-2μ)",
+   "G = 2E(1+μ)",
+   "E = G(1+μ)"
+  ],
+  "o_en": [
+   "E = 2G(1+μ)",
+   "E = 3G(1-2μ)",
+   "G = 2E(1+μ)",
+   "E = G(1+μ)"
+  ],
+  "a": 0,
+  "e_hi": "यह एक मानक संबंध है जो समदैशिक पदार्थों के लिए प्रत्यास्थ स्थिरांकों को जोड़ता है।",
+  "e_en": "This is a standard relationship linking elastic constants for isotropic materials."
+ },
+ {
+  "id": "rp-je_-f00430",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "एक खोखले शाफ्ट की मरोड़ कठोरता (Torsional Rigidity) का ठोस शाफ्ट की तुलना में क्या लाभ है?",
+  "q_en": "What is the advantage of the torsional rigidity of a hollow shaft compared to a solid shaft?",
+  "o_hi": [
+   "कम वजन में अधिक मरोड़ प्रतिरोध",
+   "अधिक वजन में कम मरोड़ प्रतिरोध",
+   "समान वजन पर कम कठोरता",
+   "कोई लाभ नहीं"
+  ],
+  "o_en": [
+   "Higher torsional resistance for less weight",
+   "Lower torsional resistance for more weight",
+   "Less rigidity for same weight",
+   "No advantage"
+  ],
+  "a": 0,
+  "e_hi": "खोखले शाफ्ट में पदार्थ अक्ष से दूर होता है, जिससे मरोड़ के प्रति अधिक प्रतिरोध मिलता है।",
+  "e_en": "In a hollow shaft, material is distributed away from the axis, providing higher resistance to torsion."
+ },
+ {
+  "id": "rp-je_-f00431",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक बीम में 'शीयर फोर्स' (Shear force) शून्य होने पर 'बेंडिंग मोमेंट' (Bending moment) क्या होता है?",
+  "q_en": "What happens to the bending moment when the shear force is zero in a beam?",
+  "o_hi": [
+   "शून्य होता है",
+   "न्यूनतम होता है",
+   "अधिकतम होता है",
+   "अपरिवर्तित रहता है"
+  ],
+  "o_en": [
+   "It is zero",
+   "It is minimum",
+   "It is maximum",
+   "It remains unchanged"
+  ],
+  "a": 2,
+  "e_hi": "जहाँ शीयर फोर्स अपना चिह्न बदलता है या शून्य होता है, वहाँ बेंडिंग मोमेंट अपने चरम मान पर होता है।",
+  "e_en": "Where shear force changes sign or is zero, the bending moment reaches its maximum value."
+ },
+ {
+  "id": "rp-je_-f00432",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "दो विभिन्न पदार्थों के एक साथ जुड़े हुए बीम को क्या कहा जाता है?",
+  "q_en": "What is a beam made of two different materials joined together called?",
+  "o_hi": [
+   "संयुक्त बीम",
+   "कम्पोजिट बीम",
+   "सैंडविच बीम",
+   "कैंटिलीवर बीम"
+  ],
+  "o_en": [
+   "Combined beam",
+   "Composite beam",
+   "Sandwich beam",
+   "Cantilever beam"
+  ],
+  "a": 1,
+  "e_hi": "कम्पोजिट बीम का उपयोग तब किया जाता है जब हमें दो अलग-अलग पदार्थों के यांत्रिक गुणों का लाभ उठाना होता है।",
+  "e_en": "A composite beam is used when we need to utilize the mechanical properties of two different materials together."
+ },
+ {
+  "id": "rp-je_-f00433",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "किसी पदार्थ की 'लचीलापन' (Resilience) किस क्षमता को दर्शाती है?",
+  "q_en": "The 'resilience' of a material represents its ability to do what?",
+  "o_hi": [
+   "भार को सहन करना",
+   "ऊर्जा को अवशोषित करना",
+   "प्लास्टिक विरूपण करना",
+   "कठोरता प्रदान करना"
+  ],
+  "o_en": [
+   "Withstand load",
+   "Absorb energy",
+   "Plastic deformation",
+   "Provide hardness"
+  ],
+  "a": 1,
+  "e_hi": "लचीलापन पदार्थ की प्रत्यास्थ सीमा के भीतर ऊर्जा को अवशोषित करने और भार हटने पर उसे छोड़ने की क्षमता है।",
+  "e_en": "Resilience is the ability of a material to absorb energy within its elastic limit and release it upon unloading."
  }
 ]
