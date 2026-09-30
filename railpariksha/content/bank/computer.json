@@ -7178,5 +7178,465 @@
   "a": 1,
   "e_hi": "मूल ट्रैफ़िक 500 है। इसमें 400% की वृद्धि (यानी 500 का 4 गुना = 2000) जोड़ने पर कुल 500 + 2000 = 2500 अनुरोध प्रति सेकंड प्राप्त होते हैं।",
   "e_en": "A 400% increase on 500 requests means adding 4 times the base amount (500 × 4 = 2000) to the original 500, resulting in a total of 2500 requests per second."
+ },
+ {
+  "id": "rp-com-l00313",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा प्रोटोकॉल इंटरनेट पर सुरक्षित और एन्क्रिप्टेड संचार के लिए उपयोग किया जाता है?",
+  "q_en": "Which of the following protocols is used for secure and encrypted communication over the internet?",
+  "o_hi": [
+   "एचटीटीपी (HTTP)",
+   "एफ़टीपी (FTP)",
+   "एचटीटीपीएस (HTTPS)",
+   "एसएमटीपी (SMTP)"
+  ],
+  "o_en": [
+   "HTTP",
+   "FTP",
+   "HTTPS",
+   "SMTP"
+  ],
+  "a": 2,
+  "e_hi": "एचटीटीपीएस (HTTPS) सुरक्षित हाइपरटेक्स्ट ट्रांसफर प्रोटोकॉल है जो एसएसएल/टीएलएस एन्क्रिप्शन का उपयोग करके डेटा को सुरक्षित रखता है।",
+  "e_en": "HTTPS (Hypertext Transfer Protocol Secure) uses SSL/TLS encryption to keep data secure during web transmission."
+ },
+ {
+  "id": "rp-com-l00314",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "जब कोई हमलावर वैध दिखने वाली नकली वेबसाइट बनाकर संवेदनशील जानकारी चुराने का प्रयास करता है, तो उसे क्या कहा जाता है?",
+  "q_en": "What is it called when an attacker creates a fake website that looks legitimate to steal sensitive information?",
+  "o_hi": [
+   "फ़िशिंग (Phishing)",
+   "मैलवेयर (Malware)",
+   "रैंसमवेयर (Ransomware)",
+   "फायरवॉल (Firewall)"
+  ],
+  "o_en": [
+   "Phishing",
+   "Malware",
+   "Ransomware",
+   "Firewall"
+  ],
+  "a": 0,
+  "e_hi": "फ़िशिंग एक साइबर हमला है जिसमें उपयोगकर्ता को धोखा देकर उनकी व्यक्तिगत या वित्तीय जानकारी प्राप्त की जाती है।",
+  "e_en": "Phishing is a cyber attack that uses deceptive emails and fake websites to trick users into revealing sensitive data."
+ },
+ {
+  "id": "rp-com-l00315",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "किस प्रकार का मैलवेयर उपयोगकर्ता की फाइलों को एन्क्रिप्ट कर देता है और उन्हें वापस पाने के लिए फिरौती (रैंसम) की मांग करता है?",
+  "q_en": "Which type of malware encrypts a user's files and demands a ransom to restore access to them?",
+  "o_hi": [
+   "स्पायवेयर (Spyware)",
+   "रैंसमवेयर (Ransomware)",
+   "एडवेयर (Adware)",
+   "ट्रोजन हॉर्स (Trojan Horse)"
+  ],
+  "o_en": [
+   "Spyware",
+   "Ransomware",
+   "Adware",
+   "Trojan Horse"
+  ],
+  "a": 1,
+  "e_hi": "रैंसमवेयर पीड़ित के कंप्यूटर या डेटा को लॉक या एन्क्रिप्ट कर देता है और फिरौती चुकाने पर ही उसे अनलॉक करता है।",
+  "e_en": "Ransomware locks or encrypts a victim's data and demands payment for the decryption key."
+ },
+ {
+  "id": "rp-com-l00316",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "कंप्यूटर नेटवर्क में अनधिकृत पहुंच को रोकने और ट्रैफिक को नियंत्रित करने के लिए निम्नलिखित में से किसका उपयोग किया जाता है?",
+  "q_en": "Which of the following is used in a computer network to prevent unauthorized access and control traffic?",
+  "o_hi": [
+   "एंटीvirus (Antivirus)",
+   "फायरवॉल (Firewall)",
+   "कुकीज़ (Cookies)",
+   "राउटर (Router)"
+  ],
+  "o_en": [
+   "Antivirus",
+   "Firewall",
+   "Cookies",
+   "Router"
+  ],
+  "a": 1,
+  "e_hi": "फायरवॉल एक नेटवर्क सुरक्षा प्रणाली है जो पूर्व-निर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले नेटवर्क ट्रैफिक की निगरानी करती है।",
+  "e_en": "A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined rules."
+ },
+ {
+  "id": "rp-com-l00317",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "डेटा को ऐसी अपठनीय कोडिंग में बदलने की प्रक्रिया को क्या कहते हैं जिसे केवल अधिकृत कुंजी (Key) द्वारा ही डिकोड किया जा सके?",
+  "q_en": "What is the process of converting data into an unreadable format that can only be decoded with an authorized key called?",
+  "o_hi": [
+   "एन्क्रिप्शन (Encryption)",
+   "डिक्रिप्शन (Decryption)",
+   "हैशिंग (Hashing)",
+   "कम्प्रेसिंग (Compressing)"
+  ],
+  "o_en": [
+   "Encryption",
+   "Decryption",
+   "Hashing",
+   "Compressing"
+  ],
+  "a": 0,
+  "e_hi": "एन्क्रिप्शन डेटा को गुप्त कोड में बदल देता है ताकि अनधिकृत लोग उसे न पढ़ सकें।",
+  "e_en": "Encryption transforms plaintext into ciphertext to prevent unauthorized access during transmission or storage."
+ },
+ {
+  "id": "rp-com-l00318",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एसएसएल (SSL) का पूर्ण रूप क्या है, जिसका उपयोग वेब सुरक्षा में किया जाता है?",
+  "q_en": "What is the full form of SSL, which is used in web security?",
+  "o_hi": [
+   "सिक्योर सॉकेट्स लेयर (Secure Sockets Layer)",
+   "सिस्टम सिक्योर लॉक (System Secure Lock)",
+   "सॉलिड स्टेट लिंक (Solid State Link)",
+   "सिक्योर सर्विस लैंग्वेज (Secure Service Language)"
+  ],
+  "o_en": [
+   "Secure Sockets Layer",
+   "System Secure Lock",
+   "Solid State Link",
+   "Secure Service Language"
+  ],
+  "a": 0,
+  "e_hi": "एसएसएल (Secure Sockets Layer) एक मानक सुरक्षा तकनीक है जो वेब सर्वर और ब्राउज़र के बीच एक एन्क्रिप्टڈ लिंक स्थापित करती है।",
+  "e_en": "SSL (Secure Sockets Layer) is a standard security technology for establishing an encrypted link between a web server and a browser."
+ },
+ {
+  "id": "rp-com-l00319",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "किसी संगठन के नेटवर्क या सिस्टम में सुरक्षा कमजोरियों का पता लगाने के लिए अधिकृत रूप से किए जाने वाले हमले को क्या कहा जाता है?",
+  "q_en": "What is an authorized simulated attack performed on a computer system to evaluate its security called?",
+  "o_hi": [
+   "मैलवेयर अटैक (Malware Attack)",
+   "पेनिट्रेशन टेस्टिंग (Penetration Testing)",
+   "सोशल इंजीनियरिंग (Social Engineering)",
+   "स्पूफिंग (Spoofing)"
+  ],
+  "o_en": [
+   "Malware Attack",
+   "Penetration Testing",
+   "Social Engineering",
+   "Spoofing"
+  ],
+  "a": 1,
+  "e_hi": "पेनिट्रेशन टेस्टिंग (या एथिकल हैकिंग) का उपयोग सिस्टम में मौजूद कमियों को ढूंढकर उन्हें ठीक करने के लिए किया जाता है।",
+  "e_en": "Penetration testing is a simulated cyber attack against your computer system to check for exploitable vulnerabilities."
+ },
+ {
+  "id": "rp-com-l00320",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा एक 'डिनॉएबल ऑफ सर्विस' (DoS) हमले का मुख्य उद्देश्य है?",
+  "q_en": "Which of the following is the primary objective of a Denial of Service (DoS) attack?",
+  "o_hi": [
+   "डेटा चोरी करना",
+   "सिस्टम या नेटवर्क संसाधनों को अनुपलब्ध करना",
+   "पासवर्ड क्रैक करना",
+   "फर्जी ईमेल भेजना"
+  ],
+  "o_en": [
+   "To steal sensitive data",
+   "To make computer resources unavailable to users",
+   "To crack user passwords",
+   "To send bulk fake emails"
+  ],
+  "a": 1,
+  "e_hi": "DoS हमला किसी मशीन या नेटवर्क संसाधन को उसके इच्छित उपयोगकर्ताओं के लिए अनुपलब्ध बनाकर काम ठप कर देता है।",
+  "e_en": "A DoS attack floods a target system with traffic to make it unavailable to legitimate users."
+ },
+ {
+  "id": "rp-com-l00321",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "सुरक्षित ऑनलाइन लेनदेन के लिए टू-फैक्टर ऑथेंटिकेशन (2FA) में आमतौर पर क्या शामिल होता है?",
+  "q_en": "What does Two-Factor Authentication (2FA) typically combine for secure online transactions?",
+  "o_hi": [
+   "दो अलग-अलग पासवर्ड",
+   "एक पासवर्ड और एक वन-टाइम पासवर्ड (OTP)",
+   "दो अलग-अलग यूजरनेम",
+   "फायरवॉल और एंटीवायरस"
+  ],
+  "o_en": [
+   "Two different passwords",
+   "A password and a One-Time Password (OTP)",
+   "Two different usernames",
+   "A firewall and an antivirus"
+  ],
+  "a": 1,
+  "e_hi": "2FA सुरक्षा की एक अतिरिक्त परत जोड़ता है, जिसमें आमतौर पर पासवर्ड (जो आपको पता है) और ओटीपी (जो आपके फोन पर आता है) का उपयोग होता है।",
+  "e_en": "2FA combines something you know (like a password) with something you have (like an OTP sent to your phone) for enhanced security."
+ },
+ {
+  "id": "rp-com-l00322",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "इंटरनेट पर किसी हमलावर द्वारा वैध यूजर या आईपी पते का रूप धारण करके डेटा चुराने या सिस्टम में सेंध लगाने को क्या कहते हैं?",
+  "q_en": "What is it called when an attacker masquerades as a legitimate user or IP address to gain unauthorized access?",
+  "o_hi": [
+   "स्पूफिंग (Spoofing)",
+   "फिशिंग (Phishing)",
+   "पैचिंग (Patching)",
+   "स्निफिंग (Sniffing)"
+  ],
+  "o_en": [
+   "Spoofing",
+   "Phishing",
+   "Patching",
+   "Sniffing"
+  ],
+  "a": 0,
+  "e_hi": "स्पूफिंग एक ऐसी तकनीक है जिसमें धोखेबाज खुद को कोई और (जैसे कोई भरोसेमंद स्रोत) बताकर सिस्टम को धोखा देता है।",
+  "e_en": "Spoofing involves masquerading as a trusted entity to trick systems or users into revealing sensitive information or granting access."
+ },
+ {
+  "id": "rp-com-l00323",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक निश्चित वित्तीय डेटा नेटवर्क में पासवर्ड रीसेट करने के लिए 4 अंकों के पिन की आवश्यकता होती है। यदि कोई हमलावर प्रति सेकंड 50 प्रयास करता है, तो सभी संभावित संयोजनों को आजमाने में अधिकतम कितने सेकंड लगेंगे?",
+  "q_en": "A secure financial data network requires a 4-digit PIN for password reset. If an attacker tries 50 attempts per second, what is the maximum number of seconds required to try all possible combinations?",
+  "o_hi": [
+   "100 सेकंड",
+   "200 सेकंड",
+   "500 सेकंड",
+   "1000 सेकंड"
+  ],
+  "o_en": [
+   "100 seconds",
+   "200 seconds",
+   "500 seconds",
+   "1000 seconds"
+  ],
+  "a": 1,
+  "e_hi": "4 अंकों के कुल संभावित संयोजन 10,000 (0000 से 9999) हैं। प्रति सेकंड 50 प्रयासों की दर से, कुल समय 10,000 / 50 = 200 सेकंड होगा।",
+  "e_en": "Total possible 4-digit combinations are 10,000 (from 0000 to 9999). At a rate of 50 attempts per second, the total time needed is 10,000 / 50 = 200 seconds."
+ },
+ {
+  "id": "rp-com-l00324",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "यदि एक डेटा एन्क्रिप्शन एल्गोरिदम 128-बिट कुंजियों का उपयोग करता है, तो ब्रूट-फोर्स विधि द्वारा सभी संभावित कुंजियों को खोजने के लिए संभावित कुंजियों की कुल संख्या कितनी होगी?",
+  "q_en": "If a data encryption algorithm uses 128-bit keys, what is the total number of possible keys required to be checked using a brute-force method?",
+  "o_hi": [
+   "2 की घात 64",
+   "2 की घात 128",
+   "128 गुना 2",
+   "128 की घात 2"
+  ],
+  "o_en": [
+   "2 raised to the power of 64",
+   "2 raised to the power of 128",
+   "128 multiplied by 2",
+   "128 raised to the power of 2"
+  ],
+  "a": 1,
+  "e_hi": "एनक्रिप्टेड कुंजियों की लंबाई बिट्स में दी जाती है, और संभावित कुंजियों की कुल संख्या 2 की घात 'बिट्स की संख्या' होती है। अतः 128-बिट के लिए यह 2^128 होगी।",
+  "e_en": "Encryption key length is given in bits, and the total number of possible keys is 2 raised to the power of the number of bits. Hence, for 128-bit, it is 2^128."
+ },
+ {
+  "id": "rp-com-l00325",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "एक कंपनी के सर्वर पर हर घंटे 500 संदिग्ध लॉगिन प्रयास दर्ज किए जाते हैं। यदि एक सुरक्षा प्रणाली इनमें से 85 प्रतिशत प्रयासों को स्वचालित रूप से ब्लॉक कर देती है, तो प्रति घंटे कितने प्रयास बिना ब्लॉक किए बच जाते हैं?",
+  "q_en": "A company server records 500 suspicious login attempts every hour. If a security system automatically blocks 85 percent of these attempts, how many attempts remain unblocked per hour?",
+  "o_hi": [
+   "425 प्रयास",
+   "75 प्रयास",
+   "85 प्रयास",
+   "415 प्रयास"
+  ],
+  "o_en": [
+   "425 attempts",
+   "75 attempts",
+   "85 attempts",
+   "415 attempts"
+  ],
+  "a": 1,
+  "e_hi": "85% प्रयास ब्लॉक हो जाते हैं, जिसका अर्थ है कि 15% प्रयास बच जाते हैं। 500 का 15 प्रतिशत निकालने पर 500 × 0.15 = 75 प्रयास प्राप्त होते हैं।",
+  "e_en": "85% of attempts are blocked, meaning 15% remain unblocked. Calculating 15 percent of 500 gives 500 × 0.15 = 75 attempts."
+ },
+ {
+  "id": "rp-com-l00326",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक साइबर सुरक्षा ऑडिट में पाया गया कि एक बैंक के डेटाबेस पर 4 सप्ताह की अवधि में कुल 8400 मैलवेयर हमले हुए। यदि हमले हर दिन समान रूप से वितरित किए गए थे, तो प्रतिदिन औसत हमलों की संख्या क्या थी?",
+  "q_en": "A cyber security audit found that a bank database experienced a total of 8400 malware attacks over a 4-week period. If the attacks were distributed evenly every day, what was the average number of attacks per day?",
+  "o_hi": [
+   "200 हमले",
+   "300 हमले",
+   "400 हमले",
+   "1200 हमले"
+  ],
+  "o_en": [
+   "200 attacks",
+   "300 attacks",
+   "400 attacks",
+   "1200 attacks"
+  ],
+  "a": 1,
+  "e_hi": "4 सप्ताह में कुल 28 दिन होते हैं (4 × 7)। प्रतिदिन औसत हमले ज्ञात करने के लिए कुल हमलों को दिनों की संख्या से विभाजित करें: 8400 / 28 = 300 हमले प्रतिदिन।",
+  "e_en": "4 weeks equals 28 days (4 × 7). To find the daily average, divide total attacks by the number of days: 8400 / 28 = 300 attacks per day."
+ },
+ {
+  "id": "rp-com-l00327",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक नेटवर्क पैकेट फ़िल्टर प्रति सेकंड अधिकतम 10,000 पैकेटों का विश्लेषण कर सकता है। यदि एक संदिग्ध ट्रैफिक प्रवाह में 35,000 पैकेट भेजे जाते हैं, तो इस फ़िल्टर को सभी पैकेटों की जाँच करने के लिए कम से कम कितने सेकंड का समय चाहिए?",
+  "q_en": "A network packet filter can analyze a maximum of 10,000 packets per second. If a suspicious traffic flow sends 35,000 packets, what is the minimum number of seconds required for the filter to examine all packets?",
+  "o_hi": [
+   "2.5 सेकंड",
+   "3.0 सेकंड",
+   "3.5 सेकंड",
+   "4.0 सेकंड"
+  ],
+  "o_en": [
+   "2.5 seconds",
+   "3.0 seconds",
+   "3.5 seconds",
+   "4.0 seconds"
+  ],
+  "a": 2,
+  "e_hi": "कुल पैकेटों की संख्या को फ़िल्टर की प्रति सेकंड क्षमता से विभाजित करें: 35,000 / 10,000 = 3.5 सेकंड।",
+  "e_en": "Divide the total number of packets by the filter's processing capacity per second: 35,000 / 10,000 = 3.5 seconds."
+ },
+ {
+  "id": "rp-com-l00328",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "एक वित्तीय संस्थान के लिए पासवर्ड नीति में न्यूनतम लंबाई 8 वर्ण और अधिकतम 16 वर्ण निर्दिष्ट है। यदि कोई पासवर्ड केवल अंग्रेजी वर्णमाला के 26 छोटे अक्षरों का उपयोग करके बनाया जाना है, तो न्यूनतम लंबाई वाले संभावित पासवर्ड संयोजनों की गणना किस प्रकार की जाएगी?",
+  "q_en": "A financial institution's password policy specifies a minimum length of 8 and maximum of 16 characters. If a password must be created using only 26 lowercase English alphabet letters, how is the number of possible password combinations for the minimum length calculated?",
+  "o_hi": [
+   "26 की घात 8",
+   "8 की घात 26",
+   "26 गुना 8",
+   "26 की घात 16"
+  ],
+  "o_en": [
+   "26 raised to the power of 8",
+   "8 raised to the power of 26",
+   "26 multiplied by 8",
+   "26 raised to the power of 16"
+  ],
+  "a": 0,
+  "e_hi": "जब प्रत्येक स्थान पर कई विकल्प उपलब्ध हों, तो कुल संयोजन 'विकल्पों की संख्या' की घात 'वर्णों की लंबाई' होती है। यहाँ 26 वर्ण और लंबाई 8 है, इसलिए 26^8 होगा।",
+  "e_en": "When multiple choices are available at each position, the total combinations equal 'number of choices' raised to the power of 'length of characters'. Here it is 26 options and length 8, giving 26^8."
+ },
+ {
+  "id": "rp-com-l00329",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "एक कंपनी अपने कर्मचारियों के लिए दो-कारक प्रमाणीकरण (2FA) लागू करती है। पासवर्ड में 10 संभावित प्रतीक हैं और 2FA ओटीपी (OTP) में 6 अंक (0 से 9) हैं। पासवर्ड के लिए 1 विकल्प और ओटीपी के लिए 1 संयोजन चुनने पर कुल अद्वितीय प्रमाणीकरण स्थितियां कितनी होंगी?",
+  "q_en": "A company implements two-factor authentication (2FA) for employees. A password has 4 positions with 10 possible symbols each, and the 2FA OTP has 6 digits (0 to 9). What is the total number of unique combinations for a 4-symbol password combined with a 6-digit OTP?",
+  "o_hi": [
+   "10 की घात 4 और 10 की घात 6 का योग",
+   "10 की घात 4 को 10 की घात 6 से गुणा करना",
+   "10 की घात 10",
+   "20 की घात 10"
+  ],
+  "o_en": [
+   "Sum of 10^4 and 10^6",
+   "Product of 10^4 and 10^6",
+   "10 raised to the power of 10",
+   "20 raised to the power of 10"
+  ],
+  "a": 1,
+  "e_hi": "स्वतंत्र चरणों वाले दो-कारक प्रमाणीकरण में, कुल संयोजनों को ज्ञात करने के लिए दोनों भागों के संयोजनों को आपस में गुणा किया जाता है (10^4 × 10^6 = 10^10)।",
+  "e_en": "In two-factor authentication with independent steps, the total combinations are found by multiplying the combinations of both parts together (10^4 × 10^6 = 10^10)."
+ },
+ {
+  "id": "rp-com-l00330",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "यदि एक फ़ायरवॉल नियमों की सूची में कुल 120 नियम हैं और प्रत्येक पैकेट की जाँच करने में 0.5 माइक्रोसेकंड लगते हैं, तो औसतन प्रत्येक नियम को क्रम से जांचने पर एक पैकेट के मूल्यांकन में कितना कुल समय लगेगा?",
+  "q_en": "If a firewall rule list contains a total of 120 rules and checking each rule takes 0.5 microseconds, what is the total time taken to evaluate a packet if it has to pass through all rules sequentially?",
+  "o_hi": [
+   "30 माइक्रोसेकंड",
+   "60 माइक्रोसेकंड",
+   "120 माइक्रोसेकंड",
+   "240 माइक्रोसेकंड"
+  ],
+  "o_en": [
+   "30 microseconds",
+   "60 microseconds",
+   "120 microseconds",
+   "240 microseconds"
+  ],
+  "a": 1,
+  "e_hi": "कुल समय निकालने के लिए नियमों की संख्या को प्रति नियम लगने वाले समय से गुणा करें: 120 × 0.5 = 60 माइक्रोसेकंड।",
+  "e_en": "To find the total time, multiply the number of rules by the time taken per rule: 120 × 0.5 = 60 microseconds."
+ },
+ {
+  "id": "rp-com-l00331",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "एक कंपनी के सुरक्षा विश्लेषक ने देखा कि पिछले 5 महीनों में रैंसमवेयर हमलों की संख्या क्रमशः 10, 20, 40 और 80 थी, और पांचवें महीने में यह प्रवृत्ति जारी रही। पांचवें महीने में हमलों की अनुमानित संख्या क्या होगी?",
+  "q_en": "A security analyst noticed that the number of ransomware attacks in consecutive months was 10, 20, 40, and 80. Following this progression, what would be the estimated number of attacks in the fifth month?",
+  "o_hi": [
+   "100 हमले",
+   "120 हमले",
+   "160 हमले",
+   "200 हमले"
+  ],
+  "o_en": [
+   "100 attacks",
+   "120 attacks",
+   "160 attacks",
+   "200 attacks"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला एक ज्यामितीय प्रगति है जहाँ प्रत्येक महीने हमले दोगुने हो रहे हैं (10 × 2 = 20, 20 × 2 = 40, 40 × 2 = 80)। अतः पांचवें महीने में 80 × 2 = 160 हमले होंगे।",
+  "e_en": "This sequence is a geometric progression where attacks double each month (10 × 2 = 20, 20 × 2 = 40, 40 × 2 = 80). Therefore, the fifth month will have 80 × 2 = 160 attacks."
+ },
+ {
+  "id": "rp-com-l00332",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक वित्तीय डेटाबेस बैकअप नीति के तहत, पूर्ण बैकअप का आकार 500 जीबी है और प्रत्येक वृद्धिशील (incremental) बैकअप का आकार 50 जीबी है। यदि एक पूर्ण बैकअप के बाद 6 वृद्धिशील बैकअप लिए जाते हैं, तो बैकअप का कुल संचयी आकार कितना होगा?",
+  "q_en": "Under a financial database backup policy, a full backup size is 500 GB and each incremental backup size is 50 GB. If 6 incremental backups are taken after one full backup, what is the total cumulative size of the backups?",
+  "o_hi": [
+   "550 जीबी",
+   "700 जीबी",
+   "800 जीबी",
+   "3000 जीबी"
+  ],
+  "o_en": [
+   "550 GB",
+   "700 GB",
+   "800 GB",
+   "3000 GB"
+  ],
+  "a": 2,
+  "e_hi": "कुल आकार = पूर्ण बैकअप का आकार + (वृद्धिशील बैकअप की संख्या × प्रत्येक वृद्धिशील बैकअप का आकार)। यानी 500 + (6 × 50) = 500 + 300 = 800 जीबी।",
+  "e_en": "Total size = Full backup size + (Number of incremental backups × size of each incremental backup). That is 500 + (6 × 50) = 500 + 300 = 800 GB."
  }
 ]
