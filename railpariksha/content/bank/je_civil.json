@@ -23918,5 +23918,212 @@
   "a": 1,
   "e_hi": "मोमेंट एरिया विधि सरल ज्यामिति वाली बीमों के लिए बहुत प्रभावी और तेज है।",
   "e_en": "The moment area method is very effective and fast for beams with simple geometry."
+ },
+ {
+  "id": "rp-je_c-f01041",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 4 मीटर लंबी ब्रैकट बीम (cantilever beam) के मुक्त सिरे पर 10 किलोन्यूटन का बिंदु भार लगा है। बीम के फिक्स्ड सिरे पर बंकन आघूर्ण (bending moment) का मान क्या होगा?",
+  "q_en": "A 4-meter long cantilever beam is subjected to a point load of 10 kN at its free end. What is the bending moment at the fixed support?",
+  "o_hi": [
+   "20 किलोन्यूटन-मीटर",
+   "40 किलोन्यूटन-मीटर",
+   "10 किलोन्यूटन-मीटर",
+   "80 किलोन्यूटन-मीटर"
+  ],
+  "o_en": [
+   "20 kNm",
+   "40 kNm",
+   "10 kNm",
+   "80 kNm"
+  ],
+  "a": 1,
+  "e_hi": "बंकन आघूर्ण का सूत्र बल गुना दूरी है। यहाँ 10 किलोन्यूटन गुणा 4 मीटर बराबर 40 किलोन्यूटन-मीटर है।",
+  "e_en": "The bending moment is calculated as force times distance. Here, 10 kN multiplied by 4 m equals 40 kNm."
+ },
+ {
+  "id": "rp-je_c-f01042",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 6 मीटर लंबी सिंपली सपोर्टेड बीम के केंद्र पर 20 किलोन्यूटन का केंद्रीय बिंदु भार लगा है। बीम के केंद्र पर अधिकतम बंकन आघूर्ण ज्ञात कीजिए।",
+  "q_en": "A 6-meter long simply supported beam carries a central point load of 20 kN. Find the maximum bending moment at the center.",
+  "o_hi": [
+   "30 किलोन्यूटन-मीटर",
+   "20 किलोन्यूटन-मीटर",
+   "60 किलोन्यूटन-मीटर",
+   "120 किलोन्यूटन-मीटर"
+  ],
+  "o_en": [
+   "30 kNm",
+   "20 kNm",
+   "60 kNm",
+   "120 kNm"
+  ],
+  "a": 0,
+  "e_hi": "सिंपली सपोर्टेड बीम के लिए अधिकतम आघूर्ण का सूत्र WL/4 है। यहाँ 20 गुणा 6 भाग 4 बराबर 30 किलोन्यूटन-मीटर है।",
+  "e_en": "The formula for maximum bending moment for a simply supported beam with a central load is WL/4. Here, 20 * 6 / 4 equals 30 kNm."
+ },
+ {
+  "id": "rp-je_c-f01043",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "यदि एक बीम की लंबाई 'L' है और उस पर 'w' का एकसमान वितरित भार (UDL) पूरी लंबाई पर लगा है, तो अधिकतम बंकन आघूर्ण का मान क्या होगा?",
+  "q_en": "If a beam of length 'L' is subjected to a Uniformly Distributed Load (UDL) of 'w' over its entire span, what is the value of the maximum bending moment?",
+  "o_hi": [
+   "wL²/2",
+   "wL²/8",
+   "wL²/4",
+   "wL²/12"
+  ],
+  "o_en": [
+   "wL²/2",
+   "wL²/8",
+   "wL²/4",
+   "wL²/12"
+  ],
+  "a": 1,
+  "e_hi": "सिंपली सपोर्टेड बीम पर यूडीएल के लिए अधिकतम बंकन आघूर्ण का मानक सूत्र wL²/8 होता है।",
+  "e_en": "The standard formula for maximum bending moment for a simply supported beam under UDL is wL²/8."
+ },
+ {
+  "id": "rp-je_c-f01044",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम की लंबाई 2 मीटर है और उस पर 5 किलोन्यूटन प्रति मीटर का यूडीएल लगा है। मुक्त सिरे से फिक्स्ड सिरे तक बंकन आघूर्ण का मान ज्ञात करें।",
+  "q_en": "A cantilever beam is 2 meters long and carries a UDL of 5 kN/m. Calculate the bending moment at the fixed support.",
+  "o_hi": [
+   "5 किलोन्यूटन-मीटर",
+   "10 किलोन्यूटन-मीटर",
+   "20 किलोन्यूटन-मीटर",
+   "2.5 किलोन्यूटन-मीटर"
+  ],
+  "o_en": [
+   "5 kNm",
+   "10 kNm",
+   "20 kNm",
+   "2.5 kNm"
+  ],
+  "a": 1,
+  "e_hi": "कैंटिलीवर पर यूडीएल के लिए बंकन आघूर्ण wL²/2 होता है। यहाँ 5 गुणा 2 का वर्ग भाग 2 बराबर 10 किलोन्यूटन-मीटर है।",
+  "e_en": "For a cantilever beam under UDL, the moment is wL²/2. Here, 5 * 2² / 2 equals 10 kNm."
+ },
+ {
+  "id": "rp-je_c-f01045",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 10 मीटर लंबी बीम में दो सपोर्ट्स के बीच की दूरी क्या होगी यदि बीम के दोनों सिरों पर 1-1 मीटर का ओवरहैंग (overhang) है?",
+  "q_en": "What is the distance between the supports in a 10-meter long beam if there is an overhang of 1 meter at each end?",
+  "o_hi": [
+   "8 मीटर",
+   "9 मीटर",
+   "10 मीटर",
+   "12 मीटर"
+  ],
+  "o_en": [
+   "8 meters",
+   "9 meters",
+   "10 meters",
+   "12 meters"
+  ],
+  "a": 0,
+  "e_hi": "कुल लंबाई में से दोनों तरफ के ओवरहैंग घटाने पर: 10 - 1 - 1 = 8 मीटर।",
+  "e_en": "Subtracting the overhang from both sides of the total length: 10 - 1 - 1 = 8 meters."
+ },
+ {
+  "id": "rp-je_c-f01046",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक संरचना में यदि 3 सदस्य (members) एक जॉइंट पर मिलते हैं, तो काइनमैटिक अनिश्चितता (kinematic indeterminacy) का मान क्या होगा यदि सभी जॉइंट्स रिजिड हैं?",
+  "q_en": "In a structure, if 3 members meet at a joint, what will be the degree of kinematic indeterminacy if all joints are rigid (2D frame)?",
+  "o_hi": [
+   "1",
+   "2",
+   "3",
+   "0"
+  ],
+  "o_en": [
+   "1",
+   "2",
+   "3",
+   "0"
+  ],
+  "a": 2,
+  "e_hi": "2D रिजिड फ्रेम के प्रत्येक जॉइंट पर 3 डिग्री ऑफ फ्रीडम (2 अनुवाद और 1 घूर्णन) होती है।",
+  "e_en": "In a 2D rigid frame, each joint has 3 degrees of freedom (2 translations and 1 rotation)."
+ },
+ {
+  "id": "rp-je_c-f01047",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक प्रोप्ड कैंटिलीवर बीम (propped cantilever) की लंबाई L है। बीम के मुक्त सिरे पर प्रतिक्रिया (reaction) का मान क्या होगा यदि उस पर w का यूडीएल लगा है?",
+  "q_en": "For a propped cantilever beam of length L, what is the reaction at the propped end if it carries a UDL of w?",
+  "o_hi": [
+   "3wL/8",
+   "wL/2",
+   "wL/8",
+   "5wL/8"
+  ],
+  "o_en": [
+   "3wL/8",
+   "wL/2",
+   "wL/8",
+   "5wL/8"
+  ],
+  "a": 0,
+  "e_hi": "सुसंगत विरूपण विधि (consistent deformation) से, प्रोप्ड सिरे पर प्रतिक्रिया 3wL/8 प्राप्त होती है।",
+  "e_en": "Using the consistent deformation method, the reaction at the propped end is found to be 3wL/8."
+ },
+ {
+  "id": "rp-je_c-f01048",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक ट्रस (truss) के लिए, यदि सदस्यों की संख्या m=7 और जॉइंट्स की संख्या j=5 है, तो क्या यह ट्रस स्टेबल है?",
+  "q_en": "For a truss, if the number of members m=7 and the number of joints j=5, is the truss stable?",
+  "o_hi": [
+   "हाँ, यह परफेक्ट ट्रस है",
+   "नहीं, यह अनस्टेबल है",
+   "हाँ, यह रिडंडेंट है",
+   "डेटा अपर्याप्त है"
+  ],
+  "o_en": [
+   "Yes, it is a perfect truss",
+   "No, it is unstable",
+   "Yes, it is redundant",
+   "Data insufficient"
+  ],
+  "a": 2,
+  "e_hi": "परफेक्ट ट्रस के लिए m = 2j - 3 होना चाहिए। यहाँ 7 > (2*5 - 3) = 7, यह एक रिडंडेंट ट्रस है।",
+  "e_en": "For a perfect truss, m = 2j - 3. Here, 7 > (2*5 - 3) = 7, making it a redundant truss."
+ },
+ {
+  "id": "rp-je_c-f01049",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "यदि एक बीम का फ्लेक्सुरल रिजिडिटी (EI) दोगुना कर दिया जाए, तो उसके केंद्रीय विक्षेप (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the flexural rigidity (EI) of a beam is doubled, what will be the effect on its central deflection?",
+  "o_hi": [
+   "आधा हो जाएगा",
+   "दोगुना हो जाएगा",
+   "चार गुना हो जाएगा",
+   "कोई परिवर्तन नहीं"
+  ],
+  "o_en": [
+   "It will be halved",
+   "It will double",
+   "It will quadruple",
+   "No change"
+  ],
+  "a": 0,
+  "e_hi": "विक्षेप का सूत्र भार और लंबाई के समानुपाती और EI के व्युत्क्रमानुपाती होता है। EI दोगुना करने पर विक्षेप आधा हो जाएगा।",
+  "e_en": "Deflection is inversely proportional to flexural rigidity (EI). Doubling EI will reduce the deflection by half."
  }
 ]
