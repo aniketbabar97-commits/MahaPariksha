@@ -254,7 +254,6 @@ class _IdCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lang = context.lang;
     final displayName = p.name.isEmpty ? context.tr('अभ्यर्थी', 'Aspirant') : p.name;
     // Stable per-device "ID number" -- not a real identifier, just a badge
     // detail that stays the same across app restarts instead of re-randomizing.
