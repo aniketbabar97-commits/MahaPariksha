@@ -44,6 +44,18 @@ class RailParikshaApp extends StatelessWidget {
         'dark' => ThemeMode.dark,
         _ => ThemeMode.system,
       },
+      // Clamp system text scaling -- the card/row-based layouts throughout this
+      // app (headers, chips, nav bar labels) assume roughly phone-default text
+      // size. An uncapped scaler (some OEM "large font"/"display size"
+      // accessibility settings go well past 2x) makes even single characters
+      // wider than their row, so Flutter wraps every letter onto its own line.
+      // Still respects the user's preference, just keeps it from breaking layout.
+      builder: (context, child) => MediaQuery(
+        data: MediaQuery.of(context).copyWith(
+          textScaler: MediaQuery.textScalerOf(context).clamp(minScaleFactor: 0.85, maxScaleFactor: 1.3),
+        ),
+        child: child!,
+      ),
       home: p.onboarded ? const HomeShell() : const OnboardingScreen(),
     );
   }
