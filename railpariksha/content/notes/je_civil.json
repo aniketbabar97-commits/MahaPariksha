@@ -202,5 +202,411 @@
   "id": "note-je_civil-surveying",
   "s": "je_civil",
   "t": "surveying"
+ },
+ {
+  "summary_hi": "संरचनात्मक विश्लेषण सिविल इंजीनियरिंग का एक महत्वपूर्ण विषय है, जो बाह्य बलों के प्रभाव में संरचनाओं के व्यवहार का अध्ययन करता है। इसमें बीम, फ्रेम और ट्रस जैसे संरचनात्मक अवयवों पर लगने वाले बलों, झुकाव, विक्षेपण और समर्थन प्रतिक्रियाओं की गणना की जाती है। इस इकाई के अंतर्गत статически निश्चयी (statically determinate) और अनििश्चयी (statically indeterminate) संरचनाओं के बीच अंतर को समझना आवश्यक है। ढलान-विक्षेपण विधि (Slope-Deflection Method), मोमेंट डिस्ट्रीब्यूशन विधि (Moment Distribution Method) और वर्चुअल वर्क जैसे तरीके इस विश्लेषण की रीढ़ हैं। परीक्षा की दृष्टि से, डिग्री ऑफ स्टैटिक इंडिटरमिसी और काइनेमैटिक इंडिटरमिसी के सूत्र बार-बार पूछे जाते हैं। प्रभाव रेखाएं (Influence Line Diagrams) गतिशील भार के प्रभाव को समझने में मदद करती हैं। रेलवे और अन्य प्रतियोगी परीक्षाओं में इस खंड से संख्यात्मक और वैचारिक दोनों प्रकार के प्रश्न आते हैं। सटीक गणना और सही सूत्रों का चयन ही इस विषय में सफलता की कुंजी है।",
+  "summary_en": "Structural analysis is a core civil engineering subject dealing with the behavior of structures under external loads. It involves calculating internal forces, slopes, deflections, and support reactions for structural elements like beams, frames, and trusses. A fundamental understanding of the distinction between statically determinate and indeterminate structures is essential. Methods such as the Slope-Deflection Method, Moment Distribution Method, and Virtual Work form the backbone of this analysis. From an exam perspective, formulas for degree of static and kinematic indeterminacy are frequently tested. Influence Line Diagrams help analyze the effects of moving loads. Railway and competitive exams regularly feature both numerical and conceptual questions from this section. Precise calculation and proper formula selection are key to mastering this topic.",
+  "facts_hi": [
+   "स्थैतिक रूप से निश्चयी संरचनाओं को पूरी तरह से हल करने के लिए केवल संतुलन के समीकरणों (Static Equilibrium Equations) की आवश्यकता होती है।",
+   "डिग्री ऑफ स्टैटिक इंडिटरमिसी (Ds) कुल प्रतिक्रियाओं और आंतरिक बलों की संख्या में से संतुलन समीकरणों को घटाकर निकाली जाती है।",
+   "एक स्थिर बीम (Fixed Beam) के लिए, दोनों सिरों पर क्षण (Moments) उत्पन्न होते हैं जो सामान्य समर्थित बीम की तुलना में विक्षेपण को कम करते हैं।",
+   "कैनिलीवर बीम के मुक्त छोर पर बेंडिंग मोमेंट शून्य होता है और फिक्स्ड छोर पर अधिकतम होता है।",
+   "कास्टिग्लिआनो का पहला प्रमेय (Castigliano's First Theorem) आंशिक अवकलन का उपयोग करके विक्षेपण ज्ञात करने के लिए उपयोग किया जाता है।",
+   "तीन-अभिगम आर्च (Three-Hinged Arch) एक स्थैतिक रूप से निश्चयी संरचना है, जबकि दो-अभिगम आर्च एक अनििश्चयी संरचना है।",
+   "प्रभाव रेखा (Influence Line Diagram) किसी निश्चित बिंदु पर शियर फोर्स या बेंडिंग मोमेंट में परिवर्तन को दर्शाती है जब एक इकाई भार संरचना पर चलता है।",
+   "मूर का प्रमेय (Mohr's Theorem) क्षेत्रफल-मोमेंट विधि (Slope-Deflection / Moment Area Method) पर आधारित है जो ढलान और विक्षेपण निकालता है।",
+   "शुद्ध बेंडिंग के तहत, एक बीम की तटस्थ अक्ष (Neutral Axis) पर प्रतिबल शून्य होता है।"
+  ],
+  "facts_en": [
+   "Statically determinate structures can be completely solved using only the equations of static equilibrium.",
+   "The degree of static indeterminacy (Ds) is calculated by subtracting equilibrium equations from the total reactions and internal forces.",
+   "For a fixed beam, moments are generated at both ends which reduce deflection compared to a simply supported beam.",
+   "The bending moment at the free end of a cantilever beam is zero and maximum at the fixed end.",
+   "Castigliano's First Theorem is used to find deflections by utilizing partial differentiation of strain energy.",
+   "A three-hinged arch is a statically determinate structure, whereas a two-hinged arch is indeterminate.",
+   "An Influence Line Diagram shows the variation of shear force or bending moment at a specific point as a unit load moves across the structure.",
+   "Mohr's Theorems are based on the Area-Moment method to determine slope and deflection.",
+   "Under pure bending, the stress along the neutral axis of a beam is zero."
+  ],
+  "tips_hi": [
+   "परीक्षा में स्टैटिक इंडिटरमिसी निकालते समय आंतरिक हिंज को अलग से गिनना न भूलें, क्योंकि प्रत्येक आंतरिक हिंज एक अतिरिक्त समीकरण प्रदान करता है।",
+   "ट्रस (Truss) के लिए m < 2j - 3 का उपयोग अपूर्ण (deficient) ट्रस की पहचान करने के लिए करें, जहाँ m सदस्य और j जॉइंट हैं।",
+   "फिक्स्ड बीम और सिंपली सपोर्टेड बीम के अधिकतम बेंडिंग मोमेंट के सूत्रों (जैसे wL^2/8 बनाम wL^2/12) को कभी आपस में न मिलाएं, यह सबसे आम जाल है।",
+   "काइनेमैटिक इंडिटरमिसी (Di) में हमेशा यह जांचें कि क्या अक्षीय विरूपण (axial deformation) को नगण्य माना गया है या नहीं।"
+  ],
+  "tips_en": [
+   "Do not forget to account for internal hinges separately when calculating static indeterminacy in the exam, as each internal hinge provides an extra equation.",
+   "Use m < 2j - 3 for trusses to quickly identify deficient ones, where m is members and j is joints.",
+   "Never confuse the maximum bending moment formulas for fixed and simply supported beams (e.g., wL^2/8 vs wL^2/12), as this is a frequent examiner trap.",
+   "Always check whether axial deformation is neglected or considered while calculating kinematic indeterminacy (Di)."
+  ],
+  "map": {
+   "hi": "संरचनात्मक विश्लेषण",
+   "en": "Structural Analysis",
+   "children": [
+    {
+     "hi": "संरचनाओं के प्रकार",
+     "en": "Types of Structures",
+     "children": [
+      {
+       "hi": "निश्चयी संरचनाएं",
+       "en": "Determinate Structures"
+      },
+      {
+       "hi": "अनििश्चयी संरचनाएं",
+       "en": "Indeterminate Structures"
+      }
+     ]
+    },
+    {
+     "hi": "इंडिटरमिसी (अनिश्चितता)",
+     "en": "Indeterminacy",
+     "children": [
+      {
+       "hi": "स्थैतिक अनिश्चितता (Ds)",
+       "en": "Static Indeterminacy"
+      },
+      {
+       "hi": "गतिकी अनिश्चितता (Di)",
+       "en": "Kinematic Indeterminacy"
+      }
+     ]
+    },
+    {
+     "hi": "विश्लेषण की विधियां",
+     "en": "Methods of Analysis",
+     "children": [
+      {
+       "hi": "ढलान-विक्षेपण और मोमेंट डिस्ट्रीब्यूशन",
+       "en": "Slope-Deflection & Moment Distribution"
+      },
+      {
+       "hi": "ऊर्जा विधियां (कास्टिग्लिआनो)",
+       "en": "Energy Methods (Castigliano)"
+      },
+      {
+       "hi": "क्षेत्रफल-मोमेंट विधि",
+       "en": "Area-Moment Method"
+      }
+     ]
+    },
+    {
+     "hi": "विशेष संरचनाएं",
+     "en": "Special Structures",
+     "children": [
+      {
+       "hi": "आर्च और सस्पेंशन ब्रिज",
+       "en": "Arches and Suspension Bridges"
+      },
+      {
+       "hi": "प्रभाव रेखाएं (ILD)",
+       "en": "Influence Line Diagrams"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_civil-structural_analysis",
+  "s": "je_civil",
+  "t": "structural_analysis"
+ },
+ {
+  "summary_hi": "मृदा यांत्रिकी और नींव सिविल इंजीनियरिंग का एक महत्वपूर्ण हिस्सा है, जो रेलवे और अन्य बुनियादी ढांचा परियोजनाओं के लिए आधार प्रदान करता है। इसमें मृदा के त्रि-कला (three-phase) गुणों, जैसे रिक्तता अनुपात, सरंध्रता, संतृप्ति की मात्रा और जल सामग्री का अध्ययन किया जाता है। मृदा का वर्गीकरण और पारगम्यता (permeability) पानी के रिساव और सीपेज दबाव को समझने में मदद करते हैं। संपीड़न (consolidation) और अपरूपण शक्ति (shear strength) यह निर्धारित करती हैं कि भार के तहत मिट्टी कैसे बैठेगी। उथली और गहरी नींव, जैसे कि पाइल फाउंडेशन, सुपरस्ट्रक्चर के भार को सुरक्षित रूप से जमीन में स्थानांतरित करती हैं। रेलवे ट्रैक और प्लेटफार्मों के डिजाइन में बेयरिंग कैपेसिटी का सही आकलन करना अनिवार्य है।",
+  "summary_en": "Soil Mechanics and Foundation Engineering is a crucial branch providing the base for railway and infrastructure projects. It involves the study of three-phase soil properties like void ratio, porosity, degree of saturation, and water content. Soil classification and permeability help in understanding seepage flow and uplift pressure. Consolidation and shear strength determine how soil behaves and settles under applied loads. Shallow and deep foundations, such as pile foundations, safely transfer superstructure loads to the ground. Accurate estimation of bearing capacity is essential for designing stable railway tracks and station platforms.",
+  "facts_hi": [
+   "मृदा एक त्रि-कला प्रणाली है जिसमें ठोस कण, जल और वायु होते हैं।",
+   "रिक्तता अनुपात (e) रिक्तियों के आयतन और ठोस पदार्थों के आयतन का अनुपात होता है।",
+   "संतृप्ति की मात्रा (S_r) मृदा में मौजूद पानी के आयतन और कुल रिक्तियों के आयतन का प्रतिशत है।",
+   "डार्सी का नियम (Darcy's Law) मृदा के माध्यम से पानी के बहाव के वेग को निर्धारित करता है।",
+   "कण आकार वितरण वक्र (Particle size distribution curve) से प्रभावी आकार (D10) प्राप्त किया जाता है।",
+   "कंसोलिडेशन (Consolidation) मृदा से पानी के बाहर निकलने के कारण होने वाला समय-निर्भर संपीड़न है।",
+   "मृदा की अपरूपण शक्ति मोहर-कूलम्ब सिद्धांत (Mohr-Coulomb theory) पर आधारित होती है।",
+   "अल्टीमेट बेयरिंग कैपेसिटी वह अधिकतम भार है जिसे नींव बिना किसी विफलता के सहन कर सकती है।",
+   "उथली नींव के लिए टेरझागी का बेयरिंग क्षमता समीकरण व्यापक रूप से उपयोग किया जाता है।",
+   "पाइल फाउंडेशन का उपयोग तब किया जाता है जब ऊपरी मिट्टी कमजोर होती है और भार को गहरी मजबूत परत तक ले जाना होता है।"
+  ],
+  "facts_en": [
+   "Soil is a three-phase system consisting of solid particles, water, and air.",
+   "Void ratio (e) is defined as the ratio of the volume of voids to the volume of solids.",
+   "Degree of saturation (S_r) is the percentage of the volume of water to the volume of voids.",
+   "Darcy's Law governs the velocity of water flow through porous soil media.",
+   "Effective size (D10) is directly obtained from the particle size distribution curve.",
+   "Consolidation is the time-dependent volume reduction caused by the expulsion of water from voids.",
+   "Shear strength of soil is fundamentally governed by the Mohr-Coulomb failure criterion.",
+   "Ultimate bearing capacity is the maximum load a foundation can support before shear failure.",
+   "Terzaghi's bearing capacity theory is widely used for analyzing shallow foundations.",
+   "Pile foundations are deployed when top soil layers are weak and loads must reach deeper strata."
+  ],
+  "tips_hi": [
+   "याद रखें कि रिक्तता अनुपात (e) का मान 1 से अधिक हो सकता है, लेकिन सरंध्रता (n) हमेशा 0 से 100% के बीच होती है।",
+   "परीक्षा में डार्सी के नियम को लागू करते समय यह जांच लें कि प्रवाह स्तर रैखिक (laminar) है या नहीं।",
+   "अक्सर परीक्षार्थी 'कंसोलिडेशन' (समय के साथ पानी निकलना) और 'कम्पैक्शन' (तत्काल वायु बाहर निकलना) को मिला देते हैं, अंतर स्पष्ट रखें।",
+   "सुरक्षा गुणांक (Factor of Safety) को हमेशा नेट अल्टीमेट बेयरिंग कैपेसिटी पर लागू करें, न कि कुल क्षमता पर, जब तक कि विशेष रूप से न कहा गया हो।"
+  ],
+  "tips_en": [
+   "Remember that the void ratio (e) can exceed 1, whereas porosity (n) always remains strictly between 0 and 100%.",
+   "Always verify if the flow condition is laminar before applying Darcy's Law in numerical problems.",
+   "Examiners love swapping 'consolidation' (time-dependent water expulsion) with 'compaction' (immediate air expulsion)—read carefully.",
+   "Always apply the Factor of Safety to the net ultimate bearing capacity rather than the gross capacity unless specified otherwise."
+  ],
+  "map": {
+   "hi": "मृदा यांत्रिकी और नींव",
+   "en": "Soil Mechanics & Foundation",
+   "children": [
+    {
+     "hi": "मृदा के गुण और सूचकांक",
+     "en": "Soil Properties & Indices",
+     "children": [
+      {
+       "hi": "त्रि-कला संबंध",
+       "en": "Three-phase relationships"
+      },
+      {
+       "hi": "कण आकार विश्लेषण",
+       "en": "Particle size analysis"
+      }
+     ]
+    },
+    {
+     "hi": "हाइड्रोलिक गुण",
+     "en": "Hydraulic Properties",
+     "children": [
+      {
+       "hi": "पारगम्यता और डार्सी का नियम",
+       "en": "Permeability and Darcy's Law"
+      },
+      {
+       "hi": "सीपेज दबाव",
+       "en": "Seepage pressure"
+      }
+     ]
+    },
+    {
+     "hi": "संपीड़न और अपरूपण शक्ति",
+     "en": "Consolidation & Shear Strength",
+     "children": [
+      {
+       "hi": "कंसोलिडेशन सिद्धांत",
+       "en": "Consolidation theory"
+      },
+      {
+       "hi": "मोहर-कूलम्ब मापदंड",
+       "en": "Mohr-Coulomb criteria"
+      }
+     ]
+    },
+    {
+     "hi": "नींव इंजीनियरिंग",
+     "en": "Foundation Engineering",
+     "children": [
+      {
+       "hi": "बेयरिंग कैपेसिटी",
+       "en": "Bearing capacity"
+      },
+      {
+       "hi": "उथली और गहरी नींव",
+       "en": "Shallow and deep foundations"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_civil-soil_mechanics_foundation",
+  "s": "je_civil",
+  "t": "soil_mechanics_foundation"
+ },
+ {
+  "summary_hi": "परिवहन अभियांत्रिकी सिविल इंजीनियरिंग का एक महत्वपूर्ण भाग है जो सड़कों, रेलवे, हवाई अड्डों और बंदरगाहों की योजना, डिजाइन और संचालन से संबंधित है। रेलवे इंजीनियरिंग में ट्रैक जियोमेट्री, गेज के प्रकार, स्लीपर घनत्व और बिंदुओं और क्रॉसिंग का विशेष महत्व है। सड़क मार्ग (हाईवे) इंजीनियरिंग में ज्यामितीय डिजाइन, कैंबर, सुपरएलीवेशन, और दृष्टि दूरियों (sight distances) का अध्ययन किया जाता है। यातायात संकेतों, सड़क चिह्नों और चौराहों का उचित डिजाइन यातायात प्रवाह को सुरक्षित और सुगम बनाता है। रेलवे और राजमार्गों के निर्माण में उपयोग होने वाले सबग्रेड, बेस और सरफेस कोर्स की गुणवत्ता पर विशेष ध्यान दिया जाता है। आरआरबी और आरपीएफ परीक्षाओं में इन घटकों, उनके मानकीकृत सूत्रों और वर्गीकरण से संबंधित प्रश्न बार-बार पूछे जाते हैं। इसलिए, विभिन्न प्रकार के ग्रेडिएंट्स, वक्रों और डिजाइन मापदंडों की स्पष्ट समझ होना परीक्षा में सफलता के लिए आवश्यक है।",
+  "summary_en": "Transportation Engineering is a vital branch of civil engineering concerned with the planning, design, and operation of roads, railways, airports, and harbors. In railway engineering, track geometry, gauge types, sleeper density, and points and crossings hold special importance. Highway engineering involves the study of geometric design, camber, superelevation, and sight distances. Proper design of traffic signs, road markings, and intersections ensures safe and smooth traffic flow. Special attention is paid to the quality of subgrade, base, and surface courses used in the construction of railways and highways. Questions related to these components, their standardized formulas, and classifications are frequently asked in RRB and RPF examinations. Therefore, a clear understanding of various types of gradients, curves, and design parameters is essential for exam success.",
+  "facts_hi": [
+   "भारतीय रेलवे में मानक ब्रॉड गेज (Broad Gauge) की ट्रैक चौड़ाई 1676 मिमी होती है।",
+   "मीटर गेज (Meter Gauge) में पटरियों के बीच की आंतरिक दूरी 1000 मिमी होती है।",
+   "स्लीपर घनत्व (Sleeper Density) को 'M + x' द्वारा दर्शाया जाता है, जहाँ M रेल की लंबाई है।",
+   "सुपरएलीवेशन (Superelevation) का मुख्य उद्देश्य अभिकेंद्र बल (centrifugal force) को संतुलित करना है।",
+   "सड़कों पर कैंबर (Camber) जल निकासी (drainage) के लिए प्रदान किया जाने वाला अनुप्रस्थ ढलान है।",
+   "स्टॉपिंग साइट डिस्टेंस (SSD) ड्राइवर की प्रतिक्रिया समय और वाहन की ब्रेकिंग दूरी पर निर्भर करती है।",
+   "रेलवे ट्रैक पर बैलास्ट (Ballast) का मुख्य कार्य लोड को समान रूप से सबग्रेड पर वितरित करना है।",
+   "आईआरसी (IRC) के अनुसार मैडम आदम और डामर सड़कों के लिए अनुशंसित अधिकतम सुपरएलीवेशन सामान्यतः 7 प्रतिशत होता है।",
+   "क्रांति या टर्नआउट (Turnout) एक रेलवे व्यवस्था है जो ट्रेनों को एक ट्रैक से दूसरे ट्रैक पर जाने की अनुमति देती है।"
+  ],
+  "facts_en": [
+   "The standard track width of a Broad Gauge in Indian Railways is 1676 mm.",
+   "The clear distance between rails in a Meter Gauge is 1000 mm.",
+   "Sleeper Density is generally expressed as 'M + x', where M is the length of the rail.",
+   "The primary purpose of Superelevation is to counterbalance the centrifugal force.",
+   "Camber on roads is a transverse slope provided for effective drainage.",
+   "Stopping Sight Distance (SSD) depends on the driver's reaction time and vehicle braking distance.",
+   "The main function of ballast in a railway track is to distribute the load uniformly to the subgrade.",
+   "According to IRC recommendations, the maximum superelevation for plain and rolling terrain is generally 7 percent.",
+   "A turnout is a railway arrangement that allows trains to cross from one track to another."
+  ],
+  "tips_hi": [
+   "गेज के आयामों को याद रखने के लिए मानक ब्रॉड गेज (1676 मिमी) को आधार बनाएं और मीटर (1000 मिमी) व नैरो (762/610 मिमी) से तुलना करके याद रखें।",
+   "सुपरएलीवेशन के सूत्र (e = V^2 / 127R) में गति (V) किमी/घंटा और त्रिज्या (R) मीटर में होती है, मात्रकों की अदला-बदली के जाल से सावधान रहें।",
+   "सड़क डिजाइन में SSD (स्टॉपिंग साइट डिस्टेंस) और OSD (ओवरटेकिंग साइट डिस्टेंस) के घटकों को आपस में न मिलाएं; OSD में प्रतिक्रिया समय और त्वरण दोनों शामिल होते हैं।",
+   "कैलकुलेशन आधारित प्रश्नों में प्रतिशत और डिग्री के अंतर को ध्यान से पढ़ें, क्योंकि परीक्षा में अक्सर मिलती-जुलती वैल्यू देकर भ्रमित किया जाता है।"
+  ],
+  "tips_en": [
+   "Use standard Broad Gauge (1676 mm) as your base reference and compare Meter (1000 mm) and Narrow gauges to avoid mixing up dimensions.",
+   "In the superelevation formula (e = V^2 / 127R), remember that speed (V) is in kmph and radius (R) is in meters; watch out for unit-conversion traps.",
+   "Do not confuse the components of SSD and OSD in highway design; remember that OSD involves acceleration and overtaking zones unlike SSD.",
+   "Read percentage and degree values carefully in numerical problems, as examiners frequently swap similar-looking options to trap hurried candidates."
+  ],
+  "map": {
+   "hi": "परिवहन अभियांत्रिकी",
+   "en": "Transportation Engineering",
+   "children": [
+    {
+     "hi": "रेलवे इंजीनियरिंग",
+     "en": "Railway Engineering",
+     "children": [
+      {
+       "hi": "ट्रैक गेज के प्रकार",
+       "en": "Types of Track Gauges"
+      },
+      {
+       "hi": "स्लीपर और बैलास्ट",
+       "en": "Sleepers and Ballast"
+      },
+      {
+       "hi": "पॉइंट्स और क्रॉसिंग",
+       "en": "Points and Crossings"
+      }
+     ]
+    },
+    {
+     "hi": "राजमार्ग इंजीनियरिंग",
+     "en": "Highway Engineering",
+     "children": [
+      {
+       "hi": "ज्यामितीय डिजाइन और कैंबर",
+       "en": "Geometric Design and Camber"
+      },
+      {
+       "hi": "सुपरएलीवेशन",
+       "en": "Superelevation"
+      },
+      {
+       "hi": "दृष्टि दूरियां (साइट डिस्टेंसेस)",
+       "en": "Sight Distances"
+      }
+     ]
+    },
+    {
+     "hi": "यातायात नियंत्रण",
+     "en": "Traffic Control",
+     "children": [
+      {
+       "hi": "यातायात संकेत और चिह्न",
+       "en": "Traffic Signs and Markings"
+      },
+      {
+       "hi": "चौराहे (इंटरसेक्शन्स)",
+       "en": "Intersections"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_civil-transportation_engineering",
+  "s": "je_civil",
+  "t": "transportation_engineering"
+ },
+ {
+  "summary_hi": "पर्यावरण अभियांत्रिकी सिविल इंजीनियरिंग का एक अत्यंत महत्वपूर्ण भाग है, जो स्वच्छ जल आपूर्ति, अपशिष्ट जल प्रबंधन और वायु प्रदूषण नियंत्रण से संबंधित है। इस विषय के अंतर्गत जल की गुणवत्ता के भौतिक, रासायनिक और जैविक गुणों का अध्ययन किया जाता है। परीक्षाओं में जल उपचार संयंत्रों के विभिन्न चरणों, जैसे स्कंदन, ऊर्णन, अवसादन और निसंदन पर विशेष बल दिया जाता है। इसके अलावा, BOD और COD जैसे महत्वपूर्ण पैरामीटर जल प्रदूषण की मात्रा को मापने के लिए उपयोग किए जाते हैं। ठोस अपशिष्ट प्रबंधन और सीवरेज प्रणाली भी रेलवे और अन्य प्रतियोगी परीक्षाओं के मुख्य केंद्र बिंदु हैं। मानक मानदंडों के अनुसार पेयजल की गुणवत्ता और दूषित जल के निस्तारण के नियम हर सिविल इंजीनियर को याद होने चाहिए। इस इकाई से सीधे संख्यात्मक और तथ्यात्मक प्रश्न पूछे जाते हैं, जो स्कोर बढ़ाने में मदद करते हैं। सही रणनीतिक अध्ययन से इस खंड में शत-प्रतिशत अंक प्राप्त किए जा सकते हैं।",
+  "summary_en": "Environmental Engineering is a crucial branch of civil engineering focusing on safe water supply, wastewater management, and air pollution control. It involves the study of physical, chemical, and biological parameters of water quality. Competitive exams frequently test processes in water treatment plants, including coagulation, flocculation, sedimentation, and filtration. Additionally, parameters like BOD and COD are vital for quantifying water pollution levels. Solid waste management and sewerage systems also form core areas for railway and engineering recruitment tests. Standard drinking water quality guidelines and wastewater disposal rules are essential for every civil engineer. This unit regularly features direct numerical and factual questions that boost exam scores. Strategic preparation of these concepts ensures high accuracy and performance.",
+  "facts_hi": [
+   "जल की कुल कठोरता (Total Hardness) मुख्य रूप से कैल्शियम और मैग्नीशियम आयनों के कारण होती है।",
+   "बायोकॉमिकल ऑक्सीजन डिमांड (BOD) आमतौर पर 20 डिग्री सेल्सियस तापमान पर 5 दिनों के लिए मापी जाती है।",
+   "पेयजल में फ्लोराइड की अत्यधिक मात्रा से फ्लोरोसिस नामक बीमारी होती है, जो दांतों और हड्डियों को प्रभावित करती है।",
+   "जल उपचार संयंत्र में अवसादन टैंक (Sedimentation Tank) में पानी का सतही भराव दर (Surface Overflow Rate) डिजाइन का मुख्य आधार है।",
+   "धीमी रेत निसंदन इकाई (Slow Sand Filter) की दक्षता बैक्टीरिया को हटाने में तीव्र रेत फिल्टर से अधिक होती है।",
+   "सीवेज के उपचार में सक्रिय कीचड़ प्रक्रिया (Activated Sludge Process) एक वायवीय (Aerobic) जैविक प्रक्रिया है।",
+   "घरेलू सीवेज का BOD और COD अनुपात सामान्यतः 0.5 से 0.8 के बीच होता है।",
+   "वायु प्रदूषण नियंत्रण के लिए इलेक्ट्रोस्टेटिक प्रेcipitेटेटर (ESP) सबसे प्रभावी कणकीय नियंत्रण उपकरणों में से एक है।",
+   "जल में अवशिष्ट क्लोरीन की उपस्थिति यह सुनिश्चित करती है कि रोगाणुनाशक प्रभाव वितरण प्रणाली में भी बना रहे।"
+  ],
+  "facts_en": [
+   "Total hardness in water is primarily caused by dissolved calcium and magnesium ions.",
+   "Biochemical Oxygen Demand (BOD) is standardly measured over a period of 5 days at 20 degrees Celsius.",
+   "Excessive fluoride concentration in drinking water causes fluorosis, affecting teeth and bones.",
+   "Surface overflow rate is a key design parameter for sedimentation tanks in water treatment plants.",
+   "Slow sand filters have a higher bacterial removal efficiency compared to rapid sand filters.",
+   "The activated sludge process used in wastewater treatment is an aerobic biological process.",
+   "The typical BOD to COD ratio for domestic sewage generally ranges between 0.5 and 0.8.",
+   "Electrostatic precipitators (ESPs) are among the most effective devices for controlling particulate air pollution.",
+   "The presence of residual chlorine in water ensures disinfection protection throughout the distribution network."
+  ],
+  "tips_hi": [
+   "BOD5 और COD के मान में हमेशा COD का मान अधिक होता है क्योंकि COD में अजैविक कार्बनिक पदार्थ भी ऑक्सीकृत हो जाते हैं।",
+   "धीमी रेत फिल्टर (SSF) और तीव्र रेत फिल्टर (RSF) के अंतर को याद रखने के लिए इनकी सफाई अंतराल और दक्षता की तुलना करें; SSF की सफाई अवधि महीनों में होती है जबकि RSF की दिनों में।",
+   "कठोरता के अस्थायी और स्थायी प्रकारों को याद रखें: कार्बोनेट कठोरता को उबालकर हटाया जा सकता है, जबकि गैर-कार्बोनेट कठोरता के लिए चूड़ा-सोडा प्रक्रिया आवश्यक है।"
+  ],
+  "tips_en": [
+   "Always remember that the COD value is higher than the BOD5 value for the same wastewater sample because COD oxidizes both biodegradable and non-biodegradable matter.",
+   "To easily differentiate between Slow Sand Filters (SSF) and Rapid Sand Filters (RSF), recall their cleaning interval: SSF takes months, whereas RSF requires cleaning every few days.",
+   "Quickly classify hardness types during exams: temporary (carbonate) hardness can be removed simply by boiling, while permanent hardness requires chemical lime-soda treatment."
+  ],
+  "map": {
+   "hi": "पर्यावरण अभियांत्रिकी",
+   "en": "Environmental Engineering",
+   "children": [
+    {
+     "hi": "जल आपूर्ति इंजीनियरिंग",
+     "en": "Water Supply Engineering",
+     "children": [
+      {
+       "hi": "जल की गुणवत्ता और पैरामीटर",
+       "en": "Water Quality Parameters"
+      },
+      {
+       "hi": "जल उपचार प्रक्रियाएं",
+       "en": "Water Treatment Processes"
+      },
+      {
+       "hi": "कीटाणुशोधन और फ्लोरीकरण",
+       "en": "Disinfection and Fluoridation"
+      }
+     ]
+    },
+    {
+     "hi": "अपशिष्ट जल इंजीनियरिंग",
+     "en": "Wastewater Engineering",
+     "children": [
+      {
+       "hi": "सीवेज लक्षण और BOD/COD",
+       "en": "Sewage Characteristics and BOD/COD"
+      },
+      {
+       "hi": "प्राथमिक और द्वितीयक उपचार",
+       "en": "Primary and Secondary Treatment"
+      }
+     ]
+    },
+    {
+     "hi": "वायु और ध्वनि प्रदूषण",
+     "en": "Air and Noise Pollution",
+     "children": [
+      {
+       "hi": "वायु प्रदूषक और नियंत्रण उपकरण",
+       "en": "Air Pollutants and Control Devices"
+      }
+     ]
+    },
+    {
+     "hi": "ठोस अपशिष्ट प्रबंधन",
+     "en": "Solid Waste Management",
+     "children": [
+      {
+       "hi": "संग्रह, परिवहन और निपटान",
+       "en": "Collection, Transport and Disposal"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_civil-environmental_engineering",
+  "s": "je_civil",
+  "t": "environmental_engineering"
  }
 ]
