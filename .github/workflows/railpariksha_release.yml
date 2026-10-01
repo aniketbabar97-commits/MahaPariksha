@@ -44,6 +44,27 @@ jobs:
         run: echo "BUILD_NUMBER=$((100 + ${{ github.run_number }}))" >> $GITHUB_ENV
       - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
       - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      # Hard gate: a build that fails to even launch must never reach a GitHub
+      # release or the Play Store, regardless of how the tag got pushed. v1.0.0
+      # shipped a build that crashed on every launch (R8 stripped a class
+      # androidx.work needed reflectively) and that was only caught because a
+      # human happened to pull a crash log by hand -- this makes that structurally
+      # impossible going forward.
+      - name: Enable KVM for emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Boot emulator, verify the signed release build survives launch
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: railpariksha/pipeline/smoke_test.sh railpariksha/app/build/app/outputs/flutter-apk/app-release.apk
       - name: Upload to Google Play
         if: ${{ env.PLAY_JSON != '' }}
         uses: r0adkll/upload-google-play@v1

@@ -90,3 +90,35 @@ jobs:
         with:
           name: railpariksha-apk
           path: railpariksha/app/build/app/outputs/flutter-apk/*.apk
+
+  # Boots a real Android emulator and installs+launches the actual release-mode
+  # build (minification on, same as what ships) -- catches release-build-only
+  # crashes (R8 stripping a class a plugin needs reflectively, etc.) that
+  # `flutter analyze`/`flutter test` cannot see, since those never run the
+  # compiled app at all. Added after v1.0.0 shipped a release build that
+  # crashed on every single launch (missing R8 keep rules for androidx.work/
+  # room, used internally by flutter_local_notifications) -- caught only by a
+  # real device and a manually-pulled crash log. This closes that gap so it's
+  # never again on a human to catch a build that fails to open.
+  smoke_test:
+    runs-on: ubuntu-latest
+    needs: [changes, app]
+    if: needs.changes.outputs.app == 'true'
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: railpariksha-apk, path: apk }
+      - name: Enable KVM for emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Boot emulator, install release APK, verify it survives launch
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: railpariksha/pipeline/smoke_test.sh apk/app-x86_64-release.apk
