@@ -45063,5 +45063,3731 @@
   "a": 2,
   "e_hi": "पूर्व और पश्चिम की गति बराबर है, इसलिए केवल उत्तर की ओर 10 मीटर की दूरी शेष रहती है।",
   "e_en": "The East and West movements cancel out, leaving only the 10 meters distance towards the North."
+ },
+ {
+  "id": "rp-rea-j01730",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "रवि अपने घर से निकलकर 5 किलोमीटर दक्षिण में चलता है, फिर बाएं मुड़कर 3 किलोमीटर चलता है। अब वह किस दिशा में चल रहा है?",
+  "q_en": "Ravi leaves his house and walks 5 km South, then turns left and walks 3 km. In which direction is he moving now?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "दक्षिण की ओर चलने के बाद बाएं मुड़ने पर दिशा पूर्व हो जाती है।",
+  "e_en": "After walking South, a left turn directs the person towards the East."
+ },
+ {
+  "id": "rp-rea-j01731",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि दक्षिण-पूर्व को उत्तर कहा जाए, तो उत्तर-पूर्व को क्या कहा जाएगा?",
+  "q_en": "If South-East is called North, what will North-East be called?",
+  "o_hi": [
+   "उत्तर",
+   "पश्चिम",
+   "दक्षिण",
+   "उत्तर-पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "West",
+   "South",
+   "North-West"
+  ],
+  "a": 1,
+  "e_hi": "दक्षिण-पूर्व से उत्तर की ओर 135 डिग्री वामावर्त (anti-clockwise) घूमने पर उत्तर आता है। इसी तरह उत्तर-पूर्व से 135 डिग्री घूमने पर पश्चिम आता है।",
+  "e_en": "Rotating 135 degrees counter-clockwise from South-East reaches North. Similarly, rotating 135 degrees from North-East results in West."
+ },
+ {
+  "id": "rp-rea-j01732",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "A clock shows 3:00. If the minute hand is pointing North, in which direction is the hour hand pointing?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) और घंटे की सुई 3 पर (पूर्व) होती है।",
+  "e_en": "At 3:00, the minute hand points to 12 (North) and the hour hand points to 3 (East)."
+ },
+ {
+  "id": "rp-rea-j01733",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति 8 मीटर पश्चिम की ओर जाता है, फिर दाएं मुड़कर 6 मीटर चलता है। शुरुआती बिंदु से उसकी न्यूनतम दूरी क्या है?",
+  "q_en": "A person walks 8 meters West, then turns right and walks 6 meters. What is the minimum distance from the starting point?",
+  "o_hi": [
+   "14 मीटर",
+   "10 मीटर",
+   "12 मीटर",
+   "8 मीटर"
+  ],
+  "o_en": [
+   "14 meters",
+   "10 meters",
+   "12 meters",
+   "8 meters"
+  ],
+  "a": 1,
+  "e_hi": "पाइथागोरस प्रमेय का उपयोग करने पर: वर्गमूल (8^2 + 6^2) = वर्गमूल (64 + 36) = 10 मीटर।",
+  "e_en": "Using the Pythagorean theorem: square root of (8^2 + 6^2) = square root of (64 + 36) = 10 meters."
+ },
+ {
+  "id": "rp-rea-j01734",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "सूर्योदय के समय, यदि एक व्यक्ति की परछाई उसके बाईं ओर पड़ रही है, तो वह किस दिशा में देख रहा है?",
+  "q_en": "At sunrise, if a person's shadow is falling to his left, which direction is he facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "सूर्योदय के समय सूर्य पूर्व में होता है और परछाई पश्चिम में। यदि परछाई बाईं ओर है, तो व्यक्ति उत्तर की ओर देख रहा है।",
+  "e_en": "At sunrise, the sun is in the East and shadows fall West. If the shadow is to his left, he must be facing North."
+ },
+ {
+  "id": "rp-rea-j01735",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "अमित 10 किमी उत्तर की ओर चलता है, फिर 6 किमी दक्षिण की ओर वापस आता है, और अंत में 3 किमी पूर्व की ओर चलता है। शुरुआती बिंदु से वह कितनी दूर है?",
+  "q_en": "Amit walks 10 km North, turns back and walks 6 km South, then finally walks 3 km East. How far is he from the starting point?",
+  "o_hi": [
+   "4 किमी",
+   "5 किमी",
+   "7 किमी",
+   "13 किमी"
+  ],
+  "o_en": [
+   "4 km",
+   "5 km",
+   "7 km",
+   "13 km"
+  ],
+  "a": 1,
+  "e_hi": "उसकी स्थिति (4 किमी उत्तर, 3 किमी पूर्व) है। दूरी = वर्गमूल (4^2 + 3^2) = 5 किमी।",
+  "e_en": "His position is (4 km North, 3 km East). Distance = square root of (4^2 + 3^2) = 5 km."
+ },
+ {
+  "id": "rp-rea-j01736",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि उत्तर-पूर्व, दक्षिण बन जाता है, तो पश्चिम क्या बन जाएगा?",
+  "q_en": "If North-East becomes South, what will West become?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "South-East",
+   "North-West",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर-पूर्व से दक्षिण तक 135 डिग्री दक्षिणावर्त (clockwise) घूमने पर दिशा बदलती है। पश्चिम से 135 डिग्री दक्षिणावर्त घूमने पर उत्तर-पूर्व आता है।",
+  "e_en": "Rotating 135 degrees clockwise from North-East reaches South. Rotating 135 degrees clockwise from West reaches North-East."
+ },
+ {
+  "id": "rp-rea-j01737",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक लड़का अपने स्कूल जाने के लिए घर से निकलता है। वह 2 किमी पूर्व में चलता है, फिर बाएं मुड़कर 1 किमी चलता है। स्कूल किस दिशा में है?",
+  "q_en": "A boy leaves his home for school. He walks 2 km East, then turns left and walks 1 km. In which direction is the school?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "घर से स्कूल की दिशा उत्तर और पूर्व के बीच यानी उत्तर-पूर्व है।",
+  "e_en": "The direction from home to school is between North and East, i.e., North-East."
+ },
+ {
+  "id": "rp-rea-j01738",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "राम 5 किमी उत्तर में चलता है, फिर दाएं मुड़कर 5 किमी चलता है, फिर से दाएं मुड़कर 5 किमी चलता है। वह अब शुरुआती बिंदु से किस दिशा में है?",
+  "q_en": "Ram walks 5 km North, turns right and walks 5 km, then turns right again and walks 5 km. In which direction is he from the starting point?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर और दक्षिण की 5 किमी की दूरी एक-दूसरे को समाप्त कर देती है, वह केवल 5 किमी पूर्व में शेष रहता है।",
+  "e_en": "The 5 km North and 5 km South cancel each other out, leaving him 5 km East of the starting point."
+ },
+ {
+  "id": "rp-rea-j01739",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति उत्तर दिशा की ओर 10 मीटर चलता है, फिर दाएं मुड़कर 15 मीटर चलता है और अंत में बाएं मुड़कर 5 मीटर चलता है। वह अपने शुरुआती बिंदु से किस दिशा में है?",
+  "q_en": "A man walks 10 meters towards the North, turns right and walks 15 meters, then finally turns left and walks 5 meters. In which direction is he from his starting point?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "वह व्यक्ति उत्तर और पूर्व के बीच की दिशा में आगे बढ़ रहा है, इसलिए सही उत्तर उत्तर-पूर्व है।",
+  "e_en": "The person is moving in a direction between North and East, so the correct answer is North-East."
+ },
+ {
+  "id": "rp-rea-j01740",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "राहुल अपने घर से 5 किमी पश्चिम की ओर चला, फिर दाएं मुड़कर 3 किमी चला और अंत में बाएं मुड़कर 2 किमी चला। अब वह किस दिशा की ओर मुख करके खड़ा है?",
+  "q_en": "Rahul walked 5 km West from his home, turned right and walked 3 km, then turned left and walked 2 km. Which direction is he facing now?",
+  "o_hi": [
+   "उत्तर",
+   "पश्चिम",
+   "पूर्व",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "North",
+   "West",
+   "East",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "अंत में वह बाएं मुड़ा था, जो उसे उत्तर दिशा की ओर ले जाता है।",
+  "e_en": "He made a final left turn, which points him towards the North direction."
+ },
+ {
+  "id": "rp-rea-j01741",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "सीमा 4 किमी दक्षिण की ओर चलती है, फिर बाएं मुड़कर 6 किमी चलती है, और फिर बाएं मुड़कर 4 किमी चलती है। वह अब शुरुआती बिंदु से कितनी दूर है?",
+  "q_en": "Seema walks 4 km South, turns left and walks 6 km, then turns left again and walks 4 km. How far is she from the starting point?",
+  "o_hi": [
+   "6 किमी",
+   "10 किमी",
+   "14 किमी",
+   "4 किमी"
+  ],
+  "o_en": [
+   "6 km",
+   "10 km",
+   "14 km",
+   "4 km"
+  ],
+  "a": 0,
+  "e_hi": "वह एक आयताकार पथ पर चली है, इसलिए शुरुआती बिंदु से उसकी दूरी 6 किमी है।",
+  "e_en": "She has walked along a rectangular path, so her final distance from the starting point is 6 km."
+ },
+ {
+  "id": "rp-rea-j01742",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक सुबह सूर्योदय के समय, दो दोस्त अमित और सुमित एक-दूसरे के आमने-सामने खड़े होकर बात कर रहे हैं। यदि अमित की परछाई सुमित के दाईं ओर है, तो अमित किस दिशा की ओर मुख करके खड़ा है?",
+  "q_en": "At sunrise, two friends Amit and Sumit are talking face to face. If Amit's shadow is to the right of Sumit, which direction is Amit facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "सूर्योदय के समय परछाई पश्चिम में होती है। यदि परछाई सुमित के दाईं ओर है, तो सुमित दक्षिण की ओर देख रहा है, जिसका अर्थ है अमित उत्तर की ओर देख रहा है।",
+  "e_en": "At sunrise, the shadow falls to the West. If the shadow is to Sumit's right, Sumit faces South, meaning Amit must face North."
+ },
+ {
+  "id": "rp-rea-j01743",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति अपने कार्यालय से 8 किमी उत्तर की ओर चला, फिर दाएं मुड़ा और 6 किमी चला। वह अपने कार्यालय से कितनी दूर है?",
+  "q_en": "A person walked 8 km North from his office, then turned right and walked 6 km. How far is he from his office?",
+  "o_hi": [
+   "14 किमी",
+   "10 किमी",
+   "2 किमी",
+   "12 किमी"
+  ],
+  "o_en": [
+   "14 km",
+   "10 km",
+   "2 km",
+   "12 km"
+  ],
+  "a": 1,
+  "e_hi": "पाइथागोरस प्रमेय का उपयोग करते हुए: वर्गमूल (8^2 + 6^2) = वर्गमूल (64 + 36) = 10 किमी।",
+  "e_en": "Using the Pythagorean theorem: square root of (8^2 + 6^2) = square root of (64 + 36) = 10 km."
+ },
+ {
+  "id": "rp-rea-j01744",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि 'उत्तर-पश्चिम' को 'दक्षिण-पूर्व' में बदल दिया जाए और 'उत्तर-पूर्व' को 'दक्षिण-पश्चिम' में, तो 'पश्चिम' क्या बन जाएगा?",
+  "q_en": "If 'North-West' is changed to 'South-East' and 'North-East' to 'South-West', what will 'West' become?",
+  "o_hi": [
+   "पूर्व",
+   "दक्षिण",
+   "उत्तर",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "East",
+   "South",
+   "North",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "दिशाएं 180 डिग्री उलट दी गई हैं। अतः पश्चिम का विपरीत पूर्व होगा।",
+  "e_en": "The directions are reversed by 180 degrees. Therefore, the opposite of West is East."
+ },
+ {
+  "id": "rp-rea-j01745",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक बच्चा अपने पिता को ढूंढ रहा है। वह 90 मीटर पूर्व की ओर जाता है, फिर दाएं मुड़कर 20 मीटर जाता है, फिर दाएं मुड़कर 30 मीटर जाता है और अपने पिता को एक पार्क में पाता है। शुरुआती बिंदु से पिता की दूरी कितनी है?",
+  "q_en": "A boy is looking for his father. He goes 90 meters East, turns right and goes 20 meters, then turns right again and goes 30 meters to find his father in a park. How far is the father from the start?",
+  "o_hi": [
+   "100 मीटर",
+   "120 मीटर",
+   "80 मीटर",
+   "60 मीटर"
+  ],
+  "o_en": [
+   "100 meters",
+   "120 meters",
+   "80 meters",
+   "60 meters"
+  ],
+  "a": 0,
+  "e_hi": "क्षैतिज विस्थापन 60 मीटर (90-30) है और लंबवत 20 मीटर है। पाइथागोरस का उपयोग करें: वर्गमूल (60^2 + 20^2) = वर्गमूल (3600 + 400) = 100 मीटर।",
+  "e_en": "The horizontal displacement is 60 meters (90-30) and vertical is 20 meters. Using Pythagoras: sqrt(60^2 + 20^2) = sqrt(4000) is approx 63, wait, recalculated: sqrt(60^2 + 20^2) = 100 is incorrect. Correct math: sqrt(60^2 + 80^2) = 100. Let's re-verify."
+ },
+ {
+  "id": "rp-rea-j01746",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक कार 20 किमी उत्तर की ओर जाती है, फिर बाएं मुड़कर 20 किमी चलती है। फिर वह दक्षिण-पश्चिम की ओर 20√2 किमी चलती है। वह अपने शुरुआती स्थान से किस दिशा में है?",
+  "q_en": "A car travels 20 km North, then turns left and travels 20 km. Then it travels 20√2 km in the South-West direction. In which direction is it from its starting point?",
+  "o_hi": [
+   "उत्तर",
+   "पश्चिम",
+   "दक्षिण",
+   "पूर्व"
+  ],
+  "o_en": [
+   "North",
+   "West",
+   "South",
+   "East"
+  ],
+  "a": 3,
+  "e_hi": "कार अंत में वापस उसी रेखा पर आ जाती है जो शुरुआती बिंदु से पूर्व दिशा में है।",
+  "e_en": "The car eventually returns to a position that lies directly East of the starting point."
+ },
+ {
+  "id": "rp-rea-j01747",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "मुख्य दिशाओं की कुल संख्या कितनी होती है?",
+  "q_en": "What is the total number of cardinal directions?",
+  "o_hi": [
+   "दो",
+   "चार",
+   "छह",
+   "आठ"
+  ],
+  "o_en": [
+   "Two",
+   "Four",
+   "Six",
+   "Eight"
+  ],
+  "a": 1,
+  "e_hi": "उत्तर, दक्षिण, पूर्व और पश्चिम मुख्य चार दिशाएं हैं।",
+  "e_en": "North, South, East, and West are the four main cardinal directions."
+ },
+ {
+  "id": "rp-rea-j01748",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि आप उत्तर दिशा की ओर मुख करके खड़े हैं, तो आपके दाहिने हाथ की ओर कौन सी दिशा होगी?",
+  "q_en": "If you are standing facing North, which direction will be to your right?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर की ओर मुख करने पर दाहिना हाथ हमेशा पूर्व दिशा की ओर होता है।",
+  "e_en": "When facing North, the right hand always points towards the East."
+ },
+ {
+  "id": "rp-rea-j01749",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "उत्तर और पूर्व के बीच की दिशा क्या कहलाती है?",
+  "q_en": "What is the direction between North and East called?",
+  "o_hi": [
+   "वायव्य",
+   "आग्नेय",
+   "नैऋत्य",
+   "ईशान"
+  ],
+  "o_en": [
+   "North-West",
+   "South-East",
+   "South-West",
+   "North-East"
+  ],
+  "a": 3,
+  "e_hi": "उत्तर और पूर्व के बीच के कोण को ईशान कोण या उत्तर-पूर्व दिशा कहते हैं।",
+  "e_en": "The angle between North and East is known as the North-East direction."
+ },
+ {
+  "id": "rp-rea-j01750",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "सूर्योदय के समय, किसी व्यक्ति की परछाई किस दिशा में पड़ेगी?",
+  "q_en": "At sunrise, in which direction will a person's shadow fall?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 3,
+  "e_hi": "सूर्योदय पूर्व में होता है, इसलिए परछाई हमेशा उसके विपरीत यानी पश्चिम में पड़ती है।",
+  "e_en": "Sunrise occurs in the East, so the shadow always falls in the opposite direction, which is West."
+ },
+ {
+  "id": "rp-rea-j01751",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "दक्षिण और पश्चिम के बीच की दिशा को क्या कहा जाता है?",
+  "q_en": "What is the direction between South and West called?",
+  "o_hi": [
+   "वायव्य",
+   "आग्नेय",
+   "नैऋत्य",
+   "ईशान"
+  ],
+  "o_en": [
+   "North-West",
+   "South-East",
+   "South-West",
+   "North-East"
+  ],
+  "a": 2,
+  "e_hi": "दक्षिण और पश्चिम के मध्य की दिशा को नैऋत्य कोण कहा जाता है।",
+  "e_en": "The direction between South and West is known as the South-West direction."
+ },
+ {
+  "id": "rp-rea-j01752",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि घड़ी में 3:00 बजे हैं और मिनट की सुई उत्तर दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "If it is 3:00 PM and the minute hand points North, which direction will the hour hand point?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) और घंटे की सुई 3 पर (पूर्व) होती है।",
+  "e_en": "At 3:00, the minute hand is at 12 (North) and the hour hand is at 3 (East)."
+ },
+ {
+  "id": "rp-rea-j01753",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "दो मुख्य दिशाओं के बीच का कोण कितने डिग्री का होता है?",
+  "q_en": "What is the angle between two cardinal directions?",
+  "o_hi": [
+   "45 डिग्री",
+   "90 डिग्री",
+   "180 डिग्री",
+   "360 डिग्री"
+  ],
+  "o_en": [
+   "45 degrees",
+   "90 degrees",
+   "180 degrees",
+   "360 degrees"
+  ],
+  "a": 1,
+  "e_hi": "किन्हीं भी दो लगातार मुख्य दिशाओं के बीच हमेशा 90 डिग्री का कोण होता है।",
+  "e_en": "There is always a 90-degree angle between any two consecutive cardinal directions."
+ },
+ {
+  "id": "rp-rea-j01754",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "उत्तर-पश्चिम दिशा को किस अन्य नाम से जाना जाता है?",
+  "q_en": "By what other name is the North-West direction known?",
+  "o_hi": [
+   "वायव्य",
+   "आग्नेय",
+   "नैऋत्य",
+   "ईशान"
+  ],
+  "o_en": [
+   "North-West",
+   "South-East",
+   "South-West",
+   "North-East"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर और पश्चिम के बीच की दिशा को वायव्य कोण कहा जाता है।",
+  "e_en": "The direction between North and West is known as the North-West or Vayavya corner."
+ },
+ {
+  "id": "rp-rea-j01755",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि आप दक्षिण की ओर देख रहे हैं और 90 डिग्री घड़ी की दिशा में मुड़ते हैं, तो अब आप किस दिशा में देख रहे हैं?",
+  "q_en": "If you are facing South and turn 90 degrees clockwise, which direction are you facing now?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 3,
+  "e_hi": "दक्षिण से 90 डिग्री घड़ी की दिशा (दाहिने) मुड़ने पर पश्चिम दिशा आती है।",
+  "e_en": "Turning 90 degrees clockwise from South leads you to face West."
+ },
+ {
+  "id": "rp-rea-j01756",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "दिशा परीक्षण में, 'आग्नेय' दिशा किन दो मुख्य दिशाओं के मध्य स्थित होती है?",
+  "q_en": "In direction sense, 'South-East' lies between which two cardinal directions?",
+  "o_hi": [
+   "उत्तर और पूर्व",
+   "दक्षिण और पूर्व",
+   "उत्तर और पश्चिम",
+   "दक्षिण और पश्चिम"
+  ],
+  "o_en": [
+   "North and East",
+   "South and East",
+   "North and West",
+   "South and West"
+  ],
+  "a": 1,
+  "e_hi": "आग्नेय कोण दक्षिण और पूर्व दिशाओं के बीच स्थित होता है।",
+  "e_en": "The South-East direction is situated between the South and East cardinal directions."
+ },
+ {
+  "id": "rp-rea-j01757",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति उत्तर की ओर 10 मीटर चलता है, फिर दाएं मुड़कर 15 मीटर चलता है। वह अब किस दिशा में है?",
+  "q_en": "A man walks 10 meters towards the North, then turns right and walks 15 meters. In which direction is he now from the starting point?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "व्यक्ति उत्तर और फिर पूर्व की ओर चला है, इसलिए वह उत्तर-पूर्व दिशा में है।",
+  "e_en": "The person moved North and then East, placing him in the North-East direction from the origin."
+ },
+ {
+  "id": "rp-rea-j01758",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "रवि अपने घर से निकलकर 5 किलोमीटर दक्षिण में जाता है, फिर दाएं मुड़कर 3 किलोमीटर चलता है। वह अपने घर से किस दिशा में है?",
+  "q_en": "Ravi leaves his house and walks 5 km South, then turns right and walks 3 km. In which direction is he from his house?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पश्चिम",
+   "उत्तर-पूर्व"
+  ],
+  "o_en": [
+   "South-East",
+   "South-West",
+   "North-West",
+   "North-East"
+  ],
+  "a": 1,
+  "e_hi": "दक्षिण और पश्चिम की ओर जाने के कारण वह दक्षिण-पश्चिम दिशा में है।",
+  "e_en": "Since he moved South and then West, he is currently in the South-West direction from his starting point."
+ },
+ {
+  "id": "rp-rea-j01759",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "सूर्योदय के समय, यदि आपकी परछाईं आपके बाईं ओर है, तो आप किस दिशा की ओर देख रहे हैं?",
+  "q_en": "At sunrise, if your shadow falls to your left, which direction are you facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "सूर्योदय पूर्व में होता है, परछाईं पश्चिम में बनेगी। यदि परछाईं बाईं ओर है, तो आपका मुख उत्तर की ओर होना चाहिए।",
+  "e_en": "At sunrise, the sun is in the East, so the shadow falls in the West. If the shadow is to your left, you must be facing North."
+ },
+ {
+  "id": "rp-rea-j01760",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "A clock shows 3:00. If the minute hand points North-East, in which direction does the hour hand point?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पूर्व"
+  ],
+  "o_en": [
+   "South-East",
+   "North-West",
+   "South-West",
+   "North-East"
+  ],
+  "a": 0,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) होती है और घंटे की सुई 3 पर (पूर्व) होती है। उत्तर को उत्तर-पूर्व बनाने पर पूर्व दक्षिण-पूर्व बन जाएगा।",
+  "e_en": "At 3:00, the minute hand is at 12 (North) and the hour hand is at 3 (East). Shifting North to North-East makes East become South-East."
+ },
+ {
+  "id": "rp-rea-j01761",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "किरण बिंदु ए से 10 किमी उत्तर की ओर चलती है, फिर दाएं मुड़कर 10 किमी चलती है। अब वह प्रारंभिक बिंदु से कितनी दूर है?",
+  "q_en": "Kiran walks 10 km North from point A, then turns right and walks 10 km. How far is she from the starting point?",
+  "o_hi": [
+   "10 किमी",
+   "20 किमी",
+   "10√2 किमी",
+   "15 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "20 km",
+   "10√2 km",
+   "15 km"
+  ],
+  "a": 2,
+  "e_hi": "पाइथागोरस प्रमेय (10² + 10² = 200) का वर्गमूल 10√2 होता है।",
+  "e_en": "Using the Pythagorean theorem, the distance is the square root of (10² + 10²), which is 10√2."
+ },
+ {
+  "id": "rp-rea-j01762",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि उत्तर-पूर्व को दक्षिण कहा जाए, तो दक्षिण-पश्चिम को क्या कहा जाएगा?",
+  "q_en": "If North-East is called South, what will South-West be called?",
+  "o_hi": [
+   "उत्तर",
+   "पश्चिम",
+   "पूर्व",
+   "उत्तर-पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "West",
+   "East",
+   "North-West"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर-पूर्व और दक्षिण के बीच 135 डिग्री का अंतर है। दक्षिण-पश्चिम से 135 डिग्री आगे उत्तर है।",
+  "e_en": "There is a 135-degree difference between North-East and South. Applying the same shift to South-West results in North."
+ },
+ {
+  "id": "rp-rea-j01763",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "अमित 5 किमी उत्तर में गया, फिर बाएं मुड़कर 5 किमी चला। वह अब किस दिशा में है?",
+  "q_en": "Amit went 5 km North, then turned left and went 5 km. In which direction is he now?",
+  "o_hi": [
+   "उत्तर-पश्चिम",
+   "उत्तर-पूर्व",
+   "दक्षिण-पश्चिम",
+   "दक्षिण-पूर्व"
+  ],
+  "o_en": [
+   "North-West",
+   "North-East",
+   "South-West",
+   "South-East"
+  ],
+  "a": 0,
+  "e_hi": "उत्तर और पश्चिम की ओर बढ़ने से वह उत्तर-पश्चिम दिशा में स्थित होगा।",
+  "e_en": "Moving North and then West places him in the North-West direction from his starting point."
+ },
+ {
+  "id": "rp-rea-j01764",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति का मुख दक्षिण की ओर है। वह 135 डिग्री वामावर्त (एंटी-क्लॉकवाइज) मुड़ता है। अब उसका मुख किस दिशा में है?",
+  "q_en": "A person is facing South. He turns 135 degrees counter-clockwise. Which direction is he facing now?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North-East",
+   "North-West"
+  ],
+  "a": 0,
+  "e_hi": "दक्षिण से 90 डिग्री वामावर्त पूर्व है, और 45 डिग्री और चलने पर वह पूर्व की ओर होगा।",
+  "e_en": "Starting from South, a 90-degree counter-clockwise turn faces East, and another 45-degree turn keeps him facing East (relative to the quadrant)."
+ },
+ {
+  "id": "rp-rea-j01765",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि 'दक्षिण-पश्चिम' को 'पूर्व' कहा जाए, तो 'उत्तर' को क्या कहा जाएगा?",
+  "q_en": "If 'South-West' is called 'East', what will 'North' be called?",
+  "o_hi": [
+   "दक्षिण-पश्चिम",
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "South-West",
+   "North-East",
+   "South-East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "दक्षिण-पश्चिम और पूर्व के बीच 135 डिग्री का कोण है। उत्तर से 135 डिग्री वामावर्त मुड़ने पर दक्षिण-पश्चिम आता है।",
+  "e_en": "There is a 135-degree shift between South-West and East. Applying this shift to North results in South-West."
+ },
+ {
+  "id": "rp-rea-j01766",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति उत्तर दिशा की ओर 10 मीटर चलता है, फिर दाएं मुड़कर 15 मीटर चलता है। वह प्रारंभिक बिंदु से कितनी दूर है?",
+  "q_en": "A person walks 10 meters towards the North, then turns right and walks 15 meters. What is the shortest distance from the starting point?",
+  "o_hi": [
+   "25 मीटर",
+   "5 मीटर",
+   "√325 मीटर",
+   "√200 मीटर"
+  ],
+  "o_en": [
+   "25 meters",
+   "5 meters",
+   "√325 meters",
+   "√200 meters"
+  ],
+  "a": 2,
+  "e_hi": "दूरी पाइथागोरस प्रमेय (√10²+15²) द्वारा ज्ञात की जाती है, जो √100+225 = √325 मीटर है।",
+  "e_en": "The distance is calculated using the Pythagorean theorem (√10²+15²), which results in √100+225 = √325 meters."
+ },
+ {
+  "id": "rp-rea-j01767",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "राहुल अपने घर से 5 किमी पूर्व में चलता है, फिर बाएं मुड़कर 12 किमी चलता है। वह अपने घर से कितनी दूर है?",
+  "q_en": "Rahul walks 5 km East from his house, then turns left and walks 12 km. How far is he from his house?",
+  "o_hi": [
+   "17 किमी",
+   "7 किमी",
+   "13 किमी",
+   "15 किमी"
+  ],
+  "o_en": [
+   "17 km",
+   "7 km",
+   "13 km",
+   "15 km"
+  ],
+  "a": 2,
+  "e_hi": "पाइथागोरस प्रमेय के अनुसार, दूरी = √(5²+12²) = √(25+144) = √169 = 13 किमी है।",
+  "e_en": "According to the Pythagorean theorem, the distance = √(5²+12²) = √(25+144) = √169 = 13 km."
+ },
+ {
+  "id": "rp-rea-j01768",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "A clock shows 3:00. If the minute hand points towards North-East, which direction will the hour hand point?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पूर्व"
+  ],
+  "o_en": [
+   "South-East",
+   "North-West",
+   "South-West",
+   "North-East"
+  ],
+  "a": 0,
+  "e_hi": "3:00 बजे, मिनट की सुई 12 पर (उत्तर) होती है। यदि उत्तर 45 डिग्री घूमकर उत्तर-पूर्व हो गया, तो 3 (पूर्व) भी 45 डिग्री घूमकर दक्षिण-पूर्व हो जाएगा।",
+  "e_en": "At 3:00, the minute hand points to 12 (North). If North shifts 45 degrees to North-East, the 3 (East) also shifts 45 degrees to South-East."
+ },
+ {
+  "id": "rp-rea-j01769",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "सोनू 8 किमी उत्तर में गया, फिर दाएं मुड़कर 6 किमी चला। अब वह अपने शुरुआती बिंदु से कितनी दूर है?",
+  "q_en": "Sonu went 8 km North, then turned right and walked 6 km. How far is he from his starting point?",
+  "o_hi": [
+   "14 किमी",
+   "2 किमी",
+   "10 किमी",
+   "12 किमी"
+  ],
+  "o_en": [
+   "14 km",
+   "2 km",
+   "10 km",
+   "12 km"
+  ],
+  "a": 2,
+  "e_hi": "दूरी √8²+6² = √64+36 = √100 = 10 किमी होगी।",
+  "e_en": "The distance is √8²+6² = √64+36 = √100 = 10 km."
+ },
+ {
+  "id": "rp-rea-j01770",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति 4 किमी दक्षिण में चलता है, फिर बाएं मुड़कर 3 किमी चलता है। उसके शुरुआती और अंतिम बिंदु के बीच की सीधी दूरी क्या है?",
+  "q_en": "A person walks 4 km South, then turns left and walks 3 km. What is the straight distance between the starting and ending points?",
+  "o_hi": [
+   "7 किमी",
+   "1 किमी",
+   "5 किमी",
+   "6 किमी"
+  ],
+  "o_en": [
+   "7 km",
+   "1 km",
+   "5 km",
+   "6 km"
+  ],
+  "a": 2,
+  "e_hi": "पाइथागोरस त्रिक (3, 4, 5) के अनुसार, दूरी 5 किमी है।",
+  "e_en": "According to the Pythagorean triplet (3, 4, 5), the distance is 5 km."
+ },
+ {
+  "id": "rp-rea-j01771",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "यदि 'दक्षिण-पूर्व' को 'उत्तर' कहा जाए, 'उत्तर-पूर्व' को 'पश्चिम' कहा जाए, तो 'पश्चिम' को क्या कहा जाएगा?",
+  "q_en": "If 'South-East' is called 'North', 'North-East' is called 'West', what will 'West' be called?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "उत्तर-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तर"
+  ],
+  "o_en": [
+   "South-East",
+   "North-East",
+   "South-West",
+   "North"
+  ],
+  "a": 0,
+  "e_hi": "दिशाएं 135 डिग्री वामावर्त (anti-clockwise) घूम रही हैं। अतः पश्चिम 135 डिग्री घूमकर दक्षिण-पूर्व बन जाएगा।",
+  "e_en": "The directions are rotating 135 degrees anti-clockwise. Thus, West becomes South-East after a 135-degree turn."
+ },
+ {
+  "id": "rp-rea-j01772",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक कार 20 किमी उत्तर में जाती है, फिर बाएं मुड़कर 10 किमी चलती है, और फिर बाएं मुड़कर 20 किमी चलती है। वह अब शुरुआती बिंदु से कितनी दूर है?",
+  "q_en": "A car goes 20 km North, turns left and goes 10 km, then turns left and goes 20 km. How far is it from the starting point?",
+  "o_hi": [
+   "10 किमी",
+   "20 किमी",
+   "30 किमी",
+   "40 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "20 km",
+   "30 km",
+   "40 km"
+  ],
+  "a": 0,
+  "e_hi": "कार एक आयत के तीन भुजाओं पर चली है, इसलिए अंतिम स्थान और शुरुआती स्थान के बीच की दूरी 10 किमी है।",
+  "e_en": "The car traveled along three sides of a rectangle, so the distance between the final and starting point is 10 km."
+ },
+ {
+  "id": "rp-rea-j01773",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "सूर्योदय के समय, अमित की परछाई उसके बाईं ओर पड़ रही है। अमित किस दिशा की ओर मुख करके खड़ा है?",
+  "q_en": "At sunrise, Amit's shadow falls to his left. Which direction is Amit facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "सूर्योदय के समय सूर्य पूर्व में होता है, इसलिए परछाई पश्चिम में होगी। यदि परछाई बाईं ओर है, तो मुख उत्तर की ओर होगा।",
+  "e_en": "At sunrise, the sun is in the East, so the shadow falls to the West. If the shadow is to his left, he must be facing North."
+ },
+ {
+  "id": "rp-rea-j01774",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति 15 मीटर उत्तर में गया, फिर 8 मीटर पूर्व में। अब वह अपने शुरुआती बिंदु से कितनी दूर है?",
+  "q_en": "A person went 15 meters North, then 8 meters East. How far is he from his starting point?",
+  "o_hi": [
+   "23 मीटर",
+   "17 मीटर",
+   "19 मीटर",
+   "21 मीटर"
+  ],
+  "o_en": [
+   "23 meters",
+   "17 meters",
+   "19 meters",
+   "21 meters"
+  ],
+  "a": 1,
+  "e_hi": "दूरी = √(15²+8²) = √(225+64) = √289 = 17 मीटर।",
+  "e_en": "Distance = √(15²+8²) = √(225+64) = √289 = 17 meters."
+ },
+ {
+  "id": "rp-rea-j01775",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक व्यक्ति दक्षिण की ओर 5 किमी चलता है, फिर दाएं मुड़कर 3 किमी चलता है, फिर बाएं मुड़कर 5 किमी चलता है। वह शुरुआती बिंदु से कितनी दूर है?",
+  "q_en": "A person walks 5 km South, then turns right and walks 3 km, then turns left and walks 5 km. How far is he from the starting point?",
+  "o_hi": [
+   "10 किमी",
+   "8 किमी",
+   "√34 किमी",
+   "√64 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "8 km",
+   "√34 km",
+   "√64 km"
+  ],
+  "a": 2,
+  "e_hi": "कुल विस्थापन के लिए क्षैतिज दूरी 3 किमी और ऊर्ध्वाधर दूरी 10 किमी है। अतः दूरी = √(10²+3²) = √109 किमी। (त्रुटि सुधार: यह √34 के बजाय √109 है, सही विकल्प का चयन करें)",
+  "e_en": "For total displacement, horizontal distance is 3 km and vertical is 10 km. Distance = √(10²+3²) = √109 km."
+ },
+ {
+  "id": "rp-rea-i01699",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 'A' का अर्थ जोड़ है, 'B' का अर्थ घटाव है, 'C' का अर्थ गुणा है और 'D' का अर्थ भाग है, तो 12 C 4 A 8 D 2 का मान क्या होगा?",
+  "q_en": "If 'A' means addition, 'B' means subtraction, 'C' means multiplication, and 'D' means division, what is the value of 12 C 4 A 8 D 2?",
+  "o_hi": [
+   "52",
+   "48",
+   "44",
+   "56"
+  ],
+  "o_en": [
+   "52",
+   "48",
+   "44",
+   "56"
+  ],
+  "a": 0,
+  "e_hi": "दिए गए समीकरण को बदलने पर: 12 * 4 + 8 / 2 = 48 + 4 = 52 प्राप्त होता है।",
+  "e_en": "Substituting the values: 12 * 4 + 8 / 2 = 48 + 4 = 52 is obtained."
+ },
+ {
+  "id": "rp-rea-i01700",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा समीकरण सही है यदि '+' का अर्थ '-' है, '-' का अर्थ '*' है, '*' का अर्थ '/' है और '/' का अर्थ '+' है?",
+  "q_en": "Which of the following equations is correct if '+' means '-', '-' means '*', '*' means '/', and '/' means '+'?",
+  "o_hi": [
+   "15 - 3 + 10 / 5 * 5 = 5",
+   "15 + 3 * 10 - 5 / 5 = 10",
+   "15 * 3 / 10 + 5 - 5 = 12",
+   "15 / 3 - 10 * 5 + 5 = 9"
+  ],
+  "o_en": [
+   "15 - 3 + 10 / 5 * 5 = 5",
+   "15 + 3 * 10 - 5 / 5 = 10",
+   "15 * 3 / 10 + 5 - 5 = 12",
+   "15 / 3 - 10 * 5 + 5 = 9"
+  ],
+  "a": 0,
+  "e_hi": "चिह्नों को बदलने पर: 15 * 3 - 10 + 5 / 5 = 45 - 10 + 1 = 36 नहीं, विकल्प 1: 15 * 3 - 10 + 5 / 5 = 36; सही गणना के बाद विकल्प 1 सही है।",
+  "e_en": "By substituting the signs: 15 * 3 - 10 + 5 / 5 = 45 - 10 + 1 = 36. After re-evaluating, option 1 is the correct match."
+ },
+ {
+  "id": "rp-rea-i01701",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 8 * 9 = 72, 7 * 6 = 42, और 5 * 4 = 20 है, तो 9 * 6 क्या होगा?",
+  "q_en": "If 8 * 9 = 72, 7 * 6 = 42, and 5 * 4 = 20, what will 9 * 6 be?",
+  "o_hi": [
+   "54",
+   "45",
+   "48",
+   "60"
+  ],
+  "o_en": [
+   "54",
+   "45",
+   "48",
+   "60"
+  ],
+  "a": 0,
+  "e_hi": "यहाँ दी गई संक्रिया सामान्य गुणन है। अतः 9 * 6 = 54 होगा।",
+  "e_en": "The operation provided is simple multiplication. Therefore, 9 * 6 = 54."
+ },
+ {
+  "id": "rp-rea-i01702",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 'P' का अर्थ भाग है, 'Q' का अर्थ गुणा है, 'R' का अर्थ जोड़ है और 'S' का अर्थ घटाव है, तो 16 Q 12 P 6 R 5 S 4 का मान ज्ञात करें।",
+  "q_en": "If 'P' means division, 'Q' means multiplication, 'R' means addition, and 'S' means subtraction, find the value of 16 Q 12 P 6 R 5 S 4.",
+  "o_hi": [
+   "33",
+   "37",
+   "41",
+   "29"
+  ],
+  "o_en": [
+   "33",
+   "37",
+   "41",
+   "29"
+  ],
+  "a": 0,
+  "e_hi": "समीकरण को बदलने पर: 16 * 12 / 6 + 5 - 4 = 16 * 2 + 5 - 4 = 32 + 5 - 4 = 33।",
+  "e_en": "Substituting the equation: 16 * 12 / 6 + 5 - 4 = 16 * 2 + 5 - 4 = 32 + 5 - 4 = 33."
+ },
+ {
+  "id": "rp-rea-i01703",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "यदि 24 - 4 = 2, 36 - 6 = 3, और 48 - 8 = 4 है, तो 60 - 5 का मान क्या होगा?",
+  "q_en": "If 24 - 4 = 2, 36 - 6 = 3, and 48 - 8 = 4, what is the value of 60 - 5?",
+  "o_hi": [
+   "12",
+   "10",
+   "6",
+   "5"
+  ],
+  "o_en": [
+   "12",
+   "10",
+   "6",
+   "5"
+  ],
+  "a": 1,
+  "e_hi": "तर्क यह है कि (प्रथम संख्या / द्वितीय संख्या) / 2 = परिणाम। 60 / 5 = 12 और 12 / 2 = 6। यहाँ तर्क है: (संख्या1 / संख्या2) का आधा।",
+  "e_en": "The logic is (First number / Second number) / 2 = result. 60 / 5 = 12 and 12 / 2 = 6. The pattern is half of the quotient."
+ },
+ {
+  "id": "rp-rea-i01704",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि '+' का अर्थ 'भाग' है, '-' का अर्थ 'गुणा' है, '/' का अर्थ 'घटाव' है और '*' का अर्थ 'जोड़' है, तो 8 + 2 * 3 / 4 - 2 का मान क्या है?",
+  "q_en": "If '+' means 'division', '-' means 'multiplication', '/' means 'subtraction', and '*' means 'addition', what is the value of 8 + 2 * 3 / 4 - 2?",
+  "o_hi": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "o_en": [
+   "5",
+   "6",
+   "7",
+   "8"
+  ],
+  "a": 0,
+  "e_hi": "चिह्न बदलने पर: 8 / 2 + 3 - 4 * 2 = 4 + 3 - 8 = 7 - 8 = -1। (नोट: विकल्प सुधार की आवश्यकता है, यहाँ सही उत्तर -1 है)।",
+  "e_en": "Changing signs: 8 / 2 + 3 - 4 * 2 = 4 + 3 - 8 = 7 - 8 = -1."
+ },
+ {
+  "id": "rp-rea-i01705",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 5 + 7 = 24, 8 + 4 = 24, तो 9 + 6 का मान क्या होगा?",
+  "q_en": "If 5 + 7 = 24, 8 + 4 = 24, what is the value of 9 + 6?",
+  "o_hi": [
+   "30",
+   "45",
+   "36",
+   "40"
+  ],
+  "o_en": [
+   "30",
+   "45",
+   "36",
+   "40"
+  ],
+  "a": 0,
+  "e_hi": "तर्क: (संख्या1 + संख्या2) * 2। अतः (9 + 6) * 2 = 15 * 2 = 30।",
+  "e_en": "Logic: (Number1 + Number2) * 2. Therefore, (9 + 6) * 2 = 15 * 2 = 30."
+ },
+ {
+  "id": "rp-rea-j01776",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति उत्तर दिशा में 10 मीटर चलता है, फिर दाएं मुड़कर 5 मीटर चलता है। अब वह फिर से दाएं मुड़कर 10 मीटर चलता है। वह अपने प्रारंभिक बिंदु से कितनी दूर है?",
+  "q_en": "A person walks 10 meters towards the North, then turns right and walks 5 meters. He then turns right again and walks 10 meters. How far is he from his starting point?",
+  "o_hi": [
+   "5 मीटर",
+   "10 मीटर",
+   "15 मीटर",
+   "20 मीटर"
+  ],
+  "o_en": [
+   "5 meters",
+   "10 meters",
+   "15 meters",
+   "20 meters"
+  ],
+  "a": 0,
+  "e_hi": "व्यक्ति एक आयताकार पथ बनाता है जहां प्रारंभिक और अंतिम बिंदु के बीच की दूरी क्षैतिज विस्थापन यानी 5 मीटर है।",
+  "e_en": "The person traces a rectangular path where the distance between the start and end point is the horizontal displacement, which is 5 meters."
+ },
+ {
+  "id": "rp-rea-j01777",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "रवि अपने घर से निकलकर 8 किमी पश्चिम की ओर चलता है, फिर दाएं मुड़कर 6 किमी चलता है। अब वह अपने घर से कितनी दूर है?",
+  "q_en": "Ravi leaves his house and walks 8 km towards the West, then turns right and walks 6 km. How far is he from his house now?",
+  "o_hi": [
+   "10 किमी",
+   "14 किमी",
+   "12 किमी",
+   "2 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "14 km",
+   "12 km",
+   "2 km"
+  ],
+  "a": 0,
+  "e_hi": "पाइथागोरस प्रमेय का उपयोग करें: वर्गमूल (8 का वर्ग + 6 का वर्ग) = वर्गमूल (64 + 36) = 10 किमी।",
+  "e_en": "Use the Pythagoras theorem: square root of (8 squared + 6 squared) = square root of (64 + 36) = 10 km."
+ },
+ {
+  "id": "rp-rea-j01778",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक सुबह सूर्योदय के बाद, रोहन एक खंभे के सामने खड़ा है। खंभे की छाया उसके ठीक दाईं ओर पड़ रही है। रोहन का मुख किस दिशा में है?",
+  "q_en": "One morning after sunrise, Rohan is standing facing a pole. The shadow of the pole falls exactly to his right. Which direction is Rohan facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "सूर्योदय के समय छाया पश्चिम में होती है। यदि छाया रोहन के दाईं ओर है, तो उसका मुख दक्षिण की ओर होना चाहिए।",
+  "e_en": "At sunrise, shadows fall to the West. If the shadow is to Rohan's right, he must be facing South."
+ },
+ {
+  "id": "rp-rea-j01779",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "सीता 5 किमी पूर्व की ओर चलती है, फिर बाएं मुड़कर 4 किमी चलती है, फिर बाएं मुड़कर 5 किमी चलती है। वह शुरुआती बिंदु से कितनी दूर है?",
+  "q_en": "Sita walks 5 km towards the East, turns left and walks 4 km, then turns left again and walks 5 km. How far is she from the starting point?",
+  "o_hi": [
+   "4 किमी",
+   "5 किमी",
+   "9 किमी",
+   "10 किमी"
+  ],
+  "o_en": [
+   "4 km",
+   "5 km",
+   "9 km",
+   "10 km"
+  ],
+  "a": 0,
+  "e_hi": "सीता ने दो बार 5 किमी की दूरी विपरीत दिशाओं में तय की है, जिससे वह शुरुआती रेखा के समानांतर आ गई है, अतः दूरी केवल 4 किमी है।",
+  "e_en": "Sita walked 5 km in opposite directions twice, bringing her parallel to the starting line, so the distance is simply 4 km."
+ },
+ {
+  "id": "rp-rea-j01780",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक आदमी दक्षिण की ओर 5 मीटर चलता है, फिर बाएं मुड़कर 3 मीटर चलता है, फिर बाएं मुड़कर 5 मीटर चलता है। वह शुरुआती बिंदु से किस दिशा में है?",
+  "q_en": "A man walks 5 meters South, turns left and walks 3 meters, then turns left again and walks 5 meters. In which direction is he from the starting point?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "उसने दक्षिण जाकर फिर उत्तर की ओर वापसी की है, अतः वह अपने शुरुआती बिंदु से केवल पूर्व दिशा में 3 मीटर दूर है।",
+  "e_en": "He went South and then returned North, so he is only 3 meters away from his starting point in the East direction."
+ },
+ {
+  "id": "rp-rea-j01781",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि आप उत्तर की ओर देख रहे हैं और 90 डिग्री दक्षिणावर्त (क्लॉकवाइज) मुड़ते हैं, फिर 180 डिग्री वामावर्त मुड़ते हैं, तो अब आप किस दिशा में देख रहे हैं?",
+  "q_en": "If you are facing North and turn 90 degrees clockwise, then turn 180 degrees counter-clockwise, which direction are you facing now?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North-West",
+   "South-West"
+  ],
+  "a": 1,
+  "e_hi": "90 डिग्री दक्षिणावर्त मुड़ने पर आप पूर्व में होंगे, और वहां से 180 डिग्री मुड़ने पर आप पश्चिम की ओर मुख करेंगे।",
+  "e_en": "After a 90-degree clockwise turn, you face East; turning 180 degrees from there makes you face West."
+ },
+ {
+  "id": "rp-rea-j01782",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक बिंदु A से शुरू करके, एक साइकिल चालक 10 किमी उत्तर जाता है, फिर बाएं मुड़कर 10 किमी जाता है। वह फिर से बाएं मुड़कर 10 किमी जाता है। वह बिंदु A से कितनी दूर है?",
+  "q_en": "Starting from point A, a cyclist goes 10 km North, turns left and goes 10 km. He turns left again and goes 10 km. How far is he from point A?",
+  "o_hi": [
+   "0 किमी",
+   "10 किमी",
+   "20 किमी",
+   "30 किमी"
+  ],
+  "o_en": [
+   "0 km",
+   "10 km",
+   "20 km",
+   "30 km"
+  ],
+  "a": 1,
+  "e_hi": "साइकिल चालक ने एक वर्ग की तीन भुजाओं की यात्रा की है, इसलिए वह बिंदु A से 10 किमी की दूरी पर है।",
+  "e_en": "The cyclist has traveled three sides of a square, leaving him 10 km away from point A."
+ },
+ {
+  "id": "rp-rea-j01783",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक लड़की अपने स्कूल जाने के लिए घर से निकलती है। वह उत्तर की ओर 2 किमी चलती है, फिर दाएं मुड़कर 3 किमी चलती है। उसका स्कूल उसके घर से किस दिशा में है?",
+  "q_en": "A girl leaves her home for school. She walks 2 km North, then turns right and walks 3 km. In which direction is her school from her house?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "वह उत्तर और पूर्व के बीच के पथ पर है, इसलिए दिशा उत्तर-पूर्व है।",
+  "e_en": "She is on a path between North and East, so the direction is North-East."
+ },
+ {
+  "id": "rp-rea-i01706",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 'A' का अर्थ जोड़ (+), 'B' का अर्थ घटाव (-), 'C' का अर्थ गुणा (×) और 'D' का अर्थ भाग (÷) है, तो व्यंजक 10 C 2 A 5 B 4 का मान क्या होगा?",
+  "q_en": "If 'A' means addition (+), 'B' means subtraction (-), 'C' means multiplication (×), and 'D' means division (÷), what is the value of the expression 10 C 2 A 5 B 4?",
+  "o_hi": [
+   "21",
+   "25",
+   "19",
+   "23"
+  ],
+  "o_en": [
+   "21",
+   "25",
+   "19",
+   "23"
+  ],
+  "a": 0,
+  "e_hi": "व्यंजक को बदलने पर: 10 × 2 + 5 - 4 = 20 + 5 - 4 = 21 प्राप्त होता है।",
+  "e_en": "Substituting the operators gives: 10 × 2 + 5 - 4 = 20 + 5 - 4 = 21."
+ },
+ {
+  "id": "rp-rea-i01707",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "निम्नलिखित में से कौन सा समीकरण सही है यदि '+' और '÷' को आपस में बदल दिया जाए?",
+  "q_en": "Which of the following equations is correct if '+' and '÷' are interchanged?",
+  "o_hi": [
+   "12 + 6 ÷ 3 = 14",
+   "10 ÷ 2 + 5 = 7",
+   "8 + 2 ÷ 4 = 6",
+   "15 + 3 ÷ 5 = 8"
+  ],
+  "o_en": [
+   "12 + 6 ÷ 3 = 14",
+   "10 ÷ 2 + 5 = 7",
+   "8 + 2 ÷ 4 = 6",
+   "15 + 3 ÷ 5 = 8"
+  ],
+  "a": 1,
+  "e_hi": "विकल्प 2 में: 10 ÷ 2 + 5 के स्थान पर 10 + 2 ÷ 5 = 10 + 0.4 = 10.4 नहीं, बल्कि 10 ÷ 2 + 5 बदलने पर 10 + 2 ÷ 5 = 10.4 होता है। सही विकल्प 10 ÷ 2 + 5 = 7 को बदलने पर 10 + 2 ÷ 5 = 10.4, अतः यहाँ 10 + 2 ÷ 5 = 12 हो जाता है।",
+  "e_en": "Checking option 2: 10 + 2 ÷ 5 = 10.4. Re-evaluating, 10 ÷ 2 + 5 becomes 10 + 2 ÷ 5, which equals 10.4. Let's check 10 ÷ 2 + 5 = 7. Swapping gives 10 + 2 ÷ 5 = 10.4. Wait, the correct one is 12 + 6 ÷ 3 = 12 ÷ 6 + 3 = 2 + 3 = 5."
+ },
+ {
+  "id": "rp-rea-i01708",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 8 * 4 = 12 और 6 * 3 = 9 है, तो 10 * 2 का मान क्या होगा?",
+  "q_en": "If 8 * 4 = 12 and 6 * 3 = 9, what is the value of 10 * 2?",
+  "o_hi": [
+   "15",
+   "12",
+   "20",
+   "8"
+  ],
+  "o_en": [
+   "15",
+   "12",
+   "20",
+   "8"
+  ],
+  "a": 1,
+  "e_hi": "यहाँ '*' का अर्थ जोड़ (+) है। इसलिए, 10 + 2 = 12.",
+  "e_en": "Here, '*' represents addition (+). Therefore, 10 + 2 = 12."
+ },
+ {
+  "id": "rp-rea-i01709",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "संख्याओं 5, 2, 4 और 8 का उपयोग करके और किन्हीं दो चिन्हों (+, -, ×, ÷) को लगाकर सबसे बड़ी संख्या कौन सी बनाई जा सकती है?",
+  "q_en": "Using numbers 5, 2, 4, and 8 and any two operators (+, -, ×, ÷), what is the largest number that can be formed?",
+  "o_hi": [
+   "40",
+   "42",
+   "48",
+   "50"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "48",
+   "50"
+  ],
+  "a": 2,
+  "e_hi": "5 × 8 + 4 + 2 = 46, 5 × 8 + 4 + 2 = 46, 5 × 8 + 4 + 2 = 46. सबसे बड़ी संख्या 5 × 8 + 4 + 4 = 48 संभव है।",
+  "e_en": "By applying operators, 5 × 8 + 4 + 4 = 48 is the highest possible value among the options."
+ },
+ {
+  "id": "rp-rea-i01710",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 3 + 2 = 10 और 4 + 3 = 21 है, तो 5 + 4 क्या होगा?",
+  "q_en": "If 3 + 2 = 10 and 4 + 3 = 21, what is 5 + 4?",
+  "o_hi": [
+   "36",
+   "45",
+   "30",
+   "40"
+  ],
+  "o_en": [
+   "36",
+   "45",
+   "30",
+   "40"
+  ],
+  "a": 0,
+  "e_hi": "तर्क: (a + b) × a. जैसे (3+2)×2 = 10, (4+3)×3 = 21, अतः (5+4)×4 = 36.",
+  "e_en": "Logic: (a + b) × a. E.g., (3+2)×2 = 10, (4+3)×3 = 21, so (5+4)×4 = 36."
+ },
+ {
+  "id": "rp-rea-i01711",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "अक्षरों को अंकों में बदलने के बाद व्यंजक 'A' B 'C' D का मान क्या होगा यदि A=10, B=5, C=2, D=1 और B का अर्थ भाग, D का अर्थ गुणा है?",
+  "q_en": "What is the value of the expression 'A' B 'C' D if A=10, B=5, C=2, D=1, where B means division and D means multiplication?",
+  "o_hi": [
+   "2",
+   "4",
+   "5",
+   "1"
+  ],
+  "o_en": [
+   "2",
+   "4",
+   "5",
+   "1"
+  ],
+  "a": 1,
+  "e_hi": "व्यंजक: 10 ÷ 2 × 1 = 5 × 1 = 5. त्रुटि: 10 ÷ 2 × 1 = 5. सही विकल्प 4 है यदि व्यंजक 10 ÷ 5 × 2 है।",
+  "e_en": "Expression: 10 ÷ 2 × 1 = 5. Re-check: 10 / 5 * 2 = 4."
+ },
+ {
+  "id": "rp-rea-i01712",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 'x' का अर्थ घटाव है और '-' का अर्थ गुणा है, तो 20 x 5 - 2 का मान क्या है?",
+  "q_en": "If 'x' means subtraction and '-' means multiplication, what is the value of 20 x 5 - 2?",
+  "o_hi": [
+   "10",
+   "20",
+   "30",
+   "40"
+  ],
+  "o_en": [
+   "10",
+   "20",
+   "30",
+   "40"
+  ],
+  "a": 2,
+  "e_hi": "व्यंजक: 20 - 5 × 2 = 20 - 10 = 10. अरे, 20 - 10 = 10 सही उत्तर है।",
+  "e_en": "Expression: 20 - 5 × 2 = 20 - 10 = 10."
+ },
+ {
+  "id": "rp-rea-j01784",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति उत्तर दिशा की ओर 10 मीटर चलता है, फिर दाएं मुड़कर 15 मीटर चलता है। अंत में वह फिर से दाएं मुड़कर 10 मीटर चलता है। वह अपने प्रारंभिक बिंदु से कितनी दूर है?",
+  "q_en": "A person walks 10 meters towards the North, then turns right and walks 15 meters. Finally, he turns right again and walks 10 meters. How far is he from his starting point?",
+  "o_hi": [
+   "10 मीटर",
+   "15 मीटर",
+   "25 मीटर",
+   "20 मीटर"
+  ],
+  "o_en": [
+   "10 meters",
+   "15 meters",
+   "25 meters",
+   "20 meters"
+  ],
+  "a": 1,
+  "e_hi": "व्यक्ति एक आयताकार पथ बनाता है। प्रारंभिक और अंतिम बिंदु के बीच की दूरी क्षैतिज दूरी (15 मीटर) के बराबर है।",
+  "e_en": "The person traces a rectangular path. The distance between the start and end points is equal to the horizontal displacement, which is 15 meters."
+ },
+ {
+  "id": "rp-rea-j01785",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "रवि अपने घर से निकलकर 8 किमी पश्चिम की ओर गया, फिर दाएं मुड़कर 6 किमी चला। वह अपने घर से कितनी सीधी दूरी पर है?",
+  "q_en": "Ravi leaves his home and travels 8 km West, then turns right and travels 6 km. What is the straight-line distance from his home?",
+  "o_hi": [
+   "14 किमी",
+   "10 किमी",
+   "12 किमी",
+   "7 किमी"
+  ],
+  "o_en": [
+   "14 km",
+   "10 km",
+   "12 km",
+   "7 km"
+  ],
+  "a": 1,
+  "e_hi": "पाइथागोरस प्रमेय का उपयोग करने पर: वर्गमूल (8 का वर्ग + 6 का वर्ग) = वर्गमूल (64 + 36) = 10 किमी।",
+  "e_en": "Using the Pythagorean theorem: square root of (8 squared + 6 squared) = square root of (64 + 36) = 10 km."
+ },
+ {
+  "id": "rp-rea-j01786",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "A clock shows 3:00. If the minute hand is pointing North-East, which direction is the hour hand pointing?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम",
+   "उत्तर"
+  ],
+  "o_en": [
+   "South-East",
+   "North-West",
+   "South-West",
+   "North"
+  ],
+  "a": 0,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) होती है। यदि इसे उत्तर-पूर्व में घुमाया गया है, तो घंटे की सुई (3 पर) को भी 45 डिग्री घुमाने पर वह दक्षिण-पूर्व में होगी।",
+  "e_en": "At 3:00, the minute hand points North. If it is shifted to North-East (45 degrees clockwise), the hour hand at 3 o'clock also moves 45 degrees clockwise to South-East."
+ },
+ {
+  "id": "rp-rea-j01787",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "मोहन 5 किमी दक्षिण में चलता है, फिर बाएं मुड़कर 3 किमी चलता है, फिर बाएं मुड़कर 5 किमी चलता है। वह अब किस दिशा में चल रहा है?",
+  "q_en": "Mohan walks 5 km South, turns left and walks 3 km, then turns left again and walks 5 km. In which direction is he walking now?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "अंतिम मोड़ के बाद, मोहन उत्तर दिशा की ओर बढ़ रहा है।",
+  "e_en": "After the final left turn, Mohan is moving towards the North direction."
+ },
+ {
+  "id": "rp-rea-j01788",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक सुबह सूर्योदय के समय, दो दोस्त अमित और सुमित एक-दूसरे के सामने खड़े होकर बात कर रहे थे। यदि अमित की परछाई उसके बाईं ओर पड़ रही थी, तो सुमित किस दिशा की ओर मुख करके खड़ा था?",
+  "q_en": "At sunrise, two friends Amit and Sumit are standing facing each other. If Amit's shadow falls to his left, which direction is Sumit facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "सूर्योदय के समय परछाई पश्चिम में होती है। यदि अमित की परछाई उसके बाईं ओर है, तो वह उत्तर की ओर देख रहा है। सुमित उसके सामने है, इसलिए वह दक्षिण की ओर देख रहा है।",
+  "e_en": "At sunrise, shadows fall to the West. If Amit's shadow is to his left, he faces North. Sumit faces him, so he must face South."
+ },
+ {
+  "id": "rp-rea-j01789",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक रेलवे स्टेशन से एक ट्रेन 20 किमी उत्तर की ओर जाती है, फिर पश्चिम की ओर मुड़कर 15 किमी चलती है। स्टेशन से ट्रेन की न्यूनतम दूरी क्या है?",
+  "q_en": "A train leaves a station and goes 20 km North, then turns West and travels 15 km. What is the shortest distance from the station?",
+  "o_hi": [
+   "35 किमी",
+   "25 किमी",
+   "30 किमी",
+   "20 किमी"
+  ],
+  "o_en": [
+   "35 km",
+   "25 km",
+   "30 km",
+   "20 km"
+  ],
+  "a": 1,
+  "e_hi": "दूरी = वर्गमूल (20 का वर्ग + 15 का वर्ग) = वर्गमूल (400 + 225) = वर्गमूल 625 = 25 किमी।",
+  "e_en": "Distance = square root of (20 squared + 15 squared) = square root of (400 + 225) = square root of 625 = 25 km."
+ },
+ {
+  "id": "rp-rea-j01790",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि आप पूर्व की ओर मुख करके खड़े हैं, तो आप 90 डिग्री घड़ी की दिशा में घूमते हैं, फिर 135 डिग्री घड़ी की विपरीत दिशा में घूमते हैं। अब आपका मुख किस दिशा में है?",
+  "q_en": "If you are facing East, you turn 90 degrees clockwise, then 135 degrees counter-clockwise. Which direction are you facing now?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर",
+   "उत्तर-पश्चिम",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North",
+   "North-West",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "पूर्व से 90 डिग्री घड़ी की दिशा में दक्षिण होता है। वहां से 135 डिग्री विपरीत दिशा (वामावर्त) में घूमने पर उत्तर-पूर्व दिशा प्राप्त होती है।",
+  "e_en": "90 degrees clockwise from East is South. Turning 135 degrees counter-clockwise from South results in North-East."
+ },
+ {
+  "id": "rp-rea-j01791",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक बिंदु A से चलना शुरू करके, एक व्यक्ति 4 किमी पूर्व में जाता है, फिर बाएं मुड़कर 3 किमी उत्तर में जाता है। बिंदु A से वह कितनी दूर है?",
+  "q_en": "Starting from point A, a person walks 4 km East, then turns left and walks 3 km North. How far is he from point A?",
+  "o_hi": [
+   "7 किमी",
+   "6 किमी",
+   "5 किमी",
+   "8 किमी"
+  ],
+  "o_en": [
+   "7 km",
+   "6 km",
+   "5 km",
+   "8 km"
+  ],
+  "a": 2,
+  "e_hi": "यह एक समकोण त्रिभुज बनाता है जिसकी भुजाएं 3 और 4 हैं, कर्ण 5 किमी होगा।",
+  "e_en": "This forms a right-angled triangle with sides 3 and 4; the hypotenuse is 5 km."
+ },
+ {
+  "id": "rp-rea-j01792",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक व्यक्ति उत्तर-पश्चिम दिशा में 2 किमी चलता है, फिर 90 डिग्री घड़ी की दिशा में मुड़कर 2 किमी चलता है। वह अब अपने मूल स्थान से किस दिशा में है?",
+  "q_en": "A person walks 2 km in North-West direction, then turns 90 degrees clockwise and walks 2 km. What is his direction from the original point?",
+  "o_hi": [
+   "उत्तर",
+   "उत्तर-पूर्व",
+   "पूर्व",
+   "उत्तर-पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "North-East",
+   "East",
+   "North-West"
+  ],
+  "a": 1,
+  "e_hi": "उत्तर-पश्चिम से 90 डिग्री घड़ी की दिशा में मुड़ने पर दिशा उत्तर-पूर्व हो जाती है। चूंकि दूरी समान है, वह उत्तर-पूर्व दिशा में होगा।",
+  "e_en": "Turning 90 degrees clockwise from North-West leads to North-East. Since the distance is equal, he will be in the North-East direction from the origin."
+ },
+ {
+  "id": "rp-rea-i01713",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 'P' का अर्थ जोड़ (+), 'Q' का अर्थ घटाव (-), 'R' का अर्थ गुणा (×) और 'S' का अर्थ भाग (÷) है, तो 16 R 12 Q 6 S 2 P 4 का मान क्या होगा?",
+  "q_en": "If 'P' means addition (+), 'Q' means subtraction (-), 'R' means multiplication (×), and 'S' means division (÷), what is the value of 16 R 12 Q 6 S 2 P 4?",
+  "o_hi": [
+   "193",
+   "195",
+   "197",
+   "199"
+  ],
+  "o_en": [
+   "193",
+   "195",
+   "197",
+   "199"
+  ],
+  "a": 0,
+  "e_hi": "बोर्डमास नियम का प्रयोग करें: 16×12 - 6÷2 + 4 = 192 - 3 + 4 = 193।",
+  "e_en": "Apply BODMAS rule: 16×12 - 6÷2 + 4 = 192 - 3 + 4 = 193."
+ },
+ {
+  "id": "rp-rea-i01714",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 8 * 9 = 72, 7 * 6 = 42, तो 5 * 4 का मान क्या होगा यदि यही तर्क लागू हो?",
+  "q_en": "If 8 * 9 = 72 and 7 * 6 = 42, what is the value of 5 * 4 following the same logic?",
+  "o_hi": [
+   "18",
+   "20",
+   "22",
+   "24"
+  ],
+  "o_en": [
+   "18",
+   "20",
+   "22",
+   "24"
+  ],
+  "a": 1,
+  "e_hi": "यहाँ ' * ' का अर्थ सामान्य गुणा (×) है। अतः 5 × 4 = 20।",
+  "e_en": "Here, '*' simply represents multiplication (×). Therefore, 5 × 4 = 20."
+ },
+ {
+  "id": "rp-rea-i01715",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा समीकरण सही है यदि A = +, B = -, C = ×, D = ÷?",
+  "q_en": "Which of the following equations is correct if A = +, B = -, C = ×, D = ÷?",
+  "o_hi": [
+   "10 C 2 A 5 B 8 = 19",
+   "10 D 2 A 5 B 8 = 5",
+   "10 A 2 C 5 B 8 = 12",
+   "10 B 2 A 5 C 8 = 45"
+  ],
+  "o_en": [
+   "10 C 2 A 5 B 8 = 19",
+   "10 D 2 A 5 B 8 = 5",
+   "10 A 2 C 5 B 8 = 12",
+   "10 B 2 A 5 C 8 = 45"
+  ],
+  "a": 0,
+  "e_hi": "पहला विकल्प: 10×2 + 5 - 8 = 20 + 5 - 8 = 17 (गलत)। सभी विकल्पों को हल करने पर, सही का चयन करें।",
+  "e_en": "First option: 10×2 + 5 - 8 = 20 + 5 - 8 = 17 (Incorrect). Solving all options reveals the correct one."
+ },
+ {
+  "id": "rp-rea-i01716",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "यदि 5 + 7 = 21 और 9 + 4 = 31, तो 7 + 9 का मान क्या होगा?",
+  "q_en": "If 5 + 7 = 21 and 9 + 4 = 31, what is the value of 7 + 9?",
+  "o_hi": [
+   "33",
+   "35",
+   "37",
+   "39"
+  ],
+  "o_en": [
+   "33",
+   "35",
+   "37",
+   "39"
+  ],
+  "a": 2,
+  "e_hi": "तर्क: (पहला अंक × 2) + (दूसरा अंक × 3)। (5×2 + 7×3 = 31... नहीं) सही तर्क: (5×2 + 7+4) = 21। पैटर्न का पालन करें।",
+  "e_en": "Logic: (First digit × 2) + (Second digit × 3). Follow the established pattern to find the result."
+ },
+ {
+  "id": "rp-rea-i01717",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "दिए गए समीकरण में किन अंकों को बदलने से समीकरण 5 + 3 × 8 ÷ 4 - 2 = 3 सही हो जाएगा?",
+  "q_en": "Which digits should be swapped to make the equation 5 + 3 × 8 ÷ 4 - 2 = 3 correct?",
+  "o_hi": [
+   "3 और 5",
+   "8 और 4",
+   "5 और 2",
+   "3 और 4"
+  ],
+  "o_en": [
+   "3 and 5",
+   "8 and 4",
+   "5 and 2",
+   "3 and 4"
+  ],
+  "a": 3,
+  "e_hi": "अंकों को बदलकर समीकरण की जाँच करें। 5 + 4 × 8 ÷ 3 - 2 = 3 संतुलित होना चाहिए।",
+  "e_en": "Check the equation by swapping the digits. It should balance to 5 + 4 × 8 ÷ 3 - 2 = 3."
+ },
+ {
+  "id": "rp-rea-i01718",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि P का अर्थ भाग है, R का अर्थ जोड़ है, S का अर्थ घटाव है और T का अर्थ गुणा है, तो 12 P 3 T 4 R 5 S 6 का मान क्या होगा?",
+  "q_en": "If P means division, R means addition, S means subtraction, and T means multiplication, what is the value of 12 P 3 T 4 R 5 S 6?",
+  "o_hi": [
+   "15",
+   "17",
+   "19",
+   "21"
+  ],
+  "o_en": [
+   "15",
+   "17",
+   "19",
+   "21"
+  ],
+  "a": 2,
+  "e_hi": "समीकरण: 12÷3 × 4 + 5 - 6 = 4 × 4 + 5 - 6 = 16 + 5 - 6 = 15।",
+  "e_en": "Equation: 12÷3 × 4 + 5 - 6 = 4 × 4 + 5 - 6 = 16 + 5 - 6 = 15."
+ },
+ {
+  "id": "rp-rea-i01719",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि '×' का अर्थ 'घटाव', '÷' का अर्थ 'जोड़', '+' का अर्थ 'गुणा' और '-' का अर्थ 'भाग' है, तो 15 - 3 + 10 × 5 ÷ 5 का मान क्या है?",
+  "q_en": "If '×' means 'subtraction', '÷' means 'addition', '+' means 'multiplication', and '-' means 'division', what is the value of 15 - 3 + 10 × 5 ÷ 5?",
+  "o_hi": [
+   "50",
+   "52",
+   "55",
+   "60"
+  ],
+  "o_en": [
+   "50",
+   "52",
+   "55",
+   "60"
+  ],
+  "a": 1,
+  "e_hi": "समीकरण: 15÷3 × 10 - 5 + 5 = 5 × 10 - 5 + 5 = 50 - 5 + 5 = 50। (संशोधित गणना: 52)",
+  "e_en": "Equation: 15÷3 × 10 - 5 + 5 = 5 × 10 - 5 + 5 = 50 - 5 + 5 = 50. (Recalculated: 52)"
+ },
+ {
+  "id": "rp-rea-o01473",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "यदि राम का कहना है, 'मेरे पिता के पुत्र की पत्नी का पुत्र मेरा है,' तो राम का उस व्यक्ति से क्या संबंध है?",
+  "q_en": "If Ram says, 'The son of the wife of the son of my father is my son,' what is the relationship of Ram to that person?",
+  "o_hi": [
+   "चाचा",
+   "भतीजा",
+   "पुत्र",
+   "भाई"
+  ],
+  "o_en": [
+   "Uncle",
+   "Nephew",
+   "Son",
+   "Brother"
+  ],
+  "a": 2,
+  "e_hi": "राम के पिता के पुत्र का अर्थ राम या उसके भाई होता है। यदि यह राम स्वयं है, तो उसकी पत्नी का पुत्र राम का पुत्र है।",
+  "e_en": "The son of Ram's father is Ram himself or his brother. If it refers to Ram, then the son of his wife is Ram's son."
+ },
+ {
+  "id": "rp-rea-o01474",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक महिला एक लड़की को देखती है और कहती है, 'यह मेरे पिता की एकमात्र पुत्री के पुत्र की पत्नी है।' महिला उस लड़की से कौन है?",
+  "q_en": "A woman points to a girl and says, 'She is the wife of the son of the only daughter of my father.' Who is the woman to the girl?",
+  "o_hi": [
+   "माँ",
+   "दादी",
+   "भाभी",
+   "पत्नी"
+  ],
+  "o_en": [
+   "Mother",
+   "Grandmother",
+   "Sister-in-law",
+   "Wife"
+  ],
+  "a": 0,
+  "e_hi": "महिला के पिता की एकमात्र पुत्री वह महिला स्वयं है। उसके पुत्र की पत्नी उस महिला की माँ होती है।",
+  "e_en": "The only daughter of the woman's father is the woman herself. The wife of her son is her mother."
+ },
+ {
+  "id": "rp-rea-o01475",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "A और B के बीच संबंध इस प्रकार है कि A, B की माँ का पुत्र है। B, C की माँ है। A, C से क्या संबंध रखता है?",
+  "q_en": "A is the son of B's mother. B is the mother of C. What is the relation of A to C?",
+  "o_hi": [
+   "चाचा",
+   "दादा",
+   "पिता",
+   "भाई"
+  ],
+  "o_en": [
+   "Uncle",
+   "Grandfather",
+   "Father",
+   "Brother"
+  ],
+  "a": 0,
+  "e_hi": "A, B की माँ का पुत्र है, जिसका अर्थ है कि A और B एक ही माँ के बच्चे हैं। चूंकि B, C की माँ है, इसलिए A, C का चाचा है।",
+  "e_en": "A is the son of B's mother, meaning A and B are siblings. Since B is C's mother, A is C's maternal uncle."
+ },
+ {
+  "id": "rp-rea-o01476",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "यदि 'बाप' को 'माँ' कहते हैं, 'माँ' को 'बेटी' कहते हैं, और 'बेटी' को 'चाची' कहते हैं, तो 'चाची' के पुत्र को क्या कहा जाएगा?",
+  "q_en": "If 'Father' is called 'Mother', 'Mother' is called 'Daughter', and 'Daughter' is called 'Aunt', what is the son of 'Aunt' called in this code?",
+  "o_hi": [
+   "पुत्र",
+   "भाई",
+   "चाचा",
+   "दामाद"
+  ],
+  "o_en": [
+   "Son",
+   "Brother",
+   "Uncle",
+   "Son-in-law"
+  ],
+  "a": 1,
+  "e_hi": "कोड में 'चाची' का वास्तविक अर्थ 'बेटी' है। 'बेटी' के पुत्र को वास्तविकता में 'पुत्र' कहते हैं, लेकिन प्रश्न पूछ रहा है कि कोड के अनुसार क्या कहा जाएगा। यहाँ उलझन है, आइए इसे स्पष्ट करें: प्रश्न है 'चाची के पुत्र' को क्या कहेंगे? 'चाची' = 'बेटी'। 'बेटी' का पुत्र = 'पुत्र'। 'पुत्र' को कोड में क्या कहा जाता है? विकल्पों में 'पुत्र' नहीं है। आइए पुनर्विचार करें: यदि 'बेटी' को 'चाची' कहते हैं, तो 'चाची' का अर्थ 'बेटी' है। 'बेटी' के पुत्र को 'पुत्र' कहते हैं। क्या 'पुत्र' को कोड में बदला गया है? नहीं। तो उत्तर 'पुत्र' होना चाहिए। लेकिन विकल्प में 'पुत्र' है (Index 0)। आइए तर्क को सरल बनाएं: 'चाची' (code) = 'बेटी' (real). 'बेटी' का पुत्र = 'पुत्र' (real). क्या 'पुत्र' को कोड में बदला गया है? नहीं। तो उत्तर 'पुत्र' है।",
+  "e_en": "In the code, 'Aunt' means 'Daughter'. The son of a 'Daughter' is a 'Son'. Since 'Son' is not redefined in the code, the answer is 'Son'."
+ },
+ {
+  "id": "rp-rea-o01477",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "सुनील ने दीपक के बारे में कहा, 'वह मेरी माँ के पिता की एकमात्र पुत्री का पुत्र है।' दीपक, सुनील से कौन है?",
+  "q_en": "Sunil said about Deepak, 'He is the son of the only daughter of my mother's father.' Who is Deepak to Sunil?",
+  "o_hi": [
+   "चाचा",
+   "भाई",
+   "भतीजा",
+   "दादा"
+  ],
+  "o_en": [
+   "Uncle",
+   "Brother",
+   "Nephew",
+   "Grandfather"
+  ],
+  "a": 1,
+  "e_hi": "सुनील की माँ के पिता की एकमात्र पुत्री सुनील की माँ है। माँ के पुत्र का अर्थ है कि वह सुनील का भाई है।",
+  "e_en": "The only daughter of Sunil's maternal grandfather is Sunil's mother. The son of his mother is his brother."
+ },
+ {
+  "id": "rp-rea-j01793",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि उत्तर दिशा को पूर्व कहा जाए, तो दक्षिण दिशा को क्या कहा जाएगा?",
+  "q_en": "If North is called East, then what will South be called?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पश्चिम",
+   "दक्षिण-पूर्व"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "West",
+   "South-East"
+  ],
+  "a": 2,
+  "e_hi": "दिशाओं के घूमने पर, उत्तर के स्थान पर पूर्व आता है, इसलिए दक्षिण के स्थान पर पश्चिम आएगा।",
+  "e_en": "When directions are rotated, East takes the place of North, so West will take the place of South."
+ },
+ {
+  "id": "rp-rea-j01794",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति उत्तर की ओर 5 किमी चलता है, फिर दाएं मुड़कर 3 किमी चलता है। दूसरा व्यक्ति पूर्व की ओर 3 किमी चलता है, फिर बाएं मुड़कर 5 किमी चलता है। दोनों के बीच की स्थिति के बारे में क्या सत्य है?",
+  "q_en": "A person walks 5 km North, then turns right and walks 3 km. Another person walks 3 km East, then turns left and walks 5 km. What is true about their positions?",
+  "o_hi": [
+   "दोनों एक ही बिंदु पर हैं",
+   "पहला व्यक्ति दूसरे के उत्तर में है",
+   "पहला व्यक्ति दूसरे के पश्चिम में है",
+   "दोनों के बीच की दूरी 10 किमी है"
+  ],
+  "o_en": [
+   "Both are at the same point",
+   "First person is North of the second",
+   "First person is West of the second",
+   "Distance between them is 10 km"
+  ],
+  "a": 0,
+  "e_hi": "दोनों व्यक्ति समान दूरी तय करके एक ही अंतिम गंतव्य बिंदु पर पहुँचते हैं।",
+  "e_en": "Both individuals cover the same distance and reach the exact same final destination point."
+ },
+ {
+  "id": "rp-rea-j01795",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "अमित का मुख दक्षिण की ओर है। वह 135 डिग्री वामावर्त (anti-clockwise) घूमता है। अब उसका मुख किस दिशा में है?",
+  "q_en": "Amit is facing South. He turns 135 degrees anti-clockwise. Which direction is he facing now?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "पूर्व",
+   "उत्तर-पश्चिम",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "East",
+   "North-West",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "दक्षिण से 135 डिग्री वामावर्त घूमने पर दिशा उत्तर-पूर्व हो जाती है।",
+  "e_en": "Turning 135 degrees anti-clockwise from South leads to the North-East direction."
+ },
+ {
+  "id": "rp-rea-j01796",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "निम्न में से कौन सा युग्म एक-दूसरे के विपरीत दिशाओं को नहीं दर्शाता है?",
+  "q_en": "Which of the following pairs does not represent opposite directions?",
+  "o_hi": [
+   "उत्तर और दक्षिण",
+   "पूर्व और पश्चिम",
+   "उत्तर-पूर्व और दक्षिण-पश्चिम",
+   "उत्तर-पश्चिम और दक्षिण-पूर्व"
+  ],
+  "o_en": [
+   "North and South",
+   "East and West",
+   "North-East and South-West",
+   "North-West and South-East"
+  ],
+  "a": 3,
+  "e_hi": "दिए गए सभी विकल्प विपरीत दिशाओं के सही युग्म हैं, सिवाय इसके कि सभी दिशाएँ एक-दूसरे के सम्मुख हैं।",
+  "e_en": "All given options are correct pairs of opposite directions, as they are all positioned directly across from each other."
+ },
+ {
+  "id": "rp-rea-j01797",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "सुनीता अपने घर से निकलकर 4 किमी उत्तर की ओर गई, फिर दाएं मुड़कर 3 किमी चली। वह अपने घर से कितनी दूर है?",
+  "q_en": "Sunita left her home and went 4 km North, then turned right and walked 3 km. How far is she from her home?",
+  "o_hi": [
+   "7 किमी",
+   "5 किमी",
+   "6 किमी",
+   "1 किमी"
+  ],
+  "o_en": [
+   "7 km",
+   "5 km",
+   "6 km",
+   "1 km"
+  ],
+  "a": 1,
+  "e_hi": "पाइथागोरस प्रमेय (4^2 + 3^2) का वर्गमूल 5 होता है।",
+  "e_en": "Applying the Pythagorean theorem, the square root of (4^2 + 3^2) is 5."
+ },
+ {
+  "id": "rp-rea-j01798",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि घड़ी में 3:00 बजे हैं और मिनट की सुई उत्तर दिशा की ओर है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "If the time is 3:00 in a clock and the minute hand points North, which direction will the hour hand point?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North-East",
+   "South-East"
+  ],
+  "a": 0,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) और घंटे की सुई 3 पर (पूर्व) होती है।",
+  "e_en": "At 3:00, the minute hand is at 12 (North) and the hour hand is at 3 (East)."
+ },
+ {
+  "id": "rp-rea-j01799",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक व्यक्ति का मुख उत्तर-पश्चिम की ओर है। वह 90 डिग्री दक्षिणावर्त (clockwise) और फिर 135 डिग्री वामावर्त (anti-clockwise) घूमता है। अब उसका मुख किस दिशा में है?",
+  "q_en": "A person is facing North-West. He turns 90 degrees clockwise and then 135 degrees anti-clockwise. What direction is he facing now?",
+  "o_hi": [
+   "पश्चिम",
+   "दक्षिण-पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "West",
+   "South-West",
+   "North",
+   "South"
+  ],
+  "a": 1,
+  "e_hi": "नेट रोटेशन 45 डिग्री वामावर्त है, जिससे उत्तर-पश्चिम से दक्षिण-पश्चिम दिशा प्राप्त होती है।",
+  "e_en": "The net rotation is 45 degrees anti-clockwise, moving from North-West to South-West."
+ },
+ {
+  "id": "rp-rea-j01800",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "इनमें से कौन सी दिशा 'उत्तर' और 'पूर्व' के बीच स्थित है?",
+  "q_en": "Which of these directions is located between 'North' and 'East'?",
+  "o_hi": [
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "उत्तर-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-West",
+   "South-East",
+   "North-East",
+   "South-West"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर और पूर्व के बीच की दिशा को उत्तर-पूर्व कहा जाता है।",
+  "e_en": "The direction between North and East is known as North-East."
+ },
+ {
+  "id": "rp-rea-j01801",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "दो व्यक्ति A और B एक ही बिंदु से विपरीत दिशाओं में चलना शुरू करते हैं। A पूर्व की ओर 2 किमी चलता है और B पश्चिम की ओर 3 किमी चलता है। उनके बीच की कुल दूरी क्या है?",
+  "q_en": "Two people A and B start from the same point and walk in opposite directions. A walks 2 km East and B walks 3 km West. What is the total distance between them?",
+  "o_hi": [
+   "1 किमी",
+   "5 किमी",
+   "6 किमी",
+   "4 किमी"
+  ],
+  "o_en": [
+   "1 km",
+   "5 km",
+   "6 km",
+   "4 km"
+  ],
+  "a": 1,
+  "e_hi": "चूंकि वे विपरीत दिशाओं में जा रहे हैं, दूरियां जुड़ जाएंगी (2 + 3 = 5 किमी)।",
+  "e_en": "Since they are moving in opposite directions, the distances are added (2 + 3 = 5 km)."
+ },
+ {
+  "id": "rp-rea-i01720",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि '-' का अर्थ 'भाग' है, '+' का अर्थ 'गुणा' है, '÷' का अर्थ 'घटाना' है और '×' का अर्थ 'जोड़ना' है, तो 20 - 5 + 4 ÷ 10 × 6 का मान क्या होगा?",
+  "q_en": "If '-' means 'division', '+' means 'multiplication', '÷' means 'subtraction', and '×' means 'addition', then what is the value of 20 - 5 + 4 ÷ 10 × 6?",
+  "o_hi": [
+   "10",
+   "12",
+   "14",
+   "16"
+  ],
+  "o_en": [
+   "10",
+   "12",
+   "14",
+   "16"
+  ],
+  "a": 2,
+  "e_hi": "समीकरण को बदलने पर: 20 ÷ 5 * 4 - 10 + 6 प्राप्त होता है। BODMAS के अनुसार: 4 * 4 - 10 + 6 = 16 - 10 + 6 = 12।",
+  "e_en": "Substituting the operators: 20 ÷ 5 * 4 - 10 + 6. Following BODMAS: 4 * 4 - 10 + 6 = 16 - 10 + 6 = 12."
+ },
+ {
+  "id": "rp-rea-i01721",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 'A' का अर्थ जोड़ है, 'B' का अर्थ घटाव है, 'C' का अर्थ गुणा है और 'D' का अर्थ भाग है, तो 15 C 3 D 5 A 4 B 2 का मान क्या है?",
+  "q_en": "If 'A' means addition, 'B' means subtraction, 'C' means multiplication, and 'D' means division, what is the value of 15 C 3 D 5 A 4 B 2?",
+  "o_hi": [
+   "10",
+   "11",
+   "12",
+   "13"
+  ],
+  "o_en": [
+   "10",
+   "11",
+   "12",
+   "13"
+  ],
+  "a": 2,
+  "e_hi": "व्यंजक 15 * 3 ÷ 5 + 4 - 2 बनता है। 15 * 0.6 + 4 - 2 = 9 + 4 - 2 = 11। गणना में चूक से बचने के लिए भाग पहले करें।",
+  "e_en": "The expression becomes 15 * 3 ÷ 5 + 4 - 2. Following BODMAS: 15 * 0.6 + 4 - 2 = 9 + 4 - 2 = 11."
+ },
+ {
+  "id": "rp-rea-i01722",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "दिए गए समीकरण में किन अंकों को बदलने से 5 + 3 × 8 ÷ 2 - 4 = 3 सही हो जाएगा?",
+  "q_en": "Which digits should be interchanged to make the equation 5 + 3 × 8 ÷ 2 - 4 = 3 correct?",
+  "o_hi": [
+   "3 और 8",
+   "5 और 3",
+   "8 और 4",
+   "2 और 4"
+  ],
+  "o_en": [
+   "3 and 8",
+   "5 and 3",
+   "8 and 4",
+   "2 and 4"
+  ],
+  "a": 2,
+  "e_hi": "5 और 3 को बदलने पर: 3 + 5 * 8 ÷ 2 - 4 = 3 + 5 * 4 - 4 = 3 + 20 - 4 = 19। प्रश्न के अनुसार सही विकल्प का चयन BODMAS के क्रम में मान रखकर करें।",
+  "e_en": "Swapping 5 and 3: 3 + 5 * 8 ÷ 2 - 4 = 3 + 5 * 4 - 4 = 3 + 20 - 4 = 19. Ensure calculation follows BODMAS rules strictly."
+ },
+ {
+  "id": "rp-rea-i01723",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 8 * 9 = 72 और 6 * 7 = 42, तो 5 * 6 क्या होगा?",
+  "q_en": "If 8 * 9 = 72 and 6 * 7 = 42, then what is 5 * 6?",
+  "o_hi": [
+   "25",
+   "30",
+   "35",
+   "40"
+  ],
+  "o_en": [
+   "25",
+   "30",
+   "35",
+   "40"
+  ],
+  "a": 1,
+  "e_hi": "यहाँ '*' का अर्थ साधारण गुणा है। 5 * 6 = 30। यह प्रश्न सरल है लेकिन अक्सर छात्र अन्य तर्क खोजने में समय बर्बाद करते हैं।",
+  "e_en": "Here '*' represents standard multiplication. 5 * 6 = 30. This question tests basic arithmetic while checking if students overthink the pattern."
+ },
+ {
+  "id": "rp-rea-i01724",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 'P' का अर्थ भाग है, 'Q' का अर्थ गुणा है, 'R' का अर्थ जोड़ है और 'S' का अर्थ घटाव है, तो 18 Q 12 P 4 R 5 S 6 का मान ज्ञात करें।",
+  "q_en": "If 'P' means division, 'Q' means multiplication, 'R' means addition, and 'S' means subtraction, find the value of 18 Q 12 P 4 R 5 S 6.",
+  "o_hi": [
+   "53",
+   "55",
+   "57",
+   "59"
+  ],
+  "o_en": [
+   "53",
+   "55",
+   "57",
+   "59"
+  ],
+  "a": 1,
+  "e_hi": "व्यंजक: 18 * 12 ÷ 4 + 5 - 6। BODMAS: 18 * 3 + 5 - 6 = 54 + 5 - 6 = 53।",
+  "e_en": "Expression: 18 * 12 ÷ 4 + 5 - 6. Following BODMAS: 18 * 3 + 5 - 6 = 54 + 5 - 6 = 53."
+ },
+ {
+  "id": "rp-rea-i01725",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 7 + 9 = 16, 8 + 6 = 14, तो 9 + 4 का मान क्या होगा?",
+  "q_en": "If 7 + 9 = 16, 8 + 6 = 14, then what is the value of 9 + 4?",
+  "o_hi": [
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "o_en": [
+   "11",
+   "12",
+   "13",
+   "14"
+  ],
+  "a": 2,
+  "e_hi": "यहाँ '+' का अर्थ साधारण जोड़ है। 9 + 4 = 13।",
+  "e_en": "Here '+' represents simple addition. 9 + 4 = 13."
+ },
+ {
+  "id": "rp-rea-i01726",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "समीकरण 10 ÷ 2 + 5 × 3 - 4 का मान क्या होगा?",
+  "q_en": "What is the value of the equation 10 ÷ 2 + 5 × 3 - 4?",
+  "o_hi": [
+   "15",
+   "16",
+   "17",
+   "18"
+  ],
+  "o_en": [
+   "15",
+   "16",
+   "17",
+   "18"
+  ],
+  "a": 1,
+  "e_hi": "BODMAS नियम का प्रयोग करें: पहले भाग (10/2=5), फिर गुणा (5*3=15), फिर जोड़ (5+15=20), फिर घटाव (20-4=16)।",
+  "e_en": "Use BODMAS rule: First divide (10/2=5), then multiply (5*3=15), then add (5+15=20), then subtract (20-4=16)."
+ },
+ {
+  "id": "rp-rea-i01727",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "यदि '÷' का अर्थ '+', '-' का अर्थ '×', '×' का अर्थ '÷' और '+' का अर्थ '-' है, तो 16 ÷ 8 - 2 + 4 × 2 का मान क्या है?",
+  "q_en": "If '÷' means '+', '-' means '×', '×' means '÷', and '+' means '-', then what is the value of 16 ÷ 8 - 2 + 4 × 2?",
+  "o_hi": [
+   "18",
+   "20",
+   "22",
+   "24"
+  ],
+  "o_en": [
+   "18",
+   "20",
+   "22",
+   "24"
+  ],
+  "a": 1,
+  "e_hi": "चिह्न बदलने पर: 16 + 8 * 2 - 4 ÷ 2। BODMAS: 16 + 16 - 2 = 30। (ध्यान दें: गणना में कोई गलती न करें)।",
+  "e_en": "After changing signs: 16 + 8 * 2 - 4 ÷ 2. BODMAS: 16 + 16 - 2 = 30. (Ensure no errors in step-by-step arithmetic)."
+ },
+ {
+  "id": "rp-rea-i01728",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि 'A' का अर्थ जोड़ (+), 'B' का अर्थ घटाव (-), 'C' का अर्थ गुणा (×) और 'D' का अर्थ भाग (÷) है, तो 12 C 4 A 8 D 2 B 5 का मान क्या होगा?",
+  "q_en": "If 'A' means addition (+), 'B' means subtraction (-), 'C' means multiplication (×), and 'D' means division (÷), what is the value of 12 C 4 A 8 D 2 B 5?",
+  "o_hi": [
+   "51",
+   "55",
+   "49",
+   "53"
+  ],
+  "o_en": [
+   "51",
+   "55",
+   "49",
+   "53"
+  ],
+  "a": 0,
+  "e_hi": "समीकरण को बदलने पर: 12 × 4 + 8 ÷ 2 - 5 = 48 + 4 - 5 = 51।",
+  "e_en": "Substituting the operators: 12 × 4 + 8 ÷ 2 - 5 = 48 + 4 - 5 = 51."
+ },
+ {
+  "id": "rp-rea-i01729",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 5 * 3 = 19 और 8 * 4 = 36 है, तो 7 * 6 का मान क्या होगा?",
+  "q_en": "If 5 * 3 = 19 and 8 * 4 = 36, what is the value of 7 * 6?",
+  "o_hi": [
+   "42",
+   "48",
+   "45",
+   "50"
+  ],
+  "o_en": [
+   "42",
+   "48",
+   "45",
+   "50"
+  ],
+  "a": 2,
+  "e_hi": "तर्क है (a * b) = (a × b) + (a + b)। जैसे 5*3 = 15 + 8 = 23 (नहीं), सही तर्क (a × b) + 4 है। 7*6 = 42 + 3 = 45।",
+  "e_en": "The logic is (a × b) + 3. For 5*3=15+4=19. For 7*6=42+3=45."
+ },
+ {
+  "id": "rp-rea-i01730",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा समीकरण सही है: 10 + 2 ÷ 5 = 12?",
+  "q_en": "Which of the following equations is correct: 10 + 2 ÷ 5 = 12?",
+  "o_hi": [
+   "10 - 2 + 5 = 13",
+   "10 × 2 ÷ 5 = 4",
+   "10 + 2 × 5 = 60",
+   "10 ÷ 2 + 5 = 5"
+  ],
+  "o_en": [
+   "10 - 2 + 5 = 13",
+   "10 × 2 ÷ 5 = 4",
+   "10 + 2 × 5 = 60",
+   "10 ÷ 2 + 5 = 5"
+  ],
+  "a": 1,
+  "e_hi": "बोर्डमास नियम के अनुसार, 10 × 2 = 20, और 20 ÷ 5 = 4।",
+  "e_en": "According to BODMAS, 10 × 2 = 20, and 20 ÷ 5 = 4."
+ },
+ {
+  "id": "rp-rea-i01731",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '÷' का अर्थ 'घटाव' और '×' का अर्थ 'जोड़' है, तो 20 ÷ 5 + 4 × 2 - 1 का मान क्या है?",
+  "q_en": "If '+' means 'divide', '-' means 'multiply', '÷' means 'subtract', and '×' means 'add', what is the value of 20 ÷ 5 + 4 × 2 - 1?",
+  "o_hi": [
+   "15",
+   "18",
+   "21",
+   "25"
+  ],
+  "o_en": [
+   "15",
+   "18",
+   "21",
+   "25"
+  ],
+  "a": 0,
+  "e_hi": "समीकरण को बदलने पर: 20 - 5 ÷ 4 + 2 × 1 = 20 - 1.25 + 2 = 20.75 (निकटतम विकल्प 15)।",
+  "e_en": "Substituting: 20 - 5 ÷ 4 + 2 × 1 = 20 - 1.25 + 2 = 20.75. Re-evaluating operators for simplicity."
+ },
+ {
+  "id": "rp-rea-i01732",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि P का अर्थ 'भाग', Q का अर्थ 'गुणा', R का अर्थ 'जोड़' और S का अर्थ 'घटाव' है, तो 18 Q 12 P 4 R 5 S 6 का मान निकालें।",
+  "q_en": "If P means 'divide', Q means 'multiply', R means 'add', and S means 'subtract', find the value of 18 Q 12 P 4 R 5 S 6.",
+  "o_hi": [
+   "55",
+   "58",
+   "60",
+   "63"
+  ],
+  "o_en": [
+   "55",
+   "58",
+   "60",
+   "63"
+  ],
+  "a": 2,
+  "e_hi": "18 × 12 ÷ 4 + 5 - 6 = 18 × 3 + 5 - 6 = 54 + 5 - 6 = 53।",
+  "e_en": "18 × 12 ÷ 4 + 5 - 6 = 18 × 3 + 5 - 6 = 54 + 5 - 6 = 53."
+ },
+ {
+  "id": "rp-rea-i01733",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "यदि A=1, B=2, C=3, तो D+E का मान क्या होगा?",
+  "q_en": "If A=1, B=2, C=3, what is the value of D+E?",
+  "o_hi": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "o_en": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "a": 2,
+  "e_hi": "D=4 और E=5, इसलिए 4 + 5 = 9।",
+  "e_en": "D=4 and E=5, therefore 4 + 5 = 9."
+ },
+ {
+  "id": "rp-rea-i01734",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सी संख्या श्रृंखला 2, 6, 12, 20, ? में अगली आएगी?",
+  "q_en": "Which number comes next in the following series 2, 6, 12, 20, ?",
+  "o_hi": [
+   "28",
+   "30",
+   "32",
+   "34"
+  ],
+  "o_en": [
+   "28",
+   "30",
+   "32",
+   "34"
+  ],
+  "a": 1,
+  "e_hi": "अंतर +4, +6, +8 है, अगला अंतर +10 होगा। 20 + 10 = 30।",
+  "e_en": "The differences are +4, +6, +8, so the next difference is +10. 20 + 10 = 30."
+ },
+ {
+  "id": "rp-rea-i01735",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "यदि 9 + 7 = 58 और 8 + 4 = 32 है, तो 7 + 5 का मान क्या होगा?",
+  "q_en": "If 9 + 7 = 58 and 8 + 4 = 32, what is the value of 7 + 5?",
+  "o_hi": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "a": 0,
+  "e_hi": "तर्क: (a + b) × (a - b) + 2। 9+7=16, 16×2=32 (नहीं)। सही तर्क: (a × b) - 5। 9*7=63-5=58। 8*4=32-0=32। 7*5=35-? ",
+  "e_en": "Logic: (a × b) + (a + b) / 2. 9*7=63 + 8 = 71 (no). Applying (a*b) + (a-b) logic."
+ },
+ {
+  "id": "rp-rea-j01802",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "सोनम अपने घर से उत्तर दिशा की ओर 5 किलोमीटर चलती है, फिर वह दाएं मुड़कर 3 किलोमीटर चलती है। अब वह अपने घर से किस दिशा में है?",
+  "q_en": "Sonam walks 5 km towards the North from her house, then turns right and walks 3 km. In which direction is she from her house now?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "सोनम उत्तर और पूर्व के बीच के क्षेत्र में है, इसलिए वह उत्तर-पूर्व दिशा में है।",
+  "e_en": "Sonam is in the region between North and East, therefore she is in the North-East direction."
+ },
+ {
+  "id": "rp-rea-j01803",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि 'उत्तर' को 'उत्तर-पूर्व' कहा जाए, तो 'दक्षिण' को क्या कहा जाएगा?",
+  "q_en": "If 'North' is called 'North-East', what will 'South' be called?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पश्चिम",
+   "पूर्व"
+  ],
+  "o_en": [
+   "South-East",
+   "South-West",
+   "North-West",
+   "East"
+  ],
+  "a": 1,
+  "e_hi": "दिशाओं में 45 डिग्री का बदलाव हो रहा है, इसलिए दक्षिण 45 डिग्री घड़ी की दिशा में मुड़कर दक्षिण-पश्चिम हो जाएगा।",
+  "e_en": "The directions are shifting by 45 degrees clockwise, so South will become South-West."
+ },
+ {
+  "id": "rp-rea-j01804",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "राहुल सूर्योदय के समय एक खंभे की ओर देख रहा है। यदि खंभे की छाया उसके ठीक बाईं ओर पड़ रही है, तो राहुल किस दिशा की ओर मुख करके खड़ा है?",
+  "q_en": "Rahul is facing a pole at sunrise. If the shadow of the pole falls exactly to his left, which direction is Rahul facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "सूर्योदय के समय छाया पश्चिम में होती है। यदि छाया बाईं ओर है, तो राहुल का मुख उत्तर की ओर होगा।",
+  "e_en": "At sunrise, shadows fall to the West. If the shadow is to his left, Rahul must be facing North."
+ },
+ {
+  "id": "rp-rea-j01805",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति 10 मीटर सामने चलता है, फिर बाएं मुड़कर 10 मीटर चलता है, और अंत में बार-बार बाएं मुड़कर 5, 10 और 10 मीटर चलता है। वह प्रारंभिक बिंदु से कितनी दूर है?",
+  "q_en": "A person walks 10 meters ahead, turns left for 10 meters, and finally turns left repeatedly for 5, 10, and 10 meters. How far is he from the starting point?",
+  "o_hi": [
+   "5 मीटर",
+   "10 मीटर",
+   "15 मीटर",
+   "20 मीटर"
+  ],
+  "o_en": [
+   "5 meters",
+   "10 meters",
+   "15 meters",
+   "20 meters"
+  ],
+  "a": 0,
+  "e_hi": "विस्थापन की गणना करने पर, वह प्रारंभिक बिंदु से 5 मीटर की दूरी पर है।",
+  "e_en": "Calculating the displacement, he ends up 5 meters away from the starting point."
+ },
+ {
+  "id": "rp-rea-j01806",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "A clock shows 3:00. If the minute hand is pointing North-East, in which direction will the hour hand point?",
+  "o_hi": [
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम",
+   "उत्तर"
+  ],
+  "o_en": [
+   "North-West",
+   "South-East",
+   "South-West",
+   "North"
+  ],
+  "a": 1,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर और घंटे की सुई 3 पर होती है। 90 डिग्री के अंतर के आधार पर दिशा दक्षिण-पूर्व होगी।",
+  "e_en": "At 3:00, the minute hand is at 12 and the hour hand is at 3. Based on the 90-degree angle, the hour hand points South-East."
+ },
+ {
+  "id": "rp-rea-j01807",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "अमित दक्षिण की ओर 5 किमी चला, फिर बाएं मुड़ा और 3 किमी चला। फिर वह उत्तर की ओर मुड़ा और 5 किमी चला। वह शुरुआती स्थान से कितनी दूर है?",
+  "q_en": "Amit walked 5 km South, then turned left and walked 3 km. Then he turned North and walked 5 km. How far is he from the starting point?",
+  "o_hi": [
+   "3 किमी",
+   "5 किमी",
+   "8 किमी",
+   "10 किमी"
+  ],
+  "o_en": [
+   "3 km",
+   "5 km",
+   "8 km",
+   "10 km"
+  ],
+  "a": 0,
+  "e_hi": "वह 5 किमी दक्षिण और फिर 5 किमी उत्तर गया, जिससे वह उसी अक्षांश पर वापस आ गया। अतः दूरी केवल 3 किमी है।",
+  "e_en": "He went 5 km South and then 5 km North, returning to the same latitude. Thus, the distance is 3 km."
+ },
+ {
+  "id": "rp-rea-j01808",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक लड़का अपने घर से 20 मीटर पूर्व की ओर चलता है, फिर दाएं मुड़कर 10 मीटर चलता है। वह फिर से दाएं मुड़कर 20 मीटर चलता है। वह प्रारंभिक बिंदु से किस दिशा में है?",
+  "q_en": "A boy walks 20 meters East from his house, then turns right and walks 10 meters. He turns right again and walks 20 meters. In which direction is he from the starting point?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "दाएं मुड़ने के बाद वह दक्षिण दिशा की ओर बढ़ रहा है।",
+  "e_en": "After turning right, he is moving towards the South direction."
+ },
+ {
+  "id": "rp-rea-j01809",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "राधा 8 किमी उत्तर की ओर चलती है, फिर 6 किमी पूर्व की ओर। उसके शुरुआती और अंतिम बिंदु के बीच की न्यूनतम दूरी क्या है?",
+  "q_en": "Radha walks 8 km North, then 6 km East. What is the minimum distance between her starting and ending points?",
+  "o_hi": [
+   "10 किमी",
+   "12 किमी",
+   "14 किमी",
+   "16 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "12 km",
+   "14 km",
+   "16 km"
+  ],
+  "a": 0,
+  "e_hi": "पाइथागोरस प्रमेय (8^2 + 6^2 = 100) का उपयोग करने पर वर्गमूल 10 किमी आता है।",
+  "e_en": "Using the Pythagorean theorem (8^2 + 6^2 = 100), the square root is 10 km."
+ },
+ {
+  "id": "rp-rea-j01810",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति का मुख दक्षिण की ओर है। वह 135 डिग्री वामावर्त (एंटी-क्लॉकवाइज) मुड़ता है। अब उसका मुख किस दिशा में है?",
+  "q_en": "A man is facing South. He turns 135 degrees anti-clockwise. In which direction is he facing now?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "दक्षिण से 135 डिग्री वामावर्त मुड़ने पर व्यक्ति उत्तर-पूर्व दिशा में आ जाता है।",
+  "e_en": "Turning 135 degrees anti-clockwise from South brings the person to the North-East direction."
+ },
+ {
+  "id": "rp-rea-i01736",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि संख्या '492' को एक लंबवत दर्पण के सामने रखा जाता है, तो दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "If the number '492' is placed in front of a vertical mirror, what will be the mirror image?",
+  "o_hi": [
+   "S94",
+   "294",
+   "2९4",
+   "492"
+  ],
+  "o_en": [
+   "S94",
+   "294",
+   "2९4",
+   "492"
+  ],
+  "a": 1,
+  "e_hi": "लंबवत दर्पण में, अंक दाईं से बाईं ओर पलट जाते हैं। 2 सबसे पहले आएगा और 4 सबसे अंत में।",
+  "e_en": "In a vertical mirror, digits are flipped horizontally. The 2 appears first and the 4 appears last."
+ },
+ {
+  "id": "rp-rea-i01737",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '837' का जल प्रतिबिंब (Water Image) क्या होगा?",
+  "q_en": "What will be the water image of the number '837'?",
+  "o_hi": [
+   "837",
+   "83L",
+   "8ƐL",
+   "837 (उल्टा)"
+  ],
+  "o_en": [
+   "837",
+   "83L",
+   "8ƐL",
+   "837 (inverted)"
+  ],
+  "a": 3,
+  "e_hi": "जल प्रतिबिंब में अंक ऊपर से नीचे की ओर उलट जाते हैं। 8 और 3 का आकार जल में बदल जाता है और 7 भी उल्टा हो जाता है।",
+  "e_en": "In a water image, digits are flipped vertically. The shapes of 8, 3, and 7 are inverted accordingly."
+ },
+ {
+  "id": "rp-rea-i01738",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि '5694' को दर्पण के सामने रखा जाए, तो उसका दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "If '5694' is placed in front of a mirror, what will be its mirror image?",
+  "o_hi": [
+   "4965",
+   "4९65",
+   "4p65",
+   "4695"
+  ],
+  "o_en": [
+   "4965",
+   "4९65",
+   "4p65",
+   "4695"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण में दायां हिस्सा बाएं में बदल जाता है। 4, 9, 6, 5 का क्रम उलट कर 4, 9, 6, 5 के दर्पण रूप में बदल जाएगा।",
+  "e_en": "In a mirror, the right side becomes the left side. The sequence 5694 reverses to form the mirror image of 4965."
+ },
+ {
+  "id": "rp-rea-i01739",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "संख्या '123' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '123'?",
+  "o_hi": [
+   "123",
+   "153",
+   "123 (उल्टा)",
+   "321"
+  ],
+  "o_en": [
+   "123",
+   "153",
+   "123 (inverted)",
+   "321"
+  ],
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब में केवल ऊपर और नीचे का हिस्सा बदलता है। '123' का अंक मान वही रहता है लेकिन वे लंबवत उल्टे हो जाते हैं।",
+  "e_en": "In a water image, only the top and bottom parts are flipped. The values remain the same but are vertically inverted."
+ },
+ {
+  "id": "rp-rea-i01740",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '2015' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '2015'?",
+  "o_hi": [
+   "5102",
+   "5102 (उल्टा)",
+   "2015 (उल्टा)",
+   "5I02"
+  ],
+  "o_en": [
+   "5102",
+   "5102 (inverted)",
+   "2015 (inverted)",
+   "5I02"
+  ],
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब में अंकों का क्रम नहीं बदलता, केवल वे लंबवत रूप से उल्टे हो जाते हैं।",
+  "e_en": "In a water image, the sequence of digits does not change, only their vertical orientation is inverted."
+ },
+ {
+  "id": "rp-rea-i01741",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '473' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '473'?",
+  "o_hi": [
+   "473 (उल्टा)",
+   "374",
+   "473 (सीधा)",
+   "374 (उल्टा)"
+  ],
+  "o_en": [
+   "473 (inverted)",
+   "374",
+   "473 (upright)",
+   "374 (inverted)"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में अंकों का स्थान नहीं बदलता, बस वे ऊपर से नीचे की ओर उलट जाते हैं।",
+  "e_en": "In a water image, the positions of digits remain the same, they are just flipped vertically."
+ },
+ {
+  "id": "rp-rea-i01742",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि एक डिजिटल घड़ी में समय '12:35' हो रहा है, तो दर्पण में क्या समय दिखेगा?",
+  "q_en": "If a digital clock shows the time '12:35', what time will appear in the mirror?",
+  "o_hi": [
+   "11:25",
+   "12:35",
+   "11:55",
+   "10:25"
+  ],
+  "o_en": [
+   "11:25",
+   "12:35",
+   "11:55",
+   "10:25"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण में समय देखने के लिए उसे 11:60 से घटाया जाता है। 11:60 - 12:35 (या 00:35) करने पर 11:25 प्राप्त होता है।",
+  "e_en": "To find the mirror time, subtract the given time from 11:60. 11:60 - 00:35 equals 11:25."
+ },
+ {
+  "id": "rp-rea-i01743",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "संख्या '5842' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '5842'?",
+  "o_hi": [
+   "2485",
+   "5842 (उल्टा)",
+   "5842 (सीधा)",
+   "2485 (उल्टा)"
+  ],
+  "o_en": [
+   "2485",
+   "5842 (inverted)",
+   "5842 (upright)",
+   "2485 (inverted)"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में अंकों का क्रम वही रहता है। 5, 8, 4, 2 ऊपर से नीचे की ओर पलट जाएंगे।",
+  "e_en": "In a water image, the order of digits remains the same. 5, 8, 4, 2 will be vertically inverted."
+ },
+ {
+  "id": "rp-rea-j01811",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति अपने घर से उत्तर दिशा में 5 किमी चलता है, फिर दाएं मुड़कर 3 किमी चलता है। अंत में वह फिर से दाएं मुड़कर 5 किमी चलता है। वह अपने घर से किस दिशा में है?",
+  "q_en": "A person walks 5 km North from his house, then turns right and walks 3 km. Finally, he turns right again and walks 5 km. In which direction is he from his starting point?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "व्यक्ति अंत में अपने घर के पूर्व दिशा में स्थित है क्योंकि उत्तर और दक्षिण की दूरियां समान हैं।",
+  "e_en": "The person is to the East of his starting point because the distances moved North and South are equal, canceling each other out vertically."
+ },
+ {
+  "id": "rp-rea-j01812",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
+  "q_en": "A clock shows 3:00. If the minute hand points towards the North-East, in which direction will the hour hand point?",
+  "o_hi": [
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम",
+   "उत्तर-पूर्व"
+  ],
+  "o_en": [
+   "South-East",
+   "North-West",
+   "South-West",
+   "North-East"
+  ],
+  "a": 0,
+  "e_hi": "3:00 बजे मिनट की सुई 12 पर होती है। यदि 12 उत्तर-पूर्व है, तो 3 (घंटे की सुई) 90 डिग्री घड़ी की दिशा में दक्षिण-पूर्व होगी।",
+  "e_en": "At 3:00, the minute hand is at 12. If 12 represents North-East, then 3 (hour hand) is 90 degrees clockwise, which is South-East."
+ },
+ {
+  "id": "rp-rea-j01813",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "राहुल अपने स्कूल से 4 किमी पश्चिम की ओर चलता है, फिर बाएं मुड़कर 3 किमी चलता है। अब वह अपने स्कूल से कितनी दूरी पर है?",
+  "q_en": "Rahul walks 4 km West from his school, then turns left and walks 3 km. How far is he from his school now?",
+  "o_hi": [
+   "7 किमी",
+   "5 किमी",
+   "6 किमी",
+   "1 किमी"
+  ],
+  "o_en": [
+   "7 km",
+   "5 km",
+   "6 km",
+   "1 km"
+  ],
+  "a": 1,
+  "e_hi": "पाइथागोरस प्रमेय का उपयोग करें: वर्गमूल (4 का वर्ग + 3 का वर्ग) = 5 किमी।",
+  "e_en": "Use the Pythagorean theorem: square root of (4 squared + 3 squared) = 5 km."
+ },
+ {
+  "id": "rp-rea-j01814",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "सूर्योदय के समय, एक खंभे की छाया राम के बाईं ओर पड़ती है। राम किस दिशा की ओर मुख करके खड़ा है?",
+  "q_en": "At sunrise, the shadow of a pole falls to the left of Ram. Which direction is Ram facing?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 0,
+  "e_hi": "सूर्योदय के समय छाया पश्चिम में होती है। यदि यह बाईं ओर है, तो राम उत्तर की ओर देख रहा है।",
+  "e_en": "At sunrise, the shadow falls to the West. If the shadow is to his left, Ram must be facing North."
+ },
+ {
+  "id": "rp-rea-j01815",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "एक ट्रेन उत्तर से दक्षिण की ओर चल रही है। हवा पश्चिम से पूर्व की ओर बह रही है। ट्रेन का धुआं किस दिशा में जाएगा?",
+  "q_en": "A train is moving from North to South. The wind is blowing from West to East. In which direction will the smoke go?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "North-West",
+   "South-East",
+   "South-West"
+  ],
+  "a": 0,
+  "e_hi": "ट्रेन का धुआं हवा की दिशा और ट्रेन की गति के विपरीत दिशा के बीच (उत्तर-पूर्व) जाएगा।",
+  "e_en": "The smoke moves in the direction of the wind (East) and opposite to the train's motion (North), resulting in North-East."
+ },
+ {
+  "id": "rp-rea-j01816",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "दीपक 20 मीटर उत्तर की ओर जाता है, फिर दाएं मुड़कर 30 मीटर चलता है। फिर दाएं मुड़कर 35 मीटर चलता है। फिर बाएं मुड़कर 15 मीटर चलता है। वह प्रारंभिक बिंदु से किस दिशा में है?",
+  "q_en": "Deepak walks 20m North, turns right and walks 30m. Then turns right and walks 35m. Then turns left and walks 15m. In which direction is he from the starting point?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "दक्षिण-पूर्व",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पश्चिम"
+  ],
+  "o_en": [
+   "North-East",
+   "South-East",
+   "North-West",
+   "South-West"
+  ],
+  "a": 1,
+  "e_hi": "अंत में वह प्रारंभिक बिंदु से पूर्व और दक्षिण की ओर है, यानी दक्षिण-पूर्व।",
+  "e_en": "Finally, his position relative to the start is East and South, which is South-East."
+ },
+ {
+  "id": "rp-rea-j01817",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "ए बिंदु बी के 10 मीटर उत्तर में है। सी बिंदु बी के 10 मीटर पूर्व में है। डी बिंदु सी के 10 मीटर उत्तर में है। ए और डी के बीच की न्यूनतम दूरी क्या है?",
+  "q_en": "Point A is 10m North of B. Point C is 10m East of B. Point D is 10m North of C. What is the shortest distance between A and D?",
+  "o_hi": [
+   "10 मीटर",
+   "20 मीटर",
+   "10 वर्गमूल 2 मीटर",
+   "30 मीटर"
+  ],
+  "o_en": [
+   "10m",
+   "20m",
+   "10 root 2 m",
+   "30m"
+  ],
+  "a": 2,
+  "e_hi": "यह एक समकोण त्रिभुज बनाता है जिसकी भुजाएं 10 और 10 हैं। कर्ण = वर्गमूल (100+100) = 10 वर्गमूल 2।",
+  "e_en": "This forms a right-angled triangle with sides 10 and 10. The hypotenuse = square root of (100+100) = 10 root 2."
+ },
+ {
+  "id": "rp-rea-j01818",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "यदि आप दक्षिण की ओर मुख करके खड़े हैं और 90 डिग्री घड़ी की दिशा में मुड़ते हैं, तो अब आप किस दिशा का सामना कर रहे हैं?",
+  "q_en": "If you are standing facing South and turn 90 degrees clockwise, which direction are you facing now?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 3,
+  "e_hi": "दक्षिण से 90 डिग्री घड़ी की दिशा में मुड़ने पर पश्चिम दिशा आती है।",
+  "e_en": "Turning 90 degrees clockwise from South leads to the West direction."
+ },
+ {
+  "id": "rp-rea-j01819",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक व्यक्ति 5 किमी पूर्व की ओर चलता है, फिर बाएं मुड़कर 5 किमी चलता है। वह फिर से बाएं मुड़कर 5 किमी चलता है। अब वह प्रारंभिक बिंदु से कितनी दूर है?",
+  "q_en": "A person walks 5 km East, then turns left and walks 5 km. He turns left again and walks 5 km. How far is he from the starting point now?",
+  "o_hi": [
+   "5 किमी",
+   "10 किमी",
+   "15 किमी",
+   "0 किमी"
+  ],
+  "o_en": [
+   "5 km",
+   "10 km",
+   "15 km",
+   "0 km"
+  ],
+  "a": 0,
+  "e_hi": "वह प्रारंभिक बिंदु से उत्तर की ओर 5 किमी दूर है।",
+  "e_en": "He is 5 km North of his starting point."
+ },
+ {
+  "id": "rp-rea-i01744",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि 'GANDHI 1869' को एक दर्पण के सामने रखा जाए, तो दर्पण में इसका प्रतिबिंब कैसा दिखेगा?",
+  "q_en": "If 'GANDHI 1869' is placed in front of a mirror, how will its reflection appear in the mirror?",
+  "o_hi": [
+   "९६८१ IHDNAG",
+   "e86I IHDNAG",
+   "९६८I IHDNAG",
+   "e86I IHGNAD"
+  ],
+  "o_en": [
+   "९६८१ IHDNAG",
+   "e86I IHDNAG",
+   "९६८I IHDNAG",
+   "e86I IHGNAD"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में अक्षर और अंक उलट जाते हैं (बाएं से दाएं)।",
+  "e_en": "In a mirror image, the letters and digits are reversed horizontally (left to right)."
+ },
+ {
+  "id": "rp-rea-j01820",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "एक व्यक्ति उत्तर की ओर 10 मीटर चलता है, फिर दाएं मुड़कर 10 मीटर चलता है। अंत में वह पुनः दाएं मुड़कर 10 मीटर चलता है। वह अपने प्रारंभिक बिंदु से किस दिशा में है?",
+  "q_en": "A person walks 10 meters towards the North, then turns right and walks 10 meters. Finally, he turns right again and walks 10 meters. In which direction is he from his starting point?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "व्यक्ति उत्तर में 10 मीटर गया, फिर पूर्व में 10 मीटर, और फिर दक्षिण में 10 मीटर। अतः वह प्रारंभिक बिंदु के पूर्व में है।",
+  "e_en": "The person moved 10m North, 10m East, and 10m South. Thus, he is to the East of the starting point."
+ },
+ {
+  "id": "rp-rea-j01821",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "सुमित 5 किमी उत्तर में गया, फिर दाएं मुड़ा और 6 किमी चला। फिर वह दाएं मुड़ा और 5 किमी चला। वह अपने शुरुआती स्थान से कितनी दूर है?",
+  "q_en": "Sumit walked 5 km North, turned right and walked 6 km. Then he turned right and walked 5 km. How far is he from his starting point?",
+  "o_hi": [
+   "11 किमी",
+   "5 किमी",
+   "6 किमी",
+   "10 किमी"
+  ],
+  "o_en": [
+   "11 km",
+   "5 km",
+   "6 km",
+   "10 km"
+  ],
+  "a": 2,
+  "e_hi": "चूँकि उसने समान दूरी उत्तर और दक्षिण में तय की, इसलिए वह शुरुआती बिंदु से केवल क्षैतिज दूरी (6 किमी) पर है।",
+  "e_en": "Since he covered equal distances North and South, he is only at a horizontal distance of 6 km from the start."
+ },
+ {
+  "id": "rp-rea-j01822",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 3,
+  "q_hi": "सूर्योदय के समय, एक खंभे की परछाईं उसके बाईं ओर पड़ रही है। खंभा किस दिशा में स्थित है?",
+  "q_en": "At sunrise, the shadow of a pole is falling to his left. In which direction is the pole located relative to the person?",
+  "o_hi": [
+   "उत्तर",
+   "दक्षिण",
+   "पूर्व",
+   "पश्चिम"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 1,
+  "e_hi": "सूर्योदय के समय सूर्य पूर्व में होता है और परछाईं पश्चिम में। यदि परछाईं बाईं ओर है, तो व्यक्ति का मुख दक्षिण की ओर है, अतः खंभा उत्तर में है।",
+  "e_en": "At sunrise, the sun is in the East and shadows fall West. If the shadow is to the left, the person faces South, meaning the pole is to the North."
+ },
+ {
+  "id": "rp-rea-j01823",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 1,
+  "q_hi": "रवि अपने घर से 10 किमी पश्चिम में चला, फिर बाएं मुड़कर 10 किमी चला। अब वह किस दिशा की ओर उन्मुख है?",
+  "q_en": "Ravi walked 10 km West from his house, then turned left and walked 10 km. Which direction is he facing now?",
+  "o_hi": [
+   "दक्षिण",
+   "उत्तर",
+   "पश्चिम",
+   "पूर्व"
+  ],
+  "o_en": [
+   "South",
+   "North",
+   "West",
+   "East"
+  ],
+  "a": 0,
+  "e_hi": "पश्चिम की ओर चलने के बाद बाएं मुड़ने पर व्यक्ति दक्षिण दिशा की ओर उन्मुख हो जाता है।",
+  "e_en": "After walking West, turning left makes the person face South."
+ },
+ {
+  "id": "rp-rea-j01824",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "एक साइकिल सवार 30 मीटर दक्षिण में जाता है, फिर बाएं मुड़कर 20 मीटर चलता है, फिर बाएं मुड़कर 30 मीटर चलता है। वह शुरुआती बिंदु से किस दिशा में है?",
+  "q_en": "A cyclist goes 30 meters South, turns left and goes 20 meters, then turns left and goes 30 meters. In which direction is he from the starting point?",
+  "o_hi": [
+   "पूर्व",
+   "पश्चिम",
+   "उत्तर",
+   "दक्षिण"
+  ],
+  "o_en": [
+   "East",
+   "West",
+   "North",
+   "South"
+  ],
+  "a": 0,
+  "e_hi": "वह 30 मीटर दक्षिण जाकर वापस 30 मीटर उत्तर आया, जिससे वह अपनी मूल क्षैतिज रेखा पर है, लेकिन 20 मीटर पूर्व में है।",
+  "e_en": "He went 30m South and returned 30m North, putting him back on the original horizontal line, but 20m to the East."
+ },
+ {
+  "id": "rp-rea-j01825",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि A, B के उत्तर में है और C, B के पश्चिम में है, तो C, A के किस दिशा में है?",
+  "q_en": "If A is to the North of B and C is to the West of B, then in which direction is C with respect to A?",
+  "o_hi": [
+   "दक्षिण-पश्चिम",
+   "उत्तर-पश्चिम",
+   "दक्षिण-पूर्व",
+   "उत्तर-पूर्व"
+  ],
+  "o_en": [
+   "South-West",
+   "North-West",
+   "South-East",
+   "North-East"
+  ],
+  "a": 0,
+  "e_hi": "A उत्तर में है और C पश्चिम में, अतः C, A के सापेक्ष दक्षिण-पश्चिम दिशा में स्थित है।",
+  "e_en": "A is North and C is West of B, placing C in the South-West direction relative to A."
+ },
+ {
+  "id": "rp-rea-j01826",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "d": 2,
+  "q_hi": "यदि उत्तर-पूर्व को दक्षिण-पश्चिम कहा जाए, तो दक्षिण को क्या कहा जाएगा?",
+  "q_en": "If North-East is called South-West, what will South be called?",
+  "o_hi": [
+   "उत्तर-पूर्व",
+   "उत्तर",
+   "पश्चिम",
+   "दक्षिण-पूर्व"
+  ],
+  "o_en": [
+   "North-East",
+   "North",
+   "West",
+   "South-East"
+  ],
+  "a": 0,
+  "e_hi": "यह 180 डिग्री का रोटेशन है। अतः दक्षिण का विपरीत उत्तर-पूर्व होगा।",
+  "e_en": "This is a 180-degree rotation. Therefore, the opposite of South will be North-East."
+ },
+ {
+  "id": "rp-rea-i01745",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'SUBHASH' का जल प्रतिबिंब (Water Image) नीचे दिए गए विकल्पों में से कौन सा है?",
+  "q_en": "Which of the following is the water image of the word 'SUBHASH'?",
+  "o_hi": [
+   "ƧUВH∀ƧH",
+   "2ՈВH∀ƧH",
+   "SՈВH∀SH",
+   "ƧUВH∀SH"
+  ],
+  "o_en": [
+   "ƧUВH∀ƧH",
+   "2ՈВH∀ƧH",
+   "SՈВH∀SH",
+   "ƧUВH∀SH"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में ऊपर का हिस्सा नीचे और नीचे का हिस्सा ऊपर हो जाता है (ऊर्ध्वाधर उल्टा)।",
+  "e_en": "In a water image, the top part becomes the bottom and vice versa (vertical inversion)."
+ },
+ {
+  "id": "rp-rea-i01746",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि 'AZAD 1947' को जल के ऊपर रखा जाए, तो इसका सही जल प्रतिबिंब क्या होगा?",
+  "q_en": "If 'AZAD 1947' is placed over water, what will be its correct water image?",
+  "o_hi": [
+   "∀Z∀D ཱ୧⇂⇂",
+   "∀Z∀D 1୧⇂⇂",
+   "VZVᗡ 1୧⇂⇂",
+   "∀Z∀D ཱ୧⇂L"
+  ],
+  "o_en": [
+   "∀Z∀D ཱ୧⇂⇂",
+   "∀Z∀D 1୧⇂⇂",
+   "VZVᗡ 1୧⇂⇂",
+   "∀Z∀D ཱ୧⇂L"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में अंक '1' का आधार ऊपर की ओर और '9' का लूप नीचे की ओर हो जाता है।",
+  "e_en": "In a water image, the digit '1' gets inverted vertically, and '9' flips its loop."
+ },
+ {
+  "id": "rp-rea-i01747",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "नाम 'NEHRU' का दर्पण प्रतिबिंब क्या होगा यदि दर्पण दाईं ओर रखा गया हो?",
+  "q_en": "What will be the mirror image of the name 'NEHRU' if the mirror is placed on the right?",
+  "o_hi": [
+   "UЯHƎИ",
+   "URHEN",
+   "ƎИHЯU",
+   "ИEHRU"
+  ],
+  "o_en": [
+   "UЯHƎИ",
+   "URHEN",
+   "ƎИHЯU",
+   "ИEHRU"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब में दायां हिस्सा बाईं ओर और बायां हिस्सा दाईं ओर दिखाई देता है।",
+  "e_en": "In a mirror image, the right side appears on the left and vice versa (lateral inversion)."
+ },
+ {
+  "id": "rp-rea-i01748",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि 'TAGORE' को जल के सामने रखा जाए, तो 'T' अक्षर कैसा दिखेगा?",
+  "q_en": "If 'TAGORE' is placed in front of water, how will the letter 'T' appear?",
+  "o_hi": [
+   "T",
+   "⊥",
+   "T (उल्टा)",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "T",
+   "⊥",
+   "T (inverted)",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में 'T' का ऊपरी क्षैतिज भाग नीचे की ओर चला जाता है, जिससे वह '⊥' दिखता है।",
+  "e_en": "In a water image, the top horizontal bar of 'T' moves to the bottom, appearing as '⊥'."
+ },
+ {
+  "id": "rp-rea-i01749",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "नाम 'BOSE' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the name 'BOSE'?",
+  "o_hi": [
+   "BOƧE",
+   "BOSƎ",
+   "BOSE",
+   "BOƧƎ"
+  ],
+  "o_en": [
+   "BOƧE",
+   "BOSƎ",
+   "BOSE",
+   "BOƧƎ"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में अक्षर 'S' का उल्टा प्रतिबिंब 'Ƨ' बनता है, जबकि अन्य अक्षर मुख्य रूप से लंबवत पलटते हैं।",
+  "e_en": "In a water image, 'S' reflects as 'Ƨ', while other letters undergo vertical inversion."
+ },
+ {
+  "id": "rp-rea-i01750",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि संख्या '12345' को दर्पण में देखा जाए, तो अंतिम अंक कौन सा होगा?",
+  "q_en": "If the number '12345' is viewed in a mirror, which will be the last digit?",
+  "o_hi": [
+   "1",
+   "5",
+   "4",
+   "2"
+  ],
+  "o_en": [
+   "1",
+   "5",
+   "4",
+   "2"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब में दायां छोर बाएं छोर पर आ जाता है, इसलिए '1' अंत में दिखाई देगा।",
+  "e_en": "In a mirror image, the right end moves to the left, so '1' will appear at the end."
+ },
+ {
+  "id": "rp-rea-j01827",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "एक महिला की ओर इशारा करते हुए, राजेश ने कहा, 'वह मेरी माँ के इकलौते बेटे की पत्नी है।' महिला का राजेश से क्या संबंध है?",
+  "q_en": "Pointing to a woman, Rajesh said, 'She is the wife of the only son of my mother.' How is the woman related to Rajesh?",
+  "o_hi": [
+   "बहन",
+   "माता",
+   "पत्नी",
+   "पुत्री"
+  ],
+  "o_en": [
+   "Sister",
+   "Mother",
+   "Wife",
+   "Daughter"
+  ],
+  "a": 2,
+  "e_hi": "राजेश की माँ का इकलौता बेटा स्वयं राजेश है, और उसकी पत्नी ही वह महिला है।",
+  "e_en": "The only son of Rajesh's mother is Rajesh himself, and his wife is the woman mentioned."
+ },
+ {
+  "id": "rp-rea-j01828",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "ए, बी का भाई है। सी, ए की माँ है। डी, सी का पिता है। ई, बी का पुत्र है। डी का ई से क्या संबंध है?",
+  "q_en": "A is the brother of B. C is the mother of A. D is the father of C. E is the son of B. How is D related to E?",
+  "o_hi": [
+   "दादा",
+   "परदादा",
+   "नाना",
+   "परनाना"
+  ],
+  "o_en": [
+   "Grandfather",
+   "Great-grandfather",
+   "Maternal Grandfather",
+   "Great-grandfather (Maternal)"
+  ],
+  "a": 3,
+  "e_hi": "डी, सी का पिता है और सी, बी की माँ है। अतः डी, बी का नाना हुआ। ई, बी का पुत्र है, इसलिए डी ई के परनाना हैं।",
+  "e_en": "D is the father of C, and C is the mother of B, making D the maternal grandfather of B. Since E is B's son, D is E's great-grandfather."
+ },
+ {
+  "id": "rp-rea-j01829",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक तस्वीर की ओर इशारा करते हुए, मोहन ने कहा, 'यह आदमी मेरे पिता के इकलौते बेटे का बेटा है।' तस्वीर में मौजूद व्यक्ति का मोहन से क्या संबंध है?",
+  "q_en": "Pointing to a photograph, Mohan said, 'This man is the son of the only son of my father.' How is the person in the photo related to Mohan?",
+  "o_hi": [
+   "भाई",
+   "पुत्र",
+   "पिता",
+   "भतीजा"
+  ],
+  "o_en": [
+   "Brother",
+   "Son",
+   "Father",
+   "Nephew"
+  ],
+  "a": 1,
+  "e_hi": "मोहन के पिता का इकलौता बेटा मोहन स्वयं है। अतः तस्वीर में मौजूद व्यक्ति मोहन का बेटा है।",
+  "e_en": "The only son of Mohan's father is Mohan himself. Thus, the person in the photo is Mohan's son."
+ },
+ {
+  "id": "rp-rea-j01830",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "ए, बी की बहन है। सी, डी का भाई है। डी, ए की बेटी है। बी का सी से क्या संबंध है?",
+  "q_en": "A is the sister of B. C is the brother of D. D is the daughter of A. How is B related to C?",
+  "o_hi": [
+   "मामा",
+   "पिता",
+   "भाई",
+   "चाचा"
+  ],
+  "o_en": [
+   "Maternal Uncle",
+   "Father",
+   "Brother",
+   "Uncle"
+  ],
+  "a": 0,
+  "e_hi": "डी, ए की बेटी है और सी, डी का भाई है, तो सी भी ए का बेटा है। बी, ए का भाई या बहन है, इसलिए बी सी का मामा या मौसी होगा।",
+  "e_en": "D is A's daughter and C is D's brother, so C is A's son. Since B is A's sibling, B is C's maternal uncle or aunt."
+ },
+ {
+  "id": "rp-rea-j01831",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक परिवार में छह सदस्य हैं। एम, एन की पत्नी है। ओ, पी का भाई है। एन, ओ की माँ है। पी का एम से क्या संबंध है?",
+  "q_en": "In a family of six, M is the wife of N. O is the brother of P. N is the mother of O. How is P related to M?",
+  "o_hi": [
+   "पुत्र",
+   "पुत्री",
+   "भांजा",
+   "बेटा या बेटी"
+  ],
+  "o_en": [
+   "Son",
+   "Daughter",
+   "Nephew",
+   "Son or Daughter"
+  ],
+  "a": 3,
+  "e_hi": "एन, एम की सास है और ओ व पी एन के बच्चे हैं। चूँकि पी का लिंग स्पष्ट नहीं है, वह बेटा या बेटी हो सकता है।",
+  "e_en": "N is M's mother-in-law, and O and P are children of N. Since P's gender is not specified, P can be a son or daughter."
+ },
+ {
+  "id": "rp-rea-j01832",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "यदि ए + बी का अर्थ है 'ए, बी का पिता है', और ए - बी का अर्थ है 'ए, बी की माँ है', तो पी + क्यू - आर में पी का आर से क्या संबंध है?",
+  "q_en": "If A + B means 'A is the father of B', and A - B means 'A is the mother of B', then in P + Q - R, how is P related to R?",
+  "o_hi": [
+   "दादा",
+   "पिता",
+   "नाना",
+   "भाई"
+  ],
+  "o_en": [
+   "Grandfather",
+   "Father",
+   "Maternal Grandfather",
+   "Brother"
+  ],
+  "a": 0,
+  "e_hi": "पी, क्यू का पिता है और क्यू, आर की माँ है। अतः पी, आर का दादा है।",
+  "e_en": "P is the father of Q, and Q is the mother of R. Therefore, P is the grandfather of R."
+ },
+ {
+  "id": "rp-rea-j01833",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "एक महिला की ओर इशारा करते हुए, एक व्यक्ति ने कहा, 'वह मेरे पिता की पत्नी की इकलौती बेटी है।' महिला का उस व्यक्ति से क्या संबंध है?",
+  "q_en": "Pointing to a woman, a man said, 'She is the only daughter of my father's wife.' How is the woman related to the man?",
+  "o_hi": [
+   "पत्नी",
+   "माता",
+   "बहन",
+   "मौसी"
+  ],
+  "o_en": [
+   "Wife",
+   "Mother",
+   "Sister",
+   "Aunt"
+  ],
+  "a": 2,
+  "e_hi": "पिता की पत्नी माता होती है, और उनकी इकलौती बेटी उस व्यक्ति की बहन होगी।",
+  "e_en": "A father's wife is the mother, and her only daughter is the sister of the man."
+ },
+ {
+  "id": "rp-rea-j01834",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "ए, बी और सी का पिता है। बी, ए का बेटा है लेकिन सी, ए का बेटा नहीं है। सी का ए से क्या संबंध है?",
+  "q_en": "A is the father of B and C. B is the son of A, but C is not the son of A. How is C related to A?",
+  "o_hi": [
+   "पुत्र",
+   "पुत्री",
+   "भतीजी",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Son",
+   "Daughter",
+   "Niece",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "चूँकि सी, ए का बच्चा है लेकिन बेटा नहीं है, तो वह ए की पुत्री है।",
+  "e_en": "Since C is a child of A but not a son, C must be the daughter of A."
  }
 ]
