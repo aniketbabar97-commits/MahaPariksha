@@ -25,13 +25,19 @@ cd "$GEN" || exit 0
 running() { pgrep -f "$1" >/dev/null 2>&1; }
 
 if ! running "bulk_questions.py.*--subjects reasoning "; then
-  nohup python3 bulk_questions.py --provider groq --model openai/gpt-oss-20b --max-calls 3000 \
+  # gpt-oss-20b was unreliable here (broad JSON-validation 400s across
+  # topics/angles on the generation prompt, unlike the short verification
+  # prompt it handles fine) -- qwen/qwen3.8-27b confirmed working instead.
+  nohup python3 bulk_questions.py --provider groq --model qwen/qwen3.8-27b --max-calls 3000 \
     --subjects reasoning --id-prefix-suffix o > "$LOGS/reasoning.log" 2>&1 &
   disown
 fi
 
 if ! running "bulk_questions.py.*--subjects maths "; then
-  nohup python3 bulk_questions.py --provider gemini --model gemini-3.8-flash --gemini-key-env GEMINI_API_KEY --max-calls 3000 \
+  # gemini-3.8-flash on this key was silently hitting its 20-requests/day
+  # cap every restart for 9 hours straight -- gemini-3.1-flash-lite on the
+  # same key confirmed working (quota is per-model, not just per-key).
+  nohup python3 bulk_questions.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY --max-calls 3000 \
     --subjects maths --id-prefix-suffix g > "$LOGS/maths.log" 2>&1 &
   disown
 fi
