@@ -16963,8 +16963,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "एक साधारण शिफ्ट सिफर में प्रत्येक अक्षर को अगले अक्षर से बदला जाता है (A→B, B→C, …, Z→A)। यदि 'RAIL' का कोड 'SBOJ' है, तो 'TRACK' का कोड क्या होगा?",
-  "q_en": "In a simple shift cipher where each letter is replaced by the next letter (A→B, B→C, …, Z→A), if 'RAIL' is coded as 'SBOJ', what is the code for 'TRACK'?",
+  "q_hi": "एक साधारण शिफ्ट सिफर में प्रत्येक अक्षर को अगले अक्षर से बदला जाता है (A→B, B→C, …, Z→A)। यदि 'RAIL' का कोड 'SBJM' है, तो 'TRACK' का कोड क्या होगा?",
+  "q_en": "In a simple shift cipher where each letter is replaced by the next letter (A→B, B→C, …, Z→A), if 'RAIL' is coded as 'SBJM', what is the code for 'TRACK'?",
   "o_hi": [
    "TUBDL",
    "USBDL",
@@ -26594,5 +26594,166 @@
   "a": 1,
   "e_hi": "मानदंड वह नियम या गुण है जिसके आधार पर हम वस्तुओं को समानता के हिसाब से समूहों में बाँटते हैं।",
   "e_en": "The criterion is the rule or trait based on which we divide objects into groups according to similarity."
+ },
+ {
+  "id": "rp-rea-o01161",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण की समस्या: श्रृंखला को देखें: 2, 5, 10, 17, 26, ? अगला संख्या क्या होगी?",
+  "q_en": "Classification Problem: Analyze the sequence: 2, 5, 10, 17, 26, ?. What is the next number?",
+  "o_hi": [
+   "35",
+   "37",
+   "36",
+   "33"
+  ],
+  "o_en": [
+   "35",
+   "37",
+   "36",
+   "33"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला पूर्ण वर्गों में 1 जोड़ने पर बनती है: 1²+1, 2²+1, 3²+1, 4²+1, 5²+1। अतः अगली संख्या 6²+1 = 36+1 = 37 है।",
+  "e_en": "The sequence follows the pattern of perfect squares plus one: 1²+1, 2²+1, 3²+1, 4²+1, 5²+1. Thus, the next number is 6²+1 = 36+1 = 37."
+ },
+ {
+  "id": "rp-rea-o01162",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण: अनुपात देखें: 4 : 16 :: 9 : ? गलत विकल्प को पहचानें या सही संबंध बनाएं।",
+  "q_en": "Classification: Analyze the analogy: 4 : 16 :: 9 : ?. Identify the correct relationship.",
+  "o_hi": [
+   "18",
+   "27",
+   "36",
+   "81"
+  ],
+  "o_en": [
+   "18",
+   "27",
+   "36",
+   "81"
+  ],
+  "a": 2,
+  "e_hi": "पहली जोड़ी में, 4 का वर्ग 16 है। इसी प्रकार, दूसरी जोड़ी में, 9 का वर्ग 81 होना चाहिए।",
+  "e_en": "In the first pair, the square of 4 is 16. Similarly, in the second pair, the square of 9 should be 81."
+ },
+ {
+  "id": "rp-rea-o01163",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण: अक्षर श्रृंखला को देखें: A, C, F, J, O, ? अगला अक्षर क्या होगा?",
+  "q_en": "Classification: Analyze the letter series: A, C, F, J, O, ?. What is the next letter?",
+  "o_hi": [
+   "T",
+   "U",
+   "V",
+   "X"
+  ],
+  "o_en": [
+   "T",
+   "U",
+   "V",
+   "X"
+  ],
+  "a": 0,
+  "e_hi": "अंतर क्रमशः +2, +3, +4, +5 है। अतः अगला अंतर +6 होगा। O के बाद 6 अक्षर आगे जाने पर T प्राप्त होता है।",
+  "e_en": "The differences are +2, +3, +4, +5. The next difference should be +6. Moving 6 letters forward from O gives T."
+ },
+ {
+  "id": "rp-rea-o01164",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण: संख्या श्रृंखला को देखें: 1, 4, 9, 16, 25, ? अगली संख्या क्या होगी?",
+  "q_en": "Classification: Analyze the number series: 1, 4, 9, 16, 25, ?. What is the next number?",
+  "o_hi": [
+   "30",
+   "36",
+   "35",
+   "26"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "35",
+   "26"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला प्राकृतिक संख्याओं के वर्गों की है: 1², 2², 3², 4², 5²। अतः अगली संख्या 6² = 36 होगी।",
+  "e_en": "This series consists of squares of natural numbers: 1², 2², 3², 4², 5². Thus, the next number is 6² = 36."
+ },
+ {
+  "id": "rp-rea-o01165",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण: संख्या श्रृंखला को देखें: 3, 6, 12, 24, 48, ? अगली संख्या क्या होगी?",
+  "q_en": "Classification: Analyze the number series: 3, 6, 12, 24, 48, ?. What is the next number?",
+  "o_hi": [
+   "72",
+   "96",
+   "98",
+   "100"
+  ],
+  "o_en": [
+   "72",
+   "96",
+   "98",
+   "100"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक पद पिछले पद को 2 से गुणा करके प्राप्त होता है। अतः अगली संख्या 48 × 2 = 96 होगी।",
+  "e_en": "Each term is obtained by multiplying the previous term by 2. Thus, the next number is 48 × 2 = 96."
+ },
+ {
+  "id": "rp-rea-o01166",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "वर्गीकरण: अनुपात देखें: 5 : 25 :: 7 : ? सही संबंध के आधार पर खाली स्थान भरें।",
+  "q_en": "Classification: Analyze the analogy: 5 : 25 :: 7 : ?. Fill in the blank based on the correct relationship.",
+  "o_hi": [
+   "14",
+   "49",
+   "35",
+   "42"
+  ],
+  "o_en": [
+   "14",
+   "49",
+   "35",
+   "42"
+  ],
+  "a": 1,
+  "e_hi": "पहली जोड़ी में, 5 का वर्ग 25 है। इसी नियम के अनुसार, 7 का वर्ग 49 होगा।",
+  "e_en": "In the first pair, the square of 5 is 25. According to the same rule, the square of 7 will be 49."
+ },
+ {
+  "id": "rp-rea-o01167",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "वर्गीकरण: अक्षर श्रृंखला को देखें: B, D, G, K, P, ? अगला अक्षर क्या होगा?",
+  "q_en": "Classification: Analyze the letter series: B, D, G, K, P, ?. What is the next letter?",
+  "o_hi": [
+   "V",
+   "W",
+   "X",
+   "U"
+  ],
+  "o_en": [
+   "V",
+   "W",
+   "X",
+   "U"
+  ],
+  "a": 1,
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः +2, +3, +4, +5 है। अगला अंतर +6 होगा। P के बाद 6 अक्षर आगे जाने पर W प्राप्त होता है।",
+  "e_en": "The gaps between letters are +2, +3, +4, +5. The next gap should be +6. Moving 6 letters forward from P gives W."
  }
 ]
