@@ -116,6 +116,17 @@ jobs:
         with: { channel: stable, cache: true }
       - run: python ../pipeline/build_bundle.py
       - run: flutter pub get
+      # The emulator's AVD needs ~7.4GB for its userdata partition; ubuntu-latest's
+      # default free space plus the Android SDK/emulator/system-image downloads
+      # above leaves less than that, so the emulator fails immediately with
+      # "Not enough space to create userdata partition" (confirmed via a run's
+      # actual logs, not assumed) before it ever boots. Removing large preinstalled
+      # toolchains this job doesn't use frees 20GB+ reliably on GitHub-hosted runners.
+      - name: Free disk space for the emulator's AVD
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /opt/hostedtoolcache/CodeQL /usr/local/lib/android/sdk/ndk
+          sudo docker image prune -af || true
+          df -h /
       - name: Enable KVM for emulator acceleration
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
