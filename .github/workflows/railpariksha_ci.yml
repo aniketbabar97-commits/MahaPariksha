@@ -23,9 +23,23 @@ jobs:
         with: { python-version: "3.12" }
       - run: python railpariksha/pipeline/validate.py
 
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      app: ${{ steps.filter.outputs.app }}
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            app:
+              - 'railpariksha/app/**'
+              - 'railpariksha/pipeline/**'
+              - '.github/workflows/railpariksha_ci.yml'
+
   app:
     runs-on: ubuntu-latest
-    needs: content
+    needs: [content, changes]
     defaults: { run: { working-directory: railpariksha/app } }
     steps:
       - uses: actions/checkout@v4
@@ -39,8 +53,15 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build apk --release --split-per-abi
-      - uses: actions/upload-artifact@v4
+      # Full release build is expensive (~12-13 min) and only needs to re-run
+      # when app/pipeline code actually changed -- content-only commits (the
+      # bulk of pushes, from the content-gen pipeline) are fully covered by
+      # analyze+test above. The signed release APK itself comes from
+      # railpariksha_release.yml on a version tag, not from this check.
+      - if: needs.changes.outputs.app == 'true'
+        run: flutter build apk --release --split-per-abi
+      - if: needs.changes.outputs.app == 'true'
+        uses: actions/upload-artifact@v4
         with:
           name: railpariksha-apk
           path: railpariksha/app/build/app/outputs/flutter-apk/*.apk
