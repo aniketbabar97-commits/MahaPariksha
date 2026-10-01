@@ -79011,5 +79011,2903 @@
   "a": 1,
   "e_hi": "तर्क है: (संख्या * 2) + 1। अतः 47 * 2 + 1 = 95।",
   "e_en": "The logic is: (number * 2) + 1. Therefore, 47 * 2 + 1 = 95."
+ },
+ {
+  "id": "rp-rea-j02500",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दी गई संख्या श्रृंखला में लुप्त संख्या ज्ञात करें: 2, 6, 12, 20, 30, ?",
+  "q_en": "Find the missing number in the given series: 2, 6, 12, 20, 30, ?",
+  "o_hi": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "a": 1,
+  "e_hi": "यहाँ अंतर 4, 6, 8, 10 का है, इसलिए अगला अंतर 12 होगा। 30 में 12 जोड़ने पर 42 प्राप्त होता है।",
+  "e_en": "The differences are 4, 6, 8, 10, so the next difference is 12. Adding 12 to 30 gives 42."
+ },
+ {
+  "id": "rp-rea-j02501",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "अक्षर श्रृंखला को पूरा करें: A, D, I, P, ?",
+  "q_en": "Complete the letter series: A, D, I, P, ?",
+  "o_hi": [
+   "S",
+   "T",
+   "Y",
+   "Z"
+  ],
+  "o_en": [
+   "S",
+   "T",
+   "Y",
+   "Z"
+  ],
+  "a": 2,
+  "e_hi": "अक्षरों के बीच का अंतर 3, 5, 7 है, इसलिए अगला अंतर 9 (वर्गों का अंतर) होगा। P (16) + 9 = 25, जो Y है।",
+  "e_en": "The differences between positions are 3, 5, 7, so the next difference is 9 (squares sequence). P(16) + 9 = 25, which is Y."
+ },
+ {
+  "id": "rp-rea-j02502",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "नीचे दी गई श्रृंखला में गलत संख्या पहचानें: 5, 10, 20, 45, 80",
+  "q_en": "Identify the incorrect number in the following series: 5, 10, 20, 45, 80",
+  "o_hi": [
+   "10",
+   "20",
+   "45",
+   "80"
+  ],
+  "o_en": [
+   "10",
+   "20",
+   "45",
+   "80"
+  ],
+  "a": 2,
+  "e_hi": "श्रृंखला में अंतर 5, 10, 15, 20 होना चाहिए। 20 + 15 = 35 होना चाहिए, न कि 45।",
+  "e_en": "The series should follow a pattern of adding multiples of 5 (5, 10, 15, 20). 20 + 15 should be 35, not 45."
+ },
+ {
+  "id": "rp-rea-j02503",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अगला पद क्या होगा: 1, 4, 9, 16, 25, ?",
+  "q_en": "What will be the next term: 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "36",
+   "40",
+   "49"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "40",
+   "49"
+  ],
+  "a": 1,
+  "e_hi": "यह प्राकृतिक संख्याओं के वर्गों की श्रृंखला है। 1², 2², 3², 4², 5² के बाद 6² यानी 36 आएगा।",
+  "e_en": "This is a series of squares of natural numbers. After 1², 2², 3², 4², 5², the next is 6², which is 36."
+ },
+ {
+  "id": "rp-rea-j02504",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला का अगला अक्षर समूह ज्ञात करें: AZ, BY, CX, DW, ?",
+  "q_en": "Find the next letter group in the series: AZ, BY, CX, DW, ?",
+  "o_hi": [
+   "EV",
+   "EU",
+   "FU",
+   "FV"
+  ],
+  "o_en": [
+   "EV",
+   "EU",
+   "FU",
+   "FV"
+  ],
+  "a": 0,
+  "e_hi": "पहला अक्षर आगे बढ़ रहा है (A, B, C, D -> E) और दूसरा पीछे (Z, Y, X, W -> V)।",
+  "e_en": "The first letter follows forward alphabetical order (A, B, C, D -> E) and the second follows backward (Z, Y, X, W -> V)."
+ },
+ {
+  "id": "rp-rea-j02505",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में लुप्त संख्या क्या है: 3, 7, 15, 31, 63, ?",
+  "q_en": "What is the missing number in the series: 3, 7, 15, 31, 63, ?",
+  "o_hi": [
+   "125",
+   "127",
+   "129",
+   "131"
+  ],
+  "o_en": [
+   "125",
+   "127",
+   "129",
+   "131"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक संख्या (2n + 1) के पैटर्न का पालन करती है। 63 * 2 + 1 = 127।",
+  "e_en": "Each number follows the pattern (2n + 1). 63 * 2 + 1 = 127."
+ },
+ {
+  "id": "rp-rea-j02506",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला को पूरा करें: 100, 95, 85, 70, 50, ?",
+  "q_en": "Complete the series: 100, 95, 85, 70, 50, ?",
+  "o_hi": [
+   "20",
+   "25",
+   "30",
+   "35"
+  ],
+  "o_en": [
+   "20",
+   "25",
+   "30",
+   "35"
+  ],
+  "a": 1,
+  "e_hi": "घटाव का अंतर 5, 10, 15, 20 है, इसलिए अगला घटाव 25 होगा। 50 - 25 = 25।",
+  "e_en": "The subtraction difference follows 5, 10, 15, 20, so the next subtraction is 25. 50 - 25 = 25."
+ },
+ {
+  "id": "rp-rea-j02507",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "निम्नलिखित श्रृंखला में अगला पद क्या है: 2, 3, 5, 7, 11, ?",
+  "q_en": "What is the next term in the following series: 2, 3, 5, 7, 11, ?",
+  "o_hi": [
+   "12",
+   "13",
+   "14",
+   "15"
+  ],
+  "o_en": [
+   "12",
+   "13",
+   "14",
+   "15"
+  ],
+  "a": 1,
+  "e_hi": "यह अभाज्य संख्याओं (prime numbers) की श्रृंखला है। 11 के बाद अगली अभाज्य संख्या 13 है।",
+  "e_en": "This is a series of prime numbers. The next prime number after 11 is 13."
+ },
+ {
+  "id": "rp-rea-j02508",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में लुप्त पद ज्ञात करें: 1, 8, 27, 64, ?",
+  "q_en": "Find the missing term in the series: 1, 8, 27, 64, ?",
+  "o_hi": [
+   "81",
+   "100",
+   "125",
+   "144"
+  ],
+  "o_en": [
+   "81",
+   "100",
+   "125",
+   "144"
+  ],
+  "a": 2,
+  "e_hi": "यह प्राकृतिक संख्याओं के घनों (cubes) की श्रृंखला है। 1³, 2³, 3³, 4³ के बाद 5³ यानी 125 आएगा।",
+  "e_en": "This is a series of cubes of natural numbers. After 1³, 2³, 3³, 4³, comes 5³, which is 125."
+ },
+ {
+  "id": "rp-rea-j02509",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में गलत संख्या पहचानें: 2, 4, 8, 16, 32, 66",
+  "q_en": "Identify the incorrect number in the series: 2, 4, 8, 16, 32, 66",
+  "o_hi": [
+   "4",
+   "16",
+   "32",
+   "66"
+  ],
+  "o_en": [
+   "4",
+   "16",
+   "32",
+   "66"
+  ],
+  "a": 3,
+  "e_hi": "यह 2 के गुणजों की ज्यामितीय श्रृंखला है। 32 * 2 = 64 होना चाहिए, 66 गलत है।",
+  "e_en": "This is a geometric series doubling each time. 32 * 2 should be 64, so 66 is incorrect."
+ },
+ {
+  "id": "rp-rea-j02510",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "संख्या श्रृंखला को पूरा करें: 3, 7, 15, 31, 63, ?",
+  "q_en": "Complete the number series: 3, 7, 15, 31, 63, ?",
+  "o_hi": [
+   "127",
+   "125",
+   "129",
+   "131"
+  ],
+  "o_en": [
+   "127",
+   "125",
+   "129",
+   "131"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला (2n + 1) के तर्क पर आधारित है। 63 गुना 2 जमा 1 बराबर 127 है।",
+  "e_en": "This series follows the (2n + 1) logic. 63 times 2 plus 1 equals 127."
+ },
+ {
+  "id": "rp-rea-j02511",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला में गलत संख्या का चयन करें: 2, 5, 10, 17, 26, 38",
+  "q_en": "Select the wrong number in the series: 2, 5, 10, 17, 26, 38",
+  "o_hi": [
+   "5",
+   "17",
+   "26",
+   "38"
+  ],
+  "o_en": [
+   "5",
+   "17",
+   "26",
+   "38"
+  ],
+  "a": 3,
+  "e_hi": "यह श्रृंखला n² + 1 के पैटर्न पर है। 6² + 1 बराबर 37 होना चाहिए, न कि 38।",
+  "e_en": "This series follows the n² + 1 pattern. 6² + 1 should be 37, not 38."
+ },
+ {
+  "id": "rp-rea-j02512",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दी गई श्रृंखला में अगला पद क्या होगा: 100, 95, 85, 70, 50, ?",
+  "q_en": "What will be the next term in the given series: 100, 95, 85, 70, 50, ?",
+  "o_hi": [
+   "25",
+   "30",
+   "35",
+   "40"
+  ],
+  "o_en": [
+   "25",
+   "30",
+   "35",
+   "40"
+  ],
+  "a": 0,
+  "e_hi": "घटने वाली संख्या 5, 10, 15, 20 है। अगली घटाव 25 होगी, इसलिए 50 - 25 = 25।",
+  "e_en": "The subtracting numbers are 5, 10, 15, 20. The next subtraction is 25, so 50 - 25 = 25."
+ },
+ {
+  "id": "rp-rea-j02513",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "संख्या श्रृंखला का अगला अंक बताइए: 4, 9, 16, 25, 36, ?",
+  "q_en": "Tell the next digit of the number series: 4, 9, 16, 25, 36, ?",
+  "o_hi": [
+   "42",
+   "49",
+   "56",
+   "64"
+  ],
+  "o_en": [
+   "42",
+   "49",
+   "56",
+   "64"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला क्रमिक प्राकृतिक संख्याओं के वर्ग हैं (2², 3², 4², 5², 6²)। अगला 7² यानी 49 होगा।",
+  "e_en": "This series consists of squares of consecutive natural numbers (2², 3², 4², 5², 6²). The next is 7², which is 49."
+ },
+ {
+  "id": "rp-rea-j02514",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें: 1, 8, 27, 64, 125, ?",
+  "q_en": "Find the missing number in the series: 1, 8, 27, 64, 125, ?",
+  "o_hi": [
+   "216",
+   "225",
+   "256",
+   "289"
+  ],
+  "o_en": [
+   "216",
+   "225",
+   "256",
+   "289"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला 1 से 6 तक की संख्याओं का घन (cube) है। 6 का घन 216 होता है।",
+  "e_en": "This series represents the cubes of numbers from 1 to 6. The cube of 6 is 216."
+ },
+ {
+  "id": "rp-rea-j02515",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "इस श्रृंखला में अगला पद क्या है: 2, 3, 5, 7, 11, 13, ?",
+  "q_en": "What is the next term in this series: 2, 3, 5, 7, 11, 13, ?",
+  "o_hi": [
+   "14",
+   "15",
+   "17",
+   "19"
+  ],
+  "o_en": [
+   "14",
+   "15",
+   "17",
+   "19"
+  ],
+  "a": 2,
+  "e_hi": "यह अभाज्य संख्याओं (prime numbers) की श्रृंखला है। 13 के बाद अगली अभाज्य संख्या 17 है।",
+  "e_en": "This is a series of prime numbers. The next prime number after 13 is 17."
+ },
+ {
+  "id": "rp-rea-j02516",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला को पूरा करें: 0, 6, 24, 60, 120, ?",
+  "q_en": "Complete the series: 0, 6, 24, 60, 120, ?",
+  "o_hi": [
+   "180",
+   "210",
+   "240",
+   "270"
+  ],
+  "o_en": [
+   "180",
+   "210",
+   "240",
+   "270"
+  ],
+  "a": 1,
+  "e_hi": "यह n³ - n का पैटर्न है। 6³ - 6 = 216 - 6 = 210।",
+  "e_en": "This follows the n³ - n pattern. 6³ - 6 = 216 - 6 = 210."
+ },
+ {
+  "id": "rp-rea-j02517",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में गलत पद पहचानें: 1, 3, 9, 27, 82, 243",
+  "q_en": "Identify the wrong term in the series: 1, 3, 9, 27, 82, 243",
+  "o_hi": [
+   "3",
+   "9",
+   "82",
+   "243"
+  ],
+  "o_en": [
+   "3",
+   "9",
+   "82",
+   "243"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक पद को 3 से गुणा किया जा रहा है। 27 गुना 3 बराबर 81 होना चाहिए, 82 गलत है।",
+  "e_en": "Each term is being multiplied by 3. 27 times 3 equals 81, so 82 is incorrect."
+ },
+ {
+  "id": "rp-rea-j02518",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला का अगला अंक निकालें: 8, 12, 24, 60, ?",
+  "q_en": "Find the next digit of the series: 8, 12, 24, 60, ?",
+  "o_hi": [
+   "120",
+   "150",
+   "180",
+   "200"
+  ],
+  "o_en": [
+   "120",
+   "150",
+   "180",
+   "200"
+  ],
+  "a": 2,
+  "e_hi": "अंतर 4, 12, 36 है। अंतर का गुणांक 3 है, इसलिए 36 गुना 3 बराबर 108 है। 60 + 108 = 168 (विकल्प में नहीं है, अन्य तर्क 8*1.5, 12*2, 24*2.5, 60*3 = 180)।",
+  "e_en": "The differences are 4, 12, 36. The multiplier is 3. Alternatively, the multiplication factors are 1.5, 2, 2.5, 3. Thus, 60 * 3 = 180."
+ },
+ {
+  "id": "rp-rea-j02519",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दी गई संख्या श्रृंखला को पूरा करें: 5, 11, 23, 47, 95, ?",
+  "q_en": "Complete the given number series: 5, 11, 23, 47, 95, ?",
+  "o_hi": [
+   "190",
+   "191",
+   "189",
+   "192"
+  ],
+  "o_en": [
+   "190",
+   "191",
+   "189",
+   "192"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक संख्या को 2 से गुणा करके 1 जोड़ा गया है (95*2 + 1 = 191)।",
+  "e_en": "Each number is multiplied by 2 and 1 is added (95*2 + 1 = 191)."
+ },
+ {
+  "id": "rp-rea-j02520",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "लुप्त अक्षर ज्ञात करें: A, D, H, M, ?",
+  "q_en": "Find the missing letter: A, D, H, M, ?",
+  "o_hi": [
+   "S",
+   "R",
+   "T",
+   "Q"
+  ],
+  "o_en": [
+   "S",
+   "R",
+   "T",
+   "Q"
+  ],
+  "a": 0,
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः +3, +4, +5 बढ़ रहा है, इसलिए अगला +6 होगा (M+6 = S)।",
+  "e_en": "The gaps between letters are increasing by +3, +4, +5, so the next jump is +6 (M+6 = S)."
+ },
+ {
+  "id": "rp-rea-j02521",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "निम्नलिखित श्रृंखला में गलत संख्या पहचानें: 2, 5, 10, 17, 26, 38",
+  "q_en": "Identify the wrong number in the following series: 2, 5, 10, 17, 26, 38",
+  "o_hi": [
+   "10",
+   "26",
+   "38",
+   "17"
+  ],
+  "o_en": [
+   "10",
+   "26",
+   "38",
+   "17"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला n^2 + 1 के पैटर्न पर है। 6^2 + 1 = 37 होना चाहिए, न कि 38।",
+  "e_en": "The series follows the pattern n^2 + 1. 6^2 + 1 should be 37, not 38."
+ },
+ {
+  "id": "rp-rea-j02522",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला का अगला पद ज्ञात करें: 1, 4, 9, 16, 25, ?",
+  "q_en": "Find the next term of the series: 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "36",
+   "49",
+   "64"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "49",
+   "64"
+  ],
+  "a": 1,
+  "e_hi": "यह प्राकृत संख्याओं के वर्गों की श्रृंखला है (1^2, 2^2, 3^2, 4^2, 5^2, 6^2 = 36)।",
+  "e_en": "This is a series of squares of natural numbers (1^2, 2^2, 3^2, 4^2, 5^2, 6^2 = 36)."
+ },
+ {
+  "id": "rp-rea-j02523",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "अनुक्रम को पूरा करें: 120, 99, 80, 63, 48, ?",
+  "q_en": "Complete the sequence: 120, 99, 80, 63, 48, ?",
+  "o_hi": [
+   "35",
+   "38",
+   "39",
+   "40"
+  ],
+  "o_en": [
+   "35",
+   "38",
+   "39",
+   "40"
+  ],
+  "a": 0,
+  "e_hi": "संख्याओं के बीच का अंतर विषम संख्याएं हैं जो घट रही हैं (-21, -19, -17, -15, -13)। 48-13 = 35।",
+  "e_en": "The differences between the numbers are decreasing odd numbers (-21, -19, -17, -15, -13). 48-13 = 35."
+ },
+ {
+  "id": "rp-rea-j02524",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अक्षर श्रृंखला को पूर्ण करें: Z, X, V, T, R, ?",
+  "q_en": "Complete the letter series: Z, X, V, T, R, ?",
+  "o_hi": [
+   "O",
+   "P",
+   "Q",
+   "N"
+  ],
+  "o_en": [
+   "O",
+   "P",
+   "Q",
+   "N"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक अक्षर पिछले अक्षर से 2 स्थान पीछे है (-2)। R-2 = P।",
+  "e_en": "Each letter is 2 positions behind the previous one (-2). R-2 = P."
+ },
+ {
+  "id": "rp-rea-j02525",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "लुप्त संख्या ज्ञात करें: 4, 9, 20, 43, 90, ?",
+  "q_en": "Find the missing number: 4, 9, 20, 43, 90, ?",
+  "o_hi": [
+   "185",
+   "184",
+   "183",
+   "181"
+  ],
+  "o_en": [
+   "185",
+   "184",
+   "183",
+   "181"
+  ],
+  "a": 0,
+  "e_hi": "पैटर्न है: (संख्या * 2) + 1, +2, +3, +4, +5। (90 * 2) + 5 = 185।",
+  "e_en": "The pattern is: (number * 2) + 1, +2, +3, +4, +5. (90 * 2) + 5 = 185."
+ },
+ {
+  "id": "rp-rea-j02526",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में अगला पद क्या होगा: 3, 6, 18, 72, ?",
+  "q_en": "What will be the next term in the series: 3, 6, 18, 72, ?",
+  "o_hi": [
+   "144",
+   "216",
+   "360",
+   "288"
+  ],
+  "o_en": [
+   "144",
+   "216",
+   "360",
+   "288"
+  ],
+  "a": 2,
+  "e_hi": "गुणांक क्रमशः 2, 3, 4, 5 बढ़ रहे हैं। 72 * 5 = 360।",
+  "e_en": "The multipliers are increasing as 2, 3, 4, 5. 72 * 5 = 360."
+ },
+ {
+  "id": "rp-rea-j02527",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षरों के समूह को पूरा करें: BD, FH, JL, NP, ?",
+  "q_en": "Complete the group of letters: BD, FH, JL, NP, ?",
+  "o_hi": [
+   "RT",
+   "QS",
+   "SU",
+   "TV"
+  ],
+  "o_en": [
+   "RT",
+   "QS",
+   "SU",
+   "TV"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर में +4 का अंतराल है। N+4=R, P+4=T।",
+  "e_en": "There is a gap of +4 for each letter. N+4=R, P+4=T."
+ },
+ {
+  "id": "rp-rea-j02528",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "संख्या श्रृंखला में लुप्त पद चुनें: 0, 7, 26, 63, ?",
+  "q_en": "Choose the missing term in the number series: 0, 7, 26, 63, ?",
+  "o_hi": [
+   "87",
+   "95",
+   "124",
+   "126"
+  ],
+  "o_en": [
+   "87",
+   "95",
+   "124",
+   "126"
+  ],
+  "a": 2,
+  "e_hi": "यह पैटर्न n^3 - 1 पर आधारित है। 5^3 - 1 = 124।",
+  "e_en": "This is based on the pattern n^3 - 1. 5^3 - 1 = 124."
+ },
+ {
+  "id": "rp-rea-j02529",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "नीचे दी गई श्रृंखला में अगला वर्ष कौन सा है? 1947, 1950, 1956, 1966, ?",
+  "q_en": "What is the next year in the following series? 1947, 1950, 1956, 1966, ?",
+  "o_hi": [
+   "1976",
+   "1980",
+   "1982",
+   "1984"
+  ],
+  "o_en": [
+   "1976",
+   "1980",
+   "1982",
+   "1984"
+  ],
+  "a": 2,
+  "e_hi": "श्रृंखला में अंतर +3, +6, +10 है। अगला अंतर +16 होना चाहिए, इसलिए 1966 + 16 = 1982।",
+  "e_en": "The differences are +3, +6, +10. The next difference is +16, so 1966 + 16 = 1982."
+ },
+ {
+  "id": "rp-rea-j02530",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "भारतीय स्वतंत्रता सेनानियों के जन्म वर्ष की श्रृंखला को पूरा करें: 1869 (गांधी), 1889 (नेहरू), 1897 (सुभाष चंद्र बोस), ?",
+  "q_en": "Complete the series of birth years of Indian freedom fighters: 1869 (Gandhi), 1889 (Nehru), 1897 (Subhash Chandra Bose), ?",
+  "o_hi": [
+   "1902",
+   "1904",
+   "1906",
+   "1908"
+  ],
+  "o_en": [
+   "1902",
+   "1904",
+   "1906",
+   "1908"
+  ],
+  "a": 3,
+  "e_hi": "यह श्रृंखला लाल बहादुर शास्त्री के जन्म वर्ष (1904) पर आधारित है, लेकिन तार्किक अंतर 20, 8, 11 का है, सही उत्तर 1904 के निकटतम विकल्प 1908 हो सकता है यदि हम पैटर्न देखें।",
+  "e_en": "This series tracks birth years. Lal Bahadur Shastri was born in 1904, but based on the progression logic, 1904 is the historically correct sequence."
+ },
+ {
+  "id": "rp-rea-j02531",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें जो भारतीय गणतंत्र दिवस के वर्षों का क्रम दिखाती है: 1950, 1952, 1956, 1962, ?",
+  "q_en": "Find the missing number in the series representing Indian Republic Day years: 1950, 1952, 1956, 1962, ?",
+  "o_hi": [
+   "1968",
+   "1970",
+   "1972",
+   "1974"
+  ],
+  "o_en": [
+   "1968",
+   "1970",
+   "1972",
+   "1974"
+  ],
+  "a": 0,
+  "e_hi": "अंतर +2, +4, +6 है, इसलिए अगला अंतर +8 होगा। 1962 + 8 = 1970, विकल्प में नहीं है, 1962+6=1968।",
+  "e_en": "The differences increase by 2: +2, +4, +6, +8. 1962 + 8 = 1970. Since 1970 is not the intended sequence logic, 1968 is the next logical step."
+ },
+ {
+  "id": "rp-rea-j02532",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "विश्व कप क्रिकेट जीतने वाले भारतीय कप्तानों के कार्यकाल के वर्षों की श्रृंखला: 1983, 2011, ?",
+  "q_en": "Series of years when Indian captains won the Cricket World Cup: 1983, 2011, ?",
+  "o_hi": [
+   "2015",
+   "2019",
+   "2023",
+   "2027"
+  ],
+  "o_en": [
+   "2015",
+   "2019",
+   "2023",
+   "2027"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला भारत के विश्व कप जीतने के वर्षों को दर्शाती है। अगला वर्ष 2023 है जब भारत ने फाइनल खेला था।",
+  "e_en": "This series lists the years India reached/won the World Cup. 2023 is the subsequent major milestone year."
+ },
+ {
+  "id": "rp-rea-j02533",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "निम्नलिखित श्रृंखला में अगला पद क्या होगा: 1, 4, 9, 16, 25 (यह संख्याएं पूर्ण वर्ग हैं)।",
+  "q_en": "What is the next term in the series: 1, 4, 9, 16, 25 (these are perfect squares).",
+  "o_hi": [
+   "30",
+   "36",
+   "40",
+   "49"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "40",
+   "49"
+  ],
+  "a": 1,
+  "e_hi": "यह 1, 2, 3, 4, 5 के वर्गों की श्रृंखला है। अगला वर्ग 6 का वर्ग यानी 36 होगा।",
+  "e_en": "This is a series of squares of 1, 2, 3, 4, 5. The next square is 6 squared, which is 36."
+ },
+ {
+  "id": "rp-rea-j02534",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "भारतीय रेलवे के स्थापना वर्षों की श्रृंखला: 1853, 1951, ?",
+  "q_en": "Series of Indian Railway historical years: 1853, 1951, ?",
+  "o_hi": [
+   "1990",
+   "2000",
+   "2010",
+   "2020"
+  ],
+  "o_en": [
+   "1990",
+   "2000",
+   "2010",
+   "2020"
+  ],
+  "a": 1,
+  "e_hi": "1853 में पहली ट्रेन चली, 1951 में रेलवे का राष्ट्रीयकरण हुआ, 2000 में नए जोन्स का गठन हुआ।",
+  "e_en": "1853 marked the first train, 1951 the nationalization, and 2000 the expansion of railway zones."
+ },
+ {
+  "id": "rp-rea-j02535",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला को पूरा करें: 10, 20, 30, 40, ?",
+  "q_en": "Complete the series: 10, 20, 30, 40, ?",
+  "o_hi": [
+   "45",
+   "50",
+   "55",
+   "60"
+  ],
+  "o_en": [
+   "45",
+   "50",
+   "55",
+   "60"
+  ],
+  "a": 1,
+  "e_hi": "यह 10 के गुणकों की एक सरल श्रृंखला है। अगला पद 50 होगा।",
+  "e_en": "This is a simple series of multiples of 10. The next term is 50."
+ },
+ {
+  "id": "rp-rea-j02536",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अशोक चक्र विजेताओं की संख्या की एक काल्पनिक श्रृंखला: 2, 5, 10, 17, ?",
+  "q_en": "A hypothetical series of award counts: 2, 5, 10, 17, ?",
+  "o_hi": [
+   "24",
+   "26",
+   "28",
+   "30"
+  ],
+  "o_en": [
+   "24",
+   "26",
+   "28",
+   "30"
+  ],
+  "a": 1,
+  "e_hi": "यह n^2 + 1 का पैटर्न है। 1^2+1=2, 2^2+1=5, 3^2+1=10, 4^2+1=17, 5^2+1=26।",
+  "e_en": "This follows the n^2 + 1 pattern. 1^2+1=2, 2^2+1=5, 3^2+1=10, 4^2+1=17, 5^2+1=26."
+ },
+ {
+  "id": "rp-rea-j02537",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "भारतीय संविधान के संशोधन वर्षों की श्रृंखला: 1951, 1952, 1954, 1955, ?",
+  "q_en": "Series of Indian Constitution amendment years: 1951, 1952, 1954, 1955, ?",
+  "o_hi": [
+   "1956",
+   "1957",
+   "1958",
+   "1959"
+  ],
+  "o_en": [
+   "1956",
+   "1957",
+   "1958",
+   "1959"
+  ],
+  "a": 0,
+  "e_hi": "यह भारतीय संविधान के शुरुआती संशोधनों के वर्षों का क्रम है। अगला प्रमुख संशोधन 1956 में हुआ था।",
+  "e_en": "This follows the sequence of early Indian constitutional amendments. The next major amendment year was 1956."
+ },
+ {
+  "id": "rp-rea-j02538",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "संख्या श्रृंखला में अगला पद क्या है: 2, 6, 12, 20, 30, ?",
+  "q_en": "What is the next term in the number series: 2, 6, 12, 20, 30, ?",
+  "o_hi": [
+   "36",
+   "40",
+   "42",
+   "44"
+  ],
+  "o_en": [
+   "36",
+   "40",
+   "42",
+   "44"
+  ],
+  "a": 2,
+  "e_hi": "अंतर +4, +6, +8, +10 है, अगला अंतर +12 होगा। 30 + 12 = 42।",
+  "e_en": "The differences are +4, +6, +8, +10. The next difference is +12, so 30 + 12 = 42."
+ },
+ {
+  "id": "rp-rea-j02539",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला को पूरा करें: 5, 10, 20, 40, ?",
+  "q_en": "Complete the series: 5, 10, 20, 40, ?",
+  "o_hi": [
+   "50",
+   "60",
+   "80",
+   "100"
+  ],
+  "o_en": [
+   "50",
+   "60",
+   "80",
+   "100"
+  ],
+  "a": 2,
+  "e_hi": "इस श्रृंखला में प्रत्येक संख्या को 2 से गुणा किया जा रहा है।",
+  "e_en": "In this series, each number is being multiplied by 2."
+ },
+ {
+  "id": "rp-rea-j02540",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से विषम संख्या ज्ञात कीजिए: 2, 3, 5, 7, 9, 11",
+  "q_en": "Find the odd number out from the given options: 2, 3, 5, 7, 9, 11",
+  "o_hi": [
+   "2",
+   "5",
+   "7",
+   "9"
+  ],
+  "o_en": [
+   "2",
+   "5",
+   "7",
+   "9"
+  ],
+  "a": 3,
+  "e_hi": "9 एक अभाज्य संख्या नहीं है, जबकि अन्य सभी अभाज्य संख्याएं हैं।",
+  "e_en": "9 is not a prime number, while all others are prime numbers."
+ },
+ {
+  "id": "rp-rea-j02541",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षर श्रृंखला में रिक्त स्थान भरें: Z, X, V, T, ?",
+  "q_en": "Fill in the blank in the letter series: Z, X, V, T, ?",
+  "o_hi": [
+   "R",
+   "S",
+   "Q",
+   "U"
+  ],
+  "o_en": [
+   "R",
+   "S",
+   "Q",
+   "U"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला वर्णमाला के अक्षरों को दो पीछे की ओर गिनकर बनाई गई है।",
+  "e_en": "This series is formed by counting backwards by two letters in the alphabet."
+ },
+ {
+  "id": "rp-rea-j02542",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में गलत पद पहचानें: 1, 4, 9, 16, 26",
+  "q_en": "Identify the wrong term in the series: 1, 4, 9, 16, 26",
+  "o_hi": [
+   "1",
+   "9",
+   "16",
+   "26"
+  ],
+  "o_en": [
+   "1",
+   "9",
+   "16",
+   "26"
+  ],
+  "a": 3,
+  "e_hi": "यह श्रृंखला पूर्ण वर्गों की है। 26 गलत है क्योंकि 5 का वर्ग 25 होना चाहिए।",
+  "e_en": "This series consists of perfect squares. 26 is wrong as the square of 5 should be 25."
+ },
+ {
+  "id": "rp-rea-j02543",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "लुप्त संख्या ज्ञात करें: 100, 90, 80, 70, ?",
+  "q_en": "Find the missing number: 100, 90, 80, 70, ?",
+  "o_hi": [
+   "60",
+   "65",
+   "55",
+   "75"
+  ],
+  "o_en": [
+   "60",
+   "65",
+   "55",
+   "75"
+  ],
+  "a": 0,
+  "e_hi": "यह एक घटती हुई श्रृंखला है जिसमें प्रत्येक पद से 10 घटाया गया है।",
+  "e_en": "This is a decreasing series where 10 is subtracted from each term."
+ },
+ {
+  "id": "rp-rea-j02544",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में अगला पद क्या होगा: 3, 6, 12, 24, ?",
+  "q_en": "What will be the next term in the series: 3, 6, 12, 24, ?",
+  "o_hi": [
+   "36",
+   "48",
+   "42",
+   "30"
+  ],
+  "o_en": [
+   "36",
+   "48",
+   "42",
+   "30"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक संख्या पिछले पद की दोगुनी है। 24 का दोगुना 48 होता है।",
+  "e_en": "Each number is double the previous term. Double of 24 is 48."
+ },
+ {
+  "id": "rp-rea-j02545",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "अक्षर श्रृंखला में लुप्त पद क्या है: B, D, G, K, ?",
+  "q_en": "What is the missing term in the letter series: B, D, G, K, ?",
+  "o_hi": [
+   "M",
+   "N",
+   "P",
+   "O"
+  ],
+  "o_en": [
+   "M",
+   "N",
+   "P",
+   "O"
+  ],
+  "a": 2,
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः 2, 3, 4 बढ़ रहा है, इसलिए अगला अंतर 5 होगा।",
+  "e_en": "The gap between letters is increasing by 2, 3, 4 respectively, so the next gap will be 5."
+ },
+ {
+  "id": "rp-rea-j02546",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला को पूरा करें: 1, 8, 27, 64, ?",
+  "q_en": "Complete the series: 1, 8, 27, 64, ?",
+  "o_hi": [
+   "81",
+   "100",
+   "125",
+   "144"
+  ],
+  "o_en": [
+   "81",
+   "100",
+   "125",
+   "144"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला प्राकृतिक संख्याओं के घनों (cubes) की है। 5 का घन 125 होता है।",
+  "e_en": "This series consists of cubes of natural numbers. The cube of 5 is 125."
+ },
+ {
+  "id": "rp-rea-j02547",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "नीचे दी गई श्रृंखला को पूरा करें: 2, 6, 12, 20, 30, ?",
+  "q_en": "Complete the given series: 2, 6, 12, 20, 30, ?",
+  "o_hi": [
+   "38",
+   "40",
+   "42",
+   "44"
+  ],
+  "o_en": [
+   "38",
+   "40",
+   "42",
+   "44"
+  ],
+  "a": 2,
+  "e_hi": "यहाँ अंतर 4, 6, 8, 10 है, तो अगला अंतर 12 होगा। 30 + 12 = 42।",
+  "e_en": "The differences are 4, 6, 8, and 10, so the next difference is 12. 30 + 12 = 42."
+ },
+ {
+  "id": "rp-rea-j02548",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "यदि 'बारिश' का अर्थ 'बाढ़' है, तो 'अत्यधिक बारिश' का कारण क्या होगा?",
+  "q_en": "If 'rain' implies 'flood', what will be the effect of 'excessive rain'?",
+  "o_hi": [
+   "सूखा",
+   "बाढ़",
+   "भूकंप",
+   "गर्मी"
+  ],
+  "o_en": [
+   "Drought",
+   "Flood",
+   "Earthquake",
+   "Heat"
+  ],
+  "a": 1,
+  "e_hi": "तर्क के अनुसार, अत्यधिक बारिश प्रत्यक्ष रूप से बाढ़ का कारण बनती है।",
+  "e_en": "According to the logic provided, excessive rain directly results in a flood."
+ },
+ {
+  "id": "rp-rea-j02549",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें: 5, 10, 20, 40, ?",
+  "q_en": "Find the missing number in the series: 5, 10, 20, 40, ?",
+  "o_hi": [
+   "60",
+   "70",
+   "80",
+   "90"
+  ],
+  "o_en": [
+   "60",
+   "70",
+   "80",
+   "90"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक संख्या पिछली संख्या की दोगुनी है। 40 गुणा 2 बराबर 80।",
+  "e_en": "Each number is double the previous number. 40 multiplied by 2 equals 80."
+ },
+ {
+  "id": "rp-rea-j02550",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "कथन: 'कल रात शहर में बिजली गुल हो गई थी।' इसका संभावित प्रभाव क्या हो सकता है?",
+  "q_en": "Statement: 'There was a power outage in the city last night.' What could be a likely effect?",
+  "o_hi": [
+   "सड़कों पर ट्रैफिक बढ़ गया",
+   "स्ट्रीट लाइटें बंद हो गईं",
+   "पेट्रोल की कीमतें बढ़ गईं",
+   "सभी लोग शहर छोड़कर चले गए"
+  ],
+  "o_en": [
+   "Traffic increased on roads",
+   "Street lights went off",
+   "Petrol prices increased",
+   "Everyone left the city"
+  ],
+  "a": 1,
+  "e_hi": "बिजली गुल होने का सीधा प्रभाव स्ट्रीट लाइटों के बंद होने पर पड़ेगा।",
+  "e_en": "The direct effect of a power outage is the failure of electrical systems like street lights."
+ },
+ {
+  "id": "rp-rea-j02551",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "संख्या श्रृंखला को पूरा करें: 1, 4, 9, 16, 25, ?",
+  "q_en": "Complete the number series: 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "36",
+   "40",
+   "49"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "40",
+   "49"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला प्राकृतिक संख्याओं के वर्गों (1², 2², 3², 4², 5², 6²) पर आधारित है।",
+  "e_en": "This series is based on squares of natural numbers (1², 2², 3², 4², 5², 6²)."
+ },
+ {
+  "id": "rp-rea-j02552",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला में गलत संख्या पहचानें: 2, 5, 10, 17, 26, 35",
+  "q_en": "Identify the wrong number in the series: 2, 5, 10, 17, 26, 35",
+  "o_hi": [
+   "10",
+   "17",
+   "26",
+   "35"
+  ],
+  "o_en": [
+   "10",
+   "17",
+   "26",
+   "35"
+  ],
+  "a": 3,
+  "e_hi": "श्रृंखला n²+1 के पैटर्न पर है। 6²+1 = 37 होना चाहिए, न कि 35।",
+  "e_en": "The series follows the n²+1 pattern. 6²+1 should be 37, not 35."
+ },
+ {
+  "id": "rp-rea-j02553",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "कथन: 'फसल खराब होने के कारण किसानों ने विरोध किया।' यहाँ कारण क्या है?",
+  "q_en": "Statement: 'Farmers protested due to crop failure.' What is the cause here?",
+  "o_hi": [
+   "विरोध प्रदर्शन",
+   "फसल का खराब होना",
+   "सरकारी नीति",
+   "मानसून की देरी"
+  ],
+  "o_en": [
+   "Protest",
+   "Crop failure",
+   "Government policy",
+   "Delayed monsoon"
+  ],
+  "a": 1,
+  "e_hi": "विरोध प्रदर्शन का मुख्य कारण फसल का खराब होना बताया गया है।",
+  "e_en": "The primary cause mentioned for the protest is the failure of crops."
+ },
+ {
+  "id": "rp-rea-j02554",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला का अगला पद क्या है: B2, D4, F6, H8, ?",
+  "q_en": "What is the next term in the series: B2, D4, F6, H8, ?",
+  "o_hi": [
+   "J10",
+   "I9",
+   "J12",
+   "K10"
+  ],
+  "o_en": [
+   "J10",
+   "I9",
+   "J12",
+   "K10"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर दो स्थान आगे बढ़ रहे हैं और संख्या भी दो बढ़ रही है।",
+  "e_en": "Letters advance by two positions and the number also increases by two."
+ },
+ {
+  "id": "rp-rea-j02555",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला को पूरा करें: 100, 95, 85, 70, ?",
+  "q_en": "Complete the series: 100, 95, 85, 70, ?",
+  "o_hi": [
+   "50",
+   "55",
+   "60",
+   "65"
+  ],
+  "o_en": [
+   "50",
+   "55",
+   "60",
+   "65"
+  ],
+  "a": 0,
+  "e_hi": "अंतर 5, 10, 15 के गुणज में है, अगला अंतर 20 होगा। 70 - 20 = 50।",
+  "e_en": "The difference increases in multiples of 5, 10, 15, so the next difference is 20. 70 - 20 = 50."
+ },
+ {
+  "id": "rp-rea-j02556",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दी गई श्रृंखला में अगला अक्षर क्या होगा: A, C, E, G, ?",
+  "q_en": "What will be the next letter in the given series: A, C, E, G, ?",
+  "o_hi": [
+   "H",
+   "I",
+   "J",
+   "K"
+  ],
+  "o_en": [
+   "H",
+   "I",
+   "J",
+   "K"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक अक्षर के बीच एक अक्षर का अंतर है। G के बाद H छोड़कर I आता है।",
+  "e_en": "There is a gap of one letter between each letter. After G, skipping H gives I."
+ },
+ {
+  "id": "rp-rea-j02557",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में गलत संख्या पहचानें: 2, 4, 8, 16, 30, 64",
+  "q_en": "Identify the wrong number in the series: 2, 4, 8, 16, 30, 64",
+  "o_hi": [
+   "4",
+   "8",
+   "30",
+   "64"
+  ],
+  "o_en": [
+   "4",
+   "8",
+   "30",
+   "64"
+  ],
+  "a": 2,
+  "e_hi": "श्रृंखला में प्रत्येक संख्या पिछली संख्या की दोगुनी है, 16 का दोगुना 32 होना चाहिए न कि 30।",
+  "e_en": "Each number in the series is double the previous one; double of 16 should be 32, not 30."
+ },
+ {
+  "id": "rp-rea-j02558",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अनुक्रम में अगला पद क्या होगा: Z, X, V, T, ?",
+  "q_en": "What will be the next term in the sequence: Z, X, V, T, ?",
+  "o_hi": [
+   "R",
+   "S",
+   "Q",
+   "P"
+  ],
+  "o_en": [
+   "R",
+   "S",
+   "Q",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला वर्णमाला में दो-दो अक्षरों के पीछे की ओर बढ़ने से बनी है।",
+  "e_en": "This series is formed by moving two letters backward in the alphabet."
+ },
+ {
+  "id": "rp-rea-j02559",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "लुप्त पद ज्ञात कीजिए: 3, 6, 18, 72, ?",
+  "q_en": "Find the missing term: 3, 6, 18, 72, ?",
+  "o_hi": [
+   "144",
+   "216",
+   "360",
+   "288"
+  ],
+  "o_en": [
+   "144",
+   "216",
+   "360",
+   "288"
+  ],
+  "a": 2,
+  "e_hi": "गुणांक 2, 3, 4 के क्रम में बढ़ रहा है। 72 को 5 से गुणा करने पर 360 आता है।",
+  "e_en": "The multiplier increases in the order of 2, 3, 4. Multiplying 72 by 5 gives 360."
+ },
+ {
+  "id": "rp-rea-j02560",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दी गई श्रृंखला में विषम संख्या चुनिए: 121, 144, 169, 190, 225",
+  "q_en": "Choose the odd number in the given series: 121, 144, 169, 190, 225",
+  "o_hi": [
+   "121",
+   "144",
+   "190",
+   "225"
+  ],
+  "o_en": [
+   "121",
+   "144",
+   "190",
+   "225"
+  ],
+  "a": 2,
+  "e_hi": "अन्य सभी संख्याएँ पूर्ण वर्ग हैं (11, 12, 13, 15 के वर्ग), जबकि 190 नहीं है।",
+  "e_en": "All other numbers are perfect squares (squares of 11, 12, 13, 15), while 190 is not."
+ },
+ {
+  "id": "rp-rea-j02561",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला पूर्ण कीजिए: B2D, D4F, F6H, H8J, ?",
+  "q_en": "Complete the series: B2D, D4F, F6H, H8J, ?",
+  "o_hi": [
+   "J10L",
+   "I10K",
+   "J12L",
+   "I12K"
+  ],
+  "o_en": [
+   "J10L",
+   "I10K",
+   "J12L",
+   "I12K"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर दो स्थान आगे बढ़ रहे हैं और संख्याएँ 2-2 के अंतराल पर बढ़ रही हैं।",
+  "e_en": "Letters are moving two places ahead and numbers are increasing at an interval of 2."
+ },
+ {
+  "id": "rp-rea-j02562",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "लुप्त संख्या ज्ञात कीजिए: 0, 7, 26, 63, ?",
+  "q_en": "Find the missing number: 0, 7, 26, 63, ?",
+  "o_hi": [
+   "87",
+   "96",
+   "124",
+   "125"
+  ],
+  "o_en": [
+   "87",
+   "96",
+   "124",
+   "125"
+  ],
+  "a": 2,
+  "e_hi": "यह n^3 - 1 का पैटर्न है (1^3-1, 2^3-1, 3^3-1, 4^3-1)। अगला 5^3-1 = 124 होगा।",
+  "e_en": "This follows the pattern n^3 - 1 (1^3-1, 2^3-1, 3^3-1, 4^3-1). The next is 5^3-1 = 124."
+ },
+ {
+  "id": "rp-rea-j02563",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दी गई संख्या श्रृंखला में अगला पद ज्ञात कीजिए: 2, 4, 6, 8, ?",
+  "q_en": "Find the next term in the given number series: 2, 4, 6, 8, ?",
+  "o_hi": [
+   "9",
+   "10",
+   "11",
+   "12"
+  ],
+  "o_en": [
+   "9",
+   "10",
+   "11",
+   "12"
+  ],
+  "a": 1,
+  "e_hi": "यह दो की वृद्धि वाली एक सरल समानांतर श्रृंखला है। 8 में 2 जोड़ने पर 10 प्राप्त होता है।",
+  "e_en": "This is a simple arithmetic progression with a common difference of 2. Adding 2 to 8 gives 10."
+ },
+ {
+  "id": "rp-rea-j02564",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अक्षर श्रृंखला में लुप्त पद पहचानिए: A, C, E, G, ?",
+  "q_en": "Identify the missing term in the letter series: A, C, E, G, ?",
+  "o_hi": [
+   "H",
+   "I",
+   "J",
+   "K"
+  ],
+  "o_en": [
+   "H",
+   "I",
+   "J",
+   "K"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक अक्षर के बीच एक अक्षर का अंतर है (B, D, F छोड़े गए हैं)। G के बाद H छोड़कर I आता है।",
+  "e_en": "Each letter has a gap of one letter (B, D, F are skipped). After G, skipping H leads to I."
+ },
+ {
+  "id": "rp-rea-j02565",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "संख्या श्रृंखला को पूर्ण करें: 1, 4, 9, 16, ?",
+  "q_en": "Complete the number series: 1, 4, 9, 16, ?",
+  "o_hi": [
+   "20",
+   "25",
+   "30",
+   "36"
+  ],
+  "o_en": [
+   "20",
+   "25",
+   "30",
+   "36"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला प्राकृतिक संख्याओं के वर्गों (1², 2², 3², 4²) पर आधारित है। अगला पद 5² अर्थात 25 होगा।",
+  "e_en": "This series is based on squares of natural numbers (1², 2², 3², 4²). The next term is 5², which is 25."
+ },
+ {
+  "id": "rp-rea-j02566",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "निम्नलिखित अनुक्रम में गलत संख्या का पता लगाएं: 5, 10, 15, 20, 26",
+  "q_en": "Find the incorrect number in the following sequence: 5, 10, 15, 20, 26",
+  "o_hi": [
+   "5",
+   "15",
+   "20",
+   "26"
+  ],
+  "o_en": [
+   "5",
+   "15",
+   "20",
+   "26"
+  ],
+  "a": 3,
+  "e_hi": "यह 5 के गुणजों की श्रृंखला है। 26 गलत है क्योंकि वहां 25 होना चाहिए था।",
+  "e_en": "This is a series of multiples of 5. 26 is incorrect because it should have been 25."
+ },
+ {
+  "id": "rp-rea-j02567",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षर श्रृंखला में अगला समूह क्या होगा: AZ, BY, CX, DW, ?",
+  "q_en": "What will be the next group in the letter series: AZ, BY, CX, DW, ?",
+  "o_hi": [
+   "EV",
+   "EU",
+   "FU",
+   "FT"
+  ],
+  "o_en": [
+   "EV",
+   "EU",
+   "FU",
+   "FT"
+  ],
+  "a": 0,
+  "e_hi": "पहला अक्षर वर्णमाला के क्रम में बढ़ रहा है (A, B, C, D -> E) और दूसरा अक्षर पीछे की ओर घट रहा है (Z, Y, X, W -> V)।",
+  "e_en": "The first letter follows the alphabetical order (A, B, C, D -> E) and the second letter follows the reverse order (Z, Y, X, W -> V)."
+ },
+ {
+  "id": "rp-rea-j02568",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें: 100, 90, 80, 70, ?",
+  "q_en": "Find the missing number in the series: 100, 90, 80, 70, ?",
+  "o_hi": [
+   "60",
+   "65",
+   "50",
+   "55"
+  ],
+  "o_en": [
+   "60",
+   "65",
+   "50",
+   "55"
+  ],
+  "a": 0,
+  "e_hi": "यह 10 की घटती हुई एक सरल श्रृंखला है। 70 में से 10 घटाने पर 60 प्राप्त होता है।",
+  "e_en": "This is a simple decreasing series by 10. Subtracting 10 from 70 gives 60."
+ },
+ {
+  "id": "rp-rea-j02569",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "संख्या श्रृंखला का अगला पद क्या होगा: 2, 6, 12, 20, 30, ?",
+  "q_en": "What will be the next term of the number series: 2, 6, 12, 20, 30, ?",
+  "o_hi": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "a": 1,
+  "e_hi": "पदों के बीच का अंतर 4, 6, 8, 10 है। अगला अंतर 12 होगा, इसलिए 30 + 12 = 42।",
+  "e_en": "The differences between terms are 4, 6, 8, 10. The next difference will be 12, so 30 + 12 = 42."
+ },
+ {
+  "id": "rp-rea-j02570",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षर श्रृंखला में लुप्त पद कौन सा है: Z, X, V, T, ?",
+  "q_en": "Which is the missing term in the letter series: Z, X, V, T, ?",
+  "o_hi": [
+   "R",
+   "S",
+   "Q",
+   "P"
+  ],
+  "o_en": [
+   "R",
+   "S",
+   "Q",
+   "P"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर के बीच दो अक्षरों का अंतर है। T से दो पीछे जाने पर R आता है।",
+  "e_en": "There is a gap of two letters between each term. Moving two positions back from T gives R."
+ },
+ {
+  "id": "rp-rea-j02571",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "संख्या श्रृंखला में प्रश्नवाचक चिह्न (?) के स्थान पर क्या आएगा: 3, 9, 27, 81, ?",
+  "q_en": "What will come in place of the question mark (?) in the number series: 3, 9, 27, 81, ?",
+  "o_hi": [
+   "162",
+   "243",
+   "273",
+   "324"
+  ],
+  "o_en": [
+   "162",
+   "243",
+   "273",
+   "324"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला 3 की घातों (3¹, 3², 3³, 3⁴) पर आधारित है। अगला पद 3⁵ अर्थात 243 है।",
+  "e_en": "This series is based on powers of 3 (3¹, 3², 3³, 3⁴). The next term is 3⁵, which is 243."
+ },
+ {
+  "id": "rp-rea-j02572",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला में विषम संख्या का चयन करें: 2, 4, 8, 16, 30",
+  "q_en": "Select the odd number in the series: 2, 4, 8, 16, 30",
+  "o_hi": [
+   "4",
+   "8",
+   "16",
+   "30"
+  ],
+  "o_en": [
+   "4",
+   "8",
+   "16",
+   "30"
+  ],
+  "a": 3,
+  "e_hi": "यहाँ प्रत्येक संख्या पिछली संख्या की दोगुनी है (2x2=4, 4x2=8, 8x2=16)। 16x2=32 होना चाहिए, इसलिए 30 गलत है।",
+  "e_en": "Each number here is double the previous one (2x2=4, 4x2=8, 8x2=16). 16x2 should be 32, so 30 is incorrect."
+ },
+ {
+  "id": "rp-rea-j02573",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "भारत के प्रधानमंत्रियों के कालानुक्रम को पूरा करें: जवाहरलाल नेहरू, लाल बहादुर शास्त्री, इंदिरा गांधी, ?",
+  "q_en": "Complete the chronological sequence of Indian Prime Ministers: Jawaharlal Nehru, Lal Bahadur Shastri, Indira Gandhi, ?",
+  "o_hi": [
+   "राजीव गांधी",
+   "मोरारजी देसाई",
+   "चौधरी चरण सिंह",
+   "गुलजारीलाल नंदा"
+  ],
+  "o_en": [
+   "Rajiv Gandhi",
+   "Morarji Desai",
+   "Chaudhary Charan Singh",
+   "Gulzarilal Nanda"
+  ],
+  "a": 1,
+  "e_hi": "नेहरू, शास्त्री और इंदिरा गांधी के बाद मोरारजी देसाई भारत के चौथे प्रधानमंत्री बने थे।",
+  "e_en": "After Nehru, Shastri, and Indira Gandhi, Morarji Desai became the fourth Prime Minister of India."
+ },
+ {
+  "id": "rp-rea-j02574",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "भारतीय संविधान के संशोधन वर्षों की श्रृंखला को पूरा करें: 1951, 1956, 1962, ?",
+  "q_en": "Complete the sequence of Indian Constitutional Amendment years: 1951, 1956, 1962, ?",
+  "o_hi": [
+   "1967",
+   "1970",
+   "1975",
+   "1980"
+  ],
+  "o_en": [
+   "1967",
+   "1970",
+   "1975",
+   "1980"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला प्रत्येक 5-6 वर्षों के अंतराल पर प्रमुख संशोधनों को दर्शाती है, जहाँ अगला सही वर्ष 1967 है।",
+  "e_en": "This sequence represents major amendments at intervals of 5-6 years, where the next correct year is 1967."
+ },
+ {
+  "id": "rp-rea-j02575",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "नोबेल पुरस्कार विजेताओं के क्रम को पहचानें: रवींद्रनाथ टैगोर (1913), सी.वी. रमन (1930), मदर टेरेसा (1979), ?",
+  "q_en": "Identify the sequence of Nobel Laureates: Rabindranath Tagore (1913), C.V. Raman (1930), Mother Teresa (1979), ?",
+  "o_hi": [
+   "अमर्त्य सेन (1998)",
+   "कैलाश सत्यार्थी (2014)",
+   "हरगोविंद खुराना (1968)",
+   "सुब्रमण्यम चंद्रशेखर (1983)"
+  ],
+  "o_en": [
+   "Amartya Sen (1998)",
+   "Kailash Satyarthi (2014)",
+   "Har Gobind Khorana (1968)",
+   "Subrahmanyan Chandrasekhar (1983)"
+  ],
+  "a": 3,
+  "e_hi": "वर्षों के आरोही क्रम में 1979 के बाद 1983 का स्थान आता है।",
+  "e_en": "In ascending order of years, 1983 follows 1979."
+ },
+ {
+  "id": "rp-rea-j02576",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "स्वतंत्रता संग्राम के महत्वपूर्ण वर्षों की श्रृंखला: 1857, 1885, 1905, ?",
+  "q_en": "Sequence of important years in the Freedom Struggle: 1857, 1885, 1905, ?",
+  "o_hi": [
+   "1919",
+   "1920",
+   "1921",
+   "1922"
+  ],
+  "o_en": [
+   "1919",
+   "1920",
+   "1921",
+   "1922"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला महत्वपूर्ण ऐतिहासिक घटनाओं को दर्शाती है; 1905 के बाद जलियांवाला बाग हत्याकांड वाला वर्ष 1919 आता है।",
+  "e_en": "This sequence shows major historical events; 1919 is the year of the Jallianwala Bagh massacre following 1905."
+ },
+ {
+  "id": "rp-rea-j02577",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "भारत के राष्ट्रपति पद के कार्यकाल का क्रम देखें: राजेंद्र प्रसाद, सर्वपल्ली राधाकृष्णन, ज़ाकिर हुसैन, ?",
+  "q_en": "Observe the sequence of Indian Presidential terms: Rajendra Prasad, Sarvepalli Radhakrishnan, Zakir Husain, ?",
+  "o_hi": [
+   "वी.वी. गिरि",
+   "नीलम संजीव रेड्डी",
+   "फखरुद्दीन अली अहमद",
+   "ज्ञानी ज़ैल सिंह"
+  ],
+  "o_en": [
+   "V. V. Giri",
+   "Neelam Sanjiva Reddy",
+   "Fakhruddin Ali Ahmed",
+   "Giani Zail Singh"
+  ],
+  "a": 0,
+  "e_hi": "ज़ाकिर हुसैन के बाद वी.वी. गिरि भारत के अगले राष्ट्रपति बने थे।",
+  "e_en": "V. V. Giri became the next President of India after Zakir Husain."
+ },
+ {
+  "id": "rp-rea-j02578",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "ओलंपिक खेलों के आयोजन वर्षों की श्रृंखला: 2004, 2008, 2012, ?",
+  "q_en": "Sequence of Olympic Games host years: 2004, 2008, 2012, ?",
+  "o_hi": [
+   "2014",
+   "2016",
+   "2018",
+   "2020"
+  ],
+  "o_en": [
+   "2014",
+   "2016",
+   "2018",
+   "2020"
+  ],
+  "a": 1,
+  "e_hi": "ग्रीष्मकालीन ओलंपिक हर 4 वर्ष में आयोजित किए जाते हैं, इसलिए 2012 के बाद 2016 सही उत्तर है।",
+  "e_en": "Summer Olympics are held every 4 years, so 2016 is the correct answer after 2012."
+ },
+ {
+  "id": "rp-rea-j02579",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "भारतीय अंतरिक्ष मिशनों की श्रृंखला: चंद्रयान-1 (2008), मंगलयान (2013), चंद्रयान-2 (2019), ?",
+  "q_en": "Sequence of Indian Space Missions: Chandrayaan-1 (2008), Mangalyaan (2013), Chandrayaan-2 (2019), ?",
+  "o_hi": [
+   "गगनयान (2021)",
+   "आदित्य-एल1 (2023)",
+   "चंद्रयान-3 (2023)",
+   "मंगलयान-2 (2024)"
+  ],
+  "o_en": [
+   "Gaganyaan (2021)",
+   "Aditya-L1 (2023)",
+   "Chandrayaan-3 (2023)",
+   "Mangalyaan-2 (2024)"
+  ],
+  "a": 2,
+  "e_hi": "चंद्रयान-2 के बाद भारत का अगला बड़ा सफल मिशन चंद्रयान-3 था।",
+  "e_en": "After Chandrayaan-2, India's next major successful mission was Chandrayaan-3."
+ },
+ {
+  "id": "rp-rea-j02580",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "संयुक्त राष्ट्र के महासचिवों का क्रम: ट्रिगवे ली, डैग हैमरस्क्योल्ड, यू थांट, ?",
+  "q_en": "Sequence of UN Secretaries-General: Trygve Lie, Dag Hammarskjöld, U Thant, ?",
+  "o_hi": [
+   "कुर्त वॉल्डहाइम",
+   "कोफी अन्नान",
+   "बान की मून",
+   "एंटोनियो गुटेरेस"
+  ],
+  "o_en": [
+   "Kurt Waldheim",
+   "Kofi Annan",
+   "Ban Ki-moon",
+   "António Guterres"
+  ],
+  "a": 0,
+  "e_hi": "यू थांट के बाद कुर्त वॉल्डहाइम संयुक्त राष्ट्र के चौथे महासचिव बने थे।",
+  "e_en": "After U Thant, Kurt Waldheim became the fourth Secretary-General of the United Nations."
+ },
+ {
+  "id": "rp-rea-j02581",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "पंचवर्षीय योजनाओं की शुरुआत के वर्ष: 1951, 1956, 1961, ?",
+  "q_en": "Start years of Five-Year Plans: 1951, 1956, 1961, ?",
+  "o_hi": [
+   "1965",
+   "1966",
+   "1969",
+   "1971"
+  ],
+  "o_en": [
+   "1965",
+   "1966",
+   "1969",
+   "1971"
+  ],
+  "a": 2,
+  "e_hi": "योजना अवकाश के बाद चौथी पंचवर्षीय योजना 1969 में शुरू हुई थी।",
+  "e_en": "After the plan holiday, the fourth Five-Year Plan started in 1969."
+ },
+ {
+  "id": "rp-rea-j02582",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "विश्व कप क्रिकेट विजेता वर्षों की श्रृंखला: 1983, 2003, 2011, ?",
+  "q_en": "Sequence of World Cup Cricket winning years (India): 1983, 2003 (finalist), 2011, ?",
+  "o_hi": [
+   "2015",
+   "2019",
+   "2023",
+   "2027"
+  ],
+  "o_en": [
+   "2015",
+   "2019",
+   "2023",
+   "2027"
+  ],
+  "a": 2,
+  "e_hi": "भारतीय टीम 1983 और 2011 में विश्व विजेता बनी थी, अगला फाइनल 2023 में खेला गया था।",
+  "e_en": "The Indian team became world champions in 1983 and 2011; the next final was played in 2023."
+ },
+ {
+  "id": "rp-rea-o02265",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "आयाम, प्रिंटिंग, बंदर, और मोटरसाइकिल में से कौन-सा शब्द शेष तीन से भिन्न है?",
+  "q_en": "Which one of the following is different from the rest: Bicycle, Printing, Monkey, and Motorbike?",
+  "o_hi": [
+   "आयाम",
+   "प्रिंटिंग",
+   "बंदर",
+   "मोटरसाइकिल"
+  ],
+  "o_en": [
+   "Bicycle",
+   "Printing",
+   "Monkey",
+   "Motorbike"
+  ],
+  "a": 1,
+  "e_hi": "आयाम और मोटरसाइकिल वाहन हैं, बंदर एक जानवर है, और प्रिंटिंग एक प्रक्रिया या कार्रवाई है, इसलिए यह शेष तीन से भिन्न है।",
+  "e_en": "Bicycle and Motorbike are vehicles, Monkey is an animal, and Printing is a process or action, making it different from the others."
+ },
+ {
+  "id": "rp-rea-o02266",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "आलू, शकरकंद, प्याज, और पालक में से कौन-सा शब्द शेष तीन से भिन्न है?",
+  "q_en": "Which one of the following is different from the rest: Potato, Sweet Potato, Onion, and Spinach?",
+  "o_hi": [
+   "आलू",
+   "शकरकंद",
+   "प्याज",
+   "पालक"
+  ],
+  "o_en": [
+   "Potato",
+   "Sweet Potato",
+   "Onion",
+   "Spinach"
+  ],
+  "a": 3,
+  "e_hi": "आलू, शकरकंद और प्याज सब्जियाँ हैं जो जमीन के नीचे या जड़ों में विकसित होती हैं (tubers/bulbs), जबकि पालक एक पत्तीदार सब्जी है।",
+  "e_en": "Potato, Sweet Potato, and Onion are root vegetables or bulbs that grow underground, whereas Spinach is a leafy vegetable."
+ },
+ {
+  "id": "rp-rea-o02267",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "सूरज, चाँद, नक्षत्र, और पृथ्वी में से कौन-सा शब्द शेष तीन से भिन्न है?",
+  "q_en": "Which one of the following is different from the rest: Sun, Moon, Star, and Earth?",
+  "o_hi": [
+   "सूरज",
+   "चाँद",
+   "नक्षत्र",
+   "पृथ्वी"
+  ],
+  "o_en": [
+   "Sun",
+   "Moon",
+   "Star",
+   "Earth"
+  ],
+  "a": 3,
+  "e_hi": "सूरज, चाँद और नक्षत्र आकाशीय पिंड हैं जो आसमान में दिखाई देते हैं, जबकि पृथ्वी वही ग्रह है जिस पर हम रहते हैं और यह सामान्यतः आसमानी पिंडों की सूची में अलग वर्गीकृत होती है।",
+  "e_en": "Sun, Moon, and Star are celestial bodies visible in the sky, while Earth is the planet we live on and is categorized differently in this context."
+ },
+ {
+  "id": "rp-rea-o02268",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "पंखा, बल्ब, और बत्ती में से कौन-सा शब्द शेष दो से भिन्न है?",
+  "q_en": "Which one of the following is different from the rest: Fan, Bulb, and Lamp?",
+  "o_hi": [
+   "पंखा",
+   "बल्ब",
+   "बत्ती",
+   "दिवा (Diya)"
+  ],
+  "o_en": [
+   "Fan",
+   "Bulb",
+   "Lamp",
+   "Diya (Oil Lamp)"
+  ],
+  "a": 0,
+  "e_hi": "बल्ब, बत्ती और दिया सभी प्रकाश के स्रोत हैं, जबकि पंखा हवा चलाने के लिए उपयोग किया जाता है।",
+  "e_en": "Bulb, Lamp, and Diya are all sources of light, whereas a Fan is used to circulate air."
+ },
+ {
+  "id": "rp-rea-o02269",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "लाल, नीला, हरा, और गोल्डन (स्वर्ण रंग) में से कौन-सा रंग शेष तीन से भिन्न है?",
+  "q_en": "Which of the following colors is different from the rest: Red, Blue, Green, and Golden?",
+  "o_hi": [
+   "लाल",
+   "नीला",
+   "हरा",
+   "गोल्डन"
+  ],
+  "o_en": [
+   "Red",
+   "Blue",
+   "Green",
+   "Golden"
+  ],
+  "a": 3,
+  "e_hi": "लाल, नीला और हरा प्राथमिक या द्वितीयक रंग हैं जो प्रकाश के स्पेक्ट्रम में मौजूद हैं, जबकि गोल्डन एक धातु का रंग है या मिश्रित रंग है।",
+  "e_en": "Red, Blue, and Green are primary or secondary colors present in the light spectrum, while Golden is a metallic or composite color."
+ },
+ {
+  "id": "rp-rea-o02270",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "कबड्डी, क्रिकेट, बास्केटबॉल, और स्विमिंग में से कौन-सा खेल शेष तीन से भिन्न है?",
+  "q_en": "Which of the following sports is different from the rest: Kabaddi, Cricket, Basketball, and Swimming?",
+  "o_hi": [
+   "कबड्डी",
+   "क्रिकेट",
+   "बास्केटबॉल",
+   "स्विमिंग"
+  ],
+  "o_en": [
+   "Kabaddi",
+   "Cricket",
+   "Basketball",
+   "Swimming"
+  ],
+  "a": 3,
+  "e_hi": "कबड्डी, क्रिकेट और बास्केटबॉल जमीन पर खेले जाने वाले खेल हैं, जबकि स्विमिंग पानी में खेला जाता है।",
+  "e_en": "Kabaddi, Cricket, and Basketball are land-based sports, whereas Swimming is a water sport."
+ },
+ {
+  "id": "rp-rea-o02271",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "मौसम, तापमान, आर्द्रता, और दबाव में से कौन-सा शब्द शेष तीन से भिन्न है?",
+  "q_en": "Which one of the following is different from the rest: Weather, Temperature, Humidity, and Pressure?",
+  "o_hi": [
+   "मौसम",
+   "तापमान",
+   "आर्द्रता",
+   "दबाव"
+  ],
+  "o_en": [
+   "Weather",
+   "Temperature",
+   "Humidity",
+   "Pressure"
+  ],
+  "a": 0,
+  "e_hi": "तापमान, आर्द्रता और दबाव मौसम के विशिष्ट पैरामीटर या माप हैं, जबकि मौसम इन सभी तत्वों का समुच्चय है।",
+  "e_en": "Temperature, Humidity, and Pressure are specific parameters or measurements of weather, whereas Weather is the collective state of these elements."
+ },
+ {
+  "id": "rp-rea-j02583",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "नीचे दी गई श्रृंखला को पूरा करें: 1947, 1950, 1952, 1957, ?",
+  "q_en": "Complete the following series based on significant years in Indian history: 1947, 1950, 1952, 1957, ?",
+  "o_hi": [
+   "1960",
+   "1962",
+   "1965",
+   "1967"
+  ],
+  "o_en": [
+   "1960",
+   "1962",
+   "1965",
+   "1967"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला महत्वपूर्ण वर्षों को दर्शाती है: स्वतंत्रता, गणतंत्र दिवस, पहला आम चुनाव, और 1962 (भारत-चीन युद्ध)।",
+  "e_en": "The series represents significant years: Independence, Republic Day, first General Election, and 1962 (Indo-China war)."
+ },
+ {
+  "id": "rp-rea-j02584",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) के मिशनों के वर्षों की श्रृंखला को पूरा करें: 2008, 2013, 2019, ?",
+  "q_en": "Complete the series of years for major ISRO lunar missions: 2008, 2013, 2019, ?",
+  "o_hi": [
+   "2020",
+   "2021",
+   "2022",
+   "2023"
+  ],
+  "o_en": [
+   "2020",
+   "2021",
+   "2022",
+   "2023"
+  ],
+  "a": 3,
+  "e_hi": "यह श्रृंखला चंद्रयान मिशनों के वर्षों का अनुसरण करती है: चंद्रयान-1, मार्स ऑर्बिटर मिशन, चंद्रयान-2, और चंद्रयान-3।",
+  "e_en": "The series follows the years of major Indian space missions: Chandrayaan-1, Mars Orbiter Mission, Chandrayaan-2, and Chandrayaan-3."
+ },
+ {
+  "id": "rp-rea-j02585",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "भारत के प्रधानमंत्रियों के कार्यकाल के अनुक्रम में लुप्त नाम चुनें: जवाहरलाल नेहरू, लाल बहादुर शास्त्री, इंदिरा गांधी, ?",
+  "q_en": "Select the missing name in the sequence of Indian Prime Ministers: Jawaharlal Nehru, Lal Bahadur Shastri, Indira Gandhi, ?",
+  "o_hi": [
+   "मोरारजी देसाई",
+   "चौधरी चरण सिंह",
+   "राजीव गांधी",
+   "अटल बिहारी वाजपेयी"
+  ],
+  "o_en": [
+   "Morarji Desai",
+   "Chaudhary Charan Singh",
+   "Rajiv Gandhi",
+   "Atal Bihari Vajpayee"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला भारत के प्रधानमंत्रियों के क्रमिक कार्यकाल को दर्शाती है, जिसमें इंदिरा गांधी के बाद मोरारजी देसाई आए थे।",
+  "e_en": "This series represents the chronological order of Indian Prime Ministers, with Morarji Desai succeeding Indira Gandhi."
+ },
+ {
+  "id": "rp-rea-j02586",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "विजेता खिलाड़ियों की श्रृंखला को पूरा करें: पी.वी. सिंधु, नीरज चोपड़ा, मीराबाई चानू, ?",
+  "q_en": "Complete the series of Indian Olympic medalists: P.V. Sindhu, Neeraj Chopra, Mirabai Chanu, ?",
+  "o_hi": [
+   "सुनील छेत्री",
+   "रवि दहिया",
+   "विश्वनाथन आनंद",
+   "लिएंडर पेस"
+  ],
+  "o_en": [
+   "Sunil Chhetri",
+   "Ravi Dahiya",
+   "Viswanathan Anand",
+   "Leander Paes"
+  ],
+  "a": 1,
+  "e_hi": "दी गई सूची टोक्यो ओलंपिक 2020 के पदक विजेताओं की है, जिसमें रवि दहिया का नाम शामिल है।",
+  "e_en": "The list consists of medalists from the Tokyo 2020 Olympics, which includes Ravi Dahiya."
+ },
+ {
+  "id": "rp-rea-j02587",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "रेलवे के विद्युतीकरण के चरणों के आधार पर श्रृंखला पूरी करें: 1925, 1930, 1950, ?",
+  "q_en": "Complete the series based on milestones in Indian Railway electrification: 1925, 1930, 1950, ?",
+  "o_hi": [
+   "1955",
+   "1960",
+   "1965",
+   "1970"
+  ],
+  "o_en": [
+   "1955",
+   "1960",
+   "1965",
+   "1970"
+  ],
+  "a": 0,
+  "e_hi": "1925 में पहली इलेक्ट्रिक ट्रेन चली थी, जिसके बाद विद्युतीकरण के विभिन्न चरणों को दर्शाया गया है।",
+  "e_en": "The first electric train ran in 1925, followed by subsequent major milestones in electrification."
+ },
+ {
+  "id": "rp-rea-j02588",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अगला नाम पहचानें: महात्मा गांधी, सुभाष चंद्र बोस, भगत सिंह, ?",
+  "q_en": "Identify the next name in the series of Indian freedom fighters: Mahatma Gandhi, Subhash Chandra Bose, Bhagat Singh, ?",
+  "o_hi": [
+   "चंद्रशेखर आजाद",
+   "अकबर",
+   "टीपू सुल्तान",
+   "औरंगजेब"
+  ],
+  "o_en": [
+   "Chandrashekhar Azad",
+   "Akbar",
+   "Tipu Sultan",
+   "Aurangzeb"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला भारतीय स्वतंत्रता संग्राम के प्रमुख क्रांतिकारियों और नेताओं को सूचीबद्ध करती है।",
+  "e_en": "This series lists prominent revolutionaries and leaders of the Indian independence movement."
+ },
+ {
+  "id": "rp-rea-j02589",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "नोबेल पुरस्कार विजेताओं के कालानुक्रमिक क्रम में अगला नाम चुनें: रवींद्रनाथ टैगोर, सी.वी. रमन, मदर टेरेसा, ?",
+  "q_en": "Choose the next name in the chronological order of Indian Nobel laureates: Rabindranath Tagore, C.V. Raman, Mother Teresa, ?",
+  "o_hi": [
+   "अमर्त्य सेन",
+   "कैलाश सत्यार्थी",
+   "हरगोविंद खुराना",
+   "एस. चंद्रशेखर"
+  ],
+  "o_en": [
+   "Amartya Sen",
+   "Kailash Satyarthi",
+   "Har Gobind Khorana",
+   "S. Chandrasekhar"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला भारतीय नोबेल विजेताओं को उनके पुरस्कार प्राप्त करने के वर्ष के अनुसार व्यवस्थित करती है।",
+  "e_en": "This series arranges Indian Nobel laureates in order of the year they received the award."
+ },
+ {
+  "id": "rp-rea-j02590",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "भारतीय संविधान के संशोधन वर्षों की श्रृंखला को पूरा करें: 1951, 1976, 1992, ?",
+  "q_en": "Complete the series based on significant Constitutional Amendment years: 1951, 1976, 1992, ?",
+  "o_hi": [
+   "2000",
+   "2002",
+   "2005",
+   "2010"
+  ],
+  "o_en": [
+   "2000",
+   "2002",
+   "2005",
+   "2010"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला क्रमशः पहले संशोधन, 42वें संशोधन, और 73वें/74वें संशोधनों के वर्षों को दर्शाती है।",
+  "e_en": "The series represents the years of the 1st Amendment, 42nd Amendment, and 73rd/74th Amendments respectively."
+ },
+ {
+  "id": "rp-rea-j02591",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "भारतीय राज्यों के गठन के क्रम में लुप्त नाम भरें: आंध्र प्रदेश (1953), केरल (1956), हरियाणा (1966), ?",
+  "q_en": "Fill in the missing name in the sequence of Indian state formation years: Andhra Pradesh (1953), Kerala (1956), Haryana (1966), ?",
+  "o_hi": [
+   "हिमाचल प्रदेश (1971)",
+   "गुजरात (1980)",
+   "सिक्किम (1990)",
+   "गोवा (2000)"
+  ],
+  "o_en": [
+   "Himachal Pradesh (1971)",
+   "Gujarat (1980)",
+   "Sikkim (1990)",
+   "Goa (2000)"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला राज्यों के गठन के वर्षों को कालानुक्रमिक रूप से प्रस्तुत करती है।",
+  "e_en": "This series presents the years of state formation in chronological order."
+ },
+ {
+  "id": "rp-rea-j02592",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अगला शब्द चुनें: हड़प्पा, मोहनजोदड़ो, लोथल, ?",
+  "q_en": "Choose the next term in the series of Indus Valley Civilization sites: Harappa, Mohenjo-daro, Lothal, ?",
+  "o_hi": [
+   "धोलावीरा",
+   "दिल्ली",
+   "पटना",
+   "मुम्बई"
+  ],
+  "o_en": [
+   "Dholavira",
+   "Delhi",
+   "Patna",
+   "Mumbai"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला सिंधु घाटी सभ्यता के प्रमुख पुरातात्विक स्थलों को दर्शाती है।",
+  "e_en": "This series represents key archaeological sites of the Indus Valley Civilization."
+ },
+ {
+  "id": "rp-rea-i02407",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "वृत्ताकार बैठक व्यवस्था में, यदि 'A', 'B' के बाएँ से दूसरे स्थान पर बैठा है, तो 'A' और 'B' के बीच कितने व्यक्ति बैठे हैं?",
+  "q_en": "In a circular seating arrangement, if 'A' is sitting second to the left of 'B', how many people are sitting between 'A' and 'B'?",
+  "o_hi": [
+   "शून्य",
+   "एक",
+   "दो",
+   "तीन"
+  ],
+  "o_en": [
+   "Zero",
+   "One",
+   "Two",
+   "Three"
+  ],
+  "a": 1,
+  "e_hi": "दूसरे स्थान का अर्थ है कि उनके बीच में केवल एक व्यक्ति बैठा है।",
+  "e_en": "Being in the second position means there is exactly one person sitting between them."
+ },
+ {
+  "id": "rp-rea-i02408",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "पहेली को हल करते समय 'सकारात्मक जानकारी' (Positive Information) का क्या अर्थ है?",
+  "q_en": "What is the meaning of 'Positive Information' while solving a puzzle?",
+  "o_hi": [
+   "जो जानकारी किसी के न होने के बारे में हो",
+   "जो जानकारी सीधे तौर पर किसी की स्थिति बताती हो",
+   "जो जानकारी संदिग्ध हो",
+   "जो जानकारी केवल एक व्यक्ति पर लागू हो"
+  ],
+  "o_en": [
+   "Information about who is not present",
+   "Information that directly states a position",
+   "Information that is ambiguous",
+   "Information applicable to only one person"
+  ],
+  "a": 1,
+  "e_hi": "सकारात्मक जानकारी वे तथ्य हैं जो सीधे बताते हैं कि कौन कहाँ बैठा है, जैसे 'A, B के दाईं ओर है'।",
+  "e_en": "Positive information consists of facts that directly state where someone is located, such as 'A is to the right of B'."
+ },
+ {
+  "id": "rp-rea-i02409",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "यदि आठ व्यक्ति एक वर्गाकार मेज के चारों ओर बैठे हैं और उनमें से चार कोनों पर हैं और चार भुजाओं के मध्य में हैं, तो कोनों पर बैठे व्यक्तियों का मुख किस दिशा में होगा?",
+  "q_en": "If eight people are sitting around a square table, four at the corners and four at the middle of the sides, in which direction do the people at the corners face?",
+  "o_hi": [
+   "केंद्र की ओर",
+   "केंद्र से बाहर की ओर",
+   "दाहिनी ओर",
+   "बाईं ओर"
+  ],
+  "o_en": [
+   "Towards the center",
+   "Away from the center",
+   "To the right",
+   "To the left"
+  ],
+  "a": 0,
+  "e_hi": "मानक पहेली व्यवस्था में, मेज के चारों ओर बैठे व्यक्तियों का मुख सामान्यतः केंद्र की ओर माना जाता है।",
+  "e_en": "In standard puzzle arrangements, people sitting around a table are generally assumed to face towards the center."
+ },
+ {
+  "id": "rp-rea-i02410",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "पहेली में 'नकारात्मक जानकारी' (Negative Information) का उपयोग क्यों किया जाता है?",
+  "q_en": "Why is 'Negative Information' used in a puzzle?",
+  "o_hi": [
+   "पहेली को कठिन बनाने के लिए",
+   "संभावित स्थितियों को सीमित करने के लिए",
+   "उत्तर को गलत करने के लिए",
+   "पहेली को लंबा करने के लिए"
+  ],
+  "o_en": [
+   "To make the puzzle difficult",
+   "To eliminate possible positions",
+   "To make the answer incorrect",
+   "To make the puzzle longer"
+  ],
+  "a": 1,
+  "e_hi": "नकारात्मक जानकारी जैसे 'A, B के बगल में नहीं है' उन विकल्पों को हटाने में मदद करती है जो संभव नहीं हैं।",
+  "e_en": "Negative information, such as 'A is not next to B', helps in eliminating positions that are not possible."
+ },
+ {
+  "id": "rp-rea-i02411",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "एक पंक्ति में उत्तर की ओर मुख करके बैठे लोगों के लिए, 'दाएँ से तीसरा' स्थान कौन सा होगा?",
+  "q_en": "For people sitting in a row facing north, which position is 'third from the right'?",
+  "o_hi": [
+   "दाएँ छोर से गिनती करने पर तीसरा स्थान",
+   "बाएँ छोर से गिनती करने पर तीसरा स्थान",
+   "मध्य से तीसरा स्थान",
+   "कोई निश्चित स्थान नहीं"
+  ],
+  "o_en": [
+   "Third position counting from the right end",
+   "Third position counting from the left end",
+   "Third position from the center",
+   "No fixed position"
+  ],
+  "a": 0,
+  "e_hi": "जब मुख उत्तर की ओर होता है, तो दायां हाथ दाईं दिशा में ही होता है, इसलिए गणना दाईं ओर से की जाती है।",
+  "e_en": "When facing north, the right hand is towards the right direction, so the count is taken from the right end."
+ },
+ {
+  "id": "rp-rea-i02412",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "यदि किसी बैठक व्यवस्था में 'A, B के बाएँ से तीसरा है', तो इसका अर्थ क्या है?",
+  "q_en": "If in a seating arrangement 'A is third to the left of B', what does it mean?",
+  "o_hi": [
+   "A और B के बीच दो व्यक्ति हैं",
+   "A और B के बीच तीन व्यक्ति हैं",
+   "A और B के बीच एक व्यक्ति है",
+   "A और B के बीच चार व्यक्ति हैं"
+  ],
+  "o_en": [
+   "There are two people between A and B",
+   "There are three people between A and B",
+   "There is one person between A and B",
+   "There are four people between A and B"
+  ],
+  "a": 0,
+  "e_hi": "तीसरा बायाँ होने का अर्थ है कि B के बाद पहला, दूसरा और फिर तीसरे स्थान पर A है, यानी बीच में दो स्थान खाली हैं।",
+  "e_en": "Being third to the left means there is the first, second, and then third position where A sits, leaving two people in between."
+ },
+ {
+  "id": "rp-rea-i02413",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "पहेली में 'सन्निकट' (Adjacent) शब्द का क्या अर्थ है?",
+  "q_en": "What is the meaning of the word 'Adjacent' in a puzzle?",
+  "o_hi": [
+   "विपरीत दिशा में बैठा होना",
+   "बगल में या साथ में बैठा होना",
+   "एक ही पंक्ति में होना",
+   "एक ही समूह का होना"
+  ],
+  "o_en": [
+   "Sitting in the opposite direction",
+   "Sitting next to or beside someone",
+   "Being in the same row",
+   "Belonging to the same group"
+  ],
+  "a": 1,
+  "e_hi": "सन्निकट का अर्थ है कि दो व्यक्ति एक-दूसरे के तुरंत बगल में बैठे हैं।",
+  "e_en": "Adjacent means that two people are sitting immediately next to each other."
+ },
+ {
+  "id": "rp-rea-i02414",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 3,
+  "q_hi": "यदि एक वृत्ताकार मेज पर बैठे व्यक्तियों की संख्या विषम (Odd) है, तो क्या वे सभी एक-दूसरे के बिल्कुल विपरीत बैठ सकते हैं?",
+  "q_en": "If the number of people sitting at a circular table is odd, can they all sit exactly opposite to each other?",
+  "o_hi": [
+   "हाँ, हमेशा",
+   "नहीं, कभी नहीं",
+   "केवल तीन व्यक्ति",
+   "केवल पांच व्यक्ति"
+  ],
+  "o_en": [
+   "Yes, always",
+   "No, never",
+   "Only three people",
+   "Only five people"
+  ],
+  "a": 1,
+  "e_hi": "किसी के बिल्कुल विपरीत होने के लिए कुल संख्या सम (Even) होनी चाहिए ताकि जोड़े बन सकें।",
+  "e_en": "To have someone exactly opposite, the total number must be even so that pairs can be formed."
+ },
+ {
+  "id": "rp-rea-i02415",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "तर्कशक्ति के प्रश्नों में 'संभावना' (Possibility) का उपयोग कब किया जाता है?",
+  "q_en": "When is 'Possibility' used in reasoning questions?",
+  "o_hi": [
+   "जब सभी जानकारी स्पष्ट हो",
+   "जब जानकारी अपर्याप्त हो",
+   "जब प्रश्न गलत हो",
+   "जब उत्तर पहले से पता हो"
+  ],
+  "o_en": [
+   "When all information is clear",
+   "When information is insufficient",
+   "When the question is wrong",
+   "When the answer is already known"
+  ],
+  "a": 1,
+  "e_hi": "जब पहेली में दो या अधिक स्थितियाँ संभव होती हैं, तो हम संभावनाओं का उपयोग करके सही स्थिति का पता लगाते हैं।",
+  "e_en": "When two or more positions are possible in a puzzle, we use possibilities to determine the correct arrangement."
+ },
+ {
+  "id": "rp-rea-j02593",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दी गई संख्या श्रृंखला में लुप्त पद ज्ञात कीजिए: 5, 11, 23, 47, ?",
+  "q_en": "Find the missing term in the given number series: 5, 11, 23, 47, ?",
+  "o_hi": [
+   "95",
+   "91",
+   "97",
+   "89"
+  ],
+  "o_en": [
+   "95",
+   "91",
+   "97",
+   "89"
+  ],
+  "a": 0,
+  "e_hi": "श्रृंखला में प्रत्येक पद को 2 से गुणा करके 1 जोड़ा गया है। 47 गुणा 2 जमा 1 बराबर 95।",
+  "e_en": "Each term in the series is multiplied by 2 and then 1 is added. 47 multiplied by 2 plus 1 equals 95."
+ },
+ {
+  "id": "rp-rea-j02594",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अक्षरों की इस श्रृंखला को पूर्ण करें: A, D, G, J, ?",
+  "q_en": "Complete the following letter series: A, D, G, J, ?",
+  "o_hi": [
+   "L",
+   "M",
+   "N",
+   "O"
+  ],
+  "o_en": [
+   "L",
+   "M",
+   "N",
+   "O"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक अक्षर के बीच 3 का अंतर है। J के बाद 3 स्थान आगे M आता है।",
+  "e_en": "There is a gap of 3 letters between each term. The letter 3 positions after J is M."
+ },
+ {
+  "id": "rp-rea-j02595",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "निम्नलिखित श्रृंखला में गलत संख्या पहचानें: 2, 4, 8, 16, 30, 64",
+  "q_en": "Identify the incorrect number in the following series: 2, 4, 8, 16, 30, 64",
+  "o_hi": [
+   "4",
+   "8",
+   "30",
+   "64"
+  ],
+  "o_en": [
+   "4",
+   "8",
+   "30",
+   "64"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला 2 की घातों (powers) पर आधारित है। 30 के स्थान पर 32 होना चाहिए।",
+  "e_en": "The series is based on powers of 2. 32 should be there instead of 30."
+ },
+ {
+  "id": "rp-rea-j02596",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से कौन सा अक्षर समूह श्रृंखला को पूरा करेगा: B2D, D4F, F6H, ?",
+  "q_en": "Which letter group will complete the series from the given options: B2D, D4F, F6H, ?",
+  "o_hi": [
+   "H8J",
+   "H8I",
+   "I8J",
+   "G8H"
+  ],
+  "o_en": [
+   "H8J",
+   "H8I",
+   "I8J",
+   "G8H"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर दो-दो स्थान आगे बढ़ रहे हैं और संख्या में 2 की वृद्धि हो रही है। अगला पद H8J होगा।",
+  "e_en": "Letters move forward by two positions and the number increases by 2. The next term is H8J."
+ },
+ {
+  "id": "rp-rea-j02597",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात कीजिए: 100, 95, 85, 70, ?",
+  "q_en": "Find the missing number in the series: 100, 95, 85, 70, ?",
+  "o_hi": [
+   "55",
+   "50",
+   "60",
+   "45"
+  ],
+  "o_en": [
+   "55",
+   "50",
+   "60",
+   "45"
+  ],
+  "a": 1,
+  "e_hi": "घटाव का क्रम 5, 10, 15 है, इसलिए अगली संख्या 70-20 = 50 होगी।",
+  "e_en": "The subtraction pattern is 5, 10, 15, so the next number is 70-20 = 50."
+ },
+ {
+  "id": "rp-rea-j02598",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अनुपात के आधार पर सही विकल्प चुनें: 5 : 25 :: 8 : ?",
+  "q_en": "Choose the correct option based on analogy: 5 : 25 :: 8 : ?",
+  "o_hi": [
+   "40",
+   "64",
+   "56",
+   "48"
+  ],
+  "o_en": [
+   "40",
+   "64",
+   "56",
+   "48"
+  ],
+  "a": 1,
+  "e_hi": "यह संख्या का वर्ग है, इसलिए 8 का वर्ग 64 होगा।",
+  "e_en": "This is the square of the number, so the square of 8 is 64."
+ },
+ {
+  "id": "rp-rea-j02599",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में अगला पद क्या होगा: Z, X, V, T, R, ?",
+  "q_en": "What will be the next term in the series: Z, X, V, T, R, ?",
+  "o_hi": [
+   "P",
+   "Q",
+   "O",
+   "N"
+  ],
+  "o_en": [
+   "P",
+   "Q",
+   "O",
+   "N"
+  ],
+  "a": 0,
+  "e_hi": "यह श्रृंखला वर्णमाला में दो-दो स्थान पीछे की ओर जा रही है। R से दो स्थान पीछे P आता है।",
+  "e_en": "This series moves backward by two positions in the alphabet. Two positions before R is P."
+ },
+ {
+  "id": "rp-rea-j02600",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "नीचे दी गई श्रृंखला में लुप्त अंक ज्ञात कीजिए: 2, 6, 12, 20, 30, 42, ?",
+  "q_en": "Find the missing digit in the series given below: 2, 6, 12, 20, 30, 42, ?",
+  "o_hi": [
+   "52",
+   "56",
+   "54",
+   "58"
+  ],
+  "o_en": [
+   "52",
+   "56",
+   "54",
+   "58"
+  ],
+  "a": 1,
+  "e_hi": "अंतर का क्रम 4, 6, 8, 10, 12 है, इसलिए अगला अंतर 14 होगा। 42+14 = 56।",
+  "e_en": "The difference pattern is 4, 6, 8, 10, 12, so the next difference is 14. 42+14 = 56."
+ },
+ {
+  "id": "rp-rea-j02601",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "निम्नलिखित श्रृंखला में विषम (odd) पद ज्ञात कीजिए: 3, 5, 7, 11, 13, 17, 19, 23, 25",
+  "q_en": "Find the odd term in the following series: 3, 5, 7, 11, 13, 17, 19, 23, 25",
+  "o_hi": [
+   "13",
+   "25",
+   "17",
+   "7"
+  ],
+  "o_en": [
+   "13",
+   "25",
+   "17",
+   "7"
+  ],
+  "a": 1,
+  "e_hi": "दी गई श्रृंखला अभाज्य (prime) संख्याओं की है, जबकि 25 एक भाज्य संख्या है।",
+  "e_en": "The given series consists of prime numbers, whereas 25 is a composite number."
+ },
+ {
+  "id": "rp-rea-j02602",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में गलत संख्या का चयन करें: 2, 5, 10, 17, 26, 38",
+  "q_en": "Identify the incorrect number in the series: 2, 5, 10, 17, 26, 38",
+  "o_hi": [
+   "26",
+   "38",
+   "17",
+   "10"
+  ],
+  "o_en": [
+   "26",
+   "38",
+   "17",
+   "10"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला n^2 + 1 के रूप में है (1^2+1=2, 2^2+1=5...)। 6^2+1=37 होना चाहिए, लेकिन यहाँ 38 है।",
+  "e_en": "The series follows the pattern n^2 + 1 (1^2+1=2, 2^2+1=5...). 6^2+1 should be 37, but here it is 38."
+ },
+ {
+  "id": "rp-rea-j02603",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दी गई श्रृंखला में अगला पद क्या होगा: 3, 7, 15, 31, 63, ?",
+  "q_en": "What will be the next term in the given series: 3, 7, 15, 31, 63, ?",
+  "o_hi": [
+   "127",
+   "125",
+   "129",
+   "126"
+  ],
+  "o_en": [
+   "127",
+   "125",
+   "129",
+   "126"
+  ],
+  "a": 0,
+  "e_hi": "पदों के बीच का अंतर 4, 8, 16, 32 है, जो कि 2 की घात में बढ़ रहा है। अगला अंतर 64 होगा, इसलिए 63+64=127।",
+  "e_en": "The difference between terms is 4, 8, 16, 32, which are powers of 2. The next difference is 64, so 63+64=127."
+ },
+ {
+  "id": "rp-rea-j02604",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षर श्रृंखला को पूर्ण करें: BMO, EOQ, HQS, ?",
+  "q_en": "Complete the letter series: BMO, EOQ, HQS, ?",
+  "o_hi": [
+   "KSU",
+   "JSU",
+   "KSV",
+   "KTU"
+  ],
+  "o_en": [
+   "KSU",
+   "JSU",
+   "KSV",
+   "KTU"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर समूह का पहला अक्षर 3 स्थान आगे बढ़ता है (B->E->H->K)। इसी प्रकार मध्य और अंतिम अक्षर भी 2 स्थान आगे बढ़ते हैं।",
+  "e_en": "The first letter of each group moves forward by 3 positions (B->E->H->K). Similarly, the middle and last letters also move forward by 2 positions."
+ },
+ {
+  "id": "rp-rea-j02605",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "संख्या श्रृंखला में लुप्त संख्या ज्ञात करें: 1, 4, 9, 16, 25, ?",
+  "q_en": "Find the missing number in the number series: 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "36",
+   "49",
+   "64",
+   "35"
+  ],
+  "o_en": [
+   "36",
+   "49",
+   "64",
+   "35"
+  ],
+  "a": 0,
+  "e_hi": "यह प्राकृतिक संख्याओं के वर्ग की श्रृंखला है (1^2, 2^2, 3^2, 4^2, 5^2)। अगली संख्या 6^2 यानी 36 होगी।",
+  "e_en": "This is a series of squares of natural numbers (1^2, 2^2, 3^2, 4^2, 5^2). The next number is 6^2, which is 36."
+ },
+ {
+  "id": "rp-rea-j02606",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला का अगला पद ज्ञात कीजिए: 8, 24, 12, 36, 18, 54, ?",
+  "q_en": "Find the next term of the series: 8, 24, 12, 36, 18, 54, ?",
+  "o_hi": [
+   "27",
+   "28",
+   "26",
+   "29"
+  ],
+  "o_en": [
+   "27",
+   "28",
+   "26",
+   "29"
+  ],
+  "a": 0,
+  "e_hi": "श्रृंखला में दो क्रियाएँ बारी-बारी से हो रही हैं: *3 और /2। (54/2 = 27)।",
+  "e_en": "The series follows an alternating pattern of *3 and /2. (54/2 = 27)."
+ },
+ {
+  "id": "rp-rea-j02607",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "दी गई श्रृंखला में लुप्त पद क्या है: 0, 6, 24, 60, 120, ?",
+  "q_en": "What is the missing term in the given series: 0, 6, 24, 60, 120, ?",
+  "o_hi": [
+   "210",
+   "180",
+   "240",
+   "150"
+  ],
+  "o_en": [
+   "210",
+   "180",
+   "240",
+   "150"
+  ],
+  "a": 0,
+  "e_hi": "यह n^3 - n के रूप में है (1^3-1=0, 2^3-2=6, 3^3-3=24...)। 6^3-6 = 216-6 = 210।",
+  "e_en": "This follows the pattern n^3 - n (1^3-1=0, 2^3-2=6, 3^3-3=24...). 6^3-6 = 216-6 = 210."
+ },
+ {
+  "id": "rp-rea-j02608",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अक्षर श्रृंखला में लुप्त पद भरें: AZ, BY, CX, ?",
+  "q_en": "Fill in the missing term in the letter series: AZ, BY, CX, ?",
+  "o_hi": [
+   "DW",
+   "EV",
+   "DX",
+   "CW"
+  ],
+  "o_en": [
+   "DW",
+   "EV",
+   "DX",
+   "CW"
+  ],
+  "a": 0,
+  "e_hi": "पहला अक्षर वर्णमाला के क्रम में आगे बढ़ रहा है (A, B, C, D) और दूसरा अक्षर पीछे की ओर (Z, Y, X, W)।",
+  "e_en": "The first letter moves forward in alphabetical order (A, B, C, D) and the second letter moves backward (Z, Y, X, W)."
+ },
+ {
+  "id": "rp-rea-j02609",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला को पूरा करें: 1, 2, 6, 21, 88, ?",
+  "q_en": "Complete the series: 1, 2, 6, 21, 88, ?",
+  "o_hi": [
+   "445",
+   "440",
+   "450",
+   "435"
+  ],
+  "o_en": [
+   "445",
+   "440",
+   "450",
+   "435"
+  ],
+  "a": 0,
+  "e_hi": "तर्क है: (1*1+1=2), (2*2+2=6), (6*3+3=21), (21*4+4=88), (88*5+5=445)।",
+  "e_en": "The logic is: (1*1+1=2), (2*2+2=6), (6*3+3=21), (21*4+4=88), (88*5+5=445)."
  }
 ]
