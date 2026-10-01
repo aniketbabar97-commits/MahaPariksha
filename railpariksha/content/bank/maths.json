@@ -53579,5 +53579,672 @@
   "a": 2,
   "e_hi": "2 वर्षों के लिए प्रभावी दर = 10 + 10 + (10*10/100) = 21%。 2000 का 21% = 420 रुपये।",
   "e_en": "Effective rate for 2 years = 10 + 10 + (10*10/100) = 21%. 21% of 2000 = Rs 420."
+ },
+ {
+  "id": "rp-mat-g202202",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि एक निश्चित राशि पर 2 वर्षों के लिए 10% की दर से साधारण ब्याज और चक्रवृद्धि ब्याज के बीच का अंतर 50 रुपये है, तो वह मूलधन क्या है?",
+  "q_en": "If the difference between simple interest and compound interest on a certain sum for 2 years at 10% per annum is 50 rupees, what is the principal amount?",
+  "o_hi": [
+   "4,500 रुपये",
+   "5,000 रुपये",
+   "5,500 रुपये",
+   "6,000 रुपये"
+  ],
+  "o_en": [
+   "4,500 rupees",
+   "5,000 rupees",
+   "5,500 rupees",
+   "6,000 rupees"
+  ],
+  "a": 1,
+  "e_hi": "2 वर्षों के लिए अंतर का सूत्र है: P * (R/100)^2. यहाँ 50 = P * (0.1)^2, जिससे P = 5000 प्राप्त होता है।",
+  "e_en": "The formula for the difference over 2 years is P * (R/100)^2. Here, 50 = P * (0.1)^2, which gives P = 5000."
+ },
+ {
+  "id": "rp-mat-g202203",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "कौन सा विकल्प 10,000 रुपये पर 10% की दर से 2 वर्षों के लिए चक्रवृद्धि ब्याज का सही मान दर्शाता है?",
+  "q_en": "Which option represents the correct compound interest on 10,000 rupees for 2 years at 10% per annum?",
+  "o_hi": [
+   "1,000 रुपये",
+   "2,000 रुपये",
+   "2,100 रुपये",
+   "1,200 रुपये"
+  ],
+  "o_en": [
+   "1,000 rupees",
+   "2,000 rupees",
+   "2,100 rupees",
+   "1,200 rupees"
+  ],
+  "a": 2,
+  "e_hi": "चक्रवृद्धि ब्याज = P * (1 + R/100)^n - P. गणना करने पर 12,100 - 10,000 = 2,100 रुपये प्राप्त होते हैं।",
+  "e_en": "Compound Interest = P * (1 + R/100)^n - P. Calculating this gives 12,100 - 10,000 = 2,100 rupees."
+ },
+ {
+  "id": "rp-mat-g202204",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि साधारण ब्याज की दर 5% से बढ़कर 7% हो जाती है, तो 2,000 रुपये पर 3 वर्षों का अतिरिक्त ब्याज कितना होगा?",
+  "q_en": "If the simple interest rate increases from 5% to 7%, what will be the additional interest on 2,000 rupees for 3 years?",
+  "o_hi": [
+   "80 रुपये",
+   "100 रुपये",
+   "120 रुपये",
+   "140 रुपये"
+  ],
+  "o_en": [
+   "80 rupees",
+   "100 rupees",
+   "120 rupees",
+   "140 rupees"
+  ],
+  "a": 2,
+  "e_hi": "ब्याज में अंतर = 2000 * (7-5)% * 3 = 2000 * 0.02 * 3 = 120 रुपये।",
+  "e_en": "Difference in interest = 2000 * (7-5)% * 3 = 2000 * 0.02 * 3 = 120 rupees."
+ },
+ {
+  "id": "rp-mat-g202205",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से किस स्थिति में साधारण ब्याज सबसे अधिक होगा?",
+  "q_en": "In which of the following cases will the simple interest be the highest?",
+  "o_hi": [
+   "1000 रुपये पर 5% की दर से 4 वर्ष",
+   "2000 रुपये पर 4% की दर से 3 वर्ष",
+   "1500 रुपये पर 6% की दर से 3 वर्ष",
+   "1200 रुपये पर 8% की दर से 3 वर्ष"
+  ],
+  "o_en": [
+   "1000 rupees at 5% for 4 years",
+   "2000 rupees at 4% for 3 years",
+   "1500 rupees at 6% for 3 years",
+   "1200 rupees at 8% for 3 years"
+  ],
+  "a": 2,
+  "e_hi": "ब्याज की गणना करें: 200, 240, 270, 288. अंतिम विकल्प में ब्याज सबसे अधिक है।",
+  "e_en": "Calculate the interest: 200, 240, 270, 288. The last option yields the highest interest."
+ },
+ {
+  "id": "rp-mat-g202206",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 3,
+  "q_hi": "एक राशि 5 वर्षों में साधारण ब्याज पर दोगुनी हो जाती है। उसी ब्याज दर पर वह राशि कितने वर्षों में चार गुनी हो जाएगी?",
+  "q_en": "A sum doubles itself in 5 years at simple interest. In how many years will it become four times at the same rate?",
+  "o_hi": [
+   "10 वर्ष",
+   "15 वर्ष",
+   "20 वर्ष",
+   "25 वर्ष"
+  ],
+  "o_en": [
+   "10 years",
+   "15 years",
+   "20 years",
+   "25 years"
+  ],
+  "a": 1,
+  "e_hi": "दोगुना होने का मतलब है ब्याज मूलधन के बराबर है। चार गुना होने के लिए ब्याज मूलधन का तीन गुना होना चाहिए, जो 15 वर्षों में होगा।",
+  "e_en": "Doubling means interest equals principal. To become four times, interest must be three times the principal, which takes 15 years."
+ },
+ {
+  "id": "rp-mat-g202207",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि चक्रवृद्धि ब्याज वार्षिक रूप से संयोजित होता है, तो 800 रुपये का 5% प्रति वर्ष की दर से 2 वर्षों का चक्रवृद्धि ब्याज क्या होगा?",
+  "q_en": "If compound interest is compounded annually, what will be the compound interest on 800 rupees at 5% per annum for 2 years?",
+  "o_hi": [
+   "80 रुपये",
+   "82 रुपये",
+   "84 रुपये",
+   "86 रुपये"
+  ],
+  "o_en": [
+   "80 rupees",
+   "82 rupees",
+   "84 rupees",
+   "86 rupees"
+  ],
+  "a": 1,
+  "e_hi": "मिश्रधन = 800 * (1.05)^2 = 882. ब्याज = 882 - 800 = 82 रुपये।",
+  "e_en": "Amount = 800 * (1.05)^2 = 882. Interest = 882 - 800 = 82 rupees."
+ },
+ {
+  "id": "rp-mat-g202208",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "कौन सा ब्याज प्रकार अधिक लाभप्रद है यदि दर और समय समान हों?",
+  "q_en": "Which type of interest is more profitable if the rate and time are the same?",
+  "o_hi": [
+   "साधारण ब्याज",
+   "चक्रवृद्धि ब्याज",
+   "दोनों समान हैं",
+   "ब्याज दर पर निर्भर नहीं करता"
+  ],
+  "o_en": [
+   "Simple interest",
+   "Compound interest",
+   "Both are equal",
+   "Does not depend on interest rate"
+  ],
+  "a": 1,
+  "e_hi": "चक्रवृद्धि ब्याज में ब्याज पर भी ब्याज मिलता है, इसलिए यह हमेशा साधारण ब्याज से अधिक होता है।",
+  "e_en": "Compound interest earns interest on interest, making it always higher than simple interest."
+ },
+ {
+  "id": "rp-mat-g202209",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 3,
+  "q_hi": "यदि 1,000 रुपये का 10% की दर से 3 वर्षों का साधारण ब्याज और चक्रवृद्धि ब्याज का अंतर ज्ञात करें।",
+  "q_en": "Find the difference between simple interest and compound interest on 1,000 rupees at 10% for 3 years.",
+  "o_hi": [
+   "10 रुपये",
+   "20 रुपये",
+   "31 रुपये",
+   "41 रुपये"
+  ],
+  "o_en": [
+   "10 rupees",
+   "20 rupees",
+   "31 rupees",
+   "41 rupees"
+  ],
+  "a": 2,
+  "e_hi": "SI = 300, CI = 1000 * (1.1)^3 - 1000 = 331. अंतर = 331 - 300 = 31 रुपये।",
+  "e_en": "SI = 300, CI = 1000 * (1.1)^3 - 1000 = 331. Difference = 331 - 300 = 31 rupees."
+ },
+ {
+  "id": "rp-mat-g202210",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि कोई राशि 2 वर्षों में 10% प्रति वर्ष की दर से 605 रुपये हो जाती है, तो मूलधन क्या है?",
+  "q_en": "If a sum becomes 605 rupees in 2 years at 10% per annum compound interest, what is the principal?",
+  "o_hi": [
+   "450 रुपये",
+   "500 रुपये",
+   "550 रुपये",
+   "600 रुपये"
+  ],
+  "o_en": [
+   "450 rupees",
+   "500 rupees",
+   "550 rupees",
+   "600 rupees"
+  ],
+  "a": 1,
+  "e_hi": "P * (1.1)^2 = 605. P * 1.21 = 605. P = 605 / 1.21 = 500 रुपये।",
+  "e_en": "P * (1.1)^2 = 605. P * 1.21 = 605. P = 605 / 1.21 = 500 rupees."
+ },
+ {
+  "id": "rp-mat-g202211",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 3,
+  "q_hi": "यदि ब्याज अर्धवार्षिक रूप से संयोजित हो, तो 10% वार्षिक दर से 1 वर्ष के लिए प्रभावी दर क्या होगी?",
+  "q_en": "If interest is compounded half-yearly, what will be the effective rate for 1 year at 10% per annum?",
+  "o_hi": [
+   "10%",
+   "10.25%",
+   "10.5%",
+   "11%"
+  ],
+  "o_en": [
+   "10%",
+   "10.25%",
+   "10.5%",
+   "11%"
+  ],
+  "a": 1,
+  "e_hi": "अर्धवार्षिक दर = 5%, समय = 2 अवधि। प्रभावी दर = 5 + 5 + (5*5)/100 = 10.25%.",
+  "e_en": "Half-yearly rate = 5%, time = 2 periods. Effective rate = 5 + 5 + (5*5)/100 = 10.25%."
+ },
+ {
+  "id": "rp-mat-g202212",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "यदि साधारण ब्याज और चक्रवृद्धि ब्याज की समान दरें समान समय अवधि के लिए दी गई हैं, तो कौन सा कथन सदैव सत्य होगा?",
+  "q_en": "If simple interest and compound interest are offered at the same rate for the same time period, which of the following statements is always true?",
+  "o_hi": [
+   "चक्रवृद्धि ब्याज हमेशा साधारण ब्याज के बराबर होता है",
+   "चक्रवृद्धि ब्याज हमेशा साधारण ब्याज से अधिक या बराबर होता है",
+   "साधारण ब्याज हमेशा चक्रवृद्धि ब्याज से अधिक होता है",
+   "ब्याज की दर पर निर्भर नहीं करता है"
+  ],
+  "o_en": [
+   "Compound interest is always equal to simple interest",
+   "Compound interest is always greater than or equal to simple interest",
+   "Simple interest is always greater than compound interest",
+   "Does not depend on the rate of interest"
+  ],
+  "a": 1,
+  "e_hi": "चक्रवृद्धि ब्याज में मूलधन के साथ-साथ ब्याज पर भी ब्याज मिलता है, इसलिए यह साधारण ब्याज से अधिक होता है।",
+  "e_en": "Compound interest includes interest on interest, making it greater than or equal to simple interest over the same period."
+ },
+ {
+  "id": "rp-mat-g202213",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "दो वर्षों के लिए 10% प्रति वर्ष की दर से 1000 रुपये पर साधारण ब्याज और चक्रवृद्धि ब्याज का अंतर क्या होगा?",
+  "q_en": "What will be the difference between simple interest and compound interest on 1000 rupees for two years at a rate of 10% per annum?",
+  "o_hi": [
+   "10 रुपये",
+   "20 रुपये",
+   "5 रुपये",
+   "15 रुपये"
+  ],
+  "o_en": [
+   "10 rupees",
+   "20 rupees",
+   "5 rupees",
+   "15 rupees"
+  ],
+  "a": 0,
+  "e_hi": "दो वर्षों के लिए अंतर का सूत्र है: P * (R/100)^2 = 1000 * (10/100)^2 = 10 रुपये।",
+  "e_en": "The formula for the difference over two years is P * (R/100)^2 = 1000 * (0.1)^2 = 10 rupees."
+ },
+ {
+  "id": "rp-mat-g202214",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से किस स्थिति में साधारण ब्याज और चक्रवृद्धि ब्याज पहले वर्ष के लिए समान होंगे?",
+  "q_en": "In which of the following cases will simple interest and compound interest be equal for the first year?",
+  "o_hi": [
+   "केवल 5% ब्याज दर पर",
+   "केवल 10% ब्याज दर पर",
+   "किसी भी ब्याज दर पर",
+   "कभी समान नहीं होते"
+  ],
+  "o_en": [
+   "Only at 5% interest rate",
+   "Only at 10% interest rate",
+   "At any interest rate",
+   "Never equal"
+  ],
+  "a": 2,
+  "e_hi": "पहले वर्ष के अंत में, चक्रवृद्धि ब्याज की गणना मूलधन पर ही की जाती है, जो साधारण ब्याज के समान ही होती है।",
+  "e_en": "At the end of the first year, compound interest is calculated on the principal only, which is identical to simple interest."
+ },
+ {
+  "id": "rp-mat-g202215",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि कोई राशि चक्रवृद्धि ब्याज पर 3 वर्षों में दोगुनी हो जाती है, तो वह उसी दर पर 6 वर्षों में कितनी हो जाएगी?",
+  "q_en": "If a sum of money doubles itself in 3 years at compound interest, how much will it become in 6 years at the same rate?",
+  "o_hi": [
+   "तीन गुना",
+   "चार गुना",
+   "छह गुना",
+   "आठ गुना"
+  ],
+  "o_en": [
+   "Three times",
+   "Four times",
+   "Six times",
+   "Eight times"
+  ],
+  "a": 1,
+  "e_hi": "चक्रवृद्धि ब्याज में यदि राशि n वर्षों में x गुना होती है, तो 2n वर्षों में वह x^2 गुना हो जाती है।",
+  "e_en": "In compound interest, if a sum becomes x times in n years, it becomes x^2 times in 2n years."
+ },
+ {
+  "id": "rp-mat-g202216",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "साधारण ब्याज की गणना किस पर की जाती है?",
+  "q_en": "On what is simple interest calculated?",
+  "o_hi": [
+   "केवल मूलधन पर",
+   "मूलधन और पिछले ब्याज पर",
+   "केवल अंतिम राशि पर",
+   "समय के वर्ग पर"
+  ],
+  "o_en": [
+   "Only on principal",
+   "On principal and previous interest",
+   "Only on final amount",
+   "On the square of time"
+  ],
+  "a": 0,
+  "e_hi": "साधारण ब्याज हमेशा मूलधन पर ही लगाया जाता है, जबकि चक्रवृद्धि ब्याज में ब्याज पर भी ब्याज लगता है।",
+  "e_en": "Simple interest is always calculated on the principal, whereas compound interest includes interest on the accumulated interest."
+ },
+ {
+  "id": "rp-mat-g202217",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि ब्याज की दर 20% वार्षिक है, तो 2 वर्षों के लिए चक्रवृद्धि ब्याज और साधारण ब्याज का प्रभावी अंतर प्रतिशत में क्या होगा?",
+  "q_en": "If the rate of interest is 20% per annum, what will be the effective difference between compound interest and simple interest for 2 years in percentage?",
+  "o_hi": [
+   "2%",
+   "4%",
+   "5%",
+   "10%"
+  ],
+  "o_en": [
+   "2%",
+   "4%",
+   "5%",
+   "10%"
+  ],
+  "a": 1,
+  "e_hi": "प्रभावी अंतर का सूत्र R^2/100 है। यहाँ 20^2/100 = 400/100 = 4%।",
+  "e_en": "The formula for the effective percentage difference is R^2/100. Here, 20^2/100 = 400/100 = 4%."
+ },
+ {
+  "id": "rp-mat-g202218",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "चक्रवृद्धि ब्याज की तुलना में साधारण ब्याज की मुख्य विशेषता क्या है?",
+  "q_en": "What is the main characteristic of simple interest compared to compound interest?",
+  "o_hi": [
+   "यह समय के साथ तेजी से बढ़ता है",
+   "यह हर अवधि के लिए समान रहता है",
+   "यह ब्याज पर ब्याज जोड़ता है",
+   "यह निवेश के लिए अधिक लाभदायक है"
+  ],
+  "o_en": [
+   "It grows faster over time",
+   "It remains constant for every period",
+   "It adds interest on interest",
+   "It is more profitable for investment"
+  ],
+  "a": 1,
+  "e_hi": "साधारण ब्याज प्रत्येक वर्ष मूलधन के एक निश्चित प्रतिशत के रूप में समान रहता है।",
+  "e_en": "Simple interest remains the same as a fixed percentage of the principal for each year."
+ },
+ {
+  "id": "rp-mat-g202219",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 3,
+  "q_hi": "यदि 1000 रुपये पर 10% की दर से 3 वर्षों के लिए साधारण ब्याज और चक्रवृद्धि ब्याज का अंतर ज्ञात करना हो, तो क्या होगा?",
+  "q_en": "If you want to find the difference between simple interest and compound interest on 1000 rupees at 10% for 3 years, what will it be?",
+  "o_hi": [
+   "10 रुपये",
+   "21 रुपये",
+   "31 रुपये",
+   "41 रुपये"
+  ],
+  "o_en": [
+   "10 rupees",
+   "21 rupees",
+   "31 rupees",
+   "41 rupees"
+  ],
+  "a": 2,
+  "e_hi": "3 वर्षों के लिए अंतर का सूत्र P * (R/100)^2 * (3 + R/100) है। 1000 * 0.01 * 3.1 = 31 रुपये।",
+  "e_en": "The formula for 3 years difference is P * (R/100)^2 * (3 + R/100). 1000 * 0.01 * 3.1 = 31 rupees."
+ },
+ {
+  "id": "rp-mat-g202220",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "कौन सा विकल्प ब्याज की गणना की आवृत्ति को दर्शाता है जो चक्रवृद्धि ब्याज को साधारण ब्याज से अलग बनाता है?",
+  "q_en": "Which option represents the frequency of interest calculation that makes compound interest different from simple interest?",
+  "o_hi": [
+   "त्रैमासिक या वार्षिक आधार पर ब्याज का संयोजन",
+   "केवल वार्षिक साधारण गणना",
+   "निश्चित समय के बाद ब्याज का भुगतान न करना",
+   "मूलधन को कम करना"
+  ],
+  "o_en": [
+   "Compounding interest quarterly or annually",
+   "Annual simple calculation only",
+   "Not paying interest after a fixed time",
+   "Reducing the principal"
+  ],
+  "a": 0,
+  "e_hi": "चक्रवृद्धि ब्याज में ब्याज को मूलधन में जोड़ा जाता है (संयोजन), जिससे भविष्य की गणनाओं के लिए आधार बढ़ जाता है।",
+  "e_en": "In compound interest, interest is added to the principal (compounding), which increases the base for future calculations."
+ },
+ {
+  "id": "rp-mat-g202221",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि किसी बैंक में 5% साधारण ब्याज और 5% चक्रवृद्धि ब्याज का विकल्प हो, तो 10 वर्षों के निवेश के लिए क्या बेहतर है?",
+  "q_en": "If a bank offers 5% simple interest and 5% compound interest, which is better for a 10-year investment?",
+  "o_hi": [
+   "साधारण ब्याज",
+   "चक्रवृद्धि ब्याज",
+   "दोनों समान हैं",
+   "निवेश की राशि पर निर्भर नहीं करता"
+  ],
+  "o_en": [
+   "Simple interest",
+   "Compound interest",
+   "Both are equal",
+   "Does not depend on the investment amount"
+  ],
+  "a": 1,
+  "e_hi": "लंबी अवधि के लिए, चक्रवृद्धि ब्याज हमेशा साधारण ब्याज से अधिक लाभ देता है क्योंकि इसमें ब्याज पर ब्याज मिलता है।",
+  "e_en": "For long-term investments, compound interest always yields higher returns than simple interest because of the power of compounding."
+ },
+ {
+  "id": "rp-mat-g202222",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "साधारण ब्याज की गणना किस मूलधन पर की जाती है?",
+  "q_en": "On which principal amount is simple interest calculated?",
+  "o_hi": [
+   "केवल अंतिम वर्ष के मूलधन पर",
+   "प्रतिवर्ष बदलते हुए मूलधन पर",
+   "मूल निवेशित राशि पर",
+   "चक्रवृद्धि ब्याज के योग पर"
+  ],
+  "o_en": [
+   "Only on the final year principal",
+   "On the annually changing principal",
+   "On the original invested amount",
+   "On the sum of compound interest"
+  ],
+  "a": 2,
+  "e_hi": "साधारण ब्याज हमेशा मूल निवेशित राशि (मूलधन) पर ही लगाया जाता है, जो पूरी अवधि के लिए स्थिर रहता है।",
+  "e_en": "Simple interest is always calculated on the original invested amount (principal), which remains constant throughout the tenure."
+ },
+ {
+  "id": "rp-mat-g202223",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "चक्रवृद्धि ब्याज की मुख्य विशेषता क्या है?",
+  "q_en": "What is the key characteristic of compound interest?",
+  "o_hi": [
+   "ब्याज पर ब्याज लगना",
+   "ब्याज का स्थिर रहना",
+   "मूलधन का कम होना",
+   "समय का प्रभाव न पड़ना"
+  ],
+  "o_en": [
+   "Interest is charged on interest",
+   "Interest remains constant",
+   "Principal amount decreases",
+   "Time does not affect it"
+  ],
+  "a": 0,
+  "e_hi": "चक्रवृद्धि ब्याज में, पिछले समय अवधि के ब्याज को मूलधन में जोड़ दिया जाता है, जिससे अगली अवधि में ब्याज पर भी ब्याज मिलता है।",
+  "e_en": "In compound interest, the interest from the previous period is added to the principal, allowing interest to be earned on interest in subsequent periods."
+ },
+ {
+  "id": "rp-mat-g202224",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "यदि समय की अवधि एक वर्ष हो, तो साधारण ब्याज और चक्रवृद्धि ब्याज में क्या संबंध होता है?",
+  "q_en": "If the time period is one year, what is the relationship between simple interest and compound interest?",
+  "o_hi": [
+   "साधारण ब्याज अधिक होता है",
+   "चक्रवृद्धि ब्याज अधिक होता है",
+   "दोनों बराबर होते हैं",
+   "कोई संबंध नहीं होता"
+  ],
+  "o_en": [
+   "Simple interest is higher",
+   "Compound interest is higher",
+   "Both are equal",
+   "There is no relationship"
+  ],
+  "a": 2,
+  "e_hi": "एक वर्ष के लिए, ब्याज की गणना पहली बार की जाती है, इसलिए साधारण और चक्रवृद्धि ब्याज का मान समान होता है।",
+  "e_en": "For a duration of one year, interest is calculated for the first time, hence the values of simple and compound interest are identical."
+ },
+ {
+  "id": "rp-mat-g202225",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "साधारण ब्याज के सूत्र (P × R × T / 100) में 'R' क्या दर्शाता है?",
+  "q_en": "In the simple interest formula (P × R × T / 100), what does 'R' represent?",
+  "o_hi": [
+   "कुल राशि",
+   "ब्याज की दर",
+   "समय की अवधि",
+   "मूलधन"
+  ],
+  "o_en": [
+   "Total amount",
+   "Rate of interest",
+   "Time period",
+   "Principal"
+  ],
+  "a": 1,
+  "e_hi": "सूत्र में 'R' का अर्थ 'रेट' या ब्याज की वार्षिक दर (प्रतिशत में) होता है।",
+  "e_en": "In the formula, 'R' stands for the rate of interest per annum (in percentage)."
+ },
+ {
+  "id": "rp-mat-g202226",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "चक्रवृद्धि ब्याज में 'मिश्रधन' (Amount) की गणना का सही आधार क्या है?",
+  "q_en": "What is the correct basis for calculating the 'Amount' in compound interest?",
+  "o_hi": [
+   "केवल मूलधन",
+   "केवल ब्याज",
+   "मूलधन और ब्याज का योग",
+   "ब्याज और समय का गुणनफल"
+  ],
+  "o_en": [
+   "Principal only",
+   "Interest only",
+   "Sum of principal and interest",
+   "Product of interest and time"
+  ],
+  "a": 2,
+  "e_hi": "मिश्रधन वह कुल राशि है जो एक निश्चित समय के बाद मूलधन में संचित चक्रवृद्धि ब्याज को जोड़कर प्राप्त होती है।",
+  "e_en": "Amount is the total sum obtained by adding the accumulated compound interest to the principal after a specific period."
+ },
+ {
+  "id": "rp-mat-g202227",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा साधारण ब्याज की गणना का आधार नहीं है?",
+  "q_en": "Which of the following is not a basis for calculating simple interest?",
+  "o_hi": [
+   "मूलधन",
+   "समय",
+   "ब्याज की दर",
+   "चक्रवृद्धि ब्याज की दर"
+  ],
+  "o_en": [
+   "Principal",
+   "Time",
+   "Rate of interest",
+   "Rate of compound interest"
+  ],
+  "a": 3,
+  "e_hi": "साधारण ब्याज की गणना केवल मूलधन, समय और साधारण ब्याज की दर के आधार पर की जाती है।",
+  "e_en": "Simple interest is calculated based solely on principal, time, and the simple interest rate."
+ },
+ {
+  "id": "rp-mat-g202228",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 1,
+  "q_hi": "साधारण ब्याज की दर किस इकाई में व्यक्त की जाती है?",
+  "q_en": "In which unit is the rate of simple interest expressed?",
+  "o_hi": [
+   "प्रतिशत प्रति वर्ष",
+   "रुपये प्रति माह",
+   "कुल राशि का अनुपात",
+   "समय के सापेक्ष इकाई"
+  ],
+  "o_en": [
+   "Percentage per annum",
+   "Rupees per month",
+   "Ratio of total amount",
+   "Unit relative to time"
+  ],
+  "a": 0,
+  "e_hi": "ब्याज की दर को आमतौर पर 'प्रतिशत प्रति वर्ष' (Percentage per annum) के रूप में परिभाषित किया जाता है।",
+  "e_en": "The rate of interest is typically defined as 'percentage per annum'."
+ },
+ {
+  "id": "rp-mat-g202229",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 3,
+  "q_hi": "चक्रवृद्धि ब्याज में, यदि समय बढ़ता है, तो ब्याज की राशि पर क्या प्रभाव पड़ता है?",
+  "q_en": "In compound interest, if time increases, what is the effect on the interest amount?",
+  "o_hi": [
+   "यह रैखिक रूप से बढ़ती है",
+   "यह घातीय रूप से बढ़ती है",
+   "यह घटती है",
+   "यह स्थिर रहती है"
+  ],
+  "o_en": [
+   "It increases linearly",
+   "It increases exponentially",
+   "It decreases",
+   "It remains constant"
+  ],
+  "a": 1,
+  "e_hi": "चक्रवृद्धि ब्याज में ब्याज पर ब्याज जुड़ने के कारण, समय के साथ ब्याज की राशि घातीय (exponential) रूप से बढ़ती है।",
+  "e_en": "Due to interest being earned on interest, the compound interest amount grows exponentially over time."
+ },
+ {
+  "id": "rp-mat-g202230",
+  "s": "maths",
+  "t": "si_ci",
+  "d": 2,
+  "q_hi": "साधारण ब्याज और चक्रवृद्धि ब्याज के बीच का अंतर किस पर निर्भर करता है?",
+  "q_en": "The difference between simple interest and compound interest depends on what?",
+  "o_hi": [
+   "केवल दर",
+   "केवल समय",
+   "मूलधन, दर और समय तीनों पर",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Only rate",
+   "Only time",
+   "Principal, rate, and time all three",
+   "None of these"
+  ],
+  "a": 2,
+  "e_hi": "दोनों ब्याजों के बीच का अंतर मूलधन के साथ-साथ दर और समय की अवधि पर भी निर्भर करता है।",
+  "e_en": "The difference between the two interests depends on the principal as well as the rate and the time period."
  }
 ]
