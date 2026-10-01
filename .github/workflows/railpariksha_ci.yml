@@ -5,6 +5,10 @@ on:
     paths: ["railpariksha/**"]
   pull_request:
     paths: ["railpariksha/**"]
+  # Manual trigger for an on-demand test APK with current content, independent of
+  # whether app code changed -- e.g. to hand testers a build after a content-only
+  # push, without waiting for an actual app-code change to earn a rebuild.
+  workflow_dispatch:
 
 # Cancel a stale run for the same branch/PR when a newer push lands, instead of
 # letting every commit's run queue up independently -- rapid successive pushes
@@ -72,9 +76,9 @@ jobs:
       # bulk of pushes, from the content-gen pipeline) are fully covered by
       # analyze+test above. The signed release APK itself comes from
       # railpariksha_release.yml on a version tag, not from this check.
-      - if: needs.changes.outputs.app == 'true'
+      - if: needs.changes.outputs.app == 'true' || github.event_name == 'workflow_dispatch'
         run: flutter build apk --release --split-per-abi
-      - if: needs.changes.outputs.app == 'true'
+      - if: needs.changes.outputs.app == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
           name: railpariksha-apk
