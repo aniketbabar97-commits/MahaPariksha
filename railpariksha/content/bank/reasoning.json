@@ -31516,5 +31516,143 @@
   "a": 1,
   "e_hi": "अनुपस्थित पद वह है जो दी गई श्रृंखला के क्रम में कहीं पर छोड़ा गया है और उसे पैटर्न के आधार पर पहचानना होता है।",
   "e_en": "A missing term is one that has been omitted from the given sequence and must be identified based on the pattern."
+ },
+ {
+  "id": "rp-rea-o01375",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "निम्नलिखित कथनों पर विचार करें: (1) सभी फूल गुलाब हैं। (2) सभी गुलाब लाल हैं। निष्कर्ष: कुछ फूल लाल हैं।",
+  "q_en": "Consider the following statements: (1) All flowers are roses. (2) All roses are red. Conclusion: Some flowers are red.",
+  "o_hi": [
+   "सही है",
+   "गलत है",
+   "अनिर्धारित है",
+   "हो सकता है"
+  ],
+  "o_en": [
+   "Valid",
+   "Invalid",
+   "Undetermined",
+   "Possible"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सभी फूल गुलाब हैं और सभी गुलाब लाल हैं, इसलिए सभी फूल लाल हैं। यदि सभी फूल लाल हैं, तो 'कुछ फूल लाल हैं' का निष्कर्ष अवश्य सही होगा।",
+  "e_en": "Since all flowers are roses and all roses are red, all flowers are red. If all flowers are red, the conclusion 'Some flowers are red' must necessarily be true."
+ },
+ {
+  "id": "rp-rea-o01376",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: (1) कुछ सेब मुंबई से आते हैं। (2) कुछ सेब शरीफ होते हैं। निष्कर्ष: कुछ मुंबई से आने वाले सेब शरीफ होते हैं।",
+  "q_en": "Statements: (1) Some apples come from Mumbai. (2) Some apples are sweet. Conclusion: Some apples from Mumbai are sweet.",
+  "o_hi": [
+   "निष्कर्ष सही है",
+   "निष्कर्ष गलत है",
+   "निष्कर्ष संभव है लेकिन आवश्यक नहीं",
+   "डेटा अपर्याप्त है"
+  ],
+  "o_en": [
+   "Conclusion is true",
+   "Conclusion is false",
+   "Conclusion is possible but not necessary",
+   "Data is insufficient"
+  ],
+  "a": 2,
+  "e_hi": "यहाँ 'मुंबई से आने वाले' और 'शरीफ' दोनों समूह केवल 'सेब' से अन्तिर करते हैं। यह संभव है कि वे एक ही सेब हों, लेकिन यह आवश्यक नहीं है। इसलिए निष्कर्ष संभव है।",
+  "e_en": "Here, 'from Mumbai' and 'sweet' both intersect only with 'apples'. It is possible they refer to the same apples, but it is not necessary. Thus, the conclusion is possible."
+ },
+ {
+  "id": "rp-rea-o01377",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: (1) सभी कताई उपकरण हैं। (2) कुछ कताई कागज हैं। निष्कर्ष: कुछ कागज उपकरण हैं।",
+  "q_en": "Statements: (1) All scissors are tools. (2) Some scissors are paper. Conclusion: Some paper are tools.",
+  "o_hi": [
+   "सही है",
+   "गलत है",
+   "अनिर्धारित",
+   "संभव है"
+  ],
+  "o_en": [
+   "Valid",
+   "Invalid",
+   "Undetermined",
+   "Possible"
+  ],
+  "a": 0,
+  "e_hi": "यदि कुछ कताई कागज हैं और सभी कताई उपकरण हैं, तो वे कुछ कागज जो कताई भी हैं, अवश्य ही उपकरण होंगे।",
+  "e_en": "If some scissors are paper and all scissors are tools, then those specific papers that are also scissors must necessarily be tools."
+ },
+ {
+  "id": "rp-rea-o01378",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: (1) कुछ पाकेज उपहार हैं। (2) सभी उपहार खिलौने हैं। निष्कर्ष: कुछ खिलौने पाकेज हैं।",
+  "q_en": "Statements: (1) Some packages are gifts. (2) All gifts are toys. Conclusion: Some toys are packages.",
+  "o_hi": [
+   "सही है",
+   "गलत है",
+   "संभव है",
+   "आवश्यक नहीं"
+  ],
+  "o_en": [
+   "Valid",
+   "Invalid",
+   "Possible",
+   "Not necessary"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ पाकेज उपहार हैं और सभी उपहार खिलौने हैं, इसलिए वे कुछ पाकेज जो उपहार भी हैं, अवश्य ही खिलौने होंगे। अतः कुछ खिलौने पाकेज हैं।",
+  "e_en": "Since some packages are gifts and all gifts are toys, those specific packages that are also gifts must be toys. Therefore, some toys are packages."
+ },
+ {
+  "id": "rp-rea-o01379",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: (1) सभी शहर गांव हैं। (2) कोई गांव जंगल नहीं है। निष्कर्ष: कुछ शहर जंगल नहीं हैं।",
+  "q_en": "Statements: (1) All cities are villages. (2) No village is a forest. Conclusion: Some cities are not forests.",
+  "o_hi": [
+   "सही है",
+   "गलत है",
+   "संभव है",
+   "आवश्यक नहीं"
+  ],
+  "o_en": [
+   "Valid",
+   "Invalid",
+   "Possible",
+   "Not necessary"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सभी शहर गांव हैं और कोई गांव जंगल नहीं है, इसलिए सभी शहर जंगल नहीं हैं। यदि सभी शहर जंगल नहीं हैं, तो कुछ शहर जंगल नहीं हैं।",
+  "e_en": "Since all cities are villages and no village is a forest, all cities are not forests. If all cities are not forests, then some cities are not forests."
+ },
+ {
+  "id": "rp-rea-o01380",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: (1) कुछ पंछी चूहे हैं। (2) सभी चूहे जानवर हैं। निष्कर्ष: कुछ पंछी जानवर हैं।",
+  "q_en": "Statements: (1) Some birds are mice. (2) All mice are animals. Conclusion: Some birds are animals.",
+  "o_hi": [
+   "सही है",
+   "गलत है",
+   "संभव है",
+   "आवश्यक नहीं"
+  ],
+  "o_en": [
+   "Valid",
+   "Invalid",
+   "Possible",
+   "Not necessary"
+  ],
+  "a": 0,
+  "e_hi": "यदि कुछ पंछी चूहे हैं और सभी चूहे जानवर हैं, तो वे कुछ पंछी जो चूहे भी हैं, अवश्य ही जानवर होंगे।",
+  "e_en": "If some birds are mice and all mice are animals, then those specific birds that are also mice must necessarily be animals."
  }
 ]
