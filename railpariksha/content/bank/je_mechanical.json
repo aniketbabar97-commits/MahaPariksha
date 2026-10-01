@@ -35878,5 +35878,396 @@
   "a": 1,
   "e_hi": "जड़त्व आघूर्ण घूर्णन गति में वही भूमिका निभाता है जो रेखीय गति में द्रव्यमान (inertia) निभाता है।",
   "e_en": "Moment of Inertia plays the same role in rotational motion that mass (inertia) plays in linear motion."
+ },
+ {
+  "id": "rp-je_-h01561",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक स्थिर पिंड पर कार्य करने वाले बलों का परिणामी बल शून्य है। क्या इसका अर्थ यह है कि पिंड विश्राम अवस्था में है?",
+  "q_en": "The resultant force acting on a rigid body is zero. Does this necessarily imply that the body is at rest?",
+  "o_hi": [
+   "हाँ, पिंड निश्चित रूप से स्थिर है",
+   "नहीं, पिंड एकसमान वेग से गति कर सकता है",
+   "नहीं, पिंड केवल घूर्णन गति कर सकता है",
+   "उपरोक्त में से कोई नहीं"
+  ],
+  "o_en": [
+   "Yes, the body is definitely at rest",
+   "No, the body can move with uniform velocity",
+   "No, the body can only rotate",
+   "None of the above"
+  ],
+  "a": 1,
+  "e_hi": "न्यूटन के प्रथम नियम के अनुसार, शून्य परिणामी बल का अर्थ है कि पिंड या तो स्थिर है या एकसमान वेग से गति कर रहा है।",
+  "e_en": "According to Newton's first law, zero resultant force implies the body is either at rest or moving with a constant velocity (zero acceleration)."
+ },
+ {
+  "id": "rp-je_-h01562",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक बीम पर 'यूनिफॉर्मली डिस्ट्रीब्यूटेड लोड' (UDL) को 'पॉइंट लोड' में बदलते समय, इसे कहाँ कार्य करता माना जाता है?",
+  "q_en": "When converting a Uniformly Distributed Load (UDL) on a beam to an equivalent point load, where is it assumed to act?",
+  "o_hi": [
+   "बीम के एक सिरे पर",
+   "बीम के केंद्र (मध्य बिंदु) पर",
+   "बीम के एक-तिहाई भाग पर",
+   "लोड के कुल विस्तार के केंद्र पर"
+  ],
+  "o_en": [
+   "At one end of the beam",
+   "At the center (midpoint) of the beam",
+   "At one-third of the beam length",
+   "At the centroid of the load distribution"
+  ],
+  "a": 3,
+  "e_hi": "UDL को उसके विस्तार की पूरी लंबाई के केंद्र (सेंट्रोइड) पर केंद्रित माना जाता है।",
+  "e_en": "A UDL is equivalent to a point load acting at the centroid of the distributed load area."
+ },
+ {
+  "id": "rp-je_-h01563",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "यदि किसी वस्तु का द्रव्यमान दोगुना कर दिया जाए और वेग आधा कर दिया जाए, तो उसकी गतिज ऊर्जा (Kinetic Energy) में क्या परिवर्तन होगा?",
+  "q_en": "If the mass of an object is doubled and its velocity is halved, what will be the change in its kinetic energy?",
+  "o_hi": [
+   "समान रहेगी",
+   "आधी हो जाएगी",
+   "दोगुनी हो जाएगी",
+   "एक-चौथाई हो जाएगी"
+  ],
+  "o_en": [
+   "Remains the same",
+   "Becomes half",
+   "Becomes double",
+   "Becomes one-fourth"
+  ],
+  "a": 1,
+  "e_hi": "गतिज ऊर्जा का सूत्र 1/2*m*v^2 है। द्रव्यमान को 2m और वेग को v/2 करने पर, ऊर्जा 1/2*(2m)*(v/2)^2 = 1/4*m*v^2 हो जाती है।",
+  "e_en": "Kinetic energy formula is 0.5*m*v^2. Substituting 2m and v/2 results in 0.5*(2m)*(v/2)^2, which equals half of the original energy."
+ },
+ {
+  "id": "rp-je_-h01564",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "त्रिज्यीय बलों (Concurrent forces) के संतुलन के लिए लामी का प्रमेय (Lami's Theorem) कब लागू होता है?",
+  "q_en": "When is Lami's Theorem applicable for the equilibrium of concurrent forces?",
+  "o_hi": [
+   "केवल 2 बलों के लिए",
+   "केवल 3 बलों के लिए",
+   "4 या अधिक बलों के लिए",
+   "किसी भी संख्या में बलों के लिए"
+  ],
+  "o_en": [
+   "Only for 2 forces",
+   "Only for 3 forces",
+   "For 4 or more forces",
+   "For any number of forces"
+  ],
+  "a": 1,
+  "e_hi": "लामी का प्रमेय विशेष रूप से एक बिंदु पर कार्य करने वाले केवल तीन समतलीय (coplanar) बलों के संतुलन के लिए मान्य है।",
+  "e_en": "Lami's theorem is specifically applicable only to a system of three coplanar forces acting at a point in equilibrium."
+ },
+ {
+  "id": "rp-je_-h01565",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "संरक्षी बल (Conservative force) के विरुद्ध किया गया कार्य किस पर निर्भर करता है?",
+  "q_en": "The work done against a conservative force depends on which of the following?",
+  "o_hi": [
+   "पथ की लंबाई पर",
+   "प्रारंभिक और अंतिम स्थितियों पर",
+   "वेग पर",
+   "समय पर"
+  ],
+  "o_en": [
+   "Path length",
+   "Initial and final positions",
+   "Velocity",
+   "Time"
+  ],
+  "a": 1,
+  "e_hi": "संरक्षी बल (जैसे गुरुत्वाकर्षण) के लिए किया गया कार्य केवल विस्थापन (प्रारंभिक और अंतिम स्थिति) पर निर्भर करता है, तय किए गए रास्ते पर नहीं।",
+  "e_en": "Work done by or against a conservative force depends solely on the initial and final positions, not on the path taken."
+ },
+ {
+  "id": "rp-je_-h01566",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "किसी पिंड का 'गुरुत्व केंद्र' (Center of Gravity) क्या हमेशा पिंड के पदार्थ के भीतर ही स्थित होता है?",
+  "q_en": "Is the Center of Gravity of a body always located within the material of the body?",
+  "o_hi": [
+   "हाँ, हमेशा",
+   "नहीं, यह बाहर भी हो सकता है",
+   "केवल ठोस वस्तुओं के लिए",
+   "केवल खोखली वस्तुओं के लिए"
+  ],
+  "o_en": [
+   "Yes, always",
+   "No, it can be outside",
+   "Only for solid objects",
+   "Only for hollow objects"
+  ],
+  "a": 1,
+  "e_hi": "एक रिंग (छल्ला) जैसी वस्तुओं का गुरुत्व केंद्र उसके खाली केंद्र में होता है, जो वस्तु के पदार्थ से बाहर है।",
+  "e_en": "For objects like a ring, the center of gravity is at the geometric center, which is in empty space outside the material."
+ },
+ {
+  "id": "rp-je_-h01567",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "जब कोई वस्तु आनत तल (Inclined plane) पर नीचे की ओर फिसलती है, तो घर्षण बल की दिशा क्या होती है?",
+  "q_en": "When an object slides down an inclined plane, what is the direction of the frictional force?",
+  "o_hi": [
+   "नीचे की ओर",
+   "ऊपर की ओर (तल के समानांतर)",
+   "ऊर्ध्वाधर नीचे",
+   "क्षैतिज दिशा में"
+  ],
+  "o_en": [
+   "Downwards",
+   "Upwards (parallel to the plane)",
+   "Vertically downwards",
+   "Horizontally"
+  ],
+  "a": 1,
+  "e_hi": "घर्षण बल हमेशा गति की दिशा के विपरीत कार्य करता है, इसलिए आनत तल पर यह ऊपर की ओर लगेगा।",
+  "e_en": "Frictional force always opposes motion; therefore, when sliding down, friction acts up the inclined plane."
+ },
+ {
+  "id": "rp-je_-h01568",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "किसी पिंड पर कार्य करने वाले दो बलों का परिणामी शून्य होने के लिए क्या आवश्यक है?",
+  "q_en": "What is required for the resultant of two forces acting on a body to be zero?",
+  "o_hi": [
+   "बल परिमाण में समान और दिशा में विपरीत होने चाहिए",
+   "बल परिमाण में भिन्न होने चाहिए",
+   "बल एक ही दिशा में होने चाहिए",
+   "बलों के बीच का कोण 90 डिग्री होना चाहिए"
+  ],
+  "o_en": [
+   "Forces must be equal in magnitude and opposite in direction",
+   "Forces must be different in magnitude",
+   "Forces must be in the same direction",
+   "The angle between forces must be 90 degrees"
+  ],
+  "a": 0,
+  "e_hi": "न्यूटन के प्रथम नियम के अनुसार, यदि दो बल एक-दूसरे के विपरीत और समान परिमाण के हैं, तो वे एक-दूसरे को संतुलित कर देते हैं।",
+  "e_en": "According to Newton's first law, if two forces are equal in magnitude and opposite in direction, they cancel each other out."
+ },
+ {
+  "id": "rp-je_-h01569",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक सरल मशीन का यांत्रिक लाभ (Mechanical Advantage) किसके बराबर होता है?",
+  "q_en": "The mechanical advantage of a simple machine is equal to?",
+  "o_hi": [
+   "भार और प्रयास का अनुपात",
+   "प्रयास और भार का अनुपात",
+   "वेग अनुपात और दक्षता का गुणनफल",
+   "उपरोक्त में से कोई नहीं"
+  ],
+  "o_en": [
+   "Ratio of load to effort",
+   "Ratio of effort to load",
+   "Product of velocity ratio and efficiency",
+   "None of the above"
+  ],
+  "a": 0,
+  "e_hi": "यांत्रिक लाभ को भार (Load) और लगाए गए प्रयास (Effort) के अनुपात के रूप में परिभाषित किया गया है।",
+  "e_en": "Mechanical advantage is defined as the ratio of the load to the effort applied."
+ },
+ {
+  "id": "rp-je_-h01570",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "लैमी का प्रमेय (Lami's Theorem) किन बलों के लिए लागू होता है?",
+  "q_en": "Lami's Theorem is applicable to which type of forces?",
+  "o_hi": [
+   "केवल दो बल",
+   "तीन समवर्ती बल",
+   "चार बल",
+   "असमतलीय बल"
+  ],
+  "o_en": [
+   "Only two forces",
+   "Three concurrent forces",
+   "Four forces",
+   "Non-coplanar forces"
+  ],
+  "a": 1,
+  "e_hi": "लैमी का प्रमेय तब लागू होता है जब तीन समवर्ती बल संतुलन की स्थिति में हों।",
+  "e_en": "Lami's theorem applies when three concurrent forces are in a state of equilibrium."
+ },
+ {
+  "id": "rp-je_-h01571",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "हुक का नियम (Hooke's Law) किसके बीच संबंध बताता है?",
+  "q_en": "Hooke's Law defines the relationship between?",
+  "o_hi": [
+   "प्रतिबल और विकृति",
+   "बल और वेग",
+   "दबाव और आयतन",
+   "कार्य और ऊर्जा"
+  ],
+  "o_en": [
+   "Stress and strain",
+   "Force and velocity",
+   "Pressure and volume",
+   "Work and energy"
+  ],
+  "a": 0,
+  "e_hi": "हुक के नियम के अनुसार, प्रत्यास्थ सीमा के भीतर प्रतिबल विकृति के सीधे समानुपाती होता है।",
+  "e_en": "According to Hooke's Law, within the elastic limit, stress is directly proportional to strain."
+ },
+ {
+  "id": "rp-je_-h01572",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "जड़त्व का नियम (Law of Inertia) किस नियम को कहा जाता है?",
+  "q_en": "Which law is known as the Law of Inertia?",
+  "o_hi": [
+   "न्यूटन का प्रथम नियम",
+   "न्यूटन का द्वितीय नियम",
+   "न्यूटन का तृतीय नियम",
+   "ऊर्जा संरक्षण का नियम"
+  ],
+  "o_en": [
+   "Newton's first law",
+   "Newton's second law",
+   "Newton's third law",
+   "Law of conservation of energy"
+  ],
+  "a": 0,
+  "e_hi": "न्यूटन का प्रथम नियम बताता है कि वस्तु अपनी अवस्था बनाए रखती है, जिसे जड़त्व का नियम कहते हैं।",
+  "e_en": "Newton's first law states that an object maintains its state, which is referred to as the Law of Inertia."
+ },
+ {
+  "id": "rp-je_-h01573",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "घूर्णन गति में, जड़त्व आघूर्ण (Moment of Inertia) 'आई' और कोणीय त्वरण 'अल्फा' का गुणनफल किसके बराबर होता है?",
+  "q_en": "In rotational motion, the product of the moment of inertia 'I' and angular acceleration 'alpha' is equal to what?",
+  "o_hi": [
+   "कोणीय संवेग",
+   "टॉर्क (आघूर्ण)",
+   "कार्य",
+   "शक्ति"
+  ],
+  "o_en": [
+   "Angular momentum",
+   "Torque",
+   "Work",
+   "Power"
+  ],
+  "a": 1,
+  "e_hi": "न्यूटन के दूसरे नियम के घूर्णन अनुरूप के अनुसार, टॉर्क = जड़त्व आघूर्ण × कोणीय त्वरण होता है।",
+  "e_en": "According to the rotational analog of Newton's second law, Torque = Moment of Inertia × Angular acceleration."
+ },
+ {
+  "id": "rp-je_-h01574",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "यदि एक पिंड का द्रव्यमान 10 किलोग्राम है और वह 2 मीटर/सेकंड² के त्वरण से गति कर रहा है, तो उस पर लगने वाला बल क्या होगा?",
+  "q_en": "If an object has a mass of 10 kg and is accelerating at 2 m/s², what is the force acting on it?",
+  "o_hi": [
+   "5 न्यूटन",
+   "12 न्यूटन",
+   "20 न्यूटन",
+   "8 न्यूटन"
+  ],
+  "o_en": [
+   "5 Newtons",
+   "12 Newtons",
+   "20 Newtons",
+   "8 Newtons"
+  ],
+  "a": 2,
+  "e_hi": "न्यूटन के द्वितीय नियम के अनुसार, बल = द्रव्यमान × त्वरण (10 × 2 = 20)।",
+  "e_en": "According to Newton's second law, Force = Mass × Acceleration (10 × 2 = 20)."
+ },
+ {
+  "id": "rp-je_-h01575",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "किसी स्प्रिंग के लिए हुक का नियम (Hooke's Law) किस सूत्र द्वारा व्यक्त किया जाता है?",
+  "q_en": "Which formula expresses Hooke's Law for a spring?",
+  "o_hi": [
+   "एफ = एम × ए",
+   "एफ = के × एक्स",
+   "पी = एफ × वी",
+   "के.ई. = 0.5 × एम × वी²"
+  ],
+  "o_en": [
+   "F = m × a",
+   "F = k × x",
+   "P = F × v",
+   "K.E. = 0.5 × m × v²"
+  ],
+  "a": 1,
+  "e_hi": "हुक का नियम बताता है कि स्प्रिंग का बल उसके विस्थापन के समानुपाती होता है, जहाँ 'के' स्प्रिंग स्थिरांक है।",
+  "e_en": "Hooke's law states that the force needed to extend or compress a spring is proportional to the distance, where 'k' is the spring constant."
+ },
+ {
+  "id": "rp-je_-h01576",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "गतिज ऊर्जा (Kinetic Energy) का सही समीकरण कौन सा है?",
+  "q_en": "Which is the correct equation for Kinetic Energy?",
+  "o_hi": [
+   "एम × जी × एच",
+   "0.5 × एम × वी²",
+   "एम × वी",
+   "एफ × डी"
+  ],
+  "o_en": [
+   "m × g × h",
+   "0.5 × m × v²",
+   "m × v",
+   "F × d"
+  ],
+  "a": 1,
+  "e_hi": "गतिज ऊर्जा किसी वस्तु के वेग के कारण होती है और इसका सूत्र 1/2 × द्रव्यमान × वेग का वर्ग है।",
+  "e_en": "Kinetic energy is the energy of an object due to its motion, given by the formula 1/2 × mass × velocity squared."
+ },
+ {
+  "id": "rp-je_-h01577",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "यदि 50 न्यूटन का बल 5 मीटर की दूरी पर कार्य करता है, तो किया गया कार्य कितना होगा?",
+  "q_en": "If a force of 50 Newtons acts over a distance of 5 meters, what is the work done?",
+  "o_hi": [
+   "10 जूल",
+   "250 जूल",
+   "55 जूल",
+   "500 जूल"
+  ],
+  "o_en": [
+   "10 Joules",
+   "250 Joules",
+   "55 Joules",
+   "500 Joules"
+  ],
+  "a": 1,
+  "e_hi": "कार्य = बल × विस्थापन, इसलिए 50 × 5 = 250 जूल।",
+  "e_en": "Work = Force × Displacement, therefore 50 × 5 = 250 Joules."
  }
 ]
