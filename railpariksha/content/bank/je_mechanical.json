@@ -18950,5 +18950,1270 @@
   "a": 1,
   "e_hi": "न्यूट्रल एक्सिस वह परत है जहाँ बीम के झुकने पर न तो खिंचाव होता है और न ही संपीड़न, इसलिए वहाँ प्रतिबल शून्य होता है।",
   "e_en": "The neutral axis is the layer where there is neither tension nor compression during bending, hence the stress is zero there."
+ },
+ {
+  "id": "rp-je_-h00825",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक स्टील की छड़ जिसकी लंबाई 2 मीटर है, पर 100 किलोन्यूटन का तन्य बल लगाया गया है। यदि छड़ का अनुप्रस्थ काट क्षेत्रफल 500 वर्ग मिलीमीटर है, तो छड़ में उत्पन्न प्रतिबल (Stress) की गणना करें।",
+  "q_en": "A steel rod of length 2 meters is subjected to a tensile force of 100 kN. If the cross-sectional area of the rod is 500 mm², calculate the stress induced in the rod.",
+  "o_hi": [
+   "100 मेगापास्कल",
+   "200 मेगापास्कल",
+   "50 मेगापास्कल",
+   "250 मेगापास्कल"
+  ],
+  "o_en": [
+   "100 MPa",
+   "200 MPa",
+   "50 MPa",
+   "250 MPa"
+  ],
+  "a": 1,
+  "e_hi": "प्रतिबल = बल / क्षेत्रफल। 100,000 न्यूटन / 500 वर्ग मिलीमीटर = 200 न्यूटन/वर्ग मिलीमीटर या 200 मेगापास्कल।",
+  "e_en": "Stress = Force / Area. 100,000 N / 500 mm² = 200 N/mm² or 200 MPa."
+ },
+ {
+  "id": "rp-je_-h00826",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "यदि किसी पदार्थ का यंग मापांक (Young's Modulus) 200 गीगापास्कल है और इस पर 0.001 का विकृति (Strain) उत्पन्न होता है, तो पदार्थ में उत्पन्न प्रतिबल क्या होगा?",
+  "q_en": "If the Young's modulus of a material is 200 GPa and it undergoes a strain of 0.001, what will be the stress induced in the material?",
+  "o_hi": [
+   "200 मेगापास्कल",
+   "100 मेगापास्कल",
+   "400 मेगापास्कल",
+   "50 मेगापास्कल"
+  ],
+  "o_en": [
+   "200 MPa",
+   "100 MPa",
+   "400 MPa",
+   "50 MPa"
+  ],
+  "a": 0,
+  "e_hi": "हुक के नियम के अनुसार, प्रतिबल = यंग मापांक × विकृति। 200,000 मेगापास्कल × 0.001 = 200 मेगापास्कल।",
+  "e_en": "According to Hooke's Law, Stress = Young's Modulus × Strain. 200,000 MPa × 0.001 = 200 MPa."
+ },
+ {
+  "id": "rp-je_-h00827",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक 1 मीटर लंबी छड़ को 2 मिलीमीटर खींचा जाता है। छड़ में उत्पन्न विकृति (Strain) का मान ज्ञात कीजिए।",
+  "q_en": "A 1-meter long rod is stretched by 2 mm. Find the value of the strain induced in the rod.",
+  "o_hi": [
+   "0.001",
+   "0.002",
+   "0.02",
+   "0.01"
+  ],
+  "o_en": [
+   "0.001",
+   "0.002",
+   "0.02",
+   "0.01"
+  ],
+  "a": 1,
+  "e_hi": "विकृति = लंबाई में परिवर्तन / मूल लंबाई। 2 मिमी / 1000 मिमी = 0.002।",
+  "e_en": "Strain = Change in length / Original length. 2 mm / 1000 mm = 0.002."
+ },
+ {
+  "id": "rp-je_-h00828",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि पॉइसन अनुपात (Poisson's ratio) 0.25 है और अनुदैर्ध्य विकृति (Longitudinal strain) 0.004 है, तो पार्श्व विकृति (Lateral strain) क्या होगी?",
+  "q_en": "If the Poisson's ratio is 0.25 and the longitudinal strain is 0.004, what will be the lateral strain?",
+  "o_hi": [
+   "0.001",
+   "0.016",
+   "0.002",
+   "0.008"
+  ],
+  "o_en": [
+   "0.001",
+   "0.016",
+   "0.002",
+   "0.008"
+  ],
+  "a": 0,
+  "e_hi": "पॉइसन अनुपात = - (पार्श्व विकृति / अनुदैर्ध्य विकृति)। अतः पार्श्व विकृति = 0.25 × 0.004 = 0.001।",
+  "e_en": "Poisson's ratio = - (Lateral strain / Longitudinal strain). Thus, Lateral strain = 0.25 × 0.004 = 0.001."
+ },
+ {
+  "id": "rp-je_-h00829",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक वृत्ताकार शाफ्ट का व्यास 100 मिलीमीटर है। यदि इस पर 50 किलोन्यूटन का अक्षीय भार लगाया जाता है, तो उत्पन्न प्रतिबल की गणना कीजिए (π का मान 3.14 लें)।",
+  "q_en": "A circular shaft has a diameter of 100 mm. If an axial load of 50 kN is applied to it, calculate the induced stress (Take π = 3.14).",
+  "o_hi": [
+   "6.37 मेगापास्कल",
+   "12.74 मेगापास्कल",
+   "3.18 मेगापास्कल",
+   "15.92 मेगापास्कल"
+  ],
+  "o_en": [
+   "6.37 MPa",
+   "12.74 MPa",
+   "3.18 MPa",
+   "15.92 MPa"
+  ],
+  "a": 0,
+  "e_hi": "क्षेत्रफल = π/4 × d² = 0.785 × 10000 = 7850 वर्ग मिमी। प्रतिबल = 50,000 / 7850 ≈ 6.37 मेगापास्कल।",
+  "e_en": "Area = π/4 × d² = 0.785 × 10000 = 7850 mm². Stress = 50,000 / 7850 ≈ 6.37 MPa."
+ },
+ {
+  "id": "rp-je_-h00830",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि एक सामग्री के लिए बल्क मापांक (Bulk Modulus) 100 गीगापास्कल है और प्रतिबल 200 मेगापास्कल है, तो आयतन में आनुपातिक परिवर्तन (Volumetric strain) क्या होगा?",
+  "q_en": "If the Bulk modulus for a material is 100 GPa and the stress is 200 MPa, what will be the volumetric strain?",
+  "o_hi": [
+   "0.002",
+   "0.02",
+   "0.0002",
+   "0.2"
+  ],
+  "o_en": [
+   "0.002",
+   "0.02",
+   "0.0002",
+   "0.2"
+  ],
+  "a": 0,
+  "e_hi": "बल्क मापांक = प्रतिबल / आयतन विकृति। अतः आयतन विकृति = 200 मेगापास्कल / 100,000 मेगापास्कल = 0.002।",
+  "e_en": "Bulk Modulus = Stress / Volumetric strain. Thus, Volumetric strain = 200 MPa / 100,000 MPa = 0.002."
+ },
+ {
+  "id": "rp-je_-h00831",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम पर मुक्त सिरे पर 10 किलोन्यूटन का बिंदु भार लगा है। यदि बीम की लंबाई 2 मीटर है, तो अधिकतम बेंडिंग मोमेंट का मान क्या होगा?",
+  "q_en": "A cantilever beam is subjected to a point load of 10 kN at its free end. If the beam length is 2 meters, what will be the maximum bending moment?",
+  "o_hi": [
+   "10 किलोन्यूटन-मीटर",
+   "20 किलोन्यूटन-मीटर",
+   "5 किलोन्यूटन-मीटर",
+   "40 किलोन्यूटन-मीटर"
+  ],
+  "o_en": [
+   "10 kNm",
+   "20 kNm",
+   "5 kNm",
+   "40 kNm"
+  ],
+  "a": 1,
+  "e_hi": "कैंटिलीवर बीम के लिए अधिकतम बेंडिंग मोमेंट फिक्स्ड सिरे पर होता है, M = P × L। 10 किलोन्यूटन × 2 मीटर = 20 किलोन्यूटन-मीटर।",
+  "e_en": "For a cantilever beam, max bending moment is at the fixed end, M = P × L. 10 kN × 2 m = 20 kNm."
+ },
+ {
+  "id": "rp-je_-h00832",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "यदि एक छड़ की लंबाई 500 मिलीमीटर है और यह 0.5 मिलीमीटर का प्रसार करती है, तो प्रतिशत विकृति (Percentage strain) कितनी होगी?",
+  "q_en": "If a rod of length 500 mm expands by 0.5 mm, what will be the percentage strain?",
+  "o_hi": [
+   "0.1%",
+   "0.01%",
+   "1%",
+   "0.5%"
+  ],
+  "o_en": [
+   "0.1%",
+   "0.01%",
+   "1%",
+   "0.5%"
+  ],
+  "a": 0,
+  "e_hi": "विकृति = 0.5 / 500 = 0.001। प्रतिशत में बदलने के लिए 100 से गुणा करें: 0.001 × 100 = 0.1%。",
+  "e_en": "Strain = 0.5 / 500 = 0.001. Multiply by 100 for percentage: 0.001 × 100 = 0.1%."
+ },
+ {
+  "id": "rp-je_-h00833",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "एक शाफ्ट पर 1000 न्यूटन-मीटर का टॉर्क (Torque) लगा है। यदि शाफ्ट की त्रिज्या 0.05 मीटर है, तो शाफ्ट की सतह पर अपरूपण प्रतिबल (Shear Stress) क्या होगा, यदि ध्रुवीय जड़त्व आघूर्ण (Polar Moment of Inertia) 1.57 × 10⁻⁶ मीटर⁴ है?",
+  "q_en": "A torque of 1000 Nm is applied to a shaft. If the shaft radius is 0.05 m, what will be the shear stress on the surface, given the Polar Moment of Inertia is 1.57 × 10⁻⁶ m⁴?",
+  "o_hi": [
+   "31.85 मेगापास्कल",
+   "63.70 मेगापास्कल",
+   "15.92 मेगापास्कल",
+   "47.77 मेगापास्कल"
+  ],
+  "o_en": [
+   "31.85 MPa",
+   "63.70 MPa",
+   "15.92 MPa",
+   "47.77 MPa"
+  ],
+  "a": 0,
+  "e_hi": "टॉर्सनल समीकरण: τ = (T × r) / J। τ = (1000 × 0.05) / 1.57 × 10⁻⁶ ≈ 31.85 मेगापास्कल।",
+  "e_en": "Torsional equation: τ = (T × r) / J. τ = (1000 × 0.05) / 1.57 × 10⁻⁶ ≈ 31.85 MPa."
+ },
+ {
+  "id": "rp-je_-h00834",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "एक बीम पर 2 किलोन्यूटन/मीटर का समान रूप से वितरित भार (UDL) 4 मीटर की लंबाई पर लगा है। बीम के केंद्र पर बेंडिंग मोमेंट का मान क्या होगा (सरल समर्थित बीम)?",
+  "q_en": "A simply supported beam carries a uniformly distributed load (UDL) of 2 kN/m over a span of 4 meters. What is the bending moment at the center of the beam?",
+  "o_hi": [
+   "4 किलोन्यूटन-मीटर",
+   "8 किलोन्यूटन-मीटर",
+   "2 किलोन्यूटन-मीटर",
+   "16 किलोन्यूटन-मीटर"
+  ],
+  "o_en": [
+   "4 kNm",
+   "8 kNm",
+   "2 kNm",
+   "16 kNm"
+  ],
+  "a": 0,
+  "e_hi": "सरल समर्थित बीम के मध्य में बेंडिंग मोमेंट M = (w × L²) / 8। (2 × 4²) / 8 = 32 / 8 = 4 किलोन्यूटन-मीटर।",
+  "e_en": "Bending moment at center of simply supported beam M = (w × L²) / 8. (2 × 4²) / 8 = 32 / 8 = 4 kNm."
+ },
+ {
+  "id": "rp-je_-h00835",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "किसी पदार्थ का वह गुण जिसके कारण वह विरूपण बल हटने पर अपना मूल आकार प्राप्त कर लेता है, क्या कहलाता है?",
+  "q_en": "What is the property of a material by which it regains its original shape after the removal of a deforming force?",
+  "o_hi": [
+   "सुघट्यता",
+   "प्रत्यास्थता",
+   "कठोरता",
+   "भंगुरता"
+  ],
+  "o_en": [
+   "Plasticity",
+   "Elasticity",
+   "Hardness",
+   "Brittleness"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्यास्थता (Elasticity) वह गुण है जो पदार्थ को बल हटाने के बाद अपनी पूर्व स्थिति में लौटने की अनुमति देता है।",
+  "e_en": "Elasticity is the property that allows a material to return to its original state after the removal of an external load."
+ },
+ {
+  "id": "rp-je_-h00836",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा पदार्थ 'भंगुर' (Brittle) सामग्री की श्रेणी में आता है?",
+  "q_en": "Which of the following materials falls into the category of 'brittle' materials?",
+  "o_hi": [
+   "मृदु इस्पात",
+   "तांबा",
+   "ढलवां लोहा",
+   "एल्युमीनियम"
+  ],
+  "o_en": [
+   "Mild steel",
+   "Copper",
+   "Cast iron",
+   "Aluminium"
+  ],
+  "a": 2,
+  "e_hi": "ढलवां लोहा (Cast iron) में बहुत कम प्लास्टिक विरूपण होता है, इसलिए इसे भंगुर सामग्री माना जाता है।",
+  "e_en": "Cast iron exhibits very little plastic deformation before fracture, classifying it as a brittle material."
+ },
+ {
+  "id": "rp-je_-h00837",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "पदार्थ का वह गुण जिसके कारण उसे पतले तारों में खींचा जा सकता है, क्या कहलाता है?",
+  "q_en": "What is the property of a material that allows it to be drawn into thin wires?",
+  "o_hi": [
+   "आघातवर्धनीयता",
+   "तन्यता",
+   "कठोरता",
+   "दृढ़ता"
+  ],
+  "o_en": [
+   "Malleability",
+   "Ductility",
+   "Hardness",
+   "Stiffness"
+  ],
+  "a": 1,
+  "e_hi": "तन्यता (Ductility) वह गुण है जो धातु को खींचकर तार बनाने में सक्षम बनाता है।",
+  "e_en": "Ductility is the property that enables a metal to be drawn into wires through tension."
+ },
+ {
+  "id": "rp-je_-h00838",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी पदार्थ का प्रतिबल-विकृति आरेख (Stress-Strain Curve) एक सीधी रेखा है, तो वह पदार्थ किस नियम का पालन करता है?",
+  "q_en": "If the stress-strain curve of a material is a straight line, which law does the material follow?",
+  "o_hi": [
+   "पास्कल का नियम",
+   "हुक का नियम",
+   "बर्नौली का प्रमेय",
+   "न्यूटन का नियम"
+  ],
+  "o_en": [
+   "Pascal's law",
+   "Hooke's law",
+   "Bernoulli's theorem",
+   "Newton's law"
+  ],
+  "a": 1,
+  "e_hi": "हुक का नियम कहता है कि प्रत्यास्थ सीमा के भीतर प्रतिबल विकृति के सीधे समानुपाती होता है।",
+  "e_en": "Hooke's law states that within the elastic limit, stress is directly proportional to strain."
+ },
+ {
+  "id": "rp-je_-h00839",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "आघातवर्धनीयता (Malleability) का अर्थ क्या है?",
+  "q_en": "What does the property 'Malleability' signify?",
+  "o_hi": [
+   "तारों में खींचे जाने की क्षमता",
+   "चादरों में पीटे जाने की क्षमता",
+   "कठोरता का माप",
+   "ऊष्मा के प्रति प्रतिरोध"
+  ],
+  "o_en": [
+   "Ability to be drawn into wires",
+   "Ability to be hammered into sheets",
+   "Measure of hardness",
+   "Resistance to heat"
+  ],
+  "a": 1,
+  "e_hi": "आघातवर्धनीयता किसी पदार्थ की वह क्षमता है जिससे उसे हथौड़े से पीटकर पतली चादरों में बदला जा सकता है।",
+  "e_en": "Malleability is the capacity of a material to be deformed under compressive stress, typically by hammering into thin sheets."
+ },
+ {
+  "id": "rp-je_-h00840",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "पदार्थों के वर्गीकरण में 'आइसोट्रोपिक' (Isotropic) सामग्री का क्या अर्थ है?",
+  "q_en": "In the classification of materials, what is meant by an 'Isotropic' material?",
+  "o_hi": [
+   "सभी दिशाओं में समान गुण",
+   "विभिन्न दिशाओं में भिन्न गुण",
+   "समय के साथ बदलने वाले गुण",
+   "केवल एक दिशा में गुण"
+  ],
+  "o_en": [
+   "Same properties in all directions",
+   "Different properties in different directions",
+   "Properties changing with time",
+   "Properties in only one direction"
+  ],
+  "a": 0,
+  "e_hi": "आइसोट्रोपिक सामग्री के यांत्रिक गुण सभी दिशाओं में एक समान होते हैं।",
+  "e_en": "Isotropic materials exhibit identical physical and mechanical properties in all directions."
+ },
+ {
+  "id": "rp-je_-h00841",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "मृदु इस्पात (Mild Steel) किस प्रकार की सामग्री के अंतर्गत आता है?",
+  "q_en": "Under which category does mild steel fall?",
+  "o_hi": [
+   "भंगुर सामग्री",
+   "तन्य सामग्री",
+   "अस्थिर सामग्री",
+   "अधात्विक सामग्री"
+  ],
+  "o_en": [
+   "Brittle material",
+   "Ductile material",
+   "Unstable material",
+   "Non-metallic material"
+  ],
+  "a": 1,
+  "e_hi": "मृदु इस्पात एक अत्यधिक तन्य सामग्री है जिसे आसानी से विरूपित किया जा सकता है।",
+  "e_en": "Mild steel is a highly ductile material capable of undergoing significant plastic deformation."
+ },
+ {
+  "id": "rp-je_-h00842",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "पदार्थ के किस गुण के कारण वह बाहरी भार के तहत स्थायी विरूपण (Permanent Deformation) का विरोध नहीं करता?",
+  "q_en": "Due to which property does a material not resist permanent deformation under external load?",
+  "o_hi": [
+   "सुघट्यता",
+   "प्रत्यास्थता",
+   "कठोरता",
+   "दृढ़ता"
+  ],
+  "o_en": [
+   "Plasticity",
+   "Elasticity",
+   "Hardness",
+   "Stiffness"
+  ],
+  "a": 0,
+  "e_hi": "सुघट्यता (Plasticity) वह गुण है जिसके कारण पदार्थ भार हटने के बाद भी अपने आकार में वापस नहीं आता।",
+  "e_en": "Plasticity is the property that allows a material to undergo permanent deformation without fracture under load."
+ },
+ {
+  "id": "rp-je_-h00843",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "यदि किसी सामग्री के गुण सभी बिंदुओं पर लेकिन विभिन्न दिशाओं में भिन्न हों, तो उसे क्या कहा जाता है?",
+  "q_en": "If a material's properties vary in different directions at all points, what is it called?",
+  "o_hi": [
+   "आइसोट्रोपिक",
+   "होमोजेनियस",
+   "एनिसोट्रोपिक",
+   "ऑर्थोट्रोपिक"
+  ],
+  "o_en": [
+   "Isotropic",
+   "Homogeneous",
+   "Anisotropic",
+   "Orthotropic"
+  ],
+  "a": 2,
+  "e_hi": "एनिसोट्रोपिक (Anisotropic) सामग्री में दिशा-निर्भर गुण होते हैं।",
+  "e_en": "Anisotropic materials possess direction-dependent properties."
+ },
+ {
+  "id": "rp-je_-h00844",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "पदार्थ की 'कठोरता' (Hardness) का मुख्य अर्थ क्या है?",
+  "q_en": "What is the primary definition of 'Hardness' in materials?",
+  "o_hi": [
+   "विरूपण के प्रति प्रतिरोध",
+   "घर्षण या खरोंच के प्रति प्रतिरोध",
+   "विफलता के प्रति प्रतिरोध",
+   "तन्यता का माप"
+  ],
+  "o_en": [
+   "Resistance to deformation",
+   "Resistance to abrasion or indentation",
+   "Resistance to failure",
+   "Measure of ductility"
+  ],
+  "a": 1,
+  "e_hi": "कठोरता किसी सामग्री की सतह द्वारा खरोंच या स्थायी इंडेंटेशन के प्रतिरोध करने की क्षमता है।",
+  "e_en": "Hardness is defined as the resistance of a material to localized plastic deformation, such as abrasion or indentation."
+ },
+ {
+  "id": "rp-je_-h00845",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सा पदार्थ सबसे अधिक तन्य (ductile) है?",
+  "q_en": "Which of the following materials is the most ductile?",
+  "o_hi": [
+   "ढलवां लोहा",
+   "मृदु इस्पात",
+   "उच्च कार्बन इस्पात",
+   "तांबा"
+  ],
+  "o_en": [
+   "Cast iron",
+   "Mild steel",
+   "High carbon steel",
+   "Copper"
+  ],
+  "a": 1,
+  "e_hi": "मृदु इस्पात (Mild steel) की तन्यता अन्य विकल्पों की तुलना में सबसे अधिक होती है।",
+  "e_en": "Mild steel exhibits higher ductility compared to the other options listed."
+ },
+ {
+  "id": "rp-je_-h00846",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक बीम में अधिकतम बंकन आघूर्ण (Bending Moment) वहाँ होता है जहाँ:",
+  "q_en": "In a beam, the maximum bending moment occurs where:",
+  "o_hi": [
+   "अपरूपण बल शून्य है",
+   "अपरूपण बल अधिकतम है",
+   "विक्षेप शून्य है",
+   "ढाल अधिकतम है"
+  ],
+  "o_en": [
+   "Shear force is zero",
+   "Shear force is maximum",
+   "Deflection is zero",
+   "Slope is maximum"
+  ],
+  "a": 0,
+  "e_hi": "बंकन आघूर्ण और अपरूपण बल के बीच संबंध के अनुसार, जहाँ अपरूपण बल शून्य होता है, वहाँ बंकन आघूर्ण अधिकतम होता है।",
+  "e_en": "According to the relationship between bending moment and shear force, the bending moment is maximum where the shear force is zero."
+ },
+ {
+  "id": "rp-je_-h00847",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "समान अनुप्रस्थ काट वाले छड़ के लिए, 'आयताकार' और 'वृत्ताकार' काट में से किसका जड़त्व आघूर्ण (Moment of Inertia) अधिक है?",
+  "q_en": "For a beam of the same cross-sectional area, which has a higher Moment of Inertia: rectangular or circular?",
+  "o_hi": [
+   "वृत्ताकार",
+   "आयताकार",
+   "दोनों बराबर हैं",
+   "सामग्री पर निर्भर करता है"
+  ],
+  "o_en": [
+   "Circular",
+   "Rectangular",
+   "Both are equal",
+   "Depends on material"
+  ],
+  "a": 1,
+  "e_hi": "समान क्षेत्रफल के लिए, एक आयताकार खंड का जड़त्व आघूर्ण आमतौर पर वृत्ताकार खंड से अधिक होता है।",
+  "e_en": "For the same cross-sectional area, a rectangular section typically provides a higher moment of inertia than a circular section."
+ },
+ {
+  "id": "rp-je_-h00848",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी पदार्थ का पॉइसन अनुपात (Poisson's ratio) 0.5 है, तो वह पदार्थ क्या कहलाता है?",
+  "q_en": "If the Poisson's ratio of a material is 0.5, what is that material called?",
+  "o_hi": [
+   "दृढ़",
+   "पूर्णतः प्लास्टिक",
+   "पूर्णतः प्रत्यास्थ",
+   "असंपीड्य"
+  ],
+  "o_en": [
+   "Rigid",
+   "Perfectly plastic",
+   "Perfectly elastic",
+   "Incompressible"
+  ],
+  "a": 3,
+  "e_hi": "0.5 का पॉइसन अनुपात इंगित करता है कि पदार्थ का आयतन विरूपण के दौरान स्थिर रहता है, जिसे असंपीड्य (incompressible) कहा जाता है।",
+  "e_en": "A Poisson's ratio of 0.5 indicates that the volume of the material remains constant during deformation, which is termed as incompressible."
+ },
+ {
+  "id": "rp-je_-h00849",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "कैंटीलीवर बीम के मुक्त सिरे पर बिंदु भार के कारण अधिकतम विक्षेप (Deflection) का मान क्या होगा?",
+  "q_en": "What is the maximum deflection for a cantilever beam with a point load at the free end?",
+  "o_hi": [
+   "WL³/3EI",
+   "WL³/8EI",
+   "WL³/48EI",
+   "WL²/2EI"
+  ],
+  "o_en": [
+   "WL³/3EI",
+   "WL³/8EI",
+   "WL³/48EI",
+   "WL²/2EI"
+  ],
+  "a": 0,
+  "e_hi": "कैंटीलीवर बीम के लिए मानक विक्षेप सूत्र WL³/3EI है।",
+  "e_en": "The standard deflection formula for a cantilever beam under a point load at the free end is WL³/3EI."
+ },
+ {
+  "id": "rp-je_-h00850",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से किस परीक्षण द्वारा पदार्थ की कठोरता (Hardness) मापी जाती है?",
+  "q_en": "Which of the following tests is used to measure the hardness of a material?",
+  "o_hi": [
+   "इम्पैक्ट टेस्ट",
+   "ब्रिनेल टेस्ट",
+   "तनन परीक्षण",
+   "थकान परीक्षण"
+  ],
+  "o_en": [
+   "Impact test",
+   "Brinell test",
+   "Tensile test",
+   "Fatigue test"
+  ],
+  "a": 1,
+  "e_hi": "ब्रिनेल, रॉकवेल और विकर्स कठोरता परीक्षण के सामान्य उदाहरण हैं।",
+  "e_en": "Brinell, Rockwell, and Vickers are common examples of hardness testing methods."
+ },
+ {
+  "id": "rp-je_-h00851",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक पतले बेलनाकार खोल (thin cylindrical shell) में, परिधीय प्रतिबल (hoop stress) और अनुदैर्ध्य प्रतिबल (longitudinal stress) का अनुपात क्या होता है?",
+  "q_en": "What is the ratio of hoop stress to longitudinal stress in a thin cylindrical shell?",
+  "o_hi": [
+   "1:1",
+   "2:1",
+   "1:2",
+   "4:1"
+  ],
+  "o_en": [
+   "1:1",
+   "2:1",
+   "1:2",
+   "4:1"
+  ],
+  "a": 1,
+  "e_hi": "पतले सिलेंडर में परिधीय प्रतिबल अनुदैर्ध्य प्रतिबल का दोगुना होता है (Hoop stress = 2 * Longitudinal stress)।",
+  "e_en": "In a thin cylinder, the hoop stress is twice the longitudinal stress (Hoop stress = 2 * Longitudinal stress)."
+ },
+ {
+  "id": "rp-je_-h00852",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "किस प्रकार के भार के तहत पदार्थ में 'थकान' (Fatigue) उत्पन्न होती है?",
+  "q_en": "Under what type of loading does 'fatigue' occur in materials?",
+  "o_hi": [
+   "स्थिर भार",
+   "अचानक भार",
+   "चक्रीय भार",
+   "तापीय भार"
+  ],
+  "o_en": [
+   "Static load",
+   "Sudden load",
+   "Cyclic load",
+   "Thermal load"
+  ],
+  "a": 2,
+  "e_hi": "थकान विफलता बार-बार होने वाले चक्रीय भार (fluctuating or cyclic loads) के कारण होती है।",
+  "e_en": "Fatigue failure is caused by repeated or cyclic loading over a period of time."
+ },
+ {
+  "id": "rp-je_-h00853",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "संरचनात्मक इस्पात के लिए यंग मापांक (Young's Modulus) का सामान्य मान क्या है?",
+  "q_en": "What is the typical value of Young's Modulus for structural steel?",
+  "o_hi": [
+   "100 GPa",
+   "200 GPa",
+   "300 GPa",
+   "400 GPa"
+  ],
+  "o_en": [
+   "100 GPa",
+   "200 GPa",
+   "300 GPa",
+   "400 GPa"
+  ],
+  "a": 1,
+  "e_hi": "इस्पात के लिए यंग मापांक (E) का मानक मान लगभग 200 GPa या 2 x 10^5 N/mm² होता है।",
+  "e_en": "The standard value of Young's Modulus (E) for steel is approximately 200 GPa or 2 x 10^5 N/mm²."
+ },
+ {
+  "id": "rp-je_-h00854",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक रेलवे बोगी के सस्पेंशन स्प्रिंग पर भार बढ़ने पर उसकी लंबाई में कमी आती है। स्प्रिंग के इस गुण को क्या कहा जाता है?",
+  "q_en": "When the load on a railway bogie suspension spring increases, its length decreases. What is this property of the spring called?",
+  "o_hi": [
+   "लचीलापन",
+   "कठोरता",
+   "सुघट्यता",
+   "भंगुरता"
+  ],
+  "o_en": [
+   "Elasticity",
+   "Stiffness",
+   "Plasticity",
+   "Brittleness"
+  ],
+  "a": 0,
+  "e_hi": "लचीलापन वह गुण है जिसके कारण वस्तु भार हटने पर अपने मूल आकार में वापस आ जाती है। स्प्रिंग लोड के तहत संकुचित होते हैं और मुक्त होने पर वापस फैल जाते हैं।",
+  "e_en": "Elasticity is the property by which a material regains its original shape after the removal of load. Springs compress under load and expand back when released."
+ },
+ {
+  "id": "rp-je_-h00855",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "यदि एक लोकोमोटिव के एक्सल पर लगने वाला बल दोगुना कर दिया जाए, तो प्रतिबल (Stress) पर क्या प्रभाव पड़ेगा, यदि क्षेत्रफल समान रहे?",
+  "q_en": "If the force applied to a locomotive axle is doubled while the cross-sectional area remains constant, what will be the effect on the stress?",
+  "o_hi": [
+   "आधा हो जाएगा",
+   "दोगुना हो जाएगा",
+   "चार गुना हो जाएगा",
+   "कोई परिवर्तन नहीं होगा"
+  ],
+  "o_en": [
+   "Will become half",
+   "Will double",
+   "Will become four times",
+   "No change"
+  ],
+  "a": 1,
+  "e_hi": "प्रतिबल का सूत्र 'बल बटा क्षेत्रफल' (Stress = Force/Area) होता है। यदि क्षेत्रफल स्थिर है, तो प्रतिबल सीधे बल के समानुपाती होता है।",
+  "e_en": "Stress is defined as force divided by area. Since the area is constant, stress is directly proportional to the applied force."
+ },
+ {
+  "id": "rp-je_-h00856",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "रेलवे ट्रैक के निर्माण में 'क्रिप' (Creep) को रोकने के लिए उपयोग की जाने वाली सामग्री का कौन सा यांत्रिक गुण महत्वपूर्ण है?",
+  "q_en": "Which mechanical property of material is crucial to resist 'creep' in the construction of railway tracks?",
+  "o_hi": [
+   "कठोरता",
+   "तन्यता",
+   "उच्च तापमान प्रतिरोध",
+   "आघात सहने की क्षमता"
+  ],
+  "o_en": [
+   "Hardness",
+   "Ductility",
+   "High-temperature resistance",
+   "Impact toughness"
+  ],
+  "a": 2,
+  "e_hi": "क्रिप उच्च तापमान और निरंतर भार के तहत सामग्री का धीरे-धीरे स्थायी विरूपण है। इसके लिए उच्च तापमान प्रतिरोध आवश्यक है।",
+  "e_en": "Creep is the slow permanent deformation of material under high temperature and constant load. High-temperature resistance is essential to mitigate this."
+ },
+ {
+  "id": "rp-je_-h00857",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक स्टील की छड़ को खींचने पर उसकी लंबाई में वृद्धि होती है और चौड़ाई में कमी आती है। इस प्रभाव को किस अनुपात से मापा जाता है?",
+  "q_en": "When a steel rod is pulled, its length increases and width decreases. Which ratio measures this effect?",
+  "o_hi": [
+   "यंग मापांक",
+   "पॉइसन अनुपात",
+   "बल्क मापांक",
+   "दृढ़ता मापांक"
+  ],
+  "o_en": [
+   "Young's modulus",
+   "Poisson's ratio",
+   "Bulk modulus",
+   "Modulus of rigidity"
+  ],
+  "a": 1,
+  "e_hi": "पॉइसन अनुपात पार्श्व विकृति (lateral strain) और अनुदैर्ध्य विकृति (longitudinal strain) का अनुपात होता है।",
+  "e_en": "Poisson's ratio is the ratio of lateral strain to longitudinal strain in a material under axial loading."
+ },
+ {
+  "id": "rp-je_-h00858",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "रेलवे के पहियों के निर्माण के लिए कौन सा पदार्थ गुण सबसे महत्वपूर्ण है ताकि वे पटरियों के झटकों को झेल सकें?",
+  "q_en": "Which material property is most critical for manufacturing railway wheels so they can withstand track impacts?",
+  "o_hi": [
+   "भंगुरता",
+   "तन्यता",
+   "आघात सहनशीलता (Toughness)",
+   "कठोरता"
+  ],
+  "o_en": [
+   "Brittleness",
+   "Ductility",
+   "Toughness",
+   "Hardness"
+  ],
+  "a": 2,
+  "e_hi": "आघात सहनशीलता (Toughness) वह गुण है जिससे पदार्थ बिना टूटे अचानक झटकों या प्रभाव को सोख लेता है।",
+  "e_en": "Toughness is the ability of a material to absorb energy and deform plastically without fracturing under sudden impact."
+ },
+ {
+  "id": "rp-je_-h00859",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक बीम पर समान रूप से वितरित भार (UDL) के कारण अधिकतम बेंडिंग मोमेंट कहाँ उत्पन्न होता है?",
+  "q_en": "Where does the maximum bending moment occur in a simply supported beam subjected to a Uniformly Distributed Load (UDL)?",
+  "o_hi": [
+   "सिरों पर",
+   "मध्य बिंदु पर",
+   "एक तिहाई दूरी पर",
+   "कहीं भी नहीं"
+  ],
+  "o_en": [
+   "At the ends",
+   "At the midpoint",
+   "At one-third distance",
+   "Nowhere"
+  ],
+  "a": 1,
+  "e_hi": "एक साधारण समर्थित बीम पर समान रूप से वितरित भार के लिए, अधिकतम बेंडिंग मोमेंट बीम के ठीक केंद्र में होता है।",
+  "e_en": "For a simply supported beam under a UDL, the maximum bending moment occurs exactly at the center of the span."
+ },
+ {
+  "id": "rp-je_-h00860",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी पदार्थ का 'यंग मापांक' (Young's Modulus) अधिक है, तो इसका क्या अर्थ है?",
+  "q_en": "If a material has a high 'Young's Modulus', what does it imply?",
+  "o_hi": [
+   "पदार्थ बहुत लचीला है",
+   "पदार्थ कठोर (Stiff) है",
+   "पदार्थ आसानी से मुड़ सकता है",
+   "पदार्थ भंगुर है"
+  ],
+  "o_en": [
+   "The material is very flexible",
+   "The material is stiff",
+   "The material bends easily",
+   "The material is brittle"
+  ],
+  "a": 1,
+  "e_hi": "यंग मापांक पदार्थ की कठोरता (stiffness) को दर्शाता है। उच्च मान का अर्थ है कि पदार्थ विरूपण के प्रति अधिक प्रतिरोधी है।",
+  "e_en": "Young's Modulus represents the stiffness of a material. A higher value means the material is more resistant to elastic deformation."
+ },
+ {
+  "id": "rp-je_-h00861",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "ट्रेन के ब्रेक लगाने पर पहियों और पटरियों के बीच घर्षण से कौन सा प्रतिबल (Stress) उत्पन्न होता है?",
+  "q_en": "Which type of stress is generated between wheels and rails due to friction when applying train brakes?",
+  "o_hi": [
+   "तनन प्रतिबल",
+   "संपीड़न प्रतिबल",
+   "अपरूपण प्रतिबल (Shear Stress)",
+   "बंकन प्रतिबल"
+  ],
+  "o_en": [
+   "Tensile stress",
+   "Compressive stress",
+   "Shear stress",
+   "Bending stress"
+  ],
+  "a": 2,
+  "e_hi": "जब सतहें एक-दूसरे के ऊपर रगड़ती हैं, तो यह अपरूपण बल उत्पन्न करता है, जिससे अपरूपण प्रतिबल पैदा होता है।",
+  "e_en": "When surfaces rub against each other, it generates tangential forces that result in shear stress."
+ },
+ {
+  "id": "rp-je_-h00862",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "एक खोखले बेलनाकार शाफ्ट की तुलना में ठोस शाफ्ट का क्या लाभ है यदि दोनों का वजन समान हो?",
+  "q_en": "What is the advantage of a hollow cylindrical shaft compared to a solid shaft if both have the same weight?",
+  "o_hi": [
+   "ठोस शाफ्ट अधिक टॉर्क सह सकता है",
+   "खोखला शाफ्ट अधिक टॉर्क सह सकता है",
+   "दोनों समान हैं",
+   "खोखला शाफ्ट सस्ता है"
+  ],
+  "o_en": [
+   "Solid shaft can take more torque",
+   "Hollow shaft can take more torque",
+   "Both are equal",
+   "Hollow shaft is cheaper"
+  ],
+  "a": 1,
+  "e_hi": "खोखले शाफ्ट का जड़त्व आघूर्ण (moment of inertia) अधिक होता है, जिससे वह समान वजन के ठोस शाफ्ट से अधिक टॉर्क सह सकता है।",
+  "e_en": "A hollow shaft has a higher polar moment of inertia for the same weight, allowing it to withstand more torque than a solid shaft."
+ },
+ {
+  "id": "rp-je_-h00863",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "धातु के थकान (Fatigue) का मुख्य कारण क्या है जो रेलवे एक्सल में विफलता का कारण बनता है?",
+  "q_en": "What is the primary cause of metal fatigue that leads to failure in railway axles?",
+  "o_hi": [
+   "उच्च तापमान",
+   "बार-बार चक्रीय भार (Cyclic loading)",
+   "स्थिर भार",
+   "जंग"
+  ],
+  "o_en": [
+   "High temperature",
+   "Repeated cyclic loading",
+   "Static loading",
+   "Corrosion"
+  ],
+  "a": 1,
+  "e_hi": "धातु की थकान तब होती है जब एक घटक बार-बार चक्रीय तनाव के संपर्क में आता है, जिससे सूक्ष्म दरारें उत्पन्न होती हैं।",
+  "e_en": "Metal fatigue occurs when a component is subjected to repeated cyclic stresses, leading to the initiation and propagation of micro-cracks."
+ },
+ {
+  "id": "rp-je_-h00864",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "किसी पदार्थ पर भार हटाने के बाद यदि वह अपने मूल आकार में वापस आ जाता है, तो इस गुण को क्या कहते हैं?",
+  "q_en": "What is the property of a material called if it returns to its original shape after the removal of an external load?",
+  "o_hi": [
+   "सुघट्यता",
+   "प्रत्यास्थता",
+   "कठोरता",
+   "भंगुरता"
+  ],
+  "o_en": [
+   "Plasticity",
+   "Elasticity",
+   "Hardness",
+   "Brittleness"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्यास्थता वह गुण है जिसके कारण पदार्थ भार हटाने पर अपने मूल आकार में लौट आता है।",
+  "e_en": "Elasticity is the property by which a material regains its original shape after the load is removed."
+ },
+ {
+  "id": "rp-je_-h00865",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी छड़ की लंबाई दोगुनी कर दी जाए और भार समान रहे, तो छड़ के विस्तार (elongation) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the length of a bar is doubled while the load remains the same, what will be the effect on the elongation of the bar?",
+  "o_hi": [
+   "आधा हो जाएगा",
+   "दोगुना हो जाएगा",
+   "चार गुना हो जाएगा",
+   "कोई बदलाव नहीं होगा"
+  ],
+  "o_en": [
+   "It will be halved",
+   "It will be doubled",
+   "It will be quadrupled",
+   "No change"
+  ],
+  "a": 1,
+  "e_hi": "विस्तार का सूत्र डेल्टा = पीएल/एई है। चूँकि विस्तार लंबाई के सीधे समानुपाती होता है, लंबाई दोगुनी करने पर विस्तार भी दोगुना हो जाएगा।",
+  "e_en": "The elongation formula is delta = PL/AE. Since elongation is directly proportional to length, doubling the length doubles the elongation."
+ },
+ {
+  "id": "rp-je_-h00866",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक कैंटिलीवर बीम के मुक्त सिरे पर बिंदु भार लगाने पर अधिकतम बेंडिंग मोमेंट कहाँ उत्पन्न होगा?",
+  "q_en": "Where will the maximum bending moment occur in a cantilever beam when a point load is applied at the free end?",
+  "o_hi": [
+   "मुक्त सिरे पर",
+   "मध्य बिंदु पर",
+   "आबद्ध (fixed) सिरे पर",
+   "कहीं नहीं"
+  ],
+  "o_en": [
+   "At the free end",
+   "At the midpoint",
+   "At the fixed end",
+   "Nowhere"
+  ],
+  "a": 2,
+  "e_hi": "कैंटिलीवर बीम में आबद्ध सिरे पर बेंडिंग मोमेंट सबसे अधिक होता है क्योंकि वहाँ से भार की लंबवत दूरी अधिकतम होती है।",
+  "e_en": "In a cantilever beam, the bending moment is maximum at the fixed end because the perpendicular distance of the load from that point is maximum."
+ },
+ {
+  "id": "rp-je_-h00867",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "यदि किसी बीम की गहराई को दोगुना कर दिया जाए, तो उसकी बेंडिंग सामर्थ्य (bending strength) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the depth of a beam is doubled, what will be the effect on its bending strength?",
+  "o_hi": [
+   "दोगुनी हो जाएगी",
+   "चार गुनी हो जाएगी",
+   "आठ गुनी हो जाएगी",
+   "अपरिवर्तित रहेगी"
+  ],
+  "o_en": [
+   "Doubles",
+   "Increases four times",
+   "Increases eight times",
+   "Remains unchanged"
+  ],
+  "a": 1,
+  "e_hi": "बेंडिंग सामर्थ्य सेक्शन मापांक (Z) पर निर्भर करती है। आयताकार बीम के लिए Z = बीएच स्क्वायर/6 होता है, इसलिए गहराई दोगुनी करने पर सामर्थ्य चार गुना हो जाती है।",
+  "e_en": "Bending strength depends on the section modulus (Z). For a rectangular beam, Z = bh^2/6, so doubling the depth increases the strength four times."
+ },
+ {
+  "id": "rp-je_-h00868",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "पॉइसन अनुपात (Poisson's ratio) का मान किसके लिए शून्य हो सकता है?",
+  "q_en": "For which of the following can the Poisson's ratio be zero?",
+  "o_hi": [
+   "रबर",
+   "कॉर्क",
+   "स्टील",
+   "एल्युमीनियम"
+  ],
+  "o_en": [
+   "Rubber",
+   "Cork",
+   "Steel",
+   "Aluminum"
+  ],
+  "a": 1,
+  "e_hi": "कॉर्क एक ऐसा पदार्थ है जिसका पॉइसन अनुपात लगभग शून्य होता है क्योंकि इसमें पार्श्व विकृति नगण्य होती है।",
+  "e_en": "Cork is a material with a Poisson's ratio of nearly zero because it exhibits negligible lateral strain."
+ },
+ {
+  "id": "rp-je_-h00869",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "टॉर्शन (torsion) के कारण शाफ्ट में उत्पन्न होने वाला कतरनी प्रतिबल (shear stress) शाफ्ट की त्रिज्या के साथ कैसे बदलता है?",
+  "q_en": "How does the shear stress produced in a shaft due to torsion vary with the radius of the shaft?",
+  "o_hi": [
+   "त्रिज्या के वर्ग के समानुपाती",
+   "त्रिज्या के सीधे समानुपाती",
+   "त्रिज्या के व्युत्क्रमानुपाती",
+   "स्थिर रहता है"
+  ],
+  "o_en": [
+   "Proportional to the square of radius",
+   "Directly proportional to radius",
+   "Inversely proportional to radius",
+   "Remains constant"
+  ],
+  "a": 1,
+  "e_hi": "टॉर्शन समीकरण के अनुसार, कतरनी प्रतिबल केंद्र से दूरी (त्रिज्या) के सीधे समानुपाती होता है।",
+  "e_en": "According to the torsion equation, shear stress is directly proportional to the distance from the center (radius)."
+ },
+ {
+  "id": "rp-je_-h00870",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "तापमान में वृद्धि के कारण किसी स्वतंत्र रूप से प्रसारित होने वाली छड़ में उत्पन्न होने वाला तापीय प्रतिबल (thermal stress) कितना होगा?",
+  "q_en": "What will be the thermal stress induced in a freely expanding rod due to an increase in temperature?",
+  "o_hi": [
+   "शून्य",
+   "धनात्मक",
+   "ऋणात्मक",
+   "असीमित"
+  ],
+  "o_en": [
+   "Zero",
+   "Positive",
+   "Negative",
+   "Infinite"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि छड़ स्वतंत्र रूप से प्रसारित हो रही है, इसलिए कोई अवरोध नहीं है और कोई प्रतिबल उत्पन्न नहीं होगा।",
+  "e_en": "Since the rod is expanding freely, there is no restraint, and therefore no stress is generated."
+ },
+ {
+  "id": "rp-je_-h00871",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक खोखले शाफ्ट का उपयोग ठोस शाफ्ट की तुलना में क्यों किया जाता है?",
+  "q_en": "Why is a hollow shaft preferred over a solid shaft?",
+  "o_hi": [
+   "यह सस्ता है",
+   "यह कम वजन में अधिक मरोड़ सामर्थ्य प्रदान करता है",
+   "यह अधिक लचीला है",
+   "यह जंग नहीं खाता"
+  ],
+  "o_en": [
+   "It is cheaper",
+   "It provides higher torsional strength for less weight",
+   "It is more flexible",
+   "It does not rust"
+  ],
+  "a": 1,
+  "e_hi": "खोखले शाफ्ट में पदार्थ का वितरण केंद्र से दूर होता है, जिससे कम वजन में अधिक मजबूती मिलती है।",
+  "e_en": "In a hollow shaft, material is distributed away from the center, providing higher strength with less weight."
+ },
+ {
+  "id": "rp-je_-h00872",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी पदार्थ का 'यंग मापांक' अधिक है, तो इसका क्या अर्थ है?",
+  "q_en": "If a material has a high 'Young's Modulus', what does it mean?",
+  "o_hi": [
+   "पदार्थ अधिक लचीला है",
+   "पदार्थ अधिक कठोर (stiff) है",
+   "पदार्थ भंगुर है",
+   "पदार्थ में विकृति अधिक होगी"
+  ],
+  "o_en": [
+   "The material is more flexible",
+   "The material is more stiff",
+   "The material is brittle",
+   "The material will deform more"
+  ],
+  "a": 1,
+  "e_hi": "यंग मापांक पदार्थ की कठोरता का माप है; उच्च मान का अर्थ है कि पदार्थ विकृति का अधिक विरोध करेगा।",
+  "e_en": "Young's Modulus is a measure of stiffness; a higher value means the material will resist deformation more effectively."
+ },
+ {
+  "id": "rp-je_-h00873",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "सामग्री के प्रति इकाई आयतन में संचित ऊर्जा को क्या कहा जाता है?",
+  "q_en": "What is the energy stored per unit volume in a material called?",
+  "o_hi": [
+   "प्रत्यास्थता",
+   "विकृति ऊर्जा घनत्व",
+   "कठोरता",
+   "सुघट्यता"
+  ],
+  "o_en": [
+   "Elasticity",
+   "Strain energy density",
+   "Hardness",
+   "Plasticity"
+  ],
+  "a": 1,
+  "e_hi": "प्रति इकाई आयतन में संचित विकृति ऊर्जा को विकृति ऊर्जा घनत्व या 'प्रूफ रेजिलिएंस' कहा जाता है।",
+  "e_en": "The strain energy stored per unit volume of a material is known as strain energy density or proof resilience."
+ },
+ {
+  "id": "rp-je_-h00874",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "एक सामग्री का 'पॉइसन अनुपात' (Poisson's ratio) किसके बीच का अनुपात है?",
+  "q_en": "The 'Poisson's ratio' of a material is the ratio of which of the following?",
+  "o_hi": [
+   "अनुदैर्ध्य विकृति और पार्श्व विकृति",
+   "पार्श्व विकृति और अनुदैर्ध्य विकृति",
+   "आयतन विकृति और रेखीय विकृति",
+   "प्रतिबल और विकृति"
+  ],
+  "o_en": [
+   "Longitudinal strain to lateral strain",
+   "Lateral strain to longitudinal strain",
+   "Volumetric strain to linear strain",
+   "Stress to strain"
+  ],
+  "a": 1,
+  "e_hi": "पॉइसन अनुपात पार्श्व विकृति और अनुदैर्ध्य विकृति का ऋणात्मक अनुपात होता है।",
+  "e_en": "Poisson's ratio is defined as the negative ratio of lateral strain to longitudinal strain."
+ },
+ {
+  "id": "rp-je_-h00875",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी छड़ की लंबाई को दोगुना कर दिया जाए, तो उसके 'यंग मापांक' (Young's Modulus) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the length of a rod is doubled, what will be the effect on its 'Young's Modulus'?",
+  "o_hi": [
+   "यह दोगुना हो जाएगा",
+   "यह आधा हो जाएगा",
+   "यह अपरिवर्तित रहेगा",
+   "यह चार गुना हो जाएगा"
+  ],
+  "o_en": [
+   "It will double",
+   "It will be halved",
+   "It will remain unchanged",
+   "It will become four times"
+  ],
+  "a": 2,
+  "e_hi": "यंग मापांक सामग्री का एक अंतर्निहित गुण है, जो लंबाई या आकार पर निर्भर नहीं करता है।",
+  "e_en": "Young's Modulus is an intrinsic property of the material and does not depend on its dimensions like length."
+ },
+ {
+  "id": "rp-je_-h00876",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "किसी सामग्री की 'भंगुरता' (Brittleness) का अर्थ क्या है?",
+  "q_en": "What does the 'Brittleness' of a material signify?",
+  "o_hi": [
+   "बिना किसी स्थायी विकृति के टूटना",
+   "खींचने पर तार बनना",
+   "उच्च आघात सहने की क्षमता",
+   "उच्च लचीलापन"
+  ],
+  "o_en": [
+   "Fracture without significant permanent deformation",
+   "Ability to be drawn into wires",
+   "High impact resistance",
+   "High flexibility"
+  ],
+  "a": 0,
+  "e_hi": "भंगुर सामग्री वे होती हैं जो भार के तहत बिना किसी पूर्व चेतावनी या विकृति के टूट जाती हैं।",
+  "e_en": "Brittle materials are those that fail or fracture with little to no permanent deformation before breaking."
+ },
+ {
+  "id": "rp-je_-h00877",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "कतरनी प्रतिबल (Shear Stress) किस प्रकार के बल के कारण उत्पन्न होता है?",
+  "q_en": "Shear stress is caused by which type of force?",
+  "o_hi": [
+   "अक्षीय बल",
+   "स्पर्शरेखीय बल",
+   "संपीड़न बल",
+   "आंतरिक बल"
+  ],
+  "o_en": [
+   "Axial force",
+   "Tangential force",
+   "Compressive force",
+   "Internal force"
+  ],
+  "a": 1,
+  "e_hi": "जब बल किसी सतह के समानांतर कार्य करता है, तो वह कतरनी प्रतिबल उत्पन्न करता है।",
+  "e_en": "Shear stress is produced when a force acts tangentially or parallel to the surface of the material."
+ },
+ {
+  "id": "rp-je_-h00878",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "आयतन मापांक (Bulk Modulus) का सूत्र क्या है?",
+  "q_en": "What is the formula for Bulk Modulus?",
+  "o_hi": [
+   "प्रत्यक्ष प्रतिबल / आयतन विकृति",
+   "आयतन विकृति / प्रत्यक्ष प्रतिबल",
+   "अपरूपण प्रतिबल / अपरूपण विकृति",
+   "अनुदैर्ध्य प्रतिबल / पार्श्व विकृति"
+  ],
+  "o_en": [
+   "Direct stress / Volumetric strain",
+   "Volumetric strain / Direct stress",
+   "Shear stress / Shear strain",
+   "Longitudinal stress / Lateral strain"
+  ],
+  "a": 0,
+  "e_hi": "आयतन मापांक प्रत्यक्ष प्रतिबल और आयतन विकृति का अनुपात होता है।",
+  "e_en": "Bulk modulus is defined as the ratio of direct stress to volumetric strain."
+ },
+ {
+  "id": "rp-je_-h00879",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 3,
+  "q_hi": "तापमान में परिवर्तन के कारण छड़ में उत्पन्न प्रतिबल को क्या कहा जाता है?",
+  "q_en": "What is the stress induced in a rod due to a change in temperature called?",
+  "o_hi": [
+   "अक्षीय प्रतिबल",
+   "तापीय प्रतिबल",
+   "कतरनी प्रतिबल",
+   "संपीड़न प्रतिबल"
+  ],
+  "o_en": [
+   "Axial stress",
+   "Thermal stress",
+   "Shear stress",
+   "Compressive stress"
+  ],
+  "a": 1,
+  "e_hi": "जब किसी छड़ को फैलने से रोका जाता है और तापमान बदलता है, तो तापीय प्रतिबल उत्पन्न होता है।",
+  "e_en": "Thermal stress is induced when a material is restrained from expanding or contracting due to temperature changes."
  }
 ]
