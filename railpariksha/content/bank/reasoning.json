@@ -33425,5 +33425,74 @@
   "a": 0,
   "e_hi": "घंटी की सूइयां लगभग हर 16 मिनट 21.835 सेकंड भर पर एक-दूसरे के लंबवत होती हैं। 3:00 के बाद अगला समय लगभग 3:16 होगा।",
   "e_en": "The clock hands are perpendicular at intervals of approximately 16 minutes and 21.835 seconds. After 3:00, the next instance is approximately 3:16."
+ },
+ {
+  "id": "rp-rea-o01458",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "शब्द 'COMPUTER' को इस प्रकार कोड किया गया है: 'C' = 3, 'O' = 15, 'M' = 13, आदि (अक्षरों के अल्फाबेटिक क्रमांक के अनुसार)। यदि 'COMPUTER' का कोड 3-15-13-16-21-20-5-18 है, तो 'MOUSE' का सही कोड क्या होगा?",
+  "q_en": "The word 'COMPUTER' is coded based on the alphabetical position of its letters (C=3, O=15, etc.). If COMPUTER is coded as 3-15-13-16-21-20-5-18, what is the correct code for 'MOUSE'?",
+  "o_hi": [
+   "13-15-21-19-5",
+   "13-15-19-19-5",
+   "13-15-21-19-21",
+   "13-15-21-19-5 (Note: Check U=21)"
+  ],
+  "o_en": [
+   "13-15-21-19-5",
+   "13-15-19-19-5",
+   "13-15-21-19-21",
+   "13-15-21-19-5 (Trap: U is 21, not 5)"
+  ],
+  "a": 0,
+  "e_hi": "M=13, O=15, U=21, S=19, E=5। इसलिए सही कोड 13-15-21-19-5 है।",
+  "e_en": "M=13, O=15, U=21, S=19, E=5. Therefore, the correct code is 13-15-21-19-5."
+ },
+ {
+  "id": "rp-rea-o01459",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "यदि 'CAT' को 'DBU' के रूप में कोड किया जाता है, तो 'DOG' को इसी तर्क के आधार पर कैसे कोड किया जाएगा?",
+  "q_en": "If 'CAT' is coded as 'DBU', how will 'DOG' be coded using the same logic?",
+  "o_hi": [
+   "E P H",
+   "E P F",
+   "E O F",
+   "D P H"
+  ],
+  "o_en": [
+   "E P H",
+   "E P F",
+   "E O F",
+   "D P H"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर की स्थिति 1 बढ़ाई गई है (C->D, A->B, T->U)। इसी प्रकार, D->E, O->P, G->H।",
+  "e_en": "The position of each letter is increased by 1 (C->D, A->B, T->U). Similarly, D->E, O->P, G->H."
+ },
+ {
+  "id": "rp-rea-o01460",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "d": 1,
+  "q_hi": "कोडिंग में, 'A' को 1, 'B' को 2, ... 'Z' को 26 माना जाता है। यदि 'APPLE' का कोड 1-16-16-12-5 है, तो 'BANANA' का कोड क्या होगा?",
+  "q_en": "In coding, 'A' is 1, 'B' is 2, ..., 'Z' is 26. If 'APPLE' is coded as 1-16-16-12-5, what is the code for 'BANANA'?",
+  "o_hi": [
+   "2-1-14-1-14-1",
+   "2-1-14-1-14-2",
+   "1-14-1-14-1-2",
+   "2-14-1-14-1-1"
+  ],
+  "o_en": [
+   "2-1-14-1-14-1",
+   "2-1-14-1-14-2",
+   "1-14-1-14-1-2",
+   "2-14-1-14-1-1"
+  ],
+  "a": 0,
+  "e_hi": "B=2, A=1, N=14, A=1, N=14, A=1। ध्यान दें कि 'A' हमेशा 1 होता है, भले ही वह अंत में हो।",
+  "e_en": "B=2, A=1, N=14, A=1, N=14, A=1. Note that 'A' is always 1, regardless of its position."
  }
 ]
