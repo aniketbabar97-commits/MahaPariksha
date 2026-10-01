@@ -1,4 +1,920 @@
 [
- {"id": "fc-comp-0001", "s": "computer", "t": "computer_fundamentals", "f_hi": "1 बाइट में कितने बिट होते हैं?", "f_en": "How many bits in 1 byte?", "b_hi": "8 बिट", "b_en": "8 bits"},
- {"id": "fc-comp-0002", "s": "computer", "t": "financial_awareness", "f_hi": "UPI का पूर्ण रूप?", "f_en": "Full form of UPI?", "b_hi": "Unified Payments Interface", "b_en": "Unified Payments Interface"}
+ {
+  "id": "fc-comp-0001",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "1 बाइट में कितने बिट होते हैं?",
+  "f_en": "How many bits in 1 byte?",
+  "b_hi": "8 बिट",
+  "b_en": "8 bits"
+ },
+ {
+  "id": "fc-comp-0002",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "UPI का पूर्ण रूप?",
+  "f_en": "Full form of UPI?",
+  "b_hi": "Unified Payments Interface",
+  "b_en": "Unified Payments Interface"
+ },
+ {
+  "id": "fc-computer-0003",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "आईपी एड्रेस (IP Address) का पूरा नाम क्या है?",
+  "f_en": "What is the full form of IP Address?",
+  "b_hi": "इंटरनेट प्रोटोकॉल एड्रेस",
+  "b_en": "Internet Protocol Address"
+ },
+ {
+  "id": "fc-computer-0004",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "WWW का पूरा नाम क्या है?",
+  "f_en": "What is the full form of WWW?",
+  "b_hi": "वर्ल्ड वाइड वेब",
+  "b_en": "World Wide Web"
+ },
+ {
+  "id": "fc-computer-0005",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "HTML का उपयोग किसके निर्माण के लिए किया जाता है?",
+  "f_en": "What is HTML used for creating?",
+  "b_hi": "वेब पेज",
+  "b_en": "Web pages"
+ },
+ {
+  "id": "fc-computer-0006",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "URL का पूरा नाम क्या है?",
+  "f_en": "What is the full form of URL?",
+  "b_hi": "यूनिफॉर्म रिसोर्स लोकेटर",
+  "b_en": "Uniform Resource Locator"
+ },
+ {
+  "id": "fc-computer-0007",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "ISP का पूरा नाम क्या है?",
+  "f_en": "What is the full form of ISP?",
+  "b_hi": "इंटरनेट सर्विस प्रोवाइडर",
+  "b_en": "Internet Service Provider"
+ },
+ {
+  "id": "fc-computer-0008",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "LAN का पूरा नाम क्या है?",
+  "f_en": "What is the full form of LAN?",
+  "b_hi": "लोकल एरिया नेटवर्क",
+  "b_en": "Local Area Network"
+ },
+ {
+  "id": "fc-computer-0009",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "आईपी एड्रेस (IP Address) का क्या अर्थ है?",
+  "f_en": "What does IP Address stand for?",
+  "b_hi": "इंटरनेट प्रोटोकॉल, जो नेटवर्क पर प्रत्येक डिवाइस की पहचान करता है।",
+  "b_en": "Internet Protocol, which identifies every device on a network."
+ },
+ {
+  "id": "fc-computer-0010",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "DNS का मुख्य कार्य क्या है?",
+  "f_en": "What is the main function of DNS?",
+  "b_hi": "यह डोमेन नाम को आईपी पते में अनुवादित करता है।",
+  "b_en": "It translates domain names into IP addresses."
+ },
+ {
+  "id": "fc-computer-0011",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "HTML का उपयोग किसके लिए किया जाता है?",
+  "f_en": "What is HTML used for?",
+  "b_hi": "वेब पेजों को बनाने और उनकी संरचना को परिभाषित करने के लिए।",
+  "b_en": "For creating and defining the structure of web pages."
+ },
+ {
+  "id": "fc-computer-0012",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "यूआरएल (URL) क्या दर्शाता है?",
+  "f_en": "What does URL represent?",
+  "b_hi": "इंटरनेट पर किसी संसाधन का पता (यूनिफ़ॉर्म रिसोर्स लोकेटर)।",
+  "b_en": "The address of a resource on the internet (Uniform Resource Locator)."
+ },
+ {
+  "id": "fc-computer-0013",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "फायरवॉल (Firewall) का उपयोग किस लिए होता है?",
+  "f_en": "What is a firewall used for?",
+  "b_hi": "नेटवर्क सुरक्षा के लिए, जो अनधिकृत पहुँच को रोकता है।",
+  "b_en": "For network security, blocking unauthorized access."
+ },
+ {
+  "id": "fc-computer-0014",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "वर्ल्ड वाइड वेब (WWW) के आविष्कारक कौन हैं?",
+  "f_en": "Who is the inventor of the World Wide Web (WWW)?",
+  "b_hi": "टिम बर्नर्स-ली (Tim Berners-Lee)",
+  "b_en": "Tim Berners-Lee"
+ },
+ {
+  "id": "fc-computer-0015",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "एक नेटवर्क से दूसरे नेटवर्क पर डेटा भेजने के लिए किस मुख्य डिवाइस का उपयोग किया जाता है?",
+  "f_en": "Which main device is used to send data from one network to another?",
+  "b_hi": "रूटर (Router)",
+  "b_en": "Router"
+ },
+ {
+  "id": "fc-computer-0016",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "एचटीटीपी (HTTP) का डिफ़ॉल्ट पोर्ट नंबर क्या होता है?",
+  "f_en": "What is the default port number of HTTP?",
+  "b_hi": "अस्सी (80)",
+  "b_en": "80"
+ },
+ {
+  "id": "fc-computer-0017",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "कंप्यूटर नेटवर्क में 'मॉडेम' (Modem) का मुख्य कार्य क्या है?",
+  "f_en": "What is the main function of a 'Modem' in a computer network?",
+  "b_hi": "डिजिटल सिग्नलों को एनालॉग में और एनालॉग को डिजिटल में बदलना",
+  "b_en": "Converting digital signals to analog and analog to digital"
+ },
+ {
+  "id": "fc-computer-0018",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "एचटीटीपी (HTTP) का डिफ़ॉल्ट पोर्ट नंबर क्या है?",
+  "f_en": "What is the default port number for HTTP?",
+  "b_hi": "पोर्ट अस्सी (Port 80)",
+  "b_en": "Port 80"
+ },
+ {
+  "id": "fc-computer-0019",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "सबसे पहला वेब ब्राउज़र कौन सा था?",
+  "f_en": "Which was the first web browser?",
+  "b_hi": "वर्ल्डवाइडवेब (WorldWideWeb), बाद में नाम बदलकर नेक्सस (Nexus) किया गया",
+  "b_en": "WorldWideWeb, later renamed to Nexus"
+ },
+ {
+  "id": "fc-computer-0020",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "लोकल एरिया नेटवर्क का संक्षिप्त रूप क्या है?",
+  "f_en": "What is the acronym for Local Area Network?",
+  "b_hi": "लैन (LAN)",
+  "b_en": "LAN"
+ },
+ {
+  "id": "fc-computer-0021",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "इंटरनेट के जनक (Father of Internet) किसे कहा जाता है?",
+  "f_en": "Who is known as the Father of Internet?",
+  "b_hi": "विंट सर्फ (Vint Cerf)",
+  "b_en": "Vint Cerf"
+ },
+ {
+  "id": "fc-computer-0022",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "HTML का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of HTML?",
+  "b_hi": "हाइपरटेक्स्ट मार्कअप लैंग्वेज (HyperText Markup Language)",
+  "b_en": "HyperText Markup Language"
+ },
+ {
+  "id": "fc-computer-0023",
+  "s": "computer",
+  "t": "internet_networking",
+  "f_hi": "वेबसाइट का मुख्य पृष्ठ (Main Page) क्या कहलाता है?",
+  "f_en": "What is the main page of a website called?",
+  "b_hi": "होम पेज (Home Page)",
+  "b_en": "Home Page"
+ },
+ {
+  "id": "fc-computer-0024",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस वर्ड में चयनित टेक्स्ट को रेखांकित करने के लिए कौन सी शॉर्टकट कुंजी का उपयोग किया जाता है?",
+  "f_en": "Which shortcut key is used to underline selected text in MS Word?",
+  "b_hi": "कंट्रोल और यू (Ctrl + U)",
+  "b_en": "Ctrl + U"
+ },
+ {
+  "id": "fc-computer-0025",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में फॉर्मूला हमेशा किस चिन्ह से शुरू होता है?",
+  "f_en": "Which symbol is always used to start a formula in MS Excel?",
+  "b_hi": "बराबर का चिन्ह ( = )",
+  "b_en": "Equals sign ( = )"
+ },
+ {
+  "id": "fc-computer-0026",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस पावरपॉइंट में नई स्लाइड डालने के लिए शॉर्टकट कुंजी क्या है?",
+  "f_en": "What is the shortcut key to insert a new slide in MS PowerPoint?",
+  "b_hi": "कंट्रोल और एम (Ctrl + M)",
+  "b_en": "Ctrl + M"
+ },
+ {
+  "id": "fc-computer-0027",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में पंक्तियों और स्तंभों के प्रतिच्छेदन को क्या कहा जाता है?",
+  "f_en": "What is the intersection of rows and columns called in MS Excel?",
+  "b_hi": "सेल (Cell)",
+  "b_en": "Cell"
+ },
+ {
+  "id": "fc-computer-0028",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस वर्ड डॉक्यूमेंट में सभी सामग्री का चयन करने के लिए कौन सी शॉर्टकट कुंजी है?",
+  "f_en": "What is the shortcut key to select all content in an MS Word document?",
+  "b_hi": "कंट्रोल और ए (Ctrl + A)",
+  "b_en": "Ctrl + A"
+ },
+ {
+  "id": "fc-computer-0029",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस पावरपॉइंट में स्लाइड शो शुरू करने के लिए किस कुंजी का उपयोग किया जाता है?",
+  "f_en": "Which key is used to start a slide show in MS PowerPoint?",
+  "b_hi": "एफ पांच (F5)",
+  "b_en": "F5"
+ },
+ {
+  "id": "fc-computer-0030",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस पावरपॉइंट में स्लाइड शो शुरू करने के लिए कौन सी फंक्शन कुंजी दबाई जाती है?",
+  "f_en": "Which function key is pressed to start a slideshow in MS PowerPoint?",
+  "b_hi": "एफ पांच (F5)",
+  "b_en": "F5"
+ },
+ {
+  "id": "fc-computer-0031",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस वर्ड दस्तावेज़ का डिफ़ॉल्ट फ़ाइल एक्सटेंशन क्या होता है?",
+  "f_en": "What is the default file extension of an MS Word document?",
+  "b_hi": "डॉट डीओसीएक्स (.docx)",
+  "b_en": ".docx"
+ },
+ {
+  "id": "fc-computer-0032",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में पंक्तियों और स्तंभों के प्रतिच्छेदन (इंटरसेक्शन) को क्या कहते हैं?",
+  "f_en": "What is the intersection of a row and a column in MS Excel called?",
+  "b_hi": "सेल (Cell)",
+  "b_en": "Cell"
+ },
+ {
+  "id": "fc-computer-0033",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस पावरपॉइंट में नई प्रस्तुति जोड़ने के लिए कौन सी शॉर्टकट कुंजी प्रयुक्त होती है?",
+  "f_en": "Which shortcut key is used to create a new presentation in MS PowerPoint?",
+  "b_hi": "कंट्रोल और एम (Ctrl + M)",
+  "b_en": "Ctrl + M"
+ },
+ {
+  "id": "fc-computer-0034",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस वर्ड में चयनित टेक्स्ट को बोल्ड करने की शॉर्टकट कुंजी क्या है?",
+  "f_en": "What is the shortcut key to make selected text bold in MS Word?",
+  "b_hi": "कंट्रोल के साथ बी (Ctrl + B)",
+  "b_en": "Ctrl + B"
+ },
+ {
+  "id": "fc-computer-0035",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में फॉर्मूला की शुरुआत हमेशा किस चिन्ह से होती है?",
+  "f_en": "Which symbol always starts a formula in MS Excel?",
+  "b_hi": "बराबर का चिन्ह (=)",
+  "b_en": "Equal sign (=)"
+ },
+ {
+  "id": "fc-computer-0036",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में पंक्तियों (Rows) और स्तंभों (Columns) के प्रतिच्छेदन को क्या कहते हैं?",
+  "f_en": "What is the intersection of a row and column called in MS Excel?",
+  "b_hi": "सेल (Cell)",
+  "b_en": "Cell"
+ },
+ {
+  "id": "fc-computer-0037",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस पावरपॉइंट में स्लाइड शो शुरू करने की शॉर्टकट कुंजी क्या है?",
+  "f_en": "What is the shortcut key to start a slideshow in MS PowerPoint?",
+  "b_hi": "एफ फाइव (F5)",
+  "b_en": "F5"
+ },
+ {
+  "id": "fc-computer-0038",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस वर्ड में चयनित टेक्स्ट को बोल्ड करने के लिए कौन सी शॉर्टकट कुंजी का उपयोग किया जाता है?",
+  "f_en": "Which shortcut key is used to bold selected text in MS Word?",
+  "b_hi": "कंट्रोल प्लस बी (Ctrl + B)",
+  "b_en": "Ctrl + B"
+ },
+ {
+  "id": "fc-computer-0039",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में फॉर्मूला की शुरुआत किस चिन्ह से होती है?",
+  "f_en": "Which symbol is used to start a formula in MS Excel?",
+  "b_hi": "बराबर का चिन्ह ( = )",
+  "b_en": "Equal sign ( = )"
+ },
+ {
+  "id": "fc-computer-0040",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "माइक्रोसॉफ्ट पावरपॉइंट में नई स्लाइड डालने के लिए शॉर्टकट कुंजी क्या है?",
+  "f_en": "What is the shortcut key to insert a new slide in Microsoft PowerPoint?",
+  "b_hi": "कंट्रोल प्लस एम (Ctrl + M)",
+  "b_en": "Ctrl + M"
+ },
+ {
+  "id": "fc-computer-0041",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस वर्ड डॉक्यूमेंट में स्पेलिंग जांचने (Spell Check) के लिए किस फंक्शन की का उपयोग किया जाता है?",
+  "f_en": "Which function key is used for spell check in an MS Word document?",
+  "b_hi": "एफ सेवन (F7)",
+  "b_en": "F7"
+ },
+ {
+  "id": "fc-computer-0042",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "एमएस एक्सेल में पंक्तियों (Rows) और कॉलम (Columns) के प्रतिच्छेदन (Intersection) को क्या कहा जाता है?",
+  "f_en": "What is the intersection of a row and column in MS Excel called?",
+  "b_hi": "सेल (Cell)",
+  "b_en": "Cell"
+ },
+ {
+  "id": "fc-computer-0043",
+  "s": "computer",
+  "t": "ms_office",
+  "f_hi": "पावरपॉइंट प्रेजेंटेशन में स्लाइड शो शुरू करने के लिए कौन सी शॉर्टकट कुंजी दबाई जाती है?",
+  "f_en": "Which shortcut key is pressed to start a slide show in a PowerPoint presentation?",
+  "b_hi": "एफ फाइव (F5)",
+  "b_en": "F5"
+ },
+ {
+  "id": "fc-computer-0044",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारत का केंद्रीय बैंक कौन सा है?",
+  "f_en": "Which is the central bank of India?",
+  "b_hi": "भारतीय रिजर्व बैंक (RBI)",
+  "b_en": "Reserve Bank of India (RBI)"
+ },
+ {
+  "id": "fc-computer-0045",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारतीय रिजर्व बैंक की स्थापना कब हुई थी?",
+  "f_en": "When was the Reserve Bank of India established?",
+  "b_hi": "एक अप्रैल उन्नीस सौ पैंतीस",
+  "b_en": "1 April 1935"
+ },
+ {
+  "id": "fc-computer-0046",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "आरबीआई का मुख्यालय कहाँ स्थित है?",
+  "f_en": "Where is the headquarters of RBI located?",
+  "b_hi": "मुंबई, महाराष्ट्र",
+  "b_en": "Mumbai, Maharashtra"
+ },
+ {
+  "id": "fc-computer-0047",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारत में एक रुपये के नोट पर किसके हस्ताक्षर होते हैं?",
+  "f_en": "Whose signature is on the one rupee note in India?",
+  "b_hi": "वित्त सचिव, भारत सरकार",
+  "b_en": "Finance Secretary, Government of India"
+ },
+ {
+  "id": "fc-computer-0048",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "राष्ट्रीय कृषि और ग्रामीण विकास बैंक (नाबार्ड) की स्थापना किस पंचवर्षीय योजना के दौरान हुई थी?",
+  "f_en": "During which five-year plan was NABARD established?",
+  "b_hi": "छठी पंचवर्षीय योजना",
+  "b_en": "Sixth Five-Year Plan"
+ },
+ {
+  "id": "fc-computer-0049",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "यूपीआई (UPI) का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of UPI?",
+  "b_hi": "यूनिफाइड पेमेंट्स इंटरफेस",
+  "b_en": "Unified Payments Interface"
+ },
+ {
+  "id": "fc-computer-0050",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारत में एक रुपये के नोट पर किसके हस्ताक्षर होते हैं?",
+  "f_en": "Whose signature is found on the one rupee note in India?",
+  "b_hi": "वित्त सचिव, भारत सरकार",
+  "b_en": "Finance Secretary, Government of India"
+ },
+ {
+  "id": "fc-computer-0051",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "रेपो रेट (Repo Rate) का क्या अर्थ है?",
+  "f_en": "What is the meaning of Repo Rate?",
+  "b_hi": "वह दर जिस पर आरबीआई वाणिज्यिक बैंकों को अल्पकालिक ऋण देता है",
+  "b_en": "The rate at which RBI lends short-term funds to commercial banks"
+ },
+ {
+  "id": "fc-computer-0052",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "आरबीआई की स्थापना किस वर्ष हुई थी?",
+  "f_en": "In which year was the RBI established?",
+  "b_hi": "वर्ष उन्नीस सौ पैंतीस",
+  "b_en": "Year nineteen thirty-five"
+ },
+ {
+  "id": "fc-computer-0053",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "नाबार्ड का मुख्य कार्य किससे संबंधित है?",
+  "f_en": "The primary function of NABARD is related to?",
+  "b_hi": "कृषि और ग्रामीण विकास",
+  "b_en": "Agriculture and rural development"
+ },
+ {
+  "id": "fc-computer-0054",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "जीएसटी भारत में कब लागू किया गया था?",
+  "f_en": "When was GST implemented in India?",
+  "b_hi": "एक जुलाई दो हजार सत्रह",
+  "b_en": "First July two thousand seventeen"
+ },
+ {
+  "id": "fc-computer-0055",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "रेपो रेट कौन निर्धारित करता है?",
+  "f_en": "Who determines the repo rate?",
+  "b_hi": "भारतीय रिजर्व बैंक",
+  "b_en": "Reserve Bank of India"
+ },
+ {
+  "id": "fc-computer-0056",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारतीय रिजर्व बैंक (RBI) की स्थापना किस वर्ष हुई थी?",
+  "f_en": "In which year was the Reserve Bank of India (RBI) established?",
+  "b_hi": "वर्ष उन्नीस सौ पैंतीस (1935)",
+  "b_en": "Year 1935"
+ },
+ {
+  "id": "fc-computer-0057",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "नाबार्ड (NABARD) का मुख्य कार्य क्या है?",
+  "f_en": "What is the primary function of NABARD?",
+  "b_hi": "कृषि और ग्रामीण विकास के लिए वित्त प्रदान करना",
+  "b_en": "Providing finance for agriculture and rural development"
+ },
+ {
+  "id": "fc-computer-0058",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "वाणिज्यिक बैंकों का राष्ट्रीयकरण किस वर्ष हुआ था?",
+  "f_en": "In which year were major commercial banks nationalized in India?",
+  "b_hi": "वर्ष उन्नीस सौ उन्सठ (1969 - प्रथम चरण)",
+  "b_en": "Year 1969 (First phase)"
+ },
+ {
+  "id": "fc-computer-0059",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारत में ₹1 के नोट पर किसके हस्ताक्षर होते हैं?",
+  "f_en": "Whose signature is on the ₹1 currency note in India?",
+  "b_hi": "वित्त सचिव, भारत सरकार",
+  "b_en": "Finance Secretary, Government of India"
+ },
+ {
+  "id": "fc-computer-0060",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "भारतीय रिजर्व बैंक का मुख्यालय कहाँ स्थित है?",
+  "f_en": "Where is the headquarters of the Reserve Bank of India located?",
+  "b_hi": "मुंबई, महाराष्ट्र",
+  "b_en": "Mumbai, Maharashtra"
+ },
+ {
+  "id": "fc-computer-0061",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "व्यापारी बैंकों की नगद आरक्षित अनुपात (CRR) दर कौन तय करता है?",
+  "f_en": "Who determines the Cash Reserve Ratio (CRR) rate for commercial banks?",
+  "b_hi": "भारतीय रिजर्व बैंक (RBI)",
+  "b_en": "Reserve Bank of India (RBI)"
+ },
+ {
+  "id": "fc-computer-0062",
+  "s": "computer",
+  "t": "financial_awareness",
+  "f_hi": "पूर्ण रूप से पहला भारतीय बैंक कौन सा था?",
+  "f_en": "Which was the first fully Indian-owned bank?",
+  "b_hi": "पंजाब नेशनल बैंक (PNB)",
+  "b_en": "Punjab National Bank (PNB)"
+ },
+ {
+  "id": "fc-computer-0063",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "फिशिंग (Phishing) क्या है?",
+  "f_en": "What is Phishing?",
+  "b_hi": "यह धोखाधड़ी से संवेदनशील जानकारी जैसे पासवर्ड या क्रेडिट कार्ड विवरण प्राप्त करने का एक तरीका है।",
+  "b_en": "It is a fraudulent attempt to obtain sensitive information like passwords or credit card details."
+ },
+ {
+  "id": "fc-computer-0064",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "रैनसमवेयर (Ransomware) का मुख्य उद्देश्य क्या है?",
+  "f_en": "What is the main purpose of Ransomware?",
+  "b_hi": "यह उपयोगकर्ता के डेटा को एन्क्रिप्ट कर देता है और फिर उसे वापस देने के लिए फिरौती (Ransom) मांगता है।",
+  "b_en": "It encrypts the user's data and then demands a ransom to restore access."
+ },
+ {
+  "id": "fc-computer-0065",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "मैलवेयर (Malware) शब्द का क्या अर्थ है?",
+  "f_en": "What does the term Malware mean?",
+  "b_hi": "यह मैलिशियस सॉफ्टवेयर (Malicious Software) का संक्षिप्त रूप है जो कंप्यूटर सिस्टम को नुकसान पहुँचाता है।",
+  "b_en": "It is short for malicious software designed to damage or disrupt computer systems."
+ },
+ {
+  "id": "fc-computer-0066",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "द्वि-चरणीय प्रमाणीकरण (Two-Factor Authentication) क्या सुरक्षा प्रदान करता है?",
+  "f_en": "What security does Two-Factor Authentication provide?",
+  "b_hi": "यह लॉगिन के दौरान पासवर्ड के अलावा पहचान की पुष्टि का एक अतिरिक्त चरण जोड़ता है।",
+  "b_en": "It adds an extra step of identity verification beyond just the password during login."
+ },
+ {
+  "id": "fc-computer-0067",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "कीlogger (Keylogger) किस प्रकार का सॉफ्टवेयर है?",
+  "f_en": "What type of software is a Keylogger?",
+  "b_hi": "यह एक ऐसा प्रोग्राम है जो उपयोगकर्ता द्वारा कीबोर्ड पर दबाए गए सभी बटन (Keystrokes) को रिकॉर्ड करता है।",
+  "b_en": "It is a program that records every keystroke made by a user on a keyboard."
+ },
+ {
+  "id": "fc-computer-0068",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "रैनसमवेयर का मुख्य कार्य क्या है?",
+  "f_en": "What is the primary function of Ransomware?",
+  "b_hi": "यह उपयोगकर्ता के डेटा को एन्क्रिप्ट करता है और उसे वापस पाने के लिए फिरौती की मांग करता है।",
+  "b_en": "It encrypts user data and demands a ransom for decryption."
+ },
+ {
+  "id": "fc-computer-0069",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "फायरवॉल का मुख्य उद्देश्य क्या है?",
+  "f_en": "What is the main purpose of a Firewall?",
+  "b_hi": "यह पूर्व-निर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी और नियंत्रण करता है।",
+  "b_en": "It monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+ },
+ {
+  "id": "fc-computer-0070",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "साइबर सुरक्षा में वीपीएन का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of VPN in cyber security?",
+  "b_hi": "वर्चुअल प्राइवेट नेटवर्क, जो इंटरनेट पर एक सुरक्षित और एन्क्रिप्टेड कनेक्शन बनाता है।",
+  "b_en": "Virtual Private Network, which creates a secure and encrypted connection over the internet."
+ },
+ {
+  "id": "fc-computer-0071",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "कीस्ट्रोक लॉगिंग या कीलॉगर क्या है?",
+  "f_en": "What is Keystroke Logging or a Keylogger?",
+  "b_hi": "यह एक प्रकार का निगरानी सॉफ़्टवेयर है जो कीबोर्ड पर उपयोगकर्ता द्वारा दबाई गई हर कुंजी को रिकॉर्ड करता है।",
+  "b_en": "It is a type of surveillance software that records every keystroke made by a user on a keyboard."
+ },
+ {
+  "id": "fc-computer-0072",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "मैलवेयर (Malware) का क्या अर्थ है?",
+  "f_en": "What does malware mean?",
+  "b_hi": "यह मैलिशियस सॉफ्टवेयर (Malicious Software) का संक्षिप्त रूप है जो कंप्यूटर प्रणालियों को नुकसान पहुँचाता है।",
+  "b_en": "It is short for malicious software designed to damage or disrupt computer systems."
+ },
+ {
+  "id": "fc-computer-0073",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "स्पायवेयर (Spyware) क्या करता है?",
+  "f_en": "What does spyware do?",
+  "b_hi": "यह उपयोगकर्ता की जानकारी के बिना उसकी गतिविधियों पर चुपचाप नजर रखता है और डेटा चुराता है।",
+  "b_en": "It secretly gathers information about a user's activity and steals data without their knowledge."
+ },
+ {
+  "id": "fc-computer-0074",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "डैनियल ऑफ सर्विस (DoS) हमला क्या है?",
+  "f_en": "What is a Denial of Service (DoS) attack?",
+  "b_hi": "यह ऐसा हमला है जो कंप्यूटर संसाधन को अत्यधिक ट्रैफ़िक भेजकर वैध उपयोगकर्ताओं के लिए अनुपलब्ध कर देता है।",
+  "b_en": "It is an attack that floods a computer resource with excessive traffic, making it unavailable to legitimate users."
+ },
+ {
+  "id": "fc-computer-0075",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "रैंसमवेयर (Ransomware) का मुख्य उद्देश्य क्या होता है?",
+  "f_en": "What is the main objective of Ransomware?",
+  "b_hi": "यह उपयोगकर्ता के डेटा को एन्क्रिप्ट कर देता है और फिरौती (Ransom) चुकाने पर ही एक्सेस वापस देता है।",
+  "b_en": "It encrypts the user's data and restores access only after a ransom is paid."
+ },
+ {
+  "id": "fc-computer-0076",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "एन्क्रिप्शन (Encryption) का मुख्य कार्य क्या है?",
+  "f_en": "What is the main function of Encryption?",
+  "b_hi": "यह डेटा को एक गुप्त कोड में बदल देता है ताकि केवल अधिकृत व्यक्ति ही इसे पढ़ सकें।",
+  "b_en": "It converts data into a secret code so that only authorized parties can read it."
+ },
+ {
+  "id": "fc-computer-0077",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "साइबर सुरक्षा में 'डीडीओएस' (DDoS) का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of 'DDoS' in cyber security?",
+  "b_hi": "डिस्ट्रीब्यूटेड डिनायल ऑफ सर्विस (Distributed Denial of Service)।",
+  "b_en": "Distributed Denial of Service."
+ },
+ {
+  "id": "fc-computer-0078",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "स्पूफिंग (Spoofing) तकनीक में क्या किया जाता है?",
+  "f_en": "What is done in Spoofing technique?",
+  "b_hi": "इसमें कोई साइबर अपराधी वैध उपयोगकर्ता या सिस्टम का रूप धारण करके धोखाधड़ी करता है।",
+  "b_en": "It is an act where a cyber criminal masquerades as a valid user or system to perpetrate fraud."
+ },
+ {
+  "id": "fc-computer-0079",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "रैनसमवेयर (Ransomware) का मुख्य उद्देश्य क्या होता है?",
+  "f_en": "What is the primary objective of Ransomware?",
+  "b_hi": "यह उपयोगकर्ता के डेटा को एन्क्रिप्ट करके उसे लॉक कर देता है और फिरौती की मांग करता है।",
+  "b_en": "It encrypts and locks the user's data and demands a ransom for its release."
+ },
+ {
+  "id": "fc-computer-0080",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "मैलवेयर (Malware) का क्या अर्थ है?",
+  "f_en": "What does Malware stand for?",
+  "b_hi": "यह दुर्भावनापूर्ण सॉफ्टवेयर (Malicious Software) का संक्षिप्त रूप है जो कंप्यूटर को नुकसान पहुँचाता है।",
+  "b_en": "It is short for Malicious Software designed to damage or disrupt a computer system."
+ },
+ {
+  "id": "fc-computer-0081",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "फायरवॉल (Firewall) का उपयोग किस लिए किया जाता है?",
+  "f_en": "What is the purpose of a Firewall?",
+  "b_hi": "यह नेटवर्क सुरक्षा प्रणाली है जो अनधिकृत पहुँच को रोकने के लिए आने-जाने वाले ट्रैफिक की निगरानी करती है।",
+  "b_en": "It is a network security system that monitors and controls incoming and outgoing network traffic."
+ },
+ {
+  "id": "fc-computer-0082",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "स्पायवेयर (Spyware) क्या कार्य करता है?",
+  "f_en": "What function does Spyware perform?",
+  "b_hi": "यह चुपके से उपयोगकर्ता की गतिविधियों पर नज़र रखता है और उनकी जानकारी चुराता है।",
+  "b_en": "It secretly gathers information about a user and their activity without their knowledge."
+ },
+ {
+  "id": "fc-computer-0083",
+  "s": "computer",
+  "t": "cyber_security",
+  "f_hi": "साइबर सुरक्षा में 'OTP' का पूरा नाम क्या है?",
+  "f_en": "What is the full form of 'OTP' in cyber security?",
+  "b_hi": "इसका पूरा नाम वन-टाइम पासवर्ड (One-Time Password) है।",
+  "b_en": "It stands for One-Time Password."
+ },
+ {
+  "id": "fc-computer-0084",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कंप्यूटर का मस्तिष्क किसे कहा जाता है?",
+  "f_en": "What is known as the brain of the computer?",
+  "b_hi": "सेंट्रल प्रोसेसिंग यूनिट (सीपीयू)",
+  "b_en": "Central Processing Unit (CPU)"
+ },
+ {
+  "id": "fc-computer-0085",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "एक बाइट में कितने बिट्स होते हैं?",
+  "f_en": "How many bits are in a byte?",
+  "b_hi": "आठ बिट्स",
+  "b_en": "Eight bits"
+ },
+ {
+  "id": "fc-computer-0086",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "रेम (RAM) किस प्रकार की मेमोरी है?",
+  "f_en": "What type of memory is RAM?",
+  "b_hi": "यह एक अस्थाई (वाष्पशील) मेमोरी है",
+  "b_en": "It is a temporary (volatile) memory"
+ },
+ {
+  "id": "fc-computer-0087",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "रोम (ROM) का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of ROM?",
+  "b_hi": "रीड ओनली मेमोरी",
+  "b_en": "Read Only Memory"
+ },
+ {
+  "id": "fc-computer-0088",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कंप्यूटर की आईसी (IC) चिप्स सामान्यतः किस पदार्थ से बनती हैं?",
+  "f_en": "Computer IC chips are commonly made of which material?",
+  "b_hi": "सिलिकॉन",
+  "b_en": "Silicon"
+ },
+ {
+  "id": "fc-computer-0089",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कंप्यूटर में कीबोर्ड किस प्रकार का उपकरण है?",
+  "f_en": "What type of device is a keyboard in a computer?",
+  "b_hi": "यह एक इनपुट डिवाइस है",
+  "b_en": "It is an input device"
+ },
+ {
+  "id": "fc-computer-0090",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कंप्यूटर का पिता किसे कहा जाता है?",
+  "f_en": "Who is known as the father of the computer?",
+  "b_hi": "चार्ल्स बेबेज",
+  "b_en": "Charles Babbage"
+ },
+ {
+  "id": "fc-computer-0091",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कंप्यूटर की सबसे छोटी इकाई क्या है?",
+  "f_en": "What is the smallest unit of computer memory?",
+  "b_hi": "बिट",
+  "b_en": "Bit"
+ },
+ {
+  "id": "fc-computer-0092",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "एक बाइट में कितने बिट्स होते हैं?",
+  "f_en": "How many bits are in one byte?",
+  "b_hi": "आठ बिट्स",
+  "b_en": "Eight bits"
+ },
+ {
+  "id": "fc-computer-0093",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "सीपीयू का मुख्य भाग क्या है?",
+  "f_en": "What are the main components of a CPU?",
+  "b_hi": "एलयू, सीयू और रजिस्टर",
+  "b_en": "ALU, CU, and Registers"
+ },
+ {
+  "id": "fc-computer-0094",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "विश्व का पहला इलेक्ट्रॉनिक कंप्यूटर कौन सा है?",
+  "f_en": "Which is the world's first electronic computer?",
+  "b_hi": "इनीयैक (ENIAC) विश्व का पहला इलेक्ट्रॉनिक कंप्यूटर है।",
+  "b_en": "ENIAC is the world's first electronic computer."
+ },
+ {
+  "id": "fc-computer-0095",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "सीपीयू (CPU) के मुख्य भाग कौन से हैं?",
+  "f_en": "What are the main parts of the CPU?",
+  "b_hi": "एलयू (ALU), सीयू (CU) और रजिस्टर सीपीयू के मुख्य भाग हैं।",
+  "b_en": "ALU, CU, and Registers are the main parts of the CPU."
+ },
+ {
+  "id": "fc-computer-0096",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "प्रथम पीढ़ी के कंप्यूटरों में किसका उपयोग किया जाता था?",
+  "f_en": "What was used in first-generation computers?",
+  "b_hi": "प्रथम पीढ़ी के कंप्यूटरों में वैक्यूम ट्यूब का उपयोग होता था।",
+  "b_en": "Vacuum tubes were used in first-generation computers."
+ },
+ {
+  "id": "fc-computer-0097",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "RAM का पूरा नाम क्या है?",
+  "f_en": "What is the full form of RAM?",
+  "b_hi": "रैंडम एक्सेस मेमोरी (RAM) कंप्यूटर की मुख्य और अस्थिर मेमोरी है।",
+  "b_en": "Random Access Memory (RAM) is the main and volatile memory of a computer."
+ },
+ {
+  "id": "fc-computer-0098",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "एक बाइट में कितने बिट होते हैं?",
+  "f_en": "How many bits are there in a byte?",
+  "b_hi": "एक बाइट में आठ बिट होते हैं।",
+  "b_en": "There are eight bits in a byte."
+ },
+ {
+  "id": "fc-computer-0099",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कौन सी डिवाइस आउटपुट डिवाइस का एक उदाहरण है?",
+  "f_en": "Which device is an example of an output device?",
+  "b_hi": "मॉनीटर एक प्रमुख आउटपुट डिवाइस है।",
+  "b_en": "Monitor is a primary output device."
+ },
+ {
+  "id": "fc-computer-0100",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "BIOS का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of BIOS?",
+  "b_hi": "बेसिक इनपुट आउटपुट सिस्टम (BIOS) मदरबोर्ड पर स्थित एक फर्मवेयर है।",
+  "b_en": "Basic Input Output System (BIOS) is firmware located on the motherboard."
+ },
+ {
+  "id": "fc-computer-0101",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "कंप्यूटर की सबसे छोटी इकाई क्या है?",
+  "f_en": "What is the smallest unit of computer data?",
+  "b_hi": "बिट",
+  "b_en": "Bit"
+ },
+ {
+  "id": "fc-computer-0102",
+  "s": "computer",
+  "t": "computer_fundamentals",
+  "f_hi": "सीपीयू का पूर्ण रूप क्या है?",
+  "f_en": "What is the full form of CPU?",
+  "b_hi": "सेंट्रल प्रोसेसिंग यूनिट",
+  "b_en": "Central Processing Unit"
+ }
 ]
