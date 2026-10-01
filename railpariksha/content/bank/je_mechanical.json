@@ -41375,5 +41375,741 @@
   "a": 1,
   "e_hi": "कार्य = दक्षता * ऊष्मा इनपुट। 0.40 * 100 = 40 kJ.",
   "e_en": "Work = Efficiency * Heat input. 0.40 * 100 = 40 kJ."
+ },
+ {
+  "id": "rp-je_-h01800",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक डीजल इंजन में, यदि ईंधन का इंजेक्शन समय से बहुत पहले शुरू हो जाता है, तो इंजन पर इसका क्या प्रभाव पड़ेगा?",
+  "q_en": "In a diesel engine, what is the effect if the fuel injection begins much earlier than the scheduled timing?",
+  "o_hi": [
+   "इंजन का शोर और कंपन बढ़ जाएगा",
+   "ईंधन की खपत कम हो जाएगी",
+   "इंजन की शक्ति बढ़ जाएगी",
+   "निकास तापमान कम हो जाएगा"
+  ],
+  "o_en": [
+   "Engine noise and vibration will increase",
+   "Fuel consumption will decrease",
+   "Engine power will increase",
+   "Exhaust temperature will decrease"
+  ],
+  "a": 0,
+  "e_hi": "समय से पहले इंजेक्शन से 'डीजल नॉक' होता है, जिससे सिलेंडर के अंदर अत्यधिक दबाव और शोर पैदा होता है।",
+  "e_en": "Early injection causes 'diesel knock' due to rapid pressure rise, leading to increased combustion noise and mechanical vibration."
+ },
+ {
+  "id": "rp-je_-h01801",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "यदि एक चार-स्ट्रोक इंजन में वॉल्व ओवरलैप का समय बढ़ा दिया जाए, तो उच्च गति पर इंजन के प्रदर्शन पर क्या असर पड़ेगा?",
+  "q_en": "If the valve overlap duration is increased in a four-stroke engine, how will it affect performance at high speeds?",
+  "o_hi": [
+   "वॉल्यूमेट्रिक दक्षता में सुधार होगा",
+   "इंजन ओवरहीट हो जाएगा",
+   "टॉर्क कम हो जाएगा",
+   "ईंधन की खपत बढ़ जाएगी"
+  ],
+  "o_en": [
+   "Volumetric efficiency will improve",
+   "Engine will overheat",
+   "Torque will decrease",
+   "Fuel consumption will increase"
+  ],
+  "a": 0,
+  "e_hi": "वॉल्व ओवरलैप से सिलेंडर के अंदर ताजी हवा के आने की प्रक्रिया बेहतर होती है, जिससे उच्च गति पर वॉल्यूमेट्रिक दक्षता बढ़ती है।",
+  "e_en": "Increased valve overlap allows better scavenging and intake of fresh charge, which improves volumetric efficiency at high engine speeds."
+ },
+ {
+  "id": "rp-je_-h01802",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक घरेलू रेफ्रिजरेटर में, फ्रीजर कंपार्टमेंट हमेशा ऊपर क्यों लगाया जाता है?",
+  "q_en": "In a domestic refrigerator, why is the freezer compartment always placed at the top?",
+  "o_hi": [
+   "संवहन (convection) धाराओं के लिए",
+   "रेफ्रिजरेंट के दबाव के लिए",
+   "जगह बचाने के लिए",
+   "सुविधा के लिए"
+  ],
+  "o_en": [
+   "For convection currents",
+   "For refrigerant pressure",
+   "To save space",
+   "For user convenience"
+  ],
+  "a": 0,
+  "e_hi": "ठंडी हवा भारी होती है और नीचे की ओर बहती है, जिससे प्राकृतिक संवहन के माध्यम से पूरे रेफ्रिजरेटर में शीतलन बना रहता है।",
+  "e_en": "Cold air is denser and sinks, creating natural convection currents that maintain cooling throughout the refrigerator cabinet."
+ },
+ {
+  "id": "rp-je_-h01803",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "पेट्रोल इंजन में 'प्री-इग्निशन' होने का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of 'pre-ignition' in a petrol engine?",
+  "o_hi": [
+   "दहन कक्ष में गर्म धब्बों (hot spots) का होना",
+   "ईंधन की उच्च ऑक्टेन रेटिंग",
+   "स्पार्क प्लग का जल्दी चलना",
+   "इंजन का ठंडा होना"
+  ],
+  "o_en": [
+   "Presence of hot spots in the combustion chamber",
+   "High octane rating of fuel",
+   "Early firing of the spark plug",
+   "Engine cooling"
+  ],
+  "a": 0,
+  "e_hi": "दहन कक्ष में कार्बन जमा होने या गर्म वाल्व के कारण ईंधन समय से पहले जलने लगता है, इसे प्री-इग्निशन कहते हैं।",
+  "e_en": "Pre-ignition occurs when hot spots, such as carbon deposits or overheated spark plug electrodes, ignite the mixture before the spark."
+ },
+ {
+  "id": "rp-je_-h01804",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन सिस्टम में 'कोफिशिएंट ऑफ परफॉरमेंस' (COP) का मान 1 से अधिक होने का क्या अर्थ है?",
+  "q_en": "What does it mean if the Coefficient of Performance (COP) of a refrigeration system is greater than 1?",
+  "o_hi": [
+   "सिस्टम प्रभावी ढंग से ऊष्मा स्थानांतरित कर रहा है",
+   "सिस्टम ऊर्जा का उत्पादन कर रहा है",
+   "यह एक आदर्श इंजन है",
+   "घर्षण शून्य है"
+  ],
+  "o_en": [
+   "The system is effectively transferring heat",
+   "The system is generating energy",
+   "It is an ideal engine",
+   "Friction is zero"
+  ],
+  "a": 0,
+  "e_hi": "COP का 1 से अधिक होना यह दर्शाता है कि निकाली गई ऊष्मा की मात्रा किए गए कार्य से अधिक है, जो एक कुशल प्रणाली है।",
+  "e_en": "A COP greater than 1 indicates that the heat removed is greater than the work input, signifying an efficient heat transfer process."
+ },
+ {
+  "id": "rp-je_-h01805",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "डीजल इंजन में संपीड़न अनुपात (compression ratio) पेट्रोल इंजन से अधिक क्यों होता है?",
+  "q_en": "Why is the compression ratio of a diesel engine higher than that of a petrol engine?",
+  "o_hi": [
+   "हवा को स्व-प्रज्वलन तापमान तक गर्म करने के लिए",
+   "इंजन को हल्का बनाने के लिए",
+   "अधिक गति प्राप्त करने के लिए",
+   "ईंधन की लागत कम करने के लिए"
+  ],
+  "o_en": [
+   "To heat the air to self-ignition temperature",
+   "To make the engine lighter",
+   "To achieve higher speeds",
+   "To reduce fuel cost"
+  ],
+  "a": 0,
+  "e_hi": "डीजल इंजन में ईंधन को जलाने के लिए स्पार्क की आवश्यकता नहीं होती, इसलिए हवा को उच्च दबाव पर संपीड़ित करके गर्म किया जाता है।",
+  "e_en": "Diesel engines rely on compression ignition; therefore, air must be compressed to a high temperature to auto-ignite the injected fuel."
+ },
+ {
+  "id": "rp-je_-h01806",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "यदि एक वाष्प संपीड़न रेफ्रिजरेशन सिस्टम (VCRS) में कंडेंसर का तापमान बढ़ जाए, तो क्या होगा?",
+  "q_en": "What happens if the condenser temperature increases in a Vapour Compression Refrigeration System (VCRS)?",
+  "o_hi": [
+   "रेफ्रिजरेशन प्रभाव कम हो जाएगा",
+   "कंप्रेसर का कार्य कम हो जाएगा",
+   "COP बढ़ जाएगा",
+   "कोई प्रभाव नहीं पड़ेगा"
+  ],
+  "o_en": [
+   "Refrigeration effect will decrease",
+   "Compressor work will decrease",
+   "COP will increase",
+   "No effect"
+  ],
+  "a": 0,
+  "e_hi": "कंडेंसर का तापमान बढ़ने से सब-कूलिंग कम हो जाती है, जिससे रेफ्रिजरेशन क्षमता और COP दोनों कम हो जाते हैं।",
+  "e_en": "An increase in condenser temperature raises the discharge pressure, reducing the refrigeration effect and the overall COP of the system."
+ },
+ {
+  "id": "rp-je_-h01807",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "दो-स्ट्रोक इंजन में, 'स्कैवेंजिंग' (scavenging) का क्या अर्थ है?",
+  "q_en": "In a two-stroke engine, what does the term 'scavenging' refer to?",
+  "o_hi": [
+   "जली हुई गैसों को बाहर निकालना और ताजी हवा भरना",
+   "ईंधन को इंजेक्ट करना",
+   "पिस्टन को ठंडा करना",
+   "लुब्रिकेशन को नियंत्रित करना"
+  ],
+  "o_en": [
+   "Removing burnt gases and filling fresh charge",
+   "Injecting the fuel",
+   "Cooling the piston",
+   "Controlling lubrication"
+  ],
+  "a": 0,
+  "e_hi": "दो-स्ट्रोक इंजन में निकास गैसों को बाहर निकालने और सिलेंडर में ताजा मिश्रण भरने की प्रक्रिया को स्कैवेंजिंग कहा जाता है।",
+  "e_en": "Scavenging is the process of flushing out the exhaust gases from the combustion chamber and replacing them with a fresh air-fuel charge."
+ },
+ {
+  "id": "rp-je_-h01808",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "आदर्श ओटो चक्र (Otto Cycle) में दक्षता किस कारक पर निर्भर करती है?",
+  "q_en": "On which factor does the efficiency of an ideal Otto Cycle depend?",
+  "o_hi": [
+   "संपीड़न अनुपात (compression ratio)",
+   "इंजन की गति",
+   "ईंधन का प्रकार",
+   "सिलेंडर का आकार"
+  ],
+  "o_en": [
+   "Compression ratio",
+   "Engine speed",
+   "Type of fuel",
+   "Cylinder size"
+  ],
+  "a": 0,
+  "e_hi": "आदर्श ओटो चक्र की तापीय दक्षता केवल संपीड़न अनुपात और गैस के विशिष्ट ऊष्मा अनुपात (gamma) पर निर्भर करती है।",
+  "e_en": "The thermal efficiency of an ideal Otto cycle is a function of the compression ratio and the ratio of specific heats (gamma) of the air."
+ },
+ {
+  "id": "rp-je_-h01809",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "प्रशीतन (Refrigeration) में 'निकोला टेस्ला' का क्या योगदान माना जाता है?",
+  "q_en": "What is considered the contribution of 'Nikola Tesla' in the field of refrigeration?",
+  "o_hi": [
+   "पहली वाष्प संपीड़न प्रणाली",
+   "अमोनिया आधारित प्रशीतन",
+   "चुंबकीय प्रशीतन के सिद्धांत",
+   "थर्मोइलेक्ट्रिक कूलिंग के सिद्धांत"
+  ],
+  "o_en": [
+   "First vapor compression system",
+   "Ammonia-based refrigeration",
+   "Principles of magnetic refrigeration",
+   "Principles of thermoelectric cooling"
+  ],
+  "a": 2,
+  "e_hi": "निकोला टेस्ला ने चुंबकीय प्रशीतन (Magnetic Refrigeration) के पीछे के सिद्धांतों और तकनीक पर महत्वपूर्ण कार्य किया था।",
+  "e_en": "Nikola Tesla performed significant work on the principles and technology behind magnetic refrigeration."
+ },
+ {
+  "id": "rp-je_-h01810",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "निकोलस ऑगस्ट ओटो ने किस प्रकार के इंजन का आविष्कार किया था?",
+  "q_en": "Nikolaus August Otto invented which type of engine?",
+  "o_hi": [
+   "दो-स्ट्रोक डीजल इंजन",
+   "चार-स्ट्रोक आंतरिक दहन इंजन",
+   "गैस टर्बाइन",
+   "भाप इंजन"
+  ],
+  "o_en": [
+   "Two-stroke diesel engine",
+   "Four-stroke internal combustion engine",
+   "Gas turbine",
+   "Steam engine"
+  ],
+  "a": 1,
+  "e_hi": "निकोलस ऑगस्ट ओटो ने 1876 में व्यावहारिक चार-स्ट्रोक (ओटो चक्र) आंतरिक दहन इंजन का विकास किया था।",
+  "e_en": "Nikolaus August Otto developed the practical four-stroke (Otto cycle) internal combustion engine in 1876."
+ },
+ {
+  "id": "rp-je_-h01811",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "रेफ्रिजरेशन चक्र में उपयोग किए जाने वाले 'कार्नोट चक्र' (Carnot Cycle) के प्रस्तावक कौन थे?",
+  "q_en": "Who was the proposer of the 'Carnot Cycle' used in refrigeration cycles?",
+  "o_hi": [
+   "सादी कार्नोट",
+   "जेम्स जूल",
+   "लॉर्ड केल्विन",
+   "रुडोल्फ क्लॉसियस"
+  ],
+  "o_en": [
+   "Sadi Carnot",
+   "James Joule",
+   "Lord Kelvin",
+   "Rudolf Clausius"
+  ],
+  "a": 0,
+  "e_hi": "निकोलस लियोनार्ड सादी कार्नोट ने 1824 में कार्नोट चक्र का प्रस्ताव रखा था, जो ऊष्मा इंजन और प्रशीतन के लिए आदर्श दक्षता का आधार है।",
+  "e_en": "Nicolas Léonard Sadi Carnot proposed the Carnot cycle in 1824, which is the basis for ideal efficiency in heat engines and refrigeration."
+ },
+ {
+  "id": "rp-je_-h01812",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "आधुनिक रेफ्रिजरेंट के रूप में उपयोग किए जाने वाले 'फ्रीऑन' (Freon) का व्यावसायिक उत्पादन किस कंपनी द्वारा शुरू किया गया था?",
+  "q_en": "Which company started the commercial production of 'Freon', used as a modern refrigerant?",
+  "o_hi": [
+   "डु पोंट (DuPont)",
+   "जनरल इलेक्ट्रिक",
+   "फोर्ड",
+   "सीमेंस"
+  ],
+  "o_en": [
+   "DuPont",
+   "General Electric",
+   "Ford",
+   "Siemens"
+  ],
+  "a": 0,
+  "e_hi": "1930 के दशक में डु पोंट कंपनी ने क्लोरोफ्लोरोकार्बन (CFC) आधारित रेफ्रिजरेंट को 'फ्रीऑन' ब्रांड नाम के तहत पेश किया था।",
+  "e_en": "In the 1930s, the DuPont company introduced chlorofluorocarbon (CFC) based refrigerants under the brand name 'Freon'."
+ },
+ {
+  "id": "rp-je_-h01813",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "डीजल इंजन का आविष्कार किस देश में हुआ था?",
+  "q_en": "In which country was the diesel engine invented?",
+  "o_hi": [
+   "संयुक्त राज्य अमेरिका",
+   "जर्मनी",
+   "फ्रांस",
+   "यूनाइटेड किंगडम"
+  ],
+  "o_en": [
+   "United States",
+   "Germany",
+   "France",
+   "United Kingdom"
+  ],
+  "a": 1,
+  "e_hi": "रुडोल्फ डीजल एक जर्मन इंजीनियर थे, जिन्होंने जर्मनी में ही डीजल इंजन का विकास और पेटेंट किया था।",
+  "e_en": "Rudolf Diesel was a German engineer who developed and patented the diesel engine in Germany."
+ },
+ {
+  "id": "rp-je_-h01814",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "वाष्प अवशोषण प्रशीतन प्रणाली (Vapor Absorption Refrigeration) में किस वैज्ञानिक ने सबसे पहले कार्य किया था?",
+  "q_en": "Which scientist first worked on the Vapor Absorption Refrigeration system?",
+  "o_hi": [
+   "फर्डिनेंड कैरे",
+   "विलियम कुलेन",
+   "जॉन गोरी",
+   "कार्ल वॉन लिंडे"
+  ],
+  "o_en": [
+   "Ferdinand Carré",
+   "William Cullen",
+   "John Gorrie",
+   "Carl von Linde"
+  ],
+  "a": 0,
+  "e_hi": "फर्डिनेंड कैरे ने 1859 में पहली बार अमोनिया-पानी आधारित वाष्प अवशोषण प्रशीतन प्रणाली का पेटेंट कराया था।",
+  "e_en": "Ferdinand Carré patented the first ammonia-water based vapor absorption refrigeration system in 1859."
+ },
+ {
+  "id": "rp-je_-h01815",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "प्रशीतन के इतिहास में 'जॉन गोरी' (John Gorrie) का नाम किस आविष्कार के लिए जाना जाता है?",
+  "q_en": "For which invention is the name 'John Gorrie' known in the history of refrigeration?",
+  "o_hi": [
+   "पहला गैस रेफ्रिजरेटर",
+   "यांत्रिक बर्फ बनाने वाली मशीन",
+   "मैग्नेटिक कूलिंग",
+   "थर्मोइलेक्ट्रिक जनरेटर"
+  ],
+  "o_en": [
+   "First gas refrigerator",
+   "Mechanical ice-making machine",
+   "Magnetic cooling",
+   "Thermoelectric generator"
+  ],
+  "a": 1,
+  "e_hi": "जॉन गोरी को 1840 के दशक में हवा के संपीड़न द्वारा बर्फ बनाने वाली पहली यांत्रिक मशीन का श्रेय दिया जाता है।",
+  "e_en": "John Gorrie is credited with inventing the first mechanical machine to make ice by compressing air in the 1840s."
+ },
+ {
+  "id": "rp-je_-h01816",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "ओटो चक्र (Otto Cycle) में प्रयुक्त होने वाला मुख्य ईंधन कौन सा है?",
+  "q_en": "What is the primary fuel used in the Otto Cycle?",
+  "o_hi": [
+   "डीजल",
+   "पेट्रोल (गैसोलीन)",
+   "प्राकृतिक गैस",
+   "मिट्टी का तेल"
+  ],
+  "o_en": [
+   "Diesel",
+   "Petrol (Gasoline)",
+   "Natural Gas",
+   "Kerosene"
+  ],
+  "a": 1,
+  "e_hi": "ओटो चक्र स्पार्क-इग्निशन इंजन पर आधारित है, जो मुख्य रूप से पेट्रोल (गैसोलीन) ईंधन का उपयोग करते हैं।",
+  "e_en": "The Otto cycle is based on spark-ignition engines, which primarily use petrol (gasoline) as fuel."
+ },
+ {
+  "id": "rp-je_-h01817",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "प्रशीतन के लिए 'लिंडे चक्र' (Linde Cycle) का विकास किसने किया था?",
+  "q_en": "Who developed the 'Linde Cycle' for refrigeration?",
+  "o_hi": [
+   "कार्ल वॉन लिंडे",
+   "रुडोल्फ डीजल",
+   "सादी कार्नोट",
+   "विलियम थॉमसन"
+  ],
+  "o_en": [
+   "Carl von Linde",
+   "Rudolf Diesel",
+   "Sadi Carnot",
+   "William Thomson"
+  ],
+  "a": 0,
+  "e_hi": "कार्ल वॉन लिंडे ने 1876 में गैसों के द्रवीकरण के लिए लिंडे चक्र विकसित किया, जो औद्योगिक प्रशीतन का आधार बना।",
+  "e_en": "Carl von Linde developed the Linde cycle for the liquefaction of gases in 1876, which became the foundation for industrial refrigeration."
+ },
+ {
+  "id": "rp-je_-h01818",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "कार्नो इंजन की दक्षता (η) का सूत्र क्या है, यदि T1 स्रोत का तापमान और T2 सिंक का तापमान है?",
+  "q_en": "What is the formula for the efficiency (η) of a Carnot engine, where T1 is source temperature and T2 is sink temperature?",
+  "o_hi": [
+   "η = 1 - (T2/T1)",
+   "η = 1 - (T1/T2)",
+   "η = (T1-T2)/T1",
+   "η = T1/T2"
+  ],
+  "o_en": [
+   "η = 1 - (T2/T1)",
+   "η = 1 - (T1/T2)",
+   "η = (T1-T2)/T1",
+   "η = T1/T2"
+  ],
+  "a": 0,
+  "e_hi": "कार्नो दक्षता केवल स्रोत और सिंक के तापमान पर निर्भर करती है और इसे 1 - (T2/T1) के रूप में परिभाषित किया गया है।",
+  "e_en": "Carnot efficiency depends only on source and sink temperatures and is defined as 1 - (T2/T1)."
+ },
+ {
+  "id": "rp-je_-h01819",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 3,
+  "q_hi": "पॉलीट्रोपिक प्रक्रिया (Polytropic process) में कार्य (W) का सूत्र क्या है?",
+  "q_en": "What is the formula for work (W) done in a polytropic process?",
+  "o_hi": [
+   "(P1V1 - P2V2) / (n - 1)",
+   "(P1V1 - P2V2) / (γ - 1)",
+   "P(V2 - V1)",
+   "mRT ln(V2/V1)"
+  ],
+  "o_en": [
+   "(P1V1 - P2V2) / (n - 1)",
+   "(P1V1 - P2V2) / (γ - 1)",
+   "P(V2 - V1)",
+   "mRT ln(V2/V1)"
+  ],
+  "a": 0,
+  "e_hi": "पॉलीट्रोपिक प्रक्रिया (PV^n = C) के लिए किया गया कार्य (P1V1 - P2V2) / (n - 1) द्वारा दिया जाता है।",
+  "e_en": "The work done for a polytropic process (PV^n = C) is given by (P1V1 - P2V2) / (n - 1)."
+ },
+ {
+  "id": "rp-je_-h01820",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "स्थिर आयतन प्रक्रिया (Isochoric process) के दौरान निकाय द्वारा किया गया कार्य कितना होता है?",
+  "q_en": "What is the work done by a system during an isochoric process?",
+  "o_hi": [
+   "शून्य",
+   "अधिकतम",
+   "नकारात्मक",
+   "अनंत"
+  ],
+  "o_en": [
+   "Zero",
+   "Maximum",
+   "Negative",
+   "Infinite"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि स्थिर आयतन प्रक्रिया में आयतन में कोई परिवर्तन नहीं होता (dV=0), इसलिए कार्य (W = ∫PdV) शून्य होता है।",
+  "e_en": "Since there is no change in volume (dV=0) in an isochoric process, the work done (W = ∫PdV) is zero."
+ },
+ {
+  "id": "rp-je_-h01821",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक आदर्श गैस के लिए आंतरिक ऊर्जा (U) किसका फलन है?",
+  "q_en": "For an ideal gas, the internal energy (U) is a function of which parameter?",
+  "o_hi": [
+   "केवल दाब",
+   "केवल तापमान",
+   "केवल आयतन",
+   "दाब और आयतन दोनों"
+  ],
+  "o_en": [
+   "Pressure only",
+   "Temperature only",
+   "Volume only",
+   "Both pressure and volume"
+  ],
+  "a": 1,
+  "e_hi": "जूल के नियम के अनुसार, एक आदर्श गैस की आंतरिक ऊर्जा केवल तापमान का फलन होती है।",
+  "e_en": "According to Joule's law, the internal energy of an ideal gas is a function of temperature only."
+ },
+ {
+  "id": "rp-je_-h01822",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "यदि एक निकाय में ऊष्मा का आदान-प्रदान शून्य है, तो उस प्रक्रम को क्या कहते हैं?",
+  "q_en": "What is a process called if there is zero heat exchange in the system?",
+  "o_hi": [
+   "समतापी प्रक्रम",
+   "रुद्धोष्म प्रक्रम",
+   "समदाबी प्रक्रम",
+   "समआयतनिक प्रक्रम"
+  ],
+  "o_en": [
+   "Isothermal process",
+   "Adiabatic process",
+   "Isobaric process",
+   "Isochoric process"
+  ],
+  "a": 1,
+  "e_hi": "रुद्धोष्म (Adiabatic) प्रक्रम वह है जिसमें निकाय और परिवेश के बीच कोई ऊष्मा स्थानांतरण नहीं होता है।",
+  "e_en": "An adiabatic process is one in which there is no heat transfer between the system and its surroundings."
+ },
+ {
+  "id": "rp-je_-h01823",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एन्ट्रॉपी की इकाई क्या है?",
+  "q_en": "What is the unit of entropy?",
+  "o_hi": [
+   "जूल/केल्विन",
+   "जूल/मोल",
+   "वाट/केल्विन",
+   "केल्विन/जूल"
+  ],
+  "o_en": [
+   "Joule/Kelvin",
+   "Joule/mole",
+   "Watt/Kelvin",
+   "Kelvin/Joule"
+  ],
+  "a": 0,
+  "e_hi": "एन्ट्रॉपी (S) को ऊष्मा और तापमान के अनुपात के रूप में परिभाषित किया जाता है (dS = dQ/T), इसलिए इकाई J/K है।",
+  "e_en": "Entropy (S) is defined as the ratio of heat to temperature (dS = dQ/T), so the unit is J/K."
+ },
+ {
+  "id": "rp-je_-h01824",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "ऊष्मागतिकी का शून्यवाँ नियम (Zeroth Law) किसके मापन का आधार है?",
+  "q_en": "The Zeroth Law of Thermodynamics is the basis for the measurement of which parameter?",
+  "o_hi": [
+   "दबाव",
+   "ऊर्जा",
+   "तापमान",
+   "कार्य"
+  ],
+  "o_en": [
+   "Pressure",
+   "Energy",
+   "Temperature",
+   "Work"
+  ],
+  "a": 2,
+  "e_hi": "शून्यवाँ नियम बताता है कि यदि दो निकाय तीसरे निकाय के साथ तापीय संतुलन में हैं, तो वे आपस में भी संतुलन में हैं, जो तापमान मापन का आधार है।",
+  "e_en": "The Zeroth Law states that if two systems are in thermal equilibrium with a third, they are in equilibrium with each other, forming the basis for temperature measurement."
+ },
+ {
+  "id": "rp-je_-h01825",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "गैस नियतांक (R) का मान क्या होता है?",
+  "q_en": "What is the value of the universal gas constant (R)?",
+  "o_hi": [
+   "8.314 J/(mol·K)",
+   "0.082 J/(mol·K)",
+   "1.38 J/(mol·K)",
+   "9.81 J/(mol·K)"
+  ],
+  "o_en": [
+   "8.314 J/(mol·K)",
+   "0.082 J/(mol·K)",
+   "1.38 J/(mol·K)",
+   "9.81 J/(mol·K)"
+  ],
+  "a": 0,
+  "e_hi": "सार्वत्रिक गैस नियतांक (R) का मानक मान लगभग 8.314 जूल प्रति मोल केल्विन है।",
+  "e_en": "The standard value of the universal gas constant (R) is approximately 8.314 Joules per mole Kelvin."
+ },
+ {
+  "id": "rp-je_-h01826",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "ऊष्मागतिकी का शून्यवाँ नियम (Zeroth Law of Thermodynamics) किसके द्वारा प्रतिपादित किया गया था?",
+  "q_en": "Who proposed the Zeroth Law of Thermodynamics?",
+  "o_hi": [
+   "रुडोल्फ क्लॉसियस",
+   "राल्फ एच. फाउलर",
+   "निकोलस सादी कार्नोट",
+   "लॉर्ड केल्विन"
+  ],
+  "o_en": [
+   "Rudolf Clausius",
+   "Ralph H. Fowler",
+   "Nicolas Sadi Carnot",
+   "Lord Kelvin"
+  ],
+  "a": 1,
+  "e_hi": "राल्फ एच. फाउलर ने 1930 के दशक में ऊष्मागतिकी के शून्यवें नियम को औपचारिक रूप दिया था।",
+  "e_en": "Ralph H. Fowler formalized the Zeroth Law of Thermodynamics in the 1930s."
+ },
+ {
+  "id": "rp-je_-h01827",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "आदर्श गैस समीकरण (Ideal Gas Equation) PV = nRT में 'R' क्या दर्शाता है?",
+  "q_en": "In the Ideal Gas Equation PV = nRT, what does 'R' represent?",
+  "o_hi": [
+   "रेनॉल्ड्स संख्या",
+   "सार्वत्रिक गैस नियतांक",
+   "आपेक्षिक घनत्व",
+   "ऊष्मीय प्रतिरोध"
+  ],
+  "o_en": [
+   "Reynolds number",
+   "Universal gas constant",
+   "Relative density",
+   "Thermal resistance"
+  ],
+  "a": 1,
+  "e_hi": "समीकरण में R सार्वत्रिक गैस नियतांक है, जिसका मान सभी आदर्श गैसों के लिए समान होता है।",
+  "e_en": "In the equation, R is the universal gas constant, which has the same value for all ideal gases."
+ },
+ {
+  "id": "rp-je_-h01828",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 3,
+  "q_hi": "सादी कार्नोट (Sadi Carnot) ने कार्नोट इंजन का विचार किस वर्ष प्रस्तुत किया था?",
+  "q_en": "In which year did Sadi Carnot present the concept of the Carnot engine?",
+  "o_hi": [
+   "1804",
+   "1824",
+   "1850",
+   "1872"
+  ],
+  "o_en": [
+   "1804",
+   "1824",
+   "1850",
+   "1872"
+  ],
+  "a": 1,
+  "e_hi": "फ्रांसीसी वैज्ञानिक सादी कार्नोट ने 1824 में 'रिफ्लेक्शन्स ऑन द मोटिव पावर ऑफ फायर' नामक अपनी पुस्तक में कार्नोट चक्र का वर्णन किया था।",
+  "e_en": "French scientist Sadi Carnot described the Carnot cycle in his 1824 book 'Reflections on the Motive Power of Fire'."
+ },
+ {
+  "id": "rp-je_-h01829",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "ऊष्मागतिकी के किस नियम को 'केल्विन-प्लैंक कथन' के रूप में जाना जाता है?",
+  "q_en": "Which law of thermodynamics is known as the 'Kelvin-Planck statement'?",
+  "o_hi": [
+   "शून्यवाँ नियम",
+   "प्रथम नियम",
+   "द्वितीय नियम",
+   "तृतीय नियम"
+  ],
+  "o_en": [
+   "Zeroth Law",
+   "First Law",
+   "Second Law",
+   "Third Law"
+  ],
+  "a": 2,
+  "e_hi": "द्वितीय नियम का केल्विन-प्लैंक कथन बताता है कि कोई भी इंजन पूरी तरह से ऊष्मा को कार्य में परिवर्तित नहीं कर सकता।",
+  "e_en": "The Kelvin-Planck statement of the Second Law states that no engine can completely convert heat into work."
+ },
+ {
+  "id": "rp-je_-h01830",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 3,
+  "q_hi": "ऊष्मागतिकी के तृतीय नियम के अनुसार, पूर्ण क्रिस्टलीय पदार्थ की एंट्रॉपी परम शून्य पर क्या होती है?",
+  "q_en": "According to the Third Law of Thermodynamics, what is the entropy of a perfect crystalline substance at absolute zero?",
+  "o_hi": [
+   "अनंत",
+   "शून्य",
+   "एक",
+   "ऋणात्मक"
+  ],
+  "o_en": [
+   "Infinite",
+   "Zero",
+   "One",
+   "Negative"
+  ],
+  "a": 1,
+  "e_hi": "तृतीय नियम के अनुसार, जैसे-जैसे तापमान परम शून्य की ओर बढ़ता है, एक पूर्ण क्रिस्टल की एंट्रॉपी शून्य हो जाती है।",
+  "e_en": "According to the Third Law, as temperature approaches absolute zero, the entropy of a perfect crystal approaches zero."
+ },
+ {
+  "id": "rp-je_-h01831",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "गैस के अणुओं की औसत गतिज ऊर्जा (Kinetic Energy) सीधे किसके समानुपाती होती है?",
+  "q_en": "The average kinetic energy of gas molecules is directly proportional to which of the following?",
+  "o_hi": [
+   "दबाव",
+   "आयतन",
+   "परम तापमान",
+   "घनत्व"
+  ],
+  "o_en": [
+   "Pressure",
+   "Volume",
+   "Absolute temperature",
+   "Density"
+  ],
+  "a": 2,
+  "e_hi": "गतिज सिद्धांत के अनुसार, गैस के अणुओं की औसत गतिज ऊर्जा केल्विन में मापे गए परम तापमान के सीधे समानुपाती होती है।",
+  "e_en": "According to kinetic theory, the average kinetic energy of gas molecules is directly proportional to the absolute temperature in Kelvin."
  }
 ]
