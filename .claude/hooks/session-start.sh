@@ -12,12 +12,15 @@
 # bulk_flashcards.py's commit message for why). That worker-relaunch logic
 # has been retired too.
 #
-# NOTES generation is now in progress for the 27 (subject, topic) pairs that
-# don't have one yet: gk (2), computer (4), english (3), and all 18 JE
-# engineering topics (mechanical/civil/electrical, 6 each). Unlike
-# bulk_questions.py, notes.py doesn't self-relaunch on restart, so this hook
-# does it for them -- per the standing rule: every background worker gets a
-# relaunch entry here so it survives a container restart.
+# NOTES generation is DONE: all 88 (subject, topic) pairs now have a note.
+# That worker-relaunch logic has been retired too.
+#
+# TIPS & TRICKS backfill is now in progress: 55 of the 88 notes predate the
+# tips_hi/tips_en field and are getting it filled in via
+# `notes.py --augment-tips`. Unlike bulk_questions.py, this doesn't
+# self-relaunch on restart, so this hook does it -- per the standing rule:
+# every background worker gets a relaunch entry here so it survives a
+# container restart.
 set -uo pipefail
 
 if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
@@ -34,21 +37,9 @@ cd "$GEN" || exit 0
 
 running() { pgrep -f "$1" >/dev/null 2>&1; }
 
-if ! running "notes.py.*gk,computer,english"; then
-  nohup python3 notes.py --provider groq --model openai/gpt-oss-120b --limit 20 \
-    --subjects gk,computer,english > "$LOGS/notes1.log" 2>&1 &
-  disown
-fi
-
-if ! running "notes.py.*je_mechanical"; then
-  nohup python3 notes.py --provider gemini --model gemini-flash-lite-latest --gemini-key-env GEMINI_API_KEY --limit 10 \
-    --subjects je_mechanical > "$LOGS/notes2.log" 2>&1 &
-  disown
-fi
-
-if ! running "notes.py.*je_civil,je_electrical"; then
-  nohup python3 notes.py --provider gemini --model gemini-flash-lite-latest --gemini-key-env GEMINI_API_KEY2 --limit 16 \
-    --subjects je_civil,je_electrical > "$LOGS/notes3.log" 2>&1 &
+if ! running "notes.py.*--augment-tips"; then
+  nohup python3 notes.py --provider groq --model openai/gpt-oss-120b --augment-tips \
+    > "$LOGS/tips1.log" 2>&1 &
   disown
 fi
 
