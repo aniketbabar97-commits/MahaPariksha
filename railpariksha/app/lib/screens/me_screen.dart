@@ -150,11 +150,17 @@ class MeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.share, color: BrandColors.saffron),
               title: Text(context.tr('दोस्तों को बताएं 📣', 'Invite friends 📣')),
-              subtitle: Text(context.tr('साथ पढ़ें, साथ आगे बढ़ें!', 'Study together, soar together!')),
-              onTap: () => SharePlus.instance.share(ShareParams(
-                  text: context.tr(
-                      'मैं RailPariksha ऐप पर रोज़ अभ्यास करता हूं — RRB NTPC, ग्रुप डी, RPF समेत सभी रेलवे परीक्षाओं के लिए मुफ़्त! आप भी जुड़ें: $kPlayUrl',
-                      'I practise daily on RailPariksha — free for RRB NTPC, Group D, RPF & more! Join me: $kPlayUrl'))),
+              subtitle: Text(context.tr('साथ पढ़ें, साथ आगे बढ़ें! (+25 XP रोज़ पहली बार)', 'Study together, soar together! (+25 XP first time daily)')),
+              onTap: () async {
+                await SharePlus.instance.share(ShareParams(
+                    text: context.tr(
+                        'मैं RailPariksha ऐप पर रोज़ अभ्यास करता हूं — RRB NTPC, ग्रुप डी, RPF समेत सभी रेलवे परीक्षाओं के लिए मुफ़्त! आप भी जुड़ें: $kPlayUrl',
+                        'I practise daily on RailPariksha — free for RRB NTPC, Group D, RPF & more! Join me: $kPlayUrl')));
+                if (p.claimShareReward() && context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text(context.tr('दोस्तों को बताने के लिए +25 XP! 🎉', '+25 XP for spreading the word! 🎉'))));
+                }
+              },
             ),
             ListTile(
               leading: const Icon(Icons.star_rate, color: BrandColors.saffron),

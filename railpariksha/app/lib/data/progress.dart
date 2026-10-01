@@ -101,6 +101,7 @@ class Progress extends ChangeNotifier {
   int bestStreak = 0;
   int lastActiveDay = 0;
   int freezeTokens = 0;
+  int lastShareDay = 0;
   bool comeback = false;
   int bestSpeed = 0;
   double beastBestScore = 0;
@@ -142,6 +143,7 @@ class Progress extends ChangeNotifier {
     bestStreak = j['bestStreak'] ?? 0;
     lastActiveDay = j['lastActiveDay'] ?? 0;
     freezeTokens = j['freezeTokens'] ?? 0;
+    lastShareDay = j['lastShareDay'] ?? 0;
     bestSpeed = j['bestSpeed'] ?? 0;
     beastBestScore = (j['beastBestScore'] as num?)?.toDouble() ?? 0;
     beastBestStreak = j['beastBestStreak'] ?? 0;
@@ -168,6 +170,7 @@ class Progress extends ChangeNotifier {
         'bestStreak': bestStreak,
         'lastActiveDay': lastActiveDay,
         'freezeTokens': freezeTokens,
+        'lastShareDay': lastShareDay,
         'bestSpeed': bestSpeed,
         'beastBestScore': beastBestScore,
         'beastBestStreak': beastBestStreak,
@@ -334,6 +337,18 @@ class Progress extends ChangeNotifier {
     save();
   }
 
+  /// Once-per-day XP nudge for actually using the "Invite friends" share sheet --
+  /// a small, honest incentive for the one in-app action that can bring in new
+  /// users, since there's no install-attribution backend to reward a real referral.
+  bool claimShareReward() {
+    final t = today();
+    if (lastShareDay == t) return false;
+    lastShareDay = t;
+    xp += 25;
+    save();
+    return true;
+  }
+
   void recordSpeed(int score) {
     if (score > bestSpeed) bestSpeed = score;
     save();
@@ -369,7 +384,7 @@ class Progress extends ChangeNotifier {
 
   Future<void> reset() async {
     final keepLang = lang;
-    xp = streak = bestStreak = lastActiveDay = freezeTokens = bestSpeed = beastBestStreak = 0;
+    xp = streak = bestStreak = lastActiveDay = freezeTokens = bestSpeed = beastBestStreak = lastShareDay = 0;
     beastBestScore = 0;
     for (final c in [dayCounts, qStats, cards]) {
       c.clear();
