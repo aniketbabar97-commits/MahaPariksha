@@ -49,10 +49,14 @@ if ! running "bulk_questions.py.*topics mathematical_operations"; then
   disown
 fi
 
-if ! running "bulk_questions.py.*topics non_verbal_reasoning"; then
+if ! running "bulk_questions.py.*topics analogy,syllogism,puzzle_seating"; then
+  # The original non_verbal_reasoning/blood_relations/coding_decoding/series/
+  # direction_sense/alphabet_test batch on this slot hit 311/topic on all 6
+  # and exited cleanly -- redeployed onto the 3 topics (out of worker i's
+  # six) still short of target, for a final concentrated push on just those.
   nohup python3 bulk_questions.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY2 --max-calls 3000 \
-    --subjects reasoning --topics non_verbal_reasoning,blood_relations,coding_decoding,series,direction_sense,alphabet_test \
-    --id-prefix-suffix j > "$LOGS/reasoning3.log" 2>&1 &
+    --subjects reasoning --topics analogy,syllogism,puzzle_seating \
+    --id-prefix-suffix k > "$LOGS/reasoning4.log" 2>&1 &
   disown
 fi
 
