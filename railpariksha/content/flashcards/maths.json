@@ -1,10 +1,227 @@
 [
- {"id": "fc-maths-0001", "s": "maths", "t": "hcf_lcm", "f_hi": "HCF × LCM = ?", "f_en": "HCF × LCM = ?", "b_hi": "दो संख्याओं का गुणनफल (HCF × LCM = संख्या1 × संख्या2)", "b_en": "The product of the two numbers (HCF × LCM = number1 × number2)"},
- {"id": "fc-maths-0002", "s": "maths", "t": "percentage", "f_hi": "x% का मतलब क्या है?", "f_en": "What does x% mean?", "b_hi": "x/100, यानी 100 में से x भाग", "b_en": "x/100, i.e. x parts out of 100"},
- {"id": "fc-maths-0003", "s": "maths", "t": "profit_loss", "f_hi": "लाभ % का सूत्र?", "f_en": "Formula for Profit %?", "b_hi": "(लाभ/क्रय मूल्य) × 100", "b_en": "(Profit/Cost Price) × 100"},
- {"id": "fc-maths-0004", "s": "maths", "t": "si_ci", "f_hi": "साधारण ब्याज (SI) का सूत्र?", "f_en": "Formula for Simple Interest (SI)?", "b_hi": "(मूलधन × दर × समय) / 100", "b_en": "(Principal × Rate × Time) / 100"},
- {"id": "fc-maths-0005", "s": "maths", "t": "time_speed_distance", "f_hi": "चाल का सूत्र?", "f_en": "Formula for Speed?", "b_hi": "चाल = दूरी / समय", "b_en": "Speed = Distance / Time"},
- {"id": "fc-maths-0006", "s": "maths", "t": "mensuration", "f_hi": "वृत्त का क्षेत्रफल?", "f_en": "Area of a circle?", "b_hi": "π × त्रिज्या²  (πr²)", "b_en": "π × radius² (πr²)"},
- {"id": "fc-maths-0007", "s": "maths", "t": "geometry", "f_hi": "त्रिभुज के कोणों का योग?", "f_en": "Sum of angles of a triangle?", "b_hi": "180°", "b_en": "180°"},
- {"id": "fc-maths-0008", "s": "maths", "t": "time_work", "f_hi": "यदि A काम x दिन में करता है, तो A का एक दिन का काम?", "f_en": "If A does a job in x days, what is A's one-day work?", "b_hi": "1/x", "b_en": "1/x"}
+ {
+  "id": "fc-maths-0001",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "f_hi": "HCF × LCM = ?",
+  "f_en": "HCF × LCM = ?",
+  "b_hi": "दो संख्याओं का गुणनफल (HCF × LCM = संख्या1 × संख्या2)",
+  "b_en": "The product of the two numbers (HCF × LCM = number1 × number2)"
+ },
+ {
+  "id": "fc-maths-0002",
+  "s": "maths",
+  "t": "percentage",
+  "f_hi": "x% का मतलब क्या है?",
+  "f_en": "What does x% mean?",
+  "b_hi": "x/100, यानी 100 में से x भाग",
+  "b_en": "x/100, i.e. x parts out of 100"
+ },
+ {
+  "id": "fc-maths-0003",
+  "s": "maths",
+  "t": "profit_loss",
+  "f_hi": "लाभ % का सूत्र?",
+  "f_en": "Formula for Profit %?",
+  "b_hi": "(लाभ/क्रय मूल्य) × 100",
+  "b_en": "(Profit/Cost Price) × 100"
+ },
+ {
+  "id": "fc-maths-0004",
+  "s": "maths",
+  "t": "si_ci",
+  "f_hi": "साधारण ब्याज (SI) का सूत्र?",
+  "f_en": "Formula for Simple Interest (SI)?",
+  "b_hi": "(मूलधन × दर × समय) / 100",
+  "b_en": "(Principal × Rate × Time) / 100"
+ },
+ {
+  "id": "fc-maths-0005",
+  "s": "maths",
+  "t": "time_speed_distance",
+  "f_hi": "चाल का सूत्र?",
+  "f_en": "Formula for Speed?",
+  "b_hi": "चाल = दूरी / समय",
+  "b_en": "Speed = Distance / Time"
+ },
+ {
+  "id": "fc-maths-0006",
+  "s": "maths",
+  "t": "mensuration",
+  "f_hi": "वृत्त का क्षेत्रफल?",
+  "f_en": "Area of a circle?",
+  "b_hi": "π × त्रिज्या²  (πr²)",
+  "b_en": "π × radius² (πr²)"
+ },
+ {
+  "id": "fc-maths-0007",
+  "s": "maths",
+  "t": "geometry",
+  "f_hi": "त्रिभुज के कोणों का योग?",
+  "f_en": "Sum of angles of a triangle?",
+  "b_hi": "180°",
+  "b_en": "180°"
+ },
+ {
+  "id": "fc-maths-0008",
+  "s": "maths",
+  "t": "time_work",
+  "f_hi": "यदि A काम x दिन में करता है, तो A का एक दिन का काम?",
+  "f_en": "If A does a job in x days, what is A's one-day work?",
+  "b_hi": "1/x",
+  "b_en": "1/x"
+ },
+ {
+  "id": "fc-maths-0009",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव को भिन्न में बदलने का सूत्र क्या है?",
+  "f_en": "What is the formula to convert a decimal to a fraction?",
+  "b_hi": "दशमलव को 10 की उचित घात से विभाजित करें (जैसे 0.5 = 5/10)।",
+  "b_en": "Divide the decimal by the appropriate power of 10 (e.g., 0.5 = 5/10)."
+ },
+ {
+  "id": "fc-maths-0010",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव में 'शून्य' जोड़ने से मान बदलता है या नहीं?",
+  "f_en": "Does adding zeros to a decimal change its value?",
+  "b_hi": "दशमलव अंक की ओर से जोड़े गए शून्य से मान नहीं बदलता (0.5 = 0.50)।",
+  "b_en": "Appending zeros to the right of the decimal point does not change the value (0.5 = 0.50)."
+ },
+ {
+  "id": "fc-maths-0011",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दो भिन्नों का गुणन कैसे किया जाता है?",
+  "f_en": "How do you multiply two fractions?",
+  "b_hi": "अंशों को आपस में और हरों को आपस में गुणा करें (a/b × c/d = ac/bd)।",
+  "b_en": "Multiply numerators together and denominators together (a/b × c/d = ac/bd)."
+ },
+ {
+  "id": "fc-maths-0012",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "भिन्न को दशमलव में बदलने का तरीका क्या है?",
+  "f_en": "How do you convert a fraction to a decimal?",
+  "b_hi": "अंश को हर से भाग दें (जैसे 3/4 = 0.75)।",
+  "b_en": "Divide the numerator by the denominator (e.g., 3/4 = 0.75)."
+ },
+ {
+  "id": "fc-maths-0013",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव में जोड़/घटाव के लिए क्या करना ज़रूरी है?",
+  "f_en": "What is essential for adding or subtracting decimals?",
+  "b_hi": "दशमलव बिंदुओं को एक-दूसरे के नीचे संरेखित (align) करना।",
+  "b_en": "Aligning the decimal points vertically."
+ },
+ {
+  "id": "fc-maths-0014",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "अंश और हर में समान संख्या से गुणा करने पर भिन्न का मान क्या होता है?",
+  "f_en": "What happens to the value of a fraction when numerator and denominator are multiplied by the same number?",
+  "b_hi": "भिन्न का मान अपरिवर्तित रहता है (सममूल्य भिन्न बनता है)।",
+  "b_en": "The value remains unchanged (it becomes an equivalent fraction)."
+ },
+ {
+  "id": "fc-maths-0015",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दो दशमलवों का गुणा करने में दशमलव बिंदु कैसे ठीक किया जाता है?",
+  "f_en": "How to place the decimal point when multiplying two decimals?",
+  "b_hi": "दोनों संख्याओं के दशमलव स्थानों की कुल संख्या को उत्तर के दाईं ओर गिनाएं।",
+  "b_en": "Count the total number of decimal places in both numbers and place the decimal point that many places from the right in the product."
+ },
+ {
+  "id": "fc-maths-0016",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "शून्य से दशमलव को भाग देने पर क्या होता है?",
+  "f_en": "What happens when a decimal is divided by zero?",
+  "b_hi": "यह अपरिभाषित (undefined) होता है और गणितीय रूप से संभव नहीं है।",
+  "b_en": "It is undefined and mathematically impossible."
+ },
+ {
+  "id": "fc-maths-0017",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव को दूर करने के लिए दशमलव को किससे गुणा करें?",
+  "f_en": "By what number should a decimal be multiplied to eliminate the decimal point?",
+  "b_hi": "दशमलव अंकों की संख्या के बराबर 10 की घात (10, 100, 1000...) से गुणा करें।",
+  "b_en": "Multiply by a power of 10 equal to the number of decimal places (10, 100, 1000...)."
+ },
+ {
+  "id": "fc-maths-0018",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "समापन दशमलव (Recurring Decimal) क्या कहलाता है?",
+  "f_en": "What is a recurring decimal?",
+  "b_hi": "जिस दशमलव में कोई अंक या अंकों का समूह बार-बार दोहराया जाता है।",
+  "b_en": "A decimal where a digit or a group of digits repeats infinitely."
+ },
+ {
+  "id": "fc-maths-0019",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव जोड़ने या घटाने की मुख्य शर्त क्या है?",
+  "f_en": "What is the main rule for adding or subtracting decimals?",
+  "b_hi": "दशमलव बिंदुओं को एक ही सीध में (align) रखना।",
+  "b_en": "Align the decimal points vertically."
+ },
+ {
+  "id": "fc-maths-0020",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव को भिन्न में बदलने का नियम क्या है?",
+  "f_en": "What is the rule to convert a decimal to a fraction?",
+  "b_hi": "दशमलव को अंश में लिखें और हर में उतने शून्य रखें जितने दशमलव बिंदु के बाद स्थान हैं, फिर सरल मान में लाएँ।",
+  "b_en": "Write the decimal digits as the numerator and 1 followed by as many zeros as there are decimal places as the denominator, then simplify."
+ },
+ {
+  "id": "fc-maths-0021",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "0.333... (अविराम) को भिन्न में कैसे लिखते हैं?",
+  "f_en": "How do you write 0.333... (recurring) as a fraction?",
+  "b_hi": "यह 1/3 के बराबर होता है।",
+  "b_en": "It is equal to 1/3."
+ },
+ {
+  "id": "fc-maths-0022",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दो दशमलव संख्याओं का योग कैसे करते हैं?",
+  "f_en": "How do you add two decimal numbers?",
+  "b_hi": "दशमलव बिंदुओं को एक-दूसरे के नीचे संरेखित करें, फिर पूरे संख्याओं की तरह जोड़ें और दशमलव बिंदु को नीचे लाए रखें।",
+  "b_en": "Align the decimal points vertically, add them as if they were whole numbers, and bring the decimal point straight down."
+ },
+ {
+  "id": "fc-maths-0023",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "0.5 को प्रतिशत में बदलने का सूत्र?",
+  "f_en": "What is the formula to convert 0.5 to a percentage?",
+  "b_hi": "दशमलव को 100 से गुणा करें, अतः 0.5 x 100 = 50%।",
+  "b_en": "Multiply the decimal by 100, so 0.5 x 100 = 50%."
+ },
+ {
+  "id": "fc-maths-0024",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "0.25 दशमलव का भिन्न रूप?",
+  "f_en": "What is the fractional form of the decimal 0.25?",
+  "b_hi": "यह 1/4 के बराबर है।",
+  "b_en": "It is equal to 1/4."
+ },
+ {
+  "id": "fc-maths-0025",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "f_hi": "दशमलव गुणन में दशमलव बिंदु की स्थिति कैसे तय करें?",
+  "f_en": "How to determine the position of the decimal point in multiplication?",
+  "b_hi": "गुणनफल में दशमलव बिंदु के दाईं ओर कुल स्थानों की संख्या, दोनों गुण्य संख्याओं में दशमलव स्थानों के योग के बराबर होती है।",
+  "b_en": "The total number of decimal places in the product equals the sum of the decimal places in the two factors."
+ }
 ]
