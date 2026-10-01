@@ -28779,5 +28779,212 @@
   "a": 0,
   "e_hi": "उल्टे क्रम में सबसे बड़ा अक्षर D पहले आएगा, फिर C, B, और अंत में A।",
   "e_en": "In reverse order, the largest letter D comes first, followed by C, B, and finally A."
+ },
+ {
+  "id": "rp-rea-o01256",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "वर्णमाला में 'K' और 'P' के बीच कितने अक्षर आते हैं?",
+  "q_en": "How many letters are there between 'K' and 'P' in the English alphabet?",
+  "o_hi": [
+   "चार",
+   "पाँच",
+   "छह",
+   "सात"
+  ],
+  "o_en": [
+   "Four",
+   "Five",
+   "Six",
+   "Seven"
+  ],
+  "a": 1,
+  "e_hi": "K के बाद L, M, N, O और P से पहले O आता है, अतः बीच में पाँच अक्षर (L, M, N, O) हैं।",
+  "e_en": "After K comes L, then M, N, O, and then P. There are five letters (L, M, N, O) in between."
+ },
+ {
+  "id": "rp-rea-o01257",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से, वर्णमाला में 'R' से 6 स्थान पीछे कौन सा अक्षर है?",
+  "q_en": "Which letter is 6 places before 'R' in the English alphabet?",
+  "o_hi": [
+   "L",
+   "M",
+   "N",
+   "O"
+  ],
+  "o_en": [
+   "L",
+   "M",
+   "N",
+   "O"
+  ],
+  "a": 1,
+  "e_hi": "R से 6 स्थान पीछे जाने पर हम M पर पहुँचते हैं (Q, P, O, N, M).",
+  "e_en": "Counting 6 positions back from R leads to M (Q, P, O, N, M)."
+ },
+ {
+  "id": "rp-rea-o01258",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "निम्नलिखित शब्दों को वर्णमाला क्रम (Dictionary Order) में व्यवस्थित करें: Cat, Cap, Car, Cart",
+  "q_en": "Arrange the following words in dictionary order: Cat, Cap, Car, Cart",
+  "o_hi": [
+   "Cap, Car, Cart, Cat",
+   "Car, Cart, Cat, Cap",
+   "Cat, Cap, Car, Cart",
+   "Cart, Cat, Cap, Car"
+  ],
+  "o_en": [
+   "Cap, Car, Cart, Cat",
+   "Car, Cart, Cat, Cap",
+   "Cat, Cap, Car, Cart",
+   "Cart, Cat, Cap, Car"
+  ],
+  "a": 0,
+  "e_hi": "पहले दो अक्षर Ca समान हैं। तीसरा अक्षर p (Cap) सबसे पहले आता है, फिर r (Car/Cart), और अंत में t (Cat)।",
+  "e_en": "The first two letters 'Ca' are the same. The third letter 'p' in Cap comes first, then 'r' in Car/Cart, and finally 't' in Cat."
+ },
+ {
+  "id": "rp-rea-o01259",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "वर्णमाला में 'Z' से शुरू करते हुए, हर दूसरा अक्षर (backward direction) लेते हुए, 5वाँ अक्षर कौन सा होगा?",
+  "q_en": "Starting from 'Z' and taking every second letter in the backward direction, what is the 5th letter?",
+  "o_hi": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "o_en": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "a": 1,
+  "e_hi": "Z (1st), X (2nd), V (3rd), T (4th), R (5th). अतः उत्तर R है।",
+  "e_en": "Z (1st), X (2nd), V (3rd), T (4th), R (5th). Therefore, the answer is R."
+ },
+ {
+  "id": "rp-rea-o01260",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "वर्णमाला में 'B' और 'Y' के बीच कितने अक्षर हैं?",
+  "q_en": "How many letters are there between 'B' and 'Y' in the English alphabet?",
+  "o_hi": [
+   "24",
+   "25",
+   "26",
+   "27"
+  ],
+  "o_en": [
+   "24",
+   "25",
+   "26",
+   "27"
+  ],
+  "a": 0,
+  "e_hi": "कुल 26 अक्षर हैं। B और Y को छोड़ने पर 24 अक्षर बचते हैं (C से X तक)।",
+  "e_en": "There are 26 letters in total. Excluding B and Y leaves 24 letters (from C to X)."
+ },
+ {
+  "id": "rp-rea-o01261",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "शब्द 'SCIENCE' के अक्षरों को उल्टे क्रम (Reverse Order) में लिखने पर, 3वाँ अक्षर कौन सा होगा?",
+  "q_en": "If the letters of the word 'SCIENCE' are written in reverse order, which letter will be the 3rd?",
+  "o_hi": [
+   "E",
+   "N",
+   "I",
+   "C"
+  ],
+  "o_en": [
+   "E",
+   "N",
+   "I",
+   "C"
+  ],
+  "a": 1,
+  "e_hi": "उल्टा शब्द ECNEICCS है। इसमें 3वाँ अक्षर N है।",
+  "e_en": "The reversed word is ECNEICCS. The 3rd letter in this sequence is N."
+ },
+ {
+  "id": "rp-rea-o01262",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "वर्णमाला में 'A' और 'M' के बीच के अक्षरों की संख्या, 'M' और 'Z' के बीच के अक्षरों की संख्या से कैसे तुलना होती है?",
+  "q_en": "How does the number of letters between 'A' and 'M' compare to the number of letters between 'M' and 'Z'?",
+  "o_hi": [
+   "A-M के बीच अक्षर अधिक हैं",
+   "M-Z के बीच अक्षर अधिक हैं",
+   "दोनों में अक्षरों की संख्या बराबर है",
+   "कोई तुलना संभव नहीं है"
+  ],
+  "o_en": [
+   "More letters between A and M",
+   "More letters between M and Z",
+   "Equal number of letters in both",
+   "Comparison is not possible"
+  ],
+  "a": 1,
+  "e_hi": "A और M के बीच 11 अक्षर हैं (B-L)। M और Z के बीच 13 अक्षर हैं (N-Y)। अतः M-Z के बीच अधिक अक्षर हैं।",
+  "e_en": "There are 11 letters between A and M (B-L). There are 13 letters between M and Z (N-Y). Thus, there are more letters between M and Z."
+ },
+ {
+  "id": "rp-rea-o01263",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "विकल्पों में से वह जोड़ा चुनें जिसके दोनों अक्षर वर्णमाला में समान दूरी पर स्थित हैं, जैसा कि 'A' और 'Z' हैं।",
+  "q_en": "Choose the pair from the options where both letters are at the same distance in the alphabet, similar to 'A' and 'Z'.",
+  "o_hi": [
+   "B और Y",
+   "C और X",
+   "D और W",
+   "E और V"
+  ],
+  "o_en": [
+   "B and Y",
+   "C and X",
+   "D and W",
+   "E and V"
+  ],
+  "a": 3,
+  "e_hi": "A(1) और Z(26) का योग 27 है। E(5) और V(22) का योग भी 27 है। अन्य विकल्पों का योग 27 नहीं है।",
+  "e_en": "The sum of positions for A(1) and Z(26) is 27. The sum of positions for E(5) and V(22) is also 27. Other options do not sum to 27."
+ },
+ {
+  "id": "rp-rea-o01264",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "शब्द 'INDIA' में कितने स्वर (Vowels) हैं?",
+  "q_en": "How many vowels are there in the word 'INDIA'?",
+  "o_hi": [
+   "दो",
+   "तीन",
+   "चार",
+   "पाँच"
+  ],
+  "o_en": [
+   "Two",
+   "Three",
+   "Four",
+   "Five"
+  ],
+  "a": 1,
+  "e_hi": "INDIA में I, I, A तीन स्वर अक्षर हैं।",
+  "e_en": "There are three vowel letters in INDIA: I, I, and A."
  }
 ]
