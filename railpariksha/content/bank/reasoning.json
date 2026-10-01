@@ -28986,5 +28986,166 @@
   "a": 1,
   "e_hi": "INDIA में I, I, A तीन स्वर अक्षर हैं।",
   "e_en": "There are three vowel letters in INDIA: I, I, and A."
+ },
+ {
+  "id": "rp-rea-o01265",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "एक पहेली में 8 व्यक्ति एक वृत्त के चारों ओर बैठे हैं। यदि A, B के ठीक दाईं ओर बैठा है, तो A और B के बीच कितने व्यक्ति बैठे हैं?",
+  "q_en": "In a puzzle, 8 people are sitting in a circle. If A is sitting immediately to the right of B, how many people are sitting between A and B?",
+  "o_hi": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "o_en": [
+   "0",
+   "1",
+   "2",
+   "3"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि A, B के ठीक दाईं ओर बैठा है, इसलिए उनके बीच कोई अन्य व्यक्ति नहीं बैठा है।",
+  "e_en": "Since A is sitting immediately to the right of B, there is no other person sitting between them."
+ },
+ {
+  "id": "rp-rea-o01266",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "12 कागज़ के पत्तों का एक ढेर है। यदि सबसे ऊपर के पत्ते को हटाकर सबसे नीचे रख दिया जाए, तो यह क्रिया 4 बार की गई, तो मूल रूप से सबसे ऊपर वाला पत्ता अब कितने पत्तों के ऊपर होगा?",
+  "q_en": "There is a stack of 12 sheets of paper. If the top sheet is removed and placed at the bottom, and this operation is repeated 4 times, how many sheets will be above the sheet that was originally at the top?",
+  "o_hi": [
+   "8",
+   "7",
+   "6",
+   "5"
+  ],
+  "o_en": [
+   "8",
+   "7",
+   "6",
+   "5"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक बार शीर्ष पत्ता नीचे चला जाता है। 4 बार करने के बाद, वह स्थिति में 4 पत्तों के नीचे (और 7 पत्तों के ऊपर) होगा? नहीं, गणना: 12 पत्ते हैं। 1वाँ पत्ता 1 बार के बाद 12वें स्थान पर। 2 बार के बाद 11वें स्थान पर। 3 बार के बाद 10वें। 4 बार के बाद 9वें स्थान पर। 9वें स्थान के ऊपर 8 पत्ते होते हैं।",
+  "e_en": "Each time the top sheet moves to the bottom. After 4 operations, the original top sheet is at position 9 from the top (12-4). Therefore, there are 8 sheets above it (positions 1 to 8)."
+ },
+ {
+  "id": "rp-rea-o01267",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "एक रेखीय बैठक व्यवस्था में 6 व्यक्ति बैठे हैं। यदि X, Y के दायीं ओर तीसरे स्थान पर है, तो X और Y के बीच कितने व्यक्ति बैठे हैं?",
+  "q_en": "In a linear seating arrangement, 6 people are sitting. If X is sitting three places to the right of Y, how many people are sitting between X and Y?",
+  "o_hi": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ],
+  "o_en": [
+   "1",
+   "2",
+   "3",
+   "4"
+  ],
+  "a": 1,
+  "e_hi": "यदि कोई व्यक्ति दूसरे व्यक्ति से 'तीसरे स्थान पर' है, तो उनके बीच दो व्यक्ति बैठे होते हैं (स्थान 1 और 2 बीच में)।",
+  "e_en": "If a person is sitting 'three places' to the right of another, there are two people sitting between them (positions 1 and 2 in between)."
+ },
+ {
+  "id": "rp-rea-o01268",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "एक वर्गाकार कमरे में 4 दीवारें हैं। एक व्यक्ति उत्तर दीवार के सामने बैठता है। यदि वह 90 डिग्री घड़ी की दिशा में घूमता है, तो वह अब किस दीवार के सामने होगा?",
+  "q_en": "In a square room, there are 4 walls. A person is sitting facing the North wall. If he turns 90 degrees clockwise, which wall will he be facing now?",
+  "o_hi": [
+   "दक्षिण",
+   "पश्चिम",
+   "पूर्व",
+   "उत्तर"
+  ],
+  "o_en": [
+   "South",
+   "West",
+   "East",
+   "North"
+  ],
+  "a": 2,
+  "e_hi": "उत्तर दिशा में बैठे व्यक्ति की घड़ी की दिशा में 90 डिग्री मोड़ पर दक्षिण? नहीं, पूर्व दिशा आती है। उत्तर से घड़ी की दिशा में 90 डिग्री पूर्व है।",
+  "e_en": "A person facing North, upon turning 90 degrees clockwise, will face East. (North -> East)."
+ },
+ {
+  "id": "rp-rea-o01269",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "100 लोगों की एक कतार में, A 15वें स्थान पर और B 85वें स्थान पर बैठा है। A और B के बीच कितने लोग बैठे हैं?",
+  "q_en": "In a queue of 100 people, A is at the 15th position and B is at the 85th position. How many people are sitting between A and B?",
+  "o_hi": [
+   "69",
+   "70",
+   "71",
+   "68"
+  ],
+  "o_en": [
+   "69",
+   "70",
+   "71",
+   "68"
+  ],
+  "a": 0,
+  "e_hi": "बीच के लोगों की संख्या = (B की स्थिति - A की स्थिति) - 1 = 85 - 15 - 1 = 69।",
+  "e_en": "Number of people between = (Position of B - Position of A) - 1 = 85 - 15 - 1 = 69."
+ },
+ {
+  "id": "rp-rea-o01270",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 3,
+  "q_hi": "एक घड़ी में, यदि 3 बजे के समय घंटी की सुई 90 डिग्री पर है, तो 9 बजे के समय घंटी की सुई कितने डिग्री पर होगी?",
+  "q_en": "On a clock, if the hour hand is at 90 degrees at 3:00, at what degree will the hour hand be at 9:00?",
+  "o_hi": [
+   "0 डिग्री",
+   "90 डिग्री",
+   "180 डिग्री",
+   "270 डिग्री"
+  ],
+  "o_en": [
+   "0 degrees",
+   "90 degrees",
+   "180 degrees",
+   "270 degrees"
+  ],
+  "a": 2,
+  "e_hi": "12 बजे से 3 बजे तक घंटी की सुई 90 डिग्री घूमती है। 12 बजे से 9 बजे तक वह 270 डिग्री घूमती है। यहाँ सापेक्ष स्थिति के लिए: 3 बजे पर सुई पूर्व में है। 9 बजे पर सुई पश्चिम में है। पूर्व और पश्चिम के बीच 180 डिग्री का अंतर है।",
+  "e_en": "At 3:00, the hour hand is at the 90-degree mark (East). At 9:00, it is at the 270-degree mark (West). The angular difference between East and West is 180 degrees."
+ },
+ {
+  "id": "rp-rea-o01271",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "एक पहेली में 5 अक्षरों की एक श्रृंखला दी गई है: A, C, E, G, ?। अगला अक्षर कौन सा होगा?",
+  "q_en": "In a puzzle, a sequence of 5 letters is given: A, C, E, G, ?. What will be the next letter?",
+  "o_hi": [
+   "I",
+   "H",
+   "J",
+   "K"
+  ],
+  "o_en": [
+   "I",
+   "H",
+   "J",
+   "K"
+  ],
+  "a": 0,
+  "e_hi": "श्रृंखला में प्रत्येक अक्षर के बाद 2 अक्षर छूटे जा रहे हैं (A+2=C, C+2=E, E+2=G). अतः G के बाद 2 अक्षर छूटने पर I आएगा।",
+  "e_en": "In the sequence, 2 letters are skipped after each letter (A+2=C, C+2=E, E+2=G). Therefore, after G, skipping 2 letters gives I."
  }
 ]

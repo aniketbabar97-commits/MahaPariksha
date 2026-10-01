@@ -10578,5 +10578,442 @@
   "a": 0,
   "e_hi": "रुद्धोष्म प्रक्रिया वह है जिसमें प्रणाली और परिवेश के बीच कोई ऊष्मा का आदान-प्रदान नहीं होता है।",
   "e_en": "An adiabatic process is one in which there is no heat transfer between the system and the surroundings."
+ },
+ {
+  "id": "rp-je_-h00461",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक वस्तु पर 10 न्यूटन और 10 न्यूटन के दो समान बल 120 डिग्री के कोण पर कार्य कर रहे हैं। उनका परिणामी बल क्या होगा?",
+  "q_en": "Two equal forces of 10 N each act on an object at an angle of 120 degrees. What is their resultant force?",
+  "o_hi": [
+   "20 न्यूटन",
+   "10 न्यूटन",
+   "5 न्यूटन",
+   "शून्य"
+  ],
+  "o_en": [
+   "20 N",
+   "10 N",
+   "5 N",
+   "Zero"
+  ],
+  "a": 1,
+  "e_hi": "परिणामी बल का सूत्र R = sqrt(P^2 + Q^2 + 2PQ cos θ) है। 10^2 + 10^2 + 2*10*10*cos(120) का मान 10 न्यूटन आता है।",
+  "e_en": "Using the resultant force formula R = sqrt(P^2 + Q^2 + 2PQ cos θ), with θ = 120 degrees, the resultant is equal to the magnitude of individual forces, which is 10 N."
+ },
+ {
+  "id": "rp-je_-h00462",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "यदि किसी वस्तु का द्रव्यमान 20 किलोग्राम है और उस पर 40 न्यूटन का बल लगाया जाता है, तो उत्पन्न त्वरण क्या होगा?",
+  "q_en": "If a body has a mass of 20 kg and a force of 40 N is applied to it, what will be the acceleration produced?",
+  "o_hi": [
+   "0.5 मीटर/सेकंड^2",
+   "2 मीटर/सेकंड^2",
+   "800 मीटर/सेकंड^2",
+   "20 मीटर/सेकंड^2"
+  ],
+  "o_en": [
+   "0.5 m/s^2",
+   "2 m/s^2",
+   "800 m/s^2",
+   "20 m/s^2"
+  ],
+  "a": 1,
+  "e_hi": "न्यूटन के द्वितीय नियम के अनुसार, त्वरण (a) = बल (F) / द्रव्यमान (m)। 40/20 = 2 मीटर/सेकंड^2।",
+  "e_en": "According to Newton's second law, acceleration (a) = Force (F) / mass (m). Thus, 40 / 20 = 2 m/s^2."
+ },
+ {
+  "id": "rp-je_-h00463",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक 50 किलोग्राम की वस्तु 10 मीटर की ऊंचाई से गिरती है। जमीन से टकराते समय उसकी गतिज ऊर्जा क्या होगी? (g = 9.8 मीटर/सेकंड^2 लें)",
+  "q_en": "A 50 kg object falls from a height of 10 meters. What will be its kinetic energy just before hitting the ground? (Take g = 9.8 m/s^2)",
+  "o_hi": [
+   "500 जूल",
+   "4900 जूल",
+   "5000 जूल",
+   "980 जूल"
+  ],
+  "o_en": [
+   "500 J",
+   "4900 J",
+   "5000 J",
+   "980 J"
+  ],
+  "a": 1,
+  "e_hi": "ऊर्जा संरक्षण के अनुसार, स्थितिज ऊर्जा गतिज ऊर्जा में बदल जाती है। PE = mgh = 50 * 9.8 * 10 = 4900 जूल।",
+  "e_en": "By the law of conservation of energy, potential energy converts into kinetic energy. PE = mgh = 50 * 9.8 * 10 = 4900 Joules."
+ },
+ {
+  "id": "rp-je_-h00464",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक घर्षण रहित सतह पर 10 किलोग्राम का ब्लॉक 5 मीटर/सेकंड के वेग से चल रहा है। इसे रोकने के लिए किया गया कार्य क्या होगा?",
+  "q_en": "A 10 kg block is moving at a velocity of 5 m/s on a frictionless surface. What is the work required to stop it?",
+  "o_hi": [
+   "25 जूल",
+   "50 जूल",
+   "125 जूल",
+   "250 जूल"
+  ],
+  "o_en": [
+   "25 J",
+   "50 J",
+   "125 J",
+   "250 J"
+  ],
+  "a": 2,
+  "e_hi": "कार्य-ऊर्जा प्रमेय के अनुसार, किया गया कार्य गतिज ऊर्जा में परिवर्तन के बराबर होता है। KE = 0.5 * m * v^2 = 0.5 * 10 * 25 = 125 जूल।",
+  "e_en": "According to the work-energy theorem, work done equals the change in kinetic energy. KE = 0.5 * 10 * 5^2 = 125 Joules."
+ },
+ {
+  "id": "rp-je_-h00465",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "यदि एक मशीन 20 सेकंड में 1000 जूल कार्य करती है, तो उसकी शक्ति क्या है?",
+  "q_en": "If a machine performs 1000 Joules of work in 20 seconds, what is its power?",
+  "o_hi": [
+   "20 वाट",
+   "50 वाट",
+   "100 वाट",
+   "20000 वाट"
+  ],
+  "o_en": [
+   "20 W",
+   "50 W",
+   "100 W",
+   "20000 W"
+  ],
+  "a": 1,
+  "e_hi": "शक्ति का सूत्र P = कार्य / समय है। 1000 / 20 = 50 वाट।",
+  "e_en": "Power is defined as work done per unit time. P = 1000 / 20 = 50 Watts."
+ },
+ {
+  "id": "rp-je_-h00466",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक सरल मशीन का यांत्रिक लाभ (Mechanical Advantage) 4 है और वेग अनुपात (Velocity Ratio) 5 है। मशीन की दक्षता क्या है?",
+  "q_en": "A simple machine has a mechanical advantage of 4 and a velocity ratio of 5. What is the efficiency of the machine?",
+  "o_hi": [
+   "20 प्रतिशत",
+   "80 प्रतिशत",
+   "125 प्रतिशत",
+   "40 प्रतिशत"
+  ],
+  "o_en": [
+   "20%",
+   "80%",
+   "125%",
+   "40%"
+  ],
+  "a": 1,
+  "e_hi": "दक्षता = यांत्रिक लाभ / वेग अनुपात। 4 / 5 = 0.8, जो 80 प्रतिशत है।",
+  "e_en": "Efficiency is defined as Mechanical Advantage divided by Velocity Ratio. 4 / 5 = 0.8 or 80%."
+ },
+ {
+  "id": "rp-je_-h00467",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "यदि किसी वस्तु का संवेग (Momentum) दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा कितने गुना हो जाएगी?",
+  "q_en": "If the momentum of an object is doubled, by how many times will its kinetic energy increase?",
+  "o_hi": [
+   "2 गुना",
+   "4 गुना",
+   "8 गुना",
+   "समान रहेगी"
+  ],
+  "o_en": [
+   "2 times",
+   "4 times",
+   "8 times",
+   "remains same"
+  ],
+  "a": 1,
+  "e_hi": "गतिज ऊर्जा (KE) = p^2 / 2m। यदि संवेग p दोगुना होता है, तो p^2 चार गुना हो जाएगा।",
+  "e_en": "Kinetic Energy (KE) = p^2 / 2m. If momentum p is doubled, p^2 becomes 4 times, thus KE increases 4 times."
+ },
+ {
+  "id": "rp-je_-h00468",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "एक 2 मीटर लंबी बीम के एक सिरे पर 100 न्यूटन का भार लटका है। बीम के दूसरे सिरे से 0.5 मीटर की दूरी पर बल आघूर्ण (Moment) क्या होगा?",
+  "q_en": "A 100 N load is hung at one end of a 2-meter beam. What is the moment at a point 0.5 meters from the other end?",
+  "o_hi": [
+   "50 न्यूटन-मीटर",
+   "100 न्यूटन-मीटर",
+   "150 न्यूटन-मीटर",
+   "200 न्यूटन-मीटर"
+  ],
+  "o_en": [
+   "50 N-m",
+   "100 N-m",
+   "150 N-m",
+   "200 N-m"
+  ],
+  "a": 2,
+  "e_hi": "आघूर्ण = बल * लंबवत दूरी। भार सिरे पर है, तो दूरी 1.5 मीटर है। 100 * 1.5 = 150 न्यूटन-मीटर।",
+  "e_en": "Moment = Force * perpendicular distance. Since the load is at one end, the distance from the point (0.5m from other end) is 1.5m. 100 * 1.5 = 150 N-m."
+ },
+ {
+  "id": "rp-je_-h00469",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "घर्षण गुणांक 0.2 है। 10 किलोग्राम के ब्लॉक को क्षैतिज सतह पर खींचने के लिए आवश्यक न्यूनतम बल क्या होगा? (g = 10 मीटर/सेकंड^2 लें)",
+  "q_en": "The coefficient of friction is 0.2. What is the minimum force required to pull a 10 kg block on a horizontal surface? (Take g = 10 m/s^2)",
+  "o_hi": [
+   "2 न्यूटन",
+   "10 न्यूटन",
+   "20 न्यूटन",
+   "100 न्यूटन"
+  ],
+  "o_en": [
+   "2 N",
+   "10 N",
+   "20 N",
+   "100 N"
+  ],
+  "a": 2,
+  "e_hi": "घर्षण बल F = μ * N = μ * mg। F = 0.2 * 10 * 10 = 20 न्यूटन।",
+  "e_en": "Frictional force F = μ * N = μ * mg. F = 0.2 * 10 * 10 = 20 Newtons."
+ },
+ {
+  "id": "rp-je_-h00470",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक स्प्रिंग का स्प्रिंग नियतांक 200 न्यूटन/मीटर है। इसे 0.1 मीटर खींचने पर स्प्रिंग में संचित स्थितिज ऊर्जा क्या होगी?",
+  "q_en": "A spring has a spring constant of 200 N/m. What is the potential energy stored in the spring when stretched by 0.1 m?",
+  "o_hi": [
+   "1 जूल",
+   "2 जूल",
+   "10 जूल",
+   "20 जूल"
+  ],
+  "o_en": [
+   "1 J",
+   "2 J",
+   "10 J",
+   "20 J"
+  ],
+  "a": 0,
+  "e_hi": "स्प्रिंग की स्थितिज ऊर्जा = 0.5 * k * x^2। 0.5 * 200 * (0.1)^2 = 100 * 0.01 = 1 जूल।",
+  "e_en": "Potential energy of a spring = 0.5 * k * x^2. Calculation: 0.5 * 200 * (0.1)^2 = 100 * 0.01 = 1 Joule."
+ },
+ {
+  "id": "rp-je_-h00471",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "आइजैक न्यूटन की प्रसिद्ध पुस्तक 'प्रिंसिपिया मैथेमेटिका' किस वर्ष में पहली बार प्रकाशित हुई थी?",
+  "q_en": "In which year was Isaac Newton's famous book 'Principia Mathematica' first published?",
+  "o_hi": [
+   "1687",
+   "1705",
+   "1665",
+   "1720"
+  ],
+  "o_en": [
+   "1687",
+   "1705",
+   "1665",
+   "1720"
+  ],
+  "a": 0,
+  "e_hi": "न्यूटन के गति के नियमों को पहली बार 1687 में 'फिलॉसॉफी नेचुरैलिस प्रिंसिपिया मैथेमेटिका' में प्रकाशित किया गया था।",
+  "e_en": "Newton's laws of motion were first published in 'Philosophiae Naturalis Principia Mathematica' in 1687."
+ },
+ {
+  "id": "rp-je_-h00472",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "किस वैज्ञानिक ने 'जड़त्व के नियम' (Law of Inertia) का प्रतिपादन गैलीलियो के कार्य के आधार पर किया था?",
+  "q_en": "Which scientist formulated the 'Law of Inertia' based on the work of Galileo?",
+  "o_hi": [
+   "आइजैक न्यूटन",
+   "अल्बर्ट आइंस्टीन",
+   "जोहान्स केपलर",
+   "रॉबर्ट हुक"
+  ],
+  "o_en": [
+   "Isaac Newton",
+   "Albert Einstein",
+   "Johannes Kepler",
+   "Robert Hooke"
+  ],
+  "a": 0,
+  "e_hi": "न्यूटन ने गैलीलियो के अवलोकनों का उपयोग करके गति के अपने पहले नियम के रूप में जड़त्व के नियम को औपचारिक रूप दिया।",
+  "e_en": "Newton formalized the law of inertia as his first law of motion, building upon Galileo's earlier observations."
+ },
+ {
+  "id": "rp-je_-h00473",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "प्रसिद्ध 'हुक का नियम' (Hooke's Law) किस वैज्ञानिक द्वारा दिया गया था?",
+  "q_en": "The famous 'Hooke's Law' was proposed by which scientist?",
+  "o_hi": [
+   "रॉबर्ट हुक",
+   "थॉमस यंग",
+   "चार्ल्स अगस्तिन डी कूलम्ब",
+   "लुई पाश्चर"
+  ],
+  "o_en": [
+   "Robert Hooke",
+   "Thomas Young",
+   "Charles-Augustin de Coulomb",
+   "Louis Pasteur"
+  ],
+  "a": 0,
+  "e_hi": "रॉबर्ट हुक ने 1676 में प्रत्यास्थता के अपने सिद्धांत (हुक का नियम) का प्रतिपादन किया था।",
+  "e_en": "Robert Hooke proposed his theory of elasticity, known as Hooke's Law, in 1676."
+ },
+ {
+  "id": "rp-je_-h00474",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "किस वैज्ञानिक को 'आधुनिक यांत्रिकी का जनक' माना जाता है?",
+  "q_en": "Which scientist is considered the 'Father of Modern Mechanics'?",
+  "o_hi": [
+   "गैलीलियो गैलीली",
+   "आर्किमिडीज",
+   "निकोलस कोपरनिकस",
+   "जेम्स क्लर्क मैक्सवेल"
+  ],
+  "o_en": [
+   "Galileo Galilei",
+   "Archimedes",
+   "Nicolaus Copernicus",
+   "James Clerk Maxwell"
+  ],
+  "a": 0,
+  "e_hi": "गैलीलियो को उनके वैज्ञानिक पद्धति और गति के अध्ययन में किए गए क्रांतिकारी कार्यों के कारण आधुनिक यांत्रिकी का जनक कहा जाता है।",
+  "e_en": "Galileo is called the father of modern mechanics due to his revolutionary work in scientific methodology and the study of motion."
+ },
+ {
+  "id": "rp-je_-h00475",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "आर्किमिडीज का सिद्धांत, जो उत्प्लावन बल (Buoyancy) से संबंधित है, किस प्राचीन सभ्यता से संबंधित है?",
+  "q_en": "Archimedes' principle, which relates to buoyancy, is associated with which ancient civilization?",
+  "o_hi": [
+   "यूनानी (ग्रीक)",
+   "मिस्र",
+   "रोमन",
+   "मेसोपोटामिया"
+  ],
+  "o_en": [
+   "Greek",
+   "Egyptian",
+   "Roman",
+   "Mesopotamian"
+  ],
+  "a": 0,
+  "e_hi": "आर्किमिडीज एक प्राचीन यूनानी गणितज्ञ, भौतिक विज्ञानी और इंजीनियर थे जिन्होंने हाइड्रोस्टैटिक्स के सिद्धांतों को विकसित किया।",
+  "e_en": "Archimedes was an ancient Greek mathematician, physicist, and engineer who developed the principles of hydrostatics."
+ },
+ {
+  "id": "rp-je_-h00476",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "किस वैज्ञानिक ने 'प्रत्यास्थता गुणांक' (Modulus of Elasticity) को परिभाषित किया जिसे अब उनके नाम से जाना जाता है?",
+  "q_en": "Which scientist defined the 'Modulus of Elasticity' which is now named after him?",
+  "o_hi": [
+   "थॉमस यंग",
+   "विलियम रेंकिन",
+   "लॉर्ड केल्विन",
+   "बर्नौली"
+  ],
+  "o_en": [
+   "Thomas Young",
+   "William Rankine",
+   "Lord Kelvin",
+   "Bernoulli"
+  ],
+  "a": 0,
+  "e_hi": "यंग का मापांक (Young's Modulus) थॉमस यंग द्वारा परिभाषित किया गया था, जो सामग्री की कठोरता को मापता है।",
+  "e_en": "Young's Modulus, which measures the stiffness of a material, was defined by Thomas Young."
+ },
+ {
+  "id": "rp-je_-h00477",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "पायसन अनुपात (Poisson's Ratio) का नाम किस फ्रांसीसी गणितज्ञ के नाम पर रखा गया है?",
+  "q_en": "The Poisson's ratio is named after which French mathematician?",
+  "o_hi": [
+   "सिमियन डेनिस पायसन",
+   "ब्लेज पास्कल",
+   "जोसेफ फूरियर",
+   "पियरे डी फर्मा"
+  ],
+  "o_en": [
+   "Siméon Denis Poisson",
+   "Blaise Pascal",
+   "Joseph Fourier",
+   "Pierre de Fermat"
+  ],
+  "a": 0,
+  "e_hi": "सिमियन डेनिस पायसन ने सामग्री के पार्श्व संकुचन और अनुदैर्ध्य विस्तार के अनुपात को परिभाषित किया।",
+  "e_en": "Siméon Denis Poisson defined the ratio of transverse contraction to longitudinal extension in materials."
+ },
+ {
+  "id": "rp-je_-h00478",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "इंजीनियरिंग यांत्रिकी में 'पार्किंग' या 'दालमबर्ट के सिद्धांत' (D'Alembert's Principle) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of 'D'Alembert's Principle' in engineering mechanics?",
+  "o_hi": [
+   "गतिशील समस्याओं को स्थैतिक समस्याओं में बदलना",
+   "घर्षण की गणना करना",
+   "प्रत्यास्थता मापना",
+   "द्रव्यमान की गणना करना"
+  ],
+  "o_en": [
+   "Converting dynamic problems into static problems",
+   "Calculating friction",
+   "Measuring elasticity",
+   "Calculating mass"
+  ],
+  "a": 0,
+  "e_hi": "दालमबर्ट का सिद्धांत गतिशील प्रणालियों को एक कल्पित स्थैतिक संतुलन (इक्विलिब्रियम) के रूप में देखने की अनुमति देता है।",
+  "e_en": "D'Alembert's principle allows dynamic systems to be treated as a form of virtual static equilibrium."
+ },
+ {
+  "id": "rp-je_-h00479",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "किस सदी में लियोनार्ड यूलर ने 'यूलर-बर्नौली बीम सिद्धांत' के विकास में योगदान दिया?",
+  "q_en": "In which century did Leonhard Euler contribute to the development of the 'Euler-Bernoulli beam theory'?",
+  "o_hi": [
+   "18वीं सदी",
+   "17वीं सदी",
+   "19वीं सदी",
+   "16वीं सदी"
+  ],
+  "o_en": [
+   "18th century",
+   "17th century",
+   "19th century",
+   "16th century"
+  ],
+  "a": 0,
+  "e_hi": "लियोनार्ड यूलर ने 1750 के दशक के दौरान डैनियल बर्नौली के साथ मिलकर बीम के विक्षेपण के सिद्धांत को विकसित किया।",
+  "e_en": "Leonhard Euler, working with Daniel Bernoulli, developed the theory of beam deflection during the 1750s."
  }
 ]
