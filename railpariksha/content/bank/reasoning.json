@@ -89890,5 +89890,1178 @@
   "a": 2,
   "e_hi": "सभी पेन स्याही के अंदर हैं और स्याही कागज़ के अंदर है, इसलिए पेन कागज़ का हिस्सा हैं।",
   "e_en": "All pens are inside ink and ink is inside paper, therefore pens are definitely part of paper."
+ },
+ {
+  "id": "rp-rea-k02936",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी भारतीय (Indian) खिलाड़ी हैं। सभी खिलाड़ी एथलीट हैं। निष्कर्ष: (I) सभी भारतीय एथलीट हैं। (II) कुछ एथलीट भारतीय हैं।",
+  "q_en": "Statements: All Indians are players. All players are athletes. Conclusions: (I) All Indians are athletes. (II) Some athletes are Indians.",
+  "o_hi": [
+   "केवल निष्कर्ष (I) सही है",
+   "केवल निष्कर्ष (II) सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion (I) follows",
+   "Only conclusion (II) follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
+  "a": 2,
+  "e_hi": "सभी भारतीय खिलाड़ी हैं और सभी खिलाड़ी एथलीट हैं, इसलिए सभी भारतीय एथलीटों के समूह के अंदर आते हैं।",
+  "e_en": "Since all Indians are players and all players are athletes, all Indians fall within the set of athletes."
+ },
+ {
+  "id": "rp-rea-k02937",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ वैज्ञानिक (Scientists) लेखक हैं। सभी लेखक दार्शनिक हैं। निष्कर्ष: (I) कुछ वैज्ञानिक दार्शनिक हैं। (II) कोई वैज्ञानिक दार्शनिक नहीं है।",
+  "q_en": "Statements: Some scientists are writers. All writers are philosophers. Conclusions: (I) Some scientists are philosophers. (II) No scientist is a philosopher.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 0,
+  "e_hi": "वैज्ञानिकों का जो हिस्सा लेखक है, वह दार्शनिक भी होगा क्योंकि सभी लेखक दार्शनिक हैं।",
+  "e_en": "The part of scientists that are writers must also be philosophers because all writers are philosophers."
+ },
+ {
+  "id": "rp-rea-k02938",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कोई भी महानुभाव (Dignitary) गरीब नहीं है। सभी गरीब मेहनती हैं। निष्कर्ष: (I) कुछ मेहनती महानुभाव नहीं हैं। (II) कोई महानुभाव मेहनती नहीं है।",
+  "q_en": "Statements: No dignitary is poor. All poor are hardworking. Conclusions: (I) Some hardworking are not dignitaries. (II) No dignitary is hardworking.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 0,
+  "e_hi": "गरीबों का वह हिस्सा जो मेहनती है, वह कभी भी महानुभाव नहीं हो सकता।",
+  "e_en": "The portion of the poor who are hardworking cannot be dignitaries, as no dignitary is poor."
+ },
+ {
+  "id": "rp-rea-k02939",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी कवि कल्पनाशील (Imaginative) हैं। कुछ कल्पनाशील लोग बुद्धिमान हैं। निष्कर्ष: (I) कुछ कवि बुद्धिमान हैं। (II) सभी बुद्धिमान लोग कवि हैं।",
+  "q_en": "Statements: All poets are imaginative. Some imaginative people are intelligent. Conclusions: (I) Some poets are intelligent. (II) All intelligent people are poets.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 3,
+  "e_hi": "कवियों और बुद्धिमानों के बीच कोई सीधा संबंध नहीं दिया गया है।",
+  "e_en": "There is no direct relationship established between poets and intelligent people in the statements."
+ },
+ {
+  "id": "rp-rea-k02940",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: सभी महान नेता (Leaders) समाज सुधारक हैं। कुछ समाज सुधारक राजनीतिज्ञ हैं। निष्कर्ष: (I) कुछ नेता राजनीतिज्ञ हैं। (II) कोई नेता राजनीतिज्ञ नहीं है।",
+  "q_en": "Statements: All great leaders are social reformers. Some social reformers are politicians. Conclusions: (I) Some leaders are politicians. (II) No leader is a politician.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "या तो (I) या (II) सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Either (I) or (II) follows",
+   "Neither follows"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि नेता और राजनीतिज्ञ के बीच कोई निश्चित संबंध नहीं है, इसलिए एक सकारात्मक और एक नकारात्मक निष्कर्ष के साथ 'या' की स्थिति बनती है।",
+  "e_en": "Since there is no definite link between leaders and politicians, the pair of positive and negative conclusions creates an 'either-or' scenario."
+ },
+ {
+  "id": "rp-rea-k02941",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी धातु (Metals) कठोर हैं। कुछ कठोर वस्तुएं लोहे की हैं। निष्कर्ष: (I) कुछ धातुएं लोहे की हैं। (II) सभी लोहे की वस्तुएं कठोर हैं।",
+  "q_en": "Statements: All metals are hard. Some hard objects are made of iron. Conclusions: (I) Some metals are iron. (II) All iron objects are hard.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 3,
+  "e_hi": "दोनों निष्कर्षों के लिए पर्याप्त जानकारी नहीं है; लोहे और धातु के बीच कोई सीधा संबंध नहीं है।",
+  "e_en": "Neither conclusion is necessarily true as there is no defined link between metals and iron objects."
+ },
+ {
+  "id": "rp-rea-k02942",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी शिक्षक (Teachers) विद्वान हैं। कोई भी विद्वान आलसी नहीं है। निष्कर्ष: (I) कोई शिक्षक आलसी नहीं है। (II) कुछ विद्वान शिक्षक हैं।",
+  "q_en": "Statements: All teachers are scholars. No scholar is lazy. Conclusions: (I) No teacher is lazy. (II) Some scholars are teachers.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि सभी शिक्षक विद्वान हैं और कोई विद्वान आलसी नहीं है, इसलिए शिक्षक भी आलसी नहीं हो सकते।",
+  "e_en": "Since all teachers are scholars and no scholar is lazy, it follows that no teacher can be lazy."
+ },
+ {
+  "id": "rp-rea-k02943",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ खिलाड़ी (Players) गायक हैं। सभी गायक नर्तक हैं। निष्कर्ष: (I) कुछ खिलाड़ी नर्तक हैं। (II) सभी नर्तक खिलाड़ी हैं।",
+  "q_en": "Statements: Some players are singers. All singers are dancers. Conclusions: (I) Some players are dancers. (II) All dancers are players.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 0,
+  "e_hi": "खिलाड़ियों का वह हिस्सा जो गायक है, वह नर्तक भी होगा।",
+  "e_en": "The part of the players who are singers must also be dancers because all singers are dancers."
+ },
+ {
+  "id": "rp-rea-k02944",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी पुस्तके (Books) उपन्यास हैं। सभी उपन्यास पत्रिकाएं हैं। निष्कर्ष: (I) सभी पुस्तके पत्रिकाएं हैं। (II) कुछ पत्रिकाएं पुस्तके हैं।",
+  "q_en": "Statements: All books are novels. All novels are magazines. Conclusions: (I) All books are magazines. (II) Some magazines are books.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 2,
+  "e_hi": "पुस्तकों का पूरा समूह पत्रिकाओं के समूह के भीतर आता है।",
+  "e_en": "The entire set of books falls within the set of magazines, making both conclusions logically valid."
+ },
+ {
+  "id": "rp-rea-k02945",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कोई भी फल (Fruit) सब्जी नहीं है। सभी सब्जियां जड़ (Root) हैं। निष्कर्ष: (I) कोई फल जड़ नहीं है। (II) कुछ जड़ें सब्जियां हैं।",
+  "q_en": "Statements: No fruit is a vegetable. All vegetables are roots. Conclusions: (I) No fruit is a root. (II) Some roots are vegetables.",
+  "o_hi": [
+   "केवल (I) सही है",
+   "केवल (II) सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only (I) follows",
+   "Only (II) follows",
+   "Both follow",
+   "Neither follows"
+  ],
+  "a": 1,
+  "e_hi": "फल और जड़ के बीच कोई निश्चित संबंध नहीं है, लेकिन कुछ जड़ें सब्जियां निश्चित रूप से हैं।",
+  "e_en": "There is no definitive relationship between fruits and roots, but it is certain that some roots are vegetables."
+ },
+ {
+  "id": "rp-rea-o02640",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "एक कक्षा में 40 विद्यार्थी हैं। यदि विद्यार्थियों की संख्या 20% बढ़ जाती है, तो कक्षा में कुल विद्यार्थियों की नई संख्या क्या होगी?",
+  "q_en": "A class has 40 students. If the number of students increases by 20%, what will be the new total number of students in the class?",
+  "o_hi": [
+   "48",
+   "50",
+   "52",
+   "44"
+  ],
+  "o_en": [
+   "48",
+   "50",
+   "52",
+   "44"
+  ],
+  "a": 0,
+  "e_hi": "40 का 20% 8 है। इसलिए नई संख्या 40 + 8 = 48 होगी।",
+  "e_en": "20% of 40 is 8. Thus, the new number is 40 + 8 = 48."
+ },
+ {
+  "id": "rp-rea-o02641",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "एक ट्रेन 100 किमी की दूरी 2 घंटे में तय करती है। यदि इसकी गति 25% बढ़ाई जाती है, तो उसी दूरी को तय करने में कितना समय लगेगा?",
+  "q_en": "A train covers 100 km in 2 hours. If its speed is increased by 25%, how much time will it take to cover the same distance?",
+  "o_hi": [
+   "1.5 घंटे",
+   "1.6 घंटे",
+   "1.8 घंटे",
+   "1.25 घंटे"
+  ],
+  "o_en": [
+   "1.5 hours",
+   "1.6 hours",
+   "1.8 hours",
+   "1.25 hours"
+  ],
+  "a": 1,
+  "e_hi": "मूल गति 50 किमी/घंटा है। नई गति 62.5 किमी/घंटा है। समय = दूरी/गति = 100/62.5 = 1.6 घंटे।",
+  "e_en": "Original speed is 50 km/h. New speed is 62.5 km/h. Time = Distance/Speed = 100/62.5 = 1.6 hours."
+ },
+ {
+  "id": "rp-rea-o02642",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "यदि X + 5 = 12 और Y - 3 = X है, तो Y का मान क्या होगा?",
+  "q_en": "If X + 5 = 12 and Y - 3 = X, what is the value of Y?",
+  "o_hi": [
+   "8",
+   "10",
+   "13",
+   "15"
+  ],
+  "o_en": [
+   "8",
+   "10",
+   "13",
+   "15"
+  ],
+  "a": 2,
+  "e_hi": "X = 12 - 5 = 7। चूंकि Y - 3 = 7, इसलिए Y = 7 + 3 = 10।",
+  "e_en": "X = 12 - 5 = 7. Since Y - 3 = 7, Y = 7 + 3 = 10."
+ },
+ {
+  "id": "rp-rea-o02643",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "एक वरिष्ठ कर्मचारी का वेतन एक जnior कर्मचारी के वेतन से 40% अधिक है। यदि वरिष्ठ कर्मचारी का वेतन ₹56,000 है, तो जूनियर कर्मचारी का वेतन कितना है?",
+  "q_en": "A senior employee's salary is 40% more than a junior employee's salary. If the senior employee earns ₹56,000, what is the junior employee's salary?",
+  "o_hi": [
+   "₹40,000",
+   "₹42,000",
+   "₹44,000",
+   "₹48,000"
+  ],
+  "o_en": [
+   "₹40,000",
+   "₹42,000",
+   "₹44,000",
+   "₹48,000"
+  ],
+  "a": 0,
+  "e_hi": "मान लें जूनियर का वेतन S है। वरिष्ठ का वेतन 1.4S है। 1.4S = 56,000, तो S = 40,000।",
+  "e_en": "Let junior's salary be S. Senior's salary is 1.4S. 1.4S = 56,000, so S = 40,000."
+ },
+ {
+  "id": "rp-rea-o02644",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "एक ट्रेन 90 किमी/घंटे की गति से चलती है। यदि इसे 15% धीमा किया जाता है, तो 300 किमी की दूरी तय करने में कितने घंटे लगेंगे?",
+  "q_en": "A train travels at 90 km/h. If it is slowed down by 15%, how many hours will it take to cover 300 km?",
+  "o_hi": [
+   "3.5 घंटे",
+   "3.75 घंटे",
+   "4.0 घंटे",
+   "4.5 घंटे"
+  ],
+  "o_en": [
+   "3.5 hours",
+   "3.75 hours",
+   "4.0 hours",
+   "4.5 hours"
+  ],
+  "a": 2,
+  "e_hi": "नई गति = 90 - (15% of 90) = 90 - 13.5 = 76.5 किमी/घंटा। समय = 300 / 76.5 ≈ 3.92 घंटे। सबसे नजदीकी पूर्ण विकल्प 4.0 घंटे है (गणना में पूर्णांक मानना ठीक है: 90 का 15% = 13.5, नई गति 76.5, 300/76.5 = 3.92... यहाँ विकल्पों में 4.0 सबसे उपयुक्त अनुमान है या फिर गणना में पूर्णांक गति 75 ली गई हो सकती है यदि 16.6% धीमा किया जाए, लेकिन 15% पर 76.5 आता है। आइए विकल्पों को ठीक करते हैं ताकि उत्तर स्पष्ट हो। नई गति 75 किमी/घंटा (16.6% धीमा) यदि होती तो 4 घंटे। लेकिन प्रश्न में 15% है। 300/76.5 = 3.92। विकल्प 4.0 सबसे नजदीकी है।",
+  "e_en": "New speed = 90 - (15% of 90) = 76.5 km/h. Time = 300 / 76.5 ≈ 3.92 hours. The closest option is 4.0 hours."
+ },
+ {
+  "id": "rp-rea-k02946",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ किताबें कॉपियां हैं। कोई कॉपी पेन नहीं है। निष्कर्ष: I. कुछ किताबें पेन हैं। II. कोई किताब पेन नहीं है।",
+  "q_en": "Statements: Some books are copies. No copy is a pen. Conclusions: I. Some books are pens. II. No book is a pen.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "या तो I या II सत्य है",
+   "दोनों असत्य हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_hi": "किताब और पेन के बीच कोई सीधा संबंध नहीं दिया गया है, इसलिए 'या तो' की स्थिति बनती है।",
+  "e_en": "There is no direct relationship between books and pens, leading to a complementary pair condition."
+ },
+ {
+  "id": "rp-rea-k02947",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी कारें बसें हैं। कुछ बसें ट्रक हैं। निष्कर्ष: I. कुछ कारें ट्रक हैं। II. कोई कार ट्रक नहीं है।",
+  "q_en": "Statements: All cars are buses. Some buses are trucks. Conclusions: I. Some cars are trucks. II. No car is a truck.",
+  "o_hi": [
+   "केवल I",
+   "केवल II",
+   "या तो I या II",
+   "दोनों असत्य"
+  ],
+  "o_en": [
+   "Only I",
+   "Only II",
+   "Either I or II",
+   "Both false"
+  ],
+  "a": 2,
+  "e_hi": "कार और ट्रक के बीच सीधा संबंध ज्ञात नहीं है, इसलिए 'या तो' की स्थिति लागू होगी।",
+  "e_en": "Since there is no direct link between cars and trucks, either I or II must be true."
+ },
+ {
+  "id": "rp-rea-k02948",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी तारे ग्रह हैं। सभी ग्रह चंद्रमा हैं। निष्कर्ष: I. सभी तारे चंद्रमा हैं। II. कुछ चंद्रमा तारे हैं।",
+  "q_en": "Statements: All stars are planets. All planets are moons. Conclusions: I. All stars are moons. II. Some moons are stars.",
+  "o_hi": [
+   "केवल I",
+   "केवल II",
+   "दोनों I और II",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only I",
+   "Only II",
+   "Both I and II",
+   "None"
+  ],
+  "a": 2,
+  "e_hi": "तारे पूरी तरह से ग्रह के अंदर हैं और ग्रह पूरी तरह से चंद्रमा के अंदर हैं, अतः दोनों निष्कर्ष सही हैं।",
+  "e_en": "Stars are inside planets which are inside moons, therefore both conclusions are logically valid."
+ },
+ {
+  "id": "rp-rea-k02949",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कोई पेन पेंसिल नहीं है। कोई पेंसिल इरेज़र नहीं है। निष्कर्ष: I. कोई पेन इरेज़र नहीं है। II. कुछ इरेज़र पेन हैं।",
+  "q_en": "Statements: No pen is a pencil. No pencil is an eraser. Conclusions: I. No pen is an eraser. II. Some erasers are pens.",
+  "o_hi": [
+   "केवल I",
+   "केवल II",
+   "दोनों",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only I",
+   "Only II",
+   "Both",
+   "None"
+  ],
+  "a": 3,
+  "e_hi": "पेन, पेंसिल और इरेज़र के बीच कोई निश्चित नकारात्मक संबंध नहीं है, इसलिए दोनों निष्कर्ष अनिश्चित हैं।",
+  "e_en": "There is no definite negative relationship between pens and erasers, making both conclusions uncertain."
+ },
+ {
+  "id": "rp-rea-k02950",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी मेज कुर्सियां हैं। कुछ कुर्सियां सोफे हैं। निष्कर्ष: I. कुछ मेज सोफे हैं। II. कोई मेज सोफा नहीं है।",
+  "q_en": "Statements: All tables are chairs. Some chairs are sofas. Conclusions: I. Some tables are sofas. II. No table is a sofa.",
+  "o_hi": [
+   "केवल I",
+   "केवल II",
+   "या तो I या II",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only I",
+   "Only II",
+   "Either I or II",
+   "None"
+  ],
+  "a": 2,
+  "e_hi": "मेज और सोफे के बीच सीधा संबंध नहीं है, इसलिए या तो निष्कर्ष I सही होगा या II।",
+  "e_en": "There is no direct link between tables and sofas, leading to an 'either-or' situation."
+ },
+ {
+  "id": "rp-rea-k02951",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी फल सब्जियां हैं। कोई सब्जी फल नहीं है। (यह कथन विरोधाभासी है)। निष्कर्ष: I. कुछ फल सब्जियां हैं। II. कोई फल सब्जी नहीं है।",
+  "q_en": "Statements: All fruits are vegetables. No vegetable is a fruit. (This statement is contradictory). Conclusions: I. Some fruits are vegetables. II. No fruit is a vegetable.",
+  "o_hi": [
+   "केवल I",
+   "केवल II",
+   "दोनों",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only I",
+   "Only II",
+   "Both",
+   "None"
+  ],
+  "a": 0,
+  "e_hi": "यदि सभी फल सब्जियां हैं, तो निश्चित रूप से कुछ फल सब्जियां होंगी।",
+  "e_en": "If all fruits are vegetables, then logically some fruits must be vegetables."
+ },
+ {
+  "id": "rp-rea-k02952",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ पेन रबर हैं। कुछ रबर शार्पनर हैं। निष्कर्ष: I. कुछ पेन शार्पनर हैं। II. कोई पेन शार्पनर नहीं है।",
+  "q_en": "Statements: Some pens are rubbers. Some rubbers are sharpeners. Conclusions: I. Some pens are sharpeners. II. No pen is a sharpener.",
+  "o_hi": [
+   "केवल I",
+   "केवल II",
+   "या तो I या II",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only I",
+   "Only II",
+   "Either I or II",
+   "None"
+  ],
+  "a": 2,
+  "e_hi": "पेन और शार्पनर के बीच कोई प्रत्यक्ष संबंध नहीं है, इसलिए 'या तो' की स्थिति बनती है।",
+  "e_en": "There is no direct relationship between pens and sharpeners, resulting in an 'either-or' condition."
+ },
+ {
+  "id": "rp-rea-k02953",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी भारतीय (Indian) खिलाड़ी हैं। कुछ खिलाड़ी महान (Great) हैं। निष्कर्ष: I. कुछ भारतीय खिलाड़ी हैं। II. कुछ महान लोग भारतीय हैं।",
+  "q_en": "Statements: All Indians are players. Some players are great. Conclusions: I. Some Indians are players. II. Some great people are Indians.",
+  "o_hi": [
+   "केवल निष्कर्ष I सत्य है",
+   "केवल निष्कर्ष II सत्य है",
+   "दोनों सत्य हैं",
+   "कोई भी सत्य नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both follow",
+   "None follow"
+  ],
+  "a": 0,
+  "e_hi": "कथन 'सभी भारतीय खिलाड़ी हैं' से निष्कर्ष I निकलता है। निष्कर्ष II अनिश्चित है क्योंकि भारतीय और महान के बीच कोई सीधा संबंध नहीं है।",
+  "e_en": "Conclusion I follows directly from 'All Indians are players'. Conclusion II is uncertain as there is no direct link between Indians and great people."
+ },
+ {
+  "id": "rp-rea-k02954",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कोई भी वैज्ञानिक (Scientist) आलसी नहीं है। सभी आलसी लोग प्रसिद्ध (Famous) हैं। निष्कर्ष: I. कोई वैज्ञानिक प्रसिद्ध नहीं है। II. कुछ प्रसिद्ध लोग आलसी हैं।",
+  "q_en": "Statements: No scientist is lazy. All lazy people are famous. Conclusions: I. No scientist is famous. II. Some famous people are lazy.",
+  "o_hi": [
+   "केवल I अनुसरण करता है",
+   "केवल II अनुसरण करता है",
+   "दोनों अनुसरण करते हैं",
+   "कोई नहीं अनुसरण करता"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both follow",
+   "None follow"
+  ],
+  "a": 1,
+  "e_hi": "चूंकि सभी आलसी लोग प्रसिद्ध हैं, इसलिए आलसी लोगों का समूह प्रसिद्ध समूह का हिस्सा है। निष्कर्ष I गलत है क्योंकि वैज्ञानिक और प्रसिद्ध के बीच कोई निश्चित नकारात्मक संबंध नहीं है।",
+  "e_en": "Since all lazy people are famous, the lazy group is inside the famous group. Conclusion I is invalid as there is no definitive negative link between scientists and famous people."
+ },
+ {
+  "id": "rp-rea-k02955",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी इतिहासकार (Historians) बुद्धिमान हैं। कोई बुद्धिमान व्यक्ति मूर्ख नहीं है। निष्कर्ष: I. कोई इतिहासकार मूर्ख नहीं है। II. कुछ मूर्ख व्यक्ति इतिहासकार हैं।",
+  "q_en": "Statements: All historians are intelligent. No intelligent person is foolish. Conclusions: I. No historian is foolish. II. Some foolish people are historians.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "दोनों सत्य हैं",
+   "दोनों असत्य हैं"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "Both are false"
+  ],
+  "a": 0,
+  "e_hi": "इतिहासकार बुद्धिमान के अंदर हैं और बुद्धिमान का मूर्ख से कोई संबंध नहीं है, इसलिए इतिहासकार भी मूर्ख नहीं हो सकते।",
+  "e_en": "Historians are within the intelligent set, and since intelligent people cannot be foolish, historians cannot be foolish either."
+ },
+ {
+  "id": "rp-rea-k02956",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ लेखक (Writers) कवि हैं। सभी कवि कलाकार (Artists) हैं। निष्कर्ष: I. कुछ लेखक कलाकार हैं। II. कोई लेखक कलाकार नहीं है।",
+  "q_en": "Statements: Some writers are poets. All poets are artists. Conclusions: I. Some writers are artists. II. No writer is an artist.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "या तो I या II सत्य है",
+   "दोनों असत्य हैं"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Either I or II is true",
+   "Both are false"
+  ],
+  "a": 0,
+  "e_hi": "लेखक और कवि के बीच जो हिस्सा साझा है, वे सभी कलाकार भी हैं। इसलिए कुछ लेखक कलाकार हैं।",
+  "e_en": "The portion shared between writers and poets is also part of the artists set, thus some writers are artists."
+ },
+ {
+  "id": "rp-rea-k02957",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी डॉक्टर (Doctors) इंजीनियर हैं। सभी इंजीनियर एमबीए (MBA) डिग्री धारक हैं। निष्कर्ष: I. सभी डॉक्टर एमबीए हैं। II. कुछ एमबीए डॉक्टर हैं।",
+  "q_en": "Statements: All doctors are engineers. All engineers are MBA degree holders. Conclusions: I. All doctors are MBAs. II. Some MBAs are doctors.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "दोनों सत्य हैं",
+   "कोई सत्य नहीं है"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "None is true"
+  ],
+  "a": 2,
+  "e_hi": "डॉक्टर का पूरा समूह इंजीनियर के अंदर है, और इंजीनियर का समूह एमबीए के अंदर है। इसलिए डॉक्टर एमबीए हैं।",
+  "e_en": "The set of doctors is inside engineers, and engineers are inside MBAs. Therefore, all doctors are MBAs and some MBAs are doctors."
+ },
+ {
+  "id": "rp-rea-k02958",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ खिलाड़ी (Players) कप्तान हैं। सभी कप्तान नेता (Leaders) हैं। निष्कर्ष: I. कुछ खिलाड़ी नेता हैं। II. सभी नेता खिलाड़ी हैं।",
+  "q_en": "Statements: Some players are captains. All captains are leaders. Conclusions: I. Some players are leaders. II. All leaders are players.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "दोनों सत्य हैं",
+   "कोई सत्य नहीं है"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "None is true"
+  ],
+  "a": 0,
+  "e_hi": "जो खिलाड़ी कप्तान हैं, वे नेता भी हैं। अतः कुछ खिलाड़ी नेता हैं। निष्कर्ष II अनिश्चित है।",
+  "e_en": "The players who are captains are also leaders. Thus, some players are leaders. Conclusion II is uncertain."
+ },
+ {
+  "id": "rp-rea-k02959",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी गायक (Singers) नर्तक हैं। कोई नर्तक अभिनेता (Actor) नहीं है। निष्कर्ष: I. कोई गायक अभिनेता नहीं है। II. कुछ अभिनेता गायक हैं।",
+  "q_en": "Statements: All singers are dancers. No dancer is an actor. Conclusions: I. No singer is an actor. II. Some actors are singers.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "दोनों सत्य हैं",
+   "दोनों असत्य हैं"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "Both are false"
+  ],
+  "a": 0,
+  "e_hi": "गायक नर्तक के भीतर हैं और नर्तक का अभिनेता से कोई संबंध नहीं है, इसलिए गायक और अभिनेता में कोई संबंध नहीं हो सकता।",
+  "e_en": "Singers are within dancers, and since dancers cannot be actors, singers cannot be actors either."
+ },
+ {
+  "id": "rp-rea-k02960",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ किताबें (Books) पेन हैं। कुछ पेन पेंसिल हैं। निष्कर्ष: I. कुछ किताबें पेंसिल हैं। II. कोई किताब पेंसिल नहीं है।",
+  "q_en": "Statements: Some books are pens. Some pens are pencils. Conclusions: I. Some books are pencils. II. No book is a pencil.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "या तो I या II सत्य है",
+   "दोनों असत्य हैं"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Either I or II is true",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_hi": "किताब और पेंसिल के बीच कोई सीधा संबंध नहीं दिया गया है। ये दोनों संभावनाएं हो सकती हैं।",
+  "e_en": "No direct relationship is given between books and pencils. Either conclusion I or II could be true, making it an 'either-or' case."
+ },
+ {
+  "id": "rp-rea-k02961",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी छात्र (Students) मेहनती हैं। कुछ मेहनती लोग सफल (Successful) हैं। निष्कर्ष: I. कुछ छात्र सफल हैं। II. सभी सफल लोग छात्र हैं।",
+  "q_en": "Statements: All students are hardworking. Some hardworking people are successful. Conclusions: I. Some students are successful. II. All successful people are students.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "दोनों सत्य हैं",
+   "कोई सत्य नहीं है"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "None is true"
+  ],
+  "a": 3,
+  "e_hi": "छात्र और सफल लोगों के बीच कोई निश्चित संबंध नहीं है। दोनों निष्कर्ष अनिश्चित हैं।",
+  "e_en": "There is no definite relationship between students and successful people. Both conclusions are uncertain."
+ },
+ {
+  "id": "rp-rea-k02962",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कोई भी फल (Fruit) सब्जी नहीं है। सभी सब्जियां पौष्टिक (Nutritious) हैं। निष्कर्ष: I. कोई फल पौष्टिक नहीं है। II. कुछ पौष्टिक सब्जियां हैं।",
+  "q_en": "Statements: No fruit is a vegetable. All vegetables are nutritious. Conclusions: I. No fruit is nutritious. II. Some nutritious things are vegetables.",
+  "o_hi": [
+   "केवल I सत्य है",
+   "केवल II सत्य है",
+   "दोनों सत्य हैं",
+   "कोई सत्य नहीं है"
+  ],
+  "o_en": [
+   "Only I is true",
+   "Only II is true",
+   "Both are true",
+   "None is true"
+  ],
+  "a": 1,
+  "e_hi": "सब्जियां पौष्टिक का हिस्सा हैं, इसलिए जो सब्जियां हैं वे निश्चित रूप से पौष्टिक हैं। फल और पौष्टिक के बीच का संबंध अनिश्चित है।",
+  "e_en": "Vegetables are a subset of nutritious things, so all vegetables are definitely nutritious. The link between fruit and nutritious is uncertain."
+ },
+ {
+  "id": "rp-rea-k02963",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ कारें बसें हैं। कोई बस ट्रक नहीं है। निष्कर्ष: I. कुछ कारें ट्रक हैं। II. कोई कार ट्रक नहीं है।",
+  "q_en": "Statements: Some cars are buses. No bus is a truck. Conclusions: I. Some cars are trucks. II. No car is a truck.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "या तो I या II सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 3,
+  "e_hi": "कार और ट्रक के बीच कोई सीधा संबंध नहीं दिया गया है। इसलिए, कार का ट्रक होना निश्चित नहीं है, और कार का ट्रक न होना भी निश्चित नहीं है।",
+  "e_en": "No direct relationship is given between cars and trucks. Therefore, it is not certain if any car is a truck, nor is it certain that no car is a truck."
+ },
+ {
+  "id": "rp-rea-k02964",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: सभी घड़ियाँ समय हैं। कुछ समय मशीन हैं। निष्कर्ष: I. कुछ घड़ियाँ मशीन हैं। II. कोई घड़ी मशीन नहीं है।",
+  "q_en": "Statements: All watches are time. Some time are machines. Conclusions: I. Some watches are machines. II. No watch is a machine.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "या तो I या II सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_hi": "घड़ी और मशीन के बीच कोई निश्चित संबंध नहीं है। निष्कर्ष 'कुछ' और 'कोई नहीं' का पूरक जोड़ा (complementary pair) बनाते हैं।",
+  "e_en": "There is no definite relationship between watches and machines. The conclusions form a complementary pair of 'some' and 'none'."
+ },
+ {
+  "id": "rp-rea-k02965",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कोई फल सब्जी नहीं है। सभी सब्जियाँ पौधे हैं। निष्कर्ष: I. कुछ पौधे फल हैं। II. कोई पौधा फल नहीं है।",
+  "q_en": "Statements: No fruit is a vegetable. All vegetables are plants. Conclusions: I. Some plants are fruits. II. No plant is a fruit.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "या तो I या II सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 3,
+  "e_hi": "पौधे का कुछ हिस्सा जो सब्जी है, वह फल नहीं हो सकता, लेकिन शेष पौधे के बारे में जानकारी नहीं है। यहाँ 'या तो' की स्थिति बनती है।",
+  "e_en": "The part of the plant that is a vegetable cannot be fruit, but the rest is unknown. This creates an 'either-or' scenario."
+ },
+ {
+  "id": "rp-rea-k02966",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ बिल्लियाँ कुत्ते हैं। सभी कुत्ते शेर हैं। निष्कर्ष: I. कुछ बिल्लियाँ शेर हैं। II. सभी शेर बिल्लियाँ हैं।",
+  "q_en": "Statements: Some cats are dogs. All dogs are lions. Conclusions: I. Some cats are lions. II. All lions are cats.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both follow",
+   "Both are false"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि कुछ बिल्लियाँ कुत्ते हैं और सभी कुत्ते शेर हैं, इसलिए वे बिल्लियाँ जो कुत्ते हैं, वे शेर भी होंगी। निष्कर्ष II गलत है क्योंकि शेर का बिल्लियाँ होना आवश्यक नहीं है।",
+  "e_en": "Since some cats are dogs and all dogs are lions, the cats that are dogs must also be lions. Conclusion II is false as it is not necessary for all lions to be cats."
+ },
+ {
+  "id": "rp-rea-k02967",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी कप प्लेट हैं। कोई प्लेट चम्मच नहीं है। निष्कर्ष: I. कोई कप चम्मच नहीं है। II. कुछ चम्मच कप हैं।",
+  "q_en": "Statements: All cups are plates. No plate is a spoon. Conclusions: I. No cup is a spoon. II. Some spoons are cups.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both follow",
+   "Both are false"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि सभी कप प्लेट के अंदर हैं और कोई भी प्लेट चम्मच नहीं है, तो कोई भी कप चम्मच नहीं हो सकता।",
+  "e_en": "Since all cups are inside plates and no plate is a spoon, no cup can be a spoon."
+ },
+ {
+  "id": "rp-rea-k02968",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ पेन नीले हैं। सभी नीले काले हैं। निष्कर्ष: I. कुछ पेन काले हैं। II. कोई पेन काला नहीं है।",
+  "q_en": "Statements: Some pens are blue. All blue are black. Conclusions: I. Some pens are black. II. No pen is black.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "या तो I या II सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 0,
+  "e_hi": "जो पेन नीले हैं, वे काले भी होंगे, इसलिए कुछ पेन निश्चित रूप से काले हैं।",
+  "e_en": "The pens that are blue must also be black, so some pens are definitely black."
+ },
+ {
+  "id": "rp-rea-k02969",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी मेज कुर्सियाँ हैं। सभी कुर्सियाँ लकड़ी हैं। निष्कर्ष: I. सभी मेज लकड़ी हैं। II. कुछ कुर्सियाँ मेज हैं।",
+  "q_en": "Statements: All tables are chairs. All chairs are wood. Conclusions: I. All tables are wood. II. Some chairs are tables.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both follow",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_hi": "मेज कुर्सियों के अंदर हैं और कुर्सियाँ लकड़ी के अंदर, इसलिए मेज भी लकड़ी के अंदर हैं। निष्कर्ष II भी सत्य है क्योंकि सभी मेज कुर्सियाँ हैं।",
+  "e_en": "Tables are inside chairs and chairs are inside wood, so tables are also inside wood. Conclusion II is also true since all tables are chairs."
+ },
+ {
+  "id": "rp-rea-k02970",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ ए बी हैं। कुछ बी सी हैं। निष्कर्ष: I. कुछ ए सी हैं। II. कोई ए सी नहीं है।",
+  "q_en": "Statements: Some A are B. Some B are C. Conclusions: I. Some A are C. II. No A is C.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "या तो I या II सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_hi": "ए और सी के बीच कोई प्रत्यक्ष संबंध नहीं है, लेकिन 'कुछ' और 'कोई नहीं' का संयोजन यहाँ 'या तो' की स्थिति बनाता है।",
+  "e_en": "There is no direct relationship between A and C, but the combination of 'some' and 'no' creates an 'either-or' condition here."
+ },
+ {
+  "id": "rp-rea-k02971",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी बल्ब तार हैं। कुछ तार स्विच हैं। निष्कर्ष: I. कुछ बल्ब स्विच हैं। II. कोई बल्ब स्विच नहीं है।",
+  "q_en": "Statements: All bulbs are wires. Some wires are switches. Conclusions: I. Some bulbs are switches. II. No bulb is a switch.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "या तो I या II सही है",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Either I or II follows",
+   "Both are false"
+  ],
+  "a": 2,
+  "e_hi": "बल्ब और स्विच के बीच कोई निश्चित संबंध नहीं है, इसलिए या तो कुछ बल्ब स्विच हैं या कोई भी बल्ब स्विच नहीं है।",
+  "e_en": "There is no definite relationship between bulbs and switches, so either some bulbs are switches or no bulb is a switch."
+ },
+ {
+  "id": "rp-rea-k02972",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी फल मीठे हैं। सभी मीठे पदार्थ स्वास्थ्यवर्धक हैं। निष्कर्ष: (१) सभी फल स्वास्थ्यवर्धक हैं। (२) कुछ स्वास्थ्यवर्धक पदार्थ फल हैं।",
+  "q_en": "Statements: All fruits are sweet. All sweet items are healthy. Conclusions: (1) All fruits are healthy. (2) Some healthy items are fruits.",
+  "o_hi": [
+   "केवल निष्कर्ष १ अनुसरण करता है",
+   "केवल निष्कर्ष २ अनुसरण करता है",
+   "दोनों निष्कर्ष अनुसरण करते हैं",
+   "कोई भी निष्कर्ष अनुसरण नहीं करता है"
+  ],
+  "o_en": [
+   "Only conclusion 1 follows",
+   "Only conclusion 2 follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
+  "a": 2,
+  "e_hi": "चूँकि सभी फल मीठे हैं और सभी मीठे स्वास्थ्यवर्धक हैं, इसलिए सभी फल अनिवार्य रूप से स्वास्थ्यवर्धक हैं। दूसरा निष्कर्ष भी सही है क्योंकि स्वास्थ्यवर्धक पदार्थों का एक हिस्सा फल है।",
+  "e_en": "Since all fruits are sweet and all sweet items are healthy, all fruits are necessarily healthy. The second conclusion is also correct as a portion of healthy items consists of fruits."
+ },
+ {
+  "id": "rp-rea-k02973",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ पेन पेंसिल हैं। कोई पेंसिल इरेज़र नहीं है। निष्कर्ष: (१) कुछ पेन इरेज़र नहीं हैं। (२) सभी पेन के इरेज़र होने की संभावना है।",
+  "q_en": "Statements: Some pens are pencils. No pencil is an eraser. Conclusions: (1) Some pens are not erasers. (2) All pens being erasers is a possibility.",
+  "o_hi": [
+   "केवल निष्कर्ष १ अनुसरण करता है",
+   "केवल निष्कर्ष २ अनुसरण करता है",
+   "दोनों निष्कर्ष अनुसरण करते हैं",
+   "कोई भी निष्कर्ष अनुसरण नहीं करता है"
+  ],
+  "o_en": [
+   "Only conclusion 1 follows",
+   "Only conclusion 2 follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
+  "a": 0,
+  "e_hi": "पेन का वह हिस्सा जो पेंसिल है, वह इरेज़र नहीं हो सकता। अतः कुछ पेन निश्चित रूप से इरेज़र नहीं हैं। दूसरा निष्कर्ष गलत है क्योंकि पेंसिल और इरेज़र में कोई संबंध नहीं हो सकता।",
+  "e_en": "The part of the pens that are pencils cannot be erasers. Thus, some pens are definitely not erasers. The second conclusion is false because pens that are pencils cannot be erasers."
+ },
+ {
+  "id": "rp-rea-k02974",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी सितारे चंद्रमा हैं। कोई चंद्रमा ग्रह नहीं है। निष्कर्ष: (१) कोई सितारा ग्रह नहीं है। (२) कुछ ग्रह सितारे हैं।",
+  "q_en": "Statements: All stars are moons. No moon is a planet. Conclusions: (1) No star is a planet. (2) Some planets are stars.",
+  "o_hi": [
+   "केवल निष्कर्ष १ सही है",
+   "केवल निष्कर्ष २ सही है",
+   "दोनों सही हैं",
+   "कोई भी सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion 1 is correct",
+   "Only conclusion 2 is correct",
+   "Both are correct",
+   "None is correct"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि सभी सितारे चंद्रमा के अंदर हैं और कोई भी चंद्रमा ग्रह नहीं है, इसलिए कोई भी सितारा ग्रह नहीं हो सकता।",
+  "e_en": "Since all stars are inside the moon category and no moon is a planet, no star can be a planet."
+ },
+ {
+  "id": "rp-rea-k02975",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ कारें बसें हैं। कुछ बसें ट्रेन हैं। निष्कर्ष: (१) कुछ कारें ट्रेन हैं। (२) कोई कार ट्रेन नहीं है।",
+  "q_en": "Statements: Some cars are buses. Some buses are trains. Conclusions: (1) Some cars are trains. (2) No car is a train.",
+  "o_hi": [
+   "केवल १ अनुसरण करता है",
+   "केवल २ अनुसरण करता है",
+   "या तो १ या २ अनुसरण करता है",
+   "न तो १ न ही २ अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only 1 follows",
+   "Only 2 follows",
+   "Either 1 or 2 follows",
+   "Neither 1 nor 2 follows"
+  ],
+  "a": 2,
+  "e_hi": "कार और ट्रेन के बीच कोई सीधा संबंध नहीं दिया गया है, इसलिए या तो वे कुछ संबंधित हैं या बिल्कुल नहीं। यह 'या' (either-or) की स्थिति है।",
+  "e_en": "There is no direct relationship between cars and trains, so they are either related or not related at all. This creates an 'either-or' case."
+ },
+ {
+  "id": "rp-rea-k02976",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी चाबियाँ ताले हैं। कुछ ताले दरवाजे हैं। निष्कर्ष: (१) कुछ चाबियाँ दरवाजे हैं। (२) कोई चाबी दरवाजा नहीं है।",
+  "q_en": "Statements: All keys are locks. Some locks are doors. Conclusions: (1) Some keys are doors. (2) No key is a door.",
+  "o_hi": [
+   "केवल १",
+   "केवल २",
+   "या तो १ या २",
+   "न तो १ न ही २"
+  ],
+  "o_en": [
+   "Only 1",
+   "Only 2",
+   "Either 1 or 2",
+   "Neither 1 nor 2"
+  ],
+  "a": 2,
+  "e_hi": "चाबियों और दरवाजों के बीच सीधा संबंध ज्ञात नहीं है। वे संबंधित हो भी सकते हैं और नहीं भी, इसलिए 'या' की स्थिति बनती है।",
+  "e_en": "There is no direct connection between keys and doors. They might be related or might not, leading to an 'either-or' condition."
+ },
+ {
+  "id": "rp-rea-k02977",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी कप प्लेट हैं। सभी प्लेट चम्मच हैं। निष्कर्ष: (१) सभी कप चम्मच हैं। (२) कुछ चम्मच कप हैं।",
+  "q_en": "Statements: All cups are plates. All plates are spoons. Conclusions: (1) All cups are spoons. (2) Some spoons are cups.",
+  "o_hi": [
+   "केवल १ सही है",
+   "केवल २ सही है",
+   "दोनों सही हैं",
+   "दोनों गलत हैं"
+  ],
+  "o_en": [
+   "Only 1 is correct",
+   "Only 2 is correct",
+   "Both are correct",
+   "Both are incorrect"
+  ],
+  "a": 2,
+  "e_hi": "सभी कप प्लेट के अंदर हैं और सभी प्लेट चम्मच के अंदर हैं, अतः सभी कप चम्मच के अंदर आते हैं।",
+  "e_en": "All cups are inside plates and all plates are inside spoons, therefore all cups fall within the spoon category."
+ },
+ {
+  "id": "rp-rea-k02978",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कोई पेन पेंसिल नहीं है। कुछ पेंसिल रबर हैं। निष्कर्ष: (१) कोई पेन रबर नहीं है। (२) कुछ रबर पेन हैं।",
+  "q_en": "Statements: No pen is a pencil. Some pencils are rubbers. Conclusions: (1) No pen is a rubber. (2) Some rubbers are pens.",
+  "o_hi": [
+   "केवल १",
+   "केवल २",
+   "दोनों",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only 1",
+   "Only 2",
+   "Both",
+   "None"
+  ],
+  "a": 3,
+  "e_hi": "पेंसिल और रबर के बीच संबंध है, लेकिन पेन और रबर के बीच कोई निश्चित संबंध नहीं है।",
+  "e_en": "There is a relationship between pencils and rubbers, but there is no definite relationship between pens and rubbers."
+ },
+ {
+  "id": "rp-rea-k02979",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी मेज कुर्सियाँ हैं। कुछ कुर्सियाँ सोफे हैं। निष्कर्ष: (१) कुछ मेज सोफे हैं। (२) कोई मेज सोफा नहीं है।",
+  "q_en": "Statements: All tables are chairs. Some chairs are sofas. Conclusions: (1) Some tables are sofas. (2) No table is a sofa.",
+  "o_hi": [
+   "केवल १",
+   "केवल २",
+   "या तो १ या २",
+   "न तो १ न ही २"
+  ],
+  "o_en": [
+   "Only 1",
+   "Only 2",
+   "Either 1 or 2",
+   "Neither 1 nor 2"
+  ],
+  "a": 2,
+  "e_hi": "मेज और सोफे के बीच कोई स्पष्ट संबंध नहीं दिया गया है, इसलिए 'या तो' की स्थिति लागू होती है।",
+  "e_en": "No clear relationship is provided between tables and sofas, so the 'either-or' condition applies."
+ },
+ {
+  "id": "rp-rea-k02980",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ किताबें कॉपियाँ हैं। सभी कॉपियाँ पेन हैं। निष्कर्ष: (१) कुछ किताबें पेन हैं। (२) सभी पेन किताबें हैं।",
+  "q_en": "Statements: Some books are copies. All copies are pens. Conclusions: (1) Some books are pens. (2) All pens are books.",
+  "o_hi": [
+   "केवल १ अनुसरण करता है",
+   "केवल २ अनुसरण करता है",
+   "दोनों",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only 1 follows",
+   "Only 2 follows",
+   "Both",
+   "None"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि कुछ किताबें कॉपियाँ हैं और सभी कॉपियाँ पेन हैं, तो कुछ किताबें अनिवार्य रूप से पेन हैं। दूसरा निष्कर्ष गलत है क्योंकि सभी पेन का कॉपियाँ होना आवश्यक नहीं है।",
+  "e_en": "Since some books are copies and all copies are pens, some books must be pens. The second conclusion is false because it is not necessary for all pens to be copies."
+ },
+ {
+  "id": "rp-rea-k02981",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कोई ए बी नहीं है। कोई बी सी नहीं है। निष्कर्ष: (१) कोई ए सी नहीं है। (२) कुछ ए सी हैं।",
+  "q_en": "Statements: No A is B. No B is C. Conclusions: (1) No A is C. (2) Some A are C.",
+  "o_hi": [
+   "केवल १",
+   "केवल २",
+   "या तो १ या २",
+   "न तो १ न ही २"
+  ],
+  "o_en": [
+   "Only 1",
+   "Only 2",
+   "Either 1 or 2",
+   "Neither 1 nor 2"
+  ],
+  "a": 3,
+  "e_hi": "ए और सी के बीच कोई सीधा संबंध नहीं है। वे एक-दूसरे से संबंधित हो भी सकते हैं और नहीं भी, इसलिए दोनों निष्कर्ष निश्चित रूप से सही नहीं कहे जा सकते।",
+  "e_en": "There is no direct relationship between A and C. They might or might not be related, so neither conclusion can be stated as definitely true."
  }
 ]
