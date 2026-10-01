@@ -28,14 +28,23 @@ jobs:
     outputs:
       app: ${{ steps.filter.outputs.app }}
     steps:
-      - uses: dorny/paths-filter@v3
-        id: filter
-        with:
-          filters: |
-            app:
-              - 'railpariksha/app/**'
-              - 'railpariksha/pipeline/**'
-              - '.github/workflows/railpariksha_ci.yml'
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      # Plain git diff against the base commit -- avoids needing a
+      # pull-requests:read token permission that the GitHub API-based
+      # dorny/paths-filter default mode requires but this workflow doesn't grant.
+      - id: filter
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          git fetch --depth=1 origin "$BASE_SHA"
+          CHANGED=$(git diff --name-only "$BASE_SHA" HEAD)
+          echo "$CHANGED"
+          if echo "$CHANGED" | grep -qE '^(railpariksha/(app|pipeline)/|\.github/workflows/railpariksha_ci\.yml)'; then
+            echo "app=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "app=false" >> "$GITHUB_OUTPUT"
+          fi
 
   app:
     runs-on: ubuntu-latest
