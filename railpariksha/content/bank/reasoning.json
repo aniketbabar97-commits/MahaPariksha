@@ -81909,5 +81909,235 @@
   "a": 0,
   "e_hi": "तर्क है: (1*1+1=2), (2*2+2=6), (6*3+3=21), (21*4+4=88), (88*5+5=445)।",
   "e_en": "The logic is: (1*1+1=2), (2*2+2=6), (6*3+3=21), (21*4+4=88), (88*5+5=445)."
+ },
+ {
+  "id": "rp-rea-j02610",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दी गई संख्या श्रृंखला को पूरा करें: 2, 5, 10, 17, 26, ?",
+  "q_en": "Complete the given number series: 2, 5, 10, 17, 26, ?",
+  "o_hi": [
+   "35",
+   "37",
+   "39",
+   "41"
+  ],
+  "o_en": [
+   "35",
+   "37",
+   "39",
+   "41"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला n^2 + 1 के पैटर्न का अनुसरण करती है। 5^2 + 1 = 26 और 6^2 + 1 = 37।",
+  "e_en": "This series follows the pattern n^2 + 1. 5^2 + 1 = 26 and 6^2 + 1 = 37."
+ },
+ {
+  "id": "rp-rea-j02611",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "लुप्त अक्षर ज्ञात करें: A, D, H, M, S, ?",
+  "q_en": "Find the missing letter: A, D, H, M, S, ?",
+  "o_hi": [
+   "V",
+   "W",
+   "X",
+   "Z"
+  ],
+  "o_en": [
+   "V",
+   "W",
+   "X",
+   "Z"
+  ],
+  "a": 3,
+  "e_hi": "अक्षरों के बीच का अंतर +3, +4, +5, +6 बढ़ रहा है। S + 7 = Z होता है।",
+  "e_en": "The difference between letters increases by +3, +4, +5, +6. S + 7 = Z."
+ },
+ {
+  "id": "rp-rea-j02612",
+  "s": "reasoning",
+  "t": "series",
+  "d": 3,
+  "q_hi": "श्रृंखला में गलत संख्या पहचानें: 5, 10, 17, 24, 37, 50",
+  "q_en": "Identify the wrong number in the series: 5, 10, 17, 24, 37, 50",
+  "o_hi": [
+   "10",
+   "17",
+   "24",
+   "37"
+  ],
+  "o_en": [
+   "10",
+   "17",
+   "24",
+   "37"
+  ],
+  "a": 2,
+  "e_hi": "यह श्रृंखला अभाज्य संख्याओं के वर्ग + 1 (n^2 + 1) का पालन करती है, जहाँ 24 गलत है क्योंकि 5^2+1=26 होना चाहिए।",
+  "e_en": "This series follows the pattern n^2 + 1. 24 is wrong because 5^2+1 should be 26."
+ },
+ {
+  "id": "rp-rea-j02613",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षरों की श्रृंखला को पूरा करें: B2E, D5G, F8I, H11K, ?",
+  "q_en": "Complete the letter series: B2E, D5G, F8I, H11K, ?",
+  "o_hi": [
+   "J14M",
+   "I14L",
+   "J13M",
+   "K14N"
+  ],
+  "o_en": [
+   "J14M",
+   "I14L",
+   "J13M",
+   "K14N"
+  ],
+  "a": 0,
+  "e_hi": "पहले और तीसरे अक्षर में +2 का अंतर है, और बीच की संख्या में +3 का अंतर है।",
+  "e_en": "The first and third letters increase by +2, and the middle number increases by +3."
+ },
+ {
+  "id": "rp-rea-j02614",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "संख्या श्रृंखला में अगला पद क्या होगा: 1, 4, 9, 16, 25, ?",
+  "q_en": "What will be the next term in the number series: 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "36",
+   "49",
+   "64"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "49",
+   "64"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला प्राकृतिक संख्याओं के वर्गों (1^2, 2^2, 3^2...) का क्रम है।",
+  "e_en": "This series is a sequence of squares of natural numbers (1^2, 2^2, 3^2...)."
+ },
+ {
+  "id": "rp-rea-j02615",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला पूरी करें: 8, 24, 12, 36, 18, 54, ?",
+  "q_en": "Complete the series: 8, 24, 12, 36, 18, 54, ?",
+  "o_hi": [
+   "27",
+   "28",
+   "30",
+   "32"
+  ],
+  "o_en": [
+   "27",
+   "28",
+   "30",
+   "32"
+  ],
+  "a": 0,
+  "e_hi": "तर्क 'x3' और '/2' का वैकल्पिक क्रम है। 54 को 2 से भाग देने पर 27 आता है।",
+  "e_en": "The logic is an alternating pattern of 'x3' and '/2'. 54 divided by 2 equals 27."
+ },
+ {
+  "id": "rp-rea-j02616",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "लुप्त पद ज्ञात करें: AZ, BY, CX, DW, ?",
+  "q_en": "Find the missing term: AZ, BY, CX, DW, ?",
+  "o_hi": [
+   "EV",
+   "EU",
+   "FU",
+   "FV"
+  ],
+  "o_en": [
+   "EV",
+   "EU",
+   "FU",
+   "FV"
+  ],
+  "a": 0,
+  "e_hi": "पहला अक्षर आगे बढ़ रहा है और दूसरा अक्षर पीछे (विपरीत क्रम)।",
+  "e_en": "The first letter follows alphabetical order, and the second follows reverse alphabetical order."
+ },
+ {
+  "id": "rp-rea-j02617",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "संख्या श्रृंखला का अगला अंक क्या है: 3, 7, 15, 31, 63, ?",
+  "q_en": "What is the next digit in the number series: 3, 7, 15, 31, 63, ?",
+  "o_hi": [
+   "125",
+   "127",
+   "129",
+   "131"
+  ],
+  "o_en": [
+   "125",
+   "127",
+   "129",
+   "131"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक संख्या (n*2 + 1) के पैटर्न का पालन करती है। 63*2 + 1 = 127।",
+  "e_en": "Each number follows the pattern (n*2 + 1). 63*2 + 1 = 127."
+ },
+ {
+  "id": "rp-rea-j02618",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में लुप्त संख्या क्या है: 100, 50, 25, 12.5, ?",
+  "q_en": "What is the missing number in the series: 100, 50, 25, 12.5, ?",
+  "o_hi": [
+   "6.25",
+   "6.5",
+   "7.25",
+   "6.75"
+  ],
+  "o_en": [
+   "6.25",
+   "6.5",
+   "7.25",
+   "6.75"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक संख्या को 2 से विभाजित किया जा रहा है। 12.5 को 2 से भाग देने पर 6.25 आता है।",
+  "e_en": "Each number is being divided by 2. 12.5 divided by 2 equals 6.25."
+ },
+ {
+  "id": "rp-rea-j02619",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में अगला पद पहचानें: 2, 6, 12, 20, 30, 42, ?",
+  "q_en": "Identify the next term in the series: 2, 6, 12, 20, 30, 42, ?",
+  "o_hi": [
+   "52",
+   "54",
+   "56",
+   "58"
+  ],
+  "o_en": [
+   "52",
+   "54",
+   "56",
+   "58"
+  ],
+  "a": 2,
+  "e_hi": "यह n^2 + n का पैटर्न है। 7^2 + 7 = 56।",
+  "e_en": "This follows the n^2 + n pattern. 7^2 + 7 = 56."
  }
 ]
