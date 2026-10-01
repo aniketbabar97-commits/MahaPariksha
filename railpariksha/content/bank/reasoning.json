@@ -32390,5 +32390,350 @@
   "a": 0,
   "e_hi": "कुल लेते = 120 + 100 - 30 = 190। न लेते = 200 - 190 = 10।",
   "e_en": "Total took = 120 + 100 - 30 = 190. Neither = 200 - 190 = 10."
+ },
+ {
+  "id": "rp-rea-o01413",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी फूल सुगंधित होते हैं। कुछ सुगंधित चीज़ें फल होती हैं। निष्कर्ष I: कुछ फल फूल होते हैं। निष्कर्ष II: कुछ फूल फल न हो सकते हैं। कौन सा निष्कर्ष निश्चित रूप से सही है?",
+  "q_en": "Statements: All flowers are fragrant. Some fragrant things are fruits. Conclusion I: Some fruits are flowers. Conclusion II: Some flowers may not be fruits. Which conclusion definitely follows?",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusion I and II follow",
+   "Neither Conclusion I nor II follows"
+  ],
+  "a": 1,
+  "e_hi": "चूँकि सभी फूल सुगंधित हैं और कुछ सुगंधित चीज़ें फल हैं, यह संभव है कि कुछ फूल फल न हों, लेकिन यह अनिवार्य नहीं है कि कोई फल फूल हो।",
+  "e_en": "Since all flowers are fragrant and some fragrant things are fruits, it is possible that some flowers are not fruits, but it is not necessary that any fruit is a flower."
+ },
+ {
+  "id": "rp-rea-o01414",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी शिक्षक पढ़े-लिखे होते हैं। सभी पढ़े-लिखे लोग सफल होते हैं। निष्कर्ष: सभी शिक्षक सफल होते हैं। क्या यह निष्कर्ष मान्य है?",
+  "q_en": "Statements: All teachers are educated. All educated people are successful. Conclusion: All teachers are successful. Is this conclusion valid?",
+  "o_hi": [
+   "हाँ, निष्कर्ष निश्चित रूप से सही है",
+   "नहीं, निष्कर्ष गलत है",
+   "शायद सही हो, शायद गलत",
+   "दанные पर्याप्त नहीं हैं"
+  ],
+  "o_en": [
+   "Yes, the conclusion is definitely correct",
+   "No, the conclusion is incorrect",
+   "It may be true or false",
+   "Data is insufficient"
+  ],
+  "a": 0,
+  "e_hi": "यदि सभी शिक्षक पढ़े-लिखे हैं और सभी पढ़े-लिखे सफल हैं, तो लॉजिकल चेन के अनुसार सभी शिक्षक सफल होने चाहिए।",
+  "e_en": "If all teachers are educated and all educated people are successful, then according to the logical chain, all teachers must be successful."
+ },
+ {
+  "id": "rp-rea-o01415",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ डॉक्टर नर्नर्स नहीं हैं। सभी नर्नर्स स्टाफ हैं। निष्कर्ष I: कुछ डॉक्टर स्टाफ नहीं हैं। निष्कर्ष II: कुछ स्टाफ डॉक्टर हैं। कौन सा निष्कर्ष सही है?",
+  "q_en": "Statements: Some doctors are not nurses. All nurses are staff. Conclusion I: Some doctors are not staff. Conclusion II: Some staff are doctors. Which conclusion is correct?",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई भी निष्कर्ष निश्चित नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
+  "a": 3,
+  "e_hi": "यह ज्ञात नहीं है कि वे डॉक्टर जो नर्नर्स नहीं हैं, स्टाफ हैं या नहीं। इसी तरह, यह भी ज्ञात नहीं है कि कोई स्टाफ डॉक्टर है या नहीं, क्योंकि डॉक्टरों का समूह नर्नर्स/स्टाफ से अलग हो सकता है।",
+  "e_en": "It is not known if the doctors who are not nurses are staff. Similarly, it is not known if any staff member is a doctor, as the doctor group may be entirely separate from nurses/staff."
+ },
+ {
+  "id": "rp-rea-o01416",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी सियामों को पानी पसंद है। कुछ पानी पसंद करने वाले मछलियाँ हैं। निष्कर्ष: कुछ मछलियाँ सियाम हैं। क्या यह निष्कर्ष सही है?",
+  "q_en": "Statements: All Siamese cats like water. Some water-likers are fish. Conclusion: Some fish are Siamese cats. Is this conclusion correct?",
+  "o_hi": [
+   "हाँ",
+   "नहीं",
+   "शायद",
+   "कोई जानकारी नहीं"
+  ],
+  "o_en": [
+   "Yes",
+   "No",
+   "Maybe",
+   "No information available"
+  ],
+  "a": 1,
+  "e_hi": "सियाम और मछलियाँ अलग श्रेणियाँ हैं। सिर्फ इसलिए कि दोनों पानी पसंद करते हैं, इसका मतलब यह नहीं कि वे एक ही समूह के सदस्य हैं।",
+  "e_en": "Siamese cats and fish are distinct categories. Just because both like water does not mean they belong to the same group."
+ },
+ {
+  "id": "rp-rea-o01417",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ कर्मचारी दक्ष हैं। सभी दक्ष कर्मचारी पुरस्कार पाते हैं। निष्कर्ष I: कुछ कर्मचारी पुरस्कार पाते हैं। निष्कर्ष II: कुछ पुरस्कार पाउने वाले कर्मचारी हैं। कौन सा निष्कर्ष सही है?",
+  "q_en": "Statements: Some employees are skilled. All skilled employees receive awards. Conclusion I: Some employees receive awards. Conclusion II: Some award recipients are employees. Which conclusion is correct?",
+  "o_hi": [
+   "केवल निष्कर्ष I",
+   "केवल निष्कर्ष II",
+   "दोनों I और II",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Only Conclusion I",
+   "Only Conclusion II",
+   "Both I and II",
+   "None"
+  ],
+  "a": 2,
+  "e_hi": "चूँकि कुछ कर्मचारी दक्ष हैं और सभी दक्ष पुरस्कार पाते हैं, तो वे कर्मचारी पुरस्कार पाते हैं। इसका स्वतः निहित (converse) भी सत्य है कि कुछ पुरस्कार पाउने वाले कर्मचारी हैं।",
+  "e_en": "Since some employees are skilled and all skilled employees get awards, those employees get awards. The converse is also true: some award recipients are employees."
+ },
+ {
+  "id": "rp-rea-o01418",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कोई भी गिराफ्टन नहीं है जो धीमा हो। कुछ धीमे जानवर गाय हैं। निष्कर्ष: कुछ गाय गिराफ्टन नहीं हैं। क्या यह निष्कर्ष सही है?",
+  "q_en": "Statements: No giraffe is slow. Some slow animals are cows. Conclusion: Some cows are not giraffes. Is this conclusion correct?",
+  "o_hi": [
+   "हाँ, निश्चित रूप से",
+   "नहीं, निश्चित रूप से नहीं",
+   "यह संभव है",
+   "यह असंभव है"
+  ],
+  "o_en": [
+   "Yes, definitely",
+   "No, definitely not",
+   "It is possible",
+   "It is impossible"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि कोई गिराफ्टन धीमा नहीं है और कुछ गाय धीमी हैं, तो वे धीमी गाय गिराफ्टन नहीं हो सकतीं। अतः कुछ गाय गिराफ्टन नहीं हैं।",
+  "e_en": "Since no giraffe is slow and some cows are slow, those slow cows cannot be giraffes. Therefore, some cows are not giraffes."
+ },
+ {
+  "id": "rp-rea-o01419",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "भारत में 'विश्व गणित दिवस' कब मनाया जाता है?",
+  "q_en": "When is World Maths Day celebrated in India?",
+  "o_hi": [
+   "12 मार्च",
+   "6 मार्च",
+   "14 मई",
+   "22 अप्रैल"
+  ],
+  "o_en": [
+   "12 March",
+   "6 March",
+   "14 May",
+   "22 April"
+  ],
+  "a": 1,
+  "e_hi": "विश्व गणित दिवस हर साल 12 मार्च को मनाया जाता है।",
+  "e_en": "World Maths Day is celebrated every year on 12 March."
+ },
+ {
+  "id": "rp-rea-o01420",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "यह पहचानें कि निम्नलिखित में से कौन सी तारीख 'विश्व विज्ञान दिवस' के रूप में मान्यता प्राप्त है?",
+  "q_en": "Identify the date recognized as 'World Science Day' from the following.",
+  "o_hi": [
+   "28 फरवरी",
+   "4 फरवरी",
+   "25 मई",
+   "10 अक्टूबर"
+  ],
+  "o_en": [
+   "28 February",
+   "4 February",
+   "25 May",
+   "10 October"
+  ],
+  "a": 0,
+  "e_hi": "UNESCO द्वारा विश्व विज्ञान दिवस 28 फरवरी को मनाया जाता है।",
+  "e_en": "World Science Day is celebrated on 28 February by UNESCO."
+ },
+ {
+  "id": "rp-rea-o01421",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 2,
+  "q_hi": "भारतीय गणितज्ञ ब्रह्मगुप्त किस गणितीय प्रमेय के लिए प्रसिद्ध हैं?",
+  "q_en": "Which mathematical theorem is the Indian mathematician Brahmagupta famous for?",
+  "o_hi": [
+   "पाइथागोरस प्रमेय",
+   "ब्रह्मगुप्त सूत्र (Brahmagupta's formula)",
+   "एयुकरीडीयन प्रमेय",
+   "डीकार्ट प्रमेय"
+  ],
+  "o_en": [
+   "Pythagorean theorem",
+   "Brahmagupta's formula",
+   "Euclidean theorem",
+   "Cartesian theorem"
+  ],
+  "a": 1,
+  "e_hi": "ब्रह्मगुप्त ने चतुर्भुज के क्षेत्रफल की गणना के लिए प्रसिद्ध सूत्र दिया था।",
+  "e_en": "Brahmagupta provided the famous formula for calculating the area of a quadrilateral."
+ },
+ {
+  "id": "rp-rea-o01422",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "'भारत में कंप्यूटर साक्षरता दिवस' किस तिथि को मनाया जाता है?",
+  "q_en": "On which date is 'Computer Literacy Day' celebrated in India?",
+  "o_hi": [
+   "2 अक्टूबर",
+   "5 अक्टूबर",
+   "10 अक्टूबर",
+   "15 अक्टूबर"
+  ],
+  "o_en": [
+   "2 October",
+   "5 October",
+   "10 October",
+   "15 October"
+  ],
+  "a": 2,
+  "e_hi": "1990 में भारत में कंप्यूटर साक्षरता दिवस की शुरुआत 10 अक्टूबर को हुई थी।",
+  "e_en": "The computer literacy day in India was initiated on 10 October in 1990."
+ },
+ {
+  "id": "rp-rea-o01423",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "कौन सा दिन 'अंतर्राष्ट्रीय महिला दिवस' के रूप में विश्व भर में मनाया जाता है?",
+  "q_en": "Which day is celebrated as 'International Women's Day' globally?",
+  "o_hi": [
+   "8 मार्च",
+   "12 फरवरी",
+   "25 नवंबर",
+   "19 जून"
+  ],
+  "o_en": [
+   "8 March",
+   "12 February",
+   "25 November",
+   "19 June"
+  ],
+  "a": 0,
+  "e_hi": "अंतर्राष्ट्रीय महिला दिवस हर साल 8 मार्च को मनाया जाता है।",
+  "e_en": "International Women's Day is celebrated every year on 8 March."
+ },
+ {
+  "id": "rp-rea-o01424",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 2,
+  "q_hi": "भारत में 'विश्व गणित दिवस' के अलावा, 'गणित दिवस' (National Mathematics Day) कब मनाया जाता है?",
+  "q_en": "Apart from World Maths Day, when is 'National Mathematics Day' celebrated in India?",
+  "o_hi": [
+   "22 दिसंबर",
+   "4 फरवरी",
+   "5 जून",
+   "14 मई"
+  ],
+  "o_en": [
+   "22 December",
+   "4 February",
+   "5 June",
+   "14 May"
+  ],
+  "a": 0,
+  "e_hi": "राष्ट्रीय गणित दिवस 22 दिसंबर को चंद्रशेखर राधारामन (S. Ramanujan) की जयंती पर मनाया जाता है।",
+  "e_en": "National Mathematics Day is celebrated on 22 December, the birth anniversary of S. Ramanujan."
+ },
+ {
+  "id": "rp-rea-o01425",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "यह पहचानें कि 'विश्व पर्यावरण दिवस' किस दिन मनाया जाता है?",
+  "q_en": "Identify the day on which 'World Environment Day' is celebrated.",
+  "o_hi": [
+   "5 जून",
+   "16 सितंबर",
+   "22 अप्रैल",
+   "17 जुलाई"
+  ],
+  "o_en": [
+   "5 June",
+   "16 September",
+   "22 April",
+   "17 July"
+  ],
+  "a": 0,
+  "e_hi": "विश्व पर्यावरण दिवस हर साल 5 जून को मनाया जाता है।",
+  "e_en": "World Environment Day is celebrated every year on 5 June."
+ },
+ {
+  "id": "rp-rea-o01426",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "भारत में 'विश्व साक्षरता दिवस' किस तिथि को मनाया जाता है?",
+  "q_en": "On which date is 'World Literacy Day' celebrated in India?",
+  "o_hi": [
+   "8 सितंबर",
+   "1 सितंबर",
+   "15 सितंबर",
+   "22 सितंबर"
+  ],
+  "o_en": [
+   "8 September",
+   "1 September",
+   "15 September",
+   "22 September"
+  ],
+  "a": 0,
+  "e_hi": "विश्व साक्षरता दिवस 8 सितंबर को मनाया जाता है।",
+  "e_en": "World Literacy Day is celebrated on 8 September."
+ },
+ {
+  "id": "rp-rea-o01427",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "यह बताएं कि 'विश्व पानी दिवस' (World Water Day) कब मनाया जाता है?",
+  "q_en": "State on which date 'World Water Day' is celebrated.",
+  "o_hi": [
+   "22 मार्च",
+   "14 जून",
+   "11 जुलाई",
+   "1 सितंबर"
+  ],
+  "o_en": [
+   "22 March",
+   "14 June",
+   "11 July",
+   "1 September"
+  ],
+  "a": 0,
+  "e_hi": "विश्व पानी दिवस हर साल 22 मार्च को मनाया जाता है।",
+  "e_en": "World Water Day is celebrated every year on 22 March."
  }
 ]
