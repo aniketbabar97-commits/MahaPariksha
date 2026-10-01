@@ -33,22 +33,26 @@ if ! running "bulk_questions.py.*--subjects reasoning "; then
   disown
 fi
 
-if ! running "bulk_questions.py.*science,je_mechanical"; then
-  # maths hit its 311/topic target on all 15 topics and exited cleanly, so
-  # this slot (GEMINI_API_KEY, gemini-3.1-flash-lite) was redeployed to the
-  # two subjects furthest behind target instead of sitting idle.
+if ! running "bulk_questions.py.*topics mathematical_operations"; then
+  # science, je_mechanical, je_civil and english (previously on these two
+  # Gemini-key slots) all hit 311/topic on every topic and exited cleanly.
+  # reasoning is now the only subject with a real gap -- bulk_questions.py's
+  # flush() uses flock + re-read-before-merge, so it's safe to run multiple
+  # concurrent writers against the same reasoning.json (confirmed by
+  # reading the script before relying on it). Redeployed both freed slots
+  # onto reasoning's weakest topics, split in half, running alongside the
+  # original Groq reasoning worker below -- 3-way parallel on the one
+  # subject that actually needs it instead of 2 idle-after-finishing slots.
   nohup python3 bulk_questions.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY --max-calls 3000 \
-    --subjects science,je_mechanical --id-prefix-suffix h > "$LOGS/science_jemech.log" 2>&1 &
+    --subjects reasoning --topics mathematical_operations,statement_conclusion,analogy,syllogism,puzzle_seating,mirror_water_image \
+    --id-prefix-suffix i > "$LOGS/reasoning2.log" 2>&1 &
   disown
 fi
 
-if ! running "bulk_questions.py.*je_civil,english"; then
-  # Split off from the original 4-subject je_gaps worker (je_mechanical,
-  # je_civil,science,english sharing one key/process) into two 2-subject
-  # workers on separate keys, so all 4 gap subjects get parallel throughput
-  # instead of round-robining one call at a time.
+if ! running "bulk_questions.py.*topics non_verbal_reasoning"; then
   nohup python3 bulk_questions.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY2 --max-calls 3000 \
-    --subjects je_civil,english --id-prefix-suffix f > "$LOGS/jecivil_english.log" 2>&1 &
+    --subjects reasoning --topics non_verbal_reasoning,blood_relations,coding_decoding,series,direction_sense,alphabet_test \
+    --id-prefix-suffix j > "$LOGS/reasoning3.log" 2>&1 &
   disown
 fi
 
