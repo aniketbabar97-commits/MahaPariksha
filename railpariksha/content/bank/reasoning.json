@@ -27307,5 +27307,488 @@
   "a": 3,
   "e_hi": "बुध, शुक्र और पृथ्वी चट्टानी ग्रह हैं, जबकि मंगल भी चट्टानी है। यह प्रश्न गलत निर्मित है, आइए इसे सुधारें। सभी चारों चट्टानी हैं। बदलें: बुध, शुक्र, पृथ्वी, मंगल में से कोई नहीं अलग है। चलिए दूसरा उदाहरण लें।",
   "e_en": "Let's use a clearer distinction. All four are terrestrial. Let's swap Mars for Jupiter to make it clear. Actually, let's use: Sun, Moon, Mars, Jupiter. Sun is a star. Let's stick to the original but fix the logic or options. Let's use: Mercury, Venus, Earth, Jupiter. Jupiter is a gas giant, others are terrestrial."
+ },
+ {
+  "id": "rp-rea-o01192",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "समझें: सभी पंछी पंखों वाले होते हैं। कुछ पंछी उड़ सकते हैं। निष्कर्ष I: कुछ पंखों वाले उड़ सकते हैं। निष्कर्ष II: सभी पंखों वाले पंछी हैं। कौन सा निष्कर्ष सही है?",
+  "q_en": "Consider: All birds have feathers. Some birds can fly. Conclusion I: Some feathered beings can fly. Conclusion II: All feathered beings are birds. Which conclusion follows?",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both conclusions follow",
+   "Neither conclusion follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ पंछी उड़ सकते हैं और सभी पंछी पंखों वाले होते हैं, इसलिए कुछ पंखों वाले जल्बिया उड़ सकते हैं। निष्कर्ष II गलत है क्योंकि सभी पंखों वाले जल्बिया पंछी जरूरी नहीं होते (जैसे कुछ परजीवी)।",
+  "e_en": "Since some birds can fly and all birds have feathers, it logically follows that some feathered beings can fly. Conclusion II is invalid because not all feathered beings are necessarily birds."
+ },
+ {
+  "id": "rp-rea-o01193",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "समझें: सभी डाकिये पत्र भेजते हैं। सभी पत्र भेजने वाले लोग संचार माध्यम का उपयोग करते हैं। निष्कर्ष: सभी डाकिये संचार माध्यम का उपयोग करते हैं। यह निष्कर्ष किस प्रकार का है?",
+  "q_en": "Consider: All postmen send letters. All letter senders use communication media. Conclusion: All postmen use communication media. What type of reasoning is this?",
+  "o_hi": [
+   "अनुमानात्मक तर्क",
+   "न्यायवाक्य (Syllogism)",
+   "वास्तुनिष्ठ तर्क",
+   "द्वितीयोत्तर तर्क"
+  ],
+  "o_en": [
+   "Inductive reasoning",
+   "Syllogism",
+   "Abductive reasoning",
+   "Deductive reasoning (General term, but Syllogism is specific)"
+  ],
+  "a": 1,
+  "e_hi": "यह एक क्लासिक न्यायवाक्य (Syllogism) है जिसमें दो प्रमेयों (premises) से एक निष्कर्ष निकाला गया है। यह एक वैध तर्कीय संरचना है।",
+  "e_en": "This is a classic Syllogism where a conclusion is drawn from two premises. It represents a valid logical structure in deductive reasoning."
+ },
+ {
+  "id": "rp-rea-o01194",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "समझें: कुछ फल मीठे होते हैं। कुछ मीठे चीज़ें पान हैं। निष्कर्ष: कुछ फल पान हैं। क्या यह निष्कर्ष अनिवार्य रूप से सही है?",
+  "q_en": "Consider: Some fruits are sweet. Some sweet things are betel leaves. Conclusion: Some fruits are betel leaves. Does this conclusion necessarily follow?",
+  "o_hi": [
+   "हाँ, यह अनिवार्य रूप से सही है",
+   "नहीं, यह अनिश्चित है",
+   "हाँ, यह हमेशा सही है",
+   "नहीं, यह हमेशा गलत है"
+  ],
+  "o_en": [
+   "Yes, it necessarily follows",
+   "No, it is indeterminate",
+   "Yes, it is always true",
+   "No, it is always false"
+  ],
+  "a": 1,
+  "e_hi": "यहाँ 'मीठे' शब्द दोनों प्रमेयों में आता है लेकिन यह मध्य पद (middle term) नहीं है क्योंकि यह वितरित (distributed) नहीं है। इसलिए फलों और पानों के बीच कोई अनिवार्य संबंध नहीं बनता।",
+  "e_en": "The term 'sweet' appears in both premises but is not a valid middle term because it is not distributed. Therefore, no necessary relationship can be established between fruits and betel leaves."
+ },
+ {
+  "id": "rp-rea-o01195",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "समझें: सभी विद्यार्थी किताबें पढ़ते हैं। कुछ किताबें पढ़ने वाले छात्र हैं। निष्कर्ष: कुछ विद्यार्थी छात्र हैं।",
+  "q_en": "Consider: All students read books. Some book readers are scholars. Conclusion: Some students are scholars.",
+  "o_hi": [
+   "निष्कर्ष सही है",
+   "निष्कर्ष गलत है",
+   "निष्कर्ष अनिश्चित है",
+   "निष्कर्ष विरोधी है"
+  ],
+  "o_en": [
+   "The conclusion is true",
+   "The conclusion is false",
+   "The conclusion is indeterminate",
+   "The conclusion is contradictory"
+  ],
+  "a": 2,
+  "e_hi": "हालांकि सभी विद्यार्थी किताबें पढ़ते हैं, यह जरूरी नहीं कि किताब पढ़ने वाले सभी छात्र हों। इसलिए 'कुछ विद्यार्थी छात्र हैं' यह कथन अनिश्चित (Indeterminate) है।",
+  "e_en": "While all students read books, it is not necessary that all book readers are scholars. Hence, the statement 'Some students are scholars' is indeterminate."
+ },
+ {
+  "id": "rp-rea-o01196",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "समझें: कुछ डॉक्टर शिक्षित हैं। सभी शिक्षित लोग बौद्धिक रूप से विकसित होते हैं। निष्कर्ष: कुछ डॉक्टर बौद्धिक रूप से विकसित होते हैं।",
+  "q_en": "Consider: Some doctors are educated. All educated people are intellectually developed. Conclusion: Some doctors are intellectually developed.",
+  "o_hi": [
+   "निष्कर्ष सही है",
+   "निष्कर्ष गलत है",
+   "निष्कर्ष अनिश्चित है",
+   "प्रमेय गलत हैं"
+  ],
+  "o_en": [
+   "The conclusion is valid",
+   "The conclusion is invalid",
+   "The conclusion is indeterminate",
+   "The premises are false"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ डॉक्टर शिक्षित हैं और सभी शिक्षित लोग बौद्धिक रूप से विकसित होते हैं, इसलिए उन डॉक्टरों (जो शिक्षित हैं) का समूह बौद्धिक रूप से विकसित लोगों के समूह में शामिल होगा।",
+  "e_en": "Since some doctors are educated and all educated people are intellectually developed, the subset of doctors who are educated will also be part of the intellectually developed group."
+ },
+ {
+  "id": "rp-rea-o01197",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "समझें: सभी काले रंग के पक्षी रात में उड़ते हैं। कुछ रात में उड़ने वाले पक्षी चूहे हैं। निष्कर्ष: कुछ काले रंग के पक्षी चूहे हैं।",
+  "q_en": "Consider: All black birds fly at night. Some night-flying birds are mice. Conclusion: Some black birds are mice.",
+  "o_hi": [
+   "निष्कर्ष सही है",
+   "निष्कर्ष गलत है",
+   "निष्कर्ष अनिश्चित है",
+   "निष्कर्ष वास्तविक है"
+  ],
+  "o_en": [
+   "The conclusion is valid",
+   "The conclusion is invalid",
+   "The conclusion is indeterminate",
+   "The conclusion is factual"
+  ],
+  "a": 2,
+  "e_hi": "यहाँ 'रात में उड़ने वाले' बीच का पद है, लेकिन यह दोनों प्रमेयों में वितरित नहीं है। इसलिए काले पक्षी और चूहों के बीच कोई निश्चित संबंध नहीं निकला जा सकता।",
+  "e_en": "Here 'night-flying' is the middle term, but it is not distributed in both premises. Therefore, no definite relationship can be established between black birds and mice."
+ },
+ {
+  "id": "rp-rea-o01198",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "एक कंपनी में सभी सुरक्षा गार्ड समर्पित हैं और सभी समर्पित लोग अनुशासित हैं। निष्कर्ष I: कुछ अनुशासित लोग सुरक्षा गार्ड हैं। निष्कर्ष II: कुछ समर्पित लोग सुरक्षा गार्ड नहीं हैं। कौन सा निष्कर्ष सही है?",
+  "q_en": "In a company, all security guards are dedicated and all dedicated people are disciplined. Conclusion I: Some disciplined people are security guards. Conclusion II: Some dedicated people are not security guards. Which conclusion follows?",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "न तो निष्कर्ष I सही है और न ही निष्कर्ष II",
+   "निष्कर्ष I और II दोनों सही हैं"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Neither Conclusion I nor II follows",
+   "Both Conclusion I and II follow"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सभी सुरक्षा गार्ड समर्पित हैं, इसलिए कुछ समर्पित लोग सुरक्षा गार्ड हैं। चूंकि सभी समर्पित लोग अनुशासित हैं, इसलिए कुछ अनुशासित लोग सुरक्षा गार्ड हैं। निष्कर्ष II अनिश्चित है।",
+  "e_en": "Since all security guards are dedicated, some dedicated people are security guards. Since all dedicated people are disciplined, some disciplined people are security guards. Conclusion II is indeterminate."
+ },
+ {
+  "id": "rp-rea-o01199",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "डॉ. शर्मा ने कहा, 'मेरे सभी रोगी नियमित रूप से दवा लेते हैं। कुछ नियमित दवा लेने वाले लोग स्वस्थ हैं।' निष्कर्ष I: कुछ रोगी स्वस्थ हैं। निष्कर्ष II: कुछ स्वस्थ लोग नियमित रूप से दवा लेते हैं।",
+  "q_en": "Dr. Sharma said, 'All my patients take medicine regularly. Some regular medicine takers are healthy.' Conclusion I: Some patients are healthy. Conclusion II: Some healthy people take medicine regularly.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "न तो निष्कर्ष I सही है और न ही निष्कर्ष II"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusion I and II follow",
+   "Neither Conclusion I nor II follows"
+  ],
+  "a": 1,
+  "e_hi": "प्रथम कथन (सभी रोगी दवा लेते हैं) और द्वितीय कथन (कुछ दवा लेने वाले स्वस्थ हैं) में 'रोगी' और 'स्वस्थ' के बीच सीधा संबंध नहीं है, इसलिए निष्कर्ष I नहीं निकलता। निष्कर्ष II द्वितीय कथन का ही सामान्यीकरण (converse) है, जो सही है।",
+  "e_en": "There is no direct link between 'patients' and 'healthy' in the statements, so Conclusion I does not follow. Conclusion II is the converse of the second statement, which is valid."
+ },
+ {
+  "id": "rp-rea-o01200",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "किसी ट्रेन स्टेशन में, सभी आरक्षित यात्री टिकट परीक्षण करते हैं। कोई भी टिकट परीक्षण करने वाला सशोभा नहीं है। निष्कर्ष I: कोई आरक्षित यात्री सशोभा नहीं है। निष्कर्ष II: कुछ आरक्षित यात्री टिकट परीक्षण नहीं करते हैं।",
+  "q_en": "At a train station, all reserved passengers check their tickets. No ticket checker is noisy. Conclusion I: No reserved passenger is noisy. Conclusion II: Some reserved passengers do not check their tickets.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "न तो निष्कर्ष I सही है और न ही निष्कर्ष II"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusion I and II follow",
+   "Neither Conclusion I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सभी आरक्षित यात्री टिकट जांचते हैं और कोई टिकट जांचने वाला शोरमंद नहीं है, इसलिए कोई आरक्षित यात्री शोरमंद नहीं हो सकता है। निष्कर्ष II प्रथम कथन के विपरीत है।",
+  "e_en": "Since all reserved passengers check tickets and no ticket checker is noisy, no reserved passenger can be noisy. Conclusion II contradicts the first statement."
+ },
+ {
+  "id": "rp-rea-o01201",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "एक पुलिस स्टेशन में, सभी अधिकारी अनुभवी हैं। कुछ अनुभवी व्यक्ति दयालु हैं। निष्कर्ष I: कुछ अधिकारी दयालु हैं। निष्कर्ष II: कुछ दयालु व्यक्ति अनुभवी हैं।",
+  "q_en": "In a police station, all officers are experienced. Some experienced people are kind. Conclusion I: Some officers are kind. Conclusion II: Some kind people are experienced.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "न तो निष्कर्ष I सही है और न ही निष्कर्ष II"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusion I and II follow",
+   "Neither Conclusion I nor II follows"
+  ],
+  "a": 1,
+  "e_hi": "द्वितीय कथन 'कुछ अनुभवी व्यक्ति दयालु हैं' का अनुरूप (converse) 'कुछ दयालु व्यक्ति अनुभवी हैं' होता है, जो सही है। निष्कर्ष I में 'अधिकारी' और 'दयालु' के बीच कोई सीधा संबंध नहीं है।",
+  "e_en": "The converse of 'Some experienced are kind' is 'Some kind are experienced', which is valid. Conclusion I has no direct link between 'officers' and 'kind'."
+ },
+ {
+  "id": "rp-rea-o01202",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "एक फैक्ट्री में, सभी मशीन ऑपरेटर्स प्रमाणित हैं। कोई प्रमाणित इंजीनियर नहीं है। निष्कर्ष I: कोई मशीन ऑपरेटर इंजीनियर नहीं है। निष्कर्ष II: सभी इंजीनियर अप्रमाणित हैं।",
+  "q_en": "In a factory, all machine operators are certified. No certified person is an engineer. Conclusion I: No machine operator is an engineer. Conclusion II: All engineers are uncertified.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "न तो निष्कर्ष I सही है और न ही निष्कर्ष II"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusion I and II follow",
+   "Neither Conclusion I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सभी ऑपरेटर्स प्रमाणित हैं और कोई प्रमाणित इंजीनियर नहीं है, इसलिए कोई ऑपरेटर इंजीनियर नहीं हो सकता। निष्कर्ष II सही है क्योंकि यदि कोई इंजीनियर प्रमाणित होता तो वह ऑपरेटर भी होता, जो संभव नहीं है, इसलिए सभी इंजीनियर अप्रमाणित हैं।",
+  "e_en": "Since all operators are certified and no certified person is an engineer, no operator is an engineer. Conclusion II is also valid because if any engineer were certified, they would be an operator, which is impossible, thus all engineers are uncertified."
+ },
+ {
+  "id": "rp-rea-o01203",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी फूल सुगंधित होते हैं। सभी गुलाब फूल होते हैं। निष्कर्ष: I. सभी गुलाब सुगंधित होते हैं। II. कुछ सुगंधित चीज़ें गुलाब नहीं हैं।",
+  "q_en": "Statement: All flowers are fragrant. All roses are flowers. Conclusions: I. All roses are fragrant. II. Some fragrant things are not roses.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष I और II सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि सभी गुलाब फूल हैं और सभी फूल सुगंधित हैं, इसलिए सभी गुलाब सुगंधित हैं (निष्कर्ष I)। चूंकि सभी फूल सुगंधित हैं, तो कुछ सुगंधित चीज़ें (जो फूल हैं) गुलाब नहीं हो सकतीं (निष्कर्ष II)।",
+  "e_en": "Since all roses are flowers and all flowers are fragrant, all roses are fragrant (Conclusion I). Since all flowers are fragrant, some fragrant things (which are flowers) are not roses (Conclusion II)."
+ },
+ {
+  "id": "rp-rea-o01204",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ डॉक्टर शिक्षक हैं। सभी शिक्षक विद्वान हैं। निष्कर्ष: I. कुछ डॉक्टर विद्वान हैं। II. कुछ विद्वान डॉक्टर हैं।",
+  "q_en": "Statement: Some doctors are teachers. All teachers are scholars. Conclusions: I. Some doctors are scholars. II. Some scholars are doctors.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष I और II सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 2,
+  "e_hi": "क्योंकि कुछ डॉक्टर शिक्षक हैं और सभी शिक्षक विद्वान हैं, इसलिए उन डॉक्टरों जो शिक्षक हैं, वे विद्वान भी होंगे। अतः कुछ डॉक्टर विद्वान हैं और इसका उल्टा भी सच है कि कुछ विद्वान डॉक्टर हैं।",
+  "e_en": "Since some doctors are teachers and all teachers are scholars, those doctors who are teachers must also be scholars. Therefore, some doctors are scholars, and conversely, some scholars are doctors."
+ },
+ {
+  "id": "rp-rea-o01205",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी कवि साहित्यिक हैं। कुछ साहित्यिक पत्रकार हैं। निष्कर्ष: I. कुछ कवि पत्रकार हैं। II. कुछ पत्रकार कवि हैं।",
+  "q_en": "Statement: All poets are literary figures. Some literary figures are journalists. Conclusions: I. Some poets are journalists. II. Some journalists are poets.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष I और II सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "यहाँ 'साहित्यिक' एक मध्यवर्ती शब्द है, लेकिन कथन में नहीं बताया गया है कि पत्रकार कवि हैं या नहीं। 'कुछ साहित्यिक पत्रकार हैं' का अर्थ यह नहीं कि वे कवि हैं। अतः कोई निष्कर्ष नहीं निकलता।",
+  "e_en": "Here 'literary figures' is the middle term, but it is not stated that journalists are poets. 'Some literary figures are journalists' does not imply they are poets. Hence, no conclusion follows."
+ },
+ {
+  "id": "rp-rea-o01206",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी घड़े मिट्टी के होते हैं। कुछ मिट्टी की चीज़ें दीवारें नहीं होतीं। निष्कर्ष: I. कुछ घड़े दीवारें नहीं होते। II. कुछ दीवारें घड़े हैं।",
+  "q_en": "Statement: All pots are made of clay. Some clay items are not walls. Conclusions: I. Some pots are not walls. II. Some walls are pots.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष I और II सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "हालांकि सभी घड़े मिट्टी के हैं, लेकिन यह अनिश्चित है कि वे दीवारें हैं या नहीं, क्योंकि 'कुछ मिट्टी की चीज़ें दीवारें नहीं होतीं' में यह स्पष्ट नहीं है कि वे घड़े हैं या अन्य वस्तुएँ। अतः कोई निष्कर्ष निश्चित रूप से सही नहीं है।",
+  "e_en": "Although all pots are clay, it is uncertain if they are walls because 'some clay items are not walls' does not specify if those items are pots. Thus, no conclusion is definitely correct."
+ },
+ {
+  "id": "rp-rea-o01207",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ बच्चे स्मार्ट हैं। सभी स्मार्ट लोग मेहनती हैं। निष्कर्ष: I. कुछ बच्चे मेहनती हैं। II. सभी मेहनती लोग बच्चे हैं।",
+  "q_en": "Statement: Some children are smart. All smart people are hardworking. Conclusions: I. Some children are hardworking. II. All hardworking people are children.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष I और II सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ बच्चे स्मार्ट हैं और सभी स्मार्ट लोग मेहनती हैं, इसलिए उन बच्चों जो स्मार्ट हैं, वे मेहनती भी होंगे। अतः निष्कर्ष I सही है। निष्कर्ष II गलत है क्योंकि सभी मेहनती लोग बच्चे नहीं हो सकते।",
+  "e_en": "Since some children are smart and all smart people are hardworking, the children who are smart must also be hardworking. So, Conclusion I is correct. Conclusion II is false because not all hardworking people are children."
+ },
+ {
+  "id": "rp-rea-o01208",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी डॉक्टर शिक्षित हैं। कुछ शिक्षित व्यक्ति समझदार हैं। निष्कर्ष I: कुछ डॉक्टर समझदार हैं। निष्कर्ष II: कोई डॉक्टर समझदार नहीं है। कौन सा निष्कर्ष अवश्य सत्य है?",
+  "q_en": "Statements: All doctors are educated. Some educated people are wise. Conclusion I: Some doctors are wise. Conclusion II: No doctor is wise. Which conclusion necessarily follows?",
+  "o_hi": [
+   "केवल निष्कर्ष I सत्य है।",
+   "केवल निष्कर्ष II सत्य है।",
+   "निष्कर्ष I या II में से कोई एक सत्य है।",
+   "कोई निष्कर्ष सत्य नहीं है।"
+  ],
+  "o_en": [
+   "Only Conclusion I follows.",
+   "Only Conclusion II follows.",
+   "Either Conclusion I or II follows.",
+   "Neither Conclusion I nor II follows."
+  ],
+  "a": 3,
+  "e_hi": "चूँकि 'कुछ शिक्षित समझदार हैं', इसलिए हमारे पास यह पक्का नहीं है कि वे डॉक्टर भी होंगे। उसी तरह, यह भी पक्का नहीं है कि कोई डॉक्टर समझदार नहीं है। इसलिए कोई निष्कर्ष अवश्य सत्य नहीं है।",
+  "e_en": "Since 'some educated are wise', it is not guaranteed that any doctor is wise, nor is it guaranteed that no doctor is wise. Therefore, neither conclusion follows necessarily."
+ },
+ {
+  "id": "rp-rea-o01209",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ फूल पुष्प हैं। सभी पुष्प सुगंधित हैं। निष्कर्ष I: कुछ फूल सुगंधित हैं। निष्कर्ष II: सभी फूल सुगंधित हैं। कौन सा निष्कर्ष सत्य है?",
+  "q_en": "Statements: Some flowers are blossoms. All blossoms are fragrant. Conclusion I: Some flowers are fragrant. Conclusion II: All flowers are fragrant. Which conclusion is true?",
+  "o_hi": [
+   "केवल निष्कर्ष I सत्य है।",
+   "केवल निष्कर्ष II सत्य है।",
+   "दोनों निष्कर्ष सत्य हैं।",
+   "कोई निष्कर्ष सत्य नहीं है।"
+  ],
+  "o_en": [
+   "Only Conclusion I follows.",
+   "Only Conclusion II follows.",
+   "Both conclusions follow.",
+   "Neither conclusion follows."
+  ],
+  "a": 0,
+  "e_hi": "चूँकि कुछ फूल पुष्प हैं और सभी पुष्प सुगंधित हैं, इसलिए उन कुछ फूलों जो पुष्प हैं, वे अवश्य सुगंधित होंगे। लेकिन सभी फूलों के सुगंधित होने की कोई गारंटी नहीं है।",
+  "e_en": "Since some flowers are blossoms and all blossoms are fragrant, those specific flowers that are blossoms must be fragrant. However, it is not guaranteed that all flowers are fragrant."
+ },
+ {
+  "id": "rp-rea-o01210",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी कट्टे हैंडगन हैं। कोई हैंडगन ब्लेड नहीं है। निष्कर्ष I: कोई कट्टा ब्लेड नहीं है। निष्कर्ष II: कुछ ब्लेड हैंडगन हैं। कौन सा निष्कर्ष सत्य है?",
+  "q_en": "Statements: All knives are hand tools. No hand tool is a blade. Conclusion I: No knife is a blade. Conclusion II: Some blades are hand tools. Which conclusion is true?",
+  "o_hi": [
+   "केवल निष्कर्ष I सत्य है।",
+   "केवल निष्कर्ष II सत्य है।",
+   "दोनों निष्कर्ष सत्य हैं।",
+   "कोई निष्कर्ष सत्य नहीं है।"
+  ],
+  "o_en": [
+   "Only Conclusion I follows.",
+   "Only Conclusion II follows.",
+   "Both conclusions follow.",
+   "Neither conclusion follows."
+  ],
+  "a": 0,
+  "e_hi": "चूँकि सभी कट्टे हैंडगन हैं और कोई हैंडगन ब्लेड नहीं है, इसलिए कोई कट्टा भी ब्लेड नहीं हो सकता। निष्कर्ष II गलत है क्योंकि ब्लेड और हैंडगन के बीच कोई संबंध नहीं है।",
+  "e_en": "Since all knives are hand tools and no hand tool is a blade, no knife can be a blade. Conclusion II is false because there is no overlap between blades and hand tools."
+ },
+ {
+  "id": "rp-rea-o01211",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: कुछ गायें भैंसें हैं। कुछ भैंसें मवेशी हैं। निष्कर्ष I: कुछ गायें मवेशी हैं। निष्कर्ष II: कुछ मवेशी गायें हैं। कौन सा निष्कर्ष सत्य है?",
+  "q_en": "Statements: Some cows are bulls. Some bulls are cattle. Conclusion I: Some cows are cattle. Conclusion II: Some cattle are cows. Which conclusion is true?",
+  "o_hi": [
+   "केवल निष्कर्ष I सत्य है।",
+   "केवल निष्कर्ष II सत्य है।",
+   "दोनों निष्कर्ष सत्य हैं।",
+   "कोई निष्कर्ष सत्य नहीं है।"
+  ],
+  "o_en": [
+   "Only Conclusion I follows.",
+   "Only Conclusion II follows.",
+   "Both conclusions follow.",
+   "Neither conclusion follows."
+  ],
+  "a": 3,
+  "e_hi": "यहाँ 'कुछ' शब्द का उपयोग दो बार किया गया है। यह पक्का नहीं है कि वे भैंसें जो मवेशी हैं, वे गाय भी होंगी। इसलिए, गायों और मवेशियों के बीच कोई अवश्य संबंध निष्कर्षित नहीं किया जा सकता।",
+  "e_en": "The term 'some' is used twice. It is not guaranteed that the bulls which are cattle are also cows. Therefore, no definite relationship between cows and cattle can be drawn."
+ },
+ {
+  "id": "rp-rea-o01212",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: सभी आपातकालीन स्थितियाँ गंभीर हैं। सभी गंभीर स्थितियाँ खतरनाक हैं। निष्कर्ष I: सभी आपातकालीन स्थितियाँ खतरनाक हैं। निष्कर्ष II: कुछ आपातकालीन स्थितियाँ खतरनाक हैं। कौन सा निष्कर्ष सत्य है?",
+  "q_en": "Statements: All emergencies are serious. All serious situations are dangerous. Conclusion I: All emergencies are dangerous. Conclusion II: Some emergencies are dangerous. Which conclusion is true?",
+  "o_hi": [
+   "केवल निष्कर्ष I सत्य है।",
+   "केवल निष्कर्ष II सत्य है।",
+   "दोनों निष्कर्ष सत्य हैं।",
+   "कोई निष्कर्ष सत्य नहीं है।"
+  ],
+  "o_en": [
+   "Only Conclusion I follows.",
+   "Only Conclusion II follows.",
+   "Both conclusions follow.",
+   "Neither conclusion follows."
+  ],
+  "a": 2,
+  "e_hi": "यदि सभी आपातकालीन स्थितियाँ गंभीर हैं और सभी गंभीर स्थितियाँ खतरनाक हैं, तो सभी आपातकालीन स्थितियाँ अवश्य खतरनाक होंगी। यदि सभी खतरनाक हैं, तो इसका अर्थ है कि कुछ भी (जो कि सभी का हिस्सा है) खतरनाक हैं।",
+  "e_en": "If all emergencies are serious and all serious situations are dangerous, then all emergencies must be dangerous. If all are dangerous, it logically implies that some are also dangerous."
  }
 ]
