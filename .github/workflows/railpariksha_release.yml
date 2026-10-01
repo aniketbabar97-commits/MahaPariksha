@@ -78,11 +78,11 @@ jobs:
           # `flutter test integration_test/...` doesn't accept --release at all (confirmed
           # via an actual run: "Could not find an option named '--release'") -- only
           # `flutter drive` does, which needs test_driver/integration_test.dart as the bridge.
-          script: |
-            cd railpariksha/app
-            flutter drive --driver=test_driver/integration_test.dart \
-              --target=integration_test/golden_path_test.dart -d emulator-5554 --release \
-              --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+          # This action runs each line of a multi-line script as its OWN separate shell
+          # invocation (confirmed via a run: "cd railpariksha/app" on its own line didn't
+          # carry over to the next line, which then failed with "No pubspec.yaml file
+          # found") -- must be a single line chained with && instead.
+          script: cd railpariksha/app && flutter drive --driver=test_driver/integration_test.dart --target=integration_test/golden_path_test.dart -d emulator-5554 --release --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
       - name: Upload to Google Play
         if: ${{ env.PLAY_JSON != '' }}
         uses: r0adkll/upload-google-play@v1
