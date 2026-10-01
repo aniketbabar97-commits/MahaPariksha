@@ -19,6 +19,7 @@ Live, checkable version: https://claude.ai/artifact/Y2Xo461VWazb8ie762PYdi
 - [ ] Manually upload the first signed AAB — Google requires the very first upload through the Console UI. Download the `.aab` from the GitHub Actions run once a release is tagged.
 - [ ] Fill Play Console listing forms: privacy policy URL, Data safety (no data collected), Content rating (Everyone), Ads = No, Government-affiliation = not affiliated.
 - [ ] Get all 12 testers to install + open the app once — this starts the 14-continuous-day closed-testing clock.
+- [ ] Share real PYQ (previous-year-question) papers per exam, so we can mix verified real exam questions into the bank and build dedicated PYQ mock tests — one or more years each for: RRB NTPC (UG/Graduate), RRB Group D, RRB ALP, RRB Technician, RRB JE (Mechanical/Civil/Electrical), RRB Paramedical, RPF Constable, RPF SI, DFCCIL Executive/Jr. Executive.
 
 ## My checklist (repo side)
 
@@ -32,5 +33,6 @@ Live, checkable version: https://claude.ai/artifact/Y2Xo461VWazb8ie762PYdi
 - [ ] Resume + grow verification coverage — paused for now to prioritize closing the content gap; resume once generation nears 25,000.
 - [ ] Ship daily current-affairs freshness automation — so that one date-sensitive subject doesn't go stale after launch.
 - [ ] Deploy the SEO/AEO site once a domain exists — `pipeline/build_site.py` already produces 111 pages with structured data; just needs hosting.
+- [ ] Build a PYQ section — tag real previous-year questions by exam + year once supplied, add a "PYQ" content type alongside notes/flashcards/quiz, and a PYQ mock-test mode that mixes real PYQs with our own bank questions (not pure-PYQ-only).
 
 See `docs/LAUNCH.md` for the fuller step-by-step detail behind each account-side item.
