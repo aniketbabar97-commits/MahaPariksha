@@ -71,7 +71,8 @@ like "study regularly". Only state tips you are highly confident are accurate --
 statistics or rules."""
 
 
-def augment_tips(provider, model, subjects_filter):
+def augment_tips(provider, model, subjects_filter, ask_kw=None):
+    ask_kw = ask_kw or {}
     """Backfill tips_hi/tips_en into existing notes that predate that field
     (written before this schema addition)."""
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
@@ -95,7 +96,7 @@ def augment_tips(provider, model, subjects_filter):
                 subject_en=s_en, subject_hi=s_hi, topic_en=t_en, topic_hi=t_hi,
                 summary_en=n.get("summary_en", ""), facts_en="; ".join(n.get("facts_en", [])))
             try:
-                tips = ask(provider, model, prompt, temperature=0.3)
+                tips = ask(provider, model, prompt, temperature=0.3, **ask_kw)
                 n["tips_hi"] = tips["tips_hi"]
                 n["tips_en"] = tips["tips_en"]
             except Exception as e:
@@ -119,10 +120,14 @@ def main():
     p.add_argument("--augment-tips", action="store_true",
                     help="backfill tips_hi/tips_en into existing notes that predate that field, "
                          "instead of drafting new notes")
+    p.add_argument("--gemini-key-env", default="GEMINI_API_KEY", help="env var holding the Gemini API key to use "
+                                                                       "(e.g. GEMINI_API_KEY2 for a second key, so "
+                                                                       "two Gemini workers don't share one quota)")
     args = p.parse_args()
+    ask_kw = {"api_key_env": args.gemini_key_env} if args.provider == "gemini" else {}
 
     if args.augment_tips:
-        augment_tips(args.provider, args.model, args.subjects)
+        augment_tips(args.provider, args.model, args.subjects, ask_kw)
         return
 
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
@@ -147,7 +152,7 @@ def main():
                 break
             prompt = SCHEMA_PROMPT.format(subject_en=s["en"], subject_hi=s["hi"], topic_en=t["en"], topic_hi=t["hi"])
             try:
-                note = ask(args.provider, args.model, prompt, temperature=0.3)
+                note = ask(args.provider, args.model, prompt, temperature=0.3, **ask_kw)
                 note["id"] = f"note-{s['id']}-{t['id']}"
                 note["s"] = s["id"]
                 note["t"] = t["id"]
