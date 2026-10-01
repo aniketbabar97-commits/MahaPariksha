@@ -193,7 +193,12 @@ class QuizBuilder {
   /// Builds a mock test whose subject mix mirrors the real exam's question-count split
   /// (e.g. RPF's General-Awareness-heavy pattern, RRB JE's Maths/Science-heavy one) rather
   /// than splitting evenly across subjects.
-  QuizSpec mock({int count = 25}) {
+  ///
+  /// [full] builds a full-length paper matching the real exam's actual CBT-1 question
+  /// count and time limit (e.g. RRB NTPC's 100 questions / 90 minutes) instead of the
+  /// quick 25-question default -- falls back to the quick defaults if the exam has no
+  /// paper length on file yet.
+  QuizSpec mock({int count = 25, bool full = false}) {
     final e = exam;
     final rnd = Random();
     final pool = _pool();
@@ -201,11 +206,12 @@ class QuizBuilder {
     for (final q in pool) {
       bySubject.putIfAbsent(q.subject, () => []).add(q);
     }
+    final targetCount = full ? (e?.paperQuestions ?? count) : count;
     final chosen = <Question>[];
     if (bySubject.isNotEmpty) {
       final weights = {for (final s in bySubject.keys) s: e?.weights[s] ?? 1};
       final capacity = {for (final s in bySubject.keys) s: bySubject[s]!.length};
-      final alloc = _weightedAllocate(weights, capacity, count);
+      final alloc = _weightedAllocate(weights, capacity, targetCount);
       for (final s in bySubject.keys) {
         final list = bySubject[s]!..shuffle(rnd);
         chosen.addAll(list.take(alloc[s]!));
@@ -213,8 +219,16 @@ class QuizBuilder {
       chosen.shuffle(rnd);
     }
     final negative = e?.negative ?? 0.0;
-    return QuizSpec(QuizMode.mock, chosen, 'मॉक टेस्ट', 'Mock Test',
-        timeLimit: Duration(seconds: 48 * chosen.length), negative: negative);
+    final timeLimit = full && e?.paperMinutes != null
+        ? Duration(minutes: e!.paperMinutes!)
+        : Duration(seconds: 48 * chosen.length);
+    return QuizSpec(
+        QuizMode.mock,
+        chosen,
+        full ? 'फुल-लेंथ मॉक' : 'मॉक टेस्ट',
+        full ? 'Full-Length Mock' : 'Mock Test',
+        timeLimit: timeLimit,
+        negative: negative);
   }
 
   /// Builds a Beast Mode sprint pool: enough questions (weighted the same way [mock]

@@ -86,6 +86,18 @@ class PracticeScreen extends StatelessWidget {
             ),
           ),
         ]),
+        if (exam.paperQuestions != null) ...[
+          const SizedBox(height: 10),
+          ActionCard(
+            icon: Icons.fact_check,
+            color: BrandColors.saffron,
+            title: context.tr('फुल-लेंथ मॉक 🎯', 'Full-length mock 🎯'),
+            subtitle: context.tr(
+                '${exam.paperQuestions} प्रश्न · ${exam.paperMinutes} मिनट · असली परीक्षा पैटर्न',
+                '${exam.paperQuestions} questions · ${exam.paperMinutes} minutes · real exam pattern'),
+            onTap: () => startQuiz(context, s.builder.mock(full: true)),
+          ),
+        ],
         SectionTitle(context.tr('विषयवार अभ्यास 📚', 'Practice by subject 📚')),
         for (final sub in subjects) ...[
           _SubjectTile(

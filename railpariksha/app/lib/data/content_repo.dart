@@ -125,6 +125,8 @@ class ContentRepo {
           subjectEntries.map((s) => s['id'] as String).toList(),
           {for (final s in subjectEntries) s['id'] as String: (s['w'] as num?)?.toInt() ?? 1},
           (e['neg'] as num? ?? 0).toDouble(),
+          (e['paper_q'] as num?)?.toInt(),
+          (e['paper_min'] as num?)?.toInt(),
         );
       }));
     groups

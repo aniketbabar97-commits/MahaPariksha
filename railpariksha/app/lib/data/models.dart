@@ -32,7 +32,14 @@ class Exam {
   /// not an even split across subjects.
   final Map<String, int> weights;
   final double negative;
-  const Exam(this.id, this.group, this.name, this.subjects, this.weights, [this.negative = 0]);
+
+  /// Real exam's CBT-1 question count / time limit (minutes), used to build a
+  /// full-length mock that matches the actual paper instead of the quick
+  /// default-length one. Falls back to the quick mock's own defaults when unset.
+  final int? paperQuestions;
+  final int? paperMinutes;
+  const Exam(this.id, this.group, this.name, this.subjects, this.weights,
+      [this.negative = 0, this.paperQuestions, this.paperMinutes]);
 }
 
 class ExamGroup {
