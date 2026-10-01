@@ -23,10 +23,10 @@ Live, checkable version: https://claude.ai/artifact/Y2Xo461VWazb8ie762PYdi
 
 ## My checklist (repo side)
 
-- [ ] Push held commits + update the PR — blocked until the Oct 1 Actions-minutes quota resets.
+- [x] Push held commits + update the PR — Oct 1 quota reset, pushing continuously since.
 - [ ] Tag a `railpariksha-vX.Y.Z` release once the 4 keystore secrets are in place — produces the signed `.aab`.
 - [ ] Final pre-tag smoke pass — validate content bank + compile-check before tagging, so the first upload isn't wasted on an avoidable bug.
-- [ ] Generate remaining questions to 25,000 — currently ~16,000; reasoning, maths, science and JE mechanical are the biggest remaining gaps.
+- [x] Generate remaining questions to 25,000 — done: 25,078 total, every subject's every topic hit its per-topic target (311/topic, 15/topic for current_affairs).
 - [ ] Generate notes/mind-maps for the 27 topics missing them — all 18 JE topics plus scattered GK/Computer/English ones currently have quiz questions but no notes page.
 - [ ] Generate flashcards for the 5 subjects with zero — current_affairs, english, je_mechanical, je_civil, je_electrical; the Revise tab shows nothing for these today.
 - [ ] Finish tips & tricks backfill on existing notes — adds exam-hall mnemonics/shortcuts to notes that predate the `tips_hi`/`tips_en` field.
