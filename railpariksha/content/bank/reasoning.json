@@ -31746,5 +31746,534 @@
   "a": 0,
   "e_hi": "मान लें C की दक्षता 100 इकाई/दिन है। B C से 25% तेज़ है, इसलिए B = 125। A B से 20% तेज़ है, इसलिए A = 125 * 1.2 = 150। कुल दक्षता = 100 + 125 + 150 = 375 इकाई/दिन। कुल काम = 375 * 12 = 4500 इकाई। A का समय = 4500 / 150 = 30 दिन। प्रतीक्षा करें, विकल्प में 30 है।",
   "e_en": "Let C's rate be 100 units/day. B is 25% faster than C, so B = 125. A is 20% faster than B, so A = 125 * 1.2 = 150. Total rate = 100 + 125 + 150 = 375 units/day. Total work = 375 * 12 = 4500 units. A's time = 4500 / 150 = 30 days."
+ },
+ {
+  "id": "rp-rea-o01385",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी फूल सुगंधित होते हैं। सभी गुलाब फूल हैं। निष्कर्ष: I. कुछ फूल गुलाब हैं। II. कुछ सुगंधित चीज़ें गुलाब हैं।",
+  "q_en": "Statements: All flowers are fragrant. All roses are flowers. Conclusions: I. Some flowers are roses. II. Some fragrant things are roses.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि सभी गुलाब फूल हैं, इसलिए कुछ फूल गुलाब हैं (निष्कर्ष I सही)। चूंकि सभी फूल सुगंधित होते हैं और गुलाब फूल हैं, इसलिए गुलाब सुगंधित होते हैं, जिसका अर्थ है कुछ सुगंधित चीज़ें गुलाब हैं (निष्कर्ष II सही)।",
+  "e_en": "Since all roses are flowers, some flowers are roses (Conclusion I is valid). Since all flowers are fragrant and roses are flowers, roses are fragrant, meaning some fragrant things are roses (Conclusion II is valid)."
+ },
+ {
+  "id": "rp-rea-o01386",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: कुछ डॉक्टर अध्यापक हैं। सभी अध्यापक शिक्षित हैं। निष्कर्ष: I. कुछ डॉक्टर शिक्षित हैं। II. कुछ शिक्षित लोग डॉक्टर हैं।",
+  "q_en": "Statements: Some doctors are teachers. All teachers are educated. Conclusions: I. Some doctors are educated. II. Some educated people are doctors.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि कुछ डॉक्टर अध्यापक हैं और सभी अध्यापक शिक्षित हैं, इसलिए उन डॉक्टरों जो अध्यापक भी हैं, वे शिक्षित हैं (निष्कर्ष I सही)। यदि कुछ डॉक्टर शिक्षित हैं, तो स्वतः ही कुछ शिक्षित लोग डॉक्टर हैं (निष्कर्ष II सही)।",
+  "e_en": "Since some doctors are teachers and all teachers are educated, the doctors who are teachers must be educated (Conclusion I is valid). If some doctors are educated, it logically follows that some educated people are doctors (Conclusion II is valid)."
+ },
+ {
+  "id": "rp-rea-o01387",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी पंछी पंखों वाले हैं। कुछ पंखों वाले चीज़ें उड़ती हैं। निष्कर्ष: I. कुछ पंछी उड़ते हैं। II. कुछ उड़ने वाली चीज़ें पंछी हैं।",
+  "q_en": "Statements: All birds have wings. Some winged things fly. Conclusions: I. Some birds fly. II. Some flying things are birds.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "यहाँ 'पंछी' और 'उड़ने वाली चीज़ें' के बीच कोई सीधा संबंध नहीं है। 'कुछ पंखों वाले चीज़ें उड़ती हैं' का अर्थ यह नहीं है कि वे पंछी हैं; वे झंडे या पतंग भी हो सकती हैं। इसलिए कोई निष्कर्ष नहीं निकलता।",
+  "e_en": "There is no direct link between 'birds' and 'flying things'. 'Some winged things fly' does not imply they are birds; they could be flags or kites. Therefore, no conclusion can be drawn."
+ },
+ {
+  "id": "rp-rea-o01388",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ किताबें उपन्यास हैं। कोई उपन्यास प्रॉफिटबल नहीं है। निष्कर्ष: I. कुछ किताबें प्रॉफिटबल नहीं हैं। II. कोई किताब प्रॉफिटबल नहीं है।",
+  "q_en": "Statements: Some books are novels. No novel is profitable. Conclusions: I. Some books are not profitable. II. No book is profitable.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ किताबें उपन्यास हैं और कोई उपन्यास प्रॉफिटबल नहीं है, इसलिए उन किताबों (जो उपन्यास हैं) की पुष्टि होती है कि वे प्रॉफिटबल नहीं हैं। इसलिए 'कुछ किताबें प्रॉफिटबल नहीं हैं' सही है, लेकिन 'कोई किताब प्रॉफिटबल नहीं है' गलत है क्योंकि अन्य किताबें (जो उपन्यास नहीं हैं) प्रॉफिटबल हो सकती हैं।",
+  "e_en": "Since some books are novels and no novel is profitable, it is certain that those specific books (the novels) are not profitable. Thus, 'Some books are not profitable' is valid, but 'No book is profitable' is invalid because non-novel books could still be profitable."
+ },
+ {
+  "id": "rp-rea-o01389",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी स्क्वायर रेक्टेंगल हैं। कुछ रेक्टेंगल घन हैं। निष्कर्ष: I. कुछ स्क्वायर घन हैं। II. कुछ रेक्टेंगल स्क्वायर हैं।",
+  "q_en": "Statements: All squares are rectangles. Some rectangles are cubes. Conclusions: I. Some squares are cubes. II. Some rectangles are squares.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "निष्कर्ष I और II दोनों सही हैं",
+   "कोई भी निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Neither conclusion I nor II follows"
+  ],
+  "a": 1,
+  "e_hi": "निष्कर्ष II सही है क्योंकि यदि सभी स्क्वायर रेक्टेंगल हैं, तो उन रेक्टेंगल में से जो स्क्वायर हैं, वे 'कुछ रेक्टेंगल' का हिस्सा बनाते हैं। निष्कर्ष I गलत है क्योंकि 'कुछ रेक्टेंगल घन हैं' का अर्थ यह नहीं है कि वे स्क्वायर हैं; वे किसी अन्य प्रकार के रेक्टेंगल हो सकते हैं।",
+  "e_en": "Conclusion II is valid because if all squares are rectangles, then squares are a subset of rectangles, so some rectangles are squares. Conclusion I is invalid because 'Some rectangles are cubes' does not imply those specific rectangles are squares; they could be non-square rectangles."
+ },
+ {
+  "id": "rp-rea-o01390",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "न्यायवाक्य (Syllogism) में 'प्राथमिक कथन' (Major Premise) और 'अप्राथमिक कथन' (Minor Premise) का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of the 'Major Premise' and 'Minor Premise' in a Syllogism?",
+  "o_hi": [
+   "समस्या को जटिल बनाना",
+   "निष्कर्ष के लिए आधार प्रदान करना",
+   "विषय को भ्रमित करना",
+   "केवल तथ्यों की पुष्टि करना"
+  ],
+  "o_en": [
+   "To make the problem complex",
+   "To provide the basis for the conclusion",
+   "To confuse the topic",
+   "To only verify facts"
+  ],
+  "a": 1,
+  "e_hi": "न्यायवाक्य में दो कथन दिए जाते हैं ताकि उनसे एक तार्किक निष्कर्ष निकाला जा सके।",
+  "e_en": "In a syllogism, two premises are given to derive a logical conclusion from them."
+ },
+ {
+  "id": "rp-rea-o01391",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "न्यायवाक्य में 'निष्कर्ष' (Conclusion) क्या होता है?",
+  "q_en": "What is a 'Conclusion' in a syllogism?",
+  "o_hi": [
+   "दिया गया पहला कथन",
+   "दिया गया दूसरा कथन",
+   "दोनों कथनों से तार्किक रूप से निकाला गया विधान",
+   "एक अभासित प्रश्न"
+  ],
+  "o_en": [
+   "The first given statement",
+   "The second given statement",
+   "A statement logically derived from both premises",
+   "An unasked question"
+  ],
+  "a": 2,
+  "e_hi": "निष्कर्ष वह विधान है जो दिए गए दोनों कथनों (premises) से तार्किक रूप से अनुसरित होता है।",
+  "e_en": "The conclusion is the statement that logically follows from the two given premises."
+ },
+ {
+  "id": "rp-rea-o01392",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "यदि कथन है: 'सभी गेंदे फूल हैं' और 'कुछ फूल लाल हैं', तो कौन सा निष्कर्ष निश्चित रूप से सही है?",
+  "q_en": "Given the statements: 'All marigolds are flowers' and 'Some flowers are red', which conclusion is definitely true?",
+  "o_hi": [
+   "सभी गेंदे लाल हैं",
+   "कुछ गेंदे लाल हो सकते हैं",
+   "कुछ लाल फूल गेंदे हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "All marigolds are red",
+   "Some marigolds may be red",
+   "Some red flowers are marigolds",
+   "No conclusion is correct"
+  ],
+  "a": 1,
+  "e_hi": "चूँकि फूलों का समूह लाल और गेंदों में ओवरलैप करता है, इसलिए संभव है कि कुछ गेंदे लाल हों, लेकिन यह निश्चित नहीं है कि सभी या कोई विशेष गेंदा लाल है। 'कुछ गेंदे लाल हो सकते हैं' एक संभावित निष्कर्ष है, लेकिन कठोर तर्क में हम अक्सर 'कोई निश्चित संबंध नहीं' को चुनते हैं यदि प्रश्न 'निश्चित रूप से' पूछे। हालाँकि, मानक RRB पैटर्न में, यदि कोई निश्चित संबंध नहीं बनता, तो 'कोई निष्कर्ष नहीं' या 'संभावना' का विकल्प देखा जाता है। यहाँ 'कुछ गेंदे लाल हो सकते हैं' एक वैध पूर्वनिष्कर्ष (possibility) है, लेकिन यदि विकल्प 'कोई निष्कर्ष निश्चित रूप से सही नहीं है' (जैसे कोई गेंदा लाल है) हो, तो वह सही होता है। चलिए इसे स्पष्ट करते हैं: 'कुछ फूल लाल हैं' और 'सभी गेंदे फूल हैं' के बीच कोई सीधा संबंध नहीं है कि गेंदे लाल हों। इसलिए, 'कुछ गेंदे लाल हैं' निश्चित नहीं है। 'कुछ लाल फूल गेंदे हैं' भी निश्चित नहीं है। अतः कोई भी कठोर निष्कर्ष नहीं बनता।",
+  "e_en": "Since the group of flowers overlaps with red flowers and marigolds, it is possible that some marigolds are red, but it is not certain that all or any specific marigold is red. In strict logical syllogisms, unless a definite connection is proven, no definitive conclusion like 'Some marigolds are red' is valid. Therefore, no definite conclusion follows."
+ },
+ {
+  "id": "rp-rea-o01393",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "न्यायवाक्य में 'सर्वव्यापक' (Universal) कथन का अर्थ क्या है?",
+  "q_en": "What does a 'Universal' statement mean in a syllogism?",
+  "o_hi": [
+   "यह केवल कुछ सदस्यों के बारे में है",
+   "यह समूह के सभी सदस्यों के बारे में है",
+   "यह केवल एक सदस्य के बारे में है",
+   "यह अस्वीकार्य है"
+  ],
+  "o_en": [
+   "It refers to some members",
+   "It refers to all members of the group",
+   "It refers to only one member",
+   "It is rejected"
+  ],
+  "a": 1,
+  "e_hi": "सर्वव्यापक कथन (जैसे 'सभी' या 'कोई नहीं') समूह के प्रत्येक सदस्य को शामिल करते हैं।",
+  "e_en": "Universal statements (like 'All' or 'No') include every member of the group."
+ },
+ {
+  "id": "rp-rea-o01394",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "यदि 'सभी कपड़े धागे से बने होते हैं' और 'सभी धागे प्राकृतिक होते हैं', तो निष्कर्ष क्या होगा?",
+  "q_en": "If 'All clothes are made of thread' and 'All threads are natural', what is the conclusion?",
+  "o_hi": [
+   "सभी कपड़े प्राकृतिक होते हैं",
+   "कुछ कपड़े प्राकृतिक नहीं होते",
+   "कोई कपड़ा प्राकृतिक नहीं है",
+   "सभी प्राकृतिक चीज़ें कपड़े हैं"
+  ],
+  "o_en": [
+   "All clothes are natural",
+   "Some clothes are not natural",
+   "No clothes are natural",
+   "All natural things are clothes"
+  ],
+  "a": 0,
+  "e_hi": "यह एक सरल तार्किक अनुक्रम है: यदि A, B है और B, C है, तो A, C है।",
+  "e_en": "This is a simple logical chain: If A is B, and B is C, then A is C."
+ },
+ {
+  "id": "rp-rea-o01395",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "न्यायवाक्य में 'अव्यापक' (Particular) कथन की पहचान कैसे की जाती है?",
+  "q_en": "How is a 'Particular' statement identified in a syllogism?",
+  "o_hi": [
+   "जब इसमें 'सभी' या 'कोई नहीं' शब्द हो",
+   "जब इसमें 'कुछ' या 'कुछ... नहीं' शब्द हो",
+   "जब यह एक प्रश्न हो",
+   "जब यह गलत हो"
+  ],
+  "o_en": [
+   "When it contains 'All' or 'No'",
+   "When it contains 'Some' or 'Some... not'",
+   "When it is a question",
+   "When it is false"
+  ],
+  "a": 1,
+  "e_hi": "अव्यापक कथन समूह के केवल कुछ सदस्यों के बारे में बात करते हैं, जो अक्सर 'कुछ' शब्द द्वारा संकेतित होता है।",
+  "e_en": "Particular statements refer to only some members of the group, often indicated by the word 'Some'."
+ },
+ {
+  "id": "rp-rea-o01396",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "पुर्जे: सभी मछलियाँ पानी में रहती हैं। कुछ पानी में रहने वाले जीव मछलियाँ होती हैं।\nनिष्कर्ष: I. कुछ मछलियाँ पानी में रहती हैं।\nII. सभी पानी में रहने वाले जीव मछलियाँ होती हैं।",
+  "q_en": "Statements: All fish live in water. Some aquatic animals are fish.\nConclusions: I. Some fish live in water.\nII. All aquatic animals are fish.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "I या II",
+   "कोई सही नहीं है"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Either I or II",
+   "None follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सभी मछलियाँ पानी में रहती हैं, इसलिए निष्कर्ष I (कुछ मछलियाँ पानी में रहती हैं) अवश्य सही है। निष्कर्ष II गलत है क्योंकि सभी जलचर मछली नहीं होते।",
+  "e_en": "Since all fish live in water, conclusion I (some fish live in water) is definitely true. Conclusion II is false because not all aquatic animals are fish."
+ },
+ {
+  "id": "rp-rea-o01397",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "पुर्जे: कुछ डॉक्टर इंजीनियर हैं। कोई इंजीनियर वकील नहीं है।\nनिष्कर्ष: I. कुछ डॉक्टर वकील नहीं हैं।\nII. कोई वकील डॉक्टर नहीं है।",
+  "q_en": "Statements: Some doctors are engineers. No engineer is a lawyer.\nConclusions: I. Some doctors are not lawyers.\nII. No lawyer is a doctor.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "दोनों I और II सही हैं",
+   "कोई सही नहीं है"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both I and II follow",
+   "None follows"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ डॉक्टर इंजीनियर हैं और कोई इंजीनियर वकील नहीं है, इसलिए वे कुछ डॉक्टर ज़रूर वकील नहीं होंगे (निष्कर्ष I)। लेकिन कुछ डॉक्टर वकील भी हो सकते हैं, इसलिए निष्कर्ष II निश्चित नहीं है।",
+  "e_en": "Since some doctors are engineers and no engineer is a lawyer, those specific doctors cannot be lawyers (Conclusion I). However, other doctors could be lawyers, so Conclusion II is not definite."
+ },
+ {
+  "id": "rp-rea-o01398",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "पुर्जे: सभी किताबें कागज से बनी होती हैं। कुछ कागज लकड़ी से बने होते हैं।\nनिष्कर्ष: I. कुछ किताबें लकड़ी से बनी होती हैं।\nII. कुछ लकड़ी कागज होती है।",
+  "q_en": "Statements: All books are made of paper. Some paper is made of wood.\nConclusions: I. Some books are made of wood.\nII. Some wood is paper.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "दोनों I और II सही हैं",
+   "कोई सही नहीं है"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both I and II follow",
+   "None follows"
+  ],
+  "a": 3,
+  "e_hi": "कागज लकड़ी से बने होते हैं, लेकिन इसका मतलब यह नहीं कि लकड़ी कागज है या किताबें सीधे लकड़ी से बनी हैं। दोनों निष्कर्ष पुर्जों से निश्चित रूप से नहीं निकलते।",
+  "e_en": "Paper is made from wood, but it does not mean wood is paper or that books are directly made of wood in the logical sense of identity. Neither conclusion follows strictly."
+ },
+ {
+  "id": "rp-rea-o01399",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "पुर्जे: यदि A है, तो B होगा। यदि B नहीं है, तो C होगा।\nनिष्कर्ष: यदि A है, तो C होगा।",
+  "q_en": "Statements: If A is true, then B happens. If B does not happen, then C happens.\nConclusion: If A is true, then C happens.",
+  "o_hi": [
+   "निष्कर्ष सही है",
+   "निष्कर्ष गलत है",
+   "निष्कर्ष पता नहीं चलता",
+   "पुर्जे परस्पर विरोधी हैं"
+  ],
+  "o_en": [
+   "Conclusion is valid",
+   "Conclusion is invalid",
+   "Conclusion cannot be determined",
+   "Statements are contradictory"
+  ],
+  "a": 2,
+  "e_hi": "यदि A है, तो B होगा। चूंकि B होगा, इसलिए 'B नहीं है' वाली शर्त लागू नहीं होती, इसलिए C के होने की कोई गारंटी नहीं है।",
+  "e_en": "If A is true, B happens. Since B happens, the condition 'If B does not happen' is not triggered, so we cannot determine if C happens."
+ },
+ {
+  "id": "rp-rea-o01400",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "पुर्जे: सभी कलाकार सृजनशील होते हैं। कुछ सृजनशील व्यक्ति कलाकार नहीं होते।\nनिष्कर्ष: I. कुछ कलाकार सृजनशील होते हैं।\nII. कुछ सृजनशील व्यक्ति कलाकार होते हैं।",
+  "q_en": "Statements: All artists are creative. Some creative persons are not artists.\nConclusions: I. Some artists are creative.\nII. Some creative persons are artists.",
+  "o_hi": [
+   "केवल I सही है",
+   "केवल II सही है",
+   "दोनों I और II सही हैं",
+   "कोई सही नहीं है"
+  ],
+  "o_en": [
+   "Only I follows",
+   "Only II follows",
+   "Both I and II follow",
+   "None follows"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि सभी कलाकार सृजनशील हैं, इसलिए 'कुछ कलाकार सृजनशील हैं' (I) सही है। साथ ही, चूंकि कुछ सृजनशील व्यक्ति कलाकार नहीं होते, इसका तात्पर्य यह है कि कुछ सृजनशील व्यक्ति ज़रूर कलाकार हैं (II), वरना सभी सृजनशील व्यक्ति कलाकार नहीं होने का दावा सही नहीं होता।",
+  "e_en": "Since all artists are creative, 'Some artists are creative' (I) is true. Also, since 'Some creative persons are not artists' is true, it implies that 'Some creative persons are artists' (II) must also be true to make the 'some' statement valid (unless all creative persons were non-artists, which contradicts the overlap implied by the set of artists). *Correction*: Actually, strictly logically, 'All A are B' and 'Some B are not A' implies 'Some B are A'. Yes, both follow."
+ },
+ {
+  "id": "rp-rea-o01401",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "सर्वप्रथम 'सिलॉजिज्म' (न्यायवाक्य) का सिद्धांत किसने विस्तार से प्रस्तुत किया था?",
+  "q_en": "Who first systematically presented the theory of 'Syllogism'?",
+  "o_hi": [
+   "अरस्तू",
+   "प्लाटो",
+   "सोकरेटिस",
+   "डिकार്ട"
+  ],
+  "o_en": [
+   "Aristotle",
+   "Plato",
+   "Socrates",
+   "Descartes"
+  ],
+  "a": 0,
+  "e_hi": "सिलॉजिज्म का सिद्धांत प्राचीन यूनानी दार्शनिक अरस्तू (Aristotle) ने अपने तर्कशास्त्र (Logic) में विस्तार से वर्णित किया था।",
+  "e_en": "The concept of Syllogism was systematically described by the ancient Greek philosopher Aristotle in his works on Logic."
+ },
+ {
+  "id": "rp-rea-o01402",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "यदि 'सभी फल मीठे होते हैं' और 'सभी आलू फल हैं', तो निष्कर्ष 'सभी आलू मीठे होते हैं' किस प्रकार का है?",
+  "q_en": "If 'All fruits are sweet' and 'All potatoes are fruits', the conclusion 'All potatoes are sweet' is of what nature?",
+  "o_hi": [
+   "अमान्य (Invalid)",
+   "मान्य (Valid)",
+   "आंशिक रूप से सही",
+   "निर्धारित नहीं किया जा सकता"
+  ],
+  "o_en": [
+   "Invalid",
+   "Valid",
+   "Partially correct",
+   "Cannot be determined"
+  ],
+  "a": 1,
+  "e_hi": "हालाँकि वास्तविक दुनिया में आलू फल नहीं होते, लेकिन तर्कशास्त्र (Logic) में यदि प्रमेय (premises) को सही माना जाए, तो निष्कर्ष तार्किक रूप से मान्य (Valid) होता है।",
+  "e_en": "Although potatoes are not fruits in reality, in Logic, if the premises are accepted as true, the conclusion is logically Valid."
+ },
+ {
+  "id": "rp-rea-o01403",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "सिलॉजिज्म में 'मध्य पद' (Middle Term) के मुख्य कार्य क्या होते हैं?",
+  "q_en": "What is the primary function of the 'Middle Term' in a Syllogism?",
+  "o_hi": [
+   "निष्कर्ष में शामिल होना",
+   "दोनों प्रमेयों में प्रकट होना",
+   "केवल पहली प्रमेय में होना",
+   "आंशिक रूप से सच होना"
+  ],
+  "o_en": [
+   "To be part of the conclusion",
+   "To appear in both premises",
+   "To be in only the first premise",
+   "To be partially true"
+  ],
+  "a": 1,
+  "e_hi": "मध्य पद वह शब्द होता है जो दोनों प्रमेयों (premises) में आता है लेकिन निष्कर्ष (conclusion) में नहीं आता, जिससे बाकी दो पदों का संबंध बनता है।",
+  "e_en": "The middle term is the word that appears in both premises but not in the conclusion, linking the other two terms."
+ },
+ {
+  "id": "rp-rea-o01404",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "जब दोनों प्रमेय 'विशेष' (Particular) होते हैं, तो सिलॉजिज्म का निष्कर्ष क्या होगा?",
+  "q_en": "When both premises in a Syllogism are 'Particular', what is the result for the conclusion?",
+  "o_hi": [
+   "यह सदैव सार्वभौमिक (Universal) होगा",
+   "कोई मान्य निष्कर्ष संभव नहीं है",
+   "यह सदैव विशेष (Particular) होगा",
+   "यह अनुमानित (Probable) होगा"
+  ],
+  "o_en": [
+   "It will always be Universal",
+   "No valid conclusion can be drawn",
+   "It will always be Particular",
+   "It will be Probable"
+  ],
+  "a": 1,
+  "e_hi": "तर्कशास्त्र के नियम के अनुसार, यदि दोनों प्रमेय विशेष होते हैं, तो उनसे कोई तार्किक निष्कर्ष नहीं निकाला जा सकता।",
+  "e_en": "According to the rules of logic, if both premises are particular, no valid conclusion can be derived."
+ },
+ {
+  "id": "rp-rea-o01405",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "सिलॉजिज्म में 'सार्वभौमिक' (Universal) और 'विशेष' (Particular) शब्द किस प्रमेय की विशेषता को दर्शाते हैं?",
+  "q_en": "In Syllogism, the terms 'Universal' and 'Particular' describe the what of the premise?",
+  "o_hi": [
+   "गुण (Quality)",
+   "विस्तार (Quantity)",
+   "सत्यता (Truth)",
+   "अवधारणा (Concept)"
+  ],
+  "o_en": [
+   "Quality",
+   "Quantity",
+   "Truth",
+   "Concept"
+  ],
+  "a": 1,
+  "e_hi": "'सार्वभौमिक' (सभी/कोई नहीं) और 'विशेष' (कुछ/कुछ नहीं) प्रमेय के विस्तार (Quantity) को दर्शाते हैं, जबकि 'धनात्मक/ऋणात्मक' गुण (Quality) को दर्शाते हैं।",
+  "e_en": "'Universal' (All/No) and 'Particular' (Some/Some not) refer to the Quantity of the premise, while 'Affirmative/Negative' refer to its Quality."
+ },
+ {
+  "id": "rp-rea-o01406",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "यदि प्रमेय 1: 'कुछ डॉक्टर नर्से हैं' और प्रमेय 2: 'सभी नर्से शिक्षित हैं', तो निष्कर्ष 'कुछ डॉक्टर शिक्षित हैं' किस प्रकार का है?",
+  "q_en": "If Premise 1: 'Some doctors are nurses' and Premise 2: 'All nurses are educated', the conclusion 'Some doctors are educated' is:",
+  "o_hi": [
+   "मान्य (Valid)",
+   "अमान्य (Invalid)",
+   "संभावित (Possible) लेकिन निश्चित नहीं",
+   "तार्किक रूप से खंडनीय"
+  ],
+  "o_en": [
+   "Valid",
+   "Invalid",
+   "Possible but not certain",
+   "Logically refutable"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि कुछ डॉक्टर नर्से हैं और सभी नर्से शिक्षित हैं, इसलिए उन डॉक्टरों का भाग जो नर्से हैं, वे निश्चित रूप से शिक्षित होंगे।",
+  "e_en": "Since some doctors are nurses and all nurses are educated, the portion of doctors who are nurses must certainly be educated."
+ },
+ {
+  "id": "rp-rea-o01407",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "सिलॉजिज्म के चार मानक रूपों (A, E, I, O) में 'E' किस प्रकार के वक्तव्य को दर्शाता है?",
+  "q_en": "In the four standard forms (A, E, I, O) of Syllogism, 'E' represents which type of statement?",
+  "o_hi": [
+   "सार्वभौमिक धनात्मक",
+   "सार्वभौमिक ऋणात्मक",
+   "विशेष धनात्मक",
+   "विशेष ऋणात्मक"
+  ],
+  "o_en": [
+   "Universal Affirmative",
+   "Universal Negative",
+   "Particular Affirmative",
+   "Particular Negative"
+  ],
+  "a": 1,
+  "e_hi": "A = सार्वभौमिक धनात्मक (All), E = सार्वभौमिक ऋणात्मक (No), I = विशेष धनात्मक (Some), O = विशेष ऋणात्मक (Some not).",
+  "e_en": "A = Universal Affirmative (All), E = Universal Negative (No), I = Particular Affirmative (Some), O = Particular Negative (Some not)."
  }
 ]
