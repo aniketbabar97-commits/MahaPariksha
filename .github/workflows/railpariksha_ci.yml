@@ -43,9 +43,16 @@ jobs:
         # is the PR's *original* base and would diff the whole PR's lifetime
         # history on every push, not just what this push actually changed.
         # Falls back to base.sha only when before is unset (PR just opened).
+        # workflow_dispatch has neither -- it's a manual "build me an APK now"
+        # request, so always treat it as app=true rather than diffing.
         env:
           BASE_SHA: ${{ github.event.before || github.event.pull_request.base.sha }}
+          IS_DISPATCH: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
+          if [ "$IS_DISPATCH" = "true" ]; then
+            echo "app=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git fetch --depth=1 origin "$BASE_SHA"
           CHANGED=$(git diff --name-only "$BASE_SHA" HEAD)
           echo "$CHANGED"
@@ -76,9 +83,9 @@ jobs:
       # bulk of pushes, from the content-gen pipeline) are fully covered by
       # analyze+test above. The signed release APK itself comes from
       # railpariksha_release.yml on a version tag, not from this check.
-      - if: needs.changes.outputs.app == 'true' || github.event_name == 'workflow_dispatch'
+      - if: needs.changes.outputs.app == 'true'
         run: flutter build apk --release --split-per-abi
-      - if: needs.changes.outputs.app == 'true' || github.event_name == 'workflow_dispatch'
+      - if: needs.changes.outputs.app == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: railpariksha-apk
