@@ -33,18 +33,22 @@ if ! running "bulk_questions.py.*--subjects reasoning "; then
   disown
 fi
 
-if ! running "bulk_questions.py.*--subjects maths "; then
-  # gemini-3.8-flash on this key was silently hitting its 20-requests/day
-  # cap every restart for 9 hours straight -- gemini-3.1-flash-lite on the
-  # same key confirmed working (quota is per-model, not just per-key).
+if ! running "bulk_questions.py.*science,je_mechanical"; then
+  # maths hit its 311/topic target on all 15 topics and exited cleanly, so
+  # this slot (GEMINI_API_KEY, gemini-3.1-flash-lite) was redeployed to the
+  # two subjects furthest behind target instead of sitting idle.
   nohup python3 bulk_questions.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY --max-calls 3000 \
-    --subjects maths --id-prefix-suffix g > "$LOGS/maths.log" 2>&1 &
+    --subjects science,je_mechanical --id-prefix-suffix h > "$LOGS/science_jemech.log" 2>&1 &
   disown
 fi
 
-if ! running "bulk_questions.py.*je_mechanical,je_civil,science,english"; then
+if ! running "bulk_questions.py.*je_civil,english"; then
+  # Split off from the original 4-subject je_gaps worker (je_mechanical,
+  # je_civil,science,english sharing one key/process) into two 2-subject
+  # workers on separate keys, so all 4 gap subjects get parallel throughput
+  # instead of round-robining one call at a time.
   nohup python3 bulk_questions.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY2 --max-calls 3000 \
-    --subjects je_mechanical,je_civil,science,english --id-prefix-suffix f > "$LOGS/je_gaps.log" 2>&1 &
+    --subjects je_civil,english --id-prefix-suffix f > "$LOGS/jecivil_english.log" 2>&1 &
   disown
 fi
 
