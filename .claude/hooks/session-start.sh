@@ -28,13 +28,13 @@ cd "$GEN" || exit 0
 running() { pgrep -f "$1" >/dev/null 2>&1; }
 
 if ! running "bulk_flashcards.py.*maths,reasoning,science"; then
-  nohup python3 bulk_flashcards.py --provider groq --model qwen/qwen3.8-27b --max-calls 600 --target 20 \
+  nohup python3 bulk_flashcards.py --provider groq --model openai/gpt-oss-120b --max-calls 600 --target 20 \
     --subjects maths,reasoning,science > "$LOGS/fc1.log" 2>&1 &
   disown
 fi
 
 if ! running "bulk_flashcards.py.*gk,railway_gk,computer"; then
-  nohup python3 bulk_flashcards.py --provider gemini --model gemini-3.1-flash-lite --gemini-key-env GEMINI_API_KEY --max-calls 600 --target 20 \
+  nohup python3 bulk_flashcards.py --provider gemini --model gemini-flash-lite-latest --gemini-key-env GEMINI_API_KEY --max-calls 600 --target 20 \
     --subjects gk,railway_gk,computer > "$LOGS/fc2.log" 2>&1 &
   disown
 fi
