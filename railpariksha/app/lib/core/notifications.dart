@@ -37,8 +37,10 @@ class RailParikshaNotifications {
     ),
   );
 
-  /// [id] 1 = morning Daily 10 nudge, 2 = evening streak nudge. [title]/[body]
-  /// are already resolved to the user's chosen language by the caller.
+  /// [id] 1 = morning Daily 10 nudge, 2 = evening streak nudge, 3 = conditional
+  /// midday high-intent ping (only scheduled when reminders.dart finds a real
+  /// reason to). [title]/[body] are already resolved to the user's chosen
+  /// language by the caller.
   static Future<void> scheduleDaily({
     required int id,
     required int hour,

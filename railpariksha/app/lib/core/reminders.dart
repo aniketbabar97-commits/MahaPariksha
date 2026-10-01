@@ -17,8 +17,12 @@ import '../data/progress.dart';
 /// picked deterministically off today's day-index so the copy rotates day
 /// to day instead of going stale, while staying stable if this function
 /// gets called more than once on the same day (e.g. toggling a setting).
-/// Still just 2 notifications/day -- punchier copy beats generic copy, but
-/// more notifications than that costs more in uninstalls than it gains.
+///
+/// Morning and evening (ids 1-2) fire every day. A third, midday ping (id 3)
+/// is conditional, not blanket -- it only fires when there's a genuine
+/// high-intent reason to (exam within a week, a streak not yet saved today,
+/// or a real mistake backlog), so the extra volume is a real signal, not
+/// noise padding toward 3/day regardless of relevance.
 String _tr(Progress p, String hi, String en) => p.lang == 'en' ? en : hi;
 
 (String, String) _pick(Progress p, List<(String, String, String, String)> variants) {
@@ -47,6 +51,53 @@ Future<void> applyReminders(Progress p) async {
     title: evening.$1,
     body: evening.$2,
   );
+
+  final midday = _middayMessage(p, days);
+  if (midday != null) {
+    final middayHour = (p.reminderHour + 6) % 24;
+    await RailParikshaNotifications.scheduleDaily(
+      id: 3,
+      hour: middayHour,
+      title: midday.$1,
+      body: midday.$2,
+    );
+  }
+}
+
+/// Only returns a message (and so only fires id 3) when there's a genuine
+/// high-intent reason -- not sent unconditionally like the morning/evening pair.
+(String, String)? _middayMessage(Progress p, int? days) {
+  if (days != null && days <= 7) {
+    return (
+      _tr(p, '$days दिन! दोपहर का रिवीज़न छोड़ा मत! ⏰', "$days days left! Don't skip your midday revision! ⏰"),
+      _tr(p, 'आखिरी हफ्तों में हर सेशन मायने रखता है।', 'Every session counts in these final weeks.'),
+    );
+  }
+  final streak = p.liveStreak;
+  if (streak >= 3 && !p.activeToday) {
+    return _pick(p, [
+      (
+        '$streak दिन की स्ट्रीक अभी बचाओ! 🔥',
+        'Save your $streak-day streak right now! 🔥',
+        'आज अभी तक कुछ नहीं किया — एक क्विज़ खेलो!',
+        "You haven't practiced today yet -- play one quiz!",
+      ),
+      (
+        'दोपहर हो गई, स्ट्रीक का क्या? ⏳',
+        'It\'s midday -- what about your streak? ⏳',
+        '$streak दिन बचाने के लिए बस एक क्विज़ चाहिए।',
+        'Just one quiz saves your $streak-day streak.',
+      ),
+    ]);
+  }
+  final mistakes = p.mistakes.length;
+  if (mistakes >= 10) {
+    return (
+      _tr(p, '$mistakes गलतियां जमा हो गई हैं 😬', '$mistakes mistakes have piled up 😬'),
+      _tr(p, 'Mistake Book खोलो और आज ही साफ़ करो!', 'Open your Mistake Book and clear it today!'),
+    );
+  }
+  return null;
 }
 
 (String, String) _morningMessage(Progress p, int? days) {
