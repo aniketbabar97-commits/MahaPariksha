@@ -19,9 +19,35 @@ jobs:
         with: { python-version: "3.12" }
       - run: python pipeline/validate.py
 
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      app: ${{ steps.filter.outputs.app }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      # GitHub's own pull_request path filter (above) diffs against the PR's
+      # base branch, which accumulates the WHOLE PR's history -- once any
+      # commit touches app/content/pipeline/docs, the trigger-level filter
+      # stays true for every later push, even pure-railpariksha-content ones.
+      # Diffing against event.before (this push's actual previous head)
+      # instead gives the real per-push answer, with no extra permissions.
+      - id: filter
+        env:
+          BASE_SHA: ${{ github.event.before || github.event.pull_request.base.sha }}
+        run: |
+          git fetch --depth=1 origin "$BASE_SHA"
+          CHANGED=$(git diff --name-only "$BASE_SHA" HEAD)
+          echo "$CHANGED"
+          if echo "$CHANGED" | grep -qE '^(app/|pipeline/|\.github/workflows/ci\.yml)'; then
+            echo "app=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "app=false" >> "$GITHUB_OUTPUT"
+          fi
+
   app:
     runs-on: ubuntu-latest
-    needs: content
+    needs: [content, changes]
     defaults: { run: { working-directory: app } }
     steps:
       - uses: actions/checkout@v4
@@ -35,8 +61,12 @@ jobs:
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test
-      - run: flutter build apk --release --split-per-abi
-      - uses: actions/upload-artifact@v4
+      # Full release build only needs to re-run when app/pipeline code
+      # actually changed since the last push -- see the `changes` job above.
+      - if: needs.changes.outputs.app == 'true'
+        run: flutter build apk --release --split-per-abi
+      - if: needs.changes.outputs.app == 'true'
+        uses: actions/upload-artifact@v4
         with:
           name: bharari-apk
           path: app/build/app/outputs/flutter-apk/*.apk
