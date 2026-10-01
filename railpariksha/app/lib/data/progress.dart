@@ -88,6 +88,7 @@ class Progress extends ChangeNotifier {
   // Settings
   bool onboarded = false;
   String lang = 'hi';
+  String name = '';
   String? examId;
   int dailyGoal = 20;
   DateTime? examDate;
@@ -132,6 +133,7 @@ class Progress extends ChangeNotifier {
   void _fromJson(Map<String, dynamic> j) {
     onboarded = j['onboarded'] ?? false;
     lang = j['lang'] ?? 'hi';
+    name = j['name'] ?? '';
     examId = j['examId'];
     dailyGoal = j['dailyGoal'] ?? 20;
     examDate = j['examDate'] != null ? DateTime.tryParse(j['examDate']) : null;
@@ -159,6 +161,7 @@ class Progress extends ChangeNotifier {
   Map<String, dynamic> _toJson() => {
         'onboarded': onboarded,
         'lang': lang,
+        'name': name,
         'examId': examId,
         'dailyGoal': dailyGoal,
         'examDate': examDate?.toIso8601String(),

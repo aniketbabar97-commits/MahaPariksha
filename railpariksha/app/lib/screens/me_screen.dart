@@ -7,6 +7,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/notifications.dart';
 import '../core/reminders.dart';
+import '../data/progress.dart';
 import '../widgets/common.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
@@ -27,6 +28,8 @@ class MeScreen extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
       children: [
         Text(context.tr('मैं 🙋', 'Me 🙋'), style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
+        const SizedBox(height: 12),
+        if (exam != null) _IdCard(p: p, examName: exam.name.of(lang)),
         SectionTitle(context.tr('मेरी तैयारी 🎯', 'My preparation 🎯')),
         Card(
           child: Column(children: [
@@ -212,6 +215,83 @@ class MeScreen extends StatelessWidget {
           child: Text(context.tr('प्रगति रीसेट करें', 'Reset progress')),
         ),
       ],
+    );
+  }
+}
+
+/// A railway-style aspirant ID card: name + the exact post they're training for,
+/// styled like an official ID badge. Motivational framing -- "you're already on
+/// your way to becoming X" -- rather than just another stats widget. Tapping the
+/// name when empty prompts for one; tapping it again lets them change it.
+class _IdCard extends StatelessWidget {
+  final Progress p;
+  final String examName;
+  const _IdCard({required this.p, required this.examName});
+
+  Future<void> _editName(BuildContext context) async {
+    final controller = TextEditingController(text: p.name);
+    final result = await showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(ctx.tr('अपना नाम लिखें', 'Enter your name')),
+        content: TextField(
+          controller: controller,
+          autofocus: true,
+          textCapitalization: TextCapitalization.words,
+          decoration: InputDecoration(hintText: ctx.tr('जैसे रोहित शर्मा', 'e.g. Rohit Sharma')),
+          onSubmitted: (v) => Navigator.pop(ctx, v),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(ctx.tr('रद्द करें', 'Cancel'))),
+          FilledButton(onPressed: () => Navigator.pop(ctx, controller.text), child: Text(ctx.tr('सहेजें', 'Save'))),
+        ],
+      ),
+    );
+    if (result != null) {
+      p.update((p) => p.name = result.trim());
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final lang = context.lang;
+    final displayName = p.name.isEmpty ? context.tr('अभ्यर्थी', 'Aspirant') : p.name;
+    // Stable per-device "ID number" -- not a real identifier, just a badge
+    // detail that stays the same across app restarts instead of re-randomizing.
+    final idNumber = 100000 + (p.examId.hashCode.abs() % 900000);
+    return InkWell(
+      borderRadius: BorderRadius.circular(20),
+      onTap: () => _editName(context),
+      child: Container(
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(gradient: BrandColors.heroGradient, borderRadius: BorderRadius.circular(20)),
+        child: Row(children: [
+          Container(
+            width: 56,
+            height: 56,
+            decoration: const BoxDecoration(color: Colors.white24, shape: BoxShape.circle),
+            child: const Icon(Icons.badge, color: Colors.white, size: 30),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(context.tr('भारतीय रेलवे अभ्यर्थी', 'Indian Railways Aspirant'),
+                  style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w700, letterSpacing: 0.5)),
+              const SizedBox(height: 2),
+              Text(displayName,
+                  style: const TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.w900)),
+              const SizedBox(height: 2),
+              Text(examName,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
+              const SizedBox(height: 4),
+              Text('ID #$idNumber', style: const TextStyle(color: Colors.white54, fontSize: 11)),
+            ]),
+          ),
+          const Icon(Icons.edit, color: Colors.white54, size: 18),
+        ]),
+      ),
     );
   }
 }
