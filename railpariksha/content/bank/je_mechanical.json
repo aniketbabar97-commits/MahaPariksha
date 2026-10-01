@@ -11015,5 +11015,465 @@
   "a": 0,
   "e_hi": "लियोनार्ड यूलर ने 1750 के दशक के दौरान डैनियल बर्नौली के साथ मिलकर बीम के विक्षेपण के सिद्धांत को विकसित किया।",
   "e_en": "Leonhard Euler, working with Daniel Bernoulli, developed the theory of beam deflection during the 1750s."
+ },
+ {
+  "id": "rp-je_-h00480",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "यदि किसी पिंड पर कार्य करने वाले सभी बलों का परिणामी शून्य है, तो पिंड की स्थिति के बारे में क्या निष्कर्ष निकाला जा सकता है?",
+  "q_en": "If the resultant of all forces acting on a body is zero, what can be concluded about the state of the body?",
+  "o_hi": [
+   "पिंड केवल स्थिर अवस्था में हो सकता है",
+   "पिंड या तो स्थिर अवस्था में है या निरंतर वेग से गतिमान है",
+   "पिंड का त्वरण शून्य नहीं हो सकता",
+   "पिंड पर कोई बल कार्य नहीं कर रहा है"
+  ],
+  "o_en": [
+   "The body must be in a state of rest",
+   "The body is either at rest or moving with constant velocity",
+   "The acceleration of the body cannot be zero",
+   "No forces are acting on the body"
+  ],
+  "a": 1,
+  "e_hi": "न्यूटन के प्रथम नियम के अनुसार, यदि शुद्ध बल शून्य है, तो वस्तु अपनी गति की अवस्था को नहीं बदलेगी।",
+  "e_en": "According to Newton's First Law, if the net force is zero, the object will not change its state of motion (equilibrium)."
+ },
+ {
+  "id": "rp-je_-h00481",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "घर्षण बल हमेशा किस दिशा में कार्य करता है?",
+  "q_en": "In which direction does the frictional force always act?",
+  "o_hi": [
+   "गति की दिशा में",
+   "गति की दिशा के विपरीत",
+   "सतह के लंबवत",
+   "गुरुत्वाकर्षण की दिशा में"
+  ],
+  "o_en": [
+   "In the direction of motion",
+   "Opposite to the direction of motion",
+   "Perpendicular to the surface",
+   "In the direction of gravity"
+  ],
+  "a": 1,
+  "e_hi": "घर्षण बल वह बल है जो संपर्क में दो सतहों के बीच सापेक्ष गति का विरोध करता है।",
+  "e_en": "Frictional force is the force that opposes the relative motion between two surfaces in contact."
+ },
+ {
+  "id": "rp-je_-h00482",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "यदि एक बीम पर भार (load) को दोगुना कर दिया जाए, तो बीम के विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the load on a beam is doubled, what will be the effect on the deflection of the beam?",
+  "o_hi": [
+   "विक्षेपण आधा हो जाएगा",
+   "विक्षेपण दोगुना हो जाएगा",
+   "विक्षेपण चार गुना हो जाएगा",
+   "कोई परिवर्तन नहीं होगा"
+  ],
+  "o_en": [
+   "Deflection will become half",
+   "Deflection will double",
+   "Deflection will become four times",
+   "No change"
+  ],
+  "a": 1,
+  "e_hi": "सरल बीम के लिए, विक्षेपण सीधे भार के समानुपाती होता है (delta = PL^3/48EI)।",
+  "e_en": "For a simple beam, deflection is directly proportional to the applied load (delta = PL^3/48EI)."
+ },
+ {
+  "id": "rp-je_-h00483",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "एक वस्तु का जड़त्व आघूर्ण (Moment of Inertia) किस पर निर्भर करता है?",
+  "q_en": "What does the moment of inertia of an object depend upon?",
+  "o_hi": [
+   "केवल वस्तु के द्रव्यमान पर",
+   "केवल वस्तु के आकार पर",
+   "द्रव्यमान के वितरण और घूर्णन अक्ष पर",
+   "वस्तु के वेग पर"
+  ],
+  "o_en": [
+   "Only on the mass of the object",
+   "Only on the shape of the object",
+   "On the distribution of mass and the axis of rotation",
+   "On the velocity of the object"
+  ],
+  "a": 2,
+  "e_hi": "जड़त्व आघूर्ण घूर्णन अक्ष के सापेक्ष द्रव्यमान के वितरण का माप है।",
+  "e_en": "Moment of inertia is a measure of the distribution of mass relative to the axis of rotation."
+ },
+ {
+  "id": "rp-je_-h00484",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "यदि किसी प्रणाली में कार्य (Work) शून्य है, तो इसका क्या कारण हो सकता है?",
+  "q_en": "If the work done in a system is zero, what could be the reason?",
+  "o_hi": [
+   "विस्थापन शून्य है",
+   "बल शून्य है",
+   "बल विस्थापन के लंबवत है",
+   "उपरोक्त सभी"
+  ],
+  "o_en": [
+   "Displacement is zero",
+   "Force is zero",
+   "Force is perpendicular to displacement",
+   "All of the above"
+  ],
+  "a": 3,
+  "e_hi": "कार्य = बल * विस्थापन * cos(theta)। यदि बल, विस्थापन या उनका कोण 90 डिग्री है, तो कार्य शून्य होगा।",
+  "e_en": "Work = Force * Displacement * cos(theta). If force, displacement, or the angle is 90 degrees, the work is zero."
+ },
+ {
+  "id": "rp-je_-h00485",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "ट्रस (Truss) के विश्लेषण में, 'जीरो फोर्स मेंबर' (Zero force member) की पहचान क्यों की जाती है?",
+  "q_en": "In the analysis of a truss, why is a 'zero force member' identified?",
+  "o_hi": [
+   "संरचना को मजबूत करने के लिए",
+   "भार वहन करने की क्षमता बढ़ाने के लिए",
+   "संरचना की स्थिरता बनाए रखने के लिए",
+   "अनावश्यक वजन कम करने के लिए"
+  ],
+  "o_en": [
+   "To strengthen the structure",
+   "To increase load bearing capacity",
+   "To maintain stability of the structure",
+   "To reduce unnecessary weight"
+  ],
+  "a": 2,
+  "e_hi": "जीरो फोर्स मेंबर भार नहीं ले जाते हैं, लेकिन वे संरचनात्मक स्थिरता बनाए रखने और बकलिंग को रोकने के लिए आवश्यक हो सकते हैं।",
+  "e_en": "Zero force members do not carry load, but they are often necessary to maintain structural stability and prevent buckling."
+ },
+ {
+  "id": "rp-je_-h00486",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "एक गतिमान वस्तु का संवेग (Momentum) दोगुना करने पर उसकी गतिज ऊर्जा (Kinetic Energy) में क्या परिवर्तन होगा?",
+  "q_en": "If the momentum of a moving object is doubled, what will be the change in its kinetic energy?",
+  "o_hi": [
+   "दोगुनी हो जाएगी",
+   "चार गुनी हो जाएगी",
+   "आधी हो जाएगी",
+   "समान रहेगी"
+  ],
+  "o_en": [
+   "It will double",
+   "It will become four times",
+   "It will become half",
+   "It will remain the same"
+  ],
+  "a": 1,
+  "e_hi": "गतिज ऊर्जा (KE) = p^2 / 2m होता है। यदि संवेग (p) दोगुना किया जाता है, तो KE चार गुना हो जाएगी।",
+  "e_en": "Kinetic Energy (KE) = p^2 / 2m. If momentum (p) is doubled, KE becomes four times."
+ },
+ {
+  "id": "rp-je_-h00487",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "कैनिलीवर बीम के मुक्त सिरे पर बिंदु भार के कारण अधिकतम बेंडिंग मोमेंट कहाँ होता है?",
+  "q_en": "Where does the maximum bending moment occur in a cantilever beam due to a point load at the free end?",
+  "o_hi": [
+   "मुक्त सिरे पर",
+   "बीम के मध्य में",
+   "फिक्स्ड सपोर्ट (दीवार) पर",
+   "कहीं नहीं"
+  ],
+  "o_en": [
+   "At the free end",
+   "At the center of the beam",
+   "At the fixed support",
+   "Nowhere"
+  ],
+  "a": 2,
+  "e_hi": "कैनिलीवर बीम में, अधिकतम बेंडिंग मोमेंट हमेशा फिक्स्ड सपोर्ट पर होता है क्योंकि वहां लीवर आर्म सबसे अधिक होता है।",
+  "e_en": "In a cantilever beam, the maximum bending moment is always at the fixed support because the lever arm is largest there."
+ },
+ {
+  "id": "rp-je_-h00488",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "यदि किसी वस्तु का गुरुत्व केंद्र (Center of Gravity) उसके आधार के बाहर निकल जाता है, तो क्या होगा?",
+  "q_en": "What will happen if the center of gravity of an object moves outside its base?",
+  "o_hi": [
+   "वस्तु स्थिर रहेगी",
+   "वस्तु पलट जाएगी",
+   "वस्तु ऊपर की ओर उठेगी",
+   "कुछ नहीं होगा"
+  ],
+  "o_en": [
+   "The object will remain stable",
+   "The object will topple",
+   "The object will move upwards",
+   "Nothing will happen"
+  ],
+  "a": 1,
+  "e_hi": "स्थिरता के लिए, गुरुत्व केंद्र से नीचे की ओर जाने वाली रेखा वस्तु के आधार के भीतर होनी चाहिए।",
+  "e_en": "For stability, the vertical line passing through the center of gravity must fall within the base of the object."
+ },
+ {
+  "id": "rp-je_-h00489",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "एक आदर्श मशीन की दक्षता (Efficiency) कितनी होती है?",
+  "q_en": "What is the efficiency of an ideal machine?",
+  "o_hi": [
+   "50 प्रतिशत",
+   "75 प्रतिशत",
+   "100 प्रतिशत",
+   "शून्य"
+  ],
+  "o_en": [
+   "50 percent",
+   "75 percent",
+   "100 percent",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "एक आदर्श मशीन वह है जिसमें कोई घर्षण या ऊर्जा का नुकसान नहीं होता, इसलिए इनपुट कार्य आउटपुट कार्य के बराबर होता है।",
+  "e_en": "An ideal machine is one with no friction or energy loss, meaning input work equals output work (100% efficiency)."
+ },
+ {
+  "id": "rp-je_-h00490",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "घर्षण गुणांक (Coefficient of friction) का मान किसके बीच होता है?",
+  "q_en": "What is the typical range for the coefficient of friction?",
+  "o_hi": [
+   "0 से 1 के बीच",
+   "हमेशा 1 से अधिक",
+   "हमेशा 0 से कम",
+   "अनंत"
+  ],
+  "o_en": [
+   "Between 0 and 1",
+   "Always greater than 1",
+   "Always less than 0",
+   "Infinite"
+  ],
+  "a": 0,
+  "e_hi": "घर्षण गुणांक आमतौर पर 0 और 1 के बीच होता है, जहाँ 0 घर्षण रहित सतह को दर्शाता है।",
+  "e_en": "The coefficient of friction typically ranges between 0 and 1, where 0 represents a frictionless surface."
+ },
+ {
+  "id": "rp-je_-h00491",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "समान परिमाण वाले दो बल जो विपरीत दिशा में कार्य करते हैं, क्या बनाते हैं?",
+  "q_en": "Two equal forces acting in opposite directions form what?",
+  "o_hi": [
+   "एक युग्म (Couple)",
+   "संतुलन (Equilibrium)",
+   "परिवर्तनीय बल",
+   "शून्य बल"
+  ],
+  "o_en": [
+   "A couple",
+   "Equilibrium",
+   "Variable force",
+   "Zero force"
+  ],
+  "a": 0,
+  "e_hi": "समान और विपरीत बल जो एक ही रेखा पर कार्य नहीं करते, एक युग्म बनाते हैं जो वस्तु को घुमाने की प्रवृत्ति रखता है।",
+  "e_en": "Equal and opposite forces that do not act along the same line form a couple, which tends to rotate the body."
+ },
+ {
+  "id": "rp-je_-h00492",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन सी एक अदिश राशि (Scalar quantity) है?",
+  "q_en": "Which of the following is a scalar quantity?",
+  "o_hi": [
+   "द्रव्यमान (Mass)",
+   "वेग (Velocity)",
+   "बल (Force)",
+   "त्वरण (Acceleration)"
+  ],
+  "o_en": [
+   "Mass",
+   "Velocity",
+   "Force",
+   "Acceleration"
+  ],
+  "a": 0,
+  "e_hi": "द्रव्यमान में केवल परिमाण होता है, दिशा नहीं, इसलिए यह एक अदिश राशि है।",
+  "e_en": "Mass has only magnitude and no direction, hence it is a scalar quantity."
+ },
+ {
+  "id": "rp-je_-h00493",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "संरक्षी बल (Conservative force) का सबसे अच्छा उदाहरण कौन सा है?",
+  "q_en": "Which of the following is the best example of a conservative force?",
+  "o_hi": [
+   "गुरुत्वाकर्षण बल",
+   "घर्षण बल",
+   "श्यान बल (Viscous force)",
+   "वायु प्रतिरोध"
+  ],
+  "o_en": [
+   "Gravitational force",
+   "Frictional force",
+   "Viscous force",
+   "Air resistance"
+  ],
+  "a": 0,
+  "e_hi": "गुरुत्वाकर्षण बल एक संरक्षी बल है क्योंकि इसके द्वारा किया गया कार्य पथ पर निर्भर नहीं करता।",
+  "e_en": "Gravitational force is a conservative force because the work done by it is independent of the path taken."
+ },
+ {
+  "id": "rp-je_-h00494",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "पिंड के जड़त्व आघूर्ण (Moment of Inertia) का मात्रक क्या है?",
+  "q_en": "What is the unit of Moment of Inertia of a body?",
+  "o_hi": [
+   "किलोग्राम-मीटर वर्ग (kg-m²)",
+   "किलोग्राम-मीटर (kg-m)",
+   "न्यूटन-मीटर (N-m)",
+   "जूल (J)"
+  ],
+  "o_en": [
+   "kilogram-meter squared (kg-m²)",
+   "kilogram-meter (kg-m)",
+   "Newton-meter (N-m)",
+   "Joule (J)"
+  ],
+  "a": 0,
+  "e_hi": "जड़त्व आघूर्ण का सूत्र I = mr² है, इसलिए इसका मात्रक kg-m² होता है।",
+  "e_en": "The formula for Moment of Inertia is I = mr², therefore its unit is kg-m²."
+ },
+ {
+  "id": "rp-je_-h00495",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 2,
+  "q_hi": "किसी वस्तु का केंद्र (Centroid) हमेशा कहाँ स्थित होता है?",
+  "q_en": "Where is the centroid of an object always located?",
+  "o_hi": [
+   "वस्तु के ज्यामितीय केंद्र पर",
+   "हमेशा वस्तु के अंदर",
+   "हमेशा वस्तु के बाहर",
+   "केवल द्रव्यमान केंद्र पर"
+  ],
+  "o_en": [
+   "At the geometric center of the object",
+   "Always inside the object",
+   "Always outside the object",
+   "Only at the center of mass"
+  ],
+  "a": 0,
+  "e_hi": "केंद्रक या सेंट्रोइड वह बिंदु है जो किसी आकार के ज्यामितीय केंद्र का प्रतिनिधित्व करता है।",
+  "e_en": "The centroid is the point that represents the geometric center of a shape."
+ },
+ {
+  "id": "rp-je_-h00496",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "स्थैतिक घर्षण (Static friction) और गतिज घर्षण (Kinetic friction) में क्या संबंध है?",
+  "q_en": "What is the relationship between static friction and kinetic friction?",
+  "o_hi": [
+   "स्थैतिक घर्षण हमेशा गतिज घर्षण से अधिक होता है",
+   "स्थैतिक घर्षण हमेशा गतिज घर्षण से कम होता है",
+   "दोनों हमेशा बराबर होते हैं",
+   "इनका कोई संबंध नहीं है"
+  ],
+  "o_en": [
+   "Static friction is always greater than kinetic friction",
+   "Static friction is always less than kinetic friction",
+   "Both are always equal",
+   "They have no relation"
+  ],
+  "a": 0,
+  "e_hi": "वस्तु को गति में लाने के लिए आवश्यक बल (स्थैतिक) गति को बनाए रखने वाले घर्षण (गतिज) से अधिक होता है।",
+  "e_en": "The force required to initiate motion (static) is greater than the friction that resists ongoing motion (kinetic)."
+ },
+ {
+  "id": "rp-je_-h00497",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "हुक का नियम (Hooke's Law) किसके बीच संबंध बताता है?",
+  "q_en": "Hooke's Law defines the relationship between which parameters?",
+  "o_hi": [
+   "प्रतिबल और विकृति",
+   "बल और वेग",
+   "दबाव और तापमान",
+   "कार्य और ऊर्जा"
+  ],
+  "o_en": [
+   "Stress and Strain",
+   "Force and Velocity",
+   "Pressure and Temperature",
+   "Work and Energy"
+  ],
+  "a": 0,
+  "e_hi": "हुक का नियम कहता है कि प्रत्यास्थ सीमा के भीतर, प्रतिबल सीधे विकृति के समानुपाती होता है।",
+  "e_en": "Hooke's Law states that within the elastic limit, stress is directly proportional to strain."
+ },
+ {
+  "id": "rp-je_-h00498",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 1,
+  "q_hi": "बल की इकाई क्या है और यह कैसी राशि है?",
+  "q_en": "What is the unit of force and what type of quantity is it?",
+  "o_hi": [
+   "न्यूटन, सदिश राशि",
+   "जूल, अदिश राशि",
+   "वाट, सदिश राशि",
+   "पास्कल, अदिश राशि"
+  ],
+  "o_en": [
+   "Newton, vector quantity",
+   "Joule, scalar quantity",
+   "Watt, vector quantity",
+   "Pascal, scalar quantity"
+  ],
+  "a": 0,
+  "e_hi": "बल की इकाई न्यूटन है और क्योंकि इसमें दिशा और परिमाण दोनों होते हैं, यह एक सदिश राशि है।",
+  "e_en": "The unit of force is Newton, and since it has both direction and magnitude, it is a vector quantity."
+ },
+ {
+  "id": "rp-je_-h00499",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics",
+  "d": 3,
+  "q_hi": "यदि किसी वस्तु पर कोई बाहरी बल न लगे, तो उसका संवेग (Momentum) कैसा रहता है?",
+  "q_en": "If no external force acts on an object, what happens to its momentum?",
+  "o_hi": [
+   "संरक्षित रहता है (Conserved)",
+   "शून्य हो जाता है",
+   "बढ़ता रहता है",
+   "घटता रहता है"
+  ],
+  "o_en": [
+   "Remains conserved",
+   "Becomes zero",
+   "Keeps increasing",
+   "Keeps decreasing"
+  ],
+  "a": 0,
+  "e_hi": "न्यूटन के दूसरे नियम के अनुसार, बाहरी बल की अनुपस्थिति में संवेग में परिवर्तन शून्य होता है।",
+  "e_en": "According to Newton's second law, in the absence of an external force, the change in momentum is zero."
  }
 ]
