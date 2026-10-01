@@ -7,20 +7,28 @@ AdMob App ID: `ca-app-pub-9100209280220037~3428622385`
 - **Banner** — bottom of the Progress screen only. Never shown on a
   quiz-taking screen (mock, practice, Beast Mode, flashcards) where it would
   interrupt focus.
-- **Interstitial** — shown once, on the Results screen, only after a
-  **mock test** (`QuizMode.mock`) — not after Daily 10, practice, or Beast
-  Mode, to keep frequency tasteful for a serious daily-use study tool.
-  Preloaded when the mock starts (`quiz_screen.dart` initState) so it's
-  usually ready by the time results appear; if it isn't ready in time, it's
-  silently skipped rather than delaying the results screen.
+- **Interstitial** — only after a **mock test** (`QuizMode.mock`), on the
+  Results screen — not after Daily 10, practice, or Beast Mode. Frequency is
+  capped (`InterstitialAdManager.shouldShowForMockCount`): the first 2 mocks
+  a user ever takes are always ad-free (protects first-session retention
+  while the daily habit is still forming), then it shows on every other mock
+  after that — an ad on literally every mock would fatigue the most engaged
+  users, who take several a day. Preloaded when the mock starts
+  (`quiz_screen.dart` initState) so it's usually ready by the time results
+  appear; if it isn't ready in time, or this mock falls in a skipped slot,
+  it's silently skipped rather than delaying the results screen.
+- **Rewarded** — opt-in only, from a card on the Progress screen, offering
+  one streak-freeze token (capped at 2, see `Progress.freezeTokens`) per
+  watch, shown only while the user is below that cap. This is a user-
+  requested exchange rather than a forced interruption, and opt-in rewarded
+  ads typically carry a higher eCPM than interstitials — preferred over
+  interstitials wherever a genuine reward moment exists in the UI.
 
 ## Reserved, not yet wired anywhere
 
-Ad unit IDs exist in `lib/core/ads_config.dart` for **Rewarded**,
-**Rewarded Interstitial**, **Native**, and **App Open**, but nothing in the
-app shows them yet. Candidate future uses:
-- Rewarded: "watch an ad for one extra Beast Mode retry" or similar --
-  ties into the existing Beast Mode replay flow.
+Ad unit IDs exist in `lib/core/ads_config.dart` for **Rewarded
+Interstitial**, **Native**, and **App Open**, but nothing in the app shows
+them yet. Candidate future uses:
 - App Open: has to be used sparingly (not on every cold start) to avoid
   feeling intrusive -- needs its own design pass before wiring up.
 - Native: would need an in-feed placement (e.g. between practice topic

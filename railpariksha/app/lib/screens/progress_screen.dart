@@ -153,6 +153,10 @@ class ProgressScreen extends StatelessWidget {
               label: Text(lang == 'en' ? b.$2 : b.$1),
             ),
         ]),
+        if (p.freezeTokens < 2) ...[
+          const SizedBox(height: 12),
+          _FreezeTokenCard(p: p),
+        ],
         const SizedBox(height: 16),
         const Center(child: AdBanner()),
       ],
@@ -174,6 +178,48 @@ class ProgressScreen extends StatelessWidget {
         ('स्पीडस्टार', 'Speedster', p.bestSpeed >= 15),
         ('गलतियों पर जीत', 'Mistake crusher', p.totalAnswered >= 50 && p.mistakes.isEmpty),
       ];
+}
+
+/// Lets the user top up a streak-freeze token (capped at 2, see
+/// [Progress.freezeTokens]) by watching a short rewarded ad -- an opt-in
+/// exchange shown only while they're below the cap, so it never nags
+/// someone who already has freezes banked. Freeze tokens otherwise only
+/// come from a 7-day streak milestone, so this is the one way to get one
+/// on demand right before a day you know you'll miss.
+class _FreezeTokenCard extends StatelessWidget {
+  final Progress p;
+  const _FreezeTokenCard({required this.p});
+
+  @override
+  Widget build(BuildContext context) {
+    RewardedAdManager.preload();
+    return Card(
+      child: ListTile(
+        leading: const Icon(Icons.ac_unit, color: BrandColors.saffron),
+        title: Text(context.tr('स्ट्रीक फ्रीज़ कमाएं ❄️', 'Earn a streak freeze ❄️')),
+        subtitle: Text(context.tr(
+            'एक छोटा विज्ञापन देखें और एक दिन मिस होने पर भी स्ट्रीक बचाने वाला टोकन पाएं',
+            'Watch a short ad to earn a token that saves your streak if you miss a day')),
+        trailing: FilledButton.icon(
+          icon: const Icon(Icons.play_circle_outline, size: 18),
+          label: Text(context.tr('देखें', 'Watch')),
+          onPressed: () {
+            final shown = RewardedAdManager.showIfReady(onReward: () {
+              p.update((pr) => pr.freezeTokens = (pr.freezeTokens + 1).clamp(0, 2));
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text(context.tr('फ्रीज़ टोकन मिला! ❄️', 'Freeze token earned! ❄️'))));
+            });
+            if (!shown) {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(
+                      context.tr('विज्ञापन अभी तैयार नहीं है, कृपया थोड़ी देर बाद कोशिश करें',
+                          'Ad isn\'t ready yet -- please try again shortly'))));
+            }
+          },
+        ),
+      ),
+    );
+  }
 }
 
 class _Stat extends StatelessWidget {

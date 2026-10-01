@@ -46,8 +46,11 @@ class _ResultsScreenState extends State<ResultsScreen> {
       p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));
       // Natural break point: results are already recorded, so showing (or
       // skipping, if not preloaded in time) the ad here never blocks or
-      // delays anything the user is waiting on.
-      InterstitialAdManager.showIfReady();
+      // delays anything the user is waiting on. Frequency-capped per
+      // InterstitialAdManager.shouldShowForMockCount -- see its doc comment.
+      if (InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
+        InterstitialAdManager.showIfReady();
+      }
     }
   }
 

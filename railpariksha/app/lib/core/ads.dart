@@ -71,6 +71,13 @@ class InterstitialAdManager {
   static InterstitialAd? _ad;
   static bool _loading = false;
 
+  /// First [_graceMocks] mocks are always ad-free (protects first-session
+  /// retention while a new user is still forming the daily habit), then
+  /// capped to every other mock after that -- an ad on literally every mock
+  /// would fatigue this app's most engaged users, who take several a day.
+  static const _graceMocks = 2;
+  static bool shouldShowForMockCount(int mockCount) => mockCount > _graceMocks && mockCount.isOdd;
+
   static void preload() {
     if (_ad != null || _loading) return;
     _loading = true;
@@ -105,5 +112,57 @@ class InterstitialAdManager {
       },
     );
     ad.show();
+  }
+}
+
+/// Lets the user opt in to watching a rewarded ad for a concrete in-app
+/// benefit (currently: a bonus streak-freeze token, see ProgressScreen) --
+/// a "give me something, get something" exchange the user asks for, rather
+/// than a forced interruption. Opt-in rewarded ads also typically earn a
+/// higher eCPM than interstitials, so this is the preferred ad type
+/// wherever a natural reward moment already exists in the UI.
+class RewardedAdManager {
+  static RewardedAd? _ad;
+  static bool _loading = false;
+
+  static bool get isReady => _ad != null;
+
+  static void preload() {
+    if (_ad != null || _loading) return;
+    _loading = true;
+    RewardedAd.load(
+      adUnitId: AdIds.rewarded,
+      request: const AdRequest(),
+      rewardedAdLoadCallback: RewardedAdLoadCallback(
+        onAdLoaded: (ad) {
+          _ad = ad;
+          _loading = false;
+        },
+        onAdFailedToLoad: (_) => _loading = false,
+      ),
+    );
+  }
+
+  /// Shows the preloaded ad and calls [onReward] once AdMob confirms a full
+  /// watch (it only fires onUserEarnedReward after that, so no separate
+  /// skip-and-claim guard is needed). Returns false and does nothing if no
+  /// ad is ready yet -- callers should tell the user to try again shortly
+  /// rather than block on a fresh load.
+  static bool showIfReady({required void Function() onReward}) {
+    final ad = _ad;
+    if (ad == null) return false;
+    _ad = null;
+    ad.fullScreenContentCallback = FullScreenContentCallback(
+      onAdDismissedFullScreenContent: (ad) {
+        ad.dispose();
+        preload();
+      },
+      onAdFailedToShowFullScreenContent: (ad, _) {
+        ad.dispose();
+        preload();
+      },
+    );
+    ad.show(onUserEarnedReward: (_, __) => onReward());
+    return true;
   }
 }
