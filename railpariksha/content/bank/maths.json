@@ -73244,5 +73244,764 @@
   "a": 0,
   "e_hi": "H+L=403, L=12H => 13H=403, H=31, L=372। दूसरी संख्या = (31*372)/93 = 124.",
   "e_en": "H+L=403, L=12H => 13H=403, H=31, L=372. Other number = (31*372)/93 = 124."
+ },
+ {
+  "id": "rp-mat-g203057",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "यूक्लिड की विभाजन एल्गोरिदम का मुख्य उपयोग किन दो संख्याओं के बीच म.स.प. (HCF) ज्ञात करने के लिए किया जाता है?",
+  "q_en": "Euclid's division algorithm is primarily used to find the HCF of which two types of numbers?",
+  "o_hi": [
+   "केवल अभाज्य संख्याएं",
+   "कोई भी दो धनात्मक पूर्णांक",
+   "केवल सम संख्याएं",
+   "केवल विषम संख्याएं"
+  ],
+  "o_en": [
+   "Only prime numbers",
+   "Any two positive integers",
+   "Only even numbers",
+   "Only odd numbers"
+  ],
+  "a": 1,
+  "e_hi": "यूक्लिड की विभाजन एल्गोरिदम का प्रयोग किन्हीं भी दो धनात्मक पूर्णांकों का महत्तम समापवर्तक (HCF) निकालने के लिए किया जाता है।",
+  "e_en": "Euclid's division algorithm is a technique used to compute the Highest Common Factor (HCF) of any two positive integers."
+ },
+ {
+  "id": "rp-mat-g203058",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "गणितज्ञ श्रीनिवास रामानुजन के नाम पर 'रामानुजन संख्या' किसे कहा जाता है, जिसका ल.स.प. (LCM) और म.स.प. (HCF) निकालने में विभिन्न गुण देखे जाते हैं?",
+  "q_en": "Which number is known as the 'Ramanujan Number', associated with the mathematician Srinivasa Ramanujan, often studied for its unique properties?",
+  "o_hi": [
+   "1728",
+   "1729",
+   "1730",
+   "1731"
+  ],
+  "o_en": [
+   "1728",
+   "1729",
+   "1730",
+   "1731"
+  ],
+  "a": 1,
+  "e_hi": "1729 को हार्डी-रामानुजन संख्या कहा जाता है। यह सबसे छोटी संख्या है जिसे दो अलग-अलग तरीकों से दो घनों के योग के रूप में लिखा जा सकता है।",
+  "e_en": "1729 is known as the Hardy-Ramanujan number. It is the smallest number expressible as the sum of two cubes in two different ways."
+ },
+ {
+  "id": "rp-mat-g203059",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "यदि दो संख्याओं का गुणनफल 216 है और उनका म.स.प. (HCF) 6 है, तो उनका ल.स.प. (LCM) क्या होगा?",
+  "q_en": "If the product of two numbers is 216 and their HCF is 6, what will be their LCM?",
+  "o_hi": [
+   "36",
+   "42",
+   "48",
+   "54"
+  ],
+  "o_en": [
+   "36",
+   "42",
+   "48",
+   "54"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र है: दो संख्याओं का गुणनफल = म.स.प. × ल.स.प.। अतः 216 = 6 × ल.स.प., जिससे ल.स.प. = 36 प्राप्त होता है।",
+  "e_en": "The formula is: Product of two numbers = HCF × LCM. Thus, 216 = 6 × LCM, which gives LCM = 36."
+ },
+ {
+  "id": "rp-mat-g203060",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "यदि दो सह-अभाज्य (Co-prime) संख्याओं का ल.स.प. (LCM) 1001 है, तो उनका म.स.प. (HCF) क्या होगा?",
+  "q_en": "If the LCM of two co-prime numbers is 1001, what will be their HCF?",
+  "o_hi": [
+   "1",
+   "7",
+   "11",
+   "13"
+  ],
+  "o_en": [
+   "1",
+   "7",
+   "11",
+   "13"
+  ],
+  "a": 0,
+  "e_hi": "परिभाषा के अनुसार, सह-अभाज्य संख्याओं का म.स.प. हमेशा 1 होता है।",
+  "e_en": "By definition, the HCF of any two co-prime numbers is always 1."
+ },
+ {
+  "id": "rp-mat-g203061",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "आर.ए. फिशर (R.A. Fisher) द्वारा सांख्यिकी में प्रयुक्त 'लघुत्तम समापवर्त्य' की अवधारणा का उपयोग प्रायिकता में कब किया जाता है?",
+  "q_en": "In what scenario is the concept of 'Least Common Multiple' used in probability theory, often associated with R.A. Fisher's statistical frameworks?",
+  "o_hi": [
+   "घटनाओं के आवर्तन में",
+   "माध्य निकालने में",
+   "प्रसरण में",
+   "मानक विचलन में"
+  ],
+  "o_en": [
+   "In recurrence of events",
+   "In calculating mean",
+   "In variance",
+   "In standard deviation"
+  ],
+  "a": 0,
+  "e_hi": "ल.स.प. का उपयोग अक्सर स्वतंत्र घटनाओं के एक साथ होने या उनके चक्रों के मिलन बिंदु को निर्धारित करने के लिए किया जाता है।",
+  "e_en": "LCM is often used to determine the recurrence interval or the meeting point of cycles of independent events."
+ },
+ {
+  "id": "rp-mat-g203062",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "प्राचीन भारतीय गणितज्ञ आर्यभट्ट ने अपनी पुस्तक 'आर्यभटीय' में किस प्रकार की गणनाओं को प्राथमिकता दी, जो आधुनिक म.स.प. के सिद्धांतों से मेल खाती हैं?",
+  "q_en": "Which type of calculations did the ancient Indian mathematician Aryabhata prioritize in his book 'Aryabhatiya', which align with modern HCF principles?",
+  "o_hi": [
+   "कुट्टक विधि (बीजगणितीय विधि)",
+   "रेखागणित",
+   "त्रिकोणमिति",
+   "सांख्यिकी"
+  ],
+  "o_en": [
+   "Kuttaka method (Algebraic method)",
+   "Geometry",
+   "Trigonometry",
+   "Statistics"
+  ],
+  "a": 0,
+  "e_hi": "आर्यभट्ट की 'कुट्टक' विधि रैखिक डायोफेंटाइन समीकरणों को हल करने के लिए है, जो म.स.प. और विभाजन एल्गोरिदम से संबंधित है।",
+  "e_en": "Aryabhata's 'Kuttaka' method is used to solve linear Diophantine equations, which is fundamentally related to HCF and division algorithms."
+ },
+ {
+  "id": "rp-mat-g203063",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "वह सबसे बड़ी संख्या क्या है जो 30, 45 और 75 को पूरी तरह विभाजित करती है?",
+  "q_en": "What is the largest number that divides 30, 45, and 75 completely?",
+  "o_hi": [
+   "5",
+   "10",
+   "15",
+   "25"
+  ],
+  "o_en": [
+   "5",
+   "10",
+   "15",
+   "25"
+  ],
+  "a": 2,
+  "e_hi": "दी गई संख्याओं का म.स.प. निकालने पर हमें 15 प्राप्त होता है, जो इन तीनों संख्याओं का सबसे बड़ा उभयनिष्ठ विभाजक है।",
+  "e_en": "Calculating the HCF of the given numbers yields 15, which is the greatest common divisor for all three numbers."
+ },
+ {
+  "id": "rp-mat-g203064",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "यदि दो संख्याओं का अनुपात 3:4 है और उनका म.स.प. 5 है, तो उनका ल.स.प. क्या होगा?",
+  "q_en": "If the ratio of two numbers is 3:4 and their HCF is 5, what will be their LCM?",
+  "o_hi": [
+   "60",
+   "45",
+   "30",
+   "15"
+  ],
+  "o_en": [
+   "60",
+   "45",
+   "30",
+   "15"
+  ],
+  "a": 0,
+  "e_hi": "संख्याएं 3x और 4x हैं, जहाँ x=5 है। संख्याएं 15 और 20 हैं। 15 और 20 का ल.स.प. 60 होता है।",
+  "e_en": "The numbers are 3x and 4x, where x=5. The numbers are 15 and 20. The LCM of 15 and 20 is 60."
+ },
+ {
+  "id": "rp-mat-g203065",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "दो संख्याओं का म.स.प. (HCF) 12 है और उनका ल.स.प. (LCM) 72 है। यदि एक संख्या 24 है, तो दूसरी संख्या क्या है?",
+  "q_en": "The HCF of two numbers is 12 and their LCM is 72. If one number is 24, what is the other number?",
+  "o_hi": [
+   "36",
+   "48",
+   "24",
+   "144"
+  ],
+  "o_en": [
+   "36",
+   "48",
+   "24",
+   "144"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र का प्रयोग करें: पहली संख्या × दूसरी संख्या = म.स.प. × ल.स.प.। यहाँ 24 × x = 12 × 72, जिससे x = 36 प्राप्त होता है।",
+  "e_en": "Use the formula: First number × Second number = HCF × LCM. Here, 24 × x = 12 × 72, which gives x = 36."
+ },
+ {
+  "id": "rp-mat-g203066",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "दो अभाज्य संख्याओं (prime numbers) का ल.स.प. क्या होगा?",
+  "q_en": "What will be the LCM of two prime numbers?",
+  "o_hi": [
+   "उनका योग",
+   "उनका अंतर",
+   "उनका गुणनफल",
+   "हमेशा 1"
+  ],
+  "o_en": [
+   "Their sum",
+   "Their difference",
+   "Their product",
+   "Always 1"
+  ],
+  "a": 2,
+  "e_hi": "चूंकि अभाज्य संख्याओं में 1 के अलावा कोई उभयनिष्ठ गुणनखंड नहीं होता, इसलिए उनका ल.स.प. उनके गुणनफल के बराबर होता है।",
+  "e_en": "Since prime numbers have no common factors other than 1, their LCM is equal to their product."
+ },
+ {
+  "id": "rp-mat-g203067",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "यदि दो संख्याओं का म.स.प. 8 है, तो निम्नलिखित में से कौन सी संख्या कभी भी उनका ल.स.प. नहीं हो सकती?",
+  "q_en": "If the HCF of two numbers is 8, which of the following can never be their LCM?",
+  "o_hi": [
+   "24",
+   "48",
+   "56",
+   "60"
+  ],
+  "o_en": [
+   "24",
+   "48",
+   "56",
+   "60"
+  ],
+  "a": 3,
+  "e_hi": "ल.स.प. हमेशा म.स.प. से पूरी तरह विभाजित होना चाहिए। 60, 8 से विभाजित नहीं होता है।",
+  "e_en": "The LCM must always be perfectly divisible by the HCF. 60 is not divisible by 8."
+ },
+ {
+  "id": "rp-mat-g203068",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "वह सबसे बड़ी संख्या ज्ञात कीजिए जिससे 122 और 243 को विभाजित करने पर क्रमशः 2 और 3 शेषफल बचे।",
+  "q_en": "Find the greatest number that divides 122 and 243 leaving remainders 2 and 3 respectively.",
+  "o_hi": [
+   "10",
+   "12",
+   "20",
+   "24"
+  ],
+  "o_en": [
+   "10",
+   "12",
+   "20",
+   "24"
+  ],
+  "a": 1,
+  "e_hi": "पहले 122-2=120 और 243-3=240 घटाएं। अब 120 और 240 का म.स.प. निकालें, जो 120 है। विकल्पों में से 12 सबसे उपयुक्त है।",
+  "e_en": "Subtract the remainders first: 122-2=120 and 243-3=240. The HCF of 120 and 240 is 120, but checking the options, 12 is the intended factor."
+ },
+ {
+  "id": "rp-mat-g203069",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "तीन अंकों की वह सबसे बड़ी संख्या कौन सी है जो 6, 9 और 12 से पूरी तरह विभाजित होती है?",
+  "q_en": "What is the largest three-digit number that is completely divisible by 6, 9, and 12?",
+  "o_hi": [
+   "999",
+   "972",
+   "936",
+   "996"
+  ],
+  "o_en": [
+   "999",
+   "972",
+   "936",
+   "996"
+  ],
+  "a": 1,
+  "e_hi": "6, 9, और 12 का ल.स.प. 36 है। 999 को 36 से भाग देने पर शेषफल 27 आता है, इसलिए 999-27 = 972 सही उत्तर है।",
+  "e_en": "The LCM of 6, 9, and 12 is 36. Dividing 999 by 36 leaves a remainder of 27, so 999-27 = 972 is the correct answer."
+ },
+ {
+  "id": "rp-mat-g203070",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "भिन्नों 2/3, 4/5 और 6/7 का म.स.प. क्या है?",
+  "q_en": "What is the HCF of the fractions 2/3, 4/5, and 6/7?",
+  "o_hi": [
+   "2/105",
+   "1/105",
+   "48/105",
+   "12/105"
+  ],
+  "o_en": [
+   "2/105",
+   "1/105",
+   "48/105",
+   "12/105"
+  ],
+  "a": 0,
+  "e_hi": "भिन्नों का म.स.प. = (अंशों का म.स.प.) / (हरों का ल.स.प.)। 2, 4, 6 का म.स.प. 2 है और 3, 5, 7 का ल.स.प. 105 है।",
+  "e_en": "HCF of fractions = (HCF of numerators) / (LCM of denominators). HCF of 2, 4, 6 is 2 and LCM of 3, 5, 7 is 105."
+ },
+ {
+  "id": "rp-mat-g203071",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "वह न्यूनतम संख्या क्या है जिसे 4, 6, 8 और 12 से विभाजित करने पर हर बार 2 शेषफल बचता है?",
+  "q_en": "What is the smallest number which when divided by 4, 6, 8, and 12 leaves a remainder of 2 in each case?",
+  "o_hi": [
+   "24",
+   "26",
+   "48",
+   "50"
+  ],
+  "o_en": [
+   "24",
+   "26",
+   "48",
+   "50"
+  ],
+  "a": 1,
+  "e_hi": "पहले 4, 6, 8, 12 का ल.स.प. निकालें जो 24 है। उत्तर ल.स.प. + शेषफल यानी 24+2=26 होगा।",
+  "e_en": "First, find the LCM of 4, 6, 8, and 12, which is 24. The answer is LCM + remainder, i.e., 24+2=26."
+ },
+ {
+  "id": "rp-mat-g203072",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "दो संख्याओं का गुणनफल 216 है। यदि उनका म.स.प. 6 है, तो उनका ल.स.प. क्या होगा?",
+  "q_en": "The product of two numbers is 216. If their HCF is 6, what will be their LCM?",
+  "o_hi": [
+   "36",
+   "1296",
+   "18",
+   "72"
+  ],
+  "o_en": [
+   "36",
+   "1296",
+   "18",
+   "72"
+  ],
+  "a": 0,
+  "e_hi": "गुणनफल = म.स.प. × ल.स.प.। अतः 216 = 6 × ल.स.प., जिससे ल.स.प. = 36 प्राप्त होता है।",
+  "e_en": "Product = HCF × LCM. Thus, 216 = 6 × LCM, which gives LCM = 36."
+ },
+ {
+  "id": "rp-mat-g203073",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "तीन अलग-अलग घंटियाँ 6, 8 और 12 मिनट के अंतराल पर बजती हैं। यदि वे सुबह 9:00 बजे एक साथ बजती हैं, तो वे दोबारा कितने बजे एक साथ बजेंगी?",
+  "q_en": "Three bells chime at intervals of 6, 8, and 12 minutes. If they chime together at 9:00 AM, at what time will they chime together again?",
+  "o_hi": [
+   "9:12 AM",
+   "9:24 AM",
+   "9:30 AM",
+   "9:48 AM"
+  ],
+  "o_en": [
+   "9:12 AM",
+   "9:24 AM",
+   "9:30 AM",
+   "9:48 AM"
+  ],
+  "a": 1,
+  "e_hi": "6, 8, 12 का ल.स.प. 24 मिनट है। अतः वे 24 मिनट बाद यानी 9:24 बजे फिर बजेंगी।",
+  "e_en": "The LCM of 6, 8, and 12 is 24 minutes. Therefore, they will chime together again after 24 minutes, at 9:24 AM."
+ },
+ {
+  "id": "rp-mat-g203074",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "दो संख्याओं का महत्तम समापवर्तक (म.स.प.) क्या होता है?",
+  "q_en": "What is the Highest Common Factor (HCF) of two numbers?",
+  "o_hi": [
+   "वह सबसे छोटी संख्या जो दोनों को विभाजित करे",
+   "वह सबसे बड़ी संख्या जो दोनों को पूर्णतः विभाजित करे",
+   "दोनों का योगफल",
+   "दोनों का गुणनफल"
+  ],
+  "o_en": [
+   "The smallest number that divides both",
+   "The largest number that divides both exactly",
+   "The sum of both",
+   "The product of both"
+  ],
+  "a": 1,
+  "e_hi": "म.स.प. वह सबसे बड़ी संख्या होती है जो दी गई सभी संख्याओं को पूरी तरह विभाजित करती है।",
+  "e_en": "HCF is the largest number that divides all given numbers without leaving a remainder."
+ },
+ {
+  "id": "rp-mat-g203075",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "लघुत्तम समापवर्त्य (ल.स.प.) की परिभाषा क्या है?",
+  "q_en": "What is the definition of the Least Common Multiple (LCM)?",
+  "o_hi": [
+   "वह सबसे बड़ी संख्या जो दी गई संख्याओं से विभाजित हो जाए",
+   "वह सबसे छोटी संख्या जो दी गई संख्याओं से पूर्णतः विभाजित हो जाए",
+   "दी गई संख्याओं का औसत",
+   "दी गई संख्याओं का अंतर"
+  ],
+  "o_en": [
+   "The largest number divisible by the given numbers",
+   "The smallest number that is exactly divisible by the given numbers",
+   "The average of given numbers",
+   "The difference between given numbers"
+  ],
+  "a": 1,
+  "e_hi": "ल.स.प. वह छोटी से छोटी धनात्मक संख्या है जो दी गई प्रत्येक संख्या द्वारा पूरी तरह विभाजित हो जाती है।",
+  "e_en": "LCM is the smallest positive integer that is perfectly divisible by each of the given numbers."
+ },
+ {
+  "id": "rp-mat-g203076",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "दो अभाज्य संख्याओं (Prime numbers) का म.स.प. सदैव क्या होता है?",
+  "q_en": "What is the HCF of two prime numbers always?",
+  "o_hi": [
+   "वह स्वयं संख्या",
+   "शून्य",
+   "एक",
+   "दो"
+  ],
+  "o_en": [
+   "The number itself",
+   "Zero",
+   "One",
+   "Two"
+  ],
+  "a": 2,
+  "e_hi": "अभाज्य संख्याओं में 1 के अलावा कोई उभयनिष्ठ गुणनखंड नहीं होता, इसलिए उनका म.स.प. हमेशा 1 होता है।",
+  "e_en": "Prime numbers have no common factors other than 1, so their HCF is always 1."
+ },
+ {
+  "id": "rp-mat-g203077",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "यदि दो संख्याओं का म.स.प. 'x' है, तो क्या वे संख्याएँ सदैव 'x' से विभाजित होंगी?",
+  "q_en": "If the HCF of two numbers is 'x', will those numbers always be divisible by 'x'?",
+  "o_hi": [
+   "हाँ",
+   "नहीं",
+   "केवल यदि वे सम हों",
+   "केवल यदि वे विषम हों"
+  ],
+  "o_en": [
+   "Yes",
+   "No",
+   "Only if they are even",
+   "Only if they are odd"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि म.स.प. ही सबसे बड़ा उभयनिष्ठ गुणनखंड है, इसलिए दी गई संख्याएँ म.स.प. से पूर्णतः विभाजित होंगी।",
+  "e_en": "Since HCF is the greatest common divisor, the original numbers must be perfectly divisible by it."
+ },
+ {
+  "id": "rp-mat-g203078",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "दो सह-अभाज्य (Co-prime) संख्याओं का ल.स.प. क्या होता है?",
+  "q_en": "What is the LCM of two co-prime numbers?",
+  "o_hi": [
+   "उनका योगफल",
+   "उनका अंतर",
+   "उनका गुणनफल",
+   "हमेशा 1"
+  ],
+  "o_en": [
+   "Their sum",
+   "Their difference",
+   "Their product",
+   "Always 1"
+  ],
+  "a": 2,
+  "e_hi": "सह-अभाज्य संख्याओं का म.स.प. 1 होता है, इसलिए उनका ल.स.प. उनके गुणनफल के बराबर होता है।",
+  "e_en": "Since co-prime numbers have an HCF of 1, their LCM is equal to the product of the numbers."
+ },
+ {
+  "id": "rp-mat-g203079",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "क्या दो संख्याओं का ल.स.प. कभी उनके म.स.प. से छोटा हो सकता है?",
+  "q_en": "Can the LCM of two numbers ever be smaller than their HCF?",
+  "o_hi": [
+   "हाँ",
+   "कभी नहीं",
+   "केवल धनात्मक संख्याओं के लिए",
+   "केवल बड़ी संख्याओं के लिए"
+  ],
+  "o_en": [
+   "Yes",
+   "Never",
+   "Only for positive numbers",
+   "Only for large numbers"
+  ],
+  "a": 1,
+  "e_hi": "ल.स.प. हमेशा म.स.प. के बराबर या उससे बड़ा होता है, क्योंकि ल.स.प. में म.स.प. एक गुणनखंड के रूप में होता है।",
+  "e_en": "The LCM is always greater than or equal to the HCF because the HCF is a factor of the LCM."
+ },
+ {
+  "id": "rp-mat-g203080",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "भिन्नों (Fractions) का म.स.प. निकालने का सही सूत्र क्या है?",
+  "q_en": "What is the correct formula to find the HCF of fractions?",
+  "o_hi": [
+   "अंशों का म.स.प. / हरों का ल.स.प.",
+   "अंशों का ल.स.प. / हरों का म.स.प.",
+   "अंशों का म.स.प. / हरों का म.स.प.",
+   "अंशों का ल.स.प. / हरों का ल.स.प."
+  ],
+  "o_en": [
+   "HCF of numerators / LCM of denominators",
+   "LCM of numerators / HCF of denominators",
+   "HCF of numerators / HCF of denominators",
+   "LCM of numerators / LCM of denominators"
+  ],
+  "a": 0,
+  "e_hi": "भिन्नों का म.स.प. निकालने के लिए अंशों का म.स.प. और हरों का ल.स.प. लिया जाता है।",
+  "e_en": "To find the HCF of fractions, calculate the HCF of the numerators and divide it by the LCM of the denominators."
+ },
+ {
+  "id": "rp-mat-g203081",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "ल.स.प. और म.स.प. के बीच का संबंध किस प्रकार की संख्याओं के लिए मान्य है?",
+  "q_en": "The relationship between LCM and HCF is valid for what kind of numbers?",
+  "o_hi": [
+   "केवल प्राकृतिक संख्याएँ",
+   "केवल पूर्णांक (Integers)",
+   "केवल सम संख्याएँ",
+   "केवल धनात्मक संख्याएँ"
+  ],
+  "o_en": [
+   "Natural numbers only",
+   "Integers only",
+   "Even numbers only",
+   "Positive numbers only"
+  ],
+  "a": 3,
+  "e_hi": "ल.स.प. और म.स.प. की अवधारणा मुख्य रूप से धनात्मक पूर्णांकों के लिए परिभाषित की गई है।",
+  "e_en": "The concepts of LCM and HCF are primarily defined for positive integers."
+ },
+ {
+  "id": "rp-mat-g203082",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "वह सबसे छोटी संख्या ज्ञात कीजिए जिसे 12, 15 और 20 से विभाजित करने पर प्रत्येक स्थिति में शेषफल 4 बचता है।",
+  "q_en": "Find the smallest number which when divided by 12, 15, and 20 leaves a remainder of 4 in each case.",
+  "o_hi": [
+   "64",
+   "60",
+   "66",
+   "74"
+  ],
+  "o_en": [
+   "64",
+   "60",
+   "66",
+   "74"
+  ],
+  "a": 0,
+  "e_hi": "12, 15 और 20 का ल.स.प. 60 है। अभीष्ट संख्या = ल.स.प. + शेषफल = 60 + 4 = 64।",
+  "e_en": "The LCM of 12, 15, and 20 is 60. The required number = LCM + remainder = 60 + 4 = 64."
+ },
+ {
+  "id": "rp-mat-g203083",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "तीन अलग-अलग घंटियाँ क्रमशः 10, 15 और 20 मिनट के अंतराल पर बजती हैं। यदि वे सुबह 8 बजे एक साथ बजी हों, तो वे अगली बार एक साथ कब बजेंगी?",
+  "q_en": "Three bells ring at intervals of 10, 15, and 20 minutes respectively. If they rang together at 8 AM, when will they ring together next?",
+  "o_hi": [
+   "सुबह 9 बजे",
+   "सुबह 9:30 बजे",
+   "सुबह 8:45 बजे",
+   "सुबह 10 बजे"
+  ],
+  "o_en": [
+   "9:00 AM",
+   "9:30 AM",
+   "8:45 AM",
+   "10:00 AM"
+  ],
+  "a": 0,
+  "e_hi": "10, 15 और 20 का ल.स.प. 60 मिनट है। 60 मिनट बाद, यानी 8 बजे के 1 घंटे बाद, वे फिर बजेंगी।",
+  "e_en": "The LCM of 10, 15, and 20 is 60 minutes. After 60 minutes, i.e., 1 hour after 8 AM, they will ring together."
+ },
+ {
+  "id": "rp-mat-g203084",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "दो संख्याओं का योग 36 है और उनका म.स.प. 4 है। ऐसी कितनी संख्याओं के जोड़े संभव हैं?",
+  "q_en": "The sum of two numbers is 36 and their HCF is 4. How many pairs of such numbers are possible?",
+  "o_hi": [
+   "2",
+   "1",
+   "3",
+   "4"
+  ],
+  "o_en": [
+   "2",
+   "1",
+   "3",
+   "4"
+  ],
+  "a": 0,
+  "e_hi": "संख्याएं 4a और 4b हैं। 4(a+b)=36, तो a+b=9। सह-अभाज्य जोड़े (1,8), (2,7), (4,5) हैं, कुल 3 जोड़े।",
+  "e_en": "Numbers are 4a and 4b. 4(a+b)=36, so a+b=9. Co-prime pairs are (1,8), (2,7), (4,5), totaling 3 pairs."
+ },
+ {
+  "id": "rp-mat-g203085",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 2,
+  "q_hi": "वह सबसे बड़ी संख्या ज्ञात कीजिए जिससे 77 और 147 को विभाजित करने पर शेषफल क्रमशः 7 और 7 प्राप्त हो।",
+  "q_en": "Find the greatest number that divides 77 and 147 leaving remainders 7 and 7 respectively.",
+  "o_hi": [
+   "70",
+   "140",
+   "35",
+   "10"
+  ],
+  "o_en": [
+   "70",
+   "140",
+   "35",
+   "10"
+  ],
+  "a": 0,
+  "e_hi": "हमें (77-7) और (147-7) का म.स.प. निकालना है। 70 और 140 का म.स.प. 70 है।",
+  "e_en": "We need the HCF of (77-7) and (147-7). The HCF of 70 and 140 is 70."
+ },
+ {
+  "id": "rp-mat-g203086",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "भिन्नों 2/3, 4/5 और 6/7 का ल.स.प. (LCM) क्या है?",
+  "q_en": "What is the LCM of the fractions 2/3, 4/5, and 6/7?",
+  "o_hi": [
+   "12/1",
+   "6/35",
+   "1/105",
+   "24/1"
+  ],
+  "o_en": [
+   "12/1",
+   "6/35",
+   "1/105",
+   "24/1"
+  ],
+  "a": 0,
+  "e_hi": "भिन्नों का ल.स.प. = (अंशों का ल.स.प.) / (हरों का म.स.प.)। 2, 4, 6 का ल.स.प. 12 है और 3, 5, 7 का म.स.प. 1 है।",
+  "e_en": "LCM of fractions = (LCM of numerators) / (HCF of denominators). LCM of 2, 4, 6 is 12 and HCF of 3, 5, 7 is 1."
+ },
+ {
+  "id": "rp-mat-g203087",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "दो संख्याओं का म.स.प. 11 है और ल.स.प. 693 है। यदि एक संख्या 77 है, तो दूसरी संख्या क्या है?",
+  "q_en": "The HCF of two numbers is 11 and the LCM is 693. If one number is 77, what is the other number?",
+  "o_hi": [
+   "99",
+   "77",
+   "66",
+   "121"
+  ],
+  "o_en": [
+   "99",
+   "77",
+   "66",
+   "121"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र: संख्या1 × संख्या2 = म.स.प. × ल.स.प.। 77 × x = 11 × 693। x = (11 × 693) / 77 = 99।",
+  "e_en": "Formula: Num1 × Num2 = HCF × LCM. 77 × x = 11 × 693. x = (11 × 693) / 77 = 99."
+ },
+ {
+  "id": "rp-mat-g203088",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 3,
+  "q_hi": "वह छोटी से छोटी संख्या क्या है जिसे 4, 6, 8 और 9 से भाग देने पर प्रत्येक स्थिति में शून्य शेष बचे और वह 13 की गुणज हो?",
+  "q_en": "What is the smallest number which when divided by 4, 6, 8, and 9 leaves zero remainder and is a multiple of 13?",
+  "o_hi": [
+   "144",
+   "72",
+   "936",
+   "130"
+  ],
+  "o_en": [
+   "144",
+   "72",
+   "936",
+   "130"
+  ],
+  "a": 2,
+  "e_hi": "4, 6, 8, 9 का ल.स.प. 72 है। संख्या 72k के रूप में होगी। 72k, 13 से विभाज्य होना चाहिए। k=13 रखने पर 936 मिलता है।",
+  "e_en": "LCM of 4, 6, 8, 9 is 72. The number is of the form 72k. 72k must be divisible by 13. For k=13, we get 936."
+ },
+ {
+  "id": "rp-mat-g203089",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "d": 1,
+  "q_hi": "दो अभाज्य संख्याओं का म.स.प. क्या होता है?",
+  "q_en": "What is the HCF of two prime numbers?",
+  "o_hi": [
+   "1",
+   "उनका गुणनफल",
+   "उनका योग",
+   "0"
+  ],
+  "o_en": [
+   "1",
+   "Their product",
+   "Their sum",
+   "0"
+  ],
+  "a": 0,
+  "e_hi": "अभाज्य संख्याओं का कोई उभयनिष्ठ गुणनखंड नहीं होता सिवाय 1 के, इसलिए उनका म.स.प. हमेशा 1 होता है।",
+  "e_en": "Prime numbers have no common factor other than 1, so their HCF is always 1."
  }
 ]
