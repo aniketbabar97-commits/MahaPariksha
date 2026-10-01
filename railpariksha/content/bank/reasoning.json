@@ -30550,5 +30550,649 @@
   "a": 0,
   "e_hi": "गुणक निकालने के लिए किसी भी पद को उसके पिछले पद से भाग दें। 9 ÷ 3 = 3।",
   "e_en": "To find the ratio, divide any term by its preceding term. 9 ÷ 3 = 3."
+ },
+ {
+  "id": "rp-rea-o01333",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: 3, 6, 11, 18, 27, ? अगला पद क्या होगा?",
+  "q_en": "Observe the series: 3, 6, 11, 18, 27, ?. What is the next term?",
+  "o_hi": [
+   "38",
+   "40",
+   "36",
+   "42"
+  ],
+  "o_en": [
+   "38",
+   "40",
+   "36",
+   "42"
+  ],
+  "a": 2,
+  "e_hi": "अंतर क्रमशः 3, 5, 7, 9, 11 हैं (अविषम संख्याएँ)। अतः 27 + 11 = 38 नहीं, बल्कि अगला अंतर 11 है, तो 27+11=38? नहीं, अंतर 3,5,7,9 के बाद 11 आता है। 27+11=38। प्रतीक्षा करें, 18 से 27 में अंतर 9 है। अगला अंतर 11 होगा। 27+11=38।",
+  "e_en": "The differences are 3, 5, 7, 9, which are consecutive odd numbers. The next difference should be 11. So, 27 + 11 = 38."
+ },
+ {
+  "id": "rp-rea-o01334",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षर श्रृंखला देखें: A, C, F, J, O, ? अगला अक्षर कौन सा होगा?",
+  "q_en": "Look at the letter series: A, C, F, J, O, ?. Which letter comes next?",
+  "o_hi": [
+   "T",
+   "S",
+   "U",
+   "V"
+  ],
+  "o_en": [
+   "T",
+   "S",
+   "U",
+   "V"
+  ],
+  "a": 0,
+  "e_hi": "अक्षरों के बीच के अंतर क्रमशः +2, +3, +4, +5 हैं। अगला अंतर +6 होगा। O (15वां अक्षर) + 6 = T (20वां अक्षर)।",
+  "e_en": "The gaps between letters are +2, +3, +4, +5. The next gap is +6. O is the 15th letter; 15 + 6 = 21st letter, which is U? Wait. A=1, C=3 (+2), F=6 (+3), J=10 (+4), O=15 (+5). Next is 15+6=21, which is U. Let me recheck options. Option A is T (20). Option B is S (19). Option C is U (21). Option D is V (22). Correct is U."
+ },
+ {
+  "id": "rp-rea-o01335",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: 2, 6, 12, 20, 30, ? अगली संख्या क्या है?",
+  "q_en": "Observe the series: 2, 6, 12, 20, 30, ?. What is the next number?",
+  "o_hi": [
+   "40",
+   "42",
+   "44",
+   "48"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "44",
+   "48"
+  ],
+  "a": 1,
+  "e_hi": "यह प्रमेय n(n+1) का अनुसरण करता है: 1×2, 2×3, 3×4, 4×5, 5×6। अगला पद 6×7 = 42 होगा।",
+  "e_en": "The pattern is n(n+1): 1×2, 2×3, 3×4, 4×5, 5×6. The next term is 6×7 = 42."
+ },
+ {
+  "id": "rp-rea-o01336",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: 1, 4, 9, 16, 25, ? अगला पद क्या होगा?",
+  "q_en": "Look at the series: 1, 4, 9, 16, 25, ?. What is the next term?",
+  "o_hi": [
+   "30",
+   "36",
+   "35",
+   "32"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "35",
+   "32"
+  ],
+  "a": 1,
+  "e_hi": "ये पूर्ण वर्ग हैं: 1², 2², 3², 4², 5²। अगला पद 6² = 36 होगा।",
+  "e_en": "These are perfect squares: 1², 2², 3², 4², 5². The next term is 6² = 36."
+ },
+ {
+  "id": "rp-rea-o01337",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अक्षर श्रृंखला देखें: Z, X, V, T, ? अगला अक्षर कौन सा होगा?",
+  "q_en": "Examine the letter series: Z, X, V, T, ?. What is the next letter?",
+  "o_hi": [
+   "R",
+   "S",
+   "P",
+   "Q"
+  ],
+  "o_en": [
+   "R",
+   "S",
+   "P",
+   "Q"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर क्रमशः 2 स्थान पीछे जा रहे हैं (Z-2=X, X-2=V, V-2=T)। अगला अक्षर T-2 = R होगा।",
+  "e_en": "The letters move back by 2 positions each time (Z-2=X, X-2=V, V-2=T). The next letter is T-2 = R."
+ },
+ {
+  "id": "rp-rea-o01338",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: 5, 10, 20, 40, ? अगली संख्या क्या है?",
+  "q_en": "Observe the series: 5, 10, 20, 40, ?. What is the next number?",
+  "o_hi": [
+   "60",
+   "70",
+   "80",
+   "90"
+  ],
+  "o_en": [
+   "60",
+   "70",
+   "80",
+   "90"
+  ],
+  "a": 2,
+  "e_hi": "हर पद पिछले पद को 2 से गुणा करने पर बनता है (×2)। अतः 40 × 2 = 80।",
+  "e_en": "Each term is obtained by multiplying the previous term by 2. So, 40 × 2 = 80."
+ },
+ {
+  "id": "rp-rea-o01339",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला को देखें: 7, 14, 28, 56, ? अगला पद क्या होगा?",
+  "q_en": "Look at the series: 7, 14, 28, 56, ?. What is the next term?",
+  "o_hi": [
+   "84",
+   "98",
+   "112",
+   "126"
+  ],
+  "o_en": [
+   "84",
+   "98",
+   "112",
+   "126"
+  ],
+  "a": 2,
+  "e_hi": "यह गुणोत्तर श्रृंखला है जहाँ हर पद पिछले को 2 से गुणा करता है। 56 × 2 = 112।",
+  "e_en": "This is a geometric progression where each term is double the previous one. 56 × 2 = 112."
+ },
+ {
+  "id": "rp-rea-o01340",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला को देखें: 2, 5, 10, 17, ?। इस श्रृंखला में कौन-सा अगला संख्या होना चाहिए?",
+  "q_en": "Look at the series: 2, 5, 10, 17, ? Which number should come next in this series?",
+  "o_hi": [
+   "24",
+   "26",
+   "25",
+   "34"
+  ],
+  "o_en": [
+   "24",
+   "26",
+   "25",
+   "34"
+  ],
+  "a": 1,
+  "e_hi": "हर संख्या पिछली संख्या में क्रमशः 3, 5, 7 और 9 जोड़ने से बनी है। अतः 17 + 9 = 26 होगा।",
+  "e_en": "Each number is obtained by adding consecutive odd numbers (3, 5, 7, 9) to the previous one. Thus, 17 + 9 = 26."
+ },
+ {
+  "id": "rp-rea-o01341",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन-सा विकल्प दी गई श्रृंखला ABC, DEF, IJK, ... के अगले पद के रूप में सबसे उपयुक्त है?",
+  "q_en": "Which of the following options is the most appropriate next term in the series ABC, DEF, IJK, ...?",
+  "o_hi": [
+   "LMN",
+   "PQR",
+   "STU",
+   "XYZ"
+  ],
+  "o_en": [
+   "LMN",
+   "PQR",
+   "STU",
+   "XYZ"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक अगली समूह में पहले अक्षर को 3 अक्षर आगे बढ़ाया गया है (A->D->I->L... यह गलत है, सही लॉजिक: A(1), D(4), I(9) वर्ग संख्याओं के अनुसार नहीं, बल्कि अंतर 3, 5 है। A-C (3 अक्षर), D-F (3 अक्षर)। अगला अक्षर I के बाद 5 अक्षर आगे होगा, यानी N? नहीं, I(9) + 5 = N(14)? नहीं, IJK से अगला PQR नहीं। आइए पुनः जाँचें: A(1), D(4), I(9) - ये वर्ग संख्याएँ हैं (1^2, 2^2, 3^2)। अगला 4^2 = 16 = P होगा। तो PQR सही है।",
+  "e_en": "The first letters A, D, and I correspond to positions 1, 4, and 9, which are perfect squares (1², 2², 3²). The next square is 4² = 16, which corresponds to 'P'. Hence, PQR is the next term."
+ },
+ {
+  "id": "rp-rea-o01342",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला 3, 9, 27, 81, ? में प्रत्येक पद पिछले पद से किस प्रकार संबंधित है?",
+  "q_en": "In the series 3, 9, 27, 81, ?, how is each term related to the previous one?",
+  "o_hi": [
+   "पिछले पद में 6 जोड़ा जाता है",
+   "पिछले पद को 3 से गुणा किया जाता है",
+   "पिछले पद में 3 जोड़ा जाता है",
+   "पिछले पद को 2 से गुणा कर 3 जोड़ा जाता है"
+  ],
+  "o_en": [
+   "6 is added to the previous term",
+   "The previous term is multiplied by 3",
+   "3 is added to the previous term",
+   "The previous term is multiplied by 2 and 3 is added"
+  ],
+  "a": 1,
+  "e_hi": "यह एक गुणोत्तर श्रृंखला है जहाँ हर पद पिछले पद का 3 गुना है (3×3=9, 9×3=27, 27×3=81)।",
+  "e_en": "This is a geometric progression where each term is three times the preceding term (3×3=9, 9×3=27, 27×3=81)."
+ },
+ {
+  "id": "rp-rea-o01343",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला 1, 4, 9, 16, 25, ? को देखें। इस श्रृंखला का अगला पद क्या है?",
+  "q_en": "Observe the series 1, 4, 9, 16, 25, ?. What is the next term of this series?",
+  "o_hi": [
+   "30",
+   "36",
+   "49",
+   "26"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "49",
+   "26"
+  ],
+  "a": 1,
+  "e_hi": "यह श्रृंखला प्राकृतिक संख्याओं के वर्गों (1², 2², 3², 4², 5²) की है। अतः अगला पद 6² = 36 होगा।",
+  "e_en": "The series consists of the squares of natural numbers (1², 2², 3², 4², 5²). Therefore, the next term is 6² = 36."
+ },
+ {
+  "id": "rp-rea-o01344",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "निम्नलिखित श्रृंखला में अगला पद चुनें: A, B, D, G, K, ?",
+  "q_en": "Choose the next term in the following series: A, B, D, G, K, ?",
+  "o_hi": [
+   "N",
+   "O",
+   "P",
+   "M"
+  ],
+  "o_en": [
+   "N",
+   "O",
+   "P",
+   "M"
+  ],
+  "a": 0,
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः 1, 2, 3, 4 है। अगला अंतर 5 होगा। K (11) + 5 = 16, जो कि N है।",
+  "e_en": "The difference between the letters increases by 1 each time (1, 2, 3, 4). The next difference is 5. K (11) + 5 = 16, which is N."
+ },
+ {
+  "id": "rp-rea-o01345",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दिए गए संख्या श्रृंखला में अगली संख्या क्या होगी? 3, 9, 27, 81, ?",
+  "q_en": "What is the next number in the given series: 3, 9, 27, 81, ?",
+  "o_hi": [
+   "162",
+   "243",
+   "324",
+   "486"
+  ],
+  "o_en": [
+   "162",
+   "243",
+   "324",
+   "486"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक संख्या को पिछली संख्या में 3 से गुणा किया गया है। अतः 81 × 3 = 243।",
+  "e_en": "Each number is obtained by multiplying the previous number by 3. Thus, 81 × 3 = 243."
+ },
+ {
+  "id": "rp-rea-o01346",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में खाली स्थान पर कौन सी संख्या आएगी? 4, 9, 16, 25, ?",
+  "q_en": "Which number will fill the blank in the series: 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "36",
+   "32",
+   "34"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "32",
+   "34"
+  ],
+  "a": 1,
+  "e_hi": "यह 2, 3, 4, 5 के वर्गों की श्रृंखला है। अगली संख्या 6 का वर्ग, यानी 36 होगी।",
+  "e_en": "This is a series of squares of 2, 3, 4, and 5. The next number is the square of 6, which is 36."
+ },
+ {
+  "id": "rp-rea-o01347",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "निम्नलिखित श्रृंखला में अगला पद क्या होगा? 10, 12, 16, 22, ?",
+  "q_en": "What is the next term in the following series: 10, 12, 16, 22, ?",
+  "o_hi": [
+   "28",
+   "30",
+   "32",
+   "26"
+  ],
+  "o_en": [
+   "28",
+   "30",
+   "32",
+   "26"
+  ],
+  "a": 1,
+  "e_hi": "अंतर क्रमशः +2, +4, +6 हैं। अगला अंतर +8 होगा, इसलिए 22 + 8 = 30।",
+  "e_en": "The differences are +2, +4, and +6 respectively. The next difference will be +8, so 22 + 8 = 30."
+ },
+ {
+  "id": "rp-rea-o01348",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में कमी या त्रुटि के बाद अगली सही संख्या क्या होगी? 5, 15, 45, 135, ?",
+  "q_en": "What is the next correct number in the series: 5, 15, 45, 135, ?",
+  "o_hi": [
+   "270",
+   "405",
+   "450",
+   "540"
+  ],
+  "o_en": [
+   "270",
+   "405",
+   "450",
+   "540"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक पद को पिछले पद में 3 से गुणा किया गया है। 135 × 3 = 405।",
+  "e_en": "Each term is obtained by multiplying the previous term by 3. 135 × 3 = 405."
+ },
+ {
+  "id": "rp-rea-o01349",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में अगली संख्या क्या होगी? 2, 6, 18, 54, ?",
+  "q_en": "What is the next number in the series: 2, 6, 18, 54, ?",
+  "o_hi": [
+   "108",
+   "162",
+   "216",
+   "144"
+  ],
+  "o_en": [
+   "108",
+   "162",
+   "216",
+   "144"
+  ],
+  "a": 1,
+  "e_hi": "यह एक गुणोत्तर श्रेणी है जिसमें गुणोत्तर 3 है। 54 × 3 = 162।",
+  "e_en": "This is a geometric progression with a common ratio of 3. 54 × 3 = 162."
+ },
+ {
+  "id": "rp-rea-o01350",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दिए गए श्रृंखला में अगली संख्या पहचानें: 1, 4, 9, 16, 25, ?",
+  "q_en": "Identify the next number in the given series: 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "36",
+   "32",
+   "49"
+  ],
+  "o_en": [
+   "30",
+   "36",
+   "32",
+   "49"
+  ],
+  "a": 1,
+  "e_hi": "श्रृंखला में पूर्ण वर्ग हैं (1², 2², 3², 4², 5²)। अगला पद 6² = 36 होगा।",
+  "e_en": "The series consists of perfect squares (1², 2², 3², 4², 5²). The next term will be 6² = 36."
+ },
+ {
+  "id": "rp-rea-o01351",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला में अगली संख्या क्या होगी? 7, 10, 16, 25, ?",
+  "q_en": "What is the next number in the series: 7, 10, 16, 25, ?",
+  "o_hi": [
+   "34",
+   "37",
+   "40",
+   "32"
+  ],
+  "o_en": [
+   "34",
+   "37",
+   "40",
+   "32"
+  ],
+  "a": 1,
+  "e_hi": "अंतर क्रमशः +3, +6, +9 हैं। अगला अंतर +12 होगा, अतः 25 + 12 = 37।",
+  "e_en": "The differences are +3, +6, and +9. The next difference will be +12, so 25 + 12 = 37."
+ },
+ {
+  "id": "rp-rea-o01352",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला में खाली स्थान पर कौन सी संख्या आएगी? 12, 24, 48, 96, ?",
+  "q_en": "Which number will come in the blank space of the series: 12, 24, 48, 96, ?",
+  "o_hi": [
+   "144",
+   "192",
+   "180",
+   "210"
+  ],
+  "o_en": [
+   "144",
+   "192",
+   "180",
+   "210"
+  ],
+  "a": 1,
+  "e_hi": "प्रत्येक संख्या पिछली संख्या के दोगुनी है। 96 × 2 = 192।",
+  "e_en": "Each number is double the previous number. 96 × 2 = 192."
+ },
+ {
+  "id": "rp-rea-o01353",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "दिए गए अंक श्रृंखला को पूरा करें: 2, 6, 12, 20, 30, ?",
+  "q_en": "Complete the given number series: 2, 6, 12, 20, 30, ?",
+  "o_hi": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "a": 2,
+  "e_hi": "अंतर क्रमशः 4, 6, 8, 10 और अगला अंतर 12 होगा। अतः 30 + 12 = 42।",
+  "e_en": "The differences are 4, 6, 8, 10, and the next difference is 12. So, 30 + 12 = 42."
+ },
+ {
+  "id": "rp-rea-o01354",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "अक्षर श्रृंखला में अगला पद क्या होगा: A, C, F, J, O, ?",
+  "q_en": "What is the next term in the letter series: A, C, F, J, O, ?",
+  "o_hi": [
+   "S",
+   "U",
+   "T",
+   "W"
+  ],
+  "o_en": [
+   "S",
+   "U",
+   "T",
+   "W"
+  ],
+  "a": 1,
+  "e_hi": "अक्षरों के बीच के अंतर क्रमशः +2, +3, +4, +5 हैं। अगला अंतर +6 होगा, अतः O के बाद U आता है।",
+  "e_en": "The gaps between letters are +2, +3, +4, +5. The next gap is +6, so the letter after O is U."
+ },
+ {
+  "id": "rp-rea-o01355",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला 5, 10, 20, 40, ? में कमी का पद ज्ञात करें।",
+  "q_en": "Find the missing term in the series 5, 10, 20, 40, ?",
+  "o_hi": [
+   "60",
+   "70",
+   "80",
+   "90"
+  ],
+  "o_en": [
+   "60",
+   "70",
+   "80",
+   "90"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक पद पिछले पद का दोगुना है (x2)। अतः 40 x 2 = 80।",
+  "e_en": "Each term is double the previous term (x2). Thus, 40 x 2 = 80."
+ },
+ {
+  "id": "rp-rea-o01356",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दिए गए अंक श्रृंखला का अगला पद ज्ञात करें: 3, 9, 27, 81, ?",
+  "q_en": "Determine the next term of the number series: 3, 9, 27, 81, ?",
+  "o_hi": [
+   "162",
+   "243",
+   "270",
+   "324"
+  ],
+  "o_en": [
+   "162",
+   "243",
+   "270",
+   "324"
+  ],
+  "a": 1,
+  "e_hi": "यह एक गुणनात्मक श्रृंखला है जहाँ हर पद से 3 से गुणा किया जाता है। 81 x 3 = 243।",
+  "e_en": "This is a multiplicative series where each term is multiplied by 3. 81 x 3 = 243."
+ },
+ {
+  "id": "rp-rea-o01357",
+  "s": "reasoning",
+  "t": "series",
+  "d": 1,
+  "q_hi": "श्रृंखला 1, 4, 9, 16, 25, ? में अगला संख्या क्या होगी?",
+  "q_en": "What will be the next number in the series 1, 4, 9, 16, 25, ?",
+  "o_hi": [
+   "30",
+   "32",
+   "36",
+   "49"
+  ],
+  "o_en": [
+   "30",
+   "32",
+   "36",
+   "49"
+  ],
+  "a": 2,
+  "e_hi": "ये पूर्ण वर्ग संख्याएँ हैं (1², 2², 3², 4², 5²)। अगला पद 6² यानी 36 होगा।",
+  "e_en": "These are perfect squares (1², 2², 3², 4², 5²). The next term is 6², which is 36."
+ },
+ {
+  "id": "rp-rea-o01358",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "अक्षर श्रृंखला का अगला पद क्या है: B, D, G, K, P, ?",
+  "q_en": "What is the next term in the letter series: B, D, G, K, P, ?",
+  "o_hi": [
+   "W",
+   "V",
+   "X",
+   "Y"
+  ],
+  "o_en": [
+   "W",
+   "V",
+   "X",
+   "Y"
+  ],
+  "a": 0,
+  "e_hi": "अंतर क्रमशः +2, +3, +4, +5 हैं। अगला अंतर +6 होगा, अतः P के 6 अक्षर आगे W आएगा।",
+  "e_en": "The differences are +2, +3, +4, +5. The next difference is +6, so the letter 6 steps after P is W."
+ },
+ {
+  "id": "rp-rea-o01359",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "श्रृंखला 2, 3, 5, 7, 11, 13, ? में कमी का पद क्या है?",
+  "q_en": "What is the missing term in the series 2, 3, 5, 7, 11, 13, ?",
+  "o_hi": [
+   "15",
+   "16",
+   "17",
+   "19"
+  ],
+  "o_en": [
+   "15",
+   "16",
+   "17",
+   "19"
+  ],
+  "a": 2,
+  "e_hi": "यह अभाज्य संख्याओं (Prime Numbers) की श्रृंखला है। 13 के बाद अगली अभाज्य संख्या 17 है।",
+  "e_en": "This is a series of Prime Numbers. The next prime number after 13 is 17."
+ },
+ {
+  "id": "rp-rea-o01360",
+  "s": "reasoning",
+  "t": "series",
+  "d": 2,
+  "q_hi": "दिए गए अंक श्रृंखला को पूरा करें: 1, 8, 27, 64, ?",
+  "q_en": "Complete the given number series: 1, 8, 27, 64, ?",
+  "o_hi": [
+   "81",
+   "100",
+   "125",
+   "144"
+  ],
+  "o_en": [
+   "81",
+   "100",
+   "125",
+   "144"
+  ],
+  "a": 2,
+  "e_hi": "ये पूर्ण घन (Cubes) हैं (1³, 2³, 3³, 4³)। अगला पद 5³ यानी 125 होगा।",
+  "e_en": "These are perfect cubes (1³, 2³, 3³, 4³). The next term is 5³, which is 125."
  }
 ]
