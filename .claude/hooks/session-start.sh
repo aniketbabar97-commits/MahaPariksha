@@ -38,7 +38,7 @@ cd "$GEN" || exit 0
 running() { pgrep -f "$1" >/dev/null 2>&1; }
 
 if ! running "notes.py.*--augment-tips"; then
-  nohup python3 notes.py --provider groq --model openai/gpt-oss-120b --augment-tips \
+  nohup python3 notes.py --provider groq --model openai/gpt-oss-20b --augment-tips \
     > "$LOGS/tips1.log" 2>&1 &
   disown
 fi
