@@ -141,4 +141,10 @@ jobs:
           force-avd-creation: false
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           disable-animations: true
-          script: cd railpariksha/app && flutter test integration_test/golden_path_test.dart --release
+          # `flutter test integration_test/...` doesn't accept --release at all (confirmed
+          # via an actual run: "Could not find an option named '--release'") -- only
+          # `flutter drive` does, which needs test_driver/integration_test.dart as the bridge.
+          script: |
+            cd railpariksha/app
+            flutter drive --driver=test_driver/integration_test.dart \
+              --target=integration_test/golden_path_test.dart -d emulator-5554 --release
