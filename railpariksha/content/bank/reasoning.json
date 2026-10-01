@@ -31654,5 +31654,97 @@
   "a": 0,
   "e_hi": "यदि कुछ पंछी चूहे हैं और सभी चूहे जानवर हैं, तो वे कुछ पंछी जो चूहे भी हैं, अवश्य ही जानवर होंगे।",
   "e_en": "If some birds are mice and all mice are animals, then those specific birds that are also mice must necessarily be animals."
+ },
+ {
+  "id": "rp-rea-o01381",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "एक कक्षा में 40 छात्र हैं। उनमें से 25 ने गणित लिया और 20 ने विज्ञान लिया। यदि कम से कम 5 छात्रों ने दोनों विषय लिए हैं, तो अधिकतम कितने छात्रों ने न तो गणित लिया और न ही विज्ञान?",
+  "q_en": "In a class of 40 students, 25 study Mathematics and 20 study Science. If at least 5 students study both subjects, what is the maximum number of students who study neither Mathematics nor Science?",
+  "o_hi": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "o_en": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "a": 0,
+  "e_hi": "दोनों विषयों में कमी से अधिकतम ओवरलैप 20 है (क्योंकि विज्ञान केवल 20 हैं)। लंबित शर्त के अनुसार, यदि दोनों में 20 हैं, तो गणित या विज्ञान में कुल 25+20-20=25 छात्र हैं। अतः न तो और न ही = 40-25=15। लेकिन प्रश्न में 'कम से कम 5' दिया गया है, इसलिए अधिकतम 'न तो न ही' तब होगा जब 'दोनों' की संख्या अधिकतम होगी। अधिकतम 'दोनों' = 20 (क्योंकि विज्ञान केवल 20 हैं)। तब 'न तो न ही' = 40 - (25 + 20 - 20) = 15। प्रतीक्षा करें, यदि 'दोनों' कम से कम 5 हैं, तो 'दोनों' अधिकतम 20 हो सकते हैं। यदि दोनों = 20, तो यूनियन = 25। न तो न ही = 15। यदि दोनों = 5, तो यूनियन = 40, न तो न ही = 0। प्रश्न पूछ रहा है कि 'अधिकतम कितने छात्रों ने न तो... लिया'। अधिकतम 'न तो न ही' तब होगा जब यूनियन न्यूनतम होगी। यूनियन न्यूनतम तब होगी जब इंटरसेक्शन अधिकतम होगी। अधिकतम इंटरसेक्शन 20 है। अतः अधिकतम 'न तो न ही' 15 है।",
+  "e_en": "To maximize the number of students taking neither, we must minimize the union of Math and Science students. The union is minimized when the intersection (students taking both) is maximized. The maximum possible intersection is 20 (limited by the number of Science students). If both = 20, Union = 25 + 20 - 20 = 25. Thus, neither = 40 - 25 = 15."
+ },
+ {
+  "id": "rp-rea-o01382",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "एक नाव समझौते की दर से 12 किमी/घंटा और धारा की दर से 4 किमी/घंटा चलती है। यदि नाव को 20 किमी की यात्रा करने में 2 घंटे लगते हैं, तो जलप्रवाह की दिशा में यात्रा की दूरी कितनी है?",
+  "q_en": "A boat travels at 12 km/h in still water and the stream flows at 4 km/h. If the boat takes 2 hours for a total trip of 20 km, how much distance was covered downstream?",
+  "o_hi": [
+   "10 किमी",
+   "12 किमी",
+   "15 किमी",
+   "18 किमी"
+  ],
+  "o_en": [
+   "10 km",
+   "12 km",
+   "15 km",
+   "18 km"
+  ],
+  "a": 1,
+  "e_hi": "नदी की धारा में गति = 12 + 4 = 16 किमी/घंटा। प्रतिकूल धारा में गति = 12 - 4 = 8 किमी/घंटा। मान लें धारा की दिशा में दूरी x है। समय समीकरण: x/16 + (20-x)/8 = 2। हल करने पर x = 12 किमी।",
+  "e_en": "Downstream speed = 12 + 4 = 16 km/h. Upstream speed = 12 - 4 = 8 km/h. Let downstream distance be x. Time equation: x/16 + (20-x)/8 = 2. Solving gives x = 12 km."
+ },
+ {
+  "id": "rp-rea-o01383",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "एक संख्या का 25% और 40% का योग 700 से 150 कम है। वह संख्या क्या है?",
+  "q_en": "The sum of 25% and 40% of a number is 150 less than 700. What is the number?",
+  "o_hi": [
+   "1000",
+   "1200",
+   "1500",
+   "2000"
+  ],
+  "o_en": [
+   "1000",
+   "1200",
+   "1500",
+   "2000"
+  ],
+  "a": 0,
+  "e_hi": "संख्या = x। 25% + 40% = 65%। 0.65x = 700 - 150 = 550। x = 550 / 0.65 = 1000।",
+  "e_en": "Let the number be x. 25% + 40% = 65%. 0.65x = 700 - 150 = 550. x = 550 / 0.65 = 1000."
+ },
+ {
+  "id": "rp-rea-o01384",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "तीन मित्र A, B और C एक काम 12 दिनों में पूरा करते हैं। A, B से 20% तेज़ और B, C से 25% तेज़ काम करता है। यदि A अकेला काम करता है, तो उसे कितने दिन लगेंगे?",
+  "q_en": "Three friends A, B, and C finish a job in 12 days. A is 20% faster than B, and B is 25% faster than C. If A works alone, how many days will he take?",
+  "o_hi": [
+   "18 दिन",
+   "20 दिन",
+   "24 दिन",
+   "30 दिन"
+  ],
+  "o_en": [
+   "18 days",
+   "20 days",
+   "24 days",
+   "30 days"
+  ],
+  "a": 0,
+  "e_hi": "मान लें C की दक्षता 100 इकाई/दिन है। B C से 25% तेज़ है, इसलिए B = 125। A B से 20% तेज़ है, इसलिए A = 125 * 1.2 = 150। कुल दक्षता = 100 + 125 + 150 = 375 इकाई/दिन। कुल काम = 375 * 12 = 4500 इकाई। A का समय = 4500 / 150 = 30 दिन। प्रतीक्षा करें, विकल्प में 30 है।",
+  "e_en": "Let C's rate be 100 units/day. B is 25% faster than C, so B = 125. A is 20% faster than B, so A = 125 * 1.2 = 150. Total rate = 100 + 125 + 150 = 375 units/day. Total work = 375 * 12 = 4500 units. A's time = 4500 / 150 = 30 days."
  }
 ]
