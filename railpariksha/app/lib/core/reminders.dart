@@ -6,34 +6,41 @@ import '../data/progress.dart';
 ///
 /// Message content is re-derived from current state every call, so each
 /// day's ping surfaces whichever signal is actually most likely to bring
-/// the user back today: an imminent exam beats everything (it's a real
-/// deadline), then a streak about to break (loss aversion is the strongest
-/// lever once a streak exists), then a backlog of unreviewed mistakes, and
-/// only then a generic nudge for a brand-new user with none of the above
-/// yet. Deliberately still just 2 notifications/day, not more -- a targeted
-/// daily ping beats a generic one, but more ever beats a user's tolerance.
+/// the user back today, in priority order: an imminent exam (escalating in
+/// three tiers as it gets closer -- a hard deadline always wins), then a
+/// streak about to break (loss aversion is the strongest lever once a
+/// streak exists), then a backlog of unreviewed mistakes, and only then a
+/// generic nudge for a brand-new user with none of the above yet.
+///
+/// Within each tier there are several high-energy variants (train-rank
+/// imagery, competitive framing, urgency -- not polite generic reminders),
+/// picked deterministically off today's day-index so the copy rotates day
+/// to day instead of going stale, while staying stable if this function
+/// gets called more than once on the same day (e.g. toggling a setting).
+/// Still just 2 notifications/day -- punchier copy beats generic copy, but
+/// more notifications than that costs more in uninstalls than it gains.
 String _tr(Progress p, String hi, String en) => p.lang == 'en' ? en : hi;
+
+(String, String) _pick(Progress p, List<(String, String, String, String)> variants) {
+  final v = variants[today() % variants.length];
+  return (_tr(p, v.$1, v.$2), _tr(p, v.$3, v.$4));
+}
 
 Future<void> applyReminders(Progress p) async {
   await RailParikshaNotifications.cancelAll();
   if (!p.reminders) return;
 
   final days = p.daysToExam;
-  final examSoon = days != null && days <= 14;
-
+  final morning = _morningMessage(p, days);
   await RailParikshaNotifications.scheduleDaily(
     id: 1,
     hour: p.reminderHour,
-    title: examSoon
-        ? _tr(p, 'परीक्षा में सिर्फ $days दिन बाकी! ⏰', 'Only $days days left for your exam! ⏰')
-        : _tr(p, 'आपका आज का Daily 10 तैयार है 🔥', "Your Daily 10 is ready 🔥"),
-    body: examSoon
-        ? _tr(p, 'आज का रिवीज़न अभी शुरू करें, एक भी दिन बर्बाद न करें।', 'Start today\'s revision now -- every day counts.')
-        : _tr(p, 'सिर्फ 10 प्रश्न, 5 मिनट। चलिए अभ्यास शुरू करते हैं!', 'Just 10 questions, 5 minutes. Let\'s get started!'),
+    title: morning.$1,
+    body: morning.$2,
   );
 
   final eveningHour = (p.reminderHour + 12) % 24;
-  final evening = _eveningMessage(p, examSoon, days);
+  final evening = _eveningMessage(p, days);
   await RailParikshaNotifications.scheduleDaily(
     id: 2,
     hour: eveningHour == 0 ? 20 : eveningHour,
@@ -42,29 +49,136 @@ Future<void> applyReminders(Progress p) async {
   );
 }
 
-(String, String) _eveningMessage(Progress p, bool examSoon, int? days) {
-  if (examSoon) {
+(String, String) _morningMessage(Progress p, int? days) {
+  if (days != null && days <= 3) {
     return (
-      _tr(p, 'परीक्षा में $days दिन! आज का रिवीज़न पूरा किया? 📚', '$days days to go! Done today\'s revision? 📚'),
+      _tr(p, '🚨 सिर्फ $days दिन बाकी! 🚨', '🚨 Only $days days left! 🚨'),
+      _tr(p, 'अभी रिवीज़न शुरू करो, एक मिनट भी बर्बाद मत करो!', "Start revising right now -- don't waste a single minute!"),
+    );
+  }
+  if (days != null && days <= 7) {
+    return (
+      _tr(p, 'परीक्षा में सिर्फ $days दिन! ⏰', 'Only $days days to your exam! ⏰'),
+      _tr(p, 'आज का रिवीज़न अभी शुरू करो, हर घंटा कीमती है।', 'Start revising now -- every hour counts.'),
+    );
+  }
+  if (days != null && days <= 14) {
+    return (
+      _tr(p, 'परीक्षा में सिर्फ $days दिन बाकी! ⏰', 'Only $days days left for your exam! ⏰'),
+      _tr(p, 'आज का रिवीज़न अभी शुरू करें, एक भी दिन बर्बाद न करें।', "Start today's revision now -- every day counts."),
+    );
+  }
+  return _pick(p, const [
+    (
+      'उठो चैंपियन! 🔥',
+      'Rise and grind, champion! 🔥',
+      'तुम्हारा आज का Daily 10 तैयार है — सिर्फ 5 मिनट में बाज़ी मार लो!',
+      'Your Daily 10 is ready -- smash it in just 5 minutes!',
+    ),
+    (
+      'भारतीय रेलवे बुला रही है 🚆',
+      'Indian Railways is calling 🚆',
+      'तैयार हो आज की सीट पक्की करने के लिए? चलो शुरू करें!',
+      "Ready to lock in today's seat? Let's start!",
+    ),
+    (
+      'हर सुबह एक जीत 🏆',
+      'Every morning, a new win 🏆',
+      'सिर्फ 10 सवाल, 5 मिनट — आज की जीत शुरू करो।',
+      "Just 10 questions, 5 minutes -- start today's win.",
+    ),
+    (
+      'तुम्हारी सीट तुम्हारा इंतज़ार कर रही है 🚂',
+      'Your seat on that train is waiting 🚂',
+      'आज का अभ्यास छोड़ा तो कोई और आगे निकल जाएगा!',
+      'Skip today and someone else moves ahead!',
+    ),
+    (
+      'जोश में हो? चलो शुरू करें! ⚡',
+      "Feeling it? Let's go! ⚡",
+      'आज का Daily 10 पूरा करके अपना दिन शुरू करो।',
+      "Kick off your day by finishing today's Daily 10.",
+    ),
+  ]);
+}
+
+(String, String) _eveningMessage(Progress p, int? days) {
+  if (days != null && days <= 3) {
+    return (
+      _tr(p, '$days दिन! आखिरी मौका है 🔥', '$days days! This is your final push 🔥'),
+      _tr(p, 'जो आज रिवीज़न करेगा, वही कल जीतेगा।', 'Whoever revises today wins tomorrow.'),
+    );
+  }
+  if (days != null && days <= 7) {
+    return (
+      _tr(p, '$days दिन बाकी! रिवीज़न पूरा किया? 📚', '$days days left! Done revising? 📚'),
+      _tr(p, 'आखिरी हफ्तों में हर घंटा मायने रखता है।', 'Every hour matters in these final weeks.'),
+    );
+  }
+  if (days != null && days <= 14) {
+    return (
+      _tr(p, '$days दिन! आज का रिवीज़न पूरा किया? 📚', "$days days to go! Done today's revision? 📚"),
       _tr(p, 'आखिरी दिनों में हर घंटा मायने रखता है।', 'Every hour counts in these final days.'),
     );
   }
-  if (p.liveStreak > 0) {
-    return (
-      _tr(p, 'अपनी ${p.liveStreak} दिन की स्ट्रीक आज पूरी करें! 🔥', 'Keep your ${p.liveStreak}-day streak alive today! 🔥'),
-      _tr(p, 'रोज़ थोड़ा, पर बिना नागा — यही सफलता का राज़ है।',
-          'A little every day, without skipping — that\'s the real secret to success.'),
-    );
+  final streak = p.liveStreak;
+  if (streak > 0) {
+    return _pick(p, [
+      (
+        '$streak दिन की स्ट्रीक टूटने वाली है! 🔥🚨',
+        'Your $streak-day streak is about to die! 🔥🚨',
+        'अभी एक क्विज़ खेलो और इसे ज़िंदा रखो!',
+        'Play one quiz right now and keep it alive!',
+      ),
+      (
+        'राजधानी बनने से एक क्विज़ दूर हो 🚄',
+        'One quiz away from Rajdhani rank 🚄',
+        '$streak दिन की मेहनत बर्बाद मत करो — आज भी खेलो!',
+        "Don't waste $streak days of hard work -- play today too!",
+      ),
+      (
+        'तुम्हारी स्ट्रीक को तुम्हारी ज़रूरत है! 💪',
+        'Your streak needs you! 💪',
+        '$streak दिन की स्ट्रीक — आज भी बरकरार रखो।',
+        'Keep that $streak-day streak alive today too.',
+      ),
+    ]);
   }
-  if (p.mistakes.length >= 5) {
-    return (
-      _tr(p, '${p.mistakes.length} गलतियां दोबारा हल करने के लिए तैयार हैं', '${p.mistakes.length} mistakes are ready for a rematch'),
-      _tr(p, 'इन्हें अभी ठीक करें, एग्ज़ाम में दोबारा ना हों।', 'Fix them now so they don\'t repeat on exam day.'),
-    );
+  final mistakes = p.mistakes.length;
+  if (mistakes >= 5) {
+    return _pick(p, [
+      (
+        '$mistakes गलतियां बदला लेने का इंतज़ार कर रही हैं 😤',
+        '$mistakes mistakes are waiting for their revenge match 😤',
+        'इन्हें आज हरा दो, एग्ज़ाम में दोबारा मौका नहीं मिलेगा!',
+        "Beat them today -- exam day won't give you a second chance!",
+      ),
+      (
+        '$mistakes गलतियां, एक मौका ⚔️',
+        '$mistakes mistakes, one shot ⚔️',
+        'Mistake Book खोलो और स्कोर बराबर करो!',
+        'Open your Mistake Book and even the score!',
+      ),
+    ]);
   }
-  return (
-    _tr(p, 'आज थोड़ा अभ्यास कर लें? 💪', 'A little practice today? 💪'),
-    _tr(p, 'रोज़ थोड़ा, पर बिना नागा — यही सफलता का राज़ है।',
-        'A little every day, without skipping — that\'s the real secret to success.'),
-  );
+  return _pick(p, const [
+    (
+      'दिन खत्म होने से पहले! ⏳',
+      'Before the day ends! ⏳',
+      'सिर्फ 5 मिनट बचे हैं आज की जीत के लिए — अभी शुरू करो!',
+      "Just 5 minutes stand between you and today's win -- go now!",
+    ),
+    (
+      'आज की बाज़ी अभी बाकी है 🎯',
+      "Today's win is still up for grabs 🎯",
+      'एक छोटा सा अभ्यास, एक बड़ा कदम सफलता की ओर।',
+      'One small practice session, one big step toward success.',
+    ),
+    (
+      'कामयाबी इंतज़ार नहीं करती ⚡',
+      "Success doesn't wait ⚡",
+      'आज थोड़ा अभ्यास कर लो, कल खुद को शुक्रिया कहोगे।',
+      "Practice a little today -- you'll thank yourself tomorrow.",
+    ),
+  ]);
 }
