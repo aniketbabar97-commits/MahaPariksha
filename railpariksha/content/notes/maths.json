@@ -108,7 +108,21 @@
      ]
     }
    ]
-  }
+  },
+  "tips_hi": [
+   "स्मरणीय वाक्य: ‘योग, योग, अंतर’ – 3, 9 और 11 के नियम याद रखने के लिए।",
+   "7 से भाग देने के लिए: अंतिम अंक को दोगुना करके शेष संख्या से घटाएँ; यह प्रक्रिया तब तक दोहराएँ जब तक संख्या छोटी न हो जाए।",
+   "ध्यान दें: 1 को ना तो अभाज्य मानें और ना ही सम्मिश्र; यदि प्रश्न में 1 को अभाज्य कहा गया हो तो यह जाल है।",
+   "पावर के यूनिट-डिजिट के लिए चक्र याद रखें: 2 की घातों का चक्र 2,4,8,6 है – इससे बड़ी घातों का अंतिम अंक जल्दी पता चलता है।",
+   "अभाज्यता जाँचते समय केवल उन प्राइम्स तक जाँचें जिनका वर्गमूल n से कम या बराबर हो।"
+  ],
+  "tips_en": [
+   "Mnemonic: ‘Sum, Sum, Difference’ – to remember the rules for 3, 9 and 11.",
+   "Rule for 7: Double the last digit and subtract it from the remaining number; repeat until the number is small.",
+   "Watch out: 1 is neither prime nor composite; if a question lists 1 as a prime, it’s a trick.",
+   "Remember the unit‑digit cycle for powers: 2^n ends in 2,4,8,6 – use this to find large powers quickly.",
+   "When checking for primality, test divisibility only by primes up to the square root of the number."
+  ]
  },
  {
   "id": "note-maths-percentage",
@@ -203,7 +217,21 @@
      ]
     }
    ]
-  }
+  },
+  "tips_hi": [
+   "समानुपातिक बदलाव के लिए 'जोड़ो, जोड़ो, गुणा करो' स्मरणीय वाक्य याद रखो: x + y + (xy/100)।",
+   "प्रश्न में पूछे गए प्रतिशत के प्रकार (वृद्धि, घटाव, परिवर्तन) और आधार (मूल या नया) को पहले स्पष्ट रूप से पहचानो।",
+   "दो successive प्रतिशत बदलाव के क्रम पर ध्यान दो; बढ़ाने के बाद घटाने और घटाने के बाद बढ़ाने के परिणाम अलग होते हैं।",
+   "20% जल्दी निकालने के लिए 10% (आधे) को दो बार जोड़ो।",
+   "5% जल्दी निकालने के लिए 10% को आधा करो।"
+  ],
+  "tips_en": [
+   "Use the mnemonic ‘Add, add, multiply’ to remember the net change formula: x + y + (xy/100).",
+   "Always identify whether the question asks for a percentage increase, decrease, or change, and whether the base is the original or the new value.",
+   "Pay attention to the order of successive percentage changes; an increase followed by a decrease is not the same as a decrease followed by an increase.",
+   "Quickly find 20% of a number by calculating 10% (half the number) and doubling it.",
+   "Quickly find 5% of a number by calculating 10% and halving it."
+  ]
  },
  {
   "summary_hi": "HCF (सबसे बड़ा समान भाजक) और LCM (सबसे छोटा समान बहुगुणक) दो संख्याओं के बीच के मूलभूत संबंध को दर्शाते हैं। HCF वह सबसे बड़ा पूर्णांक है जो दोनों संख्याओं को बिना शेष के विभाजित करता है, जबकि LCM वह सबसे छोटा पूर्णांक है जो दोनों के गुणज के रूप में आता है। इन दोनों मानों के बीच का प्रमुख सूत्र है HCF × LCM = दो संख्याओं का गुणनफल। HCF निकालने के लिए यूक्लिडियन एल्गोरिदम या प्राइम फैक्टराइज़ेशन का प्रयोग किया जाता है, और LCM को (a×b)/HCF से आसानी से प्राप्त किया जा सकता है। सहभाज्य संख्याओं के लिए HCF 1 और LCM उनका गुणनफल होता है, जिससे कई गणितीय समस्याओं का समाधान सरल हो जाता है। परीक्षा में अक्सर भिन्नों का समान हर बनाना, अनुपात और समूह बनाना आदि में इनका प्रयोग पूछा जाता है।",
@@ -310,7 +338,19 @@
   },
   "id": "note-maths-hcf_lcm",
   "s": "maths",
-  "t": "hcf_lcm"
+  "t": "hcf_lcm",
+  "tips_hi": [
+   "HCF × LCM = उत्पाद को याद रखने के लिए \"HCF‑LCM‑उत्पाद\" (HLP) संक्षिप्त रूप का उपयोग करें।",
+   "यदि एक संख्या दूसरी की गुणज है, तो LCM बड़ी संख्या और HCF छोटी संख्या है।",
+   "प्रश्न में \"LCM\" लिखे होने पर भी कभी-कभी \"HCF\" पूछे जाते हैं – पहले शब्द को दोबारा जाँचें।",
+   "यदि दोनों संख्याएँ सहभाज्य (coprime) हैं, तो LCM = गुणनफल; पहले GCD = 1 है या नहीं, यह जाँचें।"
+  ],
+  "tips_en": [
+   "Remember the key identity with the mnemonic \"HCF‑LCM‑Product\" (HLP).",
+   "If one number is a multiple of the other, LCM is the larger number and HCF is the smaller.",
+   "Examiners sometimes swap \"LCM\" and \"HCF\" in the question – double‑check the wording.",
+   "For coprime numbers, LCM equals the product; first verify that GCD = 1 before using the shortcut."
+  ]
  },
  {
   "summary_hi": "दशमलव और भिन्न गणित के दो मूलभूत अभिव्यक्तियों में से हैं, जिनका सही समझना आरआरबी/आरपीएफ परीक्षा में आवश्यक है। दशमलव में प्रत्येक अंक का स्थान मान 10 की शक्ति से निर्धारित होता है, जबकि भिन्न में अंश और हर स्पष्ट रूप से लिखे जाते हैं। किसी दशमलव को भिन्न में बदलने के लिए उसे 10 की उपयुक्त शक्ति से गुणा कर सरलतम रूप में घटाया जाता है, और भिन्न को दशमलव में बदलने के लिए हर को 10 की शक्ति के बराबर बनाकर भाग किया जाता है। समाप्ति (terminating) दशमलव केवल 2 और 5 के गुणकों वाले हर वाले भिन्नों में संभव है, जबकि अन्य में आवर्ती (repeating) दशमलव उत्पन्न होते हैं। भिन्नों के जोड़‑घटाव में समान हर लेना अनिवार्य है, और गुणा‑भाग में सीधे अंश‑हर का संचालन किया जाता है। आवर्ती दशमलव को भिन्न में बदलने के लिए आवर्ती भाग को एक चर मान कर समीकरण बनाकर हल किया जाता है, जिससे तेज़ और सटीक उत्तर मिलता है।",
@@ -403,7 +443,21 @@
   },
   "id": "note-maths-decimal_fraction",
   "s": "maths",
-  "t": "decimal_fraction"
+  "t": "decimal_fraction",
+  "tips_hi": [
+   "दो‑पाँच‑दस स्मरण: हर को 2 और 5 से सरल करने पर ही दशमलव समाप्त होता है।",
+   "पुनरावर्ती दशमलव को भिन्न में बदलने का त्वरित सूत्र: (x = 0.overline{abc}) → (10^n x - x = abc) → (x = \frac{abc}{10^n-1}).",
+   "जाल: हर में 2 या 5 के अलावा कोई अन्य अभाज्य संख्या होने पर दशमलव दोहराता है – हमेशा हर को गुणनखंडित करें।",
+   "2 या 5 के घात वाले हर वाले भिन्नों को जोड़ने/घटाने के लिए: दशमलव में बदलें, जोड़ें, फिर भिन्न में बदलें।",
+   "उत्तर देने से पहले भिन्न को सरल करें; इससे दशमलव में बदलने का समय कम होता है।"
+  ],
+  "tips_en": [
+   "Two‑Five‑Ten mnemonic: If the simplified denominator contains only 2 and 5, the decimal terminates.",
+   "Quick formula for converting a repeating decimal to a fraction: (x = 0.overline{abc}) → (10^n x - x = abc) → (x = \frac{abc}{10^n-1}).",
+   "Trap: If the denominator has any prime other than 2 or 5, the decimal repeats – always factor the denominator.",
+   "For fractions with denominators that are powers of 2 or 5, add/subtract by converting to decimal, performing the operation, then converting back.",
+   "Always simplify the fraction before converting to decimal; it saves time."
+  ]
  },
  {
   "summary_hi": "अनुपात दो संख्याओं के बीच तुलनात्मक संबंध को दर्शाता है और इसे a:b के रूप में लिखा जाता है। जब दो अनुपात बराबर होते हैं तो उन्हें समानुपात कहा जाता है, जिसे a:b = c:d के रूप में दर्शाया जाता है। समानुपात के मूल नियम के अनुसार a/b = c/d होने पर a·d = b·c सत्य होता है। अनुपात को सरल करने के लिए दोनों पदों को उनके महत्तम समापवर्तक से भाग देना चाहिए और स्केलिंग से अनुपात नहीं बदलता। मिश्रित अनुपात कई अनुपातों को गुणा करके बनता है और इसका प्रयोग गति, कार्य, मिश्रण, प्रतिशत आदि में व्यापक रूप से होता है।",
@@ -494,7 +548,19 @@
   },
   "id": "note-maths-ratio_proportion",
   "s": "maths",
-  "t": "ratio_proportion"
+  "t": "ratio_proportion",
+  "tips_hi": [
+   "स्मरणीय क्रॉस‑मल्टिप्लिकेशन: 'आधार दोगुना बराबर बंधा गुणा' (AD = BC) याद रखें।",
+   "बड़े संख्याओं से बचने के लिए, पहले सामान्य गुणकों को काटें, फिर गुणा करें।",
+   "परीक्षक अक्सर अंश और हर को उलट देते हैं; हमेशा जाँचें कि पहला संख्या अंश है।",
+   "संयुक्त अनुपात के लिए, हर चरण में सरल करें: (a:b)·(c:d) = (a·c):(b·d) → सरल करें।"
+  ],
+  "tips_en": [
+   "Remember cross‑multiplication with the mnemonic: 'AD = BC' (A times D equals B times C).",
+   "To avoid huge numbers, cancel common factors before multiplying.",
+   "Examiners often swap numerator and denominator; always verify the first number is the numerator.",
+   "For compound ratios, simplify after each multiplication: (a:b)·(c:d) = (a·c):(b·d) → reduce."
+  ]
  },
  {
   "summary_hi": "औसत वह मान है जो किसी समूह के सभी संख्याओं को जोड़कर, उनकी कुल संख्या से भाग देने पर प्राप्त होता है। यह सबसे बुनियादी सांख्यिकीय माप है और परीक्षा में अक्सर कुल, भागफल या अनुपात के रूप में पूछा जाता है। अंकगणितीय औसत सबसे सामान्य प्रकार है, जबकि भारित और हार्मोनिक औसत विशेष परिस्थितियों में उपयोग होते हैं। यदि सभी मानों में समान संख्या जोड़ी या घटाई जाए तो औसत भी उसी मात्रा से बदलता है। किसी एक मान में परिवर्तन का औसत पर प्रभाव उस परिवर्तन के अनुपात में होता है। अंकगणितीय प्रगति में पहले और अंतिम पद का औसत ही सभी पदों का औसत होता है।",
@@ -591,7 +657,19 @@
   },
   "id": "note-maths-average",
   "s": "maths",
-  "t": "average"
+  "t": "average",
+  "tips_hi": [
+   "पहला + आख़िरी = 2 × औसत",
+   "सभी में X जोड़ें → औसत में X जुड़ जाएगा",
+   "वज़न समान होने पर वज़नित औसत = साधारण औसत",
+   "औसत के अनुपात पूछते समय, पहले यह देखें कि क्या यह 'कुल औसत' है या 'औसत का औसत'"
+  ],
+  "tips_en": [
+   "First + Last = 2 × Mean",
+   "Add X to every value → Mean increases by X",
+   "If all weights are equal, weighted mean equals ordinary mean",
+   "When asked for ratio of averages, first check whether it’s the mean of totals or mean of means"
+  ]
  },
  {
   "summary_hi": "लाभ व हानि गणित में व्यापारिक लेन‑देन के मूलभूत सिद्धांत हैं। लागत मूल्य (CP) वह राशि है जो वस्तु खरीदने में खर्च होती है, जबकि बिक्री मूल्य (SP) वह राशि है जिस पर वस्तु बेची जाती है। यदि SP, CP से अधिक हो तो लाभ होता है, जिसका मान SP – CP से मिलता है; यदि CP, SP से अधिक हो तो हानि होती है, जिसका मान CP – SP से मिलता है। लाभ या हानि को प्रतिशत में व्यक्त करने के लिये क्रमशः (लाभ ÷ CP)×100 और (हानि ÷ CP)×100 सूत्र प्रयोग होते हैं। इन प्रतिशतों से CP या SP को पुनः निकालने के लिये SP = CP×(1+लाभ%/100) तथा CP = SP×100/(100–हानि%) जैसे रूपान्तरण उपयोगी होते हैं। अतिरिक्त रूप से डिस्काउंट और मार्कअप के सूत्र भी लाभ‑हानि के संदर्भ में अक्सर पूछे जाते हैं।",
@@ -696,7 +774,19 @@
   },
   "id": "note-maths-profit_loss",
   "s": "maths",
-  "t": "profit_loss"
+  "t": "profit_loss",
+  "tips_hi": [
+   "लाभ या हानि की गणना पहले करें, फिर प्रतिशत निकालें।",
+   "SP = CP × (100 + P%) / 100 और CP = SP × 100 / (100 – L%) – यह तेज़ सूत्र है।",
+   "प्रश्न में Profit%, Markup% और Discount% को एक-दूसरे से गड़बड़ न करें।",
+   "जवाब देने से पहले यह जाँच लें कि सवाल CP पूछ रहा है या SP।"
+  ],
+  "tips_en": [
+   "Compute profit or loss first, then find the percentage.",
+   "Use the quick formulas: SP = CP × (100 + P%) / 100 and CP = SP × 100 / (100 – L%).",
+   "Never mix up Profit %, Markup % and Discount % in a question.",
+   "Before answering, verify whether the problem asks for CP or SP."
+  ]
  },
  {
   "summary_hi": "साधारण ब्याज वह ब्याज है जो केवल मूलधन पर ही लगाया जाता है और इसका सूत्र I = P·R·T/100 है, जहाँ P मूलधन, R वार्षिक दर और T समय (वर्ष) है। कुल राशि = P+I = P(1+R·T/100)। चक्रवृद्धि ब्याज में प्रत्येक अवधि के अंत में अर्जित ब्याज को मूलधन में जोड़ दिया जाता है, जिससे अगली अवधि में अधिक ब्याज मिलता है। चक्रवृद्धि ब्याज की राशि का सामान्य सूत्र A = P(1+R/n·100)^{n·T} है, जहाँ n अवधि की संख्या है; वार्षिक चक्रवृद्धि के लिये n=1। प्रभावी वार्षिक दर (EAR) = (1+R/n)^{n}-1 से निकाली जाती है और निरंतर चक्रवृद्धि के लिये A = Pe^{R·T} प्रयोग होता है। दोनों प्रकार के ब्याज की तुलना करते समय समय, दर और आवृत्ति को सही रूप में प्रयोग करना आवश्यक है।",
@@ -787,7 +877,19 @@
   },
   "id": "note-maths-si_ci",
   "s": "maths",
-  "t": "si_ci"
+  "t": "si_ci",
+  "tips_hi": [
+   "पीआरटी – सरल ब्याज के सूत्र में P, R, T के क्रम को याद रखने के लिए ‘पीआरटी’ का उपयोग करें।",
+   "72 का नियम – ब्याज दर R% पर धन दोगुना होने का समय लगभग 72/R वर्ष होता है।",
+   "कम्पाउंडिंग फ़्रीक्वेंसी पर ध्यान दें – यदि प्रश्न में ‘कम्पाउंडिंग’ का उल्लेख नहीं है तो सरल ब्याज मानें; यदि ‘कम्पाउंडिंग’ है तो n को स्पष्ट रूप से देखें।",
+   "लॉग का उपयोग करके समय निकालें – यदि A, P, R, n ज्ञात हैं और T चाहिए तो T = ln(A/P) / [n ln(1+R/(100n))] का उपयोग करें।"
+  ],
+  "tips_en": [
+   "P R T – Remember the order of variables in simple interest: I = P·R·T/100; use the mnemonic 'P R T' to keep the sequence straight.",
+   "Rule of 72 – Roughly estimate doubling time as 72 divided by the annual rate R%. Handy for quick mental checks.",
+   "Check compounding frequency – If the question doesn’t specify compounding, assume simple interest; if it says compounding, be sure to note the value of n.",
+   "Use logarithms for time – When A, P, R, n are known and you need T, compute T = ln(A/P) / [n ln(1+R/(100n))]."
+  ]
  },
  {
   "summary_hi": "समय व कार्य खंड में कार्य को दर और समय के गुणनफल के रूप में परिभाषित किया जाता है। दर का अर्थ है एक इकाई समय में किया गया कार्य, और यह कार्य को समय से विभाजित करके प्राप्त होता है। कई व्यक्तियों या मशीनों के संयुक्त कार्य में व्यक्तिगत दरों का योग लिया जाता है, जिससे कुल कार्य समय घट जाता है। कार्य‑समय संबंध प्रतिलोम होता है; दक्षता बढ़ने पर आवश्यक समय घटता है। कार्य‑वेतन का सीधा अनुपात होता है, इसलिए अधिक कार्य अधिक वेतन देता है। विशेष प्रश्नों में पाइप भरना‑खाली करना, विश्राम दिवस और लघुतम समापवर्त्य जैसी तकनीकें लागू होती हैं। इन सिद्धांतों को याद रखकर विभिन्न प्रकार के समय‑कार्य प्रश्नों को तेज़ी से हल किया जा सकता है।",
@@ -894,7 +996,19 @@
   },
   "id": "note-maths-time_work",
   "s": "maths",
-  "t": "time_work"
+  "t": "time_work",
+  "tips_hi": [
+   "एमडीएस: दो समय को गुणा करें, फिर उनके योग से भाग दें, इससे संयुक्त समय मिलता है।",
+   "भिन्नों को हटाने के लिए हर के लघुत्तम समापवर्तक (LCM) का उपयोग करें।",
+   "वेतन भ्रम: क्या यह प्रति कार्य इकाई पर है या प्रति समय इकाई पर? यदि प्रति कार्य, तो पहले कार्य निकालें।",
+   "दर जोड़ने से पहले इकाइयों की जाँच करें; समान इकाई में बदलें।"
+  ],
+  "tips_en": [
+   "MDS: Multiply the two individual times, then divide by their sum to get combined time.",
+   "Use LCM of denominators to eliminate fractions early.",
+   "Wage confusion: Is it per unit of work or per unit of time? Compute work first if per work.",
+   "Always verify units before adding rates; convert to same unit."
+  ]
  },
  {
   "summary_hi": "समय, चाल और दूरी का सम्बन्ध गति = दूरी/समय के सूत्र से निर्धारित होता है। इस मूलभूत सूत्र को पुनर्व्यवस्थित करके समय = दूरी/गति तथा दूरी = गति×समय प्राप्त होते हैं, जो सभी प्रकार के प्रश्नों में प्रयोग होते हैं। समान गति में चलने वाले वस्तु का औसत गति कुल दूरी को कुल समय से विभाजित करके निकाला जाता है। दो वस्तुओं की सापेक्ष गति दिशा के अनुसार अलग होती है: समान दिशा में गति का अंतर और विपरीत दिशा में गति का योग। इकाई परिवर्तन, जैसे km/h को m/s में बदलना (1 km/h ≈ 0.27778 m/s) तथा समय को घंटे‑मिनट‑सेकंड में बदलना, परीक्षा में अक्सर पूछे जाते हैं। स्थिर चाल के ग्राफ़ में दूरी‑समय रेखा की ढाल वही चाल होती है, जिससे ग्राफ़िक प्रश्न आसानी से हल होते हैं।",
@@ -995,7 +1109,21 @@
   },
   "id": "note-maths-time_speed_distance",
   "s": "maths",
-  "t": "time_speed_distance"
+  "t": "time_speed_distance",
+  "tips_hi": [
+   "किलोमीटर/घंटा से मीटर/सेकंड में बदलने के लिए 5/18 से गुणा करें, 1000/3600 की बजाय।",
+   "सापेक्ष गति में दिशा पहले देखें: एक ही दिशा में चलने पर घटाएँ, विपरीत दिशा में चलने पर जोड़ें।",
+   "यदि दूरी दो हिस्सों में दी गई है, तो पहले कुल दूरी निकालें, फिर कुल समय से भाग देकर औसत गति निकालें।",
+   "समय को घंटे‑मिनट में दिया हो तो मिनट को 60 से भाग देकर घंटे के अंश में बदलें, फिर फ़ॉर्मूला में डालें।",
+   "सभी इकाइयों की जाँच करें: दूरी km में और गति km/h में → समय घंटे में; दूरी km में और गति m/s में → दूरी को मीटर में बदलें।"
+  ],
+  "tips_en": [
+   "To convert km/h to m/s, multiply by 5/18 instead of doing 1000/3600.",
+   "For relative speed, first check direction: subtract when moving same way, add when moving opposite.",
+   "If distance is given in two parts, add them first to get total distance, then divide by total time for average speed.",
+   "When time is given in hours and minutes, convert minutes to a fraction of an hour (minutes/60) before using the formula.",
+   "Always verify units: distance in km with speed in km/h gives time in hours; if speed is in m/s, convert distance to meters first."
+  ]
  },
  {
   "summary_hi": "क्षेत्रमिति गणित का वह भाग है जिसमें समतल और ठोस आकृतियों के क्षेत्रफल, परिधि, सतह क्षेत्रफल और आयतन की गणना की जाती है। परीक्षा में अक्सर त्रिभुज, आयत, वर्ग, वृत्त तथा घन, सिलिंडर, गोलक और शंकु के सूत्र पूछे जाते हैं। प्रत्येक आकृति के लिये मूलभूत सूत्र याद रखना तेज़ गणना में मदद करता है। π का मान 22/7 या 3.1416 प्रयोग किया जाता है। त्रिभुज का क्षेत्रफल आधा आधार गुणा ऊँचाई, आयत का लम्बाई×चौड़ाई, और वृत्त का πr² होता है। घन का सतह क्षेत्रफल 6a² तथा आयतन a³, सिलिंडर का सतह 2πr(r+h) और आयतन πr²h, गोलक का सतह 4πr² और आयतन 4/3πr³ होते हैं। शंकु का आयतन 1/3πr²h तथा सतह πr(r+√(r²+h²)) है। इन सूत्रों को सही क्रम में लिखना और इकाइयों का ध्यान रखना परीक्षा में अंक सुरक्षित करने की कुंजी है।",
@@ -1405,7 +1533,19 @@
   },
   "id": "note-maths-data_interpretation",
   "s": "maths",
-  "t": "data_interpretation"
+  "t": "data_interpretation",
+  "tips_hi": [
+   "टोटल, औसत, प्रतिशत (TAP) याद रखने के लिए एक छोटा सा संक्षिप्त शब्द",
+   "10% नियम: 10% = पुरानी वैल्यू का 1/10, जिससे त्वरित प्रतिशत परिवर्तन की गणना आसान हो जाती है",
+   "मीडियन और मोड को गड़बड़ न करें – दोनों अलग हैं, पर अक्सर परीक्षक इन्हें उलट देते हैं",
+   "उत्तर देने से पहले हमेशा इकाइयाँ और दशमलव स्थानों की जाँच करें"
+  ],
+  "tips_en": [
+   "Use the TAP mnemonic (Total, Average, Percentage) to remember the order of operations",
+   "Apply the 10% rule: 10% equals one‑tenth of the old value for quick percentage change calculations",
+   "Beware of the median vs. mode trap – they are distinct and often swapped by examiners",
+   "Always verify units and decimal places before finalizing your answer"
+  ]
  },
  {
   "summary_hi": "त्रिकोणमिति एक त्रिभुज के भुजाओं और कोणों के बीच संबंधों का अध्ययन है। इसका मूल आधार समकोण त्रिभुज है, जहाँ पायथागोरस प्रमेय (a² + b² = c²) लागू होता है। मुख्य अनुपाक हैं: ज्या (sin), कोज्या (cos), और टेंजेंट (tan), जो विपरीत, समकोण और कर्ण भुजाओं के अनुपात हैं। इकाई वृत्त (Unit Circle) का उपयोग करके त्रिकोणमितीय फलनों की परिभाषा को सभी कोणों तक विस्तारित किया जाता है। त्रिकोणमितीय सर्वसमिकाएँ, जैसे sin²θ + cos²θ = 1, गणनाओं को सरल बनाती हैं। इन फलनों की आवर्तता (periodicity) उन्हें आवर्ती फलनों के रूप में परिभाषित करती है। त्रिकोणमिति भौतिकी, इंजीनियरिंग और गणित के अन्य क्षेत्रों में दूरी, ऊँचाई और तरंगों के विश्लेषण के लिए महत्वपूर्ण है।",
