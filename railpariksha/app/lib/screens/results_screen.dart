@@ -55,7 +55,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
   }
 
   String _headline(BuildContext context, double pct) {
-    if (pct >= 0.9) return context.tr('शानदार! आप राजधानी की रफ़्तार से चल रहे हैं! 🏆', 'Outstanding! Officer material! 🏆');
+    if (pct >= 0.9) return context.tr('शानदार! तुम वंदे भारत की रफ़्तार से चल रहे हो! 🏆', 'Outstanding! You\'re running at Vande Bharat speed! 🏆');
     if (pct >= 0.7) return context.tr('बढ़िया प्रदर्शन! ऐसे ही आगे बढ़ते रहें! 🚀', 'Great work! Keep soaring! 🚀');
     if (pct >= 0.4) return context.tr('अच्छी शुरुआत! थोड़ा और अभ्यास करें 💪', 'Good start! A bit more practice 💪');
     return context.tr('हर गलती एक सबक है। दोबारा कोशिश करें! 🔥', 'Every mistake is a lesson. Try again! 🔥');

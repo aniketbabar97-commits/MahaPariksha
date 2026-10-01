@@ -142,6 +142,12 @@ Future<void> applyReminders(Progress p) async {
         '$streak दिन की स्ट्रीक — आज भी बरकरार रखो।',
         'Keep that $streak-day streak alive today too.',
       ),
+      (
+        'वंदे भारत बनने से एक क्विज़ दूर हो 🚅',
+        'One quiz away from Vande Bharat rank 🚅',
+        '$streak दिन की स्पीड मत गिरने दो — आज भी खेलो!',
+        "Don't let your $streak-day speed drop -- play today too!",
+      ),
     ]);
   }
   final mistakes = p.mistakes.length;

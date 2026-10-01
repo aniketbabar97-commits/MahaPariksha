@@ -75,6 +75,9 @@ void main() {
       expect(p.level.en, 'Sleeper');
       p.xp = 12000;
       expect(p.level.en, 'Rajdhani');
+      expect(p.level.nextXp, 25000);
+      p.xp = 25000;
+      expect(p.level.en, 'Vande Bharat');
       expect(p.level.nextXp, isNull);
     });
 

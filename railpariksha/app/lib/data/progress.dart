@@ -18,13 +18,17 @@ class Level {
   String of(String lang) => lang == 'en' ? en : hi;
 }
 
-/// Levels follow a train's own upgrade path — General to Rajdhani — to match the app's theme.
+/// Levels follow a train's own upgrade path — General to Vande Bharat — to
+/// match the app's theme. Vande Bharat tops the list, not Rajdhani: it's
+/// India's fastest and most modern train in service today, so it reads as
+/// the more aspirational finish line for a RRB/RPF aspirant right now.
 const _levels = [
   (0, 'जनरल', 'General'),
   (300, 'स्लीपर', 'Sleeper'),
   (1500, 'थर्ड एसी', 'AC 3-Tier'),
   (5000, 'सेकंड एसी', 'AC 2-Tier'),
   (12000, 'राजधानी', 'Rajdhani'),
+  (25000, 'वंदे भारत', 'Vande Bharat'),
 ];
 
 class BeastTier {
