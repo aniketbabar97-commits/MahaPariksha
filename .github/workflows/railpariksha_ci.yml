@@ -34,8 +34,13 @@ jobs:
       # pull-requests:read token permission that the GitHub API-based
       # dorny/paths-filter default mode requires but this workflow doesn't grant.
       - id: filter
+        # event.before is this push's previous head (set on both push and PR
+        # synchronize events) -- prefer it over pull_request.base.sha, which
+        # is the PR's *original* base and would diff the whole PR's lifetime
+        # history on every push, not just what this push actually changed.
+        # Falls back to base.sha only when before is unset (PR just opened).
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          BASE_SHA: ${{ github.event.before || github.event.pull_request.base.sha }}
         run: |
           git fetch --depth=1 origin "$BASE_SHA"
           CHANGED=$(git diff --name-only "$BASE_SHA" HEAD)
