@@ -1,5 +1,218 @@
 [
- {"id": "fc-reas-0001", "s": "reasoning", "t": "mirror_water_image", "f_hi": "घड़ी के दर्पण प्रतिबिंब का सूत्र?", "f_en": "Formula for a clock's mirror image?", "b_hi": "11:60 में से समय घटाएं", "b_en": "Subtract the time from 11:60"},
- {"id": "fc-reas-0002", "s": "reasoning", "t": "alphabet_test", "f_hi": "वर्णमाला का मध्य अक्षर कौन-सा है?", "f_en": "Which is the middle letter of the alphabet?", "b_hi": "M (13वां अक्षर)", "b_en": "M (13th letter)"},
- {"id": "fc-reas-0003", "s": "reasoning", "t": "syllogism", "f_hi": "न्यायवाक्य हल करने का मूल नियम?", "f_en": "The basic rule for solving syllogisms?", "b_hi": "यदि सभी A, B हैं और सभी B, C हैं, तो सभी A, C हैं (तर्क, वास्तविकता नहीं)", "b_en": "If all A are B and all B are C, then all A are C (logic, not real-world truth)"}
+ {
+  "id": "fc-reas-0001",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "घड़ी के दर्पण प्रतिबिंब का सूत्र?",
+  "f_en": "Formula for a clock's mirror image?",
+  "b_hi": "11:60 में से समय घटाएं",
+  "b_en": "Subtract the time from 11:60"
+ },
+ {
+  "id": "fc-reas-0002",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला का मध्य अक्षर कौन-सा है?",
+  "f_en": "Which is the middle letter of the alphabet?",
+  "b_hi": "M (13वां अक्षर)",
+  "b_en": "M (13th letter)"
+ },
+ {
+  "id": "fc-reas-0003",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "न्यायवाक्य हल करने का मूल नियम?",
+  "f_en": "The basic rule for solving syllogisms?",
+  "b_hi": "यदि सभी A, B हैं और सभी B, C हैं, तो सभी A, C हैं (तर्क, वास्तविकता नहीं)",
+  "b_en": "If all A are B and all B are C, then all A are C (logic, not real-world truth)"
+ },
+ {
+  "id": "fc-reasoning-0004",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में 'OPPOSITE' को 'PQPNPF' कैसे लिखा जाता है?",
+  "f_en": "In coding, how is 'OPPOSITE' written as 'PQPNPF'?",
+  "b_hi": "प्रत्येक अक्षर को अगले अक्षर से बदला जाता है (A→B, B→C, ... Z→A)।",
+  "b_en": "Each letter is replaced by the next letter in the alphabet (A→B, B→C, ... Z→A)."
+ },
+ {
+  "id": "fc-reasoning-0005",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "अंग्रेजी वर्णमाला में 'M' का विपरीत (Opposite) अक्षर कौन सा है?",
+  "f_en": "What is the opposite letter of 'M' in the English alphabet?",
+  "b_hi": "'N' (जोड़ी M-N, सार्वजनिक सूत्र: 13वाँ अक्षर)",
+  "b_en": "'N' (Pair M-N, general rule: 13th letter from start is its own opposite)"
+ },
+ {
+  "id": "fc-reasoning-0006",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "'OPPOSITE' कोडिंग में 'Z' की जगह कौन सा अक्षर आता है?",
+  "f_en": "In OPPOSITE coding, which letter replaces 'Z'?",
+  "b_hi": "'A' (वर्णमाला का पहला अक्षर)",
+  "b_en": "'A' (First letter of the alphabet)"
+ },
+ {
+  "id": "fc-reasoning-0007",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि 'SUN' को 'TVO' में बदला जाता है, तो 'MOON' कोड कैसे होगा?",
+  "f_en": "If 'SUN' is coded as 'TVO', how is 'MOON' coded?",
+  "b_hi": "'NPPQ' (प्रत्येक अक्षर एक स्थान आगे)",
+  "b_en": "'NPPQ' (Each letter shifted one position forward)"
+ },
+ {
+  "id": "fc-reasoning-0008",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग-डिकोडिंग में 'Reverse Alphabet' (A=Z, B=Y) का नियम क्या है?",
+  "f_en": "What is the rule for 'Reverse Alphabet' (A=Z, B=Y) in coding-decoding?",
+  "b_hi": "A का Z, B का Y, C का X... इस प्रकार उलटा क्रम।",
+  "b_en": "A becomes Z, B becomes Y, C becomes X... in reverse order."
+ },
+ {
+  "id": "fc-reasoning-0009",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में 'ABC' को 'BCD' के रूप में दर्शाया जाए तो 'DEF' का कोड क्या होगा?",
+  "f_en": "If 'ABC' is coded as 'BCD', how is 'DEF' coded?",
+  "b_hi": "EFG (हर अक्षर को अगले अक्षर से बदला जाता है)",
+  "b_en": "EFG (each letter is replaced by the next letter in the series)"
+ },
+ {
+  "id": "fc-reasoning-0010",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि 'CAT' को 3-1-20 के रूप में कोड किया जाता है, तो इसमें किस पद्धति का उपयोग हुआ है?",
+  "f_en": "If 'CAT' is coded as 3-1-20, which method is used?",
+  "b_hi": "वर्णों की स्थिति (Positional Value) का उपयोग",
+  "b_en": "Use of the positional value of letters in the alphabet"
+ },
+ {
+  "id": "fc-reasoning-0011",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग-डिकोडिंग में 'Opposite Letter' (विपरीत अक्षर) का सिद्धांत क्या है?",
+  "f_en": "What is the 'Opposite Letter' principle in coding-decoding?",
+  "b_hi": "A=Z, B=Y, C=X, ... (वर्णमाला के दोनों सिरों से समान दूरी वाले विपरीत अक्षर)",
+  "b_en": "A=Z, B=Y, C=X, ... (letters equidistant from opposite ends of the alphabet)"
+ },
+ {
+  "id": "fc-reasoning-0012",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि किसी शब्द के अक्षरों को उल्टा (Reverse) किया जाए, तो इसे क्या कहते हैं?",
+  "f_en": "What is it called when the letters of a word are reversed?",
+  "b_hi": "Reverse Coding (उल्टी कोडिंग)",
+  "b_en": "Reverse Coding"
+ },
+ {
+  "id": "fc-reasoning-0013",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "संख्या श्रृंखला में 'द्विगुणन' (Doubling) का नियम क्या है?",
+  "f_en": "What is the rule for 'Doubling' in a number series?",
+  "b_hi": "अगला पद पिछले पद का दोगुना होता है (Prev. term × 2)।",
+  "b_en": "The next term is twice the previous term (Prev. term × 2)."
+ },
+ {
+  "id": "fc-reasoning-0014",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "वर्ग श्रृंखला (Square Series) में अगला पद कैसे निकाला जाता है?",
+  "f_en": "How is the next term found in a Square Series?",
+  "b_hi": "पिछले पद के मूल (Square Root) में 1 जोड़कर फिर वर्ग निकालें।",
+  "b_en": "Add 1 to the square root of the previous term, then square it."
+ },
+ {
+  "id": "fc-reasoning-0015",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "भेदिक श्रृंखला (Difference Series) में 'चाल' (Step) स्थिर होने पर क्या होता है?",
+  "f_en": "In a Difference Series, what happens if the 'Step' is constant?",
+  "b_hi": "यह एक समान्तर श्रेणी (Arithmetic Progression) बन जाती है।",
+  "b_en": "It becomes an Arithmetic Progression (AP)."
+ },
+ {
+  "id": "fc-reasoning-0016",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "अक्षर श्रृंखला में 'विपरीत दिशा' (Opposite Direction) का अर्थ क्या है?",
+  "f_en": "What does 'Opposite Direction' mean in an alphabet series?",
+  "b_hi": "अक्षर A से Z की ओर या Z से A की ओर बढ़ते हैं (उल्टा क्रम)।",
+  "b_en": "Letters move from A to Z or Z to A (reverse order)."
+ },
+ {
+  "id": "fc-reasoning-0017",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "मिश्रित श्रृंखला (Mixed Series) में दो नियम कैसे पहचाने जाते हैं?",
+  "f_en": "How to identify two rules in a Mixed Series?",
+  "b_hi": "पदों के बीच के अंतर (Differences) की जाँच करें; अंतर बदलते रहते हैं।",
+  "b_en": "Check the differences between terms; the differences vary."
+ },
+ {
+  "id": "fc-reasoning-0018",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "गुणोत्तर श्रृंखला (Geometric Series) में 'अनुपात' (Ratio) की भूमिका क्या है?",
+  "f_en": "What is the role of 'Ratio' in a Geometric Series?",
+  "b_hi": "हर पद पिछले पद को एक स्थिर संख्या से गुणा करने से बनता है।",
+  "b_en": "Each term is formed by multiplying the previous term by a constant number."
+ },
+ {
+  "id": "fc-reasoning-0019",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में 'अनौचित्य' (Odd One Out) की पहचान का मुख्य आधार क्या है?",
+  "f_en": "What is the primary basis for identifying the 'Odd One Out' in classification?",
+  "b_hi": "समूह के सभी पदों में सामान्य गुण या संबंध को समझकर, जिस पद में वह विशेषता न हो, उसे अलग करना।",
+  "b_en": "Identifying the item that does not share the common property or relationship present in all other items of the group."
+ },
+ {
+  "id": "fc-reasoning-0020",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "अक्षरों के वर्गीकरण में 'द्विसंयुक्त' (Double Letters) की पहचान कैसे करें?",
+  "f_en": "How to identify 'Double Letters' in letter classification?",
+  "b_hi": "जिस शब्द या श्रृंखला में दो समान अक्षर लगातार या निश्चित अंतर पर दोहराए गए हों, उसे द्विसंयुक्त माना जाता है।",
+  "b_en": "A word or sequence where two identical letters are repeated consecutively or at a fixed interval."
+ },
+ {
+  "id": "fc-reasoning-0021",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "संख्या वर्गीकरण में 'पूरे वर्ग' (Perfect Squares) की पहचान कैसे होती है?",
+  "f_en": "How to identify 'Perfect Squares' in number classification?",
+  "b_hi": "जो संख्या किसी प्राकृतिक संख्या का वर्ग हो (जैसे 4, 9, 16), उसे पूर्ण वर्ग कहा जाता है।",
+  "b_en": "A number that is the square of a natural number (e.g., 4, 9, 16)."
+ },
+ {
+  "id": "fc-reasoning-0022",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में 'विषम' (Odd) और 'सम' (Even) संख्याओं का सबसे तेज़ अंतरण कैसे करें?",
+  "f_en": "Quickest way to distinguish 'Odd' and 'Even' numbers in classification?",
+  "b_hi": "संख्या की इकाई स्थिति (last digit) देखें: यदि अंतिम अंक 0, 2, 4, 6 या 8 हो तो सम, अन्यथा विषम।",
+  "b_en": "Check the unit digit: if it is 0, 2, 4, 6, or 8, it is even; otherwise, it is odd."
+ },
+ {
+  "id": "fc-reasoning-0023",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "अर्थ-आधारित वर्गीकरण (Meaning-based) में 'पशु' और 'पंछी' को अलग करने का लक्षण क्या है?",
+  "f_en": "What is the distinguishing feature to separate 'Animals' and 'Birds' in meaning-based classification?",
+  "b_hi": "पंछी पंखों से उड़ते हैं और अंडे देते हैं, जबकि अधिकांश पशु चार पैरों पर चलते हैं और जीवित संतान देते हैं।",
+  "b_en": "Birds fly with wings and lay eggs, while most animals walk on four legs and give birth to live young."
+ },
+ {
+  "id": "fc-reasoning-0024",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में 'सदस्य-शुद्ध' (Vowel-Consonant) पैटर्न की पहचान कैसे करें?",
+  "f_en": "How to identify the 'Vowel-Consonant' pattern in classification?",
+  "b_hi": "अक्षरों की श्रृंखला में स्वर (A, E, I, O, U) और व्यंजन (बाकी सभी) की बदलती हुई क्रमबद्धता पर ध्यान दें।",
+  "b_en": "Observe the alternating sequence of Vowels (A, E, I, O, U) and Consonants (all other letters) in the letter string."
+ }
 ]
