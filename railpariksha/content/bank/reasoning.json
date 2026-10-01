@@ -82461,5 +82461,166 @@
   "a": 1,
   "e_hi": "मानक त्रिपद न्यायवाक्य (Categorical Syllogism) में हमेशा दो प्रमेय (Major और Minor) होते हैं।",
   "e_en": "A standard Categorical Syllogism always consists of two premises (Major and Minor)."
+ },
+ {
+  "id": "rp-rea-o02628",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन: सभी कुत्ते जानवर हैं। कुछ जानवर चमड़े के होते हैं। निष्कर्ष I: कुछ चमड़े के कुत्ते हो सकते हैं। निष्कर्ष II: सभी चमड़े के जानवर कुत्ते हैं।",
+  "q_en": "Statements: All dogs are animals. Some animals are furry. Conclusion I: Some furry things can be dogs. Conclusion II: All furry animals are dogs.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 3,
+  "e_hi": "चूँकि 'कुत्ते' और 'चमड़े वाले' का कोई सीधा संबंध नहीं है, इसलिए कोई निष्कर्ष नहीं निकलता।",
+  "e_en": "Since there is no direct relationship established between 'dogs' and 'furry' entities, no conclusion logically follows."
+ },
+ {
+  "id": "rp-rea-o02629",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ कलम सफेद हैं। कोई सफेद चीज़ हरी नहीं है। निष्कर्ष I: कुछ कलम हरी नहीं हैं। निष्कर्ष II: कुछ हरी चीज़ें कलम हैं।",
+  "q_en": "Statements: Some pens are white. No white thing is green. Conclusion I: Some pens are not green. Conclusion II: Some green things are pens.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि कुछ कलम सफेद हैं और कोई सफेद हरी नहीं है, इसलिए वे सफेद कलम हरी नहीं हो सकतीं।",
+  "e_en": "Since some pens are white and no white thing is green, those specific white pens cannot be green."
+ },
+ {
+  "id": "rp-rea-o02630",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: सभी गणित विषय कठिन हैं। कोई कठिन विषय आसान नहीं है। निष्कर्ष I: कुछ कठिन विषय गणित हैं। निष्कर्ष II: कोई आसान विषय गणित नहीं है।",
+  "q_en": "Statements: All math subjects are difficult. No difficult subject is easy. Conclusion I: Some difficult subjects are math. Conclusion II: No easy subject is math.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 2,
+  "e_hi": "गणित कठिन है और कठिन आसान नहीं है, इसलिए गणित आसान नहीं है और कुछ कठिन विषय गणित ही हैं।",
+  "e_en": "Math is difficult and difficult is not easy, so math is not easy, and some difficult subjects are indeed math."
+ },
+ {
+  "id": "rp-rea-o02631",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ फल मीठे हैं। सभी मीठे चीज़ें पानी में घुलनशील हैं। निष्कर्ष I: कुछ फल पानी में घुलनशील हैं। निष्कर्ष II: सभी फल पानी में घुलनशील हैं।",
+  "q_en": "Statements: Some fruits are sweet. All sweet things are soluble in water. Conclusion I: Some fruits are soluble in water. Conclusion II: All fruits are soluble in water.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि केवल 'कुछ' फल मीठे हैं और सभी मीठे घुलनशील हैं, इसलिए केवल कुछ फल घुलनशील हैं।",
+  "e_en": "Since only 'some' fruits are sweet and all sweet things are soluble, only some fruits are soluble in water."
+ },
+ {
+  "id": "rp-rea-o02632",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: सभी शिक्षक पढ़े-लिखे हैं। कुछ पढ़े-लिखे लोग चश्मा पहनते हैं। निष्कर्ष I: कुछ शिक्षक चश्मा पहनते हैं। निष्कर्ष II: कोई शिक्षक चश्मा नहीं पहनता।",
+  "q_en": "Statements: All teachers are educated. Some educated people wear glasses. Conclusion I: Some teachers wear glasses. Conclusion II: No teacher wears glasses.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 3,
+  "e_hi": "'शिक्षक' और 'चश्मे वाले' के बीच कोई निश्चित संबंध नहीं बनता, इसलिए न तो कुछ और न ही कोई निष्कर्ष सही है।",
+  "e_en": "There is no definite link between 'teachers' and 'glasses wearers', so neither conclusion is logically certain."
+ },
+ {
+  "id": "rp-rea-o02633",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन: कुछ किताबें उपन्यास हैं। सभी उपन्यास कहानी कहते हैं। निष्कर्ष I: कुछ किताबें कहानी कहती हैं। निष्कर्ष II: सभी कहानियाँ किताबों में होती हैं।",
+  "q_en": "Statements: Some books are novels. All novels tell stories. Conclusion I: Some books tell stories. Conclusion II: All stories are in books.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 0,
+  "e_hi": "उपन्यास किताबों का हिस्सा हैं और वे कहानी कहते हैं, इसलिए कुछ किताबें कहानी कहती हैं।",
+  "e_en": "Novels are part of books and they tell stories, so some books tell stories. The second conclusion reverses the logic incorrectly."
+ },
+ {
+  "id": "rp-rea-o02634",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन: सभी डॉक्टर चिकित्सक हैं। कुछ चिकित्सक दवाइयाँ बनाते हैं। निष्कर्ष I: कुछ डॉक्टर दवाइयाँ बनाते हैं। निष्कर्ष II: कुछ दवा बनाने वाले चिकित्सक नहीं हैं।",
+  "q_en": "Statements: All doctors are physicians. Some physicians make medicines. Conclusion I: Some doctors make medicines. Conclusion II: Some medicine makers are not physicians.",
+  "o_hi": [
+   "केवल निष्कर्ष I सही है",
+   "केवल निष्कर्ष II सही है",
+   "दोनों निष्कर्ष सही हैं",
+   "कोई निष्कर्ष सही नहीं है"
+  ],
+  "o_en": [
+   "Only Conclusion I follows",
+   "Only Conclusion II follows",
+   "Both Conclusions follow",
+   "Neither Conclusion follows"
+  ],
+  "a": 3,
+  "e_hi": "चूँकि 'कुछ चिकित्सक' डॉक्टर हो सकते हैं या नहीं हो सकते, इसलिए कोई निश्चित निष्कर्ष नहीं निकलता।",
+  "e_en": "Since 'some physicians' may or may not be doctors, no definite conclusion can be drawn about doctors making medicines."
  }
 ]
