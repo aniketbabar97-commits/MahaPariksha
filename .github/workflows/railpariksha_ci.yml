@@ -148,4 +148,10 @@ jobs:
           # invocation (confirmed via a run: "cd railpariksha/app" on its own line didn't
           # carry over to the next line, which then failed with "No pubspec.yaml file
           # found") -- must be a single line chained with && instead.
-          script: cd railpariksha/app && flutter drive --driver=test_driver/integration_test.dart --target=integration_test/golden_path_test.dart -d emulator-5554 --release
+          # flutter drive itself then refused --release outright ("Flutter Driver
+          # (non-web) does not support running in release mode" -- release strips the
+          # VM service the driver needs to talk to the app at all). --profile is the
+          # fix, not a compromise: on Android, profile mode builds via the SAME release
+          # Gradle build type (isMinifyEnabled/R8 and our proguard-rules.pro all apply),
+          # so it still exercises exactly the bug class this test exists to catch.
+          script: cd railpariksha/app && flutter drive --driver=test_driver/integration_test.dart --target=integration_test/golden_path_test.dart -d emulator-5554 --profile
