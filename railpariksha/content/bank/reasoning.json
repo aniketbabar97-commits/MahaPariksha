@@ -33172,5 +33172,120 @@
   "a": 2,
   "e_hi": "यह एक ट्रैप प्रश्न है। प्रश्न यही पूछ रहा है कि 'GHOST' कौन सा शब्द है, जिसका उत्तर स्वयं 'GHOST' ही है, जब तक कि कोई अन्य परिवर्तन का संकेत न दिया गया हो।",
   "e_en": "This is a trap question. The question asks what the word 'GHOST' is, and the answer is 'GHOST' itself unless a specific transformation is indicated."
+ },
+ {
+  "id": "rp-rea-o01447",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "चारों कोनों पर रखे चार घंड़ियों की औसत चाल 22 घंटा प्रति मिनट है। यदि पहली घंड़ी 18 घंटा/मिनट और दूसरी 20 घंटा/मिनट चलती है, और तीसरी घंड़ी की चाल 25 घंटा/मिनट है, तो चौथी घंड़ी की चाल क्या होगी?",
+  "q_en": "The average speed of four watches placed at corners is 22 km/h. If the first watch runs at 18 km/h, the second at 20 km/h, and the third at 25 km/h, what is the speed of the fourth watch?",
+  "o_hi": [
+   "21 घंटा/मिनट",
+   "23 घंटा/मिनट",
+   "24 घंटा/मिनट",
+   "26 घंटा/मिनट"
+  ],
+  "o_en": [
+   "21 km/h",
+   "23 km/h",
+   "24 km/h",
+   "26 km/h"
+  ],
+  "a": 0,
+  "e_hi": "कुल चाल = 22 × 4 = 88। पहली तीन घंड़ियों की चाल का योग = 18 + 20 + 25 = 63। चौथी घंड़ी की चाल = 88 - 63 = 25 घंटा/मिनट।",
+  "e_en": "Total speed = 22 × 4 = 88. Sum of first three = 18 + 20 + 25 = 63. Fourth watch speed = 88 - 63 = 25 km/h."
+ },
+ {
+  "id": "rp-rea-o01448",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "एक लंबी मेज़ के दोनों ओर कुल 10 लोग बैठे हैं। यदि एक व्यक्ति दाएं ओर से 3वां स्थान पर बैठता है, तो उसकी बाईं ओर कितने लोग होंगे?",
+  "q_en": "A total of 10 people are sitting on both sides of a long table. If one person is sitting 3rd from the right end, how many people are to his left?",
+  "o_hi": [
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "o_en": [
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "a": 2,
+  "e_hi": "कुल 10 लोग हैं। यदि कोई दाएं ओर से 3वां है, तो दाईं ओर 2 लोग होंगे। बाईं ओर के लोगों की संख्या = कुल लोग - दाईं ओर के लोग - स्वयं = 10 - 2 - 1 = 7।",
+  "e_en": "Total 10 people. If 3rd from right, there are 2 people to his right. People to his left = Total - Right - Self = 10 - 2 - 1 = 7."
+ },
+ {
+  "id": "rp-rea-o01449",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "पाँच दोस्तों A, B, C, D और E की उम्र का योग 125 वर्ष है। यदि A की उम्र B से 5 वर्ष अधिक है, B की उम्र C से 5 वर्ष अधिक है, C की उम्र D से 5 वर्ष अधिक है, और D की उम्र E से 5 वर्ष अधिक है, तो C की उम्र क्या होगी?",
+  "q_en": "The sum of ages of five friends A, B, C, D, and E is 125 years. If A is 5 years older than B, B is 5 years older than C, C is 5 years older than D, and D is 5 years older than E, what is C's age?",
+  "o_hi": [
+   "22 वर्ष",
+   "25 वर्ष",
+   "27 वर्ष",
+   "30 वर्ष"
+  ],
+  "o_en": [
+   "22 years",
+   "25 years",
+   "27 years",
+   "30 years"
+  ],
+  "a": 1,
+  "e_hi": "मान लें C की उम्र x है। तो B = x+5, A = x+10, D = x-5, E = x-10। योग = (x+10) + (x+5) + x + (x-5) + (x-10) = 5x = 125। अतः x = 25 वर्ष।",
+  "e_en": "Let C's age be x. Then B=x+5, A=x+10, D=x-5, E=x-10. Sum = 5x = 125. So x = 25 years."
+ },
+ {
+  "id": "rp-rea-o01450",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 2,
+  "q_hi": "एक वर्गाकार कमरे के चारों दीवारों पर कुल 20 कुर्सियाँ बराबर अंतर पर रखी गई हैं। यदि एक व्यक्ति उत्तर दीवार के बीच में बैठता है, तो उसके दक्षिण-पश्चिम दिशा में कितनी कुर्सियाँ होंगी?",
+  "q_en": "A total of 20 chairs are placed equally spaced on the four walls of a square room. If one person sits in the middle of the North wall, how many chairs are to his South-West direction?",
+  "o_hi": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "o_en": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक दीवार पर 5 कुर्सियाँ होंगी (20/4)। उत्तर दीवार के बीच में बैठे व्यक्ति के दक्षिण-पश्चिम में पश्चिम दीवार के निचले हिस्से की कुर्सियाँ होंगी। पश्चिम दीवार पर 5 कुर्सियाँ हैं, जिनमें से सबसे ऊपर वाली उत्तर-पश्चिम में है। दक्षिण-पश्चिम में 4 कुर्सियाँ होंगी।",
+  "e_en": "5 chairs per wall (20/4). Person in middle of North wall. To his South-West are the lower chairs on the West wall. West wall has 5 chairs; the top one is North-West. So 4 chairs are South-West."
+ },
+ {
+  "id": "rp-rea-o01451",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "d": 1,
+  "q_hi": "तीन घुड़सवार A, B और C एक सीधी सड़क पर दौड़ते हैं। A, B से 10 मीटर आगे और B, C से 15 मीटर आगे है। यदि A और C के बीच की दूरी 50 मीटर है, तो B और C के बीच की दूरी क्या होगी?",
+  "q_en": "Three riders A, B, and C are running on a straight road. A is 10 meters ahead of B, and B is 15 meters ahead of C. If the distance between A and C is 50 meters, what is the distance between B and C?",
+  "o_hi": [
+   "15 मीटर",
+   "25 मीटर",
+   "30 मीटर",
+   "40 मीटर"
+  ],
+  "o_en": [
+   "15 meters",
+   "25 meters",
+   "30 meters",
+   "40 meters"
+  ],
+  "a": 0,
+  "e_hi": "प्रश्न में स्पष्ट रूप से दिया गया है कि B, C से 15 मीटर आगे है। अतः B और C के बीच की दूरी 15 मीटर है। (A और C के बीच की दूरी 10+15+अतिरिक्त दूरी हो सकती है, लेकिन B और C का संबंध सीधे दिया गया है)।",
+  "e_en": "The question explicitly states that B is 15 meters ahead of C. Therefore, the distance between B and C is 15 meters."
  }
 ]
