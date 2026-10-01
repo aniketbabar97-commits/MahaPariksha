@@ -51733,5 +51733,2880 @@
   "a": 0,
   "e_hi": "आर, पी की साली है और एस, आर का बच्चा है। इसलिए एस, पी का भांजा या भांजी है।",
   "e_en": "R is the sister-in-law of P, and S is the child of R. Therefore, S is the nephew or niece of P."
+ },
+ {
+  "id": "rp-rea-j01898",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक महिला की ओर इशारा करते हुए, एक आदमी ने कहा, 'वह मेरी पत्नी के इकलौते बेटे की दादी है।' महिला का उस आदमी से क्या संबंध है?",
+  "q_en": "Pointing to a woman, a man said, 'She is the grandmother of my wife's only son.' How is the woman related to the man?",
+  "o_hi": [
+   "माता",
+   "सास",
+   "पत्नी",
+   "बहन"
+  ],
+  "o_en": [
+   "Mother",
+   "Mother-in-law",
+   "Wife",
+   "Sister"
+  ],
+  "a": 0,
+  "e_hi": "आदमी की पत्नी का इकलौता बेटा आदमी का भी बेटा है। बेटे की दादी, आदमी की माँ होती है।",
+  "e_en": "The man's wife's only son is also the man's son. The grandmother of his son is the man's mother."
+ },
+ {
+  "id": "rp-rea-j01899",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि 'अ' 'ब' का भाई है, 'स' 'अ' की माँ है, 'द' 'स' का पिता है, और 'य' 'द' का बेटा है, तो 'अ' का 'य' से क्या संबंध है?",
+  "q_en": "If A is the brother of B, C is the mother of A, D is the father of C, and E is the son of D, then how is A related to E?",
+  "o_hi": [
+   "भतीजा",
+   "चाचा",
+   "भाई",
+   "पिता"
+  ],
+  "o_en": [
+   "Nephew",
+   "Uncle",
+   "Brother",
+   "Father"
+  ],
+  "a": 0,
+  "e_hi": "स, अ की माँ है और द, स का पिता है। अतः, द, अ का नाना है। य, द का बेटा है, इसलिए य, अ के मामा हैं। अ, य का भतीजा है।",
+  "e_en": "C is A's mother and D is C's father. Thus, D is A's grandfather. E is D's son, making E the maternal uncle of A. Therefore, A is E's nephew."
+ },
+ {
+  "id": "rp-rea-j01900",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "एक तस्वीर की ओर इशारा करते हुए, मोहन ने कहा, 'वह मेरे पिता की इकलौती संतान है।' तस्वीर में कौन है?",
+  "q_en": "Pointing to a photograph, Mohan said, 'She is the only child of my father.' Who is in the photograph?",
+  "o_hi": [
+   "मोहन स्वयं",
+   "मोहन की बहन",
+   "मोहन का भाई",
+   "मोहन की पत्नी"
+  ],
+  "o_en": [
+   "Mohan himself",
+   "Mohan's sister",
+   "Mohan's brother",
+   "Mohan's wife"
+  ],
+  "a": 0,
+  "e_hi": "पिता की इकलौती संतान का अर्थ है कि मोहन का कोई भाई-बहन नहीं है। इसलिए, तस्वीर में मोहन स्वयं है।",
+  "e_en": "The only child of one's father implies there are no siblings. Therefore, the person in the photo must be Mohan himself."
+ },
+ {
+  "id": "rp-rea-j01901",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "यदि 'X + Y' का अर्थ है 'X, Y की बहन है', 'X - Y' का अर्थ है 'X, Y का पिता है', तो 'P - Q + R' में P, R से किस प्रकार संबंधित है?",
+  "q_en": "If 'X + Y' means 'X is the sister of Y', and 'X - Y' means 'X is the father of Y', how is P related to R in 'P - Q + R'?",
+  "o_hi": [
+   "दादा",
+   "पिता",
+   "भाई",
+   "चाचा"
+  ],
+  "o_en": [
+   "Grandfather",
+   "Father",
+   "Brother",
+   "Uncle"
+  ],
+  "a": 0,
+  "e_hi": "P, Q का पिता है और Q, R की बहन है। चूँकि P, Q का पिता है और Q, R की बहन है, इसलिए P, R का भी पिता है।",
+  "e_en": "P is the father of Q, and Q is the sister of R. Since P is Q's father and Q is R's sister, P must be the father of R."
+ },
+ {
+  "id": "rp-rea-j01902",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "सुनीता की ओर देखते हुए, रमेश ने कहा, 'वह मेरे दादा के इकलौते बेटे की बेटी है।' सुनीता का रमेश से क्या संबंध है?",
+  "q_en": "Looking at Sunita, Ramesh said, 'She is the daughter of the only son of my grandfather.' How is Sunita related to Ramesh?",
+  "o_hi": [
+   "बहन",
+   "पत्नी",
+   "बुुआ",
+   "माता"
+  ],
+  "o_en": [
+   "Sister",
+   "Wife",
+   "Aunt",
+   "Mother"
+  ],
+  "a": 0,
+  "e_hi": "दादा का इकलौता बेटा रमेश का पिता है। पिता की बेटी रमेश की बहन होती है।",
+  "e_en": "The only son of the grandfather is the father of Ramesh. The daughter of the father is the sister of Ramesh."
+ },
+ {
+  "id": "rp-rea-j01903",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक परिवार में एक पुरुष, उसकी पत्नी, उनके तीन बेटे और उनकी पत्नियाँ हैं। प्रत्येक बेटे के अपने परिवार में 3 बच्चे हैं। परिवार में कुल कितने सदस्य हैं?",
+  "q_en": "In a family, there is a man, his wife, their three sons, and their wives. Each son has 3 children in his family. How many members are there in total?",
+  "o_hi": [
+   "17",
+   "18",
+   "19",
+   "20"
+  ],
+  "o_en": [
+   "17",
+   "18",
+   "19",
+   "20"
+  ],
+  "a": 0,
+  "e_hi": "माता-पिता (2) + तीन बेटे (3) + तीन बहुएँ (3) + 3*3 बच्चे (9) = 17।",
+  "e_en": "Parents (2) + three sons (3) + three daughters-in-law (3) + 3*3 children (9) = 17."
+ },
+ {
+  "id": "rp-rea-j01904",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "यदि A, B का पिता है, C, B की माता है, और D, C का भाई है, तो D, A से किस प्रकार संबंधित है?",
+  "q_en": "If A is the father of B, C is the mother of B, and D is the brother of C, how is D related to A?",
+  "o_hi": [
+   "साला",
+   "भाई",
+   "ससुर",
+   "पिता"
+  ],
+  "o_en": [
+   "Brother-in-law",
+   "Brother",
+   "Father-in-law",
+   "Father"
+  ],
+  "a": 0,
+  "e_hi": "A और C पति-पत्नी हैं। C का भाई D है, इसलिए D, A का साला है।",
+  "e_en": "A and C are husband and wife. D is the brother of C, so D is the brother-in-law of A."
+ },
+ {
+  "id": "rp-rea-j01905",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक औरत की ओर इशारा करते हुए, एक आदमी ने कहा, 'उसकी माँ, मेरी सास की इकलौती बेटी है।' औरत का आदमी से क्या संबंध है?",
+  "q_en": "Pointing to a woman, a man said, 'Her mother is the only daughter of my mother-in-law.' How is the woman related to the man?",
+  "o_hi": [
+   "बेटी",
+   "पत्नी",
+   "बहन",
+   "माँ"
+  ],
+  "o_en": [
+   "Daughter",
+   "Wife",
+   "Sister",
+   "Mother"
+  ],
+  "a": 0,
+  "e_hi": "सास की इकलौती बेटी आदमी की पत्नी है। यदि औरत की माँ आदमी की पत्नी है, तो वह औरत आदमी की बेटी है।",
+  "e_en": "The only daughter of the mother-in-law is the man's wife. If the woman's mother is the man's wife, then the woman is the man's daughter."
+ },
+ {
+  "id": "rp-rea-j01906",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "राहुल और रॉबिन भाई हैं। प्रमोद, रॉबिन का पिता है। शीला, प्रमोद की बहन है। प्रेमा, प्रमोद की भांजी है। शुभा, शीला की पोती है। राहुल का शीला से क्या संबंध है?",
+  "q_en": "Rahul and Robin are brothers. Pramod is the father of Robin. Sheela is the sister of Pramod. Prema is the niece of Pramod. Shubha is the granddaughter of Sheela. How is Rahul related to Sheela?",
+  "o_hi": [
+   "भतीजा",
+   "बेटा",
+   "भाई",
+   "पोता"
+  ],
+  "o_en": [
+   "Nephew",
+   "Son",
+   "Brother",
+   "Grandson"
+  ],
+  "a": 0,
+  "e_hi": "राहुल और रॉबिन, प्रमोद के बेटे हैं। चूँकि शीला, प्रमोद की बहन है, इसलिए राहुल, शीला का भतीजा है।",
+  "e_en": "Rahul and Robin are sons of Pramod. Since Sheela is the sister of Pramod, Rahul is the nephew of Sheela."
+ },
+ {
+  "id": "rp-rea-j01907",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि P + Q का अर्थ है 'P, Q का पिता है', P - Q का अर्थ है 'P, Q की माता है', तो 'A + B - C' में C का A से क्या संबंध है?",
+  "q_en": "If P + Q means 'P is the father of Q', and P - Q means 'P is the mother of Q', how is C related to A in 'A + B - C'?",
+  "o_hi": [
+   "पोता या पोती",
+   "बेटा या बेटी",
+   "दादा या दादी",
+   "भांजा या भांजी"
+  ],
+  "o_en": [
+   "Grandson or Granddaughter",
+   "Son or Daughter",
+   "Grandfather or Grandmother",
+   "Nephew or Niece"
+  ],
+  "a": 1,
+  "e_hi": "A, B का पिता है और B, C की माता है। अतः, C, A का पोता या पोती है।",
+  "e_en": "A is the father of B, and B is the mother of C. Thus, C is the grandchild of A."
+ },
+ {
+  "id": "rp-rea-i01816",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "अंग्रेजी वर्णमाला के अक्षर 'G' का दर्पण प्रतिबिंब कैसा दिखाई देगा?",
+  "q_en": "How will the mirror image of the English alphabet letter 'G' appear?",
+  "o_hi": [
+   "एक उल्टा G",
+   "बाएं-दाएं पलटा हुआ G",
+   "ऊपर-नीचे पलटा हुआ G",
+   "समान G"
+  ],
+  "o_en": [
+   "An inverted G",
+   "A left-right flipped G",
+   "An upside-down G",
+   "Same G"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में बाएं और दाएं पक्ष आपस में बदल जाते हैं।",
+  "e_en": "In a mirror image, the left and right sides are interchanged."
+ },
+ {
+  "id": "rp-rea-i01817",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि घड़ी में समय 3:15 हो रहा है, तो दर्पण में इसका प्रतिबिंब क्या समय दिखाएगा?",
+  "q_en": "If the time in a clock is 3:15, what time will its mirror image show?",
+  "o_hi": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "9:45"
+  ],
+  "o_en": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "9:45"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब ज्ञात करने के लिए समय को 11:60 में से घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror image, subtract the time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01818",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'RAILWAY' का सही जल प्रतिबिंब (Water Image) कौन सा होगा?",
+  "q_en": "Which of the following is the correct water image of the word 'RAILWAY'?",
+  "o_hi": [
+   "ऊपर-नीचे पलटा हुआ शब्द",
+   "बाएं-दाएं पलटा हुआ शब्द",
+   "समान शब्द",
+   "तिरछा शब्द"
+  ],
+  "o_en": [
+   "Word flipped vertically",
+   "Word flipped horizontally",
+   "Same word",
+   "Tilted word"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में ऊपर और नीचे के भाग आपस में बदल जाते हैं।",
+  "e_en": "In a water image, the top and bottom parts are interchanged."
+ },
+ {
+  "id": "rp-rea-i01819",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '529' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the number '529'?",
+  "o_hi": [
+   "९२५",
+   "eZS (दर्पण स्वरूप)",
+   "समान ५२९",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "९२५",
+   "eZS (mirror format)",
+   "Same 529",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण में संख्याएं उल्टे क्रम में और बाएं-दाएं बदलकर दिखाई देती हैं।",
+  "e_en": "Numbers in a mirror appear in reverse order with digits flipped horizontally."
+ },
+ {
+  "id": "rp-rea-i01820",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "दिए गए विकल्प में से उस आकृति को चुनें जो 'P' का सही जल प्रतिबिंब है?",
+  "q_en": "Choose the figure from the options that is the correct water image of 'P'?",
+  "o_hi": [
+   "d",
+   "b",
+   "q",
+   "P का उल्टा रूप"
+  ],
+  "o_en": [
+   "d",
+   "b",
+   "q",
+   "Inverted P"
+  ],
+  "a": 3,
+  "e_hi": "P का जल प्रतिबिंब ऊपर से नीचे पलटने पर एक उल्टे P जैसा दिखता है।",
+  "e_en": "The water image of P looks like an inverted P when flipped vertically."
+ },
+ {
+  "id": "rp-rea-i01821",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "एक आकृति जिसमें एक तीर ऊपर की ओर है, उसका दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of a figure with an arrow pointing upwards?",
+  "o_hi": [
+   "तीर नीचे की ओर",
+   "तीर ऊपर की ओर",
+   "तीर बाएं की ओर",
+   "तीर दाएं की ओर"
+  ],
+  "o_en": [
+   "Arrow pointing downwards",
+   "Arrow pointing upwards",
+   "Arrow pointing left",
+   "Arrow pointing right"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में केवल क्षैतिज दिशा बदलती है, ऊर्ध्वाधर स्थिति नहीं।",
+  "e_en": "In a mirror image, only the horizontal direction changes, not the vertical position."
+ },
+ {
+  "id": "rp-rea-i01822",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि घड़ी में समय 6:00 है, तो जल प्रतिबिंब में क्या समय दिखेगा?",
+  "q_en": "If the time in a clock is 6:00, what time will be visible in the water image?",
+  "o_hi": [
+   "12:30",
+   "6:00",
+   "12:00",
+   "6:30"
+  ],
+  "o_en": [
+   "12:30",
+   "6:00",
+   "12:00",
+   "6:30"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाया जाता है। 18:30 - 6:00 = 12:30।",
+  "e_en": "For water image, time is subtracted from 18:30. 18:30 - 6:00 = 12:30."
+ },
+ {
+  "id": "rp-rea-i01823",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "अक्षर 'M' का दर्पण प्रतिबिंब कैसा होगा?",
+  "q_en": "What will the mirror image of the letter 'M' look like?",
+  "o_hi": [
+   "W",
+   "M",
+   "Σ",
+   "3"
+  ],
+  "o_en": [
+   "W",
+   "M",
+   "Σ",
+   "3"
+  ],
+  "a": 1,
+  "e_hi": "M एक सममित अक्षर है, इसलिए इसका दर्पण प्रतिबिंब वही रहता है।",
+  "e_en": "M is a symmetrical letter, so its mirror image remains the same."
+ },
+ {
+  "id": "rp-rea-i01824",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि किसी वस्तु को दर्पण के सामने रखा जाए, तो उसकी कौन सी विमा (dimension) अपरिवर्तित रहती है?",
+  "q_en": "If an object is placed in front of a mirror, which dimension remains unchanged?",
+  "o_hi": [
+   "ऊंचाई",
+   "चौड़ाई",
+   "गहराई",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Height",
+   "Width",
+   "Depth",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब में ऊर्ध्वाधर ऊंचाई समान रहती है, जबकि पार्श्व (चौड़ाई) बदल जाता है।",
+  "e_en": "In a mirror image, the vertical height remains the same, while the lateral width changes."
+ },
+ {
+  "id": "rp-rea-i01825",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "शब्द 'CLOCK' का दर्पण प्रतिबिंब इनमें से कौन सा हो सकता है?",
+  "q_en": "Which of these could be the mirror image of the word 'CLOCK'?",
+  "o_hi": [
+   "KCOLC",
+   "ƆƆOLƆ",
+   "ƆОƆLƆ",
+   "CLOCK का उल्टा"
+  ],
+  "o_en": [
+   "KCOLC",
+   "ƆƆOLƆ",
+   "ƆОƆLƆ",
+   "Reverse of CLOCK"
+  ],
+  "a": 2,
+  "e_hi": "दर्पण में अक्षर उल्टे क्रम में और दर्पण में पलटे हुए दिखाई देते हैं।",
+  "e_en": "In a mirror, letters appear in reverse order and flipped horizontally."
+ },
+ {
+  "id": "rp-rea-j01908",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "यदि एक्स, वाई की पत्नी है और जेड, एक्स का पति है, तो जेड का वाई से क्या संबंध है?",
+  "q_en": "If X is the wife of Y and Z is the husband of X, then how is Z related to Y?",
+  "o_hi": [
+   "पिता",
+   "भाई",
+   "वही व्यक्ति",
+   "असंबंधित"
+  ],
+  "o_en": [
+   "Father",
+   "Brother",
+   "The same person",
+   "Unrelated"
+  ],
+  "a": 2,
+  "e_hi": "यदि एक्स, वाई की पत्नी है और जेड, एक्स का पति है, तो जेड और वाई एक ही व्यक्ति होने चाहिए।",
+  "e_en": "If X is the wife of Y and Z is the husband of X, then Z and Y must be the same person."
+ },
+ {
+  "id": "rp-rea-j01909",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एम, एन का भाई है। ओ, एन की बेटी है। पी, एम की बहन है। क्यू, ओ का भाई है। क्यू का चाचा कौन है?",
+  "q_en": "M is the brother of N. O is the daughter of N. P is the sister of M. Q is the brother of O. Who is the uncle of Q?",
+  "o_hi": [
+   "एन",
+   "पी",
+   "एम",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "N",
+   "P",
+   "M",
+   "None of these"
+  ],
+  "a": 2,
+  "e_hi": "क्यू, एन का बेटा है। एम, एन का भाई है, इसलिए एम, क्यू का चाचा है।",
+  "e_en": "Q is the son of N. Since M is the brother of N, M is the uncle of Q."
+ },
+ {
+  "id": "rp-rea-j01910",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि पी + क्यू का अर्थ है पी, क्यू का पिता है, तो ए + बी + सी का क्या अर्थ है?",
+  "q_en": "If P + Q means P is the father of Q, what does A + B + C mean?",
+  "o_hi": [
+   "ए, सी का दादा है",
+   "ए, बी का पिता है",
+   "ए, सी का पिता है",
+   "बी, सी का दादा है"
+  ],
+  "o_en": [
+   "A is the grandfather of C",
+   "A is the father of B",
+   "A is the father of C",
+   "B is the grandfather of C"
+  ],
+  "a": 0,
+  "e_hi": "ए + बी का अर्थ है ए, बी का पिता है। बी + सी का अर्थ है बी, सी का पिता है। अतः, ए, सी का दादा है।",
+  "e_en": "A + B means A is the father of B. B + C means B is the father of C. Thus, A is the grandfather of C."
+ },
+ {
+  "id": "rp-rea-j01911",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक परिवार में छह सदस्य हैं: ए, बी, सी, डी, ई और एफ। बी, सी का बेटा है लेकिन सी, बी की माँ नहीं है। ए और सी विवाहित जोड़े हैं। एफ, ए का भाई है। डी, ए की बेटी है। ई, बी का भाई है। सी का डी से क्या संबंध है?",
+  "q_en": "In a family of six members: A, B, C, D, E and F. B is the son of C but C is not the mother of B. A and C are a married couple. F is the brother of A. D is the daughter of A. E is the brother of B. How is C related to D?",
+  "o_hi": [
+   "पिता",
+   "माँ",
+   "भाई",
+   "चाचा"
+  ],
+  "o_en": [
+   "Father",
+   "Mother",
+   "Brother",
+   "Uncle"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सी, बी की माँ नहीं है और ए और सी विवाहित हैं, सी, बी का पिता है। अतः सी, डी का भी पिता है।",
+  "e_en": "Since C is not B's mother and A and C are married, C must be B's father. Thus, C is also the father of D."
+ },
+ {
+  "id": "rp-rea-j01912",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक्स, वाई की बहन है। वाई, जेड का भाई है। जेड, पी की पत्नी है। पी का एक्स से क्या संबंध है?",
+  "q_en": "X is the sister of Y. Y is the brother of Z. Z is the wife of P. How is P related to X?",
+  "o_hi": [
+   "भाई",
+   "जीजा",
+   "पिता",
+   "पति"
+  ],
+  "o_en": [
+   "Brother",
+   "Brother-in-law",
+   "Father",
+   "Husband"
+  ],
+  "a": 1,
+  "e_hi": "एक्स, वाई और जेड भाई-बहन हैं। जेड, पी की पत्नी है, इसलिए पी, एक्स का जीजा (बहन का पति) है।",
+  "e_en": "X, Y, and Z are siblings. Z is the wife of P, therefore P is the brother-in-law of X."
+ },
+ {
+  "id": "rp-rea-i01826",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "समतल दर्पण में किसी वस्तु का प्रतिबिंब कैसा दिखाई देता है?",
+  "q_en": "How does an object's image appear in a plane mirror?",
+  "o_hi": [
+   "उल्टा",
+   "पार्श्व रूप से उल्टा (लैटरली इनवर्टेड)",
+   "आकार में बड़ा",
+   "वास्तविक"
+  ],
+  "o_en": [
+   "Inverted",
+   "Laterally inverted",
+   "Magnified",
+   "Real"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण में बायां भाग दायां और दायां भाग बायां दिखाई देता है, जिसे पार्श्व परिवर्तन कहते हैं।",
+  "e_en": "In a mirror, the left side appears as the right and vice versa, a phenomenon known as lateral inversion."
+ },
+ {
+  "id": "rp-rea-i01827",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "जल प्रतिबिंब में वस्तु का कौन सा भाग ऊपर की ओर दिखाई देता है?",
+  "q_en": "In a water image, which part of the object appears at the top?",
+  "o_hi": [
+   "ऊपरी भाग",
+   "निचला भाग",
+   "बायां भाग",
+   "दायां भाग"
+  ],
+  "o_en": [
+   "Top part",
+   "Bottom part",
+   "Left part",
+   "Right part"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में ऊपर और नीचे की स्थिति बदल जाती है, जिससे निचला भाग ऊपर दिखाई देता है।",
+  "e_en": "In a water image, the top and bottom positions are swapped, causing the bottom part to appear at the top."
+ },
+ {
+  "id": "rp-rea-i01828",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "दर्पण प्रतिबिंब और जल प्रतिबिंब के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the primary difference between a mirror image and a water image?",
+  "o_hi": [
+   "दर्पण प्रतिबिंब पार्श्व परिवर्तन करता है, जल प्रतिबिंब ऊर्ध्वाधर परिवर्तन करता है",
+   "दोनों समान हैं",
+   "दर्पण प्रतिबिंब आकार बदलता है",
+   "जल प्रतिबिंब रंग बदलता है"
+  ],
+  "o_en": [
+   "Mirror image causes lateral inversion, water image causes vertical inversion",
+   "Both are identical",
+   "Mirror image changes size",
+   "Water image changes color"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण में दायां-बायां बदलता है, जबकि जल प्रतिबिंब में ऊपर-नीचे की स्थिति परिवर्तित हो जाती है।",
+  "e_en": "A mirror image flips left-to-right, while a water image flips top-to-bottom."
+ },
+ {
+  "id": "rp-rea-i01829",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि किसी वस्तु को क्षैतिज रूप से रखा जाए, तो उसका जल प्रतिबिंब किसके समान होगा?",
+  "q_en": "If an object is placed horizontally, its water image will be equivalent to what?",
+  "o_hi": [
+   "दर्पण प्रतिबिंब",
+   "कोई प्रतिबिंब नहीं",
+   "उल्टा प्रतिबिंब",
+   "वही प्रतिबिंब"
+  ],
+  "o_en": [
+   "Mirror image",
+   "No image",
+   "Inverted image",
+   "Same image"
+  ],
+  "a": 0,
+  "e_hi": "क्षैतिज रूप से रखी गई वस्तु का जल प्रतिबिंब उसके दर्पण प्रतिबिंब के समान व्यवहार करता है।",
+  "e_en": "The water image of an object placed horizontally behaves similarly to its mirror image."
+ },
+ {
+  "id": "rp-rea-i01830",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "कौन से अंग्रेजी वर्णमाला के अक्षर दर्पण और जल प्रतिबिंब में समान दिखाई देते हैं?",
+  "q_en": "Which English alphabet letters appear the same in both mirror and water images?",
+  "o_hi": [
+   "A, B, C",
+   "H, I, O",
+   "M, N, O",
+   "X, Y, Z"
+  ],
+  "o_en": [
+   "A, B, C",
+   "H, I, O",
+   "M, N, O",
+   "X, Y, Z"
+  ],
+  "a": 1,
+  "e_hi": "H, I, O जैसे अक्षरों की सममिति के कारण उनका प्रतिबिंब मूल अक्षर जैसा ही दिखता है।",
+  "e_en": "Due to their symmetry, letters like H, I, and O look identical to their original form in reflections."
+ },
+ {
+  "id": "rp-rea-i01831",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "एक घड़ी में 3:00 बजे का समय है, दर्पण में देखने पर क्या समय प्रतीत होगा?",
+  "q_en": "A clock shows 3:00. What time will it appear to be in a mirror?",
+  "o_hi": [
+   "6:00",
+   "9:00",
+   "12:00",
+   "3:00"
+  ],
+  "o_en": [
+   "6:00",
+   "9:00",
+   "12:00",
+   "3:00"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में समय ज्ञात करने के लिए 12:00 से घटाया जाता है।",
+  "e_en": "To find the mirror time, subtract the given time from 12:00."
+ },
+ {
+  "id": "rp-rea-i01832",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "जल प्रतिबिंब में कौन सा वर्णमाला का अक्षर अपना आकार नहीं बदलता है?",
+  "q_en": "Which alphabet letter does not change its shape in a water image?",
+  "o_hi": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर 'A' की ऊर्ध्वाधर सममिति उसे जल प्रतिबिंब में अपरिवर्तित रखती है।",
+  "e_en": "The vertical symmetry of the letter 'A' keeps it unchanged in a water image."
+ },
+ {
+  "id": "rp-rea-i01833",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "दर्पण प्रतिबिंब में कौन सा परिवर्तन कभी नहीं होता है?",
+  "q_en": "Which change never occurs in a mirror image?",
+  "o_hi": [
+   "ऊपर-नीचे का परिवर्तन",
+   "दायां-बायां का परिवर्तन",
+   "आकार का परिवर्तन",
+   "रंग का परिवर्तन"
+  ],
+  "o_en": [
+   "Top-bottom change",
+   "Left-right change",
+   "Size change",
+   "Color change"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब में केवल बायां और दायां हिस्सा बदलता है, ऊपर और नीचे का हिस्सा नहीं।",
+  "e_en": "In a mirror image, only the left and right sides are swapped, not the top and bottom."
+ },
+ {
+  "id": "rp-rea-i01834",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "किसी वस्तु का जल प्रतिबिंब किस दिशा में बनता है?",
+  "q_en": "In which direction is the water image of an object formed?",
+  "o_hi": [
+   "वस्तु के नीचे",
+   "वस्तु के ऊपर",
+   "वस्तु के दाएं",
+   "वस्तु के बाएं"
+  ],
+  "o_en": [
+   "Below the object",
+   "Above the object",
+   "Right of the object",
+   "Left of the object"
+  ],
+  "a": 0,
+  "e_hi": "जल की सतह नीचे होने के कारण प्रतिबिंब सदैव वस्तु के नीचे बनता है।",
+  "e_en": "Since the water surface is at the bottom, the image is always formed below the object."
+ },
+ {
+  "id": "rp-rea-j01913",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "पिता की बहन का पुत्र क्या कहलाता है?",
+  "q_en": "What is the son of your father's sister called?",
+  "o_hi": [
+   "चचेरा भाई",
+   "ममेरा भाई",
+   "फुफेरा भाई",
+   "सगा भाई"
+  ],
+  "o_en": [
+   "Cousin",
+   "Maternal cousin",
+   "Paternal cousin",
+   "Real brother"
+  ],
+  "a": 2,
+  "e_hi": "पिता की बहन बुआ कहलाती है, और बुआ के पुत्र को फुफेरा भाई कहा जाता है।",
+  "e_en": "Father's sister is called 'Bua', and her son is known as a paternal cousin (specifically 'Phuphera bhai')."
+ },
+ {
+  "id": "rp-rea-j01914",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "यदि 'अ' की माता 'ब' की बहन है, तो 'अ' का 'ब' से क्या संबंध है?",
+  "q_en": "If A's mother is the sister of B, how is A related to B?",
+  "o_hi": [
+   "भांजा या भांजी",
+   "पुत्र",
+   "पिता",
+   "भाई"
+  ],
+  "o_en": [
+   "Nephew or Niece",
+   "Son",
+   "Father",
+   "Brother"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि 'अ' की माता 'ब' की बहन है, इसलिए 'अ', 'ब' का भांजा या भांजी होगा।",
+  "e_en": "Since A's mother is the sister of B, A must be the nephew or niece of B."
+ },
+ {
+  "id": "rp-rea-j01915",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "दादी की इकलौती संतान का बेटा कौन होगा?",
+  "q_en": "Who would the son of your grandmother's only child be?",
+  "o_hi": [
+   "भाई",
+   "पिता",
+   "चाचा",
+   "मामा"
+  ],
+  "o_en": [
+   "Brother",
+   "Father",
+   "Uncle",
+   "Maternal Uncle"
+  ],
+  "a": 1,
+  "e_hi": "दादी की इकलौती संतान स्वयं पिता हैं, इसलिए उनका बेटा 'भाई' या स्वयं 'मैं' होगा।",
+  "e_en": "Grandmother's only child is your father; therefore, his son is your brother or yourself."
+ },
+ {
+  "id": "rp-rea-j01916",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "पति की पत्नी की सास कौन होती है?",
+  "q_en": "Who is the mother-in-law of a husband's wife?",
+  "o_hi": [
+   "दादी",
+   "नानी",
+   "माँ",
+   "बहन"
+  ],
+  "o_en": [
+   "Grandmother",
+   "Maternal grandmother",
+   "Mother",
+   "Sister"
+  ],
+  "a": 2,
+  "e_hi": "पति की पत्नी स्वयं महिला है, और उसकी सास उसके पति की माँ यानी उसकी अपनी माँ (सासू माँ) होगी।",
+  "e_en": "A husband's wife is the woman herself, and her mother-in-law is her husband's mother."
+ },
+ {
+  "id": "rp-rea-j01917",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक पुरुष का परिचय देते हुए एक महिला ने कहा, 'उनकी पत्नी मेरे पिता की इकलौती बेटी है।' पुरुष का महिला से क्या संबंध है?",
+  "q_en": "Pointing to a man, a woman said, 'His wife is the only daughter of my father.' How is the man related to the woman?",
+  "o_hi": [
+   "पिता",
+   "पति",
+   "भाई",
+   "पुत्र"
+  ],
+  "o_en": [
+   "Father",
+   "Husband",
+   "Brother",
+   "Son"
+  ],
+  "a": 1,
+  "e_hi": "मेरे पिता की इकलौती बेटी स्वयं महिला है, इसलिए पुरुष की पत्नी वह महिला है। अतः वह उसका पति है।",
+  "e_en": "The only daughter of my father is the woman herself; since the man's wife is that woman, he is her husband."
+ },
+ {
+  "id": "rp-rea-j01918",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "बहन के पति को क्या कहा जाता है?",
+  "q_en": "What is the sister's husband called?",
+  "o_hi": [
+   "जीजा",
+   "साला",
+   "देवर",
+   "ससुर"
+  ],
+  "o_en": [
+   "Brother-in-law (Jija)",
+   "Brother-in-law (Sala)",
+   "Brother-in-law (Devar)",
+   "Father-in-law"
+  ],
+  "a": 0,
+  "e_hi": "बहन के पति को हिंदी में जीजा कहा जाता है।",
+  "e_en": "In Hindi, a sister's husband is referred to as 'Jija'."
+ },
+ {
+  "id": "rp-rea-j01919",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि 'क', 'ख' का भाई है, 'ग', 'क' की माँ है, और 'घ', 'ग' का पिता है, तो 'घ' का 'ख' से क्या संबंध है?",
+  "q_en": "If K is the brother of Kh, G is the mother of K, and Gh is the father of G, how is Gh related to Kh?",
+  "o_hi": [
+   "दादा",
+   "नाना",
+   "पिता",
+   "परदादा"
+  ],
+  "o_en": [
+   "Grandfather (Paternal)",
+   "Grandfather (Maternal)",
+   "Father",
+   "Great-grandfather"
+  ],
+  "a": 1,
+  "e_hi": "ग, ख की माँ है और घ, ग का पिता है, तो घ, ख के नाना हुए।",
+  "e_en": "Since G is Kh's mother and Gh is G's father, Gh is the maternal grandfather (Nana) of Kh."
+ },
+ {
+  "id": "rp-rea-j01920",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "पोते या पोती के पिता को क्या कहते हैं?",
+  "q_en": "What is the father of a grandson or granddaughter called?",
+  "o_hi": [
+   "पुत्र",
+   "पिता",
+   "भाई",
+   "चाचा"
+  ],
+  "o_en": [
+   "Son",
+   "Father",
+   "Brother",
+   "Uncle"
+  ],
+  "a": 0,
+  "e_hi": "पोते/पोती के पिता स्वयं पुत्र होते हैं।",
+  "e_en": "The father of a grandson or granddaughter is your son."
+ },
+ {
+  "id": "rp-rea-j01921",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "मामा की बहन का बेटा क्या हो सकता है?",
+  "q_en": "What can the son of a maternal uncle's sister be?",
+  "o_hi": [
+   "स्वयं या भाई",
+   "पिता",
+   "चाचा",
+   "दादा"
+  ],
+  "o_en": [
+   "Self or Brother",
+   "Father",
+   "Uncle",
+   "Grandfather"
+  ],
+  "a": 0,
+  "e_hi": "मामा की बहन या तो माँ है या मौसी है, इसलिए उनका बेटा भाई या स्वयं होगा।",
+  "e_en": "A maternal uncle's sister is either your mother or your aunt, so her son is your brother or yourself."
+ },
+ {
+  "id": "rp-rea-j01922",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "ससुर की इकलौती बेटी का पति कौन है?",
+  "q_en": "Who is the husband of the only daughter of the father-in-law?",
+  "o_hi": [
+   "भाई",
+   "स्वयं",
+   "साला",
+   "मामा"
+  ],
+  "o_en": [
+   "Brother",
+   "Self",
+   "Brother-in-law",
+   "Maternal uncle"
+  ],
+  "a": 1,
+  "e_hi": "ससुर की इकलौती बेटी आपकी पत्नी है, इसलिए उसका पति आप स्वयं हैं।",
+  "e_en": "The only daughter of your father-in-law is your wife, so her husband is you."
+ },
+ {
+  "id": "rp-rea-i01835",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'PRINTER' का जल प्रतिबिंब (Water Image) नीचे दिए गए विकल्पों में से कौन सा होगा?",
+  "q_en": "Which of the following options represents the correct water image of the word 'PRINTER'?",
+  "o_hi": [
+   "PRINTER (उल्टा)",
+   "BEIИLEB",
+   "dBIИLEB",
+   "PRINTER (समान)"
+  ],
+  "o_en": [
+   "PRINTER (inverted)",
+   "BEIИLEB",
+   "dBIИLEB",
+   "PRINTER (same)"
+  ],
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब में ऊपर और नीचे की स्थिति बदल जाती है जबकि दायां और बायां पक्ष समान रहता है।",
+  "e_en": "In a water image, the top and bottom positions are swapped while the left and right sides remain unchanged."
+ },
+ {
+  "id": "rp-rea-i01836",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "दी गई आकृति का दर्पण प्रतिबिंब क्या होगा यदि दर्पण को दाईं ओर रखा गया है: '9 B 5 A'?",
+  "q_en": "What will be the mirror image of the given figure if the mirror is placed on the right: '9 B 5 A'?",
+  "o_hi": [
+   "A 5 B 9",
+   "A Ƨ ᗺ e",
+   "A 5 8 9",
+   "A 2 B 6"
+  ],
+  "o_en": [
+   "A 5 B 9",
+   "A Ƨ ᗺ e",
+   "A 5 8 9",
+   "A 2 B 6"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण दाईं ओर होने पर प्रत्येक अंक और अक्षर का पार्श्व प्रतिबिंब बनता है।",
+  "e_en": "When the mirror is on the right, each digit and letter is laterally inverted."
+ },
+ {
+  "id": "rp-rea-i01837",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि एक घड़ी में समय 3:15 हो रहा है, तो दर्पण में देखने पर क्या समय दिखाई देगा?",
+  "q_en": "If a clock shows the time 3:15, what time will it appear to be when seen in a mirror?",
+  "o_hi": [
+   "9:45",
+   "8:45",
+   "3:45",
+   "9:15"
+  ],
+  "o_en": [
+   "9:45",
+   "8:45",
+   "3:45",
+   "9:15"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण समय निकालने के लिए वास्तविक समय को 11:60 से घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror time, subtract the actual time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01838",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि घड़ी में समय 12:30 हो रहा है, तो जल प्रतिबिंब में क्या समय दिखेगा?",
+  "q_en": "If a clock shows the time 12:30, what time will it appear to be in a water image?",
+  "o_hi": [
+   "6:00",
+   "5:30",
+   "6:30",
+   "12:00"
+  ],
+  "o_en": [
+   "6:00",
+   "5:30",
+   "6:30",
+   "12:00"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाते हैं। 18:30 - 12:30 = 6:00।",
+  "e_en": "For water images, subtract the time from 18:30. 18:30 - 12:30 = 6:00."
+ },
+ {
+  "id": "rp-rea-i01839",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'EXAMINATION' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the word 'EXAMINATION'?",
+  "o_hi": [
+   "NOITANIMAXE",
+   "EXAMINATION",
+   "ИOITAИIMAXE",
+   "NOIΤΑΜΙΝΑΧΕ"
+  ],
+  "o_en": [
+   "NOITANIMAXE",
+   "EXAMINATION",
+   "ИOITAИIMAXE",
+   "NOIΤΑΜΙΝΑΧΕ"
+  ],
+  "a": 2,
+  "e_hi": "दर्पण में अंतिम अक्षर पहले आता है और सभी अक्षरों की दिशा बदल जाती है।",
+  "e_en": "In a mirror, the last letter appears first and all letters are laterally inverted."
+ },
+ {
+  "id": "rp-rea-i01840",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "कौन सा अक्षर दर्पण में देखने पर अपरिवर्तित रहता है?",
+  "q_en": "Which letter remains unchanged when viewed in a mirror?",
+  "o_hi": [
+   "P",
+   "A",
+   "B",
+   "G"
+  ],
+  "o_en": [
+   "P",
+   "A",
+   "B",
+   "G"
+  ],
+  "a": 1,
+  "e_hi": "अक्षर 'A' सममित (symmetrical) है, इसलिए दर्पण में यह वैसा ही दिखता है।",
+  "e_en": "The letter 'A' is symmetrical, so it appears the same in a mirror."
+ },
+ {
+  "id": "rp-rea-i01841",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "संख्या '8' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '8'?",
+  "o_hi": [
+   "3",
+   "8",
+   "∞",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "3",
+   "8",
+   "∞",
+   "None"
+  ],
+  "a": 1,
+  "e_hi": "संख्या 8 ऊपर और नीचे से समान है, इसलिए इसका जल प्रतिबिंब स्वयं 8 ही है।",
+  "e_en": "The number 8 is identical from top to bottom, so its water image is 8 itself."
+ },
+ {
+  "id": "rp-rea-j01923",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक तस्वीर की ओर इशारा करते हुए, एक व्यक्ति ने कहा, 'मेरा कोई भाई या बहन नहीं है, लेकिन उस आदमी का पिता मेरे पिता का बेटा है।' तस्वीर में कौन है?",
+  "q_en": "Pointing to a photograph, a man said, 'I have no brother or sister, but that man's father is my father's son.' Who is in the photograph?",
+  "o_hi": [
+   "उसका बेटा",
+   "उसका पिता",
+   "वह स्वयं",
+   "उसका भतीजा"
+  ],
+  "o_en": [
+   "His son",
+   "His father",
+   "Himself",
+   "His nephew"
+  ],
+  "a": 0,
+  "e_hi": "'मेरे पिता का बेटा' का अर्थ है 'मैं स्वयं' (क्योंकि मेरा कोई भाई-बहन नहीं है)। अतः तस्वीर में उसका बेटा है।",
+  "e_en": "'My father's son' means 'myself' since he has no siblings. Therefore, the man in the photo is his son."
+ },
+ {
+  "id": "rp-rea-j01924",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक महिला की ओर इशारा करते हुए, राजेश ने कहा, 'वह मेरे दादा के इकलौते बेटे की बेटी है।' महिला का राजेश से क्या संबंध है?",
+  "q_en": "Pointing to a woman, Rajesh said, 'She is the daughter of the only son of my grandfather.' How is the woman related to Rajesh?",
+  "o_hi": [
+   "बहन",
+   "पत्नी",
+   "माँ",
+   "चाची"
+  ],
+  "o_en": [
+   "Sister",
+   "Wife",
+   "Mother",
+   "Aunt"
+  ],
+  "a": 0,
+  "e_hi": "दादा के इकलौते बेटे का मतलब राजेश के पिता हैं। राजेश के पिता की बेटी राजेश की बहन होगी।",
+  "e_en": "The only son of the grandfather refers to Rajesh's father. The daughter of Rajesh's father is Rajesh's sister."
+ },
+ {
+  "id": "rp-rea-j01925",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "ए, बी की पत्नी है। सी, ए का भाई है। डी, सी का बेटा है। डी का बी से क्या संबंध है?",
+  "q_en": "A is the wife of B. C is the brother of A. D is the son of C. How is D related to B?",
+  "o_hi": [
+   "भतीजा",
+   "बेटा",
+   "भाई",
+   "पिता"
+  ],
+  "o_en": [
+   "Nephew",
+   "Son",
+   "Brother",
+   "Father"
+  ],
+  "a": 0,
+  "e_hi": "डी, सी का बेटा है, और सी, बी की पत्नी का भाई है। इसलिए डी, बी का भतीजा है।",
+  "e_en": "D is the son of C, and C is the brother of B's wife. Therefore, D is the nephew of B."
+ },
+ {
+  "id": "rp-rea-j01926",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एम, एन का बेटा है। ओ, एन का भाई है। पी, ओ की माँ है। एम का पी से क्या संबंध है?",
+  "q_en": "M is the son of N. O is the brother of N. P is the mother of O. How is M related to P?",
+  "o_hi": [
+   "पोता",
+   "बेटा",
+   "भतीजा",
+   "भाई"
+  ],
+  "o_en": [
+   "Grandson",
+   "Son",
+   "Nephew",
+   "Brother"
+  ],
+  "a": 0,
+  "e_hi": "पी, एन की माँ है और एम, एन का बेटा है। अतः एम, पी का पोता है।",
+  "e_en": "P is the mother of N, and M is the son of N. Therefore, M is the grandson of P."
+ },
+ {
+  "id": "rp-rea-j01927",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि ए + बी का अर्थ है 'ए, बी का पिता है' और ए - बी का अर्थ है 'ए, बी की माँ है', तो पी - क्यू + आर का क्या अर्थ है?",
+  "q_en": "If A + B means 'A is the father of B' and A - B means 'A is the mother of B', what does P - Q + R mean?",
+  "o_hi": [
+   "पी, आर की दादी है",
+   "पी, आर की माँ है",
+   "पी, आर की बहन है",
+   "पी, आर की चाची है"
+  ],
+  "o_en": [
+   "P is the grandmother of R",
+   "P is the mother of R",
+   "P is the sister of R",
+   "P is the aunt of R"
+  ],
+  "a": 0,
+  "e_hi": "पी, क्यू की माँ है और क्यू, आर का पिता है। अतः पी, आर की दादी है।",
+  "e_en": "P is the mother of Q, and Q is the father of R. Therefore, P is the grandmother of R."
+ },
+ {
+  "id": "rp-rea-j01928",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक परिवार में छह सदस्य हैं: ए, बी, सी, डी, ई और एफ। बी, सी का बेटा है लेकिन सी, बी की माँ नहीं है। ए और सी विवाहित जोड़े हैं। एफ, ए का भाई है। डी, ए की बेटी है। ई, बी का भाई है। सी का डी से क्या संबंध है?",
+  "q_en": "There are six members in a family: A, B, C, D, E, and F. B is the son of C but C is not the mother of B. A and C are a married couple. F is the brother of A. D is the daughter of A. E is the brother of B. How is C related to D?",
+  "o_hi": [
+   "पिता",
+   "माँ",
+   "चाचा",
+   "भाई"
+  ],
+  "o_en": [
+   "Father",
+   "Mother",
+   "Uncle",
+   "Brother"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि सी, बी की माँ नहीं है और सी, ए का पति है, इसलिए सी, बी का पिता है। चूँकि ए और सी विवाहित हैं, सी, डी का भी पिता है।",
+  "e_en": "Since C is not the mother of B and C is married to A, C is the father of B. Since A and C are parents, C is also the father of D."
+ },
+ {
+  "id": "rp-rea-i01842",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "दी गई आकृति '9 5 3 7' का जल प्रतिबिंब (Water Image) क्या होगा?",
+  "q_en": "What will be the water image of the given figure '9 5 3 7'?",
+  "o_hi": [
+   "6 5 3 ㄥ",
+   "a 5 3 7",
+   "6 2 3 7",
+   "6 5 3 7"
+  ],
+  "o_en": [
+   "6 5 3 ㄥ",
+   "a 5 3 7",
+   "6 2 3 7",
+   "6 5 3 7"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में ऊपर और नीचे के हिस्से बदल जाते हैं, जबकि दायां-बायां पक्ष समान रहता है।",
+  "e_en": "In a water image, the top and bottom parts are swapped, while the left and right sides remain the same."
+ },
+ {
+  "id": "rp-rea-i01843",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि घड़ी में समय 4:20 हो रहा है, तो दर्पण में देखने पर क्या समय दिखाई देगा?",
+  "q_en": "If a clock shows the time 4:20, what time will it appear to show when viewed in a mirror?",
+  "o_hi": [
+   "8:40",
+   "7:40",
+   "6:20",
+   "7:20"
+  ],
+  "o_en": [
+   "8:40",
+   "7:40",
+   "6:20",
+   "7:20"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब के समय के लिए, वास्तविक समय को 11:60 में से घटाते हैं।",
+  "e_en": "To find the mirror time, subtract the given time from 11:60."
+ },
+ {
+  "id": "rp-rea-i01844",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "दिए गए अक्षर 'B' का जल प्रतिबिंब कैसा दिखेगा?",
+  "q_en": "How will the water image of the letter 'B' appear?",
+  "o_hi": [
+   "B जैसा ही",
+   "D जैसा",
+   "8 जैसा",
+   "R जैसा"
+  ],
+  "o_en": [
+   "Same as B",
+   "Like D",
+   "Like 8",
+   "Like R"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर 'B' का जल प्रतिबिंब लगभग उसी के समान दिखता है क्योंकि उसका ऊपरी और निचला हिस्सा सममित है।",
+  "e_en": "The water image of the letter 'B' looks almost the same as it is symmetric top to bottom."
+ },
+ {
+  "id": "rp-rea-i01845",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '1 2 3 4' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the number '1 2 3 4'?",
+  "o_hi": [
+   "4 3 2 1",
+   "A Ɛ ᄅ 1",
+   "1 2 3 4",
+   "⇂ ᄅ Ɛ 4"
+  ],
+  "o_en": [
+   "4 3 2 1",
+   "A Ɛ ᄅ 1",
+   "1 2 3 4",
+   "⇂ ᄅ Ɛ 4"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में अंकों को दाईं से बाईं ओर उल्टा लिखा जाता है और उनकी दिशा भी बदल जाती है।",
+  "e_en": "In a mirror image, digits are written from right to left and their orientation is flipped horizontally."
+ },
+ {
+  "id": "rp-rea-i01846",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "अक्षर 'Q' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the letter 'Q'?",
+  "o_hi": [
+   "Q",
+   "O",
+   "Q का उल्टा",
+   "P"
+  ],
+  "o_en": [
+   "Q",
+   "O",
+   "Reversed Q",
+   "P"
+  ],
+  "a": 2,
+  "e_hi": "दर्पण में 'Q' की पूंछ दाईं के बजाय बाईं ओर दिखाई देगी।",
+  "e_en": "In the mirror, the tail of 'Q' will appear on the left instead of the right."
+ },
+ {
+  "id": "rp-rea-i01847",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "किसी आकृति में लंबवत रेखा पर दर्पण रखा गया है, तो 'M' का प्रतिबिंब क्या होगा?",
+  "q_en": "If a mirror is placed on a vertical line, what will be the reflection of 'M'?",
+  "o_hi": [
+   "W",
+   "M",
+   "3",
+   "E"
+  ],
+  "o_en": [
+   "W",
+   "M",
+   "3",
+   "E"
+  ],
+  "a": 1,
+  "e_hi": "अक्षर 'M' सममित है, इसलिए इसका दर्पण प्रतिबिंब वही रहता है।",
+  "e_en": "The letter 'M' is symmetric, so its mirror image remains the same."
+ },
+ {
+  "id": "rp-rea-j01929",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक महिला की ओर इशारा करते हुए, एक आदमी ने कहा, 'वह मेरे पिता की इकलौती बहू की बेटी है।' महिला का आदमी से क्या संबंध है?",
+  "q_en": "Pointing to a woman, a man said, 'She is the daughter of my father's only daughter-in-law.' How is the woman related to the man?",
+  "o_hi": [
+   "बहन",
+   "बेटी",
+   "भतीजी",
+   "पत्नी"
+  ],
+  "o_en": [
+   "Sister",
+   "Daughter",
+   "Niece",
+   "Wife"
+  ],
+  "a": 1,
+  "e_hi": "आदमी के पिता की इकलौती बहू स्वयं आदमी की पत्नी है। अतः, उसकी बेटी आदमी की भी बेटी होगी।",
+  "e_en": "The only daughter-in-law of a man's father is the man's own wife. Therefore, her daughter is the man's daughter."
+ },
+ {
+  "id": "rp-rea-j01930",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि 'क + ख' का अर्थ है 'क, ख का पिता है' और 'क - ख' का अर्थ है 'क, ख की माता है', तो 'अ + ब - स' का अर्थ क्या है?",
+  "q_en": "If 'A + B' means 'A is the father of B' and 'A - B' means 'A is the mother of B', what does 'A + B - C' imply?",
+  "o_hi": [
+   "अ, स का पिता है",
+   "अ, स का दादा है",
+   "अ, स का भाई है",
+   "स, अ का पिता है"
+  ],
+  "o_en": [
+   "A is the father of C",
+   "A is the grandfather of C",
+   "A is the brother of C",
+   "C is the father of A"
+  ],
+  "a": 1,
+  "e_hi": "अ, ब का पिता है और ब, स की माता है। अतः अ, स के पिता के पिता यानी दादा हैं।",
+  "e_en": "A is the father of B, and B is the mother of C. Therefore, A is the father of C's mother, making him the grandfather."
+ },
+ {
+  "id": "rp-rea-j01931",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "राजीव, अतुल का भाई है। सोनिया, सुनील की बहन है। अतुल, सोनिया का बेटा है। राजीव का सुनील से क्या संबंध है?",
+  "q_en": "Rajiv is the brother of Atul. Sonia is the sister of Sunil. Atul is the son of Sonia. How is Rajiv related to Sunil?",
+  "o_hi": [
+   "भतीजा",
+   "बेटा",
+   "भाई",
+   "पिता"
+  ],
+  "o_en": [
+   "Nephew",
+   "Son",
+   "Brother",
+   "Father"
+  ],
+  "a": 0,
+  "e_hi": "अतुल, सोनिया का बेटा है और राजीव, अतुल का भाई है। चूंकि सोनिया, सुनील की बहन है, इसलिए सुनील राजीव का मामा हुआ और राजीव उसका भतीजा।",
+  "e_en": "Atul is Sonia's son and Rajiv is Atul's brother. Since Sonia is Sunil's sister, Sunil is Rajiv's maternal uncle, making Rajiv his nephew."
+ },
+ {
+  "id": "rp-rea-j01932",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक तस्वीर की ओर संकेत करते हुए मोहन ने कहा, 'वह मेरे पिता के इकलौते पुत्र की संतान है।' तस्वीर में कौन है?",
+  "q_en": "Pointing to a photograph, Mohan said, 'He is the child of my father's only son.' Who is in the photograph?",
+  "o_hi": [
+   "मोहन स्वयं",
+   "मोहन का बेटा",
+   "मोहन का पिता",
+   "मोहन का भाई"
+  ],
+  "o_en": [
+   "Mohan himself",
+   "Mohan's son",
+   "Mohan's father",
+   "Mohan's brother"
+  ],
+  "a": 1,
+  "e_hi": "मेरे पिता का इकलौता पुत्र स्वयं मोहन है। अतः तस्वीर में मोहन की संतान (बेटा) है।",
+  "e_en": "My father's only son is Mohan himself. Therefore, the photograph shows Mohan's own child (son)."
+ },
+ {
+  "id": "rp-rea-j01933",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "महिला 'अ' का परिचय देते हुए 'ब' ने कहा, 'उसकी माँ, मेरी माँ की इकलौती बेटी है।' 'ब' का 'अ' से क्या संबंध है?",
+  "q_en": "Introducing woman A, B said, 'Her mother is the only daughter of my mother.' How is B related to A?",
+  "o_hi": [
+   "पिता",
+   "माता",
+   "बहन",
+   "चाचा"
+  ],
+  "o_en": [
+   "Father",
+   "Mother",
+   "Sister",
+   "Uncle"
+  ],
+  "a": 1,
+  "e_hi": "मेरी माँ की इकलौती बेटी स्वयं 'ब' की माँ है। यदि 'अ' की माँ 'ब' की माँ है, तो 'ब', 'अ' की माँ ही है।",
+  "e_en": "My mother's only daughter is B's mother. If A's mother is B's mother, then B is A's mother."
+ },
+ {
+  "id": "rp-rea-j01934",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक परिवार में एक पुरुष, उसकी पत्नी, उनके तीन बेटे और उनकी पत्नियाँ हैं। प्रत्येक बेटे के परिवार में तीन बच्चे हैं। परिवार में कुल कितने सदस्य हैं?",
+  "q_en": "In a family, there is a man, his wife, their three sons and their wives. Each son has three children in his family. How many members are there in total?",
+  "o_hi": [
+   "15",
+   "17",
+   "19",
+   "21"
+  ],
+  "o_en": [
+   "15",
+   "17",
+   "19",
+   "21"
+  ],
+  "a": 1,
+  "e_hi": "2 (माता-पिता) + 6 (3 बेटे और उनकी पत्नियाँ) + 9 (3*3 बच्चे) = 17 सदस्य।",
+  "e_en": "2 (parents) + 6 (3 sons and their wives) + 9 (3*3 children) = 17 members."
+ },
+ {
+  "id": "rp-rea-j01935",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि 'अ' का भाई 'ब' है, 'स' की बहन 'अ' है और 'द' का भाई 'स' है, तो 'द' का चाचा कौन है?",
+  "q_en": "If B is the brother of A, A is the sister of C, and C is the brother of D, who is the uncle of D?",
+  "o_hi": [
+   "अ",
+   "ब",
+   "स",
+   "जानकारी अधूरी है"
+  ],
+  "o_en": [
+   "A",
+   "B",
+   "C",
+   "Data inadequate"
+  ],
+  "a": 3,
+  "e_hi": "प्रश्न में लिंग स्पष्ट नहीं है कि 'द' या 'स' पुरुष हैं या महिला, और न ही किसी पिता के भाई का उल्लेख है।",
+  "e_en": "The gender of D and C is not specified, and there is no mention of a father's brother, so the uncle cannot be determined."
+ },
+ {
+  "id": "rp-rea-j01936",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "रवि का परिचय देते हुए, एक महिला ने कहा, 'उसकी पत्नी मेरे पिता की इकलौती संतान है।' महिला का रवि से क्या संबंध है?",
+  "q_en": "Introducing Ravi, a woman said, 'His wife is the only child of my father.' How is the woman related to Ravi?",
+  "o_hi": [
+   "पत्नी",
+   "माता",
+   "बहन",
+   "भाभी"
+  ],
+  "o_en": [
+   "Wife",
+   "Mother",
+   "Sister",
+   "Sister-in-law"
+  ],
+  "a": 0,
+  "e_hi": "मेरे पिता की इकलौती संतान स्वयं वह महिला है। यदि रवि की पत्नी वह महिला है, तो महिला रवि की पत्नी है।",
+  "e_en": "My father's only child is the woman herself. If Ravi's wife is that woman, then she is Ravi's wife."
+ },
+ {
+  "id": "rp-rea-j01937",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "अमित, सुनीता का भाई है। सुनीता, संजय की माँ है। अमित का संजय से क्या संबंध है?",
+  "q_en": "Amit is the brother of Sunita. Sunita is the mother of Sanjay. How is Amit related to Sanjay?",
+  "o_hi": [
+   "पिता",
+   "भाई",
+   "मामा",
+   "चाचा"
+  ],
+  "o_en": [
+   "Father",
+   "Brother",
+   "Maternal Uncle",
+   "Uncle"
+  ],
+  "a": 2,
+  "e_hi": "अमित, संजय की माँ (सुनीता) का भाई है। माँ के भाई को मामा कहा जाता है।",
+  "e_en": "Amit is the brother of Sanjay's mother (Sunita). A mother's brother is called a maternal uncle."
+ },
+ {
+  "id": "rp-rea-j01938",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक फोटो की ओर इशारा करते हुए, राजेश ने कहा, 'यह मेरे दादा के इकलौते पुत्र की इकलौती बेटी है।' फोटो में कौन है?",
+  "q_en": "Pointing to a photograph, Rajesh said, 'She is the only daughter of my grandfather's only son.' Who is in the photograph?",
+  "o_hi": [
+   "राजेश की बहन",
+   "राजेश की माँ",
+   "राजेश की बुआ",
+   "राजेश की पत्नी"
+  ],
+  "o_en": [
+   "Rajesh's sister",
+   "Rajesh's mother",
+   "Rajesh's aunt",
+   "Rajesh's wife"
+  ],
+  "a": 0,
+  "e_hi": "दादा का इकलौता पुत्र राजेश का पिता है। पिता की इकलौती बेटी राजेश की बहन है।",
+  "e_en": "Grandfather's only son is Rajesh's father. The only daughter of his father is Rajesh's sister."
+ },
+ {
+  "id": "rp-rea-i01848",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "वर्ष '1947' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the year '1947'?",
+  "o_hi": [
+   "гpA1",
+   "T4e1",
+   "TrA1",
+   "rApe1"
+  ],
+  "o_en": [
+   "гpA1",
+   "T4e1",
+   "TrA1",
+   "rApe1"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब में 1947 के अंक पलट जाएंगे, जिससे 7, 4, 9, 1 का क्रम दर्पण में दिखाई देगा।",
+  "e_en": "In a mirror image, the digits of 1947 are reversed, resulting in the sequence 7, 4, 9, 1 as seen in the mirror."
+ },
+ {
+  "id": "rp-rea-i01849",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि 'PATEL' को दर्पण के सामने रखा जाए, तो प्रतिबिंब में 'P' कैसा दिखेगा?",
+  "q_en": "If 'PATEL' is placed in front of a mirror, how will 'P' appear in the reflection?",
+  "o_hi": [
+   "q",
+   "P",
+   "d",
+   "b"
+  ],
+  "o_en": [
+   "q",
+   "P",
+   "d",
+   "b"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब में अक्षर P का दायां भाग बाईं ओर आ जाता है, जिससे यह 'q' जैसा दिखता है।",
+  "e_en": "In a mirror image, the right side of the letter P shifts to the left, making it appear like 'q'."
+ },
+ {
+  "id": "rp-rea-j01939",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "एक फोटो की ओर इशारा करते हुए, सुरेश ने कहा, 'यह मेरे पिता के एकमात्र पुत्र की पुत्री है।' फोटो वाली लड़की का सुरेश से क्या संबंध है?",
+  "q_en": "Pointing to a photograph, Suresh said, 'She is the daughter of the only son of my father.' How is the girl in the photograph related to Suresh?",
+  "o_hi": [
+   "बहन",
+   "बेटी",
+   "भतीजी",
+   "भांजी"
+  ],
+  "o_en": [
+   "Sister",
+   "Daughter",
+   "Niece",
+   "Cousin"
+  ],
+  "a": 1,
+  "e_hi": "सुरेश के पिता का एकमात्र पुत्र स्वयं सुरेश है। अतः लड़की उसकी अपनी बेटी है।",
+  "e_en": "The only son of Suresh's father is Suresh himself. Therefore, the girl is his own daughter."
+ },
+ {
+  "id": "rp-rea-j01940",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "यदि पी + क्यू का अर्थ है 'पी, क्यू का पिता है' और पी - क्यू का अर्थ है 'पी, क्यू की माँ है', तो एम - एन + ओ में एम का ओ से क्या संबंध है?",
+  "q_en": "If P + Q means 'P is the father of Q' and P - Q means 'P is the mother of Q', then how is M related to O in M - N + O?",
+  "o_hi": [
+   "दादी/नानी",
+   "माँ",
+   "बहन",
+   "बुआ"
+  ],
+  "o_en": [
+   "Grandmother",
+   "Mother",
+   "Sister",
+   "Aunt"
+  ],
+  "a": 0,
+  "e_hi": "एम, एन की माँ है और एन, ओ का पिता है। अतः एम, ओ की दादी है।",
+  "e_en": "M is the mother of N, and N is the father of O. Therefore, M is the grandmother of O."
+ },
+ {
+  "id": "rp-rea-j01941",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक्स और वाई भाई हैं। आर, वाई का पिता है। एस, टी का भाई है और एक्स का मामा है। टी का आर से क्या संबंध है?",
+  "q_en": "X and Y are brothers. R is the father of Y. S is the brother of T and the maternal uncle of X. How is T related to R?",
+  "o_hi": [
+   "पत्नी",
+   "बहन",
+   "भाई",
+   "माता"
+  ],
+  "o_en": [
+   "Wife",
+   "Sister",
+   "Brother",
+   "Mother"
+  ],
+  "a": 0,
+  "e_hi": "एस और टी, एक्स की माँ के भाई-बहन हैं। चूंकि आर, एक्स का पिता है, इसलिए टी, आर की पत्नी है।",
+  "e_en": "S and T are siblings of X's mother. Since R is X's father, T must be R's wife."
+ },
+ {
+  "id": "rp-rea-j01942",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 3,
+  "q_hi": "एक परिवार में छह सदस्य हैं। ए और बी विवाहित जोड़े हैं। ए पुरुष है। डी, सी का इकलौता बेटा है। ई, ए की बहन है। बी, डी की क्या लगती है?",
+  "q_en": "There are six members in a family. A and B are a married couple. A is male. D is the only son of C. E is the sister of A. How is B related to D?",
+  "o_hi": [
+   "माँ",
+   "बहन",
+   "चाची",
+   "डेटा अपर्याप्त"
+  ],
+  "o_en": [
+   "Mother",
+   "Sister",
+   "Aunt",
+   "Data inadequate"
+  ],
+  "a": 3,
+  "e_hi": "सी का लिंग स्पष्ट नहीं है, इसलिए बी और सी के बीच संबंध निर्धारित नहीं किया जा सकता।",
+  "e_en": "The gender of C is not clear, so the relationship between B and C cannot be determined."
+ },
+ {
+  "id": "rp-rea-j01943",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 2,
+  "q_hi": "यदि ए, बी का भाई है, सी, ए की माँ है, डी, सी का पिता है, और ई, बी का बेटा है, तो ई का डी से क्या संबंध है?",
+  "q_en": "If A is the brother of B, C is the mother of A, D is the father of C, and E is the son of B, how is E related to D?",
+  "o_hi": [
+   "पोता",
+   "बेटा",
+   "भाई",
+   "ग्रैंड-पोता"
+  ],
+  "o_en": [
+   "Grandson",
+   "Son",
+   "Brother",
+   "Great-grandson"
+  ],
+  "a": 3,
+  "e_hi": "डी, सी का पिता है और सी, ई की दादी है। इसलिए डी, ई का परदादा (ग्रैंड-फादर का पिता) है।",
+  "e_en": "D is the father of C, and C is the grandmother of E. Therefore, D is the great-grandfather of E."
+ },
+ {
+  "id": "rp-rea-j01944",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "d": 1,
+  "q_hi": "ए, बी की बहन है। बी, सी का भाई है। सी, डी का बेटा है। डी का ए से क्या संबंध है?",
+  "q_en": "A is the sister of B. B is the brother of C. C is the son of D. How is D related to A?",
+  "o_hi": [
+   "पिता या माँ",
+   "भाई",
+   "चाचा",
+   "बहन"
+  ],
+  "o_en": [
+   "Father or Mother",
+   "Brother",
+   "Uncle",
+   "Sister"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि डी, ए के भाई सी का माता-पिता है, इसलिए डी या तो ए का पिता है या माँ।",
+  "e_en": "Since D is the parent of A's brother C, D is either the father or the mother of A."
+ },
+ {
+  "id": "rp-rea-i01850",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'D4Z8A' का सही दर्पण प्रतिबिंब चुनें, जहाँ दर्पण दाईं ओर रखा गया है।",
+  "q_en": "Choose the correct mirror image of the word 'D4Z8A', where the mirror is placed on the right side.",
+  "o_hi": [
+   "A8Z4D",
+   "A8S4D",
+   "∀8Z4D",
+   "A8Z4ᗡ"
+  ],
+  "o_en": [
+   "A8Z4D",
+   "A8S4D",
+   "∀8Z4D",
+   "A8Z4ᗡ"
+  ],
+  "a": 2,
+  "e_hi": "दर्पण प्रतिबिंब में 'A' पहले आता है और उसका आकार वही रहता है, जबकि 'D' अंत में जाकर पलट जाता है।",
+  "e_en": "In the mirror image, 'A' comes first with its shape unchanged, while 'D' goes to the end and flips horizontally."
+ },
+ {
+  "id": "rp-rea-i01851",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि दर्पण को नीचे की ओर (क्षैतिज) रखा जाए, तो 'CAT' शब्द कैसा दिखेगा?",
+  "q_en": "If a mirror is placed horizontally (at the bottom), how will the word 'CAT' appear?",
+  "o_hi": [
+   "TAC",
+   "Ɔ∀⊥",
+   "CAT",
+   "L∀Ɔ"
+  ],
+  "o_en": [
+   "TAC",
+   "Ɔ∀⊥",
+   "CAT",
+   "L∀Ɔ"
+  ],
+  "a": 1,
+  "e_hi": "नीचे दर्पण रखने पर यह जल प्रतिबिंब की तरह कार्य करता है, जिससे अक्षर ऊपर-नीचे पलट जाते हैं।",
+  "e_en": "Placing a mirror at the bottom acts like a water image, causing letters to invert vertically."
+ },
+ {
+  "id": "rp-rea-i01852",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि घड़ी में वास्तविक समय 6:00 है, तो जल प्रतिबिंब में क्या समय दिखेगा?",
+  "q_en": "If the actual time in a clock is 6:00, what time will appear in the water image?",
+  "o_hi": [
+   "12:30",
+   "6:00",
+   "12:00",
+   "6:30"
+  ],
+  "o_en": [
+   "12:30",
+   "6:00",
+   "12:00",
+   "6:30"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाते हैं (18:30 - 6:00 = 12:30)।",
+  "e_en": "For water image time, subtract from 18:30 (18:30 - 6:00 = 12:30)."
+ },
+ {
+  "id": "rp-rea-i01853",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "अक्षर 'F' का दर्पण प्रतिबिंब कैसा होगा?",
+  "q_en": "How will the mirror image of the letter 'F' appear?",
+  "o_hi": [
+   "F",
+   "Ⅎ",
+   "J",
+   "L"
+  ],
+  "o_en": [
+   "F",
+   "Ⅎ",
+   "J",
+   "L"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में 'F' का मुख बाईं ओर से दाईं ओर घूम जाता है।",
+  "e_en": "In the mirror image, the horizontal strokes of 'F' flip from pointing right to pointing left."
+ },
+ {
+  "id": "rp-rea-i01854",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि शब्द 'TRAIN' को एक दर्पण के सामने रखा जाए, तो उसका सही दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "If the word 'TRAIN' is placed in front of a mirror, what will be its correct mirror image?",
+  "o_hi": [
+   "NIART",
+   "ИIAЯT",
+   "TRIAИ",
+   "ИIART"
+  ],
+  "o_en": [
+   "NIART",
+   "ИIAЯT",
+   "TRIAИ",
+   "ИIART"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में अक्षर दाएं से बाएं उलट जाते हैं और उनकी आकृति भी बदल जाती है।",
+  "e_en": "In a mirror image, the letters are reversed from right to left, and their shapes are horizontally flipped."
+ },
+ {
+  "id": "rp-rea-i01855",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि एक घड़ी में समय 3:15 हो रहा है, तो दर्पण में देखने पर समय क्या दिखाई देगा?",
+  "q_en": "If a clock shows the time 3:15, what time will it show in the mirror?",
+  "o_hi": [
+   "8:45",
+   "9:45",
+   "8:15",
+   "9:15"
+  ],
+  "o_en": [
+   "8:45",
+   "9:45",
+   "8:15",
+   "9:15"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण में समय जानने के लिए वास्तविक समय को 11:60 से घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror time, subtract the actual time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01856",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "दिए गए अक्षर समूह 'B4A9' का सही जल प्रतिबिंब चुनें।",
+  "q_en": "Choose the correct water image of the letter group 'B4A9'.",
+  "o_hi": [
+   "B4A9",
+   "B4∀6",
+   "ᗺ4∀6",
+   "B4A6"
+  ],
+  "o_en": [
+   "B4A9",
+   "B4∀6",
+   "ᗺ4∀6",
+   "B4A6"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में B और 4 का निचला भाग ऊपर की ओर दिखता है, A उल्टा हो जाता है और 9 का घेरा नीचे आता है।",
+  "e_en": "In a water image, B and 4 are vertically flipped, A is inverted, and the loop of 9 moves to the bottom."
+ },
+ {
+  "id": "rp-rea-i01857",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "निम्न में से किस अक्षर का दर्पण प्रतिबिंब और वास्तविक रूप समान होता है?",
+  "q_en": "Which of the following letters has the same mirror image and actual appearance?",
+  "o_hi": [
+   "P",
+   "Q",
+   "A",
+   "G"
+  ],
+  "o_en": [
+   "P",
+   "Q",
+   "A",
+   "G"
+  ],
+  "a": 2,
+  "e_hi": "अक्षर 'A' सममित (symmetrical) है, इसलिए इसका दर्पण प्रतिबिंब वही रहता है।",
+  "e_en": "The letter 'A' is symmetrical, so its mirror image remains the same as its original form."
+ },
+ {
+  "id": "rp-rea-i01858",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि घड़ी में समय 12:30 है, तो जल प्रतिबिंब में क्या समय दिखेगा?",
+  "q_en": "If the clock shows 12:30, what time will appear in the water image?",
+  "o_hi": [
+   "6:00",
+   "12:00",
+   "6:30",
+   "11:00"
+  ],
+  "o_en": [
+   "6:00",
+   "12:00",
+   "6:30",
+   "11:00"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से घटाते हैं। 18:30 - 12:30 = 6:00।",
+  "e_en": "For a water image, subtract the time from 18:30. 18:30 - 12:30 = 6:00."
+ },
+ {
+  "id": "rp-rea-i01859",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'PRISM' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the word 'PRISM'?",
+  "o_hi": [
+   "MSIRP",
+   "MƧIЯP",
+   "MSIЯP",
+   "PRISM"
+  ],
+  "o_en": [
+   "MSIRP",
+   "MƧIЯP",
+   "MSIЯP",
+   "PRISM"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में दायां हिस्सा बाईं ओर आ जाता है और अक्षर उलट जाते हैं।",
+  "e_en": "In a mirror image, the right side becomes the left, and the letters are horizontally reversed."
+ },
+ {
+  "id": "rp-rea-i01860",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "निम्न में से कौन सा अंक जल प्रतिबिंब में अपरिवर्तित रहता है?",
+  "q_en": "Which of the following digits remains unchanged in a water image?",
+  "o_hi": [
+   "3",
+   "0",
+   "4",
+   "7"
+  ],
+  "o_en": [
+   "3",
+   "0",
+   "4",
+   "7"
+  ],
+  "a": 1,
+  "e_hi": "0 का आकार ऊपर और नीचे से समान होता है, इसलिए जल प्रतिबिंब में वह नहीं बदलता।",
+  "e_en": "The digit 0 has the same shape from top and bottom, so it remains unchanged in a water image."
+ },
+ {
+  "id": "rp-rea-i01861",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि 'GANDHI 1869' को एक दर्पण के सामने रखा जाए, तो दर्पण में इसका प्रतिबिंब कैसा दिखेगा?",
+  "q_en": "If 'GANDHI 1869' is placed in front of a mirror, what will its mirror image look like?",
+  "o_hi": [
+   "९६८१ IHDNAG",
+   "e86I IHDNAG",
+   "९६८I IHDNAG",
+   "e86I IHDNAG (सभी उल्टे)"
+  ],
+  "o_en": [
+   "९६८१ IHDNAG",
+   "e86I IHDNAG",
+   "९६८I IHDNAG",
+   "e86I IHDNAG (all reversed)"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में अक्षर और अंक दोनों पार्श्व रूप से उल्टे हो जाते हैं। 1869 का दर्पण प्रतिबिंब e86I होगा।",
+  "e_en": "In a mirror image, both letters and digits are laterally inverted. The mirror image of 1869 will be e86I."
+ },
+ {
+  "id": "rp-rea-i01862",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'SUBHASH' का जल प्रतिबिंब (Water Image) क्या होगा?",
+  "q_en": "What will be the water image of the word 'SUBHASH'?",
+  "o_hi": [
+   "HSABHUS",
+   "ƧUВH∀ƧH",
+   "2ՈВH∀ƧH",
+   "HSAHBUS"
+  ],
+  "o_en": [
+   "HSABHUS",
+   "ƧUВH∀ƧH",
+   "2ՈВH∀ƧH",
+   "HSAHBUS"
+  ],
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब में ऊपर और नीचे का स्थान बदल जाता है। S, U, B, H, A, S, H का ऊर्ध्वाधर उल्टा रूप 2ՈВH∀ƧH होगा।",
+  "e_en": "In a water image, top and bottom positions are swapped. The vertical inversion of S, U, B, H, A, S, H results in 2ՈВH∀ƧH."
+ },
+ {
+  "id": "rp-rea-i01863",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि 'AZAD 1947' को जल के ऊपर रखा जाए, तो इसका जल प्रतिबिंब क्या होगा?",
+  "q_en": "If 'AZAD 1947' is placed over water, what will be its water image?",
+  "o_hi": [
+   "∀Z∀D 1e47",
+   "∀Z∀D 1d47",
+   "∀Z∀D 1947 (उल्टा)",
+   "VZD 1947"
+  ],
+  "o_en": [
+   "∀Z∀D 1e47",
+   "∀Z∀D 1d47",
+   "∀Z∀D 1947 (inverted)",
+   "VZD 1947"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में अक्षरों के निचले भाग ऊपर दिखाई देते हैं। A का जल प्रतिबिंब ∀ जैसा दिखता है और 7 का जल प्रतिबिंब उल्टा हो जाता है।",
+  "e_en": "In a water image, the bottom parts of characters appear at the top. The water image of A looks like ∀ and 7 becomes inverted."
+ },
+ {
+  "id": "rp-rea-i01864",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '1920' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '1920'?",
+  "o_hi": [
+   "1d20",
+   "IS20",
+   "1620",
+   "l920"
+  ],
+  "o_en": [
+   "1d20",
+   "IS20",
+   "1620",
+   "l920"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में 1, 9, 2, 0 का ऊर्ध्वाधर उल्टा रूप 1d20 जैसा दिखाई देता है।",
+  "e_en": "In a water image, the vertical inversion of 1, 9, 2, 0 appears as 1d20."
+ },
+ {
+  "id": "rp-rea-i01865",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि 'TAGORE' को दर्पण के सामने रखा जाए, तो दर्पण प्रतिबिंब में 'G' कैसा दिखेगा?",
+  "q_en": "If 'TAGORE' is placed in front of a mirror, how will 'G' appear in the mirror image?",
+  "o_hi": [
+   "सीधा G",
+   "उल्टा G",
+   "दर्पण में G परिवर्तित नहीं होता",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "Normal G",
+   "Inverted G",
+   "G does not change in mirror",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में G का दायां हिस्सा बाईं ओर आ जाता है, जिससे वह उल्टा दिखाई देता है।",
+  "e_en": "In a mirror image, the right side of G shifts to the left, making it appear reversed."
+ },
+ {
+  "id": "rp-rea-i01866",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "संख्या '1857' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the number '1857'?",
+  "o_hi": [
+   "1857 (समान)",
+   "I85L",
+   "182L",
+   "185L"
+  ],
+  "o_en": [
+   "1857 (same)",
+   "I85L",
+   "182L",
+   "185L"
+  ],
+  "a": 3,
+  "e_hi": "जल प्रतिबिंब में 7 का निचला हिस्सा ऊपर चला जाता है जिससे वह L जैसा दिखता है, जबकि 1, 8, 5 का स्वरूप बदल जाता है।",
+  "e_en": "In a water image, the bottom of 7 moves to the top appearing like L, while 1, 8, and 5 transform accordingly."
+ },
+ {
+  "id": "rp-rea-i01867",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि 'INDIAN' शब्द को दर्पण के सामने रखा जाए, तो क्या वह जल प्रतिबिंब के समान दिखेगा?",
+  "q_en": "If the word 'INDIAN' is placed in front of a mirror, will it look the same as its water image?",
+  "o_hi": [
+   "हाँ",
+   "नहीं",
+   "केवल पहले अक्षर के लिए",
+   "केवल अंतिम अक्षर के लिए"
+  ],
+  "o_en": [
+   "Yes",
+   "No",
+   "Only for the first letter",
+   "Only for the last letter"
+  ],
+  "a": 1,
+  "e_hi": "नहीं, क्योंकि दर्पण प्रतिबिंब पार्श्व रूप से उलटता है और जल प्रतिबिंब ऊपर-नीचे से उलटता है।",
+  "e_en": "No, because a mirror image is laterally inverted while a water image is vertically inverted."
+ },
+ {
+  "id": "rp-rea-i01868",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "नीचे दी गई संख्या '529' का जल प्रतिबिंब (water image) कैसा दिखाई देगा?",
+  "q_en": "What will the water image of the number '529' look like?",
+  "o_hi": [
+   "529 (उल्टा)",
+   "295 (उल्टा)",
+   "529 (क्षैतिज रूप से पलटा हुआ)",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "529 (inverted)",
+   "295 (inverted)",
+   "529 (horizontally flipped)",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में ऊपर और नीचे का हिस्सा बदल जाता है, लेकिन दायां और बायां हिस्सा समान रहता है।",
+  "e_en": "In a water image, the top and bottom parts are swapped, but the left and right sides remain the same."
+ },
+ {
+  "id": "rp-rea-i01869",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि घड़ी में समय 3:15 हो रहा है, तो दर्पण में देखने पर क्या समय दिखाई देगा?",
+  "q_en": "If a clock shows 3:15, what time will it appear to be when seen in a mirror?",
+  "o_hi": [
+   "8:45",
+   "9:15",
+   "3:45",
+   "8:15"
+  ],
+  "o_en": [
+   "8:45",
+   "9:15",
+   "3:45",
+   "8:15"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब समय निकालने के लिए 11:60 में से दिए गए समय को घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror time, subtract the given time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01870",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "किसी शब्द का दर्पण प्रतिबिंब वही रहता है, तो वह शब्द कौन सा हो सकता है?",
+  "q_en": "Which of the following words remains the same when seen in a mirror?",
+  "o_hi": [
+   "APPLE",
+   "MOM",
+   "RAIL",
+   "TRAIN"
+  ],
+  "o_en": [
+   "APPLE",
+   "MOM",
+   "RAIL",
+   "TRAIN"
+  ],
+  "a": 1,
+  "e_hi": "जिन शब्दों के अक्षर सममित (symmetrical) होते हैं, उनका दर्पण प्रतिबिंब मूल शब्द के समान होता है।",
+  "e_en": "Words containing symmetrical letters appear the same in a mirror image as the original word."
+ },
+ {
+  "id": "rp-rea-i01871",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "अंग्रेजी वर्णमाला के किन अक्षरों का जल प्रतिबिंब (water image) अपरिवर्तित रहता है?",
+  "q_en": "Which English alphabets have the same water image as their original form?",
+  "o_hi": [
+   "A, B, C",
+   "C, D, E",
+   "C, O, X",
+   "B, C, D"
+  ],
+  "o_en": [
+   "A, B, C",
+   "C, D, E",
+   "C, O, X",
+   "B, C, D"
+  ],
+  "a": 2,
+  "e_hi": "C, O, और X का आकार ऊपर और नीचे से समान होता है, इसलिए जल प्रतिबिंब में ये नहीं बदलते।",
+  "e_en": "The letters C, O, and X have identical top and bottom halves, so they remain unchanged in a water image."
+ },
+ {
+  "id": "rp-rea-i01872",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "एक घड़ी में 6:00 बजे का समय है, इसका जल प्रतिबिंब क्या होगा?",
+  "q_en": "If a clock shows 6:00, what will be its water image?",
+  "o_hi": [
+   "12:30",
+   "6:00",
+   "12:00",
+   "6:30"
+  ],
+  "o_en": [
+   "12:30",
+   "6:00",
+   "12:00",
+   "6:30"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब समय के लिए 18:30 में से समय घटाते हैं। 18:30 - 6:00 = 12:30।",
+  "e_en": "For a water image, subtract the time from 18:30. 18:30 - 6:00 = 12:30."
+ },
+ {
+  "id": "rp-rea-i01873",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "संख्या '888' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the number '888'?",
+  "o_hi": [
+   "888",
+   "888 (उल्टा)",
+   "888 (दाएं से बाएं)",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "888",
+   "888 (inverted)",
+   "888 (right to left)",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "चूंकि 8 एक सममित संख्या है, इसका दर्पण प्रतिबिंब स्वयं के समान दिखता है।",
+  "e_en": "Since 8 is a symmetrical number, its mirror image looks identical to itself."
+ },
+ {
+  "id": "rp-rea-i01874",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि 'NORTH' को दर्पण में देखा जाए, तो 'R' का स्थान क्या होगा?",
+  "q_en": "If 'NORTH' is viewed in a mirror, what will be the position of 'R'?",
+  "o_hi": [
+   "पहला",
+   "दूसरा",
+   "तीसरा",
+   "चौथा"
+  ],
+  "o_en": [
+   "First",
+   "Second",
+   "Third",
+   "Fourth"
+  ],
+  "a": 2,
+  "e_hi": "दर्पण में 'NORTH' का प्रतिबिंब 'HTRON' जैसा दिखेगा, जहाँ R तीसरे स्थान पर होगा।",
+  "e_en": "The mirror image of 'NORTH' will appear as 'HTRON', where R remains in the third position."
+ },
+ {
+  "id": "rp-rea-i01875",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि किसी आकृति का जल प्रतिबिंब और दर्पण प्रतिबिंब समान है, तो वह आकृति कैसी हो सकती है?",
+  "q_en": "If the water image and mirror image of a shape are identical, what could that shape be?",
+  "o_hi": [
+   "वर्ग",
+   "आयत",
+   "वृत्त",
+   "त्रिभुज"
+  ],
+  "o_en": [
+   "Square",
+   "Rectangle",
+   "Circle",
+   "Triangle"
+  ],
+  "a": 2,
+  "e_hi": "एक वृत्त पूरी तरह से सममित होता है, इसलिए इसका दर्पण और जल प्रतिबिंब समान होता है।",
+  "e_en": "A circle is perfectly symmetrical, so its mirror and water images are identical."
+ },
+ {
+  "id": "rp-rea-i01876",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'TRAIN' का जल प्रतिबिंब (water image) क्या होगा?",
+  "q_en": "What will be the water image of the word 'TRAIN'?",
+  "o_hi": [
+   "IЯAIT",
+   "⊥ᴚ∀IN",
+   "⊥ᴚ∀IИ",
+   "TЯAIN"
+  ],
+  "o_en": [
+   "IЯAIT",
+   "⊥ᴚ∀IN",
+   "⊥ᴚ∀IИ",
+   "TЯAIN"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में ऊपर का भाग नीचे और नीचे का भाग ऊपर हो जाता है, लेकिन दाएं-बाएं की स्थिति समान रहती है।",
+  "e_en": "In a water image, the top part becomes the bottom and vice-versa, but the left-right orientation remains unchanged."
+ },
+ {
+  "id": "rp-rea-i01877",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "घड़ी में 3:15 का समय हो रहा है। यदि इसे दर्पण में देखा जाए, तो दर्पण में क्या समय दिखाई देगा?",
+  "q_en": "The time in a clock is 3:15. If seen in a mirror, what time will be reflected?",
+  "o_hi": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "3:45"
+  ],
+  "o_en": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "3:45"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब समय निकालने के लिए 11:60 में से दिए गए समय को घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror time, subtract the given time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01878",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "दिए गए अक्षर 'M' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the letter 'M'?",
+  "o_hi": [
+   "W",
+   "M",
+   "3",
+   "E"
+  ],
+  "o_en": [
+   "W",
+   "M",
+   "3",
+   "E"
+  ],
+  "a": 1,
+  "e_hi": "अक्षर 'M' सममित है, इसलिए इसका दर्पण प्रतिबिंब मूल अक्षर जैसा ही रहता है।",
+  "e_en": "The letter 'M' is symmetrical, so its mirror image remains identical to the original letter."
+ },
+ {
+  "id": "rp-rea-i01879",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि किसी संख्यात्मक श्रृंखला '7294' को दर्पण में देखा जाए, तो वह कैसी दिखाई देगी?",
+  "q_en": "If the numerical sequence '7294' is viewed in a mirror, how will it appear?",
+  "o_hi": [
+   "4927",
+   "AesT",
+   "APeT",
+   "PEST"
+  ],
+  "o_en": [
+   "4927",
+   "AesT",
+   "APeT",
+   "PEST"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण में संख्याएं उल्टे क्रम में और उलट जाती हैं, '4' सबसे पहले आएगा।",
+  "e_en": "Numbers in a mirror appear in reverse order and flipped; '4' will appear first."
+ },
+ {
+  "id": "rp-rea-i01880",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'POCKET' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of the word 'POCKET'?",
+  "o_hi": [
+   "TEKCOP",
+   "TƎʞƆOP",
+   "TOKC EP",
+   "TƎXOOP"
+  ],
+  "o_en": [
+   "TEKCOP",
+   "TƎʞƆOP",
+   "TOKC EP",
+   "TƎXOOP"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में 'T' पहले आएगा और सभी अक्षर क्षैतिज रूप से उलट जाएंगे।",
+  "e_en": "In the mirror image, 'T' comes first and all letters are horizontally flipped."
+ },
+ {
+  "id": "rp-rea-i01881",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि घड़ी में 12:30 का समय है, तो उसका जल प्रतिबिंब क्या होगा?",
+  "q_en": "If the clock shows 12:30, what will be its water image?",
+  "o_hi": [
+   "6:00",
+   "5:30",
+   "6:30",
+   "12:00"
+  ],
+  "o_en": [
+   "6:00",
+   "5:30",
+   "6:30",
+   "12:00"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से घटाएं। 18:30 - 12:30 = 6:00।",
+  "e_en": "For a water image, subtract from 18:30. 18:30 - 12:30 = 6:00."
+ },
+ {
+  "id": "rp-rea-i01882",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "नीचे दी गई श्रृंखला 'BR4A1' का सही जल प्रतिबिंब चुनें:",
+  "q_en": "Choose the correct water image for the sequence 'BR4A1':",
+  "o_hi": [
+   "BY4V1",
+   "Bᴚ4∀I",
+   "BЯ4A1",
+   "1A4RB"
+  ],
+  "o_en": [
+   "BY4V1",
+   "Bᴚ4∀I",
+   "BЯ4A1",
+   "1A4RB"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में ऊपर-नीचे का परिवर्तन होता है, B और R का आकार उल्टा हो जाता है।",
+  "e_en": "Water image results in vertical inversion; the shapes of B and R are flipped vertically."
+ },
+ {
+  "id": "rp-rea-i01883",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि घड़ी में समय 3:15 हो रहा है, तो दर्पण में देखने पर क्या समय दिखाई देगा?",
+  "q_en": "If the time in a clock is 3:15, what time will it show when viewed in a mirror?",
+  "o_hi": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "9:45"
+  ],
+  "o_en": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "9:45"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब समय निकालने के लिए दिए गए समय को 11:60 में से घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror image time, subtract the given time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01884",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "नीचे दी गई आकृति 'B' का जल प्रतिबिंब कैसा दिखेगा?",
+  "q_en": "How will the water image of the letter 'B' look?",
+  "o_hi": [
+   "B (समान)",
+   "B (उल्टा)",
+   "d (उल्टा)",
+   "P (उल्टा)"
+  ],
+  "o_en": [
+   "B (same)",
+   "B (inverted)",
+   "d (inverted)",
+   "P (inverted)"
+  ],
+  "a": 0,
+  "e_hi": "अक्षर 'B' का जल प्रतिबिंब सामान्यतः स्वयं के समान ही दिखता है क्योंकि इसका ऊपरी और निचला भाग सममित होता है।",
+  "e_en": "The water image of the letter 'B' generally looks the same as the original because its top and bottom halves are symmetrical."
+ },
+ {
+  "id": "rp-rea-i01885",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'DOG' का जल प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the water image of the word 'DOG'?",
+  "o_hi": [
+   "DOG (उल्टा)",
+   "DOG (नीचे से ऊपर)",
+   "GO D (उल्टा)",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "DOG (inverted)",
+   "DOG (bottom-up)",
+   "GO D (inverted)",
+   "None of these"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में अक्षरों का क्रम वही रहता है लेकिन वे ऊपर-नीचे पलट जाते हैं।",
+  "e_en": "In a water image, the sequence of letters remains the same, but they are flipped vertically."
+ },
+ {
+  "id": "rp-rea-i01886",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "दर्पण प्रतिबिंब में कौन से बड़े अक्षर (Capital Letters) अपरिवर्तित रहते हैं?",
+  "q_en": "Which capital letters remain unchanged in a mirror image?",
+  "o_hi": [
+   "A, B, C, D, E",
+   "A, H, I, M, O, T, U, V, W, X, Y",
+   "A, B, D, E, H",
+   "इनमें से कोई नहीं"
+  ],
+  "o_en": [
+   "A, B, C, D, E",
+   "A, H, I, M, O, T, U, V, W, X, Y",
+   "A, B, D, E, H",
+   "None of these"
+  ],
+  "a": 1,
+  "e_hi": "वे अक्षर जिनका दर्पण प्रतिबिंब और वास्तविक रूप एक समान होता है, वे सममित होते हैं।",
+  "e_en": "Letters whose mirror image is identical to their original form are symmetrical."
+ },
+ {
+  "id": "rp-rea-i01887",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्या '529' का जल प्रतिबिंब (Water Image) क्या होगा?",
+  "q_en": "What will be the water image of the number '529'?",
+  "o_hi": [
+   "529",
+   "295",
+   "526",
+   "ᘔᘿ९"
+  ],
+  "o_en": [
+   "529",
+   "295",
+   "526",
+   "ᘔᘿ९"
+  ],
+  "a": 3,
+  "e_hi": "जल प्रतिबिंब में ऊपर का भाग नीचे और नीचे का भाग ऊपर दिखाई देता है।",
+  "e_en": "In a water image, the top part appears at the bottom and the bottom part appears at the top."
+ },
+ {
+  "id": "rp-rea-i01888",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "एक घड़ी में 3:15 का समय हो रहा है। दर्पण में देखने पर यह समय क्या दिखाई देगा?",
+  "q_en": "A clock shows the time 3:15. What time will it show when viewed in a mirror?",
+  "o_hi": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "3:45"
+  ],
+  "o_en": [
+   "8:45",
+   "9:15",
+   "8:15",
+   "3:45"
+  ],
+  "a": 0,
+  "e_hi": "दर्पण प्रतिबिंब निकालने के लिए समय को 11:60 में से घटाते हैं। 11:60 - 3:15 = 8:45।",
+  "e_en": "To find the mirror image, subtract the time from 11:60. 11:60 - 3:15 = 8:45."
+ },
+ {
+  "id": "rp-rea-i01889",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "यदि किसी शब्द के दर्पण प्रतिबिंब और वास्तविक शब्द समान हैं, तो वह शब्द किस प्रकार के अक्षरों से बना है?",
+  "q_en": "If the mirror image of a word is identical to the original word, what kind of letters is it made of?",
+  "o_hi": [
+   "केवल सममित अक्षरों से",
+   "केवल अंग्रेजी के स्वर से",
+   "केवल व्यंजन से",
+   "कोई भी अक्षर हो सकता है"
+  ],
+  "o_en": [
+   "Only symmetric letters",
+   "Only English vowels",
+   "Only consonants",
+   "Any letters"
+  ],
+  "a": 0,
+  "e_hi": "जिन अक्षरों की आकृति लंबवत रूप से सममित होती है (जैसे A, H, I, M), उनका दर्पण प्रतिबिंब समान रहता है।",
+  "e_en": "Letters with vertical symmetry (like A, H, I, M) maintain their appearance in a mirror image."
+ },
+ {
+  "id": "rp-rea-i01890",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "एक घड़ी में 6:00 बजे हैं। जल प्रतिबिंब में यह क्या समय दर्शाएगी?",
+  "q_en": "A clock shows 6:00. What time will it show in a water image?",
+  "o_hi": [
+   "12:30",
+   "6:30",
+   "12:00",
+   "5:30"
+  ],
+  "o_en": [
+   "12:30",
+   "6:30",
+   "12:00",
+   "5:30"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब के लिए 18:30 से घटाते हैं। 18:30 - 6:00 = 12:30।",
+  "e_en": "To find the water image time, subtract from 18:30. 18:30 - 6:00 = 12:30."
+ },
+ {
+  "id": "rp-rea-i01891",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "दर्पण प्रतिबिंब में बाएं से दाएं का क्रम क्या होता है?",
+  "q_en": "What is the order of left to right in a mirror image?",
+  "o_hi": [
+   "दायां बायां बन जाता है",
+   "बायां दायां बन जाता है",
+   "दोनों समान रहते हैं",
+   "कोई बदलाव नहीं होता"
+  ],
+  "o_en": [
+   "Right becomes left",
+   "Left becomes right",
+   "Both remain same",
+   "No change"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण में वस्तु का केवल पार्श्व परिवर्तन (lateral inversion) होता है।",
+  "e_en": "In a mirror, objects undergo lateral inversion, meaning the left side appears on the right."
+ },
+ {
+  "id": "rp-rea-i01892",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "अक्षर 'B' का दर्पण प्रतिबिंब क्या होगा?",
+  "q_en": "What will be the mirror image of letter 'B'?",
+  "o_hi": [
+   "B",
+   "8",
+   "ᗺ",
+   "q"
+  ],
+  "o_en": [
+   "B",
+   "8",
+   "ᗺ",
+   "q"
+  ],
+  "a": 2,
+  "e_hi": "B का दर्पण प्रतिबिंब क्षैतिज रूप से उलटने पर ᗺ दिखाई देता है।",
+  "e_en": "The mirror image of B, when flipped horizontally, appears as ᗺ."
+ },
+ {
+  "id": "rp-rea-i01893",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि किसी आकृति को जल के पास रखा जाए, तो कौन सी विशेषता अपरिवर्तित रहती है?",
+  "q_en": "If an object is placed near water, which feature remains unchanged?",
+  "o_hi": [
+   "ऊंचाई",
+   "चौड़ाई",
+   "दायां-बायां क्रम",
+   "रंग"
+  ],
+  "o_en": [
+   "Height",
+   "Width",
+   "Left-right order",
+   "Color"
+  ],
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब में केवल ऊपर-नीचे का क्रम बदलता है, बाएं-दाएं का क्रम समान रहता है।",
+  "e_en": "In a water image, only the top-to-bottom order changes; the left-to-right order remains the same."
  }
 ]
