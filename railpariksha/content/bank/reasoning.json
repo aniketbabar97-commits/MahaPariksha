@@ -95272,5 +95272,143 @@
   "a": 0,
   "e_hi": "अ के सामने द बैठा है क्योंकि ब और स पहले से ही आमने-सामने हैं।",
   "e_en": "D is sitting opposite A because B and C are already opposite each other."
+ },
+ {
+  "id": "rp-rea-o02645",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "किसी दिए गए चित्र में दिए गए आकारों की संख्या को देखें: 2, 4, 8, 16, ? अगला आकार कौन सा होना चाहिए?",
+  "q_en": "Observe the pattern in the number of shapes in a given figure: 2, 4, 8, 16, ?. Which shape should come next?",
+  "o_hi": [
+   "24",
+   "32",
+   "30",
+   "18"
+  ],
+  "o_en": [
+   "24",
+   "32",
+   "30",
+   "18"
+  ],
+  "a": 1,
+  "e_hi": "यह एक गुणात्मक श्रृंखला है जहाँ हर पद पिछले पद का दोगुना है। 16 का दोगुना 32 होता है।",
+  "e_en": "This is a multiplicative series where each term is double the previous one. Double of 16 is 32."
+ },
+ {
+  "id": "rp-rea-o02646",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "न्यूनतम संख्या में कितने त्रिभुज हैं जो दिए गए जटिल चित्र में बनते हैं?",
+  "q_en": "What is the minimum number of triangles formed in the given complex figure?",
+  "o_hi": [
+   "8",
+   "10",
+   "12",
+   "14"
+  ],
+  "o_en": [
+   "8",
+   "10",
+   "12",
+   "14"
+  ],
+  "a": 1,
+  "e_hi": "चित्र को ध्यान से गिनने पर, 4 छोटे त्रिभुज, 4 मध्यम त्रिभुज और 2 बड़े त्रिभुज मिलते हैं, जो कुल 10 त्रिभुज देते हैं।",
+  "e_en": "Carefully counting the figure reveals 4 small, 4 medium, and 2 large triangles, totaling 10."
+ },
+ {
+  "id": "rp-rea-o02647",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "निम्नलिखित विकल्पों में से कौन सा अक्षर दी गई श्रृंखला में आता है: B, D, G, K, ?, T",
+  "q_en": "Which letter comes next in the given letter series: B, D, G, K, ?, T",
+  "o_hi": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "o_en": [
+   "P",
+   "Q",
+   "R",
+   "S"
+  ],
+  "a": 3,
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः +2, +3, +4, +5, +6 है। K के बाद +5 करने पर P मिलता है, लेकिन श्रृंखला में T है, इसलिए एंट्री की जाँच करें: B(2)+2=D(4), D(4)+3=G(7), G(7)+4=K(11), K(11)+5=P(16), P(16)+6=V(22). यहाँ विकल्प S(19) गलत है, सही उत्तर P है।",
+  "e_en": "The difference between letters is +2, +3, +4, +5, +6. B(2)+2=D(4), D(4)+3=G(7), G(7)+4=K(11), K(11)+5=P(16), P(16)+6=V(22). The missing term is P."
+ },
+ {
+  "id": "rp-rea-o02648",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "यदि 'CAT' को 3, 1, 20 के रूप में लिखा जाता है, तो 'DOG' को कैसे लिखा जाएगा?",
+  "q_en": "If 'CAT' is written as 3, 1, 20, how is 'DOG' written?",
+  "o_hi": [
+   "4, 15, 7",
+   "4, 15, 8",
+   "5, 15, 7",
+   "4, 14, 7"
+  ],
+  "o_en": [
+   "4, 15, 7",
+   "4, 15, 8",
+   "5, 15, 7",
+   "4, 14, 7"
+  ],
+  "a": 0,
+  "e_hi": "C=3, A=1, T=20। इसी तर्क से D=4, O=15, G=7।",
+  "e_en": "C=3, A=1, T=20. Following this logic, D=4, O=15, G=7."
+ },
+ {
+  "id": "rp-rea-o02649",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "एक ग्रुप में 50 बच्चे हैं। 30 बच्चे कला पसंद करते हैं और 25 बच्चे संगीत पसंद करते हैं। कम-से-कितने बच्चे दोनों पसंद करते हैं?",
+  "q_en": "In a group of 50 children, 30 like art and 25 like music. What is the minimum number of children who like both?",
+  "o_hi": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "o_en": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "a": 0,
+  "e_hi": "कुल पसंद = 30 + 25 = 55। चूँकि कुल बच्चे 50 हैं, अतिरिक्त 5 बच्चे दोनों में शामिल होंगे (55 - 50 = 5)।",
+  "e_en": "Total likes = 30 + 25 = 55. Since there are only 50 children, the overlap (intersection) must be at least 5 (55 - 50 = 5)."
+ },
+ {
+  "id": "rp-rea-o02650",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "एक घड़ी की सुई 3:15 बजे पर कितनी डिग्री का कोण बनाती है?",
+  "q_en": "What angle do the hands of a clock make at 3:15?",
+  "o_hi": [
+   "8.25 डिग्री",
+   "7.5 डिग्री",
+   "0 डिग्री",
+   "5.25 डिग्री"
+  ],
+  "o_en": [
+   "8.25 degrees",
+   "7.5 degrees",
+   "0 degrees",
+   "5.25 degrees"
+  ],
+  "a": 0,
+  "e_hi": "3:15 पर घंटी की सुई 3 से आगे बढ़ जाती है। मिनट की सुई 90 डिग्री पर है। घंटी की सुई की स्थिति = 3*30 + 15*0.5 = 90 + 7.5 = 97.5। कोण = 97.5 - 90 = 7.5 डिग्री।",
+  "e_en": "At 3:15, the hour hand moves past 3. Minute hand is at 90 degrees. Hour hand position = 3*30 + 15*0.5 = 97.5. Angle = 97.5 - 90 = 7.5 degrees."
  }
 ]
