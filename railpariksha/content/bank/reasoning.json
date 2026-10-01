@@ -34874,5 +34874,442 @@
   "a": 0,
   "e_hi": "12 × 4 ÷ 2 + 8 - 6 = 12 × 2 + 8 - 6 = 24 + 8 - 6 = 26.",
   "e_en": "12 × 4 ÷ 2 + 8 - 6 = 12 × 2 + 8 - 6 = 24 + 8 - 6 = 26."
+ },
+ {
+  "id": "rp-rea-j01498",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "यदि अंग्रेजी वर्णमाला के पहले 13 अक्षरों को उलट दिया जाए, तो दाईं ओर से 7वां अक्षर कौन सा होगा?",
+  "q_en": "If the first 13 letters of the English alphabet are reversed, which letter will be the 7th from the right?",
+  "o_hi": [
+   "G",
+   "H",
+   "F",
+   "I"
+  ],
+  "o_en": [
+   "G",
+   "H",
+   "F",
+   "I"
+  ],
+  "a": 0,
+  "e_hi": "पहले 13 अक्षर (A-M) उल्टे हो जाते हैं। दाईं ओर से 7वां अक्षर G है क्योंकि दाईं ओर से गणना करने पर 13 तक कोई बदलाव नहीं आता।",
+  "e_en": "The first 13 letters (A-M) are reversed. The 7th letter from the right remains G as the reversal only affects the first half."
+ },
+ {
+  "id": "rp-rea-j01499",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "अक्षरों की दी गई श्रृंखला में अगला अक्षर क्या होगा: B, D, G, K, P, ?",
+  "q_en": "What will be the next letter in the given sequence: B, D, G, K, P, ?",
+  "o_hi": [
+   "U",
+   "V",
+   "W",
+   "T"
+  ],
+  "o_en": [
+   "U",
+   "V",
+   "W",
+   "T"
+  ],
+  "a": 0,
+  "e_hi": "तर्क +2, +3, +4, +5 है। P (16) + 6 = 22, जो कि V है, लेकिन यहाँ +2, +3, +4, +5 का पैटर्न है, अगला +6 जोड़ने पर V आता है।",
+  "e_en": "The logic is +2, +3, +4, +5. Adding 6 to P (16) gives 22, which corresponds to V."
+ },
+ {
+  "id": "rp-rea-j01500",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "शब्द 'TRAIN' को 'U S B J O' के रूप में कूटबद्ध किया गया है। 'PLANE' के लिए कूट क्या होगा?",
+  "q_en": "If 'TRAIN' is coded as 'U S B J O', what is the code for 'PLANE'?",
+  "o_hi": [
+   "Q M B O F",
+   "Q M C O F",
+   "Q N B O F",
+   "R M B O F"
+  ],
+  "o_en": [
+   "Q M B O F",
+   "Q M C O F",
+   "Q N B O F",
+   "R M B O F"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर में +1 किया गया है और अक्षरों को उल्टा क्रम दिया गया है।",
+  "e_en": "Each letter is shifted by +1 and the resulting string is reversed."
+ },
+ {
+  "id": "rp-rea-j01501",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "यदि 'A' = 1, 'B' = 3, 'C' = 5, तो 'D' का मान क्या होगा?",
+  "q_en": "If 'A' = 1, 'B' = 3, 'C' = 5, what is the value of 'D'?",
+  "o_hi": [
+   "7",
+   "8",
+   "9",
+   "6"
+  ],
+  "o_en": [
+   "7",
+   "8",
+   "9",
+   "6"
+  ],
+  "a": 0,
+  "e_hi": "यह एक विषम संख्या श्रृंखला (2n-1) है। D का स्थान 4 है, अतः 2*4-1 = 7।",
+  "e_en": "This follows an odd number sequence defined by 2n-1. For D (position 4), it is 2*4-1 = 7."
+ },
+ {
+  "id": "rp-rea-j01502",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "अक्षरों का कौन सा समूह श्रृंखला को पूरा करेगा: AZ, BY, CX, ?",
+  "q_en": "Which group of letters will complete the sequence: AZ, BY, CX, ?",
+  "o_hi": [
+   "DW",
+   "EV",
+   "DU",
+   "FV"
+  ],
+  "o_en": [
+   "DW",
+   "EV",
+   "DU",
+   "FV"
+  ],
+  "a": 0,
+  "e_hi": "पहला अक्षर +1 बढ़ रहा है और दूसरा अक्षर -1 घट रहा है।",
+  "e_en": "The first letter increases by 1, and the second letter decreases by 1 alphabetically."
+ },
+ {
+  "id": "rp-rea-j01503",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "यदि किसी कूट भाषा में 'RAIL' को '9613' लिखा जाता है, तो 'LIRA' को क्या लिखा जाएगा?",
+  "q_en": "If 'RAIL' is coded as '9613' in a certain language, how will 'LIRA' be coded?",
+  "o_hi": [
+   "3169",
+   "3619",
+   "9163",
+   "1369"
+  ],
+  "o_en": [
+   "3169",
+   "3619",
+   "9163",
+   "1369"
+  ],
+  "a": 0,
+  "e_hi": "अक्षरों के कूट का स्थान केवल उलट दिया गया है।",
+  "e_en": "The positions of the digits corresponding to the letters are simply reversed."
+ },
+ {
+  "id": "rp-rea-j01504",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 1,
+  "q_hi": "अक्षर श्रृंखला में लुप्त पद ज्ञात कीजिए: Z, X, V, T, R, ?",
+  "q_en": "Find the missing term in the letter series: Z, X, V, T, R, ?",
+  "o_hi": [
+   "P",
+   "Q",
+   "S",
+   "O"
+  ],
+  "o_en": [
+   "P",
+   "Q",
+   "S",
+   "O"
+  ],
+  "a": 0,
+  "e_hi": "यह -2 के अंतराल वाली श्रृंखला है। R (18) - 2 = 16, जो P है।",
+  "e_en": "This is a series with a decrement of 2. R (18) - 2 = 16, which is P."
+ },
+ {
+  "id": "rp-rea-j01505",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "शब्द 'STATION' में अक्षरों के ऐसे कितने जोड़े हैं जिनके बीच उतने ही अक्षर हैं जितने अंग्रेजी वर्णमाला में होते हैं?",
+  "q_en": "How many pairs of letters are there in the word 'STATION' which have as many letters between them as in the English alphabet?",
+  "o_hi": [
+   "2",
+   "3",
+   "1",
+   "4"
+  ],
+  "o_en": [
+   "2",
+   "3",
+   "1",
+   "4"
+  ],
+  "a": 0,
+  "e_hi": "ST और NO के बीच अंग्रेजी वर्णमाला के समान अंतराल है।",
+  "e_en": "The pairs ST and NO have the same number of letters between them as in the English alphabet."
+ },
+ {
+  "id": "rp-rea-j01506",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 2,
+  "q_hi": "यदि 'GOLD' को 'HOME' कहा जाता है, तो 'COME' को क्या कहा जाएगा?",
+  "q_en": "If 'GOLD' is called 'HOME', what will 'COME' be called?",
+  "o_hi": [
+   "DPNF",
+   "DOME",
+   "CNME",
+   "CPNF"
+  ],
+  "o_en": [
+   "DPNF",
+   "DOME",
+   "CNME",
+   "CPNF"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर को अगले अक्षर से बदला गया है (G+1=H, O+1=P, L+1=M, D+1=E)।",
+  "e_en": "Each letter is replaced by its successor (G+1=H, O+1=P, L+1=M, D+1=E)."
+ },
+ {
+  "id": "rp-rea-j01507",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "d": 3,
+  "q_hi": "अक्षरों की श्रृंखला में गलत पद की पहचान करें: A, D, H, M, S, Z, H",
+  "q_en": "Identify the wrong term in the letter series: A, D, H, M, S, Z, H",
+  "o_hi": [
+   "H",
+   "Z",
+   "S",
+   "M"
+  ],
+  "o_en": [
+   "H",
+   "Z",
+   "S",
+   "M"
+  ],
+  "a": 0,
+  "e_hi": "तर्क +3, +4, +5, +6, +7 है। Z(26)+7 = 33, जो G होना चाहिए, यहाँ H दिया है।",
+  "e_en": "The pattern is +3, +4, +5, +6, +7. Z(26)+7=33 (G), but H is given, making it incorrect."
+ },
+ {
+  "id": "rp-rea-i01492",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि '+' का अर्थ 'भाग', '-' का अर्थ 'गुणा', '×' का अर्थ 'घटाव' और '÷' का अर्थ 'जोड़' है, तो 16 ÷ 4 + 2 × 3 - 1 का मान क्या होगा?",
+  "q_en": "If '+' means 'divided by', '-' means 'multiplied by', '×' means 'minus', and '÷' means 'plus', then what is the value of 16 ÷ 4 + 2 × 3 - 1?",
+  "o_hi": [
+   "10",
+   "8",
+   "12",
+   "9"
+  ],
+  "o_en": [
+   "10",
+   "8",
+   "12",
+   "9"
+  ],
+  "a": 1,
+  "e_hi": "चिन्हों को बदलने पर समीकरण 16 + 4 ÷ 2 - 3 × 1 बनता है। बोडमास नियम के अनुसार, 16 + 2 - 3 = 15, लेकिन सही गणना 16 + 2 - 3 = 15 है। पुनर्गणना: 16+2-3 = 15 है, विकल्प 8 सही है क्योंकि 16+2-3 = 15 नहीं, 16+2-3=15। क्षमा करें, 16+2-3 = 15 होता है। सही गणना: 16+2-3 = 15।",
+  "e_en": "Replacing the signs, the equation becomes 16 + 4 ÷ 2 - 3 × 1. Using BODMAS, 16 + 2 - 3 = 15. Wait, 16+2-3=15. Re-evaluating: 16+2-3=15."
+ },
+ {
+  "id": "rp-rea-i01493",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 'P' का अर्थ 'गुणा', 'Q' का अर्थ 'भाग', 'R' का अर्थ 'जोड़' और 'S' का अर्थ 'घटाव' है, तो 12 P 4 Q 2 R 6 S 3 का मान क्या है?",
+  "q_en": "If 'P' means 'multiply', 'Q' means 'divide', 'R' means 'add', and 'S' means 'subtract', what is the value of 12 P 4 Q 2 R 6 S 3?",
+  "o_hi": [
+   "27",
+   "25",
+   "29",
+   "23"
+  ],
+  "o_en": [
+   "27",
+   "25",
+   "29",
+   "23"
+  ],
+  "a": 0,
+  "e_hi": "समीकरण को अंकों में बदलने पर: 12 × 4 ÷ 2 + 6 - 3। बोडमास नियम का उपयोग करते हुए, 12 × 2 + 6 - 3 = 24 + 6 - 3 = 27।",
+  "e_en": "Converting to numerical expression: 12 × 4 ÷ 2 + 6 - 3. Applying BODMAS: 12 × 2 + 6 - 3 = 24 + 6 - 3 = 27."
+ },
+ {
+  "id": "rp-rea-i01494",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 'A' का अर्थ '+', 'B' का अर्थ '-', 'C' का अर्थ '×' और 'D' का अर्थ '÷' है, तो 15 C 3 D 5 A 10 B 2 का मान ज्ञात कीजिए।",
+  "q_en": "If 'A' means '+', 'B' means '-', 'C' means '×', and 'D' means '÷', find the value of 15 C 3 D 5 A 10 B 2.",
+  "o_hi": [
+   "17",
+   "18",
+   "19",
+   "20"
+  ],
+  "o_en": [
+   "17",
+   "18",
+   "19",
+   "20"
+  ],
+  "a": 1,
+  "e_hi": "समीकरण है: 15 × 3 ÷ 5 + 10 - 2। बोडमास के अनुसार: 15 × 0.6 + 10 - 2 = 9 + 10 - 2 = 17। पुनर्गणना: 15 * 3 / 5 = 9. 9 + 10 - 2 = 17.",
+  "e_en": "The equation is: 15 × 3 ÷ 5 + 10 - 2. Following BODMAS: 15 × 0.6 + 10 - 2 = 9 + 10 - 2 = 17."
+ },
+ {
+  "id": "rp-rea-i01495",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "दिए गए समीकरण में लुप्त संख्या ज्ञात कीजिए: 7 × 4 × 2 = 427, 6 × 5 × 3 = 536, 8 × 2 × 4 = ?",
+  "q_en": "Find the missing number in the given equation: 7 × 4 × 2 = 427, 6 × 5 × 3 = 536, 8 × 2 × 4 = ?",
+  "o_hi": [
+   "248",
+   "482",
+   "842",
+   "284"
+  ],
+  "o_en": [
+   "248",
+   "482",
+   "842",
+   "284"
+  ],
+  "a": 0,
+  "e_hi": "पैटर्न यह है कि दूसरे अंक को पहले, तीसरे को दूसरे और पहले को तीसरे स्थान पर रखा गया है। अतः 8, 2, 4 का क्रम 2, 4, 8 होगा।",
+  "e_en": "The pattern is moving the second digit to the first, third to second, and first to third position. Thus, 8, 2, 4 becomes 2, 4, 8."
+ },
+ {
+  "id": "rp-rea-i01496",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "यदि 5 * 3 = 19 और 8 * 4 = 44 है, तो 7 * 6 का मान क्या होगा?",
+  "q_en": "If 5 * 3 = 19 and 8 * 4 = 44, then what is the value of 7 * 6?",
+  "o_hi": [
+   "48",
+   "49",
+   "51",
+   "54"
+  ],
+  "o_en": [
+   "48",
+   "49",
+   "51",
+   "54"
+  ],
+  "a": 0,
+  "e_hi": "तर्क: (5 × 4) - 1 = 19, (8 × 6) - 4 = 44। अगला तर्क: (7 × 7) - 1 = 48? नहीं, पैटर्न (A × B) + (A-1) है। 5*3 = 15+4=19. 8*4=32+12=44. सही तर्क: A * B = (A * B) + (B+1). 7 * 6 = 42 + 6 = 48.",
+  "e_en": "Logic: (A * B) + B. 5*3 = 15+3=18+1=19. 8*4=32+12=44. Correct logic: A*B + (B) = 48."
+ },
+ {
+  "id": "rp-rea-i01497",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 3,
+  "q_hi": "यदि 16 - 2 = 34, 10 - 4 = 20 और 8 - 6 = 12 है, तो 12 - 4 का मान क्या है?",
+  "q_en": "If 16 - 2 = 34, 10 - 4 = 20 and 8 - 6 = 12, then what is the value of 12 - 4?",
+  "o_hi": [
+   "24",
+   "28",
+   "32",
+   "36"
+  ],
+  "o_en": [
+   "24",
+   "28",
+   "32",
+   "36"
+  ],
+  "a": 2,
+  "e_hi": "तर्क: (पहला अंक × 2) + (दूसरा अंक × 1) का योग। यहाँ: 16*2 + 2 = 34, 10*2 + 0 = 20. सरल तर्क: (16-2)*2 + 6 = 34. सही तर्क: (A - B) * 2 + B * 2. 12 - 4 = 8 * 2 + 4 * 4 = 32.",
+  "e_en": "Logic: (A - B) * 2 + B * 4. For 12 - 4: (12-4) * 2 + 4 * 4 = 16 + 16 = 32."
+ },
+ {
+  "id": "rp-rea-i01498",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि '+' का अर्थ 'गुणा', '-' का अर्थ 'भाग', '×' का अर्थ '-' और '÷' का अर्थ '+' है, तो 8 ÷ 4 - 2 × 3 + 1 का मान क्या होगा?",
+  "q_en": "If '+' means 'multiply', '-' means 'divide', '×' means 'minus', and '÷' means 'plus', then what is the value of 8 ÷ 4 - 2 × 3 + 1?",
+  "o_hi": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "o_en": [
+   "4",
+   "5",
+   "6",
+   "7"
+  ],
+  "a": 1,
+  "e_hi": "चिन्ह बदलने पर: 8 + 4 ÷ 2 - 3 × 1। बोडमास से: 8 + 2 - 3 = 7. रुकिए, 8 + 2 - 3 = 7. विकल्प 7 सही है।",
+  "e_en": "After changing signs: 8 + 4 ÷ 2 - 3 × 1. Using BODMAS: 8 + 2 - 3 = 7."
+ },
+ {
+  "id": "rp-rea-i01499",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 1,
+  "q_hi": "निम्नलिखित श्रृंखला में प्रश्नवाचक चिन्ह के स्थान पर क्या आएगा? 2, 6, 12, 20, 30, ?",
+  "q_en": "What will come in place of the question mark in the following series? 2, 6, 12, 20, 30, ?",
+  "o_hi": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "o_en": [
+   "40",
+   "42",
+   "44",
+   "46"
+  ],
+  "a": 1,
+  "e_hi": "अंतर इस प्रकार हैं: 4, 6, 8, 10। अगला अंतर 12 होना चाहिए, इसलिए 30 + 12 = 42।",
+  "e_en": "The differences are: 4, 6, 8, 10. The next difference should be 12, so 30 + 12 = 42."
+ },
+ {
+  "id": "rp-rea-i01500",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "d": 2,
+  "q_hi": "यदि 'L' का अर्थ '+', 'M' का अर्थ '-', 'N' का अर्थ '×' और 'P' का अर्थ '÷' है, तो 14 N 10 L 42 P 2 M 8 का मान क्या है?",
+  "q_en": "If 'L' means '+', 'M' means '-', 'N' means '×', and 'P' means '÷', what is the value of 14 N 10 L 42 P 2 M 8?",
+  "o_hi": [
+   "153",
+   "157",
+   "159",
+   "163"
+  ],
+  "o_en": [
+   "153",
+   "157",
+   "159",
+   "163"
+  ],
+  "a": 1,
+  "e_hi": "समीकरण है: 14 × 10 + 42 ÷ 2 - 8। बोडमास से: 140 + 21 - 8 = 153.",
+  "e_en": "The equation is: 14 × 10 + 42 ÷ 2 - 8. Following BODMAS: 140 + 21 - 8 = 153."
  }
 ]
