@@ -177,12 +177,14 @@ class ProgressScreen extends StatelessWidget {
               label: Text(lang == 'en' ? b.$2 : b.$1),
             ),
         ]),
-        if (p.freezeTokens < 2) ...[
+        if (p.freezeTokens < 2 && !p.removedAds) ...[
           const SizedBox(height: 12),
           _FreezeTokenCard(p: p),
         ],
-        const SizedBox(height: 16),
-        const Center(child: AdBanner()),
+        if (!p.removedAds) ...[
+          const SizedBox(height: 16),
+          const Center(child: AdBanner()),
+        ],
       ],
     );
   }

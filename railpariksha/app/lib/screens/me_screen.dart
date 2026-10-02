@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/notifications.dart';
+import '../core/purchases.dart';
 import '../core/reminders.dart';
 import '../data/progress.dart';
 import '../core/transitions.dart';
@@ -32,6 +33,8 @@ class MeScreen extends StatelessWidget {
         Text(context.tr('मैं 🙋', 'Me 🙋'), style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
         const SizedBox(height: 12),
         if (exam != null) _IdCard(p: p, examName: exam.name.of(lang)),
+        SectionTitle(context.tr('प्रीमियम 👑', 'Premium 👑')),
+        _PremiumCard(p: p, purchases: s.purchases),
         SectionTitle(context.tr('मेरी तैयारी 🎯', 'My preparation 🎯')),
         Card(
           child: Column(children: [
@@ -357,6 +360,83 @@ class _IdCard extends StatelessWidget {
         ]),
         ),
       ),
+    );
+  }
+}
+
+/// One-time "remove ads / unlock full offline mode" purchase (non-consumable
+/// product `remove_ads_offline` -- see purchases.dart and docs/IAP_EVAL.md
+/// for the Play Console setup this depends on). Shows a plain "thanks" state
+/// once purchased; otherwise a buy button plus a restore-purchases action for
+/// anyone who reinstalled or switched devices.
+class _PremiumCard extends StatefulWidget {
+  final Progress p;
+  final PurchaseManager purchases;
+  const _PremiumCard({required this.p, required this.purchases});
+
+  @override
+  State<_PremiumCard> createState() => _PremiumCardState();
+}
+
+class _PremiumCardState extends State<_PremiumCard> {
+  bool _busy = false;
+
+  Future<void> _run(Future<void> Function() action) async {
+    HapticFeedback.selectionClick();
+    setState(() => _busy = true);
+    try {
+      await action();
+    } finally {
+      if (mounted) setState(() => _busy = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final p = widget.p;
+    if (p.removedAds) {
+      return Card(
+        child: ListTile(
+          leading: const Icon(Icons.verified, color: BrandColors.saffron),
+          title: Text(context.tr('प्रीमियम सक्रिय ✅', 'Premium active ✅')),
+          subtitle: Text(context.tr(
+              'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड -- धन्यवाद! 🙏',
+              'No ads, full offline mode -- thank you! 🙏')),
+        ),
+      );
+    }
+    return FutureBuilder<void>(
+      future: widget.purchases.ready,
+      builder: (context, snapshot) {
+        final loading = snapshot.connectionState != ConnectionState.done;
+        final product = widget.purchases.product;
+        return Card(
+          child: Column(children: [
+            ListTile(
+              leading: const Icon(Icons.block, color: BrandColors.sky),
+              title: Text(context.tr('विज्ञापन हटाएं, ऑफ़लाइन मोड अनलॉक करें', 'Remove ads, unlock full offline mode')),
+              subtitle: Text(product != null
+                  ? context.tr('एक बार का भुगतान -- ${product.price}', 'One-time payment -- ${product.price}')
+                  : loading
+                      ? context.tr('लोड हो रहा है...', 'Loading...')
+                      : context.tr('अभी उपलब्ध नहीं', 'Not available right now')),
+              trailing: FilledButton(
+                onPressed: (_busy || loading || product == null) ? null : () => _run(widget.purchases.buy),
+                child: _busy
+                    ? const SizedBox(
+                        width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                    : Text(context.tr('खरीदें', 'Buy')),
+              ),
+            ),
+            ListTile(
+              dense: true,
+              leading: const Icon(Icons.restore, color: BrandColors.sky),
+              title: Text(context.tr('पहले खरीदा है? पुनर्स्थापित करें', 'Already purchased? Restore it')),
+              onTap: _busy ? null : () => _run(widget.purchases.restore),
+            ),
+          ]),
+        );
+      },
     );
   }
 }

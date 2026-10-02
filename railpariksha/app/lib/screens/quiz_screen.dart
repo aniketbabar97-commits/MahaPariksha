@@ -59,8 +59,9 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void initState() {
     super.initState();
-    qLang = AppScope.read(context).progress.lang;
-    if (spec.mode == QuizMode.mock) InterstitialAdManager.preload();
+    final p = AppScope.read(context).progress;
+    qLang = p.lang;
+    if (spec.mode == QuizMode.mock && !p.removedAds) InterstitialAdManager.preload();
     remaining = spec.timeLimit?.inSeconds ?? 0;
     _startTimer();
   }

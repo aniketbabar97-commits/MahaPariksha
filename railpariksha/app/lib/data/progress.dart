@@ -100,6 +100,15 @@ class Progress extends ChangeNotifier {
   int reminderHour = 7;
   bool streakRiskAlerts = true;
 
+  /// One-time purchase entitlement (`remove_ads_offline`, see
+  /// lib/core/purchases.dart): removes all ads and is the flag the market
+  /// survey's price-sensitive users are paying for instead of a subscription.
+  /// "Offline mode" is this app's existing offline-first behaviour (see
+  /// ads.dart) -- there's nothing else to unlock there, it's marketing
+  /// framing for a true today. Set by PurchaseManager on a verified purchase
+  /// or successful restore; never set directly from UI.
+  bool removedAds = false;
+
   /// Fired once, right as [_gain] marks the user active for today (i.e. the
   /// first qualifying activity of the day just landed). Set by main.dart to
   /// reschedule reminders immediately, so a late-night streak-SOS already
@@ -154,6 +163,7 @@ class Progress extends ChangeNotifier {
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
     streakRiskAlerts = j['streakRiskAlerts'] ?? true;
+    removedAds = j['removedAds'] ?? false;
     xp = j['xp'] ?? 0;
     streak = j['streak'] ?? 0;
     bestStreak = j['bestStreak'] ?? 0;
@@ -184,6 +194,7 @@ class Progress extends ChangeNotifier {
         'reminders': reminders,
         'reminderHour': reminderHour,
         'streakRiskAlerts': streakRiskAlerts,
+        'removedAds': removedAds,
         'xp': xp,
         'streak': streak,
         'bestStreak': bestStreak,

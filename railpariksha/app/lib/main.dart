@@ -1,9 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'core/ads.dart';
 import 'core/app_scope.dart';
 import 'core/notifications.dart';
+import 'core/purchases.dart';
 import 'core/reminders.dart';
 import 'core/theme.dart';
 import 'data/content_repo.dart';
@@ -29,9 +32,14 @@ Future<void> main() async {
     progress.examId = null;
     progress.onboarded = false;
   }
-  runApp(AppScope(repo: repo, progress: progress, child: const RailParikshaApp()));
+  final purchases = PurchaseManager(progress);
+  runApp(AppScope(repo: repo, progress: progress, purchases: purchases, child: const RailParikshaApp()));
   repo.checkForUpdate();
   initAds();
+  // Fire-and-forget: a slow/unavailable Play Billing connection must never
+  // delay startup. removedAds is already loaded from disk by progress.load()
+  // above, so ads stay off for a paying user even before this resolves.
+  unawaited(purchases.init());
   await RailParikshaNotifications.init();
   if (progress.reminders) await applyReminders(progress);
 }

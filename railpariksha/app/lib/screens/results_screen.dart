@@ -49,7 +49,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
       // skipping, if not preloaded in time) the ad here never blocks or
       // delays anything the user is waiting on. Frequency-capped per
       // InterstitialAdManager.shouldShowForMockCount -- see its doc comment.
-      if (InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
+      if (!p.removedAds && InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
         InterstitialAdManager.showIfReady();
       }
     }

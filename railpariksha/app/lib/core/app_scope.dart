@@ -3,12 +3,15 @@ import 'package:flutter/widgets.dart';
 import '../data/content_repo.dart';
 import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
+import 'purchases.dart';
 
 class AppScope extends InheritedNotifier<Progress> {
   final ContentRepo repo;
   final QuizBuilder builder;
+  final PurchaseManager purchases;
 
-  AppScope({super.key, required this.repo, required Progress progress, required super.child})
+  AppScope(
+      {super.key, required this.repo, required this.purchases, required Progress progress, required super.child})
       : builder = QuizBuilder(repo, progress),
         super(notifier: progress);
 
