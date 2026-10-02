@@ -15,12 +15,27 @@
 # NOTES generation is DONE: all 88 (subject, topic) pairs now have a note.
 # That worker-relaunch logic has been retired too.
 #
-# TIPS & TRICKS backfill is now in progress: 55 of the 88 notes predate the
-# tips_hi/tips_en field and are getting it filled in via
-# `notes.py --augment-tips`. Unlike bulk_questions.py, this doesn't
-# self-relaunch on restart, so this hook does it -- per the standing rule:
-# every background worker gets a relaunch entry here so it survives a
-# container restart.
+# TIPS & TRICKS backfill is DONE. That worker-relaunch logic has been
+# retired too.
+#
+# FACT-CHECK pass is now in progress: factcheck.py blind-solves all 25,078
+# stored questions with an independent model and writes disagreements for
+# human review (it never edits the bank files itself, so running several
+# instances against disjoint files concurrently is safe). Split 3-way across
+# providers/keys so it finishes in hours, not a single ~8h sequential pass:
+#   groq/qwen3.8-27b -> maths, gk, current_affairs (_fc_groq.json)
+#   gemini/3.8-flash (key 1) -> reasoning, railway_gk, science (_fc_gemini1.json)
+#   gemini/3.8-flash (key 2) -> je_civil, je_mechanical, je_electrical,
+#                                english, computer (_fc_gemini2.json)
+# gemini-2.5-flash was tried first but key 1's free-tier quota for it turned
+# out to be a mere 20 requests/day (confirmed via an actual 429 response) --
+# gemini-3.8-flash has its own separate, untouched quota on both keys.
+# Output goes to pipeline/reports/, NEVER content/bank/ -- build_bundle.py
+# globs every file in content/bank/ into the app's content bundle, so a
+# disagreements report dropped in there would corrupt the shipped bundle.
+# None of these self-relaunch on restart, so this hook does it -- per the
+# standing rule: every background worker gets a relaunch entry here so it
+# survives a container restart.
 set -uo pipefail
 
 if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
@@ -37,9 +52,33 @@ cd "$GEN" || exit 0
 
 running() { pgrep -f "$1" >/dev/null 2>&1; }
 
-if ! running "notes.py.*--augment-tips"; then
-  nohup python3 notes.py --provider groq --model openai/gpt-oss-20b --augment-tips \
-    > "$LOGS/tips1.log" 2>&1 &
+BANK="$REPO/content/bank"
+REPORTS="$REPO/pipeline/reports"
+mkdir -p "$REPORTS"
+
+if ! running "factcheck.py.*_fc_groq.json"; then
+  nohup python3 factcheck.py --provider groq --model qwen/qwen3.8-27b \
+    --out "$REPORTS/_fc_groq.json" \
+    "$BANK/maths.json" "$BANK/gk.json" "$BANK/current_affairs.json" \
+    > "$LOGS/factcheck_groq.log" 2>&1 &
+  disown
+fi
+
+if ! running "factcheck.py.*_fc_gemini1.json"; then
+  nohup python3 factcheck.py --provider gemini --model gemini-3.8-flash \
+    --out "$REPORTS/_fc_gemini1.json" \
+    "$BANK/reasoning.json" "$BANK/railway_gk.json" "$BANK/science.json" \
+    > "$LOGS/factcheck_gemini1.log" 2>&1 &
+  disown
+fi
+
+if ! running "factcheck.py.*_fc_gemini2.json"; then
+  GEMINI_API_KEY="${GEMINI_API_KEY2:-$GEMINI_API_KEY}" \
+  nohup python3 factcheck.py --provider gemini --model gemini-3.8-flash \
+    --out "$REPORTS/_fc_gemini2.json" \
+    "$BANK/je_civil.json" "$BANK/je_mechanical.json" "$BANK/je_electrical.json" \
+    "$BANK/english.json" "$BANK/computer.json" \
+    > "$LOGS/factcheck_gemini2.log" 2>&1 &
   disown
 fi
 
