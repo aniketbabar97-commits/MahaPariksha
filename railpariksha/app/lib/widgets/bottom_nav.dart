@@ -69,7 +69,7 @@ class _NavButton extends StatelessWidget {
   final NavItem item;
   final bool selected;
   final VoidCallback onTap;
-  const _NavButton({required this.item, required this.selected, required this.onTap});
+  const _NavButton({super.key, required this.item, required this.selected, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
