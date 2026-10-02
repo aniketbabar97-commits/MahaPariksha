@@ -1,0 +1,36 @@
+gk.json CONFIRMED_DELETE candidates (exhaustive-verification pass, 2026-10-02)
+================================================================================
+
+Scope of this pass over content/bank/gk.json (3346 items):
+  1. Full structural scan (all 3346 items): malformed option counts, duplicate
+     options, out-of-range answer index, empty explanations, leftover
+     generation-artifact text ("let's adjust", "as an AI", "TODO", etc.) -- 0
+     structural issues found.
+  2. Full "answer/explanation mismatch" heuristic scan (all 3346 items):
+     flagged every item where an option OTHER than the stored answer's text
+     appears verbatim in the English explanation -- 43 flagged, all 43
+     individually reviewed against independent fact-checking (own knowledge +
+     WebSearch for anything uncertain). 4 required fixes (see git history /
+     commit message); none required deletion.
+  3. Targeted fact review of "recency-sensitive" items (current office-holders,
+     counts, dates that can go stale) and a broad knowledge-based skim across
+     additional samples (polity, awards, geography, Nobel/Sahitya Akademi
+     claims, fabricated-entity-name scan over Yojana/Mission/Award/Scheme
+     patterns in all 3346 items). No fabricated schemes/awards/people were
+     found used as a CORRECT answer; a handful of invented-sounding option
+     names (e.g. "Punit Prize", "Tatsach Prize") exist only as intentionally
+     fictitious wrong-answer distractors, which is normal MCQ design, not an
+     error.
+
+Result: no item in gk.json met the bar for CONFIRMED_DELETE (no option
+correct / fabricated premise / leftover generation artifacts) in this pass.
+
+NONE -- no delete candidates identified.
+
+Note: this is a best-effort exhaustive pass within one session's budget, not
+a claim that every one of the 3,346 items received an individually
+dedicated web search. Items not already caught by the structural/mismatch
+heuristics or touched by the knowledge-based skim above were assessed
+against the reviewer's own subject knowledge but not separately
+web-verified. If deeper certainty is wanted on a specific sub-topic, a
+follow-up pass scoped to that sub-topic is recommended.
