@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -164,17 +165,20 @@ class _QuestionResultTile extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () => push(
-          context,
-          (_) => QuizScreen(
-            spec: QuizSpec(
-              QuizMode.practice,
-              [question],
-              label.isEmpty ? 'प्रश्न' : label,
-              label.isEmpty ? 'Question' : label,
+        onTap: () {
+          HapticFeedback.selectionClick();
+          push(
+            context,
+            (_) => QuizScreen(
+              spec: QuizSpec(
+                QuizMode.practice,
+                [question],
+                label.isEmpty ? 'प्रश्न' : label,
+                label.isEmpty ? 'Question' : label,
+              ),
             ),
-          ),
-        ),
+          );
+        },
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(children: [
@@ -218,7 +222,10 @@ class _NoteResultTile extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () => push(context, (_) => TopicScreen(subject: subject, topic: topic)),
+        onTap: () {
+          HapticFeedback.selectionClick();
+          push(context, (_) => TopicScreen(subject: subject, topic: topic));
+        },
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(children: [
