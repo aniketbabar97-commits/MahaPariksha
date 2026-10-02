@@ -8,7 +8,12 @@ Requires `GROQ_API_KEY` and/or `GEMINI_API_KEY` in the environment.
 
 - `bulk_questions.py` -- tops up `content/bank/<subject>.json` toward a per-topic
   target (300 questions/topic, 15/topic for `current_affairs` since those facts
-  age out). Resumable, dedups by normalized question text.
+  age out). Resumable, dedups by normalized question text. The `reasoning` subject
+  uses a dedicated prompt (`REASONING_PROMPT`/`REASONING_TOPIC_GUIDE`) plus a
+  mandatory independent blind-solve check (`blind_solve_reasoning`, same pattern as
+  `ca_daily.py`'s cross-model check) on every drafted item before it's kept -- see
+  `../../docs/REASONING_GENERATOR_FIX.md` for why (reasoning was ~14% wrong-answer
+  rate under the old generic prompt) and `--no-verify-reasoning` to disable it.
 - `notes.py` -- drafts `content/notes/<subject>.json` entries (summary, facts,
   mind-map) for every topic that doesn't have one yet.
 - `factcheck.py` -- blind-solves stored questions with a second model and

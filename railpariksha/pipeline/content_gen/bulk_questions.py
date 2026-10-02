@@ -77,6 +77,150 @@ questions (e.g. "2, 5, 10, 17, ?" or "3 : 9 :: 4 : ?") -- even though the sequen
 in both languages, q_hi must still frame it in Hindi, e.g. "श्रृंखला को देखें: 2, 5, 10, 17, ?" or
 "अनुपात देखें: 3 : 9 :: 4 : ?", not just the bare sequence."""
 
+# --- Reasoning is generated with a dedicated prompt (see bulk_questions.py module
+# docstring / git history for the root-cause writeup): the generic ANGLES/PROMPT above
+# is tuned for *fact-recall* subjects and, applied to "reasoning", kept producing (a)
+# trivia/definition items ("What does the law of reflection state?") instead of actual
+# puzzles, (b) puzzles whose own stated facts don't uniquely force the marked answer
+# (under-constrained seating/direction puzzles, hand-waved explanations), and (c) heavily
+# templated near-duplicates across the whole bank (literally the same frame with only the
+# digits swapped -- "A, C, F, J, ?", "water image of the number N" x18, "if X*Y=Z and
+# A*B=C, what is P*Q" x8). Two independent reviews (a Groq fact-check pass and a human
+# review of the whole bank) flagged ~14% of reasoning questions as wrong/non-existent
+# answers, far above every other subject -- this prompt plus blind_solve_reasoning()
+# below are the fix: construct a genuine, fully-constrained puzzle instance per topic,
+# self-verify it has exactly one derivable answer, vary entities so items don't collide
+# into the same template, then independently re-solve it blind before accepting it.
+REASONING_TOPIC_GUIDE = {
+    "series": "A genuine number OR letter series with ONE consistent rule (arithmetic/geometric "
+              "difference, alternating pattern, squares/cubes, two interleaved series, etc). Do not "
+              "reuse the common textbook examples verbatim (ban: 'A, C, F, J', '2, 5, 10, 17', "
+              "'1, 4, 9, 16') -- invent a fresh term set and a fresh rule each time.",
+    "coding_decoding": "A letter-shift or word/number coding scheme (e.g. each letter shifted by a "
+              "fixed or position-dependent offset, or a word-to-code mapping) applied consistently; "
+              "the question gives one or two worked coded examples and asks to decode/encode a NEW word.",
+    "classification": "Four items where exactly three share one specific, nameable property and the "
+              "4th genuinely lacks it -- not 'three are X-shaped things, one is a different kind of "
+              "thing', but a real odd-one-out by a stated rule (same category, pick which breaks it).",
+    "blood_relations": "A short, fully-specified family chain (e.g. 'A is B's father. B is C's "
+              "sister...') with ENOUGH relations stated to pin down exactly one answer to the "
+              "question asked -- not an ambiguous or under-specified chain.",
+    "direction_sense": "A person walks a SEQUENCE of legs with explicit directions and distances (or "
+              "turns), e.g. 'walks 5km North, turns right, walks 3km...'. Track position/facing "
+              "yourself using standard compass turns (right from North = East, etc) before finalizing "
+              "the distance/direction asked for.",
+    "syllogism": "Exactly 2 premises (standard A/E/I/O form: All/No/Some/Some-not) and 1-2 candidate "
+              "conclusions. Apply standard syllogism rules (a conclusion follows only if it is validly "
+              "entailed by the premises; use the 'either-or' answer only when the two conclusions are "
+              "a genuine complementary I/E pair on the same terms) -- do not mark a conclusion correct "
+              "just because it sounds plausible.",
+    "alphabet_test": "A position-in-alphabet puzzle (counting from left/right/reverse, Nth letter "
+              "after/before another, letter arithmetic). Actually count the positions "
+              "(A=1...Z=26) yourself before fixing the answer; do not eyeball it.",
+    "mirror_water_image": "An ACTUAL mirror-image or water-image transformation task: a short word, a "
+              "clock time, or a simple shape description, asking what it becomes under a LEFT-RIGHT "
+              "mirror flip (mirror image) or an UPSIDE-DOWN flip (water image) -- never a question "
+              "*about* the definition of mirror/water image (ban phrasing like 'what does the law of "
+              "reflection state' or 'which side is reversed in a mirror image' -- that is trivia, not "
+              "a puzzle). For clock mirror images use 11:60 minus the time; for water images use 12:00 "
+              "minus the time with the hour hand also flipped top-to-bottom; show the arithmetic.",
+    "mathematical_operations": "A SYMBOL-SUBSTITUTION code (e.g. '+' means x, '-' means ÷, 'x' means -, "
+              "'÷' means +, or similar) applied to a fresh expression -- not literal arithmetic dressed "
+              "up as a pattern ('if 8*9=72 and 6*7=42, what is 5*6' is NOT a reasoning question, it's "
+              "just multiplication; '*' must carry a genuine, previously-undisclosed substitution rule "
+              "the solver has to infer or has just been told).",
+    "puzzle_seating": "A linear or circular seating arrangement with ENOUGH constraints (relative "
+              "positions, facing direction, who sits where) to pin down ONE unique, fully-determined "
+              "arrangement -- work the full arrangement out yourself first, then ask about one person's "
+              "position in it. Never leave the arrangement under-constrained (multiple valid "
+              "arrangements satisfying the clues) and never put a plain cause-effect or statement "
+              "question under this topic -- it must be an actual seating puzzle.",
+    "statement_conclusion": "A short statement (fact, or a pair of premises) plus one or two "
+              "conclusions; decide strictly by what is logically forced by the statement alone "
+              "(not by outside real-world knowledge) whether each conclusion follows, doesn't follow, "
+              "or is merely possible.",
+    "non_verbal_reasoning": "A describable figural/spatial pattern task (counting shapes, completing a "
+              "described figure series, folding/embedded-figure logic described in words) -- describe "
+              "the figures precisely enough in words that the puzzle is solvable from the text alone; "
+              "never ask a question *about* a reasoning term's definition.",
+    "analogy": "A genuine word or letter analogy (A:B :: C:?) where the first pair's relationship "
+              "(opposite, part-whole, function, category) is the SAME relationship that must be applied "
+              "to produce the 4th term -- invent a fresh pair each time, don't reuse 'ABC:ZYX' or other "
+              "stock textbook analogies verbatim.",
+}
+
+REASONING_PROMPT = """You are writing NEW logical-reasoning puzzle questions for an Indian Railways
+(RRB/RPF) exam-prep app -- the "{topic_en}" ({topic_hi}) topic of the Reasoning subject.
+
+What this topic actually means here: {topic_guide}
+
+Write {n} DISTINCT puzzle questions, difficulty mix across 1 (easy), 2 (medium), 3 (hard), matching the
+real difficulty and phrasing conventions of RRB NTPC / Group D / RPF reasoning sections (not a trivia
+quiz about the topic's name, and not a school textbook example copied verbatim).
+
+MANDATORY self-check before you output each item (do this silently, step by step, for every single
+question -- this is the single most important instruction in this prompt):
+1. Actually construct the puzzle's facts/constraints first.
+2. Actually SOLVE it yourself from those facts alone, showing the derivation to yourself.
+3. Confirm that exactly ONE of your 4 options is forced by the facts, and the other 3 are genuinely
+   wrong under the same facts (not just "worse-sounding" -- an option that could also be true under
+   some reading of the facts means the puzzle is broken; rewrite the facts until only one answer survives).
+4. Only then write e_hi/e_en as the worked derivation you just did -- the explanation must show the
+   actual steps (positions counted, directions tracked, premises applied), never a one-line assertion.
+If step 3 ever fails, discard that attempt and build a different, better-constrained puzzle instead of
+forcing an answer.
+
+Anti-duplication (the existing bank already has heavy near-duplicate templates -- do NOT add more):
+vary the people/letters/numbers/entities substantially across these {n} items AND avoid the specific
+stock clichés named in the topic guidance above. Two items in this batch must not share the same
+sentence frame with only digits/names swapped.
+
+Output ONLY a JSON object, no markdown fences, no extra text:
+{{"questions": [
+  {{
+    "q_hi": "question in natural Hindi (Devanagari)", "q_en": "same question in natural English (not literal translation)",
+    "o_hi": ["4 options in Hindi"], "o_en": ["4 options in English, same order/meaning as o_hi"],
+    "a": <0-3 correct index>,
+    "e_hi": "worked step-by-step explanation in Hindi", "e_en": "worked step-by-step explanation in English",
+    "d": <1, 2, or 3>
+  }}, ... {n} items total
+]}}
+
+Exactly 4 options each, exactly one correct answer, options must not overlap in meaning.
+CRITICAL for q_hi: it must contain actual Hindi (Devanagari) framing words, never bare numbers/letters
+copied unchanged from q_en -- e.g. "श्रृंखला को देखें: 2, 5, 10, 17, ?", not just the bare sequence."""
+
+SOLVE_PROMPT = """Solve this reasoning puzzle yourself from scratch, step by step. Do not assume any
+answer is already correct -- derive it independently from only the facts given below.
+
+Q: {q}
+Options:
+{opts}
+
+If the facts given do not clearly and uniquely force exactly one option, set "confident" to false.
+Output ONLY a JSON object, no markdown fences, no extra text:
+{{"answer_index": <0-3>, "confident": true or false}}"""
+
+
+OTHER_PROVIDER = {"groq": "gemini", "gemini": "groq"}
+DEFAULT_VERIFY_MODEL = {"groq": "openai/gpt-oss-120b", "gemini": "gemini-2.5-flash"}
+
+
+def blind_solve_reasoning(provider, model, q, **kw):
+    """Independently re-derive a drafted reasoning question's answer from only its question
+    + options (no explanation, no marked answer shown) -- the same blind-solve pattern
+    ca_daily.py uses for current-affairs. Returns True only if the solver (ideally a
+    DIFFERENT provider than the one that drafted the item, so one model's mistake can't
+    just confirm itself) independently lands on the same option, confidently."""
+    opts = "\n".join(f"{i}. {o}" for i, o in enumerate(q["o_en"]))
+    prompt = SOLVE_PROMPT.format(q=q["q_en"], opts=opts)
+    try:
+        result = ask(provider, model, prompt, temperature=0.1, **kw)
+        return bool(result.get("confident")) and result.get("answer_index") == q["a"]
+    except Exception as e:
+        print(f"  verify ERROR on {q.get('id', q['q_en'][:40])}: {e}", file=sys.stderr, flush=True)
+        return False  # fail closed: an unverifiable item is dropped, not kept
+
 
 def flush(path, new_items):
     """Merge new_items into path under an exclusive lock, re-reading the latest
@@ -157,7 +301,19 @@ def main():
     p.add_argument("--gemini-key-env", default="GEMINI_API_KEY", help="env var holding the Gemini API key to use "
                                                                        "(e.g. GEMINI_API_KEY2 for a second key, so "
                                                                        "two Gemini workers don't share one quota)")
+    p.add_argument("--no-verify-reasoning", action="store_true",
+                    help="skip the independent blind-solve check on reasoning items (default: on). "
+                         "Only disable for a quick smoke test -- this check is the fix for the ~14%% "
+                         "wrong-answer rate the two review passes found in the reasoning bank.")
+    p.add_argument("--verify-provider", choices=["groq", "gemini"],
+                    help="provider used to independently re-solve each drafted reasoning item "
+                         "(default: the OTHER provider from --provider, so a single model's mistake "
+                         "can't just confirm itself)")
+    p.add_argument("--verify-model", help="model for --verify-provider (default: a sane per-provider default)")
     args = p.parse_args()
+    verify_provider = args.verify_provider or OTHER_PROVIDER[args.provider]
+    verify_model = args.verify_model or DEFAULT_VERIFY_MODEL[verify_provider]
+    verify_kw = {"api_key_env": args.gemini_key_env} if verify_provider == "gemini" else {}
 
     tax = json.load(open(f"{ROOT}/content/taxonomy.json", encoding="utf-8"))
     codes = subject_codes(tax)
@@ -192,9 +348,16 @@ def main():
             count = len(by_topic.get(t["id"], []))
             rounds_here = 0
             while count < target and calls < args.max_calls and rounds_here < 40:
-                angle = random.choice(ANGLES)
-                prompt = PROMPT.format(subject_en=s["en"], subject_hi=s["hi"], topic_en=t["en"],
-                                        topic_hi=t["hi"], angle=angle, n=BATCH)
+                if s["id"] == "reasoning":
+                    guide = REASONING_TOPIC_GUIDE.get(
+                        t["id"], "A genuine logical-reasoning puzzle for this topic, not a trivia "
+                                  "question about the topic's definition.")
+                    prompt = REASONING_PROMPT.format(topic_en=t["en"], topic_hi=t["hi"],
+                                                      topic_guide=guide, n=BATCH)
+                else:
+                    angle = random.choice(ANGLES)
+                    prompt = PROMPT.format(subject_en=s["en"], subject_hi=s["hi"], topic_en=t["en"],
+                                            topic_hi=t["hi"], angle=angle, n=BATCH)
                 try:
                     kw = {"api_key_env": args.gemini_key_env} if args.provider == "gemini" else {}
                     result = ask(args.provider, args.model, prompt, **kw)
@@ -221,6 +384,15 @@ def main():
                           "a": q["a"], "e_hi": q["e_hi"], "e_en": q["e_en"]}
                     next_num += 1
                     new_items.append(q2)
+                if new_items and s["id"] == "reasoning" and not args.no_verify_reasoning:
+                    verified = []
+                    for q2 in new_items:
+                        if blind_solve_reasoning(verify_provider, verify_model, q2, **verify_kw):
+                            verified.append(q2)
+                        else:
+                            print(f"  dropped (blind-solve mismatch): {q2['q_en'][:80]}", flush=True)
+                        time.sleep(1.5 if verify_provider == "groq" else 2.0)
+                    new_items = verified
                 if new_items:
                     landed = flush(path, new_items)
                     by_topic.setdefault(t["id"], []).extend(new_items)
