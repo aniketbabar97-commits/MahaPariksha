@@ -142,7 +142,13 @@ class MeScreen extends StatelessWidget {
                   DropdownMenuItem(value: 'light', child: Text(context.tr('लाइट', 'Light'))),
                   DropdownMenuItem(value: 'dark', child: Text(context.tr('डार्क', 'Dark'))),
                 ],
-                onChanged: (v) => p.update((p) => p.theme = v ?? 'system'),
+                // The two rows above (daily goal, language) already fire
+                // haptics from their SegmentedButton -- this one didn't,
+                // despite being the same "pick one of a few options" pattern.
+                onChanged: (v) {
+                  HapticFeedback.selectionClick();
+                  p.update((p) => p.theme = v ?? 'system');
+                },
               ),
             ),
           ]),
@@ -258,10 +264,18 @@ class _IdCard extends StatelessWidget {
     // Stable per-device "ID number" -- not a real identifier, just a badge
     // detail that stays the same across app restarts instead of re-randomizing.
     final idNumber = 100000 + (p.examId.hashCode.abs() % 900000);
-    return InkWell(
-      borderRadius: BorderRadius.circular(20),
-      onTap: () => _editName(context),
-      child: Container(
+    return Semantics(
+      button: true,
+      label: context.tr('अपना नाम बदलें', 'Edit your name'),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: () {
+          // The only prominent, hero-sized tap target on this screen with no
+          // tactile feedback at all -- every other row/button on Me now has it.
+          HapticFeedback.selectionClick();
+          _editName(context);
+        },
+        child: Container(
         padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(gradient: BrandColors.heroGradient, borderRadius: BorderRadius.circular(20)),
         child: Row(children: [
@@ -290,6 +304,7 @@ class _IdCard extends StatelessWidget {
           ),
           const Icon(Icons.edit, color: Colors.white54, size: 18),
         ]),
+        ),
       ),
     );
   }

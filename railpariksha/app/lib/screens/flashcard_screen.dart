@@ -18,13 +18,15 @@ class FlashcardScreen extends StatefulWidget {
   State<FlashcardScreen> createState() => _FlashcardScreenState();
 }
 
-class _FlashcardScreenState extends State<FlashcardScreen> {
+class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProviderStateMixin {
   late List<Flashcard> deck;
   int index = 0;
   int known = 0;
   bool flipped = false;
   double drag = 0;
   late String cLang;
+  double _springStart = 0;
+  late final AnimationController _springCtrl;
 
   @override
   void initState() {
@@ -32,6 +34,17 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
     final s = AppScope.read(context);
     deck = s.builder.dueCards(subject: widget.subject, limit: 20);
     cLang = s.progress.lang;
+    // A swipe released short of the threshold used to teleport the card back
+    // to center instantly via setState(drag = 0) -- a jarring snap next to
+    // the deliberate spring/elastic animation this app uses everywhere else.
+    _springCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 220))
+      ..addListener(() => setState(() => drag = _springStart * (1 - Curves.easeOut.transform(_springCtrl.value))));
+  }
+
+  @override
+  void dispose() {
+    _springCtrl.dispose();
+    super.dispose();
   }
 
   Future<void> _answer(bool good) async {
@@ -103,6 +116,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
       Expanded(
         child: GestureDetector(
           onTap: () => setState(() => flipped = !flipped),
+          onHorizontalDragStart: (_) => _springCtrl.stop(),
           onHorizontalDragUpdate: (d) => setState(() => drag += d.delta.dx),
           onHorizontalDragEnd: (_) {
             if (drag > width * 0.25) {
@@ -110,7 +124,8 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
             } else if (drag < -width * 0.25) {
               _answer(false);
             } else {
-              setState(() => drag = 0);
+              _springStart = drag;
+              _springCtrl.forward(from: 0);
             }
           },
           child: Transform.translate(
