@@ -581,7 +581,10 @@ class _BeastResultsSheet extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: TextButton(
-              onPressed: onDone,
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                onDone();
+              },
               child: Text(context.tr('पूर्ण', 'Done')),
             ),
           ),

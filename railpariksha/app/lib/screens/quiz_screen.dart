@@ -93,7 +93,13 @@ class _QuizScreenState extends State<QuizScreen> {
     if (spec.instantFeedback && answered) return;
     final correct = i == q.answer;
     setState(() => answers[index] = i);
-    if (!spec.instantFeedback) return; // mock: record at submit
+    if (!spec.instantFeedback) {
+      // Mock mode defers correctness feedback to submit time, but the tap
+      // itself still deserves the same tactile acknowledgement every other
+      // option tap in the app gives -- instead of silence until Next/Submit.
+      HapticFeedback.selectionClick();
+      return;
+    }
     HapticFeedback.lightImpact();
     if (!correct) HapticFeedback.vibrate();
     final r = AppScope.read(context).progress.recordAnswer(q.id, correct);
@@ -208,14 +214,20 @@ class _QuizScreenState extends State<QuizScreen> {
             IconButton(
               tooltip: context.tr('भाषा बदलें', 'Switch language'),
               icon: Text(qLang == 'en' ? 'हिं' : 'EN', style: const TextStyle(fontWeight: FontWeight.w900)),
-              onPressed: () => setState(() => qLang = qLang == 'en' ? 'hi' : 'en'),
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                setState(() => qLang = qLang == 'en' ? 'hi' : 'en');
+              },
             ),
             IconButton(
               tooltip: p.bookmarks.contains(q.id)
                   ? context.tr('सहेजा गया, हटाएं', 'Saved, remove')
                   : context.tr('प्रश्न सहेजें', 'Save question'),
               icon: Icon(p.bookmarks.contains(q.id) ? Icons.bookmark : Icons.bookmark_border),
-              onPressed: () => p.toggleBookmark(q.id),
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                p.toggleBookmark(q.id);
+              },
             ),
           ],
         ),
@@ -483,7 +495,14 @@ class _Explanation extends StatelessWidget {
             padding: const EdgeInsets.all(8),
             child: Text(ctx.tr('क्या गलत है?', "What's wrong?"), style: Theme.of(ctx).textTheme.titleMedium),
           ),
-          for (final r in reasons) ListTile(title: Text(r), onTap: () => Navigator.pop(ctx, r)),
+          for (final r in reasons)
+            ListTile(
+              title: Text(r),
+              onTap: () {
+                HapticFeedback.selectionClick();
+                Navigator.pop(ctx, r);
+              },
+            ),
         ]),
       ),
     );

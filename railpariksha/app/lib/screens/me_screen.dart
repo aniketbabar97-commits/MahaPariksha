@@ -38,7 +38,10 @@ class MeScreen extends StatelessWidget {
               title: Text(context.tr('परीक्षा', 'Exam')),
               subtitle: Text(exam?.name.of(lang) ?? '-'),
               trailing: const Icon(Icons.chevron_right),
-              onTap: () => showExamSwitcher(context),
+              onTap: () {
+                HapticFeedback.selectionClick();
+                showExamSwitcher(context);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.event, color: BrandColors.sky),
@@ -48,6 +51,7 @@ class MeScreen extends StatelessWidget {
                   : '${p.examDate!.day}/${p.examDate!.month}/${p.examDate!.year}'),
               trailing: const Icon(Icons.chevron_right),
               onTap: () async {
+                HapticFeedback.selectionClick();
                 final now = DateTime.now();
                 final d = await showDatePicker(
                   context: context,
@@ -106,6 +110,7 @@ class MeScreen extends StatelessWidget {
                 subtitle: Text('${p.reminderHour.toString().padLeft(2, '0')}:00'),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () async {
+                  HapticFeedback.selectionClick();
                   final t = await showTimePicker(
                     context: context,
                     initialTime: TimeOfDay(hour: p.reminderHour, minute: 0),
@@ -161,6 +166,7 @@ class MeScreen extends StatelessWidget {
               title: Text(context.tr('दोस्तों को बताएं 📣', 'Invite friends 📣')),
               subtitle: Text(context.tr('साथ पढ़ें, साथ आगे बढ़ें! (+25 XP रोज़ पहली बार)', 'Study together, soar together! (+25 XP first time daily)')),
               onTap: () async {
+                HapticFeedback.selectionClick();
                 await SharePlus.instance.share(ShareParams(
                     text: context.tr(
                         'मैं RailPariksha ऐप पर रोज़ अभ्यास करता हूं — RRB NTPC, ग्रुप डी, RPF समेत सभी रेलवे परीक्षाओं के लिए मुफ़्त! आप भी जुड़ें: $kPlayUrl',
@@ -174,12 +180,18 @@ class MeScreen extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.star_rate, color: BrandColors.saffron),
               title: Text(context.tr('ऐप को रेटिंग दें ⭐', 'Rate the app ⭐')),
-              onTap: () => launchUrl(Uri.parse(kPlayUrl), mode: LaunchMode.externalApplication),
+              onTap: () {
+                HapticFeedback.selectionClick();
+                launchUrl(Uri.parse(kPlayUrl), mode: LaunchMode.externalApplication);
+              },
             ),
             ListTile(
               leading: const Icon(Icons.mail, color: BrandColors.saffron),
               title: Text(context.tr('सुझाव / संपर्क 💬', 'Feedback / contact 💬')),
-              onTap: () => launchUrl(Uri(scheme: 'mailto', path: kSupportEmail, query: 'subject=RailPariksha%20feedback')),
+              onTap: () {
+                HapticFeedback.selectionClick();
+                launchUrl(Uri(scheme: 'mailto', path: kSupportEmail, query: 'subject=RailPariksha%20feedback'));
+              },
             ),
           ]),
         ),
@@ -205,6 +217,7 @@ class MeScreen extends StatelessWidget {
         TextButton(
           style: TextButton.styleFrom(foregroundColor: BrandColors.wrong),
           onPressed: () async {
+            HapticFeedback.selectionClick();
             final ok = await showDialog<bool>(
               context: context,
               builder: (ctx) => AlertDialog(
@@ -212,7 +225,16 @@ class MeScreen extends StatelessWidget {
                 content: Text(ctx.tr('इसे वापस नहीं लाया जा सकता।', 'This cannot be undone.')),
                 actions: [
                   TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('नहीं', 'No'))),
-                  TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('हां, मिटाएं', 'Yes, reset'))),
+                  TextButton(
+                    onPressed: () {
+                      // Destructive and irreversible -- a stronger buzz than the
+                      // selectionClick every other tap in this app uses, so the
+                      // confirm itself feels like it carries real weight.
+                      HapticFeedback.heavyImpact();
+                      Navigator.pop(ctx, true);
+                    },
+                    child: Text(ctx.tr('हां, मिटाएं', 'Yes, reset')),
+                  ),
                 ],
               ),
             );

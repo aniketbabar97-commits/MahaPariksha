@@ -165,14 +165,20 @@ class _ReelScreenState extends State<ReelScreen> {
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.white),
           tooltip: context.tr('बंद करें', 'Close'),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () {
+            HapticFeedback.selectionClick();
+            Navigator.pop(context);
+          },
         ),
         actions: [
           IconButton(
             tooltip: context.tr('भाषा बदलें', 'Switch language'),
             icon: Text(_lang == 'en' ? 'हिं' : 'EN',
                 style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.white)),
-            onPressed: () => setState(() => _lang = _lang == 'en' ? 'hi' : 'en'),
+            onPressed: () {
+              HapticFeedback.selectionClick();
+              setState(() => _lang = _lang == 'en' ? 'hi' : 'en');
+            },
           ),
         ],
       ),

@@ -79,7 +79,10 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
           IconButton(
             tooltip: context.tr('भाषा बदलें', 'Switch language'),
             icon: Text(cLang == 'en' ? 'हिं' : 'EN', style: const TextStyle(fontWeight: FontWeight.w900)),
-            onPressed: () => setState(() => cLang = cLang == 'en' ? 'hi' : 'en'),
+            onPressed: () {
+              HapticFeedback.selectionClick();
+              setState(() => cLang = cLang == 'en' ? 'hi' : 'en');
+            },
           ),
         ],
       ),

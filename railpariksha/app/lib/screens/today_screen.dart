@@ -140,7 +140,10 @@ class TodayScreen extends StatelessWidget {
                       padding: const EdgeInsets.only(bottom: 8),
                       child: InkWell(
                         borderRadius: BorderRadius.circular(12),
-                        onTap: () => startQuiz(context, s.builder.practice(subject: g.subject)),
+                        onTap: () {
+                          HapticFeedback.selectionClick();
+                          startQuiz(context, s.builder.practice(subject: g.subject));
+                        },
                         child: Row(children: [
                           Icon(subjectIcon(sub?.icon ?? ''), color: BrandColors.saffron, size: 20),
                           const SizedBox(width: 10),
@@ -165,7 +168,10 @@ class TodayScreen extends StatelessWidget {
         Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
-            onTap: () => push(context, (_) => const ReelScreen()),
+            onTap: () {
+              HapticFeedback.selectionClick();
+              push(context, (_) => const ReelScreen());
+            },
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.heroGradient),
@@ -203,7 +209,10 @@ class TodayScreen extends StatelessWidget {
         Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
-            onTap: () => startQuiz(context, s.builder.daily()),
+            onTap: () {
+              HapticFeedback.selectionClick();
+              startQuiz(context, s.builder.daily());
+            },
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.fireGradient),

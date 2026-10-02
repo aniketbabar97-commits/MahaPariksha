@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -49,8 +50,12 @@ class TopicScreen extends StatelessWidget {
             style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
             icon: const Icon(Icons.play_arrow_rounded),
             label: Text(context.tr('इस टॉपिक का अभ्यास करें ($count)', 'Practice this topic ($count)')),
-            onPressed:
-                count == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: topic.id)),
+            onPressed: count == 0
+                ? null
+                : () {
+                    HapticFeedback.selectionClick();
+                    startQuiz(context, s.builder.practice(subject: subject.id, topic: topic.id));
+                  },
           ),
         ]),
       ),
@@ -156,9 +161,12 @@ class _MindMapViewState extends State<MindMapView> {
         Center(child: Container(width: 3, height: 18, color: BrandColors.saffron.withValues(alpha: 0.5))),
         Row(mainAxisAlignment: MainAxisAlignment.end, children: [
           TextButton(
-            onPressed: () => setState(() => open.length == root.children.length
-                ? open.clear()
-                : open.addAll(List.generate(root.children.length, (i) => i))),
+            onPressed: () {
+              HapticFeedback.selectionClick();
+              setState(() => open.length == root.children.length
+                  ? open.clear()
+                  : open.addAll(List.generate(root.children.length, (i) => i)));
+            },
             child: Text(open.length == root.children.length
                 ? context.tr('सभी बंद करें', 'Collapse all')
                 : context.tr('सभी खोलें', 'Expand all')),
@@ -190,7 +198,15 @@ class _MindMapViewState extends State<MindMapView> {
             expanded: b.children.isNotEmpty ? isOpen : null,
             child: InkWell(
               borderRadius: BorderRadius.circular(14),
-              onTap: () => setState(() => isOpen ? open.remove(i) : open.add(i)),
+              // A branch with no children had nothing to expand, but its row
+              // still showed an ink ripple on tap -- a dead tap that looked
+              // interactive but did and changed nothing.
+              onTap: b.children.isEmpty
+                  ? null
+                  : () {
+                      HapticFeedback.selectionClick();
+                      setState(() => isOpen ? open.remove(i) : open.add(i));
+                    },
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
                 child: Row(children: [

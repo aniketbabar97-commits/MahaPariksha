@@ -223,6 +223,7 @@ class _FreezeTokenCard extends StatelessWidget {
           icon: const Icon(Icons.play_circle_outline, size: 18),
           label: Text(context.tr('देखें', 'Watch')),
           onPressed: () {
+            HapticFeedback.selectionClick();
             final shown = RewardedAdManager.showIfReady(onReward: () {
               p.update((pr) => pr.freezeTokens = (pr.freezeTokens + 1).clamp(0, 2));
               ScaffoldMessenger.of(context)

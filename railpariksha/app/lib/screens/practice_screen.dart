@@ -205,7 +205,10 @@ class SubjectScreen extends StatelessWidget {
             style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
             icon: const Icon(Icons.shuffle),
             label: Text(context.tr('सभी टॉपिक से मिश्रित अभ्यास 🔀', 'Mixed practice from all topics 🔀')),
-            onPressed: () => startQuiz(context, s.builder.practice(subject: subject.id)),
+            onPressed: () {
+              HapticFeedback.selectionClick();
+              startQuiz(context, s.builder.practice(subject: subject.id));
+            },
           ),
           SectionTitle(context.tr('टॉपिक 🧩', 'Topics 🧩')),
           for (final t in subject.topics) ...[
@@ -248,9 +251,18 @@ class SubjectScreen extends StatelessWidget {
                   ]),
                   trailing: IconButton(
                     icon: const Icon(Icons.play_circle, color: BrandColors.saffron, size: 34),
-                    onPressed: n == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: t.id)),
+                    tooltip: context.tr('अभ्यास शुरू करें', 'Start practice'),
+                    onPressed: n == 0
+                        ? null
+                        : () {
+                            HapticFeedback.selectionClick();
+                            startQuiz(context, s.builder.practice(subject: subject.id, topic: t.id));
+                          },
                   ),
-                  onTap: () => push(context, (_) => TopicScreen(subject: subject, topic: t)),
+                  onTap: () {
+                    HapticFeedback.selectionClick();
+                    push(context, (_) => TopicScreen(subject: subject, topic: t));
+                  },
                 ),
               );
             }),
