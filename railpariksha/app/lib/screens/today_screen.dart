@@ -149,8 +149,9 @@ class TodayScreen extends StatelessWidget {
                           const SizedBox(width: 10),
                           Expanded(
                             child: Text(
-                              context.tr('आप $name में पीछे हैं — आज ~${g.recommendedDaily} प्रश्न करें',
-                                  "You're behind on $name — try ~${g.recommendedDaily} Qs today"),
+                              context.tr(
+                                  '$name पेपर का ${(g.examShare * 100).round()}% है, पर आप इसमें पीछे हैं — आज ~${g.recommendedDaily} प्रश्न करें',
+                                  "$name is ${(g.examShare * 100).round()}% of the paper and you're behind on it — try ~${g.recommendedDaily} Qs today"),
                               style: const TextStyle(fontSize: 13.5),
                             ),
                           ),

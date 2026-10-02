@@ -38,7 +38,13 @@ class PacingGap {
 
   /// Roughly how many of today's practice questions should go to this subject.
   final int recommendedDaily;
-  const PacingGap(this.subject, this.deficit, this.recommendedDaily);
+
+  /// This subject's share of the real exam's question-count weighting (0..1) --
+  /// the same number [QuizBuilder.mock] uses to build its subject split, surfaced
+  /// here so the UI can say *why* this subject deserves the catch-up, not just that
+  /// it does.
+  final double examShare;
+  const PacingGap(this.subject, this.deficit, this.recommendedDaily, this.examShare);
 }
 
 class QuizBuilder {
@@ -127,7 +133,7 @@ class QuizBuilder {
       final deficit = expectedShare - actualShare;
       if (deficit > threshold) {
         final recommended = (expectedShare * progress.dailyGoal).round().clamp(1, progress.dailyGoal);
-        gaps.add(PacingGap(s, deficit, recommended));
+        gaps.add(PacingGap(s, deficit, recommended, expectedShare));
       }
     }
     gaps.sort((a, b) => b.deficit.compareTo(a.deficit));

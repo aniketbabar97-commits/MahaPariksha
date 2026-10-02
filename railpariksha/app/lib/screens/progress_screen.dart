@@ -6,6 +6,7 @@ import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
+import '../data/models.dart';
 import '../data/progress.dart';
 import '../widgets/common.dart';
 import 'practice_screen.dart';
@@ -77,6 +78,10 @@ class ProgressScreen extends StatelessWidget {
         _BeastBadge(p: p, lang: lang),
         SectionTitle(context.tr('अभ्यास कैलेंडर 🗓️', 'Study calendar 🗓️')),
         _Heatmap(counts: p.dayCounts, goal: p.dailyGoal),
+        if (exam != null) ...[
+          SectionTitle(context.tr('परीक्षा वेटेज 📊', 'Exam weightage 📊')),
+          _WeightageCard(exam: exam, subjects: subjects, lang: lang),
+        ],
         SectionTitle(context.tr('विषयवार सटीकता 🎯', 'Accuracy by subject 🎯')),
         Card(
           child: Padding(
@@ -339,6 +344,80 @@ class _BeastBadge extends StatelessWidget {
             curve: Curves.easeOutCubic,
             builder: (context, v, _) => Text(v.toStringAsFixed(1), style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
           ),
+        ]),
+      ),
+    );
+  }
+}
+
+/// Shows each subject's share of the selected exam's real paper -- the same
+/// per-subject weighting [QuizBuilder.mock] uses to build a mock test that
+/// mirrors the actual exam instead of an even split. That weighting drove
+/// question allocation already but was never shown to the student; placed
+/// directly above "Accuracy by subject" below so the same row layout lets
+/// a student line up "how much of my exam is this" against "how good am I
+/// at this" at a glance.
+class _WeightageCard extends StatelessWidget {
+  final Exam exam;
+  final List<Subject> subjects;
+  final String lang;
+  const _WeightageCard({required this.exam, required this.subjects, required this.lang});
+
+  @override
+  Widget build(BuildContext context) {
+    final totalWeight = subjects.fold(0, (a, s) => a + (exam.weights[s.id] ?? 1));
+    final sorted = [...subjects]..sort((a, b) => (exam.weights[b.id] ?? 1).compareTo(exam.weights[a.id] ?? 1));
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            context.tr(
+                'असली पेपर में हर विषय से कितने प्रश्न आते हैं — ज़्यादा हिस्सेदारी वाले विषय को पहले मज़बूत करें',
+                "Each subject's share of questions in the real paper -- strengthen the heavier ones first"),
+            style: TextStyle(fontSize: 12.5, color: Theme.of(context).hintColor),
+          ),
+          const SizedBox(height: 12),
+          if (totalWeight > 0)
+            for (final sub in sorted)
+              Builder(builder: (context) {
+                final share = (exam.weights[sub.id] ?? 1) / totalWeight;
+                return InkWell(
+                  onTap: () {
+                    HapticFeedback.selectionClick();
+                    push(context, (_) => SubjectScreen(subject: sub));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: Row(children: [
+                      Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
+                      const SizedBox(width: 6),
+                      SizedBox(width: 96, child: Text(sub.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(6),
+                          child: TweenAnimationBuilder<double>(
+                            tween: Tween(begin: 0, end: share),
+                            duration: const Duration(milliseconds: 700),
+                            curve: Curves.easeOutCubic,
+                            builder: (context, v, _) => LinearProgressIndicator(
+                              value: v,
+                              minHeight: 10,
+                              backgroundColor: Colors.grey.withValues(alpha: 0.15),
+                              color: BrandColors.sky,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 48,
+                        child: Text('${(share * 100).round()}%',
+                            textAlign: TextAlign.right, style: const TextStyle(fontWeight: FontWeight.w700)),
+                      ),
+                    ]),
+                  ),
+                );
+              }),
         ]),
       ),
     );
