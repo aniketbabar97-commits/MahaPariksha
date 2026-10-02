@@ -89689,31 +89689,31 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "यदि किसी कूट भाषा में 'STATION' को 'URCVKQP' लिखा जाता है, तो 'PLATFORM' का कूट क्या होगा?",
-  "q_en": "If in a certain code language 'STATION' is coded as 'URCVKQP', what will be the code for 'PLATFORM'?",
+  "q_hi": "यदि किसी कोड भाषा में 'STATION' को 'UVCVKQP' लिखा जाता है, तो 'PLATFORM' का कोड क्या होगा?",
+  "q_en": "If in a certain code language 'STATION' is coded as 'UVCVKQP', what will be the code for 'PLATFORM'?",
   "o_hi": [
-   "RNCVHTQK",
-   "RNBUHSQK",
-   "RNCVGTQK",
-   "SMBVGTQK"
+   "RNCVHQTO",
+   "RNCVHQTP",
+   "RNBVHQTO",
+   "RNCUHQTO"
   ],
   "o_en": [
-   "RNCVHTQK",
-   "RNBUHSQK",
-   "RNCVGTQK",
-   "SMBVGTQK"
+   "RNCVHQTO",
+   "RNCVHQTP",
+   "RNBVHQTO",
+   "RNCUHQTO"
   ],
   "a": 0,
-  "e_hi": "यहाँ अक्षरों में वैकल्पिक रूप से +2 और +3 जोड़ा गया है (विषम स्थानों पर +2, सम स्थानों पर +3): S+2=U, T+3=R, A+2=C, T+3=V, I+2=K, O+3=Q, N+2=P। इसी प्रकार PLATFORM के लिए: P+2=R, L+3=N, A+2=C, T+3=V, F+2=H, R+3=T, M+2=O,ഗത O+3=K। अतः सही उत्तर 'RNCVHTQK' है।",
-  "e_en": "Here the letters are shifted alternately by +2 and +3 (odd positions +2, even positions +3): S+2=U, T+3=R, A+2=C, T+3=V, I+2=K, O+3=Q, N+2=P. Similarly for PLATFORM: P+2=R, L+3=N, A+2=C, T+3=V, F+2=H, R+3=T, M+2=O, F+3=K (Wait: M+2=O, F+3=I -> let's check F+3=I, R+3=U. Let's re-verify: P(16)+2=R(18), L(12)+3=O(15), A(1)+2=C(3), T(20)+3=W(23), F(6)+2=H(8), R(18)+3=U(21), M(13)+2=O(15), પછી P(16)... Wait, options say RNCVHTQK. Let's check RNCVHTQK: P+2=R, L+2=N? No, L+2=N, A+2=C, T+2=V, F+2=H, R+2=T, M+2=Q, K... Let's use constant +2: P+2=R, L+2=N, A+2=C, T+2=V, F+2=H, R+2=T, M+2=O, K (Wait, option 1 has RNCVHTQK. Let's trace back option 1: P+2=R, L+2=N, A+2=C, T+2=V, H=8 (F+2=H? No, F is 6, H is 8, so +2). T is 20, Q is 17 (-3). Let's trace option 1: P+2=R, L+2=N, A+2=C, T+2=V, F+2=H, R+2=T, M+2=O, K... wait, M+2=O, but option has Q. Let's check a clean rule: Every letter is shifted by its position index. P+1=Q, L+2=N, A+3=D... doesn't match options. Let's stick to simple +2 shift for all: P+2=R, L+2=N, A+2=C, T+2=V, F+2=H, R+2=T, M+2=O, K... wait, length of PLATFORM is 8, options have 8 letters. Let's use standard +2: P->R, L->N, A->C, T->V, F->H, R->T, M->O, K->Wait, last letter is M, M+2=O. Option 1 is RNCVHTQK. Let's fix option 1 to RNCVHTQK and explanation accordingly."
+  "e_hi": "प्रत्येक अक्षर को 2 स्थान आगे खिसकाया जाता है (+2): S+2=U, T+2=V, A+2=C, T+2=V, I+2=K, O+2=Q, N+2=P। इसी नियम से PLATFORM: P+2=R, L+2=N, A+2=C, T+2=V, F+2=H, O+2=Q, R+2=T, M+2=O।",
+  "e_en": "Each letter is shifted forward by 2 positions (+2): S+2=U, T+2=V, A+2=C, T+2=V, I+2=K, O+2=Q, N+2=P. Applying the same rule to PLATFORM: P+2=R, L+2=N, A+2=C, T+2=V, F+2=H, O+2=Q, R+2=T, M+2=O."
  },
  {
   "id": "rp-rea-r03184",
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 1,
-  "q_hi": "एक विशेष कूट में 'SIGNAL' को 'TJHMBO' लिखा जाता है, तो उसी कूट में 'BRIDGE' को कैसे लिखा जाएगा?",
-  "q_en": "In a special code, 'SIGNAL' is written as 'TJHMBO', how will 'BRIDGE' be written in that same code?",
+  "q_hi": "एक विशेष कोड में, 'SIGNAL' को 'TJHOBM' लिखा जाता है, 'BRIDGE' को उसी कोड में कैसे लिखा जाएगा?",
+  "q_en": "In a special code, 'SIGNAL' is written as 'TJHOBM', how will 'BRIDGE' be written in that same code?",
   "o_hi": [
    "CSJEHF",
    "CSJEHD",
@@ -89727,8 +89727,8 @@
    "CTJEHF"
   ],
   "a": 0,
-  "e_hi": "इस कूट में प्रत्येक अक्षर को ठीक अगले अक्षर से बदला गया है (यानी +1 की वृद्धि): S+1=T, I+1=J, G+1=H, N+1=M, A+1=B, L+1=O। इसी नियम से BRIDGE के लिए: B+1=C, R+1=S, I+1=J, D+1=E, G+1=H, E+1=F। अतः सही उत्तर 'CSJEHF' है।",
-  "e_en": "In this code, each letter is replaced by the very next letter (+1 shift): S+1=T, I+1=J, G+1=H, N+1=M, A+1=B, L+1=O. Following the same rule for BRIDGE: B+1=C, R+1=S, I+1=J, D+1=E, G+1=H, E+1=F. Thus, the correct answer is 'CSJEHF'."
+  "e_hi": "इस कोड में, प्रत्येक अक्षर को अगले अक्षर से बदला जाता है (+1 शिफ्ट): S+1=T, I+1=J, G+1=H, N+1=O, A+1=B, L+1=M। इसी नियम से BRIDGE: B+1=C, R+1=S, I+1=J, D+1=E, G+1=H, E+1=F।",
+  "e_en": "In this code, each letter is replaced by the very next letter (+1 shift): S+1=T, I+1=J, G+1=H, N+1=O, A+1=B, L+1=M. Following the same rule for BRIDGE: B+1=C, R+1=S, I+1=J, D+1=E, G+1=H, E+1=F."
  },
  {
   "id": "rp-rea-r03185",
@@ -89758,8 +89758,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 1,
-  "q_hi": "एक निश्चित कूट भाषा में 'NUMBER' को '13-21-13-2-5-18' लिखा जाता है, तो उसी कूट भाषा में 'GRIEF' को क्या लिखा जाएगा?",
-  "q_en": "In a certain code language 'NUMBER' is coded as '13-21-13-2-5-18', how will 'GRIEF' be coded in that same code language?",
+  "q_hi": "एक निश्चित कोड भाषा में 'NUMBER' को '14-21-13-2-5-18' कोडित किया जाता है, 'GRIEF' को उस भाषा में कैसे कोडित किया जाएगा?",
+  "q_en": "In a certain code language 'NUMBER' is coded as '14-21-13-2-5-18', how will 'GRIEF' be coded in that same code language?",
   "o_hi": [
    "7-18-9-5-6",
    "7-18-9-6-5",
@@ -89804,8 +89804,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 3,
-  "q_hi": "एक विशेष कूट भाषा में 'DELHI' को 'CCKED' लिखा जाता है, तो उसी कूट भाषा में 'MUMBAI' को कैसे लिखा जाएगा?",
-  "q_en": "In a special code language 'DELHI' is written as 'CCKED', how will 'MUMBAI' be written in that same code language?",
+  "q_hi": "एक विशेष कोड भाषा में 'DELHI' को 'CDKGH' लिखा जाता है, 'MUMBAI' को उसी कोड भाषा में कैसे लिखा जाएगा?",
+  "q_en": "In a special code language 'DELHI' is written as 'CDKGH', how will 'MUMBAI' be written in that same code language?",
   "o_hi": [
    "LTLAZH",
    "LTLAZG",
@@ -89827,54 +89827,54 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "एक निश्चित कूट भाषा में, 'TRAIN' को 'WSFMR' लिखा जाता है। उसी भाषा में 'TRACK' को कैसे लिखा जाएगा?",
-  "q_en": "In a certain code language, 'TRAIN' is written as 'WSFMR'. How will 'TRACK' be written in that language?",
+  "q_hi": "एक निश्चित कोड भाषा में, 'TRAIN' को 'XVEMR' लिखा जाता है। 'TRACK' को उस भाषा में कैसे लिखा जाएगा?",
+  "q_en": "In a certain code language, 'TRAIN' is written as 'XVEMR'. How will 'TRACK' be written in that language?",
   "o_hi": [
-   "WUFHN",
-   "WUFFN",
-   "WUFGM",
-   "WVEHN"
+   "XVEGO",
+   "XVEGP",
+   "XVFGO",
+   "WVEGO"
   ],
   "o_en": [
-   "WUFHN",
-   "WUFFN",
-   "WUFGM",
-   "WVEHN"
+   "XVEGO",
+   "XVEGP",
+   "XVFGO",
+   "WVEGO"
   ],
   "a": 0,
-  "e_hi": "यहाँ प्रत्येक अक्षर में क्रमशः +3, +2, +3, +2, +3 की वृद्धि की गई है। T(+3)=W, R(+2)=T (स्पष्टीकरण सुधार: R+3=U, A+2=C, I+3=L... आइए पैटर्न जांचें: T(20)+3=23(W), R(18)+1=19(S)? नहीं, T->W (+3), R->S (+1), A->F (+5)... यह स्पष्ट नहीं है। सही पैटर्न: T+3=W, R+1=S, A+5=F, I+4=M, N+4=R. TRACK पर लागू करने पर: T+3=W, R+1=S? विकल्प मिलाएँ: WUFHN. T+3=W, R+3=U, A+5=F, C+5=H, K+3=N. अतः सही उत्तर WUFHN है।",
-  "e_en": "Analyzing 'TRAIN' to 'WSFMR': T(+3)=W, R(+3)=U, A(+5)=F, I(+5)=M, N(+4)=R. Applying a similar consistent positional shift logic for 'TRACK': T(+3)=W, R(+3)=U, A(+5)=F, C(+5)=H, K(+3)=N. Thus, 'TRACK' becomes 'WUFHN'."
+  "e_hi": "प्रत्येक अक्षर को 4 स्थान आगे खिसकाया जाता है (+4): T+4=X, R+4=V, A+4=E, I+4=M, N+4=R। इसी नियम से TRACK: T+4=X, R+4=V, A+4=E, C+4=G, K+4=O।",
+  "e_en": "Each letter is shifted forward by 4 positions (+4): T+4=X, R+4=V, A+4=E, I+4=M, N+4=R. Applying the same rule to TRACK: T+4=X, R+4=V, A+4=E, C+4=G, K+4=O."
  },
  {
   "id": "rp-rea-r03190",
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "यदि कूट भाषा में 'STATION' को 'RUZSJPM' लिखा जाता है, तो 'JOURNEY' को उसी कूट भाषा में क्या लिखा जाएगा?",
-  "q_en": "If in a code language 'STATION' is coded as 'RUZSJPM', how will 'JOURNEY' be coded in that language?",
+  "q_hi": "यदि किसी कोड भाषा में 'STATION' को 'RUZUHPM' कोडित किया जाता है, तो 'JOURNEY' को उस भाषा में कैसे कोडित किया जाएगा?",
+  "q_en": "If in a code language 'STATION' is coded as 'RUZUHPM', how will 'JOURNEY' be coded in that language?",
   "o_hi": [
-   "INQTQFX",
-   "IPOTQFX",
-   "INOSQFX",
-   "INOTQFX"
+   "IPTSMFX",
+   "IPTSMFY",
+   "IQTSMFX",
+   "IPUSMFX"
   ],
   "o_en": [
-   "INQTQFX",
-   "IPOTQFX",
-   "INOSQFX",
-   "INOTQFX"
+   "IPTSMFX",
+   "IPTSMFY",
+   "IQTSMFX",
+   "IPUSMFX"
   ],
-  "a": 3,
-  "e_hi": "दी गई कूट भाषा में प्रत्येक अक्षर में वैकल्पिक रूप से -1 और +1 किया गया है: S(-1)=R, T(+1)=U, A(-1)=Z, T(+1)=S, I(-1)=H, O(+1)=P, N(-1)=M (अतः 'RUZSJPM')। इसी प्रकार 'JOURNEY' के लिए: J(-1)=I, O(+1)=P, U(-1)=T, R(+1)=S, N(-1)=M, E(+1)=F, Y(-1)=X। परिणाम 'IPOTQFX' या 'INOTQFX'? चलिए ठीक से घटाएं: J-1=I, O+1=P, U-1=T, R+1=S, N-1=M, E+1=F, Y-1=X. यानी 'IPTQFX'? विकल्प 3 देखें: INOTQFX. आइए फिर से जांचें: J(-1)=I, O(-1)=N? यदि सभी में -1 और +1 का क्रम है: S(-1)=R, T(+1)=U, A(-1)=Z, T(+1)=S, I(-1)=H(यहाँ H है, पर कूट में J है यानी I+1=J, तो I(-1)=H, यहाँ JPM दिया है: I(-1)=H, O(+1)=P, N(-1)=M). मूलतः पैटर्न -1, +1, -1, +1, -1, +1, -1 है। JOURNEY पर: J-1=I, O+1=P, U-1=T, R+1=S, N-1=M, E+1=F, Y-1=X. उत्तर 'IPTSMFX'? विकल्प मिलाएँ: सही उत्तर INOTQFX है जहाँ O-1=N है।",
-  "e_en": "The pattern involves alternating subtraction and addition: S(-1)=R, T(+1)=U, A(-1)=Z, T(+1)=S, I(-1)=H, O(+1)=P, N(-1)=M. Applying this exact sequence (-1, +1, -1, +1, -1, +1, -1) to 'JOURNEY': J(-1)=I, O(+1)=P, U(-1)=T, R(+1)=S, N(-1)=M, E(+1)=F, Y(-1)=X. Thus, the coded word is 'INOTQFX'."
+  "a": 0,
+  "e_hi": "क्रम बारी-बारी से -1, +1 है: S-1=R, T+1=U, A-1=Z, T+1=U, I-1=H, O+1=P, N-1=M। इसी क्रम से JOURNEY: J-1=I, O+1=P, U-1=T, R+1=S, N-1=M, E+1=F, Y-1=X।",
+  "e_en": "The pattern alternates -1, +1: S-1=R, T+1=U, A-1=Z, T+1=U, I-1=H, O+1=P, N-1=M. Applying the same sequence to JOURNEY: J-1=I, O+1=P, U-1=T, R+1=S, N-1=M, E+1=F, Y-1=X."
  },
  {
   "id": "rp-rea-r03191",
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 1,
-  "q_hi": "एक निश्चित कूट भाषा में 'DELHI' को '73541' और 'CALCUTTA' को '82586928' लिखा जाता है, तो 'CALICUT' को उसी भाषा में कैसे लिखा जाएगा?",
-  "q_en": "In a certain code language, 'DELHI' is written as '73541' and 'CALCUTTA' as '82586928'. How will 'CALICUT' be written in that language?",
+  "q_hi": "एक निश्चित कोड भाषा में, 'DELHI' को '73541' और 'CALCUTTA' को '82586922' लिखा जाता है। 'CALICUT' को उस भाषा में कैसे लिखा जाएगा?",
+  "q_en": "In a certain code language, 'DELHI' is written as '73541' and 'CALCUTTA' as '82586922'. How will 'CALICUT' be written in that language?",
   "o_hi": [
    "8254892",
    "8251892",
@@ -89888,8 +89888,8 @@
    "8241892"
   ],
   "a": 1,
-  "e_hi": "यह प्रत्यक्ष अक्षर-से-अंक (Direct Letter-to-Number) कूट है। C=8, A=2, L=5, I=1, C=8, U=9, T=2। 'CALICUT' के लिए इन अंकों को प्रतिस्थापित करने पर: C(8) A(2) L(5) I(1) C(8) U(9) T(2) प्राप्त होता है, जो '8251892' है।",
-  "e_en": "This is a direct letter-to-number coding based on the common letters in 'DELHI' and 'CALCUTTA'. C=8, A=2, L=5, I=1, C=8, U=9, T=2. Substituting these into 'CALICUT' gives 8-2-5-1-8-9-2, which is '8251892'."
+  "e_hi": "अक्षर-संख्या मानचित्रण DELHI और CALCUTTA के साझा अक्षरों से: D=7, E=3, L=5, H=4, I=1, C=8, A=2, U=9, T=2। CALICUT में बदलने पर: C=8, A=2, L=5, I=1, C=8, U=9, T=2, यानी '8251892'।",
+  "e_en": "Mapping letters to digits from the shared letters of DELHI and CALCUTTA: D=7, E=3, L=5, H=4, I=1, C=8, A=2, U=9, T=2. Substituting into CALICUT: C=8, A=2, L=5, I=1, C=8, U=9, T=2, giving '8251892'."
  },
  {
   "id": "rp-rea-r03192",
@@ -89911,8 +89911,8 @@
    "KYQQCP"
   ],
   "a": 0,
-  "e_hi": "यहाँ शब्दों को दो बराबर भागों में बांटा गया है या -2 का अचल बदलाव है। PENCIL (6 अक्षर) को दो भागों में तोड़ें: PEN और CIL। PEN में प्रत्येक अक्षर से -2 करने पर: P(-2)=N, E(-2)=C, N(-2)=L (नहीं, N(-2)=K). आइए दूसरा भाग देखें: C(-2)=A, I(-2)=G, L(-2)=J. पूरा कूट NEBCGJ है, यानी P(-3)=M, E(-2)=C... आइए सरल स्थिति देखें: प्रत्येक अक्षर में -3 की कमी की गई है। P-3=M? नहीं, P-3=M, E-3=B, N-3=K... यहाँ 'NEBCGJ' दिया है। P-3=M? नहीं, P(16)-3=13(M). यहाँ कूट का पहला अक्षर N है (P-2=N)। E-2=C? यहाँ E का कूट E है या C? 'NEBCGJ' में दूसरा अक्षर E है। अतः P(-2)=N, E(-2)=C (नहीं, E-2=C नहीं बल्कि E-2=C? E=5, C=3, तो -2). N(-2)=L (यहाँ B है). स्पष्ट नियम: शब्द को आधा (3-3) बांटकर विपरीत क्रम में -2 करना या सीधा -2 करना। M-2=K, A-2=Y, T-2=R, T-2=R, E-2=C, R-2=P. अतः 'KYRRCP' बनता है।",
-  "e_en": "Each letter in the word is shifted backward by 2 positions (-2). P(-2)=N, E(-2)=C, N(-2)=L, C(-2)=A, I(-2)=G, L(-2)=J (Wait, checking exact indices: P(16)-2=14(N), E(5)-2=3(C), etc.). Applying the same -2 shift to 'MATTER': M(13)-2=K(11), A(1)-2=Y(25), T(20)-2=R(18), T(20)-2=R(18), E(5)-2=C(3), R(18)-2=P(16). Thus, we get 'KYRRCP'."
+  "e_hi": "प्रत्येक अक्षर को 2 स्थान पीछे खिसकाया जाता है (-2): P-2=N, E-2=C, N-2=L, C-2=A, I-2=G, L-2=J। इसी नियम से MATTER: M-2=K, A-2=Y (वर्णमाला का चक्र), T-2=R, T-2=R, E-2=C, R-2=P।",
+  "e_en": "Each letter in the word is shifted backward by 2 positions (-2): P-2=N, E-2=C, N-2=L, C-2=A, I-2=G, L-2=J. Applying the same rule to MATTER: M-2=K, A-2=Y (wrapping around the alphabet), T-2=R, T-2=R, E-2=C, R-2=P."
  },
  {
   "id": "rp-rea-r03193",
@@ -89933,7 +89933,7 @@
    "QLBOTU",
    "PMBOTU"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "इस कूट भाषा में प्रत्येक अक्षर को ठीक अगले अक्षर से बदल दिया गया है, यानी सभी अक्षरों में +1 जोड़ा गया है। G(+1)=H, A(+1)=B, R(+1)=S, D(+1)=E, E(+1)=F, N(+1)=O। इसी नियम को 'PLANTS' पर लागू करने पर: P(+1)=Q, L(+1)=M, A(+1)=B, N(+1)=O, T(+1)=U, S(+1)=T प्राप्त होता है। अतः सही कूट 'QMBOTU' है।",
   "e_en": "In this code language, each letter is shifted forward by 1 position (+1). G(+1)=H, A(+1)=B, R(+1)=S, D(+1)=E, E(+1)=F, N(+1)=O. Applying this same +1 rule to 'PLANTS': P(+1)=Q, L(+1)=M, A(+1)=B, N(+1)=O, T(+1)=U, S(+1)=T. Thus, the coded word is 'QMBOTU'."
  },
@@ -89965,23 +89965,23 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 3,
-  "q_hi": "एक निश्चित कूट भाषा में, 'MOBILE' को 'LBNHKD' लिखा जाता है। उसी कूट भाषा में 'SPEAKER' को किस प्रकार लिखा जाएगा?",
-  "q_en": "In a certain code language, 'MOBILE' is written as 'LBNHKD'. How will 'SPEAKER' be written in that language?",
+  "q_hi": "एक निश्चित कोड भाषा में, 'MOBILE' को 'LNAHKD' लिखा जाता है। 'SPEAKER' को उस भाषा में कैसे लिखा जाएगा?",
+  "q_en": "In a certain code language, 'MOBILE' is written as 'LNAHKD'. How will 'SPEAKER' be written in that language?",
   "o_hi": [
-   "ROZBJDP",
-   "TOZBJDP",
-   "ROZBJDO",
-   "SOZBJDP"
+   "RODZJDQ",
+   "RODZJDP",
+   "SODZJDQ",
+   "RODYJDQ"
   ],
   "o_en": [
-   "ROZBJDP",
-   "TOZBJDP",
-   "ROZBJDO",
-   "SOZBJDP"
+   "RODZJDQ",
+   "RODZJDP",
+   "SODZJDQ",
+   "RODYJDQ"
   ],
   "a": 0,
-  "e_hi": "यहाँ प्रत्येक अक्षर में क्रमशः -1, +1, -1, +1, -1, +1 का पैटर्न है या सभी में -1, +2 जैसी क्रमिक कमी है। M(-1)=L, O(-1)=N (पर यहाँ B है, अतः ओपोजिट या स्थिति आधारित बदलाव है)। आइए जांचें: M-1=L, O+1=P (पर यहाँ B है)... सही पैटर्न विषम स्थानों पर -1 और सम स्थानों पर -1 है: M-1=L, O-2=M(नहीं)... आइए देखें: M(13)->L(12) [-1], O(15)->B? यदि यह विपरीत है या अन्य बदलाव: M का L (-1), O का B (-1 नहीं, O का विपरीत L, B का Y). सही संबंध: M(-1)=L, O(-1)=N(नहीं), स्पष्टतः M(13)-1=12(L), O(15)-13... नहीं, M-1=L, O-13=B... यह पोजीशन शिफ़्ट -1, -1, -1, -1, -1, -1 है? M-1=L, O-13=B? नहीं! M(13) और L(12) [-1], O(15) और B(2)... ध्यान दें: M-1=L, O-13? नहीं, M-1=L, O-13? आइए सरल अंतर लें: M-1=L, O-13=B? नहीं, शब्द के अक्षरों को आधा बांटें या विपरीत करें। 'SPEAKER' पर पैटर्न (-1, -1, -1...) लागू करने पर S-1=R, P-1=O, E-1=D(यहाँ विकल्प में R... है): S-1=R, P-1=O, E-1=D... विकल्प 1 में 'ROZBJDP' है, जिसका अर्थ है S-1=R, P-1=O, E-1=D (नहीं, Z है). अतः सही पैटर्न: S-1=R, P-1=O, E-2=C (यहाँ Z है). निश्चित रूप से यह -1, -2, -3 या अन्य घटता क्रम है: S-1=R, P-2=N (यहाँ O है). सही उत्तर ROZBJDP है।",
-  "e_en": "Examining 'MOBILE' to 'LBNHKD': M(-1)=L, O(-13)=B? Actually, observing the consistent positional backward shift of -1, -2, -3, etc. or specific shifts: S-1=R, P-1=O? Let's check option 'ROZBJDP': S(-1)=R, P(-1)=O? No, P(-1)=O, but the second letter is O. Wait, S(-1)=R, P(-2)=N (here O). Let's accept the standard RRB pattern yielding 'ROZBJDP'."
+  "e_hi": "प्रत्येक अक्षर को 1 स्थान पीछे खिसकाया जाता है (-1): M-1=L, O-1=N, B-1=A, I-1=H, L-1=K, E-1=D। इसी नियम से SPEAKER: S-1=R, P-1=O, E-1=D, A-1=Z, K-1=J, E-1=D, R-1=Q।",
+  "e_en": "Each letter is shifted backward by 1 position (-1): M-1=L, O-1=N, B-1=A, I-1=H, L-1=K, E-1=D. Applying the same rule to SPEAKER: S-1=R, P-1=O, E-1=D, A-1=Z, K-1=J, E-1=D, R-1=Q."
  },
  {
   "id": "rp-rea-r03196",
@@ -90060,20 +90060,20 @@
   "q_hi": "एक निश्चित कूट भाषा में, यदि 'ROURKELA' को 'TQWTMNGC' लिखा जाता है, तो उसी भाषा में 'PATNA' को क्या लिखा जाएगा?",
   "q_en": "In a certain code language, if 'ROURKELA' is coded as 'TQWTMNGC', how will 'PATNA' be coded in that language?",
   "o_hi": [
-   "RCVPF",
+   "RCVPC",
    "RDVQF",
    "QCVPE",
    "SCWQF"
   ],
   "o_en": [
-   "RCVPF",
+   "RCVPC",
    "RDVQF",
    "QCVPE",
    "SCWQF"
   ],
   "a": 0,
-  "e_hi": "प्रत्येक अक्षर में उसके वर्णमाला क्रम के आधार पर +2, +3, +4... की क्रमिक वृद्धि की जाती है। R+2=T, O+3=Q, U+4=W, R+5=T, K+6=M, E+7=N, L+8=G, A+9=C। इसी प्रकार PATNA के लिए: P+2=R, A+3=D, T+4=X (क्षमा करें, T+4=X नहीं बल्कि T(20)+4=24(X) होता है, आइए विकल्पों से मिलान करें: P+2=R, A+3=D, T+4=X, N+5=S, A+6=G - विकल्प RDVQF सही है)।",
-  "e_en": "Each letter is shifted forward by an increasing sequence starting from +2: R(+2)=T, O(+3)=Q, U(+4)=W, R(+5)=T, K(+6)=M, E(+7)=N, L(+8)=G, A(+9)=C. Applying the same rule +2, +3, +4, +5, +6 to PATNA: P+2=R, A+3=D, T+4=X (Wait, T(20)+4=X. Let's re-verify: P(16)+2=18(R), A(1)+3=4(D), T(20)+4=24(X)? Wait, let's check options: RCVPF -> P+2=R, A+2=C, T+2=V, N+2=P, A+2=F. Let's check rule: ROURKELA to TQWTMNGC. R(18)->T(20)=+2, O(15)->Q(17)=+2, U(21)->W(23)=+2. All letters are shifted by +2. Thus PATNA -> P+2=R, A+2=C, T+2=V, N+2=P, A+2=F. Hence RCVPF is correct."
+  "e_hi": "प्रत्येक अक्षर को 2 स्थान आगे खिसकाया जाता है (+2): R+2=T, O+2=Q, U+2=W, R+2=T, K+2=M, E+2=G, L+2=N, A+2=C। इसी नियम से PATNA: P+2=R, A+2=C, T+2=V, N+2=P, A+2=C।",
+  "e_en": "Each letter is shifted forward by 2 positions (+2): R+2=T, O+2=Q, U+2=W, R+2=T, K+2=M, E+2=G, L+2=N, A+2=C. Applying the same rule to PATNA: P+2=R, A+2=C, T+2=V, N+2=P, A+2=C."
  },
  {
   "id": "rp-rea-r03200",
@@ -90117,7 +90117,7 @@
    "OGVTR",
    "OHVUR"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "प्रत्येक अक्षर में +3 जोड़ा गया है: T+3=W, R+3=U, A+3=D, I+3=L, N+3=Q। इसी नियम को METRO पर लागू करने पर: M+3=P, E+3=H, T+3=W, R+3=U, O+3=R, जिससे 'PHWUR' प्राप्त होता है।",
   "e_en": "Each letter is shifted forward by 3 positions: T+3=W, R+3=U, A+3=D, I+3=L, N+3=Q. Applying the same +3 shift to METRO: M+3=P, E+3=H, T+3=W, R+3=U, O+3=R, yielding 'PHWUR'."
  },
@@ -90126,8 +90126,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "एक निश्चित कूट भाषा में 'GARDEN' को 'IDTFGP' लिखा जाता है, तो उसी भाषा में 'FLOWER' को किस प्रकार लिखा जाएगा?",
-  "q_en": "In a certain code language, 'GARDEN' is written as 'IDTFGP', how will 'FLOWER' be written in that code language?",
+  "q_hi": "एक निश्चित कोड भाषा में, 'GARDEN' को 'ICTFGP' लिखा जाता है, 'FLOWER' को उस कोड भाषा में कैसे लिखा जाएगा?",
+  "q_en": "In a certain code language, 'GARDEN' is written as 'ICTFGP', how will 'FLOWER' be written in that code language?",
   "o_hi": [
    "HNQYGT",
    "HMPXFS",
@@ -90141,31 +90141,31 @@
    "GMQWFT"
   ],
   "a": 0,
-  "e_hi": "यहाँ प्रत्येक अक्षर में लगातार दो-दो स्थानों की वृद्धि की गई है: G+2=I, A+2=C (तर्क सुधार: A+3=D), G(7)+2=I(9), A(1)+3=D(4), R(18)+2=T(20), D(4)+3=G(7), E(5)+2=G(7), N(14)+3=Q(17). यानी नियम +2, +3, +2, +3, +2, +3 है। FLOWER पर लागू करने पर: F+2=H, L+3=O, O+2=Q, W+3=Z, E+2=G, R+3=U; अतः सही उत्तर HNQYGU होगा।",
-  "e_en": "The pattern alternates with +2 and +3 shifts: G+2=I, A+3=D, R+2=T, D+3=G, E+2=G, N+3=Q. Applying the same alternate +2, +3 pattern to FLOWER: F+2=H, L+3=O, O+2=Q, W+3=Z, E+2=G, R+3=U, yielding 'HNQYGU'."
+  "e_hi": "प्रत्येक अक्षर को 2 स्थान आगे खिसकाया जाता है (+2): G+2=I, A+2=C, R+2=T, D+2=F, E+2=G, N+2=P। इसी नियम से FLOWER: F+2=H, L+2=N, O+2=Q, W+2=Y, E+2=G, R+2=T।",
+  "e_en": "Each letter is shifted forward by 2 positions (+2): G+2=I, A+2=C, R+2=T, D+2=F, E+2=G, N+2=P. Applying the same rule to FLOWER: F+2=H, L+2=N, O+2=Q, W+2=Y, E+2=G, R+2=T."
  },
  {
   "id": "rp-rea-r03203",
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 3,
-  "q_hi": "यदि किसी कूट भाषा में 'PUNJAB' का कोड 'RXPMYD' है, तो उसी भाषा में 'KERALA' को कैसे कूटबद्ध किया जाएगा?",
-  "q_en": "If in a code language 'PUNJAB' is coded as 'RXPMYD', how will 'KERALA' be coded in that language?",
+  "q_hi": "यदि किसी कोड भाषा में 'PUNJAB' को 'RWPLCD' कोडित किया जाता है, तो 'KERALA' को उस भाषा में कैसे कोडित किया जाएगा?",
+  "q_en": "If in a code language 'PUNJAB' is coded as 'RWPLCD', how will 'KERALA' be coded in that language?",
   "o_hi": [
-   "MGTPNC",
-   "MGTQNC",
-   "MFTPNC",
-   "MHUQND"
+   "MGTCNC",
+   "MGTCNB",
+   "MFTCNC",
+   "NGTCNC"
   ],
   "o_en": [
-   "MGTPNC",
-   "MGTQNC",
-   "MFTPNC",
-   "MHUQND"
+   "MGTCNC",
+   "MGTCNB",
+   "MFTCNC",
+   "NGTCNC"
   ],
   "a": 0,
-  "e_hi": "अक्षरों के युग्मों या क्रमिक बदलाव को देखें: P+2=R, U+3=X, N-1=M, J+3=M, A+2=Y, B+2=D। बेहतर नियम: P(16)->R(18) [+2], U(21)->X(24) [+3], N(14)->P(16) [+2], J(10)->M(13) [+3], A(1)->Y(25) [-2]? आइए आसान पैटर्न देखें: विषम स्थानों पर +2 और सम स्थानों पर +3 है। KERALA पर: K+2=M, E+3=H (तर्क: E+2=G), R+2=T, A+3=D (तर्क: L+3=P), L+2=N, A+3=C; अतः MGTPNC सही है।",
-  "e_en": "Analyzing positional shifts: P+2=R, U+3=X, N+2=P, J+3=M, A+2=C (Wait, Y is -2 or +2 wrap around), B+2=D. Following the +2, +3 alternating shift pattern for KERALA: K+2=M, E+2=G (Wait, alternating +2, +3 gives K+2=M, E+3=H, R+2=T, A+3=D, L+2=N, A+3=C -> MGTDNC not there). Let's use uniform +2: K+2=M, E+2=G, R+2=T, A+2=C, L+2=N, A+2=C -> MGTCNC. Let's check options: MGTPNC. Let's do K+2=M, E+2=G, R+2=T, L+2=N, A+2=C... Wait, KERALA length is 6. Let's re-verify: P(16)->R(18) [+2], U(21)->X(24) [+3], N(14)->P(16) [+2], J(10)->M(13) [+3], A(1)->C(3) [+2], B(2)->D(4) [+2]. So the pattern is +2, +3, +2, +3, +2, +2. For KERALA: K+2=M, E+3=H, R+2=T, A+3=D, L+2=N, A+2=C -> MHTDNC (not in options). Let's check MGTPNC: K+2=M, E+2=G, R+2=T, A+1=B? No, MGTCNC. Let's choose MGTPNC as the standard designed option."
+  "e_hi": "प्रत्येक अक्षर को 2 स्थान आगे खिसकाया जाता है (+2): P+2=R, U+2=W, N+2=P, J+2=L, A+2=C, B+2=D। इसी नियम से KERALA: K+2=M, E+2=G, R+2=T, A+2=C, L+2=N, A+2=C।",
+  "e_en": "Each letter is shifted forward by 2 positions (+2): P+2=R, U+2=W, N+2=P, J+2=L, A+2=C, B+2=D. Applying the same rule to KERALA: K+2=M, E+2=G, R+2=T, A+2=C, L+2=N, A+2=C."
  },
  {
   "id": "rp-rea-r03204",
@@ -90186,7 +90186,7 @@
    "CCJFH",
    "CDKFH"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "प्रत्येक अक्षर को एक स्थान पीछे (-1) किया गया है: M-1=L, U-1=T, M-1=L, B-1=A, A-1=Z, I-1=H। इसी प्रकार DELHI के प्रत्येक अक्षर में से 1 घटाने पर: D-1=C, E-1=D, L-1=K, H-1=G, I-1=H अर्थात 'CDKGH' प्राप्त होता है।",
   "e_en": "Each letter is shifted backward by 1 position (-1): M-1=L, U-1=T, M-1=L, B-1=A, A-1=Z, I-1=H. Applying the same -1 rule to DELHI: D-1=C, E-1=D, L-1=K, H-1=G, I-1=H, resulting in 'CDKGH'."
  },
@@ -90268,19 +90268,19 @@
   "q_en": "In a certain code language, 'GIRL' is coded as 'OJZT', how will 'BOY' be coded in that language?",
   "o_hi": [
    "JWP",
-   "JWQ",
+   "JWG",
    "IXP",
    "HWQ"
   ],
   "o_en": [
    "JWP",
-   "JWQ",
+   "JWG",
    "IXP",
    "HWQ"
   ],
-  "a": 0,
-  "e_hi": "प्रत्येक अक्षर में +8 जोड़ा गया है: G(7)+8=O(15), I(9)+8=Q(17)? आइए देखें O(15), J(10), Z(26), T(20). G(7)+8=15(O), I(9)+1=10(J)? आइए पैटर्न जांचें: G+8=O, I+1=J, R+8=Z, L+8=T (यहाँ बीच में +1 का अपवाद है, या सभी में +8 है: G+8=O, I+8=Q? विकल्प JWQ के अनुसार: B+8=J, O+8=W, Y+8=G? Y(25)+8 = 33-26 = 7(G) यानी JWG होना चाहिए, लेकिन विकल्प में JWQ है। आइए दूसरा नियम देखें: विपरीत अक्षर या अन्य। सही मानक कूट के अनुसार BOY का कूट JWQ बनता है)।",
-  "e_en": "Each letter is shifted forward by 8 positions (with standard wrap-around): B+8=J, O+8=W, Y+8=Q (or standard positional offset), yielding 'JWQ'."
+  "a": 1,
+  "e_hi": "प्रत्येक अक्षर को 8 स्थान आगे खिसकाया जाता है (+8, वर्णमाला चक्र सहित): G+8=O, I+8=Q, R+8=Z, L+8=T। इसी नियम से BOY: B+8=J, O+8=W, Y+8=G (25+8=33, चक्र: 33-26=7=G)।",
+  "e_en": "Each letter is shifted forward by 8 positions (+8, wrapping around the alphabet): G+8=O, I+8=Q, R+8=Z, L+8=T. Applying the same rule to BOY: B+8=J, O+8=W, Y+8=G (25+8=33, wrapping: 33-26=7=G)."
  },
  {
   "id": "rp-rea-r03209",
@@ -90290,20 +90290,20 @@
   "q_hi": "एक निश्चित कूट भाषा में, यदि 'TRAIN' को 'WUDLQ' लिखा जाता है, तो उसी भाषा में 'STATION' को किस प्रकार लिखा जाएगा?",
   "q_en": "In a certain code language, if 'TRAIN' is coded as 'WUDLQ', how will 'STATION' be coded in that language?",
   "o_hi": [
-   "VWDWRLQ",
+   "VWDWLRQ",
    "VWEXRLQ",
    "VWDXQLP",
    "VWDXRLQ"
   ],
   "o_en": [
-   "VWDWRLQ",
+   "VWDWLRQ",
    "VWEXRLQ",
    "VWDXQLP",
    "VWDXRLQ"
   ],
-  "a": 3,
-  "e_hi": "स्पष्टीकरण: इस कूट में प्रत्येक अक्षर में +3 की निश्चित वृद्धि की गई है।\nT (+3) = W\nR (+3) = U\nA (+3) = D\nI (+3) = L\nN (+3) = Q\nइसी प्रकार 'STATION' के लिए:\nS + 3 = V\nT + 3 = W\nA + 3 = D\nT + 3 = W\nI + 3 = L\nO + 3 = R\nN + 3 = Q\nअतः सही कूट 'VWDXRLQ' है।",
-  "e_en": "Explanation: Each letter in the word is shifted forward by 3 positions in the alphabet.\nT (+3) = W, R (+3) = U, A (+3) = D, I (+3) = L, N (+3) = Q.\nApplying the same +3 rule to 'STATION':\nS+3=V, T+3=W, A+3=D, T+3=W, I+3=L, O+3=R, N+3=Q.\nThus, the coded word is 'VWDXRLQ'."
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर को 3 स्थान आगे खिसकाया जाता है: T+3=W, R+3=U, A+3=D, I+3=L, N+3=Q। इसी नियम से STATION: S+3=V, T+3=W, A+3=D, T+3=W, I+3=L, O+3=R, N+3=Q, यानी 'VWDWLRQ'।",
+  "e_en": "Each letter is shifted forward by 3 positions: T+3=W, R+3=U, A+3=D, I+3=L, N+3=Q. Applying the same rule to STATION: S+3=V, T+3=W, A+3=D, T+3=W, I+3=L, O+3=R, N+3=Q, giving 'VWDWLRQ'."
  },
  {
   "id": "rp-rea-r03210",
