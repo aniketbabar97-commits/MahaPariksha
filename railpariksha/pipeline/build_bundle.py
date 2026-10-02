@@ -56,6 +56,7 @@ def main():
         "motivation": load_dir("motivation"),
         "notes": load_dir("notes"),
         "exam_strategy": exam_strategy,
+        "cheat_sheets": load_dir("cheat_sheets"),
     }
     if gk_booster is not None:
         bundle["gk_booster"] = gk_booster
@@ -64,6 +65,7 @@ def main():
     out.write_text(json.dumps(bundle, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"wrote {out} v{bundle['version']}: {len(questions)} questions, "
           f"{len(bundle['flashcards'])} flashcards, {len(bundle['motivation'])} motivation, "
+          f"{len(bundle['cheat_sheets'])} cheat sheets, "
           f"{out.stat().st_size // 1024} KB")
 
 

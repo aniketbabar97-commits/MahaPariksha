@@ -199,6 +199,28 @@ class GkBoosterCategory {
       );
 }
 
+/// One condensed cram category (e.g. "Percentage", "Zones & HQs") within a
+/// subject's cheat sheet -- the exam-day "5 minutes before the exam" version
+/// of a topic, distinct from [TopicNote] which is the explanatory one.
+class CheatSheet {
+  final String subject;
+  final String topic;
+  final Bi category;
+  final List<String> itemsHi;
+  final List<String> itemsEn;
+  const CheatSheet(this.subject, this.topic, this.category, this.itemsHi, this.itemsEn);
+
+  List<String> items(String lang) => lang == 'en' ? itemsEn : itemsHi;
+
+  factory CheatSheet.fromJson(Map<String, dynamic> j) => CheatSheet(
+        j['s'],
+        j['t'],
+        Bi(j['cat_hi'], j['cat_en']),
+        List<String>.from(j['items_hi']),
+        List<String>.from(j['items_en']),
+      );
+}
+
 class MapNode {
   final Bi label;
   final List<MapNode> children;

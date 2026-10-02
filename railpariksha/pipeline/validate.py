@@ -91,6 +91,21 @@ def check_map(node, where, errs, depth=0):
         check_map(c, where, errs, depth + 1)
 
 
+def check_cheat_sheet(c, where, errs):
+    need = {"id", "s", "t", "cat_hi", "cat_en", "items_hi", "items_en"}
+    if not need <= set(c):
+        errs.append(f"{where}: missing {sorted(need - set(c))}")
+        return
+    if c["s"] not in TOPICS or c["t"] not in TOPICS[c["s"]]:
+        errs.append(f"{where}: bad subject/topic {c['s']}/{c['t']}")
+    if not (nonempty(c["cat_hi"]) and nonempty(c["cat_en"])):
+        errs.append(f"{where}: empty category title")
+    ih, ie = c["items_hi"], c["items_en"]
+    if not (isinstance(ih, list) and isinstance(ie, list) and len(ih) == len(ie)
+            and 1 <= len(ih) <= 30 and all(nonempty(x) for x in ih) and all(nonempty(x) for x in ie)):
+        errs.append(f"{where}: items_hi/items_en must be parallel lists of 1-30 non-empty strings")
+
+
 def check_note(n, where, errs):
     need = {"id", "s", "t", "summary_hi", "summary_en", "facts_hi", "facts_en", "map"}
     if not need <= set(n):
@@ -179,7 +194,7 @@ def validate_file(path, seen_ids, errs):
         return 0
     kind = path.parent.name
     checker = {"bank": check_question, "flashcards": check_flashcard, "motivation": check_motivation,
-               "notes": check_note}.get(kind)
+               "notes": check_note, "cheat_sheets": check_cheat_sheet}.get(kind)
     if checker is None:
         return 0
     for i, item in enumerate(data):
@@ -239,7 +254,7 @@ def check_gk_booster(path, errs):
 def main(argv):
     explicit = [Path(a).resolve() for a in argv]
     files = explicit or sorted(
-        p for d in ("bank", "flashcards", "motivation", "notes") for p in (CONTENT / d).glob("*.json")
+        p for d in ("bank", "flashcards", "motivation", "notes", "cheat_sheets") for p in (CONTENT / d).glob("*.json")
     )
     errs, seen, total = [], set(), 0
     for f in files:

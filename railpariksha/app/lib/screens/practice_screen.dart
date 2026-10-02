@@ -7,6 +7,7 @@ import '../core/transitions.dart';
 import '../data/models.dart';
 import '../widgets/common.dart';
 import '../widgets/exam_picker.dart';
+import 'cheat_sheet_screen.dart';
 import 'quiz_screen.dart';
 import 'topic_screen.dart';
 
@@ -210,6 +211,17 @@ class SubjectScreen extends StatelessWidget {
               startQuiz(context, s.builder.practice(subject: subject.id));
             },
           ),
+          if (s.repo.hasCheatSheets(subject.id)) ...[
+            const SizedBox(height: Spacing.sm),
+            OutlinedButton.icon(
+              icon: const Icon(Icons.bolt, color: BrandColors.saffron),
+              label: Text(context.tr('चीट शीट देखें ⚡', 'View cheat sheet ⚡')),
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                push(context, (_) => CheatSheetScreen(subject: subject));
+              },
+            ),
+          ],
           SectionTitle(context.tr('टॉपिक 🧩', 'Topics 🧩')),
           for (final t in subject.topics) ...[
             Builder(builder: (context) {

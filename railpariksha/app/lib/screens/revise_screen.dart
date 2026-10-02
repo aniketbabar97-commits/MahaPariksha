@@ -5,6 +5,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
 import '../widgets/common.dart';
+import 'cheat_sheet_screen.dart';
 import 'flashcard_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
@@ -117,6 +118,43 @@ class ReviseScreen extends StatelessWidget {
                             padding: const EdgeInsets.all(12),
                             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                               Icon(subjectIcon(sub.icon), color: BrandColors.saffron, size: 30),
+                              const SizedBox(height: 6),
+                              Text(sub.name.of(lang),
+                                  textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
+                            ]),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
+        if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasCheatSheets(sub.id))) ...[
+          SectionTitle(context.tr('चीट शीट ⚡', 'Cheat sheets ⚡')),
+          SizedBox(
+            height: 104,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                for (final sub in s.repo.subjectsFor(exam).where((sub) => s.repo.hasCheatSheets(sub.id)))
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: SizedBox(
+                      width: 120,
+                      child: Card(
+                        clipBehavior: Clip.antiAlias,
+                        child: InkWell(
+                          onTap: () {
+                            HapticFeedback.selectionClick();
+                            push(context, (_) => CheatSheetScreen(subject: sub));
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(12),
+                            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                              const Icon(Icons.bolt, color: BrandColors.saffron, size: 30),
                               const SizedBox(height: 6),
                               Text(sub.name.of(lang),
                                   textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,

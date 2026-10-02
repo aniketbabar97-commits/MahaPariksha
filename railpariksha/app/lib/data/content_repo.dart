@@ -27,6 +27,14 @@ class ContentRepo {
 
   ExamStrategy? strategy(String examId) => _strategies[examId];
 
+  /// A subject's cram cheat sheets, in file order (one entry per category,
+  /// e.g. Percentage, Mensuration). Empty for a subject with none yet.
+  List<CheatSheet> cheatSheetsFor(String subject) =>
+      _cheatSheetsBySubject[subject] ?? const [];
+  bool hasCheatSheets(String subject) => (_cheatSheetsBySubject[subject] ?? const []).isNotEmpty;
+  final List<CheatSheet> _cheatSheets = [];
+  final Map<String, List<CheatSheet>> _cheatSheetsBySubject = {};
+
   /// All topic notes, unordered. Notes aren't indexed by exam (a note is keyed by
   /// subject/topic, not exam), so callers that need exam-scoped notes filter this
   /// by subject id themselves (e.g. the search screen).
@@ -162,6 +170,13 @@ class ContentRepo {
         : ((boosterRaw['categories'] as List?) ?? const [])
             .map((j) => GkBoosterCategory.fromJson(j))
             .toList();
+    _cheatSheets
+      ..clear()
+      ..addAll(((data['cheat_sheets'] as List?) ?? const []).map((j) => CheatSheet.fromJson(j)));
+    _cheatSheetsBySubject.clear();
+    for (final c in _cheatSheets) {
+      (_cheatSheetsBySubject[c.subject] ??= []).add(c);
+    }
     _subjectById
       ..clear()
       ..addEntries(subjects.map((s) => MapEntry(s.id, s)));

@@ -1,0 +1,77 @@
+[
+ {
+  "id": "cs-reasoning-coding_decoding",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "cat_hi": "कोडिंग-डिकोडिंग शॉर्टकट",
+  "cat_en": "Coding-Decoding Shortcuts",
+  "items_hi": [
+   "अक्षर-से-संख्या: A=1,B=2,...Z=26; विपरीत क्रम में: Z=1,Y=2,...A=26",
+   "EJOTY ट्रिक: E=5, J=10, O=15, T=20, Y=25 — जल्दी गिनने के लिए एंकर बिंदु",
+   "विपरीत अक्षर जोड़े (योग=27): A-Z, B-Y, C-X ... स्थिति n के लिए विपरीत = 27−n",
+   "+2/−2 जैसी कोडिंग में शब्द के हर अक्षर को समान संख्या से शिफ्ट किया जाता है",
+   "शब्द-कोडिंग में जाँचें कि शिफ्ट और शब्द का उल्टा क्रम दोनों लागू हैं या नहीं",
+   "संख्या-कोडिंग में अंक व उसके कोड के बीच पैटर्न खोजें (जैसे ×2, +1, अंक उल्टे) और सभी उदाहरणों पर जाँचें",
+   "स्वर/व्यंजन ट्रिक: देखें कि कोडिंग केवल व्यंजनों को शिफ्ट/बदल रही है या स्वरों को भी"
+  ],
+  "items_en": [
+   "Letter-to-number: A=1,B=2,...Z=26; reverse order: Z=1,Y=2,...A=26",
+   "EJOTY trick: E=5, J=10, O=15, T=20, Y=25 — anchor points for quick counting",
+   "Opposite letter pairs (sum=27): A-Z, B-Y, C-X ... for position n, opposite = 27−n",
+   "In +2/−2 style coding, every letter of the word shifts by the same fixed number",
+   "For word coding, check whether BOTH a letter-shift AND word reversal are applied",
+   "In number coding, find the digit-to-code pattern (×2, +1, digits reversed...) and verify it on all given examples",
+   "Vowel/consonant trick: check if only consonants are shifted/changed, or vowels too"
+  ]
+ },
+ {
+  "id": "cs-reasoning-series",
+  "s": "reasoning",
+  "t": "series",
+  "cat_hi": "श्रृंखला हल करने की तरकीबें",
+  "cat_en": "Series-Solving Tricks",
+  "items_hi": [
+   "पहले क्रमागत पदों का अंतर देखें (समान अंतर = समांतर श्रेणी)",
+   "यदि अंतर भी एक श्रेणी बनाते हैं, तो दूसरे स्तर का अंतर जाँचें (द्विघात-प्रकार श्रृंखला)",
+   "क्रमागत पदों का अनुपात देखें (समान अनुपात = गुणोत्तर श्रेणी, जैसे ×2, ×3...)",
+   "एकांतर पैटर्न देखें: दो आपस में मिली श्रृंखलाएँ (विषम स्थान पर एक नियम, सम स्थान पर दूसरा)",
+   "वर्ग/घन ± स्थिरांक जाँचें: n², n²+1, n³, n³−1 आदि",
+   "अभाज्य संख्या श्रृंखला या फिबोनाक्ची-प्रकार (अगला पद = पिछले दो का योग) जाँचें",
+   "अक्षर श्रृंखला के लिए अक्षरों को संख्या में बदलें (A=1...Z=26) और संख्यात्मक पैटर्न खोजें"
+  ],
+  "items_en": [
+   "First check the difference between consecutive terms (constant difference = arithmetic series)",
+   "If the differences themselves form a series, check the 2nd-level difference (quadratic-type series)",
+   "Check the ratio between consecutive terms (constant ratio = geometric series, e.g. ×2, ×3...)",
+   "Look for an alternating pattern: two interleaved series (odd positions one rule, even positions another)",
+   "Check squares/cubes ± a constant: n², n²+1, n³, n³−1 etc.",
+   "Check prime-number series or Fibonacci-type (next term = sum of previous two)",
+   "For letter series, convert letters to numbers (A=1...Z=26) and look for the same numeric pattern"
+  ]
+ },
+ {
+  "id": "cs-reasoning-direction_sense",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "cat_hi": "दिशा-ज्ञान के नियम",
+  "cat_en": "Direction-Sense Rules",
+  "items_hi": [
+   "डिफ़ॉल्ट: जब तक न बताया जाए, उत्तर की ओर मुख माना जाता है",
+   "दक्षिणावर्त (clockwise) क्रम: N→E→S→W→N; वामावर्त (anticlockwise): N→W→S→E→N",
+   "दाएँ मुड़ना = अगली दक्षिणावर्त दिशा; बाएँ मुड़ना = अगली वामावर्त दिशा",
+   "अंतिम स्थिति निकालने के लिए निर्देशांक विधि प्रयोग करें: शुरुआत (0,0), उत्तर=+y, दक्षिण=−y, पूर्व=+x, पश्चिम=−x",
+   "शुरुआत व अंत बिंदु के बीच न्यूनतम दूरी: पाइथागोरस प्रमेय, √(x²+y²)",
+   "सूर्योदय (सुबह) पर छाया पश्चिम की ओर पड़ती है; सूर्यास्त (शाम) पर छाया पूर्व की ओर पड़ती है",
+   "दोपहर में सूर्य के सिर पर होने से छाया सबसे छोटी होती है (छाया-आधारित प्रश्नों के लिए)"
+  ],
+  "items_en": [
+   "Default: facing North unless stated otherwise in the question",
+   "Clockwise order: N→E→S→W→N; anticlockwise order: N→W→S→E→N",
+   "Turning right = next clockwise direction; turning left = next anticlockwise direction",
+   "To find final position, use the coordinate method: start at (0,0), North=+y, South=−y, East=+x, West=−x",
+   "Shortest distance between start and end point: Pythagoras theorem, √(x²+y²)",
+   "At sunrise (morning) shadow falls towards the West; at sunset (evening) shadow falls towards the East",
+   "At noon, with the sun overhead, the shadow is shortest (useful for shadow-length questions)"
+  ]
+ }
+]
