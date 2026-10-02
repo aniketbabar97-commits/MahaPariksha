@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
+import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
 
 /// How many items each growth batch adds to the queue.
@@ -240,6 +241,12 @@ class _McqCardState extends State<_McqCard> {
     final r = context.scope.progress.recordAnswer(widget.q.id, correct);
     if (mounted) setState(() => xpEarned = r.xp);
     await Future.delayed(const Duration(milliseconds: 900));
+    // The reel is one of the app's main engagement loops (endless swipe,
+    // same recordAnswer/Reward as the regular quiz) but was missing the
+    // level-up/streak/goal celebration quiz_screen.dart already has -- a
+    // level-up mid-reel silently gave XP with no payoff. Shown after the
+    // correct/wrong flash settles, before advancing to the next card.
+    if (mounted) await celebrate(context, r);
     if (mounted) widget.onAdvance();
   }
 
