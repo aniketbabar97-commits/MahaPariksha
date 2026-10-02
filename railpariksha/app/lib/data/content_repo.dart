@@ -19,9 +19,12 @@ class ContentRepo {
   final List<Flashcard> flashcards = [];
   final List<Motivation> motivation = [];
   final Map<String, TopicNote> _notes = {};
+  final Map<String, ExamStrategy> _strategies = {};
 
   TopicNote? note(String subject, String topic) => _notes['$subject/$topic'];
   bool hasNotes(String subject) => _notes.keys.any((k) => k.startsWith('$subject/'));
+
+  ExamStrategy? strategy(String examId) => _strategies[examId];
 
   /// All topic notes, unordered. Notes aren't indexed by exam (a note is keyed by
   /// subject/topic, not exam), so callers that need exam-scoped notes filter this
@@ -147,6 +150,11 @@ class ContentRepo {
       ..addEntries(((data['notes'] as List?) ?? const [])
           .map((j) => TopicNote.fromJson(j))
           .map((n) => MapEntry('${n.subject}/${n.topic}', n)));
+    final strategyJson = (data['exam_strategy'] as Map?)?.cast<String, dynamic>() ?? const <String, dynamic>{};
+    _strategies
+      ..clear()
+      ..addEntries(strategyJson.entries
+          .map((e) => MapEntry(e.key, ExamStrategy.fromJson(e.key, e.value as Map<String, dynamic>))));
     _subjectById
       ..clear()
       ..addEntries(subjects.map((s) => MapEntry(s.id, s)));

@@ -11,6 +11,9 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from validate import resolve_exam_strategy  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 
@@ -31,6 +34,9 @@ def main():
         sys.exit("validation failed; bundle not built")
 
     taxonomy = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
+    exam_strategy = resolve_exam_strategy(
+        json.loads((CONTENT / "exam_strategy.json").read_text(encoding="utf-8"))
+    )
     questions = load_dir("bank")
     for q in questions:
         # Source links stay in the repo, not on devices, for the bulk of the bank (keeps
@@ -47,6 +53,7 @@ def main():
         "flashcards": load_dir("flashcards"),
         "motivation": load_dir("motivation"),
         "notes": load_dir("notes"),
+        "exam_strategy": exam_strategy,
     }
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)

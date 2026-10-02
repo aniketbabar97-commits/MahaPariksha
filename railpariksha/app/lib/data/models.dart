@@ -137,6 +137,35 @@ class Motivation {
       Motivation(j['id'], j['type'], Bi(j['hi'], j['en']), j['by']);
 }
 
+class StrategyStage {
+  final Bi title;
+  final Bi detail;
+  const StrategyStage(this.title, this.detail);
+
+  factory StrategyStage.fromJson(Map<String, dynamic> j) =>
+      StrategyStage(Bi(j['hi'], j['en']), Bi(j['detail_hi'], j['detail_en']));
+}
+
+/// Static "Exam Strategy & Pattern" reference content: the real multi-stage
+/// selection process, tactical tips and an honest cutoff note for one exam.
+/// Negative-marking math and time budgeting aren't stored here -- they're
+/// computed live from the [Exam]'s own paperQuestions/paperMinutes/negative
+/// so the worked example never drifts out of sync with the taxonomy.
+class ExamStrategy {
+  final String examId;
+  final List<StrategyStage> stages;
+  final List<Bi> tips;
+  final Bi cutoffNote;
+  const ExamStrategy(this.examId, this.stages, this.tips, this.cutoffNote);
+
+  factory ExamStrategy.fromJson(String examId, Map<String, dynamic> j) => ExamStrategy(
+        examId,
+        (j['stages'] as List).map((s) => StrategyStage.fromJson(s)).toList(),
+        (j['tips'] as List).map((t) => Bi(t['hi'], t['en'])).toList(),
+        Bi(j['cutoff_hi'], j['cutoff_en']),
+      );
+}
+
 class MapNode {
   final Bi label;
   final List<MapNode> children;

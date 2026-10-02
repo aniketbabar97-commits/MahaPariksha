@@ -17,6 +17,7 @@ ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 taxonomy = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
 TOPICS = {s["id"]: {t["id"] for t in s["topics"]} for s in taxonomy["subjects"]}
+EXAM_IDS = {e["id"] for e in taxonomy["exams"]}
 
 Q_FIELDS = {"id", "s", "t", "d", "q_hi", "q_en", "o_hi", "o_en", "a", "e_hi", "e_en"}
 Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date"}
@@ -109,6 +110,56 @@ def check_note(n, where, errs):
     check_map(n["map"], where, errs)
 
 
+def resolve_exam_strategy(data):
+    """Resolve {"$ref": "other_exam_id"} entries (used by exams that share an
+    identical selection process, e.g. RRB JE's three engineering branches) into
+    a copy of the referenced exam's content."""
+    resolved = {}
+    for exam_id, entry in data.items():
+        ref = entry.get("$ref") if isinstance(entry, dict) else None
+        resolved[exam_id] = data[ref] if ref else entry
+    return resolved
+
+
+def check_exam_strategy(data, path, errs):
+    """content/exam_strategy.json is a single dict keyed by exam id (not a list
+    of items like bank/flashcards/motivation/notes), so it's validated separately
+    from validate_file's per-item loop."""
+    where = path.relative_to(ROOT)
+    missing = EXAM_IDS - set(data)
+    if missing:
+        errs.append(f"{where}: missing exam ids {sorted(missing)}")
+    extra = set(data) - EXAM_IDS
+    if extra:
+        errs.append(f"{where}: unknown exam ids {sorted(extra)}")
+    for exam_id, entry in data.items():
+        if isinstance(entry, dict) and "$ref" in entry:
+            if entry["$ref"] not in data:
+                errs.append(f"{where}[{exam_id}]: $ref to unknown exam {entry['$ref']}")
+            continue
+        need = {"stages", "tips", "cutoff_hi", "cutoff_en"}
+        if not isinstance(entry, dict) or not need <= set(entry):
+            errs.append(f"{where}[{exam_id}]: missing {sorted(need - set(entry if isinstance(entry, dict) else {}))}")
+            continue
+        if not (nonempty(entry["cutoff_hi"]) and nonempty(entry["cutoff_en"])):
+            errs.append(f"{where}[{exam_id}]: empty cutoff text")
+        stages = entry["stages"]
+        if not (isinstance(stages, list) and 2 <= len(stages) <= 6):
+            errs.append(f"{where}[{exam_id}]: stages must be a list of 2-6")
+        else:
+            for i, s in enumerate(stages):
+                need_s = {"hi", "en", "detail_hi", "detail_en"}
+                if not (isinstance(s, dict) and need_s <= set(s) and all(nonempty(s[k]) for k in need_s)):
+                    errs.append(f"{where}[{exam_id}].stages[{i}]: needs non-empty {sorted(need_s)}")
+        tips = entry["tips"]
+        if not (isinstance(tips, list) and 3 <= len(tips) <= 5):
+            errs.append(f"{where}[{exam_id}]: tips must be a list of 3-5")
+        else:
+            for i, t in enumerate(tips):
+                if not (isinstance(t, dict) and nonempty(t.get("hi")) and nonempty(t.get("en"))):
+                    errs.append(f"{where}[{exam_id}].tips[{i}]: needs non-empty hi/en")
+
+
 def validate_file(path, seen_ids, errs):
     try:
         # Shared lock so a concurrent content_gen writer (which takes an exclusive
@@ -145,12 +196,21 @@ def validate_file(path, seen_ids, errs):
 
 
 def main(argv):
-    files = [Path(a).resolve() for a in argv] or sorted(
+    explicit = [Path(a).resolve() for a in argv]
+    files = explicit or sorted(
         p for d in ("bank", "flashcards", "motivation", "notes") for p in (CONTENT / d).glob("*.json")
     )
     errs, seen, total = [], set(), 0
     for f in files:
         total += validate_file(f, seen, errs)
+
+    strategy_path = CONTENT / "exam_strategy.json"
+    if not explicit or strategy_path.resolve() in explicit:
+        strategy = json.loads(strategy_path.read_text(encoding="utf-8"))
+        check_exam_strategy(strategy, strategy_path, errs)
+        total += len(strategy)
+        files = files + [strategy_path] if strategy_path not in files else files
+
     for e in errs[:200]:
         print("ERROR", e)
     print(f"{len(files)} files, {total} items, {len(errs)} errors")

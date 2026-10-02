@@ -8,7 +8,9 @@ import '../core/theme.dart';
 import '../core/notifications.dart';
 import '../core/reminders.dart';
 import '../data/progress.dart';
+import '../core/transitions.dart';
 import '../widgets/common.dart';
+import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
 
@@ -81,6 +83,17 @@ class MeScreen extends StatelessWidget {
             ),
           ]),
         ),
+        if (exam != null) ...[
+          const SizedBox(height: 12),
+          ActionCard(
+            icon: Icons.route,
+            color: BrandColors.sky,
+            title: context.tr('परीक्षा रणनीति व पैटर्न 🛤️', 'Exam strategy & pattern 🛤️'),
+            subtitle: context.tr('चयन प्रक्रिया, निगेटिव मार्किंग व समय प्रबंधन',
+                'Selection stages, negative marking & time budgeting'),
+            onTap: () => push(context, (_) => ExamStrategyScreen(exam: exam)),
+          ),
+        ],
         SectionTitle(context.tr('ऐप सेटिंग्स ⚙️', 'App settings ⚙️')),
         Card(
           child: Column(children: [
