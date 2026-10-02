@@ -4094,29 +4094,6 @@
   "e_en": "To find the DC gain, substitute s = 0, which results in 10/5 = 2."
  },
  {
-  "id": "rp-je_e-f00179",
-  "s": "je_electrical",
-  "t": "control_systems",
-  "d": 3,
-  "q_hi": "एक यूनिटी फीडबैक सिस्टम का ओपन-लूप ट्रांसफर फंक्शन G(s) = K / [s(s+2)] है। प्रणाली की प्राकृतिक आवृत्ति (natural frequency) क्या होगी?",
-  "q_en": "The open-loop transfer function of a unity feedback system is G(s) = K / [s(s+2)]. What will be the natural frequency of the system?",
-  "o_hi": [
-   "1 rad/sec",
-   "2 rad/sec",
-   "sqrt(2) rad/sec",
-   "K rad/sec"
-  ],
-  "o_en": [
-   "1 rad/sec",
-   "2 rad/sec",
-   "sqrt(2) rad/sec",
-   "K rad/sec"
-  ],
-  "a": 2,
-  "e_hi": "क्लोज्ड लूप ट्रांसफर फंक्शन का हर s^2 + 2s + K है, जहाँ ओमेगा-n का वर्ग K है। यहाँ मानक रूप s^2 + 2*zeta*wn*s + wn^2 से तुलना करने पर, wn = sqrt(K) है, लेकिन यदि K का मान नहीं दिया है, तो दिए गए विकल्पों में से 2 का वर्गमूल सही होगा यदि K=2 हो।",
-  "e_en": "Comparing the denominator s^2 + 2s + K with standard form s^2 + 2*zeta*wn*s + wn^2, wn^2 = K. Assuming K=2 for the standard characteristic equation, wn = sqrt(2)."
- },
- {
   "id": "rp-je_e-f00180",
   "s": "je_electrical",
   "t": "control_systems",
@@ -13110,29 +13087,6 @@
   "e_en": "An SCR is a latching device; once turned on, removing the gate current does not turn it off until the anode current falls below the holding current."
  },
  {
-  "id": "rp-je_e-f00571",
-  "s": "je_electrical",
-  "t": "power_electronics",
-  "d": 2,
-  "q_hi": "उच्च आवृत्ति वाले हीटिंग अनुप्रयोगों में किस उपकरण का उपयोग मुख्य रूप से किया जाता है?",
-  "q_en": "Which device is primarily used in high-frequency heating applications?",
-  "o_hi": [
-   "SCR",
-   "डायोड",
-   "जीटीओ (GTO)",
-   "ट्रायक (TRIAC)"
-  ],
-  "o_en": [
-   "SCR",
-   "Diode",
-   "GTO",
-   "TRIAC"
-  ],
-  "a": 3,
-  "e_hi": "ट्रायक (TRIAC) का उपयोग एसी पावर नियंत्रण और उच्च आवृत्ति वाले हीटिंग सर्किट में व्यापक रूप से किया जाता है।",
-  "e_en": "TRIACs are widely used in AC power control and high-frequency heating circuits due to their bidirectional switching capability."
- },
- {
   "id": "rp-je_e-f00572",
   "s": "je_electrical",
   "t": "power_electronics",
@@ -20884,29 +20838,6 @@
   "e_en": "For a generator, Eg = V + (Ia * Ra). Here, Eg = 220 + (50 * 0.2) = 220 + 10 = 230 Volts."
  },
  {
-  "id": "rp-je_e-f00909",
-  "s": "je_electrical",
-  "t": "electrical_machines",
-  "d": 3,
-  "q_hi": "एक 10 केवीए, 2000/200 वोल्ट ट्रांसफॉर्मर का प्रतिबाधा (इम्पीडेंस) क्या होगा यदि प्राथमिक पक्ष से देखने पर इसका प्रतिरोध 5 ओम है?",
-  "q_en": "What is the impedance of a 10 kVA, 2000/200V transformer if the resistance referred to the primary side is 5 ohms?",
-  "o_hi": [
-   "5 ओम",
-   "10 ओम",
-   "20 ओम",
-   "25 ओम"
-  ],
-  "o_en": [
-   "5 ohms",
-   "10 ohms",
-   "20 ohms",
-   "25 ohms"
-  ],
-  "a": 0,
-  "e_hi": "प्रश्न में प्रतिबाधा (इम्पीडेंस) का मान सीधे दिया गया है (रेफर किए गए प्रतिरोध के रूप में), जो कि 5 ओम है।",
-  "e_en": "The value of the impedance referred to the primary side is already provided in the question as 5 ohms."
- },
- {
   "id": "rp-je_e-f00910",
   "s": "je_electrical",
   "t": "electrical_machines",
@@ -25875,29 +25806,6 @@
   "e_en": "Copper loss is proportional to the square of the load. (1/2)^2 * 400 = 1/4 * 400 = 100 Watts."
  },
  {
-  "id": "rp-je_e-f01126",
-  "s": "je_electrical",
-  "t": "electrical_machines",
-  "d": 2,
-  "q_hi": "एक 6-ध्रुव डीसी मशीन में 480 कंडक्टर हैं और यह 500 आरपीएम पर चलती है। यदि फ्लक्स प्रति ध्रुव 0.02 वेबर है, तो लैप वाइंडिंग के लिए प्रेरित ईएमएफ क्या होगा?",
-  "q_en": "A 6-pole DC machine has 480 conductors and runs at 500 RPM. If the flux per pole is 0.02 Wb, what will be the induced EMF for lap winding?",
-  "o_hi": [
-   "240 वोल्ट",
-   "480 वोल्ट",
-   "120 वोल्ट",
-   "360 वोल्ट"
-  ],
-  "o_en": [
-   "240 Volts",
-   "480 Volts",
-   "120 Volts",
-   "360 Volts"
-  ],
-  "a": 0,
-  "e_hi": "लैप वाइंडिंग के लिए A = P = 6। सूत्र E = (P * Φ * N * Z) / (60 * A) = (6 * 0.02 * 500 * 480) / (60 * 6) = 240 वोल्ट।",
-  "e_en": "For lap winding, A = P = 6. Formula E = (P * Φ * N * Z) / (60 * A) = (6 * 0.02 * 500 * 480) / (60 * 6) = 240 Volts."
- },
- {
   "id": "rp-je_e-f01127",
   "s": "je_electrical",
   "t": "electrical_machines",
@@ -26611,29 +26519,6 @@
   "e_en": "Actual power = Wattmeter reading × CT ratio × PT ratio. 500 × 10 × 20 = 100,000 W."
  },
  {
-  "id": "rp-je_e-f01158",
-  "s": "je_electrical",
-  "t": "measurements_instrumentation",
-  "d": 3,
-  "q_hi": "एक 220 वोल्ट डीसी आपूर्ति में 100 ओम का शंट प्रतिरोध जोड़ा गया है। यदि मीटर का आंतरिक प्रतिरोध 1 ओम है, तो मीटर की नई सीमा (range) क्या होगी?",
-  "q_en": "A shunt resistance of 100 ohms is added to a DC supply of 220 V. If the meter's internal resistance is 1 ohm, what is the new range of the meter?",
-  "o_hi": [
-   "220.1 वोल्ट",
-   "222.2 वोल्ट",
-   "220 वोल्ट",
-   "2.2 वोल्ट"
-  ],
-  "o_en": [
-   "220.1 V",
-   "222.2 V",
-   "220 V",
-   "2.2 V"
-  ],
-  "a": 1,
-  "e_hi": "यह एक वोल्टेज डिवाइडर समस्या है। कुल वोल्टेज का विभाजन मीटर और शंट के बीच होता है।",
-  "e_en": "This is a voltage divider problem. The total voltage is divided between the meter and the shunt."
- },
- {
   "id": "rp-je_e-f01159",
   "s": "je_electrical",
   "t": "measurements_instrumentation",
@@ -26678,29 +26563,6 @@
   "a": 1,
   "e_hi": "शक्ति P = VI cos(थीटा)। P = 100 × 5 × cos(60) = 500 × 0.5 = 250 वाट।",
   "e_en": "Power P = VI cos(theta). P = 100 × 5 × cos(60) = 500 × 0.5 = 250 W."
- },
- {
-  "id": "rp-je_e-f01161",
-  "s": "je_electrical",
-  "t": "measurements_instrumentation",
-  "d": 3,
-  "q_hi": "एक ऊर्जा मीटर (Energy Meter) 200 रिवोल्यूशन प्रति यूनिट (kWh) पर कैलिब्रेट किया गया है। यदि मीटर 30 सेकंड में 10 रिवोल्यूशन लेता है, तो लोड की शक्ति क्या है?",
-  "q_en": "An energy meter is calibrated at 200 revolutions per unit (kWh). If the meter completes 10 revolutions in 30 seconds, what is the power of the load?",
-  "o_hi": [
-   "600 वाट",
-   "1200 वाट",
-   "2400 वाट",
-   "3000 वाट"
-  ],
-  "o_en": [
-   "600 W",
-   "1200 W",
-   "2400 W",
-   "3000 W"
-  ],
-  "a": 0,
-  "e_hi": "ऊर्जा = 10/200 kWh = 0.05 kWh. समय = 30/3600 घंटे। शक्ति = ऊर्जा/समय = 600 वाट।",
-  "e_en": "Energy = 10/200 kWh = 0.05 kWh. Time = 30/3600 hours. Power = Energy/Time = 600 W."
  },
  {
   "id": "rp-je_e-f01162",
@@ -30795,29 +30657,6 @@
   "a": 2,
   "e_hi": "कैथोड रे ऑसिलोस्कोप (CRO) का उपयोग वोल्टेज के तात्कालिक मान और विद्युत तरंग के आकार को देखने के लिए किया जाता है।",
   "e_en": "A Cathode Ray Oscilloscope (CRO) is used to observe instantaneous voltage values and the shape of electrical waveforms."
- },
- {
-  "id": "rp-je_e-f01340",
-  "s": "je_electrical",
-  "t": "measurements_instrumentation",
-  "d": 1,
-  "q_hi": "मापन उपकरणों में 'प्राथमिक' (Primary) और 'द्वितीयक' (Secondary) उपकरणों का वर्गीकरण किस आधार पर किया जाता है?",
-  "q_en": "On what basis are measuring instruments classified into 'Primary' and 'Secondary' instruments?",
-  "o_hi": [
-   "उपकरण के आकार के आधार पर",
-   "मापन के सिद्धांत के आधार पर",
-   "आउटपुट के प्रदर्शन के तरीके के आधार पर",
-   "उपकरण की निर्माण सामग्री के आधार पर"
-  ],
-  "o_en": [
-   "Based on the size of the instrument",
-   "Based on the principle of measurement",
-   "Based on the method of output display",
-   "Based on the construction material of the instrument"
-  ],
-  "a": 2,
-  "e_hi": "प्राथमिक उपकरण निरपेक्ष मान देते हैं, जबकि द्वितीयक उपकरण अंशांकन (calibration) पर निर्भर करते हैं।",
-  "e_en": "Primary instruments provide absolute values without calibration, whereas secondary instruments depend on calibration."
  },
  {
   "id": "rp-je_e-f01341",

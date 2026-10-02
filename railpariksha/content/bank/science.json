@@ -14484,20 +14484,20 @@
   "q_hi": "यदि 10 ग्राम कैल्शियम 8 ग्राम ऑक्सीजन के साथ पूर्ण रूप से अभिक्रिया करके कैल्शियम ऑक्साइड बनाता है, तो निर्मित कैल्शियम ऑक्साइड का द्रव्यमान कितना होगा?",
   "q_en": "If 10 grams of calcium react completely with 8 grams of oxygen to form calcium oxide, what will be the mass of the calcium oxide formed?",
   "o_hi": [
-   "18 ग्राम",
+   "14 ग्राम",
    "10 ग्राम",
    "8 ग्राम",
    "2 ग्राम"
   ],
   "o_en": [
-   "18 grams",
+   "14 grams",
    "10 grams",
    "8 grams",
    "2 grams"
   ],
   "a": 0,
-  "e_hi": "यह द्रव्यमान के संरक्षण के नियम पर आधारित है, जिसमें कहा गया है कि एक रासायनिक अभिक्रिया में, अभिकारकों का कुल द्रव्यमान उत्पादों के कुल द्रव्यमान के बराबर होता है। इसलिए, 10 ग्राम कैल्शियम + 8 ग्राम ऑक्सीजन = 18 ग्राम कैल्शियम ऑक्साइड।",
-  "e_en": "This is based on the Law of Conservation of Mass, which states that in a chemical reaction, the total mass of the reactants equals the total mass of the products. Therefore, 10 grams of calcium + 8 grams of oxygen = 18 grams of calcium oxide."
+  "e_hi": "Ca (40 g/mol) + ½O₂ → CaO: 10 ग्राम Ca = 0.25 मोल, जिसके लिए 0.25 मोल ऑक्सीजन परमाणु = 4 ग्राम ऑक्सीजन चाहिए (दी गई 8 ग्राम में से पूरी नहीं लगती)। इससे 0.25 मोल CaO = 14 ग्राम बनता है, और 4 ग्राम ऑक्सीजन शेष रह जाती है।",
+  "e_en": "Ca (40 g/mol) + ½O₂ → CaO: 10 g Ca = 0.25 mol, needs 0.25 mol O-atoms = 4 g oxygen (not all 8 g supplied reacts). This forms 0.25 mol CaO = 14 g, with 4 g oxygen left over unreacted."
  },
  {
   "id": "rp-sci-g00631",
@@ -25940,18 +25940,18 @@
   "o_hi": [
    "20",
    "1024",
-   "2048",
+   "1,048,576",
    "4096"
   ],
   "o_en": [
    "20",
    "1024",
-   "2048",
+   "1,048,576",
    "4096"
   ],
   "a": 2,
-  "e_hi": "कोशिका विभाजन की दर 2 प्रति मिनट है, तो 10 मिनट में 20 विभाजन होंगे। कुल कोशिकाएं 2 की घात 20 नहीं, बल्कि 10 मिनट में 20 बार के विभाजन चक्र में 2^11 होंगी यदि दर प्रति मिनट है। यहाँ 10 मिनट में 20 विभाजन चक्र (2^20) या प्रति मिनट द्विगुणन के आधार पर गणना की जाती है।",
-  "e_en": "With 2 divisions per minute, in 10 minutes there are 20 cycles. The total number of cells is calculated as 2 raised to the power of 20."
+  "e_hi": "2 विभाजन प्रति मिनट, 10 मिनट में = कुल 20 विभाजन; 1 कोशिका से शुरू करने पर कुल कोशिकाएं = 2^20 = 1,048,576।",
+  "e_en": "2 divisions per minute for 10 minutes = 20 total doublings; starting from 1 cell, total cells = 2^20 = 1,048,576."
  },
  {
   "id": "rp-sci-h01129",
@@ -26352,20 +26352,20 @@
   "q_hi": "मानव शरीर की सबसे बड़ी कोशिका कौन सी है?",
   "q_en": "Which is the largest cell in the human body?",
   "o_hi": [
-   "तंत्रिका कोशिका",
+   "अंडाणु (Ovum)",
    "यकृत कोशिका",
    "मांसपेशी कोशिका",
    "रक्त कोशिका"
   ],
   "o_en": [
-   "Nerve cell",
+   "Ovum (egg cell)",
    "Liver cell",
    "Muscle cell",
    "Blood cell"
   ],
   "a": 0,
-  "e_hi": "तंत्रिका कोशिका या न्यूरॉन मानव शरीर की लंबाई में सबसे बड़ी कोशिका होती है।",
-  "e_en": "Nerve cells or neurons are the longest cells in the human body."
+  "e_hi": "अंडाणु (Ovum) आकार में सबसे बड़ी मानव कोशिका है; तंत्रिका कोशिका (न्यूरॉन) शरीर की सबसे लंबी कोशिका है -- परीक्षा में अक्सर इन्हें गलत समझा जाता है।",
+  "e_en": "The ovum (egg cell) is the largest human cell by size; the nerve cell (neuron) is the longest cell in the body -- a commonly confused pair in exam GK."
  },
  {
   "id": "rp-sci-h01147",
@@ -41785,20 +41785,20 @@
   "q_hi": "यदि एक यात्री ट्रेन की गति को मापने के लिए एक उपकरण का उपयोग करता है जो डॉप्लर प्रभाव के सिद्धांत पर आधारित है, तो यह किस वैज्ञानिक खोज का उपयोग कर रहा है?",
   "q_en": "If a passenger uses a device based on the Doppler Effect to measure train speed, which scientific discovery is being applied?",
   "o_hi": [
-   "क्रिश्चियन डॉप्लर द्वारा ध्वनि तरंगों की खोज",
+   "डॉप्लर प्रभाव, जिसे क्रिश्चियन डॉप्लर ने वर्णित किया",
    "आइजैक न्यूटन द्वारा प्रकाश का अपवर्तन",
    "अल्बर्ट आइंस्टीन द्वारा सापेक्षता का सिद्धांत",
    "मैक्स प्लैंक द्वारा क्वांटम सिद्धांत"
   ],
   "o_en": [
-   "Discovery of sound waves by Christian Doppler",
+   "The Doppler Effect, described by Christian Doppler",
    "Refraction of light by Isaac Newton",
    "Theory of relativity by Albert Einstein",
    "Quantum theory by Max Planck"
   ],
   "a": 0,
-  "e_hi": "डॉप्लर प्रभाव का प्रतिपादन 1842 में ऑस्ट्रियाई भौतिक विज्ञानी क्रिश्चियन डॉप्लर द्वारा किया गया था। यह स्रोत और प्रेक्षक के बीच सापेक्ष गति के कारण तरंगों की आवृत्ति में परिवर्तन को मापता है।",
-  "e_en": "The Doppler Effect was proposed by Austrian physicist Christian Doppler in 1842. It measures the change in frequency of waves due to relative motion between the source and the observer."
+  "e_hi": "डॉप्लर प्रभाव -- स्रोत और प्रेक्षक के बीच सापेक्ष गति के कारण तरंगों की आवृत्ति में परिवर्तन -- का वर्णन क्रिश्चियन डॉप्लर ने 1842 में किया था; यह ध्वनि और प्रकाश दोनों तरंगों पर लागू होता है।",
+  "e_en": "The Doppler Effect -- the change in observed frequency of waves due to relative motion between source and observer -- was described by Christian Doppler in 1842; it applies to both sound and light waves."
  },
  {
   "id": "rp-sci-h01818",
