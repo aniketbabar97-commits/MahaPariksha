@@ -43,6 +43,14 @@ void main() {
     await tester.tap(find.byType(ChoiceChip).first);
     await tester.pumpAndSettle();
 
+    // Onboarding now inserts a short placement diagnostic between exam-pick
+    // and goal-pick (see screens/onboarding.dart) -- skip it here since this
+    // test is about the golden path loading without crashing, not the
+    // diagnostic's own scoring logic.
+    expect(find.text('Skip'), findsOneWidget);
+    await tester.tap(find.text('Skip'));
+    await tester.pumpAndSettle();
+
     expect(find.byKey(const ValueKey('goal')), findsOneWidget);
     await tester.tap(find.text("Let's go!"));
     await tester.pumpAndSettle(const Duration(seconds: 2));
