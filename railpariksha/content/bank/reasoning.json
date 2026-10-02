@@ -92909,8 +92909,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 2,
-  "q_hi": "छह मित्र - अमित, बिना, चित्रा, दीपा, ईशा और फरहान एक सीधी पंक्ति में उत्तर की ओर मुख करके बैठे हैं। बिना, अमित के ठीक दाईं ओर है। चित्रा, ईशा और फरहान के बीच में है। फरहान, पंक्ति के किसी एक छोर पर है। दीपा, अमित के बाईं ओर तीसरे स्थान पर है। निम्नलिखित में से कौन दीपा के ठीक दाईं ओर बैठा है?",
-  "q_en": "Six friends - Amit, Bina, Chitra, Deepa, Esha and Farhan are sitting in a straight line facing North. Bina is immediately to the right of Amit. Chitra is between Esha and Farhan. Farhan is at one of the extreme ends of the line. Deepa is third to the left of Amit. Who among the following is sitting immediately to the right of Deepa?",
+  "q_hi": "छह मित्र - अमित, बिना, चित्रा, दीपा, ईशा और फरहान उत्तर की ओर मुख करके एक पंक्ति में बैठे हैं। बिना, अमित के ठीक दायें है। चित्रा, ईशा और फरहान के बीच है। फरहान पंक्ति के किसी एक छोर पर नहीं है। दीपा, अमित से तीसरी बायीं ओर है। दीपा के ठीक दायें कौन बैठा है?",
+  "q_en": "Six friends - Amit, Bina, Chitra, Deepa, Esha and Farhan are sitting in a straight line facing North. Bina is immediately to the right of Amit. Chitra is between Esha and Farhan. Farhan is not at the extreme left end of the line. Deepa is third to the left of Amit. Who among the following is sitting immediately to the right of Deepa?",
   "o_hi": [
    "अमित",
    "बिना",
@@ -92923,9 +92923,9 @@
    "Esha",
    "Chitra"
   ],
-  "a": 0,
-  "e_hi": "चरण 1: फरहान पंक्ति के किसी एक छोर पर है और चित्रा, ईशा व फरहान के बीच में है, अतः एक छोर का क्रम 'फरहान - चित्रा - ईशा' होगा। चरण 2: दीपा, अमित के बाईं ओर तीसरे स्थान पर है, जिससे अमित और दीपा के बीच दो लोग हैं। चरण 3: बिना, अमित के ठीक दाईं ओर है। संपूर्ण व्यवस्था (बाएं से दाएं): दीपा, ईशा, चित्रा, फरहान (या ऐसा ही कोई क्रम), लेकिन दी गई शर्तों से सटीक क्रम 'दीपा, ईशा, चित्रा, फरहान, अमित, बिना' बनता है। अतः अमित, दीपा के ठीक दाईं ओर (क्रम में आगे) है।",
-  "e_en": "Step 1: Farhan is at one end, and Chitra is between Esha and Farhan. So one end order is Farhan, Chitra, Esha or vice versa. Step 2: Deepa is third to the left of Amit. Step 3: Bina is immediately to the right of Amit. Arranging all: Deepa is at position 1, Esha at 2, Chitra at 3, Farhan at 4, Amit at 5, Bina at 6. Thus, Amit sits immediately to the right of Deepa's immediate segment context, confirming Amit as the correct neighbor."
+  "a": 2,
+  "e_hi": "क्रम: दीपा(1), ईशा(2), चित्रा(3), अमित(4), बिना(5), फरहान(6)। दीपा के ठीक दायें ईशा है।",
+  "e_en": "Order: Deepa(1), Esha(2), Chitra(3), Amit(4), Bina(5), Farhan(6). Immediately to the right of Deepa is Esha."
  },
  {
   "id": "rp-rea-r03324",
@@ -92955,8 +92955,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 1,
-  "q_hi": "पाँच इमारतें - L, M, N, O और P एक सीधी पंक्ति में पूर्व की ओर मुख करके बनी हैं। N, P के ठीक दाईं ओर है। L, पंक्ति के एक छोर पर है और उसके ठीक बगल में O है। M, N के बाईं ओर नहीं है। पंक्ति के ठीक बीच में कौन सी इमारत है?",
-  "q_en": "Five buildings - L, M, N, O and P are built in a straight line facing East. N is immediately to the right of P. L is at one of the extreme ends and O is immediately next to it. M is not to the left of N. Which building is in the exact middle of the row?",
+  "q_hi": "पांच इमारतें - L, M, N, O और P पूर्व की ओर मुख करके एक सीधी रेखा में बनी हैं। N, P के ठीक दायें है। L सबसे बायें छोर पर है और O इसके ठीक बगल में है। M, N के बायें नहीं है। पंक्ति के ठीक मध्य में कौन सी इमारत है?",
+  "q_en": "Five buildings - L, M, N, O and P are built in a straight line facing East. N is immediately to the right of P. L is at the extreme left end and O is immediately next to it. M is not to the left of N. Which building is in the exact middle of the row?",
   "o_hi": [
    "P",
    "N",
@@ -92970,16 +92970,16 @@
    "M"
   ],
   "a": 0,
-  "e_hi": "चरण 1: L एक छोर पर है और O उसके बगल में है। अतः क्रम 'L, O' या '..., L, O' से शुरू/अंत होता है। चरण 2: N, P के ठीक दाईं ओर है (अर्थात P, N का बायां पड़ोसी है)। चरण 3: M, N के बाईं ओर नहीं है, यानी M, N के दाईं ओर होगा। चरण 4: संपूर्ण क्रम (उत्तर मुखी पंक्ति में ऊपर से नीचे या बाएं से दाएं): L, O, P, N, M. बीच की इमारत P है।",
-  "e_en": "Step 1: L is at an end, O is next to it. Step 2: N is immediately to the right of P (P - N). Step 3: M is not to the left of N, so M is to the right of N. Step 4: The arrangement is L, O, P, N, M. P is in the exact middle."
+  "e_hi": "क्रम: L(1), O(2), P(3), N(4), M(5)। मध्य (स्थिति 3) में P है।",
+  "e_en": "Order: L(1), O(2), P(3), N(4), M(5). The middle (position 3) has P."
  },
  {
   "id": "rp-rea-r03326",
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 3,
-  "q_hi": "सात छात्र - A, B, C, D, E, F और G उत्तर दिशा की ओर मुख करके एक पंक्ति में बैठे हैं। E, B के बाईं ओर तीसरे स्थान पर है। B पंक्ति के किसी एक छोर पर है। C, E के ठीक दाईं ओर है। D, A और F के ठीक बीच में बैठा है। G, F के बाईं ओर है। निम्नलिखित में से कौन सा युग्म पंक्ति के दोनों छोरों पर बैठा है?",
-  "q_en": "Seven students - A, B, C, D, E, F and G are sitting in a row facing North. E is third to the left of B. B is at one of the extreme ends. C is immediately to the right of E. D is sitting exactly between A and F. G is to the left of F. Which of the following pairs is sitting at the extreme ends of the row?",
+  "q_hi": "सात विद्यार्थी - A, B, C, D, E, F और G उत्तर की ओर मुख करके एक पंक्ति में बैठे हैं। E, B से तीसरा बायें है। B पंक्ति के किसी छोर पर है। C, E के ठीक दायें है। D, A और F के ठीक बीच बैठा है। G, F के दायें है। A पंक्ति के किसी छोर पर बैठा है। पंक्ति के दोनों छोरों पर कौन सी जोड़ी बैठी है?",
+  "q_en": "Seven students - A, B, C, D, E, F and G are sitting in a row facing North. E is third to the left of B. B is at one of the extreme ends. C is immediately to the right of E. D is sitting exactly between A and F. G is to the right of F. A is sitting at one of the extreme ends. Which of the following pairs is sitting at the extreme ends of the row?",
   "o_hi": [
    "B और G",
    "B और A",
@@ -92992,9 +92992,9 @@
    "E and C",
    "G and B"
   ],
-  "a": 0,
-  "e_hi": "चरण 1: B एक छोर पर है और E उसके बाईं ओर तीसरा है, जिसका अर्थ है कि B दाएं छोर पर होना चाहिए ताकि E बाएं आ सके। क्रम में स्थान: _ _ _ _ _ _ B. चरण 2: E बाएं से तीसरा है (स्थान 3)। C, E के ठीक दाईं ओर है (स्थान 4)। चरण 3: G, F के बाईं ओर है और D, A व F के बीच में है। कुल व्यवस्था: G, F, D, A, E, C, B. अतः छोरों पर B और G बैठे हैं।",
-  "e_en": "Step 1: B is at an extreme end and E is third to its left. Thus B must be at the right end (position 7), placing E at position 3. Step 2: C is immediately to the right of E (position 4). Step 3: Placing remaining students yields G, F, D, A, E, C, B. The extreme ends are B and G."
+  "a": 1,
+  "e_hi": "यदि B छोर पर (स्थिति 7) है, तो E(4), C(5)। A छोर पर है, अतः A(1)। शेष D,F क्रमागत: A-D-F यानी D(2),F(3)। G, F के दायें होना चाहिए, अतः G(6)। पूर्ण क्रम: A(1),D(2),F(3),E(4),C(5),G(6),B(7)। छोरों पर A और B हैं।",
+  "e_en": "If B is at the extreme (position 7), then E(4), C(5). A is at an extreme, so A(1). The remaining D,F are consecutive as A-D-F, i.e. D(2), F(3). G must be to the right of F, so G(6). Full order: A(1),D(2),F(3),E(4),C(5),G(6),B(7). The extremes have A and B."
  },
  {
   "id": "rp-rea-r03327",
@@ -93039,8 +93039,8 @@
    "Physics"
   ],
   "a": 0,
-  "e_hi": "चरण 1: भौतिकी, गणित के ठीक ऊपर है (भौतिकी - गणित)। चरण 2: गणित, अंग्रेजी के नीचे है (अंग्रेजी - ... - गणित)। चरण 3: रसायन, अंग्रेजी के ऊपर है और इतिहास, रसायन के ऊपर है (इतिहास - रसायन - अंग्रेजी)। चरण 4: संपूर्ण क्रम ऊपर से नीचे: इतिहास, रसायन, अंग्रेजी, भौतिकी, गणित। अतः सबसे नीचे गणित की किताब है।",
-  "e_en": "Step 1: Physics is immediately above Math (Physics over Math). Step 2: Math is below English. Step 3: Chemistry is above English, and History is above Chemistry. Step 4: Top to bottom order is History, Chemistry, English, Physics, Math. Thus Math is at the bottom."
+  "e_hi": "पूरा क्रम इस प्रकार बनता है: History > Chemistry > English > Physics > Math (ऊपर से नीचे)। चूंकि Physics, Math के ठीक ऊपर है और English, Math से ऊपर है (पर ठीक ऊपर नहीं, क्योंकि Physics वह जगह लेता है), English, Physics से ऊपर आता है। सबसे नीचे Math है।",
+  "e_en": "The full order from top to bottom is: History > Chemistry > English > Physics > Math. Since Physics is immediately above Math, and English is above Math (but not immediately, since Physics occupies that slot), English sits above Physics. At the very bottom is Math."
  },
  {
   "id": "rp-rea-r03329",
@@ -93070,23 +93070,23 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 1,
-  "q_hi": "चार खिलाड़ी - A, B, C और D एक कैरम बोर्ड के चारों ओर बैठे हैं। A, C के सामने है। B, D के दाईं ओर दूसरा है। यदि D दक्षिण दिशा की ओर मुख करके बैठा है, तो C किस दिशा की ओर मुख करके बैठा है?",
-  "q_en": "Four players - A, B, C and D are sitting around a carrom board. A is opposite to C. B is second to the right of D. If D is facing South, which direction is C facing?",
+  "q_hi": "चार खिलाड़ी - A, B, C और D कैरम बोर्ड के चारों ओर बैठे हैं, प्रत्येक केंद्र की ओर मुख करके। A, C के सामने है। B, D से दूसरा दायें (यानी सीधे सामने) है। A, D के ठीक दायें बैठा है। यदि D दक्षिण की ओर मुख किए हुए है, तो C किस दिशा में मुख किए हुए है?",
+  "q_en": "Four players - A, B, C and D are sitting around a carrom board, each facing the centre. A is opposite to C. B is second to the right of D (i.e. directly opposite). A is sitting immediately to the right of D. If D is facing South, which direction is C facing?",
   "o_hi": [
-   "उत्तर (North)",
+   "पूर्व",
    "दक्षिण (South)",
    "पूर्व (East)",
    "पश्चिम (West)"
   ],
   "o_en": [
-   "North",
+   "East",
    "South",
    "East",
    "West"
   ],
   "a": 0,
-  "e_hi": "चरण 1: D दक्षिण की ओर मुख करके बैठा है। चरण 2: B, D के दाईं ओर दूसरा है (कैरम में मेज के चारों ओर बैठने पर D का दायां पश्चिम की ओर होगा, अतः B उत्तर दिशा में होगा)। चरण 3: A और C आमने-सामने हैं। यदि D दक्षिण में है तो C उत्तर दिशा की ओर मुख करेगा।",
-  "e_en": "Step 1: D faces South. Step 2: B is second to the right of D (from D's perspective facing South, right is West, so second to right places B opposite or suitably). Step 3: A and C are opposite each other. Since D faces South, C must face North."
+  "e_hi": "D दक्षिण मुख किए हुए है, अतः D उत्तर दिशा में बैठा है (केंद्र की ओर मुख करने पर)। A, D के ठीक दायें (घड़ी की दिशा में) है, यानी पूर्व दिशा में बैठा है और पश्चिम की ओर मुख किए हुए है। C, A के सामने है (विपरीत दिशा में बैठा), अतः C पश्चिम दिशा में बैठा है और पूर्व की ओर मुख किए हुए है।",
+  "e_en": "D faces South, so D is seated on the North side (facing the centre). A, immediately to D's right (clockwise), is seated on the East side, facing West. C is opposite A (seated on the opposite side), so C is on the West side, facing East."
  },
  {
   "id": "rp-rea-r03331",
@@ -93107,9 +93107,9 @@
    "Two",
    "Three"
   ],
-  "a": 0,
-  "e_hi": "चरण 1: J, M के बाईं ओर तीसरा है, यानी J और M के बीच दो अधिकारी हैं (क्रम: J _ _ M). चरण 2: N, L के ठीक दाईं ओर है (क्रम: L N). चरण 3: K एक छोर पर है और J का पड़ोसी नहीं है, अतः K बाएं छोर पर होगा (स्थान 1 पर K, स्थान 2 पर J, फिर L, N, M). चरण 4: L तीसरा अधिकारी है, जिसके बाईं ओर K और J हैं? रुकिए, क्रम पुनः जांचें: यदि K बाएं छोर पर है, तो J उसके बगल में नहीं हो सकता। अतः J बीच में होगा। सही क्रम: K, M, J, L, N. L के बाईं ओर 3 अधिकारी (K, M, J) हैं। पुनः जाँच: L के बाईं ओर शून्य नहीं बल्कि तीन हैं। विकल्प 3 सही है.",
-  "e_en": "Step 1: J is third to the left of M (_ J _ M _). Step 2: N is immediately to the right of L (L N). Step 3: K is at an end and J is not next to him. Correct arrangement derived: K, J, M, L, N or similar. Re-evaluating L's position: L has officers to its left. Exact count is three."
+  "a": 1,
+  "e_hi": "क्रम: J(1), L(2), N(3), M(4), K(5)। L के बायें केवल J है -- अर्थात एक अधिकारी।",
+  "e_en": "Order: J(1), L(2), N(3), M(4), K(5). Only J is to the left of L -- that is, one officer."
  },
  {
   "id": "rp-rea-r03332",
@@ -93369,8 +93369,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 2,
-  "q_hi": "छह व्यक्ति - A, B, C, D, E और F एक सीधी पंक्ति में उत्तर की ओर मुख करके बैठे हैं। D, C के ठीक बाईं ओर बैठा है। F, B के दाईं ओर तीसरे स्थान पर है। A, E के बाईं ओर दूसरे स्थान पर है। E पंक्ति के किसी एक छोर पर बैठा है। निम्नलिखित में से कौन F के ठीक दाईं ओर बैठा है?",
-  "q_en": "Six persons - A, B, C, D, E and F are sitting in a straight line facing North. D is sitting immediately to the left of C. F is sitting third to the right of B. A is second to the left of E. E is sitting at one of the extreme ends. Who among the following is sitting immediately to the right of F?",
+  "q_hi": "छह व्यक्ति - A, B, C, D, E और F उत्तर की ओर मुख करके एक सीधी पंक्ति में बैठे हैं। D, C के ठीक बायें बैठा है। F, B से दूसरा दायें बैठा है। A, E से दूसरा बायें है। E पंक्ति के किसी एक छोर पर है। F के ठीक दायें कौन बैठा है?",
+  "q_en": "Six persons A, B, C, D, E and F are sitting in a straight line facing North. D is sitting immediately to the left of C. F is sitting second to the right of B. A is second to the left of E. E is sitting at one of the extreme ends. Who among the following is sitting immediately to the right of F?",
   "o_hi": [
    "C",
    "D",
@@ -93383,9 +93383,9 @@
    "E",
    "Cannot be determined"
   ],
-  "a": 1,
-  "e_hi": "दी गई जानकारी के अनुसार, E एक छोर पर है। यदि E बाएं छोर (स्थान 1) पर है, तो A, E के बाएं नहीं बैठ सकता। अतः E दाएं छोर (स्थान 6) पर है। A, E (स्थान 6) से बाएं दूसरा है, अतः A स्थान 4 पर है। F, B के दाएं तीसरा है, जिससे B स्थान 1 पर और F स्थान 4 पर होना चाहिए जो असंभव है क्योंकि A पहले से स्थान 4 पर है। इसलिए E बाएं छोर से दूसरा नहीं बल्कि दाएं छोर पर है। चलिए सही क्रम बनाते हैं: B (1), A (2), F (3), E (4)? नहीं, E छोर पर है। सही व्यवस्था है: B, D, C, A, F, E. जाँच करते हैं: D, C के बाएं है; F, B के दाएं तीसरा है; A, E के बाएं दूसरा है (E दाएं छोर 6 पर, A स्थान 4 पर)। स्पष्ट है कि D, F के ठीक दाईं ओर बैठा है।",
-  "e_en": "According to the clues, E sits at an extreme end. If E is at the extreme right (position 6), A is at position 4 (second to the left of E). F is third to the right of B, which means B is at 1 and F is at 4, creating a conflict since A is already at 4. Thus, let's test: B (1), D (2), C (3), A (4), F (5), E (6). Let's verify: D is immediately left of C (positions 2 and 3); F is third to the right of B (1 to 5); A is second to the left of E (6 - 2 = 4). Hence, D sits immediately to the right of F? Wait, positions are B(1), D(2), C(3), A(4), F(5), E(6). Immediate right of F(5) is E(6). Let's re-verify: D is left of C. F is third to right of B. A is second to left of E. Let's check option D: D is sitting immediately to the right of F? In arrangement B, D, C, A, F, E, F is 5th and E is 6th, so E is to the right of F. Let's check standard solution: B, F, D, C, A, E... Wait, let's re-evaluate strictly. Correct sequence: B, D, C, A, F, E gives E to the right of F. Therefore, the option is E."
+  "a": 2,
+  "e_hi": "यदि E छोर पर (स्थिति 6) है, तो A स्थिति 4 पर है। B(3), F(5) [F, B से दूसरा दायें]। शेष स्थितियाँ 1,2 पर D,C [D, C के ठीक बायें: D(1),C(2)]। पूर्ण क्रम: D(1),C(2),B(3),A(4),F(5),E(6)। F के ठीक दायें E है।",
+  "e_en": "If E is at the extreme end (position 6), A is at position 4. B(3), F(5) [F is second to the right of B]. The remaining positions 1,2 go to D,C [D immediately left of C: D(1), C(2)]. Full order: D(1), C(2), B(3), A(4), F(5), E(6). Immediately to the right of F is E."
  },
  {
   "id": "rp-rea-r03344",
@@ -93430,8 +93430,8 @@
    "P"
   ],
   "a": 2,
-  "e_hi": "L बाएं छोर पर है (स्थान 1)। O, L के दाएं दूसरा है, अतः O स्थान 3 पर है। P, N के दाएं तीसरा है, जिससे N स्थान 1 पर होना चाहिए जो असंभव है क्योंकि L पहले से है। अतः L दाएं छोर (स्थान 6) पर है। O, L से बाएं दूसरा होगा (क्योंकि मुख उत्तर है, दाएं दूसरा मतलब बाएं होगा यदि छोर से देखें? नहीं, उत्तर मुख में दाएं मतलब आगे बढ़ना)। L दाएं छोर (6) पर है, तो O दाएं से दूसरा यानी स्थान 5 पर है। P, N के दाएं तीसरा है, अतः N स्थान 1 पर और P स्थान 4 पर है। M, Q के ठीक बाएं है, जिससे M स्थान 2 और Q स्थान 3 पर आते हैं। पूरी पंक्ति: N(1), M(2), Q(3), P(4), O(5), L(6)। मध्य के दो अधिकारी Q (3) और P (4) हैं। विकल्पों में O उपलब्ध नहीं है, सही विकल्प O है? विकल्प में O दिया है, लेकिन मध्य में Q और P हैं। पुनः जाँच करें: N, M, Q, P, O, L. मध्य पद P और O? नहीं, 3 और 4 मध्य हैं। अतः O मध्य में नहीं है। चलिए पुनः व्यवस्थित करें: यदि L बाएं छोर (1) पर है, O स्थान 3 पर है। N स्थान 2 पर हो तो P स्थान 5 पर होगा। M और Q के लिए स्थान 4 और 6 बचते हैं। सही क्रम: L(1), N(2), O(3), P(4), M(5), Q(6)। जाँच: O, L के दाएं दूसरा है (ठीक है); P, N के दाएं तीसरा है (2+3=5, गलत, P 4 पर है तो दूसरा है)। सही क्रम L, N, O, M, Q, P... चलिए विकल्पों के आधार पर O सही है क्योंकि O मध्य (तीसरे स्थान) पर है।",
-  "e_en": "Let's derive: L is at an extreme end. If L is at the left end (1), O is at 3. N is at 2, then P is at 5. M and Q occupy 4 and 6. Let's test sequence: L(1), N(2), O(3), P(4), M(5), Q(6). Let's check clues: O is second to right of L (1 to 3, correct); L is at extreme end (1, correct); M is immediate left of Q (5 and 6, correct); P is third to right of N (2 to 5, correct). The positions are 1, 2, 3, 4, 5, 6. The middle two positions are 3 and 4, occupied by O and P. Since O is in the options, O is correct."
+  "e_hi": "क्रम: L(1), N(2), O(3), P(4), M(5), Q(6)। मध्य की दो स्थितियाँ (3,4) O और P द्वारा घेरी गई हैं।",
+  "e_en": "Order: L(1), N(2), O(3), P(4), M(5), Q(6). The two middle positions (3,4) are occupied by O and P."
  },
  {
   "id": "rp-rea-r03346",
@@ -93461,46 +93461,46 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 3,
-  "q_hi": "सात यात्री - 1, 2, 3, 4, 5, 6 और 7 एक पंक्ति में उत्तर की ओर मुख करके खड़े हैं। यात्री 4, यात्री 7 के बाईं ओर तीसरे स्थान पर है। यात्री 7 पंक्ति के किसी एक छोर पर है। यात्री 2, यात्री 4 के ठीक बगल में नहीं है। यात्री 1, यात्री 3 के दाईं ओर दूसरे स्थान पर है। यात्री 5, यात्री 6 के बाईं ओर है। बीचों-बीच कौन सा यात्री खड़ा है?",
-  "q_en": "Seven passengers - 1, 2, 3, 4, 5, 6 and 7 stand in a row facing North. Passenger 4 is third to the left of Passenger 7. Passenger 7 is at one of the extreme ends. Passenger 2 is not adjacent to Passenger 4. Passenger 1 is second to the right of Passenger 3. Passenger 5 is to the left of the exact middle? Let's simplify: Passenger 5 is to the left of Passenger 6. Which passenger stands in the exact middle?",
+  "q_hi": "सात यात्री - 1, 2, 3, 4, 5, 6 और 7 उत्तर की ओर मुख करके एक पंक्ति में खड़े हैं। यात्री 4, यात्री 7 से तीसरा बायें है। यात्री 7 पंक्ति के किसी एक छोर पर है। यात्री 2, यात्री 4 के निकट नहीं है। यात्री 1, यात्री 3 से दूसरा दायें है। यात्री 5, यात्री 6 के बायें है। कौन सा यात्री ठीक मध्य में खड़ा है?",
+  "q_en": "Seven passengers - 1, 2, 3, 4, 5, 6 and 7 stand in a row facing North. Passenger 4 is third to the left of Passenger 7. Passenger 7 is at one of the extreme ends. Passenger 2 is not adjacent to Passenger 4. Passenger 1 is second to the right of Passenger 3. Passenger 5 is to the left of Passenger 6. Which passenger stands in the exact middle?",
   "o_hi": [
    "यात्री 1",
    "यात्री 3",
-   "यात्री 5",
+   "यात्री 4",
    "यात्री 6"
   ],
   "o_en": [
    "Passenger 1",
    "Passenger 3",
-   "Passenger 5",
+   "Passenger 4",
    "Passenger 6"
   ],
-  "a": 0,
-  "e_hi": "यात्री 7 एक छोर पर है। यदि 7 दाएं छोर (7) पर है, तो 4, 7 से बाएं तीसरा यानी स्थान 4 पर है। यदि 7 बाएं छोर पर होता, तो 4 के लिए बाईं ओर कोई स्थान नहीं बचता। अतः 7 दाएं छोर (7) पर है और 4, 4वें स्थान पर है। यात्री 1, 3 के दाएं दूसरा है। यात्री 5, 6 के बाईं ओर है। इन शर्तों के साथ 7 स्थानों (1 से 7) को भरने पर, मध्य स्थान (स्थान 4 पर 4 है, अतः मध्य स्थान 4 है? कुल 7 हैं, तो मध्य स्थान 4वां है)। स्थान 4 पर यात्री 1 आता है यदि हम क्रम बनाएँ: 3, 2, 6, 1, 5, 4, 7 - जाँच करें: 4, 7 से बाएं तीसरा (7 से तीन कदम बाएं: 7, 6, 5, 4 - सही है)। मध्य में यात्री 1 आता है।",
-  "e_en": "Passenger 7 is at an extreme end. If 7 is at the right end (7), Passenger 4 is third to its left, which places 4 at position 4. (If 7 were at the left, 4 couldn't be to its left). Thus, 7 is at 7 and 4 is at 4. The exact middle of 7 positions is position 4. Since Passenger 4 is at position 4, wait—let's check the sequence: 3, 2, 6, 1, 5, 4, 7. Let's verify clues: 4 is third to left of 7 (positions 4 to 7, correct); 1 is second to right of 3; 5 is to the left of 6. The middle passenger at position 4 is Passenger 1."
+  "a": 2,
+  "e_hi": "यात्री 7 को बायें छोर पर रखने पर यात्री 4 बायीं ओर नहीं आ सकता, अतः यात्री 7 दायें छोर (स्थिति 7) पर है और यात्री 4, तीसरा बायें यानी स्थिति 4 पर है -- जो 7 स्थानों की ठीक मध्य स्थिति है। अतः मध्य में यात्री 4 है।",
+  "e_en": "Placing Passenger 7 at the left end would put Passenger 4 out of range, so Passenger 7 is at the right end (position 7) and Passenger 4, third to its left, is at position 4 -- the exact middle of 7 positions. So Passenger 4 stands in the middle."
  },
  {
   "id": "rp-rea-r03348",
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 1,
-  "q_hi": "पाँच ट्रेनें - T1, T2, T3, T4 और T5 एक समानांतर पटरी पर पूर्व की ओर मुख करके खड़ी हैं। T3, T1 के ठीक दाईं ओर है। T5, T2 के बाईं ओर है लेकिन T4 के दाईं ओर है। यदि T2 पटरी के बाएं छोर पर है, तो बाएं से तीसरे स्थान पर कौन सी ट्रेन खड़ी है?",
-  "q_en": "Five trains - T1, T2, T3, T4 and T5 are standing on a parallel track facing East. T3 is immediately to the right of T1. T5 is to the left of T2? Wait: T5 is to the left of T2 is impossible if T2 is at the extreme left. Let's fix: T5 is to the right of T2 and to the left of T4. If T2 is at the extreme left end, which train is standing at the third position from the left?",
+  "q_hi": "पांच ट्रेनें - T1, T2, T3, T4 और T5 पूर्व की ओर मुख करके एक समानांतर पटरी पर खड़ी हैं। T3, T1 के ठीक दायें है। T5, T2 के दायें और T4 के बायें है। T1, T5 के ठीक दायें है। यदि T2 सबसे बायें छोर पर है, तो बायें से तीसरे स्थान पर कौन सी ट्रेन खड़ी है?",
+  "q_en": "Five trains - T1, T2, T3, T4 and T5 are standing on a parallel track facing East. T3 is immediately to the right of T1. T5 is to the right of T2 and to the left of T4. T1 is immediately to the right of T5. If T2 is at the extreme left end, which train is standing at the third position from the left?",
   "o_hi": [
-   "T1",
+   "T2",
    "T3",
    "T4",
-   "T5"
+   "T1"
   ],
   "o_en": [
-   "T1",
+   "T2",
    "T3",
    "T4",
-   "T5"
+   "T1"
   ],
   "a": 3,
-  "e_hi": "प्रश्न के अनुसार T2 बाएं छोर पर है (यानी पहली स्थिति)। T5, T2 के दाईं ओर और T4 के बाईं ओर है, जिससे T5 दूसरी स्थिति पर और T4 तीसरी स्थिति पर होना चाहिए? रुकिए, T3, T1 के ठीक दाईं ओर है। यदि T2 (1), T5 (2), T4 (3), T1 (4), T3 (5) हो, तो T3, T1 के दाईं ओर है। आइए पूरी व्यवस्था देखें: T2, T5, T4, T1, T3. यहाँ T2 बाएं छोर पर है; T5, T2 के दाएं और T4 के बाएं है; T3, T1 के ठीक दाएं है। बाएं से तीसरे स्थान पर T4 है? विकल्पों में T5 है। चलिए सही क्रम बनाते हैं: T2, T5, T3, T1, T4. जाँच: T3, T1 के दाईं ओर है? नहीं, T1, T3 के बाएं होना चाहिए। सही क्रम: T2, T5, T4, T1, T3? नहीं, T3, T1 के तुरंत दाएं है। अतः क्रम T2, T5, T1, T3, T4 हो सकता है। इसमें T2 बाएं छोर पर है, T5, T2 के दाएं है, T3, T1 के दाएं है। बाएं से तीसरा स्थान T1 है।",
-  "e_en": "Given that T2 is at the extreme left end (position 1). T5 is to the right of T2 and left of T4. T3 is immediately to the right of T1. Let's arrange: T2, T5, T1, T3, T4. Let's check: T2 is at the left end (1st); T5 is to the right of T2 (2nd); T1 is 3rd; T3 is immediately to the right of T1 (4th); T4 is 5th. The train at the third position from the left is T1. Wait, let's check the options. If T5 is the answer, let's re-verify the exact wording: T3 is immediately to the right of T1. If T2(1), T5(2), T1(3), T3(4), T4(5), then T3 is right of T1. The third position is T1."
+  "e_hi": "T2(1)। T1, T5 के ठीक दायें है और T3, T1 के ठीक दायें है, अतः T5,T1,T3 तीन क्रमागत स्थान बनाते हैं। T5, T2 से दायें और T4 से बायें होना चाहिए, इसलिए T5(2),T1(3),T3(4),T4(5)। बायें से तीसरे स्थान पर T1 है।",
+  "e_en": "T2(1). T1 is immediately to the right of T5, and T3 is immediately to the right of T1, so T5,T1,T3 form three consecutive positions. T5 must be to the right of T2 and to the left of T4, giving T5(2), T1(3), T3(4), T4(5). The third position from the left is T1."
  },
  {
   "id": "rp-rea-r03349",
@@ -93576,8 +93576,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 3,
-  "q_hi": "छह व्यक्ति - X1, X2, X3, X4, X5 और X6 एक पंक्ति में उत्तर की ओर मुख करके बैठे हैं। X3, X1 के ठीक बाईं ओर है। X5, X6 के दाईं ओर दूसरे स्थान पर है। X2 पंक्ति के बाएं छोर पर बैठा है। निम्नलिखित में से कौन सा व्यक्ति ठीक बीच में (यानी तीसरे और चौथे स्थान पर) बैठा है?",
-  "q_en": "Six persons - X1, X2, X3, X4, X5 and X6 are sitting in a row facing North. X3 is immediately to the left of X1. X5 is second to the right of X6. X2 is sitting at the extreme left end. Which of the following persons are sitting in the exact middle (i.e., 3rd and 4th positions)?",
+  "q_hi": "छह व्यक्ति - X1, X2, X3, X4, X5 और X6 उत्तर की ओर मुख करके एक पंक्ति में बैठे हैं। X3, X1 के ठीक बायें है। X5, X6 से दूसरा दायें है। X2 सबसे बायें छोर पर बैठा है। X1 किसी भी छोर पर नहीं बैठा है। निम्नलिखित में से कौन ठीक मध्य (तीसरे और चौथे स्थान) में बैठे हैं?",
+  "q_en": "Six persons - X1, X2, X3, X4, X5 and X6 are sitting in a row facing North. X3 is immediately to the left of X1. X5 is second to the right of X6. X2 is sitting at the extreme left end. X1 is not sitting at either extreme end. Which of the following persons are sitting in the exact middle (i.e., 3rd and 4th positions)?",
   "o_hi": [
    "X1 और X3",
    "X3 और X5",
@@ -93591,8 +93591,8 @@
    "X4 and X5"
   ],
   "a": 2,
-  "e_hi": "X2 बाएं छोर पर यानी पहले स्थान पर बैठा है। X3, X1 के तुरंत बाएं है, यानी X3 और X1 एक साथ (जैसे 3,4 या 4,5) बैठेंगे। X5, X6 के दाएं दूसरा है। X2(1) के बाद बचे स्थान 2, 3, 4, 5, 6 हैं। यदि X6 स्थान 2 पर हो, तो X5 स्थान 4 पर होगा। X3 और X1 के लिए स्थान 3 और 5 बचते हैं (या 5 और 6)। सही क्रम: X2(1), X6(2), X3(3), X5(4), X1(5), X4(6). जाँच करें: X3, X1 के तुरंत बाएं है? यहाँ X3 स्थान 3 पर है और X1 स्थान 5 पर, यह गलत है। सही क्रम: X2(1), X6(2), X1(3), X6... नहीं। सही क्रम है: X2(1), X4(2), X3(3), X1(4), X6(5), X5(6). जाँच: X3, X1 के तुरंत बाएं है (3 और 4); X5, X6 के दाएं दूसरा है (5 और 6); X2 बाएं छोर पर है। इस प्रकार 3रे और 4थे स्थान पर X3 और X1 हैं।",
-  "e_en": "X2 is at the extreme left end (position 1). X3 is immediately to the left of X1. X5 is second to the right of X6. Let's place them in the 6 positions: X2(1), X4(2), X3(3), X1(4), X6(5), X5(6). Let's verify: X2 is at position 1 (extreme left); X3 is immediately to the left of X1 (positions 3 and 4); X5 is second to the right of X6 (positions 5 and 6, since 5 + 2 = 7? Wait, 5 is second to right of 6 means X6 is at 4 and X5 is at 6? Let's check: X6 is at 4, X5 is at 6. Then positions are X2(1), X3(2), X1(3), X6(4), X4(5), X5(6). Let's check X3 is left of X1 (2 and 3). X5 is second to right of X6 (4 and 6). The 3rd and 4th positions are occupied by X1 and X6."
+  "e_hi": "X2(1)। X1 किसी छोर पर नहीं, अतः X3(2),X1(3) [शेष विकल्प अमान्य होगा]। X6(4),X5(6) [X5, X6 से दूसरा दायें]। शेष X4(5)। क्रम: X2(1),X3(2),X1(3),X6(4),X4(5),X5(6)। मध्य में X1 और X6 हैं।",
+  "e_en": "X2(1). X1 is not at either extreme, so X3(2), X1(3) [the other placement would be invalid]. X6(4), X5(6) [X5 is second to the right of X6]. The remainder X4(5). Order: X2(1), X3(2), X1(3), X6(4), X4(5), X5(6). The middle is occupied by X1 and X6."
  },
  {
   "id": "rp-rea-r03353",
@@ -93636,17 +93636,17 @@
    "S",
    "R"
   ],
-  "a": 0,
-  "e_hi": "पाँच व्यक्ति P, Q, R, S, T वृत्त में केंद्र की ओर मुख करके बैठे हैं। S, P के दाएं दूसरा है। T, Q के बाएं दूसरा है। चूँकि R, P का पड़ोसी नहीं है, इसलिए R को P के बगल में नहीं रखा जा सकता। यदि हम व्यवस्थित करें: P से शुरू करते हुए, P के दाएं पहला स्थान खाली, दूसरा S है। T, Q के बाएं दूसरा है। जब क्रम हल किया जाता है, तो दक्षिणावर्त (clockwise) व्यवस्था बनती है: P, S, Q, T, R। इस व्यवस्था में Q के ठीक दाएं कौन है? Q के दाएं S है, और S के दाएं T है। आइए पुनः जाँचें: S, P के दाएं दूसरा है (P से एक छोड़कर S); T, Q के बाएं दूसरा है। R, P का पड़ोसी नहीं है (P और R के बीच T और Q हैं)। अतः Q के ठीक दाएं S है, लेकिन विकल्पों में देखिए: P, T, S, R। सही उत्तर P है या S? व्यवस्था: P -> S -> Q -> तो Q के तुरंत दाएं T है? चलिए दोबारा बनाते हैं। यदि P शीर्ष पर है, तो दाएं S है। Q, S के दाएं होगा। व्यवस्था: P, R, T, Q, S. जाँच करें: S, P के दाएं दूसरा है (हाँ, बीच में R)। T, Q के बाएं दूसरा है (हाँ, बीच में S)। R, P का निकटतम पड़ोसी है? यहाँ R, P के ठीक बगल में है, जो 'R, P का निकटतम पड़ोसी नहीं है' नियम का उल्लंघन करता है। सही व्यवस्था: P, T, R, S, Q. जाँच: S, P के दाएं दूसरा (P, T, R, S - चौथे स्थान पर S)। T, Q के बाएं दूसरा (Q, P, T - बीच में P)। इस प्रकार Q के ठीक दाएं P है।",
-  "e_en": "Five persons P, Q, R, S, T sit in a circle facing the center. S is second to the right of P. T is second to the left of Q. R is not a neighbor of P. Let's arrange them clockwise: P, T, R, S, Q. Let's verify: S is 2nd to the right of P (P -> T -> R -> S). T is 2nd to the left of Q (Q -> S -> ... wait, Q's left is S, then R, then T). R is not a neighbor of P (True, R is between T and S). Who sits to the immediate right of Q? In clockwise P, T, R, S, Q, the immediate right of Q is P."
+  "a": 2,
+  "e_hi": "दक्षिणावर्त क्रम: P, Q, S, R, T। P दायें S से दूसरा है (P->Q->S)। T, Q से दूसरा बायें है (Q->S->... उल्टी दिशा में T->R->Q)। R, P का निकटतम नहीं है (सत्य)। Q के ठीक दायें S है।",
+  "e_en": "Clockwise order: P, Q, S, R, T. S is second to the right of P (P->Q->S). T is second to the left of Q (counting backwards, Q->S->...; T->R->Q). R is not a neighbor of P (true). Immediately to the right of Q is S."
  },
  {
   "id": "rp-rea-r03355",
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 1,
-  "q_hi": "चार वाहन - W, X, Y और Z - उत्तर की ओर मुख करके एक पंक्ति में खड़े हैं। W, Z के ठीक बाएं है। Y, X के दाएं से दूसरे स्थान पर है। पंक्ति के बाएं छोर पर कौन सा वाहन खड़ा है?",
-  "q_en": "Four vehicles - W, X, Y, and Z - are standing in a row facing North. W is to the immediate left of Z. Y is second to the right of X. Which vehicle is standing at the extreme left end of the row?",
+  "q_hi": "चार वाहन - W, X, Y, और Z उत्तर की ओर मुख करके एक पंक्ति में खड़े हैं। W, Z के ठीक बायें है। Y, X के ठीक दायें है। पंक्ति के सबसे बायें छोर पर कौन सा वाहन खड़ा है?",
+  "q_en": "Four vehicles - W, X, Y, and Z - are standing in a row facing North. W is to the immediate left of Z. Y is immediately to the right of X. Which vehicle is standing at the extreme left end of the row?",
   "o_hi": [
    "X",
    "Y",
@@ -93660,8 +93660,8 @@
    "Z"
   ],
   "a": 0,
-  "e_hi": "चार वाहन W, X, Y, Z उत्तर की ओर मुख किए हैं। W, Z के ठीक बाएं है, जिसका अर्थ है कि उनका जोड़ा (W, Z) इस क्रम में है। Y, X के दाएं दूसरा है, जिसका अर्थ है कि X और Y के बीच एक वाहन है (X _ Y)। चूंकि कुल 4 ही वाहन हैं, X को बाएं छोर पर होना होगा, फिर बीच में कोई और, फिर Y दाएं छोर के पास। यदि X बाएं छोर (1) पर है, तो Y तीसरे स्थान (3) पर होगा। बचा हुआ स्थान 2 और 4 है। W और Z एक साथ (तुरंत बाएं-दाएं) हैं, जो केवल 2 और 3 या 3 और 4 पर आ सकते हैं। चूँकि Y तीसरे स्थान पर है, W और Z स्थान 3 और 4 पर नहीं आ सकते (क्योंकि Y तीसरे पर है)। अतः W और Z स्थान 1 और 2 पर या 2 और 3 पर होने चाहिए। लेकिन X पहले स्थान पर है, इसलिए W और Z स्थान 2 और 3 पर नहीं हो सकते। इसलिए W(2) और Z(3) होना चाहिए, और Y(4) होना चाहिए। आइए जाँच करें: Y, X के दाएं दूसरा है (X पहले पर, बीच में W दूसरे पर, Y तीसरे पर? नहीं, X(1), W(2), Z(3), Y(4)। यहाँ Y, X से तीसरे स्थान पर है। यह नियम 'Y, X के दाएं दूसरा है' को गलत साबित करता है। चलिए दूसरा संयोजन देखते हैं: X(1) और Y(3) के बीच कोई होना चाहिए। यदि व्यवस्था X(1), Z(2), W(3), Y(4) है, तो W, Z के तुरंत बाएं नहीं है (यहाँ Z, W के बाएं है)। सही व्यवस्था जो सभी नियमों को माने: X(1), W(2), Z(3), Y(4) में W, Z के बाएं है। लेकिन Y, X के दाएं दूसरा होना चाहिए (अर्थात बीच में एक वाहन)। यदि X(1) है, तो बीच में कोई और वाहन (मान लीजिए Z) है, और Y तीसरा है -> X, Z, Y, W। यहाँ W, Z के तुरंत बाएं नहीं है। अंततः सही क्रम: Y, X के दाएं दूसरा है, यानी X(1), _(2), Y(3)। बचा हुआ Z और W, जहाँ W, Z के ठीक बाएं है। यदि Z(2) और W(3) हो, तो क्रम X(1), Z(2), W(3), Y(4) बनता है, लेकिन यहाँ W, Z के बाएं नहीं बल्कि दाएं है। यदि W(2) और Z(3) हो, तो क्रम X(1), W(2), Z(3), Y(4) बनता है, जिसमें W, Z के बाएं है। और Y, X के दाएं दूसरा है? X(1) और Y(3) के बीच W(2) है, यानी Y, X के दाएं दूसरा है। अतः बाएं छोर पर X है।",
-  "e_en": "Four vehicles W, X, Y, Z face North. W is immediate left of Z (WZ). Y is second to the right of X (X _ Y). Testing positions 1 to 4: If X is at 1, then Y must be at 3 (since Y is second to the right of X, meaning 1 + 2 = 3). The remaining spots are 2 and 4. We need W to be immediate left of Z (WZ), which fits perfectly into spots 2 and 3! Thus, the arrangement from left to right is: X(1), W(2), Z(3), Y(4). Let's check: W is immediate left of Z (2 is left of 3, W is at 2, Z is at 3 - yes). Y is second to the right of X (X at 1, Y at 3 - yes). Therefore, the vehicle at the extreme left end is X."
+  "e_hi": "X(1),Y(2),W(3),Z(4)। W, Z के ठीक बायें है (3,4)। Y, X के ठीक दायें है (1,2)। सबसे बायें छोर पर X है।",
+  "e_en": "X(1), Y(2), W(3), Z(4). W is immediately left of Z (3,4). Y is immediately right of X (1,2). The extreme left end has X."
  },
  {
   "id": "rp-rea-r03356",
@@ -93691,8 +93691,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 2,
-  "q_hi": "चार कर्मचारी - K, L, M और N - एक वर्गाकार मेज के चारों कोनों पर केंद्र की ओर मुख करके बैठे हैं। K, L के बाएं से दूसरे स्थान पर है। M, N के ठीक दाएं है। K के ठीक सामने कौन बैठा है?",
-  "q_en": "Four employees - K, L, M, and N - are sitting at the four corners of a square table facing the center. K is second to the left of L. M is immediate right of N. Who is sitting directly opposite to K?",
+  "q_hi": "चार कर्मचारी - K, L, M, और N एक वर्गाकार मेज़ के चार कोनों पर केंद्र की ओर मुख करके बैठे हैं। K, L के ठीक बायें है। M, N के ठीक दायें है। K के ठीक सामने कौन बैठा है?",
+  "q_en": "Four employees - K, L, M, and N - are sitting at the four corners of a square table facing the center. K is immediately to the left of L. M is immediately to the right of N. Who is sitting directly opposite to K?",
   "o_hi": [
    "L",
    "M",
@@ -93705,9 +93705,9 @@
    "N",
    "Cannot be determined"
   ],
-  "a": 1,
-  "e_hi": "चार कर्मचारी वर्गाकार मेज के कोनों पर केंद्र की ओर मुख करके बैठे हैं। L को किसी एक कोने पर रखें (मान लीजिए ऊपर-बाएं)। K, L के बाएं दूसरा है, जिसका अर्थ है K ठीक L के विकर्णतः विपरीत (diagonal opposite) कोने पर है। अब हमारे पास M और N के लिए दो कोने बचे हैं। नियम कहता है कि M, N के ठीक दाएं है। यदि केंद्र की ओर मुख हो, तो घड़ी की सुई की दिशा (clockwise) में दायां होता है। यदि N को निचले-बाएं कोने पर रखें, तो उसका दायां ऊपरी-बाएं कोना होगा जहाँ L बैठा है, जो संभव नहीं है। अतः N को निचले-दाएं कोने पर रखें, तो उसका ठीक दायां कोना ऊपरी-दाएं कोने पर M को रखेगा। इस प्रकार व्यवस्था पूरी होती है: L, K, M, N चारों कोनों पर इस प्रकार हैं कि K और M एक-दूसरे के आमने-सामने (विकर्णतः विपरीत) हैं। अतः K के ठीक सामने M बैठा है।",
-  "e_en": "Four employees are at the four corners of a square table facing center. Place L at the top-left corner. K is second to the left of L, which means K is at the bottom-right corner (diagonally opposite to L). We have two corners left: top-right and bottom-left, for M and N. We are given that M is immediate right of N. Facing center, clockwise is right. If N is at bottom-left, its immediate right in a square is top-left (occupied by L). Thus, N must be at bottom-right? Wait, bottom-right is already K! Let's re-verify: Corners are TL, TR, BR, BL. L is at TL. K is 2nd to the left of L, which means K is at BR. Remaining corners are TR and BL for M and N. If N is at BL, its immediate right (clockwise) is TL (occupied). So N must be at TR, and its immediate right is BR? No, clockwise from TR is BR (which is K). Let's trace clockwise: TL -> TR -> BR -> BL -> TL. If N is at BL, its clockwise next is TL (L). If N is at TR, its clockwise next is BR (K). If N is at BR, its clockwise next is BL. Wait, M is immediate right of N. If N is at TR, its right is BR (K). If N is at BR, its right is BL. If N is at BL, its right is TL (L). So N must be at BR? But BR is K! Let's restart: If K is at BR, and L is at TL. Remaining are TR and BL. If N is at BL, its right is TL (taken). If N is at TR, its right is BR (taken). Wait! In a square, facing center, if you are at TR, your right is... wait, facing center means looking down/left. From TR, your right is top-left (TL)! Let's use standard coordinates: TL is top-left. Facing center, your right is towards top-right? No! Facing center from TL means looking towards the center (down-right). Your left is bottom-left, your right is top-right. Let's re-evaluate: K is 2nd left of L. If L is at TL, left is BL, 2nd left is BR. So K is at BR. Opposite to K (BR) is TL (which is L). Wait, if K is at BR, opposite is TL (L). But what about M and N? If M is immediate right of N, and remaining corners are TR and BL. If N is at TR, its right is BR (K - taken). If N is at BL, its right is TL (L - taken). Ah, square table: corners are 4. If L is at TL, K is at BR. Remaining are TR and BL. If N is at TR, its right (clockwise) is BR (K). Wait, clockwise: TL -> TR -> BR -> BL -> TL. So from TR, clockwise is BR. But BR has K. Let's check counter-clockwise: TL -> BL -> BR -> TR -> TL. If N is at BL, counter-clockwise is BR. So M is immediate right (counter-clockwise) of N? Usually 'right' means clockwise. Let's test M = TR, N = BL? If N is at BL, clockwise is TL (L). If N is at TR, clockwise is BR (K). Wait, is 'right' clockwise? Yes. Then M must be at TL? L is there. This means the question has M and N at remaining spots. Let's re-read: K is second to left of L. L(TL) -> left is BL -> 2nd left is BR (K). Opposite of K(BR) is TL(L). Wait, if opposite of K is L, then the question asks 'Who is sitting directly opposite to K?', and L is opposite to K! Let's check option A: L. Yes, L is opposite to K because in a square of 4 corners, opposite corners are (TL, BR) and (TR, BL). Since L is at TL and K is at BR, they are directly opposite!"
+  "a": 2,
+  "e_hi": "L को ऊपर-बायें कोने पर रखें। K, L के ठीक बायें यानी नीचे-बायें कोने पर है। शेष दो कोने (ऊपर-दायें, नीचे-दायें) M,N के लिए हैं -- ये आसन्न हैं। N को ऊपर-दायें रखने पर M इसके ठीक दायें यानी नीचे-दायें आता है। K(नीचे-बायें) के ठीक सामने N(ऊपर-दायें) है।",
+  "e_en": "Place L at the top-left corner. K, immediately to L's left, is at the bottom-left corner. The remaining two corners (top-right, bottom-right) are for M and N -- these are adjacent. Placing N at top-right puts M immediately to its right at bottom-right. Directly opposite K (bottom-left) is N (top-right)."
  },
  {
   "id": "rp-rea-r03358",
@@ -93729,8 +93729,8 @@
    "P"
   ],
   "a": 0,
-  "e_hi": "पाँच किताबों के ऊर्ध्वाधर ढेर में नीचे से ऊपर क्रम बनाते हैं। दिया गया है: T, P के ठीक ऊपर है (TP)। P, Q के ठीक ऊपर है (PQ)। इसका अर्थ है कि एक साथ जुड़े होने पर क्रम TPQ बनता है (T सबसे ऊपर, फिर P, फिर Q)। आगे दिया है: R, S के नीचे है लेकिन Q के ऊपर है (यानी S > R > Q)। चूंकि Q इन सबके नीचे आ रहा है, और R Q के ऊपर है, तो क्रम बनता है: S के नीचे R, और R के नीचे Q। सम्पूर्ण क्रम ऊपर से नीचे इस प्रकार होगा: T, P, Q, R, S? आइए जाँच करें: 'R, Q के ऊपर है' - हमारे क्रम में Q नीचे है और R ऊपर है, जिसका अर्थ है R, Q के ऊपर है (हाँ)। 'R, S के नीचे है' - हमारे क्रम में S सबसे ऊपर या ऊपर होना चाहिए, और R उसके नीचे है। आइए सही श्रृंखला ऊपर से नीचे बनाएँ: S सबसे ऊपर, फिर R, फिर T, फिर P, फिर Q? आइए नियमों से मिलान करें:\n1. T, P के ठीक ऊपर है (TP - हाँ, यदि P Q के ऊपर हो और T P के ऊपर)।\n2. P, Q के ठीक ऊपर है (PQ - हाँ)।\n3. R, S के नीचे है लेकिन Q के ऊपर है -> यह विरोधाभास है क्योंकि यदि R, Q के ऊपर है और P, Q के ठीक ऊपर है, तो R और P का स्थानज संबंध क्या है? यदि क्रम S, R, T, P, Q हो, तो R, S के नीचे है (हाँ), R, Q के ऊपर है (हाँ), T, P के ठीक ऊपर है (हाँ), P, Q के ठीक ऊपर है (हाँ)। इस प्रकार ऊपर से नीचे क्रम है: S, R, T, P, Q। सबसे नीचे Q है।",
-  "e_en": "Five books in a vertical stack. Given: T is immediately above P (TP). P is immediately above Q (PQ). So we have T-P-Q from top to middle-bottom. Also given: R is below S (S ... R) but above Q (R ... Q). Combining all: S is above R, R is above T? Wait, if R is above Q, and Q is below P, where does R fit? Let's check stack from top to bottom: S, R, T, P, Q. Let's verify constraints: 1. T is immediately above P (Yes, T is right above P). 2. P is immediately above Q (Yes, P is right above Q). 3. R is below S (S is above R - Yes) and above Q (R is above Q - Yes, R is above T and P and Q). Therefore, the complete order from top to bottom is S, R, T, P, Q. The book at the very bottom is Q."
+  "e_hi": "क्रम ऊपर से नीचे: S, R, T, P, Q। T, P के ठीक ऊपर है; P, Q के ठीक ऊपर है; R, S के नीचे पर Q से ऊपर है। सबसे नीचे Q है।",
+  "e_en": "Order from top to bottom: S, R, T, P, Q. T is immediately above P; P is immediately above Q; R is below S but above Q. At the very bottom is Q."
  },
  {
   "id": "rp-rea-r03359",
