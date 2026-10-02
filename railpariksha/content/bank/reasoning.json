@@ -95203,5 +95203,304 @@
   "a": 1,
   "e_hi": "स्पष्टीकरण: n x n आकार के ग्रिड में वर्गों की कुल संख्या निकालने का सूत्र है: 1^2 + 2^2 + 3^2 + ... + n^2। यहाँ n = 4 है। इसलिए, 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 30। अतः ग्रिड में कुल 30 वर्ग हैं। सही विकल्प 2 है।",
   "e_en": "Explanation: The total number of squares in an n x n grid is given by the formula: 1^2 + 2^2 + 3^2 + ... + n^2. Here n = 4. Therefore, calculating for a 4x4 grid: 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 30. Thus, there are 30 squares in total. Hence, option 1 is correct."
+ },
+ {
+  "id": "rp-rea-r03423",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "एक दीवार घड़ी में 8 बजकर 20 मिनट का समय हो रहा है। यदि इसे समतल दर्पण में देखा जाए, तो दर्पण में दिखने वाला समय क्या होगा?",
+  "q_en": "A wall clock shows a time of 8 hours and 20 minutes. If it is viewed in a plane mirror, what time will be displayed in the mirror reflection?",
+  "o_hi": [
+   "3 बजकर 40 मिनट",
+   "4 बजकर 40 मिनट",
+   "3 बजकर 20 मिनट",
+   "4 बजकर 20 मिनट"
+  ],
+  "o_en": [
+   "3 hours 40 minutes",
+   "4 hours 40 minutes",
+   "3 hours 20 minutes",
+   "4 hours 20 minutes"
+  ],
+  "a": 0,
+  "e_hi": "घड़ी के दर्पण प्रतिबिंब को ज्ञात करने के लिए, दिए गए समय को 11:60 में से घटाया जाता है। 11:60 - 08:20 = 03:40। अतः दर्पण में 3 बजकर 40 मिनट दिखाई देगा।",
+  "e_en": "To find the mirror image time of a clock, subtract the given time from 11:60. 11:60 - 08:20 = 03:40. Thus, the clock will show 3 hours and 40 minutes."
+ },
+ {
+  "id": "rp-rea-r03424",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "संख्यात्मक और वर्णमाला संयोजन '7B3K9P' का जल प्रतिबिंब (water image) क्या होगा, यदि जल रेखा इसके ठीक नीचे स्थित हो?",
+  "q_en": "What will be the water image of the alphanumeric combination '7B3K9P' if the water line is situated directly below it?",
+  "o_hi": [
+   "L83MYd",
+   "JBEKA6",
+   "¿BEXdb",
+   "¿B3K9b"
+  ],
+  "o_en": [
+   "L83MYd",
+   "JBEKA6",
+   "¿BEXdb",
+   "¿B3K9b"
+  ],
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब में प्रत्येक वर्ण और अंक ऊपर से नीचे (vertical inversion) उल्टा हो जाता है जबकि उनका दायाँ-बायाँ क्रम वही रहता है। 7 का जल प्रतिबिंब ¿ जैसा दिखता है, B का B रहता है, 3 का 3 रहता है, K का K रहता है, 9 का 6 बनता है और P का b बनता है। सही संयोजन '¿B3K9b' या उपयुक्त मुद्रित रूप है।",
+  "e_en": "In a water image, each character is vertically inverted while maintaining its left-to-right sequence. 7 inverts to ¿, B remains B, 3 remains 3, K remains K, 9 inverts to 6 (or similar shape depending on font, here standard inversion applies), and P inverts to b."
+ },
+ {
+  "id": "rp-rea-r03425",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "एक घड़ी में 4 बजकर 50 मिनट का समय हो रहा है। इस स्थिति में जल प्रतिबिंब (water image) समय क्या दर्शाएगा?",
+  "q_en": "A clock shows 4 hours and 50 minutes. What time will be shown by its water image?",
+  "o_hi": [
+   "1 बजकर 40 मिनट",
+   "2 बजकर 40 मिनट",
+   "1 बजकर 10 मिनट",
+   "2 बजकर 10 मिनट"
+  ],
+  "o_en": [
+   "1 hour 40 minutes",
+   "2 hours 40 minutes",
+   "1 hour 10 minutes",
+   "2 hours 10 minutes"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब समय निकालने के लिए दिए गए समय को 17:90 (या 18:30) में से घटाया जाता है। 17:90 - 04:50 = 13:40, जो कि 12 घंटे के प्रारूप में 1 बजकर 40 मिनट होता है।",
+  "e_en": "To calculate the water image time, subtract the given time from 17:90 (or 18:30). 17:90 - 04:50 = 13:40, which corresponds to 1 hour and 40 minutes in a 12-hour format."
+ },
+ {
+  "id": "rp-rea-r03426",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "रेलवे टिकट काउंटर पर एक गुप्त कोड 'STATION' लिखा है। यदि इसके ठीक दाईं ओर एक समतल दर्पण रख दिया जाए, तो इसका सटीक दर्पण प्रतिबिंब कौन सा होगा?",
+  "q_en": "A secret code 'STATION' is written at a railway ticket counter. If a plane mirror is placed directly to its right, which of the following will be its exact mirror image?",
+  "o_hi": [
+   "NOITATS",
+   "NOITATS (पार्श्व उलटा)",
+   "N017470",
+   "S⟷A⟷T⟷I⟷O⟷N"
+  ],
+  "o_en": [
+   "NOITATS",
+   "NOITATS (lateral inversion)",
+   "N017470",
+   "S⟷A⟷T⟷I⟷O⟷N"
+  ],
+  "a": 1,
+  "e_hi": "दर्पण प्रतिबिंब में दायाँ सिरा बाएँ जाता है और प्रत्येक अक्षर का पार्श्व उलटाव (lateral inversion) होता है। 'STATION' में N से शुरुआत होगी और सभी अक्षर उल्टे हो जाएंगे: N (उल्टा), O, I, T (वैसा ही), A (वैसा ही), T, S (उल्टा)। यह 'NOITATS' के रूप में दिखाई देगा जिसमें अक्षर भी पलटे होंगे।",
+  "e_en": "In a mirror image, the right end comes first, and each letter undergoes lateral inversion. 'STATION' becomes NOITATS with each individual letter horizontally flipped."
+ },
+ {
+  "id": "rp-rea-r03427",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "एक परीक्षा हॉल की दीवार घड़ी में 12 बजकर 35 मिनट का समय हो रहा है। यदि इसका जल प्रतिबिंब देखा जाए, तो क्या समय दिखाई देगा?",
+  "q_en": "An examination hall wall clock shows 12 hours and 35 minutes. What time will be reflected in its water image?",
+  "o_hi": [
+   "5 बजकर 55 मिनट",
+   "6 बजकर 05 मिनट",
+   "5 बजकर 25 मिनट",
+   "6 बजकर 55 मिनट"
+  ],
+  "o_en": [
+   "5 hours 55 minutes",
+   "6 hours 5 minutes",
+   "5 hours 25 minutes",
+   "6 hours 55 minutes"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब समय के लिए 18:30 में से घटाते हैं। चूंकि 30 मिनट में से 35 नहीं घट सकता, इसलिए 18:30 को 17:90 मान लेते हैं। 17:90 - 12:35 = 05:55। अतः 5 बजकर 55 मिनट सही उत्तर है।",
+  "e_en": "For water image time, subtract from 18:30. Since 35 cannot be subtracted from 30, borrow 1 hour making it 17:90. 17:90 - 12:35 = 05:55."
+ },
+ {
+  "id": "rp-rea-r03428",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "दी गई संख्या '49825' का दर्पण प्रतिबिंब क्या होगा, यदि दर्पण इसके बाईं ओर रखा गया हो?",
+  "q_en": "What will be the mirror image of the given number '49825' if the mirror is placed to its left?",
+  "o_hi": [
+   "52894",
+   "52864",
+   "52849",
+   "25894"
+  ],
+  "o_en": [
+   "52894",
+   "52864",
+   "52849",
+   "25894"
+  ],
+  "a": 0,
+  "e_hi": "जब दर्पण बाईं ओर रखा जाता है, तो दायाँ भाग बाएँ आ जाता है और अंकों का क्रम भी उल्टे क्रम से शुरू होता है (जो कि सामान्य दाएँ दर्पण के समान ही परिणाम देता है बशर्ते संदर्भ बिंदु बायाँ हो)। '49825' में अंत वाला '5' पहले आएगा और वह पार्श्व उल्टे रूप में होगा, फिर 2, 8, 9, और 4। सही क्रम 52894 (पार्श्व उलटे अंकों के साथ) बनेगा।",
+  "e_en": "When a mirror is placed to the left, the rightmost digit comes first, and each digit is laterally inverted. '49825' yields 5, 2, 8, 9, 4 in reverse sequence with flipped digits."
+ },
+ {
+  "id": "rp-rea-r03429",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "एक आकृति जिसमें तीर (arrow) ऊपर की ओर इशारा कर रहा है और उसके ठीक नीचे एक जल सतह है, उस जल प्रतिबिंब में तीर किस दिशा में इशारा करेगा?",
+  "q_en": "A figure contains an arrow pointing straight UP, and a water surface is directly below it. In the water image, in which direction will the arrow point?",
+  "o_hi": [
+   "ऊपर की ओर (UP)",
+   "नीचे की ओर (DOWN)",
+   "बाएँ की ओर (LEFT)",
+   "दाएँ की ओर (RIGHT)"
+  ],
+  "o_en": [
+   "UP",
+   "DOWN",
+   "LEFT",
+   "RIGHT"
+  ],
+  "a": 1,
+  "e_hi": "जल प्रतिबिंब में केवल ऊर्ध्वाधर (vertical) उलटाव होता है, यानी ऊपर का हिस्सा नीचे और नीचे का हिस्सा ऊपर हो जाता है। चूँकि मूल तीर ऊपर की ओर इशारा कर रहा है, जल प्रतिबिंब में उसका नुकीला सिरा नीचे की ओर हो जाएगा।",
+  "e_en": "A water image causes a vertical inversion (top-to-bottom flip). Since the original arrow points UP, its water reflection will point DOWN."
+ },
+ {
+  "id": "rp-rea-r03430",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 3,
+  "q_hi": "यदि शब्द 'EXAM' का जल प्रतिबिंब (water image) बनाया जाए, तो अंग्रेजी वर्णमाला के कौन से अक्षर अपनी मूल आकृति को पूरी तरह बरकरार रखेंगे और जल प्रतिबिंब में अपरिवर्तित दिखेंगे?",
+  "q_en": "If the water image of the word 'EXAM' is taken, which letters of the English alphabet within it will retain their exact original shape and appear unchanged in the water image?",
+  "o_hi": [
+   "कोई नहीं (None)",
+   "केवल E और X",
+   "केवल X और M",
+   "E, X, A और M सभी"
+  ],
+  "o_en": [
+   "None",
+   "Only E and X",
+   "Only X and M",
+   "All E, X, A and M"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब में ऊर्ध्वाधर समरूपता (vertical symmetry) वाले अक्षर ही अपरिवर्तित रहते हैं। 'EXAM' में E (क्षैतिज रूप से सममित है, जल में उल्टा होगा), X (ऊपर-नीचे और दाएँ-बाएँ दोनों तरफ से सममित हो सकता है यदि रेखाएं समान हों, लेकिन मानक फोंट में ऊर्ध्वाधर जल प्रतिबिंब बदल जाता है), A (उल्टा होकर V बनता है), M (उल्टा होकर W बनता है)। अतः इनमें से कोई भी अक्षर मानक जल प्रतिबिंब में अपरिवर्तित नहीं रहता।",
+  "e_en": "Water images require vertical symmetry for a character to remain unchanged. In standard block letters, none of E, X, A, or M remain identical when flipped upside down (A becomes V, M becomes W, E flips, standard X might change if top/bottom are distinct). Thus, none remain unchanged."
+ },
+ {
+  "id": "rp-rea-r03431",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 1,
+  "q_hi": "यदि किसी घड़ी में वास्तविक समय 4 बजकर 40 मिनट हो रहा है, तो उस घड़ी का जल प्रतिबिंब (Water Image) समय क्या होगा?",
+  "q_en": "If a clock shows the actual time as 4 hours 40 minutes, what will be the water image time of that clock?",
+  "o_hi": [
+   "1 बजकर 50 मिनट",
+   "2 बजकर 50 मिनट",
+   "1 बजकर 20 मिनट",
+   "2 बजकर 20 मिनट"
+  ],
+  "o_en": [
+   "1 hour 50 minutes",
+   "2 hours 50 minutes",
+   "1 hour 20 minutes",
+   "2 hours 20 minutes"
+  ],
+  "a": 0,
+  "e_hi": "जल प्रतिबिंब ज्ञात करने के लिए, दिए गए समय को 18:30 (या 17:90) में से घटाया जाता है। यहाँ वास्तविक समय 4:40 है। 17:90 - 4:40 = 13:50। चूंकि 13 का अर्थ रेलवे समय के अनुसार दोपहर का 1 होता है, इसलिए 12 घंटे घटाने पर समय 1:50 प्राप्त होता है। अतः सही उत्तर विकल्प 0 है।",
+  "e_en": "To find the water image time, subtract the given time from 18:30 (or 17:90). Here, the given time is 4:40. Subtracting 4:40 from 17:90 gives 13:50. Since 13 corresponds to 1:00 PM, subtracting 12 hours gives 1:50. Therefore, the correct option is 0."
+ },
+ {
+  "id": "rp-rea-r03432",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "d": 2,
+  "q_hi": "शब्द 'RAILWAY' का सही दर्पण प्रतिबिंब (Mirror Image) क्या होगा जब दर्पण को दाईं ओर रखा जाए?",
+  "q_en": "What will be the correct mirror image of the word 'RAILWAY' when the mirror is placed on the right side?",
+  "o_hi": [
+   "YAWLIA",
+   "YAWLIAR",
+   "ƔAWLIAЯ",
+   "YAWLIⱭЯ"
+  ],
+  "o_en": [
+   "YAWLIA",
+   "YAWLIAR",
+   "ƔAWLIAЯ",
+   "YAWLIⱭЯ"
+  ],
+  "a": 3,
+  "e_hi": "दर्पण प्रतिबिंब में प्रत्येक अक्षर का दायाँ हिस्सा बायाँ और बायाँ हिस्सा दायाँ हो जाता है तथा अक्षरों का क्रम भी विपरीत हो जाता है (अंतिम अक्षर सबसे पहले आता है)। 'RAILWAY' में 'Y' सबसे अंत में है जो दर्पण के सबसे पास होने के कारण सबसे पहले सीधा या हल्का परिवर्तित दिखेगा, और सभी अक्षर बाएँ-दाएँ पलट जाएंगे। अंततः 'YAWLIⱭЯ' सही दर्पण प्रतिबिंब बनता है।",
+  "e_en": "In a mirror image, each letter is flipped horizontally (left to right), and the order of the letters is reversed (the last letter comes first). For the word 'RAILWAY', 'Y' comes first in reverse order, followed by 'A', 'W', 'I', 'L', 'A', and 'R' flipped horizontally. This yields 'YAWLIⱭЯ'. Thus, option 3 is correct."
+ },
+ {
+  "id": "rp-rea-r03433",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "जिस प्रकार 'ट्रेन' का संबंध 'पटरियों' से है, उसी प्रकार 'जहाज' का संबंध किससे है?",
+  "q_en": "Train is to Tracks as Ship is to what?",
+  "o_hi": [
+   "आकाश",
+   "समुद्र",
+   "हवाई अड्डा",
+   "मार्ग"
+  ],
+  "o_en": [
+   "Sky",
+   "Sea",
+   "Airport",
+   "Route"
+  ],
+  "a": 1,
+  "e_hi": "स्पष्टीकरण: एक ट्रेन पटरियों पर चलती है, जो उसके चलने का मार्ग है। इसी प्रकार, एक जहाज समुद्र या पानी में चलता है। इसलिए सही उत्तर 'समुद्र' है।",
+  "e_en": "Explanation: A train runs on tracks, which serve as its dedicated path of motion. Similarly, a ship travels on the sea/water. Therefore, the correct answer is 'Sea'."
+ },
+ {
+  "id": "rp-rea-r03434",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 2,
+  "q_hi": "दी गई सादृश्यता को पूरा करें: BDF : HJL :: PRT : ?",
+  "q_en": "Complete the given analogy: BDF : HJL :: PRT : ?",
+  "o_hi": [
+   "VXZ",
+   "UWY",
+   "TVX",
+   "SUW"
+  ],
+  "o_en": [
+   "VXZ",
+   "UWY",
+   "TVX",
+   "SUW"
+  ],
+  "a": 0,
+  "e_hi": "स्पष्टीकरण: B(2), D(4), F(6) से H(8), J(10), L(12) बनता है, जहाँ प्रत्येक अक्षर में +6 की वृद्धि हुई है। इसी प्रकार P(16), R(18), T(20) में प्रत्येक अक्षर में +6 जोड़ने पर V(22), X(24), Z(26) प्राप्त होता है। अतः सही विकल्प VXZ है।",
+  "e_en": "Explanation: In the first pair, B(2), D(4), F(6) correspond to H(8), J(10), L(12) respectively, with a constant shift of +6 for each letter. Applying the same +6 rule to P(16), R(18), T(20), we get V(22), X(24), Z(26), which is VXZ."
+ },
+ {
+  "id": "rp-rea-r03435",
+  "s": "reasoning",
+  "t": "analogy",
+  "d": 1,
+  "q_hi": "संख्या युग्म के बीच के संबंध को पहचानें और लुप्त संख्या ज्ञात करें: 14 : 196 :: 18 : ?",
+  "q_en": "Identify the relationship in the number pair and find the missing term: 14 : 196 :: 18 : ?",
+  "o_hi": [
+   "324",
+   "342",
+   "288",
+   "306"
+  ],
+  "o_en": [
+   "324",
+   "342",
+   "288",
+   "306"
+  ],
+  "a": 0,
+  "e_hi": "स्पष्टीकरण: पहली संख्या का वर्ग दूसरी संख्या है। यहाँ 14 का वर्ग 196 है ($14 \\times 14 = 196$)। इसी नियम के अनुसार 18 का वर्ग 324 होगा ($18 \\times 18 = 324$)। इसलिए सही विकल्प 324 है।",
+  "e_en": "Explanation: The second number is the square of the first number. Here, 14 squared is 196 ($14 \\times 14 = 196$). Following the exact same rule for 18, we get $18 \\times 18 = 324$. Therefore, the correct option is 324."
  }
 ]
