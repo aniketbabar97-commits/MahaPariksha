@@ -99,7 +99,7 @@ ThemeData buildTheme(Brightness b) {
 // glance instead of stock Material outlines -- every one of these names was
 // confirmed against the phosphor_flutter 2.1.0 package source before use.
 IconData subjectIcon(String name) {
-  const map = {
+  final map = {
     'translate': Icons.translate,
     'abc': PhosphorIcons.textAa(PhosphorIconsStyle.fill),
     'calculate': PhosphorIcons.calculator(PhosphorIconsStyle.fill),
