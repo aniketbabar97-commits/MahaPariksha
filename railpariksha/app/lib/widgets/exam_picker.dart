@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -34,7 +35,13 @@ class ExamPicker extends StatelessWidget {
                     ),
                     selected: selected == e.id,
                     selectedColor: BrandColors.saffron.withValues(alpha: 0.25),
-                    onSelected: (_) => onSelected(e.id),
+                    // The single most important choice in onboarding -- which
+                    // exam to prepare for -- had no tactile feedback at all,
+                    // unlike every other selection control in the app.
+                    onSelected: (_) {
+                      HapticFeedback.selectionClick();
+                      onSelected(e.id);
+                    },
                   ),
               ],
             ),

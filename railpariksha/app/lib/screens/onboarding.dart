@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -95,6 +96,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               trailing: Icon(current == code ? Icons.radio_button_checked : Icons.radio_button_off,
                   color: BrandColors.saffron),
               onTap: () {
+                HapticFeedback.selectionClick();
                 context.scope.progress.update((p) => p.lang = code);
                 setState(() => step = 1);
               },
@@ -156,7 +158,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   style: const TextStyle(fontWeight: FontWeight.w700)),
               subtitle: Text(context.tr(hi, en)),
               trailing: goal == n ? const Icon(Icons.check_circle, color: BrandColors.saffron) : null,
-              onTap: () => setState(() => goal = n),
+              onTap: () {
+                HapticFeedback.selectionClick();
+                setState(() => goal = n);
+              },
             ),
           ),
         );
@@ -174,13 +179,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
           icon: const Icon(Icons.rocket_launch),
           label: Text(context.tr('सफ़र शुरू करें!', "Let's go!")),
-          onPressed: () => context.scope.progress.update((p) {
-            p.examId = examId;
-            p.dailyGoal = goal;
-            p.onboarded = true;
-          }),
+          onPressed: () {
+            HapticFeedback.selectionClick();
+            context.scope.progress.update((p) {
+              p.examId = examId;
+              p.dailyGoal = goal;
+              p.onboarded = true;
+            });
+          },
         ),
-        TextButton(onPressed: () => setState(() => step = 1), child: Text(context.tr('वापस', 'Back'))),
+        TextButton(
+          onPressed: () {
+            HapticFeedback.selectionClick();
+            setState(() => step = 1);
+          },
+          child: Text(context.tr('वापस', 'Back')),
+        ),
       ],
     );
   }

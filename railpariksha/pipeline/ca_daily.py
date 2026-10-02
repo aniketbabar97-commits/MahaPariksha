@@ -35,7 +35,11 @@ from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "content/bank/current_affairs_auto.json"
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+# gemini-2.5-flash's free tier is capped at a hard 20 requests/day (confirmed
+# via an actual 429 RESOURCE_EXHAUSTED) and was also seeing persistent 503
+# "high demand" errors on a live run -- gemini-flash-lite-latest answered
+# immediately with no quota/availability issues in the same run.
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-lite-latest")
 GROK_MODEL = os.environ.get("GROK_MODEL", "grok-4-fast-reasoning")
 CLAUDE_MODEL = os.environ.get("RAILPARIKSHA_CLAUDE_MODEL", "claude-sonnet-5")
 FEEDS = [f for f in os.environ.get(
