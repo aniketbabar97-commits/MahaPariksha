@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 /// Shared spacing scale so padding/gaps stay consistent instead of scattering
 /// magic numbers across screens. Use these for new/updated layout code.
@@ -95,32 +94,35 @@ ThemeData buildTheme(Brightness b) {
   );
 }
 
-// Phosphor's filled glyphs read as a deliberate, branded icon set at a
-// glance instead of stock Material outlines -- every one of these names was
-// confirmed against the phosphor_flutter 2.1.0 package source before use.
+// A phosphor_flutter-based duotone icon set was tried here and reverted --
+// its PhosphorIconData extends IconData, which this Flutter SDK marks a
+// `final class` (no external package may extend it), so release AOT
+// compilation hard-fails even though `flutter analyze`/`test` both pass.
+// Material's own *filled* glyphs (dropping the _outlined suffix) give a
+// bolder, more deliberate look with zero dependency risk instead.
 IconData subjectIcon(String name) {
-  final map = {
+  const map = {
     'translate': Icons.translate,
-    'abc': PhosphorIcons.textAa(PhosphorIconsStyle.fill),
-    'calculate': PhosphorIcons.calculator(PhosphorIconsStyle.fill),
-    'psychology': PhosphorIcons.brain(PhosphorIconsStyle.fill),
-    'account_balance': Icons.account_balance_outlined,
-    'public': PhosphorIcons.globe(PhosphorIconsStyle.fill),
-    'gavel': Icons.gavel_outlined,
+    'abc': Icons.abc,
+    'calculate': Icons.calculate,
+    'psychology': Icons.psychology,
+    'account_balance': Icons.account_balance,
+    'public': Icons.public,
+    'gavel': Icons.gavel,
     'currency_rupee': Icons.currency_rupee,
-    'science': PhosphorIcons.flask(PhosphorIconsStyle.fill),
-    'lightbulb': Icons.lightbulb_outline,
-    'computer': PhosphorIcons.desktop(PhosphorIconsStyle.fill),
-    'school': Icons.school_outlined,
-    'traffic': Icons.traffic_outlined,
-    'newspaper': PhosphorIcons.newspaper(PhosphorIconsStyle.fill),
-    'eco': Icons.eco_outlined,
+    'science': Icons.science,
+    'lightbulb': Icons.lightbulb,
+    'computer': Icons.computer,
+    'school': Icons.school,
+    'traffic': Icons.traffic,
+    'newspaper': Icons.newspaper,
+    'eco': Icons.eco,
     'insights': Icons.insights,
-    'park': Icons.park_outlined,
-    'train': PhosphorIcons.trainSimple(PhosphorIconsStyle.fill),
-    'build': PhosphorIcons.wrench(PhosphorIconsStyle.fill),
-    'construction': PhosphorIcons.hardHat(PhosphorIconsStyle.fill),
-    'bolt': PhosphorIcons.lightning(PhosphorIconsStyle.fill),
+    'park': Icons.park,
+    'train': Icons.train,
+    'build': Icons.build,
+    'construction': Icons.construction,
+    'bolt': Icons.bolt,
   };
-  return map[name] ?? Icons.menu_book_outlined;
+  return map[name] ?? Icons.menu_book;
 }
