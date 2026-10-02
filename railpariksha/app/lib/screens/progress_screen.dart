@@ -5,8 +5,11 @@ import 'package:share_plus/share_plus.dart';
 import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../data/progress.dart';
 import '../widgets/common.dart';
+import 'practice_screen.dart';
+import 'quiz_screen.dart';
 
 class ProgressScreen extends StatelessWidget {
   const ProgressScreen({super.key});
@@ -83,7 +86,15 @@ class ProgressScreen extends StatelessWidget {
                 Builder(builder: (context) {
                   final st = subjectStats[sub.id];
                   final acc = st == null || st[0] == 0 ? null : st[1] / st[0];
-                  return Padding(
+                  return InkWell(
+                    // These rows showed per-subject accuracy but did nothing
+                    // when tapped -- the natural next step from "here's how
+                    // you're doing in X" is jumping straight into that subject.
+                    onTap: () {
+                      HapticFeedback.selectionClick();
+                      push(context, (_) => SubjectScreen(subject: sub));
+                    },
+                    child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 6),
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
@@ -113,6 +124,7 @@ class ProgressScreen extends StatelessWidget {
                             textAlign: TextAlign.right, style: const TextStyle(fontWeight: FontWeight.w700)),
                       ),
                     ]),
+                    ),
                   );
                 }),
             ]),
@@ -128,6 +140,13 @@ class ProgressScreen extends StatelessWidget {
                 title: Text(s.repo.topic(t.subject, t.topic)?.name.of(lang) ?? t.topic),
                 subtitle: Text(s.repo.subject(t.subject)?.name.of(lang) ?? ''),
                 trailing: Text('${(t.accuracy * 100).round()}%', style: const TextStyle(fontWeight: FontWeight.w800)),
+                // A list literally titled "Topics to improve" had no way to
+                // act on that -- tapping did nothing. The obvious next step
+                // from "you're weak here" is practicing that exact topic now.
+                onTap: () {
+                  HapticFeedback.selectionClick();
+                  startQuiz(context, s.builder.practice(subject: t.subject, topic: t.topic));
+                },
               ),
             ),
         ],
