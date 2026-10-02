@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 /// Shared spacing scale so padding/gaps stay consistent instead of scattering
 /// magic numbers across screens. Use these for new/updated layout code.
@@ -94,29 +95,32 @@ ThemeData buildTheme(Brightness b) {
   );
 }
 
+// Phosphor's filled glyphs read as a deliberate, branded icon set at a
+// glance instead of stock Material outlines -- every one of these names was
+// confirmed against the phosphor_flutter 2.1.0 package source before use.
 IconData subjectIcon(String name) {
   const map = {
     'translate': Icons.translate,
-    'abc': Icons.abc,
-    'calculate': Icons.calculate_outlined,
-    'psychology': Icons.psychology_outlined,
+    'abc': PhosphorIcons.textAa(PhosphorIconsStyle.fill),
+    'calculate': PhosphorIcons.calculator(PhosphorIconsStyle.fill),
+    'psychology': PhosphorIcons.brain(PhosphorIconsStyle.fill),
     'account_balance': Icons.account_balance_outlined,
-    'public': Icons.public,
+    'public': PhosphorIcons.globe(PhosphorIconsStyle.fill),
     'gavel': Icons.gavel_outlined,
     'currency_rupee': Icons.currency_rupee,
-    'science': Icons.science_outlined,
+    'science': PhosphorIcons.flask(PhosphorIconsStyle.fill),
     'lightbulb': Icons.lightbulb_outline,
-    'computer': Icons.computer,
+    'computer': PhosphorIcons.desktop(PhosphorIconsStyle.fill),
     'school': Icons.school_outlined,
     'traffic': Icons.traffic_outlined,
-    'newspaper': Icons.newspaper,
+    'newspaper': PhosphorIcons.newspaper(PhosphorIconsStyle.fill),
     'eco': Icons.eco_outlined,
     'insights': Icons.insights,
     'park': Icons.park_outlined,
-    'train': Icons.train_outlined,
-    'build': Icons.build_outlined,
-    'construction': Icons.construction_outlined,
-    'bolt': Icons.bolt,
+    'train': PhosphorIcons.trainSimple(PhosphorIconsStyle.fill),
+    'build': PhosphorIcons.wrench(PhosphorIconsStyle.fill),
+    'construction': PhosphorIcons.hardHat(PhosphorIconsStyle.fill),
+    'bolt': PhosphorIcons.lightning(PhosphorIconsStyle.fill),
   };
   return map[name] ?? Icons.menu_book_outlined;
 }
