@@ -95269,9 +95269,9 @@
    "1 hour 10 minutes",
    "2 hours 10 minutes"
   ],
-  "a": 0,
-  "e_hi": "जल प्रतिबिंब समय निकालने के लिए दिए गए समय को 17:90 (या 18:30) में से घटाया जाता है। 17:90 - 04:50 = 13:40, जो कि 12 घंटे के प्रारूप में 1 बजकर 40 मिनट होता है।",
-  "e_en": "To calculate the water image time, subtract the given time from 17:90 (or 18:30). 17:90 - 04:50 = 13:40, which corresponds to 1 hour and 40 minutes in a 12-hour format."
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब सूत्र: 6:00 - वास्तविक समय (मॉड्यूलो 12)। 4 घंटे 50 मिनट = 4.8333 घंटे। 6 - 4.8333 = 1.1667 घंटे = 1 घंटा 10 मिनट।",
+  "e_en": "Water image formula: 6:00 - actual time (mod 12). 4 hours 50 minutes = 4.8333 hours. 6 - 4.8333 = 1.1667 hours = 1 hour 10 minutes."
  },
  {
   "id": "rp-rea-r03426",
@@ -95315,9 +95315,9 @@
    "5 hours 25 minutes",
    "6 hours 55 minutes"
   ],
-  "a": 0,
-  "e_hi": "जल प्रतिबिंब समय के लिए 18:30 में से घटाते हैं। चूंकि 30 मिनट में से 35 नहीं घट सकता, इसलिए 18:30 को 17:90 मान लेते हैं। 17:90 - 12:35 = 05:55। अतः 5 बजकर 55 मिनट सही उत्तर है।",
-  "e_en": "For water image time, subtract from 18:30. Since 35 cannot be subtracted from 30, borrow 1 hour making it 17:90. 17:90 - 12:35 = 05:55."
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब सूत्र: 6:00 - वास्तविक समय (मॉड्यूलो 12)। 12 घंटे 35 मिनट को मॉड 12 में 0.5833 घंटे मानें। 6 - 0.5833 = 5.4167 घंटे = 5 घंटे 25 मिनट।",
+  "e_en": "Water image formula: 6:00 - actual time (mod 12). 12 hours 35 minutes is 0.5833 hours when taken mod 12. 6 - 0.5833 = 5.4167 hours = 5 hours 25 minutes."
  },
  {
   "id": "rp-rea-r03428",
@@ -95384,9 +95384,9 @@
    "Only X and M",
    "All E, X, A and M"
   ],
-  "a": 0,
-  "e_hi": "जल प्रतिबिंब में ऊर्ध्वाधर समरूपता (vertical symmetry) वाले अक्षर ही अपरिवर्तित रहते हैं। 'EXAM' में E (क्षैतिज रूप से सममित है, जल में उल्टा होगा), X (ऊपर-नीचे और दाएँ-बाएँ दोनों तरफ से सममित हो सकता है यदि रेखाएं समान हों, लेकिन मानक फोंट में ऊर्ध्वाधर जल प्रतिबिंब बदल जाता है), A (उल्टा होकर V बनता है), M (उल्टा होकर W बनता है)। अतः इनमें से कोई भी अक्षर मानक जल प्रतिबिंब में अपरिवर्तित नहीं रहता।",
-  "e_en": "Water images require vertical symmetry for a character to remain unchanged. In standard block letters, none of E, X, A, or M remain identical when flipped upside down (A becomes V, M becomes W, E flips, standard X might change if top/bottom are distinct). Thus, none remain unchanged."
+  "a": 1,
+  "e_hi": "जल में ऊपर-नीचे पलटने पर, जो अक्षर क्षैतिज अक्ष पर सममित हैं वे अपने आकार में अपरिवर्तित दिखते हैं। EXAM में E और X क्षैतिज रूप से सममित हैं, जबकि A और M सममित नहीं हैं (पलटने पर अलग दिखते हैं)। अतः उत्तर 'केवल E और X' है।",
+  "e_en": "When flipped upside-down in water, letters that are symmetric about a horizontal axis look unchanged. In EXAM, E and X are horizontally symmetric, while A and M are not (they look different when flipped). So the answer is 'Only E and X'."
  },
  {
   "id": "rp-rea-r03431",
@@ -95407,9 +95407,9 @@
    "1 hour 20 minutes",
    "2 hours 20 minutes"
   ],
-  "a": 0,
-  "e_hi": "जल प्रतिबिंब ज्ञात करने के लिए, दिए गए समय को 18:30 (या 17:90) में से घटाया जाता है। यहाँ वास्तविक समय 4:40 है। 17:90 - 4:40 = 13:50। चूंकि 13 का अर्थ रेलवे समय के अनुसार दोपहर का 1 होता है, इसलिए 12 घंटे घटाने पर समय 1:50 प्राप्त होता है। अतः सही उत्तर विकल्प 0 है।",
-  "e_en": "To find the water image time, subtract the given time from 18:30 (or 17:90). Here, the given time is 4:40. Subtracting 4:40 from 17:90 gives 13:50. Since 13 corresponds to 1:00 PM, subtracting 12 hours gives 1:50. Therefore, the correct option is 0."
+  "a": 2,
+  "e_hi": "जल प्रतिबिंब सूत्र: 6:00 - वास्तविक समय। 4 घंटे 40 मिनट = 4.6667 घंटे। 6 - 4.6667 = 1.3333 घंटे = 1 घंटा 20 मिनट।",
+  "e_en": "Water image formula: 6:00 - actual time. 4 hours 40 minutes = 4.6667 hours. 6 - 4.6667 = 1.3333 hours = 1 hour 20 minutes."
  },
  {
   "id": "rp-rea-r03432",
@@ -95430,9 +95430,9 @@
    "ƔAWLIAЯ",
    "YAWLIⱭЯ"
   ],
-  "a": 3,
-  "e_hi": "दर्पण प्रतिबिंब में प्रत्येक अक्षर का दायाँ हिस्सा बायाँ और बायाँ हिस्सा दायाँ हो जाता है तथा अक्षरों का क्रम भी विपरीत हो जाता है (अंतिम अक्षर सबसे पहले आता है)। 'RAILWAY' में 'Y' सबसे अंत में है जो दर्पण के सबसे पास होने के कारण सबसे पहले सीधा या हल्का परिवर्तित दिखेगा, और सभी अक्षर बाएँ-दाएँ पलट जाएंगे। अंततः 'YAWLIⱭЯ' सही दर्पण प्रतिबिंब बनता है।",
-  "e_en": "In a mirror image, each letter is flipped horizontally (left to right), and the order of the letters is reversed (the last letter comes first). For the word 'RAILWAY', 'Y' comes first in reverse order, followed by 'A', 'W', 'I', 'L', 'A', and 'R' flipped horizontally. This yields 'YAWLIⱭЯ'. Thus, option 3 is correct."
+  "a": 1,
+  "e_hi": "शब्द के अक्षरों का क्रम उल्टा हो जाता है: RAILWAY उल्टा होकर YAWLIAR बनता है, जो विकल्प 'YAWLIAR' से मेल खाता है।",
+  "e_en": "The order of the letters is reversed: RAILWAY reversed becomes YAWLIAR, matching the option 'YAWLIAR'."
  },
  {
   "id": "rp-rea-r03433",
