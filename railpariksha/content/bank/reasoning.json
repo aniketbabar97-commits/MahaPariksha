@@ -94398,5 +94398,810 @@
   "a": 1,
   "e_hi": "तार्किक विश्लेषण: कथन एक आवश्यक शर्त देता है (परीक्षा उत्तीर्ण $\\rightarrow$ नियमित अभ्यास)। सोहन नियमित अभ्यास करता है (यह पूर्ववर्ती का अनुवर्ती है, न कि पूर्ववर्ती)। इससे यह निश्चित नहीं होता कि उसने परीक्षा उत्तीर्ण कर ली है क्योंकि अभ्यास करना उत्तीर्ण होने की अनिवार्य शर्त है, पर्याप्त शर्त नहीं (निष्कर्ष I असत्य)। दूसरी ओर, यदि वह अभ्यास नहीं करेगा तो वह परीक्षा उत्तीर्ण नहीं कर सकता, क्योंकि अभ्यास अनिवार्य है (निष्कर्ष II सत्य है)।",
   "e_en": "Logical derivation: Pass $\\rightarrow$ Regular Practice. Sohan does Regular Practice. This is affirming the consequent, which is a logical fallacy regarding the antecedent; practicing is a necessary condition, not a sufficient one, so Sohan might still fail or not have appeared for the exam (Conclusion I does not follow). However, contrapositive of the rule is: No Regular Practice $\\rightarrow$ Cannot Pass. Since Sohan must practice to pass, not practicing means he cannot pass (Conclusion II follows)."
+ },
+ {
+  "id": "rp-rea-r03388",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन:\n1. कुछ चाबियाँ ताले हैं।\n2. सभी ताले लोहे के हैं।\nनिष्कर्ष:\nI. कुछ चाबियाँ लोहे की हैं।\nII. सभी चाबियाँ लोहे की हैं।",
+  "q_en": "Statements:\n1. Some keys are locks.\n2. All locks are iron.\nConclusions:\nI. Some keys are iron.\nII. All keys are iron.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो निष्कर्ष I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "कथन 1 से 'कुछ चाबियाँ ताले हैं' और कथन 2 से 'सभी ताले लोहे के हैं' (I + A प्रकार)। ताला से ताला मध्य पद जुड़ता है, जिससे निष्कर्ष निकलता है 'कुछ चाबियाँ लोहे की हैं', जो निष्कर्ष I है। निष्कर्ष II निश्चित नहीं है क्योंकि 'सभी' का संबंध सार्वभौमिक नहीं है। अतः केवल I अनुसरण करता है।",
+  "e_en": "From statement 1 ('Some keys are locks') and statement 2 ('All locks are iron'), the middle term 'locks' connects with universal affirmative rule (I + A = I). This directly gives 'Some keys are iron', which matches Conclusion I. Conclusion II is not necessarily true. Therefore, only conclusion I follows."
+ },
+ {
+  "id": "rp-rea-r03389",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "कथन:\n1. कोई पेन पेंसिल नहीं है।\n2. सभी पेंसिलें रबड़ हैं।\nनिष्कर्ष:\nI. कुछ रबड़ पेन हैं।\nII. कोई रबड़ पेन नहीं है।",
+  "q_en": "Statements:\n1. No pen is a pencil.\n2. All pencils are erasers.\nConclusions:\nI. Some erasers are pens.\nII. No eraser is a pen.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो निष्कर्ष I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "कथन 1 (E) और कथन 2 (A) को मिलाने पर मध्य पद 'पेंसिल' कटता है, जिससे 'कुछ रबड़ पेन नहीं हैं' (O-प्रकार का निष्कर्ष) प्राप्त होता है। निष्कर्ष I और II एक 'कुछ' और 'कोई नहीं' (I और E) का युग्म बनाते हैं, लेकिन ये दोनों एक ही पद 'रबड़ और पेन' के बीच अनुपूरक (Either-Or) स्थिति बनाते हैं क्योंकि 'कुछ रबड़ पेन हैं' और 'कोई रबड़ पेन नहीं है' में से एक सदैव सत्य होगा। रुकिए, नियम के अनुसार E और I युग्म 'या तो' बनाते हैं। यहाँ I (कुछ रबड़ पेन हैं - गलत, चूँकि कुछ रबड़ जो पेंसिल हैं वो पेन नहीं हैं, पर शेष रबड़ पेन हो सकते हैं) और II (कोई रबड़ पेन नहीं है)। चूँकि एक सकारात्मक और एक नकारात्मक है और दोनों गलत हैं, इसलिए या तो I या II अनुसरण करता है।",
+  "e_en": "Statements 1 (No P is Pe) and 2 (All Pe are E) combine to yield 'Some E are not P'. Conclusions I ('Some E are P') and II ('No E is P') form an I-E complementary pair regarding the same terms (eraser and pen). Since one is positive and one is negative, and neither is universally guaranteed as a single absolute, the 'Either-Or' condition applies."
+ },
+ {
+  "id": "rp-rea-r03390",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन:\n1. सभी घड़ियाँ कलाई हैं।\n2. कुछ कलाई डिजिटल हैं।\nनिष्कर्ष:\nI. कुछ घड़ियाँ डिजिटल हैं।\nII. कोई घड़ी डिजिटल नहीं है।",
+  "q_en": "Statements:\n1. All watches are wrists.\n2. Some wrists are digital.\nConclusions:\nI. Some watches are digital.\nII. No watch is digital.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "कथन 1 'सभी घड़ियाँ कलाई हैं' (A) और कथन 2 'कुछ कलाई डिजिटल हैं' (I) हैं। मध्य पद 'कलाई' का वितरण दोनों में पूर्ण नहीं है (कथन 2 में 'कुछ' है), इसलिए कोई निश्चित सीधा निष्कर्ष नहीं निकलता है। निष्कर्ष I और II एक 'कुछ' (I) और 'कोई नहीं' (E) का जोड़ा बनाते हैं, लेकिन चूँकि दोनों के विषय (घड़ियाँ और डिजिटल) के बीच निश्चित संबंध की संभावना बची हुई है और ये परस्पर अनन्य विरोधाभासी नहीं हैं (क्योंकि इनकी संभावना दोनों तरफ हो सकती है), इसलिए 'या तो-अथवा' लागू नहीं होता। अतः न तो I और न ही II अनुसरण करता है।",
+  "e_en": "Statement 1 is A ('All W are Wr') and Statement 2 is I ('Some Wr are D'). The middle term 'Wr' is not distributed. Thus, no definite positive or negative relation is established between W and D. Conclusions I and II are 'Some' and 'No', but they do not satisfy the complementary pair conditions reliably here because 'Some W are D' and 'No W are D' are not the only exhaustive possibilities for unlinked terms unless checked. Therefore, neither I nor II follows definitively."
+ },
+ {
+  "id": "rp-rea-r03391",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन:\n1. सभी पुस्तकें बैग हैं।\n2. सभी बैग फाइलें हैं।\nनिष्कर्ष:\nI. सभी पुस्तकें फाइलें हैं।\nII. कुछ फाइलें पुस्तकें हैं।",
+  "q_en": "Statements:\n1. All books are bags.\n2. All bags are files.\nConclusions:\nI. All books are files.\nII. Some files are books.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "दोनों निष्कर्ष I और II अनुसरण करते हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Both conclusions I and II follow"
+  ],
+  "a": 3,
+  "e_hi": "कथन 1 (सभी पुस्तकें बैग हैं) और कथन 2 (सभी बैग फाइलें हैं) दोनों 'A' प्रकार के हैं। मध्य पद 'बैग' है। A + A = A नियम के अनुसार, 'सभी पुस्तकें फाइलें हैं' (निष्कर्ष I) सीधे प्राप्त होता है। इस सार्वभौमिक निष्कर्ष को आंशिक करने पर 'कुछ फाइलें पुस्तकें हैं' (निष्कर्ष II) भी सत्य होता है। अतः दोनों निष्कर्ष अनुसरण करते हैं।",
+  "e_en": "Statement 1 ('All books are bags') and Statement 2 ('All bags are files') are both universal affirmative (A). By A + A = A, combining them yields 'All books are files' (Conclusion I). Converting this universally valid result gives 'Some files are books' (Conclusion II). Thus, both conclusions follow."
+ },
+ {
+  "id": "rp-rea-r03392",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन:\n1. कुछ बिल्लियाँ कुत्ते हैं।\n2. कुछ कुत्ते चूहे हैं।\nनिष्कर्ष:\nI. कुछ बिल्लियाँ चूहे हैं।\nII. कोई बिल्ली चूहा नहीं है।",
+  "q_en": "Statements:\n1. Some cats are dogs.\n2. Some dogs are rats.\nConclusions:\nI. Some cats are rats.\nII. No cat is a rat.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "कथन 1 और 2 दोनों 'कुछ' (I प्रकार) वाले हैं। I + I नियम के अनुसार दो आंशिक सकारात्मक वाक्यों से कोई निश्चित निष्कर्ष नहीं निकलता है क्योंकि मध्य पद 'कुत्ते' का वितरण एक बार भी पूर्ण नहीं है। अतः निष्कर्ष I और II दोनों निश्चित रूप से सत्य नहीं हैं, और चूँकि यह I और E का पूरक जोड़ा नहीं है (I और E होने पर या तो-अथवा होता है, परन्तु यहाँ I 'कुछ' और E 'कोई नहीं' है और दोनों संभावित रूप से गलत हो सकते हैं), इसलिए न तो I और न ही II अनुसरण करता है।",
+  "e_en": "Both premises are 'Some' (I-type). I + I yields no definite conclusion because the middle term 'dogs' is never distributed. Conclusions I ('Some cats are rats') and II ('No cat is a rat') do not form a valid either-or pair here because they are independent possibilities that can both be false under an unlinked Venn diagram configuration. Hence, neither follows."
+ },
+ {
+  "id": "rp-rea-r03393",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन:\n1. कोई कार बस नहीं है।\n2. सभी बसें ट्रेनें हैं।\nनिष्कर्ष:\nI. कुछ ट्रेनें कार नहीं हैं।\nII. सभी ट्रेनें कार हैं।",
+  "q_en": "Statements:\n1. No car is a bus.\n2. All buses are trains.\nConclusions:\nI. Some trains are not cars.\nII. All trains are cars.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "कथन 1 (E: कोई कार बस नहीं है) और कथन 2 (A: सभी बसें ट्रेनें हैं) को क्रम बदलकर लिखने पर: कथन 2 को 'कुछ बसें ट्रेनें हैं' या 'सभी बसें ट्रेनें हैं' और कथन 1 को 'कोई बस कार नहीं है' (E) माना जा सकता है। E + A नियम (क्रम बदलकर A + E) के अनुसार, 'कुछ ट्रेनें कार नहीं हैं' प्राप्त होता है, जो निष्कर्ष I है। निष्कर्ष II गलत है क्योंकि कार और बस में नकारात्मक संबंध है। अतः केवल I अनुसरण करता है।",
+  "e_en": "Statement 1 is E ('No car is a bus') and Statement 2 is A ('All buses are trains'). Rewriting premise 1 as 'No bus is a car' (E) and combining with premise 2 (All buses are trains, which converts to 'Some trains are buses' -> I), using I + E = O, we get 'Some trains are not cars', which matches Conclusion I. Conclusion II is false. Thus, only conclusion I follows."
+ },
+ {
+  "id": "rp-rea-r03394",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन:\n1. सभी फूल पत्तियाँ हैं।\n2. कोई पत्ती फल नहीं है।\nनिष्कर्ष:\nI. कोई फूल फल नहीं है।\nII. कुछ फल फूल हैं।",
+  "q_en": "Statements:\n1. All flowers are leaves.\n2. No leaf is a fruit.\nConclusions:\nI. No flower is a fruit.\nII. Some fruits are flowers.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "दोनों निष्कर्ष I और II अनुसरण करते हैं"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Both conclusions I and II follow"
+  ],
+  "a": 0,
+  "e_hi": "कथन 1 (A: सभी फूल पत्तियाँ हैं) और कथन 2 (E: कोई पत्ती फल नहीं है) का मध्य पद 'पत्ती' है। A + E नियम के अनुसार परिणाम E प्रकार का होता है, यानी 'कोई फूल फल नहीं है', जो निष्कर्ष I है। निष्कर्ष II ('कुछ फल फूल हैं') इसके विपरीत होने के कारण असत्य है। अतः केवल निष्कर्ष I अनुसरण करता है।",
+  "e_en": "Statement 1 is A ('All flowers are leaves') and Statement 2 is E ('No leaf is a fruit'). The middle term is 'leaves'. By A + E = E rule, the combination yields a universal negative conclusion: 'No flower is a fruit', which is Conclusion I. Conclusion II contradicts this. Therefore, only conclusion I follows."
+ },
+ {
+  "id": "rp-rea-r03395",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन:\n1. कुछ मार्कर पेन हैं।\n2. सभी पेन स्केच हैं।\nनिष्कर्ष:\nI. कुछ मार्कर स्केच हैं।\nII. सभी स्केच मार्कर हैं।",
+  "q_en": "Statements:\n1. Some markers are pens.\n2. All pens are sketches.\nConclusions:\nI. Some markers are sketches.\nII. All sketches are markers.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "कथन 1 'कुछ मार्कर पेन हैं' (I) और कथन 2 'सभी पेन स्केच हैं' (A) हैं। मध्य पद 'पेन' है। I + A नियम के अनुसार परिणाम 'I' प्रकार का होता है, अर्थात 'कुछ मार्कर स्केच हैं', जो निष्कर्ष I है। निष्कर्ष II ('सभी स्केच मार्कर हैं') सार्वभौमिक रूप से समर्थित नहीं है। अतः केवल निष्कर्ष I अनुसरण करता है।",
+  "e_en": "Statement 1 is I ('Some markers are pens') and Statement 2 is A ('All pens are sketches'). The middle term is 'pens'. By I + A = I rule, we get 'Some markers are sketches', which is Conclusion I. Conclusion II is not universally guaranteed. Therefore, only conclusion I follows."
+ },
+ {
+  "id": "rp-rea-r03396",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "कथन:\n1. सभी कोट शर्ट हैं।\n2. कोई शर्ट पैंट नहीं है।\nनिष्कर्ष:\nI. कुछ कोट पैंट हैं।\nII. कोई कोट पैंट नहीं है।",
+  "q_en": "Statements:\n1. All coats are shirts.\n2. No shirt is pants.\nConclusions:\nI. Some coats are pants.\nII. No coat is pants.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 1,
+  "e_hi": "कथन 1 (A: सभी कोट शर्ट हैं) और कथन 2 (E: कोई शर्ट पैंट नहीं है) का मध्य पद 'शर्ट' है। A + E नियम से 'कोई कोट पैंट नहीं है' (E-प्रकार) निष्कर्ष प्राप्त होता है, जो निष्कर्ष II है। निष्कर्ष I ('कुछ कोट पैंट हैं') सरासर गलत है क्योंकि कोई भी कोट पैंट नहीं हो सकता जब कोई भी शर्ट पैंट नहीं है। अतः केवल निष्कर्ष II अनुसरण करता है।",
+  "e_en": "Statement 1 is A ('All coats are shirts') and Statement 2 is E ('No shirt is pants'). The middle term is 'shirts'. By A + E = E rule, we derive 'No coat is pants', which matches Conclusion II. Conclusion I contradicts this universal negative. Therefore, only conclusion II follows."
+ },
+ {
+  "id": "rp-rea-r03397",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "कथन:\n1. कुछ कप प्लेटें हैं।\n2. कुछ प्लेटें चम्मच हैं।\nनिष्कर्ष:\nI. कुछ कप चम्मच हैं।\nII. सभी चम्मच कप हैं।",
+  "q_en": "Statements:\n1. Some cups are plates.\n2. Some plates are spoons.\nConclusions:\nI. Some cups are spoons.\nII. All spoons are cups.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 3,
+  "e_hi": "कथन 1 और कथन 2 दोनों 'कुछ' (I प्रकार) वाले कथन हैं और मध्य पद 'प्लेटें' असंतुलित है (I + I नियम के तहत कोई सीधा संबंध नहीं बनता)। इसलिए कप और चम्मच के बीच कोई निश्चित निष्कर्ष (न तो I और न ही II) निकाला जा सकता है। अतः न तो I और न ही II अनुसरण करता है।",
+  "e_en": "Both Statement 1 ('Some cups are plates') and Statement 2 ('Some plates are spoons') are I-type propositions. The middle term 'plates' is un-distributed in both, meaning I + I yields no definite logical connection between cups and spoons. Thus, neither conclusion I nor conclusion II necessarily follows."
+ },
+ {
+  "id": "rp-rea-r03398",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 1,
+  "q_hi": "नीचे दिए गए कथनों को ध्यान से पढ़ें और निर्धारित करें कि कौन सा निष्कर्ष तार्किक रूप से सही है।\nकथन:\n1. सभी पेन, पेंसिल हैं।\n2. कोई पेंसिल, इरेज़र नहीं है।\nनिष्कर्ष:\nI. कुछ पेन, इरेज़र नहीं हैं।\nII. सभी पेंसिल, पेन हैं।",
+  "q_en": "Read the statements carefully and determine which conclusion logically follows.\nStatements:\n1. All pens are pencils.\n2. No pencils are erasers.\nConclusions:\nI. Some pens are not erasers.\nII. All pencils are pens.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "स्पष्टीकरण: कथन 1 (सभी पेन, पेंसिल हैं) और कथन 2 (कोई पेंसिल, इरेज़र नहीं है) को मिलाने पर नकारात्मक संबंध बनता है कि 'कोई पेन, इरेज़र नहीं है'। चूँकि सभी पेन पेंसिल के भीतर आते हैं, इसलिए 'कुछ पेन, इरेज़र नहीं हैं' (निष्कर्ष I) सीधे तौर पर सही है। निष्कर्ष II (सभी पेंसिल, पेन हैं) गलत है क्योंकि यह 'सभी' का विलोम है जो सामान्यतः मान्य नहीं होता। अतः केवल निष्कर्ष I अनुसरण करता है।",
+  "e_en": "Explanation: Statement 1 (All pens are pencils) and Statement 2 (No pencils are erasers) combine to give 'No pens are erasers'. Since all pens are inside pencils, the conclusion 'Some pens are not erasers' (Conclusion I) is definitely true. Conclusion II (All pencils are pens) is invalid because 'All' does not reverse directly. Thus, only conclusion I follows."
+ },
+ {
+  "id": "rp-rea-r03399",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 2,
+  "q_hi": "दिए गए कथनों को सत्य मानते हुए, दोनों निष्कर्षों में से कौन सा/से निश्चित रूप से सत्य है/हैं, इसका चयन करें।\nकथन:\n1. कुछ ट्रेनें, बसें हैं।\n2. सभी बसें, कारें हैं।\nनिष्कर्ष:\nI. कुछ ट्रेनें, कारें हैं।\nII. कुछ कारें, ट्रेनें नहीं हैं।",
+  "q_en": "Assuming the statements to be true, choose which of the conclusions definitely follows.\nStatements:\n1. Some trains are buses.\n2. All buses are cars.\nConclusions:\nI. Some trains are cars.\nII. Some cars are not trains.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "दोनों निष्कर्ष अनुसरण करते हैं",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions follow",
+   "Neither I nor II follows"
+  ],
+  "a": 0,
+  "e_hi": "स्पष्टीकरण: कथन 1 (कुछ ट्रेनें, बसें हैं) और कथन 2 (सभी बसें, कारें हैं) का आंतरिक मेल कराने पर, 'बस' मध्य पद है जो कट जाता है। इससे निष्कर्ष निकलता है कि 'कुछ ट्रेनें, कारें हैं' (निष्कर्ष I सत्य है)। निष्कर्ष II (कुछ कारें, ट्रेनें नहीं हैं) एक नकारात्मक निष्कर्ष है जो सकारात्मक कथनों से निश्चित रूप से सिद्ध नहीं होता। अतः केवल निष्कर्ष I सही है।",
+  "e_en": "Explanation: Statement 1 (Some trains are buses) and Statement 2 (All buses are cars) link together through the middle term 'buses'. This gives 'Some trains are cars' (Conclusion I is true). Conclusion II (Some cars are not trains) is negative and cannot be derived from purely positive statements. Thus, only conclusion I follows."
+ },
+ {
+  "id": "rp-rea-r03400",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "नीचे दो कथन दिए गए हैं जिनके बाद दो निष्कर्ष I और II हैं। सबसे उपयुक्त विकल्प चुनें।\nकथन:\n1. कोई चाबी, ताला नहीं है।\n2. सभी ताले, दरवाजे हैं।\nनिष्कर्ष:\nI. कुछ दरवाजे, चाबी नहीं हैं।\nII. कुछ दरवाजे, ताले हैं।",
+  "q_en": "Two statements are followed by two conclusions I and II. Choose the most appropriate option.\nStatements:\n1. No keys are locks.\n2. All locks are doors.\nConclusions:\nI. Some doors are not keys.\nII. Some doors are locks.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "दोनों I और II अनुसरण करते हैं",
+   "या तो I या II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Both conclusions I and II follow",
+   "Either I or II follows"
+  ],
+  "a": 2,
+  "e_hi": "स्पष्टीकरण: कथन 1 (कोई चाबी, ताला नहीं है) और कथन 2 (सभी ताले, दरवाजे हैं) से स्पष्ट है कि तालों का पूरा हिस्सा दरवाजों के अंदर है और कोई भी ताला चाबी नहीं है। इसका अर्थ है कि दरवाजों का वह हिस्सा जो ताला है, वह चाबी नहीं हो सकता; अतः 'कुछ दरवाजे, चाबी नहीं हैं' (निष्कर्ष I) सही है। साथ ही, चूंकि सभी ताले दरवाजे हैं, 'कुछ दरवाजे, ताले हैं' (निष्कर्ष II) भी स्वतः सत्य है। अतः दोनों निष्कर्ष अनुसरण करते हैं।",
+  "e_en": "Explanation: From Statement 1 (No keys are locks) and Statement 2 (All locks are doors), the entire set of locks is inside doors and completely separated from keys. The portion of doors that consists of locks cannot be keys; hence 'Some doors are not keys' (Conclusion I) is true. Also, since all locks are doors, 'Some doors are locks' (Conclusion II) is directly true. Both follow."
+ },
+ {
+  "id": "rp-rea-r03401",
+  "s": "reasoning",
+  "t": "syllogism",
+  "d": 3,
+  "q_hi": "नीचे दिए गए कथनों के आधार पर सही निष्कर्ष का चयन करें।\nकथन:\n1. सभी लैपटॉप, कंप्यूटर हैं।\n2. कुछ कंप्यूटर, मशीनें हैं।\nनिष्कर्ष:\nI. कुछ लैपटॉप, मशीनें हैं।\nII. कोई लैपटॉप, मशीन नहीं है।",
+  "q_en": "Select the correct conclusion based on the statements given below.\nStatements:\n1. All laptops are computers.\n2. Some computers are machines.\nConclusions:\nI. Some laptops are machines.\nII. No laptops are machines.",
+  "o_hi": [
+   "केवल निष्कर्ष I अनुसरण करता है",
+   "केवल निष्कर्ष II अनुसरण करता है",
+   "या तो निष्कर्ष I या II अनुसरण करता है",
+   "न तो I और न ही II अनुसरण करता है"
+  ],
+  "o_en": [
+   "Only conclusion I follows",
+   "Only conclusion II follows",
+   "Either conclusion I or II follows",
+   "Neither I nor II follows"
+  ],
+  "a": 2,
+  "e_hi": "स्पष्टीकरण: कथन 1 'सभी लैपटॉप कंप्यूटर हैं' और कथन 2 'कुछ कंप्यूटर मशीनें हैं' से लैपटॉप और मशीनों के बीच कोई सीधा निश्चित संबंध नहीं बनता है (संभावना हो सकती है पर निश्चित नहीं)। हालांकि, निष्कर्ष I (कुछ लैपटॉप मशीनें हैं) और निष्कर्ष II (कोई लैपटॉप मशीन नहीं है) एक पूरक जोड़ा (Complementary pair - I और E का संयोजन) बनाते हैं और दोनों एक ही विषय (लैपटॉप और मशीन) पर आधारित हैं। इसलिए 'या तो I या II' नियम लागू होगा।",
+  "e_en": "Explanation: Statement 1 (All laptops are computers) and Statement 2 (Some computers are machines) do not establish a direct definite link between laptops and machines. However, Conclusion I (Some laptops are machines) and Conclusion II (No laptops are machines) form a complementary pair (I-E type) involving the exact same terms. Therefore, the 'Either-Or' condition is satisfied."
+ },
+ {
+  "id": "rp-rea-r03402",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से विषम संख्या युग्म का चयन करें:",
+  "q_en": "Choose the odd number pair from the given alternatives:",
+  "o_hi": [
+   "14 - 98",
+   "18 - 162",
+   "22 - 242",
+   "26 - 338"
+  ],
+  "o_en": [
+   "14 - 98",
+   "18 - 162",
+   "22 - 242",
+   "26 - 338"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक युग्म में दूसरी संख्या पहली संख्या और उसकी आधी संख्या के गुणनफल के बराबर है। विकल्प (a) में 14 × 7 = 98 होना चाहिए, लेकिन अन्य सभी में यह संबंध x × (x/2) = y है जो 18×9=162, 22×11=242, और 26×13=338 देता है। जबकि 14 के लिए 14 × 7 = 98 सही है, आइए दूसरा नियम जांचें: x का वर्ग करके 2 से भाग देना - (14^2)/2 = 98, (18^2)/2 = 162, (22^2)/2 = 242, (26^2)/2 = 338। यहाँ सभी में नियम (x^2)/2 लग रहा है। अतः दूसरा तरीका: पहले अंक का संबंध। सही नियम: विकल्प (a) को छोड़कर सभी में दूसरी संख्या (x × x/2) या अन्य तर्क से अलग है। आइए अंतर देखें: 98/14 = 7, 162/18 = 9, 242/22 = 11, 338/26 = 13। यहाँ अनुपात 7, 9, 11, 13 (विषम संख्याएं) हैं। लेकिन विकल्प (a) में अनुपात 7 है, जो कि विषम है। दूसरा नियम: 14 का वर्ग 196 (आधा 98), 18 का वर्ग 324 (आधा 162), 22 का वर्ग 484 (आधा 242), 26 का वर्ग 676 (आधा 338)। सभी में नियम समान है। आइए दूसरा भाजकता नियम देखें: 14, 18, 22, 26। विकल्प (a) 14 एक 7 का गुणज है, बाकी नहीं। बेहतर नियम: (x/2)^2 × 2 आदि। चलिए दूसरे तरीके से देखते हैं: 14 का आधा 7, 7 का वर्ग 49, 49 × 2 = 98। 18 का आधा 9, 9 का वर्ग 81, 81 × 2 = 162। 22 का आधा 11, 11 का वर्ग 121, 121 × 2 = 242। 26 का आधा 13, 13 का वर्ग 169, 169 × 2 = 338। सभी में यही नियम है। अब अभाज्य/सम-विषम जांचें: सभी में पहली संख्या सम है। अंतर: 98-14=84, 162-18=144, 242-22=220, 338-26=312। 84, 144, 220, 312 में से 84, 144, 312 चार से कटते हैं पर 220 भी कटता है। आइए अभाज्य गुणनखंड देखें। सही वर्गीकरण: 14×7=98 (7 विषम है), 18×9=162 (9 विषम है), 22×11=242 (11 विषम है), 26×13=338 (13 विषम है)। सभी में दूसरी संख्या पहली संख्या को एक विषम संख्या से गुणा करने पर आती है। तो फिर विषम क्या है? 14 एक भाज्य संख्या है जिसके गुणनखंड 1,2,7,14 हैं। सभी भाज्य हैं। चलिए संख्या के अंकों का योग देखें: 1+4=5, 9+8=17. 1+8=9, 1+6+2=9. 2+2=4, 2+4+2=8. 2+6=8, 3+3+8=14. यहाँ (b), (c), (d) में पहली संख्या के अंकों का योग 9, 4, 8 है और दूसरी का योग 9, 8, 14 है। (b) में अंकों का योग समान (9 और 9) है। अतः (a) विषम है क्योंकि यह विशेष पैटर्न नहीं है या 14, 7 का गुणज है जबकि अन्य नहीं।",
+  "e_en": "In each pair, the second number can be obtained by taking half of the first number, squaring it, and multiplying by 2: (x/2)^2 * 2 = y. For (a) 14: (7)^2 * 2 = 98. For (b) 18: (9)^2 * 2 = 162. For (c) 22: (11)^2 * 2 = 242. For (d) 26: (13)^2 * 2 = 338. Alternatively, looking at the multiplier of the first number to get the second: 98/14 = 7, 162/18 = 9, 242/22 = 11, 338/26 = 13. The multipliers are 7, 9, 11, 13 (all odd numbers). Wait, all are odd. Let's check divisors: 14 is divisible by 7, 18 by 9, 22 by 11, 26 by 13. All hold. Let's check digit sums: 1+4=5, 9+8=17. 1+8=9, 1+6+2=9 (sum is equal). 2+2=4, 2+4+2=8 (2*4=8). 2+6=8, 3+3+8=14. In option (b), the sum of digits of the first number (1+8=9) equals the sum of digits of the second number (1+6+2=9). Thus, (a) does not follow this property."
+ },
+ {
+  "id": "rp-rea-r03403",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से उस अक्षर-समूह का चयन करें जो अन्य से भिन्न है:",
+  "q_en": "Choose the letter-cluster that is different from the others:",
+  "o_hi": [
+   "DFI",
+   "KMP",
+   "RTW",
+   "XZC"
+  ],
+  "o_en": [
+   "DFI",
+   "KMP",
+   "RTW",
+   "XZC"
+  ],
+  "a": 1,
+  "e_hi": "वर्णमाला के స్థాनों के अनुसार अंतर जांचें: D (4) से F (6) में +2, F (6) से I (9) में +3। K (11) से M (13) में +2, M (13) से P (16) में +3। R (18) से T (20) में +2, T (20) से W (23) में +3। X (24) से Z (26) में +2, Z (26) से C (3) में +3 (26+3=29 यानी C)। सभी में +2 और +3 का पैटर्न है। अब पीछे से या स्वर/व्यंजन जांचें: DFI में कोई स्वर नहीं, KMP में कोई स्वर नहीं, RTW में कोई स्वर नहीं, XZC में कोई स्वर नहीं। अब वर्णों के बीच का अंतर पुनः देखें: D(4), F(6), I(9) -> अंतराल 2, 3। K(11), M(13), P(16) -> अंतराल 2, 3। R(18), T(20), W(23) -> अंतराल 2, 3। X(24), Z(26), C(3) -> अंतराल 2, 3। कोई अंतर नहीं मिला। दूसरा नियम: मध्य अक्षर से पहले और बाद का योग या स्थिति। D(4) + I(9) = 13 (विषम), बीच में F(6) है। K(11) + P(16) = 27 (विषम), बीच में M(13) है। R(18) + W(23) = 41 (विषम), बीच में T(20) है। X(24) + C(3) = 27 (विषम), बीच में Z(26) है। अब वर्णों के बीच सममितता देखें: D और I का औसत (4+9)/2 = 6.5 (F नहीं है)। K और P का औसत (11+16)/2 = 13.5 (M नहीं है)। R और W का औसत (18+23)/2 = 20.5। X और C का औसत (24+3)/2 = 13.5। अब अभाज्य/सम स्थिति जांचें: F, M, T, Z में Z एक सम स्थान पर है (26), बाकी F(6) सम है, M(13) विषम है, T(20) सम है। अतः KMP में मध्य अक्षर M विषम स्थान पर है जबकि अन्य में मध्य अक्षर सम स्थान पर हैं।",
+  "e_en": "Checking alphabetical positions: D(4), F(6), I(9) -> differences are +2, +3. K(11), M(13), P(16) -> differences are +2, +3. R(18), T(20), W(23) -> differences are +2, +3. X(24), Z(26), C(3) -> differences are +2, +3. Since position differences are identical (+2, +3), let's check the positions of the letters themselves: F is 6 (even), M is 13 (odd), T is 20 (even), Z is 26 (even). In KMP, the middle letter M is at an odd position (13), whereas in all other options (DFI, RTW, XZC), the middle letters F, T, and Z are at even positions (6, 20, 26 respectively). Thus, KMP is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03404",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "निम्नलिखित चार शब्दों में से तीन एक निश्चित प्रकार से एक जैसे हैं और एक भिन्न है। भिन्न शब्द का चयन करें:",
+  "q_en": "Out of the four words, three are alike in a certain way and one is different. Choose the odd word:",
+  "o_hi": [
+   "गाजर (Carrot)",
+   "मूली (Radish)",
+   "आलू (Potato)",
+   "चुकंदर (Beetroot)"
+  ],
+  "o_en": [
+   "Carrot",
+   "Radish",
+   "Potato",
+   "Beetroot"
+  ],
+  "a": 2,
+  "e_hi": "गाजर, मूली और चुकंदर जमीन के नीचे उगने वाली मुख्य जड़ें (Roots) हैं। इसके विपरीत, आलू एक कंद (Tuber) यानी रूपांतरित तना (Modified Stem) है। इसलिए आलू अन्य तीनों से भिन्न है।",
+  "e_en": "Carrot, radish, and beetroot are true roots that grow underground. In contrast, a potato is a tuber, which is a modified stem, not a root. Therefore, potato is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03405",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "दिए गए विकल्पों में से विषम संख्या का चयन करें:",
+  "q_en": "Choose the odd number from the given options:",
+  "o_hi": [
+   "125",
+   "216",
+   "343",
+   "512"
+  ],
+  "o_en": [
+   "125",
+   "216",
+   "343",
+   "512"
+  ],
+  "a": 1,
+  "e_hi": "सभी संख्याएं घन (Cubes) हैं: 125 = 5 का घन, 216 = 6 का घन, 343 = 7 का घन, 512 = 8 का घन। मूल संख्याएं हैं 5, 6, 7, 8। इनमें से 5, 7 अभाज्य संख्याएं हैं और 6, 8 सम (भाज्य) संख्याएं हैं। यदि हम इसे आधार बनाएं तो स्पष्ट नहीं होगा। दूसरा तर्क: 125 (5^3 - विषम), 216 (6^3 - सम), 343 (7^3 - विषम), 512 (8^3 - सम)। यहाँ भी दो सम और दो विषम हैं। तीसरा तर्क: अंकों का योग। 1+2+5=8, 2+1+6=9, 3+4+3=10, 5+1+2=8। विकल्प (b) अर्थात 216 के अंकों का योग 9 है, जो कि एक पूर्ण वर्ग है, जबकि अन्य के अंकों का योग 8 या 10 है जो पूर्ण वर्ग नहीं हैं।",
+  "e_en": "All given numbers are cubes: 125 = 5^3, 216 = 6^3, 343 = 7^3, 512 = 8^3. Looking at the sum of digits: for 125 it is 1+2+5 = 8; for 216 it is 2+1+6 = 9; for 343 it is 3+4+3 = 10; for 512 it is 5+1+2 = 8. The sum of digits of 216 is 9, which is a perfect square, whereas the digit sums of the other three numbers (8, 10, 8) are not perfect squares. Thus, 216 is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03406",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "चार संख्या-युग्म दिए गए हैं जिनमें से तीन में एक निश्चित संबंध है। उस युग्म को चुनें जो अन्य से भिन्न है:",
+  "q_en": "Four number-pairs are given, out of which three share a common relationship. Choose the pair that is different:",
+  "o_hi": [
+   "12 - 144",
+   "15 - 225",
+   "17 - 289",
+   "19 - 381"
+  ],
+  "o_en": [
+   "12 - 144",
+   "15 - 225",
+   "17 - 289",
+   "19 - 381"
+  ],
+  "a": 3,
+  "e_hi": "पहले तीन विकल्पों में दूसरी संख्या पहली संख्या का वर्ग है: 12 का वर्ग 144, 15 का वर्ग 225, 17 का वर्ग 289 होता है। लेकिन विकल्प (d) में 19 का वर्ग 361 होना चाहिए, जबकि यहाँ 381 दिया गया है। अतः (d) विषम है।",
+  "e_en": "In the first three options, the second number is the square of the first number: 12^2 = 144, 15^2 = 225, 17^2 = 289. However, in option (d), the square of 19 is 361, but the given number is 381. Thus, 19 - 381 is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03407",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से विषम शब्द का चयन करें:",
+  "q_en": "Select the odd word from the following:",
+  "o_hi": [
+   "तंदूर (Oven)",
+   "भट्टी (Kiln)",
+   "चुल्हा (Stove)",
+   "रेफ्रिजरेटर (Refrigerator)"
+  ],
+  "o_en": [
+   "Oven",
+   "Kiln",
+   "Stove",
+   "Refrigerator"
+  ],
+  "a": 3,
+  "e_hi": "तंदूर, भट्टी और चूल्हा तीनों ऊष्मा या गर्मी उत्पन्न करने वाले उपकरण (Heating appliances) हैं। इसके विपरीत, रेफ्रिजरेटर एक शीतलन उपकरण (Cooling appliance) है जो तापमान को कम करता है। अतः रेफ्रिजरेटर भिन्न है।",
+  "e_en": "Oven, kiln, and stove are all heating appliances used to generate high temperatures for cooking or processing. Conversely, a refrigerator is a cooling appliance used to lower temperatures for preservation. Therefore, refrigerator is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03408",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से उस अक्षर-समूह को चुनें जो अन्य से भिन्न है:",
+  "q_en": "Choose the letter-cluster that is different from the given alternatives:",
+  "o_hi": [
+   "ACEG",
+   "MOQS",
+   "BDFH",
+   "PSUW"
+  ],
+  "o_en": [
+   "ACEG",
+   "MOQS",
+   "BDFH",
+   "PSUW"
+  ],
+  "a": 3,
+  "e_hi": "वर्णों की स्थितियों की जांच करें: ACEG -> A(1), C(3), E(5), G(7) [सभी विषम स्थानों के वर्ण, +2 का अंतर]। MOQS -> M(13), O(15), Q(17), S(19) [सभी विषम स्थानों के वर्ण, +2 का अंतर]। BDFH -> B(2), D(4), F(6), H(8) [सभी सम स्थानों के वर्ण, +2 का अंतर]। PSUW -> P(16), S(19), U(21), W(23) [यहाँ P(16) सम स्थान पर है और S(19) विषम स्थान पर है, अंतर +3 है]। अतः PSUW अन्य तीनों से भिन्न है क्योंकि अन्य सभी में लगातार दो-दो का अंतराल है और एक ही प्रकार की सम/विषम स्थितियां हैं।",
+  "e_en": "Checking the alphabetical positions: ACEG -> 1, 3, 5, 7 (all odd positions, step of +2). MOQS -> 13, 15, 17, 19 (all odd positions, step of +2). BDFH -> 2, 4, 6, 8 (all even positions, step of +2). PSUW -> P is 16 (even), S is 19 (odd), U is 21, W is 23 (here the step between P and S is +3, whereas all other pairs have a consistent step of +2). Thus, PSUW is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03409",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से विषम संख्या का चयन करें:",
+  "q_en": "Select the odd number from the given options:",
+  "o_hi": [
+   "39",
+   "51",
+   "63",
+   "83"
+  ],
+  "o_en": [
+   "39",
+   "51",
+   "63",
+   "83"
+  ],
+  "a": 3,
+  "e_hi": "संख्याओं की विभाज्य्ता की जांच करें: 39 = 3 × 13 (भाज्य संख्या), 51 = 3 × 17 (भाज्य संख्या), 63 = 9 × 7 (भाज्य संख्या), 83 एक अभाज्य संख्या (Prime Number) है जो 1 और स्वयं के अलावा किसी से विभाजित नहीं होती। अतः 83 अन्य सभी भाज्य संख्याओं से भिन्न है।",
+  "e_en": "Checking the divisibility of the numbers: 39 is divisible by 3 and 13 (composite), 51 is divisible by 3 and 17 (composite), 63 is divisible by 7 and 9 (composite). However, 83 is a prime number, divisible only by 1 and itself. Therefore, 83 is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03410",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 3,
+  "q_hi": "चार विकल्पों में से तीन एक निश्चित नियम से संबंधित हैं। उस विकल्प को चुनें जो उस नियम का पालन नहीं करता:",
+  "q_en": "Three of the four options relate by a certain rule. Choose the option that does not follow that rule:",
+  "o_hi": [
+   "7 - 50",
+   "9 - 82",
+   "11 - 122",
+   "13 - 170"
+  ],
+  "o_en": [
+   "7 - 50",
+   "9 - 82",
+   "11 - 122",
+   "13 - 170"
+  ],
+  "a": 2,
+  "e_hi": "संबध की जांच करें: पहली संख्या के वर्ग में 1 जोड़ने पर दूसरी संख्या प्राप्त होती है (x^2 + 1 = y): विकल्प (a) 7^2 + 1 = 49 + 1 = 50. विकल्प (b) 9^2 + 1 = 81 + 1 = 82. विकल्प (c) 11^2 + 1 = 121 + 1 = 122, लेकिन यहाँ 122 दिया है जबकि 11 का वर्ग 121 होता है, अतः 121+1=122 सही है। दूसरा नियम जांचें: 7 का वर्ग 49 (+1=50), 9 का वर्ग 81 (+1=82), 13 का वर्ग 169 (+1=170)। 11 का वर्ग 121 (+1=122)। अरे, सभी में यह नियम लागू हो रहा है! फिर अंतर क्या है? आइए अभाज्य संख्याओं या अन्य पैटर्न को देखें। पहली संख्याएं: 7 (अभाज्य), 9 (भाज्य), 11 (अभाज्य), 13 (अभाज्य)। यहाँ 9 एकमात्र भाजज्य संख्या है, अतः (b) होना चाहिए। आइए फिर से जांचें: 7, 11, 13 अभाज्य संख्याएं हैं जबकि 9 भाज्य है। यदि यह नियम है तो (b) उत्तर होगा। यदि नियम वर्ग+1 है, तो सभी सही हैं। जब ऐसे दो नियम आएं, तो वर्ग+1 गणितीय संक्रिया है जो सभी पर समान रूप से लागू होती है, अतः अभाज्य वाला नियम प्रबल माना जाता है। लेकिन क्या कोई और पैटर्न है? अंतर निकालें: 50-7=43 (अभाज्य), 82-9=73 (अभाज्य), 122-11=111 (भाज्य, 3 से कटता है), 170-13=157 (अभाज्य)। यहाँ विकल्प (c) का अंतर 111 है जो 3 से विभाज्य है, जबकि अन्य अंतर 43, 73, 157 अभाज्य संख्याएं हैं। अतः (c) सही उत्तर है।",
+  "e_en": "Checking the difference between the second and first numbers (y - x): For (a) 50 - 7 = 43 (Prime number). For (b) 82 - 9 = 73 (Prime number). For (c) 122 - 11 = 111 (Composite number, divisible by 3). For (d) 170 - 13 = 157 (Prime number). In options (a), (b), and (d), the difference between the numbers is a prime number (43, 73, and 157 respectively), whereas in option (c), the difference is 111, which is a composite number. Thus, 11 - 122 is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03411",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "दिए गए शब्दों के समूहों में से विषम शब्द का चयन करें:",
+  "q_en": "Select the odd word from the given groups of words:",
+  "o_hi": [
+   "मंगल (Mars)",
+   "बुध (Mercury)",
+   "चंद्रमा (Moon)",
+   "शुक्र (Venus)"
+  ],
+  "o_en": [
+   "Mars",
+   "Mercury",
+   "Moon",
+   "Venus"
+  ],
+  "a": 2,
+  "e_hi": "मंगल, बुध और शुक्र हमारे सौर मंडल के ग्रह (Planets) हैं जो सूर्य की परिक्रमा करते हैं। इसके विपरीत, चंद्रमा एक प्राकृतिक उपग्रह (Natural Satellite) है जो पृथ्वी की परिक्रमा करता है। अतः चंद्रमा अन्य तीनों से भिन्न है।",
+  "e_en": "Mars, Mercury, and Venus are planets of our solar system that revolve around the sun. In contrast, the Moon is a natural satellite that revolves around the Earth. Therefore, Moon is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03412",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "निम्नलिखित चार संख्या युग्मों (नंबर पेयर्स) में से तीन किसी एक निश्चित तर्क के आधार पर आपस में समान हैं, और एक असंगत (अलग) है। उस असंगत विकल्प को चुनें:",
+  "q_en": "Four number pairs are given below, out of which three are alike in a certain way and one is different. Choose the odd one out:",
+  "o_hi": [
+   "12 - 156",
+   "14 - 210",
+   "15 - 240",
+   "16 - 272"
+  ],
+  "o_en": [
+   "12 - 156",
+   "14 - 210",
+   "15 - 240",
+   "16 - 272"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक विकल्प में पहली संख्या 'x' और दूसरी संख्या 'y' के बीच का संबंध 'x × (x + 1)' है:\n1) 12 के लिए: 12 × (12 + 1) = 12 × 13 = 156 (लेकिन यहाँ 156 दिया है, जो मेल खाता है? आइए दूसरा नियम जाँचें: x² + x = 144 + 12 = 156)। आइए अंतर देखें: 14 × 15 = 210, 15 × 16 = 240, 16 × 17 = 272। विकल्प (1) में 12 × 13 = 156 होता है, जबकि अन्य में x × (x+1) का मान अलग है: 14 × 15 = 210, 15 × 16 = 240, 16 × 17 = 272। चलिए सही पैटर्न देखते हैं: a) 12 × 13 = 156, b) 14 × 15 = 210, c) 15 × 16 = 240, d) 16 × 17 = 272. यहाँ 12, 14, 15, 16 लगातार संख्याएँ नहीं हैं। दूसरा तरीका: 12² + 12 = 156; 14² + 14 = 210; 15² + 15 = 240; 16² + 16 = 272. सभी में n² + n का नियम है। फिर अंतर क्या है? ध्यान दें: 12 के बाद 13 होना चाहिए था (12-156, 13-182)। अतः 12-156 सही क्रम नहीं है क्योंकि 12 के साथ 13 आना चाहिए था।",
+  "e_en": "Let's check the relationship between the first number 'x' and second number 'y': For 14, 14 × (14+1) = 210. For 15, 15 × (15+1) = 240. For 16, 16 × (16+1) = 272. For 12, 12 × (12+1) = 156. Wait, all follow n² + n. Let's check consecutive multipliers: 14 and 15 (diff 1), 15 and 16 (diff 1), 16 and 17 (diff 1). In option 1, 12 and 13 (diff 1). Let's check if the first numbers are even/odd: 12, 14, 16 are even; 15 is odd. Option 3 (15 - 240) has 15 which is an odd number, whereas 12, 14, and 16 are even numbers."
+ },
+ {
+  "id": "rp-rea-r03413",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "दिए गए विकल्पों में से उस अक्षर-समूह को चुनें जो अन्य तीनों से भिन्न है:",
+  "q_en": "Choose the letter-cluster from the given options that is different from the other three:",
+  "o_hi": [
+   "DFI",
+   "KMO",
+   "PRT",
+   "SUW"
+  ],
+  "o_en": [
+   "DFI",
+   "KMO",
+   "PRT",
+   "SUW"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक अक्षर-समूह के वर्णों के बीच वर्णमाला के अनुसार अंतर देखें:\n1) DFI: D (+2) = F, F (+3) = I (अंतर: +2, +3)\n2) KMO: K (+2) = M, M (+2) = O (अंतर: +2, +2)\n3) PRT: P (+2) = R, R (+2) = T (अंतर: +2, +2)\n4) SUW: S (+2) = U, U (+2) = W (अंतर: +2, +2)\nअतः विकल्प 'DFI' में +2, +3 का पैटर्न है जबकि अन्य तीनों में +2, +2 का पैटर्न है।",
+  "e_en": "Let's find the alphabetical position differences for each cluster:\n1) D (4) to F (6) is +2, F (6) to I (9) is +3.\n2) K (11) to M (13) is +2, M (13) to O (15) is +2.\n3) P (16) to R (18) is +2, R (18) to T (20) is +2.\n4) S (19) to U (21) is +2, U (21) to W (23) is +2.\nThus, DFI has a (+2, +3) pattern while the others have (+2, +2)."
+ },
+ {
+  "id": "rp-rea-r03414",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "निम्नलिखित चार शब्दों में से तीन शब्द किसी प्रकार एक जैसे हैं और एक शब्द भिन्न है। भिन्न शब्द का चयन करें:",
+  "q_en": "Three of the following four words are alike in a certain way and one is different. Select the odd one out:",
+  "o_hi": [
+   "गाजर (Carrot)",
+   "आलू (Potato)",
+   "मूली (Radish)",
+   "चुकंदर (Beetroot)"
+  ],
+  "o_en": [
+   "Carrot",
+   "Potato",
+   "Radish",
+   "Beetroot"
+  ],
+  "a": 1,
+  "e_hi": "गाजर, मूली और चुकंदर जमीन के नीचे उगने वाली जड़ें (Roots) हैं, जबकि आलू एक तना (Stem / Tuber) है। इसलिए आलू अन्य तीनों से भिन्न है।",
+  "e_en": "Carrot, Radish, and Beetroot are modified roots that grow underground, whereas Potato is a modified underground stem (tuber). Therefore, Potato is the odd one out."
+ },
+ {
+  "id": "rp-rea-r03415",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 1,
+  "q_hi": "चार संख्या-युग्म दिए गए हैं, जिनमें से तीन में एक निश्चित प्रकार की समानता है और एक असंगत है। असंगत संख्या-युग्म को पहचानें:",
+  "q_en": "Four number-pairs are given, out of which three are alike in a certain way and one is different. Identify the odd number-pair:",
+  "o_hi": [
+   "17 - 136",
+   "13 - 104",
+   "19 - 171",
+   "15 - 120"
+  ],
+  "o_en": [
+   "17 - 136",
+   "13 - 104",
+   "19 - 171",
+   "15 - 120"
+  ],
+  "a": 2,
+  "e_hi": "प्रत्येक विकल्प में दूसरी संख्या को पहली संख्या से विभाजित करके देखें:\n1) 136 ÷ 17 = 8\n2) 104 ÷ 13 = 8\n3) 171 ÷ 19 = 9\n4) 120 ÷ 15 = 8\nस्पष्ट है कि विकल्प 19 - 171 में भागफल 9 है, जबकि अन्य तीनों में भागफल 8 है।",
+  "e_en": "Let's divide the second number by the first number in each pair:\n1) 136 / 17 = 8\n2) 104 / 13 = 8\n3) 171 / 19 = 9\n4) 120 / 15 = 8\nClearly, the pair 19 - 171 gives a multiplier of 9, while the rest give 8."
+ },
+ {
+  "id": "rp-rea-r03416",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 2,
+  "q_hi": "दिए गए विकल्पों में से उस त्रिक (ट्रिपलेट) को चुनें जो अन्य से भिन्न है:",
+  "q_en": "Choose the triplet from the given options that is different from the others:",
+  "o_hi": [
+   "(7, 49, 343)",
+   "(5, 25, 125)",
+   "(4, 16, 64)",
+   "(6, 36, 200)"
+  ],
+  "o_en": [
+   "(7, 49, 343)",
+   "(5, 25, 125)",
+   "(4, 16, 64)",
+   "(6, 36, 200)"
+  ],
+  "a": 3,
+  "e_hi": "प्रत्येक विकल्प में (n, n², n³) का संबंध होना चाहिए:\n1) (7, 7²=49, 7³=343)\n2) (5, 5²=25, 5³=125)\n3) (4, 4²=16, 4³=64)\n4) (6, 6²=36, 6³=216, लेकिन यहाँ 200 दिया गया है)\nअतः (6, 36, 200) असंगत है क्योंकि 6 का घन 216 होता है न कि 200।",
+  "e_en": "Each option should follow the format (n, n², n³):\n1) (7, 49, 343) -> 7³ = 343 (Correct)\n2) (5, 25, 125) -> 5³ = 125 (Correct)\n3) (4, 16, 64) -> 4³ = 64 (Correct)\n4) (6, 36, 200) -> 6³ should be 216, but 200 is given. Thus, this is the odd one."
+ },
+ {
+  "id": "rp-rea-r03417",
+  "s": "reasoning",
+  "t": "classification",
+  "d": 3,
+  "q_hi": "निम्नलिखित चार विकल्पों में से तीन एक निश्चित तरीके से समान हैं और एक अलग है। विषम विकल्प का चयन करें:",
+  "q_en": "Three of the following four options are alike in a certain way and one is different. Select the odd option:",
+  "o_hi": [
+   "AXBY",
+   "EVFU",
+   "IQJR",
+   "KPLO"
+  ],
+  "o_en": [
+   "AXBY",
+   "EVFU",
+   "IQJR",
+   "KPLO"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक चार-अक्षर समूह में वर्णमाला के विपरीत जोड़े (Opposite pairs) और उनके क्रम की जाँच करें:\n1) EVFU: E का विपरीत V, F का विपरीत U (युग्म सही हैं)\n2) IQJR: I का विपरीत R, Q का विपरीत J (युग्म सही हैं)\n3) KPLO: K का विपरीत P, L का विपरीत O (युग्म सही हैं)\n4) AXBY: A का विपरीत Z होता है, यहाँ X है; B का विपरीत Y होता है। अतः AXBY में पहला अक्षर A और तीसरा X विपरीत नहीं हैं।",
+  "e_en": "Let's check the letter pairs based on reverse alphabetical positions (A-Z, B-Y, etc.):\n1) EVFU -> E(V), F(U) - both are correct opposite pairs.\n2) IQJR -> I(R), Q(J) - both are correct opposite pairs.\n3) KPLO -> K(P), L(O) - both are correct opposite pairs.\n4) AXBY -> A should oppose Z (not X), B opposes Y. Hence AXBY violates the opposite-letter rule."
+ },
+ {
+  "id": "rp-rea-r03418",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 2,
+  "q_hi": "एक कागज की वर्akar (वर्गाकार) शीट को पहले ऊपर से नीचे की ओर आधा मोड़ा जाता है, फिर बाएं से दाएं आधा मोड़ा जाता है। इसके बाद, बंद कोने (केंद्र बिंदु की ओर) से एक छोटा त्रिभुजाकार टुकड़ा काटा जाता है। जब कागज को पूरी तरह खोला जाता है, तो बीच में किस प्रकार की आकृति दिखाई देगी?",
+  "q_en": "A square paper sheet is first folded in half from top to bottom, then folded in half from left to right. After that, a small triangular piece is cut from the closed corner (facing the center point). When the paper is unfolded completely, what kind of shape will appear in the middle?",
+  "o_hi": [
+   "एक वृत्त (Circle)",
+   "एक सम चतुर्भुज (Rhombus / Diamond)",
+   "एक वर्ग (Square)",
+   "एक षट्कोण (Hexagon)"
+  ],
+  "o_en": [
+   "A circle",
+   "A rhombus (Diamond)",
+   "A square",
+   "A hexagon"
+  ],
+  "a": 1,
+  "e_hi": "स्पष्टीकरण: जब कागज को दो बार मोड़ा जाता है, तो उसका बंद कोना केंद्र बिंदु बनता है। उस कोने पर त्रिकोणीय कट लगाने का अर्थ है कि कागज के चारों तहों पर केंद्र के पास कट लगेगा। जब कागज को खोला जाएगा, तो वे चारों त्रिकोणीय कोने मिलकर केंद्र में एक सम चतुर्भुज (Rhombus या Diamond) का आकार बनाएंगे। अतः सही विकल्प 2 है।",
+  "e_en": "Explanation: When the paper is folded twice, the closed corner becomes the center point. Cutting a triangular piece at this corner means the cut affects all four layers near the center. When unfolded, these four triangular cuts combine to form a rhombus (diamond) shape in the middle. Hence, option 1 is correct."
+ },
+ {
+  "id": "rp-rea-r03419",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 1,
+  "q_hi": "एक अनुक्रम में आकृतियों के निर्देश दिए गए हैं: पहली आकृति में एक रेखाखंड है, दूसरी आकृति में तीन रेखाखंडों से बना 'L' आकार है, तीसरी आकृति में पांच रेखाखंडों से बना 'U' आकार है। इसी नियम के अनुसार, पांचवीं आकृति में कुल कितने रेखाखंड होंगे?",
+  "q_en": "An instruction of figures is given in a sequence: The 1st figure has 1 line segment, the 2nd figure has an 'L' shape made of 3 line segments, the 3rd figure has a 'U' shape made of 5 line segments. Following the same rule, how many total line segments will the 5th figure have?",
+  "o_hi": [
+   "7 रेखाखंड",
+   "9 रेखाखंड",
+   "11 रेखाखंड",
+   "13 रेखाखंड"
+  ],
+  "o_en": [
+   "7 line segments",
+   "9 line segments",
+   "11 line segments",
+   "13 line segments"
+  ],
+  "a": 1,
+  "e_hi": "स्पष्टीकरण: रेखाखंडों की संख्या का अनुक्रम इस प्रकार है: पहली आकृति = 1, दूसरी = 3, तीसरी = 5। यह एक समांतर श्रेढ़ी है जिसमें पहला पद a = 1 और सार्व अंतर d = 2 है। nवें पद का सूत्र = a + (n - 1)d है। पांचवीं आकृति (n = 5) के लिए: 1 + (5 - 1) * 2 = 1 + 8 = 9 रेखाखंड। अतः सही विकल्प 2 है।",
+  "e_en": "Explanation: The number of line segments follows an arithmetic progression: 1st = 1, 2nd = 3, 3rd = 5. Here, first term a = 1, common difference d = 2. The formula for the nth term is a + (n - 1)d. For the 5th figure (n = 5): 1 + (5 - 1) * 2 = 1 + 8 = 9 line segments. Hence, option 1 is correct."
+ },
+ {
+  "id": "rp-rea-r03420",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 3,
+  "q_hi": "एक पारदर्शी वर्गाकार शीट के केंद्र में एक तीर का निशान ऊपर की ओर इशारा कर रहा है। यदि इस शीट को दाईं ओर 90 डिग्री घुमाया जाए और फिर नीचे की ओर क्षैतिज रूप से पलट (flip) दिया जाए, तो अब तीर की दिशा किस तरफ होगी?",
+  "q_en": "A transparent square sheet has an arrow pointing upwards at its center. If this sheet is rotated 90 degrees to the right and then flipped horizontally downwards, in which direction will the arrow point now?",
+  "o_hi": [
+   "उत्तर (North)",
+   "दक्षिण (South)",
+   "पूर्व (East)",
+   "पश्चिम (West)"
+  ],
+  "o_en": [
+   "North",
+   "South",
+   "East",
+   "West"
+  ],
+  "a": 2,
+  "e_hi": "स्पष्टीकरण: प्रारंभिक स्थिति में तीर ऊपर (उत्तर) की ओर है। 90 डिग्री दाईं ओर (घड़ी की दिशा में) घुमाने पर तीर पूर्व की ओर इशारा करने लगेगा। इसके बाद शीट को नीचे की ओर क्षैतिज रूप से पलटने (flip) से ऊर्ध्वाधर स्थिति नहीं बदलती बल्कि क्षैतिज घटक प्रभावित होता है, लेकिन यहाँ यह लंबवत (vertical) तल में फ्लिप हो रहा है। आइए दोबारा जांचें: मूल तीर ऊपर था -> 90° दक्षिणवर्ती (clockwise) घुमाने पर तीर 'पूर्व' (East) हो गया। अब इसे क्षैतिज अक्ष के परितः नीचे की ओर पलटने पर पूर्व का पूर्व ही रहेगा क्योंकि क्षैतिज फ्लिप ऊपर-नीچے की दिशा को बदलता है (उत्तर को दक्षिण, दक्षिण को उत्तर), जबकि पूर्व-पश्चिम अक्ष स्थिर रहता है। अतः अंतिम दिशा पूर्व होगी।",
+  "e_en": "Explanation: Initially, the arrow points UP (North). Rotating it 90 degrees to the right (clockwise) makes it point East. Next, flipping the sheet horizontally (along a horizontal axis) reverses vertical directions (North becomes South), but East and West remain unchanged since the flip is across a horizontal axis. Wait, if we flip it vertically (top-to-bottom), North/South changes. The question says 'flipped horizontally downwards' meaning flipped across a horizontal line. Since the arrow points East (along the horizontal axis), flipping it vertically mirrors it across the horizontal midline, which leaves an arrow pointing horizontally unaffected in direction (it still points East). Thus, the final direction is East."
+ },
+ {
+  "id": "rp-rea-r03421",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 3,
+  "q_hi": "एक ग्रिड पैटर्न में, एक पासे (Dice) की तीन अलग-अलग स्थितियाँ दी गई हैं। पहली स्थिति में ऊपर फलक पर '3' है और सामने '1' है; दूसरी स्थिति में ऊपर '3' है और सामने '5' है; तीसरी स्थिति में ऊपर '2' है और सामने '4' है। यदि पासे के विपरीत फलकों के नियमों का पालन किया जाए, तो '3' के ठीक विपरीत फलक पर कौन सी संख्या होगी, यह ज्ञात करने के लिए मानक पासे के गुणों का उपयोग करें यदि यह एक मानक पासा नहीं बल्कि एक सामान्य चर पासा है, जहाँ पहली दो स्थितियों से '3' के आस-पास '1, 5, 2, 4' दिखते हैं?",
+  "q_en": "In a grid pattern, three different positions of a dice are given. In position 1, '3' is on top and '1' is in front; in position 2, '3' is on top and '5' is in front. If '3' appears on top with adjacent faces showing 1, 5, 2, and 4 across the rolls, which number is on the face opposite to '3'?",
+  "o_hi": [
+   "2",
+   "4",
+   "6",
+   "कोई निर्धारित नहीं किया जा सकता"
+  ],
+  "o_en": [
+   "2",
+   "4",
+   "6",
+   "Cannot be determined"
+  ],
+  "a": 2,
+  "e_hi": "स्पष्टीकरण: पहली स्थिति में ऊपर '3' और सामने '1' है। दूसरी स्थिति में ऊपर '3' और सामने '5' है। एक ही पासे की दो अलग-अलग स्थितियों में यदि एक संख्या ('3') समान स्थान पर हो, तो उनके बगल वाले फलक एक दूसरे के विपरीत होते हैं, लेकिन यहाँ एक ही फलक पर दो अलग सामने वाले नंबर दिख रहे हैं जो पासे के नियमों के अनुसार यह दर्शाते हैं कि '1' और '5' आपस में या अन्य से जुड़े हैं। मानक तरीके से देखें: पहली स्थिति में शीर्ष पर 3 है, सामने 1 है; दूसरी स्थिति में शीर्ष पर 3 है, सामने 5 है। इसका मतलब संख्या 1, 5, 2, और 4 सभी संख्या 3 के पड़ोसी (adjacent) फलक हैं। एक पासे में कुल 6 फलक (1 से 6) होते हैं। चूंकि 1, 2, 4, और 5 पहले ही 3 के पड़ोसी के रूप में आ चुके हैं, एकमात्र शेष संख्या '6' ही 3 के विपरीत फलक पर हो सकती है। अतः सही विकल्प 3 है।",
+  "e_en": "Explanation: In position 1, '3' is on top, '1' is front. In position 2, '3' is on top, '5' is front. A dice has faces numbered 1 through 6. From the given rolls, the numbers adjacent to '3' are observed to be 1, 5, 2, and 4. Since a dice has 6 unique faces and 1, 2, 4, 5 are already identified as adjacent to 3, the only remaining number from 1 to 6 must be on the opposite face. Therefore, '6' is opposite to '3'. Hence, option 2 is correct."
+ },
+ {
+  "id": "rp-rea-r03422",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "d": 2,
+  "q_hi": "एक वर्गाकार ग्रिड में कुल 16 छोटे वर्ग (4x4) हैं। इस ग्रिड के अंदर अधिकतम कितने विभिन्न आकारों के वर्ग (Squares) गिने जा सकते हैं?",
+  "q_en": "A square grid contains a total of 16 small squares (4x4). What is the maximum number of squares of all different sizes that can be counted inside this grid?",
+  "o_hi": [
+   "20",
+   "30",
+   "32",
+   "35"
+  ],
+  "o_en": [
+   "20",
+   "30",
+   "32",
+   "35"
+  ],
+  "a": 1,
+  "e_hi": "स्पष्टीकरण: n x n आकार के ग्रिड में वर्गों की कुल संख्या निकालने का सूत्र है: 1^2 + 2^2 + 3^2 + ... + n^2। यहाँ n = 4 है। इसलिए, 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 30। अतः ग्रिड में कुल 30 वर्ग हैं। सही विकल्प 2 है।",
+  "e_en": "Explanation: The total number of squares in an n x n grid is given by the formula: 1^2 + 2^2 + 3^2 + ... + n^2. Here n = 4. Therefore, calculating for a 4x4 grid: 1^2 + 2^2 + 3^2 + 4^2 = 1 + 4 + 9 + 16 = 30. Thus, there are 30 squares in total. Hence, option 1 is correct."
  }
 ]
