@@ -222,14 +222,14 @@
    "समानुपातिक बदलाव के लिए 'जोड़ो, जोड़ो, गुणा करो' स्मरणीय वाक्य याद रखो: x + y + (xy/100)।",
    "प्रश्न में पूछे गए प्रतिशत के प्रकार (वृद्धि, घटाव, परिवर्तन) और आधार (मूल या नया) को पहले स्पष्ट रूप से पहचानो।",
    "दो successive प्रतिशत बदलाव के क्रम पर ध्यान दो; बढ़ाने के बाद घटाने और घटाने के बाद बढ़ाने के परिणाम अलग होते हैं।",
-   "20% जल्दी निकालने के लिए 10% (आधे) को दो बार जोड़ो।",
+   "20% जल्दी निकालने के लिए पहले 10% निकालो (जो 20% का आधा है), फिर उसे दोगुना करो।",
    "5% जल्दी निकालने के लिए 10% को आधा करो।"
   ],
   "tips_en": [
    "Use the mnemonic ‘Add, add, multiply’ to remember the net change formula: x + y + (xy/100).",
    "Always identify whether the question asks for a percentage increase, decrease, or change, and whether the base is the original or the new value.",
    "Pay attention to the order of successive percentage changes; an increase followed by a decrease is not the same as a decrease followed by an increase.",
-   "Quickly find 20% of a number by calculating 10% (half the number) and doubling it.",
+   "Quickly find 20% of a number by first calculating 10% (which is half of 20%) and then doubling it.",
    "Quickly find 5% of a number by calculating 10% and halving it."
   ]
  },
@@ -794,9 +794,9 @@
   "facts_hi": [
    "साधारण ब्याज का सूत्र I = P·R·T/100 है।",
    "साधारण ब्याज में कुल राशि = P(1+R·T/100) होती है।",
-   "चक्रवृद्धि ब्याज की राशि A = P(1+R/n·100)^{n·T} से निकाली जाती है।",
+   "चक्रवृद्धि ब्याज की राशि A = P(1+R/(100n))^{nT} से निकाली जाती है (R प्रतिशत में)।",
    "वार्षिक चक्रवृद्धि में n=1, अर्धवार्षिक में n=2, त्रैमासिक में n=4, मासिक में n=12।",
-   "प्रभावी वार्षिक दर (EAR) = (1+R/n)^{n} - 1 है।",
+   "प्रभावी वार्षिक दर (EAR) = (1+R/(100n))^{n} - 1 है (R प्रतिशत में)।",
    "निरंतर चक्रवृद्धि के लिये A = P·e^{R·T} प्रयोग होता है।",
    "साधारण ब्याज रैखिक वृद्धि देता है, जबकि चक्रवृद्धि ब्याज घातीय वृद्धि देता है।",
    "ब्याज दर को प्रतिशत से दशमलव में बदलने के लिये 100 से भाग दें।",
@@ -806,9 +806,9 @@
   "facts_en": [
    "Simple interest uses the formula I = P·R·T/100.",
    "In simple interest the total amount equals P(1+R·T/100).",
-   "Compound amount is given by A = P(1+R/n·100)^{n·T}.",
+   "Compound amount is given by A = P(1+R/(100n))^{nT}, with R expressed as a percentage.",
    "For yearly compounding n=1, semi‑annual n=2, quarterly n=4, monthly n=12.",
-   "Effective annual rate (EAR) equals (1+R/n)^{n} - 1.",
+   "Effective annual rate (EAR) equals (1+R/(100n))^{n} - 1, with R expressed as a percentage.",
    "Continuous compounding uses A = P·e^{R·T}.",
    "Simple interest grows linearly, compound interest grows exponentially.",
    "Convert a percentage rate to decimal by dividing by 100.",
