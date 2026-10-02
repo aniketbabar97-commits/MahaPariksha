@@ -20,6 +20,7 @@ class ContentRepo {
   final List<Motivation> motivation = [];
   final Map<String, TopicNote> _notes = {};
   final Map<String, ExamStrategy> _strategies = {};
+  List<GkBoosterCategory> gkBooster = [];
 
   TopicNote? note(String subject, String topic) => _notes['$subject/$topic'];
   bool hasNotes(String subject) => _notes.keys.any((k) => k.startsWith('$subject/'));
@@ -155,6 +156,12 @@ class ContentRepo {
       ..clear()
       ..addEntries(strategyJson.entries
           .map((e) => MapEntry(e.key, ExamStrategy.fromJson(e.key, e.value as Map<String, dynamic>))));
+    final boosterRaw = data['gk_booster'];
+    gkBooster = boosterRaw == null
+        ? const []
+        : ((boosterRaw['categories'] as List?) ?? const [])
+            .map((j) => GkBoosterCategory.fromJson(j))
+            .toList();
     _subjectById
       ..clear()
       ..addEntries(subjects.map((s) => MapEntry(s.id, s)));

@@ -166,6 +166,39 @@ class ExamStrategy {
       );
 }
 
+/// One reference entry in a GK booster category -- e.g. one scheme, one award,
+/// one national park. A short bold title plus a one/two-line bilingual detail
+/// covers every category's shape (dates+themes, scheme facts, award winners,
+/// author names, park/species) without category-specific fields.
+class GkBoosterItem {
+  final Bi title;
+  final Bi detail;
+  const GkBoosterItem(this.title, this.detail);
+
+  factory GkBoosterItem.fromJson(Map<String, dynamic> j) => GkBoosterItem(
+        Bi(j['title_hi'], j['title_en']),
+        Bi(j['detail_hi'], j['detail_en']),
+      );
+}
+
+/// A browsable category of static GK reference entries (Important Days,
+/// Govt Schemes, Awards, Books & Authors, National Parks, Committees...),
+/// read/browsed rather than quizzed -- see content/gk_booster.json.
+class GkBoosterCategory {
+  final String id;
+  final String icon;
+  final Bi name;
+  final List<GkBoosterItem> items;
+  const GkBoosterCategory(this.id, this.icon, this.name, this.items);
+
+  factory GkBoosterCategory.fromJson(Map<String, dynamic> j) => GkBoosterCategory(
+        j['id'],
+        j['icon'] ?? 'book',
+        Bi(j['name_hi'], j['name_en']),
+        (j['items'] as List).map((i) => GkBoosterItem.fromJson(i)).toList(),
+      );
+}
+
 class MapNode {
   final Bi label;
   final List<MapNode> children;

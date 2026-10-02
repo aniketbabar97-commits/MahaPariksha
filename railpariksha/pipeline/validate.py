@@ -195,6 +195,47 @@ def validate_file(path, seen_ids, errs):
     return len(data)
 
 
+def check_gk_booster(path, errs):
+    """content/gk_booster.json isn't a per-item collection like bank/flashcards/etc
+    (it's a single file of category -> items), so it's validated on its own shape
+    here rather than via validate_file's per-directory checker dispatch."""
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        errs.append(f"{path}: invalid JSON: {e}")
+        return 0
+    if not (isinstance(data, dict) and isinstance(data.get("categories"), list)):
+        errs.append(f"{path}: top level must be an object with a 'categories' list")
+        return 0
+    total = 0
+    seen_cat_ids = set()
+    for ci, cat in enumerate(data["categories"]):
+        where = f"{path.relative_to(ROOT)}.categories[{ci}]"
+        need = {"id", "icon", "name_hi", "name_en", "items"}
+        if not isinstance(cat, dict) or not need <= set(cat):
+            errs.append(f"{where}: missing {sorted(need - set(cat if isinstance(cat, dict) else {}))}")
+            continue
+        if cat["id"] in seen_cat_ids:
+            errs.append(f"{where}: duplicate category id {cat['id']}")
+        seen_cat_ids.add(cat["id"])
+        if not (nonempty(cat["name_hi"]) and nonempty(cat["name_en"])):
+            errs.append(f"{where}: empty category name")
+        if not isinstance(cat["items"], list) or not cat["items"]:
+            errs.append(f"{where}: items must be a non-empty list")
+            continue
+        for ii, item in enumerate(cat["items"]):
+            iwhere = f"{where}.items[{ii}]"
+            ineed = {"title_hi", "title_en", "detail_hi", "detail_en"}
+            if not isinstance(item, dict) or not ineed <= set(item):
+                errs.append(f"{iwhere}: missing {sorted(ineed - set(item if isinstance(item, dict) else {}))}")
+                continue
+            for f in ineed:
+                if not nonempty(item[f]):
+                    errs.append(f"{iwhere}: {f} empty")
+            total += 1
+    return total
+
+
 def main(argv):
     explicit = [Path(a).resolve() for a in argv]
     files = explicit or sorted(
@@ -210,6 +251,11 @@ def main(argv):
         check_exam_strategy(strategy, strategy_path, errs)
         total += len(strategy)
         files = files + [strategy_path] if strategy_path not in files else files
+
+    gk_booster_path = CONTENT / "gk_booster.json"
+    if not argv and gk_booster_path.exists():
+        files.append(gk_booster_path)
+        total += check_gk_booster(gk_booster_path, errs)
 
     for e in errs[:200]:
         print("ERROR", e)

@@ -11,6 +11,7 @@ import 'beast_mode_screen.dart';
 import 'ca_archive_screen.dart';
 import 'ca_digest_screen.dart';
 import 'flashcard_screen.dart';
+import 'gk_booster_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
 import 'search_screen.dart';
@@ -307,6 +308,15 @@ class TodayScreen extends StatelessWidget {
                   '${caDates.values.first.length} नई बातें · ${formatCaDate(caDates.keys.first).hi}',
                   '${caDates.values.first.length} new updates · ${formatCaDate(caDates.keys.first).en}'),
           onTap: () => push(context, (_) => const CaDigestScreen()),
+        ),
+        const SizedBox(height: 12),
+        ActionCard(
+          icon: Icons.bolt,
+          color: BrandColors.saffron,
+          title: context.tr('जीके बूस्टर', 'GK Booster'),
+          subtitle: context.tr('दिवस, योजनाएं, पुरस्कार — रटने लायक रेफरेंस लिस्ट',
+              'Days, schemes, awards -- cram-ready reference lists'),
+          onTap: () => push(context, (_) => const GkBoosterScreen()),
         ),
         const SizedBox(height: 12),
         ActionCard(

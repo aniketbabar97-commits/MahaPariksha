@@ -37,6 +37,8 @@ def main():
     exam_strategy = resolve_exam_strategy(
         json.loads((CONTENT / "exam_strategy.json").read_text(encoding="utf-8"))
     )
+    gk_booster_path = CONTENT / "gk_booster.json"
+    gk_booster = json.loads(gk_booster_path.read_text(encoding="utf-8")) if gk_booster_path.exists() else None
     questions = load_dir("bank")
     for q in questions:
         # Source links stay in the repo, not on devices, for the bulk of the bank (keeps
@@ -55,6 +57,8 @@ def main():
         "notes": load_dir("notes"),
         "exam_strategy": exam_strategy,
     }
+    if gk_booster is not None:
+        bundle["gk_booster"] = gk_booster
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(bundle, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
