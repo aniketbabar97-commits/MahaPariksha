@@ -93944,8 +93944,8 @@
   "s": "reasoning",
   "t": "direction_sense",
   "d": 3,
-  "q_hi": "मंजू एक बिंदु से उत्तर की ओर 12 किमी चलती है, फिर पश्चिम की ओर मुड़कर 9 किमी चलती है। वहां से वह दक्षिण की ओर 3 किमी चलती है, और फिर पूर्व की ओर 5 किमी चलती है। मंजू शुरुआती बिंदु से न्यूनतम कितनी दूरी पर है?",
-  "q_en": "Manju walks 12 km North from a point, then turns West and walks 9 km. From there, she walks 3 km South, and then walks 5 km East. What is the minimum distance of Manju from the starting point?",
+  "q_hi": "मंजू किसी बिंदु से 12 किमी उत्तर चलती है, फिर पश्चिम की ओर मुड़कर 9 किमी चलती है। वहां से वह 3 किमी दक्षिण चलती है, और फिर 4 किमी पूर्व चलती है। आरंभिक बिंदु से मंजू की न्यूनतम दूरी क्या है?",
+  "q_en": "Manju walks 12 km North from a point, then turns West and walks 9 km. From there, she walks 3 km South, and then walks 4 km East. What is the minimum distance of Manju from the starting point?",
   "o_hi": [
    "√106 किमी",
    "10 किमी",
@@ -93958,9 +93958,9 @@
    "12 km",
    "14 km"
   ],
-  "a": 1,
-  "e_hi": "शुरुआत (0,0) से उत्तर 12 किमी -> (0,12)। पश्चिम 9 किमी -> (-9,12)। दक्षिण 3 किमी -> (-9,9)। पूर्व 5 किमी -> (-4,9)। शुरुआती बिंदु (0,0) और अंतिम बिंदु (-4,9) के बीच की न्यूनतम दूरी = √((-4 - 0)² + (9 - 0)²) = √(16 + 81) = √97, यहाँ दोबारा जांचें: पश्चिम 9 और पूर्व 5 का अंतर -4 है। उत्तर 12 और दक्षिण 3 का अंतर 9 है। दूरी = √((-4)² + 9²) = √(16 + 81) = √97. विकल्प में सुधार: √97 के निकटतम या यदि डेटा 12, 9, 6, 3 हो तो √(16+36) = √52 आदि। चलिए सटीक मान देखते हैं: उत्तर 12, दक्षिण 3 का अंतर 9. पश्चिम 9, पूर्व 5 का अंतर 4. दूरी = √(9² + 4²) = √97. विकल्पों में 10 किमी एक अनुमानित मान हो सकता है या यदि हम डेटा को ठीक करें: यदि पश्चिम 12 और पूर्व 4 हो तो अंतर 8 और उत्तर 12 दक्षिण 6 हो तो अंतर 6, √(68)=10. यहाँ विकल्प 10 किमी सही मानने के लिए यदि मान 6 और 8 हों। चलिए मानक प्रश्न के अनुसार गणना करें: उत्तर 12, दक्षिण 3 = 9 (ऊपर)। पश्चिम 9, पूर्व 5 = 4 (बाएं)। दूरी √97 है।",
-  "e_en": "Net North displacement = 12 - 3 = 9 km. Net West displacement = 9 - 5 = 4 km. Minimum distance from start = √(9² + 4²) = √97 km. (Adjusted to standard options where √97 approx matches 10 in multiple choice approximations, or exact √(92+42) calculation applies)."
+  "a": 0,
+  "e_hi": "स्थिति: 12 उत्तर (0,12), 9 पश्चिम (-9,12), 3 दक्षिण (-9,9), 4 पूर्व (-5,9)। दूरी = √(5² + 9²) = √(25+81) = √106 किमी।",
+  "e_en": "Position: 12 North (0,12), 9 West (-9,12), 3 South (-9,9), 4 East (-5,9). Distance = sqrt(5^2 + 9^2) = sqrt(25+81) = sqrt(106) km."
  },
  {
   "id": "rp-rea-r03369",
@@ -94013,8 +94013,8 @@
   "s": "reasoning",
   "t": "direction_sense",
   "d": 3,
-  "q_hi": "अमित एक पार्क में खड़ा है। वह दक्षिण दिशा में 18 किमी चलता है, फिर बाएं मुड़कर 8 किमी चलता है। इसके बाद वह फिर से बाएं मुड़कर 6 किमी चलता है और रुक जाता है। अमित अपने शुरुआती बिंदु से न्यूनतम कितनी दूरी पर और किस दिशा में है?",
-  "q_en": "Amit is standing in a park. He walks 18 km towards South, then turns left and walks 8 km. After that, he turns left again and walks 6 km and stops. What is the shortest distance and direction of Amit from his starting point?",
+  "q_hi": "अमित एक पार्क में खड़ा है। वह दक्षिण की ओर 18 किमी चलता है, फिर बाएं मुड़कर 8 किमी चलता है। उसके बाद, वह फिर बाएं मुड़कर 12 किमी चलता है और रुक जाता है। आरंभिक बिंदु से अमित की न्यूनतम दूरी और दिशा क्या है?",
+  "q_en": "Amit is standing in a park. He walks 18 km towards South, then turns left and walks 8 km. After that, he turns left again and walks 12 km and stops. What is the shortest distance and direction of Amit from his starting point?",
   "o_hi": [
    "10 किमी, दक्षिण-पूर्व",
    "12 किमी, दक्षिण-पश्चिम",
@@ -94028,8 +94028,8 @@
    "14 km, South-East"
   ],
   "a": 0,
-  "e_hi": "अमित दक्षिण में 18 किमी चला। फिर बाएं (पूर्व) मुड़कर 8 किमी चला। फिर बाएं (उत्तर) मुड़कर 6 किमी चला। अब वह शुरुआती बिंदु के दक्षिण में 18 - 6 = 12 किमी और पूर्व में 8 किमी है। न्यूनतम दूरी = √(12² + 8²) = √(144 + 64) = √208 जो कि लगभग 14.42 किमी नहीं बल्कि एक समकोण त्रिभुज के आधार पर सही गणना करते हैं: दक्षिण में प्रभावी दूरी 18 - 6 = 12 नहीं, बल्कि यदि पहले दक्षिण 18 और उत्तर 6 गए, तो दक्षिण में शेष 12 किमी और पूर्व में 8 किमी। पायथागोरस प्रमेय से: आधार = 8, लम्ब = 12, कर्ण = √(8² + 12²) = √(64 + 144) = √208. क्षमा करें, यदि प्रारंभिक स्थिति से देखें तो वह दक्षिण-पूर्व में है। आइए विकल्पों के अनुसार मान सुधारें: यदि दक्षिण 12 और पूर्व 9 हो (जैसे 9 और 12 का कर्ण 15 हो)। यहाँ 8 और 12 से दूरी √208 है। विकल्पों में सही मान के लिए प्रश्न को समायोजित करते हैं: यदि वह दक्षिण 16 और उत्तर 4 चले, तो 12 दक्षिण और 5 पूर्व, कर्ण = √(144+25) = 13। यहाँ सही उत्तर 10 किमी दक्षिण-पूर्व है यदि दक्षिण 8 और उत्तर 2 हो, तथा पूर्व 6 हो। गणना: दक्षिण 8, बाएं (पूर्व) 6, बाएं (उत्तर) 2। दक्षिण प्रभावी = 8 - 2 = 6 किमी। पूर्व = 8 किमी (यदि पूर्व 8 हो तो 6 और 8 का कर्ण 10 किमी दक्षिण-पूर्व)।",
-  "e_en": "Amit walks 8 km South, turns left (East) for 8 km, turns left (North) for 2 km. Effective South = 8 - 2 = 6 km. East = 8 km. Shortest distance = √(6² + 8²) = √100 = 10 km, and he is to the South-East of the start."
+  "e_hi": "स्थिति: 18 दक्षिण (0,-18), बाएं मुड़ने पर दक्षिण से पूर्व, 8 पूर्व (8,-18), फिर बाएं मुड़ने पर पूर्व से उत्तर, 12 उत्तर (8,-6)। दूरी = √(8²+6²) = √(64+36) = √100 = 10 किमी, दक्षिण-पूर्व दिशा में।",
+  "e_en": "Position: 18 South (0,-18), turning left from South faces East, 8 East (8,-18), then turning left from East faces North, 12 North (8,-6). Distance = sqrt(8^2+6^2) = sqrt(64+36) = sqrt(100) = 10 km, in the South-East direction."
  },
  {
   "id": "rp-rea-r03372",
@@ -94257,9 +94257,9 @@
    "14 km",
    "16 km"
   ],
-  "a": 2,
-  "e_hi": "A से 8 किमी पूर्व (8,0), फिर बाएं (उत्तर) 6 किमी (8,6)। फिर दाएं (पूर्व) 4 किमी (12,6)। अंत में दाएं (दक्षिण) 6 किमी (12,0)। बिंदु A (0,0) और B (12,0) के बीच की कुल क्षैतिज दूरी 12 + 2 = 14 किमी है (क्योंकि B, A से कुल 12 किमी पूर्व और 0 किमी उत्तर है, लेकिन प्रारंभिक पथ में x अक्ष पर कुल विस्थापन 8 + 4 = 12 किमी है, अतः न्यूनतम दूरी 12 किमी होगी। पुनः जाँच: A से B का क्षैतिज अंतर 8 + 4 = 12 किमी है, ऊर्ध्वाधर अंतर 6 - 6 = 0 किमी है। अतः सीधी दूरी 12 किमी है)।",
-  "e_en": "Start A(0,0). Walks 8km East to (8,0). Turns left(North), walks 6km to (8,6). Turns right(East), walks 4km to (12,6). Turns right(South), walks 6km to (12,0) which is point B. The straight line distance between A(0,0) and B(12,0) is 12 km."
+  "a": 1,
+  "e_hi": "स्थिति: 8 पूर्व (8,0), बाएं मुड़कर 6 उत्तर (8,6), दाएं मुड़कर 4 पूर्व (12,6), दाएं मुड़कर 6 दक्षिण (12,0)। A से B की दूरी = 12 किमी।",
+  "e_en": "Position: 8 East (8,0), turning left 6 North (8,6), turning right 4 East (12,6), turning right 6 South (12,0). Distance from A to B = 12 km."
  },
  {
   "id": "rp-rea-r03382",
@@ -94280,9 +94280,9 @@
    "South-East",
    "South-West"
   ],
-  "a": 2,
-  "e_hi": "राहुल दक्षिण की ओर चला। पहला बायां मोड़ = पूर्व दिशा। वह पूर्व की ओर 40 मीटर चला। दूसरा बायां मोड़ = उत्तर दिशा। वह उत्तर की ओर 20 मीटर चला। इस समय उसका मुख उत्तर (North) की ओर है। उत्तर से 45 डिग्री दक्षिणावर्त (Clockwise) मुड़ने पर वह उत्तर-पूर्व (North-East) दिशा में हो जाता है। (क्षमा करें, मोड़ की गणना पुनः करें: दक्षिण से बायां = पूर्व, पूर्व से बायां = उत्तर। उत्तर से 45° दक्षिणावर्त = उत्तर-पूर्व)।",
-  "e_en": "Rahul walks South. First left turn makes him face East. He walks 40m East. Second left turn makes him face North. He walks 20m North. Currently facing North. A 45-degree clockwise turn from North results in facing North-East."
+  "a": 0,
+  "e_hi": "30 दक्षिण, बाएं मुड़कर (दक्षिण से पूर्व) 40 चलना, फिर बाएं मुड़कर (पूर्व से उत्तर) 20 चलना -- अब वह उत्तर की ओर मुख किए हुए है। उत्तर से 45 डिग्री दक्षिणावर्त (clockwise) घुमने पर वह उत्तर-पूर्व दिशा में मुख करता है।",
+  "e_en": "30 South, turning left (South to East) and walking 40, then turning left (East to North) and walking 20 -- he is now facing North. Turning 45 degrees clockwise from North makes him face North-East."
  },
  {
   "id": "rp-rea-r03383",
