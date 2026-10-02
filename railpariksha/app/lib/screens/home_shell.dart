@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/app_scope.dart';
+import '../core/reminders.dart';
 import '../widgets/bottom_nav.dart';
 import 'me_screen.dart';
 import 'practice_screen.dart';
@@ -15,10 +16,36 @@ class HomeShell extends StatefulWidget {
   State<HomeShell> createState() => _HomeShellState();
 }
 
-class _HomeShellState extends State<HomeShell> {
+class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
   int index = 0;
 
   void goTo(int i) => setState(() => index = i);
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  // Coming back to the foreground is the other moment (besides the activity
+  // hook in main.dart) a stale schedule can be caught and fixed: the day may
+  // have rolled over, or the user may have practiced in a widget/other entry
+  // point, while the app sat backgrounded. Re-running applyReminders here
+  // cancels and re-picks all four notification slots off current state --
+  // see the staleness note in reminders.dart.
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      final p = context.scope.progress;
+      if (p.reminders) applyReminders(p);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

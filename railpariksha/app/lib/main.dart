@@ -17,6 +17,14 @@ Future<void> main() async {
   final repo = ContentRepo();
   final progress = Progress();
   await Future.wait([repo.load(), progress.load()]);
+  // Reschedule the moment today's streak is actually saved, so a late-night
+  // streak-SOS already queued for tonight (scheduled from a stale snapshot
+  // taken at an earlier launch) gets cancelled right away instead of firing
+  // after the streak no longer needs saving. See reminders.dart for the rest
+  // of the staleness story this is covering.
+  progress.onActiveToday = () {
+    if (progress.reminders) applyReminders(progress);
+  };
   if (progress.examId != null && repo.exam(progress.examId!) == null) {
     progress.examId = null;
     progress.onboarded = false;

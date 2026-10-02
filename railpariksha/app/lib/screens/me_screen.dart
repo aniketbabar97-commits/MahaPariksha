@@ -87,7 +87,9 @@ class MeScreen extends StatelessWidget {
             SwitchListTile(
               secondary: const Icon(Icons.notifications_active, color: BrandColors.sky),
               title: Text(context.tr('रोज़ का रिमाइंडर 🔔', 'Daily reminders 🔔')),
-              subtitle: Text(context.tr('दिन में अधिकतम 2 सूचनाएं', 'At most 2 notifications a day')),
+              subtitle: Text(context.tr(
+                  'सुबह और शाम की सूचना, कभी-कभी ज़रूरत पड़ने पर अतिरिक्त',
+                  'Morning and evening, plus the occasional extra when it genuinely matters')),
               value: p.reminders,
               onChanged: (v) async {
                 HapticFeedback.selectionClick();
@@ -117,6 +119,20 @@ class MeScreen extends StatelessWidget {
                   );
                   if (t == null) return;
                   p.update((p) => p.reminderHour = t.hour);
+                  await applyReminders(p);
+                },
+              ),
+            if (p.reminders)
+              SwitchListTile(
+                secondary: const Icon(Icons.local_fire_department, color: BrandColors.sky),
+                title: Text(context.tr('स्ट्रीक SOS चेतावनी 🚨', 'Streak SOS alert 🚨')),
+                subtitle: Text(context.tr(
+                    'रात 9 बजे एक अतिरिक्त अलर्ट — सिर्फ तब, जब स्ट्रीक खतरे में हो',
+                    'An extra alert at 9pm -- only when your streak is actually at risk')),
+                value: p.streakRiskAlerts,
+                onChanged: (v) async {
+                  HapticFeedback.selectionClick();
+                  p.update((p) => p.streakRiskAlerts = v);
                   await applyReminders(p);
                 },
               ),

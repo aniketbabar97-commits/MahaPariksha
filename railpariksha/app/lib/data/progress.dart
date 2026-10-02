@@ -98,6 +98,15 @@ class Progress extends ChangeNotifier {
   String theme = 'system';
   bool reminders = true;
   int reminderHour = 7;
+  bool streakRiskAlerts = true;
+
+  /// Fired once, right as [_gain] marks the user active for today (i.e. the
+  /// first qualifying activity of the day just landed). Set by main.dart to
+  /// reschedule reminders immediately, so a late-night streak-SOS already
+  /// queued for tonight gets cancelled the moment it's no longer warranted --
+  /// see the staleness caveat in reminders.dart. Not persisted; a plain
+  /// in-memory hook, since it only matters while the app is running.
+  void Function()? onActiveToday;
 
   // Gamification
   int xp = 0;
@@ -144,6 +153,7 @@ class Progress extends ChangeNotifier {
     theme = j['theme'] ?? 'system';
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
+    streakRiskAlerts = j['streakRiskAlerts'] ?? true;
     xp = j['xp'] ?? 0;
     streak = j['streak'] ?? 0;
     bestStreak = j['bestStreak'] ?? 0;
@@ -173,6 +183,7 @@ class Progress extends ChangeNotifier {
         'theme': theme,
         'reminders': reminders,
         'reminderHour': reminderHour,
+        'streakRiskAlerts': streakRiskAlerts,
         'xp': xp,
         'streak': streak,
         'bestStreak': bestStreak,
@@ -305,6 +316,10 @@ class Progress extends ChangeNotifier {
     if (goalNow) gained += 50;
     xp += gained;
     save();
+    // Today's first qualifying activity just landed -- let main.dart know so
+    // it can re-pick tonight's notifications now rather than leaving a
+    // just-invalidated streak-SOS queued for later (see reminders.dart).
+    if (!wasActive && activeToday) onActiveToday?.call();
     return Reward(gained,
         goalCompleted: goalNow, levelUp: level.index > beforeLevel, streakMilestone: milestone);
   }

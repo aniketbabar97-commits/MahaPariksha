@@ -23,6 +23,35 @@ import '../data/progress.dart';
 /// high-intent reason to (exam within a week, a streak not yet saved today,
 /// or a real mistake backlog), so the extra volume is a real signal, not
 /// noise padding toward 3/day regardless of relevance.
+///
+/// A fourth slot, id 4, is the late-night "streak SOS" -- distinct in tone
+/// (its own higher-priority channel, see notifications.dart) and in timing
+/// (a fixed late hour, independent of the user's morning/evening times) from
+/// the regular evening nudge. It only exists when the streak is actually
+/// still unsaved and worth protecting (>= [_streakSosThreshold] days) this
+/// evening.
+///
+/// Local-notification caveat, and how it's handled here: flutter_local_notifications
+/// schedules a fixed title/body ahead of time -- it cannot re-check "has the
+/// user practiced yet?" at the moment it fires. So eligibility is computed
+/// now, at schedule time, not at 9pm. To keep that snapshot from going stale
+/// over the following hours, [applyReminders] must be re-run (which cancels
+/// and recomputes all four) the moment anything could have flipped the
+/// condition: on every app launch, on app resume (see HomeShell), on any
+/// reminder-settings change, and -- the case that matters most here --
+/// immediately when the user's first qualifying activity of the day lands
+/// (see `Progress.onActiveToday`, wired in main.dart). That closes the gap
+/// for the common case (open the app, practice, the SOS for tonight is
+/// cancelled right then) but not a case no local-only scheme can close: the
+/// app never being opened again before 9pm after the streak was saved by some
+/// other route, or the clock simply running out with the app in the
+/// background the whole time and no resume event firing. There is no way to
+/// evaluate "did they practice today" at the exact fire instant without a
+/// server push or a background callback, neither of which this app has (by
+/// design -- no new dependency). This is the accepted tradeoff.
+const _streakSosThreshold = 3;
+const _streakSosHour = 21; // 9pm local -- inside the "getting late" window, well before midnight.
+
 String _tr(Progress p, String hi, String en) => p.lang == 'en' ? en : hi;
 
 (String, String) _pick(Progress p, List<(String, String, String, String)> variants) {
@@ -62,6 +91,41 @@ Future<void> applyReminders(Progress p) async {
       body: midday.$2,
     );
   }
+
+  if (p.streakRiskAlerts) {
+    final sos = _streakSosMessage(p);
+    if (sos != null) {
+      await RailParikshaNotifications.scheduleDaily(
+        id: 4,
+        hour: _streakSosHour,
+        title: sos.$1,
+        body: sos.$2,
+        urgent: true,
+      );
+    }
+  }
+}
+
+/// Only returns a message (and so only fires id 4) when there's a real
+/// streak worth saving and it hasn't been saved yet today -- see the caveat
+/// on staleness above [_streakSosThreshold].
+(String, String)? _streakSosMessage(Progress p) {
+  final streak = p.liveStreak;
+  if (streak < _streakSosThreshold || p.activeToday) return null;
+  return _pick(p, [
+    (
+      'आपकी $streak दिन की स्ट्रीक खतरे में है! 🚨',
+      'Your $streak-day streak is at risk! 🚨',
+      'आज अभी अभ्यास करें, आधी रात से पहले बचा लें!',
+      'Practice now to keep it alive before midnight!',
+    ),
+    (
+      '$streak दिन, और रात होने वाली है ⏳🔥',
+      '$streak days, and night is closing in ⏳🔥',
+      'अभी एक क्विज़ खेलो, स्ट्रीक मत टूटने दो!',
+      "Play one quiz right now -- don't let it break!",
+    ),
+  ]);
 }
 
 /// Only returns a message (and so only fires id 3) when there's a genuine
