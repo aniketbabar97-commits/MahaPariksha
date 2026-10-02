@@ -91161,8 +91161,8 @@
   "s": "reasoning",
   "t": "blood_relations",
   "d": 2,
-  "q_hi": "एक परिवार में पी, क्यू, आर, एस, टी और यू छह सदस्य हैं। आर, क्यू की बहन है। क्यू, टी का पति है। यू, पी और टी का पुत्र है। एस, पी की पत्नी है। एस का क्यू से क्या संबंध है?",
-  "q_en": "In a family of six members P, Q, R, S, T, and U: R is the sister of Q. Q is the husband of T. U is the son of P and T. S is the wife of P. How is S related to Q?",
+  "q_hi": "छह सदस्यों P, Q, R, S, T और U के परिवार में: R, Q की बहन है। Q, T का पति है। U, Q और T का पुत्र है। S, T की मां है। S, Q से कैसे संबंधित है?",
+  "q_en": "In a family of six members P, Q, R, S, T, and U: R is the sister of Q. Q is the husband of T. U is the son of Q and T. S is the mother of T. How is S related to Q?",
   "o_hi": [
    "सास",
    "माता",
@@ -91176,8 +91176,8 @@
    "Grandmother"
   ],
   "a": 0,
-  "e_hi": "चरण 1: क्यू का विवाह टी से हुआ है और क्यू पुरुष है (क्योंकि वह पति है)। चरण 2: यू, पी और टी का पुत्र है, इसलिए पी और टी, यू के माता-पिता हैं। चूंकि क्यू टी का पति है, अतः पी क्यू का पिता या माता होगा और टी क्यू की पत्नी है। चरण 3: एस, पी की पत्नी है। यदि पी टी का माता-पिता है, तो एस और पी माता-पिता हैं। प्रश्न में दिया है कि यू, पी और टी का पुत्र है, यानी टी मां है और पी पिता है। अतः एस, क्यू की सास (Mother-in-law) होगी क्योंकि एस क्यू की पत्नी (टी) की मां है।",
-  "e_en": "Step 1: Q is married to T, and Q is the husband (male). Step 2: U is the son of P and T. Since Q is T's husband, T is female and Q is male. Step 3: S is the wife of P. Since P and T are parents of U, and Q is married to T, P and T are parents of T (wait, P and T are parents of U, meaning P and T are a couple, so P is father and T is mother). S is the wife of P, so S is the mother of T. Therefore, S is the mother-in-law of Q."
+  "e_hi": "S, T की मां है, और T, Q की पत्नी है। इसलिए S, Q की सास (पत्नी की मां) है।",
+  "e_en": "S is the mother of T, and T is Q's wife. So S is Q's mother-in-law (wife's mother)."
  },
  {
   "id": "rp-rea-r03248",
@@ -91290,9 +91290,9 @@
    "Mother",
    "Cousin"
   ],
-  "a": 3,
-  "e_hi": "चरण 1: ओ, जे की माता है। एन, ओ का पुत्र है, इसलिए एन, जे का भाई है (या जे, एन का भाई/बहन है)। चरण 2: के, जे का भाई है। एम, एन की पत्नी है और एल, एम की पुत्री है। इसका अर्थ है कि एल, एन और एम की पुत्री है। चरण 3: चूँकि एन और जे (तथा के) एक ही माता (ओ) की संतान हैं, एन, जे का भाई है। इसलिए एन की पुत्री (एल) जे की भतीजी/भांजी नहीं बल्कि जे के भाई की पुत्री यानी भतीजी होगी। लेकिन रुकिए: यदि एन, जे का भाई है, तो एन की पुत्री एल, जे की भतीजी हुई। आइए विकल्पों को देखें: 'भतीजी/भांजी' सही है।",
-  "e_en": "Step 1: O is the mother of J. N is the son of O, so N is a sibling of J. K is the brother of J. Step 2: M is the wife of N, and L is the daughter of M. Thus, L is the daughter of N. Step 3: Since N and J share the mother O, N is J's brother. L is N's daughter, which makes L the niece of J."
+  "a": 1,
+  "e_hi": "N, O का पुत्र है और O, J की मां है, अतः N, J का भाई है। M, N की पत्नी है और L, N व M की बेटी है। चूंकि N, J का भाई है, L, J की भतीजी (niece) है।",
+  "e_en": "N is the son of O, and O is the mother of J, so N is J's brother. M is N's wife, and L is the daughter of N and M. Since N is J's brother, L is J's niece."
  },
  {
   "id": "rp-rea-r03253",
@@ -91322,8 +91322,8 @@
   "s": "reasoning",
   "t": "blood_relations",
   "d": 3,
-  "q_hi": "ए, बी की बहन है। सी, बी की शादीशुदा पत्नी है। डी, सी का भाई है। ई, डी का पिता है। ए का ई से क्या संबंध है?",
-  "q_en": "A is the sister of B. C is the married wife of B. D is the brother of C. E is the father of D. How is A related to E?",
+  "q_hi": "A, B की बहन है। C, B की पत्नी है। D, C का भाई है। A, D की पत्नी है। E, D का पिता है। A, E से कैसे संबंधित है?",
+  "q_en": "A is the sister of B. C is the wife of B. D is the brother of C. A is the wife of D. E is the father of D. How is A related to E?",
   "o_hi": [
    "पुत्री",
    "बहु (डॉटर्स-इन-लॉ)",
@@ -91337,8 +91337,8 @@
    "Mother-in-law"
   ],
   "a": 1,
-  "e_hi": "चरण 1: सी, बी की पत्नी है और डी, सी का भाई है। ई, डी का पिता है, जिसका अर्थ है ई, सी का भी पिता है। चरण 2: ए, बी की बहन है। सी, बी की पत्नी है, तो बी, सी का पति है। चरण 3: ए, बी की बहन है, यानी ए, बी के परिवार की है। चूंकि सी, बी की पत्नी है, ए, सी के पति की बहन (ननद) हुई। ई, सी का पिता है, इसलिए ए, ई की पुत्रवधू (डॉटर्स-इन-लॉ / बहू) के पति की बहन है—रुकिए! ए, बी की बहन है और सी, बी की पत्नी है। ई, सी का पिता है, इसलिए ई के बच्चों में सी और डी हैं। बी, सी का पति है, तो बी, ई का दामाद (Son-in-law) हुआ। ए, बी की बहन है, इसलिए ए, बी की ही बहन है। इसका अर्थ है ए, ई की बेटी नहीं है; बल्कि ए, ई के दामाद (बी) की बहन है। विकल्पों के अनुसार, क्या यह 'पुत्री' या कुछ और है? विकल्प हैं: पुत्री, बहु, बहन, सास। यहाँ ए, बी की बहन है, और बी, ई का दामाद है। इस प्रश्न की सटीक परिभाषा के तहत ए, ई की 'बेटी' नहीं है। आइए विकल्पों में देखें: यदि कोई सीधा संबंध न हो, तो क्या यह प्रश्न ठीक है? चलिए दोबारा जांचते हैं: ए, बी की बहन है; सी, बी की पत्नी है; डी, सी का भाई है; ई, डी का पिता है। ई का पुत्र/पुत्री सी है। बी, सी का पति है। ए, बी की बहन है। ए का ई से संबंध: ए, बी की बहन है और बी, ई का दामाद है। तो ए, ई के दामाद की बहन है। चूँकि सटीक शब्द विकल्पों में नहीं है, इस प्रश्न को रद्द करते हैं और दूसरा बनाते हैं? नहीं, JSON जनरेट करना है, आइए इस आइटम को बदल कर एक स्पष्ट प्रश्न रखते हैं:",
-  "e_en": "Let's replace this item mentally to ensure 100% solidity: A is the mother of B. C is the sister of A. D is the father of C. E is the son of D. How is B related to D?"
+  "e_hi": "D, E का पुत्र है। A, D की पत्नी है, अतः A, E की पुत्रवधू (daughter-in-law) है।",
+  "e_en": "D is E's son. A is D's wife, so A is E's daughter-in-law."
  },
  {
   "id": "rp-rea-r03255",
@@ -91589,9 +91589,9 @@
    "Brother",
    "Son"
   ],
-  "a": 2,
-  "e_hi": "महिला के भाई का पिता उस महिला का भी पिता है। व्यक्ति की पत्नी का ससुर उस व्यक्ति का अपना पिता है। चूँकि महिला के पिता और व्यक्ति के पिता एक ही व्यक्ति हैं, इसलिए वह व्यक्ति उस महिला का भाई है।",
-  "e_en": "The father of the woman's brother is the woman's father. The father-in-law of the man's wife is the man's own father. Since the woman's father is the man's father, the man is the brother of the woman."
+  "a": 1,
+  "e_hi": "'उसके भाई का पिता' = स्त्री का अपना पिता (मानक रूप से)। यह 'मेरी पत्नी का पिता' के समान है, अर्थात स्त्री और वक्ता की पत्नी का पिता एक ही है -- जिससे पता चलता है कि यह स्त्री स्वयं वक्ता की पत्नी है। अतः पुरुष, स्त्री का पति है।",
+  "e_en": "'Her brother's father' is the woman's own father (by standard convention). This equals 'my wife's father', meaning the woman and the speaker's wife share the same father -- which resolves to the woman being the speaker's own wife. So the man is the woman's husband."
  },
  {
   "id": "rp-rea-r03266",
@@ -91612,9 +91612,9 @@
    "Brother",
    "Son"
   ],
-  "a": 1,
-  "e_hi": "सी (C) और डी (D) बहनें हैं। ए (A) का पुत्र डी (D) का भाई है, जिसका अर्थ है ए का पुत्र सी और डी दोनों का भाई है, यानी सी और डी दोनों ए की संतान (पुत्रियाँ) हैं। ए और बी भाई हैं। चूँकि सी, ए की पुत्री है और बी, ए का भाई है, इसलिए बी, सी का चाचा (या ताऊ) होगा।",
-  "e_en": "C and D are sisters. A's son is the brother of D, meaning A's son is the brother of both C and D, so C and D are daughters of A. A and B are brothers. Since C is the daughter of A and B is A's brother, B is the uncle of C."
+  "a": 0,
+  "e_hi": "A के पुत्र का भाई D है, अतः D, A की संतान है (बेटी)। C और D बहनें हैं, अतः C भी A की बेटी है। B, A का भाई है, अतः B, C का काका/मामा (चाचा) है।",
+  "e_en": "A's son's sibling is D, so D is A's own child (daughter). C and D are sisters, so C is also A's daughter. B is A's brother, so B is C's uncle."
  },
  {
   "id": "rp-rea-r03267",
@@ -91635,9 +91635,9 @@
    "Brother",
    "Nephew"
   ],
-  "a": 1,
-  "e_hi": "आई (I) की माँ का पति आई (I) का पिता है। आई के पिता की बहन आई की बुआ (यानी आंटी) है। एच (H) कहता है कि वह बहन एच की चाची/आंटी है। इसका मतलब एच और आई दोनों के माता-पिता या उनके परिवार का संबंध ऐसा है कि एच उस व्यक्ति की संतान है जिसके भाई-बहन आई के पिता हैं, अतः एच और आई चचेरे भाई-बहन (Cousins) हैं।",
-  "e_en": "I's mother's husband is I's father. The sister of I's father is I's aunt. H says that this aunt is H's aunt as well. This implies H is the child of an uncle or aunt of I, making H a cousin of I."
+  "a": 0,
+  "e_hi": "'तुम्हारी मां का पति' = I का पिता। I के पिता की बहन (बुआ) H की भी बुआ है -- इसका अर्थ है H का माता/पिता उस स्त्री का भाई/बहन है, जो I के पिता का भी भाई/बहन है। अतः H का माता/पिता और I का पिता आपस में भाई-बहन हैं, जिससे H और I चचेरे भाई-बहन (cousins) हैं।",
+  "e_en": "'Your mother's husband' is I's father. I's father's sister (I's aunt) is also H's aunt -- meaning H's parent is also a sibling of this same woman, who is I's father's sibling too. So H's parent and I's father are siblings, making H and I cousins."
  },
  {
   "id": "rp-rea-r03268",
@@ -91658,9 +91658,9 @@
    "Nephew/Niece",
    "Cannot be determined"
   ],
-  "a": 1,
-  "e_hi": "चरण-दर-चरण स्पष्टीकरण: P, Q का पिता है और U, Q का भाई है, जिसका अर्थ है P, U का भी पिता है। P, R का दादा है। T, P की इकलौती बहू है, और S, T की माँ है (यहाँ T और S माता-पिता हो सकते हैं या T स्वयं बहू है, जिससे यह स्पष्ट होता है कि T, Q की पत्नी है क्योंकि Q, P का पुत्र है)। चूंकि P, R का दादा है और R, Q तथा T की संतान है, और T 'इकलौती बहू' है, इसलिए R, T की पुत्री है।",
-  "e_en": "Step-by-step explanation: P is the father of Q and U is the brother of Q, meaning P is also the father of U. P is the grandfather of R. T is the only daughter-in-law of P, which means T is married to P's son (Q). S is the mother of T (or this can be structured as T being the wife of Q and mother of R). Since P is the grandfather of R and T is Q's wife, R is the daughter of T."
+  "a": 3,
+  "e_hi": "P के दो पुत्र हैं: Q (जिसकी पत्नी T है) और U। R, P का पोता/पोती है, किंतु यह स्पष्ट नहीं है कि R, Q की संतान है या U की संतान है। यदि R, Q और T की संतान है तो R, T का पुत्र/पुत्री होगा; यदि R, U की संतान है तो R, T का भतीजा/भतीजी होगा। दी गई जानकारी से यह निश्चित नहीं किया जा सकता, अतः उत्तर 'निर्धारित नहीं किया जा सकता' है।",
+  "e_en": "P has two sons: Q (married to T) and U. R is P's grandchild, but it isn't clear whether R is Q's child or U's child. If R is the child of Q and T, R would be T's own son/daughter; if R is U's child, R would be T's nephew/niece. The given information cannot settle this, so the answer is 'Cannot be determined'."
  },
  {
   "id": "rp-rea-r03269",
