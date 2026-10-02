@@ -65,7 +65,16 @@ void main() {
     await tester.tap(tabs.at(1)); // Practice tab
     await tester.pumpAndSettle(const Duration(seconds: 2));
     await tester.tap(find.textContaining('Mock test'));
-    await tester.pumpAndSettle(const Duration(seconds: 3));
+    // NOT pumpAndSettle: QuizScreen starts a Timer.periodic(1s) countdown for
+    // the exam's time limit (tens of minutes), which keeps scheduling new
+    // frames for its entire duration -- pumpAndSettle waits for frames to stop
+    // being scheduled at all, so it never returns and the job hangs until
+    // GitHub's job timeout kills it (confirmed via an actual run: the step sat
+    // for ~6 hours before being force-cancelled). A few fixed pumps are enough
+    // to let the quiz screen finish building and surface any render exception.
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pump(const Duration(seconds: 1));
     expect(tester.takeException(), isNull, reason: 'mock test crashed on start');
 
     // A mock test screen has no bottom nav (it's pushed full-screen) -- its

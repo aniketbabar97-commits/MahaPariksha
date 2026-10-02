@@ -67,6 +67,10 @@ jobs:
           sudo udevadm control --reload-rules
           sudo udevadm trigger --name-match=kvm
       - name: Boot emulator and run the golden-path e2e test against the signed build
+        # Fail fast instead of burning hours if pumpAndSettle ever hangs again
+        # (confirmed real failure mode -- see golden_path_test.dart's note on
+        # QuizScreen's countdown Timer.periodic).
+        timeout-minutes: 15
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 34
