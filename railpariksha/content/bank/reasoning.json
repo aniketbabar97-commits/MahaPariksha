@@ -89597,23 +89597,23 @@
   "s": "reasoning",
   "t": "series",
   "d": 2,
-  "q_hi": "निम्नलिखित श्रृंखला में गलत संख्या की पहचान करें: 4, 9, 19, 39, 79, 159, 319",
-  "q_en": "Identify the wrong number in the following series: 4, 9, 19, 39, 79, 159, 319",
+  "q_hi": "निम्नलिखित श्रृंखला में गलत संख्या की पहचान करें: 4, 9, 19, 38, 79, 159, 319",
+  "q_en": "Identify the wrong number in the following series: 4, 9, 19, 38, 79, 159, 319",
   "o_hi": [
    "9",
    "19",
-   "39",
+   "38",
    "79"
   ],
   "o_en": [
    "9",
    "19",
-   "39",
+   "38",
    "79"
   ],
-  "a": 0,
-  "e_hi": "नियम है: संख्या × 2 + 1। 4 × 2 + 1 = 9, 9 × 2 + 1 = 19, 19 × 2 + 1 = 39, 39 × 2 + 1 = 79, 79 × 2 + 1 = 159, 159 × 2 + 1 = 319। यहाँ दी गई सभी संख्याएँ इस नियम का पालन करती हैं; किंतु यदि प्रश्न में कोई और श्रृंखला हो जैसे 4, 6, 12, 24... यहाँ मूल श्रृंखला में 4 से शुरू होकर नियम (×2 + 1) पूरी तरह सही बैठ रहा है, अतः कोई त्रुटि नहीं है? रुकिए, यदि विकल्प देखें तो मानक पैटर्न 4, 9, 19, 39... में सभी सही हैं। आइए इसे दूसरे मानक नियम से परखें: अंतर 5, 10, 20, 40, 80, 160 है। 4+5=9, 9+10=19, 19+20=39, 39+40=79, 79+80=159, 159+160=319। सभी संख्याएँ सही हैं, अतः यह प्रश्न एक अन्य प्रकार का है जहां श्रृंखला में कोई त्रुटि नहीं है। चलिए प्रश्न बदलते हैं ताकि एक गलत संख्या मिल सके: 4, 9, 19, 38, 79... यदि 39 की जगह 38 है तो वह गलत है। लेकिन यहाँ सभी संख्याएं सही हैं, अतः इस प्रश्न को रद्द करके दूसरा सटीक प्रश्न रखते हैं।",
-  "e_en": "Let's use a series with a clear error: 2, 6, 12, 20, 30, 42, 56. Wait, those are correct. Let's use: 3, 8, 15, 24, 35, 48, 63, 80. Let's make an error: 3, 8, 15, 25, 35... Here 25 is wrong, should be 24. Let's use a proper question: Identify wrong in 5, 10, 20, 40, 81, 160. 81 should be 80. Let's output this one."
+  "a": 2,
+  "e_hi": "नियम है: संख्या × 2 + 1। 4 × 2 + 1 = 9, 9 × 2 + 1 = 19, 19 × 2 + 1 = 39 (किंतु यहाँ 38 दिया गया है, जो गलत है), और सही क्रम में 39 × 2 + 1 = 79, 79 × 2 + 1 = 159, 159 × 2 + 1 = 319। अतः गलत संख्या 38 है।",
+  "e_en": "The rule is: number x 2 + 1. 4 x 2 + 1 = 9, 9 x 2 + 1 = 19, 19 x 2 + 1 = 39 (but 38 is given here, which is wrong), and correctly 39 x 2 + 1 = 79, 79 x 2 + 1 = 159, 159 x 2 + 1 = 319. So the wrong number is 38."
  },
  {
   "id": "rp-rea-r03180",
@@ -90370,17 +90370,17 @@
    "Two",
    "More than three"
   ],
-  "a": 3,
-  "e_hi": "शब्द DANGEROUS के अक्षरों (D=4, A=1, N=14, G=7, E=5, R=18, O=15, U=21, S=19) के बीच आगे और पीछे दोनों दिशाओं में अग्रिम और पश्चगामी क्रम की जाँच करने पर तीन से अधिक (जैसे E और G, E और R, N और O आदि) जोड़े मिलते हैं।",
-  "e_en": "Checking both forward and backward directions for pairs in 'DANGEROUS' based on alphabetical positions, we find more than three valid pairs."
+  "a": 1,
+  "e_hi": "DANGEROUS में D(4) और G(7) के बीच शब्द में 2 अक्षर हैं (स्थिति 1,4) और वर्णमाला में भी 2 अक्षर हैं (E,F)। यह एकमात्र मिलान जोड़ी है, अतः उत्तर 'एक' है।",
+  "e_en": "In DANGEROUS, D(4) and G(7) have 2 letters between them in the word (positions 1,4) and also 2 letters between them in the alphabet (E,F). This is the only matching pair, so the answer is 'One'."
  },
  {
   "id": "rp-rea-r03213",
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 2,
-  "q_hi": "अंग्रेजी वर्णमाला श्रृंखला में, बाएं छोर से 7वें अक्षर और दाएं छोर से 9वें अक्षर के ठीक बीच में कौन सा अक्षर स्थित है?",
-  "q_en": "In the English alphabet series, which letter is exactly midway between the 7th letter from the left end and the 9th letter from the right end?",
+  "q_hi": "अंग्रेज़ी वर्णमाला श्रृंखला में, बाएं सिरे से 7वें अक्षर और दायें सिरे से 8वें अक्षर के बीच ठीक मध्य में कौन सा अक्षर है?",
+  "q_en": "In the English alphabet series, which letter is exactly midway between the 7th letter from the left end and the 8th letter from the right end?",
   "o_hi": [
    "M",
    "N",
@@ -90393,32 +90393,32 @@
    "L",
    "O"
   ],
-  "a": 1,
-  "e_hi": "बाएं छोर से 7वां अक्षर G है। दाएं छोर से 9वां अक्षर = 27 - 9 = 18वां अक्षर (R) है। G (7) और R (18) के बीच के अक्षरों की स्थिति का औसत: (7 + 18) / 2 = 25 / 2 = 12.5, जो कि ठीक मध्य में नहीं है क्योंकि कुल अक्षर 12 हैं। G(7) से R(18) तक कुल 12 अक्षर हैं (7,8,9,10,11,12,13,14,15,16,17,18)। इनके ठीक बीच में 12.5 यानी 12वां और 13वां अक्षर (L और M) आते हैं। चूँकि प्रश्न में 'कौन सा अक्षर' पूछा गया है, पुनः गणना करें: G से R तक 12 अक्षर हैं, मध्य में दो अक्षर (L=12, M=13) हैं। विकल्पों के अनुसार N (14) या अन्य, आइए ठीक मध्य मान N (14) या M पर विचार करें। सही माध्य 12.5 पर N और M दोनों हैं, विकल्प में N उपलब्ध है।",
-  "e_en": "7th from left is G (7). 9th from right is 27 - 9 = 18th (R). The letters between G(7) and R(18) are 8 to 17 (10 letters). The middle of 7 and 18 is (7+18)/2 = 12.5. The 13th letter is M."
+  "a": 0,
+  "e_hi": "बाएं से 7वां अक्षर G(7) है। दायें से 8वां अक्षर S(27-8=19) है। मध्य बिंदु = (7+19)/2 = 13 = M।",
+  "e_en": "The 7th letter from the left is G(7). The 8th letter from the right is S(27-8=19). The midpoint = (7+19)/2 = 13 = M."
  },
  {
   "id": "rp-rea-r03214",
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 2,
-  "q_hi": "यदि अंग्रेजी वर्णमाला के पहले आधे भाग को उलट दिया जाए, तो बाएं छोर से 5वें अक्षर के दाएं 8वां अक्षर कौन सा होगा?",
-  "q_en": "If the first half of the English alphabet is reversed, which letter will be 8th to the right of the 5th letter from the left end?",
+  "q_hi": "यदि अंग्रेज़ी वर्णमाला का पहला आधा (A से M) उल्टा लिख दिया जाए, तो बाएं सिरे से 5वें अक्षर से 3 स्थान दायीं ओर कौन सा अक्षर होगा?",
+  "q_en": "If the first half of the English alphabet (A to M) is reversed, which letter will be 3rd to the right of the 5th letter from the left end?",
   "o_hi": [
    "J",
-   "K",
+   "F",
    "I",
    "L"
   ],
   "o_en": [
    "J",
-   "K",
+   "F",
    "I",
    "L"
   ],
   "a": 1,
-  "e_hi": "पहلا आधा भाग (A से M) उलट दिया गया है, यानी M से A तक। बाएं छोर से 5वां अक्षर = सामान्य वर्णमाला का (14 - 5) = 9वां अक्षर यानी I है। इस 9वें अक्षर के दाएं 8वां अक्षर = 9 + 8 = 17वां अक्षर। चूँकि 17वां अक्षर दूसरे आधे भाग (N से Z) में है जो अपरिवर्तित है, 17वां अक्षर Q होगा? रुकिए, विकल्प देखें: J, K, I, L। पुनः गणना: बाएं से 5वां अक्षर (विपरीत पहले भाग में) = 14 - 5 = 9वां अक्षर (I)। इसके दाएं 8वां = 9 + 8 = 17। लेकिन दूसरा भाग नहीं बदला है, तो 17वां अक्षर Q होना चाहिए। विकल्प में Q नहीं है। प्रश्न की शर्तें सुधारें: यदि पहला आधा भाग विपरीत हो, तो बाएं से 3रा और दाएं 4था आदि। मान लें बाएं से 2nd अक्षर के दाएं 5वां पूछा हो। सही गणना: प्रथम अर्धांश विपरीत (M से A), द्वितीय अर्धांश समान (N से Z)। बाएं से 5वां = 14-5 = 9 (I)। I के दाएं 8वां = 17 (Q)। चूँकि विकल्प में Q नहीं है, आइए दूसरा प्रश्न देखें: बाएं से 2nd के दाएं 4th = 6 (H)। प्रथम अर्धांश में 6वां = 14-6 = 8 (H)? नहीं। सही उत्तर K (11वां) आता है यदि प्रश्न बाएं से 3रे के दाएं 6ठा हो (3+6=9, प्रथम अर्धांश में 14-9=5 यानी E)। यहाँ सही उत्तर K (विकल्प 1) है।",
-  "e_en": "First half (A-M) is reversed. 5th from left in reversed half is 14 - 5 = 9th letter (I). 8th to the right of 9 is 17th letter, which is Q? Let's re-verify standard test constraint: 5th from left is 9th. 8th to right = 17. The option K corresponds to position 11."
+  "e_hi": "उल्टा क्रम: M,L,K,J,I,H,G,F,E,D,C,B,A,N,O...। बाएं से 5वां अक्षर I है (स्थान 5)। इससे 3 दायीं ओर यानी स्थान 8 = F।",
+  "e_en": "Reversed sequence: M,L,K,J,I,H,G,F,E,D,C,B,A,N,O... The 5th letter from the left is I (position 5). 3 places to the right is position 8 = F."
  },
  {
   "id": "rp-rea-r03215",
@@ -90439,9 +90439,9 @@
    "M",
    "P"
   ],
-  "a": 1,
-  "e_hi": "शब्द PERFORMANCE के अक्षर हैं: P, E, R, F, O, R, M, A, N, C, E (11 अक्षर)। बाएं से 6ठा अक्षर R है। R एक व्यंजन है, इसे पिछले अक्षर Q से बदला जाता है। अतः बाएं से 6ठा अक्षर Q होगा? रुकिए, R का पिछला अक्षर Q है। विकल्पों में Q पहला है, लेकिन सही उत्तर L या अन्य हो सकता है यदि छठा अक्षर कोई और हो। आइए गिने: 1st=P(O), 2nd=E(F), 3rd=R(Q), 4th=F(E), 5th=O(P), 6th=R(Q)। यहाँ छठा अक्षर R है, जिसका पिछला अक्षर Q है।",
-  "e_en": "The 6th letter of 'PERFORMANCE' from the left is R. Since R is a consonant, replacing it with the previous letter gives Q."
+  "a": 0,
+  "e_hi": "PERFORMANCE: P-E-R-F-O-R-M-A-N-C-E। बाएं से 6वां अक्षर R है (व्यंजन), अतः पिछला अक्षर Q होगा।",
+  "e_en": "PERFORMANCE: P-E-R-F-O-R-M-A-N-C-E. The 6th letter from the left is R (a consonant), so it becomes the previous letter Q."
  },
  {
   "id": "rp-rea-r03216",
@@ -90451,20 +90451,20 @@
   "q_hi": "अंग्रेजी वर्णमाला में, बाएं छोर से 19वें अक्षर और दाएं छोर से 16वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
   "q_en": "In the English alphabet, which letter is exactly midway between the 19th letter from the left end and the 16th letter from the right end?",
   "o_hi": [
-   "L",
+   "O",
    "M",
    "K",
    "N"
   ],
   "o_en": [
-   "L",
+   "O",
    "M",
    "K",
    "N"
   ],
   "a": 0,
-  "e_hi": "बाएं छोर से 19वां अक्षर S (19) है। दाएं छोर से 16वां अक्षर = 27 - 16 = 11वां अक्षर (K) है। K (11) और S (19) के ठीक मध्य का अक्षर = (11 + 19) / 2 = 30 / 2 = 15वां अक्षर है। 15वां अक्षर O है? विकल्प में O नहीं है, L, M, K, N हैं। गणना पुनः करें: दाएं से 16वां = 27 - 16 = 11 (K)। बाएं से 19वां = 19 (S)। K और S के बीच अक्षर हैं: 12, 13, 14, 15, 16, 17, 18 (कुल 7 अक्षर)। इनके ठीक मध्य में 15वां अक्षर (O) आता है। यदि विकल्प में O नहीं है, तो प्रश्न के आंकड़े 18वां और 14वां हो सकते हैं। मान लीजिए बाएं से 4था और दाएं से 4था। यहाँ सही उत्तर L (12) है।",
-  "e_en": "19th from left is S (19). 16th from right is 27 - 16 = 11th (K). The exact midpoint between 11 and 19 is (11 + 19)/2 = 15 (O). If adjusting for specific test parameters, L is the midpoint of 8 and 16."
+  "e_hi": "बाएं से 19वां अक्षर S(19) है। दायें से 16वां अक्षर K(27-16=11) है। मध्य बिंदु = (19+11)/2 = 15 = O।",
+  "e_en": "The 19th letter from the left is S(19). The 16th letter from the right is K(27-16=11). The midpoint = (19+11)/2 = 15 = O."
  },
  {
   "id": "rp-rea-r03217",
@@ -90508,9 +90508,9 @@
    "Two",
    "Three"
   ],
-  "a": 1,
-  "e_hi": "शब्द BRILLIANT में कुल 9 अक्षर हैं। मूल क्रम: B, R, I, L, L, I, A, N, T। वर्णमाला क्रम में व्यवस्थित करने पर: A, B, I, I, L, L, N, R, T। केवल 'I' (तीसरे स्थान पर) अपनी मूल स्थिति (तीसरा स्थान) पर अपरिवर्तित रहता है। अतः सही उत्तर 'एक' है।",
-  "e_en": "Original word: B R I L L I A N T. Alphabetical order: A B I I L L N R T. Comparing positions, only the letter 'I' at the 3rd position remains unchanged. Thus, exactly one letter."
+  "a": 3,
+  "e_hi": "BRILLIANT: B-R-I-L-L-I-A-N-T। वर्णानुक्रम में: A-B-I-I-L-L-N-R-T। तुलना करने पर स्थिति 3(I),5(L),9(T) अपरिवर्तित रहती हैं -- कुल तीन।",
+  "e_en": "BRILLIANT: B-R-I-L-L-I-A-N-T. Sorted alphabetically: A-B-I-I-L-L-N-R-T. Comparing, positions 3(I), 5(L), 9(T) stay unchanged -- three in total."
  },
  {
   "id": "rp-rea-r03219",
@@ -90531,9 +90531,9 @@
    "H",
    "K"
   ],
-  "a": 0,
-  "e_hi": "वर्णमाला विपरीत क्रम में है (Z से A)। बाएं छोर से 12वां अक्षर = सामान्य वर्णमाला का (27 - 12) = 15वां अक्षर यानी O है। O के दाएं 5वां अक्षर (विپरीत क्रम में दाएं का अर्थ Z की तरफ यानी A की तरफ है, अतः स्थिति घटेगी): 15 - 5 = 10वां अक्षर। 10वां अक्षर J है? रुकिए, विपरीत क्रम में बाएं से 12वां मतलब Z की तरफ से 12वां, जो कि सामान्य दाएं से 12वां (O) है। इसके दाएं 5वां मतलब A की तरफ 5 कदम और, यानी 12 + 5 = 17वां अक्षर (I)। अतः सही उत्तर I है।",
-  "e_en": "In reverse alphabet, 12th from left is 12th from Z, which is O (15th in normal). Moving 5 to the right in reverse order means moving towards A, so 15 - 5 = 10th letter (J)? Wait, moving right in reverse order means decreasing the reverse index: 12 + 5 = 17th from Z, which is I."
+  "a": 1,
+  "e_hi": "उल्टे क्रम (Z से A) में, बाएं से 12वां अक्षर O है (26-11=15)। इसके दायें 5वां यानी सामान्य क्रम में 5 पीछे: O(15)-5=J(10)।",
+  "e_en": "In reverse order (Z to A), the 12th letter from the left is O (position 15 in normal alphabet). 5th to the right of it means 5 further toward A: O(15)-5 = J(10)."
  },
  {
   "id": "rp-rea-r03220",
@@ -90600,17 +90600,17 @@
    "Two",
    "Three"
   ],
-  "a": 2,
-  "e_hi": "शब्द 'RAILWAYS' के अक्षरों की स्थिति: R(18), A(1), I(9), L(12), W(23), A(1), Y(25), S(19)। आगे और पीछे दोनों दिशाओं में जांच करने पर: 1) A और I के बीच (1 और 9, बीच में 7 अक्षर - नहीं); 2) A(2) और C... आइए सीधे अक्षरों को देखें: A और C नहीं; I(9) और L(12) के बीच J, K दो अक्षर हैं, शब्द में कोई नहीं; S(19) और Y(25) के बीच T, U, V, W, X (5 अक्षर), शब्द में W, A, Y (3 अक्षर)। आइए सही युग्म खोजें: A(2) और B... शब्द 'RAILWAYS' में: 1) A और I (नही); सही जोड़े: (I, L) - I और L के बीच वर्णमाला में J, K होते हैं (2 अक्षर), शब्द में भी I और L के बीच कोई अन्य अक्षर नहीं है? नहीं, I और L के ठीक बाद L है, बीच में 0 अक्षर हैं जबकि वर्णमाला में 2 हैं। आइए (A, C)... सही जोड़ा है: A और B, C... L(12) और S(19) के बीच - M, N, O, P, Q, R (6 अक्षर)। R(18) और S(19) - ठीक बगल में हैं (0 अक्षर)। चलिए (A, I) नहीं, (A, S)? (A, W)? सही जोड़े दो हैं: (I, L) - वर्णमाला में बीच में 2 अक्षर, यहाँ 0? नहीं। सही उत्तर 'दो' (Two) है जो (A, C) जैसे युग्मों से बनता है।",
-  "e_en": "Let's check the word 'RAILWAYS' forward and backward: Forward: R(18), A(1), I(9), L(12), W(23), A(1), Y(25), S(19). Checking pairs: A and I (no), A and L (no). Let's check I(9) and L(12) - difference is 3, no. Check A(1) and C... Wait, examining all forward/backward combinations yields two valid letter pairs matching alphabetical distance."
+  "a": 1,
+  "e_hi": "RAILWAYS में W(23) और Y(25) के बीच शब्द में 1 अक्षर है (स्थिति 5,7) और वर्णमाला में भी 1 अक्षर है (X)। यह एकमात्र मिलान जोड़ी है, अतः उत्तर 'एक' है।",
+  "e_en": "In RAILWAYS, W(23) and Y(25) have 1 letter between them in the word (positions 5,7) and also 1 letter between them in the alphabet (X). This is the only matching pair, so the answer is 'One'."
  },
  {
   "id": "rp-rea-r03223",
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 2,
-  "q_hi": "अंग्रेजी वर्णमाला में, कौन सा अक्षर बाएं से 10वें और दाएं से 8वें अक्षर के ठीक बीच में स्थित होगा?",
-  "q_en": "In the English alphabet, which letter is exactly midway between the 10th letter from the left and the 8th letter from the right?",
+  "q_hi": "अंग्रेज़ी वर्णमाला में, बाएं से 10वें अक्षर और दायें से 9वें अक्षर के ठीक मध्य में कौन सा अक्षर है?",
+  "q_en": "In the English alphabet, which letter is exactly midway between the 10th letter from the left and the 9th letter from the right?",
   "o_hi": [
    "N",
    "M",
@@ -90624,8 +90624,8 @@
    "L"
   ],
   "a": 0,
-  "e_hi": "बाएं से 10वां अक्षर = J (10)। दाएं से 8वां अक्षर = बाएं से (27 - 8) = 19वां अक्षर यानी S (19)। J (10) और S (19) के ठीक बीच का अक्षर निकालने के लिए औसत लें: (10 + 19) / 2 = 29 / 2 = 14.5, जो पूर्णांक नहीं है। अतः इनके ठीक बीच में दो अक्षर (N=14 और O=15) होंगे। प्रश्न में 'ठीक बीच का अक्षर' पूछा गया है, अतः मध्य बिंदु 14.5 के आसपास N (14) और O (15) हैं। विकल्प में N दिया गया है।",
-  "e_en": "The 10th letter from the left is J (10). The 8th letter from the right is the 19th letter from the left (27 - 8 = 19), which is S (19). The midpoint between 10 and 19 is (10 + 19)/2 = 14.5. Since the positions are 14 (N) and 15 (O), N is the appropriate standard choice among options."
+  "e_hi": "बाएं से 10वां अक्षर J(10) है। दायें से 9वां अक्षर R(27-9=18) है। मध्य बिंदु = (10+18)/2 = 14 = N।",
+  "e_en": "The 10th letter from the left is J(10). The 9th letter from the right is R(27-9=18). The midpoint = (10+18)/2 = 14 = N."
  },
  {
   "id": "rp-rea-r03224",
@@ -90646,9 +90646,9 @@
    "T",
    "X"
   ],
-  "a": 0,
-  "e_hi": "शब्द 'EXAMINATION' में स्वर (Vowels) हैं: E, A, I, A, I, O (कुल 6 स्वर)। इन्हें वर्णमाला क्रम में व्यवस्थित करने पर: A, A, E, I, I, O। व्यंजन (Consonants) हैं: X, M, N, T, N (कुल 5 व्यंजन)। इन्हें वर्णमाला क्रम में व्यवस्थित करने पर: M, N, N, T, X। पूरी नई श्रृंखला: A, A, E, I, I, O, M, N, N, T, X। बाएं से 7वां अक्षर गिनने पर: 1st=A, 2nd=A, 3rd=E, 4th=I, 5th=I, 6th=O, 7th=M? रुकिए, M वर्णमाला क्रम में पहले आता है या O के बाद? M(13), N(14), N(14), T(20), X(24)। श्रृंखला: A, A, E, I, I, O फिर M, N, N, T, X। 7वां अक्षर M है? विकल्प में M दूसरा है, N पहला है। आइए दोबारा गिनें: स्वरों का क्रम: A(2 बार), E(1 बार), I(2 बार), O(1 बार) -> A, A, E, I, I, O (कुल 6)। व्यंजनों का क्रम: X, M, N, T, N में व्यंजन हैं X, M, N, T, N. वर्णमाला क्रम: M, N, N, T, X. अतः संयुक्त श्रृंखला: A, A, E, I, I, O, M, N, N, T, X. बाएं से 7वां अक्षर M है। यदि विकल्प में M है, तो सही उत्तर M (दूसरा विकल्प) होगा।",
-  "e_en": "In the word 'EXAMINATION', vowels are E, A, I, A, I, O. Arranging vowels alphabetically: A, A, E, I, I, O. Consonants are X, M, N, T, N. Arranging consonants alphabetically: M, N, N, T, X. Combined sequence: A, A, E, I, I, O, M, N, N, T, X. The 7th letter from the left is M."
+  "a": 1,
+  "e_hi": "EXAMINATION में स्वर: E,A,I,A,I,O (वर्णानुक्रम में: A,A,E,I,I,O) और व्यंजन: X,M,N,T,N (वर्णानुक्रम में: M,N,N,T,X)। क्रम: A,A,E,I,I,O,M,N,N,T,X। 7वां अक्षर M है।",
+  "e_en": "EXAMINATION's vowels: E,A,I,A,I,O (sorted: A,A,E,I,I,O) and consonants: X,M,N,T,N (sorted: M,N,N,T,X). Sequence: A,A,E,I,I,O,M,N,N,T,X. The 7th letter is M."
  },
  {
   "id": "rp-rea-r03225",
@@ -90692,9 +90692,9 @@
    "Q",
    "N"
   ],
-  "a": 0,
-  "e_hi": "बाएं से 5वां अक्षर = E (5)। दाएं से 4वां अक्षर = बाएं से (27 - 4) = 23वां अक्षर यानी W (23)। दोनों के बीच की स्थिति का औसत: (5 + 23) / 2 = 28 / 2 = 14। 14वां अक्षर N होता है? रुकिए, 5 और 23 का औसत 14 है, और 14वां अक्षर N है। विकल्पों में N चौथे स्थान पर है, आइए देखें कि क्या मैंने सही गणना की: E=5, W=23. (5+23)/2 = 14 (N). उत्तर N होना चाहिए, आइए विकल्प a, b, c, d में देखें।",
-  "e_en": "The 5th letter from the left is E (5). The 4th letter from the right is the 23rd letter from the left (27 - 4 = 23, which is W). The midpoint position is (5 + 23)/2 = 14. The 14th letter of the alphabet is N."
+  "a": 3,
+  "e_hi": "बाएं से 5वां अक्षर E(5) है। दायें से 4था अक्षर W(27-4=23) है। मध्य बिंदु = (5+23)/2 = 14 = N।",
+  "e_en": "The 5th letter from the left is E(5). The 4th letter from the right is W(27-4=23). The midpoint = (5+23)/2 = 14 = N."
  },
  {
   "id": "rp-rea-r03227",
@@ -90715,9 +90715,9 @@
    "S",
    "P"
   ],
-  "a": 0,
-  "e_hi": "हटाए जाने वाले अक्षर 3 के गुणज वाले हैं: C(3), F(6), I(9), L(12), O(15), R(18), U(21), X(24)। नई श्रृंखला में हर 3 में से 1 अक्षर हट जाता है, यानी हर 2 अक्षर बचते हैं और 1 हटता है। बाएं से 12वां अक्षर निकालने के लिए: मूल वर्णमाला में वह कौन सी स्थिति होगी? चूंकि हर 3 में से 1 गया, तो 12 पद प्राप्त करने के लिए हमें मूल वर्णमाला में लगभग 12 + (12/2) = 18वें पद तक जाना होगा। मूल पदों की सूची से C, F, I, L, O हटाकर गिनें: 1(A), 2(B), [3 हटा], 4(D), 5(E), [6 हटा], 7(G), 8(H), [9 हटा], 10(J), 11(K), [12 हटा], 13(M), 14(N), [15 हटा], 16(P), 17(Q), [18 हटा]। यहाँ 12वां अक्षर Q आता है? आइए फिर से गिनें: 1=A, 2=B, 4=D, 5=E, 7=G, 8=H, 10=J, 11=K, 13=M, 14=N, 16=P, 17=Q (यह 12वां है)। 19=S, 20=T (यह 13वां, 14वां है)। अरे रुकिए, 17वां अक्षर Q है और यह 12वें स्थान पर है। इसके बाद 19(S) और 20(T) बचेंगे, जिसमें 19(S) 15वां होगा और 20(T) 16वां होगा। यदि मूल 18वां (R) हट जाता है, तो अगला 19(S) 15वां बनता है। प्रश्न में बाएं से 12वां पूछा गया है, जो कि Q है।",
-  "e_en": "Every third letter is removed: C, F, I, L, O, R, U, X. Let's list the remaining letters position by position: 1:A, 2:B, (C removed), 3:D, 4:E, (F removed), 5:G, 6:H, (I removed), 7:J, 8:K, (L removed), 9:M, 10:N, (O removed), 11:P, 12:Q. Thus, the 12th letter in the new series is Q."
+  "a": 1,
+  "e_hi": "हर तीसरा अक्षर हटाने पर नई श्रृंखला: A,B,D,E,G,H,J,K,M,N,P,Q,S,T,V,W,Y,Z। इसका 12वां अक्षर Q है।",
+  "e_en": "Removing every third letter gives the new sequence: A,B,D,E,G,H,J,K,M,N,P,Q,S,T,V,W,Y,Z. Its 12th letter is Q."
  },
  {
   "id": "rp-rea-r03228",
@@ -90784,9 +90784,9 @@
    "R",
    "O"
   ],
-  "a": 1,
-  "e_hi": "चरण 1: वर्णमाला विपरीत क्रम में है, इसलिए दाईं ओर से 12वां अक्षर सामान्य वर्णमाला का बाईं ओर से 12वां अक्षर यानी L (12) होगा। चरण 2: इस L के बाईं ओर 5वां अक्षर निकालने के लिए, 12 में से 5 घटाएं, जिससे 7 प्राप्त होता है। चरण 3: विपरीत क्रम में बाईं ओर से 7वां अक्षर, सामान्य क्रम का 20वां अक्षर (T) नहीं बल्कि बाईं ओर से 7वां यानी G का विपरीत (T) होगा। सही दृष्टिकोण: विपरीत क्रम में, 'दाईं ओर से 12वां' वास्तव में सामान्य क्रम का 12वां अक्षर (L) है। इसके बाईं ओर 5वां मतलब 12 + 5 = 17वां अक्षर (Q)। अतः Q का विपरीत P है।",
-  "e_en": "Step 1: In reverse order, 'from the right' is equivalent to 'from the left' in normal order. The 12th from the right is L (12th from left). Step 2: 5th to the left of 12th from right means we move towards Z, so 12 + 5 = 17th from the right. Step 3: The 17th letter from the right in reverse order is the 17th letter from the left in normal order, which is Q. Wait, let's re-verify: 12th from right in reverse (Z=1, Y=2...) is L. Left of L in reverse is towards Z, so index increases. 12 + 5 = 17th from right, which is Q? No, 17th from right is Q. Let's trace directly: 12th from right is L. 5th to its left is 12 + 5 = 17th from right, which is Q? Actually, 17th letter from Z is Q? No, 27 - 17 = 10 (J). Let's use standard formula: Reverse order, right 12th -> 12th from A. Left 5th -> 12 + 5 = 17th from A, which is Q. Wait, 17th from left in reverse order is Q? Let's check: 17th letter is Q. So the answer is P."
+  "a": 0,
+  "e_hi": "उल्टे क्रम में, दायें से 12वां अक्षर सामान्य क्रम के बाएं से 12वें अक्षर L के समान है। इसके 5 बायें यानी उल्टे क्रम में आगे की ओर, सामान्य क्रम में +5: L(12)+5=Q(17)।",
+  "e_en": "In reverse order, the 12th from the right corresponds to L (12th from the left in normal order). 5th to the left of it (further into reverse order) means +5 in normal position: L(12)+5 = Q(17)."
  },
  {
   "id": "rp-rea-r03231",
@@ -90796,20 +90796,20 @@
   "q_hi": "शब्द 'DANGEROUS' में अक्षरों के ऐसे कितने जोड़े हैं, जिनके बीच उतने ही अक्षर हैं जितने कि अंग्रेजी वर्णमाला में उनके बीच होते हैं?",
   "q_en": "How many such pairs of letters are there in the word 'DANGEROUS' each of which has as many letters between them in the word as in the English alphabet?",
   "o_hi": [
-   "दो",
+   "एक",
    "तीन",
    "चार",
    "एक से अधिक चार"
   ],
   "o_en": [
-   "Two",
+   "One",
    "Three",
    "Four",
    "More than four"
   ],
-  "a": 3,
-  "e_hi": "चरण 1: शब्द 'DANGEROUS' के अक्षरों को आगे और पीछे दोनों दिशाओं में वर्णमाला क्रम से जांचें। चरण 2: जोड़े इस प्रकार मिलते हैं: (D,E), (D,G), (E,G), आदि। सभी संभावित जोड़े गिनने पर इनकी कुल संख्या 4 से अधिक यानी 5 (जैसे D-G, E-G, N-R, G-R, O-U आदि की जांच) बैठती है। अतः सही उत्तर 'एक से अधिक चार' है।",
-  "e_en": "Step 1: Check forward and backward pairs in 'DANGEROUS'. Step 2: Forward/backward checks reveal pairs such as (D,E), (D,G), (E,G), (N,R), etc. Total valid pairs count to more than four. Thus, the correct option is 'More than four'."
+  "a": 0,
+  "e_hi": "DANGEROUS में केवल D(4) और G(7) एक मिलान जोड़ी बनाते हैं (शब्द में 2 अक्षर, वर्णमाला में भी 2 अक्षर: E,F)। अतः उत्तर 'एक' है।",
+  "e_en": "In DANGEROUS, only D(4) and G(7) form a matching pair (2 letters between them in the word, and also 2 letters between them in the alphabet: E,F). So the answer is 'One'."
  },
  {
   "id": "rp-rea-r03232",
@@ -90830,9 +90830,9 @@
    "L",
    "O"
   ],
-  "a": 0,
-  "e_hi": "चरण 1: बाएं छोर से 8वां अक्षर H है (मान 8)। चरण 2: दाएं छोर से 7वां अक्षर, बाएं से (27 - 7) = 20वां अक्षर यानी T है (मान 20)। चरण 3: H (8) और T (20) के ठीक बीच का स्थान (8 + 20) / 2 = 14वां अक्षर है, जो N है। अरे रुकिए, (8+20)/2 = 14 (N)? नहीं, H से T तक कुल अक्षर गिनते हैं: H(8), I, J, K, L, M, N, O, P, Q, R, S, T(20)। बीच का अक्षर M (13) है। 8 और 20 का औसत 14 है? नहीं, मध्य स्थान 14वां अक्षर N है, जिसका अर्थ है 8 से 14 तक 6 अक्षर और 14 से 20 तक 6 अक्षर। अतः N सही मध्य बिंदु है।",
-  "e_en": "Step 1: 8th letter from the left is H (8). Step 2: 7th letter from the right is T (20th from left). Step 3: The midpoint between 8 and 20 is (8 + 20) / 2 = 14, which is N. Let's verify: letters from H to T inclusive: H, I, J, K, L, M, N, O, P, Q, R, S, T. There are 13 letters. The 7th one from either end is N. Thus, N is correct."
+  "a": 1,
+  "e_hi": "बाएं से 8वां अक्षर H(8) है। दायें से 7वां अक्षर T(27-7=20) है। मध्य बिंदु = (8+20)/2 = 14 = N।",
+  "e_en": "The 8th letter from the left is H(8). The 7th letter from the right is T(27-7=20). The midpoint = (8+20)/2 = 14 = N."
  },
  {
   "id": "rp-rea-r03233",
@@ -90876,9 +90876,9 @@
    "L",
    "O"
   ],
-  "a": 0,
-  "e_hi": "चरण 1: केवल पहला आधा भाग (A से M) उलट दिया गया है (अर्थात M से A)। चरण 2: बाएं छोर से 5वां अक्षर ज्ञात करना है। चूंकि A-M उलटा है, बाएं से 5वां अक्षर (14 - 5) = 9वां अक्षर यानी I होगा। चरण 3: इस 5वें अक्षर के दाईं ओर 10वां अक्षर चाहिए, यानी 5 + 10 = 15वां अक्षर। चरण 4: 15वां अक्षर दूसरे आधे भाग (N से Z) में आता है, जो कि सीधे O है (चूंकि पहला आधा भाग 13 अक्षरों का है, 15वां अक्षर N से दूसरा यानी O होगा)। जांच: 5वां अक्षर = 9 (I), 9 + 10 = 19? नहीं, 5 + 10 = 15. 15वां अक्षर N है।",
-  "e_en": "Step 1: First half (A-M) is reversed (M...A), second half (N-Z) remains normal. Step 2: 5th letter from the left in reversed first half is 14 - 5 = 9th letter of normal alphabet, which is I. Step 3: 10th to the right of this means position 5 + 10 = 15 from the left. Step 4: Since first half has 13 letters, the 15th letter overall is the 2nd letter of the second half, which is N. Thus, N is correct."
+  "a": 3,
+  "e_hi": "उल्टा क्रम: M,L,K,J,I,H,G,F,E,D,C,B,A,N,O...। बाएं से 5वां अक्षर I है (स्थान 5)। इससे 10 दायीं ओर यानी स्थान 15 = O।",
+  "e_en": "Reversed sequence: M,L,K,J,I,H,G,F,E,D,C,B,A,N,O... The 5th letter from the left is I (position 5). 10 places to the right is position 15 = O."
  },
  {
   "id": "rp-rea-r03235",
@@ -90888,43 +90888,43 @@
   "q_hi": "शब्द 'MOUNTAIN' में प्रत्येक स्वर को वर्णमाला में उसके अगले अक्षर से बदल दिया जाए और प्रत्येक व्यंजन को उसके पिछले अक्षर से बदल दिया जाए, तो बाएं से चौथा अक्षर क्या होगा?",
   "q_en": "In the word 'MOUNTAIN', if each vowel is replaced by the next letter in the alphabet and each consonant is replaced by the previous letter, what will be the 4th letter from the left?",
   "o_hi": [
-   "S",
+   "M",
    "T",
    "U",
    "V"
   ],
   "o_en": [
-   "S",
+   "M",
    "T",
    "U",
    "V"
   ],
   "a": 0,
-  "e_hi": "चरण 1: मूल शब्द 'MOUNTAIN' के अक्षर हैं: M, O, U, N, T, A, I, N। चरण 2: बाएं से चौथा अक्षर 'N' है। चरण 3: 'N' एक व्यंजन है, इसलिए नियम के अनुसार इसे इसके पिछले अक्षर यानी 'M' से बदला जाएगा। अरे प्रश्न में पूछा है 'बाएं से चौथा अक्षर क्या होगा?' - यदि हम पूरे शब्द को बदलते हैं: M->L, O->P, U->V, N->M, T->S, A->B, I->J, N->M (शब्द बनता है LPVMSBJM)। इसका चौथा अक्षर M है? विकल्प में M नहीं है। रुकिए, प्रश्न का अर्थ है कि परिवर्तन के बाद चौथा अक्षर क्या होगा? चौथा अक्षर N था, जो व्यंजन होने पर M बनता है। विकल्पों में M नहीं है? विकल्पों को देखें: S, T, U, V. इसका मतलब प्रश्न शायद 'चौथा अक्षर' नहीं बल्कि परिवर्तन के बाद किसी और स्थिति का है या मैंने गलत पढ़ा। आइए दोबारा पढ़ें: बाएं से चौथा अक्षर 'N' है, N का पिछला अक्षर M है। यदि विकल्प S, T, U, V हैं, तो यह तीसरे अक्षर T (जो S बनता है) या किसी अन्य के लिए हो सकता है। चलिए इसे ठीक करते हैं: यदि T (जो 5वां अक्षर है) को बदला जाए तो T का पिछला S बनता है। प्रश्न को मान लेते हैं 5वें अक्षर के लिए, लेकिन चूँकि JSON स्थिर है, आइए सुनिश्चित करें: T (5वां अक्षर) का पिछला S है। अतः सही उत्तर S है।",
-  "e_en": "Step 1: Word is 'MOUNTAIN'. Step 2: The 5th letter is T (let's check 4th: N -> M). Wait, if the question meant 5th letter 'T', its previous letter is 'S'. Let's verify the options: S is present. Thus, considering the 5th letter T, it changes to S."
+  "e_hi": "MOUNTAIN: M-O-U-N-T-A-I-N। बाएं से 4वां अक्षर N है (व्यंजन), अतः पिछला अक्षर M होगा।",
+  "e_en": "MOUNTAIN: M-O-U-N-T-A-I-N. The 4th letter from the left is N (a consonant), so it becomes the previous letter M."
  },
  {
   "id": "rp-rea-r03236",
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 1,
-  "q_hi": "यदि 'ENGLISH' शब्द के सभी अक्षरों को वर्णमाला के क्रमानुसार बाएं से दाएं व्यवस्थित किया जाए, तो कितने अक्षरों के बीच उतने ही अक्षर होंगे जितने अंग्रेजी वर्णमाला में होते हैं (शब्द के भीतर)?",
-  "q_en": "If all the letters of the word 'ENGLISH' are arranged alphabetically, how many letters remain at their original relative positions? Instead, let's frame standard letter-gap: How many such pairs exist in 'ENGLISH'?",
+  "q_hi": "यदि शब्द 'ENGLISH' के अक्षरों को वर्णानुक्रम में व्यवस्थित किया जाए, तो ऐसे कितने जोड़े हैं जिनमें शब्द में उतने ही अक्षर हैं जितने वर्णमाला में हैं?",
+  "q_en": "How many such pairs of letters are there in the word 'ENGLISH' each of which has as many letters between them in the word as they have in the English alphabet?",
   "o_hi": [
    "एक",
    "दो",
-   "तीन",
+   "चार",
    "शून्य"
   ],
   "o_en": [
    "One",
    "Two",
-   "Three",
+   "Four",
    "Zero"
   ],
-  "a": 1,
-  "e_hi": "चरण 1: शब्द 'ENGLISH' में अक्षर हैं E, N, G, L, I, S, H। चरण 2: इनके बीच की वर्णमाला दूरी जांचते हैं: E(5) और G(7) के बीच 1 अक्षर (F) होता है, यहाँ भी E और G के बीच एक स्थान है। चरण 3: इस प्रकार केवल एक युग्म (E, G) ऐसा है। अतः सही उत्तर 'एक' है।",
-  "e_en": "Step 1: Word 'ENGLISH'. Step 2: Checking letter pairs for alphabetical distance, E (5) and G (7) have one letter between them in the word (N? No, E _ G has one position). Specifically, E and G have exactly 1 letter gap (F), matching standard alphabet. Thus, 1 pair exists."
+  "a": 2,
+  "e_hi": "ENGLISH: E(5),N(14),G(7),L(12),I(9),S(19),H(8)। जाँच करने पर 4 जोड़े मिलान करते हैं: (E,G), (E,I), (N,L), (G,I)। अतः उत्तर 'चार' है।",
+  "e_en": "ENGLISH: E(5),N(14),G(7),L(12),I(9),S(19),H(8). Checking all pairs, 4 pairs match: (E,G), (E,I), (N,L), (G,I). So the answer is 'Four'."
  },
  {
   "id": "rp-rea-r03237",
@@ -90935,19 +90935,19 @@
   "q_en": "Which letter is exactly midway between the 19th letter from the left and the 18th letter from the right in the English alphabet?",
   "o_hi": [
    "L",
-   "K",
+   "N",
    "M",
    "J"
   ],
   "o_en": [
    "L",
-   "K",
+   "N",
    "M",
    "J"
   ],
   "a": 1,
-  "e_hi": "चरण 1: बाएं से 19वां अक्षर S है (मान 19)। चरण 2: दाएं से 18वां अक्षर, बाएं से (27 - 18) = 9वां अक्षर यानी I है (मान 9)। चरण 3: 9 और 19 का मध्य बिंदु (9 + 19) / 2 = 28 / 2 = 14वां अक्षर है। चरण 4: 14वां अक्षर N है? अरे! 9 और 19 का मध्य 14 है, जो N है। विकल्पों में N नहीं है, K है? रुकिए, 19वां S है, दाएं से 18वां मतलब 27-18=9 (I)। 9 और 19 के बीच: I(9), J(10), K(11), L(12), M(13), N(14), O(15), P(16), Q(17), R(18), S(19). कुल 11 अक्षर हैं। बीच का अक्षर (11+1)/2 = 6वां पद है, जो I से 6 कदम आगे यानी 9 + 5 = 14वां (N) होना चाहिए। विकल्प K दिया है? यदि प्रश्न 'दाएं से 16वां' हो तो K आयेगा। मान लेते हैं प्रश्न दाएं से 16वां है, जिससे 27-16=11 (K) और 19 का मध्य 15 (O) होगा। चलिए इस प्रश्न को सरल रखते हैं: बाएं से 4 और दाएं से 4 का मध्य M (13)।",
-  "e_en": "Step 1: 4th from left is D (4). Step 2: 4th from right is W (23). Step 3: Midpoint between 4 and 23 is (4 + 23) / 2 = 13.5 - wait, let's use 5th from left (E=5) and 5th from right (V=22). Midpoint of 5 and 22 is 13.5? Let's use 7th from left (G=7) and 7th from right (T=20). Midpoint of 7 and 20 is (7+20)/2 = 13.5. Let's use symmetric positions: 6th from left (F=6) and 6th from right (U=21). Midpoint of 6 and 21: (6+21)/2 = 13.5. Let's use standard integers: 5th from left (E=5) and 9th from right (I from right = 18th from left). Midpoint = (5+18)/2 = 11.5. Let's take A(1) and Z(26) -> midpoint is 13.5. Let's frame it cleanly: Between 3rd from left (C) and 3rd from right (X), midpoint is M (13). 3 and 24 -> (3+24)/2? No, X is 24. (3+24)/2 = 13.5. Let's use 2nd from left (B=2) and 2nd from right (Y=25). Sum = 27, average = 13.5. Let's use odd distance: 4th from left (D=4) and 6th from right (U=21). (4+21)/2 = 12.5. Let's ensure integer: 3rd from left (C=3) and 7th from right (T=20). (3+20)/2 = 11.5. Let's use 5th from left (E=5) and 7th from right (T=20). Sum = 25, not 27. To get an exact integer letter, the sum of their left-indices must be even. Let's take 4th from left (D=4) and 8th from right (S=19). Sum = 4 + 19 = 23 (odd). Let's take 3rd from left (C=3) and 5th from right (V=22). Sum = 25. Let's take 2nd from left (B=2) and 6th from right (U=21) -> sum 23. Let's use a standard template: Which letter is midway between C (3) and W (23)? Sum = 26, average = 13 (M). C is 3rd from left, W is 4th from right (23rd from left). Midpoint = (3+23)/2 = 13, which is M. Options: [L, K, M, J]. Correct is M (index 2)."
+  "e_hi": "बाएं से 19वां अक्षर S(19) है। दायें से 18वां अक्षर I(27-18=9) है। मध्य बिंदु = (19+9)/2 = 14 = N।",
+  "e_en": "The 19th letter from the left is S(19). The 18th letter from the right is I(27-18=9). The midpoint = (19+9)/2 = 14 = N."
  },
  {
   "id": "rp-rea-r03238",
@@ -91026,20 +91026,20 @@
   "q_hi": "अंग्रेजी वर्णमाला श्रृंखला में, बाएं छोर से 20वें अक्षर और दाएं छोर से 15वें अक्षर के ठीक बीच में कौन सा अक्षर होगा?",
   "q_en": "Which letter will be exactly midway between the 20th letter from the left end and the 15th letter from the right end in the English alphabet series?",
   "o_hi": [
-   "M",
+   "P",
    "L",
    "N",
    "K"
   ],
   "o_en": [
-   "M",
+   "P",
    "L",
    "N",
    "K"
   ],
   "a": 0,
-  "e_hi": "बाएं से 20वां अक्षर = T (20)। दाएं से 15वां अक्षर = बाएं से (26 - 15 + 1) = 12वां अक्षर यानी L (12)। T(20) और L(12) के ठीक बीच का अक्षर = (20 + 12) / 2 = 32 / 2 = 16। 16वां अक्षर P है? रुकिए, 20 और 12 का मध्य औसत (20+12)/2 = 16 (P)। विकल्प में P नहीं है। प्रश्न दोबारा देखें: दाएं से 15वां = 26 - 15 + 1 = 12 (L)। बाएं से 20वां = T (20)। इनके बीच के अक्षर: L(12), M(13), N(14), O(15), P(16), Q(17), R(18), S(19), T(20)। ठीक बीच में P है। यदि विकल्प में M दिया है, तो क्या गणना त्रुटि है? चलिए दूसरा संयोजन लेते हैं: बाएं से 8वां (H) और दाएं से 8वां (S)। मध्य अक्षर M (13)। मान लीजिए बाएं से 7वां (G) और दाएं से 7वां (T)। मध्य = (7 + 20)/2 = 13.5 (नहीं)। आइए इस प्रश्न को ठीक करें: बाएं से 6वें और दाएं से 6वें के बीच... यदि बाएं से 5वां (E) और दाएं से 5वां (V = 22) हो, तो मध्य = (5+22)/2 = 13.5। यदि बाएं से 4वां (D) और दाएं से 5वां (V) हो, तो (4+22)/2 = 13 (M)। अतः बाएं से 4वें और दाएं से 5वें के बीच M होगा।",
-  "e_en": "4th from left is D(4). 5th from right is V(22). The midpoint position is (4 + 22)/2 = 26 / 2 = 13. The 13th letter is M."
+  "e_hi": "बाएं से 20वां अक्षर T(20) है। दायें से 15वां अक्षर L(27-15=12) है। मध्य बिंदु = (20+12)/2 = 16 = P।",
+  "e_en": "The 20th letter from the left is T(20). The 15th letter from the right is L(27-15=12). The midpoint = (20+12)/2 = 16 = P."
  },
  {
   "id": "rp-rea-r03242",
@@ -91106,9 +91106,9 @@
    "G",
    "S"
   ],
-  "a": 0,
-  "e_hi": "शब्द 'GODDESS' के अक्षर हैं: G, O, D, D, E, S, S। इन्हें वर्णमाला के बढ़ते क्रम में व्यवस्थित करने पर: D, D, E, G, S, S, O -> आइए ठीक से छांटें: D, D, E, G, O, S, S। बाएं से चौथा अक्षर G है।",
-  "e_en": "The letters of 'GODDESS' are G, O, D, D, E, S, S. Arranging them alphabetically gives: D, D, E, G, O, S, S. The 4th letter from the left is G."
+  "a": 2,
+  "e_hi": "GODDESS: G-O-D-D-E-S-S। वर्णानुक्रम में: D,D,E,G,O,S,S। चौथा अक्षर G है।",
+  "e_en": "GODDESS: G-O-D-D-E-S-S. Sorted alphabetically: D,D,E,G,O,S,S. The 4th letter is G."
  },
  {
   "id": "rp-rea-r03245",
@@ -91129,9 +91129,9 @@
    "O",
    "R"
   ],
-  "a": 0,
-  "e_hi": "पहला आधा भाग A से M तक (13 अक्षर) उलटा है (M से A)। बाएं से 5वां अक्षर: सीधे क्रम में 5वां E होता है, लेकिन पहले आधे भाग के उलटने के कारण यह 13 - 5 + 1 = 9वां अक्षर यानी I होगा। अब इसके दाएं 10वां अक्षर चाहिए: 9 + 10 = 19वां अक्षर, जो कि सीधे वर्णमाला का S है। रुकिए, 19वां अक्षर S है, लेकिन विकल्प में P है। आइए दोबारा गणना करें: बाएं से 5वां अक्षर पहले आधे में है (यानी M से A के बीच)। सीधे क्रम में स्थान = 5। उलटे क्रम में स्थिति = (13 - 5 + 1) = 9 (यानी I)। I के दाएं 10वां = 9 + 10 = 19 (S)। विकल्प P (16) कैसे आया? यदि प्रश्न में दूसरा आधा उलटा हो या कुछ और। चलिए आसान और सटीक बनाते हैं: पहले आधे (A-M) को उलटा गया है। बाएं से 3रा अक्षर: M, L, K (यानी K, जो कि 11वां है)। इसके दाएं 5वां: 11 + 5 = 16 (P)। प्रश्न को संशोधित करते हैं: 'बाएं से 3रे अक्षर के दाएं 5वां अक्षर'। 3रा अक्षर M से A में 11वां (K) बनता है, K के दाएं 5वां 16वां (P) है। अतः सही उत्तर P है।",
-  "e_en": "The first half (A-M) is reversed. The 3rd letter from the left in this reversed half corresponds to the 11th letter in the normal alphabet (K). 5 to the right of K is 11 + 5 = 16th letter, which is P."
+  "a": 2,
+  "e_hi": "उल्टा क्रम: M,L,K,J,I,H,G,F,E,D,C,B,A,N,O...। बाएं से 5वां अक्षर I है (स्थान 5)। इससे 10 दायीं ओर यानी स्थान 15 = O।",
+  "e_en": "Reversed sequence: M,L,K,J,I,H,G,F,E,D,C,B,A,N,O... The 5th letter from the left is I (position 5). 10 places to the right is position 15 = O."
  },
  {
   "id": "rp-rea-r03246",
@@ -91141,20 +91141,20 @@
   "q_hi": "शब्द 'MANDATE' में ऐसे कितने अक्षर युग्म हैं जिनके बीच उतने ही अक्षर हैं जितने वर्णमाला में होते हैं (आगे और पीछे दोनों दिशाओं में)?",
   "q_en": "How many pairs of letters are there in the word 'MANDATE' which have as many letters between them in the word as in the alphabetical series (both forward and backward)?",
   "o_hi": [
-   "एक (One)",
+   "शून्य",
    "दो (Two)",
    "तीन (Three)",
    "चार (Four)"
   ],
   "o_en": [
-   "One",
+   "None",
    "Two",
    "Three",
    "Four"
   ],
-  "a": 1,
-  "e_hi": "M(13), A(1), N(14), D(4), A(1), T(20), E(5)। जोड़े जांचें: 1) A(1) और D(4) के बीच B, C दो अक्षर हैं; शब्द में N, D (नहीं)। 2) A(1) और E(5) के बीच: शब्द में अंतिम A और E के बीच कोई अक्षर नहीं, वर्णमाला में 3 होते हैं। 3) D(4) और E(5) लगातार हैं (कोई अक्षर नहीं, वर्णमाला में भी लगातार हैं)। अतः 1 युग्म (D और E) मिलता है।",
-  "e_en": "Positions: M(13), A(1), N(14), D(4), A(1), T(20), E(5). Checking adjacent letters: D(4) and E(5) are consecutive in the word and in the alphabet, forming 1 valid pair."
+  "a": 0,
+  "e_hi": "MANDATE: M(13),A(1),N(14),D(4),A(1),T(20),E(5)। किसी भी जोड़े में शब्द का अंतर वर्णमाला के अंतर से मेल नहीं खाता, अतः उत्तर 'शून्य' है।",
+  "e_en": "MANDATE: M(13),A(1),N(14),D(4),A(1),T(20),E(5). No pair has its word-gap matching its alphabet-gap, so the answer is 'None'."
  },
  {
   "id": "rp-rea-r03247",
@@ -91773,7 +91773,7 @@
    "150",
    "142"
   ],
-  "a": 3,
+  "a": 1,
   "e_hi": "दिए गए समीकरण में प्रतीकों को उनके अर्थ के अनुसार बदलने पर: 36 x 4 + 8 ÷ 4 - 2। BODMAS नियम का उपयोग करने पर: सबसे पहले भाग (÷) हल करें: 8 ÷ 4 = 2। फिर गुणा (x) हल करें: 36 x 4 = 144। समीकरण बनता है: 144 + 2 - 2। इसे हल करने पर 144 प्राप्त होता है, लेकिन विकल्पों के अनुसार पुनर्गणना करें: 36 x 4 = 144; 8 ÷ 4 = 2; 144 + 2 - 4 (यदि ÷ 4 है) = 142।",
   "e_en": "Substituting the symbols according to the given rules in the expression 36 - 4 x 8 + 4 ÷ 2: We get 36 x 4 + 8 ÷ 4 - 2. Applying BODMAS: First, division: 8 ÷ 4 = 2. Then multiplication: 36 x 4 = 144. Expression becomes 144 + 2 - 2 = 144. Wait, checking if ÷ means minus and + means divide: 36 x 4 + 8 / 4 - 2 -> 144 + 2 - 4 = 142."
  },
@@ -91832,19 +91832,19 @@
   "q_en": "In a special code language, '+' means 'division', '-' means 'multiplication', '÷' means 'subtraction', and 'x' means 'addition'. Which of the following equations is correct according to this code?",
   "o_hi": [
    "16 + 2 - 4 x 6 ÷ 2 = 28",
-   "16 - 2 + 4 x 6 ÷ 2 = 36",
+   "8 - 3 + 4 x 5 ÷ 1 = 10",
    "16 x 2 ÷ 4 - 6 + 2 = 9",
    "16 ÷ 2 x 4 - 6 + 2 = 12"
   ],
   "o_en": [
    "16 + 2 - 4 x 6 ÷ 2 = 28",
-   "16 - 2 + 4 x 6 ÷ 2 = 36",
+   "8 - 3 + 4 x 5 ÷ 1 = 10",
    "16 x 2 ÷ 4 - 6 + 2 = 9",
    "16 ÷ 2 x 4 - 6 + 2 = 12"
   ],
   "a": 1,
-  "e_hi": "प्रत्येक विकल्प की जाँच करते हैं। दूसरे विकल्प को लेते हैं: 16 - 2 + 4 x 6 ÷ 2 = 36। प्रतीकों को बदलने पर: 16 x 2 ÷ 4 + 6 - 2। BODMAS से हल करें: 16 x (2 ÷ 4) + 6 - 2 -> 16 x 0.5 + 6 - 2 = 8 + 6 - 2 = 12 (यह 36 नहीं है)। आइए चौथे विकल्प की जाँच करें: 16 ÷ 2 x 4 - 6 + 2 -> 16 - 2 + 4 x 6 ÷ 2 = ? यदि समीकरण 16 x 2 + 4 ÷ 2 - 6 हो: 32 + 2 - 6 = 28. चलिए सही विकल्प को पुनर्जीवित करते हैं: यदि 16 - 2 + 4 x 6 ÷ 2 के स्थान पर 18 - 2 + 3 x 6 ÷ 2 हो: 18 x (2 ÷ 3)... मान लीजिए सही समीकरण 24 - 2 + 4 x 2 ÷ 1 = 36: 24 x 2 + 4 - 2 = 50. सही समीकरण जो 36 दे: 12 - 3 + 6 x 4 ÷ 2 -> 12 x (3 ÷ 6)... चलिए सटीक विकल्प 2 को इस प्रकार संशोधित मानते हैं जहाँ गणना 36 आए: 16 x 2 + 4 - 2 ... चूँकि यह रेलवे परीक्षा पैटर्न है, विकल्प 2 सही है जब प्रतीकों का सही मूल्यांकन 36 बैठता है।",
-  "e_en": "Checking option 2: 16 - 2 + 4 x 6 ÷ 2 = 36. Substituting signs (- becomes x, + becomes ÷, x becomes +, ÷ becomes -): 16 x 2 ÷ 4 + 6 - 2. Applying BODMAS: 16 x (0.5) + 6 - 2 = 8 + 6 - 2 = 12. Let's re-verify with standard RRB options where one specific equation correctly evaluates to the given number. Option 2 is designed to match after correct operator mapping."
+  "e_hi": "विकल्प की जाँच करें: '8 - 3 + 4 x 5 ÷ 1 = 10'। संकेतों को बदलें ('-' का अर्थ ×, '+' का अर्थ ÷, 'x' का अर्थ +, '÷' का अर्थ -): 8 × 3 ÷ 4 + 5 - 1। BODMAS से: 8 × 3 = 24, 24 ÷ 4 = 6। अतः 6 + 5 - 1 = 10, जो बराबर है।",
+  "e_en": "Check the option '8 - 3 + 4 x 5 / 1 = 10'. Replacing codes ('-' means x, '+' means /, 'x' means +, '/' means -): 8 x 3 / 4 + 5 - 1. By BODMAS: 8 x 3 = 24, 24 / 4 = 6. So 6 + 5 - 1 = 10, which matches."
  },
  {
   "id": "rp-rea-r03277",
@@ -91874,8 +91874,8 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि '$' का अर्थ '+', '@' का अर्थ '-', '#' का अर्थ 'x', और '%' का अर्थ '÷' है, तो (15 # 3) % (5 $ 2) @ 4 का मान क्या होगा?",
-  "q_en": "If '$' means '+', '@' means '-', '#' means 'x', and '%' means '÷', what is the value of (15 # 3) % (5 $ 2) @ 4?",
+  "q_hi": "यदि '$' का अर्थ '+' है, '@' का अर्थ '-' है, '#' का अर्थ 'x' है, और '%' का अर्थ '÷' है, तो (9 # 2) % (4 $ 5) @ 1 का मान क्या है?",
+  "q_en": "If '$' means '+', '@' means '-', '#' means 'x', and '%' means '÷', what is the value of (9 # 2) % (4 $ 5) @ 1?",
   "o_hi": [
    "1",
    "3",
@@ -91888,9 +91888,9 @@
    "5",
    "7"
   ],
-  "a": 1,
-  "e_hi": "प्रतीकों को बदलने पर व्यंजक बनता है: (15 x 3) ÷ (5 + 2) - 4। कोष्ठकों को हल करें: (15 x 3) = 45 और (5 + 2) = 7। समीकरण बनता है: 45 ÷ 7 - 4 (यह पूर्ण संख्या नहीं है)। यदि समीकरण में 15 # 3 के स्थान पर 35 हो या 28 हो: मान लीजिए व्यंजक (28 # 2) % (4 $ 3) @ 2 है -> (28 x 2) ÷ (4 + 3) - 2 = 56 ÷ 7 - 2 = 8 - 2 = 6। मूल प्रश्न (15 # 3) % (5 $ 2) को यदि (21 # 3) % (3 $ 4) @ 2 करें: (21 x 3) ÷ (3 + 4) - 2 = 63 ÷ 7 - 2 = 9 - 2 = 7। मान लीजिए सही व्यंजक (15 # 3) % 3 @ 4 हो: (15 x 3) ÷ 3 - 4 = 15 - 4 = 11। यदि व्यंजक (20 # 3) % 5 $ 1 @ 4 हो: 60 ÷ 5 + 1 - 4 = 12 + 1 - 4 = 9। मान लीजिए सही उत्तर 3 के लिए व्यंजक (21 # 3) % 7 $ 2 @ 4 हो: 63 ÷ 7 + 2 - 4 = 9 + 2 - 4 = 7। सही मान 3 प्राप्त करने के लिए: (15 # 1) % 5 $ 2 @ 4 -> 15 ÷ 5 + 2 - 4 = 3 + 2 - 4 = 1। यदि (15 # 2) % 5 $ 3 @ 4 -> 30... मान लीजिए सही प्रश्न के अनुसार उत्तर 3 है।",
-  "e_en": "Substituting symbols in the adjusted expression (21 # 3) % 7 $ 4 @ 4: (21 x 3) ÷ 7 + 4 - 4. Step-by-step: 21 x 3 = 63. Then division: 63 ÷ 7 = 9. Then addition: 9 + 4 = 13. Subtraction: 13 - 4 = 9. For the option 3, evaluating (15 # 1) % 5 @ 2 ... following the precise substitution yields 3."
+  "a": 0,
+  "e_hi": "संकेतों को बदलने पर: (9 × 2) ÷ (4 + 5) - 1 बनता है। कोष्ठक पहले: 9 × 2 = 18, 4 + 5 = 9। अतः 18 ÷ 9 - 1 = 2 - 1 = 1।",
+  "e_en": "Replacing the codes: (9 x 2) / (4 + 5) - 1. Brackets first: 9 x 2 = 18, 4 + 5 = 9. So 18 / 9 - 1 = 2 - 1 = 1."
  },
  {
   "id": "rp-rea-r03279",
@@ -91900,18 +91900,18 @@
   "q_hi": "यदि 'P' का अर्थ 'गुना (x)', 'R' का अर्थ 'भाग (÷)', 'T' का अर्थ 'जोड़ (+)', और 'S' का अर्थ 'घटाव (-)' है, तो 18 P 2 T 12 R 4 S 6 का मान ज्ञात कीजिए।",
   "q_en": "If 'P' means 'multiplied by (x)', 'R' means 'divided by (÷)', 'T' means 'plus (+)', and 'S' means 'minus (-)', find the value of 18 P 2 T 12 R 4 S 6.",
   "o_hi": [
-   "35",
+   "33",
    "37",
    "39",
    "41"
   ],
   "o_en": [
-   "35",
+   "33",
    "37",
    "39",
    "41"
   ],
-  "a": 2,
+  "a": 0,
   "e_hi": "अक्षरों को गणितीय संकेतों से प्रतिस्थापित करने पर: 18 x 2 + 12 ÷ 4 - 6। BODMAS नियम का पालन करें: सबसे पहले भाग हल करें: 12 ÷ 4 = 3। फिर गुणा हल करें: 18 x 2 = 36। अब व्यंजक बनता है: 36 + 3 - 6। इसके बाद जोड़ें: 36 + 3 = 39। अंत में घटाएं: 39 - 6 = 33 (यदि विकल्प 33 न हो तो पुनर्गणना करें: 36 + 3 - 6 = 33, विकल्पों में 39 है, शायद 18 P 3 हो: 18 x 3 = 54 + 3 - 6 = 51. यदि 12 P 2 T 15 R 3 S 4 हो: 12 x 2 + 15 ÷ 3 - 4 = 24 + 5 - 4 = 25. मान लीजिए व्यंजक 20 P 2 T 16 R 4 S 5 है: 20 x 2 + 16 ÷ 4 - 5 = 40 + 4 - 5 = 39)। अतः 20 P 2 T 16 R 4 S 5 के लिए सही उत्तर 39 है।",
   "e_en": "Replacing letters with operators in 20 P 2 T 16 R 4 S 5: 20 x 2 + 16 ÷ 4 - 5. Applying BODMAS: Division first -> 16 ÷ 4 = 4. Multiplication next -> 20 x 2 = 40. Expression becomes: 40 + 4 - 5. Addition -> 40 + 4 = 44. Subtraction -> 44 - 5 = 39. Thus, the correct answer is 39."
  },
@@ -91934,7 +91934,7 @@
    "148",
    "150"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "सबसे पहले प्रतीकों को उनके नए अर्थों से बदलें: 36 - 4 × 8 + 4 ÷ 2 में, '-' बनता है '×', '×' बनता है '+', '+' बनता है '÷', और '÷' बनता है '-'। नया व्यंजक है: 36 × 4 + 8 ÷ 2 - 2। BODMAS नियम के अनुसार, पहले भाग दें: 8 ÷ 2 = 4। फिर गुणा करें: 36 × 4 = 144। फिर जोड़ें: 144 + 4 = 148। अंत में घटाएं: 148 - 2 = 142।",
   "e_en": "First replace the symbols with their new meanings: in 36 - 4 × 8 + 4 ÷ 2, '-' becomes '×', '×' becomes '+', '+' becomes '÷', and '÷' becomes '-'. The new expression is: 36 × 4 + 8 ÷ 2 - 2. Following the BODMAS rule, first divide: 8 ÷ 2 = 4. Then multiply: 36 × 4 = 144. Then add: 144 + 4 = 148. Finally subtract: 148 - 2 = 142."
  },
@@ -91957,7 +91957,7 @@
    "60",
    "51"
   ],
-  "a": 1,
+  "a": 3,
   "e_hi": "दिए गए अक्षरों को उनके गणितीय प्रतीकों से बदलें: 18 C 3 A 12 D 4 B 6 बनता है 18 × 3 + 12 ÷ 4 - 6। BODMAS नियम का पालन करते हुए, पहले भाग दें: 12 ÷ 4 = 3। अब व्यंजक है: 18 × 3 + 3 - 6। इसके बाद गुणा करें: 18 × 3 = 54। अब जोड़ें: 54 + 3 = 57। अंत में घटाएं: 57 - 6 = 51? रुकिए, जांच करें: 54 + 3 = 57, 57 - 6 = 51. सही उत्तर 51 है (विकल्प 4)।",
   "e_en": "Replace the given letters with their mathematical symbols: 18 C 3 A 12 D 4 B 6 becomes 18 × 3 + 12 ÷ 4 - 6. Following the BODMAS rule, first divide: 12 ÷ 4 = 3. Now the expression is: 18 × 3 + 3 - 6. Next multiply: 18 × 3 = 54. Now add: 54 + 3 = 57. Finally subtract: 57 - 6 = 51. The correct option is 51."
  },
@@ -91980,7 +91980,7 @@
    "106",
    "110"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "दिए गए प्रतीकों को उनके अर्थ के अनुसार बदलें: 25 @ 4 # 16 % 2 $ 6 बनता है 25 × 4 + 16 ÷ 2 - 6। BODMAS नियम के अनुसार सबसे पहले भाग हल करें: 16 ÷ 2 = 8। इसके बाद गुणा हल करें: 25 × 4 = 100। अब मान रखें: 100 + 8 - 6। जोड़ें: 100 + 8 = 108। घटाएं: 108 - 6 = 102? रुकिए, 100 + 8 = 108, 108 - 6 = 102। विकल्प 102 है।",
   "e_en": "Replace symbols according to their meaning: 25 @ 4 # 16 % 2 $ 6 becomes 25 × 4 + 16 ÷ 2 - 6. According to BODMAS, first solve division: 16 ÷ 2 = 8. Then solve multiplication: 25 × 4 = 100. Now substitute: 100 + 8 - 6. Add: 100 + 8 = 108. Subtract: 108 - 6 = 102. The correct option is 102."
  },
@@ -91989,8 +91989,8 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि 'P' का अर्थ 'भाग', 'Q' का अर्थ 'गुणा', 'R' का अर्थ 'जोड़' और 'S' का अर्थ 'घटाव' है, तो 44 Q 6 R 12 S 6 P 2 का मान क्या है?",
-  "q_en": "If 'P' means 'division', 'Q' means 'multiplication', 'R' means 'addition' and 'S' means 'subtraction', what is the value of 44 Q 6 R 12 S 6 P 2?",
+  "q_hi": "यदि 'P' का अर्थ 'भाग' है, 'Q' का अर्थ 'गुणा' है, 'R' का अर्थ 'जोड़' है और 'S' का अर्थ 'घटाव' है, तो 44 Q 4 R 12 S 4 P 2 का मान क्या है?",
+  "q_en": "If 'P' means 'division', 'Q' means 'multiplication', 'R' means 'addition' and 'S' means 'subtraction', what is the value of 44 Q 4 R 12 S 4 P 2?",
   "o_hi": [
    "182",
    "184",
@@ -92004,8 +92004,8 @@
    "188"
   ],
   "a": 2,
-  "e_hi": "समीकरण को बदलें: 45 × 4 + 10 - 8 ÷ 2। भाग करने पर: 8 ÷ 2 = 4। गुणा करने पर: 45 × 4 = 180। जोड़ने पर: 180 + 10 = 190। घटाने पर: 190 - 4 = 186। सही उत्तर 186 है।",
-  "e_en": "Replace letters with symbols for 45 Q 4 R 10 S 8 P 2: 45 × 4 + 10 - 8 ÷ 2. Apply BODMAS: Division first (8 ÷ 2 = 4), then multiplication (45 × 4 = 180), then addition (180 + 10 = 190), and subtraction (190 - 4 = 186)."
+  "e_hi": "संकेतों को बदलने पर: 44 Q 4 R 12 S 4 P 2 बनता है 44 × 4 + 12 - 4 ÷ 2। BODMAS से: 4 ÷ 2 = 2, 44 × 4 = 176। अतः 176 + 12 - 2 = 186।",
+  "e_en": "Replacing the codes: 44 Q 4 R 12 S 4 P 2 becomes 44 x 4 + 12 - 4 / 2. By BODMAS: 4 / 2 = 2, 44 x 4 = 176. So 176 + 12 - 2 = 186."
  },
  {
   "id": "rp-rea-r03284",
@@ -92026,7 +92026,7 @@
    "10",
    "12"
   ],
-  "a": 1,
+  "a": 2,
   "e_hi": "प्रतीकों को प्रतिस्थापित करें: 15 × 3 ÷ 15 + 5 - 2 बनता है 15 ÷ 3 + 15 - 5 × 2। BODMAS नियम के अनुसार पहले भाग हल करें: 15 ÷ 3 = 5। अब व्यंजक है: 5 + 15 - 5 × 2। फिर गुणा हल करें: 5 × 2 = 10। अब व्यंजक है: 5 + 15 - 10। फिर जोड़ें: 5 + 15 = 20। अंत में घटाएं: 20 - 10 = 10। सही उत्तर 10 है।",
   "e_en": "Substitute the symbols: 15 × 3 ÷ 15 + 5 - 2 becomes 15 ÷ 3 + 15 - 5 × 2. According to BODMAS, first solve division: 15 ÷ 3 = 5. Now the expression is: 5 + 15 - 5 × 2. Then solve multiplication: 5 × 2 = 10. Now the expression is: 5 + 15 - 10. Then add: 5 + 15 = 20. Finally subtract: 20 - 10 = 10. The correct option is 10."
  },
@@ -92039,19 +92039,19 @@
   "q_en": "If '+' and '-' are interchanged, and '×' and '÷' are interchanged in the equation, which of the following equations will be correct?",
   "o_hi": [
    "5 + 3 × 8 - 12 ÷ 4 = 3",
-   "5 - 3 + 8 × 12 ÷ 4 = 15",
+   "10 - 5 + 8 × 4 ÷ 2 = 11",
    "5 × 3 + 8 - 12 ÷ 4 = 17",
    "5 - 3 × 8 + 12 ÷ 4 = 10"
   ],
   "o_en": [
    "5 + 3 × 8 - 12 ÷ 4 = 3",
-   "5 - 3 + 8 × 12 ÷ 4 = 15",
+   "10 - 5 + 8 × 4 ÷ 2 = 11",
    "5 × 3 + 8 - 12 ÷ 4 = 17",
    "5 - 3 × 8 + 12 ÷ 4 = 10"
   ],
   "a": 1,
-  "e_hi": "विकल्प 2 की जाँच करें: '5 - 3 + 8 × 12 ÷ 4 = 15'। प्रतीकों को आपस में बदलने पर (- को +, + को -, × को ÷, ÷ को ×), समीकरण बनता है: 5 + 3 - 8 ÷ 12 × 4 = 15। इसे हल करें: 8 - (8/12) × 4 = 8 - 32/12 = 8 - 8/3 = 16/3 (गलत)। आइए विकल्प 4 देखें: '5 - 3 × 8 + 12 ÷ 4 = 10'। बदलने पर: 5 + 3 ÷ 8 - 12 × 4 = 10 (गलत)। आइए ऐसा विकल्प चुनें जो सही हो: 10 + 5 - 5 ÷ 5 × 5 = 10। बदलने पर: 10 - 5 + 5 × 5 ÷ 5 = 10 - 5 + 5 = 10। अतः यह सही है।",
-  "e_en": "Let's check the valid substitution where equation holds true. For 10 + 5 - 5 ÷ 5 × 5 = 10, interchanging '+' and '-', and '×' and '÷' gives 10 - 5 + 5 × 5 ÷ 5. Solving this: 10 - 5 + (25 ÷ 5) = 10 - 5 + 5 = 10. Thus, this equation evaluates correctly."
+  "e_hi": "विकल्प की जाँच करें: '10 - 5 + 8 × 4 ÷ 2 = 11'। '+' और '-' को आपस में तथा '×' और '÷' को आपस में बदलने पर: 10 + 5 - 8 ÷ 4 × 2 बनता है। BODMAS से: 8 ÷ 4 = 2, 2 × 2 = 4। अतः 10 + 5 - 4 = 11, जो बराबर है।",
+  "e_en": "Check the option '10 - 5 + 8 x 4 / 2 = 11'. Interchanging '+' with '-' and '×' with '÷': 10 + 5 - 8 / 4 x 2. By BODMAS: 8 / 4 = 2, 2 x 2 = 4. So 10 + 5 - 4 = 11, which matches."
  },
  {
   "id": "rp-rea-r03286",
@@ -92072,7 +92072,7 @@
    "27",
    "29"
   ],
-  "a": 1,
+  "a": 2,
   "e_hi": "दिए गए प्रतीकों को उनके अर्थ के अनुसार बदलें: 276 $ 23 # 2 @ 4 * 1 बनता है 276 ÷ 23 × 2 + 4 - 1। BODMAS नियम लागू करें: सबसे पहले भाग: 276 ÷ 23 = 12। अब व्यंजक है: 12 × 2 + 4 - 1। फिर गुणा करें: 12 × 2 = 24। अब जोड़ें: 24 + 4 = 28। अंत में घटाएं: 28 - 1 = 27। सही उत्तर 27 है।",
   "e_en": "Replace the symbols according to their meanings: 276 $ 23 # 2 @ 4 * 1 becomes 276 ÷ 23 × 2 + 4 - 1. Apply BODMAS rule: First division: 276 ÷ 23 = 12. Now the expression is: 12 × 2 + 4 - 1. Then multiply: 12 × 2 = 24. Then add: 24 + 4 = 28. Finally subtract: 28 - 1 = 27. The correct option is 27."
  },
@@ -92104,8 +92104,8 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि '×' का अर्थ '-', '-' का अर्थ '÷', '+' का अर्थ '×' और '÷' का अर्थ '+' है, तो 20 - 5 ÷ 4 + 6 × 2 का मान क्या होगा?",
-  "q_en": "If '×' means '-', '-' means '÷', '+' means '×' and '÷' means '+', what is the value of 20 - 5 ÷ 4 + 6 × 2?",
+  "q_hi": "यदि '×' का अर्थ '-' है, '-' का अर्थ '÷' है, '+' का अर्थ '×' है और '÷' का अर्थ '+' है, तो 20 - 5 ÷ 4 + 2 × 2 का मान क्या है?",
+  "q_en": "If '×' means '-', '-' means '÷', '+' means '×' and '÷' means '+', what is the value of 20 - 5 ÷ 4 + 2 × 2?",
   "o_hi": [
    "8",
    "10",
@@ -92119,62 +92119,62 @@
    "14"
   ],
   "a": 1,
-  "e_hi": "प्रतीकों को बदलने पर व्यंजक बनता है: 40 ÷ 8 + 4 × 2 - 3। BODMAS नियम से सबसे पहले भाग हल करें: 40 ÷ 8 = 5। फिर गुणा हल करें: 4 × 2 = 8। अब जोड़ें: 5 + 8 = 13। अंत में घटाएं: 13 - 3 = 10। सही उत्तर 10 है।",
-  "e_en": "Substitute the symbols for expression 40 - 8 ÷ 4 + 2 × 3: '-' means '÷', '÷' means '+', '+' means '×', '×' means '-'. The expression becomes 40 ÷ 8 + 4 × 2 - 3. Applying BODMAS: Division (40 ÷ 8 = 5), Multiplication (4.2 = 8), Addition (5 + 8 = 13), Subtraction (13 - 3 = 10)."
+  "e_hi": "संकेतों को बदलने पर: 20 ÷ 5 + 4 × 2 - 2 बनता है। BODMAS से: 4 × 2 = 8, 20 ÷ 5 = 4। अतः 4 + 8 - 2 = 10।",
+  "e_en": "Replacing the codes: 20 / 5 + 4 x 2 - 2. By BODMAS: 4 x 2 = 8, 20 / 5 = 4. So 4 + 8 - 2 = 10."
  },
  {
   "id": "rp-rea-r03289",
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 3,
-  "q_hi": "यदि सांकेतिक भाषा में '+' का अर्थ गुणा (×), '-' का अर्थ भाग (÷), '×' का अर्थ घटाना (-) और '÷' का अर्थ जोड़ना (+) है, तो निम्नलिखित समीकरण का मान ज्ञात कीजिए: [ (30 - 6) ÷ 5 ] × 2 + 3",
+  "q_hi": "किसी कोडित भाषा में, यदि '+' का अर्थ '×' है, '-' का अर्थ '÷' है, '×' का अर्थ '-' है और '÷' का अर्थ '+' है, तो समीकरण का मान ज्ञात करें: [ (30 - 6) ÷ 5 ] × 2 + 3",
   "q_en": "In a coded language, if '+' means '×', '-' means '÷', '×' means '-' and '÷' means '+', find the value of the equation: [ (30 - 6) ÷ 5 ] × 2 + 3",
   "o_hi": [
-   "10",
+   "4",
    "12",
    "14",
    "16"
   ],
   "o_en": [
-   "10",
+   "4",
    "12",
    "14",
    "16"
   ],
-  "a": 2,
-  "e_hi": "प्रतीकों को प्रतिस्थापित करने पर व्यंजक बनता है: 24 ÷ 6 - 2 + 3 × 4। BODMAS नियम के अनुसार सबसे पहले भाग हल करें: 24 ÷ 6 = 4। फिर गुणा हल करें: 3 × 4 = 12। अब व्यंजक है: 4 - 2 + 12। बाएं से दाएं हल करें: 4 - 2 = 2, और 2 + 12 = 14। सही उत्तर 14 है।",
-  "e_en": "Substitute the symbols for 24 - 6 × 2 ÷ 3 + 4: '-' becomes '÷', '×' becomes '-', '÷' becomes '+', '+' becomes '×'. The expression becomes 24 ÷ 6 - 2 + 3 × 4. Apply BODMAS: Division (24 ÷ 6 = 4), Multiplication (3 × 4 = 12), Subtraction/Addition from left to right: 4 - 2 + 12 = 2 + 12 = 14."
+  "a": 0,
+  "e_hi": "कोष्ठक और संकेतों को बदलने पर: [(30 ÷ 6) + 5] - 2 × 3 बनता है। कोष्ठक पहले: 30 ÷ 6 = 5, 5 + 5 = 10। फिर 2 × 3 = 6। अतः 10 - 6 = 4।",
+  "e_en": "Replacing brackets and codes: [(30 / 6) + 5] - 2 x 3. Brackets first: 30 / 6 = 5, 5 + 5 = 10. Then 2 x 3 = 6. So 10 - 6 = 4."
  },
  {
   "id": "rp-rea-r03290",
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 1,
-  "q_hi": "यदि '+' का अर्थ 'भाग देना' (÷) है, '-' का अर्थ 'गुणा करना' (×) है, '×' का अर्थ 'घटाना' (-) है, और '÷' का अर्थ 'जोड़ना' (+) है, तो निम्नलिखित समीकरण का मान ज्ञात कीजिए: 36 - 4 × 8 ÷ 4 + 2",
-  "q_en": "If '+' means 'divide by' (÷), '-' means 'multiply by' (×), '×' means 'subtract' (-), and '÷' means 'add' (+), find the value of the following expression: 36 - 4 × 8 ÷ 4 + 2",
+  "q_hi": "यदि '+' का अर्थ 'इससे भाग दें' (÷) है, '-' का अर्थ 'इससे गुणा करें' (×) है, '×' का अर्थ 'घटाएं' (-) है, और '÷' का अर्थ 'जोड़ें' (+) है, तो व्यंजक का मान ज्ञात करें: 10 - 3 × 5 ÷ 8 + 4",
+  "q_en": "If '+' means 'divide by' (÷), '-' means 'multiply by' (×), '×' means 'subtract' (-), and '÷' means 'add' (+), find the value of the following expression: 10 - 3 × 5 ÷ 8 + 4",
   "o_hi": [
-   "140",
-   "144",
-   "150",
-   "154"
+   "25",
+   "27",
+   "29",
+   "31"
   ],
   "o_en": [
-   "140",
-   "144",
-   "150",
-   "154"
+   "25",
+   "27",
+   "29",
+   "31"
   ],
-  "a": 0,
-  "e_hi": "दिए गए समीकरण में प्रतीकों को उनके अर्थ के अनुसार बदलने पर: 36 × 4 - 8 + 4 ÷ 2. BODMAS नियम का पालन करने पर: पहले भाग (4 ÷ 2 = 2), फिर गुणा (36 × 4 = 144). अब समीकरण बनता है: 144 - 8 + 2. हल करने पर: 136 + 2 = 138? रुकिए, पुनर्गणना करें: 36 × 4 = 144, 144 - 8 = 136, 136 + (4 ÷ 2 = 2) = 138. विकल्प 140 गलत है। आइए दोबारा चेक करें: 36 - 4 × 8 ÷ 4 + 2. (-) का अर्थ × है, तो 36 × 4; (×) का अर्थ - है, तो - 8; (÷) का अर्थ + है, तो + 4; (+) का अर्थ ÷ है, तो ÷ 2. अतः 36 × 4 - 8 + 4 ÷ 2 = 144 - 8 + 2 = 138, लेकिन 138 विकल्पों में नहीं है। चलिए दूसरा प्रश्न बनाते हैं: 36 ÷ 4 + 8 × 4 - 2. प्रतीकों को बदलने पर: 36 + 4 ÷ 8 - 4 × 2 = 36 + 0.5 - 8 = पूर्णांक नहीं। सही समीकरण: 24 - 4 × 2 ÷ 6 + 3. (-) मतलब × (24 × 4), (×) मतलब - ( - 2), (÷) मतलब + ( + 6), (+) मतलब ÷ ( ÷ 3). समीकरण: 24 × 4 - 2 + 6 ÷ 3 = 96 - 2 + 2 = 96. (उत्तर: 140)",
-  "e_en": "Applying the symbol substitutions to the expression 36 - 4 × 8 ÷ 4 + 2: '-' becomes '×', '×' becomes '-', '÷' becomes '+', '+' becomes '÷'. New expression: 36 × 4 - 8 + 4 ÷ 2. Using BODMAS: 4 ÷ 2 = 2, 36 × 4 = 144. Expression: 144 - 8 + 2 = 138... Wait, let's use the precise problem: If '+' means '÷', '-' means '×', '×' means '-', '÷' means '+', evaluate: 36 × 4 ÷ 2 - 5 + 3. Substituting: 36 - 4 + 2 × 5 ÷ 3. Let's pick option 140 via: 40 × 3 - 2 + 8 ÷ 4 = 120 - 2 + 2 = 120. Let's stick to a clean valid one: Given expression: 20 - 4 × 3 + 2 ÷ 2. Sub: 20 × 4 - 3 ÷ 2 + 2 = 80 - 1.5 + 2 = 80.5. Let's use standard integer output 140: 32 - 4 × 5 ÷ 2 + 10. Sub: 32 × 4 - 5 + 2 ÷ 10 = 128 - 5 + 0.2 = 123.2. Let's use: 35 - 5 × 4 ÷ 2 + 10 where - is ×, × is -, ÷ is +, + is ÷. 35 × 5 - 4 + 2 ÷ 10 = 175 - 4 + 0.2 = 171.2. Correct calculation for option 140: 28 - 4 × 2 + 16 ÷ 4. Sub: 28 × 4 - 2 + 16 ÷ 4 = 112 - 2 + 4 = 114. Let's use a verified expression yielding 140: (30 - 5) × 4 + 20 ÷ 5. Sub symbols: 30 × 5 - 4 + 20 ÷ 5 = 150 - 4 + 4 = 150. Let's take 140 as the result of: 30 × 4 + 20 - 10 ÷ 2. Sub: 30 - 4 ÷ 20 × 10 + 2 = 30 - 0.2 × 10 + 2 = 30 - 2 + 2 = 30. Let's take the exact question: If '+' = ÷, '-' = ×, '×' = -, '÷' = +, then 40 - 5 × 4 ÷ 2 + 10 = 40 × 5 - 4 + 2 ÷ 10 = 200 - 4 + 0.2 = 196.2. Let's ensure option 140 matches: 28 - 5 × 3 + 20 ÷ 4 -> 28 × 5 - 3 + 20 ÷ 4 = 140 - 3 + 5 = 142. If 28 - 5 × 3 + 15 ÷ 5 -> 28 × 5 - 3 + 15 ÷ 5 = 140 - 3 + 3 = 140. Correct."
+  "a": 1,
+  "e_hi": "संकेतों को बदलने पर: 10 × 3 - 5 + 8 ÷ 4 बनता है। BODMAS से: 10 × 3 = 30, 8 ÷ 4 = 2। अतः 30 - 5 + 2 = 27।",
+  "e_en": "Replacing the codes: 10 x 3 - 5 + 8 / 4. By BODMAS: 10 x 3 = 30, 8 / 4 = 2. So 30 - 5 + 2 = 27."
  },
  {
   "id": "rp-rea-r03291",
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 1,
-  "q_hi": "यदि अक्षर कोड में A का अर्थ '+', B का अर्थ '-', C का अर्थ '×' और D का अर्थ '÷' है, तो व्यंजक का मान क्या होगा: 40 C 2 A 15 D 3 B 6",
-  "q_en": "If letter codes mean: A for '+', B for '-', C for '×', and D for '÷', find the value of the expression: 40 C 2 A 15 D 3 B 6",
+  "q_hi": "यदि अक्षर कोड इस प्रकार हैं: A का अर्थ '+', B का अर्थ '-', C का अर्थ '×', और D का अर्थ '÷', तो व्यंजक 40 C 2 A 45 D 5 B 6 का मान ज्ञात करें",
+  "q_en": "If letter codes mean: A for '+', B for '-', C for '×', and D for '÷', find the value of the expression: 40 C 2 A 45 D 5 B 6",
   "o_hi": [
    "81",
    "83",
@@ -92188,16 +92188,16 @@
    "89"
   ],
   "a": 1,
-  "e_hi": "दिए गए अक्षरों को गणितीय प्रतीकों से बदलने पर: 40 C 2 A 15 D 3 B 6 बनता है 40 × 2 + 15 ÷ 3 - 6. BODMAS नियम के अनुसार सबसे पहले भाग हल करें: 15 ÷ 3 = 5. अब गुणा करें: 40 × 2 = 80. समीकरण बनता है: 80 + 5 - 6. जोड़ने पर: 85 - 6 = 79? रुकिए, 80 + 5 = 85, 85 - 6 = 79. विकल्पों में 79 नहीं है। आइए विकल्पों के अनुसार मान देखें: यदि उत्तर 83 है, तो 40 × 2 + 15 ÷ 3 - 6 = 80 + 5 - 6 = 79. यदि व्यंजक 40 C 2 A 16 D 4 B 5 हो: 40 × 2 + 16 ÷ 4 - 5 = 80 + 4 - 5 = 79. यदि 42 C 2 A 15 D 3 B 4 हो: 42 × 2 + 15 ÷ 3 - 4 = 84 + 5 - 4 = 85. यदि 40 C 2 A 18 D 3 B 5 हो: 40 × 2 + 18 ÷ 3 - 5 = 80 + 6 - 5 = 81. यदि 41 C 2 A 15 D 3 B 5 हो: 41 × 2 + 15 ÷ 3 - 5 = 82 + 5 - 5 = 82. चलिए सटीक व्यंजक लेते हैं: 40 C 2 A 18 D 3 B 3 = 40 × 2 + 18 ÷ 3 - 3 = 80 + 6 - 3 = 83. अतः सही विकल्प 83 है।",
-  "e_en": "Substitute the letters with their respective mathematical signs in the expression 40 C 2 A 18 D 3 B 3: C=×, A=+, D=÷, B=-. The expression becomes 40 × 2 + 18 ÷ 3 - 3. Applying BODMAS rule: First division (18 ÷ 3 = 6), then multiplication (40 × 2 = 80). The expression simplifies to 80 + 6 - 3. Performing addition and subtraction from left to right: 86 - 3 = 83. Thus, the correct option is 83."
+  "e_hi": "संकेतों को बदलने पर: 40 × 2 + 45 ÷ 5 - 6 बनता है। BODMAS से: 45 ÷ 5 = 9, 40 × 2 = 80। अतः 80 + 9 - 6 = 83।",
+  "e_en": "Replacing the codes: 40 x 2 + 45 / 5 - 6. By BODMAS: 45 / 5 = 9, 40 x 2 = 80. So 80 + 9 - 6 = 83."
  },
  {
   "id": "rp-rea-r03292",
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि सांकेतिक भाषा में '+' का अर्थ 'गुणा', '-' का अर्थ 'भाग', '×' का अर्थ 'घटाव' और '÷' का अर्थ 'जोड़' है, तो समीकरण का मान निकालिए: (12 ÷ 6) × 3 + 2 - 4",
-  "q_en": "If in a coded language '+' means 'multiply', '-' means 'divide', '×' means 'subtract', and '÷' means 'add', evaluate the equation: (12 ÷ 6) × 3 + 2 - 4",
+  "q_hi": "यदि किसी कोडित भाषा में '+' का अर्थ 'गुणा' है, '-' का अर्थ 'भाग' है, '×' का अर्थ 'घटाव' है, और '÷' का अर्थ 'जोड़' है, तो समीकरण का मान ज्ञात करें: (10 ÷ 4) × 4 + 1 - 2",
+  "q_en": "If in a coded language '+' means 'multiply', '-' means 'divide', '×' means 'subtract', and '÷' means 'add', evaluate the equation: (10 ÷ 4) × 4 + 1 - 2",
   "o_hi": [
    "10",
    "12",
@@ -92210,9 +92210,9 @@
    "14",
    "16"
   ],
-  "a": 0,
-  "e_hi": "दी गई समीकरण में प्रतीकों को बदलने पर: (12 + 6) - 3 × 2 ÷ 4. कोष्ठक को पहले हल करने पर: (12 + 6) = 18. अब समीकरण है: 18 - 3 × 2 ÷ 4. BODMAS के अनुसार पहले भाग करें: 2 ÷ 4 = 0.5. फिर गुणा करें: 3 × 0.5 = 1.5. समीकरण: 18 - 1.5 = 16.5 (विकल्पों में नहीं है). मान लीजिए समीकरण (12 ÷ 6) × 4 + 2 - 2 है: (12 + 6) - 4 × 2 ÷ 2 = 18 - 4 × 1 = 18 - 4 = 14. आइए सटीक समीकरण लें जिसका उत्तर 10 हो: (16 ÷ 4) × 5 + 3 - 6 जहाँ ÷ = +, × = -, + = ×, - = ÷. बदलने पर: (16 + 4) - 5 × 3 ÷ 6 = 20 - 5 × 0.5 = 17.5. चलिए ठीक व्यंजक लेते हैं: (8 ÷ 4) × 6 + 2 - 3. प्रतीकों को बदलने पर: (8 + 4) - 6 × 2 ÷ 3 = 12 - 12 ÷ 3 = 12 - 4 = 8. यदि (10 ÷ 2) × 4 + 3 - 2 हो: (10 + 2) - 4 × 3 ÷ 2 = 12 - 6 = 6. यदि समीकरण (20 ÷ 5) × 4 + 2 - 4 हो: (20 + 5) - 4 × 2 ÷ 4 = 25 - 2 = 23. सही व्यंजक जिसके लिए उत्तर 10 आए: (16 ÷ 4) × 2 + 4 - 2 -> (16 + 4) - 2 × 4 ÷ 2 = 20 - 4 = 16. चलिए 10 उत्तर लाने के लिए: (10 ÷ 5) × 6 + 4 - 2 -> (10 + 5) - 6 × 4 ÷ 2 = 15 - 12 = 3. सही व्यंजक: (8 ÷ 2) × 3 + 4 - 2 प्रतीकों के साथ: (8 + 2) - 3 × 4 ÷ 2 = 10 - 6 = 4. आइए व्यंजक लें: (12 ÷ 4) × 4 + 2 - 6 -> (12 + 4) - 4 × 2 ÷ 6 (अपूर्णांक). चलिए व्यंजक लें: (18 ÷ 6) × 2 + 4 - 2 -> (18 + 6) - 2 × 4 ÷ 2 = 24 - 4 = 20. यदि व्यंजक (6 ÷ 2) × 4 + 3 - 3 हो: (6 + 2) - 4 × 3 ÷ 3 = 8 - 4 = 4. चलिए व्यंजक लेते हैं: (12 ÷ 4) × 2 + 8 - 4 जहाँ प्रतीक बदलने पर (12 + 4) - 2 × 8 ÷ 4 = 16 - 4 = 12. यदि (8 ÷ 2) × 2 + 6 - 3 हो: (8 + 2) - 2 × 6 ÷ 3 = 10 - 4 = 6. यदि (6 ÷ 3) × 5 + 4 - 2 हो: (6 + 3) - 5 × 4 ÷ 2 = 9 - 10 = -1. यदि (12 ÷ 3) × 3 + 4 - 2 हो: (12 + 3) - 3 × 4 ÷ 2 = 15 - 6 = 9. यदि (14 ÷ 7) × 5 + 4 - 2 हो: (14 + 7) - 5 × 4 ÷ 2 = 21 - 10 = 11. सही व्यंजक जिसका उत्तर 10 है: (16 ÷ 8) × 5 + 6 - 3 -> (16 + 8) - 5 × 6 ÷ 3 = 24 - 10 = 14. चलिए व्यंजक लें: (10 ÷ 2) × 2 + 8 - 4 -> (10 + 2) - 2 × 8 ÷ 4 = 12 - 4 = 8. चलिए व्यंजक लें: (10 ÷ 5) × 5 + 6 - 3 -> (10 + 5) - 5 × 6 ÷ 3 = 15 - 10 = 5. चलिए व्यंजक लें: (12 ÷ 2) × 2 + 10 - 5 -> (12 + 2) - 2 × 10 ÷ 5 = 14 - 4 = 10. बिल्कुल! व्यंजक: (12 ÷ 2) × 2 + 10 - 5. प्रतीकों को बदलने पर: (12 + 2) - 2 × 10 ÷ 5 = 14 - 2 × 2 = 14 - 4 = 10.",
-  "e_en": "Given expression: (12 ÷ 2) × 2 + 10 - 5. Substituting signs: '+' becomes '×', '-' becomes '÷', '×' becomes '-', '÷' becomes '+'. The expression becomes: (12 + 2) - 2 × 10 ÷ 5. Solving inside parentheses first: (12 + 2) = 14. Now expression is 14 - 2 × 10 ÷ 5. Applying BODMAS, division first: 10 ÷ 5 = 2. Then multiplication: 2 × 2 = 4. Finally subtraction: 14 - 4 = 10. Thus, the correct option is 10."
+  "a": 1,
+  "e_hi": "संकेतों को बदलने पर ('+' का अर्थ गुणा, '-' का अर्थ भाग, '×' का अर्थ घटाव, '÷' का अर्थ जोड़): (10 ÷ 4) × 4 + 1 - 2 बनता है (10 + 4) - 4 × 1 ÷ 2। कोष्ठक पहले: 10 + 4 = 14। फिर BODMAS से: 4 × 1 = 4, 4 ÷ 2 = 2। अतः 14 - 2 = 12।",
+  "e_en": "Replacing the codes ('+' means multiply, '-' means divide, '×' means subtract, '÷' means add): (10 / 4) x 4 + 1 - 2 becomes (10 + 4) - 4 x 1 / 2. Brackets first: 10 + 4 = 14. Then by BODMAS: 4 x 1 = 4, 4 / 2 = 2. So 14 - 2 = 12."
  },
  {
   "id": "rp-rea-r03293",
@@ -92233,7 +92233,7 @@
    "35",
    "37"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "दिए गए व्यंजक में अक्षरों को उनके गणितीय प्रतीकों से बदलने पर: 44 Q 9 P 12 S 6 R 4 बन जाता है 44 × 9 ÷ 12 - 6 + 4. BODMAS नियम के अनुसार सबसे पहले भाग और गुणा को बाएं से दाएं हल करें: पहले 9 ÷ 12 = 0.75, फिर 44 × 0.75 = 33. या इसे भिन्न के रूप में करें: (44 × 9) / 12 = 396 / 12 = 33. अब समीकरण बनता है: 33 - 6 + 4. इसके बाद घटाव और जोड़ करें: 33 - 6 = 27, और 27 + 4 = 31? रुकिए, 33 - 6 = 27, 27 + 4 = 31. विकल्प 31 पहला है, लेकिन यहाँ उत्तर 33 कैसे आया? आइए दोबारा जांचें: 33 - 6 + 4 में 33 में 4 जोड़ें (बोर्डमास के अनुसार जोड़ पहले, घटाव बाद में: 33 + 4 = 37, 37 - 6 = 31). अरे! सही उत्तर 31 है, लेकिन हमने विकल्प 31 (सूचकांक 0) रखा है। चलिए देखते हैं a का मान क्या है। यदि सही उत्तर 31 है तो a = 0 होना चाहिए। विकल्पों में [31, 33, 35, 37] है। गणना: 33 - 6 + 4 = 31. अतः सही उत्तर 31 है (index 0).",
   "e_en": "Replacing the letters with mathematical operators in 44 Q 9 P 12 S 6 R 4: Q=×, P=÷, S=-, R=+ gives 44 × 9 ÷ 12 - 6 + 4. Following BODMAS from left to right for multiplication and division: (44 × 9) / 12 = 396 / 12 = 33. The expression now is 33 - 6 + 4. Performing addition and subtraction from left to right (or addition first: 33 + 4 = 37, then 37 - 6 = 31): 33 - 6 = 27, 27 + 4 = 31. Thus, the value is 31."
  },
@@ -92256,7 +92256,7 @@
    "54",
    "60"
   ],
-  "a": 1,
+  "a": 2,
   "e_hi": "दिए गए व्यंजक 180 $ 15 # 4 @ 12 * 6 में प्रतीकों को प्रतिस्थापित करने पर: 180 ÷ 15 × 4 + 12 - 6. BODMAS नियम के अनुसार, सबसे पहले भाग (÷) करें: 180 ÷ 15 = 12. अब व्यंजक है: 12 × 4 + 12 - 6. इसके बाद गुणा (×) करें: 12 × 4 = 48. अब व्यंजक है: 48 + 12 - 6. इसके बाद जोड़ (+) करें: 48 + 12 = 60. अंत में घटाव (-) करें: 60 - 6 = 54. विकल्पों में 54 तीसरा विकल्प है। अतः सही उत्तर 54 है।",
   "e_en": "Substituting the symbols in 180 $ 15 # 4 @ 12 * 6 ($ = ÷, # = ×, @ = +, * = -): 180 ÷ 15 × 4 + 12 - 6. Applying BODMAS: First division, 180 ÷ 15 = 12. Expression becomes 12 × 4 + 12 - 6. Next, multiplication, 12 × 4 = 48. Expression becomes 48 + 12 - 6. Next, addition, 48 + 12 = 60. Finally, subtraction, 60 - 6 = 54. Thus, the correct option is 54."
  },
@@ -92265,8 +92265,8 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि समीकरण में प्रतीकों को इस प्रकार बदला जाता है: '+' का अर्थ '÷', '÷' का अर्थ '-', '-' का अर्थ '×', और '×' का अर्थ '+', तो 24 + 6 ÷ 3 - 2 × 5 का सही मान क्या होगा?",
-  "q_en": "If the signs in an equation are interchanged as follows: '+' means '÷', '÷' means '-', '-' means '×', and '×' means '+', what is the correct value of 24 + 6 ÷ 3 - 2 × 5?",
+  "q_hi": "यदि किसी समीकरण में चिन्हों को इस प्रकार बदला गया है: '+' का अर्थ '÷' है, '÷' का अर्थ '-' है, '-' का अर्थ '×' है, और '×' का अर्थ '+' है, तो 24 + 6 ÷ 3 - 2 × 6 का सही मान क्या है?",
+  "q_en": "If the signs in an equation are interchanged as follows: '+' means '÷', '÷' means '-', '-' means '×', and '×' means '+', what is the correct value of 24 + 6 ÷ 3 - 2 × 6?",
   "o_hi": [
    "2",
    "4",
@@ -92280,16 +92280,16 @@
    "8"
   ],
   "a": 1,
-  "e_hi": "दिए गए व्यंजक 24 + 6 ÷ 3 - 2 × 5 में प्रतीकों को बदलने पर: '+' की जगह '÷', '÷' की जगह '-', '-' की जगह '×', और '×' की जगह '+', जिससे नया व्यंजक बनता है: 24 ÷ 6 - 3 × 2 + 5. BODMAS नियम के अनुसार: सबसे पहले भाग करें: 24 ÷ 6 = 4. अब व्यंजक है: 4 - 3 × 2 + 5. इसके बाद गुणा करें: 3 × 2 = 6. अब व्यंजक है: 4 - 6 + 5. इसके बाद जोड़ और घटाव बाएं से दाएं करें: 4 - 6 = -2, और -2 + 5 = 3? रुकिए, BODMAS के अनुसार पहले सभी धनात्मक पदों को जोड़ें: 4 और 5 धनात्मक हैं, अतः 4 + 5 = 9. फिर ऋण पद घटाएं: 9 - 6 = 3. विकल्पों में 3 नहीं है! आइए दोबारा जांच करें। व्यंजक: 24 ÷ 6 - 3 × 2 + 5. 24 ÷ 6 = 4. 3 × 2 = 6. 4 - 6 + 5 = 3. क्या हमने सही प्रतीक बदले? प्रश्न: 24 + 6 ÷ 3 - 2 × 5. '+' -> ÷ (24 ÷ 6), '÷' -> - (- 3), '-' -> × (× 2? नहीं, '-' का अर्थ '×' है, तो बीच में - की जगह × आना चाहिए था). मूल व्यंजक: 24 + 6 ÷ 3 - 2 × 5. '+' = ÷ -> 24 ÷ 6. '÷' = - -> - 3. '-' = × -> × 2. '×' = + -> + 5. नया व्यंजक: 24 ÷ 6 - 3 × 2 + 5. BODMAS: 24 ÷ 6 = 4. फिर गुणा: 3 × 2 = 6. व्यंजक: 4 - 6 + 5 = 3. चलिए मान लेते हैं कि व्यंजक 30 + 6 ÷ 3 - 2 × 4 था: 30 ÷ 6 - 3 × 2 + 4 = 5 - 6 + 4 = 3. यदि व्यंजक 18 + 6 ÷ 3 - 2 × 2 हो: 18 ÷ 6 - 3 × 2 + 2 = 3 - 6 + 2 = -1. यदि व्यंजक 24 + 8 ÷ 4 - 2 × 3 हो: 24 ÷ 8 - 2 × 3 + 3 = 3 - 6 + 3 = 0. सही व्यंजक जिसके लिए उत्तर 4 आए: 24 + 6 ÷ 2 - 2 × 3 -> 24 ÷ 6 - 3 × 2 + 3 = 4 - 6 + 3 = 1. यदि व्यंजक 36 + 6 ÷ 3 - 2 × 3 हो: 36 ÷ 6 - 3 × 2 + 3 = 6 - 6 + 3 = 3. यदि व्यंजक 12 + 6 ÷ 3 - 2 × 1 हो: 12 ÷ 6 - 3 × 2 + 1 = 2 - 6 + 1 = -3. आइए व्यंजक बदलें ताकि उत्तर 4 हो: 30 + 6 ÷ 3 - 2 × 2 = 30 ÷ 6 - 3 × 2 + 2 = 5 - 6 + 2 = 1. सही व्यंजक: 24 + 6 ÷ 3 - 1 × 2 = 24 ÷ 6 - 3 × 1 + 2 = 4 - 3 + 2 = 3. यदि 30 + 6 ÷ 2 - 1 × 2 = 30 ÷ 6 - 2 × 1 + 2 = 5 - 2 + 2 = 5. यदि व्यंजक 12 + 6 ÷ 3 - 1 × 3 हो: 12 ÷ 6 - 3 × 1 + 3 = 2 - 3 + 3 = 2. यदि व्यंजक 24 + 6 ÷ 3 - 1 × 4 हो: 24 ÷ 6 - 3 × 1 + 4 = 4 - 3 + 4 = 5. सही व्यंजक: 24 + 12 ÷ 4 - 2 × 2 -> 24 ÷ 12 - 4 × 2 + 2 = 2 - 8 + 2 = -4. सही सटीक व्यंजक जिसके लिए विकल्प 4 (दूसरा विकल्प) सही हो: 12 + 3 ÷ 1 - 2 × 3 ... चलिए इसे मानक रूप में रखते हैं: 18 + 6 ÷ 2 - 2 × 3 के स्थान पर 24 + 6 ÷ 3 - 1 × 1... चलिए एक सरल प्रश्न लेते हैं: 16 + 4 ÷ 2 - 1 × 3 -> 16 ÷ 4 - 2 × 1 + 3 = 4 - 2 + 3 = 5. यदि 8 + 4 ÷ 2 - 1 × 2 -> 8 ÷ 4 - 2 × 1 + 2 = 2 - 2 + 2 = 2. यदि 12 + 4 ÷ 2 - 1 × 2 -> 12 ÷ 4 - 2 × 1 + 2 = 3 - 2 + 2 = 3. यदि 16 + 4 ÷ 2 - 2 × 2 -> 16 ÷ 4 - 2 × 2 + 2 = 4 - 4 + 2 = 2. यदि 20 + 4 ÷ 2 - 2 × 2 -> 20 ÷ 4 - 2 × 2 + 2 = 5 - 4 + 2 = 3. यदि 24 + 4 ÷ 2 - 2 × 2 -> 24 ÷ 4 - 2 × 2 + 2 = 6 - 4 + 2 = 4. बिल्कुल! व्यंजक: 24 + 4 ÷ 2 - 2 × 2. प्रतीकों को बदलने पर: 24 ÷ 4 - 2 × 2 + 2 = 6 - 4 + 2 = 4.",
-  "e_en": "Given expression: 24 + 4 ÷ 2 - 2 × 2. Substituting signs: '+' means '÷', '÷' means '-', '-' means '×', '×' means '+'. The new expression becomes: 24 ÷ 4 - 2 × 2 + 2. Applying BODMAS rule: First division, 24 ÷ 4 = 6. Expression becomes: 6 - 2 × 2 + 2. Next, multiplication, 2 × 2 = 4. Expression becomes: 6 - 4 + 2. Next, perform addition and subtraction from left to right: 6 - 4 = 2, and 2 + 2 = 4. Thus, the correct value is 4."
+  "e_hi": "संकेतों को बदलने पर: 24 ÷ 6 - 3 × 2 + 6 बनता है। BODMAS से: 24 ÷ 6 = 4, 3 × 2 = 6। अतः 4 - 6 + 6 = 4।",
+  "e_en": "Replacing the codes: 24 / 6 - 3 x 2 + 6. By BODMAS: 24 / 6 = 4, 3 x 2 = 6. So 4 - 6 + 6 = 4."
  },
  {
   "id": "rp-rea-r03296",
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि 'A' का अर्थ '×', 'B' का अर्थ '÷', 'C' का अर्थ '+' और 'D' का अर्थ '-' है, तो 18 A 3 C 24 B 6 D 5 का मान ज्ञात कीजिए।",
-  "q_en": "If 'A' means '×', 'B' means '÷', 'C' means '+', and 'D' means '-', find the value of 18 A 3 C 24 B 6 D 5.",
+  "q_hi": "यदि 'A' का अर्थ '×' है, 'B' का अर्थ '÷' है, 'C' का अर्थ '+' है, और 'D' का अर्थ '-' है, तो 18 A 3 C 48 B 6 D 5 का मान ज्ञात करें",
+  "q_en": "If 'A' means '×', 'B' means '÷', 'C' means '+', and 'D' means '-', find the value of 18 A 3 C 48 B 6 D 5.",
   "o_hi": [
    "55",
    "57",
@@ -92303,8 +92303,8 @@
    "61"
   ],
   "a": 1,
-  "e_hi": "दिए गए व्यंजक 18 A 3 C 24 B 6 D 5 में अक्षरों को गणितीय प्रतीकों से बदलने पर: A = ×, B = ÷, C = +, D = -. व्यंजक बनता है: 18 × 3 + 24 ÷ 6 - 5. BODMAS नियम के अनुसार, सबसे पहले भाग (÷) करें: 24 ÷ 6 = 4. अब व्यंजक है: 18 × 3 + 4 - 5. इसके बाद गुणा (×) करें: 18 × 3 = 54. अब व्यंजक है: 54 + 4 - 5. इसके बाद जोड़ (+) करें: 54 + 4 = 58. अंत में घटाव (-) करें: 58 - 5 = 53. अरे! 53 विकल्पों में नहीं है। आइए विकल्पों के अनुसार मान देखें: यदि उत्तर 57 है, तो 54 + 4 - 1 = 57 (अर्थात D 1 होना चाहिए)। यदि व्यंजक 18 A 3 C 24 B 6 D 1 हो: 18 × 3 + 24 ÷ 6 - 1 = 54 + 4 - 1 = 57. आइए दूसरा व्यंजक लें: 18 A 3 C 30 B 6 D 2 -> 18 × 3 + 30 ÷ 6 - 2 = 54 + 5 - 2 = 57. बिल्कुल! व्यंजक: 18 A 3 C 30 B 6 D 2. प्रतीकों को रखने पर: 18 × 3 + 30 ÷ 6 - 2. भाग: 30 ÷ 6 = 5. गुणा: 18 × 3 = 54. जोड़: 54 + 5 = 59. घटाव: 59 - 2 = 57. अतः सही उत्तर 57 है।",
-  "e_en": "Substituting the letters with signs in the expression 18 A 3 C 30 B 6 D 2 (A=×, B=÷, C=+, D=-): 18 × 3 + 30 ÷ 6 - 2. Applying BODMAS rule: First, division, 30 ÷ 6 = 5. Expression becomes 18 × 3 + 5 - 2. Second, multiplication, 18 × 3 = 54. Expression becomes 54 + 5 - 2. Third, addition, 54 + 5 = 59. Finally, subtraction, 59 - 2 = 57. Thus, the correct option is 57."
+  "e_hi": "संकेतों को बदलने पर: 18 × 3 + 48 ÷ 6 - 5 बनता है। BODMAS से: 48 ÷ 6 = 8, 18 × 3 = 54। अतः 54 + 8 - 5 = 57।",
+  "e_en": "Replacing the codes: 18 x 3 + 48 / 6 - 5. By BODMAS: 48 / 6 = 8, 18 x 3 = 54. So 54 + 8 - 5 = 57."
  },
  {
   "id": "rp-rea-r03297",
@@ -92334,23 +92334,23 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 3,
-  "q_hi": "यदि '+' का अर्थ '×', '-' का अर्थ '÷', '×' का अर्थ '-' और '÷' का अर्थ '+' है, तो निम्नलिखित जटिल समीकरण का मान ज्ञात कीजिए: [ (20 - 5) ÷ 3 ] + [ (4 × 2) - 1 ]",
+  "q_hi": "यदि '+' का अर्थ '×' है, '-' का अर्थ '÷' है, '×' का अर्थ '-' है, और '÷' का अर्थ '+' है, तो जटिल व्यंजक का मान ज्ञात करें: [ (20 - 5) ÷ 3 ] + [ (4 × 2) - 1 ]",
   "q_en": "If '+' means '×', '-' means '÷', '×' means '-', and '÷' means '+', find the value of the complex expression: [ (20 - 5) ÷ 3 ] + [ (4 × 2) - 1 ]",
   "o_hi": [
    "22",
-   "24",
+   "14",
    "26",
    "28"
   ],
   "o_en": [
    "22",
-   "24",
+   "14",
    "26",
    "28"
   ],
   "a": 1,
-  "e_hi": "दिए गए समीकरण में सभी प्रतीकों को प्रतिस्थापित करने पर: [ (20 ÷ 5) + 3 ] × [ (4 - 2) ÷ 1 ]. अब प्रत्येक कोष्ठक को अलग-अलग हल करें: पहले कोष्ठक में - का अर्थ ÷ और ÷ का अर्थ + है, अतः (20 ÷ 5) = 4, और फिर + 3 यानी 4 + 3 = 7. दूसरे कोष्ठक में × का अर्थ - और - का अर्थ ÷ है, अतः (4 - 2) = 2, और फिर ÷ 1 यानी 2 ÷ 1 = 2. बीच में '+' है जिसका अर्थ '×' है, अतः दोनों कोष्ठकों के परिणामों का गुणा होगा: 7 × 2 = 14. अरे! 14 विकल्पों में नहीं है। आइए प्रतीकों की पुनरावृत्ति जांचें। समीकरण: [ (20 - 5) ÷ 3 ] + [ (4 × 2) - 1 ]. '-' -> ÷, so (20 ÷ 5). '÷' -> +, so + 3. '+' -> ×, so between brackets we put ×. '×' -> -, so (4 - 2). '-' -> ÷, so ÷ 1. तो [ (20 ÷ 5) + 3 ] × [ (4 - 2) ÷ 1 ] = [4 + 3] × [2 ÷ 1] = 7 × 2 = 14. विकल्पों के अनुसार यदि उत्तर 24 लाना हो, तो [ (24 - 4) ÷ 2 ] + [ (6 × 3) - 2 ] लें: [ (24 ÷ 4) + 2 ] × [ (6 - 3) ÷ 2 ] = [6 + 2] × [3 ÷ 2] = 8 × 1.5 = 12. चलिए व्यंजक लेते हैं: [ (30 - 6) ÷ 4 ] + [ (5 × 2) - 2 ] -> [ (30 ÷ 6) + 4 ] × [ (5 - 2) ÷ 2 ] = [5 + 4] × [3 ÷ 2] = 13.5. सही व्यंजक जिसके लिए परिणाम 24 आए: [ (36 - 6) ÷ 5 ] + [ (8 × 4) - 4 ] -> [ (36 ÷ 6) + 5 ] × [ (8 - 4) ÷ 4 ] = [6 + 5] × [4 ÷ 4] = 11 × 1 = 11. आइए एक सटीक व्यंजक लें जिसका उत्तर 24 हो: [ (40 - 10) ÷ 5 ] + [ (6 × 2) - 2 ] प्रतीकों के साथ: [ (40 ÷ 10) + 5 ] × [ (6 - 2) ÷ 2 ] = [4 + 5] × [4 ÷ 2] = 9 × 2 = 18. चलिए व्यंजक लें: [ (32 - 8) ÷ 4 ] + [ (8 × 2) - 2 ] -> [ (32 ÷ 8) + 4 ] × [ (8 - 2) ÷ 2 ] = [4 + 4] × [6 ÷ 2] = 8 × 3 = 24. बिल्कुल! व्यंजक: [ (32 - 8) ÷ 4 ] + [ (8 × 2) - 2 ]. प्रतीकों को बदलने पर: [ (32 ÷ 8) + 4 ] × [ (8 - 2) ÷ 2 ]. पहला कोष्ठक: 4 + 4 = 8. दूसरा कोष्ठक: 6 ÷ 2 = 3. दोनों का गुणा: 8 × 3 = 24.",
-  "e_en": "Substituting the symbols in the expression [ (32 - 8) ÷ 4 ] + [ (8 × 2) - 2 ] where '-' means '÷', '÷' means '+', '+' means '×', and '×' means '-': First bracket: (32 ÷ 8) + 4 = 4 + 4 = 8. Second bracket: (8 - 2) ÷ 2 = 6 ÷ 2 = 3. Between the brackets, '+' becomes '×'. Thus, multiplying the results of both brackets: 8 × 3 = 24. Therefore, the correct option is 24."
+  "e_hi": "दोनों कोष्ठकों को अलग-अलग हल करें। पहला: [(20 - 5) ÷ 3] बनता है [(20 ÷ 5) + 3] = [4 + 3] = 7। दूसरा: [(4 × 2) - 1] बनता है [(4 - 2) ÷ 1] = [2 ÷ 1] = 2। अंत में दोनों को जोड़ें (मूल '+' चिन्ह '×' बनता है): 7 × 2 = 14।",
+  "e_en": "Solve both brackets separately. First: [(20 - 5) / 3] becomes [(20 / 5) + 3] = [4 + 3] = 7. Second: [(4 x 2) - 1] becomes [(4 - 2) / 1] = [2 / 1] = 2. Finally combine with the original '+' (which means multiply): 7 x 2 = 14."
  },
  {
   "id": "rp-rea-r03299",
@@ -92371,7 +92371,7 @@
    "35",
    "39"
   ],
-  "a": 1,
+  "a": 2,
   "e_hi": "दिए गए व्यंजक (36 L 4) M 3 N (12 P 4) में अक्षरों को उनके प्रतीकों से बदलने पर: L = ÷, M = ×, N = +, P = -. व्यंजक बनता है: (36 ÷ 4) × 3 + (12 - 4). सबसे पहले पहले कोष्ठक को हल करें: 36 ÷ 4 = 9. फिर दूसरे कोष्ठक को हल करें: 12 - 4 = 8. अब व्यंजक है: 9 × 3 + 8. BODMAS नियम के अनुसार पहले गुणा करें: 9 × 3 = 27. अब जोड़ें: 27 + 8 = 35. अरे! 35 तीसरा विकल्प है, लेकिन आइए देखें हमने क्या हल किया: 27 + 8 = 35. विकल्पों में [27, 31, 35, 39] है, जिसमें 35 सूचकांक 2 पर है। क्या हमारा उत्तर 35 है? हाँ, 9 × 3 = 27 और 27 + 8 = 35. अतः सही विकल्प 35 है (index 2).",
   "e_en": "Substituting the letters in the expression (36 L 4) M 3 N (12 P 4) with their respective signs (L=÷, M=×, N=+, P=-): (36 ÷ 4) × 3 + (12 - 4). Solving the first parenthesis: 36 ÷ 4 = 9. Solving the second parenthesis: 12 - 4 = 8. The expression now simplifies to 9 × 3 + 8. Applying BODMAS rule, perform multiplication first: 9 × 3 = 27. Then perform addition: 27 + 8 = 35. Thus, the correct option is 35."
  },
@@ -92380,23 +92380,23 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 1,
-  "q_hi": "यदि '+' का अर्थ 'भाग देना' (÷) है, '-' का अर्थ 'गुणा करना' (×) है, '×' का अर्थ 'घटाना' (-) है, और '÷' का अर्थ 'जोड़ना' (+) है, तो निम्नलिखित समीकरण का मान ज्ञात कीजिए: 36 - 4 × 8 ÷ 4 + 2",
-  "q_en": "If '+' means 'divide by' (÷), '-' means 'multiply by' (×), '×' means 'subtract' (-), and '÷' means 'add' (+), find the value of the following equation: 36 - 4 × 8 ÷ 4 + 2",
+  "q_hi": "यदि '+' का अर्थ 'इससे भाग दें' (÷) है, '-' का अर्थ 'इससे गुणा करें' (×) है, '×' का अर्थ 'घटाएं' (-) है, और '÷' का अर्थ 'जोड़ें' (+) है, तो समीकरण का मान ज्ञात करें: 14 - 2 × 6 ÷ 9 + 3",
+  "q_en": "If '+' means 'divide by' (÷), '-' means 'multiply by' (×), '×' means 'subtract' (-), and '÷' means 'add' (+), find the value of the following equation: 14 - 2 × 6 ÷ 9 + 3",
   "o_hi": [
-   "146",
-   "148",
-   "150",
-   "152"
+   "23",
+   "25",
+   "27",
+   "29"
   ],
   "o_en": [
-   "146",
-   "148",
-   "150",
-   "152"
+   "23",
+   "25",
+   "27",
+   "29"
   ],
   "a": 1,
-  "e_hi": "चरण 1: दिए गए प्रतीकों को उनके नए अर्थ से बदलें। समीकरण: 36 - 4 × 8 ÷ 4 + 2 बनता है: 36 × 4 - 8 + 4 ÷ 2. चरण 2: BODMAS नियम लागू करें। भाग: 4 ÷ 2 = 2. समीकरण: 36 × 4 - 8 + 2. चरण 3: गुणा: 36 × 4 = 144. समीकरण: 144 - 8 + 2. चरण 4: जोड़ और घटाव: 144 - 8 = 136; 136 + 2 = 148.",
-  "e_en": "Step 1: Replace symbols with their new meanings. Equation: 36 - 4 × 8 ÷ 4 + 2 becomes: 36 × 4 - 8 + 4 ÷ 2. Step 2: Apply BODMAS. Division: 4 ÷ 2 = 2. Equation: 36 × 4 - 8 + 2. Step 3: Multiplication: 36 × 4 = 144. Equation: 144 - 8 + 2. Step 4: Addition and Subtraction: 144 - 8 = 136; 136 + 2 = 148."
+  "e_hi": "संकेतों को बदलने पर: 14 × 2 - 6 + 9 ÷ 3 बनता है। BODMAS से: 6 ÷ 9... नहीं, सही प्रतिस्थापन: 14 '-' 2 '×' 6 '÷' 9 '+' 3 में '-' का अर्थ × है, '×' का अर्थ - है, '÷' का अर्थ + है, '+' का अर्थ ÷ है। अतः बनता है: 14 × 2 - 6 + 9 ÷ 3 = 28 - 6 + 3 = 25।",
+  "e_en": "Replacing the codes ('-' means x, '×' means -, '÷' means +, '+' means /): 14 x 2 - 6 + 9 / 3 = 28 - 6 + 3 = 25."
  },
  {
   "id": "rp-rea-r03301",
@@ -92417,7 +92417,7 @@
    "32",
    "34"
   ],
-  "a": 2,
+  "a": 0,
   "e_hi": "चरण 1: अक्षरों को गणितीय प्रतीकों से बदलें। व्यंजक: (18 × 3) ÷ 2 + 6 - 5. चरण 2: कोष्ठक हल करें: (18 × 3) = 54. व्यंजक: 54 ÷ 2 + 6 - 5. चरण 3: भाग करें: 54 ÷ 2 = 27. व्यंजक: 27 + 6 - 5. चरण 4: जोड़ें और घटाएं: 27 + 6 = 33, 33 - 5 = 32.",
   "e_en": "Step 1: Replace letters with mathematical symbols. Expression: (18 × 3) ÷ 2 + 6 - 5. Step 2: Solve parentheses: (18 × 3) = 54. Expression: 54 ÷ 2 + 6 - 5. Step 3: Divide: 54 ÷ 2 = 27. Expression: 27 + 6 - 5. Step 4: Add and subtract: 27 + 6 = 33, 33 - 5 = 32."
  },
@@ -92440,7 +92440,7 @@
    "55",
    "57"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "चरण 1: प्रतीकों को प्रतिस्थापित करें: 44 ÷ 4 × 5 - 6 + 2. चरण 2: BODMAS नियम के अनुसार भाग हल करें: 44 ÷ 4 = 11. व्यंजक: 11 × 5 - 6 + 2. चरण 3: गुणा हल करें: 11 × 5 = 55. व्यंजक: 55 - 6 + 2. चरण 4: जोड़ और घटाव: 55 - 6 = 49, 49 + 2 = 51? रुकिए, 55 - 6 = 49 और 49 + 2 = 51. विकल्प 53 दिया गया है? आइए दोबारा जाँच करें: 55 - 6 + 2 = 55 + 2 - 6 = 57 - 6 = 51. विकल्प A 51 है, चलिए '51' सही करते हैं। यदि विकल्प 51 (पहला विकल्प) सही है, तो उत्तर A होगा।",
   "e_en": "Step 1: Substitute symbols: 44 ÷ 4 × 5 - 6 + 2. Step 2: Division: 44 ÷ 4 = 11. Expression: 11 × 5 - 6 + 2. Step 3: Multiplication: 11 × 5 = 55. Expression: 55 - 6 + 2. Step 4: Addition and Subtraction: 55 - 6 + 2 = 49 + 2 = 51. Correct option index is 0 (51)."
  },
@@ -92449,23 +92449,23 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 3,
-  "q_hi": "यदि समीकरण '12 ÷ 3 + 4 × 2 - 6 = 14' में '+' और '-', तथा '×' और '÷' को आपस में बदल दिया जाए, तो नया समीकरण क्या परिणाम देगा?",
-  "q_en": "If in the equation '12 ÷ 3 + 4 × 2 - 6 = 14', '+' and '-', and '×' and '÷' are interchanged, what will be the result of the new equation?",
+  "q_hi": "यदि समीकरण '10 ÷ 4 + 2 × 1 - 3 = ?' में '+' और '-', तथा '×' और '÷' को आपस में बदल दिया जाए, तो नए समीकरण का परिणाम क्या होगा?",
+  "q_en": "If in the equation '10 ÷ 4 + 2 × 1 - 3 = ?', '+' and '-', and '×' and '÷' are interchanged, what will be the result of the new equation?",
   "o_hi": [
-   "4.5",
-   "5",
-   "6.5",
-   "8"
+   "41",
+   "43",
+   "45",
+   "47"
   ],
   "o_en": [
-   "4.5",
-   "5",
-   "6.5",
-   "8"
+   "41",
+   "43",
+   "45",
+   "47"
   ],
   "a": 0,
-  "e_hi": "चरण 1: दिए गए नियमों के अनुसार चिह्न बदलें: '÷' बनता है '×', '+' बनता है '-', '×' बनता है '÷', '-' बनता है '+'. नया समीकरण: 12 × 3 - 4 ÷ 2 + 6. चरण 2: भाग हल करें: 4 ÷ 2 = 2. समीकरण: 12 × 3 - 2 + 6. चरण 3: गुणा हल करें: 12 × 3 = 36. समीकरण: 36 - 2 + 6. चरण 4: जोड़ और घटाव: 36 - 2 = 34, 34 + 6 = 40? ओह, विकल्पों में 40 नहीं है। चलिए समीकरण और प्रतीकों को फिर से देखते हैं। समीकरण: 12 ? 3 ? 4 ? 2 ? 6. यदि प्रश्न है '12 × 3 ÷ 4 + 2 - 6', चलिए मानक प्रश्न बनाते हैं: यदि 12, 3, 4, 2, 6 के बीच के चिह्न बदले जाते हैं... मान लीजिए मूल समीकरण 12 + 3 - 4 × 2 ÷ 6 है। यदि '+' और '-', '×' और '÷' बदलें: 12 - 3 + 4 ÷ 2 × 6 = 12 - 3 + 2 × 6 = 12 - 3 + 12 = 21. इस विशिष्ट प्रश्न के लिए, यदि हम दिए गए मान 4.5 पर पहुँचें: 12 ÷ 3 = 4; 4+4=8; 8*2=16; 16-6=10. यदि मूल समीकरण 12 × 3 ÷ 4 - 2 + 6 है: 12 ÷ 3 × 4 + 2 - 6 = 4 × 4 + 2 - 6 = 16 + 2 - 6 = 12. चलिए दूसरा प्रश्न लेते हैं जो त्रुटिमुक्त हो।",
-  "e_en": "Step 1: Apply symbol interchanges. '÷' becomes '×', '+' becomes '-', '×' becomes '÷', '-' becomes '+'. For standard evaluation: Let's consider 18 - 6 + 3 × 2 ÷ 1 with rules: '-' to '+', '+' to '-', '×' to '÷', '÷' to '×'. Result: 18 + 6 - 3 ÷ 2 × 1 = 24 - 1.5 = 22.5. Let's use a verified clean item: If '+' means '÷', '-' means '×', '×' means '+', '÷' means '-', evaluate 20 - 4 × 3 + 2 ÷ 1 -> 20 × 4 + 3 ÷ 2 - 1 = 80 + 1.5 - 1 = 80.5."
+  "e_hi": "समीकरण '10 ÷ 4 + 2 × 1 - 3' में '+' और '-' तथा '×' और '÷' को बदलने पर मिलता है: 10 × 4 - 2 ÷ 1 + 3। BODMAS से: 10 × 4 = 40, 2 ÷ 1 = 2। अतः 40 - 2 + 3 = 41।",
+  "e_en": "Interchanging '+' with '-' and '×' with '÷' in '10 / 4 + 2 x 1 - 3' gives: 10 x 4 - 2 / 1 + 3. By BODMAS: 10 x 4 = 40, 2 / 1 = 2. So 40 - 2 + 3 = 41."
  },
  {
   "id": "rp-rea-r03304",
@@ -92486,7 +92486,7 @@
    "15",
    "17"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "चरण 1: प्रतीकों को उनके अर्थ से बदलें: 15 × 3 ÷ 5 + 4 - 2. चरण 2: भाग हल करें: 3 ÷ 5 = 0.6. (या इसे भिन्न के रूप में रखें: (15 × 3) / 5 = 45 / 5 = 9). व्यंजक: 9 + 4 - 2. चरण 3: जोड़ और घटाव करें: 9 + 4 = 13, 13 - 2 = 11. उत्तर: 11 (विकल्प 0).",
   "e_en": "Step 1: Replace symbols with their meanings: 15 × 3 ÷ 5 + 4 - 2. Step 2: Division/Multiplication from left: (15 × 3) ÷ 5 = 45 ÷ 5 = 9. Expression: 9 + 4 - 2. Step 3: Addition and Subtraction: 9 + 4 = 13, 13 - 2 = 11. Correct option index is 0."
  },
@@ -92501,13 +92501,13 @@
    "18 B 6 D 3 C 2 A 5 = 35",
    "20 D 4 B 2 C 5 A 6 = 21",
    "15 C 3 A 10 B 2 D 5 = 16",
-   "30 D 5 B 3 C 4 A 7 = 21"
+   "30 D 5 B 3 C 4 A 7 = 19"
   ],
   "o_en": [
    "18 B 6 D 3 C 2 A 5 = 35",
    "20 D 4 B 2 C 5 A 6 = 21",
    "15 C 3 A 10 B 2 D 5 = 16",
-   "30 D 5 B 3 C 4 A 7 = 21"
+   "30 D 5 B 3 C 4 A 7 = 19"
   ],
   "a": 2,
   "e_hi": "चरण 1: प्रत्येक विकल्प के लिए प्रतीकों को बदलें और जाँच करें। आइए विकल्प 3 (सूची में सूचकांक 2) की जाँच करें: 15 C 3 A 10 B 2 D 5 -> 15 - 3 + 10 × 2 ÷ 5. चरण 2: भाग हल करें: 2 ÷ 5 = 0.4, फिर गुणा: 10 × 0.4 = 4. समीकरण: 15 - 3 + 4. चरण 3: हल करें: 15 - 3 = 12, 12 + 4 = 16. यह दिए गए परिणाम (16) से मेल खाता है। अतः यह समीकरण सही है।",
@@ -92522,13 +92522,13 @@
   "q_en": "If '+' means '×', '×' means '-', '-' means '÷' and '÷' means '+', what will be the value of the expression (24 - 6) ÷ (5 + 4) × 2?",
   "o_hi": [
    "1",
-   "2",
+   "22",
    "4",
    "6"
   ],
   "o_en": [
    "1",
-   "2",
+   "22",
    "4",
    "6"
   ],
@@ -92564,23 +92564,23 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "यदि समीकरण में अंकों और चिन्हों को बदलने पर: '5 + 3 × 8 - 12 ÷ 4 = ?', और यदि '+' का अर्थ '÷', '-' का अर्थ '+', '×' का अर्थ '-' और '÷' का अर्थ '×' हो, तो मान क्या होगा?",
-  "q_en": "If numbers and signs in the equation '5 + 3 × 8 - 12 ÷ 4 = ?' are changed such that '+' means '÷', '-' means '+', '×' means '-' and '÷' means '×', what will be the value?",
+  "q_hi": "यदि समीकरण '6 + 3 × 8 - 12 ÷ 4 = ?' में संख्याओं और चिन्हों को इस प्रकार बदला जाए कि '+' का अर्थ '÷' है, '-' का अर्थ '+' है, '×' का अर्थ '-' है और '÷' का अर्थ '×' है, तो मान क्या होगा?",
+  "q_en": "If numbers and signs in the equation '6 + 3 × 8 - 12 ÷ 4 = ?' are changed such that '+' means '÷', '-' means '+', '×' means '-' and '÷' means '×', what will be the value?",
   "o_hi": [
    "51",
-   "55",
+   "42",
    "59",
    "61"
   ],
   "o_en": [
    "51",
-   "55",
+   "42",
    "59",
    "61"
   ],
   "a": 1,
-  "e_hi": "चरण 1: प्रतीकों को प्रतिस्थापित करें। समीकरण: 5 ÷ 3 - 8 + 12 × 4. अरे यह भिन्नों में जाएगा। चलिए समीकरण बदलते हैं: '12 + 4 - 6 × 3 ÷ 2'. प्रतीक लगाएं: 12 ÷ 4 + 6 - 3 × 2. चरण 2: भाग करें: 12 ÷ 4 = 3. व्यंजक: 3 + 6 - 3 × 2. चरण 3: गुणा करें: 3 × 2 = 6. व्यंजक: 3 + 6 - 6. चरण 4: जोड़ें और घटाएं: 3 + 6 = 9, 9 - 6 = 3. यदि विकल्पों में 3 हो... मान लीजिए समीकरण 20 + 5 - 4 × 2 ÷ 1 है: 20 ÷ 5 + 4 - 2 × 1 = 4 + 4 - 2 = 6.",
-  "e_en": "Step 1: Substitute symbols in a clean equation like 20 + 5 - 4 × 2 ÷ 1 with rules '+' = '÷', '-' = '+', '×' = '-', '÷' = '×'. Step 2: Equation becomes 20 ÷ 5 + 4 - 2 × 1. Step 3: Division: 20 ÷ 5 = 4. Multiplication: 2 × 1 = 2. Expression: 4 + 4 - 2. Step 4: Calculate: 8 - 2 = 6."
+  "e_hi": "संकेतों को बदलने पर ('+' का अर्थ ÷, '-' का अर्थ +, '×' का अर्थ -, '÷' का अर्थ ×) समीकरण '6 + 3 × 8 - 12 ÷ 4' बनता है 6 ÷ 3 - 8 + 12 × 4। BODMAS से: 6 ÷ 3 = 2, 12 × 4 = 48। अतः 2 - 8 + 48 = 42।",
+  "e_en": "Replacing the codes ('+' means /, '-' means +, '×' means -, '÷' means x), the equation '6 + 3 x 8 - 12 / 4' becomes 6 / 3 - 8 + 12 x 4. By BODMAS: 6 / 3 = 2, 12 x 4 = 48. So 2 - 8 + 48 = 42."
  },
  {
   "id": "rp-rea-r03309",
@@ -92592,13 +92592,13 @@
   "o_hi": [
    "18",
    "20",
-   "22",
+   "10",
    "24"
   ],
   "o_en": [
    "18",
    "20",
-   "22",
+   "10",
    "24"
   ],
   "a": 2,
@@ -92624,7 +92624,7 @@
    "154",
    "160"
   ],
-  "a": 0,
+  "a": 3,
   "e_hi": "दिए गए समीकरण में प्रतीकों को बदलने पर: 36 - 4 ÷ 8 × 4 + 2\nनया समीकरण बनेगा: 36 × 4 + 8 - 4 ÷ 2\nबोर्डमास (BODMAS) नियम के अनुसार:\n1. 4 ÷ 2 = 2\n2. 36 × 4 = 144\nअतः 144 + 8 - 2 = 152 - 2 = 146.",
   "e_en": "Replacing the symbols in the given expression: 36 - 4 ÷ 8 × 4 + 2\nThe new expression becomes: 36 × 4 + 8 - 4 ÷ 2\nAccording to the BODMAS rule:\n1. 4 ÷ 2 = 2\n2. 36 × 4 = 144\nThus, 144 + 8 - 2 = 152 - 2 = 146."
  },
@@ -92670,7 +92670,7 @@
    "19",
    "21"
   ],
-  "a": 2,
+  "a": 1,
   "e_hi": "कोष्ठक और प्रतीकों को हल करने पर:\n(15 $ 3) % 5 @ 10 # 2\n= (15 × 3) ÷ 5 + 10 - 2\n= 45 ÷ 5 + 10 - 2\n= 9 + 10 - 2\n= 19 - 2 = 17. (रुकिए, 9 + 10 = 19, 19 - 2 = 17. विकल्प 17 दूसरा विकल्प है। अतः सही विकल्प 1 होगा।)",
   "e_en": "Substituting the brackets and symbols:\n(15 $ 3) % 5 @ 10 # 2\n= (15 × 3) ÷ 5 + 10 - 2\n= 45 ÷ 5 + 10 - 2\n= 9 + 10 - 2\n= 19 - 2 = 17. Thus, the second option (17) is correct."
  },
@@ -92682,13 +92682,13 @@
   "q_hi": "यदि '×' का अर्थ '-', '-' का अर्थ '÷', '+' का अर्थ '×', और '÷' का अर्थ '+' हो, तो समीकरण 16 ÷ 4 - 2 + 5 × 3 का मान ज्ञात करें।",
   "q_en": "If '×' means '-', '-' means '÷', '+' means '×', and '÷' means '+', find the value of the equation 16 ÷ 4 - 2 + 5 × 3.",
   "o_hi": [
-   "9",
+   "23",
    "11",
    "13",
    "15"
   ],
   "o_en": [
-   "9",
+   "23",
    "11",
    "13",
    "15"
@@ -92706,13 +92706,13 @@
   "q_en": "If 'L' means '+', 'M' means '-', 'N' means 'x', and 'P' means '÷', what is the value of 14 N 5 L 72 P 8 M 15?",
   "o_hi": [
    "70",
-   "74",
+   "64",
    "78",
    "82"
   ],
   "o_en": [
    "70",
-   "74",
+   "64",
    "78",
    "82"
   ],
@@ -92739,7 +92739,7 @@
    "41",
    "45"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "दिए गए प्रतीकों को गणितीय संक्रियाओं में बदलने पर:\n120 ÷ 10 × 3 + 4 - 5\nबोर्डमास नियम के अनुसार:\n1. 120 ÷ 10 = 12\n2. 12 × 3 = 36\n3. 36 + 4 - 5 = 40 - 5 = 35. (रुकिए, 36 + 4 = 40, 40 - 5 = 35. विकल्प 35 पहला विकल्प है। अतः सही विकल्प 0 होगा।)",
   "e_en": "Replacing the given symbols with mathematical operations:\n120 ÷ 10 × 3 + 4 - 5\nAccording to BODMAS:\n1. 120 ÷ 10 = 12\n2. 12 × 3 = 36\n3. 36 + 4 - 5 = 40 - 5 = 35. Thus, the first option (35) is correct."
  },
@@ -92762,7 +92762,7 @@
    "27",
    "30"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "दिए गए व्यंजक में अक्षरों के स्थान पर उनके मान रखने पर:\n40 ÷ 8 × 4 + 6 - 5\nबोर्डमास नियम के अनुसार:\n1. 40 ÷ 8 = 5\n2. 5 × 4 = 20\n3. 20 + 6 - 5 = 26 - 5 = 21. (रुकिए, 20 + 6 = 26, 26 - 5 = 21. विकल्प 21 पहला विकल्प है। अतः सही विकल्प 0 होगा।)",
   "e_en": "Substituting the letters with their values in the expression:\n40 ÷ 8 × 4 + 6 - 5\nAccording to BODMAS:\n1. 40 ÷ 8 = 5\n2. 5 × 4 = 20\n3. 20 + 6 - 5 = 26 - 5 = 21. Thus, the first option (21) is correct."
  },
@@ -92775,13 +92775,13 @@
   "q_en": "If '×' means '+', '+' means '÷', '÷' means '-', and '-' means '×', what is the value of 24 + 6 - 3 × 2 ÷ 5?",
   "o_hi": [
    "1",
-   "3",
+   "9",
    "5",
    "7"
   ],
   "o_en": [
    "1",
-   "3",
+   "9",
    "5",
    "7"
   ],
@@ -92808,7 +92808,7 @@
    "150",
    "156"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "दिए गए समीकरण में प्रतीकों को उनके अर्थ के अनुसार बदलने पर: 36 - 4 × 8 + 4 ÷ 2. BODMAS नियम के अनुसार सबसे पहले भाग करें: 4 ÷ 2 = 2. समीकरण बनता है: 36 - 4 × 8 + 2. अब गुणा करें: 4 × 8 = 32. समीकरण बनता है: 36 - 32 + 2. अब जोड़ और घटाव करें: 36 - 32 = 4, और 4 + 2 = 6? रुकिए, सही गणना: 36 - 32 + 2 = 6? आइए फिर से देखें। समीकरण: 36 × 4 - 8 ÷ 4 + 2. × का अर्थ '-', - का अर्थ '×', ÷ का अर्थ '+', + का अर्थ '÷'। बदलने पर: 36 - 4 × 8 + 4 ÷ 2. = 36 - 32 + 2 = 6. लेकिन विकल्प में 6 नहीं है! चलिए दूसरा प्रश्न देखते हैं जहाँ सही विकल्प 138 हो: समीकरण (54 ÷ 6 + 3 × 2 - 1) हो। यहाँ, ÷ means +, + means ÷, × means -, - means ×. 54 + 6 ÷ 3 - 2 × 1 = 54 + 2 - 2 = 54. आइए दिए गए प्रश्न 36 × 4 - 8 ÷ 4 + 2 के लिए मानक समीकरण: 36 - 4 × 8 + 4 ÷ 2 = 36 - 32 + 2 = 6 (यदि विकल्प में 6 न हो तो सही समीकरण: 156 - 12...). यहाँ 36 - 32 + 2 = 6. चूँकि प्रश्न के अनुसार 36 × 4 -> 36 - 4, 4 - 8 -> 4 × 8 = 32, 8 ÷ 4 -> 8 + 4 = 12, 4 + 2 -> 4 ÷ 2 = 2? प्रश्न में संख्याएँ समान हैं। मान लीजिए समीकरण 40 ÷ 10 × 5 - 3 + 2 है। प्रतीक बदलने पर: 40 + 10 - 5 × 3 ÷ 2 = 40 + 10 - 7.5 = 42.5. सही उत्तर 138 के लिए: 120 + 20 - 2 = 138. अतः विकल्प (0) 138 सही है।",
   "e_en": "Substituting the symbols according to the given rules in the expression: 36 - 4 × 8 + 4 ÷ 2. Applying BODMAS rule, division first: 4 ÷ 2 = 2. Then multiplication: 4 × 8 = 32. Then subtraction and addition: 36 - 32 + 2 = 6. Adjusting for the given options where 138 is correct through a standard test expression: 140 - 4 + 2 = 138, yielding option 0."
  },
@@ -92840,8 +92840,8 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 2,
-  "q_hi": "एक सांकेतिक भाषा में यदि 'A' का अर्थ '+', 'B' का अर्थ '-', 'C' का अर्थ '×', और 'D' का अर्थ '÷' है, तो समीकरण (18 C 3) D (6 A 2) B 4 का मान ज्ञात कीजिए।",
-  "q_en": "In a coded language, if 'A' means '+', 'B' means '-', 'C' means '×', and 'D' means '÷', find the value of the expression (18 C 3) D (6 A 2) B 4.",
+  "q_hi": "किसी कोड भाषा में, यदि 'A' का अर्थ '+' है, 'B' का अर्थ '-' है, 'C' का अर्थ '×' है, और 'D' का अर्थ '÷' है, तो व्यंजक (16 C 4) D (6 A 2) B 4 का मान ज्ञात करें",
+  "q_en": "In a coded language, if 'A' means '+', 'B' means '-', 'C' means '×', and 'D' means '÷', find the value of the expression (16 C 4) D (6 A 2) B 4.",
   "o_hi": [
    "2",
    "4",
@@ -92855,8 +92855,8 @@
    "8"
   ],
   "a": 1,
-  "e_hi": "अक्षरों को उनके गणितीय प्रतीकों से बदलने पर: (18 × 3) ÷ (6 + 2) - 4. सबसे पहले कोष्ठक (brackets) को हल करें: पहला कोष्ठक (18 × 3) = 54; दूसरा कोष्ठक (6 + 2) = 8. अब समीकरण बनता है: 54 ÷ 8 - 4. BODMAS नियम के अनुसार भाग करें: 54 ÷ 8 = 6.75? रुकिए, यदि समीकरण (24 C 2) D (4 A 2) B 3 हो तो: (24 × 2) ÷ (4 + 2) - 3 = 48 ÷ 6 - 3 = 8 - 3 = 5. यदि हम समीकरण (32 C 2) D (4 A 4) B 4 लें तो: (32 × 2) ÷ (4 + 4) - 4 = 64 ÷ 8 - 4 = 8 - 4 = 4. अतः सही समीकरण के अनुसार मान 4 (विकल्प 1) है।",
-  "e_en": "Replacing letters with their mathematical symbols: (32 × 2) ÷ (4 + 4) - 4. Solving the brackets first: (32 × 2) = 64; (4 + 4) = 8. Now the expression is 64 ÷ 8 - 4. According to BODMAS, perform division first: 64 ÷ 8 = 8. Then perform subtraction: 8 - 4 = 4. Thus, the correct answer is 4."
+  "e_hi": "संकेतों को बदलने पर: (16 × 4) ÷ (6 + 2) - 4 बनता है। कोष्ठक पहले: 16 × 4 = 64, 6 + 2 = 8। अतः 64 ÷ 8 - 4 = 8 - 4 = 4।",
+  "e_en": "Replacing the codes: (16 x 4) / (6 + 2) - 4. Brackets first: 16 x 4 = 64, 6 + 2 = 8. So 64 / 8 - 4 = 8 - 4 = 4."
  },
  {
   "id": "rp-rea-r03321",
@@ -92866,20 +92866,20 @@
   "q_hi": "यदि '+' और '-' तथा संख्याओं '4' और '8' को आपस में बदल दिया जाए, तो निम्नलिखित में से कौन सा समीकरण सही होगा?",
   "q_en": "If the signs '+' and '-' and the numbers '4' and '8' are interchanged, which of the following equations will be correct?",
   "o_hi": [
-   "12 - 4 + 8 = 16",
+   "12 - 4 + 8 = 20",
    "8 + 4 - 12 = 4",
    "4 - 8 + 12 = 0",
    "8 - 4 + 12 = 16"
   ],
   "o_en": [
-   "12 - 4 + 8 = 16",
+   "12 - 4 + 8 = 20",
    "8 + 4 - 12 = 4",
    "4 - 8 + 12 = 0",
    "8 - 4 + 12 = 16"
   ],
   "a": 3,
-  "e_hi": "नियम: '+' को '-' से और '-' को '+' से बदलें; तथा '4' को '8' से और '8' को '4' से बदलें। आइए विकल्प (3) की जाँच करें: 8 - 4 + 12 = 16. परिवर्तन करने पर: '8' बन जाता है '4', '-' बन जाता है '+', '4' बन जाता है '8', '+' बन जाता है '-', '12' अपरिवर्तित रहता है। नया समीकरण बनता है: 4 + 8 - 12 = ? इसे हल करने पर: 4 + 8 = 12, और 12 - 12 = 0 (जो कि 16 के बराबर नहीं है)। चलिए अन्य विकल्पों की जाँच करें। विकल्प (1): 12 - 4 + 8 = 16 -> परिवर्तन के बाद: 12 + 8 - 4 = 16 -> 20 - 4 = 16, जो कि बिल्कुल सही है। अतः सही विकल्प 12 - 4 + 8 = 16 है।",
-  "e_en": "Rule: Interchange '+' and '-', and interchange numbers '4' and '8'. Let's test option 0: '12 - 4 + 8 = 16'. After interchanging signs and numbers: 12 becomes 12, '-' becomes '+', '4' becomes '8', '+' becomes '-', '8' becomes '4'. The new equation is: 12 + 8 - 4 = 16. Solving the left side: 12 + 8 = 20, and 20 - 4 = 16. This matches the right side (16). Thus, the correct option is 12 - 4 + 8 = 16."
+  "e_hi": "विकल्प की जाँच करें: '8 - 4 + 12 = 16' सही है क्योंकि 8 - 4 + 12 = 16। जबकि '12 - 4 + 8 = 20' गलत है क्योंकि 12 - 4 + 8 वास्तव में 16 होता है, 20 नहीं।",
+  "e_en": "Check the option '8 - 4 + 12 = 16' -- this is true since 8 - 4 + 12 = 16. Meanwhile '12 - 4 + 8 = 20' is false since 12 - 4 + 8 actually equals 16, not 20."
  },
  {
   "id": "rp-rea-r03322",
@@ -92900,7 +92900,7 @@
    "96",
    "106"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "दिए गए व्यंजक में अक्षरों को उनके प्रतीकों से प्रतिस्थापित करने पर: 44 ÷ 4 × 6 + 20 - 10. BODMAS नियम के अनुसार सबसे पहले भाग करें: 44 ÷ 4 = 11. अब व्यंजक बनता है: 11 × 6 + 20 - 10. इसके बाद गुणा करें: 11 × 6 = 66. अब व्यंजक बनता है: 66 + 20 - 10. इसके बाद जोड़ करें: 66 + 20 = 86. अंत में घटाव करें: 86 - 10 = 76? रुकिए, 86 - 10 = 76 होता है, लेकिन यदि विकल्प में 76 है तो उत्तर 76 होगा। आइए विकल्पों में देखें: [76, 86, 96, 106]। गणना फिर से: 66 + 20 = 86, 86 - 10 = 76. अतः सही उत्तर 76 है (विकल्प 0)।",
   "e_en": "Substituting letters with their symbols in the expression: 44 ÷ 4 × 6 + 20 - 10. According to BODMAS, perform division first: 44 ÷ 4 = 11. The expression becomes: 11 × 6 + 20 - 10. Next, perform multiplication: 11 × 6 = 66. The expression becomes: 66 + 20 - 10. Next, addition: 66 + 20 = 86. Finally, subtraction: 86 - 10 = 76. Thus, the correct answer is 76."
  },
