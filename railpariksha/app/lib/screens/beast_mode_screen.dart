@@ -8,7 +8,9 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
 import '../data/models.dart';
+import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
+import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
 
 /// A question wrong in a row this many times in a row ends the sprint early — "knocked out".
@@ -67,6 +69,13 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
   int? _flashAnswer;
   bool _finished = false;
   bool _dialogOpen = false;
+  // Beast Mode already earns real per-question Rewards via recordAnswer
+  // (same as Practice/Speed), but never used anything beyond .xp -- a
+  // level-up/streak/goal mid-sprint got zero payoff. Collected here and
+  // celebrated once in _finish(), before the results sheet, rather than
+  // popping a dialog mid-sprint (which the 280ms answer-lock window and the
+  // countdown timer are not built to tolerate).
+  Reward? _notable;
 
   QuizSpec get spec => widget.spec;
   Question get q => queue[qi];
@@ -97,6 +106,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     final p = AppScope.read(context).progress;
     final r = p.recordAnswer(q.id, correct);
     xpEarned += r.xp;
+    if (r.levelUp || r.streakMilestone != null || r.goalCompleted) _notable = r;
     setState(() {
       _locked = true;
       _flashAnswer = i;
@@ -156,7 +166,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     });
   }
 
-  void _finish({bool knockedOut = false}) {
+  Future<void> _finish({bool knockedOut = false}) async {
     if (_finished) return;
     // Flips canPop (see PopScope below) to true via rebuild, so the results sheet's own
     // "Play again"/"Done" pops go straight through instead of hitting the in-sprint exit
@@ -169,6 +179,8 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     // new best from merely tying the already-recorded one.
     final previousBest = p.beastBestScore;
     p.recordBeast(score, bestStreakRun);
+    if (_notable != null && mounted) await celebrate(context, _notable!);
+    if (!mounted) return;
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,

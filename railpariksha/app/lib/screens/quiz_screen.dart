@@ -45,6 +45,12 @@ class _QuizScreenState extends State<QuizScreen> {
   int speedCorrect = 0;
   int xpEarned = 0;
   final started = DateTime.now();
+  // Speed Round already earns real per-question Rewards via recordAnswer
+  // (same as Practice), but _select returns early for it before the
+  // immediate celebrate() call below -- popping a dialog mid-sprint would
+  // eat into the 60-second timer. Collected here and celebrated once in
+  // _finish() instead, same pattern as the mock-mode batch below.
+  Reward? _notable;
 
   QuizSpec get spec => widget.spec;
   Question get q => spec.questions[index];
@@ -93,6 +99,7 @@ class _QuizScreenState extends State<QuizScreen> {
     final r = AppScope.read(context).progress.recordAnswer(q.id, correct);
     xpEarned += r.xp;
     if (spec.mode == QuizMode.speed) {
+      if (r.levelUp || r.streakMilestone != null || r.goalCompleted) _notable = r;
       if (correct) speedCorrect++;
       await Future.delayed(const Duration(milliseconds: 350));
       if (!mounted) return;
@@ -125,7 +132,7 @@ class _QuizScreenState extends State<QuizScreen> {
     // so collecting the last non-trivial one and celebrating once after the
     // loop -- instead of per question, which batch-grading a mock test would
     // otherwise fire several dialogs back to back for.
-    Reward? notable;
+    Reward? notable = _notable;
     if (spec.mode == QuizMode.mock) {
       for (var i = 0; i < spec.questions.length; i++) {
         final a = answers[i];
