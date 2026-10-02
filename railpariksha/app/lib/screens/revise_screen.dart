@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../widgets/common.dart';
 import 'flashcard_screen.dart';
 import 'practice_screen.dart';
@@ -36,7 +37,7 @@ class ReviseScreen extends StatelessWidget {
           child: InkWell(
             onTap: () {
               HapticFeedback.selectionClick();
-              Navigator.push(context, MaterialPageRoute(builder: (_) => const FlashcardScreen()));
+              push(context, (_) => const FlashcardScreen());
             },
             child: Container(
               padding: const EdgeInsets.all(20),
@@ -83,12 +84,7 @@ class ReviseScreen extends StatelessWidget {
           title: context.tr('गलतियों की कॉपी', 'Mistake book'),
           subtitle: context.tr('${p.mistakes.length} प्रश्न · जब तक सही न हों, बार-बार आएंगे',
               '${p.mistakes.length} questions · they return until you master them'),
-          onTap: p.mistakes.isEmpty
-              ? null
-              : () {
-                  HapticFeedback.selectionClick();
-                  startQuiz(context, s.builder.mistakes());
-                },
+          onTap: p.mistakes.isEmpty ? null : () => startQuiz(context, s.builder.mistakes()),
         ),
         const SizedBox(height: 12),
         ActionCard(
@@ -96,12 +92,7 @@ class ReviseScreen extends StatelessWidget {
           color: BrandColors.saffron,
           title: context.tr('सहेजे गए प्रश्न', 'Saved questions'),
           subtitle: context.tr('${p.bookmarks.length} प्रश्न', '${p.bookmarks.length} questions'),
-          onTap: p.bookmarks.isEmpty
-              ? null
-              : () {
-                  HapticFeedback.selectionClick();
-                  startQuiz(context, s.builder.bookmarked());
-                },
+          onTap: p.bookmarks.isEmpty ? null : () => startQuiz(context, s.builder.bookmarked()),
         ),
         if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasNotes(sub.id))) ...[
           SectionTitle(context.tr('नोट्स व माइंड मैप 🧠🗺️', 'Notes & mind maps 🧠🗺️')),
@@ -120,7 +111,7 @@ class ReviseScreen extends StatelessWidget {
                         child: InkWell(
                           onTap: () {
                             HapticFeedback.selectionClick();
-                            Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub)));
+                            push(context, (_) => SubjectScreen(subject: sub));
                           },
                           child: Padding(
                             padding: const EdgeInsets.all(12),
@@ -152,7 +143,7 @@ class ReviseScreen extends StatelessWidget {
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () {
                   HapticFeedback.selectionClick();
-                  Navigator.push(context, MaterialPageRoute(builder: (_) => FlashcardScreen(subject: sub.id)));
+                  push(context, (_) => FlashcardScreen(subject: sub.id));
                 },
               ),
             ),

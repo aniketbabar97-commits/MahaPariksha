@@ -43,12 +43,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: 24),
               Expanded(
                 child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 250),
-                  child: switch (step) {
-                    0 => _language(p.lang),
-                    1 => _exam(),
-                    _ => _goal(),
-                  },
+                  duration: const Duration(milliseconds: 320),
+                  switchInCurve: Curves.easeOutCubic,
+                  switchOutCurve: Curves.easeInCubic,
+                  // Default AnimatedSwitcher fade only -- language/exam/goal
+                  // steps just faded/jumped despite this screen's hero
+                  // gradient card being deliberately branded. A soft upward
+                  // drift matches RpRoute's page-transition language instead.
+                  transitionBuilder: (child, animation) => FadeTransition(
+                    opacity: animation,
+                    child: SlideTransition(
+                      position: Tween<Offset>(begin: const Offset(0, 0.06), end: Offset.zero).animate(animation),
+                      child: child,
+                    ),
+                  ),
+                  child: KeyedSubtree(
+                    key: ValueKey(step),
+                    child: switch (step) {
+                      0 => _language(p.lang),
+                      1 => _exam(),
+                      _ => _goal(),
+                    },
+                  ),
                 ),
               ),
             ],

@@ -32,12 +32,27 @@ class TopicScreen extends StatelessWidget {
       top: false,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-        child: FilledButton.icon(
-          style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
-          icon: const Icon(Icons.play_arrow_rounded),
-          label: Text(context.tr('इस टॉपिक का अभ्यास करें ($count)', 'Practice this topic ($count)')),
-          onPressed: count == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: topic.id)),
-        ),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          // The disabled button at count==0 relied on the reader noticing the
+          // "(0)" in its own label as the reason -- same pattern EmptyState
+          // uses elsewhere in this file (note == null case) now spells it out.
+          if (count == 0)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 8),
+              child: Text(
+                context.tr('इस टॉपिक के प्रश्न जल्द ही आ रहे हैं।', 'Questions for this topic are coming soon.'),
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13),
+              ),
+            ),
+          FilledButton.icon(
+            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+            icon: const Icon(Icons.play_arrow_rounded),
+            label: Text(context.tr('इस टॉपिक का अभ्यास करें ($count)', 'Practice this topic ($count)')),
+            onPressed:
+                count == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: topic.id)),
+          ),
+        ]),
       ),
     );
 
@@ -167,23 +182,30 @@ class _MindMapViewState extends State<MindMapView> {
           borderRadius: BorderRadius.circular(14),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-          InkWell(
-            borderRadius: BorderRadius.circular(14),
-            onTap: () => setState(() => isOpen ? open.remove(i) : open.add(i)),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
-              child: Row(children: [
-                Expanded(
-                  child: Text(b.label.of(widget.lang),
-                      style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: color)),
-                ),
-                if (b.children.isNotEmpty)
-                  AnimatedRotation(
-                    turns: isOpen ? 0.5 : 0,
-                    duration: const Duration(milliseconds: 250),
-                    child: Icon(Icons.expand_more, color: color),
+          Semantics(
+            button: b.children.isNotEmpty,
+            // The chevron's rotation alone told a sighted user whether a
+            // branch was open -- a screen-reader user got no "expanded" state
+            // or even a hint the row could be tapped at all.
+            expanded: b.children.isNotEmpty ? isOpen : null,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(14),
+              onTap: () => setState(() => isOpen ? open.remove(i) : open.add(i)),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
+                child: Row(children: [
+                  Expanded(
+                    child: Text(b.label.of(widget.lang),
+                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: color)),
                   ),
-              ]),
+                  if (b.children.isNotEmpty)
+                    AnimatedRotation(
+                      turns: isOpen ? 0.5 : 0,
+                      duration: const Duration(milliseconds: 250),
+                      child: Icon(Icons.expand_more, color: color),
+                    ),
+                ]),
+              ),
             ),
           ),
           AnimatedSize(

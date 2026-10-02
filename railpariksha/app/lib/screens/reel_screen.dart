@@ -369,8 +369,11 @@ class _FlashcardCardState extends State<_FlashcardCard> {
     if (answered) return;
     answered = true;
     HapticFeedback.selectionClick();
-    context.scope.progress.reviewCard(widget.c.id, good);
-    widget.onAdvance();
+    final r = context.scope.progress.reviewCard(widget.c.id, good);
+    // Same gap as _McqCard's celebrate() wiring above -- this card's Reward
+    // was being discarded, silently dropping a level-up/streak/goal payoff.
+    if (mounted) await celebrate(context, r);
+    if (mounted) widget.onAdvance();
   }
 
   @override

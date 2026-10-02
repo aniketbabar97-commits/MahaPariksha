@@ -56,7 +56,22 @@ class RailParikshaApp extends StatelessWidget {
         ),
         child: child!,
       ),
-      home: p.onboarded ? const HomeShell() : const OnboardingScreen(),
+      // Finishing onboarding -- the single most emotionally important moment
+      // in the app -- used to be an instant, unanimated hard cut (MaterialApp
+      // just swapping `home`), less motion polish than switching a quiz
+      // question. An AnimatedSwitcher here guarantees a transition regardless
+      // of how MaterialApp/Navigator internally handles a changed `home`, and
+      // matches RpRevealRoute's fade+scale "curtain opening" feel.
+      home: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 520),
+        switchInCurve: Curves.easeOutQuart,
+        switchOutCurve: Curves.easeInCubic,
+        transitionBuilder: (child, animation) => FadeTransition(
+          opacity: animation,
+          child: ScaleTransition(scale: Tween<double>(begin: 0.92, end: 1.0).animate(animation), child: child),
+        ),
+        child: p.onboarded ? const HomeShell(key: ValueKey('home')) : const OnboardingScreen(key: ValueKey('onboarding')),
+      ),
     );
   }
 }

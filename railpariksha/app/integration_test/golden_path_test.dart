@@ -21,6 +21,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
 import 'package:railpariksha/main.dart' as app;
+import 'package:railpariksha/widgets/bottom_nav.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -46,15 +47,20 @@ void main() {
     await tester.tap(find.text("Let's go!"));
     await tester.pumpAndSettle(const Duration(seconds: 2));
 
-    // --- Home shell: should now show the 5-tab bottom nav ---
-    expect(find.byType(NavigationBar), findsOneWidget);
-    final tabs = find.byType(NavigationDestination);
-    expect(tabs, findsNWidgets(5));
+    // --- Home shell: should now show the 5-tab floating bottom nav ---
+    // RpBottomNav replaced the stock NavigationBar/NavigationDestination
+    // widgets this test used to find tabs by type -- each tab button now
+    // carries a stable ValueKey('nav_tab_$i') instead (see widgets/bottom_nav.dart).
+    expect(find.byType(RpBottomNav), findsOneWidget);
+    Finder tab(int i) => find.byKey(ValueKey('nav_tab_$i'));
+    for (var i = 0; i < 5; i++) {
+      expect(tab(i), findsOneWidget);
+    }
 
     // Visit every tab once -- each one builds its own screen from the loaded
     // content/progress state, so this alone catches a per-tab render crash.
     for (var i = 0; i < 5; i++) {
-      await tester.tap(tabs.at(i));
+      await tester.tap(tab(i));
       await tester.pumpAndSettle(const Duration(seconds: 2));
       expect(tester.takeException(), isNull, reason: 'tab $i threw while rendering');
     }
@@ -62,7 +68,7 @@ void main() {
     // --- Start a real mock test (exercises QuizBuilder.mock() against the
     // full live question bank: weighted subject allocation, pool filtering,
     // everything) ---
-    await tester.tap(tabs.at(1)); // Practice tab
+    await tester.tap(tab(1)); // Practice tab
     await tester.pumpAndSettle(const Duration(seconds: 2));
     await tester.tap(find.textContaining('Mock test'));
     // NOT pumpAndSettle: QuizScreen starts a Timer.periodic(1s) countdown for
@@ -80,6 +86,6 @@ void main() {
     // A mock test screen has no bottom nav (it's pushed full-screen) -- its
     // absence confirms we actually navigated into the quiz, not that the tap
     // silently no-opped.
-    expect(find.byType(NavigationBar), findsNothing);
+    expect(find.byType(RpBottomNav), findsNothing);
   });
 }

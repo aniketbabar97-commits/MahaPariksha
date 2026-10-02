@@ -7,7 +7,9 @@ import 'package:url_launcher/url_launcher.dart';
 import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../data/models.dart';
+import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/celebrate.dart';
 import 'results_screen.dart';
@@ -20,7 +22,7 @@ void startQuiz(BuildContext context, QuizSpec spec) {
         content: Text(context.tr('इस विभाग में अभी प्रश्न नहीं हैं। जल्द आ रहे हैं!', 'No questions here yet. Coming soon!'))));
     return;
   }
-  Navigator.push(context, MaterialPageRoute(builder: (_) => QuizScreen(spec: spec)));
+  push(context, (_) => QuizScreen(spec: spec));
 }
 
 const _labelsHi = ['अ', 'ब', 'क', 'ड'];
@@ -113,28 +115,37 @@ class _QuizScreenState extends State<QuizScreen> {
   }
 
   bool _finished = false;
-  void _finish() {
+  Future<void> _finish() async {
     if (_finished) return;
     _finished = true;
     timer?.cancel();
     final p = AppScope.read(context).progress;
+    // Only one of these per-question Rewards can ever carry a notable event
+    // (level/streak/goal are once-a-day state crossings, not per-question),
+    // so collecting the last non-trivial one and celebrating once after the
+    // loop -- instead of per question, which batch-grading a mock test would
+    // otherwise fire several dialogs back to back for.
+    Reward? notable;
     if (spec.mode == QuizMode.mock) {
       for (var i = 0; i < spec.questions.length; i++) {
         final a = answers[i];
-        if (a != null) xpEarned += p.recordAnswer(spec.questions[i].id, a == spec.questions[i].answer).xp;
+        if (a == null) continue;
+        final r = p.recordAnswer(spec.questions[i].id, a == spec.questions[i].answer);
+        xpEarned += r.xp;
+        if (r.levelUp || r.streakMilestone != null || r.goalCompleted) notable = r;
       }
     }
     if (spec.mode == QuizMode.speed) p.recordSpeed(speedCorrect);
-    Navigator.pushReplacement(
+    if (notable != null && mounted) await celebrate(context, notable);
+    if (!mounted) return;
+    pushReplacementReveal(
       context,
-      MaterialPageRoute(
-        builder: (_) => ResultsScreen(
-          spec: spec,
-          answers: answers,
-          xpEarned: xpEarned,
-          elapsed: DateTime.now().difference(started),
-          speedScore: speedCorrect,
-        ),
+      (_) => ResultsScreen(
+        spec: spec,
+        answers: answers,
+        xpEarned: xpEarned,
+        elapsed: DateTime.now().difference(started),
+        speedScore: speedCorrect,
       ),
     );
   }

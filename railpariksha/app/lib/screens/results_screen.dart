@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../core/ads.dart';
@@ -118,16 +119,22 @@ class _ResultsScreenState extends State<ResultsScreen> {
               child: OutlinedButton.icon(
                 icon: const Icon(Icons.share),
                 label: Text(context.tr('शेयर करें', 'Share')),
-                onPressed: () => SharePlus.instance.share(ShareParams(
-                    text: context.tr(
-                        'मैंने RailPariksha ऐप पर ${spec.titleHi} में ${isSpeed ? widget.speedScore : '$correct/$total'} अंक हासिल किए! 🔥 आप कितने लाएंगे?',
-                        'I scored ${isSpeed ? widget.speedScore : '$correct/$total'} in ${spec.titleEn} on RailPariksha! 🔥 Can you beat it?'))),
+                onPressed: () {
+                  HapticFeedback.selectionClick();
+                  SharePlus.instance.share(ShareParams(
+                      text: context.tr(
+                          'मैंने RailPariksha ऐप पर ${spec.titleHi} में ${isSpeed ? widget.speedScore : '$correct/$total'} अंक हासिल किए! 🔥 आप कितने लाएंगे?',
+                          'I scored ${isSpeed ? widget.speedScore : '$correct/$total'} in ${spec.titleEn} on RailPariksha! 🔥 Can you beat it?')));
+                },
               ),
             ),
             const SizedBox(width: 12),
             Expanded(
               child: FilledButton(
-                onPressed: () => Navigator.pop(context),
+                onPressed: () {
+                  HapticFeedback.selectionClick();
+                  Navigator.pop(context);
+                },
                 child: Text(context.tr('पूर्ण', 'Done')),
               ),
             ),

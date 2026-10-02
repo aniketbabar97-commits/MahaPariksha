@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../data/models.dart';
 import '../widgets/common.dart';
 import '../widgets/exam_picker.dart';
@@ -131,7 +133,7 @@ class _EnglishBonusTile extends StatelessWidget {
       title: sub.name.of(context.lang),
       subtitle: context.tr('$count प्रश्न · परीक्षा के पाठ्यक्रम का हिस्सा नहीं, बोनस अभ्यास',
           '$count questions · not part of the exam syllabus, bonus practice'),
-      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: sub))),
+      onTap: () => push(context, (_) => SubjectScreen(subject: sub)),
     );
   }
 }
@@ -147,7 +149,10 @@ class _QuickTile extends StatelessWidget {
   Widget build(BuildContext context) => Card(
         clipBehavior: Clip.antiAlias,
         child: InkWell(
-          onTap: onTap,
+          onTap: () {
+            HapticFeedback.selectionClick();
+            onTap();
+          },
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
             child: Column(children: [
@@ -176,7 +181,7 @@ class _SubjectTile extends StatelessWidget {
       subtitle: acc == null
           ? context.tr('$count प्रश्न · शुरू करें', '$count questions · start now')
           : context.tr('$count प्रश्न · अचूकता ${(acc * 100).round()}%', '$count questions · ${(acc * 100).round()}% accuracy'),
-      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => SubjectScreen(subject: subject))),
+      onTap: () => push(context, (_) => SubjectScreen(subject: subject)),
     );
   }
 }
@@ -218,21 +223,34 @@ class SubjectScreen extends StatelessWidget {
                         '$n questions${s.repo.note(subject.id, t.id) != null ? ' · notes & mind map' : ''}')),
                     if (acc != null) ...[
                       const SizedBox(height: 6),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(4),
-                        child: LinearProgressIndicator(
-                          value: acc,
-                          minHeight: 6,
-                          color: acc >= 0.7 ? BrandColors.correct : (acc >= 0.4 ? BrandColors.saffron : BrandColors.wrong),
+                      Row(children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: LinearProgressIndicator(
+                              value: acc,
+                              minHeight: 6,
+                              color: acc >= 0.7
+                                  ? BrandColors.correct
+                                  : (acc >= 0.4 ? BrandColors.saffron : BrandColors.wrong),
+                            ),
+                          ),
                         ),
-                      ),
+                        const SizedBox(width: 8),
+                        // The subject-level tiles show accuracy as a %, but this
+                        // per-topic bar was color-only -- color alone (red/
+                        // yellow/green) isn't accessible to colorblind users and
+                        // gives no precise number either.
+                        Text('${(acc * 100).round()}%',
+                            style: TextStyle(fontSize: 11, color: Theme.of(context).hintColor)),
+                      ]),
                     ],
                   ]),
                   trailing: IconButton(
                     icon: const Icon(Icons.play_circle, color: BrandColors.saffron, size: 34),
                     onPressed: n == 0 ? null : () => startQuiz(context, s.builder.practice(subject: subject.id, topic: t.id)),
                   ),
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: t))),
+                  onTap: () => push(context, (_) => TopicScreen(subject: subject, topic: t)),
                 ),
               );
             }),

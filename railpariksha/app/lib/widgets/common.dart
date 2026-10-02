@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -123,28 +124,42 @@ class ActionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Disabled (onTap == null, e.g. Mistake Book with no mistakes yet) looked
+    // identical to an active card save for the subtitle text -- dim the icon
+    // chip and title so the inactive state reads at a glance, not just on
+    // careful reading of the subtitle copy.
+    final disabled = onTap == null;
+    final hint = Theme.of(context).hintColor;
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: onTap,
+        onTap: onTap == null
+            ? null
+            : () {
+                HapticFeedback.selectionClick();
+                onTap!();
+              },
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Row(children: [
             Container(
               width: 48,
               height: 48,
-              decoration: BoxDecoration(color: color.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(14)),
-              child: Icon(icon, color: color),
+              decoration: BoxDecoration(
+                  color: (disabled ? hint : color).withValues(alpha: 0.15), borderRadius: BorderRadius.circular(14)),
+              child: Icon(icon, color: disabled ? hint : color),
             ),
             const SizedBox(width: 14),
             Expanded(
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(title, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+                Text(title,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700, fontSize: 16, color: disabled ? hint : null)),
                 const SizedBox(height: 2),
-                Text(subtitle, style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13)),
+                Text(subtitle, style: TextStyle(color: hint, fontSize: 13)),
               ]),
             ),
-            trailing ?? Icon(Icons.chevron_right, color: Theme.of(context).hintColor),
+            trailing ?? Icon(Icons.chevron_right, color: hint),
           ]),
         ),
       ),
@@ -165,7 +180,10 @@ class SectionTitle extends StatelessWidget {
 
 /// A friendly bilingual placeholder for empty lists, missing data, or errors.
 /// [actionLabel]/[onAction] optionally offer a way forward instead of a dead end.
-class EmptyState extends StatelessWidget {
+/// A layered sunrise-ring illustration (matching the brand mark) behind the
+/// icon instead of a bare Material icon, so every empty/done state still
+/// feels designed rather than like an unfinished screen.
+class EmptyState extends StatefulWidget {
   final IconData icon;
   final String text;
   final String? actionLabel;
@@ -173,16 +191,56 @@ class EmptyState extends StatelessWidget {
   const EmptyState({super.key, required this.icon, required this.text, this.actionLabel, this.onAction});
 
   @override
+  State<EmptyState> createState() => _EmptyStateState();
+}
+
+class _EmptyStateState extends State<EmptyState> with SingleTickerProviderStateMixin {
+  late final AnimationController c =
+      AnimationController(vsync: this, duration: const Duration(milliseconds: 700))..forward();
+
+  @override
+  void dispose() {
+    c.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) => Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(Spacing.xxl + 8),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Icon(icon, size: 56, color: BrandColors.saffron),
-            const SizedBox(height: Spacing.md),
-            Text(text, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyLarge),
-            if (actionLabel != null && onAction != null) ...[
+            ScaleTransition(
+              scale: CurvedAnimation(parent: c, curve: Curves.elasticOut),
+              child: SizedBox(
+                width: 120,
+                height: 120,
+                child: Stack(alignment: Alignment.center, children: [
+                  Container(
+                    width: 120,
+                    height: 120,
+                    decoration:
+                        BoxDecoration(shape: BoxShape.circle, color: BrandColors.saffron.withValues(alpha: 0.08)),
+                  ),
+                  Container(
+                    width: 88,
+                    height: 88,
+                    decoration:
+                        BoxDecoration(shape: BoxShape.circle, color: BrandColors.saffron.withValues(alpha: 0.14)),
+                  ),
+                  Container(
+                    width: 60,
+                    height: 60,
+                    decoration: const BoxDecoration(gradient: BrandColors.fireGradient, shape: BoxShape.circle),
+                    child: Icon(widget.icon, size: 30, color: Colors.white),
+                  ),
+                ]),
+              ),
+            ),
+            const SizedBox(height: Spacing.lg),
+            Text(widget.text, textAlign: TextAlign.center, style: Theme.of(context).textTheme.bodyLarge),
+            if (widget.actionLabel != null && widget.onAction != null) ...[
               const SizedBox(height: Spacing.lg),
-              FilledButton(onPressed: onAction, child: Text(actionLabel!)),
+              FilledButton(onPressed: widget.onAction, child: Text(widget.actionLabel!)),
             ],
           ]),
         ),

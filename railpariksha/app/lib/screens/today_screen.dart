@@ -4,6 +4,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import 'beast_mode_screen.dart';
@@ -161,7 +162,7 @@ class TodayScreen extends StatelessWidget {
         Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
-            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const ReelScreen())),
+            onTap: () => push(context, (_) => const ReelScreen()),
             child: Container(
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.heroGradient),
@@ -288,7 +289,7 @@ class TodayScreen extends StatelessWidget {
           color: BrandColors.sky,
           title: context.tr('प्रश्न व नोट्स खोजें', 'Search questions & notes'),
           subtitle: context.tr('किसी भी टॉपिक या कीवर्ड पर सीधे जाएं', 'Jump straight to any topic or keyword'),
-          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const SearchScreen())),
+          onTap: () => push(context, (_) => const SearchScreen()),
         ),
         const SizedBox(height: 12),
         ActionCard(
@@ -296,7 +297,7 @@ class TodayScreen extends StatelessWidget {
           color: BrandColors.skyLight,
           title: context.tr('फ्लैशकार्ड रिवीज़न', 'Flashcard revision'),
           subtitle: context.tr('$dueCards कार्ड आज रिवीज़न के लिए', '$dueCards cards due today'),
-          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const FlashcardScreen())),
+          onTap: () => push(context, (_) => const FlashcardScreen()),
         ),
         const SizedBox(height: 12),
         ActionCard(

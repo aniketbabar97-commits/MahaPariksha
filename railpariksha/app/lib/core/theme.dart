@@ -54,7 +54,14 @@ ThemeData buildTheme(Brightness b) {
   return base.copyWith(
     scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFF5F7FC) : const Color(0xFF0E1320),
     cardTheme: CardThemeData(
-      elevation: 0,
+      // A flat elevation:0 made every card and the content behind it blur
+      // into one plane -- a soft colored shadow (sky-tinted, not pure black)
+      // reads as a deliberate depth system instead of Material's defaults.
+      // Dark mode keeps it flat since a shadow barely registers against the
+      // near-black background there and would mostly look like banding.
+      elevation: b == Brightness.light ? 3 : 0,
+      shadowColor: BrandColors.sky.withValues(alpha: b == Brightness.light ? 0.16 : 0),
+      surfaceTintColor: Colors.transparent,
       color: b == Brightness.light ? Colors.white : const Color(0xFF1A2133),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       margin: EdgeInsets.zero,

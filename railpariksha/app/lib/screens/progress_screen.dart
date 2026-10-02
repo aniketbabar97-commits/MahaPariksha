@@ -348,16 +348,29 @@ class _Heatmap extends StatelessWidget {
                     final day = start + w * 7 + d;
                     final n = counts[day] ?? 0;
                     final v = n == 0 ? 0.0 : (0.25 + 0.75 * (n / goal).clamp(0.0, 1.0));
-                    return Container(
-                      width: 16,
-                      height: 16,
-                      margin: const EdgeInsets.all(1.5),
-                      decoration: BoxDecoration(
-                        color: day > t
-                            ? Colors.transparent
-                            : (n == 0 ? Colors.grey.withValues(alpha: 0.15) : BrandColors.saffron.withValues(alpha: v)),
-                        borderRadius: BorderRadius.circular(4),
-                        border: day == t ? Border.all(color: BrandColors.sky, width: 1.5) : null,
+                    if (day > t) {
+                      // Future day, nothing to announce -- an empty node would
+                      // otherwise still get swipe focus with nothing to say.
+                      return const SizedBox(width: 16, height: 16, child: SizedBox.shrink());
+                    }
+                    final date = DateTime.fromMillisecondsSinceEpoch(day * 86400000, isUtc: true);
+                    // A ~84-cell study calendar had no Semantics at all -- a
+                    // screen-reader user got nothing meaningful from the whole
+                    // heatmap. One label per cell (date + questions that day)
+                    // makes the same info the color encodes available to them.
+                    return Semantics(
+                      label: context.tr(
+                          '${date.day}/${date.month}: $n प्रश्न',
+                          '${date.day}/${date.month}: $n questions'),
+                      child: Container(
+                        width: 16,
+                        height: 16,
+                        margin: const EdgeInsets.all(1.5),
+                        decoration: BoxDecoration(
+                          color: n == 0 ? Colors.grey.withValues(alpha: 0.15) : BrandColors.saffron.withValues(alpha: v),
+                          borderRadius: BorderRadius.circular(4),
+                          border: day == t ? Border.all(color: BrandColors.sky, width: 1.5) : null,
+                        ),
                       ),
                     );
                   }),

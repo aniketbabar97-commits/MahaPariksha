@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../data/models.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
@@ -68,12 +69,14 @@ class _SearchScreenState extends State<SearchScreen> {
     final needle = _query.toLowerCase();
     List<Question> questionResults = const [];
     List<TopicNote> noteResults = const [];
+    var questionMatchCount = 0;
     if (needle.isNotEmpty) {
       final pool = s.repo.questionsFor(exam);
-      questionResults = pool
+      final questionMatches = pool
           .where((q) => q.text.hi.toLowerCase().contains(needle) || q.text.en.toLowerCase().contains(needle))
-          .take(50)
           .toList();
+      questionMatchCount = questionMatches.length;
+      questionResults = questionMatches.take(50).toList();
       final examSubjects = exam.subjects.toSet();
       noteResults = s.repo.allNotes
           .where((n) =>
@@ -85,6 +88,10 @@ class _SearchScreenState extends State<SearchScreen> {
           .take(20)
           .toList();
     }
+    // The debounce timer hasn't fired yet for the latest keystroke -- without
+    // this, a narrow query on a 25k+ question bank could look like a complete
+    // "No results" or a stale result set rather than still-searching.
+    final pending = _controller.text.trim() != _query;
 
     return Scaffold(
       appBar: AppBar(
@@ -104,35 +111,41 @@ class _SearchScreenState extends State<SearchScreen> {
             IconButton(icon: const Icon(Icons.clear), tooltip: context.tr('साफ़ करें', 'Clear'), onPressed: _clear),
         ],
       ),
-      body: _query.isEmpty
+      body: _query.isEmpty && !pending
           ? EmptyState(
               icon: Icons.search,
               text: context.tr('टाइप करना शुरू करें — हिंदी या अंग्रेज़ी में।', 'Start typing — in Hindi or English.'),
             )
-          : (questionResults.isEmpty && noteResults.isEmpty)
-              ? EmptyState(
-                  icon: Icons.search_off,
-                  text: context.tr('कुछ नहीं मिला। कोई और शब्द आज़माएं।', 'No results. Try a different search term.'),
-                )
-              : ListView(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                  children: [
-                    if (noteResults.isNotEmpty) ...[
-                      SectionTitle(context.tr('नोट्स', 'Notes')),
-                      for (final n in noteResults) ...[
-                        _NoteResultTile(note: n),
-                        const SizedBox(height: 8),
+          : pending
+              ? const Center(child: CircularProgressIndicator())
+              : (questionResults.isEmpty && noteResults.isEmpty)
+                  ? EmptyState(
+                      icon: Icons.search_off,
+                      text: context.tr('कुछ नहीं मिला। कोई और शब्द आज़माएं।', 'No results. Try a different search term.'),
+                    )
+                  : ListView(
+                      padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
+                      children: [
+                        if (noteResults.isNotEmpty) ...[
+                          SectionTitle(context.tr('नोट्स', 'Notes')),
+                          for (final n in noteResults) ...[
+                            _NoteResultTile(note: n),
+                            const SizedBox(height: 8),
+                          ],
+                        ],
+                        if (questionResults.isNotEmpty) ...[
+                          SectionTitle(questionMatchCount > questionResults.length
+                              ? context.tr('प्रश्न (ऊपर के ${questionResults.length}, कुल $questionMatchCount)',
+                                  'Questions (top ${questionResults.length} of $questionMatchCount)')
+                              : context.tr(
+                                  'प्रश्न (${questionResults.length})', 'Questions (${questionResults.length})')),
+                          for (final q in questionResults) ...[
+                            _QuestionResultTile(question: q),
+                            const SizedBox(height: 8),
+                          ],
+                        ],
                       ],
-                    ],
-                    if (questionResults.isNotEmpty) ...[
-                      SectionTitle(context.tr('प्रश्न (${questionResults.length})', 'Questions (${questionResults.length})')),
-                      for (final q in questionResults) ...[
-                        _QuestionResultTile(question: q),
-                        const SizedBox(height: 8),
-                      ],
-                    ],
-                  ],
-                ),
+                    ),
     );
   }
 }
@@ -151,16 +164,14 @@ class _QuestionResultTile extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () => Navigator.push(
+        onTap: () => push(
           context,
-          MaterialPageRoute(
-            builder: (_) => QuizScreen(
-              spec: QuizSpec(
-                QuizMode.practice,
-                [question],
-                label.isEmpty ? 'प्रश्न' : label,
-                label.isEmpty ? 'Question' : label,
-              ),
+          (_) => QuizScreen(
+            spec: QuizSpec(
+              QuizMode.practice,
+              [question],
+              label.isEmpty ? 'प्रश्न' : label,
+              label.isEmpty ? 'Question' : label,
             ),
           ),
         ),
@@ -207,7 +218,7 @@ class _NoteResultTile extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => TopicScreen(subject: subject, topic: topic))),
+        onTap: () => push(context, (_) => TopicScreen(subject: subject, topic: topic)),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/app_scope.dart';
+import '../widgets/bottom_nav.dart';
 import 'me_screen.dart';
 import 'practice_screen.dart';
 import 'progress_screen.dart';
@@ -28,34 +29,16 @@ class _HomeShellState extends State<HomeShell> {
       const ProgressScreen(),
       const MeScreen(),
     ];
+    final items = [
+      NavItem(Icons.wb_sunny_outlined, Icons.wb_sunny, context.tr('आज', 'Today')),
+      NavItem(Icons.edit_note_outlined, Icons.edit_note, context.tr('अभ्यास', 'Practice')),
+      NavItem(Icons.style_outlined, Icons.style, context.tr('रिवीज़न', 'Revise')),
+      NavItem(Icons.insights_outlined, Icons.insights, context.tr('प्रगति', 'Progress')),
+      NavItem(Icons.person_outline, Icons.person, context.tr('मैं', 'Me')),
+    ];
     return Scaffold(
       body: SafeArea(bottom: false, child: IndexedStack(index: index, children: pages)),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: index,
-        onDestinationSelected: goTo,
-        destinations: [
-          NavigationDestination(
-              icon: const Icon(Icons.wb_sunny_outlined),
-              selectedIcon: const Icon(Icons.wb_sunny),
-              label: context.tr('आज', 'Today')),
-          NavigationDestination(
-              icon: const Icon(Icons.edit_note_outlined),
-              selectedIcon: const Icon(Icons.edit_note),
-              label: context.tr('अभ्यास', 'Practice')),
-          NavigationDestination(
-              icon: const Icon(Icons.style_outlined),
-              selectedIcon: const Icon(Icons.style),
-              label: context.tr('रिवीज़न', 'Revise')),
-          NavigationDestination(
-              icon: const Icon(Icons.insights_outlined),
-              selectedIcon: const Icon(Icons.insights),
-              label: context.tr('प्रगति', 'Progress')),
-          NavigationDestination(
-              icon: const Icon(Icons.person_outline),
-              selectedIcon: const Icon(Icons.person),
-              label: context.tr('मैं', 'Me')),
-        ],
-      ),
+      bottomNavigationBar: RpBottomNav(index: index, items: items, onTap: goTo),
     );
   }
 }

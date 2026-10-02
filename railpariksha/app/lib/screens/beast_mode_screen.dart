@@ -6,6 +6,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
+import '../core/transitions.dart';
 import '../data/models.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
@@ -35,7 +36,7 @@ void startBeastMode(BuildContext context, QuizSpec spec, int seconds) {
     return;
   }
   HapticFeedback.selectionClick();
-  Navigator.push(context, MaterialPageRoute(builder: (_) => BeastModeScreen(spec: spec, seconds: seconds)));
+  push(context, (_) => BeastModeScreen(spec: spec, seconds: seconds));
 }
 
 class BeastModeScreen extends StatefulWidget {
@@ -163,6 +164,10 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     setState(() => _finished = true);
     timer?.cancel();
     final p = AppScope.read(context).progress;
+    // Captured before recordBeast updates beastBestScore -- comparing against
+    // the post-update value (p.beastBestScore == score) can't tell a genuine
+    // new best from merely tying the already-recorded one.
+    final previousBest = p.beastBestScore;
     p.recordBeast(score, bestStreakRun);
     showModalBottomSheet(
       context: context,
@@ -177,6 +182,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
         bestStreakRun: bestStreakRun,
         xpEarned: xpEarned,
         knockedOut: knockedOut,
+        isNewBest: score > previousBest,
         // Both callbacks pop via this State's own (still-mounted) `context` rather than the
         // sheet's — by the time either is tappable the sheet is a separate, shorter-lived
         // route, and chaining pops off it after it starts closing is asking for trouble.
@@ -442,6 +448,7 @@ class _BeastResultsSheet extends StatelessWidget {
   final int bestStreakRun;
   final int xpEarned;
   final bool knockedOut;
+  final bool isNewBest;
   final VoidCallback onPlayAgain;
   final VoidCallback onDone;
   const _BeastResultsSheet({
@@ -451,6 +458,7 @@ class _BeastResultsSheet extends StatelessWidget {
     required this.bestStreakRun,
     required this.xpEarned,
     required this.knockedOut,
+    required this.isNewBest,
     required this.onPlayAgain,
     required this.onDone,
   });
@@ -469,7 +477,6 @@ class _BeastResultsSheet extends StatelessWidget {
     final tier = p.beastTier;
     final next = tier.nextScore;
     final into = next == null ? 1.0 : ((p.beastBestScore - tier.minScore) / (next - tier.minScore)).clamp(0.0, 1.0);
-    final isNewBest = p.beastBestScore == score;
 
     return SafeArea(
       child: Padding(
