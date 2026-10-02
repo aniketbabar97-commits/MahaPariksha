@@ -91,6 +91,9 @@ class Progress extends ChangeNotifier {
   String name = '';
   String? examId;
   int dailyGoal = 20;
+  /// Result of the onboarding diagnostic quiz: 'beginner' / 'intermediate' / 'advanced',
+  /// or null if the user skipped it. Informational only -- never gates anything.
+  String? placementLevel;
   DateTime? examDate;
   String theme = 'system';
   bool reminders = true;
@@ -136,6 +139,7 @@ class Progress extends ChangeNotifier {
     name = j['name'] ?? '';
     examId = j['examId'];
     dailyGoal = j['dailyGoal'] ?? 20;
+    placementLevel = j['placementLevel'];
     examDate = j['examDate'] != null ? DateTime.tryParse(j['examDate']) : null;
     theme = j['theme'] ?? 'system';
     reminders = j['reminders'] ?? true;
@@ -164,6 +168,7 @@ class Progress extends ChangeNotifier {
         'name': name,
         'examId': examId,
         'dailyGoal': dailyGoal,
+        'placementLevel': placementLevel,
         'examDate': examDate?.toIso8601String(),
         'theme': theme,
         'reminders': reminders,
@@ -398,6 +403,7 @@ class Progress extends ChangeNotifier {
     mocks.clear();
     onboarded = false;
     examId = null;
+    placementLevel = null;
     examDate = null;
     lang = keepLang;
     save(now: true);

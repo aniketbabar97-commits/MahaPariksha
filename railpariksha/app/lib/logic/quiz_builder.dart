@@ -4,7 +4,7 @@ import '../data/content_repo.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 
-enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs }
+enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs, placement }
 
 class QuizSpec {
   final QuizMode mode;
@@ -17,7 +17,7 @@ class QuizSpec {
       {this.timeLimit, this.negative = 0});
 
   /// Instant feedback after each answer (practice-style) vs reveal at the end (test-style).
-  bool get instantFeedback => mode != QuizMode.mock;
+  bool get instantFeedback => mode != QuizMode.mock && mode != QuizMode.placement;
 }
 
 class TopicStat {
@@ -146,6 +146,28 @@ class QuizBuilder {
     chosen.addAll(_pick(rest, 10 - chosen.length, rnd));
     chosen.shuffle(rnd);
     return QuizSpec(QuizMode.daily, chosen, 'आज का Daily 10', "Today's Daily 10");
+  }
+
+  /// Short, ungraded diagnostic for onboarding: a weighted mix across the chosen
+  /// exam's subjects (round-robin by subject), never negatively marked, used only
+  /// to suggest a starting daily goal.
+  QuizSpec placement({int count = 10}) {
+    final rnd = Random();
+    final pool = _pool();
+    final bySubject = <String, List<Question>>{};
+    for (final q in pool) {
+      bySubject.putIfAbsent(q.subject, () => []).add(q);
+    }
+    final chosen = <Question>[];
+    final subjects = bySubject.keys.toList()..shuffle(rnd);
+    var i = 0;
+    while (chosen.length < count && subjects.isNotEmpty && bySubject.values.any((l) => l.isNotEmpty)) {
+      final list = bySubject[subjects[i % subjects.length]]!;
+      if (list.isNotEmpty) chosen.add(list.removeAt(rnd.nextInt(list.length)));
+      i++;
+    }
+    chosen.shuffle(rnd);
+    return QuizSpec(QuizMode.placement, chosen, 'स्तर जांच', 'Level Check', negative: 0);
   }
 
   /// Largest-remainder allocation of `total` items across `weights`, capped per key by
