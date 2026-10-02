@@ -22,17 +22,23 @@
 # stored questions with an independent model and writes disagreements for
 # human review (it never edits the bank files itself, so running several
 # instances against disjoint files concurrently is safe). Split 3-way across
-# providers/keys so it finishes in hours, not a single ~8h sequential pass:
-#   groq/qwen3.8-27b -> maths, gk, current_affairs (_fc_groq.json)
-#   gemini/3.8-flash (key 1) -> reasoning, railway_gk, science (_fc_gemini1.json)
-#   gemini/3.8-flash (key 2) -> je_civil, je_mechanical, je_electrical,
-#                                english, computer (_fc_gemini2.json)
-# gemini-2.5-flash was tried first but key 1's free-tier quota for it turned
-# out to be a mere 20 requests/day (confirmed via an actual 429 response) --
-# gemini-3.8-flash has its own separate, untouched quota on both keys.
+# 3 different Groq models (each meters its own daily quota separately) so it
+# finishes in hours, not a single ~8h sequential pass:
+#   qwen/qwen3.8-27b  -> maths, gk, current_affairs (_fc_groq.json)
+#   gpt-oss-120b      -> reasoning, railway_gk, science (_fc_groq2.json)
+#   gpt-oss-20b       -> je_civil, je_mechanical, je_electrical, english,
+#                        computer (_fc_groq3.json)
+# Both Gemini keys were tried first but BOTH turned out to be capped at a
+# hard 20 requests/day across every model tested (2.5-flash and 3.8-flash
+# alike) -- confirmed via actual 429 RESOURCE_EXHAUSTED responses on both
+# keys -- nowhere near enough for ~8,000 calls each, so abandoned entirely
+# in favor of Groq's much larger per-model daily token quotas.
 # Output goes to pipeline/reports/, NEVER content/bank/ -- build_bundle.py
 # globs every file in content/bank/ into the app's content bundle, so a
 # disagreements report dropped in there would corrupt the shipped bundle.
+# factcheck.py has no resume/checkpoint -- a restart re-runs each worker's
+# files from question 1, so this relaunch costs some repeated API calls, but
+# is still correct (it only ever reports disagreements, never mutates state).
 # None of these self-relaunch on restart, so this hook does it -- per the
 # standing rule: every background worker gets a relaunch entry here so it
 # survives a container restart.
@@ -64,21 +70,20 @@ if ! running "factcheck.py.*_fc_groq.json"; then
   disown
 fi
 
-if ! running "factcheck.py.*_fc_gemini1.json"; then
-  nohup python3 factcheck.py --provider gemini --model gemini-3.8-flash \
-    --out "$REPORTS/_fc_gemini1.json" \
+if ! running "factcheck.py.*_fc_groq2.json"; then
+  nohup python3 factcheck.py --provider groq --model openai/gpt-oss-120b \
+    --out "$REPORTS/_fc_groq2.json" \
     "$BANK/reasoning.json" "$BANK/railway_gk.json" "$BANK/science.json" \
-    > "$LOGS/factcheck_gemini1.log" 2>&1 &
+    > "$LOGS/factcheck_groq2.log" 2>&1 &
   disown
 fi
 
-if ! running "factcheck.py.*_fc_gemini2.json"; then
-  GEMINI_API_KEY="${GEMINI_API_KEY2:-$GEMINI_API_KEY}" \
-  nohup python3 factcheck.py --provider gemini --model gemini-3.8-flash \
-    --out "$REPORTS/_fc_gemini2.json" \
+if ! running "factcheck.py.*_fc_groq3.json"; then
+  nohup python3 factcheck.py --provider groq --model openai/gpt-oss-20b \
+    --out "$REPORTS/_fc_groq3.json" \
     "$BANK/je_civil.json" "$BANK/je_mechanical.json" "$BANK/je_electrical.json" \
     "$BANK/english.json" "$BANK/computer.json" \
-    > "$LOGS/factcheck_gemini2.log" 2>&1 &
+    > "$LOGS/factcheck_groq3.log" 2>&1 &
   disown
 fi
 
