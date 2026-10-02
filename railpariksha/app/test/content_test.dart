@@ -132,5 +132,20 @@ void main() {
       expect(next.first.id, first[1].id);
       expect(next.any((c) => c.id == first[0].id), isFalse);
     });
+
+    test('current affairs: grouped by date (most recent first), quiz capped at 10 and scoped to that date', () {
+      final byDate = b.currentAffairsByDate();
+      expect(byDate, isNotEmpty);
+      final dates = byDate.keys.toList();
+      final sortedDesc = [...dates]..sort((a, c) => c.compareTo(a));
+      expect(dates, sortedDesc);
+      final latest = dates.first;
+      final quiz = b.currentAffairsQuiz(latest);
+      expect(quiz.questions, isNotEmpty);
+      expect(quiz.questions.length, lessThanOrEqualTo(10));
+      expect(quiz.questions.every((q) => q.date == latest), isTrue);
+      // Hand-curated current-affairs questions have no date and are excluded.
+      expect(byDate.values.expand((qs) => qs).every((q) => q.date != null), isTrue);
+    });
   });
 }

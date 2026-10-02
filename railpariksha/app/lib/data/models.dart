@@ -61,6 +61,14 @@ class Question {
   final Bi? hook;
   final Bi? fact;
 
+  /// ISO `YYYY-MM-DD` date this item was auto-drafted on (current-affairs pipeline
+  /// only). Null for hand-curated questions, which aren't dated.
+  final String? date;
+
+  /// Source article URL. Only kept in the content pack for dated (auto-drafted)
+  /// current-affairs items -- see pipeline/build_bundle.py.
+  final String? src;
+
   const Question({
     required this.id,
     required this.subject,
@@ -73,6 +81,8 @@ class Question {
     required this.explanation,
     this.hook,
     this.fact,
+    this.date,
+    this.src,
   });
 
   List<String> options(String lang) => lang == 'en' ? optionsEn : optionsHi;
@@ -94,6 +104,8 @@ class Question {
         explanation: Bi(j['e_hi'], j['e_en']),
         hook: _opt(j, 'hook'),
         fact: _opt(j, 'fact'),
+        date: j['date'],
+        src: j['src'],
       );
 }
 

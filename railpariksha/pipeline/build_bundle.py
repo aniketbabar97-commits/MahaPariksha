@@ -33,7 +33,13 @@ def main():
     taxonomy = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
     questions = load_dir("bank")
     for q in questions:
-        q.pop("src", None)  # source links stay in the repo, not on devices
+        # Source links stay in the repo, not on devices, for the bulk of the bank (keeps
+        # the pack small, and most content has no use for one in the app). Exception:
+        # dated, auto-drafted current-affairs items keep theirs -- the Current Affairs
+        # digest shows a "read the source" link per item, and there are only ever a
+        # handful of these at a time.
+        if not q.get("date"):
+            q.pop("src", None)
     bundle = {
         "version": int(datetime.now(timezone.utc).strftime("%Y%m%d%H%M")),
         "taxonomy": taxonomy,

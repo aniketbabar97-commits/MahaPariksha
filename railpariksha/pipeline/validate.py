@@ -13,12 +13,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
+ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 taxonomy = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
 TOPICS = {s["id"]: {t["id"] for t in s["topics"]} for s in taxonomy["subjects"]}
 
 Q_FIELDS = {"id", "s", "t", "d", "q_hi", "q_en", "o_hi", "o_en", "a", "e_hi", "e_en"}
-Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src"}
+Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date"}
 F_FIELDS = {"id", "s", "t", "f_hi", "b_hi", "f_en", "b_en"}
 M_FIELDS = {"id", "type", "hi", "en"}
 M_OPTIONAL = {"by"}
@@ -52,6 +53,8 @@ def check_question(q, where, errs):
         errs.append(f"{where}: a must be 0..3")
     if nonempty(q.get("q_hi")) and not DEVANAGARI.search(q["q_hi"]) and q["s"] != "english":
         errs.append(f"{where}: q_hi has no Devanagari")
+    if "date" in q and not (isinstance(q["date"], str) and ISO_DATE.match(q["date"])):
+        errs.append(f"{where}: date must be YYYY-MM-DD")
 
 
 def check_flashcard(c, where, errs):

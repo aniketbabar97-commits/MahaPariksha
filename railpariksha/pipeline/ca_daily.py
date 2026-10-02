@@ -217,6 +217,7 @@ def blind_solve(backend, d: Draft, source_text: str) -> Solve:
 
 
 def main():
+    gen_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     news = fetch_news()
     if not news:
         print("no fresh news; nothing to do")
@@ -260,6 +261,10 @@ def main():
             "id": f"caauto-{next_n:05d}", "s": "current_affairs", "t": d.topic, "d": 1,
             "q_hi": d.q_hi, "q_en": d.q_en, "o_hi": d.o_hi, "o_en": d.o_en, "a": d.a,
             "e_hi": d.e_hi, "e_en": d.e_en, "src": d.src,
+            # ISO date this item was drafted on -- lets the app group auto current-affairs
+            # items into per-day quiz/digest screens (hand-curated current_affairs.json
+            # items have no date and aren't part of that grouping).
+            "date": gen_date,
         })
         next_n += 1
     if kept:

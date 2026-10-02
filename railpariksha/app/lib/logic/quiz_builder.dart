@@ -4,7 +4,7 @@ import '../data/content_repo.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 
-enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast }
+enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs }
 
 class QuizSpec {
   final QuizMode mode;
@@ -301,5 +301,26 @@ class QuizBuilder {
   Motivation? todaysMotivation() {
     if (repo.motivation.isEmpty) return null;
     return repo.motivation[today() % repo.motivation.length];
+  }
+
+  /// Auto-drafted current-affairs questions grouped by the ISO date they were drafted
+  /// on, most recent date first. Hand-curated current-affairs questions carry no
+  /// `date` and are excluded here -- they already surface through normal subject
+  /// practice instead. Reported (hidden) questions are excluded, same as [_pool].
+  Map<String, List<Question>> currentAffairsByDate() {
+    final byDate = <String, List<Question>>{};
+    for (final q in repo.questions) {
+      if (q.date == null || progress.reported.contains(q.id)) continue;
+      (byDate[q.date!] ??= []).add(q);
+    }
+    final keys = byDate.keys.toList()..sort((a, b) => b.compareTo(a));
+    return {for (final k in keys) k: byDate[k]!};
+  }
+
+  /// A short quiz (up to 10 Qs) built from one day's auto-drafted current-affairs
+  /// questions, for the dated Current Affairs archive.
+  QuizSpec currentAffairsQuiz(String date) {
+    final qs = currentAffairsByDate()[date] ?? const <Question>[];
+    return QuizSpec(QuizMode.currentAffairs, qs.take(10).toList(), 'करेंट अफेयर्स क्विज़', 'Current Affairs Quiz');
   }
 }

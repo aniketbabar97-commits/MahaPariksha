@@ -8,6 +8,8 @@ import '../core/transitions.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import 'beast_mode_screen.dart';
+import 'ca_archive_screen.dart';
+import 'ca_digest_screen.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
@@ -39,6 +41,7 @@ class TodayScreen extends StatelessWidget {
     // for accuracy to mean anything (same minAttempts spirit as pacingGaps above), so brand
     // new users aren't locked out by a 0% accuracy that's really just "no data yet".
     final beastUnlocked = p.totalAnswered < 20 || p.accuracy >= 0.5;
+    final caDates = s.builder.currentAffairsByDate();
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
@@ -282,6 +285,18 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+        ),
+        const SizedBox(height: 12),
+        ActionCard(
+          icon: subjectIcon('newspaper'),
+          color: BrandColors.sky,
+          title: context.tr('करेंट अफेयर्स डाइजेस्ट', 'Current Affairs digest'),
+          subtitle: caDates.isEmpty
+              ? context.tr('रोज़ाना अपडेट जल्द आ रहे हैं', 'Daily updates coming soon')
+              : context.tr(
+                  '${caDates.values.first.length} नई बातें · ${formatCaDate(caDates.keys.first).hi}',
+                  '${caDates.values.first.length} new updates · ${formatCaDate(caDates.keys.first).en}'),
+          onTap: () => push(context, (_) => const CaDigestScreen()),
         ),
         const SizedBox(height: 12),
         ActionCard(
