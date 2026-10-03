@@ -48252,5 +48252,97 @@
   "a": 0,
   "e_hi": "कार्नो दक्षता η = 1 - (T_L / T_H)। गणना: 1 - (300/500) = 1 - 0.6 = 0.4 या 40%।",
   "e_en": "Carnot efficiency η = 1 - (T_L / T_H). Calculation: 1 - (300/500) = 1 - 0.6 = 0.4 or 40%."
+ },
+ {
+  "id": "rp-je_-02106",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक दो-स्ट्रोक आंतरिक दहन इंजन में, यदि क्रैंकशाफ का गुणांक (crankshaft speed ratio) चार-स्ट्रोक इंजन की तुलना में कितना होता है?",
+  "q_en": "In a two-stroke internal combustion engine, what is the ratio of the crankshaft speed compared to a four-stroke engine for the same number of power strokes per minute?",
+  "o_hi": [
+   "दोगुना",
+   "आधा",
+   "चार गुना",
+   "एक समान"
+  ],
+  "o_en": [
+   "Twice",
+   "Half",
+   "Four times",
+   "Same"
+  ],
+  "a": 0,
+  "e_hi": "दो-स्ट्रोक इंजन में प्रत्येक क्रैंकशाफ चक्कर में एक पावर स्ट्रोक होता है, जबकि चार-स्ट्रोक में दो चक्करों में एक पावर स्ट्रोक होता है। इसलिए, एक ही पावर स्ट्रोक दर के लिए दो-स्ट्रोक इंजन की गति दोगुनी होती है।",
+  "e_en": "A two-stroke engine has one power stroke per crankshaft revolution, while a four-stroke engine has one power stroke per two revolutions. Therefore, for the same power stroke rate, the two-stroke engine's speed is twice that of the four-stroke engine."
+ },
+ {
+  "id": "rp-je_-02107",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक चार-स्ट्रोक डीज़ल इंजन में, 2000 आरपीएम (RPM) की गति पर प्रत्येक सिलिंडर में प्रति मिनट कितने पावर स्ट्रोक हैं?",
+  "q_en": "In a four-stroke diesel engine running at 2000 RPM, how many power strokes occur per minute in each cylinder?",
+  "o_hi": [
+   "1000",
+   "2000",
+   "4000",
+   "500"
+  ],
+  "o_en": [
+   "1000",
+   "2000",
+   "4000",
+   "500"
+  ],
+  "a": 0,
+  "e_hi": "चार-स्ट्रोक इंजन में, दो क्रैंकशाफ चक्करों (720 डिग्री) में एक पावर स्ट्रोक होता है। इसलिए, 2000 RPM पर, प्रति मिनट पावर स्ट्रोक की संख्या 2000 / 2 = 1000 होगी।",
+  "e_en": "In a four-stroke engine, one power stroke occurs every two crankshaft revolutions. Thus, at 2000 RPM, the number of power strokes per minute is 2000 / 2 = 1000."
+ },
+ {
+  "id": "rp-je_-02108",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक कार्नोट प्रशीतन चक्र (Carnot refrigeration cycle) में, यदि स्रोत का तापमान 270 केल्विन और सिंक का तापमान 300 केल्विन है, तो इसका प्रदर्शन गुणांक (COP) क्या होगा?",
+  "q_en": "For a Carnot refrigeration cycle, if the source temperature is 270 K and the sink temperature is 300 K, what is the Coefficient of Performance (COP)?",
+  "o_hi": [
+   "0.9",
+   "9.0",
+   "1.11",
+   "0.11"
+  ],
+  "o_en": [
+   "0.9",
+   "9.0",
+   "1.11",
+   "0.11"
+  ],
+  "a": 1,
+  "e_hi": "प्रशीतन के लिए कार्नोट COP का सूत्र है: COP = T_L / (T_H - T_L)। यहाँ T_L = 270 K और T_H = 300 K है। इसलिए, COP = 270 / (300 - 270) = 270 / 30 = 9.0।",
+  "e_en": "The Carnot COP for refrigeration is given by: COP = T_L / (T_H - T_L). Here T_L = 270 K and T_H = 300 K. Therefore, COP = 270 / (300 - 270) = 270 / 30 = 9.0."
+ },
+ {
+  "id": "rp-je_-02109",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 3,
+  "q_hi": "एक आदर्श ऑटो-डीज़ल चक्र में, यदि दबाव अनुपात (compression ratio) 15:1 और कट-ऑफ अनुपात (cut-off ratio) 2:1 है, और गैस का विशिष्ट ऊष्मा धारण गुणांक (gamma) 1.4 है, तो दक्षता लगभग कितनी होगी?",
+  "q_en": "For an ideal Diesel cycle, if the compression ratio is 15:1 and the cut-off ratio is 2:1, and the specific heat ratio (gamma) is 1.4, what is the approximate efficiency?",
+  "o_hi": [
+   "50%",
+   "55%",
+   "60%",
+   "65%"
+  ],
+  "o_en": [
+   "50%",
+   "55%",
+   "60%",
+   "65%"
+  ],
+  "a": 1,
+  "e_hi": "डीज़ल चक्र की दक्षता η = 1 - (1/r^(γ-1)) * [(r_c^γ - 1) / (γ(r_c - 1))] है। मान रखने पर: r=15, r_c=2, γ=1.4। गणना करने पर दक्षता लगभग 55.4% आती है, जो 55% के सबसे करीब है।",
+  "e_en": "Diesel cycle efficiency η = 1 - (1/r^(γ-1)) * [(r_c^γ - 1) / (γ(r_c - 1))]. Substituting r=15, r_c=2, γ=1.4. The calculation yields an efficiency of approximately 55.4%, which is closest to 55%."
  }
 ]
