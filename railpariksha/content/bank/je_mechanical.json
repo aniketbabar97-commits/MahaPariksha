@@ -47240,5 +47240,258 @@
   "a": 0,
   "e_hi": "हेड को द्रव स्तंभ की ऊंचाई के रूप में व्यक्त किया जाता है, इसलिए इसकी इकाई मीटर होती है।",
   "e_en": "Head is expressed as the height of a fluid column, so its unit is meter."
+ },
+ {
+  "id": "rp-je_-02062",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "द्रव यांत्रिकी में, द्रवों को मुख्य रूप से कौन-से दो वर्गों में वर्गीकृत किया जाता है?",
+  "q_en": "In fluid mechanics, fluids are primarily classified into which two categories?",
+  "o_hi": [
+   "स्थिर और गतिशील",
+   "असल (Real) और आदर्श (Ideal)",
+   "संपीड़्य और असंपीड़्य",
+   "न्यूटोनियन और गैर-न्यूटोनियन"
+  ],
+  "o_en": [
+   "Static and Dynamic",
+   "Real and Ideal",
+   "Compressible and Incompressible",
+   "Newtonian and Non-Newtonian"
+  ],
+  "a": 1,
+  "e_hi": "द्रवों को उनके श्यानता (viscosity) के आधार पर असल (जिसमें श्यानता होती है) और आदर्श (जिसमें श्यानता शून्य होती है) वर्गों में बांटा जाता है।",
+  "e_en": "Fluids are classified as Real (having viscosity) and Ideal (having zero viscosity) based on their viscosity properties."
+ },
+ {
+  "id": "rp-je_-02063",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "वह द्रव जिसमें कर्षण बल (shear stress) और चरम वेग परवर्तन (rate of strain) के बीच का अनुपात स्थिर होता है, उसे किस वर्ग में रखा जाता है?",
+  "q_en": "The fluid in which the ratio of shear stress to the rate of strain is constant is classified as which type?",
+  "o_hi": [
+   "गैर-न्यूटोनियन द्रव",
+   "न्यूटोनियन द्रव",
+   "थिक्सोट्रोपिक द्रव",
+   "रेओलॉजिकल द्रव"
+  ],
+  "o_en": [
+   "Non-Newtonian fluid",
+   "Newtonian fluid",
+   "Thixotropic fluid",
+   "Rheological fluid"
+  ],
+  "a": 1,
+  "e_hi": "न्यूटोनियन द्रवों में कर्षण बल और चरम वेग परवर्तन के बीच का संबंध रैखिक होता है, जिसका अर्थ है कि श्यानता गति की दर से नहीं बदलती।",
+  "e_en": "Newtonian fluids exhibit a linear relationship between shear stress and rate of strain, meaning viscosity remains constant regardless of shear rate."
+ },
+ {
+  "id": "rp-je_-02064",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 3,
+  "q_hi": "एक तरल पदार्थ जिसकी श्यानता (viscosity) समय के साथ कम हो जाती है जब उस पर लगातार कर्षण बल (shear stress) लगाया जाता है, उसे किस श्रेणी में वर्गीकृत किया जाता है?",
+  "q_en": "A liquid whose viscosity decreases with time when subjected to a constant shear stress is classified in which category?",
+  "o_hi": [
+   "डायलैटेंट (Dilatant)",
+   "थिक्सोट्रोपिक (Thixotropic)",
+   "रेओपेक्टिक (Reopectic)",
+   "प्लास्टिक (Plastic)"
+  ],
+  "o_en": [
+   "Dilatant",
+   "Thixotropic",
+   "Reopectic",
+   "Plastic"
+  ],
+  "a": 1,
+  "e_hi": "थिक्सोट्रोपिक द्रवों में, लगातार शियरिंग के दौरान अंतर्गत संरचना टूट जाती है, जिससे श्यानता समय के साथ कम हो जाती है।",
+  "e_en": "Thixotropic fluids exhibit a decrease in viscosity over time due to the breakdown of internal structure under continuous shearing."
+ },
+ {
+  "id": "rp-je_-02065",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "वह द्रव जिसकी श्यानता (viscosity) गति की दर (shear rate) बढ़ने पर बढ़ जाती है, उसे क्या कहा जाता है?",
+  "q_en": "The fluid whose viscosity increases with an increase in shear rate is called what?",
+  "o_hi": [
+   "थिक्सोट्रोपिक द्रव",
+   "डायलैटेंट द्रव",
+   "आदर्श द्रव",
+   "न्यूटोनियन द्रव"
+  ],
+  "o_en": [
+   "Thixotropic fluid",
+   "Dilatant fluid",
+   "Ideal fluid",
+   "Newtonian fluid"
+  ],
+  "a": 1,
+  "e_hi": "डायलैटेंट द्रव (या shear-thickening fluids) वे होते हैं जिनकी श्यानता तब बढ़ती है जब उन पर चरम वेग परवर्तन (shear rate) बढ़ाया जाता है।",
+  "e_en": "Dilatant fluids, also known as shear-thickening fluids, are those whose viscosity increases when the shear rate is increased."
+ },
+ {
+  "id": "rp-je_-02066",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "संपीड़्यता (compressibility) के आधार पर, वायु (air) को सामान्यतः किस प्रकार के द्रव के रूप में वर्गीकृत किया जाता है?",
+  "q_en": "Based on compressibility, air is generally classified as what type of fluid?",
+  "o_hi": [
+   "असंपीड़्य द्रव",
+   "संपीड़्य द्रव",
+   "आदर्श द्रव",
+   "असली द्रव"
+  ],
+  "o_en": [
+   "Incompressible fluid",
+   "Compressible fluid",
+   "Ideal fluid",
+   "Real fluid"
+  ],
+  "a": 1,
+  "e_hi": "गैसें, जिसमें वायु शामिल है, दाब में परिवर्तन के कारण अपना घनत्व बदल सकती हैं, इसलिए इन्हें संपीड़्य द्रव माना जाता है।",
+  "e_en": "Gases, including air, can change their density due to pressure changes, hence they are classified as compressible fluids."
+ },
+ {
+  "id": "rp-je_-02067",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "वह द्रव जिसकी श्यानता (viscosity) शून्य होती है और जो किसी भी आकार के बर्तन में बिना किसी घर्षण के प्रवाहित हो सकता है, उसे क्या कहते हैं?",
+  "q_en": "The fluid that has zero viscosity and can flow in any container without any friction is called what?",
+  "o_hi": [
+   "असल द्रव (Real Fluid)",
+   "आदर्श द्रव (Ideal Fluid)",
+   "संपीड़्य द्रव (Compressible Fluid)",
+   "गैर-न्यूटोनियन द्रव (Non-Newtonian Fluid)"
+  ],
+  "o_en": [
+   "Real Fluid",
+   "Ideal Fluid",
+   "Compressible Fluid",
+   "Non-Newtonian Fluid"
+  ],
+  "a": 1,
+  "e_hi": "आदर्श द्रव एक काल्पनिक अवधारणा है जिसमें श्यानता शून्य होती है, इसका अर्थ है कि प्रवाह के दौरान कोई ऊर्जा घर्षण के रूप में खर्च नहीं होती।",
+  "e_en": "An ideal fluid is a theoretical concept with zero viscosity, implying no energy loss due to friction during flow."
+ },
+ {
+  "id": "rp-je_-02068",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "द्रव यांत्रिकी में, किसी बिंदु पर स्थितिक दबाव (static pressure) की इकाई क्या होती है?",
+  "q_en": "In fluid mechanics, what is the standard SI unit of static pressure at a point?",
+  "o_hi": [
+   "पास्कल (Pa)",
+   "न्यूटन (N)",
+   "जूल (J)",
+   "वाट (W)"
+  ],
+  "o_en": [
+   "Pascal (Pa)",
+   "Newton (N)",
+   "Joule (J)",
+   "Watt (W)"
+  ],
+  "a": 0,
+  "e_hi": "दबाव बल प्रति क्षेत्रफल होता है, इसलिए इसकी SI इकाई पास्कल (N/m²) होती है।",
+  "e_en": "Pressure is force per unit area, so its SI unit is Pascal (N/m²)."
+ },
+ {
+  "id": "rp-je_-02069",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "रेनॉल्ड्स संख्या (Reynolds Number) का सूत्र Re = ρvd/μ है। यदि द्रव का घनत्व ρ, वेग v, और चिपचिपापन (viscosity) μ स्थिर रहें, तो रेडियस r के दोगुना करने पर रेनॉल्ड्स संख्या में क्या परिवर्तन होगा?",
+  "q_en": "The Reynolds Number is given by Re = ρvd/μ. If the fluid density ρ, velocity v, and viscosity μ remain constant, what happens to the Reynolds Number when the radius r is doubled?",
+  "o_hi": [
+   "दोगुनी हो जाएगी",
+   "आधी हो जाएगी",
+   "चार गुना हो जाएगी",
+   "अपरिवर्तित रहेगी"
+  ],
+  "o_en": [
+   "It will double",
+   "It will halve",
+   "It will become four times",
+   "It will remain unchanged"
+  ],
+  "a": 0,
+  "e_hi": "चूँकि द = 2r, इसलिए Re ∝ d। यदि r दोगुना हो जाता है, तो d भी दोगुना हो जाता है और Re भी दोगुना हो जाता है।",
+  "e_en": "Since d = 2r, Re is proportional to d. If r doubles, d also doubles, causing Re to double."
+ },
+ {
+  "id": "rp-je_-02070",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "बर्नौली के समीकरण के अनुसार, यदि एक क्षैतिज पाइप में द्रव का वेग बढ़ता है, तो दबाव (pressure) में क्या परिवर्तन होगा?",
+  "q_en": "According to Bernoulli's equation, if the velocity of a fluid increases in a horizontal pipe, what change will occur in the pressure?",
+  "o_hi": [
+   "दबाव कम हो जाएगा",
+   "दबाव बढ़ जाएगा",
+   "दबाव स्थिर रहेगा",
+   "दबाव शून्य हो जाएगा"
+  ],
+  "o_en": [
+   "Pressure will decrease",
+   "Pressure will increase",
+   "Pressure will remain constant",
+   "Pressure will become zero"
+  ],
+  "a": 0,
+  "e_hi": "बर्नौली के सिद्धांत के अनुसार, ऊँचाई स्थिर रहने पर वेग बढ़ने से स्थितिक दबाव घटता है।",
+  "e_en": "According to Bernoulli's principle, at constant height, an increase in velocity leads to a decrease in static pressure."
+ },
+ {
+  "id": "rp-je_-02071",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "यदि किसी द्रव का घनत्व 1000 kg/m³ है और गुरुत्वीय त्वरण 9.81 m/s² है, तो 2 मीटर की गहराई पर द्रव दबाव (hydrostatic pressure) कितना होगा?",
+  "q_en": "If a fluid has a density of 1000 kg/m³ and gravitational acceleration is 9.81 m/s², what is the hydrostatic pressure at a depth of 2 meters?",
+  "o_hi": [
+   "19620 Pa",
+   "9810 Pa",
+   "29430 Pa",
+   "4905 Pa"
+  ],
+  "o_en": [
+   "19620 Pa",
+   "9810 Pa",
+   "29430 Pa",
+   "4905 Pa"
+  ],
+  "a": 0,
+  "e_hi": "द्रव दबाव P = ρgh = 1000 × 9.81 × 2 = 19620 Pa होता है।",
+  "e_en": "Hydrostatic pressure P = ρgh = 1000 × 9.81 × 2 = 19620 Pa."
+ },
+ {
+  "id": "rp-je_-02072",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "पम्प की कुल प्रभावी दक्षता (Overall Efficiency) का सूत्र क्या होता है, जिसमें उपयोगी शक्ति (useful power) और इनपुट शक्ति (input power) शामिल हैं?",
+  "q_en": "What is the formula for the overall efficiency of a pump, involving useful power and input power?",
+  "o_hi": [
+   "η = (Useful Power / Input Power) × 100%",
+   "η = (Input Power / Useful Power) × 100%",
+   "η = Useful Power × Input Power",
+   "η = Input Power - Useful Power"
+  ],
+  "o_en": [
+   "η = (Useful Power / Input Power) × 100%",
+   "η = (Input Power / Useful Power) × 100%",
+   "η = Useful Power × Input Power",
+   "η = Input Power - Useful Power"
+  ],
+  "a": 0,
+  "e_hi": "दक्षता हमेशा आउटपुट (उपयोगी) शक्ति और इनपुट शक्ति के अनुपात के रूप में परिभाषित की जाती है।",
+  "e_en": "Efficiency is always defined as the ratio of output (useful) power to input power."
  }
 ]
