@@ -58980,29 +58980,6 @@
   "e_en": "The pattern follows +1 increment for each letter. Applying this to BOMBAY gives CPNCBZ."
  },
  {
-  "id": "rp-rea-j02148",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 2,
-  "q_hi": "एक निश्चित कूट में 'TRAIN' को 'URBOO' लिखा जाता है। उसी तर्क से 'FIGHT' को क्या लिखा जाएगा?",
-  "q_en": "In a certain code, 'TRAIN' is written as 'URBOO'. Based on the same logic, how is 'FIGHT' written?",
-  "o_hi": [
-   "GJHIU",
-   "GJIIU",
-   "GJJIU",
-   "GIHIU"
-  ],
-  "o_en": [
-   "GJHIU",
-   "GJIIU",
-   "GJJIU",
-   "GIHIU"
-  ],
-  "a": 0,
-  "e_hi": "अक्षर पैटर्न +1, +2, +1, +2, +1 है। F+1=G, I+2=K, G+1=H, H+2=J, T+1=U। उत्तर GJHIU के बजाय GJIHU है, जो विकल्प में नहीं है, अतः सही पैटर्न T(+1)=U, R(+2)=T, A(+1)=B, I(+2)=K, N(+1)=O है।",
-  "e_en": "The pattern is +1, +2, +1, +2, +1. Applying this to FIGHT results in GJIHU, matching the logic."
- },
- {
   "id": "rp-rea-j02149",
   "s": "reasoning",
   "t": "coding_decoding",
@@ -59160,8 +59137,8 @@
    "ROVE"
   ],
   "a": 2,
-  "e_hi": "अक्षरों के स्थान को पुनर्व्यवस्थित किया गया है (3-4-2-1)। GIVE (1-2-3-4) -> VIEG (3-4-2-1)। OVER -> ERVO।",
-  "e_en": "The letters are rearranged in the order 3-4-2-1. Applying this to OVER gives ERVO."
+  "e_hi": "अक्षरों के स्थान को पुनर्व्यवस्थित किया गया है - क्रम है 3-2-4-1 (GIVE के तीसरे अक्षर V को पहले, फिर दूसरा I, फिर चौथा E, फिर पहला G)। OVER (O-V-E-R) पर यही क्रम लगाने पर: तीसरा E, दूसरा V, चौथा R, पहला O = 'EVRO'।",
+  "e_en": "The letters are rearranged in the order 3-2-4-1 (from GIVE, the 3rd letter V comes first, then the 2nd letter I, then the 4th letter E, then the 1st letter G). Applying this same order to OVER (O-V-E-R): 3rd=E, 2nd=V, 4th=R, 1st=O, giving 'EVRO'."
  },
  {
   "id": "rp-rea-i02119",
@@ -59666,8 +59643,8 @@
    "Data is incomplete"
   ],
   "a": 2,
-  "e_hi": "चूंकि राहुल स्नातक है, वह आवेदन की पात्रता पूरी करता है।",
-  "e_en": "Since Rahul is a graduate, he meets the eligibility criteria for the application."
+  "e_hi": "'केवल' शब्द बताता है कि स्नातक होना आवश्यक (necessary) शर्त है, परंतु यह अनिवार्य नहीं कि हर स्नातक अवश्य आवेदन कर ही सकेगा (अन्य अघोषित शर्तें भी हो सकती हैं)। राहुल स्नातक है, इसलिए यह 'संभव' है कि वह आवेदन कर सके, पर यह निश्चित रूप से सिद्ध नहीं होता।",
+  "e_en": "The word 'only' shows that being a graduate is a necessary condition, but it doesn't guarantee every graduate can definitely apply (there could be other unstated requirements too). Since Rahul is a graduate, it is 'possible' that he can apply, but this isn't proven with certainty."
  },
  {
   "id": "rp-rea-i02134",
@@ -59712,8 +59689,8 @@
    "None of these"
   ],
   "a": 1,
-  "e_hi": "संसाधनों की कमी की समस्या को हल करने के लिए जनसंख्या नियंत्रण एक तार्किक उपाय है।",
-  "e_en": "Population control is a logical measure to address the problem of resource scarcity."
+  "e_hi": "कथन केवल इतना कहता है कि संसाधन घट रहे हैं, यह नहीं कहता कि जनसंख्या नियंत्रण 'अनिवार्य' ही एकमात्र समाधान है (अन्य उपाय भी संभव हैं, जैसे संसाधनों का बेहतर प्रबंधन)। अतः यह निष्कर्ष कथन से अधिक दावा करता है और इसलिए अनुसरण नहीं करता।",
+  "e_en": "The statement only says resources are becoming scarce; it does not say population control is the sole 'mandatory' solution (other measures, like better resource management, are also possible). So this conclusion overstates the premise and does not follow."
  },
  {
   "id": "rp-rea-i02136",
@@ -59783,29 +59760,6 @@
   "a": 0,
   "e_hi": "चूंकि दोनों समूहों के बीच कोई स्पष्ट निषेध नहीं है, इसलिए उनके बीच ओवरलैप संभव है।",
   "e_en": "Since there is no explicit prohibition between the two groups, an overlap between them is possible."
- },
- {
-  "id": "rp-rea-j02166",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 1,
-  "q_hi": "यदि किसी कूट भाषा में 'DELHI' को 'EFMII' लिखा जाता है, तो उसी भाषा में 'BOMBAY' को कैसे लिखा जाएगा?",
-  "q_en": "If 'DELHI' is coded as 'EFMII' in a certain language, how will 'BOMBAY' be coded in that same language?",
-  "o_hi": [
-   "CPNCBZ",
-   "CPOCBZ",
-   "CQOCBZ",
-   "CPOCAZ"
-  ],
-  "o_en": [
-   "CPNCBZ",
-   "CPOCBZ",
-   "CQOCBZ",
-   "CPOCAZ"
-  ],
-  "a": 0,
-  "e_hi": "प्रत्येक अक्षर में क्रमशः +1, +1, +1, +4, +4 की वृद्धि हो रही है। BOMBAY के लिए यह पैटर्न CPOCBZ देता है।",
-  "e_en": "The pattern follows +1, +1, +1, +4, +4 increment for each letter. Applying this to BOMBAY results in CPOCBZ."
  },
  {
   "id": "rp-rea-j02167",
@@ -60264,8 +60218,8 @@
    "DJCKS"
   ],
   "a": 1,
-  "e_hi": "प्रत्येक अक्षर में +2 किया गया है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। इसी प्रकार CHAIR में +2 करने पर EJCKS प्राप्त होता है।",
-  "e_en": "Each letter is shifted by +2. T+2=V, A+2=C, B+2=D, L+2=N, E+2=G. Applying +2 to CHAIR yields EJCKS."
+  "e_hi": "प्रत्येक अक्षर में +2 किया गया है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। इसी प्रकार CHAIR में +2 करने पर: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, जो 'EJCKT' प्राप्त होता है।",
+  "e_en": "Each letter is shifted by +2. T+2=V, A+2=C, B+2=D, L+2=N, E+2=G. Applying +2 to CHAIR: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, giving 'EJCKT'."
  },
  {
   "id": "rp-rea-j02182",
@@ -60333,8 +60287,8 @@
    "None follow"
   ],
   "a": 3,
-  "e_hi": "पहला निष्कर्ष ऐतिहासिक तथ्य पर आधारित है, जबकि दूसरा निष्कर्ष कथन से तार्किक रूप से सिद्ध नहीं होता।",
-  "e_en": "The first conclusion is a historical fact, while the second cannot be logically derived from the statement alone."
+  "e_hi": "'कथन' में केवल यह बताया गया है कि नेहरू भारत के पहले प्रधानमंत्री थे - इसमें न तो कोई वर्ष (1947) और न ही जन्मस्थान का उल्लेख है। चूंकि दोनों निष्कर्ष केवल दिए गए कथन के पाठ से (बाहरी सामान्य ज्ञान के बिना) सिद्ध नहीं होते, इसलिए कोई भी निष्कर्ष अनुसरण नहीं करता।",
+  "e_en": "The statement only says Nehru was India's first PM — it mentions neither a year (1947) nor his birthplace. Since neither conclusion can be derived strictly from the text of the statement alone (without outside general knowledge), neither conclusion follows."
  },
  {
   "id": "rp-rea-i02148",
@@ -60519,29 +60473,6 @@
   "a": 0,
   "e_hi": "खोज का अर्थ यह नहीं है कि नियम अस्तित्व में नहीं था, वह केवल अज्ञात था।",
   "e_en": "Discovery does not mean the law did not exist; it simply means it was unknown."
- },
- {
-  "id": "rp-rea-j02184",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 1,
-  "q_hi": "यदि किसी कूट भाषा में 'DELHI' को 'EDKGI' लिखा जाता है, तो उसी भाषा में 'BOMBAY' को क्या लिखा जाएगा?",
-  "q_en": "If 'DELHI' is written as 'EDKGI' in a certain code, how will 'BOMBAY' be coded in the same language?",
-  "o_hi": [
-   "CPNCBZ",
-   "APNCBZ",
-   "CPNCAZ",
-   "CPNCBX"
-  ],
-  "o_en": [
-   "CPNCBZ",
-   "APNCBZ",
-   "CPNCAZ",
-   "CPNCBX"
-  ],
-  "a": 0,
-  "e_hi": "तर्क यह है कि अक्षरों में +1, -1, +1, -1 का पैटर्न है। B+1=C, O-1=N, M+1=N, B-1=A, A+1=B, Y-1=X नहीं, यहाँ +1, -1 का क्रम है।",
-  "e_en": "The pattern follows +1, -1 alternately for each letter. Applying this to BOMBAY gives C, N, N, A, B, Z."
  },
  {
   "id": "rp-rea-j02185",
@@ -60958,29 +60889,6 @@
   "e_en": "No direct relationship is established between singers and actors in the statement, so both conclusions are uncertain."
  },
  {
-  "id": "rp-rea-j02193",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 1,
-  "q_hi": "यदि एक निश्चित कूट भाषा में 'TRAIN' को 'UQBJO' लिखा जाता है, तो उसी कूट भाषा में 'STATION' को कैसे लिखा जाएगा?",
-  "q_en": "If 'TRAIN' is coded as 'UQBJO' in a certain language, how will 'STATION' be coded in the same language?",
-  "o_hi": [
-   "T U B U J O P",
-   "U U B U J O P",
-   "T U B V J O P",
-   "U V B U J O P"
-  ],
-  "o_en": [
-   "T U B U J O P",
-   "U U B U J O P",
-   "T U B V J O P",
-   "U V B U J O P"
-  ],
-  "a": 1,
-  "e_hi": "प्रत्येक अक्षर में +1 की वृद्धि की गई है। T+1=U, R+1=S, A+1=B, I+1=J, N+1=O। इसी तरह STATION बनेगा U U B U J O P।",
-  "e_en": "Each letter is shifted by +1. T+1=U, R+1=S, A+1=B, I+1=J, N+1=O. Following this pattern, STATION becomes U U B U J O P."
- },
- {
   "id": "rp-rea-j02194",
   "s": "reasoning",
   "t": "coding_decoding",
@@ -61002,29 +60910,6 @@
   "a": 2,
   "e_hi": "अक्षरों के वर्णमाला क्रम का योग: C(3)+A(1)+T(20)=24। B(2)+A(1)+T(20)=23।",
   "e_en": "The sum of the alphabetical positions: C(3)+A(1)+T(20)=24. Therefore, B(2)+A(1)+T(20)=23."
- },
- {
-  "id": "rp-rea-j02195",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "यदि 'RED' को 6720 के रूप में कूटबद्ध किया गया है, तो 'GREEN' के लिए कूट क्या होगा?",
-  "q_en": "If 'RED' is coded as 6720, what will be the code for 'GREEN'?",
-  "o_hi": [
-   "16185514",
-   "18551416",
-   "7185514",
-   "1455187"
-  ],
-  "o_en": [
-   "16185514",
-   "18551416",
-   "7185514",
-   "1455187"
-  ],
-  "a": 0,
-  "e_hi": "अक्षरों के स्थान मान को पीछे से लिखा गया है। R=18, E=5, D=4। (4+2)(5+2)(18+2) या सीधे मान का अनुक्रम। यहाँ G(7) R(18) E(5) E(5) N(14) है।",
-  "e_en": "The positional values are arranged. G is 7, R is 18, E is 5, E is 5, N is 14. Combining these gives 7185514, adjusted for code logic."
  },
  {
   "id": "rp-rea-j02196",
@@ -61579,29 +61464,6 @@
   "e_en": "Digits are mapped to letters where 1=B, 9=J, 4=D, 7=G, 5=E, 0=A."
  },
  {
-  "id": "rp-rea-j02211",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "कोड भाषा में 'शिवाजी' को 'टीजेडबीकेजे' लिखा जाता है, तो 'तात्या' को कैसे लिखेंगे?",
-  "q_en": "In a code language, 'SHIVAJI' is written as 'TJZBKJ', how will 'TATYA' be written?",
-  "o_hi": [
-   "यूबीयूजेडबी",
-   "यूबीयूजेड",
-   "यूबीयूजेडए",
-   "यूबीयूजेडसी"
-  ],
-  "o_en": [
-   "UBUZB",
-   "UBUZ",
-   "UBUZA",
-   "UBUZC"
-  ],
-  "a": 1,
-  "e_hi": "अक्षरों में +1, +2, +1, +2 का पैटर्न है।",
-  "e_en": "The pattern is +1, +2, +1, +2 applied to the letters."
- },
- {
   "id": "rp-rea-i02175",
   "s": "reasoning",
   "t": "statement_conclusion",
@@ -61899,29 +61761,6 @@
   "a": 0,
   "e_hi": "अक्षरों के वास्तविक वर्णमाला क्रम को सीधे लिखा गया है: D=4, E=5, E=5, R=18 (यहाँ 1221518 एक अलग तर्क है)। चलिए सरल कोड लेते हैं: D=4, E=5, R=18।",
   "e_en": "The letters are represented by their alphabetical positions. H=8, I=9, G=7, H=8."
- },
- {
-  "id": "rp-rea-j02216",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "यदि 'RED' को 6720 लिखा जाता है, तो 'GREEN' को कैसे लिखा जाएगा?",
-  "q_en": "If 'RED' is coded as 6720, how will 'GREEN' be coded?",
-  "o_hi": [
-   "9207716",
-   "9197716",
-   "8197716",
-   "9197715"
-  ],
-  "o_en": [
-   "9207716",
-   "9197716",
-   "8197716",
-   "9197715"
-  ],
-  "a": 1,
-  "e_hi": "प्रत्येक अक्षर में 2 जोड़कर उनका विपरीत मान या अगला मान लिया गया है।",
-  "e_en": "Each letter's position is shifted by 2 units to derive the code."
  },
  {
   "id": "rp-rea-j02217",
@@ -62518,8 +62357,8 @@
    "None follows"
   ],
   "a": 3,
-  "e_hi": "कथन के अनुसार आरक्षण यात्रा के लिए अनिवार्य शर्त है। राहुल के पास आरक्षण नहीं है, इसलिए वह यात्रा नहीं कर सकता।",
-  "e_en": "According to the statement, reservation is a mandatory condition for travel. Rahul lacks a reservation, so he cannot travel."
+  "e_hi": "कथन केवल यह बताता है कि आरक्षित टिकट होना यात्रा के लिए पर्याप्त (sufficient) है, यह नहीं कहता कि यह एकमात्र तरीका (आवश्यक शर्त) है। अतः आरक्षण न होने से यह निश्चित रूप से नहीं निकलता कि राहुल यात्रा नहीं कर सकता (हो सकता है वह किसी अन्य वैध तरीके से यात्रा करे) - यह 'पूर्ववर्ती को नकारने' (denying the antecedent) की भ्रांति है। निष्कर्ष 2 भी केवल एक सुझाव है, कथन से सिद्ध नहीं होता। इसलिए कोई भी निष्कर्ष सही सिद्ध नहीं होता।",
+  "e_en": "The statement only says a reserved ticket is sufficient for travel, not that it is the only (necessary) way to travel. So the lack of a reservation does not definitely mean Rahul cannot travel (he might travel some other valid way) — concluding otherwise commits the 'denying the antecedent' fallacy. Conclusion 2 is merely a suggestion, not something proven by the statement. So neither conclusion follows."
  },
  {
   "id": "rp-rea-i02198",
@@ -62656,8 +62495,8 @@
    "Neither follows"
   ],
   "a": 3,
-  "e_hi": "तर्क के अनुसार, समय पर पहुँचना ट्रेन पकड़ने की अनिवार्य शर्त है। शर्त पूरी न होने पर परिणाम नकारात्मक होगा।",
-  "e_en": "According to the logic, reaching on time is a mandatory condition for catching the train. If the condition is not met, the result will be negative."
+  "e_hi": "कथन केवल यह बताता है कि समय पर पहुँचना ट्रेन पकड़ने के लिए पर्याप्त (sufficient) है, यह नहीं कहता कि यह एकमात्र तरीका (आवश्यक शर्त) है। इसलिए समय पर न पहुँचने से यह निश्चित नहीं होता कि राजू ट्रेन नहीं पकड़ पाएगा (यह 'पूर्ववर्ती को नकारने' यानी denying the antecedent की भ्रांति है, न कि modus tollens)। निष्कर्ष 2 भी मात्र एक सुझाव है। इसलिए दोनों निष्कर्ष गलत हैं।",
+  "e_en": "The statement only says reaching on time is sufficient to catch the train, not that it is the only (necessary) way. So not reaching on time does not definitely mean Raju will miss the train (this is the 'denying the antecedent' fallacy, not modus tollens). Conclusion 2 is merely a suggestion. So neither conclusion follows."
  },
  {
   "id": "rp-rea-i02204",
@@ -63806,8 +63645,8 @@
    "South"
   ],
   "a": 1,
-  "e_hi": "दक्षिण की ओर मुख करने पर दायां हाथ पूर्व दिशा की ओर होता है। छात्र अक्सर उत्तर-मुखी व्यवस्था मानकर गलती करते हैं।",
-  "e_en": "When facing South, the right hand points East. Students often err by assuming a North-facing perspective."
+  "e_hi": "दक्षिण की ओर मुख करने पर दायां हाथ पश्चिम दिशा की ओर होता है। छात्र अक्सर उत्तर-मुखी व्यवस्था मानकर गलती करते हैं।",
+  "e_en": "When facing South, the right hand points West. Students often err by assuming a North-facing perspective."
  },
  {
   "id": "rp-rea-i02229",
@@ -63837,8 +63676,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 2,
-  "q_hi": "पाँच पुस्तकें एक मेज पर एक के ऊपर एक रखी हैं। 'गणित' 'विज्ञान' के ऊपर है, 'हिंदी' 'अंग्रेजी' के नीचे है, और 'विज्ञान' 'हिंदी' के ऊपर है। सबसे नीचे कौन सी पुस्तक है?",
-  "q_en": "Five books are stacked on a table. Math is above Science, Hindi is below English, and Science is above Hindi. Which book is at the bottom?",
+  "q_hi": "चार पुस्तकें एक मेज पर एक के ऊपर एक रखी हैं। 'गणित' 'विज्ञान' के ऊपर है, 'हिंदी' 'अंग्रेजी' के नीचे है, और 'विज्ञान' 'हिंदी' के ऊपर है। सबसे नीचे कौन सी पुस्तक है?",
+  "q_en": "Four books are stacked on a table. Math is above Science, Hindi is below English, and Science is above Hindi. Which book is at the bottom?",
   "o_hi": [
    "गणित",
    "विज्ञान",
@@ -63852,8 +63691,8 @@
    "English"
   ],
   "a": 2,
-  "e_hi": "क्रम है: गणित > विज्ञान > हिंदी > अंग्रेजी (या अंग्रेजी ऊपर)। हिंदी सबसे नीचे आती है।",
-  "e_en": "The order is Math > Science > Hindi > English (or English above). Hindi ends up at the bottom."
+  "e_hi": "गणित > विज्ञान > हिंदी (दी गई शृंखला से), और अंग्रेजी > हिंदी (अलग से दिया गया)। चूंकि हिंदी, विज्ञान और अंग्रेजी दोनों से नीचे है, इसलिए हिंदी सबसे नीचे है।",
+  "e_en": "Math > Science > Hindi (from the given chain), and English > Hindi (given separately). Since Hindi is below both Science and English, Hindi is at the bottom."
  },
  {
   "id": "rp-rea-i02231",
@@ -63921,8 +63760,8 @@
    "W"
   ],
   "a": 2,
-  "e_hi": "क्रम है: एक्स > वाई > जेड > डब्ल्यू। 'डब्ल्यू' सबसे पीछे है।",
-  "e_en": "The sequence is: X > Y > Z > W. W is at the very end."
+  "e_hi": "दिया गया है: X आगे है Y से, Y आगे है Z से (अतः X-Y-Z क्रम में), और Z, W से पीछे है यानी W, Z से आगे है। चूंकि Z, X और Y दोनों के बाद आता है, और W के भी बाद आता है, इसलिए Z सबके बाद यानी सबसे पीछे है - चाहे W की सटीक स्थिति जो भी हो।",
+  "e_en": "We know X is ahead of Y, Y is ahead of Z (so order X-Y-Z), and Z is behind W, i.e. W is ahead of Z. Since Z comes after both X and Y, and also after W, Z must be behind everyone — regardless of W's exact position. So Z is at the back."
  },
  {
   "id": "rp-rea-i02234",
@@ -64084,29 +63923,6 @@
   "a": 2,
   "e_hi": "छह लोगों में दो मध्य स्थान होते हैं, लेकिन अन्य लोगों की स्थिति स्पष्ट नहीं है।",
   "e_en": "There are two middle positions in a row of six, but the exact positions of others are not fixed."
- },
- {
-  "id": "rp-rea-i02266",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "एक वृत्ताकार मेज पर पांच लोग बैठे हैं। 'क' 'ख' के बाईं ओर दूसरे स्थान पर है। 'ग' 'घ' के दाईं ओर दूसरे स्थान पर है। यदि 'च' 'क' के बगल में है, तो 'घ' के दाईं ओर कौन है?",
-  "q_en": "Five people sit around a circular table. A is second to the left of B. C is second to the right of D. If E is next to A, who is to the right of D?",
-  "o_hi": [
-   "क",
-   "ख",
-   "ग",
-   "च"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "E"
-  ],
-  "a": 1,
-  "e_hi": "वृत्ताकार व्यवस्था में पांच लोगों के लिए स्थान निर्धारित करने पर 'ख' ही 'घ' के दाईं ओर आता है।",
-  "e_en": "Placing five people in a circular arrangement, B correctly fits to the right of D."
  },
  {
   "id": "rp-rea-i02267",
@@ -64381,31 +64197,8 @@
    "None"
   ],
   "a": 0,
-  "e_hi": "पी के दाईं ओर क्यू है, आर के दाईं ओर पी है, और एस के दाईं ओर आर है।",
-  "e_en": "Q is to the right of P, P is to the right of R, and R is to the right of S."
- },
- {
-  "id": "rp-rea-i02270",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह लोग एक घेरे में केंद्र की ओर मुख करके बैठे हैं। एक्स, वाई के बगल में है। जेड, डब्ल्यू के सामने है। यदि वी, यू के दाईं ओर है, तो जेड के बाईं ओर कौन है?",
-  "q_en": "Six people are sitting in a circle facing the center. X is next to Y. Z is opposite W. If V is to the right of U, who is to the left of Z?",
-  "o_hi": [
-   "एक्स",
-   "वाई",
-   "यू",
-   "वी"
-  ],
-  "o_en": [
-   "X",
-   "Y",
-   "U",
-   "V"
-  ],
-  "a": 3,
-  "e_hi": "वृत्ताकार व्यवस्था में जेड के बाईं ओर वी स्थित है।",
-  "e_en": "In the circular arrangement, V is positioned to the left of Z."
+  "e_hi": "P के दाईं ओर Q है, Q के दाईं ओर R है (चूंकि P, R के सामने है - वर्गाकार मेज में सामने वाला व्यक्ति 2 स्थान दूर होता है), और R के दाईं ओर S है। इस प्रकार दक्षिणावर्त क्रम P-Q-R-S है, जिसमें S, R के दाईं ओर बैठा है - यानी R ही वह व्यक्ति है जिसके दाईं ओर S बैठा है।",
+  "e_en": "Q is to the right of P, R is to the right of Q (since P is opposite R — on a square table, the person opposite is 2 seats away), and S is to the right of R. This gives the clockwise order P-Q-R-S, where S sits to R's right — so R is the person to whose right S is sitting."
  },
  {
   "id": "rp-rea-i02271",
@@ -64454,29 +64247,6 @@
   "e_en": "If Shyam is at the seventh position, Ram will be at the fourth position."
  },
  {
-  "id": "rp-rea-i02273",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "चार मित्र ए, बी, सी और डी एक कार्ड गेम खेल रहे हैं। ए, सी का साथी है। बी, डी का साथी है। यदि सी का मुख उत्तर की ओर है, तो डी का मुख किस दिशा में है?",
-  "q_en": "Four friends A, B, C, and D are playing a card game. A is the partner of C. B is the partner of D. If C faces North, in which direction does D face?",
-  "o_hi": [
-   "पूर्व",
-   "पश्चिम",
-   "उत्तर",
-   "दक्षिण"
-  ],
-  "o_en": [
-   "East",
-   "West",
-   "North",
-   "South"
-  ],
-  "a": 1,
-  "e_hi": "साझेदार एक-दूसरे के विपरीत बैठते हैं, इसलिए डी का मुख पश्चिम की ओर होगा।",
-  "e_en": "Partners sit opposite each other, so D must face West."
- },
- {
   "id": "rp-rea-i02274",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -64496,8 +64266,8 @@
    "History"
   ],
   "a": 2,
-  "e_hi": "क्रम इतिहास, रसायन, भौतिकी, गणित है। रसायन विज्ञान सबसे नीचे है।",
-  "e_en": "The order is History, Chemistry, Physics, Math. Chemistry is at the bottom."
+  "e_hi": "गणित > भौतिकी > रसायन विज्ञान (दी गई शृंखला से), और इतिहास > रसायन विज्ञान (अलग से दिया गया)। चूंकि रसायन विज्ञान, भौतिकी और इतिहास दोनों से नीचे है, इसलिए रसायन विज्ञान सबसे नीचे है।",
+  "e_en": "Math > Physics > Chemistry (from the given chain), and History > Chemistry (given separately). Since Chemistry is below both Physics and History, Chemistry is at the bottom."
  },
  {
   "id": "rp-rea-i02275",
@@ -65395,29 +65165,6 @@
   "a": 2,
   "e_hi": "चूंकि पी और आर साथ नहीं हो सकते, इसलिए क्यू को बीच में होना चाहिए ताकि वे अलग रहें।",
   "e_en": "Since P and R cannot be together, Q must be in the middle to separate them."
- },
- {
-  "id": "rp-rea-i02291",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "पांच छात्र एक वृत्ताकार मेज के चारों ओर बैठे हैं। ए, बी के बाईं ओर है। सी, डी के दाईं ओर है। ई, ए के दाईं ओर है। यदि डी, ई के बाईं ओर है, तो बी के दाईं ओर कौन है?",
-  "q_en": "Five students are sitting around a circular table. A is to the left of B. C is to the right of D. E is to the right of A. If D is to the left of E, who is to the right of B?",
-  "o_hi": [
-   "ए",
-   "सी",
-   "डी",
-   "ई"
-  ],
-  "o_en": [
-   "A",
-   "C",
-   "D",
-   "E"
-  ],
-  "a": 2,
-  "e_hi": "क्रम (घड़ी की दिशा में): बी-ए-ई-डी-सी है। बी के दाईं ओर सी है।",
-  "e_en": "The order (clockwise) is B-A-E-D-C. C is to the right of B."
  },
  {
   "id": "rp-rea-i02292",
@@ -66335,9 +66082,9 @@
    "1949",
    "1950"
   ],
-  "a": 0,
-  "e_hi": "जॉन मथाई ने 1949 में स्वतंत्र भारत का पहला रेल बजट पेश किया था। यह प्रश्न तार्किक कालानुक्रमिक अनुक्रमों के लिए आधार प्रदान करता है।",
-  "e_en": "John Mathai presented the first Railway Budget of independent India in 1949. This question serves as a foundation for logical chronological sequences."
+  "a": 2,
+  "e_hi": "जॉन मथाई ने स्वतंत्र भारत का पहला रेल बजट वर्ष 1949 में पेश किया था।",
+  "e_en": "John Mathai presented independent India's first Railway Budget in the year 1949."
  },
  {
   "id": "rp-rea-j02316",
@@ -66566,8 +66313,8 @@
    "C"
   ],
   "a": 2,
-  "e_hi": "व्यवस्था इस प्रकार है: D, C, E, B, A। अतः ई मध्य में है।",
-  "e_en": "The arrangement is: D, C, E, B, A. Therefore, E is in the middle."
+  "e_hi": "A ठीक B के बाईं ओर है (A-B सटे हुए), C ठीक D के दाईं ओर है (D-C सटे हुए), और E, B के दाईं ओर पर C के बाईं ओर है। इन्हें मिलाकर एक मान्य क्रम है: A, B, E, D, C। इस क्रम में मध्य स्थान (5 में से तीसरा) पर E है।",
+  "e_en": "A is immediately left of B (A-B adjacent), C is immediately right of D (D-C adjacent), and E is to the right of B but left of C. Combining these gives a valid order: A, B, E, D, C. In this order, the middle position (3rd of 5) is E."
  },
  {
   "id": "rp-rea-i02310",
@@ -66662,52 +66409,6 @@
   "e_en": "The order is: C > A > B > D > E. A is in second place."
  },
  {
-  "id": "rp-rea-i02314",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह किताबें एक शेल्फ पर हैं। भौतिकी की किताब गणित के दाईं ओर है। रसायन विज्ञान, इतिहास के बाईं ओर है। अंग्रेजी, भौतिकी के बाईं ओर है। यदि रसायन विज्ञान सबसे बाईं ओर है, तो दाईं ओर से दूसरी किताब कौन सी है?",
-  "q_en": "Six books are on a shelf. The Physics book is to the right of Mathematics. Chemistry is to the left of History. English is to the left of Physics. If Chemistry is at the far left, which book is second from the right?",
-  "o_hi": [
-   "भौतिकी",
-   "गणित",
-   "इतिहास",
-   "अंग्रेजी"
-  ],
-  "o_en": [
-   "Physics",
-   "Mathematics",
-   "History",
-   "English"
-  ],
-  "a": 1,
-  "e_hi": "क्रम: रसायन-इतिहास-अंग्रेजी-गणित-भौतिकी-जीवविज्ञान। दाईं से दूसरी गणित है।",
-  "e_en": "Order: Chemistry-History-English-Mathematics-Physics-Biology. The second from right is Mathematics."
- },
- {
-  "id": "rp-rea-i02315",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच लोग एक पंक्ति में खड़े हैं। ए, बी के पीछे है। सी, डी के आगे है। ई, ए के आगे है। यदि डी, बी के पीछे है, तो सबसे आगे कौन खड़ा है?",
-  "q_en": "Five people are standing in a line. A is behind B. C is ahead of D. E is ahead of A. If D is behind B, who is standing at the very front?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "ई"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "E"
-  ],
-  "a": 3,
-  "e_hi": "क्रम: ई-ए-बी-डी-सी (उलटा) या सी-डी-बी-ए-ई। ई सबसे आगे है।",
-  "e_en": "The order is E-A-B-D-C. Therefore, E is at the very front."
- },
- {
   "id": "rp-rea-i02316",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -66752,29 +66453,6 @@
   "a": 3,
   "e_hi": "व्यवस्था: पंक्ति 1 (उ): पी-एस-क्यू-आर, पंक्ति 2 (द): सी-ए-डी-बी। क्यू के सामने डी है।",
   "e_en": "Arrangement: Row 1 (N): P-S-Q-R, Row 2 (S): C-A-D-B. D is opposite Q."
- },
- {
-  "id": "rp-rea-i02318",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 1,
-  "q_hi": "पांच मित्र - अ, ब, स, द और इ - एक पंक्ति में उत्तर की ओर मुख करके बैठे हैं। यदि 'ब' किसी भी छोर पर नहीं है और 'अ' केवल 'स' के ठीक बगल में है, तो बीच में कौन बैठा है?",
-  "q_en": "Five friends - A, B, C, D, and E - are sitting in a row facing north. If 'B' is not at either end and 'A' is sitting exactly next to 'C', who is sitting in the middle?",
-  "o_hi": [
-   "अ",
-   "ब",
-   "स",
-   "द"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "D"
-  ],
-  "a": 1,
-  "e_hi": "व्यवस्था के अनुसार, 'ब' को बीच में होना चाहिए ताकि अन्य शर्तें पूरी हो सकें।",
-  "e_en": "According to the arrangement, 'B' must be in the middle to satisfy the given conditions."
  },
  {
   "id": "rp-rea-i02319",
@@ -66823,75 +66501,6 @@
   "e_en": "Since 'M' is in the middle and the others are adjacent to it, 'M' is the one between them."
  },
  {
-  "id": "rp-rea-i02321",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह लोग एक मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। ए, बी के सामने है। सी, डी के दाईं ओर है। यदि ई, ए के दाईं ओर है, तो एफ, बी के किस ओर है?",
-  "q_en": "Six people are sitting around a table facing the center. A is opposite B. C is to the right of D. If E is to the right of A, then where is F in relation to B?",
-  "o_hi": [
-   "बाईं ओर",
-   "दाईं ओर",
-   "सामने",
-   "पीछे"
-  ],
-  "o_en": [
-   "To the left",
-   "To the right",
-   "Opposite",
-   "Behind"
-  ],
-  "a": 0,
-  "e_hi": "स्थानों को व्यवस्थित करने पर, एफ, बी के बाईं ओर आता है।",
-  "e_en": "Arranging the positions, F comes to the left of B."
- },
- {
-  "id": "rp-rea-i02322",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच फल - आम, केला, सेब, अंगूर और संतरा - एक कतार में रखे हैं। आम, सेब के बगल में नहीं है। केला, संतरा के बगल में है। यदि सेब, अंगूर के बाईं ओर है, तो बीच में कौन सा फल है?",
-  "q_en": "Five fruits - Mango, Banana, Apple, Grapes, and Orange - are placed in a row. Mango is not next to Apple. Banana is next to Orange. If Apple is to the left of Grapes, which fruit is in the middle?",
-  "o_hi": [
-   "आम",
-   "केला",
-   "सेब",
-   "अंगूर"
-  ],
-  "o_en": [
-   "Mango",
-   "Banana",
-   "Apple",
-   "Grapes"
-  ],
-  "a": 3,
-  "e_hi": "तार्किक व्यवस्था करने पर अंगूर मध्य स्थिति में आता है।",
-  "e_en": "Upon logical arrangement, Grapes occupy the middle position."
- },
- {
-  "id": "rp-rea-i02323",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "पांच इमारतें एक सीधी रेखा में हैं। ए, बी के दाईं ओर है। सी, डी के बाईं ओर है। यदि ई, बी के बाईं ओर है और डी, ए के बाईं ओर है, तो कौन सी इमारत सबसे बाईं ओर है?",
-  "q_en": "Five buildings are in a straight line. A is to the right of B. C is to the left of D. If E is to the left of B and D is to the left of A, which building is on the extreme left?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "ई"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "E"
-  ],
-  "a": 3,
-  "e_hi": "क्रम ई-बी-ए-डी-सी बनता है, अतः ई सबसे बाईं ओर है।",
-  "e_en": "The sequence formed is E-B-A-D-C, so E is at the extreme left."
- },
- {
   "id": "rp-rea-i02324",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -66911,77 +66520,8 @@
    "Sohan"
   ],
   "a": 3,
-  "e_hi": "बैठक व्यवस्था के अनुसार मोहन, श्याम के दाईं ओर बैठता है।",
-  "e_en": "According to the seating arrangement, Mohan sits to the right of Shyam."
- },
- {
-  "id": "rp-rea-i02325",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "छह छात्र एक पंक्ति में हैं। ए, बी के बाईं ओर है। सी, डी के दाईं ओर है। ई, बी के दाईं ओर है। यदि डी, ई के बाईं ओर है, तो पंक्ति में सबसे दाईं ओर कौन है?",
-  "q_en": "Six students are in a row. A is to the left of B. C is to the right of D. E is to the right of B. If D is to the left of E, who is at the extreme right of the row?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "ई"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "E"
-  ],
-  "a": 2,
-  "e_hi": "व्यवस्था ए-बी-ई-डी-सी है, जिससे सी सबसे दाईं ओर आता है।",
-  "e_en": "The arrangement is A-B-E-D-C, making C the one at the extreme right."
- },
- {
-  "id": "rp-rea-i02326",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच लोग एक वृत्त में केंद्र की ओर मुख करके बैठे हैं। ए, बी के बगल में है। सी, डी के बगल में है। यदि ई, ए के बाईं ओर है, तो डी किसके बगल में है?",
-  "q_en": "Five people are sitting in a circle facing the center. A is next to B. C is next to D. If E is to the left of A, who is D next to?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "ई"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "E"
-  ],
-  "a": 2,
-  "e_hi": "वृत्ताकार व्यवस्था में सी, डी और बी के बीच में होगा।",
-  "e_en": "In a circular arrangement, C will be between D and B."
- },
- {
-  "id": "rp-rea-i02327",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 1,
-  "q_hi": "तीन खिलाड़ी - एक्स, वाई, जेड - एक पंक्ति में हैं। एक्स, वाई के दाईं ओर है। जेड, एक्स के दाईं ओर है। यदि एक और खिलाड़ी डब्लू, वाई के बाईं ओर आता है, तो पंक्ति में बीच में कौन है?",
-  "q_en": "Three players - X, Y, Z - are in a row. X is to the right of Y. Z is to the right of X. If another player W joins to the left of Y, who is in the middle of the row?",
-  "o_hi": [
-   "एक्स",
-   "वाई",
-   "जेड",
-   "डब्लू"
-  ],
-  "o_en": [
-   "X",
-   "Y",
-   "Z",
-   "W"
-  ],
-  "a": 1,
-  "e_hi": "व्यवस्था डब्लू-वाई-एक्स-जेड है, जिसमें वाई और एक्स बीच में हैं; विकल्पों के अनुसार वाई सही उत्तर है।",
-  "e_en": "The arrangement is W-Y-X-Z, where Y and X are in the middle; based on options, Y is the correct answer."
+  "e_hi": "सोहन के दाईं ओर मोहन है, मोहन के दाईं ओर (सोहन के सामने होने के कारण) राम है, और राम के दाईं ओर श्याम है। इस प्रकार दक्षिणावर्त क्रम सोहन-मोहन-राम-श्याम है, जिसमें श्याम के दाईं ओर (चक्र पूरा होकर) सोहन बैठता है।",
+  "e_en": "Mohan is to the right of Sohan, Ram is to the right of Mohan (since Ram is opposite Sohan), and Shyam is to the right of Ram. This gives the clockwise order Sohan-Mohan-Ram-Shyam, where Sohan sits to Shyam's right (wrapping around the table)."
  },
  {
   "id": "rp-rea-i02328",
@@ -67007,29 +66547,6 @@
   "e_en": "The sitting order is D, C, A, B, E. A is sitting in the middle."
  },
  {
-  "id": "rp-rea-i02329",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह लोग एक वृत्ताकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। पी, क्यू के बाईं ओर दूसरा है और आर, एस के दाईं ओर है। यदि टी, पी और आर के बीच में है, तो क्यू के ठीक दाईं ओर कौन है?",
-  "q_en": "Six people are sitting around a circular table facing the center. P is second to the left of Q and R is to the right of S. If T is between P and R, who is to the immediate right of Q?",
-  "o_hi": [
-   "एस",
-   "पी",
-   "टी",
-   "यू"
-  ],
-  "o_en": [
-   "S",
-   "P",
-   "T",
-   "U"
-  ],
-  "a": 0,
-  "e_hi": "वृत्ताकार क्रम में क्यू, एस, आर, टी, पी और यू व्यवस्थित हैं। क्यू के दाईं ओर एस है।",
-  "e_en": "In the circular arrangement, Q, S, R, T, P, and U are placed. S is to the immediate right of Q."
- },
- {
   "id": "rp-rea-i02330",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -67049,54 +66566,8 @@
    "West"
   ],
   "a": 3,
-  "e_hi": "यदि ए उत्तर देख रहा है, तो उसके दाईं ओर बैठा व्यक्ति पूर्व की ओर मुख करेगा।",
-  "e_en": "If A is facing North, the person sitting to his right will face East."
- },
- {
-  "id": "rp-rea-i02331",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "सात छात्र एक सीधी रेखा में बैठे हैं। एम, एन के बाईं ओर तीसरा है। यदि ओ, एम के ठीक बगल में है और पी, ओ के दाईं ओर दूसरा है, तो एम और पी के बीच कितने छात्र हैं?",
-  "q_en": "Seven students are sitting in a straight line. M is third to the left of N. If O is next to M and P is second to the right of O, how many students are between M and P?",
-  "o_hi": [
-   "शून्य",
-   "एक",
-   "दो",
-   "तीन"
-  ],
-  "o_en": [
-   "Zero",
-   "One",
-   "Two",
-   "Three"
-  ],
-  "a": 1,
-  "e_hi": "क्रम एम, ओ, पी है, इसलिए एम और पी के बीच केवल ओ बैठा है।",
-  "e_en": "The sequence is M, O, P, so only O sits between M and P."
- },
- {
-  "id": "rp-rea-i02332",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पाँच इमारतें पी, क्यू, आर, एस और टी एक पंक्ति में हैं। आर, पी के दाईं ओर है और टी, क्यू के बाईं ओर है। यदि एस, टी के दाईं ओर और आर के बाईं ओर है, तो बीच में कौन सी इमारत है?",
-  "q_en": "Five buildings P, Q, R, S, and T are in a row. R is to the right of P and T is to the left of Q. If S is to the right of T and to the left of R, which building is in the middle?",
-  "o_hi": [
-   "पी",
-   "क्यू",
-   "आर",
-   "एस"
-  ],
-  "o_en": [
-   "P",
-   "Q",
-   "R",
-   "S"
-  ],
-  "a": 3,
-  "e_hi": "क्रम क्यू, टी, एस, आर, पी है। एस मध्य में स्थित है।",
-  "e_en": "The order is Q, T, S, R, P. S is located in the middle."
+  "e_hi": "यदि A उत्तर की ओर मुख किए हुए है (अर्थात मेज़ की दक्षिण भुजा पर बैठा है), तो A के दाहिने हाथ की दिशा पूर्व होती है, यानी A के दाईं ओर बैठा व्यक्ति मेज़ की पूर्वी भुजा पर है। पूर्वी भुजा पर बैठकर केंद्र की ओर मुख करने वाला व्यक्ति पश्चिम दिशा की ओर देखता है। अतः B पश्चिम की ओर मुख किए हुए है।",
+  "e_en": "If A faces North (i.e. sits on the south side of the table), A's right hand points East, so the person to A's right sits on the east side of the table. A person sitting on the east side facing the centre faces West. So B is facing West."
  },
  {
   "id": "rp-rea-i02333",
@@ -67122,29 +66593,6 @@
   "e_en": "In parallel rows, people sitting opposite each other face opposite directions."
  },
  {
-  "id": "rp-rea-i02334",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह मित्र एक पंक्ति में बैठे हैं। जेड, वाई के बाईं ओर है और एक्स, डब्ल्यू के दाईं ओर है। यदि वी, यू के दाईं ओर है और जेड, एक्स के दाईं ओर है, तो पंक्ति के बाएं छोर पर कौन है?",
-  "q_en": "Six friends are sitting in a row. Z is to the left of Y and X is to the right of W. If V is to the right of U and Z is to the right of X, who is at the left end of the row?",
-  "o_hi": [
-   "यू",
-   "वी",
-   "डब्ल्यू",
-   "एक्स"
-  ],
-  "o_en": [
-   "U",
-   "V",
-   "W",
-   "X"
-  ],
-  "a": 0,
-  "e_hi": "क्रम यू, वी, डब्ल्यू, एक्स, जेड, वाई है। यू सबसे बाएं है।",
-  "e_en": "The order is U, V, W, X, Z, Y. U is at the far left."
- },
- {
   "id": "rp-rea-i02335",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -67164,8 +66612,8 @@
    "S"
   ],
   "a": 2,
-  "e_hi": "क्रम एस, आर, क्यू, पी है। एस सबसे बाईं ओर है।",
-  "e_en": "The order is S, R, Q, P. S is at the extreme left."
+  "e_hi": "दिया गया है: R, Q से बाईं ओर है (यानी R पहले आता है), R, S से बाईं ओर है, और Q, P से बाईं ओर है। इन्हें मिलाकर एक मान्य क्रम है: R, S, Q, P। चूंकि R के पहले कुछ भी नहीं है, R सबसे बाईं ओर (extreme left) है।",
+  "e_en": "We're given: R is left of Q (R comes first), R is left of S, and Q is left of P. Combining these gives a valid order: R, S, Q, P. Since nothing comes before R, R is at the extreme left."
  },
  {
   "id": "rp-rea-i02336",

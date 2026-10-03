@@ -2572,8 +2572,8 @@
    "50%"
   ],
   "a": 1,
-  "e_hi": "डीजल चक्र दक्षता का सूत्र संपीड़न अनुपात और कट-ऑफ अनुपात पर निर्भर करता है। गणना करने पर यह लगभग 55 प्रतिशत आता है।",
-  "e_en": "Diesel cycle efficiency depends on compression ratio and cut-off ratio. Calculating gives approximately 55%."
+  "e_hi": "डीजल चक्र दक्षता = 1 - (1/r^(γ-1)) * [(ρ^γ - 1)/(γ(ρ-1))]। r=15, ρ=2, γ=1.4 रखने पर: 15^0.4 ≈ 2.954, 1/2.954 ≈ 0.3385; (2^1.4 - 1)/(1.4*1) ≈ 1.639/1.4 ≈ 1.171; दक्षता = 1 - 0.3385*1.171 ≈ 1 - 0.396 = 0.604, यानी लगभग 60%।",
+  "e_en": "Diesel cycle efficiency = 1 - (1/r^(gamma-1)) * [(rho^gamma - 1)/(gamma*(rho-1))]. With r=15, rho=2, gamma=1.4: r^(gamma-1) = 15^0.4 ≈ 2.954, so 1/2.954 ≈ 0.3385; (rho^gamma - 1)/(gamma*(rho-1)) = (2^1.4 - 1)/(1.4*1) ≈ 1.639/1.4 ≈ 1.171. Efficiency = 1 - 0.3385*1.171 ≈ 1 - 0.396 = 0.604, i.e. approximately 60%."
  },
  {
   "id": "rp-je_-f00113",
@@ -18234,9 +18234,9 @@
    "4.71 mm",
    "6.28 mm"
   ],
-  "a": 1,
-  "e_hi": "बेंड अलाउंस = (Angle * pi / 180) * (Radius + K * Thickness)। 90 डिग्री के लिए यह मान लगभग 3.14 मिलीमीटर आता है।",
-  "e_en": "Bend allowance = (Angle * pi / 180) * (Radius + K * Thickness). For 90 degrees and standard parameters, it calculates to approximately 3.14 mm."
+  "a": 0,
+  "e_hi": "बेंड अलाउंस = (कोण * pi / 180) * (R + K * मोटाई)। यहाँ R = 0 (तीव्र कोन वाला मोड़) मानते हुओ, BA = (90 * pi/180) * (0 + 0.5*2) = 1.5708 * 1 ≈ 1.57 मिलीमीटर।",
+  "e_en": "Bend allowance = (Angle * pi / 180) * (R + K * Thickness). Assuming inside bend radius R = 0 (a sharp bend), BA = (90 * pi/180) * (0 + 0.5*2) = 1.5708 * 1 ≈ 1.57 mm."
  },
  {
   "id": "rp-je_-h00795",
@@ -30149,8 +30149,8 @@
    "36.7 m"
   ],
   "a": 1,
-  "e_hi": "घर्षण हानि hf = (f * L * V^2) / (2 * g * D)। hf = (0.02 * 100 * 3^2) / (2 * 9.81 * 0.1) = 18 / 1.962 = 9.17 मीटर (यदि f डार्सी घर्षण कारक है)। यहाँ मानक f के लिए गणना 18.35 आती है।",
-  "e_en": "Head loss hf = (f * L * V^2) / (2 * g * D). hf = (0.02 * 100 * 9) / (2 * 9.81 * 0.1) = 9.17 m. Depending on the friction factor definition, 18.35 m is also common if f is the Darcy factor."
+  "e_hi": "घर्षण हानि hf = (f * L * V^2) / (2 * g * D), जहाँ f डार्सी घर्षण कारक है। hf = (0.02 * 100 * 3^2) / (2 * 9.81 * 0.1) = 18 / 1.962 ≈ 9.17 मीटर।",
+  "e_en": "Head loss hf = (f * L * V^2) / (2 * g * D), where f is the Darcy friction factor. hf = (0.02 * 100 * 3^2) / (2 * 9.81 * 0.1) = 18 / 1.962 ≈ 9.17 m."
  },
  {
   "id": "rp-je_-h01314",
@@ -38405,9 +38405,9 @@
    "Decrease compression ratio",
    "Decrease the cetane number of the fuel"
   ],
-  "a": 2,
-  "e_hi": "डीजल इंजन में नॉकिंग को कम करने के लिए संपीड़न अनुपात को कम करना चाहिए, जो इग्निशन विलंब (ignition delay) को नियंत्रित करता है।",
-  "e_en": "To reduce knocking in a diesel engine, one should decrease the compression ratio, which helps manage the ignition delay period."
+  "a": 0,
+  "e_hi": "डीजल इंजन में नॉकिंग इग्नीशन विलंब (ignition delay) के कारण होती है। संपीडन अनुपात बढ़ाने से वायु का तापमान बढ़ता है, जिससे इग्नीशन विलंब कम हो कर नॉकिंग घटती है।",
+  "e_en": "Knocking in a diesel engine is caused by ignition delay. Increasing the compression ratio raises the air temperature, which shortens the ignition delay and thereby reduces knocking."
  },
  {
   "id": "rp-je_-h01675",
@@ -44137,29 +44137,6 @@
   "e_en": "Ludwig Prandtl presented the 'Boundary Layer Theory' in 1904, which opened new avenues in fluid mechanics and deepened the understanding of turbulence."
  },
  {
-  "id": "rp-je_-01925",
-  "s": "je_mechanical",
-  "t": "fluid_mechanics_machinery",
-  "d": 2,
-  "q_hi": "पंप और टर्बाइन के अनुपात में 'विशिष्ट गति' (Specific Speed) की अवधारणा का जनक किसे माना जाता है?",
-  "q_en": "Who is considered the originator of the concept of 'Specific Speed' in the context of pumps and turbines?",
-  "o_hi": [
-   "एलेन नॉर्मांड",
-   "जॉर्ज बर्नौली",
-   "ओस्बॉर्ड रेनॉल्ड्स",
-   "लुडविग प्रैंडल"
-  ],
-  "o_en": [
-   "Alfred Normand",
-   "George Bernoulli",
-   "Osborne Reynolds",
-   "Ludwig Prandtl"
-  ],
-  "a": 0,
-  "e_hi": "एलेन नॉर्मांड, एक फ्रांसीसी इंजीनियर, को 'विशिष्ट गति' (Specific Speed) की अवधारणा का जनक माना जाता है, जिसका उपयोग पंप और टर्बाइन के प्रकार की पहचान करने के लिए किया जाता है।",
-  "e_en": "Alfred Normand, a French engineer, is considered the originator of the concept of 'Specific Speed', which is used to identify the type of pumps and turbines."
- },
- {
   "id": "rp-je_-01926",
   "s": "je_mechanical",
   "t": "fluid_mechanics_machinery",
@@ -44181,29 +44158,6 @@
   "a": 2,
   "e_hi": "प्रवाह समीकरण Q = A × V के अनुसार, क्षेत्रफल (A) के व्युत्क्रमानुपाती गति (V) होती है। व्यास आधा होने पर क्षेत्रफल चारवें हिस्सा रह जाता है, इसलिए गति चार गुना हो जाती है।",
   "e_en": "According to the continuity equation Q = A × V, velocity is inversely proportional to the cross-sectional area. Halving the diameter reduces the area to one-fourth, thus increasing the velocity by four times."
- },
- {
-  "id": "rp-je_-01927",
-  "s": "je_mechanical",
-  "t": "fluid_mechanics_machinery",
-  "d": 2,
-  "q_hi": "एक पंप को इस्तेमाल किया जा रहा है जो 50 मीटर की ऊँचाई तक पानी पंप करता है। यदि पंप का दक्षता (efficiency) 80% है और शक्ति (power) इनपुट 10 kW है, तो यह पंप प्रति सेकंड कितना पानी (kg में) उठा सकता है? (g = 10 m/s² मानें)",
-  "q_en": "A pump is used to lift water to a height of 50 meters. If the pump's efficiency is 80% and the power input is 10 kW, how much water (in kg) can it lift per second? (Assume g = 10 m/s²)",
-  "o_hi": [
-   "पंप की घूर्णन गति बहुत अधिक होना",
-   "सक्शन लाइन में दबाव वाष्प दबाव से कम हो जाना",
-   "डिस्चार्ज लाइन में अचानक दबाव बढ़ना",
-   "पंप में तेल का तापमान बढ़ना"
-  ],
-  "o_en": [
-   "The rotational speed of the pump is too high",
-   "The pressure in the suction line drops below the vapor pressure",
-   "Sudden increase in pressure in the discharge line",
-   "Increase in oil temperature inside the pump"
-  ],
-  "a": 1,
-  "e_hi": "कैविटेशन तब होता है जब सक्शन साइड पर स्थानीय दबाव तरल के वाष्प दबाव से कम हो जाता है, जिससे वाष्प बुलबुले बनते हैं।",
-  "e_en": "Cavitation occurs when the local pressure in the suction side drops below the vapor pressure of the liquid, causing vapor bubbles to form."
  },
  {
   "id": "rp-je_-01928",
@@ -44302,8 +44256,8 @@
   "s": "je_mechanical",
   "t": "fluid_mechanics_machinery",
   "d": 3,
-  "q_hi": "एक पंप 50 kW की शक्ति से 2000 kg/min की दर से जल पंप करता है। यदि जल की ऊँचाई 10 m पर उठाई जाती है, तो पंप की दक्षता (efficiency) क्या होगी? (g = 9.81 m/s²)",
-  "q_en": "A pump operates at 50 kW power, pumping water at a rate of 2000 kg/min to a height of 10 m. What is the efficiency of the pump? (g = 9.81 m/s²)",
+  "q_hi": "१ पंप 50 kW की शक्ति से 20000 kg/min की दर से जल पंप करता है। यदि जल की ऒंचाई 10 m पर उठाई जाती है, तो पंप की दक्षता (efficiency) क्या होगी? (g = 9.81 m/s²)",
+  "q_en": "A pump operates at 50 kW power, pumping water at a rate of 20000 kg/min to a height of 10 m. What is the efficiency of the pump? (g = 9.81 m/s²)",
   "o_hi": [
    "65.4%",
    "75.2%",
@@ -44317,8 +44271,8 @@
    "55.8%"
   ],
   "a": 0,
-  "e_hi": "उत्पादित शक्ति = mgh/t = (2000/60) * 9.81 * 10 = 3270 W = 3.27 kW। दक्षता = (3.27 / 50) * 100 = 65.4%।",
-  "e_en": "Output Power = mgh/t = (2000/60) * 9.81 * 10 = 3270 W = 3.27 kW. Efficiency = (3.27 / 50) * 100 = 65.4%."
+  "e_hi": "उत्पादित शक्ति = mgh/t = (20000/60) * 9.81 * 10 = 32700 W = 32.7 kW। दक्षता = (32.7 / 50) * 100 = 65.4%।",
+  "e_en": "Output Power = mgh/t = (20000/60) * 9.81 * 10 = 32700 W = 32.7 kW. Efficiency = (32.7 / 50) * 100 = 65.4%."
  },
  {
   "id": "rp-je_-01933",
@@ -44894,5 +44848,212 @@
   "a": 1,
   "e_hi": "इसोथर्मल प्रक्रिया में आंतरिक ऊर्जा का परिवर्तन शून्य होता है, इसलिए ऊष्मा का आदान-प्रदान कार्य के बराबर होता है।",
   "e_en": "In an isothermal process, the change in internal energy is zero, so the heat exchange equals the work done."
+ },
+ {
+  "id": "rp-je_-01958",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक इंजन में तापमान के अंतर (ΔT) को बढ़ाने पर, यदि ऊष्मा की आपूर्ति (Q) स्थिर रहती है, तो थर्मोडायनामिक दक्षता (η) पर क्या प्रभाव पड़ता है?",
+  "q_en": "In an engine, if the temperature difference (ΔT) is increased while keeping heat input (Q) constant, what happens to the thermodynamic efficiency (η)?",
+  "o_hi": [
+   "दक्षता बढ़ जाती है",
+   "दक्षता घट जाती है",
+   "दक्षता अपरिवर्तित रहती है",
+   "दक्षता अस्थिर हो जाती है"
+  ],
+  "o_en": [
+   "Efficiency increases",
+   "Efficiency decreases",
+   "Efficiency remains unchanged",
+   "Efficiency becomes unstable"
+  ],
+  "a": 0,
+  "e_hi": "कार्नोट दक्षता या सामान्य थर्मल दक्षता सीधे तौर पर तापमान के अंतर पर निर्भर करती है; बड़ा ΔT अधिक विद्युत या यांत्रिक कार्य उत्पन्न करता है।",
+  "e_en": "Carnot or general thermal efficiency is directly related to the temperature difference; a larger ΔT allows for more mechanical work to be produced from the same heat input."
+ },
+ {
+  "id": "rp-je_-01959",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक वाहन के इंजन में 'सुपरचार्जिंग' (supercharging) प्रक्रिया का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of 'supercharging' in a vehicle engine?",
+  "o_hi": [
+   "इंजन की शीतलीकरण दर बढ़ाना",
+   "सिलेंडर में हवा/गैस का दबाव बढ़ाना",
+   "इंजन के वजन को कम करना",
+   "ईंधन की साफ्टी (safety) सुनिश्चित करना"
+  ],
+  "o_en": [
+   "To increase the cooling rate of the engine",
+   "To increase the pressure of air/gas in the cylinder",
+   "To reduce the weight of the engine",
+   "To ensure fuel safety"
+  ],
+  "a": 1,
+  "e_hi": "सुपरचार्जिंग में एक कंप्रेसर का उपयोग करके सिलेंडर में प्रवेश करने वाली हवा का दबाव और घनत्व बढ़ाया जाता है, जिससे अधिक ईंधन जलाया जा सकता है और शक्ति बढ़ती है।",
+  "e_en": "Supercharging uses a compressor to increase the pressure and density of air entering the cylinder, allowing more fuel to be burned and thus increasing power output."
+ },
+ {
+  "id": "rp-je_-01960",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक हीट पंप (heat pump) के गुणक (COP) की तुलना एक हीट इंजन (heat engine) की दक्षता (efficiency) से करें। सामान्यतः एक हीट पंप का COP कितना होता है?",
+  "q_en": "Compare the Coefficient of Performance (COP) of a heat pump with the efficiency of a heat engine. Typically, what is the COP of a heat pump?",
+  "o_hi": [
+   "हमेशा 1 से कम होता है",
+   "हमेशा 1 से अधिक होता है",
+   "हमेशा शून्य होता है",
+   "यह दक्षता के बराबर होता है"
+  ],
+  "o_en": [
+   "Always less than 1",
+   "Always greater than 1",
+   "Always zero",
+   "Equal to efficiency"
+  ],
+  "a": 1,
+  "e_hi": "हीट पंप ऊर्जा का उत्पादन नहीं करता बल्कि उसे स्थानांतरित करता है। इसलिए, इसके द्वारा प्रदान की गई ऊष्मा (Q_H) प्रयुक्त कार्य (W) से अधिक होती है, जिससे COP > 1 होता है।",
+  "e_en": "A heat pump transfers energy rather than producing it. Therefore, the heat delivered (Q_H) is greater than the work input (W), resulting in a COP greater than 1."
+ },
+ {
+  "id": "rp-je_-01961",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक वायु-संकुचित (air-compressed) टैंक में गैस का तापमान बहुत अधिक हो जाता है। यदि टैंक को अदनामिक (adiabatic) माना जाए, तो गैस के विस्तार (expansion) के दौरान उसका तापमान कैसे बदलेगा?",
+  "q_en": "The temperature of gas in an air-compressed tank becomes very high. If the tank is considered adiabatic, how will the temperature change during the expansion of the gas?",
+  "o_hi": [
+   "तापमान बढ़ेगा",
+   "तापमान घटेगा",
+   "तापमान स्थिर रहेगा",
+   "तापमान उतार-चढ़ाव करेगा"
+  ],
+  "o_en": [
+   "Temperature will increase",
+   "Temperature will decrease",
+   "Temperature will remain constant",
+   "Temperature will fluctuate"
+  ],
+  "a": 1,
+  "e_hi": "अदनामिक विस्तार के दौरान, गैस आस-पास के माध्यम से ऊष्मा लेती या छोड़ती नहीं। विस्तार के लिए किया गया कार्य गैस की आंतरिक ऊर्जा से आता है, जिससे तापमान गिरता है।",
+  "e_en": "During adiabatic expansion, the gas does not exchange heat with the surroundings. The work done for expansion comes from the internal energy of the gas, causing the temperature to drop."
+ },
+ {
+  "id": "rp-je_-01962",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक व्हाइटहेड इंजन (Whitehead engine) में, यदि दाब 4 बार है और तापमान 300 K है, तो वॉर्नर इंजन (Walne engine) में दाब और तापमान क्या होंगे?",
+  "q_en": "In a Whitehead engine, if the pressure is 4 bar and temperature is 300 K, what will be the pressure and temperature in a Walne engine?",
+  "o_hi": [
+   "4 बार, 300 K",
+   "4 बार, 600 K",
+   "8 बार, 300 K",
+   "8 बार, 600 K"
+  ],
+  "o_en": [
+   "4 bar, 300 K",
+   "4 bar, 600 K",
+   "8 bar, 300 K",
+   "8 bar, 600 K"
+  ],
+  "a": 0,
+  "e_hi": "वॉर्नर इंजन व्हाइटहेड इंजन का एक प्रकार है जहाँ समान तापमान और दाब को बनाए रखा जाता है, इसलिए मान समान रहते हैं।",
+  "e_en": "The Walne engine is a type of Whitehead engine where the same temperature and pressure are maintained, so the values remain unchanged."
+ },
+ {
+  "id": "rp-je_-01963",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक आदर्स गैस के लिए, यदि आंतरिक ऊर्जा (Internal Energy) केवल तापमान का फलन है, तो इसका कारण क्या है?",
+  "q_en": "For an ideal gas, if internal energy is a function of temperature only, what is the reason for this?",
+  "o_hi": [
+   "गैस के अणुओं के बीच कोई आकर्षण बल नहीं होता",
+   "गैस का द्रव्यमान स्थिर रहता है",
+   "गैस का आयतन परिवर्तनशील होता है",
+   "गैस का दाब तापमान के समानुपाती होता है"
+  ],
+  "o_en": [
+   "There are no intermolecular forces of attraction between gas molecules",
+   "The mass of the gas remains constant",
+   "The volume of the gas is variable",
+   "The pressure of the gas is proportional to temperature"
+  ],
+  "a": 0,
+  "e_hi": "आदर्श गैस के अणुओं के बीच कोई आंतरिक ऊर्जा (आकर्षण/प्रतिकर्षण) नहीं होती, इसलिए आंतरिक ऊर्जा केवल स्थितिज ऊर्जा (तापमान) पर निर्भर करती है।",
+  "e_en": "Ideal gas molecules have no internal potential energy (attraction/repulsion), so internal energy depends only on kinetic energy (temperature)."
+ },
+ {
+  "id": "rp-je_-01964",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "कार्नो चक्र (Carnot cycle) में, यदि ऊष्मा स्रोत का तापमान 600 K और सिंक का तापमान 300 K है, तो चक्र की दक्षता क्या होगी?",
+  "q_en": "In a Carnot cycle, if the source temperature is 600 K and the sink temperature is 300 K, what is the efficiency of the cycle?",
+  "o_hi": [
+   "25%",
+   "50%",
+   "75%",
+   "100%"
+  ],
+  "o_en": [
+   "25%",
+   "50%",
+   "75%",
+   "100%"
+  ],
+  "a": 1,
+  "e_hi": "कार्नो दक्षता का सूत्र η = 1 - (T_sink / T_source) है। मान रखने पर: 1 - (300/600) = 1 - 0.5 = 0.5 या 50%।",
+  "e_en": "Carnot efficiency formula is η = 1 - (T_sink / T_source). Substituting values: 1 - (300/600) = 1 - 0.5 = 0.5 or 50%."
+ },
+ {
+  "id": "rp-je_-01965",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक बंद पात्र (closed system) में, यदि गैस का आयतन स्थिर रहता है और तापमान बढ़ता है, तो किया गया कार्य (Work Done) कितना होगा?",
+  "q_en": "In a closed system, if the gas volume remains constant and temperature increases, what is the work done?",
+  "o_hi": [
+   "शून्य",
+   "सकारात्मक",
+   "नकारात्मक",
+   "तापमान पर निर्भर करता है"
+  ],
+  "o_en": [
+   "Zero",
+   "Positive",
+   "Negative",
+   "Depends on temperature"
+  ],
+  "a": 0,
+  "e_hi": "कार्य का सूत्र W = PΔV है। चूँकि आयतन में परिवर्तन (ΔV) शून्य है, इसलिए किया गया कार्य शून्य होगा।",
+  "e_en": "The formula for work is W = PΔV. Since the change in volume (ΔV) is zero, the work done will be zero."
+ },
+ {
+  "id": "rp-je_-01966",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक आदर्स गैस के लिए, यदि तापमान 273°C से 0°C तक कम किया जाता है, तो उसका वास्तविक तापमान (केल्विन में) कितना बदलेगा?",
+  "q_en": "For an ideal gas, if the temperature is reduced from 273°C to 0°C, by how much does its absolute temperature (in Kelvin) change?",
+  "o_hi": [
+   "273 K",
+   "546 K",
+   "273 K कम",
+   "546 K कम"
+  ],
+  "o_en": [
+   "273 K",
+   "546 K",
+   "Decreases by 273 K",
+   "Decreases by 546 K"
+  ],
+  "a": 2,
+  "e_hi": "273°C = 546 K और 0°C = 273 K। अंतर = 546 - 273 = 273 K। इसलिए तापमान 273 K कम हुआ।",
+  "e_en": "273°C = 546 K and 0°C = 273 K. Difference = 546 - 273 = 273 K. So, the temperature decreased by 273 K."
  }
 ]
