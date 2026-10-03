@@ -91,7 +91,19 @@ class TopicScreen extends StatelessWidget {
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(18),
-                child: Text(note.summary.of(lang), style: const TextStyle(fontSize: 16.5, height: 1.7)),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Row(children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(color: BrandColors.sky.withValues(alpha: 0.1), shape: BoxShape.circle),
+                      child: Icon(topicIcon(topic.id), color: BrandColors.sky, size: 20),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(child: Text(topic.name.of(lang), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15))),
+                  ]),
+                  const SizedBox(height: 14),
+                  Text(note.summary.of(lang), style: const TextStyle(fontSize: 16.5, height: 1.7)),
+                ]),
               ),
             ),
           ]),
