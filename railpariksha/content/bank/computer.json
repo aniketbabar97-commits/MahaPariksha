@@ -1250,23 +1250,23 @@
   "s": "computer",
   "t": "ms_office",
   "d": 3,
-  "q_hi": "Ribbon इंटरफ़ेस को सबसे पहले किस एप्लिकेशन ने पेश किया?",
-  "q_en": "Which application introduced the Ribbon interface first?",
+  "q_hi": "माइक्रोसॉफ्ट ऑफिस के किस संस्करण में रिबन इंटरफ़ेस को पहली बार पेश किया गया था?",
+  "q_en": "In which version of Microsoft Office was the Ribbon interface first introduced?",
   "o_hi": [
-   "Word 2007",
-   "Excel 2007",
-   "PowerPoint 2007",
-   "Access 2007"
+   "ऑफिस 2003",
+   "ऑफिस 2007",
+   "ऑफिस 2010",
+   "ऑफिस 2013"
   ],
   "o_en": [
-   "Word 2007",
-   "Excel 2007",
-   "PowerPoint 2007",
-   "Access 2007"
+   "Office 2003",
+   "Office 2007",
+   "Office 2010",
+   "Office 2013"
   ],
-  "a": 2,
-  "e_hi": "Ribbon इंटरफ़ेस को सबसे पहले PowerPoint 2007 ने पेश किया था।",
-  "e_en": "The Ribbon interface was first introduced in PowerPoint 2007."
+  "a": 1,
+  "e_hi": "रिबन इंटरफ़ेस को ऑफिस 2007 में पेश किया गया था (Word, Excel, PowerPoint और Access में एक साथ), जिसने पुरानी मेनू/टूलबार प्रणाली की जगह ली।",
+  "e_en": "The Ribbon interface was introduced across Office 2007 (Word, Excel, PowerPoint and Access simultaneously), replacing the older menu/toolbar system."
  },
  {
   "id": "rp-com-o00057",
@@ -2046,9 +2046,9 @@
    "Control peripherals",
    "All of the above"
   ],
-  "a": 3,
-  "e_hi": "CPU डेटा संग्रहीत करता है, गणनाएँ करता है और परिधीय उपकरणों को नियंत्रित करता है।",
-  "e_en": "The CPU stores data, performs calculations, and controls peripheral devices."
+  "a": 1,
+  "e_hi": "सीपीयू का मुख्य कार्य गणितीय और तार्किक गणनाएँ करके निर्देशों को निष्पादित करना है; डेटा मुख्य मेमोरी में रहता है, और पेरिफेरल्स का प्रबंधन सीधे सीपीयू द्वारा नहीं, बल्कि I/O नियंत्रकों द्वारा किया जाता है।",
+  "e_en": "The CPU's core function is to execute instructions by performing arithmetic and logical calculations; data is held in main memory, and peripherals are managed via I/O controllers, not directly by the CPU."
  },
  {
   "id": "rp-com-o00094",
@@ -2633,20 +2633,20 @@
   "q_hi": "DNS का मुख्य कार्य क्या है?",
   "q_en": "What is the primary function of DNS?",
   "o_hi": [
-   "IP पते को नाम में बदलना",
-   "सर्वर की पहचान",
-   "डेटा एन्क्रिप्शन",
+   "डोमेन नामों को IP पतों में बदलना",
+   "सर्वर की पहचान करना",
+   "डेटा एन्क्रिप्ट करना",
    "नेटवर्क टोपोलॉजी दिखाना"
   ],
   "o_en": [
-   "Convert IP address to name",
+   "Convert domain names to IP addresses",
    "Identify server",
    "Encrypt data",
    "Show network topology"
   ],
   "a": 0,
-  "e_hi": "DNS इंटरनेट पर डोमेन नाम को संबंधित IP पते में बदलता है, जिससे उपयोगकर्ता नाम से वेबसाइट तक पहुँच सकते हैं।",
-  "e_en": "DNS translates domain names into corresponding IP addresses, enabling users to access websites by name."
+  "e_hi": "DNS (डोमेन नेम सिस्टम) मानव-पठनीय डोमेन नामों को उन संख्यात्मक IP पतों में बदलता है जिनका उपयोग कंप्यूटर एक-दूसरे को खोजने के लिए करते हैं।",
+  "e_en": "DNS (Domain Name System) translates human-readable domain names into the numeric IP addresses computers use to locate each other."
  },
  {
   "id": "rp-com-o00121",
@@ -16330,8 +16330,8 @@
    "2"
   ],
   "a": 2,
-  "e_hi": "COUNT फलन केवल संख्यात्मक मानों की गिनती करता है। दिए गए तर्कों में केवल 10, 20 और 30 संख्याएँ हैं, इसलिए परिणाम 3 होगा ('ABC' पाठ है और TRUE एक तार्किक मान है जिसे COUNT छोड़ देता है)।",
-  "e_en": "The COUNT function only counts numerical values. In the given arguments, only 10, 20, and 30 are numbers, so the result is 3 ('ABC' is text and TRUE is a boolean which COUNT ignores)."
+  "e_hi": "एक्सेल का COUNT फ़ंक्शन संख्यात्मक मानों को गिनता है, और जब TRUE/FALSE को सीधे शाब्दिक (literal) आर्गुमेंट के रूप में टाइप किया जाता है (किसी सेल संदर्भ से नहीं), तो यह उन्हें भी गिनता है। यहाँ 10, 20, TRUE और 30 सभी गिने जाते हैं (4), जबकि 'ABC' (टेक्स्ट) शामिल नहीं होता।",
+  "e_en": "Excel's COUNT function counts numeric values, and -- when typed directly as literal arguments (not from a cell reference) -- it also counts TRUE/FALSE. Here 10, 20, TRUE and 30 are all counted (4), while 'ABC' (text) is excluded."
  },
  {
   "id": "rp-com-l00716",
@@ -16468,8 +16468,8 @@
    "5"
   ],
   "a": 0,
-  "e_hi": "COUNTA फलन उन सभी सेलों या तर्कों की गिनती करता है जो खाली नहीं हैं। दिए गए उदाहरण में 10, 'रेलवे' और 20 तीन गैर-रिक्त मान हैं (रिक्त स्ट्रिंग खाली मानी जाती है), अतः कुल गिनती 3 है।",
-  "e_en": "The COUNTA function counts all cells or arguments that are not empty. In the given example, 10, 'Railway', and 20 are three non-empty values, so the total count is 3."
+  "e_hi": "एक्सेल का COUNTA फ़ंक्शन उन सभी आर्गुमेंट को गिनता है जो वास्तव में खाली सेल नहीं हैं -- इसमें संख्याएँ, टेक्स्ट, और एक शाब्दिक खाली-स्ट्रिंग मान ('') भी शामिल है। यहाँ 10, 'Railway', '' और 20 सभी गिने जाते हैं, जिससे कुल 4 प्राप्त होता है।",
+  "e_en": "Excel's COUNTA function counts all arguments that are not a genuinely empty cell -- this includes numbers, text, and even a literal empty-string value (''). Here 10, 'Railway', '' and 20 are all counted, giving 4."
  },
  {
   "id": "rp-com-l00722",
@@ -19619,8 +19619,8 @@
    "Bridge"
   ],
   "a": 1,
-  "e_hi": "फायरवॉल एक नेटवर्क सुरक्षा प्रणाली है जो पूर्व-निर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी और नियंत्रण करती है।",
-  "e_en": "A firewall is a network security system that monitors and controls incoming and based on predetermined security rules."
+  "e_hi": "फ़ायरवॉल एक नेटवर्क सुरक्षा प्रणाली है जो पूर्वनिर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले ट्रैफ़िक की निगरानी और नियंत्रण करती है।",
+  "e_en": "A firewall is a network security system that monitors and controls incoming and outgoing traffic based on predetermined security rules."
  },
  {
   "id": "rp-com-l00859",

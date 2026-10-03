@@ -119,8 +119,8 @@
   "s": "je_electrical",
   "t": "circuit_theory",
   "d": 3,
-  "q_hi": "एक श्रृंखला आरएलसी (RLC) परिपथ में, यदि प्रतिरोध 3 ओम, प्रेरकत्व प्रतिघात 4 ओम और धारिता प्रतिघात 1 ओम है, तो परिपथ का प्रतिबाधा (Impedance) क्या होगा?",
-  "q_en": "In a series RLC circuit, if resistance is 3 Ohms, inductive reactance is 4 Ohms, and capacitive reactance is 1 Ohm, what will be the impedance of the circuit?",
+  "q_hi": "एक श्रेणी RLC परिपथ में, यदि प्रतिरोध 3 ओम, प्रेरकीय प्रतिघात 5 ओम, और धारितीय प्रतिघात 1 ओम है, तो परिपथ की प्रतिबाधा (impedance) क्या होगी?",
+  "q_en": "In a series RLC circuit, if resistance is 3 Ohms, inductive reactance is 5 Ohms, and capacitive reactance is 1 Ohm, what will be the impedance of the circuit?",
   "o_hi": [
    "8 ओम",
    "5 ओम",
@@ -134,8 +134,8 @@
    "3 Ohms"
   ],
   "a": 1,
-  "e_hi": "प्रतिबाधा Z = sqrt(R^2 + (XL - XC)^2) होता है। Z = sqrt(3^2 + (4-1)^2) = sqrt(9+9) = 4.24, जो विकल्प 5 के निकट है।",
-  "e_en": "Impedance Z = sqrt(R^2 + (XL - XC)^2). Z = sqrt(3^2 + (4-1)^2) = sqrt(18) = 4.24, which is closest to 5."
+  "e_hi": "प्रतिबाधा Z = sqrt(R^2 + (XL - XC)^2) = sqrt(3^2 + (5-1)^2) = sqrt(9 + 16) = sqrt(25) = 5 ओम।",
+  "e_en": "Impedance Z = sqrt(R^2 + (XL - XC)^2) = sqrt(3^2 + (5-1)^2) = sqrt(9 + 16) = sqrt(25) = 5 Ohms."
  },
  {
   "id": "rp-je_e-f00007",
@@ -441,8 +441,8 @@
   "s": "je_electrical",
   "t": "circuit_theory",
   "d": 3,
-  "q_hi": "एक 200 वोल्ट के डीसी स्रोत के साथ 40 ओम का प्रतिरोध श्रेणी में जुड़ा है। यदि प्रतिरोध को 60 ओम कर दिया जाए, तो धारा में कितनी कमी आएगी?",
-  "q_en": "A 40 ohm resistor is in series with a 200 volt DC source. If the resistance is changed to 60 ohms, what will be the decrease in current?",
+  "q_hi": "एक 200 वोल्ट डीसी स्रोत के साथ श्रेणी में 40 ओम का प्रतिरोधक जुड़ा है। यदि प्रतिरोध को 50 ओम में बदल दिया जाए, तो धारा में कितनी कमी आएगी?",
+  "q_en": "A 40 ohm resistor is in series with a 200 volt DC source. If the resistance is changed to 50 ohms, what will be the decrease in current?",
   "o_hi": [
    "1 एम्पियर",
    "0.5 एम्पियर",
@@ -455,9 +455,9 @@
    "2 Ampere",
    "1.5 Ampere"
   ],
-  "a": 3,
-  "e_hi": "प्रारंभिक धारा = 200/40 = 5A। नई धारा = 200/60 = 3.33A। कमी = 5 - 3.33 = 1.67A (लगभग 1.5-2 के निकटतम)।",
-  "e_en": "Initial current = 200/40 = 5A. New current = 200/60 = 3.33A. Decrease = 5 - 3.33 = 1.67A (approx)."
+  "a": 0,
+  "e_hi": "प्रारंभिक धारा = 200/40 = 5 A. नई धारा = 200/50 = 4 A. कमी = 5 - 4 = 1 एम्पियर।",
+  "e_en": "Initial current = 200/40 = 5 A. New current = 200/50 = 4 A. Decrease = 5 - 4 = 1 Ampere."
  },
  {
   "id": "rp-je_e-f00021",
@@ -1030,9 +1030,9 @@
    "Linear and bilateral",
    "Passive only"
   ],
-  "a": 2,
-  "e_hi": "सुपरपोजिशन प्रमेय केवल उन परिपथों पर लागू होता है जो रैखिक (linear) और द्विपक्षीय (bilateral) दोनों होते हैं।",
-  "e_en": "The Superposition Theorem is applicable only to circuits that are both linear and bilateral."
+  "a": 0,
+  "e_hi": "सुपरपोज़िशन प्रमेय (Superposition Theorem) केवल रेखीय (linear) परिपथों पर लागू होता है -- सुपरपोज़िशन के लिए द्विपक्षीय (bilateral) होना आवश्यक नहीं है; यह शर्त प्रत्यागम प्रमेय (Reciprocity Theorem) से अधिक जुड़ी हुई है।",
+  "e_en": "The Superposition Theorem is applicable only to circuits that are linear (containing only linear elements) -- bilaterality is not required for superposition; that is a precondition more associated with the Reciprocity Theorem."
  },
  {
   "id": "rp-je_e-f00046",
