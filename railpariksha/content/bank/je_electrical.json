@@ -41812,5 +41812,97 @@
   "a": 1,
   "e_hi": "थाइरिस्टर (एससीआर) को अर्ध-नियंत्रित स्विच माना जाता है क्योंकि इसे एक पल्स द्वारा चालू किया जा सकता है, लेकिन इसे बंद करने के लिए बाहरी सर्किट की आवश्यकता होती है।",
   "e_en": "A thyristor (SCR) is considered a semi-controlled switch because it can be turned on by a gate pulse, but requires external commutation circuitry to be turned off."
+ },
+ {
+  "id": "rp-je_e-01830",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "यदि एक लोड का पावर फैक्टर 0.8 lagging है और उसकी वास्तविक शक्ति 10 kW है, तो उसकी अपारेंट शक्ति (S) क्या होगी?",
+  "q_en": "If a load has a power factor of 0.8 lagging and its real power is 10 kW, what is its apparent power (S)?",
+  "o_hi": [
+   "12.5 kVA",
+   "8 kVA",
+   "10 kVA",
+   "13.33 kVA"
+  ],
+  "o_en": [
+   "12.5 kVA",
+   "8 kVA",
+   "10 kVA",
+   "13.33 kVA"
+  ],
+  "a": 0,
+  "e_hi": "S = P / pf = 10 kW / 0.8 = 12.5 kVA।",
+  "e_en": "S = P / pf = 10 kW / 0.8 = 12.5 kVA."
+ },
+ {
+  "id": "rp-je_e-01831",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 1,
+  "q_hi": "त्रि‑फेज़ सिस्टम में, यदि लाइन‑लाइन वोल्टेज 400 V है, तो प्रत्येक फेज‑वोल्टेज (सिंगल‑फ़ेज़) कितना होगा?",
+  "q_en": "In a three‑phase system, if the line‑to‑line voltage is 400 V, what is the phase voltage of each single phase?",
+  "o_hi": [
+   "400 V",
+   "230 V",
+   "346 V",
+   "692 V"
+  ],
+  "o_en": [
+   "400 V",
+   "230 V",
+   "346 V",
+   "692 V"
+  ],
+  "a": 1,
+  "e_hi": "फ़ेज‑वोल्टेज = लाइन‑लाइन वोल्टेज ÷ √3 = 400 V ÷ 1.732 ≈ 230 V।",
+  "e_en": "Phase voltage = line‑to‑line voltage ÷ √3 = 400 V ÷ 1.732 ≈ 230 V."
+ },
+ {
+  "id": "rp-je_e-01832",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "एक 100 kVA, 10 % इम्पीडेंस वाला ट्रांसफॉर्मर पर 5 % लोड पर वोल्टेज ड्रॉप लगभग कितना प्रतिशत होगा?",
+  "q_en": "A 100 kVA transformer with 10 % impedance is loaded at 5 %. Approximately what percent voltage drop will occur?",
+  "o_hi": [
+   "0.5 %",
+   "0.5 kV",
+   "5 %",
+   "0.5 % of rated voltage"
+  ],
+  "o_en": [
+   "0.5 %",
+   "0.5 kV",
+   "5 %",
+   "0.5 % of rated voltage"
+  ],
+  "a": 0,
+  "e_hi": "वोल्टेज ड्रॉप = लोड % × इम्पीडेंस % = 5 % × 10 % = 0.5 %।",
+  "e_en": "Voltage drop = load % × impedance % = 5 % × 10 % = 0.5 %."
+ },
+ {
+  "id": "rp-je_e-01833",
+  "s": "je_electrical",
+  "t": "power_systems",
+  "d": 2,
+  "q_hi": "यदि 11 kV, 100 MVA बेस पर ट्रांसफॉर्मर की पर‑यूनिट इम्पीडेंस 0.1 pu है, तो उसका पर‑यूनिट शॉर्ट‑सर्किट करंट (इकाई) क्या होगा?",
+  "q_en": "On an 11 kV, 100 MVA base, a transformer has a per‑unit impedance of 0.1 pu. What is its per‑unit short‑circuit current?",
+  "o_hi": [
+   "5 pu",
+   "10 pu",
+   "1 pu",
+   "0.1 pu"
+  ],
+  "o_en": [
+   "5 pu",
+   "10 pu",
+   "1 pu",
+   "0.1 pu"
+  ],
+  "a": 1,
+  "e_hi": "शॉर्ट‑सर्किट करंट = 1 / Zpu = 1 / 0.1 = 10 pu।",
+  "e_en": "Short‑circuit current = 1 / Zpu = 1 / 0.1 = 10 pu."
  }
 ]
