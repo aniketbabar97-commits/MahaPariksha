@@ -44693,22 +44693,22 @@
   "s": "je_civil",
   "t": "structural_analysis",
   "d": 3,
-  "q_hi": "एक समकोण त्रिकोणीय ट्रस में दो समर्थन A और B 6 m दूरी पर हैं, शीर्ष C की ऊँचाई 4 m है और उस पर 10 kN का लोड लगा है। सदस्य AC में बल कितना होगा?",
-  "q_en": "In a right‑triangle truss with supports A and B 6 m apart, top joint C is 4 m high and carries a 10 kN load. What is the force in member AC?",
+  "q_hi": "एक सममित (isosceles) त्रिकोणीय ट्रस में दो समर्थन A और B 6 m दूरी पर हैं, शीर्ष C, AB के मध्यबिंदु के ठीक ऊपर 4 m की ऊँचाई पर है, और उस पर 10 kN का लोड लगा है। सदस्य AC में बल कितना होगा?",
+  "q_en": "In a symmetric (isosceles) triangular truss with supports A and B 6 m apart, apex joint C is directly above the midpoint of AB at a height of 4 m, and carries a 10 kN load. What is the force in member AC?",
   "o_hi": [
-   "5 kN",
-   "6.25 kN",
-   "8 kN",
-   "10 kN"
+   "5 kN",
+   "6.25 kN",
+   "8 kN",
+   "10 kN"
   ],
   "o_en": [
-   "5 kN",
-   "6.25 kN",
-   "8 kN",
-   "10 kN"
+   "5 kN",
+   "6.25 kN",
+   "8 kN",
+   "10 kN"
   ],
   "a": 1,
-  "e_hi": "C में दो समान सदस्य AC और BC हैं। sinθ=4/5, इसलिए 2F sinθ=10 kN → F=6.25 kN (तनाव)।",
-  "e_en": "Members AC and BC are symmetric; sinθ=4/5, so 2F sinθ=10 kN gives F=6.25 kN in tension."
+  "e_hi": "C, AB के मध्यबिंदु के ऊपर है, इसलिए सदस्य AC और BC सममित हैं और AC की लंबाई = √(3²+4²) = 5 m, sinθ = 4/5। जोड़ C पर संतुलन से 2F sinθ = 10 kN, इसलिए F = 6.25 kN (तनाव)।",
+  "e_en": "Since C lies directly above the midpoint of AB, members AC and BC are symmetric, each of length sqrt(3^2+4^2) = 5 m, giving sinθ = 4/5. Vertical equilibrium at joint C gives 2F sinθ = 10 kN, so F = 6.25 kN (tension)."
  }
 ]
