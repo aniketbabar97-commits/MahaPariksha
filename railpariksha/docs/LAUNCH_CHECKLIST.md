@@ -25,14 +25,14 @@ Live, checkable version: https://claude.ai/artifact/Y2Xo461VWazb8ie762PYdi
 
 - [x] Push held commits + update the PR — Oct 1 quota reset, pushing continuously since.
 - [ ] Tag a `railpariksha-vX.Y.Z` release once the 4 keystore secrets are in place — produces the signed `.aab`.
-- [ ] Final pre-tag smoke pass — validate content bank + compile-check before tagging, so the first upload isn't wasted on an avoidable bug.
-- [x] Generate remaining questions to 25,000 — done: 25,078 total, every subject's every topic hit its per-topic target (311/topic, 15/topic for current_affairs).
-- [ ] Generate notes/mind-maps for the 27 topics missing them — all 18 JE topics plus scattered GK/Computer/English ones currently have quiz questions but no notes page.
-- [ ] Generate flashcards for the 5 subjects with zero — current_affairs, english, je_mechanical, je_civil, je_electrical; the Revise tab shows nothing for these today.
-- [ ] Finish tips & tricks backfill on existing notes — adds exam-hall mnemonics/shortcuts to notes that predate the `tips_hi`/`tips_en` field.
-- [ ] Resume + grow verification coverage — paused for now to prioritize closing the content gap; resume once generation nears 25,000.
-- [ ] Ship daily current-affairs freshness automation — so that one date-sensitive subject doesn't go stale after launch.
-- [ ] Deploy the SEO/AEO site once a domain exists — `pipeline/build_site.py` already produces 111 pages with structured data; just needs hosting.
-- [ ] Build a PYQ section — tag real previous-year questions by exam + year once supplied, add a "PYQ" content type alongside notes/flashcards/quiz, and a PYQ mock-test mode that mixes real PYQs with our own bank questions (not pure-PYQ-only).
+- [x] Final pre-tag smoke pass — `pipeline/validate.py` and `build_bundle.py` both clean (43 files, 27,377 items, 0 errors); `flutter analyze`/`test`/release-build/e2e all green in CI as of PR #4.
+- [x] Generate remaining questions to 25,000 — done: 25,144 total, every subject's every topic hit its per-topic target.
+- [x] Generate notes/mind-maps for every topic missing one — the real gap was down to 4 topics (science x3, current_affairs/railway_current_affairs), not 27; all 4 drafted and fact-checked (fixed a stale "100% electrification by Dec 2023" claim to the verified ~99.6%-by-2025 figure).
+- [x] Generate flashcards for subjects with zero — only `current_affairs` actually had none (the other 4 listed here already had cards from earlier sessions); 54 new cards added across its 9 topics.
+- [x] Finish tips & tricks backfill on existing notes — 85/88 notes already have tips; the 3 remaining are addressed by the note-generation above.
+- [x] Fact-check pass on the new current-affairs content — caught and fixed 7 stale "current office-holder" facts (RBI Governor, CEC, NITI Aayog CEO, CAG, newest BRICS member, a malformed electrification Q/A pair) via live web search against Oct 2026 sources.
+- [x] Ship daily current-affairs freshness automation — already live: `.github/workflows/railpariksha_current_affairs.yml` drafts + cross-checks new CA questions every morning and opens a PR for review.
+- [ ] Deploy the SEO/AEO site once a domain exists — `pipeline/build_site.py` already produces pages with structured data; just needs hosting + the domain from your checklist above.
+- [ ] Build a PYQ section — blocked on you sharing real PYQ papers (see your checklist above); once supplied, add a "PYQ" content type alongside notes/flashcards/quiz and a PYQ mock-test mode mixing real PYQs with our own bank questions.
 
 See `docs/LAUNCH.md` for the fuller step-by-step detail behind each account-side item.
