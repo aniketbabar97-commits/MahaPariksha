@@ -47746,5 +47746,166 @@
   "a": 1,
   "e_hi": "एक्सपेंशन वाल्व अवरुद्ध होने पर, रेफ्रिजरेंट की प्रवाह दर कम हो जाती है। इससे वाष्पक में न्यूनतम दबाव और तापमान गिर जाता है, जिससे वाष्पक पर बर्फ जम सकती है या ठंडक प्रभाव कम हो जाता है।",
   "e_en": "If the expansion valve is blocked, refrigerant flow decreases. This causes low pressure and temperature in the evaporator, leading to potential icing or reduced cooling capacity."
+ },
+ {
+  "id": "rp-je_-02084",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "चार-स्ट्रोक इंजन में, संपीड़न (compression) स्ट्रोक के दौरान पिस्टन की गति किस दिशा में होती है?",
+  "q_en": "In a four-stroke engine, in which direction does the piston move during the compression stroke?",
+  "o_hi": [
+   "शिला direction (upwards)",
+   "नीचे की ओर",
+   "बाएँ की ओर",
+   "दाएँ की ओर"
+  ],
+  "o_en": [
+   "Upwards",
+   "Downwards",
+   "To the left",
+   "To the right"
+  ],
+  "a": 0,
+  "e_hi": "संपीड़न स्ट्रोक में, पिस्टन नीचे से ऊपर की ओर चलता है ताकि क्रैंक केस में मौजूद वायु-ईंधन मिश्रण को संपीडित किया जा सके।",
+  "e_en": "During the compression stroke, the piston moves upwards to compress the air-fuel mixture in the cylinder."
+ },
+ {
+  "id": "rp-je_-02085",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "पेट्रोल इंजन (स्पाक-इग्निशन इंजन) में स्टारिंग के बाद पहला स्ट्रोक कौन सा होता है?",
+  "q_en": "What is the first stroke in a petrol (spark-ignition) engine after starting?",
+  "o_hi": [
+   "सूक्ष्म (Intake)",
+   "संपीड़न (Compression)",
+   "पावर (Expansion)",
+   "एक्सहास्ट (Exhaust)"
+  ],
+  "o_en": [
+   "Intake",
+   "Compression",
+   "Expansion",
+   "Exhaust"
+  ],
+  "a": 0,
+  "e_hi": "चार-स्ट्रोक इंजन का क्रम हमेशा सूक्ष्म (Intake), संपीड़न, पावर और एक्सहास्ट होता है। इसलिए पहला स्ट्रोक सूक्ष्म होता है।",
+  "e_en": "The sequence of a four-stroke engine is always Intake, Compression, Power, and Exhaust. Thus, the first stroke is Intake."
+ },
+ {
+  "id": "rp-je_-02086",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "प्रशीतन प्रणाली (Refrigeration system) में, वाष्पीकरण (evaporation) प्रक्रिया कहां होती है?",
+  "q_en": "In a refrigeration system, where does the evaporation process take place?",
+  "o_hi": [
+   "कंडेंसर में (Condenser)",
+   "कंप्रेसर में (Compressor)",
+   "एवैपोरेटर में (Evaporator)",
+   "थ्रोटल वाल्व में (Throttle Valve)"
+  ],
+  "o_en": [
+   "In the Condenser",
+   "In the Compressor",
+   "In the Evaporator",
+   "In the Throttle Valve"
+  ],
+  "a": 2,
+  "e_hi": "एवैपोरेटर वह घटक है जहां कूलेंट का दबाव कम होता है और वह वाष्पित होकर आसपास के माध्यम से ऊष्मा अवशोषित करता है।",
+  "e_en": "The evaporator is the component where the refrigerant pressure drops and it evaporates, absorbing heat from the surrounding medium."
+ },
+ {
+  "id": "rp-je_-02087",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "डीजल इंजन में ईंधन का दहन (combustion) किसके द्वारा प्रेरित किया जाता है?",
+  "q_en": "In a diesel engine, combustion of fuel is initiated by?",
+  "o_hi": [
+   "इग्निशन प्लग",
+   "कंप्रेसन (Compression)",
+   "पेट्रोल पंप",
+   "कार्ब्युरेटर"
+  ],
+  "o_en": [
+   "Ignition plug",
+   "Compression",
+   "Petrol pump",
+   "Carburetor"
+  ],
+  "a": 1,
+  "e_hi": "डीजल इंजन में स्पार्क प्लग का उपयोग नहीं होता; उच्च संपीड़न के कारण वायु का तापमान इतना बढ़ जाता है कि ईंधन स्वतः दह्नित हो जाता है।",
+  "e_en": "Diesel engines do not use spark plugs; the high temperature of air due to high compression causes the fuel to ignite spontaneously (compression ignition)."
+ },
+ {
+  "id": "rp-je_-02088",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "प्रशीतन चक्र में, कूलेंट का दबाव सबसे अधिक किस घटक में होता है?",
+  "q_en": "In the refrigeration cycle, at which component is the refrigerant pressure highest?",
+  "o_hi": [
+   "एवैपोरेटर के प्रवेश द्वार पर",
+   "कंप्रेसर के निष्कर्ष (Discharge) पर",
+   "थ्रोटल वाल्व के बाद",
+   "कंडेंसर के प्रवेश द्वार पर"
+  ],
+  "o_en": [
+   "At the evaporator inlet",
+   "At the compressor discharge",
+   "After the throttle valve",
+   "At the condenser inlet"
+  ],
+  "a": 1,
+  "e_hi": "कंप्रेसर कम दबाव वाली वाष्प को उच्च दबाव में संपीडित करता है, इसलिए कंप्रेसर के निष्कर्ष (discharge) पर दबाव सबसे अधिक होता है।",
+  "e_en": "The compressor compresses low-pressure vapor into high pressure, so the pressure is highest at the compressor discharge."
+ },
+ {
+  "id": "rp-je_-02089",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "चार-स्ट्रोक इंजन में एक पूर्ण चक्र (complete cycle) पूरा होने के लिए क्रैंकशाफ (crankshaft) को कितनी घुमाव (rotations) चाहिए?",
+  "q_en": "How many rotations of the crankshaft are required to complete one full cycle in a four-stroke engine?",
+  "o_hi": [
+   "एक घुमाव",
+   "दो घुमाव",
+   "तीन घुमाव",
+   "चार घुमाव"
+  ],
+  "o_en": [
+   "One rotation",
+   "Two rotations",
+   "Three rotations",
+   "Four rotations"
+  ],
+  "a": 1,
+  "e_hi": "चार स्ट्रोक (सूक्ष्म, संपीड़न, पावर, एक्सहास्ट) पूरा करने के लिए पिस्टन को आगे-पीछे चलना पड़ता है, जिसके लिए क्रैंकशाफ को दो पूर्ण घुमाव (720 डिग्री) देने होते हैं।",
+  "e_en": "To complete the four strokes (Intake, Compression, Power, Exhaust), the piston must move back and forth, requiring two full rotations (720 degrees) of the crankshaft."
+ },
+ {
+  "id": "rp-je_-02090",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "प्रशीतन प्रणाली में 'थ्रोटल वाल्व' (Throttle Valve) का मुख्य कार्य क्या है?",
+  "q_en": "What is the primary function of the 'Throttle Valve' in a refrigeration system?",
+  "o_hi": [
+   "कूलेंट का दबाव बढ़ाना",
+   "कूलेंट का दबाव कम करना (Expansion)",
+   "कूलेंट की गति को नियंत्रित करना",
+   "कूलेंट का तापमान बढ़ाना"
+  ],
+  "o_en": [
+   "To increase refrigerant pressure",
+   "To reduce refrigerant pressure (Expansion)",
+   "To control refrigerant flow speed",
+   "To increase refrigerant temperature"
+  ],
+  "a": 1,
+  "e_hi": "थ्रोटल वाल्व सिस्टम का विस्तार (expansion) घटक है, जो उच्च दबाव वाले तरल कूलेंट का दबाव अचानक कम कर देता है ताकि वह एवैपोरेटर में वाष्पित हो सके।",
+  "e_en": "The throttle valve is the expansion component of the system; it suddenly reduces the pressure of high-pressure liquid refrigerant so it can evaporate in the evaporator."
  }
 ]

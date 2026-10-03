@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../logic/leaderboard_service.dart';
 import '../widgets/common.dart';
+import '../widgets/share_card.dart';
 
 /// Anonymous, per-exam, weekly leaderboard -- see logic/leaderboard_service.dart for
 /// the schema/privacy model. Entirely optional on top of the app's offline-first core:
@@ -110,10 +110,19 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                                       tooltip: context.tr('शेयर करें', 'Share'),
                                       onPressed: () {
                                         HapticFeedback.selectionClick();
-                                        SharePlus.instance.share(ShareParams(
-                                            text: context.tr(
-                                                'मैं RailPariksha पर ${exam.name.hi} लीडरबोर्ड में #$rank रैंक पर हूं! 🏆 मुझे हराओ: $kPlayUrl',
-                                                "I'm #$rank on the RailPariksha ${exam.name.en} leaderboard! 🏆 Beat me: $kPlayUrl")));
+                                        shareScoreCard(
+                                          context,
+                                          card: ScoreShareCard(
+                                            headline: context.tr('${exam.name.hi} लीडरबोर्ड में मेरी रैंक!', 'My rank on the ${exam.name.en} leaderboard!'),
+                                            scoreText: '#$rank',
+                                            scoreSub: context.tr('रैंक', 'rank'),
+                                            footer: context.tr('मुझे हराओ! 🏆', 'Beat me! 🏆'),
+                                            icon: Icons.military_tech,
+                                          ),
+                                          text: context.tr(
+                                              'मैं RailPariksha पर ${exam.name.hi} लीडरबोर्ड में #$rank रैंक पर हूं! 🏆 मुझे हराओ: $kPlayUrl',
+                                              "I'm #$rank on the RailPariksha ${exam.name.en} leaderboard! 🏆 Beat me: $kPlayUrl"),
+                                        );
                                       },
                                     ),
                                   ]),

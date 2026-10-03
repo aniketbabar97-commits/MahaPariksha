@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/ads.dart';
 import '../core/app_scope.dart';
@@ -10,6 +9,7 @@ import '../logic/leaderboard_service.dart';
 import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
+import '../widgets/share_card.dart';
 
 class ResultsScreen extends StatefulWidget {
   final QuizSpec spec;
@@ -155,10 +155,23 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 label: Text(context.tr('शेयर करें', 'Share')),
                 onPressed: () {
                   HapticFeedback.selectionClick();
-                  SharePlus.instance.share(ShareParams(
-                      text: context.tr(
-                          'मैंने RailPariksha ऐप पर ${spec.titleHi} में ${isSpeed ? widget.speedScore : '$correct/$total'} अंक हासिल किए! 🔥 आप कितने लाएंगे? $kPlayUrl',
-                          'I scored ${isSpeed ? widget.speedScore : '$correct/$total'} in ${spec.titleEn} on RailPariksha! 🔥 Can you beat it? $kPlayUrl')));
+                  final scoreStr = isSpeed ? '${widget.speedScore}' : '$correct/$total';
+                  final title = lang == 'hi' ? spec.titleHi : spec.titleEn;
+                  shareScoreCard(
+                    context,
+                    card: ScoreShareCard(
+                      headline: context.tr('मैंने $title में यह स्कोर हासिल किया!', 'I scored this on $title!'),
+                      scoreText: isSpeed ? scoreStr : '$scoreStr',
+                      scoreSub: isSpeed
+                          ? context.tr('60 सेकंड में सही उत्तर', 'correct answers in 60 sec')
+                          : context.tr('सही उत्तर', 'correct answers'),
+                      footer: context.tr('आप कितने लाएंगे? 🔥', 'Can you beat it? 🔥'),
+                      icon: isSpeed ? Icons.bolt : Icons.emoji_events,
+                    ),
+                    text: context.tr(
+                        'मैंने RailPariksha ऐप पर $title में $scoreStr अंक हासिल किए! 🔥 आप कितने लाएंगे? $kPlayUrl',
+                        'I scored $scoreStr in $title on RailPariksha! 🔥 Can you beat it? $kPlayUrl'),
+                  );
                 },
               ),
             ),

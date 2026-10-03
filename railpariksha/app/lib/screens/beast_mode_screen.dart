@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -10,6 +9,7 @@ import '../core/transitions.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
+import '../widgets/share_card.dart';
 import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
 
@@ -564,7 +564,17 @@ class _BeastResultsSheet extends StatelessWidget {
                       'टियर: ${tier.hi}\n\nक्या आप मुझे हरा सकते हैं? $kPlayUrl';
                   final en = 'I scored ${score.toStringAsFixed(1)} in RailPariksha Beast Mode! ⚡ (streak $bestStreakRun) '
                       'Tier: ${tier.en}\n\nCan you beat me? $kPlayUrl';
-                  SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : hi));
+                  shareScoreCard(
+                    context,
+                    card: ScoreShareCard(
+                      headline: context.tr('मैंने बीस्ट मोड में यह टियर हासिल किया!', 'I reached this tier in Beast Mode!'),
+                      scoreText: score.toStringAsFixed(1),
+                      scoreSub: context.tr('स्ट्रीक $bestStreakRun · टियर ${tier.hi}', 'Streak $bestStreakRun · Tier ${tier.en}'),
+                      footer: context.tr('क्या आप मुझे हरा सकते हैं? ⚡', 'Can you beat me? ⚡'),
+                      icon: Icons.whatshot,
+                    ),
+                    text: lang == 'en' ? en : hi,
+                  );
                 },
               ),
             ),

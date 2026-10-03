@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/ads.dart';
 import '../core/app_scope.dart';
@@ -10,6 +9,7 @@ import '../data/models.dart';
 import '../data/progress.dart';
 import '../logic/percentile.dart';
 import '../widgets/common.dart';
+import '../widgets/share_card.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
 
@@ -525,5 +525,15 @@ void _shareWeeklyCard(BuildContext context, Progress p, String lang) {
       '🔥 Current streak: $streak days\n'
       '🏅 Level: ${level.en}\n\n'
       'Join me on RailPariksha — free practice app 🚀 $kPlayUrl';
-  SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : hi));
+  shareScoreCard(
+    context,
+    card: ScoreShareCard(
+      headline: context.tr('मेरी साप्ताहिक रिपोर्ट 🗓️', 'My weekly report 🗓️'),
+      scoreText: '$weekCount',
+      scoreSub: context.tr('प्रश्न हल किए · $acc% सटीकता · 🔥 $streak दिन', 'questions solved · $acc% accuracy · 🔥 $streak day streak'),
+      footer: context.tr('आप भी अभ्यास शुरू करें 🚀', 'Join me on RailPariksha 🚀'),
+      icon: Icons.local_fire_department,
+    ),
+    text: lang == 'en' ? en : hi,
+  );
 }
