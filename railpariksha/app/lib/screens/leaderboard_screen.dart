@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -98,8 +99,23 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                                   child: Row(children: [
                                     const Icon(Icons.military_tech, color: BrandColors.sunrise),
                                     const SizedBox(width: 10),
-                                    Text(context.tr('आपकी रैंक: #$rank', 'Your rank: #$rank'),
-                                        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800)),
+                                    Expanded(
+                                      child: Text(context.tr('आपकी रैंक: #$rank', 'Your rank: #$rank'),
+                                          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800)),
+                                    ),
+                                    // A good rank is exactly the kind of brag-worthy moment that
+                                    // drives a share -- the leaderboard had no way to act on it.
+                                    IconButton(
+                                      icon: const Icon(Icons.share, color: Colors.white),
+                                      tooltip: context.tr('शेयर करें', 'Share'),
+                                      onPressed: () {
+                                        HapticFeedback.selectionClick();
+                                        SharePlus.instance.share(ShareParams(
+                                            text: context.tr(
+                                                'मैं RailPariksha पर ${exam.name.hi} लीडरबोर्ड में #$rank रैंक पर हूं! 🏆 मुझे हराओ: $kPlayUrl',
+                                                "I'm #$rank on the RailPariksha ${exam.name.en} leaderboard! 🏆 Beat me: $kPlayUrl")));
+                                      },
+                                    ),
                                   ]),
                                 ),
                               ],
