@@ -1,0 +1,56 @@
+# Delete candidates (53 items)
+# Format: id | reason
+
+rp-eng-s00315 | error_spotting: multiple statements are factually wrong simultaneously (route stated as Bombay-Poona instead of Bombay-Thane; '50 miles' also wrong vs true 21 miles) -- question has more than one incorrect statement, making the designated answer non-unique/ambiguous.
+rp-eng-s00319 | error_spotting: besides the flagged '1935' statement, 'ran on the Bombay-Poona line' is also questionable for the FIRST electric locomotive (actual first run was Bombay VT-Kurla in 1925) -- multiple potentially-wrong statements.
+rp-eng-s00322 | error_spotting: besides the flagged 'Bombay Central' statement, 'first station on the Bombay-Poona line' is also factually wrong (should be Bombay-Thane) -- two false statements, non-unique answer.
+rp-eng-s00323 | error_spotting: three statements are simultaneously wrong -- 'ran between Bombay and Poona' (should be Thane), 'inaugurated on 16 February 1853' (actual date is 16 April 1853), and the flagged '1849' -- question unanswerable with a single correct choice.
+rp-eng-s00324 | error_spotting: besides the flagged 'meter gauge' statement, 'ran between Bombay and Poona' and 'inaugurated on 16 February 1853' (actual date 16 April 1853) are also false -- multiple wrong statements.
+rp-eng-s00709 | error_spotting: stored answer is 'No error' but the explanation claims there IS an error ('missed' is incorrectly used) and the explanation text is garbled, inserting untranslated Hindi fragments into e_en -- leftover generation artifact / answer-explanation contradiction.
+rp-eng-s00710 | error_spotting: the flagged option text ('because' and 'because of' used together) does not match the actual words present in the quoted sentence -- fabricated/mismatched error description.
+rp-eng-s00711 | error_spotting: stored answer is 'No error' but explanation asserts an error exists ('could have caused' vs 'could have led to', not a real grammar distinction) -- contradictory and the claimed 'error' is not a genuine error.
+rp-eng-s00712 | error_spotting: explanation's proposed 'corrected' sentence is identical to the original sentence, i.e. no actual correction is demonstrated -- generation artifact.
+rp-eng-s00714 | error_spotting: vague, unfalsifiable 'cause and result not clearly linked' framing with a 'corrected' sentence that doesn't meaningfully differ -- not a genuine identifiable grammar error.
+rp-eng-s00715 | error_spotting: the flagged option text ('slipped') does not match the word actually used in the quoted sentence ('to slip') -- mismatched/fabricated error description.
+rp-eng-s00717 | error_spotting: stored answer is 'No error' but explanation claims 'slipperiness' is incorrectly expressed -- contradicts the stored answer.
+rp-eng-s00718 | error_spotting: vague 'timeline is unclear' framing with a confusing non-corrective rewritten sentence -- not a genuine, verifiable grammar error.
+rp-eng-s01284 | error_spotting (math-dressed): question asserts a true fact ('1 km = 1000 m') is 'wrong' and then gives the same value (1000 m) as the 'correct' answer -- self-contradictory premise.
+rp-eng-f01456 | error_spotting: the designated 'error' ('Due to the repair...') is not actually wrong; the explanation itself admits 'the structure is technically acceptable' -- fabricated/unsupported error.
+rp-eng-f01509 | error_spotting: option (C) is given as 'has he gone' but the quoted sentence itself reads '...where he has gone' (normal word order) -- the option text contradicts the sentence being tested.
+rp-eng-s00347 | vocabulary: explanation invents a non-existent English word ('smemorandum') as the basis for the answer -- fabricated/garbled content.
+rp-eng-s00387 | vocabulary: English rendering is tautological -- asks 'which word is most similar to small' and lists 'small' itself as the correct option (a Hindi-to-English translation exercise that broke when rendered in English).
+rp-eng-s00887 | vocabulary: explanation gives a false/fabricated etymology ('the root of pleasant is happiness') -- pleasant derives from Latin placere, not from the concept of happiness.
+rp-eng-s01010 | vocabulary: question asks for a 'Hindi word' translation of 'consequential' but all options are English words, and the correct answer is the same word as the one being defined (tautological) -- broken template.
+rp-eng-s01013 | vocabulary: question asks for 'a less formal synonym of because' and the stored correct answer is 'because' itself -- tautological, not a real synonym question.
+rp-eng-s01014 | vocabulary: question asks for 'a synonym of therefore used less in formal writing' and the stored correct answer is 'therefore' itself -- tautological.
+rp-eng-s01018 | vocabulary: question asks for a 'Hindi word' translation of 'nevertheless' but all options are English words ('because','but','therefore','nevertheless'); the explanation's claim that 'but' translates to 'nevertheless' is also weak/wrong -- broken template.
+rp-eng-s01090 | vocabulary: English rendering is tautological -- asks for a synonym of 'key' and lists 'key' itself as the correct option (broken Hindi-to-English translation template, intended word was चाबी).
+rp-eng-s00457 | grammar: cites a fabricated historical figure 'Robert Lowndes' publishing a grammar in 1763; the real historical figure is Robert Lowth, who published 'A Short Introduction to English Grammar' in 1762.
+rp-eng-s00464 | grammar: repeats the same fabricated name 'Robert Lowndes' (actual: Robert Lowth, 1762) among the options/answer for 'which 18th-century grammar first used the word syntax'.
+rp-eng-s00465 | grammar: claims 'The Oxford English Grammar' was published by OUP in 1901; it was actually written by Sidney Greenbaum and published in 1996.
+rp-eng-s00615 | grammar: question's premise embeds a fabricated fact -- a locomotive named 'Swan' built in 1853 -- which is not a real, verifiable historical fact (no such locomotive is documented); the actual first India-built locomotive was built in 1895 at Ajmer workshop.
+rp-eng-s00136 | cloze_test: explanation gives a circular/fabricated etymology for the word 'cloze' ('comes from the English word cloze meaning to delete'); it actually derives from 'closure' (Gestalt psychology), coined by Wilson Taylor in 1953.
+rp-eng-s00157 | cloze_test: claims Jane Austen's 'first novel' was Pride and Prejudice (1813); her first published novel was actually Sense and Sensibility (1811), which is even listed among the other options.
+rp-eng-s00193 | cloze_test: explanation text is a corrupted, leftover self-correction ('New speed is 90+5=95...Distance=95x3=285... but options given 195; correct answer per options is 195 km') using the wrong original speed in its reasoning -- generation artifact despite the final index being numerically consistent.
+rp-eng-s00617 | cloze_test: the sentence frame itself is ungrammatical regardless of which option is chosen -- 'The book, ___ written by a famous author, was a bestseller' is missing the auxiliary 'was' after the relative pronoun blank.
+rp-eng-s00621 | cloze_test: no option produces a grammatical sentence -- 'It is important ___ to keep the environment clean' with 'to be' inserted reads 'It is important to be to keep...', which is broken English.
+rp-eng-s00638 | cloze_test: stored answer index points to 'then' but the explanation describes 'because' as correct (a different option) -- explanation contradicts the stored answer.
+rp-eng-s01192 | cloze_test/railway-fact: names 'Pir Panjal Tunnel' as India's longest railway tunnel; this is now outdated -- Tunnel No. 8 on the Rishikesh-Karnaprayag line (14.57 km, completed 2025) is longer, and none of the given options reflect the current correct answer.
+rp-eng-s00154 | cloze_test/railway-fact: claims the first railway workshop in India was established in Kolkata in 1860; the actual first fully-fledged railway workshop was the Jamalpur Locomotive Workshop (Bihar), established in 1862 by the East Indian Railway Company.
+rp-eng-s00265 | comprehension (math): no option matches the exact computed answer (141.67 m); explanation itself says 'closest option is 140 meters' -- flawed/unanswerable quantitative item.
+rp-eng-s00279 | comprehension: question's premise is logically flawed -- a metal's purity percentage (99.9%) cannot by itself identify WHICH metal (gold/silver/copper/iron) it is; any of the four metals could be 99.9% pure.
+rp-eng-s00508 | comprehension/railway-fact: claims the first locomotive built in India was named 'Swan' in 1864; no such locomotive is documented -- the actual first India-built locomotive (F-734) was manufactured in 1895 at the Ajmer workshop.
+rp-eng-s00509 | comprehension/railway-fact: claims the first railway workshop in India was established in Bangalore in 1864 (also internally inconsistent with rp-eng-s00154's claim of Kolkata/1860 elsewhere in this same bank); the real answer is Jamalpur Workshop (Bihar), 1862.
+rp-eng-s01220 | comprehension (math): the true average (83.75) is not among the options; explanation explicitly notes 'Note: If 83.75 were an option, it would be correct' -- self-admitted flawed/unanswerable question.
+rp-eng-s01270 | comprehension (math): explanation explicitly states 'The correct answer 38 is not among the options, indicating an error in the question' -- self-admitted flawed/unanswerable question.
+rp-eng-s01205 | comprehension: q_en references 'the paragraph' about a guitar but the passage text is missing from the English rendering entirely (only present in q_hi) -- unanswerable in English as presented.
+rp-eng-s01207 | comprehension: q_en references 'the passage' describing sustainable development but the passage text is missing from the English rendering (present only in q_hi) -- unanswerable in English as presented.
+rp-eng-f01403 | comprehension: question references 'the passage' discussing sustainable development, but no passage text exists anywhere in the item (missing in both q_hi and q_en) -- unanswerable.
+rp-eng-f01404 | comprehension: question references 'the author' on modern technology benefits, but no passage/author text exists anywhere in the item -- unanswerable.
+rp-eng-f01405 | comprehension: question references 'the passage' about a railway modernization plan, but no passage text exists anywhere in the item -- unanswerable.
+rp-eng-f01406 | comprehension: question references 'the passage' about mandatory safety equipment, but no passage text exists anywhere in the item -- unanswerable.
+rp-eng-f01407 | comprehension: question references 'the author' encouraging public transport, but no passage/author text exists anywhere in the item -- unanswerable.
+rp-eng-f01408 | comprehension: question references 'the passage' to identify a false statement, but no passage text exists anywhere in the item -- unanswerable.
+rp-eng-f01409 | comprehension: question references 'the passage' describing digital literacy, but no passage text exists anywhere in the item -- unanswerable.
+rp-eng-f01410 | comprehension: question references 'the passage' on energy sources, but no passage text exists anywhere in the item -- unanswerable.
+rp-eng-f01411 | comprehension: question asks for the 'central theme of the passage', but no passage text exists anywhere in the item -- unanswerable.

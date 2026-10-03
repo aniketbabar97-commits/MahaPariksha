@@ -1,0 +1,163 @@
+name: RailPariksha CI
+on:
+  push:
+    branches: [main]
+    paths: ["railpariksha/**"]
+  pull_request:
+    paths: ["railpariksha/**"]
+  # Manual trigger for an on-demand test APK with current content, independent of
+  # whether app code changed -- e.g. to hand testers a build after a content-only
+  # push, without waiting for an actual app-code change to earn a rebuild.
+  workflow_dispatch:
+
+# Cancel a stale run for the same branch/PR when a newer push lands, instead of
+# letting every commit's run queue up independently -- rapid successive pushes
+# (e.g. an automated content pipeline) would otherwise build a large backlog of
+# runs for commits nobody needs the result of anymore.
+concurrency:
+  group: railpariksha-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python railpariksha/pipeline/validate.py
+
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      app: ${{ steps.filter.outputs.app }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      # Plain git diff against the base commit -- avoids needing a
+      # pull-requests:read token permission that the GitHub API-based
+      # dorny/paths-filter default mode requires but this workflow doesn't grant.
+      - id: filter
+        # event.before is this push's previous head (set on both push and PR
+        # synchronize events) -- prefer it over pull_request.base.sha, which
+        # is the PR's *original* base and would diff the whole PR's lifetime
+        # history on every push, not just what this push actually changed.
+        # Falls back to base.sha only when before is unset (PR just opened).
+        # workflow_dispatch has neither -- it's a manual "build me an APK now"
+        # request, so always treat it as app=true rather than diffing.
+        env:
+          BASE_SHA: ${{ github.event.before || github.event.pull_request.base.sha }}
+          IS_DISPATCH: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          if [ "$IS_DISPATCH" = "true" ]; then
+            echo "app=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git fetch --depth=1 origin "$BASE_SHA"
+          CHANGED=$(git diff --name-only "$BASE_SHA" HEAD)
+          echo "$CHANGED"
+          if echo "$CHANGED" | grep -qE '^(railpariksha/(app|pipeline)/|\.github/workflows/railpariksha_ci\.yml)'; then
+            echo "app=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "app=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  app:
+    runs-on: ubuntu-latest
+    needs: [content, changes]
+    defaults: { run: { working-directory: railpariksha/app } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable, cache: true }
+      - run: python ../pipeline/build_bundle.py
+      - run: flutter pub get
+      - run: flutter analyze
+      - run: flutter test
+      # Full release build is expensive (~12-13 min) and only needs to re-run
+      # when app/pipeline code actually changed -- content-only commits (the
+      # bulk of pushes, from the content-gen pipeline) are fully covered by
+      # analyze+test above. The signed release APK itself comes from
+      # railpariksha_release.yml on a version tag, not from this check.
+      - if: needs.changes.outputs.app == 'true'
+        run: flutter build apk --release --split-per-abi
+      - if: needs.changes.outputs.app == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: railpariksha-apk
+          path: railpariksha/app/build/app/outputs/flutter-apk/*.apk
+
+  # Boots a real Android emulator and runs integration_test/golden_path_test.dart
+  # in --release mode (minification on, same as what ships) against it: onboarding,
+  # every bottom-nav tab, and starting a real mock test. Catches release-build-only
+  # crashes (R8 stripping a class a plugin needs reflectively, etc.) that
+  # `flutter analyze`/`flutter test` cannot see, since those never run the
+  # compiled app at all. Added after v1.0.0 shipped a release build that crashed
+  # on every single launch (missing R8 keep rules for androidx.work/room, used
+  # internally by flutter_local_notifications) -- caught only by a real device
+  # and a manually-pulled crash log. This closes that gap so it's never again on
+  # a human to catch a build that fails to open.
+  e2e_test:
+    runs-on: ubuntu-latest
+    needs: changes
+    if: needs.changes.outputs.app == 'true'
+    # A hang here (e.g. pumpAndSettle never converging because some screen has
+    # a repeating Timer/animation) should fail fast and loud, not silently eat
+    # the default 6-hour job ceiling -- confirmed via an actual run that did
+    # exactly that (see golden_path_test.dart's QuizScreen countdown-timer note).
+    timeout-minutes: 20
+    defaults: { run: { working-directory: railpariksha/app } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable, cache: true }
+      - run: python ../pipeline/build_bundle.py
+      - run: flutter pub get
+      # The emulator's AVD needs ~7.4GB for its userdata partition; ubuntu-latest's
+      # default free space plus the Android SDK/emulator/system-image downloads
+      # above leaves less than that, so the emulator fails immediately with
+      # "Not enough space to create userdata partition" (confirmed via a run's
+      # actual logs, not assumed) before it ever boots. Removing large preinstalled
+      # toolchains this job doesn't use frees 20GB+ reliably on GitHub-hosted runners.
+      - name: Free disk space for the emulator's AVD
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /opt/hostedtoolcache/CodeQL /usr/local/lib/android/sdk/ndk
+          sudo docker image prune -af || true
+          df -h /
+      - name: Enable KVM for emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Boot emulator and run the golden-path e2e test in release mode
+        timeout-minutes: 15
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          # `flutter test integration_test/...` doesn't accept --release at all (confirmed
+          # via an actual run: "Could not find an option named '--release'") -- only
+          # `flutter drive` does, which needs test_driver/integration_test.dart as the bridge.
+          # This action runs each line of a multi-line script as its OWN separate shell
+          # invocation (confirmed via a run: "cd railpariksha/app" on its own line didn't
+          # carry over to the next line, which then failed with "No pubspec.yaml file
+          # found") -- must be a single line chained with && instead.
+          # flutter drive itself then refused --release outright ("Flutter Driver
+          # (non-web) does not support running in release mode" -- release strips the
+          # VM service the driver needs to talk to the app at all). --profile is the
+          # fix, not a compromise: on Android, profile mode builds via the SAME release
+          # Gradle build type (isMinifyEnabled/R8 and our proguard-rules.pro all apply),
+          # so it still exercises exactly the bug class this test exists to catch.
+          script: cd railpariksha/app && flutter drive --driver=test_driver/integration_test.dart --target=integration_test/golden_path_test.dart -d emulator-5554 --profile

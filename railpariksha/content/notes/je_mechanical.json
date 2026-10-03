@@ -1,0 +1,614 @@
+[
+ {
+  "summary_hi": "ऊष्मागतिकी यांत्रिक अभियांत्रिकी की वह महत्वपूर्ण शाखा है जिसके अंतर्गत ऊष्मा और कार्य के आपसी रूपांतरण तथा ऊर्जा के संरक्षण का अध्ययन किया जाता है। यह विज्ञान मुख्य रूप से चार मूलभूत नियमों पर आधारित है, जो शून्यवें नियम से लेकर तीसरे नियम तक फैले हुए हैं। शून्यवाँ नियम तापमान मापन का आधार प्रदान करता है, जबकि पहला नियम ऊर्जा संरक्षण का प्रसिद्ध समीकरण प्रस्तुत करता है। दूसरा नियम ऊष्मा के प्रवाह की दिशा और प्रक्रमों की अप्रतिवर्त्यता को स्पष्ट करता है। आरआरबी और रेलवे परीक्षाओं में इस विषय से प्रणालियों, गुणों, प्रक्रमों और चक्रों पर आधारित प्रश्न बहुतायत में पूछे जाते हैं। इसलिए, आंतरिक ऊर्जा, एन्थैल्पी और एंट्रॉपी जैसी अवस्था चरों की स्पष्ट समझ होना आवश्यक है।",
+  "summary_en": "Thermodynamics is a vital branch of mechanical engineering that deals with the mutual conversion of heat and work, alongside the conservation of energy. This science is primarily governed by four fundamental laws ranging from the zeroth to the third law. The zeroth law provides the basis for temperature measurement, while the first law establishes the famous energy conservation principle. The second law clarifies the direction of heat flow and the irreversibility of processes. RRB and railway exams frequently feature questions based on thermodynamic systems, properties, processes, and cycles. Therefore, a clear understanding of state variables such as internal energy, enthalpy, and entropy is essential.",
+  "facts_hi": [
+   "ऊष्मागतिकी का शून्यवाँ नियम (Zeroth Law) तापमान की अवधारणा और तापमापी के सिद्धांत को परिभाषित करता है।",
+   "ऊष्मागतिकी का पहला नियम ऊर्जा संरक्षण के सिद्धांत पर आधारित है, जिसके अनुसार $\\Delta Q = \\Delta U + \\Delta W$ होता है।",
+   "पृथक प्रणाली (Isolated System) में न तो द्रव्यमान का और न ही ऊर्जा का आदान-प्रदान परिवेश के साथ होता है।",
+   "ऊष्मागतिकी का दूसरा नियम ऊष्मा के निम्न तापमान से उच्च तापमान की ओर स्वतः प्रवाह को असंभव बताता है (क्लासियस और केल्विन-प्लैंक कथन)।",
+   "एन्ट्रापी (Entropy) किसी प्रणाली की यादृच्छिकता (randomness) या अव्यवस्था की माप है, जो उत्क्रमणीय प्रक्रम में स्थिर रहती है।",
+   "शुद्ध पदार्थ के लिए ट्रिपल पॉइंट (Triple Point) वह बिंदु है जहाँ ठोस, द्रव और वाष्प अवस्थाएं एक साथ साम्यावस्था में रहती हैं।",
+   "आदर्श गैस के लिए आंतरिक ऊर्जा (Internal Energy) केवल और केवल तापमान का फलन होती है (जूल का नियम)।",
+   "कार्नोट चक्र (Carnot Cycle) दो समतापिय (Isothermal) और दो रुद्धोष्म (Adiabatic) प्रक्रमों से मिलकर बनता है।",
+   "एक उत्क्रमणीय प्रक्रम के लिए एन्ट्रापी परिवर्तन शून्य ($dS = 0$) होता है।"
+  ],
+  "facts_en": [
+   "The zeroth law of thermodynamics defines the concept of temperature and the principle of thermometry.",
+   "The first law of thermodynamics is based on the conservation of energy, expressed as $\\Delta Q = \\Delta U + \\Delta W$.",
+   "An isolated system allows the exchange of neither mass nor energy with its surroundings.",
+   "The second law of thermodynamics states the impossibility of spontaneous heat flow from low to high temperature (Clausius and Kelvin-Planck statements).",
+   "Entropy is a measure of randomness or disorder in a system, which remains constant in a reversible process.",
+   "The triple point for a pure substance is the condition where solid, liquid, and vapor phases coexist in equilibrium.",
+   "For an ideal gas, internal energy is a function of temperature alone (Joule's law).",
+   "A Carnot cycle consists of two isothermal and two adiabatic processes.",
+   "For a reversible process, the net entropy change of the universe is zero ($dS = 0$)."
+  ],
+  "tips_hi": [
+   "विकल्पों में 'रुद्धोष्म (Adiabatic)' और 'समतापीय (Isothermal)' शब्दों को अक्सर अदल-बदल कर भ्रमित किया जाता है; प्रश्न में 'ऊष्मारोधी दीवार' देखते ही तुरंत रुद्धोष्म प्रक्रम पर टिक लगाएं।",
+   "याद रखें कि एंट्रॉपी केवल 'उत्क्रमणीय' प्रक्रम में स्थिर रहती है, जबकि वास्तविक (अउत्क्रमणीय) प्रक्रमों में यह हमेशा बढ़ती है।",
+   "कार्य (Work) और ऊष्मा (Heat) दोनों ही 'पथ फलन (Path Function)' हैं, जबकि दाब, तापमान और आयतन 'बिंदु फलन (Point Function)' हैं—इसे याद रखने के लिए 'W-H Path' शॉर्टकट का उपयोग करें।",
+   "कार्नोट दक्षता का सूत्र याद रखते समय हमेशा हर (Denominator) में उच्च तापमान ($T_1$) और अंश में दोनों का अंतर रखें ताकि मान 1 से कम आए।"
+  ],
+  "tips_en": [
+   "Examiners love swapping the terms 'Adiabatic' and 'Isothermal' in options; look for keywords like 'insulated wall' to immediately identify an adiabatic process.",
+   "Remember that entropy remains constant only in 'reversible' processes, whereas in real (irreversible) processes, it always increases.",
+   "Both work and heat are 'path functions', while pressure, temperature, and volume are 'point functions'—use the acronym W-H for path functions.",
+   "When recalling Carnot efficiency, always place the higher temperature ($T_1$) in the denominator and temperature difference in the numerator to ensure the value is less than 1."
+  ],
+  "map": {
+   "hi": "ऊष्मागतिकी",
+   "en": "Thermodynamics",
+   "children": [
+    {
+     "hi": "मूलभूत नियम",
+     "en": "Fundamental Laws",
+     "children": [
+      {
+       "hi": "शून्यवाँ नियम (तापमान)",
+       "en": "Zeroth Law (Temperature)"
+      },
+      {
+       "hi": "पहला नियम (ऊर्जा संरक्षण)",
+       "en": "First Law (Energy Conservation)"
+      },
+      {
+       "hi": "दूसरा नियम (दिशा और एन्ट्रापी)",
+       "en": "Second Law (Direction & Entropy)"
+      },
+      {
+       "hi": "तीसरा नियम (एन्ट्रापी शून्य)",
+       "en": "Third Law (Zero Entropy)"
+      }
+     ]
+    },
+    {
+     "hi": "प्रणालियाँ और गुण",
+     "en": "Systems and Properties",
+     "children": [
+      {
+       "hi": "बंद, खुला और पृथक प्रणाली",
+       "en": "Closed, Open & Isolated System"
+      },
+      {
+       "hi": "पथ और बिंदु फलन",
+       "en": "Path & Point Functions"
+      },
+      {
+       "hi": "आंतरिक ऊर्जा और एन्थैल्पी",
+       "en": "Internal Energy & Enthalpy"
+      }
+     ]
+    },
+    {
+     "hi": "ऊष्मागतिक प्रक्रम",
+     "en": "Thermodynamic Processes",
+     "children": [
+      {
+       "hi": "समतापीय और रुद्धोष्म",
+       "en": "Isothermal & Adiabatic"
+      },
+      {
+       "hi": "समदाबी और समायतनिक",
+       "en": "Isobaric & Isochoric"
+      }
+     ]
+    },
+    {
+     "hi": "चक्र और दक्षता",
+     "en": "Cycles and Efficiency",
+     "children": [
+      {
+       "hi": "कार्नोट चक्र",
+       "en": "Carnot Cycle"
+      },
+      {
+       "hi": "इंजन और रेफ्रिजरेटर",
+       "en": "Engines & Refrigerators"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_mechanical-thermodynamics",
+  "s": "je_mechanical",
+  "t": "thermodynamics"
+ },
+ {
+  "summary_hi": "पदार्थों की सामर्थ्य (Strength of Materials) यांत्रिकी का एक महत्वपूर्ण विषय है, जो बाहरी बलों के अधीन ठोस वस्तुओं के आंतरिक व्यवहार का अध्ययन करता है। इसमें प्रतिबल (Stress) और विकृति (Strain) के बीच के संबंधों, विभिन्न प्रकार के बलों जैसे कि कर्तन, बंकन और मरोड़ के प्रभावों का विश्लेषण किया जाता है। हुक का नियम प्रत्यास्थ सीमा के भीतर प्रतिबल और विकृति के अनुपात को नियत (Young's Modulus) मानता है। बीम के बंकन समीकरण और शाफ्ट के मरोड़ समीकरण आरआरबी और आरपीएफ परीक्षाओं की दृष्टि से अत्यंत महत्वपूर्ण हैं। विभिन्न लोडिंग स्थितियों के तहत ढलान और विक्षेपण (Slope and Deflection) की गणना करना इस खंड का एक प्रमुख हिस्सा है। इसके अलावा, अधिकतम shear stress और principal stresses का निर्धारण मशीन के घटकों की सुरक्षा के लिए आवश्यक है। यह विषय रेलवे परीक्षाओं में संख्यात्मक और वैचारिक दोनों प्रकार के प्रश्नों के लिए रीढ़ की हड्डी का काम करता है।",
+  "summary_en": "Strength of Materials is a core engineering discipline analyzing the internal behavior of solid bodies under external loads. It studies relationships between stress and strain, along with the effects of various forces such as shear, bending, and torsion. Hooke's law establishes the constant ratio between stress and strain within the elastic limit as Young's Modulus. Bending equations for beams and torsion equations for shafts are highly critical for RRB and RPF technical examinations. Calculating slope and deflection under various loading conditions forms a major part of this module. Furthermore, determining maximum shear and principal stresses is essential for ensuring component safety in machine design. This subject serves as the backbone for both numerical and conceptual questions in railway competitive exams.",
+  "facts_hi": [
+   "प्रतिबल (Stress) की SI इकाई न्यूटन प्रति वर्ग मीटर (N/m²) या पास्कल (Pa) होती है।",
+   "विकृति (Strain) एक विमाहीन (dimensionless) राशि है क्योंकि यह दो समान लंबाई का अनुपात होती है।",
+   "हुक का नियम केवल प्रत्यास्थ सीमा (Elastic Limit) के भीतर ही लागू होता है।",
+   "यंग मापांक (Young's Modulus, E) अनुदैर्ध्य प्रतिबल और अनुदैर्ध्य विकृति का अनुपात होता है।",
+   "पॉइजन अनुपात (Poisson's Ratio) पार्श्व विकृति और अनुदैर्ध्य विकृति का ऋणात्मक अनुपात है।",
+   "एक गोलाकार शाफ्ट के लिए मरोड़ समीकरण (Torsion Equation) T/J = τ/r = Gθ/L होता है।",
+   "शुद्ध अपरूपण प्रतिबल (Pure Shear) के मामले में अधिकतम मुख्य प्रतिबल, अपरूपण प्रतिबल के बराबर होता है।",
+   "आघूर्ण (Bending Moment) शून्य होने पर बंकन प्रतिबल भी शून्य होता है।"
+  ],
+  "facts_en": [
+   "The SI unit of Stress is Newton per square meter (N/m²) or Pascal (Pa).",
+   "Strain is a dimensionless quantity as it is the ratio of two similar lengths.",
+   "Hooke's law is applicable only within the proportional or elastic limit.",
+   "Young's Modulus (E) is the ratio of longitudinal stress to longitudinal strain.",
+   "Poisson's Ratio is the negative ratio of lateral strain to longitudinal strain.",
+   "The torsion equation for a circular shaft is T/J = τ/r = Gθ/L.",
+   "In the case of pure shear, the maximum principal stress equals the shear stress.",
+   "Bending stress is zero at points where the Bending Moment is zero."
+  ],
+  "tips_hi": [
+   "परीक्षा में विकल्पों को चुनते समय पॉइजन अनुपात की सीमा (-1 से 0.5) को हमेशा याद रखें; अधिकांश धातुओं के लिए यह 0.25 से 0.33 के बीच होता है।",
+   "यदि प्रश्न में 'डक्टाइल मटेरियल' (Ductile material) कहा गया है, तो अधिकतम shear stress थ्योरी का उपयोग करने के लिए तैयार रहें।",
+   "मात्रक रूपांतरण से बचने के लिए हमेशा याद रखें कि GPa को MPa में बदलते समय 10^3 से गुणा करना होता है।"
+  ],
+  "tips_en": [
+   "Always keep the theoretical limits of Poisson's ratio (-1 to 0.5) in mind; for most metals, it ranges between 0.25 and 0.33.",
+   "If the question specifies a 'ductile material', be prepared to apply the maximum shear stress theory for failure analysis.",
+   "To avoid unit conversion traps, remember that converting GPa to MPa requires multiplying by 10^3."
+  ],
+  "map": {
+   "hi": "पदार्थों की सामर्थ्य",
+   "en": "Strength of Materials",
+   "children": [
+    {
+     "hi": "तनाव और विकृति",
+     "en": "Stress and Strain",
+     "children": [
+      {
+       "hi": "हुक का नियम और प्रत्यास्थता स्थिरांक",
+       "en": "Hooke's Law and Elastic Constants"
+      },
+      {
+       "hi": "पॉइजन अनुपात और तापीय प्रतिबल",
+       "en": "Poisson's Ratio and Thermal Stresses"
+      }
+     ]
+    },
+    {
+     "hi": "बंकन और अपरूपण बल",
+     "en": "Bending and Shear Forces",
+     "children": [
+      {
+       "hi": "एसएफडी और बीएमडी आरेख",
+       "en": "SFD and BMD Diagrams"
+      },
+      {
+       "hi": "बीम का बंकन समीकरण",
+       "en": "Bending Equation of Beams"
+      }
+     ]
+    },
+    {
+     "hi": "शाफ्ट का मरोड़",
+     "en": "Torsion of Shafts",
+     "children": [
+      {
+       "hi": "मरोड़ समीकरण और ध्रुवीय जड़त्व आघूर्ण",
+       "en": "Torsion Equation and Polar Moment of Inertia"
+      }
+     ]
+    },
+    {
+     "hi": "मुख्य प्रतिबल और मोहर वृत्त",
+     "en": "Principal Stresses and Mohr's Circle",
+     "children": [
+      {
+       "hi": "अधिकतम और न्यूनतम मुख्य प्रतिबल",
+       "en": "Maximum and Minimum Principal Stresses"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_mechanical-strength_of_materials",
+  "s": "je_mechanical",
+  "t": "strength_of_materials"
+ },
+ {
+  "summary_hi": "द्रव यांत्रिकी और मशीनरी यांत्रिक अभियांत्रिकी का एक अत्यंत महत्वपूर्ण विषय है जो रेलवे (RRB/RPF) परीक्षाओं में बार-बार पूछा जाता है। इसमें द्रवों के स्थैतिक, गतिक और प्रवाह व्यवहार का अध्ययन किया जाता है, जिसके अंतर्गत बरनौली का प्रमेय और निरंतरता समीकरण (Continuity Equation) मुख्य आधार हैं। हाइड्रोलिक मशीनें जैसे टरबाइन और पंप जल ऊर्जा को यांत्रिक ऊर्जा में और इसके विपरीत बदलते हैं। केन्द्रापसारक (Centrifugal) पंप और फ्रांसिस या पेल्टन टरबाइन इस श्रेणी के प्रमुख उपकरण हैं। विशिष्ट गति (Specific Speed) और दक्षता (Efficiency) से जुड़े प्रश्न परीक्षा में सीधे संख्यात्मक रूप से पूछे जाते हैं। रेनॉल्ड्स संख्या (Reynolds Number) प्रवाह के प्रकार (स्तरीय या प्रक्षुब्ध) को निर्धारित करने में मदद करती है। इस इकाई को मजबूत करने से अभियांत्रिकीय गणनाओं और व्यावहारिक अनुप्रयोगों दोनों के प्रश्न आसानी से हल हो जाते हैं।",
+  "summary_en": "Fluid Mechanics and Machinery is a critical mechanical engineering topic frequently tested in Indian Railways (RRB/RPF) examinations. It encompasses the study of fluids at rest, in motion, and their flow behavior, where Bernoulli's theorem and the Continuity Equation form the core fundamentals. Hydraulic machines such as turbines and pumps convert water energy into mechanical energy and vice versa, with centrifugal pumps and Francis or Pelton turbines being prime examples. Questions related to specific speed and efficiency frequently appear as direct numerical problems in exams. The Reynolds number helps determine whether a fluid flow is laminar or turbulent. Mastering this unit ensures easy resolution of both computational and practical application-based questions.",
+  "facts_hi": [
+   "बरनौली का समीकरण ऊर्जा संरक्षण के नियम पर आधारित है।",
+   "निरंतरता समीकरण (Continuity Equation) द्रव्यमान संरक्षण के नियम पर कार्य करता है (A1V1 = A2V2)।",
+   "रेनॉल्ड्स संख्या (Re) 2000 से कम होने पर प्रवाह स्तरीय (Laminar) होता है।",
+   "पेल्टन टरबाइन एक उच्च शीश (High Head) और आवेग (Impulse) प्रकार का जल टरबाइन है।",
+   "फ्रांसिस टरबाइन मध्यम शीश और प्रतिक्रिया (Reaction) प्रकार का टरबाइन होता है।",
+   "केन्द्रापसारक पंप में प्राइमिंग (Priming) की प्रक्रिया हवा निकालने के लिए की जाती है।",
+   "विशिष्ट गति (Specific Speed) टरबाइन या पंप के प्रदर्शन और वर्गीकरण को निर्धारित करती है।",
+   "मैनोमीटर का उपयोग पाइप या चैनलों में दाब अंतर मापने के लिए किया जाता है।"
+  ],
+  "facts_en": [
+   "Bernoulli's equation is based on the principle of conservation of energy.",
+   "The Continuity Equation is based on the principle of conservation of mass (A1V1 = A2V2).",
+   "Flow is laminar when the Reynolds number (Re) is less than 2000.",
+   "Pelton turbine is a high-head and impulse-type water turbine.",
+   "Francis turbine is a medium-head and reaction-type turbine.",
+   "Priming in a centrifugal pump is performed to remove air pockets.",
+   "Specific speed determines the performance and classification of turbines and pumps.",
+   "Manometers are used to measure pressure differences in pipes or channels."
+  ],
+  "tips_hi": [
+   "टरबाइन के प्रकार याद रखने के लिए शॉर्टकट अपनाएं: 'पेल्टन' हमेशा उच्च हेड के लिए, 'फ्रांसिस' मध्यम के लिए और 'कप्लान' निम्न हेड के लिए होता है।",
+   "परीक्षा में अक्सर 'आवेग (Impulse)' और 'प्रतिक्रिया (Reaction)' टरबाइन के उदाहरण आपस में बदलकर विकल्प में दिए जाते हैं, इसलिए शब्दों को ध्यान से पढ़ें।",
+   "याद रखें कि केन्द्रापसारक पंप बिना प्राइमिंग के कभी शुरू नहीं करना चाहिए, यह प्रश्न अक्सर परीक्षाओं में ट्रॅप के रूप में पूछा जाता है।"
+  ],
+  "tips_en": [
+   "Use a shortcut for turbines: 'Pelton' for high head, 'Francis' for medium head, and 'Kaplan' for low head.",
+   "Examiners love to swap examples of 'Impulse' and 'Reaction' turbines in options; read the question terms very carefully.",
+   "Always remember that a centrifugal pump should never be started without priming; this is a classic exam trap question."
+  ],
+  "map": {
+   "hi": "द्रव यांत्रिकी व मशीनरी",
+   "en": "Fluid Mechanics & Machinery",
+   "children": [
+    {
+     "hi": "द्रव स्टैटिक्स और किनेमेटिक्स",
+     "en": "Fluid Statics and Kinematics",
+     "children": [
+      {
+       "hi": "दाब मापन और मैनोमीटर",
+       "en": "Pressure Measurement & Manometers"
+      },
+      {
+       "hi": "प्लवकता और मेटासेंट्रिक ऊंचाई",
+       "en": "Buoyancy & Metacentric Height"
+      }
+     ]
+    },
+    {
+     "hi": "द्रव गतिशीलता",
+     "en": "Fluid Dynamics",
+     "children": [
+      {
+       "hi": "निरंतरता समीकरण",
+       "en": "Continuity Equation"
+      },
+      {
+       "hi": "बरनौली प्रमेय",
+       "en": "Bernoulli's Theorem"
+      },
+      {
+       "hi": "रेनॉल्ड्स संख्या और प्रवाह",
+       "en": "Reynolds Number & Flow Types"
+      }
+     ]
+    },
+    {
+     "hi": "हाइड्रोलिक टरबाइन",
+     "en": "Hydraulic Turbines",
+     "children": [
+      {
+       "hi": "पेल्टन व्हील",
+       "en": "Pelton Wheel"
+      },
+      {
+       "hi": "फ्रांसिस और कप्लान टरबाइन",
+       "en": "Francis & Kaplan Turbines"
+      },
+      {
+       "hi": "विशिष्ट गति",
+       "en": "Specific Speed"
+      }
+     ]
+    },
+    {
+     "hi": "पंप",
+     "en": "Pumps",
+     "children": [
+      {
+       "hi": "केन्द्रापसारक पंप और प्राइमिंग",
+       "en": "Centrifugal Pumps & Priming"
+      },
+      {
+       "hi": "प्रत्यागामी पंप",
+       "en": "Reciprocating Pumps"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_mechanical-fluid_mechanics_machinery",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery"
+ },
+ {
+  "summary_hi": "विनिर्माण प्रक्रियाएं यांत्रिक अभियांत्रिकी का एक महत्वपूर्ण भाग हैं, जो कच्चे माल को उपयोगी अंतिम उत्पादों में बदलती हैं। इसमें मुख्य रूप से कास्टिंग, वेल्डिंग, मेटल फॉर्मिंग और मशीनिंग जैसी तकनीकें शामिल हैं। रेलवे परीक्षाओं में इन प्रक्रियाओं के मूल सिद्धांतों, तापमान नियंत्रण और दोषों से संबंधित प्रश्न बहुतायत में पूछे जाते हैं। कास्टिंग प्रक्रिया में पैटर्न और कोर का सही चयन आवश्यक होता है, जबकि वेल्डिंग में विभिन्न आर्क और गैस विधियों का अध्ययन किया जाता है। मेटल फॉर्मिंग में प्लास्टिक विरूपण के माध्यम से धातु को आकार दिया जाता है, जिसमें हॉट वर्किंग और कोल्ड वर्किंग दोनों महत्वपूर्ण हैं। मशीनिंग प्रक्रियाओं में कटिंग टूल्स, टूल लाइफ और चिप फॉर्मेशन की समझ होना अनिवार्य है। इस विषय पर मजबूत पकड़ आरआरबी और आरपीएफ परीक्षाओं में उच्च अंक प्राप्त करने में मदद करती है। सही वैचारिक स्पष्टता से परीक्षार्थी परीक्षा में पूछे गए संख्यात्मक और सैद्धांतिक दोनों प्रकार के प्रश्नों को आसानी से हल कर सकते हैं।",
+  "summary_en": "Manufacturing processes form a core pillar of mechanical engineering, transforming raw materials into useful finished goods. They primarily encompass casting, welding, metal forming, and machining techniques. Railway recruitment exams frequently test the fundamental principles, temperature controls, and defects associated with these processes. Casting relies heavily on the correct selection of patterns and cores, whereas welding explores various arc and gas methods. Metal forming shapes metals via plastic deformation, highlighting the distinction between hot working and cold working. Machining operations require a solid understanding of cutting tools, tool life equations, and chip formation mechanics. Mastering this subject is essential for securing top scores in RRB and RPF exams. Clear conceptual clarity enables aspirants to tackle both numerical and theoretical questions with high accuracy.",
+  "facts_hi": [
+   "कास्टिंग में धातु के संकोचन (Shrinkage) की भरपाई के लिए पैटर्न का आकार वास्तविक घटक से थोड़ा बड़ा बनाया जाता है।",
+   "गेटिन सिस्टम का मुख्य कार्य पिघले हुए धातु को मोल्ड गुहा में बिना टरबुलेन्स के सुचारू रूप से पहुंचाना है।",
+   "वेल्डिंग में शील्डेड मेटल आर्क वेल्डिंग (SMAW) को मैनुअल मेटल आर्क वेल्डिंग (MMAW) के रूप में भी जाना जाता है।",
+   "गैस वेल्डिंग में ऑक्सी-एसिटिलीन फ्लेम का तापमान लगभग 3200 डिग्री सेल्सियस तक पहुंच सकता है।",
+   "हॉट वर्किंग प्रक्रियाएं पुन:क्रिस्टलीकरण (Recrystallization) तापमान से ऊपर की जाती हैं, जिससे धातु में वर्क हार्डनिंग नहीं होती।",
+   "कोल्ड वर्किंग धातु की ताकत और कठोरता को बढ़ाती है लेकिन उसकी डक्टिलिटी (Ductility) को कम कर देती है।",
+   "टेलर का टूल लाइफ समीकरण (Taylor's Tool Life Equation) $VT^n = C$ कटिंग स्पीड और टूल लाइफ के बीच संबंध बताता है।",
+   "लेथ मशीन पर काम करते समय फीड रेट को आमतौर पर मिलीमीटर प्रति क्रांति (mm/rev) में मापा जाता है।",
+   "ड्रिलिंग एक एंड-कटिंग टूल ऑपरेशन है जिसका उपयोग मौजूदा छेद को बड़ा करने के लिए नहीं बल्कि नया छेद बनाने के लिए किया जाता है।"
+  ],
+  "facts_en": [
+   "Pattern allowances are provided to make the pattern slightly larger than the final casting to compensate for metal shrinkage.",
+   "The primary function of the gating system is to deliver molten metal smoothly into the mold cavity without turbulence.",
+   "Shielded Metal Arc Welding (SMAW) in welding is also widely referred to as Manual Metal Arc Welding (MMAW).",
+   "The oxy-acetylene flame temperature in gas welding can reach approximately 3200 degrees Celsius.",
+   "Hot working processes are performed above the recrystallization temperature, preventing work hardening in the metal.",
+   "Cold working increases the strength and hardness of a metal while simultaneously decreasing its ductility.",
+   "Taylor's Tool Life Equation, expressed as $VT^n = C$, establishes the mathematical relationship between cutting speed and tool life.",
+   "Feed rate on a lathe machine is typically measured and specified in millimeters per revolution (mm/rev).",
+   "Drilling is an end-cutting tool operation primarily used to create a new hole rather than to enlarge an existing one."
+  ],
+  "tips_hi": [
+   "हॉट वर्किंग और कोल्ड वर्किंग के प्रभावों को कभी न मिलाएं: याद रखें कि कोल्ड वर्किंग से डक्टिलिटी घटती है जबकि स्ट्रेंथ बढ़ती है।",
+   "टेलर के टूल लाइफ समीकरण $VT^n = C$ में 'n' के मान को याद रखें; विभिन्न कटिंग टूल्स के लिए इसकी सीमा 0.1 से 0.7 के बीच होती है।",
+   "ड्रिलिंग और बोरिंग शब्दों में भ्रमित न हों: ड्रिलिंग नया छेद बनाती है, जबकि बोरिंग पहले से मौजूद छेद को फिनिश और बड़ा करती है।",
+   "कास्टिंग एलाउंस के प्रश्नों को हल करते समय हमेशा ध्यान दें कि सिकुड़न (Shrinkage) के लिए साइज हमेशा बढ़ाया जाता है, घटाया नहीं।"
+  ],
+  "tips_en": [
+   "Never confuse the mechanical effects of hot and cold working: remember that cold working drops ductility while spiking ultimate tensile strength.",
+   "Memorize the typical range of exponent 'n' in Taylor's tool life equation ($VT^n = C$), which generally lies between 0.1 and 0.7 for common tool materials.",
+   "Do not swap drilling and boring in exams: drilling creates a virgin hole, whereas boring finishes and enlarges a pre-existing hole.",
+   "When calculating pattern size in casting questions, always double-check that shrinkage allowance is added, never subtracted."
+  ],
+  "map": {
+   "hi": "विनिर्माण प्रक्रियाएं",
+   "en": "Manufacturing Processes",
+   "children": [
+    {
+     "hi": "कास्टिंग प्रक्रिया",
+     "en": "Casting Processes",
+     "children": [
+      {
+       "hi": "पैटर्न और एलाउंस",
+       "en": "Patterns and Allowances"
+      },
+      {
+       "hi": "गेटिंग सिस्टम",
+       "en": "Gating System"
+      },
+      {
+       "hi": "कास्टिंग दोष",
+       "en": "Casting Defects"
+      }
+     ]
+    },
+    {
+     "hi": "वेल्डिंग और जॉइनिंग",
+     "en": "Welding and Joining",
+     "children": [
+      {
+       "hi": "आर्क वेल्डिंग",
+       "en": "Arc Welding"
+      },
+      {
+       "hi": "गैस वेल्डिंग",
+       "en": "Gas Welding"
+      },
+      {
+       "hi": "वेल्डिंग दोष",
+       "en": "Welding Defects"
+      }
+     ]
+    },
+    {
+     "hi": "मेटल फॉर्मिंग",
+     "en": "Metal Forming",
+     "children": [
+      {
+       "hi": "हॉट वर्किंग",
+       "en": "Hot Working"
+      },
+      {
+       "hi": "कोल्ड वर्किंग",
+       "en": "Cold Working"
+      },
+      {
+       "hi": "रोलिंग और फोर्जिंग",
+       "en": "Rolling and Forging"
+      }
+     ]
+    },
+    {
+     "hi": "मशीनिंग और मशीन टूल्स",
+     "en": "Machining and Machine Tools",
+     "children": [
+      {
+       "hi": "लेथ मशीन संचालन",
+       "en": "Lathe Operations"
+      },
+      {
+       "hi": "टूल लाइफ और टेलर समीकरण",
+       "en": "Tool Life and Taylor Equation"
+      },
+      {
+       "hi": "चिप के प्रकार",
+       "en": "Types of Chips"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_mechanical-manufacturing_processes",
+  "s": "je_mechanical",
+  "t": "manufacturing_processes"
+ },
+ {
+  "summary_hi": "आईसी इंजन और प्रशीतन यांत्रिक अभियांत्रिकी के अत्यधिक महत्वपूर्ण विषय हैं जो आरआरबी और आरपीएफ परीक्षाओं में बार-बार पूछे जाते हैं। आंतरिक दहन इंजन रासायनिक ऊर्जा को ऊष्मीय ऊर्जा और अंततः यांत्रिक कार्य में बदलते हैं, जिसमें दो-स्ट्रोक और चार-स्ट्रोक चक्र प्रमुख हैं। ऑटो चक्र ओटो-साइकिल पेट्रोल इंजन का आधार है, जबकि डीजल चक्र संपीड़न प्रज्वलन (compression ignition) पर आधारित है। प्रशीतन चक्र (refrigeration cycle) वाष्प संपीडन प्रणाली पर कार्य करता है जो ऊष्मा को ठंडे क्षेत्र से गर्म क्षेत्र में स्थानांतरित करती है। परीक्षा की दृष्टि से, तापीय दक्षता, संपीडन अनुपात और प्रशीतक (refrigerant) के गुण सबसे महत्वपूर्ण हैं। इन अवधारणाओं पर आधारित संख्यात्मक और तथ्यात्मक प्रश्न अक्सर परीक्षा में मेरिट तय करते हैं।",
+  "summary_en": "IC Engines and Refrigeration are crucial topics in Mechanical Engineering frequently tested in RRB and RPF examinations. Internal combustion engines convert chemical energy into thermal energy and finally mechanical work, with two-stroke and four-stroke cycles being the most prominent. The Otto cycle forms the basis of petrol engines, whereas the Diesel cycle operates on compression ignition. The refrigeration system works on the vapor compression cycle, transferring heat from a low-temperature region to a high-temperature one. From an examination perspective, thermal efficiency, compression ratio, and refrigerant properties are paramount. Numerical and factual questions based on these concepts often determine success in the exam.",
+  "facts_hi": [
+   "ऑटो चक्र (Otto Cycle) स्थिर आयतन (constant volume) पर ऊष्मा का आदान-प्रदान करता है।",
+   "डीजल चक्र (Diesel Cycle) स्थिर दाब (constant pressure) पर ऊष्मा जोड़ता है।",
+   "चार-स्ट्रोक इंजन में क्रैंकशाफ्ट के दो फेरों पर एक शक्ति स्ट्रोक (power stroke) मिलता है।",
+   "दो-स्ट्रोक इंजन में क्रैंकशाफ्ट के प्रत्येक फेरे पर एक शक्ति स्ट्रोक मिलता है।",
+   "संपीडन अनुपात (Compression Ratio) बढ़ने से ऑटो चक्र की दक्षता बढ़ती है।",
+   "कार्नट दक्षता (Carnot Efficiency) केवल स्रोतों के तापमान पर निर्भर करती है।",
+   "वाष्प संपीडन प्रशीतन प्रणाली में मुख्य घटक संपीडक, संघननकर्ता, विस्तार वाल्व और वाष्पीपत्र हैं।",
+   "प्रशीतक (Refrigerant) का क्रांतिक तापमान (critical temperature) उच्च होना चाहिए।",
+   "डुआल चक्र (Dual Cycle) को मिक्स्ड साइकिल भी कहा जाता है जिसमें ऊष्मा का कुछ भाग स्थिर आयतन पर और शेष स्थिर दाब पर दिया जाता है।"
+  ],
+  "facts_en": [
+   "The Otto cycle involves heat addition at constant volume.",
+   "The Diesel cycle involves heat addition at constant pressure.",
+   "A four-stroke engine produces one power stroke for every two revolutions of the crankshaft.",
+   "A two-stroke engine produces one power stroke for every revolution of the crankshaft.",
+   "Increasing the compression ratio increases the efficiency of the Otto cycle.",
+   "Carnot efficiency depends solely on the temperatures of the source and sink.",
+   "The vapor compression refrigeration system consists of a compressor, condenser, expansion valve, and evaporator.",
+   "A good refrigerant should have a high critical temperature.",
+   "The Dual cycle is also known as a mixed cycle where heat is added partly at constant volume and partly at constant pressure."
+  ],
+  "tips_hi": [
+   "परीक्षा में ऑटो और डीजल चक्र की दक्षता का सूत्र तुलना करते समय याद रखें कि समान संपीडन अनुपात पर ऑटो चक्र हमेशा डीजल चक्र से अधिक दक्ष होता है।",
+   "प्रश्न पत्र में 'दाब अनुपात' और 'संपीडन अनुपात' के शब्दों को ध्यान से पढ़ें क्योंकि परीक्षाक अक्सर इन्हें आपस में बदलकर भ्रमित करते हैं।",
+   "प्रशीतन चक्र के घटकों का क्रम याद रखने के लिए 'C-C-E-E' नियम का अभ्यास करें: संपीडक (Compressor) -> संघननकर्ता (Condenser) -> विस्तार वाल्व (Expansion valve) -> वाष्पीपत्र (Evaporator)।"
+  ],
+  "tips_en": [
+   "When comparing Otto and Diesel cycle efficiencies in the exam, remember that for the same compression ratio, the Otto cycle is always more efficient than the Diesel cycle.",
+   "Carefully distinguish between 'pressure ratio' and 'compression ratio' in questions, as examiners frequently swap them as traps.",
+   "Use the 'C-C-E-E' mnemonic for the sequence of components in a vapor compression refrigeration system: Compressor -> Condenser -> Expansion valve -> Evaporator."
+  ],
+  "map": {
+   "hi": "आईसी इंजन व प्रशीतन",
+   "en": "IC Engines & Refrigeration",
+   "children": [
+    {
+     "hi": "आईसी इंजन मूल बातें",
+     "en": "IC Engine Basics",
+     "children": [
+      {
+       "hi": "दो-स्ट्रोक और चार-स्ट्रोक",
+       "en": "Two-Stroke vs Four-Stroke"
+      },
+      {
+       "hi": "कार्य चक्र (ऑटो, डीजल, ड्यूल)",
+       "en": "Working Cycles (Otto, Diesel, Dual)"
+      }
+     ]
+    },
+    {
+     "hi": "इंजन प्रदर्शन और पैरामीटर",
+     "en": "Engine Performance & Parameters",
+     "children": [
+      {
+       "hi": "संपीडन अनुपात और दक्षता",
+       "en": "Compression Ratio & Efficiency"
+      },
+      {
+       "hi": "शक्ति और बलाघूर्ण",
+       "en": "Power and Torque"
+      }
+     ]
+    },
+    {
+     "hi": "प्रशीतन प्रणाली",
+     "en": "Refrigeration Systems",
+     "children": [
+      {
+       "hi": "वाष्प संपीडन चक्र",
+       "en": "Vapor Compression Cycle"
+      },
+      {
+       "hi": "प्रशीतक और उनके गुण",
+       "en": "Refrigerants & Properties"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_mechanical-ic_engines_refrigeration",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration"
+ },
+ {
+  "summary_hi": "अभियांत्रिकी यांत्रिकी (Engineering Mechanics) यांत्रिकी की वह शाखा है जो स्थिर या गतिमान वस्तुओं पर लगने वाले बलों और उनके प्रभावों का अध्ययन करती है। इसे मुख्य रूप से स्टैटिक्स (स्थैतिकी) और डायनेमिक्स (गतिकी) में विभाजित किया जाता है, जहाँ स्टैटिक्स विश्राम अवस्था में बलों का अध्ययन करती है और डायनेमिक्स गतिमान वस्तुओं का। रेलवे और अन्य तकनीकी परीक्षाओं (RRB/RPF) में इस विषय से बल, आघूर्ण (Moment), घर्षण (Friction) और ट्रस विश्लेषण पर आधारित संख्यात्मक तथा सैद्धांतिक प्रश्न पूछे जाते हैं। न्यूटन के गति के नियम, लामी का प्रमेय और वर्चुअल वर्क इस खंड के सबसे महत्वपूर्ण आधार हैं। सही अवधारणाओं और सूत्रों की स्पष्टता से परीक्षा में कम समय में सटीक उत्तर प्राप्त किए जा सकते हैं। इस रिविजन नोट्स के माध्यम से आप सभी महत्वपूर्ण बिंदुओं को आसानी से याद रख सकते हैं।",
+  "summary_en": "Engineering Mechanics is the branch of mechanics that deals with the study of forces and their effects on bodies at rest or in motion. It is broadly classified into Statics, which deals with bodies at rest, and Dynamics, which deals with bodies in motion. In railway and technical exams (RRB/RPF), questions are frequently asked on forces, moments, friction, and truss analysis based on numerical and theoretical concepts. Newton's laws of motion, Lami's theorem, and the principle of virtual work form the core foundation of this subject. Clear understanding of concepts and formulas enables accurate problem-solving within tight exam time limits. This revision note helps you quickly recall all crucial high-yield topics efficiently.",
+  "facts_hi": [
+   "बल (Force) एक सदिश राशि है जिसका एसआई मात्रक न्यूटन (N) है।",
+   "लामी का प्रमेय (Lami's Theorem) केवल तभी लागू होता है जब किसी बिंदु पर तीन सह-तलीय समवर्ती बल संतुलन में हों।",
+   "जड़त्व आघूर्ण (Moment of Inertia) का मात्रक kg·m² होता है।",
+   "घर्षण बल (Friction Force) हमेशा संपर्क सतहों के बीच गति का विरोध करता है।",
+   "सीमित घर्षण बल (Limiting Friction) अभिलंब प्रतिक्रिया (Normal Reaction) के समानुपाती होता है।",
+   "उत्केंद्रता (Eccentricity) और गुरुत्व केंद्र (Center of Gravity) स्थिर संतुलन तय करने में महत्वपूर्ण हैं।",
+   "ट्रस (Truss) में पूर्ण फ्रेम के लिए सदस्यों की संख्या m = 2j - 3 होती है, जहाँ j जोड़ों (joints) की संख्या है।",
+   "युग्म (Couple) का परिणामी बल शून्य होता है, लेकिन इसका आघूर्ण शून्य नहीं होता।",
+   "न्यूटन का पहला गति का नियम जड़त्व (Inertia) की परिभाषा देता है।"
+  ],
+  "facts_en": [
+   "Force is a vector quantity with SI unit Newton (N).",
+   "Lami's Theorem is applicable only when three coplanar concurrent forces are in equilibrium at a point.",
+   "The SI unit of Moment of Inertia is kg·m².",
+   "Friction force always opposes the relative motion between contacting surfaces.",
+   "Limiting friction force is directly proportional to the normal reaction.",
+   "Eccentricity and Center of Gravity are crucial in determining stable equilibrium.",
+   "For a perfect truss frame, the relation between members (m) and joints (j) is m = 2j - 3.",
+   "The resultant force of a couple is zero, but its moment is non-zero.",
+   "Newton's First Law of Motion provides the definition of inertia."
+  ],
+  "tips_hi": [
+   "परीक्षा में जब भी तीन सह-तलीय बल संतुलन में दिखें, तुरंत 'लामी का प्रमेय' (Sine rule) का उपयोग करने का सोचें।",
+   "जल्दबाजी में 'युग्म' (Couple) और 'बल' (Force) के प्रभावों को न मिलाएं; युग्म कभी भी रैखिक गति उत्पन्न नहीं करता, केवल घूर्णन गति देता है।",
+   "संख्यात्मक प्रश्नों को हल करते समय इकाइयों (Units) की एकरूपता (SI system) हमेशा पहले जांच लें, यह सबसे आम परीक्षा ट्रैप है।",
+   "घर्षण गुणांक (μ) का मान हमेशा 0 और 1 के बीच होता है; यदि गणना में मान 1 से अधिक आए तो अपनी गणना दोबारा जांचें।"
+  ],
+  "tips_en": [
+   "Whenever three coplanar concurrent forces are in equilibrium in a problem, immediately look to apply Lami's theorem using the sine rule.",
+   "Do not confuse the effects of a 'Couple' with a single 'Force'; a couple produces pure rotation with zero resultant force.",
+   "Always verify unit consistency (SI system) before calculating numerical answers; mixed units are a favorite exam trap.",
+   "The coefficient of friction (μ) typically ranges between 0 and 1; if your calculated value exceeds 1 for standard surfaces, recheck your math."
+  ],
+  "map": {
+   "hi": "अभियांत्रिकी यांत्रिकी",
+   "en": "Engineering Mechanics",
+   "children": [
+    {
+     "hi": "सांख्यिकी (Statics)",
+     "en": "Statics",
+     "children": [
+      {
+       "hi": "बल प्रणाली और लामी का प्रमेय",
+       "en": "Force Systems & Lami's Theorem"
+      },
+      {
+       "hi": "घर्षण (Friction)",
+       "en": "Friction"
+      },
+      {
+       "hi": "गुरुत्व केंद्र और जड़त्व आघूर्ण",
+       "en": "CG & Moment of Inertia"
+      }
+     ]
+    },
+    {
+     "hi": "गतिकी (Dynamics)",
+     "en": "Dynamics",
+     "children": [
+      {
+       "hi": "शुद्धगतिकी (Kinematics)",
+       "en": "Kinematics"
+      },
+      {
+       "hi": "बलगतिकी (Kinetics)",
+       "en": "Kinetics"
+      }
+     ]
+    },
+    {
+     "hi": "संरचनाएं और ट्रस (Structures & Trusses)",
+     "en": "Structures & Trusses",
+     "children": [
+      {
+       "hi": "जॉइंट विधि और सेक्शन विधि",
+       "en": "Method of Joints & Sections"
+      },
+      {
+       "hi": "완성 트러스 조건 (Perfect Truss)",
+       "en": "Perfect Truss Conditions"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_mechanical-engineering_mechanics",
+  "s": "je_mechanical",
+  "t": "engineering_mechanics"
+ }
+]

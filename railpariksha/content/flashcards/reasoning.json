@@ -1,0 +1,2639 @@
+[
+ {
+  "id": "fc-reas-0001",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "घड़ी के दर्पण प्रतिबिंब का सूत्र?",
+  "f_en": "Formula for a clock's mirror image?",
+  "b_hi": "11:60 में से समय घटाएं",
+  "b_en": "Subtract the time from 11:60"
+ },
+ {
+  "id": "fc-reas-0002",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला का मध्य अक्षर कौन-सा है?",
+  "f_en": "Which is the middle letter of the alphabet?",
+  "b_hi": "M (13वां अक्षर)",
+  "b_en": "M (13th letter)"
+ },
+ {
+  "id": "fc-reas-0003",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "न्यायवाक्य हल करने का मूल नियम?",
+  "f_en": "The basic rule for solving syllogisms?",
+  "b_hi": "यदि सभी A, B हैं और सभी B, C हैं, तो सभी A, C हैं (तर्क, वास्तविकता नहीं)",
+  "b_en": "If all A are B and all B are C, then all A are C (logic, not real-world truth)"
+ },
+ {
+  "id": "fc-reasoning-0005",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "अंग्रेजी वर्णमाला में 'M' का विपरीत (Opposite) अक्षर कौन सा है?",
+  "f_en": "What is the opposite letter of 'M' in the English alphabet?",
+  "b_hi": "'N' (जोड़ी M-N, सार्वजनिक सूत्र: 13वाँ अक्षर)",
+  "b_en": "'N' (Pair M-N, general rule: 13th letter from start is its own opposite)"
+ },
+ {
+  "id": "fc-reasoning-0006",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "'OPPOSITE' कोडिंग में 'Z' की जगह कौन सा अक्षर आता है?",
+  "f_en": "In OPPOSITE coding, which letter replaces 'Z'?",
+  "b_hi": "'A' (वर्णमाला का पहला अक्षर)",
+  "b_en": "'A' (First letter of the alphabet)"
+ },
+ {
+  "id": "fc-reasoning-0007",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि 'SUN' को 'TVO' में बदला जाता है, तो 'MOON' कोड कैसे होगा?",
+  "f_en": "If 'SUN' is coded as 'TVO', how is 'MOON' coded?",
+  "b_hi": "'NPPO' (प्रत्येक अक्षर एक स्थान आगे)",
+  "b_en": "'NPPO' (Each letter shifted one position forward)"
+ },
+ {
+  "id": "fc-reasoning-0008",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग-डिकोडिंग में 'Reverse Alphabet' (A=Z, B=Y) का नियम क्या है?",
+  "f_en": "What is the rule for 'Reverse Alphabet' (A=Z, B=Y) in coding-decoding?",
+  "b_hi": "A का Z, B का Y, C का X... इस प्रकार उलटा क्रम।",
+  "b_en": "A becomes Z, B becomes Y, C becomes X... in reverse order."
+ },
+ {
+  "id": "fc-reasoning-0009",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में 'ABC' को 'BCD' के रूप में दर्शाया जाए तो 'DEF' का कोड क्या होगा?",
+  "f_en": "If 'ABC' is coded as 'BCD', how is 'DEF' coded?",
+  "b_hi": "EFG (हर अक्षर को अगले अक्षर से बदला जाता है)",
+  "b_en": "EFG (each letter is replaced by the next letter in the series)"
+ },
+ {
+  "id": "fc-reasoning-0010",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि 'CAT' को 3-1-20 के रूप में कोड किया जाता है, तो इसमें किस पद्धति का उपयोग हुआ है?",
+  "f_en": "If 'CAT' is coded as 3-1-20, which method is used?",
+  "b_hi": "वर्णों की स्थिति (Positional Value) का उपयोग",
+  "b_en": "Use of the positional value of letters in the alphabet"
+ },
+ {
+  "id": "fc-reasoning-0011",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग-डिकोडिंग में 'Opposite Letter' (विपरीत अक्षर) का सिद्धांत क्या है?",
+  "f_en": "What is the 'Opposite Letter' principle in coding-decoding?",
+  "b_hi": "A=Z, B=Y, C=X, ... (वर्णमाला के दोनों सिरों से समान दूरी वाले विपरीत अक्षर)",
+  "b_en": "A=Z, B=Y, C=X, ... (letters equidistant from opposite ends of the alphabet)"
+ },
+ {
+  "id": "fc-reasoning-0012",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि किसी शब्द के अक्षरों को उल्टा (Reverse) किया जाए, तो इसे क्या कहते हैं?",
+  "f_en": "What is it called when the letters of a word are reversed?",
+  "b_hi": "Reverse Coding (उल्टी कोडिंग)",
+  "b_en": "Reverse Coding"
+ },
+ {
+  "id": "fc-reasoning-0013",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "संख्या श्रृंखला में 'द्विगुणन' (Doubling) का नियम क्या है?",
+  "f_en": "What is the rule for 'Doubling' in a number series?",
+  "b_hi": "अगला पद पिछले पद का दोगुना होता है (Prev. term × 2)।",
+  "b_en": "The next term is twice the previous term (Prev. term × 2)."
+ },
+ {
+  "id": "fc-reasoning-0014",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "वर्ग श्रृंखला (Square Series) में अगला पद कैसे निकाला जाता है?",
+  "f_en": "How is the next term found in a Square Series?",
+  "b_hi": "पिछले पद के मूल (Square Root) में 1 जोड़कर फिर वर्ग निकालें।",
+  "b_en": "Add 1 to the square root of the previous term, then square it."
+ },
+ {
+  "id": "fc-reasoning-0015",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "भेदिक श्रृंखला (Difference Series) में 'चाल' (Step) स्थिर होने पर क्या होता है?",
+  "f_en": "In a Difference Series, what happens if the 'Step' is constant?",
+  "b_hi": "यह एक समान्तर श्रेणी (Arithmetic Progression) बन जाती है।",
+  "b_en": "It becomes an Arithmetic Progression (AP)."
+ },
+ {
+  "id": "fc-reasoning-0016",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "अक्षर श्रृंखला में 'विपरीत दिशा' (Opposite Direction) का अर्थ क्या है?",
+  "f_en": "What does 'Opposite Direction' mean in an alphabet series?",
+  "b_hi": "अक्षर A से Z की ओर या Z से A की ओर बढ़ते हैं (उल्टा क्रम)।",
+  "b_en": "Letters move from A to Z or Z to A (reverse order)."
+ },
+ {
+  "id": "fc-reasoning-0017",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "मिश्रित श्रृंखला (Mixed Series) में दो नियम कैसे पहचाने जाते हैं?",
+  "f_en": "How to identify two rules in a Mixed Series?",
+  "b_hi": "पदों के बीच के अंतर (Differences) की जाँच करें; अंतर बदलते रहते हैं।",
+  "b_en": "Check the differences between terms; the differences vary."
+ },
+ {
+  "id": "fc-reasoning-0018",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "गुणोत्तर श्रृंखला (Geometric Series) में 'अनुपात' (Ratio) की भूमिका क्या है?",
+  "f_en": "What is the role of 'Ratio' in a Geometric Series?",
+  "b_hi": "हर पद पिछले पद को एक स्थिर संख्या से गुणा करने से बनता है।",
+  "b_en": "Each term is formed by multiplying the previous term by a constant number."
+ },
+ {
+  "id": "fc-reasoning-0019",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में 'अनौचित्य' (Odd One Out) की पहचान का मुख्य आधार क्या है?",
+  "f_en": "What is the primary basis for identifying the 'Odd One Out' in classification?",
+  "b_hi": "समूह के सभी पदों में सामान्य गुण या संबंध को समझकर, जिस पद में वह विशेषता न हो, उसे अलग करना।",
+  "b_en": "Identifying the item that does not share the common property or relationship present in all other items of the group."
+ },
+ {
+  "id": "fc-reasoning-0020",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "अक्षरों के वर्गीकरण में 'द्विसंयुक्त' (Double Letters) की पहचान कैसे करें?",
+  "f_en": "How to identify 'Double Letters' in letter classification?",
+  "b_hi": "जिस शब्द या श्रृंखला में दो समान अक्षर लगातार या निश्चित अंतर पर दोहराए गए हों, उसे द्विसंयुक्त माना जाता है।",
+  "b_en": "A word or sequence where two identical letters are repeated consecutively or at a fixed interval."
+ },
+ {
+  "id": "fc-reasoning-0021",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "संख्या वर्गीकरण में 'पूरे वर्ग' (Perfect Squares) की पहचान कैसे होती है?",
+  "f_en": "How to identify 'Perfect Squares' in number classification?",
+  "b_hi": "जो संख्या किसी प्राकृतिक संख्या का वर्ग हो (जैसे 4, 9, 16), उसे पूर्ण वर्ग कहा जाता है।",
+  "b_en": "A number that is the square of a natural number (e.g., 4, 9, 16)."
+ },
+ {
+  "id": "fc-reasoning-0022",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में 'विषम' (Odd) और 'सम' (Even) संख्याओं का सबसे तेज़ अंतरण कैसे करें?",
+  "f_en": "Quickest way to distinguish 'Odd' and 'Even' numbers in classification?",
+  "b_hi": "संख्या की इकाई स्थिति (last digit) देखें: यदि अंतिम अंक 0, 2, 4, 6 या 8 हो तो सम, अन्यथा विषम।",
+  "b_en": "Check the unit digit: if it is 0, 2, 4, 6, or 8, it is even; otherwise, it is odd."
+ },
+ {
+  "id": "fc-reasoning-0023",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "अर्थ-आधारित वर्गीकरण (Meaning-based) में 'पशु' और 'पंछी' को अलग करने का लक्षण क्या है?",
+  "f_en": "What is the distinguishing feature to separate 'Animals' and 'Birds' in meaning-based classification?",
+  "b_hi": "पंछी पंखों से उड़ते हैं और अंडे देते हैं, जबकि अधिकांश पशु चार पैरों पर चलते हैं और जीवित संतान देते हैं।",
+  "b_en": "Birds fly with wings and lay eggs, while most animals walk on four legs and give birth to live young."
+ },
+ {
+  "id": "fc-reasoning-0024",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में 'सदस्य-शुद्ध' (Vowel-Consonant) पैटर्न की पहचान कैसे करें?",
+  "f_en": "How to identify the 'Vowel-Consonant' pattern in classification?",
+  "b_hi": "अक्षरों की श्रृंखला में स्वर (A, E, I, O, U) और व्यंजन (बाकी सभी) की बदलती हुई क्रमबद्धता पर ध्यान दें।",
+  "b_en": "Observe the alternating sequence of Vowels (A, E, I, O, U) and Consonants (all other letters) in the letter string."
+ },
+ {
+  "id": "fc-reasoning-0025",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "सामान्य बैठक व्यवस्था में 'बाएं ओर' (Left) की दिशा कैसे निर्धारित की जाती है?",
+  "f_en": "In general seating arrangements, how is the direction of 'Left' determined?",
+  "b_hi": "व्यक्ति की अपनी दिशा के अनुसार (जैसे वे बैठे हैं), उनके हाथ की ओर।",
+  "b_en": "According to the person's own orientation (as they are sitting), towards their left hand."
+ },
+ {
+  "id": "fc-reasoning-0026",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "यदि कोई व्यक्ति उत्तर की ओर मुख करके बैठता है, तो उसके 'बाएं' ओर कौन-सा दिशा-बिंदु होता है?",
+  "f_en": "If a person faces North, which direction is on their 'left'?",
+  "b_hi": "पश्चिम (West)",
+  "b_en": "West"
+ },
+ {
+  "id": "fc-reasoning-0027",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "चक्रीय बैठक व्यवस्था (Circular Arrangement) में 'दोनों दिशाओं में दूरी' (Shortest distance) कैसे निकाली जाती है?",
+  "f_en": "In circular arrangements, how is the 'shortest distance' calculated?",
+  "b_hi": "कुल संख्या (N) और सीधी गिनती (K) में से जो छोटा हो, वही दूरी मानी जाती है।",
+  "b_en": "The minimum of the direct count (K) and (Total N - K)."
+ },
+ {
+  "id": "fc-reasoning-0028",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "सीधी संरेख (Linear) बैठक में X और Y के बीच 'K' लोग बैठे हैं, तो उनके बीच की दूरी क्या होगी?",
+  "f_en": "In a linear row, if K people sit between X and Y, what is the distance between them?",
+  "b_hi": "K + 1 (क्योंकि दूरी में दोनों सिरियां भी शामिल होती हैं।)",
+  "b_en": "K + 1 (because distance includes both endpoints)."
+ },
+ {
+  "id": "fc-reasoning-0029",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "यदि A, B के तुरंत बाएं ओर बैठता है, तो B किसके तुरंत दाएं ओर होगा?",
+  "f_en": "If A sits immediately to the left of B, who is B immediately to the right of?",
+  "b_hi": "A (यह संबंध सममित/व्युत्क्रमी है)।",
+  "b_en": "A (The relationship is symmetrical/reciprocal)."
+ },
+ {
+  "id": "fc-reasoning-0030",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "पहेली हल करने में 'तार्किक निष्कर्ष' (Logical Deduction) का मुख्य नियम क्या है?",
+  "f_en": "What is the main rule of 'Logical Deduction' in solving puzzles?",
+  "b_hi": "एक ही बार में सब कुछ न मानें; सबसे पहले उन तथ्यों को जोड़ें जो सीधे से जुड़े हों।",
+  "b_en": "Do not assume everything at once; first combine facts that are directly linked."
+ },
+ {
+  "id": "fc-reasoning-0031",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में अक्षर को दो स्थान आगे बढ़ाना",
+  "f_en": "Shifting each letter two positions forward in coding",
+  "b_hi": "हर अक्षर को उसके बाद के दो अक्षरों में बदलना",
+  "b_en": "Replace each letter with the one two positions ahead in the alphabet"
+ },
+ {
+  "id": "fc-reasoning-0032",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में अक्षर को दो स्थान पीछे ले जाना",
+  "f_en": "Shifting each letter two positions backward in coding",
+  "b_hi": "हर अक्षर को उसके पहले के दो अक्षरों में बदलना",
+  "b_en": "Replace each letter with the one two positions before in the alphabet"
+ },
+ {
+  "id": "fc-reasoning-0033",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में अंकों में पाँच जोड़ना",
+  "f_en": "Adding five to each digit in coding",
+  "b_hi": "प्रत्येक अंक में पाँच जोड़कर नया अंक बनाना",
+  "b_en": "Add five to each digit to get the coded digit"
+ },
+ {
+  "id": "fc-reasoning-0034",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में अंकों को उलटा क्रम देना",
+  "f_en": "Reversing the order of digits in coding",
+  "b_hi": "अंकों को उल्टा करके नया क्रम बनाना",
+  "b_en": "Reverse the sequence of digits to obtain the code"
+ },
+ {
+  "id": "fc-reasoning-0035",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में सम और विषम स्थानों के अक्षरों को अदला‑बदली करना",
+  "f_en": "Swapping letters at even and odd positions in coding",
+  "b_hi": "सम स्थान के अक्षर को अगले विषम स्थान के अक्षर से बदलना",
+  "b_en": "Exchange letters at even positions with the following odd positions"
+ },
+ {
+  "id": "fc-reasoning-0036",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग में समान अंतर वाला क्रम बनाना",
+  "f_en": "Creating a sequence with a constant difference in coding",
+  "b_hi": "हर अगले तत्व में समान अंतर जैसे तीन जोड़ना",
+  "b_en": "Add a fixed increment such as three to each successive element"
+ },
+ {
+  "id": "fc-reasoning-0037",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग‑डिकोडिंग में अक्षर प्रतिस्थापन नियम क्या है?",
+  "f_en": "What is the substitution rule in coding-decoding?",
+  "b_hi": "एक अक्षर को निश्चित संख्या से आगे या पीछे ले जाना",
+  "b_en": "Shift each letter by a fixed number forward or backward."
+ },
+ {
+  "id": "fc-reasoning-0038",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "यदि A को D में बदला जाता है तो शिफ्ट मान क्या है?",
+  "f_en": "If A is changed to D, what is the shift value?",
+  "b_hi": "शिफ्ट +3 (तीन स्थान आगे)",
+  "b_en": "Shift +3 (three positions forward)."
+ },
+ {
+  "id": "fc-reasoning-0039",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग‑डिकोडिंग में उलटा क्रम लागू करने का नियम?",
+  "f_en": "Rule for applying reverse order in coding-decoding?",
+  "b_hi": "सभी अक्षरों को उल्टा लिखें, फिर अन्य परिवर्तन लागू करें",
+  "b_en": "Write the string backwards, then apply other transformations."
+ },
+ {
+  "id": "fc-reasoning-0040",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "संख्यात्मक कोडिंग में 1‑9 को 9‑1 में बदलने का नियम क्या है?",
+  "f_en": "What is the rule for numeric coding 1‑9 to 9‑1?",
+  "b_hi": "हर अंक को 10‑उसके मान से बदलें (उदाहरण: 3→7)",
+  "b_en": "Replace each digit with (10 – digit) (e.g., 3→7)."
+ },
+ {
+  "id": "fc-reasoning-0041",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "डायग्राम‑कोड में तीर की दिशा क्या दर्शाती है?",
+  "f_en": "What does arrow direction indicate in diagram code?",
+  "b_hi": "संदेश में आगे या पीछे की स्थिति",
+  "b_en": "Indicates forward or backward movement in the sequence."
+ },
+ {
+  "id": "fc-reasoning-0042",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "f_hi": "कोडिंग‑डिकोडिंग में दो‑अक्षर बदलाव का नियम?",
+  "f_en": "Rule for pair swapping in coding-decoding?",
+  "b_hi": "संदेश के प्रत्येक दो अक्षरों को आपस में बदलें (1‑2, 3‑4, …)",
+  "b_en": "Swap every two consecutive letters (1‑2, 3‑4, …)."
+ },
+ {
+  "id": "fc-reasoning-0043",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "सादृश्यता (Analogy) की मूल परिभाषा क्या है?",
+  "f_en": "What is the basic definition of Analogy?",
+  "b_hi": "दो वस्तुओं/विचारों के बीच समान सम्बन्ध को खोजने की प्रक्रिया।",
+  "b_en": "A process of finding the same relationship between two pairs of items."
+ },
+ {
+  "id": "fc-reasoning-0044",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "सादृश्यता के मुख्य प्रकार कौन‑कौन से हैं?",
+  "f_en": "What are the main types of Analogy?",
+  "b_hi": "शब्दात्मक, संख्यात्मक और चित्रात्मक।",
+  "b_en": "Verbal, numerical and pictorial."
+ },
+ {
+  "id": "fc-reasoning-0045",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "'अंश‑सम्पूर्ण' सादृश्यता का नियम क्या है?",
+  "f_en": "What is the rule of Part‑Whole analogy?",
+  "b_hi": "पहला शब्द भाग है, दूसरा सम्पूर्ण; जैसे पंख : पक्षी :: पंखा : हवा।",
+  "b_en": "The first term is a part, the second is the whole; e.g., wing : bird :: fan : air."
+ },
+ {
+  "id": "fc-reasoning-0046",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "सादृश्यता हल करने की मूल रणनीति क्या है?",
+  "f_en": "What is the basic strategy to solve an Analogy?",
+  "b_hi": "पहले जोड़े का सम्बन्ध पहचानें, वही सम्बन्ध दूसरे जोड़े में लागू करें।",
+  "b_en": "Identify the relationship in the first pair and apply the same to the second pair."
+ },
+ {
+  "id": "fc-reasoning-0047",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "सम्बन्ध समान और समानार्थी शब्द में अंतर क्या है?",
+  "f_en": "What is the difference between relationship similarity and synonymy?",
+  "b_hi": "सम्बन्ध समान में प्रकार समान होता है, समानार्थी में अर्थ समान।",
+  "b_en": "Relationship similarity matches the type of relation; synonymy matches meaning."
+ },
+ {
+  "id": "fc-reasoning-0048",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "संख्यात्मक सादृश्यता में अंक परिवर्तन का नियम क्या होता है?",
+  "f_en": "What is the rule for number transformation in Numerical Analogy?",
+  "b_hi": "परिवर्तन (जोड़, घटाव, गुणा, भाग) दोनों जोड़ों में स्थिर रहता है।",
+  "b_en": "The operation (add, subtract, multiply, divide) remains constant across both pairs."
+ },
+ {
+  "id": "fc-reasoning-0049",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "समानता (Analogy) की परिभाषा क्या है?",
+  "f_en": "What is the definition of Analogy?",
+  "b_hi": "दो वस्तुओं या शब्दों के बीच समान संबंध स्थापित करना।",
+  "b_en": "Establishing a similar relationship between two objects or words."
+ },
+ {
+  "id": "fc-reasoning-0050",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "शब्द‑समानता हल करने की पहली प्रक्रिया क्या है?",
+  "f_en": "What is the first step in solving a verbal analogy?",
+  "b_hi": "प्रश्न में दिए गए दो शब्दों के बीच का संबंध पहचानना।",
+  "b_en": "Identify the relationship between the given pair of words."
+ },
+ {
+  "id": "fc-reasoning-0051",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "समानता और समानार्थी शब्द में मुख्य अंतर?",
+  "f_en": "Key difference between Analogy and Synonym?",
+  "b_hi": "समानता में संबंध (जैसे कारण, भाग) होता है, जबकि समानार्थी शब्द केवल अर्थ में समानता दर्शाते हैं।",
+  "b_en": "Analogy involves a specific relationship; synonyms share only meaning."
+ },
+ {
+  "id": "fc-reasoning-0052",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "AB : CD :: EF : ? में ‘?’ को कैसे निर्धारित करें?",
+  "f_en": "How to determine ‘?’ in AB : CD :: EF : ?",
+  "b_hi": "EF के साथ वही संबंध स्थापित करें जो AB‑CD में है; परिणाम वह शब्द होगा जो समान संबंध रखता हो।",
+  "b_en": "Apply the same relationship from AB‑CD to EF; the answer is the term that fits that relationship."
+ },
+ {
+  "id": "fc-reasoning-0053",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "समानता प्रश्न में ‘विपरीत’ (Antonym) किस प्रकार उपयोग होता है?",
+  "f_en": "How is ‘Antonym’ used in Analogy questions?",
+  "b_hi": "यदि AB का संबंध ‘विपरीत’ है, तो EF‑? भी वही विपरीत संबंध दर्शाएगा।",
+  "b_en": "If AB are opposites, then EF and ? must also be opposites."
+ },
+ {
+  "id": "fc-reasoning-0054",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "‘भाग‑सम्पूर्ण’ समानता का उदाहरण क्या है?",
+  "f_en": "Give an example of Part‑Whole analogy.",
+  "b_hi": "पैर का संबंध शरीर से है, उसी प्रकार पंख का संबंध पक्षी से है।",
+  "b_en": "Foot relates to body, just as wing relates to bird."
+ },
+ {
+  "id": "fc-reasoning-0055",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "‘कारण‑परिणाम’ समानता में क्या देखना चाहिए?",
+  "f_en": "What to look for in Cause‑Effect analogy?",
+  "b_hi": "एक घटना का कारण और उसका परिणाम।",
+  "b_en": "Identify the cause and its consequent effect."
+ },
+ {
+  "id": "fc-reasoning-0056",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "क्रम (Sequence) समानता कैसे बनती है?",
+  "f_en": "How is a Sequence analogy formed?",
+  "b_hi": "पहले, दूसरे, तीसरे तत्व के नियम को पहचानें और अगले को लागू करें।",
+  "b_en": "Identify the rule governing first, second, third items and apply it to the next."
+ },
+ {
+  "id": "fc-reasoning-0057",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "समानता हल करने के प्रमुख चरण क्या हैं?",
+  "f_en": "What are the key steps to solve an Analogy?",
+  "b_hi": "पहला चरण: संबंध पहचानें। दूसरा चरण: विकल्पों में समानता खोजें। तीसरा चरण: सबसे उपयुक्त विकल्प चुनें।",
+  "b_en": "First: Identify the relationship. Second: Find the same relationship in options. Third: Choose the best match."
+ },
+ {
+  "id": "fc-reasoning-0058",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "समानता के प्रमुख प्रकार कौन‑से हैं?",
+  "f_en": "What are the major types of Analogy?",
+  "b_hi": "सम्पूर्ण‑अंश, कारण‑परिणाम, कार्य‑उपकरण, समान‑विपरीत।",
+  "b_en": "Whole‑Part, Cause‑Effect, Function‑Tool, Similar‑Opposite."
+ },
+ {
+  "id": "fc-reasoning-0059",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "‘A : B :: C : ?’ में उत्तर खोजने की मूल विधि क्या है?",
+  "f_en": "What is the basic method to find the answer in ‘A : B :: C : ?’?",
+  "b_hi": "पहले A‑B का संबंध पहचानें, फिर वही संबंध C पर लागू करें।",
+  "b_en": "Identify the relationship between A and B, then apply the same relationship to C."
+ },
+ {
+  "id": "fc-reasoning-0060",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "समानता (Analogy) और वर्गीकरण (Classification) में मुख्य अंतर क्या है?",
+  "f_en": "What is the main difference between Analogy and Classification?",
+  "b_hi": "समानता में दो जोड़े का संबंध समान होता है, वर्गीकरण में वस्तुओं को समान गुणों के आधार पर समूहित किया जाता है।",
+  "b_en": "Analogy matches relationships between pairs; Classification groups items based on shared attributes."
+ },
+ {
+  "id": "fc-reasoning-0061",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "‘समानता’ प्रश्नों में ‘समानता‑विपरीत’ (Synonym‑Antonym) का उदाहरण क्या है?",
+  "f_en": "Give an example of a Synonym‑Antonym analogy question.",
+  "b_hi": "खुश : दुःखी :: प्रकाश : अंधकार (विपरीतार्थक जोड़े समान संबंध बनाते हैं)।",
+  "b_en": "Happy : Sad :: Light : Dark (antonym pairs sharing the same relationship)."
+ },
+ {
+  "id": "fc-reasoning-0062",
+  "s": "reasoning",
+  "t": "analogy",
+  "f_hi": "RRB परीक्षा में ‘समानता’ के लिए समय प्रबंधन का प्रमुख नियम क्या है?",
+  "f_en": "What is the key time‑management rule for Analogy in RRB exams?",
+  "b_hi": "पहले आसान ‘सम्पूर्ण‑अंश’ या ‘कारण‑परिणाम’ प्रकार हल करें, फिर जटिल ‘समान‑विपरीत’ पर जाएँ।",
+  "b_en": "First solve easy Whole‑Part or Cause‑Effect types, then move to complex Similar‑Opposite ones."
+ },
+ {
+  "id": "fc-reasoning-0063",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समान अंतर वाली अंक श्रृंखला को क्या कहते हैं?",
+  "f_en": "What is a sequence with constant difference called?",
+  "b_hi": "समान अंतर वाली श्रृंखला को अंकगणितीय श्रृंखला कहते हैं।",
+  "b_en": "A sequence with constant difference is called an arithmetic series."
+ },
+ {
+  "id": "fc-reasoning-0064",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "अंकगणितीय श्रृंखला का n‑वां पद कैसे निकालें?",
+  "f_en": "How to find the nth term of an arithmetic series?",
+  "b_hi": "n‑वां पद = पहला पद + (n‑1) × सामान्य अंतर।",
+  "b_en": "nth term = first term + (n‑1) × common difference."
+ },
+ {
+  "id": "fc-reasoning-0065",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समांतर श्रेणी (ज्यामितीय श्रृंखला) का प्रथम पद और समान अनुपात क्या है?",
+  "f_en": "What are the first term and common ratio in a geometric series?",
+  "b_hi": "पहला पद a, समान अनुपात r; प्रत्येक पद = पूर्व पद × r।",
+  "b_en": "First term a, common ratio r; each term = previous term × r."
+ },
+ {
+  "id": "fc-reasoning-0066",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "ज्यामितीय श्रृंखला का n‑वां पद कैसे निकालें?",
+  "f_en": "How to find the nth term of a geometric series?",
+  "b_hi": "n‑वां पद = a × r^(n‑1)।",
+  "b_en": "nth term = a × r^(n‑1)."
+ },
+ {
+  "id": "fc-reasoning-0067",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "ज्यामितीय श्रृंखला का योग सूत्र क्या है (पहले n पदों के लिए)?",
+  "f_en": "What is the sum formula for the first n terms of a geometric series?",
+  "b_hi": "S_n = a × (1‑r^n)/(1‑r), r≠1।",
+  "b_en": "S_n = a × (1‑r^n)/(1‑r), r≠1."
+ },
+ {
+  "id": "fc-reasoning-0068",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "अंकगणितीय श्रृंखला के प्रथम n पदों का योग कैसे निकालें?",
+  "f_en": "How to find the sum of the first n terms of an arithmetic series?",
+  "b_hi": "S_n = n × (पहला पद + अंतिम पद)/2 = n/2 × [2a + (n‑1)d]।",
+  "b_en": "S_n = n × (first term + last term)/2 = n/2 × [2a + (n‑1)d]."
+ },
+ {
+  "id": "fc-reasoning-0069",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समान अंतर वाली श्रृंखला का nवाँ पद कैसे लिखें?",
+  "f_en": "How to write the nth term of an arithmetic series?",
+  "b_hi": "nवाँ पद = पहला पद + (n‑1) × सामान्य अंतर",
+  "b_en": "nth term = first term + (n‑1) × common difference"
+ },
+ {
+  "id": "fc-reasoning-0070",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समान अंतर वाली श्रृंखला के पहले n पदों का योग क्या है?",
+  "f_en": "What is the sum of the first n terms of an arithmetic series?",
+  "b_hi": "पहले n पदों का योग = n/2 × [2 × पहला पद + (n‑1) × सामान्य अंतर]",
+  "b_en": "Sum = n/2 × [2 × first term + (n‑1) × common difference]"
+ },
+ {
+  "id": "fc-reasoning-0071",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समान अनुपात वाली श्रृंखला का nवाँ पद कैसे लिखें?",
+  "f_en": "How to write the nth term of a geometric series?",
+  "b_hi": "nवाँ पद = पहला पद × (सामान्य अनुपात)^(n‑1)",
+  "b_en": "nth term = first term × (common ratio)^(n‑1)"
+ },
+ {
+  "id": "fc-reasoning-0072",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समान अनुपात वाली श्रृंखला के पहले n पदों का योग (r≠1) क्या है?",
+  "f_en": "What is the sum of the first n terms of a geometric series (r≠1)?",
+  "b_hi": "पहले n पदों का योग = पहला पद × [(सामान्य अनुपात)^n - 1]/(सामान्य अनुपात - 1)",
+  "b_en": "Sum = first term × [(common ratio)^n - 1]/(common ratio - 1)"
+ },
+ {
+  "id": "fc-reasoning-0073",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "पर्यायी (alternating) श्रृंखला की विशेषता क्या है?",
+  "f_en": "What is the characteristic of an alternating series?",
+  "b_hi": "प्रत्येक पद का चिन्ह (+/‑) क्रमशः बदलता रहता है",
+  "b_en": "The sign (+/‑) of successive terms alternates"
+ },
+ {
+  "id": "fc-reasoning-0074",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "यदि किसी श्रृंखला में द्वितीय अंतर स्थिर है, तो वह किस प्रकार की श्रृंखला है?",
+  "f_en": "If the second differences of a series are constant, what type of series is it?",
+  "b_hi": "द्वितीय अंतर स्थिर होने पर श्रृंखला द्विघात (n²) रूप वाली होती है",
+  "b_en": "Constant second differences indicate a quadratic (n²) series"
+ },
+ {
+  "id": "fc-reasoning-0075",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समांतर श्रेणी क्या होती है?",
+  "f_en": "What is an arithmetic series?",
+  "b_hi": "एक ऐसी श्रेणी जहाँ प्रत्येक पद में समान अंतर (सामान्य अंतर) जुड़ता है।",
+  "b_en": "A sequence where each term differs by a constant common difference."
+ },
+ {
+  "id": "fc-reasoning-0076",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "समांतर श्रेणी के पहले n पदों का योग?",
+  "f_en": "Sum of first n terms of an arithmetic series?",
+  "b_hi": "Sₙ = n/2·(a₁ + aₙ) या Sₙ = n/2·[2a₁ + (n‑1)d]।",
+  "b_en": "Sₙ = n/2 (a₁ + aₙ) or Sₙ = n/2[2a₁ + (n‑1)d]."
+ },
+ {
+  "id": "fc-reasoning-0077",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "भौमितिक श्रेणी क्या है?",
+  "f_en": "What is a geometric series?",
+  "b_hi": "एक ऐसी श्रेणी जहाँ प्रत्येक पद में समान अनुपात (सामान्य अनुपात) से गुणा किया जाता है।",
+  "b_en": "A sequence where each term is multiplied by a constant common ratio."
+ },
+ {
+  "id": "fc-reasoning-0078",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "भौमितिक श्रेणी के पहले n पदों का योग?",
+  "f_en": "Sum of first n terms of a geometric series?",
+  "b_hi": "Sₙ = a₁·(1‑rⁿ)/(1‑r), जहाँ r ≠ 1।",
+  "b_en": "Sₙ = a₁·(1‑rⁿ)/(1‑r), where r ≠ 1."
+ },
+ {
+  "id": "fc-reasoning-0079",
+  "s": "reasoning",
+  "t": "series",
+  "f_hi": "फिबोनाच्ची श्रेणी की प्रारम्भिक शर्तें क्या हैं?",
+  "f_en": "What are the starting terms of the Fibonacci series?",
+  "b_hi": "पहला पद 0, दूसरा पद 1, और प्रत्येक अगले पद = दो पिछले पदों का योग।",
+  "b_en": "First term 0, second term 1, each subsequent term equals sum of previous two."
+ },
+ {
+  "id": "fc-reasoning-0080",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "दिशा ज्ञान की परिभाषा क्या है?",
+  "f_en": "What is the definition of direction sense?",
+  "b_hi": "वह क्षमता जिससे व्यक्ति बाएँ‑दाएँ, आगे‑पीछे और उत्तर‑दक्षिण आदि दिशा निर्धारित कर सके।",
+  "b_en": "The ability to identify left/right, front/back and cardinal directions such as north, south, etc."
+ },
+ {
+  "id": "fc-reasoning-0081",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "घड़ी की सुई की दिशा में घुमाना किस दिशा को दर्शाता है?",
+  "f_en": "Turning in the direction of a clock’s hands indicates which direction?",
+  "b_hi": "दाएँ (clockwise) दिशा।",
+  "b_en": "Rightward (clockwise) direction."
+ },
+ {
+  "id": "fc-reasoning-0082",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "यदि आप उत्तर की ओर खड़े हैं और दो बार बाएँ मुड़ते हैं तो आप किस दिशा में होंगे?",
+  "f_en": "If you face north and turn left twice, which direction will you face?",
+  "b_hi": "दक्षिण की ओर।",
+  "b_en": "South."
+ },
+ {
+  "id": "fc-reasoning-0083",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "एक 180° मोड़ का अर्थ क्या है?",
+  "f_en": "What does a 180° turn mean?",
+  "b_hi": "सामने की दिशा से ठीक उल्टी दिशा।",
+  "b_en": "The exact opposite direction from the original."
+ },
+ {
+  "id": "fc-reasoning-0084",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "एक 45° दाएँ मोड़ के बाद उत्तर से नई दिशा क्या होगी?",
+  "f_en": "After a 45° right turn from north, what is the new direction?",
+  "b_hi": "उत्तर‑पूर्व (North‑East)।",
+  "b_en": "North‑East."
+ },
+ {
+  "id": "fc-reasoning-0085",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "सापेक्ष दिशा और निरपेक्ष दिशा में अंतर क्या है?",
+  "f_en": "What is the difference between relative and absolute direction?",
+  "b_hi": "सापेक्ष दिशा व्यक्ति की मौजूदा स्थिति पर निर्भर करती है; निरपेक्ष दिशा हमेशा स्थायी (जैसे उत्तर, दक्षिण) रहती है।",
+  "b_en": "Relative direction depends on the person’s current orientation; absolute direction (like north, south) remains fixed."
+ },
+ {
+  "id": "fc-reasoning-0086",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "घड़ी की दिशा में नब्बे डिग्री मोड़ का परिणाम क्या होता है?",
+  "f_en": "What is the result of a 90° turn clockwise?",
+  "b_hi": "उत्तरी दिशा से पूर्व दिशा में बदल जाता है, यानी नब्बे डिग्री घड़ी की दिशा में।",
+  "b_en": "Changes from North to East, i.e., a ninety‑degree clockwise turn."
+ },
+ {
+  "id": "fc-reasoning-0087",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "वामावर्त एक सौ अस्सी डिग्री मोड़ से दिशा कैसे बदलती है?",
+  "f_en": "How does direction change after a 180° anticlockwise turn?",
+  "b_hi": "उत्तरी दिशा से दक्षिणी दिशा में उलट जाता है, यानी एक सौ अस्सी डिग्री वामावर्त।",
+  "b_en": "North becomes South, i.e., a one‑hundred‑eighty‑degree anticlockwise turn."
+ },
+ {
+  "id": "fc-reasoning-0088",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "नॉर्थ‑ईस्ट‑साउथ‑वेस्ट क्रम किस दिशा में चलता है?",
+  "f_en": "In which direction does the N‑E‑S‑W order proceed?",
+  "b_hi": "घड़ी की दिशा में (clockwise)।",
+  "b_en": "Clockwise."
+ },
+ {
+  "id": "fc-reasoning-0089",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "सापेक्ष दिशा और निरपेक्ष दिशा में मुख्य अंतर क्या है?",
+  "f_en": "What is the main difference between relative and absolute direction?",
+  "b_hi": "सापेक्ष दिशा में बाएँ/दाएँ/आगे/पीछे; निरपेक्ष में उत्तर/पूर्व/दक्षिण/पश्चिम।",
+  "b_en": "Relative uses left/right/front/back; absolute uses North/East/South/West."
+ },
+ {
+  "id": "fc-reasoning-0090",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "एक ही दिशा में दो बार दाएँ मोड़ने से कौन सी दिशा प्राप्त होती है?",
+  "f_en": "Turning right twice from the same direction yields which direction?",
+  "b_hi": "एक सौ अस्सी डिग्री मोड़, यानी मूल दिशा के विपरीत दिशा।",
+  "b_en": "A one‑hundred‑eighty‑degree turn, i.e., the opposite direction."
+ },
+ {
+  "id": "fc-reasoning-0091",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "घड़ी की दिशा में घुमने को क्या कहते हैं?",
+  "f_en": "What is the term for rotating clockwise?",
+  "b_hi": "घड़ी की दिशा में घुमना = Clockwise rotation",
+  "b_en": "Rotating in the direction of a clock's hands is clockwise"
+ },
+ {
+  "id": "fc-reasoning-0092",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "यदि आप उत्तर की ओर देख रहे हैं और 90° बाएँ मुड़ते हैं, तो आप किस दिशा में देखेंगे?",
+  "f_en": "If facing North and turning 90° left, which direction will you face?",
+  "b_hi": "बाएँ 90° मोड़ने पर पश्चिम की दिशा में देखेंगे",
+  "b_en": "Turning left 90° from North faces West"
+ },
+ {
+  "id": "fc-reasoning-0093",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "विपरीत दिशा (180°) का अर्थ क्या है?",
+  "f_en": "What does opposite direction (180°) mean?",
+  "b_hi": "विपरीत दिशा = मूल दिशा से उल्टी, अर्थात 180° घुमना",
+  "b_en": "Opposite direction means a 180° turn, facing the reverse of the original direction"
+ },
+ {
+  "id": "fc-reasoning-0094",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "उत्तर दिशा में खड़े होकर पहले दाएँ फिर बाएँ मोड़ने पर अंतिम दिशा क्या होगी?",
+  "f_en": "Facing North, turn right then left; what is the final direction?",
+  "b_hi": "पहले दाएँ (पूरब) फिर बाएँ (उत्तरी) – अंत में फिर से उत्तर दिशा में",
+  "b_en": "Right turn to East, then left turn back to North; final direction is North"
+ },
+ {
+  "id": "fc-reasoning-0095",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "घड़ी के अंक 12, 3, 6, 9 क्रमशः किस दिशा को दर्शाते हैं?",
+  "f_en": "Clock positions 12, 3, 6, 9 correspond to which directions?",
+  "b_hi": "12‑ओ’clock = उत्तर, 3‑ओ’clock = पूर्व, 6‑ओ’clock = दक्षिण, 9‑ओ’clock = पश्चिम",
+  "b_en": "12 o’clock = North, 3 o’clock = East, 6 o’clock = South, 9 o’clock = West"
+ },
+ {
+  "id": "fc-reasoning-0096",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "यदि आप उत्तर की ओर देख रहे हैं और 45° बाएँ मुड़ते हैं, तो आप किस दिशा में होंगे?",
+  "f_en": "If facing North and turning 45° left, which direction are you in?",
+  "b_hi": "45° बाएँ मोड़ने पर उत्तर‑पश्चिम दिशा में होंगे",
+  "b_en": "A 45° left turn from North points to North‑West"
+ },
+ {
+  "id": "fc-reasoning-0097",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "घड़ी की सुई की दिशा को क्या कहते हैं?",
+  "f_en": "What is the direction of a clock's hand called?",
+  "b_hi": "इसे घड़ी की दिशा (clockwise) कहा जाता है।",
+  "b_en": "It is called clockwise direction."
+ },
+ {
+  "id": "fc-reasoning-0098",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "विपरीत दिशा को अंग्रेज़ी में क्या कहा जाता है?",
+  "f_en": "What is the opposite direction called in English?",
+  "b_hi": "इसे anticlockwise या counter‑clockwise कहा जाता है।",
+  "b_en": "It is called anticlockwise or counter‑clockwise."
+ },
+ {
+  "id": "fc-reasoning-0099",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "एक व्यक्ति को 180° घुमाने पर वह किस दिशा में देखेगा?",
+  "f_en": "After rotating a person 180°, which direction will he face?",
+  "b_hi": "वह बिल्कुल विपरीत दिशा में देखेगा।",
+  "b_en": "He will face exactly the opposite direction."
+ },
+ {
+  "id": "fc-reasoning-0100",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "यदि आप उत्तर की ओर खड़े हैं और दाएँ 90° मुड़ते हैं, तो आप किस दिशा में मुड़ेंगे?",
+  "f_en": "If you stand facing north and turn right 90°, which direction do you face?",
+  "b_hi": "आप पूर्व (East) की ओर मुड़ेंगे।",
+  "b_en": "You will face East."
+ },
+ {
+  "id": "fc-reasoning-0101",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "‘समकोण’ शब्द का प्रयोग दिशा‑सेंस में किस स्थिति के लिए होता है?",
+  "f_en": "In direction sense, what situation does the term ‘right angle’ refer to?",
+  "b_hi": "जब दो दिशाएँ 90° पर हों, तब इसे समकोण कहा जाता है।",
+  "b_en": "When two directions are at 90°, it is called a right angle."
+ },
+ {
+  "id": "fc-reasoning-0102",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "f_hi": "एक व्यक्ति को बाएँ 45° और फिर दाएँ 135° घुमाने पर कुल घुमाव कितना होगा?",
+  "f_en": "After turning left 45° and then right 135°, what is the net rotation?",
+  "b_hi": "कुल 90° दाएँ घुमाव होगा।",
+  "b_en": "The net rotation will be 90° to the right."
+ },
+ {
+  "id": "fc-reasoning-0103",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण की परिभाषा क्या है?",
+  "f_en": "What is the definition of classification?",
+  "b_hi": "वर्गीकरण वह प्रक्रिया है जिसमें वस्तुओं को समान विशेषताओं के आधार पर समूहित किया जाता है।",
+  "b_en": "Classification is the process of grouping items based on common attributes."
+ },
+ {
+  "id": "fc-reasoning-0104",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण के कितने प्रकार होते हैं?",
+  "f_en": "How many types of classification are there?",
+  "b_hi": "एकल, द्वि- और बहु-वर्गीकरण (single, double, multiple classification)।",
+  "b_en": "Single, double, and multiple classification."
+ },
+ {
+  "id": "fc-reasoning-0105",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में सामान्य आधार कौन‑से हैं?",
+  "f_en": "What are common bases for classification?",
+  "b_hi": "आकार, आकार‑परिमाण, रंग, क्रम, कार्य आदि।",
+  "b_en": "Shape, size, color, order, function, etc."
+ },
+ {
+  "id": "fc-reasoning-0106",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में परिवर्तन का नियम क्या है?",
+  "f_en": "What is the rule of change in classification?",
+  "b_hi": "प्रत्येक चरण में केवल एक ही विशेषता बदलनी चाहिए।",
+  "b_en": "Only one attribute should change at a time."
+ },
+ {
+  "id": "fc-reasoning-0107",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "श्रृंखला और वर्गीकरण में मुख्य अंतर क्या है?",
+  "f_en": "What is the main difference between series and classification?",
+  "b_hi": "श्रृंखला क्रमिक परिवर्तन दर्शाती है, वर्गीकरण समानता पर आधारित समूह बनाता है।",
+  "b_en": "Series shows sequential change; classification groups based on similarity."
+ },
+ {
+  "id": "fc-reasoning-0108",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में ‘असमान वस्तु’ कैसे पहचानें?",
+  "f_en": "How to identify the odd one out in classification?",
+  "b_hi": "सभी वस्तुओं के सामान्य गुणों की तुलना कर वह वस्तु चुनें जो अलग हो।",
+  "b_en": "Compare common attributes and select the item that differs."
+ },
+ {
+  "id": "fc-reasoning-0109",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण क्या है?",
+  "f_en": "What is classification?",
+  "b_hi": "समान विशेषताओं के आधार पर वस्तुओं को समूहों में बाँटना।",
+  "b_en": "Grouping items based on common attributes."
+ },
+ {
+  "id": "fc-reasoning-0110",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण के मुख्य प्रकार कौन‑कौन से हैं?",
+  "f_en": "What are the main types of classification?",
+  "b_hi": "एकल, दोहरा और बहु वर्गीकरण।",
+  "b_en": "Single, double and multiple classification."
+ },
+ {
+  "id": "fc-reasoning-0111",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में प्रत्येक तत्व को कितनी बार समूह में रखा जा सकता है?",
+  "f_en": "How many times can an element appear in a group in classification?",
+  "b_hi": "केवल एक ही समूह में, अर्थात् परस्पर अनन्य।",
+  "b_en": "Only in one group; groups are mutually exclusive."
+ },
+ {
+  "id": "fc-reasoning-0112",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण और समानता (Analogy) में मुख्य अंतर क्या है?",
+  "f_en": "What is the main difference between classification and analogy?",
+  "b_hi": "वर्गीकरण में समानता के आधार पर समूह बनाते हैं, जबकि समानता में दो जोड़ों के बीच संबंध दिखाते हैं।",
+  "b_en": "Classification forms groups based on similarity; analogy shows a relationship between two pairs."
+ },
+ {
+  "id": "fc-reasoning-0113",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "संख्यात्मक वर्गीकरण में सामान्य गुण खोजने की विधि क्या कहलाती है?",
+  "f_en": "What is the method called that finds a common factor in numeric classification?",
+  "b_hi": "सामान्य भाजक (Common factor) विधि।",
+  "b_en": "Common factor method."
+ },
+ {
+  "id": "fc-reasoning-0114",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में Venn आरेख का उपयोग कब नहीं किया जाता?",
+  "f_en": "When is a Venn diagram not used in classification?",
+  "b_hi": "जब समूह परस्पर अनन्य हों, अर्थात् कोई ओवरलैप न हो।",
+  "b_en": "When groups are mutually exclusive with no overlap."
+ },
+ {
+  "id": "fc-reasoning-0115",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में ‘Odd One Out’ को क्या कहा जाता है?",
+  "f_en": "What is ‘Odd One Out’ called in classification?",
+  "b_hi": "बहिष्करण (Exclusion) प्रश्न।",
+  "b_en": "Exclusion (Odd One Out) question."
+ },
+ {
+  "id": "fc-reasoning-0116",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण और क्रम‑सरणी (Series) में मुख्य अंतर क्या है?",
+  "f_en": "What is the main difference between classification and series?",
+  "b_hi": "वर्गीकरण में क्रम नहीं, केवल समूह बनाते हैं; क्रम‑सरणी में क्रम महत्वपूर्ण है।",
+  "b_en": "Classification forms unordered groups; series requires a specific order."
+ },
+ {
+  "id": "fc-reasoning-0117",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण प्रश्न हल करने के लिए कौन सा ग्राफ़ उपयोगी है?",
+  "f_en": "Which diagram is useful for solving classification questions?",
+  "b_hi": "वेन आरेख (Venn diagram) का प्रयोग किया जाता है।",
+  "b_en": "A Venn diagram is used."
+ },
+ {
+  "id": "fc-reasoning-0118",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "वर्गीकरण में सामान्य और भिन्न गुण कैसे पहचाने जाते हैं?",
+  "f_en": "How are common and differing attributes identified in classification?",
+  "b_hi": "सभी विकल्पों में दोहराए जाने वाले गुण सामान्य; जो केवल एक में दिखे वह भिन्न।",
+  "b_en": "Attributes repeated across options are common; the one appearing only once is the differing attribute."
+ },
+ {
+  "id": "fc-reasoning-0119",
+  "s": "reasoning",
+  "t": "classification",
+  "f_hi": "एक वर्गीकरण प्रश्न में अधिकतम कितने समूह हो सकते हैं?",
+  "f_en": "What is the maximum number of groups possible in a classification question?",
+  "b_hi": "आमतौर पर चार समूह तक होते हैं।",
+  "b_en": "Usually up to four groups."
+ },
+ {
+  "id": "fc-reasoning-0120",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज्म की परिभाषा क्या है?",
+  "f_en": "What is the definition of a syllogism?",
+  "b_hi": "दो प्रस्ताव और एक निष्कर्ष वाला तर्क।",
+  "b_en": "A reasoning consisting of two premises and a conclusion."
+ },
+ {
+  "id": "fc-reasoning-0121",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज्म में कितने प्रस्ताव होते हैं?",
+  "f_en": "How many statements are there in a syllogism?",
+  "b_hi": "दो प्रस्ताव और एक निष्कर्ष, कुल तीन।",
+  "b_en": "Two premises and one conclusion, total three statements."
+ },
+ {
+  "id": "fc-reasoning-0122",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज्म के मुख्य प्रकार कौन‑से हैं?",
+  "f_en": "What are the main types of syllogism?",
+  "b_hi": "वर्गीय, शर्तीय और विभक्तीय।",
+  "b_en": "Categorical, conditional, and disjunctive."
+ },
+ {
+  "id": "fc-reasoning-0123",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "वितरण नियम (Distribution Rule) क्या कहता है?",
+  "f_en": "What does the distribution rule state?",
+  "b_hi": "यदि कोई शब्द सर्वत्र (All) है तो वह विषय में वितरित होता है; यदि कोई शब्द कुछ (Some) है तो वह कर्म में वितरित नहीं होता।",
+  "b_en": "If a term is universal (All) it is distributed in the subject; a particular (Some) term is not distributed in the predicate."
+ },
+ {
+  "id": "fc-reasoning-0124",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "'Illicit Minor' त्रुटि कब होती है?",
+  "f_en": "When does the 'Illicit Minor' fallacy occur?",
+  "b_hi": "जब निष्कर्ष में विशेष (Some) के रूप में प्रयुक्त शब्द, पूर्वधारणा में वितरित नहीं होता।",
+  "b_en": "When the term used as a particular in the conclusion is not distributed in the premises."
+ },
+ {
+  "id": "fc-reasoning-0125",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज्म हल करने की सामान्य विधि क्या है?",
+  "f_en": "What is the common method to solve a syllogism?",
+  "b_hi": "विषय‑कर्म‑सहायक तालिका बनाकर वितरण, प्रतिबंध और निरूपण जाँचें।",
+  "b_en": "Create a subject‑predicate‑middle diagram and check distribution, restriction, and inference."
+ },
+ {
+  "id": "fc-reasoning-0126",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "वर्गीकृत सिलॉजिज्म के कितने फ़िगर होते हैं?",
+  "f_en": "How many figures are there in categorical syllogism?",
+  "b_hi": "चार फ़िगर (पहला, दूसरा, तीसरा, चौथा)।",
+  "b_en": "Four figures (first, second, third, fourth)."
+ },
+ {
+  "id": "fc-reasoning-0127",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "पहले फ़िगर की मान्य रूप‑रेखा कौन‑सी है?",
+  "f_en": "Which is a valid form in the first figure?",
+  "b_hi": "Barbara (All A are B, All B are C ⇒ All A are C)।",
+  "b_en": "Barbara (All A are B, All B are C ⇒ All A are C)."
+ },
+ {
+  "id": "fc-reasoning-0128",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज्म में मध्य पद का वितरण नियम क्या है?",
+  "f_en": "What is the distribution rule for the middle term in a syllogism?",
+  "b_hi": "मध्य पद को कम से कम एक बार वितरित (distributed) होना चाहिए।",
+  "b_en": "The middle term must be distributed at least once."
+ },
+ {
+  "id": "fc-reasoning-0129",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "'All A are B' का क्या निष्कर्ष निकलता है?",
+  "f_en": "What conclusion follows from 'All A are B'?",
+  "b_hi": "परंपरागत न्याय (Aristotelian logic) के अनुसार, 'All A are B' से 'Some A are B' (उप-वैकल्पन) और फिर रूपांतरण (conversion) द्वारा 'Some B are A' भी वैध रूप से निकलता है।",
+  "b_en": "Under the traditional (Aristotelian) convention used in competitive exams, 'All A are B' validly implies 'Some A are B' (by subalternation) and then, by conversion, 'Some B are A' also follows."
+ },
+ {
+  "id": "fc-reasoning-0130",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज्म की परिभाषा क्या है?",
+  "f_en": "What is the definition of syllogism?",
+  "b_hi": "तीन प्रस्तावनाओं से निकाली गई तर्कसंगत निष्कर्ष।",
+  "b_en": "A logical conclusion drawn from three statements."
+ },
+ {
+  "id": "fc-reasoning-0131",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "एक श्रेणीबद्ध सिलॉजिज्म में कितनी प्रस्तावनाएँ होती हैं?",
+  "f_en": "How many propositions are there in a categorical syllogism?",
+  "b_hi": "तीन प्रस्तावनाएँ।",
+  "b_en": "Three propositions."
+ },
+ {
+  "id": "fc-reasoning-0132",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "'Barbara' वैध स्वरूप का मानक क्या है?",
+  "f_en": "What is the standard form of the valid 'Barbara' syllogism?",
+  "b_hi": "AAA (सभी‑सभी‑सभी) स्वरूप।",
+  "b_en": "AAA (All‑All‑All) form."
+ },
+ {
+  "id": "fc-reasoning-0133",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "मध्य पद के बारे में नियम क्या है?",
+  "f_en": "What is the rule concerning the middle term?",
+  "b_hi": "मध्य पद कम से कम एक बार वितरित होना चाहिए।",
+  "b_en": "The middle term must be distributed at least once."
+ },
+ {
+  "id": "fc-reasoning-0134",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "'कुछ' और 'सभी' के बीच सामान्य भ्रम क्या है?",
+  "f_en": "What is the common confusion between 'some' and 'all'?",
+  "b_hi": "'कुछ' यह नहीं दर्शाता कि सभी शामिल हैं।",
+  "b_en": "'Some' does not imply 'all'."
+ },
+ {
+  "id": "fc-reasoning-0135",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज़्म क्या है?",
+  "f_en": "What is a syllogism?",
+  "b_hi": "तीन प्रस्तावों (दो प्रमुख और एक निष्कर्ष) से बनता तर्क",
+  "b_en": "A reasoning consisting of three statements (two premises and a conclusion)."
+ },
+ {
+  "id": "fc-reasoning-0136",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज़्म के प्रमुख भाग कौन‑से हैं?",
+  "f_en": "What are the major components of a syllogism?",
+  "b_hi": "प्रमुख, गौण, और निष्कर्ष",
+  "b_en": "Major premise, minor premise, and conclusion."
+ },
+ {
+  "id": "fc-reasoning-0137",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज़्म में 'कंट्राडिक्शन' का क्या अर्थ है?",
+  "f_en": "What does 'contradiction' mean in syllogism?",
+  "b_hi": "दोनों प्रस्ताव एक साथ सत्य नहीं हो सकते",
+  "b_en": "Both statements cannot be true simultaneously."
+ },
+ {
+  "id": "fc-reasoning-0138",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज़्म में 'अवैध' निष्कर्ष कब बनता है?",
+  "f_en": "When is a conclusion invalid in a syllogism?",
+  "b_hi": "यदि प्रमुख या गौण प्रस्ताव गलत या असंबंधित हों",
+  "b_en": "If either premise is false or unrelated."
+ },
+ {
+  "id": "fc-reasoning-0139",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज़्म के 'समानार्थी' और 'विपरीतार्थी' शब्दों में अंतर?",
+  "f_en": "Difference between synonymous and antonymous terms in syllogism?",
+  "b_hi": "समानार्थी समान अर्थ देते हैं, विपरीतार्थी विरोधी अर्थ",
+  "b_en": "Synonymous terms have same meaning; antonymous terms have opposite meanings."
+ },
+ {
+  "id": "fc-reasoning-0140",
+  "s": "reasoning",
+  "t": "syllogism",
+  "f_hi": "सिलॉजिज़्म में 'उदाहरण' का प्रयोग कब उचित है?",
+  "f_en": "When is using an example appropriate in a syllogism?",
+  "b_hi": "जब प्रमुख और गौण प्रस्ताव स्पष्ट नहीं हों, तो उदाहरण से स्पष्टता बढ़ती है",
+  "b_en": "When premises are vague, an example clarifies the reasoning."
+ },
+ {
+  "id": "fc-reasoning-0141",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "पिता का भाई क्या कहलाता है?",
+  "f_en": "What is the term for father's brother?",
+  "b_hi": "चाचा",
+  "b_en": "Paternal uncle (Chacha)"
+ },
+ {
+  "id": "fc-reasoning-0142",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "माँ की बहन को क्या कहा जाता है?",
+  "f_en": "What is the term for mother's sister?",
+  "b_hi": "मौसी",
+  "b_en": "Maternal aunt (Mausi)"
+ },
+ {
+  "id": "fc-reasoning-0143",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "बेटी के पिता की माँ को क्या कहते हैं?",
+  "f_en": "What is the relation of a daughter's father's mother?",
+  "b_hi": "दादी",
+  "b_en": "Grandmother (paternal)"
+ },
+ {
+  "id": "fc-reasoning-0144",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "भाई की बेटी को क्या कहा जाता है?",
+  "f_en": "What is the term for brother's daughter?",
+  "b_hi": "भतीजी",
+  "b_en": "Niece (Bhatiji)"
+ },
+ {
+  "id": "fc-reasoning-0145",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "भाई के बेटे को क्या कहा जाता है?",
+  "f_en": "What is the term for brother's son?",
+  "b_hi": "भतीजा",
+  "b_en": "Nephew (Bhatija)"
+ },
+ {
+  "id": "fc-reasoning-0146",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "भाई-बहन के बीच समान या अलग रक्त संबंध?",
+  "f_en": "Are siblings (brother-sister) blood-related equally?",
+  "b_hi": "समान रक्त संबंध होते हैं",
+  "b_en": "Siblings share the same blood relation equally"
+ },
+ {
+  "id": "fc-reasoning-0147",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "पिता के पिता को क्या कहा जाता है?",
+  "f_en": "What is father’s father called?",
+  "b_hi": "दादा",
+  "b_en": "Grandfather (paternal)"
+ },
+ {
+  "id": "fc-reasoning-0148",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "माँ की माँ को क्या कहा जाता है?",
+  "f_en": "What is mother’s mother called?",
+  "b_hi": "नानी",
+  "b_en": "Grandmother (maternal)"
+ },
+ {
+  "id": "fc-reasoning-0149",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "पिता के भाई को क्या कहा जाता है?",
+  "f_en": "What is father’s brother called?",
+  "b_hi": "चाचा (पितृ चाचा)",
+  "b_en": "Paternal uncle"
+ },
+ {
+  "id": "fc-reasoning-0150",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "माँ के भाई को क्या कहा जाता है?",
+  "f_en": "What is mother’s brother called?",
+  "b_hi": "मामा (मातृ चाचा)",
+  "b_en": "Maternal uncle"
+ },
+ {
+  "id": "fc-reasoning-0151",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "भाई की बेटी को क्या कहा जाता है?",
+  "f_en": "What is brother’s daughter called?",
+  "b_hi": "भतीजी",
+  "b_en": "Niece (brother’s daughter)"
+ },
+ {
+  "id": "fc-reasoning-0152",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "बहन का बेटा को क्या कहा जाता है?",
+  "f_en": "What is sister’s son called?",
+  "b_hi": "भतीजा",
+  "b_en": "Nephew (sister’s son)"
+ },
+ {
+  "id": "fc-reasoning-0153",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "भाई का बेटा क्या कहलाता है?",
+  "f_en": "What is the son of a brother called?",
+  "b_hi": "भतीजा",
+  "b_en": "nephew"
+ },
+ {
+  "id": "fc-reasoning-0154",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "माँ की बहन को क्या कहा जाता है?",
+  "f_en": "What is the sister of one's mother called?",
+  "b_hi": "मौसी",
+  "b_en": "maternal aunt"
+ },
+ {
+  "id": "fc-reasoning-0155",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "पिता के भाई की पत्नी का संबंध क्या है?",
+  "f_en": "What is the relation of father's brother's wife?",
+  "b_hi": "बुआ",
+  "b_en": "paternal aunt"
+ },
+ {
+  "id": "fc-reasoning-0156",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "बहन के पति को क्या कहा जाता है?",
+  "f_en": "What is the husband of one's sister called?",
+  "b_hi": "भाई‑जी (भाई‑इन‑लॉ)",
+  "b_en": "brother‑in‑law"
+ },
+ {
+  "id": "fc-reasoning-0157",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "बेटी के बेटे को क्या कहा जाता है?",
+  "f_en": "What is the son of one's daughter called?",
+  "b_hi": "पोता",
+  "b_en": "grandson"
+ },
+ {
+  "id": "fc-reasoning-0158",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "पिता की बहन के बेटे को क्या कहा जाता है?",
+  "f_en": "What is the son of father's sister called?",
+  "b_hi": "चचेता (चचेरा भाई)",
+  "b_en": "cousin (maternal)"
+ },
+ {
+  "id": "fc-reasoning-0159",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "पिता के भाई को क्या कहा जाता है?",
+  "f_en": "What is the father's brother called?",
+  "b_hi": "चाचा (पिता के भाई)",
+  "b_en": "Chacha (father's brother)"
+ },
+ {
+  "id": "fc-reasoning-0160",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "माँ की बहन को क्या कहा जाता है?",
+  "f_en": "What is the mother's sister called?",
+  "b_hi": "मौसी (माँ की बहन)",
+  "b_en": "Mausi (mother's sister)"
+ },
+ {
+  "id": "fc-reasoning-0161",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "दादी की माँ को क्या कहा जाता है?",
+  "f_en": "What is the mother of one's grandmother called?",
+  "b_hi": "परदादी",
+  "b_en": "Great‑grandmother (maternal)"
+ },
+ {
+  "id": "fc-reasoning-0162",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "समान पीढ़ी के रिश्ते को क्या कहा जाता है?",
+  "f_en": "What is a relationship on the same generation called?",
+  "b_hi": "सहज संबंध (जैसे भाई‑बहन, चचेरे भाई‑बहन)",
+  "b_en": "Collateral relationship (e.g., siblings, cousins)"
+ },
+ {
+  "id": "fc-reasoning-0163",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "f_hi": "रिश्ते की डिग्री कैसे निकाली जाती है?",
+  "f_en": "How is the degree of relationship determined?",
+  "b_hi": "डिग्री = पीढ़ी अंतर + पक्ष अंतर (उदा. चाचा = 2)",
+  "b_en": "Degree = generation difference + collateral difference (e.g., uncle = 2)"
+ },
+ {
+  "id": "fc-reasoning-0164",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण क्या है?",
+  "f_en": "What is an Alphabet Test?",
+  "b_hi": "एक श्रृंखला में लुप्त अक्षर पहचानना या क्रम निर्धारित करना।",
+  "b_en": "Identifying missing letters or determining the order in a series."
+ },
+ {
+  "id": "fc-reasoning-0165",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "अंग्रेज़ी वर्णमाला में कुल कितने अक्षर होते हैं?",
+  "f_en": "How many letters are there in the English alphabet?",
+  "b_hi": "अंग्रेज़ी वर्णमाला में 26 अक्षर होते हैं।",
+  "b_en": "The English alphabet contains 26 letters."
+ },
+ {
+  "id": "fc-reasoning-0166",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "हिंदी स्वरवर्ण में कितनी ध्वनियाँ होती हैं?",
+  "f_en": "How many vowels are there in the Hindi alphabet?",
+  "b_hi": "हिंदी स्वरवर्ण में 11 स्वर होते हैं।",
+  "b_en": "The Hindi vowel set comprises 11 vowels."
+ },
+ {
+  "id": "fc-reasoning-0167",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "अक्षर क्रम में A का मान क्या है?",
+  "f_en": "What is the numeric value of 'A' in alphabetical order?",
+  "b_hi": "A = 1, B = 2, … Z = 26।",
+  "b_en": "A = 1, B = 2, … Z = 26."
+ },
+ {
+  "id": "fc-reasoning-0168",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वैकल्पिक अक्षर श्रृंखला की नियम क्या है?",
+  "f_en": "What is the rule for an alternating‑letter series?",
+  "b_hi": "हर दूसरे अक्षर को छोड़कर क्रम जारी रहता है (उदा. A, C, E …)।",
+  "b_en": "The series proceeds by skipping every second letter (e.g., A, C, E …)."
+ },
+ {
+  "id": "fc-reasoning-0169",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "उल्टी वर्णक्रम क्या कहलाता है?",
+  "f_en": "What is a reverse alphabetical series called?",
+  "b_hi": "उसे उल्टा वर्णक्रम या रिवर्स अल्फाबेट क्रम कहा जाता है (Z, Y, X …)।",
+  "b_en": "It is called a reverse alphabetical order (Z, Y, X …)."
+ },
+ {
+  "id": "fc-reasoning-0170",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण में प्रयुक्त मुख्य स्वर कौन‑से हैं?",
+  "f_en": "Which are the main vowels used in alphabet tests?",
+  "b_hi": "मुख्य स्वर A, E, I, O, U हैं।",
+  "b_en": "The main vowels are A, E, I, O, U."
+ },
+ {
+  "id": "fc-reasoning-0171",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णक्रम में दो अक्षरों के बीच समान अंतर वाले क्रम को क्या कहते हैं?",
+  "f_en": "What is a series where each successive letter is separated by the same interval called?",
+  "b_hi": "इसे समान अंतर वाला अक्षर क्रम (Arithmetic Letter Series) कहा जाता है।",
+  "b_en": "It is called an arithmetic letter series."
+ },
+ {
+  "id": "fc-reasoning-0172",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "अंग्रेज़ी वर्णमाला में व्यंजन कितने हैं?",
+  "f_en": "How many consonants are there in the English alphabet?",
+  "b_hi": "वर्णमाला में इक्कीस व्यंजन होते हैं।",
+  "b_en": "There are 21 consonants."
+ },
+ {
+  "id": "fc-reasoning-0173",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण में अक्सर उलझन पैदा करने वाले अक्षर कौन‑से होते हैं?",
+  "f_en": "Which letters commonly cause confusion in alphabet tests?",
+  "b_hi": "b‑d और p‑q अक्सर भ्रमित करते हैं।",
+  "b_en": "b‑d and p‑q are often confusing."
+ },
+ {
+  "id": "fc-reasoning-0174",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "यदि क्रम A, C, E, G… दिया गया हो, तो अगला अक्षर क्या होगा?",
+  "f_en": "Given the series A, C, E, G…, what is the next letter?",
+  "b_hi": "अगला अक्षर I है।",
+  "b_en": "The next letter is I."
+ },
+ {
+  "id": "fc-reasoning-0175",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण क्या है?",
+  "f_en": "What is the Alphabet Test?",
+  "b_hi": "वर्णमाला परीक्षण में अक्षरों की क्रमबद्धता या पैटर्न पहचानना होता है।",
+  "b_en": "The Alphabet Test involves identifying the order or pattern of letters."
+ },
+ {
+  "id": "fc-reasoning-0176",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण में \"A, C, B, D, C, E\" जैसा पैटर्न किस नियम को दर्शाता है?",
+  "f_en": "What rule does the pattern \"A, C, B, D, C, E\" illustrate?",
+  "b_hi": "यह क्रमिक दो‑अक्षर आगे‑पीछे बढ़ते क्रम (इंटरलीव्ड) को दर्शाता है।",
+  "b_en": "It shows an interleaved forward progression of letters."
+ },
+ {
+  "id": "fc-reasoning-0177",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "यदि क्रम है B, D, F, ?, J तो ? में कौन सा अक्षर आएगा?",
+  "f_en": "In the series B, D, F, ?, J, which letter fills the blank?",
+  "b_hi": "छिपा अक्षर एच है, क्योंकि यह हर दूसरे अक्षर पर बढ़ता है।",
+  "b_en": "The missing letter is H, as the series increments by two letters."
+ },
+ {
+  "id": "fc-reasoning-0178",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण में \"Z, X, V, …\" क्रम का अगला अक्षर क्या होगा?",
+  "f_en": "What is the next letter in the series Z, X, V, …?",
+  "b_hi": "अगला अक्षर टी है, क्योंकि यह दो‑दो करके पीछे जाता है।",
+  "b_en": "The next letter is T, moving backward by two letters."
+ },
+ {
+  "id": "fc-reasoning-0179",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "वर्णमाला परीक्षण में बड़े और छोटे अक्षरों का मिश्रण किस बात का संकेत देता है?",
+  "f_en": "What does mixing uppercase and lowercase letters indicate in an Alphabet Test?",
+  "b_hi": "यह अक्सर अक्षर क्रम में परिवर्तन या उलट‑फ़ेर का संकेत देता है।",
+  "b_en": "It usually signals a change or reversal in the letter sequence."
+ },
+ {
+  "id": "fc-reasoning-0180",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "हिंदी वर्णमाला में स्वर और व्यंजन की कुल संख्या क्या है?",
+  "f_en": "What is the total number of vowels and consonants in the Hindi alphabet?",
+  "b_hi": "हिंदी में 13 स्वर और 33 व्यंजन, कुल 46 अक्षर होते हैं।",
+  "b_en": "Hindi has 13 vowels and 33 consonants, making a total of 46 letters."
+ },
+ {
+  "id": "fc-reasoning-0181",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "अंग्रेज़ी अक्षर का क्रमांक कैसे निर्धारित करें?",
+  "f_en": "How to determine the numeric position of an English letter?",
+  "b_hi": "A=1, B=2, … Z=26 क्रम में क्रमांक दिया जाता है।",
+  "b_en": "Assign A=1, B=2, … Z=26 based on their order."
+ },
+ {
+  "id": "fc-reasoning-0182",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "हिंदी वर्णमाला के पहले तीन अक्षर कौन‑से हैं?",
+  "f_en": "What are the first three letters of the Hindi alphabet?",
+  "b_hi": "पहले तीन अक्षर हैं: अ, आ, इ।",
+  "b_en": "The first three letters are: अ, आ, इ."
+ },
+ {
+  "id": "fc-reasoning-0183",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "यदि क्रम A C E G … दिया हो, तो n‑वां पद कौन सा होगा?",
+  "f_en": "In the series A C E G …, what is the nth term?",
+  "b_hi": "n‑वां पद (2n‑1)वें अक्षर के बराबर होता है, यानी A C E G I …",
+  "b_en": "The nth term is the (2n‑1)th letter, giving A C E G I …"
+ },
+ {
+  "id": "fc-reasoning-0184",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "f_hi": "उल्टी क्रम में अक्षर का मान कैसे निकालें?",
+  "f_en": "How to find the numeric value of a letter in reverse alphabetical order?",
+  "b_hi": "रिवर्स मान = 27 – सामान्य क्रमांक; उदाहरण: Z=1, Y=2, …",
+  "b_en": "Reverse value = 27 – normal position; e.g., Z=1, Y=2, …"
+ },
+ {
+  "id": "fc-reasoning-0185",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "परिपत्र व्यवस्था में कुल विभिन्न क्रम कितने होते हैं?",
+  "f_en": "How many distinct arrangements are there in a circular seating?",
+  "b_hi": "यदि n लोग हों तो (n‑1)! क्रम",
+  "b_en": "For n persons, distinct arrangements = (n‑1)!"
+ },
+ {
+  "id": "fc-reasoning-0186",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "यदि प्रतिबिंब को समान माना जाए तो परिपत्र क्रम कितने होते हैं?",
+  "f_en": "If reflections are considered identical, how many circular arrangements?",
+  "b_hi": "(n‑1)!/2 क्रम",
+  "b_en": "(n‑1)!/2 arrangements"
+ },
+ {
+  "id": "fc-reasoning-0187",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "सीधी पंक्ति में n लोगों की कुल क्रमिक व्यवस्थाएँ?",
+  "f_en": "Total linear arrangements of n people?",
+  "b_hi": "n! क्रम",
+  "b_en": "n! arrangements"
+ },
+ {
+  "id": "fc-reasoning-0188",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "समान दूरी पर बैठने के लिये शर्त क्या है?",
+  "f_en": "Condition for equal spacing seating?",
+  "b_hi": "कुल सीटों की संख्या को व्यक्तियों की संख्या से भाग देना चाहिए, अर्थात सीटें n का गुणज हों",
+  "b_en": "Total seats must be a multiple of the number of people"
+ },
+ {
+  "id": "fc-reasoning-0189",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "परिपत्र में दो लोग विपरीत बैठें तो उनके बीच कितनी सीटें होंगी?",
+  "f_en": "If two people sit opposite in a circle, how many seats lie between them?",
+  "b_hi": "n/2‑1 सीटें, जब n सम हो",
+  "b_en": "n/2‑1 seats when n is even"
+ },
+ {
+  "id": "fc-reasoning-0190",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "बाएँ immediate और दाएँ immediate का अर्थ क्या है?",
+  "f_en": "What does 'immediate left' and 'immediate right' mean?",
+  "b_hi": "बाएँ immediate = तुरंत बाएँ वाली सीट, दाएँ immediate = तुरंत दाएँ वाली सीट",
+  "b_en": "Immediate left = the seat directly to the left; immediate right = directly to the right"
+ },
+ {
+  "id": "fc-reasoning-0191",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "वृत्ताकार मेज पर 'तुरंत दाएँ' और 'तुरंत बाएँ' की दिशा कैसे निर्धारित करें?",
+  "f_en": "How to determine 'immediate right' and 'immediate left' in a circular table?",
+  "b_hi": "घड़ी की सुई की दिशा दाएँ, उसके विपरीत बाएँ होती है।",
+  "b_en": "Clockwise direction is immediate right; counter‑clockwise is immediate left."
+ },
+ {
+  "id": "fc-reasoning-0192",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "यदि दो व्यक्तियों के बीच केवल एक व्यक्ति बैठा है, तो उनकी सीटों के बीच कितनी दूरी है?",
+  "f_en": "If exactly one person sits between two persons, what is the seat distance between them?",
+  "b_hi": "दो स्थानों की दूरी, अर्थात दो सीटें अलग हैं।",
+  "b_en": "They are two seats apart (one person in between)."
+ },
+ {
+  "id": "fc-reasoning-0193",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "एक गोल मेज पर n व्यक्तियों की अलग‑अलग बैठाने की कुल संभावनाएँ क्या होती हैं?",
+  "f_en": "Total distinct arrangements of n persons around a circular table?",
+  "b_hi": "(n‑1)!  (घुमाव को समान मानते हुए)",
+  "b_en": "(n‑1)! (considering rotations identical)."
+ },
+ {
+  "id": "fc-reasoning-0194",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "आयताकार मेज पर सामने‑सामने बैठने वाले दो व्यक्तियों को क्या कहा जाता है?",
+  "f_en": "What are two persons sitting opposite each other at a rectangular table called?",
+  "b_hi": "उन्हें 'विपरीत' या 'सामने‑सामने' कहा जाता है।",
+  "b_en": "They are called opposite or facing each other."
+ },
+ {
+  "id": "fc-reasoning-0195",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "यदि A, B, C क्रमशः बाएँ‑से‑दाएँ बैठते हैं, तो B के बाएँ कौन होगा?",
+  "f_en": "If A, B, C sit left to right respectively, who is to the left of B?",
+  "b_hi": "A बाएँ होगा।",
+  "b_en": "A is to the left of B."
+ },
+ {
+  "id": "fc-reasoning-0196",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "एक पंक्ति में n लोग बैठते हैं (n विषम), तो मध्य पद का क्रमांक क्या होता है?",
+  "f_en": "In a line of n people (n odd), what is the index of the middle position?",
+  "b_hi": "(n+1)/2‑वाँ स्थान।",
+  "b_en": "(n+1)/2‑th position."
+ },
+ {
+  "id": "fc-reasoning-0197",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "परिपत्र बैठने में कुल कितने क्रम संभव हैं?",
+  "f_en": "How many arrangements are possible in a circular seating?",
+  "b_hi": "(n‑1)! जहाँ n लोग हों",
+  "b_en": "(n‑1)! where n is the number of people"
+ },
+ {
+  "id": "fc-reasoning-0198",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "परिपत्र व्यवस्था में दो व्यक्तियों के बीच ठीक एक व्यक्ति होना क्या कहलाता है?",
+  "f_en": "What is it called when exactly one person sits between two persons in a circle?",
+  "b_hi": "'एक व्यक्ति के बीच' या 'एक के बीच' स्थिति",
+  "b_en": "'One person between' condition"
+ },
+ {
+  "id": "fc-reasoning-0199",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "परिपत्र व्यवस्था में किसी को दाएँ immediate बैठाना क्या दर्शाता है?",
+  "f_en": "In a circular arrangement, what does 'immediate right' of a person mean?",
+  "b_hi": "उसके ठीक बगल में, घड़ी की दिशा में पहला स्थान",
+  "b_en": "The seat directly next to them on the clockwise side"
+ },
+ {
+  "id": "fc-reasoning-0200",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "परिपत्र बैठने में दो व्यक्तियों को एक-दूसरे के सामने रखना कैसे दर्शाते हैं?",
+  "f_en": "How is it denoted when two persons sit opposite each other in a circle?",
+  "b_hi": "विपरीत (opposite) स्थिति; दो स्थानों के बीच (n/2‑1) लोग हों",
+  "b_en": "Opposite position; there are (n/2‑1) people between them"
+ },
+ {
+  "id": "fc-reasoning-0201",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "यदि A, B के बाएँ immediate है, तो B, A के किस ओर है?",
+  "f_en": "If A is immediate left of B, where is B relative to A?",
+  "b_hi": "A के दाएँ immediate",
+  "b_en": "Immediate right of A"
+ },
+ {
+  "id": "fc-reasoning-0202",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "f_hi": "समीपस्थ (adjacent) और निकटतम (nearest) में अंतर क्या है?",
+  "f_en": "What is the difference between 'adjacent' and 'nearest' in seating puzzles?",
+  "b_hi": "समीपस्थ = सीधे बगल में, निकटतम = सबसे कम दूरी पर लेकिन बीच में कोई भी हो सकता है",
+  "b_en": "Adjacent = directly next to; Nearest = closest distance, may have others in between"
+ },
+ {
+  "id": "fc-reasoning-0203",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "अशाब्दिक तर्कशक्ति क्या है?",
+  "f_en": "What is Non‑Verbal Reasoning?",
+  "b_hi": "आकृतियों, चित्रों व पैटर्नों के आधार पर तर्क करने की क्षमता।",
+  "b_en": "Ability to reason using shapes, pictures and patterns."
+ },
+ {
+  "id": "fc-reasoning-0204",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "अशाब्दिक तर्कशक्ति के मुख्य प्रकार कौन‑से हैं?",
+  "f_en": "What are the main types of Non‑Verbal Reasoning?",
+  "b_hi": "श्रृंखला, समानता, वर्गीकरण, भिन्न वस्तु, प्रतिबिंब, जल‑छवि, कागज़ मोड़।",
+  "b_en": "Series, analogies, classification, odd one out, mirror image, water image, paper folding."
+ },
+ {
+  "id": "fc-reasoning-0205",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "दर्पण (मिरर) चित्र में बाएँ‑दाएँ उलटाव का नियम क्या है?",
+  "f_en": "What is the left‑right reversal rule in mirror images?",
+  "b_hi": "चित्र को क्षैतिज धुरी पर प्रतिबिंबित करने पर बाएँ और दाएँ स्थान बदल जाते हैं।",
+  "b_en": "When reflected on a horizontal axis, left and right positions are interchanged."
+ },
+ {
+  "id": "fc-reasoning-0206",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "कागज़ मोड़ प्रश्न में n मोड़ के बाद कुल भागों की संख्या कैसे निकाली जाती है?",
+  "f_en": "How to find the total number of parts after n folds in paper‑folding questions?",
+  "b_hi": "हर मोड़ पर भागों की संख्या दुगुनी हो जाती है; इसलिए n मोड़ पर कुल भाग दो की शक्ति n के बराबर होते हैं।",
+  "b_en": "The number of parts doubles with each fold; after n folds it equals 2 to the power of n."
+ },
+ {
+  "id": "fc-reasoning-0207",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "जल‑छवि (वॉटर इमेज) में चित्र कैसे बदलता है?",
+  "f_en": "How does a figure change in a water‑image problem?",
+  "b_hi": "चित्र को जल सतह पर उलटने पर ऊर्ध्वाधर धुरी पर प्रतिबिंबित किया जाता है; ऊपर‑नीचे स्थान बदलते हैं।",
+  "b_en": "The figure is reflected on a vertical axis, swapping top and bottom positions."
+ },
+ {
+  "id": "fc-reasoning-0208",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "भिन्न वस्तु (Odd One Out) में सही उत्तर चुनने की सामान्य रणनीति क्या है?",
+  "f_en": "What is the usual strategy to pick the correct answer in Odd One Out?",
+  "b_hi": "विकल्पों में वह आकृति खोजें जिसकी गुणधर्म (संख्या, दिशा, आकार) बाकी से अलग हो।",
+  "b_en": "Identify the figure whose property (number, direction, shape) differs from the others."
+ },
+ {
+  "id": "fc-reasoning-0209",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "आयना प्रतिबिंब क्या है?",
+  "f_en": "What is a mirror image?",
+  "b_hi": "एक आकृति को समान दूरी पर स्थित लम्बवत अक्ष के सापेक्ष उल्टा दर्शाना।",
+  "b_en": "A figure reflected across a line at equal distance, producing a reversed image."
+ },
+ {
+  "id": "fc-reasoning-0210",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "घूर्णन (रोटेशन) में दिशा कैसे निर्धारित होती है?",
+  "f_en": "How is direction determined in a rotation?",
+  "b_hi": "घड़ी की सुई की दिशा को clockwise और उसके विपरीत को anticlockwise कहा जाता है।",
+  "b_en": "Clockwise follows the direction of a clock’s hands; the opposite is anticlockwise."
+ },
+ {
+  "id": "fc-reasoning-0211",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "समरूपता (समानता) में आकार का अनुपात क्या रहता है?",
+  "f_en": "What remains constant in similarity of shapes?",
+  "b_hi": "सभी संबंधित पक्षों का अनुपात समान रहता है।",
+  "b_en": "The ratio of corresponding sides remains constant."
+ },
+ {
+  "id": "fc-reasoning-0212",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "समरूप (Congruent) आकृतियों के लिये कौन‑कौन से परिवर्तन मान्य हैं?",
+  "f_en": "Which transformations keep figures congruent?",
+  "b_hi": "परावर्तन, घूर्णन, स्थानांतरण तथा प्रतिबिंबित प्रतिलिपि।",
+  "b_en": "Reflection, rotation, translation and mirror duplication."
+ },
+ {
+  "id": "fc-reasoning-0213",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "‘Odd One Out’ प्रश्न में मुख्य सिद्धांत क्या है?",
+  "f_en": "What is the key principle in an ‘Odd One Out’ item?",
+  "b_hi": "जो चित्र अन्य सभी के समान पैटर्न या परिवर्तन नहीं रखता, वह असमान है।",
+  "b_en": "The figure that does not share the common pattern or transformation is the odd one out."
+ },
+ {
+  "id": "fc-reasoning-0214",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "त्रिकोणीय श्रृंखला में क्रमिक परिवर्तन क्या हो सकता है?",
+  "f_en": "What sequential change can occur in a triangular series?",
+  "b_hi": "प्रत्येक अगला त्रिकोण पहले का ९० डिग्री घूर्णन हो सकता है।",
+  "b_en": "Each successive triangle may be a 90‑degree rotation of the previous one."
+ },
+ {
+  "id": "fc-reasoning-0215",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "अंकात्मक क्रम की विशेषता क्या है?",
+  "f_en": "What is the characteristic of a numeric series?",
+  "b_hi": "प्रत्येक पद पिछले दो पदों के योग से बनता है।",
+  "b_en": "Each term is the sum of the two preceding terms."
+ },
+ {
+  "id": "fc-reasoning-0216",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "दर्पण में प्रतिबिंब क्या दर्शाता है?",
+  "f_en": "What does a mirror image represent?",
+  "b_hi": "दाएँ‑बाएँ उलटा रूप, जहाँ बाएँ और दाएँ स्थान बदल जाते हैं।",
+  "b_en": "A left‑right reversed figure where left and right positions are swapped."
+ },
+ {
+  "id": "fc-reasoning-0217",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "90 डिग्री घड़ी की दिशा में घुमाने पर क्या परिवर्तन होता है?",
+  "f_en": "What change occurs when rotated 90 degrees clockwise?",
+  "b_hi": "सभी बिंदु मूल बिंदु के चारों ओर 90° घड़ी की दिशा में घुमते हैं।",
+  "b_en": "All points rotate 90° around the center in a clockwise direction."
+ },
+ {
+  "id": "fc-reasoning-0218",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "कागज मोड़ने पर बनने वाली आकृति को क्या कहा जाता है?",
+  "f_en": "What is the figure formed by paper folding called?",
+  "b_hi": "फोल्डिंग पैटर्न या मोड़‑आकृति।",
+  "b_en": "Folding pattern or fold‑figure."
+ },
+ {
+  "id": "fc-reasoning-0219",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "‘विचलन’ (odd one out) में किस बात पर ध्यान देना चाहिए?",
+  "f_en": "What should be focused on in an ‘odd one out’ question?",
+  "b_hi": "एकमात्र वस्तु की विशेषता या नियम जो बाकी से अलग हो।",
+  "b_en": "The unique property or rule of the single item that differs from the rest."
+ },
+ {
+  "id": "fc-reasoning-0220",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "त्रि‑आयामी आकृति को दो आयाम में दिखाने को क्या कहते हैं?",
+  "f_en": "What is it called when a 3‑D figure is shown in 2‑D?",
+  "b_hi": "समतल चित्रण या दो‑आयामी प्रतिनिधित्व।",
+  "b_en": "Flat illustration or two‑dimensional representation."
+ },
+ {
+  "id": "fc-reasoning-0221",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "घड़ी की दिशा में घुमाव की पहचान कैसे करें?",
+  "f_en": "How to identify clockwise rotation?",
+  "b_hi": "यदि आकृति बाएँ से दाएँ नीचे की ओर घुमी है तो वह घड़ी की दिशा में घुमाव है।",
+  "b_en": "If the figure moves from left to right downward, it is a clockwise rotation."
+ },
+ {
+  "id": "fc-reasoning-0222",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "आकार में प्रतिबिंब (मिरर इमेज) किस दिशा में होता है?",
+  "f_en": "In which direction does a mirror image occur?",
+  "b_hi": "प्रतिबिंब हमेशा क्षैतिज अक्ष (वर्टिकल लाइन) के सापेक्ष बाएँ‑दाएँ उलटा होता है।",
+  "b_en": "A mirror image is reversed left‑right with respect to a vertical axis."
+ },
+ {
+  "id": "fc-reasoning-0223",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "समानता (Similarity) और समरूपता (Congruence) में मुख्य अंतर?",
+  "f_en": "Key difference between similarity and congruence?",
+  "b_hi": "समरूपता में आकार समान और आकार अनुपात 1:1 होता है; समानता में आकार समान पर अनुपात 1 से अलग हो सकता है।",
+  "b_en": "Congruence requires identical size (ratio 1:1); similarity allows proportional scaling."
+ },
+ {
+  "id": "fc-reasoning-0224",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "समान रूप में क्रमिक संख्यात्मक श्रृंखला की पहचान कैसे करें?",
+  "f_en": "How to recognize an arithmetic series in figures?",
+  "b_hi": "यदि प्रत्येक चरण में समान संख्या या आकार का जोड़/घटाव होता है तो वह अंकगणितीय श्रृंखला है।",
+  "b_en": "If each step adds or subtracts the same number/size, it is an arithmetic series."
+ },
+ {
+  "id": "fc-reasoning-0225",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "कौन-सा पैटर्न ‘विकल्प‑बाह्य’ (odd one out) बनाता है?",
+  "f_en": "What makes a pattern the ‘odd one out’?",
+  "b_hi": "जो आकृति नियम (जैसे घुमाव, प्रतिबिंब या क्रम) का उल्लंघन करती है, वह विकल्प‑बाह्य होती है।",
+  "b_en": "The figure that violates the governing rule (rotation, mirror, sequence) is the odd one out."
+ },
+ {
+  "id": "fc-reasoning-0226",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "f_hi": "आकृति पूर्णता (Figure Completion) में सबसे आम सिद्धांत?",
+  "f_en": "Most common principle in Figure Completion?",
+  "b_hi": "खाली स्थान को भरने के लिए मौजूदा आकृतियों के आकार, दिशा और संख्या के निरंतरता को जारी रखें।",
+  "b_en": "Complete the missing part by continuing the size, direction, and count continuity of existing figures."
+ },
+ {
+  "id": "fc-reasoning-0227",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "कथन व निष्कर्ष क्या हैं?",
+  "f_en": "What are statement and conclusion?",
+  "b_hi": "कथन वह तथ्य है जो दिया जाता है; निष्कर्ष वह परिणाम है जो उस कथन से तर्कसंगत रूप से निकाला जाता है।",
+  "b_en": "A statement is a given fact; a conclusion is the result logically drawn from that statement."
+ },
+ {
+  "id": "fc-reasoning-0228",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "निष्कर्ष निकालते समय कौन सी शर्त अनिवार्य है?",
+  "f_en": "What condition is mandatory when drawing a conclusion?",
+  "b_hi": "निष्कर्ष केवल उन ही कथनों से निकाला जा सकता है जो प्रश्न में दिए गये हैं, किसी अतिरिक्त मान्यतानुसार नहीं।",
+  "b_en": "A conclusion can be drawn only from the statements provided in the question, not from extra assumptions."
+ },
+ {
+  "id": "fc-reasoning-0229",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "सभी A, B हैं – क्या 'कुछ B, A हैं' निष्कर्ष सही है?",
+  "f_en": "All A are B – is the conclusion 'Some B are A' valid?",
+  "b_hi": "हां, यह निष्कर्ष सही है क्योंकि यदि सभी A B हैं, तो कम से कम एक B अवश्य ही A होगा।",
+  "b_en": "Yes, it is valid because if all A are B, at least one B must be an A."
+ },
+ {
+  "id": "fc-reasoning-0230",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "सभी A, B हैं – क्या 'सभी B, A हैं' निष्कर्ष सही है?",
+  "f_en": "All A are B – is the conclusion 'All B are A' correct?",
+  "b_hi": "नहीं, यह निष्कर्ष गलत है; यह प्रतिवाद (converse) त्रुटि है।",
+  "b_en": "No, this conclusion is incorrect; it is a converse error."
+ },
+ {
+  "id": "fc-reasoning-0231",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "निष्कर्ष सत्यापित करने के लिए कौन सी तकनीक प्रयोग की जाती है?",
+  "f_en": "Which technique is used to verify a conclusion?",
+  "b_hi": "वेन आरेख (Venn diagram) बनाकर प्रत्येक कथन के सेट की सीमा देखी जाती है।",
+  "b_en": "A Venn diagram is drawn to examine the set relations of each statement."
+ },
+ {
+  "id": "fc-reasoning-0232",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "यदि कुछ X, Y हैं और सभी Y, Z हैं – कौन सा निष्कर्ष निश्चित है?",
+  "f_en": "If some X are Y and all Y are Z – which conclusion is certain?",
+  "b_hi": "कुछ X, Z हैं।",
+  "b_en": "Some X are Z."
+ },
+ {
+  "id": "fc-reasoning-0233",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "कथन व निष्कर्ष की परिभाषा क्या है?",
+  "f_en": "What is the definition of statement and conclusion?",
+  "b_hi": "कथन वह तथ्य है जो दिया जाता है; निष्कर्ष वह परिणाम है जो कथन से अनिवार्य रूप से निकलता है।",
+  "b_en": "A statement is a given fact; a conclusion is the result that necessarily follows from the statement."
+ },
+ {
+  "id": "fc-reasoning-0234",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "यदि P ⇒ Q दिया गया हो, तो कौन‑सा निष्कर्ष वैध है?",
+  "f_en": "If P ⇒ Q is given, which conclusion is valid?",
+  "b_hi": "\"P सत्य है\" निष्कर्ष वैध नहीं है; \"Q सत्य है\" केवल तभी वैध जब P सत्य हो।",
+  "b_en": "Conclusion \"P is true\" is not valid; \"Q is true\" is valid only when P is true."
+ },
+ {
+  "id": "fc-reasoning-0235",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "'सिर्फ अगर' (Only if) और 'यदि' (If) में क्या अंतर है?",
+  "f_en": "What is the difference between 'Only if' and 'If'?",
+  "b_hi": "'यदि' का अर्थ P ⇒ Q; 'सिर्फ अगर' का अर्थ Q ⇒ P।",
+  "b_en": "'If' means P ⇒ Q; 'Only if' means Q ⇒ P."
+ },
+ {
+  "id": "fc-reasoning-0236",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "कथन‑निष्कर्ष में 'विपर्यय' (converse) को मानना क्यों त्रुटिपूर्ण है?",
+  "f_en": "Why is assuming the converse in statement-conclusion reasoning erroneous?",
+  "b_hi": "विपर्यय (Q ⇒ P) मूल कथन (P ⇒ Q) से आवश्यक नहीं होता; इसलिए यह हमेशा सत्य नहीं रहता।",
+  "b_en": "The converse (Q ⇒ P) is not implied by the original statement (P ⇒ Q); hence it is not always true."
+ },
+ {
+  "id": "fc-reasoning-0237",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "जब दोनों कथन और निष्कर्ष सत्य हों पर निष्कर्ष अनिवार्य न हो, तो निष्कर्ष को क्या कहा जाता है?",
+  "f_en": "When both statement and conclusion are true but the conclusion is not necessary, what is the conclusion called?",
+  "b_hi": "ऐसे निष्कर्ष को 'अवैध निष्कर्ष' कहा जाता है।",
+  "b_en": "Such a conclusion is called an 'invalid conclusion'."
+ },
+ {
+  "id": "fc-reasoning-0238",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "'यदि और केवल यदि' (If and only if) को प्रतीक में कैसे दर्शाते हैं?",
+  "f_en": "How is 'If and only if' represented symbolically?",
+  "b_hi": "'यदि और केवल यदि' को P ⇔ Q द्वारा दर्शाते हैं।",
+  "b_en": "'If and only if' is represented as P ⇔ Q."
+ },
+ {
+  "id": "fc-reasoning-0239",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "एक कथन से निष्कर्ष निकालने की शर्त क्या है?",
+  "f_en": "What is the condition for drawing a conclusion from a statement?",
+  "b_hi": "यदि निष्कर्ष केवल कथन से अनिवार्य रूप से निकले, तो वह वैध है।",
+  "b_en": "A conclusion is valid only if it follows necessarily from the given statement."
+ },
+ {
+  "id": "fc-reasoning-0240",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "वैकल्पिक (Either‑or) कथन में निष्कर्ष कैसे निर्धारित करें?",
+  "f_en": "How to determine conclusions in an either-or statement?",
+  "b_hi": "केवल वह निष्कर्ष चुनें जो दोनों विकल्पों में समान हो।",
+  "b_en": "Select the conclusion that holds true in both alternatives."
+ },
+ {
+  "id": "fc-reasoning-0241",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "समानार्थी शब्दों वाले कथन में निष्कर्ष की वैधता?",
+  "f_en": "Validity of conclusions in statements with synonymous words?",
+  "b_hi": "समानार्थी शब्दों का अर्थ समान रहता है, इसलिए निष्कर्ष वही रहता है।",
+  "b_en": "Synonymous words retain meaning, so the conclusion remains unchanged."
+ },
+ {
+  "id": "fc-reasoning-0242",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "नकारात्मक (Negative) कथन से निष्कर्ष निकालते समय क्या देखना चाहिए?",
+  "f_en": "What to watch for when drawing conclusions from a negative statement?",
+  "b_hi": "नकारात्मक शब्द 'कोई नहीं', 'नहीं' आदि को ध्यान में रखकर दोहरा नकार न बनाएं।",
+  "b_en": "Consider negation words like 'none', 'not' and avoid double negatives."
+ },
+ {
+  "id": "fc-reasoning-0243",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "एकाधिक कथनों से निष्कर्ष निकालते समय नियम?",
+  "f_en": "Rule for drawing conclusions from multiple statements?",
+  "b_hi": "सभी कथनों को एक साथ सत्य मानें; निष्कर्ष को प्रत्येक से अनिवार्य रूप से निकलना चाहिए।",
+  "b_en": "Assume all statements true; the conclusion must follow necessarily from each."
+ },
+ {
+  "id": "fc-reasoning-0244",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "‘यदि…तो…’ प्रकार के कथन में आवश्यक और पर्याप्त शर्तें?",
+  "f_en": "Necessary and sufficient conditions in ‘If…then…’ statements?",
+  "b_hi": "‘यदि’ आवश्यक, ‘तो’ पर्याप्त; दोनों मिलकर शर्त पूर्ण होती है।",
+  "b_en": "'If' indicates a necessary condition, 'then' a sufficient condition; together they form the complete condition."
+ },
+ {
+  "id": "fc-reasoning-0245",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "कथन क्या है?",
+  "f_en": "What is a statement?",
+  "b_hi": "वह वाक्य जो तथ्य या स्थिति को दर्शाता है।",
+  "b_en": "A sentence that conveys a fact or situation."
+ },
+ {
+  "id": "fc-reasoning-0246",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "निष्कर्ष क्या है?",
+  "f_en": "What is a conclusion?",
+  "b_hi": "कथन से निकाला गया तर्कसंगत परिणाम।",
+  "b_en": "A logical result drawn from a statement."
+ },
+ {
+  "id": "fc-reasoning-0247",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "वैध निष्कर्ष की शर्त क्या है?",
+  "f_en": "Condition for a valid conclusion?",
+  "b_hi": "निष्कर्ष केवल कथन में निहित हो और अतिरिक्त जानकारी न जोड़ें।",
+  "b_en": "The conclusion must be wholly contained in the statement without adding new information."
+ },
+ {
+  "id": "fc-reasoning-0248",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "कथन के प्रकार कौन‑कौन से हैं?",
+  "f_en": "What are the types of statements?",
+  "b_hi": "सार्वभौमिक सकारात्मक, सार्वभौमिक नकारात्मक, विशेष सकारात्मक, विशेष नकारात्मक।",
+  "b_en": "Universal affirmative, universal negative, particular affirmative, particular negative."
+ },
+ {
+  "id": "fc-reasoning-0249",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "यदि दो निष्कर्ष संभावित हों तो कौन सा मान्य है?",
+  "f_en": "If two conclusions are possible, which is valid?",
+  "b_hi": "जो सभी परिस्थितियों में सत्य रहता है, वही मान्य।",
+  "b_en": "The one that remains true in all situations is valid."
+ },
+ {
+  "id": "fc-reasoning-0250",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "f_hi": "कथन‑निष्कर्ष में ‘यदि‑तो’ संबंध का क्या अर्थ है?",
+  "f_en": "What does the ‘if‑then’ relationship signify in statement‑conclusion?",
+  "b_hi": "यदि antecedent सत्य है तो consequent भी सत्य होना आवश्यक।",
+  "b_en": "If the antecedent is true, the consequent must also be true."
+ },
+ {
+  "id": "fc-reasoning-0251",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "किसी संख्या का 2 से विभाज्य होने का नियम क्या है?",
+  "f_en": "What is the rule for a number to be divisible by 2?",
+  "b_hi": "यदि अंतिम अंक 0,2,4,6,8 हो तो वह संख्या 2 से विभाज्य होती है।",
+  "b_en": "If the last digit is 0,2,4,6,8 the number is divisible by 2."
+ },
+ {
+  "id": "fc-reasoning-0252",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "पहली n प्राकृतिक संख्याओं का योग का सूत्र क्या है?",
+  "f_en": "Formula for sum of first n natural numbers?",
+  "b_hi": "योग = n(n+1)÷2",
+  "b_en": "Sum = n(n+1)/2"
+ },
+ {
+  "id": "fc-reasoning-0253",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "पर्याय (Permutation) और संयोजन (Combination) में मुख्य अंतर?",
+  "f_en": "Main difference between permutation and combination?",
+  "b_hi": "पर्याय में क्रम मायने रखता है, संयोजन में नहीं।",
+  "b_en": "Permutation considers order, combination does not."
+ },
+ {
+  "id": "fc-reasoning-0254",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "दो स्वतंत्र घटनाओं की संयुक्त संभावना का नियम?",
+  "f_en": "Rule for probability of two independent events occurring together?",
+  "b_hi": "संयुक्त संभावना = प्रत्येक की व्यक्तिगत संभावना का गुणन।",
+  "b_en": "Joint probability = product of individual probabilities."
+ },
+ {
+  "id": "fc-reasoning-0255",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "अंतिम अंक 5 वाली संख्या का वर्ग निकालने का त्वरित तरीका?",
+  "f_en": "Quick method to square a number ending with 5?",
+  "b_hi": "संख्या को 10 से गुणा कर 5 जोड़ें, फिर 25 लिखें। उदाहरण: 35² = 3×4=12 → 1225।",
+  "b_en": "Multiply the leading part by its successor and append 25. e.g., 35² = 3×4=12 → 1225."
+ },
+ {
+  "id": "fc-reasoning-0256",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "किसी संख्या को 9 से गुणा करने पर अंक योग का नियम?",
+  "f_en": "Digit-sum rule when multiplying a number by 9?",
+  "b_hi": "परिणाम के अंकों का योग हमेशा 9 या 9 का गुणज होता है।",
+  "b_en": "Sum of digits of the product is always 9 or a multiple of 9."
+ },
+ {
+  "id": "fc-reasoning-0257",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "LCM क्या है?",
+  "f_en": "What is LCM?",
+  "b_hi": "दो संख्याओं का लघुत्तम समापवर्त्य वह सबसे छोटा संख्या है जो दोनों को बिना शेष के विभाजित करता है।",
+  "b_en": "LCM is the smallest number divisible by both numbers."
+ },
+ {
+  "id": "fc-reasoning-0258",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "HCF निकालने की विधि?",
+  "f_en": "How to find HCF?",
+  "b_hi": "दो संख्याओं का महत्तम समापवर्त्य वह सबसे बड़ा संख्या है जो दोनों को बिना शेष के विभाजित करता है; यूक्लिडियन एल्गोरिद्म से निकाला जाता है।",
+  "b_en": "HCF is the greatest number dividing both; found via Euclidean algorithm."
+ },
+ {
+  "id": "fc-reasoning-0259",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "सरल ब्याज की सूत्र?",
+  "f_en": "Formula for Simple Interest?",
+  "b_hi": "सरल ब्याज = (मुख्य राशि × वार्षिक दर × समय) / 100।",
+  "b_en": "Simple Interest = (Principal × Rate × Time) / 100."
+ },
+ {
+  "id": "fc-reasoning-0260",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "प्रतिशत वृद्धि का सूत्र?",
+  "f_en": "Formula for Percentage Increase?",
+  "b_hi": "प्रतिशत वृद्धि = (नया मान - पुराना मान) × 100 / पुराना मान।",
+  "b_en": "Percentage Increase = (New – Old) × 100 / Old."
+ },
+ {
+  "id": "fc-reasoning-0261",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "औसत (Mean) की गणना?",
+  "f_en": "How to calculate Mean?",
+  "b_hi": "औसत = सभी मानों का योग ÷ मानों की संख्या।",
+  "b_en": "Mean = Sum of all values ÷ Number of values."
+ },
+ {
+  "id": "fc-reasoning-0262",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "पर्यायवाची और संयोजन में अंतर?",
+  "f_en": "Difference between Permutation and Combination?",
+  "b_hi": "पर्यायवाची में क्रम महत्त्वपूर्ण है; nPr = n! / (n‑r)!। संयोजन में क्रम नहीं माना जाता; nCr = n! / [r! (n‑r)!]।",
+  "b_en": "Permutation considers order (nPr = n!/(n‑r)!), Combination ignores order (nCr = n!/[r!(n‑r)!])."
+ },
+ {
+  "id": "fc-reasoning-0263",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "दो संख्याओं का LCM और HCF का गुणनफल क्या है?",
+  "f_en": "Product of LCM and HCF of two numbers?",
+  "b_hi": "दोनों संख्याओं के गुणनफल के बराबर",
+  "b_en": "Equal to the product of the two numbers"
+ },
+ {
+  "id": "fc-reasoning-0264",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "किसी संख्या को 5 से गुणा करने का तेज़ तरीका?",
+  "f_en": "Quick method to multiply a number by 5?",
+  "b_hi": "संख्या को दस से गुणा करके आधा करें",
+  "b_en": "Multiply by 10 then halve the result"
+ },
+ {
+  "id": "fc-reasoning-0265",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "किसी संख्या का 3 से विभाज्य होने की जाँच कैसे करें?",
+  "f_en": "How to test if a number is divisible by 3?",
+  "b_hi": "अंकों का योग तीन से विभाज्य हो तो संख्या भी विभाज्य",
+  "b_en": "If sum of digits is divisible by 3, the number is divisible by 3"
+ },
+ {
+  "id": "fc-reasoning-0266",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "LCM और HCF का सम्बन्ध क्या है?",
+  "f_en": "What is the relationship between LCM and HCF?",
+  "b_hi": "LCM × HCF = दो संख्याओं का गुणनफल",
+  "b_en": "LCM × HCF = product of the two numbers"
+ },
+ {
+  "id": "fc-reasoning-0267",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "प्रतिशत वृद्धि का सूत्र क्या है?",
+  "f_en": "What is the formula for percentage increase?",
+  "b_hi": "नया मान = मूल मान × (1 + प्रतिशत/100)",
+  "b_en": "New value = Original × (1 + %/100)"
+ },
+ {
+  "id": "fc-reasoning-0268",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "सरल ब्याज की गणना का सूत्र क्या है?",
+  "f_en": "What is the formula for simple interest?",
+  "b_hi": "सरल ब्याज = (मुख्य राशि × दर × समय) / 100",
+  "b_en": "Simple Interest = (Principal × Rate × Time) / 100"
+ },
+ {
+  "id": "fc-reasoning-0269",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "n संख्याओं का औसत निकालने का तरीका?",
+  "f_en": "How to find the average of n numbers?",
+  "b_hi": "औसत = कुल योग ÷ संख्याओं की संख्या",
+  "b_en": "Average = Sum ÷ Number of terms"
+ },
+ {
+  "id": "fc-reasoning-0270",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "f_hi": "लाभ प्रतिशत निकालने का सूत्र क्या है?",
+  "f_en": "What is the formula for profit percentage?",
+  "b_hi": "लाभ प्रतिशत = (लाभ ÷ लागत मूल्य) × 100",
+  "b_en": "Profit % = (Profit ÷ Cost Price) × 100"
+ },
+ {
+  "id": "fc-reasoning-0271",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में वस्तु की दूरी और प्रतिच्छाया की दूरी में क्या संबंध है?",
+  "f_en": "What is the relationship between object distance and image distance in a plane mirror?",
+  "b_hi": "वस्तु की दूरी के बराबर, दोनों समान होते हैं।",
+  "b_en": "Image distance equals object distance; they are equal."
+ },
+ {
+  "id": "fc-reasoning-0272",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "प्लेन दर्पण में छवि का आकार वस्तु के आकार के सापेक्ष कैसे होता है?",
+  "f_en": "How does the size of the image relate to the size of the object in a plane mirror?",
+  "b_hi": "छवि का आकार वस्तु के आकार के समान होता है।",
+  "b_en": "The image is the same size as the object (1:1 scale)."
+ },
+ {
+  "id": "fc-reasoning-0273",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "प्लेन दर्पण में छवि का लेटरल इनवर्शन क्यों होता है?",
+  "f_en": "Why is there lateral inversion in a plane mirror image?",
+  "b_hi": "परावर्तित प्रकाश बाएँ‑दाएँ दिशा को उलट देता है, जिससे छवि लेटरली इनवर्टेड होती है।",
+  "b_en": "Reflected light reverses left‑right direction, causing lateral inversion."
+ },
+ {
+  "id": "fc-reasoning-0274",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "जल सतह पर बनती छवि कहाँ स्थित होती है?",
+  "f_en": "Where is the image formed by a water surface located?",
+  "b_hi": "वस्तु के समान दूरी नीचे जल सतह के नीचे बनती है; यह वर्चुअल इमेज है।",
+  "b_en": "It appears the same distance below the water surface as the object is above; a virtual image."
+ },
+ {
+  "id": "fc-reasoning-0275",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "परावर्तन के नियम में कोण का संबंध क्या है?",
+  "f_en": "What is the angular relationship in the law of reflection?",
+  "b_hi": "आगमन कोण = परावर्तन कोण, दोनों सामान्य के सापेक्ष बराबर होते हैं।",
+  "b_en": "Angle of incidence equals angle of reflection, measured from the normal."
+ },
+ {
+  "id": "fc-reasoning-0276",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "वक्र दर्पण में फोकस की परिभाषा क्या है?",
+  "f_en": "What is the definition of the focus in a curved mirror?",
+  "b_hi": "फोकस वह बिंदु है जहाँ समानांतर किरणें परावर्तित होकर मिलती हैं।",
+  "b_en": "The focus is the point where parallel rays converge after reflection."
+ },
+ {
+  "id": "fc-reasoning-0277",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में दिखाई देने वाली छवि को क्या कहते हैं?",
+  "f_en": "What is the image seen in a mirror called?",
+  "b_hi": "दर्पण प्रतिच्छवि (वर्चुअल इमेज)",
+  "b_en": "Mirror image (virtual image)"
+ },
+ {
+  "id": "fc-reasoning-0278",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में बाएँ‑दाएँ उलटाव क्यों होता है?",
+  "f_en": "Why is left‑right reversal observed in a mirror?",
+  "b_hi": "क्योंकि दर्पण सामने‑से पीछे प्रकाश को प्रतिबिंबित करता है, जिससे लेटरल इन्वर्शन दिखता है।",
+  "b_en": "Because a plane mirror reflects light front‑to‑back, producing lateral inversion."
+ },
+ {
+  "id": "fc-reasoning-0279",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में वस्तु से छवि की दूरी कैसे निर्धारित होती है?",
+  "f_en": "How is the distance of image from a plane mirror determined?",
+  "b_hi": "छवि की दूरी वस्तु की दूरी के बराबर होती है; दोनों दर्पण से समान दूरी पर होते हैं।",
+  "b_en": "Image distance equals object distance; both are equidistant from the mirror."
+ },
+ {
+  "id": "fc-reasoning-0280",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "जल सतह पर प्रतिबिंब कब समतल दर्पण जैसा व्यवहार करता है?",
+  "f_en": "When does a water surface act like a plane mirror?",
+  "b_hi": "जब वस्तु और दर्शक दोनों जल सतह के निकट हों और अपवर्तन का प्रभाव नगण्य हो।",
+  "b_en": "When the object and observer are close to the water surface and refraction is negligible, the surface behaves like a plane mirror."
+ },
+ {
+  "id": "fc-reasoning-0281",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण की वर्चुअल इमेज को स्क्रीन पर क्यों नहीं दिखा सकते?",
+  "f_en": "Why can't a virtual image be projected onto a screen?",
+  "b_hi": "वर्चुअल इमेज वास्तविक प्रकाश किरणों का मिलन नहीं है, इसलिए स्क्रीन पर नहीं पकड़ी जा सकती।",
+  "b_en": "A virtual image is not formed by converging real rays, so it cannot be captured on a screen."
+ },
+ {
+  "id": "fc-reasoning-0282",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "उत्तल व वक्र प्रतिबिंब में अंतर क्या है?",
+  "f_en": "What is the difference between upright and inverted images in mirrors?",
+  "b_hi": "उत्तल छवि वर्चुअल होती है और वस्तु के समान पक्ष में दिखती है; वक्र (उलटा) छवि वास्तविक होती है और दर्पण के पीछे बनती है।",
+  "b_en": "Upright images are virtual and appear on the same side as the object; inverted images are real and form on the opposite side of the mirror."
+ },
+ {
+  "id": "fc-reasoning-0283",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में वस्तु का प्रतिच्छाया किस प्रकार बनता है?",
+  "f_en": "How is an image formed in a plane mirror?",
+  "b_hi": "वस्तु के समान आकार, उल्टा और समान दूरी पर बनता है।",
+  "b_en": "Same size, laterally inverted, at equal distance behind the mirror."
+ },
+ {
+  "id": "fc-reasoning-0284",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "वक्र दर्पण में फोकल लंबाई कैसे निर्धारित की जाती है?",
+  "f_en": "How is the focal length of a curved mirror determined?",
+  "b_hi": "वक्रता त्रिज्या को दो से विभाजित करके।",
+  "b_en": "Half the radius of curvature."
+ },
+ {
+  "id": "fc-reasoning-0285",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "एक उत्तल दर्पण में प्रतिबिंब वास्तविक या आभासी होता है?",
+  "f_en": "Is the image formed by a convex mirror real or virtual?",
+  "b_hi": "आभासी, सीधा और छोटा।",
+  "b_en": "Virtual, upright, and reduced."
+ },
+ {
+  "id": "fc-reasoning-0286",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "पानी की सतह पर वस्तु का वास्तविक प्रतिच्छाया कहाँ दिखाई देता है?",
+  "f_en": "Where does the real image appear for an object placed above water?",
+  "b_hi": "वस्तु के समान दूरी नीचे, पानी की सतह के नीचे।",
+  "b_en": "At a depth equal to the object's height, below the water surface."
+ },
+ {
+  "id": "fc-reasoning-0287",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में परावर्तित किरणों के कोण का नियम क्या है?",
+  "f_en": "What is the law of reflection in mirrors?",
+  "b_hi": "आगमन कोण = परावर्तन कोण, दोनों सामान्य के सापेक्ष।",
+  "b_en": "Angle of incidence equals angle of reflection, measured from the normal."
+ },
+ {
+  "id": "fc-reasoning-0288",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "वस्तु दर्पण से निकट आती है तो प्रतिबिंब में क्या बदलता है?",
+  "f_en": "What changes in the image as an object moves closer to a plane mirror?",
+  "b_hi": "छवि का आकार नहीं बदलता, पर उसकी दूरी वस्तु की दूरी के बराबर घटती है।",
+  "b_en": "Image size remains constant while its distance decreases proportionally to the object's distance."
+ },
+ {
+  "id": "fc-reasoning-0289",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में वस्तु की छवि का आकार?",
+  "f_en": "Size of image in a plane mirror?",
+  "b_hi": "वस्तु के समान आकार (आकार में बराबर)",
+  "b_en": "Same size as the object (magnification = 1)"
+ },
+ {
+  "id": "fc-reasoning-0290",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में वस्तु और उसकी छवि के बीच की दूरी?",
+  "f_en": "Distance between object and its image in a plane mirror?",
+  "b_hi": "वस्तु से दर्पण तक की दूरी का दो गुना",
+  "b_en": "Twice the distance from object to the mirror"
+ },
+ {
+  "id": "fc-reasoning-0291",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण में बनती छवि का प्रकार?",
+  "f_en": "Type of image formed by a plane mirror?",
+  "b_hi": "आभासी, सीधी, समान आकार की",
+  "b_en": "Virtual, upright, same size as the object"
+ },
+ {
+  "id": "fc-reasoning-0292",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "दर्पण और जल प्रतिबिंब में बाएँ‑दाएँ उलटाव",
+  "f_en": "Left‑right reversal in mirror vs water reflection",
+  "b_hi": "दोनों में बाएँ‑दाएँ समान उलटाव होता है",
+  "b_en": "Both show the same left‑right reversal"
+ },
+ {
+  "id": "fc-reasoning-0293",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "जल सतह पर प्रतिबिंबित छवि की गहराई",
+  "f_en": "Depth of reflected image in water surface",
+  "b_hi": "वस्तु की गहराई के बराबर (आभासी)",
+  "b_en": "Equal to the object’s depth (virtual image behind the surface)"
+ },
+ {
+  "id": "fc-reasoning-0294",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "f_hi": "डुबे हुए वस्तु का जल में वास्तविक उलटा प्रतिबिंब",
+  "f_en": "Real inverted image of a submerged object in water",
+  "b_hi": "वास्तविक, उलटा, वस्तु के नीचे बनता है",
+  "b_en": "Real, inverted, formed below the object"
+ }
+]

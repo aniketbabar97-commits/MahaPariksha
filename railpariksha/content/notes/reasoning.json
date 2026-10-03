@@ -1,0 +1,1469 @@
+[
+ {
+  "id": "note-reasoning-coding_decoding",
+  "s": "reasoning",
+  "t": "coding_decoding",
+  "summary_hi": "कोडिंग-डिकोडिंग में किसी शब्द या संख्या को एक निश्चित नियम (कोड) के अनुसार बदला जाता है, और परीक्षार्थी को उस छिपे हुए नियम को पहचानकर समान पैटर्न को अन्य शब्दों पर लागू करना होता है। सबसे सामान्य प्रकार हैं: अक्षर कोडिंग (letter shifting), संख्या कोडिंग, प्रतिस्थापन कोडिंग (substitution) तथा मिश्रित कोडिंग। अक्षर कोडिंग में अक्सर अंग्रेजी वर्णमाला में प्रत्येक अक्षर को आगे या पीछे एक निश्चित संख्या में स्थान खिसकाया जाता है, जैसे +1 कोड में A को B, B को C में बदला जाता है। इसे हल करने के लिए वर्णमाला में हर अक्षर का स्थान संख्या (position value) याद रखना बहुत उपयोगी होता है, जैसे A=1, B=2 ... Z=26। विपरीत क्रम कोडिंग में वर्णमाला को उल्टा गिनकर स्थान निकाला जाता है (Z=1, Y=2, ...)। संख्या कोडिंग में अक्सर शब्दों के अक्षरों को उनके स्थान मान, या किसी गणितीय संक्रिया (जोड़/गुणा) से बदला जाता है। प्रतिस्थापन कोडिंग में सीधे एक शब्द के बदले दूसरा शब्द दिया जाता है और उसी प्रतिस्थापन नियम को नए प्रश्न पर लागू करना होता है।",
+  "summary_en": "Coding-Decoding involves transforming a word or number using a hidden rule (code), and the candidate must identify that rule and apply the same pattern to a new case. Common types are letter coding (shifting), number coding, substitution coding, and mixed coding. In letter shifting, each letter of the alphabet is moved forward or backward by a fixed number of places — e.g. in a +1 code, A becomes B, B becomes C. It helps enormously to memorize each letter's position value (A=1, B=2, ... Z=26) and its reverse position (Z=1, Y=2, ...) for solving these quickly. Number coding often replaces letters of a word with their position values or applies an arithmetic operation (addition/multiplication) to them. Substitution coding directly swaps one word for another, and the same substitution rule must then be applied to a new question.",
+  "facts_hi": [
+   "अक्षर स्थान मान: A=1, B=2, C=3 ... Z=26",
+   "उल्टा स्थान मान: Z=1, Y=2, X=3 ... A=26",
+   "किसी अक्षर व उसके उल्टे स्थान मान का योग सदैव 27 होता है",
+   "+n कोड में हर अक्षर को n स्थान आगे खिसकाया जाता है",
+   "−n कोड में हर अक्षर को n स्थान पीछे खिसकाया जाता है",
+   "स्वर (vowels): A, E, I, O, U — कोडिंग में अक्सर अलग नियम पाते हैं",
+   "संख्या कोडिंग में अक्सर जोड़, गुणा या वर्ग जैसी संक्रिया छिपी होती है",
+   "प्रतिस्थापन कोडिंग में मूल अर्थ नहीं, केवल दिया गया प्रतिस्थापन नियम लागू होता है",
+   "मिश्रित कोड में एक साथ कई नियम (अक्षर+संख्या) प्रयुक्त हो सकते हैं",
+   "पैटर्न पहचानने के लिए हमेशा कम से कम दो उदाहरण जोड़ों की तुलना करें"
+  ],
+  "facts_en": [
+   "Letter position value: A=1, B=2, C=3 ... Z=26",
+   "Reverse position value: Z=1, Y=2, X=3 ... A=26",
+   "A letter's position value plus its reverse position value always equals 27",
+   "In a +n code, every letter shifts forward by n places",
+   "In a −n code, every letter shifts backward by n places",
+   "Vowels: A, E, I, O, U — often follow a different rule in coding",
+   "Number coding often hides an operation like addition, multiplication or squaring",
+   "In substitution coding, apply only the given substitution rule, ignoring real meaning",
+   "Mixed codes can combine multiple rules (letters + numbers) at once",
+   "Always compare at least two example pairs to correctly identify the pattern"
+  ],
+  "map": {
+   "hi": "कोडिंग-डिकोडिंग",
+   "en": "Coding-Decoding",
+   "children": [
+    {
+     "hi": "अक्षर कोडिंग",
+     "en": "Letter Coding",
+     "children": [
+      {
+       "hi": "स्थान मान A=1...Z=26",
+       "en": "Position value A=1...Z=26"
+      },
+      {
+       "hi": "+n/−n शिफ्ट नियम",
+       "en": "+n/−n shift rule"
+      }
+     ]
+    },
+    {
+     "hi": "उल्टा स्थान मान",
+     "en": "Reverse Position Value",
+     "children": [
+      {
+       "hi": "Z=1...A=26",
+       "en": "Z=1...A=26"
+      },
+      {
+       "hi": "योग सदैव 27",
+       "en": "Sum always 27"
+      }
+     ]
+    },
+    {
+     "hi": "संख्या कोडिंग",
+     "en": "Number Coding",
+     "children": [
+      {
+       "hi": "जोड़/गुणा/वर्ग छिपी संक्रिया",
+       "en": "Hidden addition/multiplication/square"
+      }
+     ]
+    },
+    {
+     "hi": "प्रतिस्थापन कोडिंग",
+     "en": "Substitution Coding",
+     "children": [
+      {
+       "hi": "दिया नियम ही लागू करें",
+       "en": "Apply only the given rule"
+      }
+     ]
+    },
+    {
+     "hi": "मिश्रित कोडिंग",
+     "en": "Mixed Coding",
+     "children": [
+      {
+       "hi": "एकाधिक नियम एक साथ",
+       "en": "Multiple rules combined"
+      }
+     ]
+    }
+   ]
+  },
+  "tips_hi": [
+   "27 का जादू: किसी अक्षर का आगे का स्थान + पीछे का स्थान हमेशा 27 होता है, इसलिए पीछे का स्थान निकालने के लिए 27 से आगे का स्थान घटा दें।",
+   "शिफ्टिंग को आसान बनाने के लिए 5 और 2 के समूह का उपयोग करें: 5 आगे + 2 आगे = 7 आगे, फिर 1 आगे जोड़ें। इस तरह +8 या -8 को जल्दी से गिनें।",
+   "सवाल में अक्सर स्वरों के लिए अलग नियम छिपा होता है; अगर आप स्वरों को उसी तरह शिफ्ट करते हैं जैसे व्यंजनों को, तो आप गलत हो सकते हैं।",
+   "पहले उदाहरण जोड़े को ध्यान से देखें: यदि एक जोड़े में +3 और दूसरे में -2 है, तो पैटर्न में असंगति हो सकती है; सही नियम खोजने के लिए सभी उदाहरणों की तुलना करें।"
+  ],
+  "tips_en": [
+   "The 27 trick: a letter’s forward position plus its reverse position always equals 27, so to find the reverse position just subtract the forward position from 27.",
+   "Use the 5‑plus‑2 shortcut for shifting: 5 forward + 2 forward = 7 forward, then add 1 more. This lets you quickly count +8 or –8 shifts without a mental wheel.",
+   "Vowels often hide a different rule; if you treat vowels the same as consonants you’ll be misled. Always check whether vowels are coded separately.",
+   "First compare all example pairs carefully: if one pair uses +3 and another uses –2, the pattern may be inconsistent. Look for a single consistent rule before applying it to the new word."
+  ]
+ },
+ {
+  "id": "note-reasoning-blood_relations",
+  "s": "reasoning",
+  "t": "blood_relations",
+  "summary_hi": "रक्त संबंध (Blood Relations) प्रश्नों में परिवार के सदस्यों के बीच के संबंधों को दिए गए कथनों से समझना होता है और अंतिम पूछे गए संबंध को ज्ञात करना होता है। इसे हल करने का सबसे प्रभावी तरीका है एक वंश वृक्ष (family tree diagram) बनाना, जिसमें पुरुष को एक चिन्ह (जैसे ↑ तीर या □) और महिला को दूसरे चिन्ह (जैसे ○) से दर्शाया जाए, तथा विवाह को '=' और पीढ़ी को ऊपर-नीचे रेखा से दिखाया जाए। सांकेतिक भाषा वाले प्रश्नों में गणितीय चिन्ह (+, −, ×, ÷) परिवार के संबंधों (जैसे भाई, बहन, पिता, माता) को दर्शाते हैं, और इन्हें डिकोड करने के बाद अंतिम संबंध निकाला जाता है। कुछ प्रश्नों में केवल पुरुष वक्ता ('वह मेरा...') के आधार पर लिंग तय करना पड़ता है, इसलिए वाक्य में 'वह' पुरुष है या महिला यह ध्यान से पढ़ना ज़रूरी है। जटिल पहेलियों में एक साथ कई पीढ़ियाँ (दादा-पिता-पुत्र) शामिल हो सकती हैं, जहाँ चरणबद्ध रूप से संबंध जोड़ना ज़रूरी होता है।",
+  "summary_en": "Blood Relations questions require working out family relationships from given statements and finding the relationship asked at the end. The most effective method is drawing a family tree diagram, using one symbol for males (e.g. an upward arrow or square) and another for females (e.g. a circle), '=' for marriage, and vertical lines for generations. In coded questions, mathematical symbols (+, −, ×, ÷) stand for family relations (like brother, sister, father, mother), and the final relationship is found after decoding each symbol. Some questions require inferring gender purely from context (e.g. 'he is my...'), so careful reading of pronouns is essential. Complex puzzles may span multiple generations (grandfather-father-son), requiring the relationship chain to be built step by step.",
+  "facts_hi": [
+   "पुरुष सदस्य को चिन्ह से, महिला सदस्य को अलग चिन्ह से दर्शाएँ",
+   "विवाह संबंध को '=' चिन्ह से दिखाएँ",
+   "एक ही पीढ़ी के सदस्यों को क्षैतिज रेखा से जोड़ें",
+   "पिता का भाई = चाचा; माता का भाई = मामा",
+   "पिता की बहन = बुआ; माता की बहन = मौसी",
+   "पति के पिता = ससुर; पत्नी के पिता = ससुर (दोनों ओर से समान शब्द)",
+   "भाई की पत्नी = भाभी; बहन का पति = जीजा/बहनोई",
+   "पुत्र का पुत्र = पोता; पुत्री का पुत्र = नाती",
+   "सांकेतिक प्रश्नों में हर गणितीय चिन्ह को पहले डिकोड करें, फिर संबंध जोड़ें",
+   "वाक्य को अंत से शुरू से पढ़कर संबंध की कड़ी बनाना आसान होता है"
+  ],
+  "facts_en": [
+   "Use one symbol for male members, a different symbol for female members",
+   "Show marriage relation with an '=' sign",
+   "Connect members of the same generation with a horizontal line",
+   "Father's brother = uncle; mother's brother = maternal uncle",
+   "Father's sister = paternal aunt; mother's sister = maternal aunt",
+   "Husband's father = father-in-law; wife's father = father-in-law (same term either side)",
+   "Brother's wife = sister-in-law; sister's husband = brother-in-law",
+   "Son's son = grandson; daughter's son = grandson (maternal side)",
+   "In coded questions, decode every mathematical symbol first, then build the relation",
+   "Reading the chain from the last statement backward makes tracing the relationship easier"
+  ],
+  "map": {
+   "hi": "रक्त संबंध",
+   "en": "Blood Relations",
+   "children": [
+    {
+     "hi": "वंश वृक्ष विधि",
+     "en": "Family Tree Method",
+     "children": [
+      {
+       "hi": "पुरुष/महिला चिन्ह",
+       "en": "Male/female symbols"
+      },
+      {
+       "hi": "'=' विवाह, ऊर्ध्वाधर रेखा पीढ़ी",
+       "en": "'=' marriage, vertical line = generation"
+      }
+     ]
+    },
+    {
+     "hi": "मूल संबंध शब्दावली",
+     "en": "Basic Relation Terms",
+     "children": [
+      {
+       "hi": "चाचा/मामा, बुआ/मौसी",
+       "en": "Uncle (paternal/maternal), aunt (paternal/maternal)"
+      },
+      {
+       "hi": "भाभी, जीजा/बहनोई",
+       "en": "Sister-in-law, brother-in-law"
+      }
+     ]
+    },
+    {
+     "hi": "सांकेतिक कोडिंग प्रश्न",
+     "en": "Coded Symbol Questions",
+     "children": [
+      {
+       "hi": "+,−,×,÷ = संबंध कोड",
+       "en": "+,−,×,÷ represent relations"
+      }
+     ]
+    },
+    {
+     "hi": "बहु-पीढ़ी पहेलियाँ",
+     "en": "Multi-generation Puzzles",
+     "children": [
+      {
+       "hi": "चरणबद्ध कड़ी जोड़ें",
+       "en": "Build the chain step by step"
+      }
+     ]
+    }
+   ]
+  },
+  "tips_hi": [
+   "रिश्तों को संक्षिप्त रूप से लिखें: F=पिता, M=माता, S=भाई, B=बहन, U=चाचा/चाची, G=दादा/दादी, N=नाना/नानी। इससे जटिल वाक्यों में भी जल्दी पहचान होती है।",
+   "किसी कथन को पढ़ते समय पहले मुख्य व्यक्ति (जैसे 'मैं', 'वह') को चिन्हित करें, फिर उसके रिश्ते को पीछे की ओर ट्रेस करें; यह ट्रेसिंग को सरल बनाता है।",
+   "सामान्य भ्रम: 'भाई' और 'भाभी' (या 'भाई‑इन‑लॉ') के बीच अंतर। हमेशा यह जाँचें कि संदर्भ में पुरुष या महिला है।",
+   "किसी भी प्रश्न में लिंग के संकेत (he/she) को पहले स्पष्ट करें; लिंग की गलत व्याख्या से पूरी श्रृंखला गलत हो सकती है।",
+   "गणितीय प्रतीकों को डिकोड करते समय, उन्हें अस्थायी चर (जैसे X, Y) से बदलें, फिर पूरी श्रृंखला को एक बार में हल करें; इससे त्रुटि कम होती है।"
+  ],
+  "tips_en": [
+   "Write relationships in shorthand: F=father, M=mother, S=brother, B=sister, U=uncle/aunt, G=grandfather/grandmother, N=great‑grandfather/grandmother. This speeds up recognition in complex sentences.",
+   "When reading a statement, first identify the main person (e.g., 'I', 'he', 'she') and then trace the relationship backwards; this simplifies the tracing process.",
+   "Common trap: confusing 'brother' with 'brother‑in‑law' (or 'sister‑in‑law'). Always check whether the context refers to a male or female relative.",
+   "If a question uses gendered pronouns (he/she), confirm the gender first; misidentifying it can derail the entire chain.",
+   "When decoding mathematical symbols, replace them with temporary variables (e.g., X, Y) and solve the whole chain at once; this reduces mistakes."
+  ]
+ },
+ {
+  "summary_hi": "सादृश्यता दो वस्तुओं या समूहों के बीच समान संबंध स्थापित करने की प्रक्रिया है, जो सामान्यतः A:B :: C:D के रूप में प्रस्तुत की जाती है। यह प्रश्न प्रकार तर्कशक्ति में अत्यधिक महत्व रखता है क्योंकि यह अभ्यर्थी की विश्लेषणात्मक क्षमता और पैटर्न पहचानने की योग्यता को परखता है। सादृश्यता को शब्दात्मक, संख्यात्मक और चित्रात्मक तीन मुख्य प्रकारों में वर्गीकृत किया जाता है। समाधान के लिए पहले दिए गए जोड़ी में संबंध को स्पष्ट रूप से समझना, फिर उसी नियम को दूसरी जोड़ी पर लागू करना आवश्यक है। परीक्षा में तेज़ी से उत्तर देने के लिए सामान्य संबंध‑प्रकार (जैसे भाग‑सम्पूर्ण, कारण‑परिणाम, क्रम, समानता‑विपरीतता) को याद रखना उपयोगी रहता है।",
+  "summary_en": "Analogy establishes a similar relationship between two items or groups, usually expressed as A:B :: C:D. This question type is crucial in reasoning tests as it evaluates a candidate's analytical and pattern‑recognition skills. Analogies are classified into word, number and figure types. To solve, first identify the relationship in the given pair, then apply the same rule to the second pair. In exams, quick answers come from memorising common relationship types such as part‑whole, cause‑effect, sequence, similarity‑difference.",
+  "facts_hi": [
+   "सादृश्यता दो वस्तुओं के बीच समान संबंध दर्शाती है",
+   "प्रश्न का स्वरूप अक्सर A:B :: C:D होता है",
+   "मुख्य प्रकार: शब्दात्मक, संख्यात्मक, चित्रात्मक",
+   "समाधान में पहले संबंध पहचानें, फिर नियम लागू करें",
+   "सामान्य संबंध‑प्रकार: भाग‑सम्पूर्ण, कारण‑परिणाम, क्रम",
+   "विकल्पों को हटाते हुए प्रक्रिया दोहराएँ",
+   "समय सीमा में तेज़ी से उत्तर चुनना आवश्यक है",
+   "अभ्यास से पैटर्न पहचानने की गति बढ़ती है",
+   "सही उत्तर अक्सर विकल्पों में सबसे सरल अनुप्रयोग होता है",
+   "प्रत्येक प्रकार में अलग‑अलग गणितीय या शब्दीय नियम लागू हो सकते हैं"
+  ],
+  "facts_en": [
+   "Analogy shows a similar relationship between two items",
+   "The question format is usually A:B :: C:D",
+   "Main types: word, number, figure",
+   "Solve by first identifying the relation, then applying the rule",
+   "Common relation types: part‑whole, cause‑effect, sequence",
+   "Eliminate options while repeating the process",
+   "Choosing quickly within time limits is essential",
+   "Practice improves pattern‑recognition speed",
+   "The correct answer often is the simplest application among choices",
+   "Each type may involve different mathematical or verbal rules"
+  ],
+  "map": {
+   "hi": "सादृश्यता",
+   "en": "Analogy",
+   "children": [
+    {
+     "hi": "परिभाषा",
+     "en": "Definition",
+     "children": [
+      {
+       "hi": "सादृश्यता दो वस्तुओं/समूहों के बीच समान संबंध दर्शाती है",
+       "en": "Analogy shows a similar relationship between two items/groups"
+      }
+     ]
+    },
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "शब्दात्मक",
+       "en": "Word"
+      },
+      {
+       "hi": "संख्यात्मक",
+       "en": "Number"
+      },
+      {
+       "hi": "चित्रात्मक",
+       "en": "Figure"
+      }
+     ]
+    },
+    {
+     "hi": "समाधान की विधि",
+     "en": "Solving Method",
+     "children": [
+      {
+       "hi": "संबंध पहचानें",
+       "en": "Identify the relationship"
+      },
+      {
+       "hi": "पहले जोड़ी से नियम निकालें",
+       "en": "Derive the rule from the first pair"
+      },
+      {
+       "hi": "वही नियम दूसरे जोड़ी पर लागू करें",
+       "en": "Apply the same rule to the second pair"
+      }
+     ]
+    },
+    {
+     "hi": "आवश्यक टिप्स",
+     "en": "Key Tips",
+     "children": [
+      {
+       "hi": "समानता, विपरीतता, क्रम, कारण‑परिणाम पर ध्यान दें",
+       "en": "Focus on similarity, difference, sequence, cause‑effect"
+      },
+      {
+       "hi": "विकल्पों को हटाते हुए प्रक्रिया दोहराएँ",
+       "en": "Repeat the process while eliminating options"
+      },
+      {
+       "hi": "समय सीमा में तेज़ी से उत्तर चुनें",
+       "en": "Select the answer quickly within the time limit"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-analogy",
+  "s": "reasoning",
+  "t": "analogy",
+  "tips_hi": [
+   "पीसीसीएस याद रखने के लिए एक संक्षिप्त शब्द",
+   "संख्या सादृश्यता में पहले अनुपात, फिर अंतर की जाँच करें",
+   "समानता और भिन्नता के विकल्पों को उलटने का जाल",
+   "उत्तर चुनने से पहले उल्टे जोड़े (B:A) से संबंध की पुष्टि करें"
+  ],
+  "tips_en": [
+   "Use the mnemonic \"PCCS\" (Part‑Whole, Cause‑Effect, Comparison, Sequence) to quickly scan options",
+   "For number analogies, first check the ratio, then the difference (or vice‑versa) to spot patterns",
+   "Examiners often swap similarity and difference options; verify the direction of the relationship",
+   "Before finalizing, test the reverse pair (B:A) to ensure consistency"
+  ]
+ },
+ {
+  "summary_hi": "श्रृंखलाएँ संख्यात्मक या अल्फाबेटिक क्रम होते हैं जहाँ प्रत्येक पद पूर्ववर्ती पद से एक नियत नियम के अनुसार प्राप्त होता है। परीक्षा में अक्सर अंकात्मक, अक्षरात्मक, आकृति एवं मिश्रित श्रृंखलाएँ पूछी जाती हैं। सामान्य नियमों में समान अंतर (AP), समान अनुपात (GP), वर्ग, घन, फैक्टोरियल, द्विपदीय आदि शामिल हैं। किसी भी श्रृंखला को हल करने के लिए पहले पैटर्न पहचानना, अंतर/अनुपात निकालना और संभावित विकल्पों के साथ तुलना करना आवश्यक है। समय बचाने के लिए तेज़ गणना तकनीकें जैसे अंतर तालिका, गुणक तालिका और क्रमिक अनुमान उपयोगी होते हैं। अभ्यास से विभिन्न प्रकार की श्रृंखलाओं की पहचान में दक्षता बढ़ती है।",
+  "summary_en": "Series are numeric or alphabetic sequences where each term follows a fixed rule from the previous one. Exams frequently include numeric, alphabetic, figure and mixed series. Common rules cover constant difference (AP), constant ratio (GP), squares, cubes, factorials, binomials, etc. To solve a series, first identify the pattern, compute differences or ratios, and compare with the given options. Speed techniques like difference tables, multiplier tables and logical guessing help save time. Regular practice improves the ability to recognize various series types.",
+  "facts_hi": [
+   "AP (Arithmetic Progression) में प्रत्येक पद का अंतर स्थिर रहता है।",
+   "GP (Geometric Progression) में प्रत्येक पद का अनुपात स्थिर रहता है।",
+   "फिबोनाची श्रृंखला में प्रत्येक पद दो पूर्ववर्ती पदों का योग होता है।",
+   "वर्ग श्रृंखला में पदों के बीच का अंतर लगातार बढ़ता है (जैसे 1,4,9,16 …)।",
+   "घन श्रृंखला में पदों के बीच का अंतर द्विघातीय रूप से बढ़ता है (जैसे 1,8,27,64 …)।",
+   "अक्षरात्मक श्रृंखला में प्रत्येक अक्षर का क्रम ASCII या वर्णक्रमिक अंतर पर आधारित हो सकता है।",
+   "मिश्रित श्रृंखला में अंक और अक्षर दोनों का नियम एक साथ लागू होता है।",
+   "दो-स्तरीय श्रृंखला में दो अलग-अलग पैटर्न क्रमिक रूप से बदलते हैं।",
+   "समान अंतर या अनुपात के अलावा, कभी‑कभी पदों को जोड़कर या घटाकर नया नियम बनता है।",
+   "समय सीमा में तेज़ उत्तर देने के लिए पहले अंतर/अनुपात तालिका बनाकर जांचें।"
+  ],
+  "facts_en": [
+   "In an AP each term differs from the previous by a constant amount.",
+   "In a GP each term is multiplied by a constant ratio.",
+   "In a Fibonacci series each term equals the sum of the two preceding terms.",
+   "In square series the gaps between terms increase steadily (e.g., 1,4,9,16 …).",
+   "In cube series the gaps grow quadratically (e.g., 1,8,27,64 …).",
+   "Alphabetic series follow ASCII or alphabetical position differences.",
+   "Mixed series apply both numeric and alphabetic rules together.",
+   "In a two‑level series two different patterns alternate.",
+   "Besides constant difference or ratio, sometimes terms are related by addition or subtraction.",
+   "To answer quickly, first draw a difference/ratio table and verify against options."
+  ],
+  "map": {
+   "hi": "श्रृंखला",
+   "en": "Series",
+   "children": [
+    {
+     "hi": "अंकात्मक समान अंतर श्रृंखला",
+     "en": "Arithmetic (Constant Difference)",
+     "children": [
+      {
+       "hi": "समान अंतर",
+       "en": "Constant Difference"
+      },
+      {
+       "hi": "द्वि‑अंतर",
+       "en": "Second Difference"
+      }
+     ]
+    },
+    {
+     "hi": "अंकात्मक समान अनुपात श्रृंखला",
+     "en": "Geometric (Constant Ratio)",
+     "children": [
+      {
+       "hi": "समान अनुपात",
+       "en": "Constant Ratio"
+      },
+      {
+       "hi": "घातीय वृद्धि",
+       "en": "Exponential Growth"
+      }
+     ]
+    },
+    {
+     "hi": "फिबोनाची एवं समान अंतर मिश्रित श्रृंखला",
+     "en": "Fibonacci & Hybrid",
+     "children": [
+      {
+       "hi": "फिबोनाची",
+       "en": "Fibonacci"
+      },
+      {
+       "hi": "त्रिकोणीय क्रम",
+       "en": "Triangular Sequence"
+      }
+     ]
+    },
+    {
+     "hi": "अक्षरात्मक एवं आकृति श्रृंखला",
+     "en": "Alphabetic & Figure",
+     "children": [
+      {
+       "hi": "अक्षर क्रम",
+       "en": "Alphabet Order"
+      },
+      {
+       "hi": "आकृति पैटर्न",
+       "en": "Figure Pattern"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-series",
+  "s": "reasoning",
+  "t": "series",
+  "tips_hi": [
+   "सभी अच्छे छात्र खोजते हैं (A G S F) – याद रखें कि श्रृंखला के चार सामान्य प्रकार हैं: Arithmetic, Geometric, Square, Fibonacci।",
+   "मध्य पद पाने के लिए पहले और आखिरी पद का औसत (AP) या ज्यामितीय माध्य (GP) निकालें।",
+   "यदि अनुपात पूर्णांक नहीं है, तो यह अंतर श्रृंखला हो सकती है।",
+   "किसी भी विकल्प को चुनने से पहले अंतिम पद के साथ पैटर्न की पुष्टि करें।"
+  ],
+  "tips_en": [
+   "All Good Students Find (A G S F) – remember the four common series types: Arithmetic, Geometric, Square, Fibonacci.",
+   "For the middle term, take the average of the first and last term (AP) or the geometric mean of the first and last term (GP).",
+   "If the ratio is not an integer, it’s likely a difference series.",
+   "Always confirm the pattern with the last given term before choosing an option."
+  ]
+ },
+ {
+  "summary_hi": "वर्गीकरण वह प्रक्रिया है जिसमें वस्तुओं को उनके समान गुणों के आधार पर समूहित किया जाता है। यह क्षमता तर्कशक्ति परीक्षा में अक्सर प्रश्न रूप में आती है, जैसे समान वस्तुओं का समूह बनाना या असमान वस्तु चुनना। वर्गीकरण के मुख्य मानदंड आकार, रंग, रूप, सामग्री और कार्य होते हैं, जिन्हें पहचान कर तेज़ी से उत्तर दिया जा सकता है। दो‑स्तरीय वर्गीकरण में पहले बड़े समूह बनाते हैं और फिर प्रत्येक समूह के भीतर उप‑समूह बनाते हैं। सही उत्तर के लिए सभी विकल्पों को ध्यान से देखना, सामान्य विशेषता पहचानना और अनावश्यक गुणों को बाहर रखना आवश्यक है। नियमित अभ्यास से गति और शुद्धता दोनों में सुधार होता है।",
+  "summary_en": "Classification is the process of grouping objects based on common attributes. This ability frequently appears in reasoning exams, often as tasks to form a set of similar items or to pick the odd one out. The main criteria are size, color, shape, material and function, and recognizing them allows quick answers. In two‑level classification a larger group is formed first, followed by sub‑groups within it. To answer correctly, examine all options carefully, identify the shared characteristic, and ignore irrelevant features. Regular practice enhances both speed and accuracy in exams.",
+  "facts_hi": [
+   "वर्गीकरण वह प्रक्रिया है जिसमें वस्तुओं को समान गुणों के आधार पर समूहित किया जाता है।",
+   "सामान्य वर्गीकरण मानदंडों में आकार, रंग, रूप, सामग्री और कार्य शामिल हैं।",
+   "वर्गीकरण प्रश्नों में अक्सर “असमान वस्तु चुनें” या “समान वस्तुओं का समूह बनाएं” पूछा जाता है।",
+   "सही वर्गीकरण के लिए पहले सभी विकल्पों को ध्यान से देखना और सामान्य विशेषता पहचानना आवश्यक है।",
+   "दो‑स्तरीय वर्गीकरण में पहले बड़े समूह और फिर उप‑समूह बनाते हैं।",
+   "वर्गीकरण में “समानता‑भेद” सिद्धांत का प्रयोग होता है।",
+   "वर्गीकरण के लिए अक्सर “समानता‑भेद तालिका” बनायी जाती है।",
+   "वर्गीकरण में “विपरीत गुण” का उपयोग करके “असमान” वस्तु पहचानी जाती है।",
+   "समय सीमा में तेज़ी से वर्गीकरण करने के लिए मुख्य गुण पर ध्यान केंद्रित करें, अतिरिक्त गुणों को अनदेखा करें।",
+   "वर्गीकरण कौशल का अभ्यास नियमित रूप से करने से परीक्षा में तेज़ी और शुद्धता बढ़ती है।"
+  ],
+  "facts_en": [
+   "Classification is the process of grouping objects based on common attributes.",
+   "Common criteria include size, color, shape, material and function.",
+   "Classification questions often ask to “pick the odd one out” or “form a set of similar items.”",
+   "To classify correctly, first observe all options carefully and identify the shared characteristic.",
+   "In two‑level classification, a larger group is formed first, followed by sub‑groups within it.",
+   "The similarity‑difference principle is applied in classification.",
+   "A similarity‑difference table is frequently drawn to aid classification.",
+   "Opposite attributes are used to identify the “odd” item in a set.",
+   "Under time pressure, focus on the primary attribute and ignore secondary ones.",
+   "Regular practice of classification improves speed and accuracy in exams."
+  ],
+  "map": {
+   "hi": "वर्गीकरण",
+   "en": "Classification",
+   "children": [
+    {
+     "hi": "आधारभूत मानदंड",
+     "en": "Basic Criteria",
+     "children": [
+      {
+       "hi": "आकार",
+       "en": "Size"
+      },
+      {
+       "hi": "रंग",
+       "en": "Color"
+      },
+      {
+       "hi": "सामग्री",
+       "en": "Material"
+      }
+     ]
+    },
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "एक‑स्तरीय वर्गीकरण",
+       "en": "Single-level classification"
+      },
+      {
+       "hi": "दो‑स्तरीय वर्गीकरण",
+       "en": "Two-level classification"
+      },
+      {
+       "hi": "समूह‑वर्गीकरण",
+       "en": "Group classification"
+      }
+     ]
+    },
+    {
+     "hi": "प्रक्रिया",
+     "en": "Procedure",
+     "children": [
+      {
+       "hi": "पर्यवेक्षण",
+       "en": "Observation"
+      },
+      {
+       "hi": "समानता पहचान",
+       "en": "Identify similarity"
+      },
+      {
+       "hi": "समूह बनाना",
+       "en": "Form groups"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-classification",
+  "s": "reasoning",
+  "t": "classification",
+  "tips_hi": [
+   "आकार-रंग-वर्ग-आकृति-कार्य (स्मरणीय संक्षिप्ताक्षर)",
+   "पहले स्पष्ट अंतर वाले विकल्प हटाएँ, फिर शेष में द्वितीयक गुण देखें।",
+   "परीक्षक अक्सर 'आकार' और 'आकृति' को बदल देते हैं; प्रश्न में पूछे गए गुण को दोबारा जाँचें।",
+   "सबसे प्रमुख गुण को पहले जाँचें, फिर अन्य गुणों पर विचार करें।",
+   "पहले प्रमुख गुण से समूह बनाएं, फिर उपगुण से उपसमूह।"
+  ],
+  "tips_en": [
+   "Mnemonic: Size-Color-Category-Shape-Function (SCCSF)",
+   "First eliminate options with obvious differences, then examine secondary attributes in the remaining ones.",
+   "Examiners often swap 'size' and 'shape'; double‑check which attribute the question asks for.",
+   "Always check the dominant attribute first, then consider others.",
+   "Group by the major attribute first, then sub‑group by the secondary attribute."
+  ]
+ },
+ {
+  "summary_hi": "दिशा ज्ञान परीक्षण में उम्मीदवार को विभिन्न स्थितियों में अभिमुखीकरण, बाएँ‑दाएँ मोड़, घड़ी की सुई के अनुसार या विपरीत दिशा में घूमना, तथा उत्तर‑दक्षिण‑पूर्व‑पश्चिम जैसे बुनियादी दिशाओं की पहचान करनी होती है। प्रश्न अक्सर चित्र, मानचित्र या मौखिक निर्देशों के रूप में प्रस्तुत होते हैं और समय सीमा के भीतर सही दिशा बताना आवश्यक होता है। मुख्य नियमों में घड़ी की सुई की दिशा में 90° मोड़ को दाएँ (राइट) और विपरीत दिशा को बाएँ (लेफ्ट) कहा जाता है। यदि व्यक्ति पूर्व की ओर मुख करके 180° घुमता है तो वह पश्चिम की ओर मुड़ जाता है। किसी बिंदु से दूसरे बिंदु तक की दिशा निर्धारित करने के लिए ‘समानांतर’ और ‘लंबवत’ रेखाओं का उपयोग किया जाता है। इन सिद्धांतों का अभ्यास करने से परीक्षा में तेज़ और सटीक उत्तर देने में मदद मिलती है।",
+  "summary_en": "In Direction Sense tests, candidates must determine orientation in various situations, identify left‑right turns, rotate clockwise or anticlockwise, and recognize basic directions such as north, south, east and west. Questions are often presented as diagrams, maps or verbal instructions, and the correct direction must be given within the time limit. The key rule is that a 90° turn in the direction of a clock’s hand is called right, while the opposite 90° turn is called left. If a person facing east rotates 180°, they will be facing west. Determining the direction between two points relies on using parallel and perpendicular lines. Practicing these principles helps provide faster and more accurate answers in the exam.",
+  "facts_hi": [
+   "घड़ी की सुई की दिशा में 90° मोड़ को दाएँ (राइट) कहा जाता है।",
+   "घड़ी की सुई के विपरीत दिशा में 90° मोड़ को बाएँ (लेफ्ट) कहा जाता है।",
+   "180° मोड़ को उल्टा (उल्टा) या पीछे (बैक) कहा जाता है।",
+   "उत्तर से दक्षिण तक का सीधा मार्ग 180° का अंतर दर्शाता है।",
+   "पूर्व‑पश्चिम के बीच का कोण भी 180° होता है।",
+   "यदि आप उत्तर की ओर मुख करके दाएँ मुड़ते हैं तो आप पूर्व की ओर देखेंगे।",
+   "यदि आप उत्तर की ओर मुख करके बाएँ मुड़ते हैं तो आप पश्चिम की ओर देखेंगे।",
+   "“समानांतर” दिशा में चलना मतलब दिशा नहीं बदलना, जबकि “लंबवत” दिशा में 90° मोड़ लेना।",
+   "मानचित्र पर ‘N’ अक्षर उत्तर दिशा दर्शाता है; इसे हमेशा ऊपर मानें।",
+   "दिशा प्रश्नों में समय सीमा के भीतर उत्तर देना अंक प्राप्ति के लिए महत्वपूर्ण है।"
+  ],
+  "facts_en": [
+   "A 90° turn in the direction of a clock’s hand is called right.",
+   "A 90° turn opposite to the clock’s hand is called left.",
+   "A 180° turn is referred to as back or opposite.",
+   "A straight line from north to south represents a 180° difference.",
+   "The angle between east and west is also 180°.",
+   "If you face north and turn right, you will face east.",
+   "If you face north and turn left, you will face west.",
+   "Moving in a parallel direction means no change, while a perpendicular direction involves a 90° turn.",
+   "On a map the letter ‘N’ indicates north; always treat it as up.",
+   "Answering direction questions within the time limit is crucial for scoring."
+  ],
+  "map": {
+   "hi": "दिशा ज्ञान",
+   "en": "Direction Sense",
+   "children": [
+    {
+     "hi": "बुनियादी दिशाएँ",
+     "en": "Basic Directions",
+     "children": [
+      {
+       "hi": "उत्तर, दक्षिण, पूर्व, पश्चिम",
+       "en": "North, South, East, West"
+      },
+      {
+       "hi": "उत्तरी‑पूर्व, दक्षिणी‑पूर्व आदि",
+       "en": "Northeast, Southeast, etc"
+      }
+     ]
+    },
+    {
+     "hi": "कोणीय मोड़",
+     "en": "Angular Turns",
+     "children": [
+      {
+       "hi": "दाएँ (90°)",
+       "en": "Right (90°)"
+      },
+      {
+       "hi": "बाएँ (90°)",
+       "en": "Left (90°)"
+      },
+      {
+       "hi": "उल्टा (180°)",
+       "en": "Back/180°"
+      }
+     ]
+    },
+    {
+     "hi": "मानचित्र उपयोग",
+     "en": "Map Usage",
+     "children": [
+      {
+       "hi": "कम्पास संकेत",
+       "en": "Compass indication"
+      },
+      {
+       "hi": "समानांतर‑लंबवत रेखा",
+       "en": "Parallel‑perpendicular lines"
+      }
+     ]
+    },
+    {
+     "hi": "सामान्य रणनीतियाँ",
+     "en": "Common Strategies",
+     "children": [
+      {
+       "hi": "समय प्रबंधन",
+       "en": "Time management"
+      },
+      {
+       "hi": "दृष्टिकोण स्थिरता",
+       "en": "Consistent orientation"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-direction_sense",
+  "s": "reasoning",
+  "t": "direction_sense",
+  "tips_hi": [
+   "CRCL याद रखें: Clockwise Right, Counterclockwise Left – 90° मोड़ को जल्दी पहचानें।",
+   "180° के लिए उल्टा सोचें: N↔S, E↔W – दिशा उलटने पर तुरंत पता चलेगा।",
+   "मानचित्र पर हमेशा North ऊपर रखें; अगर चित्र घुमाया हो तो पहले दिशा जाँचें।",
+   "सापेक्ष स्थिति पूछे तो पहले B को कल्पना करें, फिर A को उसके बाएँ/दाएँ रखें।",
+   "क्लॉक फेस की कल्पना करें: 12 N, 3 E, 6 S, 9 W – इससे घुमाव जल्दी तय करें।"
+  ],
+  "tips_en": [
+   "Remember CRCL: Clockwise Right, Counterclockwise Left – quickly spot 90° turns.",
+   "For 180°, flip the letters: N↔S, E↔W – instantly know the opposite direction.",
+   "Always keep North at the top on a map; if the diagram is rotated, check orientation first.",
+   "When asked about relative positions, picture B first, then place A to its left/right.",
+   "Visualise a clock face: 12 N, 3 E, 6 S, 9 W – use it to determine rotations fast."
+  ]
+ },
+ {
+  "summary_hi": "सिलॉजिज्म दो या अधिक प्रस्तावों के बीच तार्किक सम्बन्ध स्थापित कर निष्कर्ष निकालने की प्रक्रिया है, जो सामान्य बुद्धिमत्ता एवं तर्कशक्ति में अक्सर पूछी जाती है। इसे समझने के लिये प्रत्येक प्रस्ताव को वर्ग (A, B, C) के रूप में लिखना और उनके बीच के सम्बन्ध को पहचानना आवश्यक है। चार मुख्य प्रकार होते हैं‑ सार्वत्रिक सकारात्मक, सार्वत्रिक नकारात्मक, आंशिक सकारात्मक तथा आंशिक नकारात्मक। सिलॉजिज्म के समाधान में नियमों का सही प्रयोग, वेन आरेख द्वारा सत्यापन और शब्दों की समानता पर ध्यान देना प्रमुख है। परीक्षा में समय बचाने के लिये पहले शब्दों को चिन्हित करें, फिर नियम लागू करें और अंत में निष्कर्ष की वैधता जांचें।",
+  "summary_en": "Syllogism is the logical process of deriving a conclusion from two or more statements, a staple in General Intelligence & Reasoning exams. To solve them, each statement is expressed in terms of sets (A, B, C) and their relationships are identified. There are four basic forms – universal affirmative, universal negative, particular affirmative and particular negative. Correct application of inference rules, verification with Venn diagrams, and careful attention to term consistency are key. In exams, mark the terms first, apply the rules, and finally check the conclusion’s validity to save time.",
+  "facts_hi": [
+   "सिलॉजिज्म दो या अधिक प्रस्तावों से निष्कर्ष निकालने की तर्क प्रक्रिया है।",
+   "प्रस्तावों को वर्ग (A, B, C) के रूप में लिखना समाधान का पहला कदम है।",
+   "चार प्रकार के सिलॉजिज्म होते हैं: सार्वत्रिक सकारात्मक, सार्वत्रिक नकारात्मक, आंशिक सकारात्मक, आंशिक नकारात्मक।",
+   "निष्कर्ष के लिये कम से कम दो प्रस्ताव आवश्यक होते हैं।",
+   "एक ही वर्ग में दो विरोधी प्रस्ताव नहीं हो सकते।",
+   "निष्कर्ष में प्रयुक्त सभी शब्द प्रस्तावों में उपस्थित होने चाहिए।",
+   "वेन आरेख से प्रस्तावों के सम्बन्ध का दृश्य सत्यापन किया जा सकता है।",
+   "नियम लागू करने से गलत निष्कर्षों से बचा जा सकता है।",
+   "सामान्य त्रुटियों में शब्दों का गलत प्रयोग और अधिक अनुमान शामिल हैं।",
+   "समय बचाने के लिये पहले शब्दों को चिन्हित करें, फिर नियम लागू करें और अंत में निष्कर्ष जांचें।"
+  ],
+  "facts_en": [
+   "Syllogism is the logical process of deriving a conclusion from two or more statements.",
+   "Writing each statement as a set (A, B, C) is the first step in solving.",
+   "There are four types: universal affirmative, universal negative, particular affirmative, particular negative.",
+   "At least two statements are required to draw a conclusion.",
+   "Contradictory statements cannot exist within the same set.",
+   "All terms used in the conclusion must appear in the premises.",
+   "Venn diagrams provide a visual verification of set relationships.",
+   "Applying inference rules prevents invalid conclusions.",
+   "Common mistakes include misuse of terms and overgeneralization.",
+   "To save time, mark terms first, apply rules, then verify the conclusion."
+  ],
+  "map": {
+   "hi": "सिलॉजिज्म",
+   "en": "Syllogism",
+   "children": [
+    {
+     "hi": "परिभाषा",
+     "en": "Definition",
+     "children": [
+      {
+       "hi": "सिलॉजिज्म दो या अधिक प्रस्तावों से निष्कर्ष निकालने की तर्क प्रक्रिया है।",
+       "en": "Syllogism is the logical process of deriving a conclusion from two or more statements."
+      }
+     ]
+    },
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "सार्वत्रिक सकारात्मक (All A are B)",
+       "en": "Universal affirmative (All A are B)"
+      },
+      {
+       "hi": "सार्वत्रिक नकारात्मक (No A are B)",
+       "en": "Universal negative (No A are B)"
+      },
+      {
+       "hi": "आंशिक सकारात्मक (Some A are B)",
+       "en": "Particular affirmative (Some A are B)"
+      },
+      {
+       "hi": "आंशिक नकारात्मक (Some A are not B)",
+       "en": "Particular negative (Some A are not B)"
+      }
+     ]
+    },
+    {
+     "hi": "नियम",
+     "en": "Rules",
+     "children": [
+      {
+       "hi": "एक ही वर्ग में दो विरोधी प्रस्ताव नहीं हो सकते",
+       "en": "Contradictory statements cannot exist within the same set"
+      },
+      {
+       "hi": "निष्कर्ष के लिये कम से कम दो प्रस्ताव आवश्यक हैं",
+       "en": "At least two statements are required to draw a conclusion"
+      },
+      {
+       "hi": "निष्कर्ष में प्रयुक्त सभी शब्द प्रस्तावों में उपस्थित होने चाहिए",
+       "en": "All terms used in the conclusion must appear in the premises"
+      }
+     ]
+    },
+    {
+     "hi": "समाधान विधि",
+     "en": "Solution Method",
+     "children": [
+      {
+       "hi": "वाक्य को A, B, C के रूप में लिखें",
+       "en": "Express each statement as A, B, C"
+      },
+      {
+       "hi": "वेन आरेख से सत्यापन करें",
+       "en": "Verify using Venn diagrams"
+      },
+      {
+       "hi": "सही निष्कर्ष के लिये नियम लागू करें",
+       "en": "Apply inference rules to obtain a valid conclusion"
+      }
+     ]
+    },
+    {
+     "hi": "सामान्य त्रुटियाँ",
+     "en": "Common Mistakes",
+     "children": [
+      {
+       "hi": "अधिक अनुमान (overgeneralization)",
+       "en": "Overgeneralization"
+      },
+      {
+       "hi": "विरोधी शब्दों का गलत प्रयोग",
+       "en": "Misuse of contradictory terms"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-syllogism",
+  "s": "reasoning",
+  "t": "syllogism",
+  "tips_hi": [
+   "पहले शब्दों को चिन्हित करें, फिर नियम लागू करें, फिर निष्कर्ष की वैधता जाँचें।",
+   "दोनों पूर्वधारणाएँ सार्वभौमिक सकारात्मक (All A are B, All B are C) होने पर, निष्कर्ष भी सार्वभौमिक सकारात्मक (All A are C) होता है; वेन डाइग्राम की आवश्यकता नहीं।",
+   "सभी A B नहीं हैं और सभी A B हैं के बीच भ्रम से बचें; शब्द 'are' और 'are not' पर ध्यान दें।",
+   "सुनिश्चित करें कि निष्कर्ष में प्रयुक्त हर शब्द कम से कम एक पूर्वधारणा में है।"
+  ],
+  "tips_en": [
+   "Mark terms first, apply rules, then verify conclusion validity.",
+   "If both premises are universal affirmative (All A are B, All B are C), the conclusion is automatically universal affirmative (All A are C); no Venn diagram needed.",
+   "Beware of swapping 'All A are B' with 'No A are B'; check the verb 'are' vs 'are not'.",
+   "Ensure every term in the conclusion appears in at least one premise."
+  ]
+ },
+ {
+  "summary_hi": "वर्णमाला परीक्षण सामान्य बुद्धिमत्ता एवं तर्कशक्ति में प्रमुख भाग है। यह अक्षरों के क्रम, अंतराल, उल्टा क्रम तथा स्वर‑व्यंजन पैटर्न को पहचानने की क्षमता पर आधारित प्रश्न प्रस्तुत करता है। अक्सर प्रश्नों में कोई अक्षर छूट जाता है या अगला अक्षर खोजना होता है, जिससे तेज़ी और शुद्धता दोनों आवश्यक होते हैं। उत्तर लिखते समय बड़े‑छोटे अक्षर में अंतर नहीं माना जाता, इसलिए केवल सही क्रम पर ध्यान देना चाहिए। समय सीमा को देखते हुए प्रश्न को जल्दी स्कैन कर विकल्पों को हटाना और नियमित अभ्यास करना सफलता की कुंजी है।",
+  "summary_en": "The Alphabet Test is a key component of General Intelligence and Reasoning. It presents questions that assess the ability to recognize letter sequences, intervals, reverse order and vowel‑consonant patterns. Frequently a letter is omitted or the next letter must be identified, demanding both speed and accuracy. Answers are accepted in any case, so focus solely on the correct order. Managing the time limit by quickly scanning the item, discarding unlikely options, and regular practice are essential for success.",
+  "facts_hi": [
+   "वर्णमाला परीक्षण में अक्षरों की क्रमबद्धता की पहचान करनी होती है।",
+   "प्रश्न अक्सर क्रम, उल्टा क्रम या निश्चित अंतराल वाले क्रम पर आधारित होते हैं।",
+   "स्वर और व्यंजन के पैटर्न को समझना अतिरिक्त अंक दिला सकता है।",
+   "“Missing Letter” प्रकार में एक या अधिक अक्षर हटाए होते हैं, उन्हें सही स्थान पर भरना होता है।",
+   "“Series Completion” में अगला अक्षर या दो अक्षर खोजने होते हैं।",
+   "अक्षर क्रम में 2‑3 के अंतराल वाले पैटर्न को अक्सर उपयोग किया जाता है।",
+   "उल्टा क्रम (Z‑Y‑X…) में भी समान अंतराल लागू हो सकता है।",
+   "समय सीमा में तेज़ी से स्कैन करना और अनावश्यक विकल्पों को हटाना महत्वपूर्ण है।",
+   "उत्तर लिखते समय बड़े अक्षर (Capital) या छोटे अक्षर (Small) में अंतर नहीं माना जाता।",
+   "अभ्यास के लिए पिछले वर्ष के प्रश्नपत्र और ऑनलाइन मॉक टेस्ट उपयोगी होते हैं।"
+  ],
+  "facts_en": [
+   "In alphabet tests you must recognize the order of letters.",
+   "Questions often rely on forward, reverse, or fixed‑interval sequences.",
+   "Understanding vowel‑consonant patterns can earn extra marks.",
+   "In “Missing Letter” type one or more letters are omitted and must be filled in correctly.",
+   "“Series Completion” requires finding the next one or two letters.",
+   "Patterns with intervals of 2‑3 letters are frequently used.",
+   "Reverse order (Z‑Y‑X…) can also follow the same interval rule.",
+   "Scanning quickly and eliminating unlikely options within the time limit is crucial.",
+   "Capital or small letters are treated the same for answers.",
+   "Practicing with past papers and online mock tests is beneficial."
+  ],
+  "map": {
+   "hi": "वर्णमाला परीक्षण",
+   "en": "Alphabet Test",
+   "children": [
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "Missing Letter",
+       "en": "Missing Letter"
+      },
+      {
+       "hi": "Series Completion",
+       "en": "Series Completion"
+      },
+      {
+       "hi": "Odd One Out",
+       "en": "Odd One Out"
+      }
+     ]
+    },
+    {
+     "hi": "रणनीति",
+     "en": "Strategies",
+     "children": [
+      {
+       "hi": "अंतराल पहचान",
+       "en": "Interval Identification"
+      },
+      {
+       "hi": "उल्टा क्रम",
+       "en": "Reverse Order"
+      }
+     ]
+    },
+    {
+     "hi": "सामान्य त्रुटियाँ",
+     "en": "Common Mistakes",
+     "children": [
+      {
+       "hi": "विराम चिह्न भूलना",
+       "en": "Ignoring Punctuation"
+      },
+      {
+       "hi": "बड़े‑छोटे अक्षर भ्रम",
+       "en": "Case Confusion"
+      }
+     ]
+    },
+    {
+     "hi": "समय प्रबंधन",
+     "en": "Time Management",
+     "children": [
+      {
+       "hi": "त्वरित स्कैन",
+       "en": "Quick Scanning"
+      },
+      {
+       "hi": "विकल्प हटाना",
+       "en": "Eliminate Options"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-alphabet_test",
+  "s": "reasoning",
+  "t": "alphabet_test",
+  "tips_hi": [
+   "स्वर (AEIOU) को याद रखने के लिए 'सभी पाँच स्वरों को एक साथ गिनें' का प्रयोग करें।",
+   "खाली स्थान भरते समय अंतराल (2,3) को ध्यान में रखकर जल्दी से अगला अक्षर निकालें।",
+   "रीज़निंग परीक्षाओं में Y को हमेशा व्यंजन (consonant) ही माना जाता है, कभी स्वर नहीं — केवल A, E, I, O, U स्वर हैं।",
+   "यदि क्रम उल्टा (Z‑Y‑X…) हो तो Z के बाद Y, फिर X की जाँच करें।",
+   "वर्णमाला को उल्टा याद रखने के लिए 'Z से A तक' वाक्यांश का उपयोग करें।"
+  ],
+  "tips_en": [
+   "Remember vowels (AEIOU) by grouping them together: 'All Five Vowels'.",
+   "When filling a missing letter, quickly note the interval (2,3) and skip accordingly.",
+   "In reasoning exams, Y is always treated as a consonant, never a vowel — only A, E, I, O, U are vowels.",
+   "If the sequence is reverse (Z‑Y‑X…), double‑check that after Z comes Y, then X.",
+   "Use the phrase 'Z to A' to memorize the reverse alphabet."
+  ]
+ },
+ {
+  "summary_hi": "समतल दर्पण व शांत जल सतह दोनों ही समान नियमों पर कार्य करते हैं। वस्तु से समान दूरी पर आभासी छवि बनती है, जिसका आकार वस्तु के बराबर और दिशा उर्ध्वाधर रहती है। दर्पण में बाएँ‑दाएँ का उलटाव केवल लैटरल होता है, जबकि ऊँचाई नहीं बदलती। परावर्तन का नियम – आगमन कोण बराबर परावर्तन कोण – सभी स्थितियों में लागू होता है। वक्र दर्पण में वास्तविक या आभासी छवि बन सकती है, पर जल सतह केवल समतल दर्पण जैसा व्यवहार करती है। इन सिद्धांतों का उपयोग सुरक्षा दर्पण, वाहन के पीछे के दर्पण तथा जल में स्वयं को देखे जाने में होता है।",
+  "summary_en": "A plane mirror and a calm water surface obey the same optical rules. A virtual image appears at the same distance as the object, with identical size and upright orientation. In a mirror only left‑right reversal occurs, not top‑bottom. The law of reflection—angle of incidence equals angle of reflection—holds universally. Curved mirrors may produce real or virtual images of varying size, whereas a water surface behaves like a plane mirror. These principles are applied in safety mirrors, rear‑view mirrors of vehicles, and self‑inspection on water.",
+  "facts_hi": [
+   "समतल दर्पण व शांत जल सतह पर छवि आभासी होती है।",
+   "छवि वस्तु से समान दूरी पर बनती है, इसलिए दूरी का मान बराबर रहता है।",
+   "आभासी छवि का आकार वस्तु के बराबर (आकार 1:1) होता है।",
+   "समतल दर्पण में छवि उर्ध्वाधर रहती है, केवल बाएँ‑दाएँ उलटती है।",
+   "परावर्तन का नियम: आगमन कोण = परावर्तन कोण।",
+   "वक्र दर्पण में वास्तविक या आभासी छवि बन सकती है, आकार बदल सकता है।",
+   "वक्र दर्पण में फोकस बिंदु पर वस्तु रखी तो वास्तविक उलटा छवि बनती है।",
+   "जल सतह पर प्रतिबिंब केवल तब स्पष्ट होता है जब सतह स्थिर हो।",
+   "जल में प्रकाश का अपवर्तन नहीं, केवल परावर्तन होता है जब सतह पर ही देखा जाता है।",
+   "सुरक्षा दर्पण, वाहन के पीछे का दर्पण, और जल में आत्म‑परिक्षण में ये सिद्धांत लागू होते हैं।"
+  ],
+  "facts_en": [
+   "A plane mirror or a calm water surface forms a virtual image.",
+   "The image appears at the same distance behind the surface as the object is in front.",
+   "The virtual image has the same size as the object (magnification 1).",
+   "In a plane mirror the image is upright; only left‑right reversal occurs.",
+   "Law of reflection: angle of incidence equals angle of reflection.",
+   "Curved mirrors can produce real or virtual images with varying sizes.",
+   "With a curved mirror, placing an object at the focal point yields a real inverted image.",
+   "A water surface shows a clear reflection only when it is still.",
+   "When looking at the surface, light is reflected, not refracted, so the image follows reflection rules.",
+   "These principles are used in safety mirrors, rear‑view mirrors, and self‑inspection on water."
+  ],
+  "map": {
+   "hi": "दर्पण व जल प्रतिबिंब",
+   "en": "Mirror & Water Image",
+   "children": [
+    {
+     "hi": "परिभाषा",
+     "en": "Definition",
+     "children": [
+      {
+       "hi": "वस्तु का प्रतिबिंब",
+       "en": "Image of an object"
+      }
+     ]
+    },
+    {
+     "hi": "गुणधर्म",
+     "en": "Properties",
+     "children": [
+      {
+       "hi": "आभासी छवि समान दूरी पर",
+       "en": "Virtual image at equal distance"
+      },
+      {
+       "hi": "आकार समान (1:1)",
+       "en": "Same size (1:1)"
+      },
+      {
+       "hi": "उर्ध्वाधर, बाएँ‑दाएँ उलटाव",
+       "en": "Upright with left‑right reversal"
+      }
+     ]
+    },
+    {
+     "hi": "प्रकाश का नियम",
+     "en": "Law of Light",
+     "children": [
+      {
+       "hi": "आगमन कोण = परावर्तन कोण",
+       "en": "Angle of incidence = angle of reflection"
+      },
+      {
+       "hi": "समतल दर्पण में लैटरल उलटाव",
+       "en": "Lateral reversal in plane mirror"
+      }
+     ]
+    },
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "समतल दर्पण – आभासी, समान आकार",
+       "en": "Plane mirror – virtual, same size"
+      },
+      {
+       "hi": "वक्र दर्पण – वास्तविक/आभासी, आकार बदलता",
+       "en": "Curved mirror – real/virtual, size varies"
+      }
+     ]
+    },
+    {
+     "hi": "व्यावहारिक उपयोग",
+     "en": "Practical Uses",
+     "children": [
+      {
+       "hi": "सुरक्षा दर्पण, वाहन का पीछे का दर्पण, जल में आत्म‑परिक्षण",
+       "en": "Safety mirrors, rear‑view mirrors, self‑inspection on water"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-mirror_water_image",
+  "s": "reasoning",
+  "t": "mirror_water_image",
+  "tips_hi": [
+   "उभा‑प्लेन‑लेफ्ट‑राइट (UPLR) – याद रखें कि दर्पण की इमेज उभा, समतल और केवल बाएँ‑दाएँ उलटी होती है।",
+   "दर्पण से वस्तु की दूरी को 2× करके इमेज की दूरी निकालें।",
+   "जल सतह पर इमेज वर्चुअल है, रियल नहीं – यह उलझाने वाला विकल्प है।",
+   "पहले ऑब्जेक्ट की दिशा और दर्पण की स्थिति जाँचें, फिर इमेज की ऊँचाई/उन्मुखीकरण तय करें।"
+  ],
+  "tips_en": [
+   "UPLR – Upright, Plane, Left‑Right mnemonic to remember the image is upright, plane mirror, only left‑right reversed.",
+   "Distance double: Multiply the object‑to‑mirror distance by 2 to get image distance.",
+   "Trap: Remember that a water surface produces a virtual image, not a real one – examiners often swap these terms.",
+   "Always check: Verify the object's orientation and the mirror's position before deciding on the image's height or orientation."
+  ]
+ },
+ {
+  "summary_hi": "अशाब्दिक तर्कशक्ति वह खंड है जिसमें आकृतियों को बिना शब्दों के समझना, उनका क्रम, समानता, वर्गीकरण और विभिन्न रूपांतरण जैसे घुमाव, प्रतिबिंब, मोड़ आदि का विश्लेषण करना शामिल है। यह परीक्षा में उम्मीदवार की स्थानिक जागरूकता, त्वरित निर्णय क्षमता और पैटर्न पहचान कौशल को परखता है। प्रश्नों में क्रम (सीरीज़), समानता‑वर्गीकरण, अलग वस्तु, आइना‑पानी प्रतिबिंब, कागज मोड़ना और एम्बेडेड फ़िगर जैसी विविध श्रेणियाँ आती हैं। प्रत्येक प्रकार में नियम पहचान कर विकल्पों को व्यवस्थित रूप से हटाना आवश्यक होता है। तेज़ी से हल करने के लिए 1‑1.5 मिनट का समय नियोजन और कागज पर स्केचिंग मददगार सिद्ध होती है। नियमित अभ्यास से घुमाव, प्रतिबिंब, स्केलिंग जैसे सामान्य रूपांतरणों की पहचान आसान हो जाती है।",
+  "summary_en": "Non-verbal reasoning deals with interpreting figures without words, analyzing sequences, analogies, classifications and transformations such as rotations, reflections and folds. It tests a candidate's spatial awareness, quick decision‑making and pattern‑recognition abilities in exams. Questions appear in series, analogies‑classification, odd‑one‑out, mirror‑water images, paper folding and embedded figures. Each type requires identifying the underlying rule and eliminating options systematically. Managing about 1‑1.5 minutes per item and sketching patterns on paper aid speed. Regular practice makes common transformations like rotation, reflection and scaling readily recognizable.",
+  "facts_hi": [
+   "अशाब्दिक तर्कशक्ति मानसिक रूप से आकृतियों को कल्पना व परिवर्तित करने की क्षमता को मापती है।",
+   "रेलवे भर्ती में यह स्थानिक जागरूकता का आकलन करती है, जो नेविगेशन व उपकरण संचालन में आवश्यक है।",
+   "मुख्य प्रश्न प्रकार क्रम, समानता, वर्गीकरण, अलग वस्तु, आइना, पानी, कागज मोड़ना और एम्बेडेड फ़िगर हैं।",
+   "श्रृंखला में नियम (जोड़, घटाव, घुमाव, प्रतिबिंब) पहचान कर अनुपस्थित आकृति निकालें।",
+   "आइना व पानी के प्रतिबिंब में आकृति को क्षैतिज या लंबवत रूप से उलटना होता है।",
+   "कागज मोड़ने के प्रश्नों में मोड़ और खोलने की प्रक्रिया को कल्पना करके अनुपस्थित भाग खोजें।",
+   "पैटर्न के अनुसार विकल्पों को हटाते हुए व्यवस्थित रूप से उत्तर चुनें।",
+   "समय प्रबंधन के लिए प्रति प्रश्न लगभग 1‑1.5 मिनट रखें।",
+   "नियमित रूप से कागज पर पैटर्न बनाना सटीकता बढ़ाता है और मानसिक बोझ घटाता है।",
+   "समाधान किए प्रश्नों की समीक्षा से 90°, 180° घुमाव, स्केलिंग व प्रतिबिंब जैसे सामान्य नियम पहचानें।"
+  ],
+  "facts_en": [
+   "Non‑verbal reasoning measures the ability to visualize and manipulate shapes mentally.",
+   "In railway recruitment it evaluates spatial awareness needed for navigation and equipment handling.",
+   "Key question types are series, analogies, classification, odd‑one‑out, mirror, water, paper folding and embedded figures.",
+   "In series, identify the rule (addition, subtraction, rotation, reflection) and apply it to find the missing figure.",
+   "Mirror and water image questions require flipping the figure horizontally or vertically as instructed.",
+   "Paper‑folding questions need you to imagine the folding and unfolding steps to locate the missing part.",
+   "Select the answer by systematically eliminating options that violate the identified pattern.",
+   "Allocate roughly 1‑1.5 minutes per question for effective time management.",
+   "Sketching patterns on paper regularly improves accuracy and reduces mental load.",
+   "Review solved questions to recognize common transformations like 90°, 180° rotations, scaling and reflection."
+  ],
+  "map": {
+   "hi": "अशाब्दिक तर्कशक्ति",
+   "en": "Non-Verbal Reasoning",
+   "children": [
+    {
+     "hi": "श्रृंखला प्रश्न",
+     "en": "Series Questions",
+     "children": [
+      {
+       "hi": "संख्यात्मक श्रृंखला",
+       "en": "Numeric Series"
+      },
+      {
+       "hi": "आकृति श्रृंखला",
+       "en": "Figure Series"
+      }
+     ]
+    },
+    {
+     "hi": "समानता एवं वर्गीकरण",
+     "en": "Analogies & Classification",
+     "children": [
+      {
+       "hi": "आकृति समानता",
+       "en": "Figure Analogy"
+      },
+      {
+       "hi": "वर्गीकरण",
+       "en": "Classification"
+      }
+     ]
+    },
+    {
+     "hi": "आइना एवं प्रतिबिंब",
+     "en": "Mirror & Water Images",
+     "children": [
+      {
+       "hi": "आइना प्रतिबिंब",
+       "en": "Mirror Image"
+      },
+      {
+       "hi": "पानी प्रतिबिंब",
+       "en": "Water Image"
+      }
+     ]
+    },
+    {
+     "hi": "कागज मोड़ना",
+     "en": "Paper Folding",
+     "children": [
+      {
+       "hi": "एक बार मोड़",
+       "en": "Single Fold"
+      },
+      {
+       "hi": "दो बार मोड़",
+       "en": "Double Fold"
+      }
+     ]
+    },
+    {
+     "hi": "स्थानिक कल्पना",
+     "en": "Spatial Visualization",
+     "children": [
+      {
+       "hi": "आकार घुमाव",
+       "en": "Rotation of Shapes"
+      },
+      {
+       "hi": "आंतरिक चित्र",
+       "en": "Embedded Figures"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-non_verbal_reasoning",
+  "s": "reasoning",
+  "t": "non_verbal_reasoning",
+  "tips_hi": [
+   "आरआरएस: रोटेशन, रिफ्लेक्शन, स्केलिंग को याद रखने के लिए संक्षिप्ताक्षर",
+   "सीरीज में 90° घड़ी की दिशा और 90° घड़ी के विपरीत दिशा के बीच वैकल्पिक होने पर दिशा को तीर से चिह्नित करके मध्यवर्ती चरणों को छोड़ें",
+   "मिरर प्रश्नों में परीक्षक अक्सर क्षैतिज और ऊर्ध्वाधर फ्लिप को बदल देते हैं; फ्लिप के अक्ष को पहले जाँचें",
+   "अजीब-एक-आउट चुनते समय हमेशा सममिति जाँचें; यदि एक आकृति अन्य की सममिति से वंचित है, तो वह संभवतः अजीब है",
+   "पेपर फोल्डिंग में 'फोल्ड, अनफोल्ड, लोकेट' नियम याद रखें; फोल्ड चरण को छोड़ने से गलत उत्तर मिल सकता है"
+  ],
+  "tips_en": [
+   "Use the mnemonic RRS (Rotation, Reflection, Scaling) to remember the common transformations",
+   "In a series alternating 90° clockwise and 90° counter‑clockwise rotations, mark the direction with an arrow and skip intermediate steps",
+   "In mirror questions examiners often swap horizontal and vertical flips; always verify the axis before flipping",
+   "When selecting the odd‑one‑out, first check for symmetry; if one figure lacks the symmetry present in the others, it’s likely the odd one",
+   "For paper‑folding problems remember the 'fold, unfold, locate' rule; skipping the fold step usually leads to a wrong answer"
+  ]
+ },
+ {
+  "summary_hi": "गणितीय संक्रियाएँ सामान्य बुद्धिमत्ता एवं तर्कशक्ति में बुनियादी जोड़, घटाव, गुणा और भाग से शुरू होती हैं, जिनके नियमों को BODMAS क्रम नियम के अनुसार लागू किया जाता है। जोड़ व गुणा में परिवर्तनीयता तथा समुच्चय में वितरणीयता जैसी गुणात्मक विशेषताएँ होती हैं, जबकि घटाव व भाग क्रमपरिवर्तनीय नहीं होते। अभिव्यक्तियों को हल करते समय कोष्ठक, घातांक, गुणा‑भाग, जोड़‑घटाव के क्रम का पालन करना अनिवार्य है। कैरी‑बरो की समझ, आधार‑10 के निकट संख्याओं का उपयोग और वर्ग‑घन सूत्र जैसी मानसिक गणना तकनीकें तेज़ और सटीक उत्तर देती हैं। इन सिद्धांतों को नियमित अभ्यास से याद रखकर परीक्षा में समय बचाया जा सकता है।",
+  "summary_en": "Mathematical operations in General Intelligence start with the four basics—addition, subtraction, multiplication and division—and are governed by the BODMAS order of operations. Addition and multiplication enjoy commutativity and distributive properties, whereas subtraction and division are order‑sensitive. Solving expressions requires handling brackets first, then exponents, followed by multiplication/division and finally addition/subtraction. Understanding carry‑borrow, using numbers close to base‑10, and applying square/cube shortcuts speed up mental calculations. Mastering these rules through regular practice saves valuable time in exams.",
+  "facts_hi": [
+   "चार मूलभूत संक्रियाएँ जोड़, घटाव, गुणा, भाग हैं।",
+   "BODMAS नियम से अभिव्यक्तियों का सही क्रम तय होता है।",
+   "जोड़ और गुणा में परिवर्तनीयता लागू होती है, क्रम बदलने से परिणाम नहीं बदलता।",
+   "घटाव और भाग में परिवर्तनशीलता नहीं होती; क्रम बदलने से परिणाम बदलता है।",
+   "गुणा में वितरणीयता (a×(b+c)=a×b + a×c) गणना को सरल बनाती है।",
+   "कैरी और बरो की समझ से बड़े अंकों की जोड़‑घटाव तेज़ होती है।",
+   "मानसिक गणना में आधार 10 के निकट संख्याओं को उपयोग करने से त्रुटि घटती है।",
+   "वर्ग के लिए (n+1)² = n² + 2n +1 सूत्र याद रखें।",
+   "अभिव्यक्तियों में कोष्ठक को हमेशा पहले हल करें, फिर घातांक, फिर गुणा/भाग, फिर जोड़/घटाव।"
+  ],
+  "facts_en": [
+   "The four basic operations are addition, subtraction, multiplication and division.",
+   "The BODMAS rule determines the correct sequence for evaluating expressions.",
+   "Addition and multiplication are commutative; changing the order does not affect the result.",
+   "Subtraction and division are not commutative; changing the order changes the result.",
+   "Multiplication follows the distributive property (a×(b+c)=a×b + a×c) which simplifies calculations.",
+   "Understanding carry and borrow speeds up addition and subtraction of large numbers.",
+   "Using numbers close to base‑10 in mental math reduces errors.",
+   "Remember the square formula (n+1)² = n² + 2n +1.",
+   "Always solve brackets first, then exponents, then multiplication/division, and finally addition/subtraction."
+  ],
+  "map": {
+   "hi": "गणितीय संक्रियाएँ",
+   "en": "Mathematical Operations",
+   "children": [
+    {
+     "hi": "जोड़ व घटाव",
+     "en": "Addition & Subtraction",
+     "children": [
+      {
+       "hi": "कैरी और बरो की समझ",
+       "en": "Understanding carry and borrow"
+      },
+      {
+       "hi": "समरूप अंकों का समूह",
+       "en": "Grouping like terms"
+      }
+     ]
+    },
+    {
+     "hi": "गुणा व भाग",
+     "en": "Multiplication & Division",
+     "children": [
+      {
+       "hi": "गुणन तालिका का प्रयोग",
+       "en": "Using multiplication tables"
+      },
+      {
+       "hi": "भिन्न भाग में भाग",
+       "en": "Division with remainders"
+      }
+     ]
+    },
+    {
+     "hi": "क्रम नियम (BODMAS)",
+     "en": "Order of Operations (BODMAS)",
+     "children": [
+      {
+       "hi": "कोष्ठक सबसे पहले",
+       "en": "Brackets first"
+      },
+      {
+       "hi": "घातांक और मूल",
+       "en": "Exponents and roots"
+      },
+      {
+       "hi": "गुणा/भाग बाएँ से दाएँ",
+       "en": "Multiplication/Division left to right"
+      }
+     ]
+    },
+    {
+     "hi": "गुणात्मक गुण",
+     "en": "Properties of Operations",
+     "children": [
+      {
+       "hi": "परिवर्तनीयता",
+       "en": "Commutativity"
+      },
+      {
+       "hi": "सम्बद्धता",
+       "en": "Associativity"
+      },
+      {
+       "hi": "वितरणीयता",
+       "en": "Distributivity"
+      }
+     ]
+    },
+    {
+     "hi": "मानसिक गणना तकनीक",
+     "en": "Mental Math Techniques",
+     "children": [
+      {
+       "hi": "आधार 10 के निकट संख्याएँ",
+       "en": "Numbers near base 10"
+      },
+      {
+       "hi": "वर्ग और घन सूत्र",
+       "en": "Square and cube formulas"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-mathematical_operations",
+  "s": "reasoning",
+  "t": "mathematical_operations",
+  "tips_hi": [
+   "10 घटाने का ट्रिक: 10, 20, 30… से घटाने के लिए, हर अंक को 9 से घटाएँ और 1 जोड़ें।",
+   "11 से गुणा का शॉर्टकट: दो अंकों के लिए, दोनों अंकों को जोड़ें और बीच में लिखें (उदाहरण: 23 × 11 = 253)। तीन अंकों के लिए, पहले और आखिरी अंक जोड़कर बीच के अंक के बाद लिखें (उदाहरण: 123 × 11 = 1353)।",
+   "हमेशा जाँचें कि कहीं ब्रैकेट छूट तो नहीं गया: यदि अभिव्यक्ति बहुत बड़ी दिखती है या पैटर्न है, तो पुनः जाँचें कि कोई ब्रैकेट छूट गया है या नहीं। छूटे हुए ब्रैकेट से क्रम बदल सकता है।",
+   "वर्ग सूत्र शॉर्टकट: (n+1)² = n² + 2n + 1। n² को एक बार निकालें और लगातार वर्गों के लिए पुनः उपयोग करें, जिससे समय बचता है।"
+  ],
+  "tips_en": [
+   "10‑minus trick for subtraction: to subtract a number from 10, 20, 30… subtract each digit from 9 and add 1 to the result.",
+   "Multiplication by 11 shortcut: for a two‑digit number, add the two digits and write the sum between them (e.g., 23×11=253). For a three‑digit number, add the first and last digits and write the sum after the middle digit (e.g., 123×11=1353).",
+   "Always check for hidden brackets: if an expression looks too large or has a pattern, re‑evaluate to see if a missing bracket changes the order. Missing brackets can flip the result.",
+   "Square‑formula shortcut: (n+1)² = n² + 2n + 1. Compute n² once and reuse it for consecutive squares, saving time."
+  ]
+ },
+ {
+  "summary_hi": "कथन और निष्कर्ष प्रश्नों में, आपको दिए गए कथन को सत्य मानकर यह तय करना होता है कि निष्कर्ष उससे तार्किक रूप से अनुसरण करते हैं या नहीं। यहाँ मुख्य नियम यह है कि निष्कर्ष कथन के शब्दों और सीमाओं के भीतर ही होना चाहिए; बाहरी जानकारी या व्यक्तिगत अनुभव का उपयोग नहीं किया जा सकता। यदि निष्कर्ष कथन की तुलना में अधिक व्यापक या विशिष्ट है, तो वह अमान्य हो सकता है। 'कुछ', 'सभी', 'कोई नहीं' जैसे शब्दों का सटीक प्रयोग तर्क की सफलता निर्धारित करता है। कभी-कभी दोनों निष्कर्ष सही हो सकते हैं, या कोई भी नहीं, या केवल एक ही सही हो सकता है। प्रश्न हल करते समय ध्यान रहे कि निष्कर्ष कथन का सीधा परिणाम हो, न कि अनुमान। इस विषय में तार्किक स्पष्टता और शब्दों के अर्थ पर ध्यान केंद्रित करना परीक्षा में सफलता की कुंजी है।",
+  "summary_en": "In Statement and Conclusion questions, you must assume the given statement is true and determine if the conclusions logically follow from it. The core rule is that conclusions must stay within the scope and wording of the statement; external knowledge or personal experience cannot be used. If a conclusion is broader or more specific than the statement, it may be invalid. The precise use of quantifiers like 'some', 'all', and 'none' determines the validity of the argument. Sometimes both conclusions are valid, sometimes neither, and sometimes only one is correct. When solving, ensure the conclusion is a direct consequence of the statement, not an assumption. Logical clarity and attention to word meaning are key to success in this topic for RRB/RPF exams.",
+  "facts_hi": [
+   "कथन को हमेशा सत्य माना जाता है, चाहे वह वास्तविकता से मेल खाए या नहीं।",
+   "निष्कर्ष कथन से बाहर की किसी भी जानकारी पर आधारित नहीं हो सकता।",
+   "यदि निष्कर्ष कथन की तुलना में अधिक व्यापक है, तो वह अमान्य है।",
+   "'कुछ' का अर्थ है कि कम से कम एक, और 'सभी' का अर्थ है कि सभी बिना अपवाद के।",
+   "दोनों निष्कर्ष तभी सही माने जाएंगे जब वे दोनों कथन से सीधे अनुसरण करें।",
+   "यदि कोई निष्कर्ष कथन के विपरीत है, तो वह गलत है।",
+   "शब्दों के अर्थ में छोटी-छोटी भिन्नताएँ निष्कर्ष की वैधता को बदल सकती हैं।",
+   "तार्किक अनुमान (inference) और निष्कर्ष (conclusion) में अंतर समझना ज़रूरी है।",
+   "कथन में 'हो सकता है' जैसे शब्दों का उपयोग निश्चितता को कम करता है।",
+   "परीक्षा में समय प्रबंधन के लिए त्वरित तार्किक विश्लेषण करना सीखें।"
+  ],
+  "facts_en": [
+   "The statement is always assumed to be true, regardless of real-world facts.",
+   "A conclusion cannot be based on any information outside the statement.",
+   "If a conclusion is broader than the statement, it is invalid.",
+   "'Some' means at least one, and 'all' means every single one without exception.",
+   "Both conclusions are considered valid only if both directly follow from the statement.",
+   "If a conclusion contradicts the statement, it is incorrect.",
+   "Small differences in word meaning can change the validity of a conclusion.",
+   "It is essential to understand the difference between inference and conclusion.",
+   "The use of words like 'may' or 'might' in a statement reduces certainty.",
+   "Learn to perform quick logical analysis for better time management in the exam."
+  ],
+  "map": {
+   "hi": "कथन व निष्कर्ष",
+   "en": "Statement & Conclusion",
+   "children": [
+    {
+     "hi": "मूल नियम",
+     "en": "Basic Rules",
+     "children": [
+      {
+       "hi": "कथन सत्य माना जाता है",
+       "en": "Statement is assumed true"
+      },
+      {
+       "hi": "बाहरी जानकारी वर्जित",
+       "en": "External info is prohibited"
+      }
+     ]
+    },
+    {
+     "hi": "शब्दों का अर्थ",
+     "en": "Word Meanings",
+     "children": [
+      {
+       "hi": "कुछ (Some)",
+       "en": "Some"
+      },
+      {
+       "hi": "सभी (All)",
+       "en": "All"
+      },
+      {
+       "hi": "कोई नहीं (None)",
+       "en": "None"
+      }
+     ]
+    },
+    {
+     "hi": "निष्कर्ष के प्रकार",
+     "en": "Types of Conclusions",
+     "children": [
+      {
+       "hi": "एक ही सही",
+       "en": "Only one valid"
+      },
+      {
+       "hi": "दोनों सही",
+       "en": "Both valid"
+      },
+      {
+       "hi": "कोई भी नहीं",
+       "en": "Neither valid"
+      }
+     ]
+    },
+    {
+     "hi": "सामान्य त्रुटियाँ",
+     "en": "Common Errors",
+     "children": [
+      {
+       "hi": "अनुमान लगाना",
+       "en": "Making assumptions"
+      },
+      {
+       "hi": "व्यापकता का दुरुपयोग",
+       "en": "Misusing generality"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-statement_conclusion",
+  "s": "reasoning",
+  "t": "statement_conclusion",
+  "tips_hi": [
+   "S-C-L याद रखें: पहले कथन (Statement), फिर निष्कर्ष (Conclusion), और अंत में तार्किक संबंध (Link) की जाँच करें।",
+   "मॉडैलिटी चेक: यदि कथन में 'may' या 'might' है, तो निष्कर्ष में 'must' या 'cannot' का प्रयोग न करें; यदि है तो उसे अस्वीकार करें।",
+   "ट्रैप: परीक्षक विकल्पों का क्रम उलट देते हैं; हमेशा पहले निष्कर्ष पढ़ें, फिर कथन, ताकि गलत पढ़ने से बचें।",
+   "कथन को अपने शब्दों में लिखें: इससे दायरे और शब्दों की स्पष्टता मिलती है, जिससे निष्कर्ष का सही मूल्यांकन आसान होता है।"
+  ],
+  "tips_en": [
+   "Remember the S-C-L mnemonic: first Statement, then Conclusion, and finally check the Logical link.",
+   "Modal check: If the statement contains 'may' or 'might', the conclusion should not use 'must' or 'cannot'; discard if it does.",
+   "Trap: Examiners sometimes reverse the order of options; always read the Conclusion first, then the Statement, to avoid misreading.",
+   "Rewrite the statement in your own words: this clarifies scope and wording, making it easier to judge the conclusion accurately."
+  ]
+ },
+ {
+  "summary_hi": "पहेली और बैठक व्यवस्था के प्रश्न तार्किक सोच और स्थानिक दृष्टि का परीक्षण करते हैं। इन प्रश्नों को हल करने के लिए सबसे पहले दिए गए सभी संकेतों को ध्यान से पढ़ना और उनमें से निश्चित तथ्यों को पहचानना आवश्यक है। एक प्रभावी रणनीति यह है कि एक सरल डायग्राम या ग्रिड बनाकर प्रत्येक व्यक्ति या वस्तु की संभावित स्थिति को चिह्नित करना। जब कई शर्तें एक साथ लागू हों, तो 'प्रक्रिया द्वारा अस्वीकृति' (process of elimination) का उपयोग करके गलत विकल्पों को बाहर करना चाहिए। दिशाओं (उत्तर, दक्षिण, पूर्व, पश्चिम) और सापेक्ष स्थितियों (बाएं, दाएं, बीच में) को स्पष्ट रूप से समझना बहुत महत्वपूर्ण है। यदि कोई प्रश्न जटिल लग रहा हो, तो उसे छोटा करके या अलग-अलग भागों में तोड़कर हल करने की कोशिश करें। समय प्रबंधन के लिए, आसान प्रश्नों को पहले हल करें और जटिल पहेलियों के लिए अधिक समय दें। नियमित अभ्यास से इन प्रकार के प्रश्नों में तेजी और सटीकता दोनों में सुधार होता है।",
+  "summary_en": "Puzzle and seating arrangement questions test logical reasoning and spatial visualization skills. To solve them effectively, one must carefully read all clues and identify the definite facts first. A strong strategy involves creating a simple diagram or grid to mark the potential positions of each person or object. When multiple conditions apply, use the process of elimination to rule out incorrect options. Understanding directions (North, South, East, West) and relative positions (left, right, center) is crucial for accuracy. If a problem seems complex, try breaking it down into smaller, manageable parts. For better time management, solve easier questions first and allocate more time for intricate puzzles. Regular practice significantly improves both speed and accuracy in handling these types of questions.",
+  "facts_hi": [
+   "सबसे पहले निश्चित तथ्यों (definite facts) को पहचानें और डायग्राम में दर्ज करें।",
+   "सापेक्ष स्थिति (relative position) को स्पष्ट रूप से समझें, जैसे 'A, B के तुरंत बाएं'।",
+   "दिशाओं का उपयोग करते समय उत्तर, दक्षिण, पूर्व और पश्चिम को सही ढंग से लागू करें।",
+   "प्रक्रिया द्वारा अस्वीकृति (elimination) का उपयोग करके गलत विकल्पों को बाहर करें।",
+   "जब तक सभी शर्तें पूरी नहीं हो जातीं, तब तक अंतिम उत्तर न चुनें।",
+   "वृत्ताकार बैठक व्यवस्था में 'बाएं' और 'दाएं' की दिशा व्यक्ति की ओर देखने पर निर्भर करती है।",
+   "जटिल प्रश्नों में अलग-अलग संभावित स्थितियों (cases) का विश्लेषण करें।",
+   "समय बचाने के लिए आसान प्रश्नों को पहले हल करें।",
+   "डायग्राम बनाना मानसिक रूप से प्रश्न को हल करने की तुलना में अधिक सटीक होता है।",
+   "प्रत्येक चरण के बाद अपने डायग्राम की जांच करें ताकि त्रुटियाँ न हों।"
+  ],
+  "facts_en": [
+   "Identify and record definite facts in the diagram first.",
+   "Understand relative positions clearly, such as 'A is immediately left of B'.",
+   "Apply North, South, East, and West correctly when using directions.",
+   "Use the process of elimination to rule out incorrect options.",
+   "Do not select the final answer until all conditions are satisfied.",
+   "In circular seating, 'left' and 'right' depend on whether the person is facing the center or outside.",
+   "Analyze different possible cases for complex questions.",
+   "Solve easier questions first to save time.",
+   "Drawing a diagram is more accurate than solving the problem mentally.",
+   "Check your diagram after each step to avoid errors."
+  ],
+  "map": {
+   "hi": "पहेली व बैठक व्यवस्था",
+   "en": "Puzzle & Seating Arrangement",
+   "children": [
+    {
+     "hi": "बैठक व्यवस्था",
+     "en": "Seating Arrangement",
+     "children": [
+      {
+       "hi": "सीधी पंक्ति",
+       "en": "Linear Row"
+      },
+      {
+       "hi": "वृत्ताकार",
+       "en": "Circular"
+      },
+      {
+       "hi": "आयताकार",
+       "en": "Rectangular"
+      }
+     ]
+    },
+    {
+     "hi": "दिशाएँ",
+     "en": "Directions",
+     "children": [
+      {
+       "hi": "मुख्य दिशाएँ",
+       "en": "Primary Directions"
+      },
+      {
+       "hi": "सापेक्ष दिशाएँ",
+       "en": "Relative Directions"
+      }
+     ]
+    },
+    {
+     "hi": "तार्किक प्रक्रिया",
+     "en": "Logical Process",
+     "children": [
+      {
+       "hi": "अस्वीकृति विधि",
+       "en": "Elimination Method"
+      },
+      {
+       "hi": "संकेत विश्लेषण",
+       "en": "Clue Analysis"
+      }
+     ]
+    },
+    {
+     "hi": "समय प्रबंधन",
+     "en": "Time Management",
+     "children": [
+      {
+       "hi": "प्राथमिकता क्रम",
+       "en": "Prioritization"
+      },
+      {
+       "hi": "तेजी अभ्यास",
+       "en": "Speed Practice"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-reasoning-puzzle_seating",
+  "s": "reasoning",
+  "t": "puzzle_seating",
+  "tips_hi": [
+   "सप्लिट (सिट, पोजीशन, लिंक, इडेंटिफाई, टेस्ट) – इस संक्षिप्त शब्द से समस्या को चरणबद्ध तरीके से हल करें।",
+   "2x2 ग्रिड विधि – 4 सीटों के लिए 2x2 ग्रिड बनाकर स्थानों को जल्दी जाँचें।",
+   "'अगला' और 'तुरंत अगला' के बीच भ्रम – हमेशा स्पष्ट करें कि क्लू 'next to' या 'immediately next to' है।",
+   "प्रत्येक व्यक्ति के लिए अस्वीकार्य स्थानों की अलग सूची रखें – इससे दोहराव वाली त्रुटियों से बचा जा सकता है।",
+   "मिरर विधि (केंद्र के पार प्रतिबिंब) – विपरीत सीटों के लिए प्रतिबिंबित करके स्थिति तय करें।"
+  ],
+  "tips_en": [
+   "SPLIT (Sit, Position, Link, Identify, Test) – use this mnemonic to tackle the puzzle step‑by‑step.",
+   "2x2 Grid Method – for four‑seat arrangements draw a 2×2 grid to test relative positions quickly.",
+   "'Next to' vs 'Immediately next to' – always clarify whether the clue means adjacent or directly adjacent.",
+   "Maintain a separate list of forbidden positions for each person – this prevents double‑assignment errors.",
+   "Mirror Method (reflection across the centre) – use it to deduce opposite‑seat relationships efficiently."
+  ]
+ }
+]

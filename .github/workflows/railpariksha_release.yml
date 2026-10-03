@@ -1,0 +1,111 @@
+# Tag railpariksha-vX.Y.Z to ship. Needs repo secrets:
+#   ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD, ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD
+#   PLAY_SERVICE_ACCOUNT_JSON (optional; without it the signed AAB is only attached to the GitHub release)
+# Uses a distinct tag prefix (railpariksha-v*) so it never collides with Bharari's release tags (v*).
+name: RailPariksha release
+on:
+  push:
+    tags: ["railpariksha-v*"]
+  workflow_dispatch:
+    inputs:
+      track:
+        description: Play track (internal, alpha, beta, production)
+        default: internal
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      PLAY_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+    defaults: { run: { working-directory: railpariksha/app } }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - uses: subosito/flutter-action@v2
+        with: { channel: stable, cache: true }
+      - run: python ../pipeline/build_bundle.py
+      - name: Set up signing
+        env:
+          KEYSTORE: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_PW: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PW: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE" ]; then echo "::error::ANDROID_KEYSTORE_BASE64 secret missing"; exit 1; fi
+          echo "$KEYSTORE" | base64 -d > android/upload.jks
+          printf 'storeFile=../upload.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' "$STORE_PW" "$ALIAS" "$KEY_PW" > android/key.properties
+      - name: Version from run number
+        run: echo "BUILD_NUMBER=$((100 + ${{ github.run_number }}))" >> $GITHUB_ENV
+      - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      # Hard gate: a build that fails to even launch must never reach a GitHub
+      # release or the Play Store, regardless of how the tag got pushed. v1.0.0
+      # shipped a build that crashed on every launch (R8 stripped a class
+      # androidx.work needed reflectively) and that was only caught because a
+      # human happened to pull a crash log by hand -- this makes that structurally
+      # impossible going forward.
+      # The emulator's AVD needs ~7.4GB for its userdata partition; ubuntu-latest's
+      # default free space plus the Android SDK/emulator/system-image downloads
+      # above leaves less than that, so the emulator fails immediately with
+      # "Not enough space to create userdata partition" (confirmed via a run's
+      # actual logs, not assumed) before it ever boots. Removing large preinstalled
+      # toolchains this job doesn't use frees 20GB+ reliably on GitHub-hosted runners.
+      - name: Free disk space for the emulator's AVD
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/.ghcup /opt/hostedtoolcache/CodeQL /usr/local/lib/android/sdk/ndk
+          sudo docker image prune -af || true
+          df -h /
+      - name: Enable KVM for emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Boot emulator and run the golden-path e2e test against the signed build
+        # Fail fast instead of burning hours if pumpAndSettle ever hangs again
+        # (confirmed real failure mode -- see golden_path_test.dart's note on
+        # QuizScreen's countdown Timer.periodic).
+        timeout-minutes: 15
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          arch: x86_64
+          target: google_apis
+          force-avd-creation: false
+          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          # `flutter test integration_test/...` doesn't accept --release at all (confirmed
+          # via an actual run: "Could not find an option named '--release'") -- only
+          # `flutter drive` does, which needs test_driver/integration_test.dart as the bridge.
+          # This action runs each line of a multi-line script as its OWN separate shell
+          # invocation (confirmed via a run: "cd railpariksha/app" on its own line didn't
+          # carry over to the next line, which then failed with "No pubspec.yaml file
+          # found") -- must be a single line chained with && instead.
+          # flutter drive itself then refused --release outright ("Flutter Driver
+          # (non-web) does not support running in release mode" -- release strips the
+          # VM service the driver needs to talk to the app at all). --profile is the
+          # fix, not a compromise: on Android, profile mode builds via the SAME release
+          # Gradle build type (isMinifyEnabled/R8 and our proguard-rules.pro all apply),
+          # so it still exercises exactly the bug class this test exists to catch.
+          script: cd railpariksha/app && flutter drive --driver=test_driver/integration_test.dart --target=integration_test/golden_path_test.dart -d emulator-5554 --profile --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      - name: Upload to Google Play
+        if: ${{ env.PLAY_JSON != '' }}
+        uses: r0adkll/upload-google-play@v1
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: app.railpariksha
+          releaseFiles: railpariksha/app/build/app/outputs/bundle/release/app-release.aab
+          track: ${{ github.event.inputs.track || 'internal' }}
+          status: ${{ (github.event.inputs.track || 'internal') == 'internal' && 'completed' || 'draft' }}
+          whatsNewDirectory: railpariksha/docs/store/whatsnew
+      - uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            railpariksha/app/build/app/outputs/bundle/release/app-release.aab
+            railpariksha/app/build/app/outputs/flutter-apk/app-release.apk

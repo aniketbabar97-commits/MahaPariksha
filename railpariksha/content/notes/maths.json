@@ -1,0 +1,1701 @@
+[
+ {
+  "id": "note-maths-number_system",
+  "s": "maths",
+  "t": "number_system",
+  "summary_hi": "संख्या पद्धति गणित की नींव है और इसमें प्राकृतिक संख्याएँ, पूर्ण संख्याएँ, पूर्णांक, परिमेय व अपरिमेय संख्याएँ तथा वास्तविक संख्याएँ शामिल हैं। परीक्षा में सबसे ज़्यादा पूछे जाने वाले भाग हैं: भाज्यता के नियम (divisibility rules), अभाज्य संख्याएँ (prime numbers), सम-विषम संख्याएँ तथा भाग एल्गोरिथम (a = bq + r)। किसी संख्या के अभाज्य होने की जाँच के लिए उसके वर्गमूल तक की सभी अभाज्य संख्याओं से भाग देकर देखा जाता है। भाज्यता के नियम बड़ी संख्याओं को बिना पूरा भाग किए जल्दी जाँचने में मदद करते हैं, जैसे किसी संख्या का 3 या 9 से विभाज्य होना उसके अंकों के योग पर निर्भर करता है। इकाई अंक (unit digit) से संबंधित प्रश्नों में घातांक के चक्र (cyclicity) का उपयोग होता है, जैसे 2 की घातों का इकाई अंक 2,4,8,6 के चक्र में दोहराता है। यह अध्याय HCF-LCM, प्रतिशत, ब्याज जैसे अन्य अध्यायों की भी नींव है, इसलिए इसकी ठोस समझ बहुत ज़रूरी है।",
+  "summary_en": "Number System is the foundation of quantitative aptitude, covering natural numbers, whole numbers, integers, rational and irrational numbers, and real numbers. The most frequently tested areas are divisibility rules, prime numbers, odd-even properties, and the division algorithm (a = bq + r). To check if a number is prime, it is tested for divisibility by all primes up to its square root. Divisibility rules let you quickly test large numbers without full division — for example, divisibility by 3 or 9 depends on the sum of digits. Unit-digit questions rely on the cyclicity of powers, such as powers of 2 repeating the unit-digit cycle 2, 4, 8, 6. This chapter also underpins other topics like HCF-LCM, percentage and interest, so a strong grasp here pays off across the exam.",
+  "facts_hi": [
+   "प्राकृतिक संख्याएँ: 1, 2, 3, ... (0 शामिल नहीं)",
+   "पूर्ण संख्याएँ: 0, 1, 2, 3, ... (0 सहित)",
+   "पूर्णांक: ऋणात्मक, शून्य व धनात्मक संख्याएँ",
+   "परिमेय संख्या: p/q रूप में लिखी जा सकने वाली संख्या (q ≠ 0)",
+   "अपरिमेय संख्या: p/q रूप में नहीं लिखी जा सकती, जैसे √2, π",
+   "1 न तो अभाज्य है न ही भाज्य (composite)",
+   "2 एकमात्र सम अभाज्य संख्या है",
+   "किसी संख्या के 2 से विभाज्य होने की शर्त: इकाई अंक 0,2,4,6,8 हो",
+   "किसी संख्या के 3 से विभाज्य होने की शर्त: अंकों का योग 3 से विभाज्य हो",
+   "किसी संख्या के 9 से विभाज्य होने की शर्त: अंकों का योग 9 से विभाज्य हो",
+   "किसी संख्या के 11 से विभाज्य होने की शर्त: विषम व सम स्थान के अंकों के योग का अंतर 0 या 11 का गुणज हो",
+   "भाग एल्गोरिथम: भाज्य = (भाजक × भागफल) + शेषफल"
+  ],
+  "facts_en": [
+   "Natural numbers: 1, 2, 3, ... (0 not included)",
+   "Whole numbers: 0, 1, 2, 3, ... (includes 0)",
+   "Integers: negative numbers, zero and positive numbers",
+   "Rational number: can be written as p/q form (q ≠ 0)",
+   "Irrational number: cannot be written as p/q, e.g. √2, π",
+   "1 is neither prime nor composite",
+   "2 is the only even prime number",
+   "Divisible by 2 when: unit digit is 0, 2, 4, 6 or 8",
+   "Divisible by 3 when: sum of digits is divisible by 3",
+   "Divisible by 9 when: sum of digits is divisible by 9",
+   "Divisible by 11 when: difference of sums of digits at odd and even places is 0 or a multiple of 11",
+   "Division algorithm: Dividend = (Divisor × Quotient) + Remainder"
+  ],
+  "map": {
+   "hi": "संख्या पद्धति",
+   "en": "Number System",
+   "children": [
+    {
+     "hi": "संख्याओं के प्रकार",
+     "en": "Types of Numbers",
+     "children": [
+      {
+       "hi": "प्राकृतिक व पूर्ण संख्याएँ",
+       "en": "Natural & whole numbers"
+      },
+      {
+       "hi": "पूर्णांक",
+       "en": "Integers"
+      },
+      {
+       "hi": "परिमेय व अपरिमेय संख्याएँ",
+       "en": "Rational & irrational numbers"
+      }
+     ]
+    },
+    {
+     "hi": "अभाज्य संख्याएँ",
+     "en": "Prime Numbers",
+     "children": [
+      {
+       "hi": "2 एकमात्र सम अभाज्य",
+       "en": "2 is the only even prime"
+      },
+      {
+       "hi": "√n तक भाग देकर जाँच",
+       "en": "Test by dividing up to √n"
+      }
+     ]
+    },
+    {
+     "hi": "भाज्यता के नियम",
+     "en": "Divisibility Rules",
+     "children": [
+      {
+       "hi": "3, 9: अंकों का योग",
+       "en": "3, 9: sum of digits"
+      },
+      {
+       "hi": "11: स्थानीय योगों का अंतर",
+       "en": "11: difference of place-sums"
+      },
+      {
+       "hi": "2: इकाई अंक सम",
+       "en": "2: unit digit even"
+      }
+     ]
+    },
+    {
+     "hi": "भाग एल्गोरिथम",
+     "en": "Division Algorithm",
+     "children": [
+      {
+       "hi": "भाज्य = भाजक×भागफल + शेष",
+       "en": "Dividend = Divisor×Quotient + Remainder"
+      }
+     ]
+    },
+    {
+     "hi": "इकाई अंक व चक्रीयता",
+     "en": "Unit Digit & Cyclicity",
+     "children": [
+      {
+       "hi": "घातों का दोहराव चक्र",
+       "en": "Repeating cycle of powers"
+      }
+     ]
+    }
+   ]
+  },
+  "tips_hi": [
+   "स्मरणीय वाक्य: ‘योग, योग, अंतर’ – 3, 9 और 11 के नियम याद रखने के लिए।",
+   "7 से भाग देने के लिए: अंतिम अंक को दोगुना करके शेष संख्या से घटाएँ; यह प्रक्रिया तब तक दोहराएँ जब तक संख्या छोटी न हो जाए।",
+   "ध्यान दें: 1 को ना तो अभाज्य मानें और ना ही सम्मिश्र; यदि प्रश्न में 1 को अभाज्य कहा गया हो तो यह जाल है।",
+   "पावर के यूनिट-डिजिट के लिए चक्र याद रखें: 2 की घातों का चक्र 2,4,8,6 है – इससे बड़ी घातों का अंतिम अंक जल्दी पता चलता है।",
+   "अभाज्यता जाँचते समय केवल उन प्राइम्स तक जाँचें जिनका वर्गमूल n से कम या बराबर हो।"
+  ],
+  "tips_en": [
+   "Mnemonic: ‘Sum, Sum, Difference’ – to remember the rules for 3, 9 and 11.",
+   "Rule for 7: Double the last digit and subtract it from the remaining number; repeat until the number is small.",
+   "Watch out: 1 is neither prime nor composite; if a question lists 1 as a prime, it’s a trick.",
+   "Remember the unit‑digit cycle for powers: 2^n ends in 2,4,8,6 – use this to find large powers quickly.",
+   "When checking for primality, test divisibility only by primes up to the square root of the number."
+  ]
+ },
+ {
+  "id": "note-maths-percentage",
+  "s": "maths",
+  "t": "percentage",
+  "summary_hi": "प्रतिशत का अर्थ है 'प्रति सौ', यानी किसी मात्रा को 100 के आधार पर व्यक्त करना। यह अध्याय लाभ-हानि, ब्याज, औसत जैसे कई अन्य अध्यायों की नींव है, इसलिए इसमें भिन्न (fraction) से प्रतिशत और प्रतिशत से भिन्न में तेज़ी से बदलाव करना आना चाहिए। यदि किसी संख्या A का x% ज्ञात करना हो तो सूत्र है (A × x)/100। किसी मात्रा में प्रतिशत वृद्धि या कमी के बाद मूल मान ज्ञात करने के लिए 'उलटा प्रतिशत' (reverse percentage) विधि उपयोगी होती है। जब कोई मात्रा पहले x% बढ़े और फिर y% घटे (या इसके विपरीत), तो शुद्ध प्रतिशत परिवर्तन का सूत्र है: x + y + (xy/100), जिसमें कमी को ऋणात्मक मान के रूप में लिया जाता है। परीक्षा में जनसंख्या वृद्धि, चुनाव में मत प्रतिशत, तथा मूल्य वृद्धि/कमी पर आधारित प्रश्न बहुत सामान्य हैं।",
+  "summary_en": "Percentage means 'per hundred' — expressing a quantity relative to a base of 100. This chapter underlies many others like Profit & Loss, Interest and Average, so quick conversion between fractions and percentages is essential (e.g. 1/4 = 25%, 1/8 = 12.5%). To find x% of a number A, use the formula (A × x)/100. To find the original value after a percentage increase or decrease, the 'reverse percentage' method is useful. When a quantity increases by x% and then decreases by y% (or vice versa), the net percentage change formula is x + y + (xy/100), taking decrease as negative. Exam questions commonly involve population growth, vote-share problems, and price increase/decrease scenarios.",
+  "facts_hi": [
+   "x% का अर्थ है x/100",
+   "A का x% = (A × x)/100",
+   "1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 1/10 = 10%",
+   "यदि मूल्य x% बढ़े, तो पुरानी मात्रा को 100/(100+x)% कम करना होगा ताकि व्यय समान रहे",
+   "यदि मूल्य x% घटे, तो खपत को 100/(100−x)% बढ़ाना होगा ताकि व्यय समान रहे",
+   "क्रमिक % परिवर्तन (x% फिर y%): शुद्ध परिवर्तन = x + y + xy/100",
+   "प्रतिशत वृद्धि = (नया मान − पुराना मान)/पुराना मान × 100",
+   "जनसंख्या n वर्ष बाद, दर r% वार्षिक वृद्धि पर = P(1 + r/100)ⁿ",
+   "यदि A, B से x% अधिक है तो B, A से [x/(100+x)]×100 % कम है",
+   "यदि A, B से x% कम है तो B, A से [x/(100−x)]×100 % अधिक है"
+  ],
+  "facts_en": [
+   "x% means x/100",
+   "x% of A = (A × x)/100",
+   "1/2 = 50%, 1/4 = 25%, 1/5 = 20%, 1/8 = 12.5%, 1/10 = 10%",
+   "If price increases by x%, reduce consumption by 100/(100+x)% to keep expenditure same",
+   "If price decreases by x%, increase consumption by 100/(100−x)% to keep expenditure same",
+   "Successive % change (x% then y%): net change = x + y + xy/100",
+   "Percentage increase = (New value − Old value)/Old value × 100",
+   "Population after n years at r% annual growth = P(1 + r/100)ⁿ",
+   "If A is x% more than B, then B is [x/(100+x)]×100 % less than A",
+   "If A is x% less than B, then B is [x/(100−x)]×100 % more than A"
+  ],
+  "map": {
+   "hi": "प्रतिशत",
+   "en": "Percentage",
+   "children": [
+    {
+     "hi": "मूल सूत्र",
+     "en": "Basic Formula",
+     "children": [
+      {
+       "hi": "A का x% = Ax/100",
+       "en": "x% of A = Ax/100"
+      },
+      {
+       "hi": "भिन्न-प्रतिशत रूपांतरण",
+       "en": "Fraction-percentage conversion"
+      }
+     ]
+    },
+    {
+     "hi": "क्रमिक परिवर्तन",
+     "en": "Successive Change",
+     "children": [
+      {
+       "hi": "x + y + xy/100",
+       "en": "x + y + xy/100"
+      },
+      {
+       "hi": "कमी = ऋणात्मक मान",
+       "en": "Decrease = negative value"
+      }
+     ]
+    },
+    {
+     "hi": "उलटा प्रतिशत",
+     "en": "Reverse Percentage",
+     "children": [
+      {
+       "hi": "मूल्य वृद्धि पर खपत घटाना",
+       "en": "Reduce consumption on price rise"
+      }
+     ]
+    },
+    {
+     "hi": "तुलनात्मक प्रतिशत",
+     "en": "Comparative Percentage",
+     "children": [
+      {
+       "hi": "A, B से अधिक/कम होने पर सूत्र",
+       "en": "Formula when A is more/less than B"
+      }
+     ]
+    },
+    {
+     "hi": "जनसंख्या वृद्धि",
+     "en": "Population Growth",
+     "children": [
+      {
+       "hi": "P(1+r/100)ⁿ",
+       "en": "P(1+r/100)ⁿ"
+      }
+     ]
+    }
+   ]
+  },
+  "tips_hi": [
+   "समानुपातिक बदलाव के लिए 'जोड़ो, जोड़ो, गुणा करो' स्मरणीय वाक्य याद रखो: x + y + (xy/100)।",
+   "प्रश्न में पूछे गए प्रतिशत के प्रकार (वृद्धि, घटाव, परिवर्तन) और आधार (मूल या नया) को पहले स्पष्ट रूप से पहचानो।",
+   "दो successive प्रतिशत बदलाव के क्रम पर ध्यान दो; बढ़ाने के बाद घटाने और घटाने के बाद बढ़ाने के परिणाम अलग होते हैं।",
+   "20% जल्दी निकालने के लिए पहले 10% निकालो (जो 20% का आधा है), फिर उसे दोगुना करो।",
+   "5% जल्दी निकालने के लिए 10% को आधा करो।"
+  ],
+  "tips_en": [
+   "Use the mnemonic ‘Add, add, multiply’ to remember the net change formula: x + y + (xy/100).",
+   "Always identify whether the question asks for a percentage increase, decrease, or change, and whether the base is the original or the new value.",
+   "Pay attention to the order of successive percentage changes; an increase followed by a decrease is not the same as a decrease followed by an increase.",
+   "Quickly find 20% of a number by first calculating 10% (which is half of 20%) and then doubling it.",
+   "Quickly find 5% of a number by calculating 10% and halving it."
+  ]
+ },
+ {
+  "summary_hi": "HCF (सबसे बड़ा समान भाजक) और LCM (सबसे छोटा समान बहुगुणक) दो संख्याओं के बीच के मूलभूत संबंध को दर्शाते हैं। HCF वह सबसे बड़ा पूर्णांक है जो दोनों संख्याओं को बिना शेष के विभाजित करता है, जबकि LCM वह सबसे छोटा पूर्णांक है जो दोनों के गुणज के रूप में आता है। इन दोनों मानों के बीच का प्रमुख सूत्र है HCF × LCM = दो संख्याओं का गुणनफल। HCF निकालने के लिए यूक्लिडियन एल्गोरिदम या प्राइम फैक्टराइज़ेशन का प्रयोग किया जाता है, और LCM को (a×b)/HCF से आसानी से प्राप्त किया जा सकता है। सहभाज्य संख्याओं के लिए HCF 1 और LCM उनका गुणनफल होता है, जिससे कई गणितीय समस्याओं का समाधान सरल हो जाता है। परीक्षा में अक्सर भिन्नों का समान हर बनाना, अनुपात और समूह बनाना आदि में इनका प्रयोग पूछा जाता है।",
+  "summary_en": "HCF (Highest Common Factor) and LCM (Least Common Multiple) describe the fundamental relationship between two numbers. HCF is the greatest integer that divides both numbers without remainder, while LCM is the smallest integer that is a multiple of both. The key formula linking them is HCF × LCM = product of the two numbers. HCF can be found using the Euclidean algorithm or prime factorization, and LCM is easily obtained as (a×b)/HCF. For coprime numbers, HCF equals 1 and LCM equals their product, simplifying many mathematical problems. Exams often ask for applications such as finding common denominators of fractions, ratios, and grouping tasks.",
+  "facts_hi": [
+   "HCF का अर्थ सबसे बड़ा समान भाजक है।",
+   "LCM का अर्थ सबसे छोटा समान बहुगुणक है।",
+   "HCF × LCM = दो संख्याओं का गुणनफल।",
+   "यदि a|b तो HCF(a,b)=a।",
+   "यूक्लिडियन एल्गोरिदम HCF को तेज़ी से निकालता है।",
+   "प्राइम फैक्टराइज़ेशन से दोनों HCF और LCM मिलते हैं।",
+   "LCM = (a×b)/HCF।",
+   "सहभाज्य संख्याओं में HCF = 1 और LCM = a×b।",
+   "भिन्नों को समान हर में लाने के लिए LCM उपयोगी है।",
+   "समूह बनाते समय HCF सबसे बड़ा सामान्य समूह आकार देता है।"
+  ],
+  "facts_en": [
+   "HCF stands for Highest Common Factor.",
+   "LCM stands for Least Common Multiple.",
+   "HCF × LCM equals the product of the two numbers.",
+   "If a divides b, then HCF(a,b) = a.",
+   "The Euclidean algorithm finds HCF quickly.",
+   "Prime factorization yields both HCF and LCM.",
+   "LCM = (a×b)/HCF.",
+   "For coprime numbers, HCF = 1 and LCM = a×b.",
+   "LCM is useful for obtaining a common denominator of fractions.",
+   "HCF gives the largest possible group size in partition problems."
+  ],
+  "map": {
+   "hi": "HCF और LCM",
+   "en": "HCF and LCM",
+   "children": [
+    {
+     "hi": "परिभाषा",
+     "en": "Definition",
+     "children": [
+      {
+       "hi": "HCF दो या अधिक संख्याओं का सबसे बड़ा समान भाजक है",
+       "en": "HCF is the greatest common divisor of two or more numbers"
+      },
+      {
+       "hi": "LCM दो या अधिक संख्याओं का सबसे छोटा समान बहुगुणक है",
+       "en": "LCM is the least common multiple of two or more numbers"
+      }
+     ]
+    },
+    {
+     "hi": "गुणधर्म",
+     "en": "Properties",
+     "children": [
+      {
+       "hi": "HCF × LCM = दो संख्याओं का गुणनफल",
+       "en": "HCF × LCM = product of the two numbers"
+      },
+      {
+       "hi": "यदि a|b तो HCF(a,b)=a",
+       "en": "If a divides b then HCF(a,b)=a"
+      }
+     ]
+    },
+    {
+     "hi": "गणना विधि",
+     "en": "Calculation methods",
+     "children": [
+      {
+       "hi": "प्राइम फैक्टराइज़ेशन से HCF और LCM निकालें",
+       "en": "Use prime factorization to find HCF and LCM"
+      },
+      {
+       "hi": "यूक्लिडियन एल्गोरिदम से HCF तेज़ी से मिलता है",
+       "en": "Euclidean algorithm quickly finds HCF"
+      },
+      {
+       "hi": "LCM = (a×b)/HCF",
+       "en": "LCM = (a×b)/HCF"
+      }
+     ]
+    },
+    {
+     "hi": "उपयोग",
+     "en": "Applications",
+     "children": [
+      {
+       "hi": "भिन्नों को समान हर में लाने के लिए LCM उपयोगी है",
+       "en": "LCM is used to bring fractions to a common denominator"
+      },
+      {
+       "hi": "समस्या में समूह बनाते समय HCF मदद करता है",
+       "en": "HCF helps in grouping problems"
+      }
+     ]
+    },
+    {
+     "hi": "संबंध",
+     "en": "Relation",
+     "children": [
+      {
+       "hi": "यदि a और b सहभाज्य हैं तो HCF=1 और LCM=a×b",
+       "en": "If a and b are coprime then HCF=1 and LCM=a×b"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-hcf_lcm",
+  "s": "maths",
+  "t": "hcf_lcm",
+  "tips_hi": [
+   "HCF × LCM = उत्पाद को याद रखने के लिए \"HCF‑LCM‑उत्पाद\" (HLP) संक्षिप्त रूप का उपयोग करें।",
+   "यदि एक संख्या दूसरी की गुणज है, तो LCM बड़ी संख्या और HCF छोटी संख्या है।",
+   "प्रश्न में \"LCM\" लिखे होने पर भी कभी-कभी \"HCF\" पूछे जाते हैं – पहले शब्द को दोबारा जाँचें।",
+   "यदि दोनों संख्याएँ सहभाज्य (coprime) हैं, तो LCM = गुणनफल; पहले GCD = 1 है या नहीं, यह जाँचें।"
+  ],
+  "tips_en": [
+   "Remember the key identity with the mnemonic \"HCF‑LCM‑Product\" (HLP).",
+   "If one number is a multiple of the other, LCM is the larger number and HCF is the smaller.",
+   "Examiners sometimes swap \"LCM\" and \"HCF\" in the question – double‑check the wording.",
+   "For coprime numbers, LCM equals the product; first verify that GCD = 1 before using the shortcut."
+  ]
+ },
+ {
+  "summary_hi": "दशमलव और भिन्न गणित के दो मूलभूत अभिव्यक्तियों में से हैं, जिनका सही समझना आरआरबी/आरपीएफ परीक्षा में आवश्यक है। दशमलव में प्रत्येक अंक का स्थान मान 10 की शक्ति से निर्धारित होता है, जबकि भिन्न में अंश और हर स्पष्ट रूप से लिखे जाते हैं। किसी दशमलव को भिन्न में बदलने के लिए उसे 10 की उपयुक्त शक्ति से गुणा कर सरलतम रूप में घटाया जाता है, और भिन्न को दशमलव में बदलने के लिए हर को 10 की शक्ति के बराबर बनाकर भाग किया जाता है। समाप्ति (terminating) दशमलव केवल 2 और 5 के गुणकों वाले हर वाले भिन्नों में संभव है, जबकि अन्य में आवर्ती (repeating) दशमलव उत्पन्न होते हैं। भिन्नों के जोड़‑घटाव में समान हर लेना अनिवार्य है, और गुणा‑भाग में सीधे अंश‑हर का संचालन किया जाता है। आवर्ती दशमलव को भिन्न में बदलने के लिए आवर्ती भाग को एक चर मान कर समीकरण बनाकर हल किया जाता है, जिससे तेज़ और सटीक उत्तर मिलता है।",
+  "summary_en": "Decimals and fractions are fundamental representations in mathematics, crucial for RRB/RPF exams. In a decimal each digit’s place value is a power of 10, while a fraction clearly separates numerator and denominator. To convert a decimal to a fraction, multiply by the appropriate power of 10 and simplify; to turn a fraction into a decimal, divide the numerator by a denominator that is a power of 10. Terminating decimals arise only from fractions whose denominators contain only 2 and 5 as prime factors, otherwise the decimal repeats. Adding or subtracting fractions requires a common denominator, whereas multiplication and division operate directly on numerators and denominators. Repeating decimals are converted to fractions by assigning a variable to the repeating part, forming an equation, and solving for the fraction, yielding quick and exact results.",
+  "facts_hi": [
+   "दशमलव में प्रत्येक अंक का मान 10 की शक्ति से निर्धारित होता है",
+   "भिन्न का हर 1 से बड़ा होना चाहिए, अन्यथा वह पूर्णांक बन जाता है",
+   "दशमलव को भिन्न में बदलने के लिए 10, 100, 1000 आदि से गुणा करें",
+   "भिन्न को दशमलव में बदलने के लिए हर को 10 की शक्ति के बराबर बनाकर भाग करें",
+   "केवल 2 और 5 के गुणकों वाले हर वाले भिन्नों में समाप्ति दशमलव मिलता है",
+   "अन्य हर वाले भिन्नों में आवर्ती दशमलव उत्पन्न होते हैं",
+   "भिन्नों का जोड़‑घटाव समान हर लेकर किया जाता है",
+   "भिन्नों का गुणा‑भाग अंश‑हर पर सीधे किया जाता है",
+   "आवर्ती दशमलव को भिन्न में बदलने के लिए समीकरण बनाकर हल करें",
+   "आवर्ती भाग को एक चर मान कर समीकरण में प्रतिस्थापित करें"
+  ],
+  "facts_en": [
+   "Each digit in a decimal represents a power of 10",
+   "A fraction’s denominator must be greater than 1, otherwise it is an integer",
+   "Convert a decimal to a fraction by multiplying with 10, 100, 1000, etc.",
+   "Convert a fraction to a decimal by dividing after making the denominator a power of 10",
+   "Only fractions whose denominators contain 2 and 5 produce terminating decimals",
+   "Fractions with other prime factors yield repeating decimals",
+   "Add or subtract fractions by first finding a common denominator",
+   "Multiply or divide fractions directly on numerators and denominators",
+   "Convert a repeating decimal to a fraction by forming and solving an equation",
+   "Treat the repeating part as a variable when setting up the equation"
+  ],
+  "map": {
+   "hi": "दशमलव व भिन्न",
+   "en": "Decimals & Fractions",
+   "children": [
+    {
+     "hi": "परिचय",
+     "en": "Introduction",
+     "children": [
+      {
+       "hi": "दशमलव का स्थान मान",
+       "en": "Place value in decimals"
+      },
+      {
+       "hi": "भिन्न का मूल रूप",
+       "en": "Basic form of fractions"
+      }
+     ]
+    },
+    {
+     "hi": "रूपांतरण",
+     "en": "Conversion",
+     "children": [
+      {
+       "hi": "दशमलव → भिन्न",
+       "en": "Decimal to fraction"
+      },
+      {
+       "hi": "भिन्न → दशमलव",
+       "en": "Fraction to decimal"
+      }
+     ]
+    },
+    {
+     "hi": "गुणा‑भाग",
+     "en": "Operations",
+     "children": [
+      {
+       "hi": "समान हर पर जोड़/घटाव",
+       "en": "Addition/subtraction with common denominator"
+      },
+      {
+       "hi": "भिन्नों का गुणा‑भाग",
+       "en": "Multiplication/division of fractions"
+      }
+     ]
+    },
+    {
+     "hi": "आवर्ती दशमलव",
+     "en": "Repeating Decimals",
+     "children": [
+      {
+       "hi": "आवर्ती को भिन्न में बदलना",
+       "en": "Convert repeating decimal to fraction"
+      },
+      {
+       "hi": "आवर्ती दशमलव की पहचान",
+       "en": "Identify repeating part"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-decimal_fraction",
+  "s": "maths",
+  "t": "decimal_fraction",
+  "tips_hi": [
+   "दो‑पाँच‑दस स्मरण: हर को 2 और 5 से सरल करने पर ही दशमलव समाप्त होता है।",
+   "पुनरावर्ती दशमलव को भिन्न में बदलने का त्वरित सूत्र: (x = 0.overline{abc}) → (10^n x - x = abc) → (x = \frac{abc}{10^n-1}).",
+   "जाल: हर में 2 या 5 के अलावा कोई अन्य अभाज्य संख्या होने पर दशमलव दोहराता है – हमेशा हर को गुणनखंडित करें।",
+   "2 या 5 के घात वाले हर वाले भिन्नों को जोड़ने/घटाने के लिए: दशमलव में बदलें, जोड़ें, फिर भिन्न में बदलें।",
+   "उत्तर देने से पहले भिन्न को सरल करें; इससे दशमलव में बदलने का समय कम होता है।"
+  ],
+  "tips_en": [
+   "Two‑Five‑Ten mnemonic: If the simplified denominator contains only 2 and 5, the decimal terminates.",
+   "Quick formula for converting a repeating decimal to a fraction: (x = 0.overline{abc}) → (10^n x - x = abc) → (x = \frac{abc}{10^n-1}).",
+   "Trap: If the denominator has any prime other than 2 or 5, the decimal repeats – always factor the denominator.",
+   "For fractions with denominators that are powers of 2 or 5, add/subtract by converting to decimal, performing the operation, then converting back.",
+   "Always simplify the fraction before converting to decimal; it saves time."
+  ]
+ },
+ {
+  "summary_hi": "अनुपात दो संख्याओं के बीच तुलनात्मक संबंध को दर्शाता है और इसे a:b के रूप में लिखा जाता है। जब दो अनुपात बराबर होते हैं तो उन्हें समानुपात कहा जाता है, जिसे a:b = c:d के रूप में दर्शाया जाता है। समानुपात के मूल नियम के अनुसार a/b = c/d होने पर a·d = b·c सत्य होता है। अनुपात को सरल करने के लिए दोनों पदों को उनके महत्तम समापवर्तक से भाग देना चाहिए और स्केलिंग से अनुपात नहीं बदलता। मिश्रित अनुपात कई अनुपातों को गुणा करके बनता है और इसका प्रयोग गति, कार्य, मिश्रण, प्रतिशत आदि में व्यापक रूप से होता है।",
+  "summary_en": "A ratio expresses the comparative relationship between two numbers and is written as a:b. When two ratios are equal they form a proportion, denoted a:b = c:d. The fundamental rule of proportion states that if a/b = c/d then a·d = b·c. To simplify a ratio, divide both terms by their greatest common divisor, and scaling does not change the ratio itself. A compound ratio is obtained by multiplying several ratios, and ratios are widely used in speed, work, mixture, percentage and other contexts.",
+  "facts_hi": [
+   "अनुपात दो संख्याओं के बीच तुलनात्मक संबंध है।",
+   "समानुपात में दो अनुपात बराबर होते हैं।",
+   "a:b = c:d को चार पदों का समानुपात कहा जाता है।",
+   "समानुपात के नियम: यदि a/b = c/d तो a·d = b·c।",
+   "अनुपात को सरल करने के लिए महत्तम समापवर्तक (GCD) से भाग दें।",
+   "मिश्रित अनुपात दो या अधिक अनुपातों को जोड़कर बनता है।",
+   "अनुपात का उलटा (reciprocal) लेना समानुपात को नहीं बदलता।",
+   "अनुपात में स्केलिंग (समान गुणक) से मान बदलते हैं पर अनुपात नहीं।",
+   "अनुपात का प्रयोग गति, कार्य, मिश्रण, प्रतिशत आदि में होता है।"
+  ],
+  "facts_en": [
+   "A ratio expresses the comparative relationship between two numbers.",
+   "In a proportion, two ratios are equal.",
+   "a:b = c:d is called a continued proportion of four terms.",
+   "Proportion rule: if a/b = c/d then a·d = b·c.",
+   "Simplify a ratio by dividing both terms by their greatest common divisor.",
+   "A compound ratio is formed by multiplying two or more ratios.",
+   "Taking the reciprocal of a ratio does not alter the proportion.",
+   "Scaling a ratio by a common factor changes the terms but not the ratio.",
+   "Ratios are used in speed, work, mixture, percentage, etc."
+  ],
+  "map": {
+   "hi": "अनुपात व समानुपात",
+   "en": "Ratio & Proportion",
+   "children": [
+    {
+     "hi": "परिभाषा",
+     "en": "Definition",
+     "children": [
+      {
+       "hi": "अनुपात: दो संख्याओं का तुलनात्मक संबंध",
+       "en": "Ratio: comparative relation of two numbers"
+      },
+      {
+       "hi": "समानुपात: दो अनुपातों की बराबरी",
+       "en": "Proportion: equality of two ratios"
+      }
+     ]
+    },
+    {
+     "hi": "नियम और सूत्र",
+     "en": "Rules & Formulas",
+     "children": [
+      {
+       "hi": "यदि a/b = c/d तो a·d = b·c",
+       "en": "If a/b = c/d then a·d = b·c"
+      },
+      {
+       "hi": "अनुपात को सरल करने के लिए GCD से भाग दें",
+       "en": "Simplify ratio by GCD"
+      }
+     ]
+    },
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "सरल अनुपात",
+       "en": "Simple ratio"
+      },
+      {
+       "hi": "संयुक्त अनुपात",
+       "en": "Compound ratio"
+      },
+      {
+       "hi": "उलटा अनुपात",
+       "en": "Reciprocal ratio"
+      }
+     ]
+    },
+    {
+     "hi": "अनुप्रयोग",
+     "en": "Applications",
+     "children": [
+      {
+       "hi": "गति, कार्य, मिश्रण, प्रतिशत",
+       "en": "Speed, work, mixture, percentage"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-ratio_proportion",
+  "s": "maths",
+  "t": "ratio_proportion",
+  "tips_hi": [
+   "स्मरणीय क्रॉस‑मल्टिप्लिकेशन: 'आधार दोगुना बराबर बंधा गुणा' (AD = BC) याद रखें।",
+   "बड़े संख्याओं से बचने के लिए, पहले सामान्य गुणकों को काटें, फिर गुणा करें।",
+   "परीक्षक अक्सर अंश और हर को उलट देते हैं; हमेशा जाँचें कि पहला संख्या अंश है।",
+   "संयुक्त अनुपात के लिए, हर चरण में सरल करें: (a:b)·(c:d) = (a·c):(b·d) → सरल करें।"
+  ],
+  "tips_en": [
+   "Remember cross‑multiplication with the mnemonic: 'AD = BC' (A times D equals B times C).",
+   "To avoid huge numbers, cancel common factors before multiplying.",
+   "Examiners often swap numerator and denominator; always verify the first number is the numerator.",
+   "For compound ratios, simplify after each multiplication: (a:b)·(c:d) = (a·c):(b·d) → reduce."
+  ]
+ },
+ {
+  "summary_hi": "औसत वह मान है जो किसी समूह के सभी संख्याओं को जोड़कर, उनकी कुल संख्या से भाग देने पर प्राप्त होता है। यह सबसे बुनियादी सांख्यिकीय माप है और परीक्षा में अक्सर कुल, भागफल या अनुपात के रूप में पूछा जाता है। अंकगणितीय औसत सबसे सामान्य प्रकार है, जबकि भारित और हार्मोनिक औसत विशेष परिस्थितियों में उपयोग होते हैं। यदि सभी मानों में समान संख्या जोड़ी या घटाई जाए तो औसत भी उसी मात्रा से बदलता है। किसी एक मान में परिवर्तन का औसत पर प्रभाव उस परिवर्तन के अनुपात में होता है। अंकगणितीय प्रगति में पहले और अंतिम पद का औसत ही सभी पदों का औसत होता है।",
+  "summary_en": "The average is the value obtained by adding all numbers in a set and dividing by the count of numbers. It is the fundamental measure of central tendency and frequently appears in exams as totals, quotients or ratios. The arithmetic mean is the most common type, while weighted and harmonic means are used in special cases. Adding or subtracting the same amount to every value shifts the average by that amount. Changing a single value affects the average proportionally to the change. In an arithmetic progression, the average of all terms equals the average of the first and last terms.",
+  "facts_hi": [
+   "औसत (Mean) किसी समूह के सभी मानों का कुल योग को मानों की संख्या से भाग देकर प्राप्त होता है।",
+   "अंकगणितीय औसत सबसे सामान्य प्रकार है और इसे (Σxi)/n से दर्शाते हैं।",
+   "भारित औसत में प्रत्येक मान को उसके भार से गुणा कर कुल योग को भारों के योग से भाग देते हैं।",
+   "हार्मोनिक औसत का प्रयोग तब होता है जब मानों का प्रतिलोम लेना आवश्यक हो, सूत्र n/Σ(1/xi) है।",
+   "यदि सभी मानों में समान संख्या जोड़ दी जाये तो औसत भी उसी संख्या से बढ़ेगा।",
+   "यदि सभी मानों में समान संख्या घटा दी जाये तो औसत भी उसी से घटेगा।",
+   "एक मान बदलने से औसत पर प्रभाव उस मान के परिवर्तन के अनुपात में होता है।",
+   "अंकगणितीय औसत, माध्य (median) और बहुलक (mode) तीनों अलग-अलग माप हैं।",
+   "किसी समानांतर श्रेणी (AP) में n पदों का औसत पहले और अंतिम पद का औसत होता है।",
+   "परीक्षा में औसत से संबंधित प्रश्न अक्सर कुल, भागफल, अनुपात या शर्तीय परिवर्तन के रूप में आते हैं।"
+  ],
+  "facts_en": [
+   "The mean of a set is obtained by dividing the sum of all values by the number of values.",
+   "The arithmetic mean is the most common type and is expressed as (Σxi)/n.",
+   "In a weighted mean each value is multiplied by its weight, and the total is divided by the sum of the weights.",
+   "The harmonic mean is used when reciprocals are needed; its formula is n/Σ(1/xi).",
+   "Adding the same number to every value increases the mean by that number.",
+   "Subtracting the same number from every value decreases the mean by that number.",
+   "Changing a single value affects the mean proportionally to the magnitude of the change.",
+   "Arithmetic mean, median, and mode are three different measures of central tendency.",
+   "In an arithmetic progression, the mean of n terms equals the average of the first and last term.",
+   "Exam questions on average often appear as totals, quotients, ratios, or conditional changes."
+  ],
+  "map": {
+   "hi": "औसत",
+   "en": "Average",
+   "children": [
+    {
+     "hi": "परिभाषा",
+     "en": "Definition",
+     "children": [
+      {
+       "hi": "औसत का अर्थ",
+       "en": "Meaning of average"
+      },
+      {
+       "hi": "सभी मानों का योग",
+       "en": "Sum of all values"
+      }
+     ]
+    },
+    {
+     "hi": "सूत्र",
+     "en": "Formula",
+     "children": [
+      {
+       "hi": "Mean = Σxi / n",
+       "en": "Mean = Σxi / n"
+      },
+      {
+       "hi": "Weighted Mean = Σwi·xi / Σwi",
+       "en": "Weighted Mean = Σwi·xi / Σwi"
+      }
+     ]
+    },
+    {
+     "hi": "प्रकार",
+     "en": "Types",
+     "children": [
+      {
+       "hi": "अंकगणितीय औसत",
+       "en": "Arithmetic mean"
+      },
+      {
+       "hi": "भारित औसत",
+       "en": "Weighted mean"
+      },
+      {
+       "hi": "हार्मोनिक औसत",
+       "en": "Harmonic mean"
+      }
+     ]
+    },
+    {
+     "hi": "गुणधर्म",
+     "en": "Properties",
+     "children": [
+      {
+       "hi": "समान अंतर जोड़ने पर औसत बढ़ता",
+       "en": "Mean increases by same amount added"
+      },
+      {
+       "hi": "एक मान बदलने पर औसत पर प्रभाव",
+       "en": "Effect on mean when a single value changes"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-average",
+  "s": "maths",
+  "t": "average",
+  "tips_hi": [
+   "पहला + आख़िरी = 2 × औसत",
+   "सभी में X जोड़ें → औसत में X जुड़ जाएगा",
+   "वज़न समान होने पर वज़नित औसत = साधारण औसत",
+   "औसत के अनुपात पूछते समय, पहले यह देखें कि क्या यह 'कुल औसत' है या 'औसत का औसत'"
+  ],
+  "tips_en": [
+   "First + Last = 2 × Mean",
+   "Add X to every value → Mean increases by X",
+   "If all weights are equal, weighted mean equals ordinary mean",
+   "When asked for ratio of averages, first check whether it’s the mean of totals or mean of means"
+  ]
+ },
+ {
+  "summary_hi": "लाभ व हानि गणित में व्यापारिक लेन‑देन के मूलभूत सिद्धांत हैं। लागत मूल्य (CP) वह राशि है जो वस्तु खरीदने में खर्च होती है, जबकि बिक्री मूल्य (SP) वह राशि है जिस पर वस्तु बेची जाती है। यदि SP, CP से अधिक हो तो लाभ होता है, जिसका मान SP – CP से मिलता है; यदि CP, SP से अधिक हो तो हानि होती है, जिसका मान CP – SP से मिलता है। लाभ या हानि को प्रतिशत में व्यक्त करने के लिये क्रमशः (लाभ ÷ CP)×100 और (हानि ÷ CP)×100 सूत्र प्रयोग होते हैं। इन प्रतिशतों से CP या SP को पुनः निकालने के लिये SP = CP×(1+लाभ%/100) तथा CP = SP×100/(100–हानि%) जैसे रूपान्तरण उपयोगी होते हैं। अतिरिक्त रूप से डिस्काउंट और मार्कअप के सूत्र भी लाभ‑हानि के संदर्भ में अक्सर पूछे जाते हैं।",
+  "summary_en": "Profit and loss form the basic arithmetic of commercial transactions. The cost price (CP) is the amount paid to acquire an item, while the selling price (SP) is the amount received on sale. When SP exceeds CP, a profit arises equal to SP − CP; conversely, when CP exceeds SP, a loss occurs equal to CP − SP. Profit or loss expressed as a percentage uses the formulas (Profit ÷ CP) × 100 and (Loss ÷ CP) × 100 respectively. These percentages allow us to reverse‑calculate CP or SP: SP = CP × (1 + Profit%/100) and CP = SP × 100/(100 − Loss%). Additionally, discount and markup formulas are frequently linked to profit‑loss concepts in exam questions.",
+  "facts_hi": [
+   "लागत मूल्य (CP) वह राशि है जो वस्तु खरीदने में खर्च होती है।",
+   "बिक्री मूल्य (SP) वह राशि है जिस पर वस्तु बेची जाती है।",
+   "लाभ तब होता है जब SP > CP, और लाभ = SP – CP।",
+   "हानि तब होती है जब CP > SP, और हानि = CP – SP।",
+   "लाभ प्रतिशत = (लाभ ÷ CP) × 100।",
+   "हानि प्रतिशत = (हानि ÷ CP) × 100।",
+   "यदि लाभ प्रतिशत ज्ञात हो तो SP = CP × (1 + लाभ%/100)।",
+   "यदि हानि प्रतिशत ज्ञात हो तो CP = SP × 100/(100 – हानि%)।",
+   "डिस्काउंट = (डिस्काउंट% × मूल मूल्य)/100, और अंतिम बिक्री मूल्य = मूल मूल्य – डिस्काउंट।",
+   "मार्कअप = CP पर लाभ प्रतिशत, जिससे नया बिक्री मूल्य प्राप्त होता है।"
+  ],
+  "facts_en": [
+   "Cost Price (CP) is the amount spent to purchase an item.",
+   "Selling Price (SP) is the amount at which the item is sold.",
+   "Profit occurs when SP > CP, and profit = SP – CP.",
+   "Loss occurs when CP > SP, and loss = CP – SP.",
+   "Profit percentage = (Profit ÷ CP) × 100.",
+   "Loss percentage = (Loss ÷ CP) × 100.",
+   "If profit percent is known, SP = CP × (1 + profit%/100).",
+   "If loss percent is known, CP = SP × 100/(100 – loss%).",
+   "Discount = (Discount% × marked price)/100, and final selling price = marked price – discount.",
+   "Markup is profit percent on CP, giving a new selling price."
+  ],
+  "map": {
+   "hi": "लाभ व हानि",
+   "en": "Profit & Loss",
+   "children": [
+    {
+     "hi": "परिभाषाएँ",
+     "en": "Definitions",
+     "children": [
+      {
+       "hi": "Cost Price (CP) – वस्तु की खरीद कीमत",
+       "en": "Cost Price (CP) – purchase cost of an item"
+      },
+      {
+       "hi": "Selling Price (SP) – वस्तु की बिक्री कीमत",
+       "en": "Selling Price (SP) – selling price of an item"
+      },
+      {
+       "hi": "Profit – SP > CP, अंतर",
+       "en": "Profit – when SP > CP, the difference"
+      }
+     ]
+    },
+    {
+     "hi": "सूत्र",
+     "en": "Formulas",
+     "children": [
+      {
+       "hi": "Profit = SP – CP",
+       "en": "Profit = SP – CP"
+      },
+      {
+       "hi": "Loss = CP – SP",
+       "en": "Loss = CP – SP"
+      },
+      {
+       "hi": "Profit% = (Profit/CP) × 100",
+       "en": "Profit% = (Profit/CP) × 100"
+      }
+     ]
+    },
+    {
+     "hi": "प्रतिशत गणना",
+     "en": "Percentage Calculations",
+     "children": [
+      {
+       "hi": "Loss% = (Loss/CP) × 100",
+       "en": "Loss% = (Loss/CP) × 100"
+      },
+      {
+       "hi": "यदि SP ज्ञात हो तो CP = SP × 100/(100+Profit%)",
+       "en": "If SP is known, CP = SP × 100/(100+Profit%)"
+      },
+      {
+       "hi": "यदि CP ज्ञात हो तो SP = CP × (1 + Profit%/100)",
+       "en": "If CP is known, SP = CP × (1 + Profit%/100)"
+      }
+     ]
+    },
+    {
+     "hi": "विशेष मामलों",
+     "en": "Special Cases",
+     "children": [
+      {
+       "hi": "Discount = (Discount% × MRP)/100",
+       "en": "Discount = (Discount% × MRP)/100"
+      },
+      {
+       "hi": "Markup = Profit% of CP",
+       "en": "Markup = Profit% of CP"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-profit_loss",
+  "s": "maths",
+  "t": "profit_loss",
+  "tips_hi": [
+   "लाभ या हानि की गणना पहले करें, फिर प्रतिशत निकालें।",
+   "SP = CP × (100 + P%) / 100 और CP = SP × 100 / (100 – L%) – यह तेज़ सूत्र है।",
+   "प्रश्न में Profit%, Markup% और Discount% को एक-दूसरे से गड़बड़ न करें।",
+   "जवाब देने से पहले यह जाँच लें कि सवाल CP पूछ रहा है या SP।"
+  ],
+  "tips_en": [
+   "Compute profit or loss first, then find the percentage.",
+   "Use the quick formulas: SP = CP × (100 + P%) / 100 and CP = SP × 100 / (100 – L%).",
+   "Never mix up Profit %, Markup % and Discount % in a question.",
+   "Before answering, verify whether the problem asks for CP or SP."
+  ]
+ },
+ {
+  "summary_hi": "साधारण ब्याज वह ब्याज है जो केवल मूलधन पर ही लगाया जाता है और इसका सूत्र I = P·R·T/100 है, जहाँ P मूलधन, R वार्षिक दर और T समय (वर्ष) है। कुल राशि = P+I = P(1+R·T/100)। चक्रवृद्धि ब्याज में प्रत्येक अवधि के अंत में अर्जित ब्याज को मूलधन में जोड़ दिया जाता है, जिससे अगली अवधि में अधिक ब्याज मिलता है। चक्रवृद्धि ब्याज की राशि का सामान्य सूत्र A = P(1+R/n·100)^{n·T} है, जहाँ n अवधि की संख्या है; वार्षिक चक्रवृद्धि के लिये n=1। प्रभावी वार्षिक दर (EAR) = (1+R/n)^{n}-1 से निकाली जाती है और निरंतर चक्रवृद्धि के लिये A = Pe^{R·T} प्रयोग होता है। दोनों प्रकार के ब्याज की तुलना करते समय समय, दर और आवृत्ति को सही रूप में प्रयोग करना आवश्यक है।",
+  "summary_en": "Simple interest is calculated only on the principal and uses the formula I = P·R·T/100, where P is principal, R the annual rate and T the time in years. The total amount becomes P+I = P(1+R·T/100). Compound interest adds the accrued interest to the principal each period, so the next period earns interest on a larger sum. Its general formula is A = P(1+R/n·100)^{n·T}, with n denoting the number of compounding periods per year (n=1 for yearly). The effective annual rate is (1+R/n)^{n}-1, and for continuous compounding A = Pe^{R·T}. When comparing the two, it is crucial to handle time, rate and frequency correctly.",
+  "facts_hi": [
+   "साधारण ब्याज का सूत्र I = P·R·T/100 है।",
+   "साधारण ब्याज में कुल राशि = P(1+R·T/100) होती है।",
+   "चक्रवृद्धि ब्याज की राशि A = P(1+R/(100n))^{nT} से निकाली जाती है (R प्रतिशत में)।",
+   "वार्षिक चक्रवृद्धि में n=1, अर्धवार्षिक में n=2, त्रैमासिक में n=4, मासिक में n=12।",
+   "प्रभावी वार्षिक दर (EAR) = (1+R/(100n))^{n} - 1 है (R प्रतिशत में)।",
+   "निरंतर चक्रवृद्धि के लिये A = P·e^{R·T} प्रयोग होता है।",
+   "साधारण ब्याज रैखिक वृद्धि देता है, जबकि चक्रवृद्धि ब्याज घातीय वृद्धि देता है।",
+   "ब्याज दर को प्रतिशत से दशमलव में बदलने के लिये 100 से भाग दें।",
+   "समय को हमेशा वर्ष में बदलना आवश्यक है।",
+   "भविष्य मूल्य की गणना में n·T को कुल अवधियों की संख्या माना जाता है।"
+  ],
+  "facts_en": [
+   "Simple interest uses the formula I = P·R·T/100.",
+   "In simple interest the total amount equals P(1+R·T/100).",
+   "Compound amount is given by A = P(1+R/(100n))^{nT}, with R expressed as a percentage.",
+   "For yearly compounding n=1, semi‑annual n=2, quarterly n=4, monthly n=12.",
+   "Effective annual rate (EAR) equals (1+R/(100n))^{n} - 1, with R expressed as a percentage.",
+   "Continuous compounding uses A = P·e^{R·T}.",
+   "Simple interest grows linearly, compound interest grows exponentially.",
+   "Convert a percentage rate to decimal by dividing by 100.",
+   "Time must always be expressed in years.",
+   "In future‑value calculations n·T is the total number of compounding periods."
+  ],
+  "map": {
+   "hi": "ब्याज",
+   "en": "Interest",
+   "children": [
+    {
+     "hi": "साधारण ब्याज",
+     "en": "Simple Interest",
+     "children": [
+      {
+       "hi": "सूत्र",
+       "en": "Formula"
+      },
+      {
+       "hi": "कुल राशि",
+       "en": "Total Amount"
+      },
+      {
+       "hi": "उदाहरण",
+       "en": "Example"
+      }
+     ]
+    },
+    {
+     "hi": "चक्रवृद्धि ब्याज",
+     "en": "Compound Interest",
+     "children": [
+      {
+       "hi": "सूत्र",
+       "en": "Formula"
+      },
+      {
+       "hi": "आवृत्ति",
+       "en": "Frequency"
+      },
+      {
+       "hi": "प्रभावी दर",
+       "en": "Effective Rate"
+      }
+     ]
+    },
+    {
+     "hi": "तुलना एवं अनुप्रयोग",
+     "en": "Comparison & Applications",
+     "children": [
+      {
+       "hi": "रैखिक बनाम घातीय",
+       "en": "Linear vs Exponential"
+      },
+      {
+       "hi": "वित्तीय योजना",
+       "en": "Financial Planning"
+      },
+      {
+       "hi": "भविष्य मूल्य",
+       "en": "Future Value"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-si_ci",
+  "s": "maths",
+  "t": "si_ci",
+  "tips_hi": [
+   "पीआरटी – सरल ब्याज के सूत्र में P, R, T के क्रम को याद रखने के लिए ‘पीआरटी’ का उपयोग करें।",
+   "72 का नियम – ब्याज दर R% पर धन दोगुना होने का समय लगभग 72/R वर्ष होता है।",
+   "कम्पाउंडिंग फ़्रीक्वेंसी पर ध्यान दें – यदि प्रश्न में ‘कम्पाउंडिंग’ का उल्लेख नहीं है तो सरल ब्याज मानें; यदि ‘कम्पाउंडिंग’ है तो n को स्पष्ट रूप से देखें।",
+   "लॉग का उपयोग करके समय निकालें – यदि A, P, R, n ज्ञात हैं और T चाहिए तो T = ln(A/P) / [n ln(1+R/(100n))] का उपयोग करें।"
+  ],
+  "tips_en": [
+   "P R T – Remember the order of variables in simple interest: I = P·R·T/100; use the mnemonic 'P R T' to keep the sequence straight.",
+   "Rule of 72 – Roughly estimate doubling time as 72 divided by the annual rate R%. Handy for quick mental checks.",
+   "Check compounding frequency – If the question doesn’t specify compounding, assume simple interest; if it says compounding, be sure to note the value of n.",
+   "Use logarithms for time – When A, P, R, n are known and you need T, compute T = ln(A/P) / [n ln(1+R/(100n))]."
+  ]
+ },
+ {
+  "summary_hi": "समय व कार्य खंड में कार्य को दर और समय के गुणनफल के रूप में परिभाषित किया जाता है। दर का अर्थ है एक इकाई समय में किया गया कार्य, और यह कार्य को समय से विभाजित करके प्राप्त होता है। कई व्यक्तियों या मशीनों के संयुक्त कार्य में व्यक्तिगत दरों का योग लिया जाता है, जिससे कुल कार्य समय घट जाता है। कार्य‑समय संबंध प्रतिलोम होता है; दक्षता बढ़ने पर आवश्यक समय घटता है। कार्य‑वेतन का सीधा अनुपात होता है, इसलिए अधिक कार्य अधिक वेतन देता है। विशेष प्रश्नों में पाइप भरना‑खाली करना, विश्राम दिवस और लघुतम समापवर्त्य जैसी तकनीकें लागू होती हैं। इन सिद्धांतों को याद रखकर विभिन्न प्रकार के समय‑कार्य प्रश्नों को तेज़ी से हल किया जा सकता है।",
+  "summary_en": "Time & Work treats work as the product of rate and time. The rate is the amount of work done per unit time, obtained by dividing work by time. For combined work of several persons or machines, the total rate is the sum of individual rates, reducing the overall time required. Time and efficiency are inversely related; higher efficiency means less time. Work and wages are directly proportional, so more work yields higher pay. Special problem types involve pipe filling‑emptying, rest days, and using the least common multiple for fractional work. Mastering these concepts enables quick solving of diverse Time‑Work questions.",
+  "facts_hi": [
+   "कार्य = दर × समय।",
+   "दर = कार्य / समय।",
+   "समय = कार्य / दर।",
+   "कई लोगों की संयुक्त दर व्यक्तिगत दरों का योग होती है।",
+   "समय और दक्षता प्रतिलोम अनुपाती होते हैं।",
+   "यदि दो लोग अलग-अलग समय में काम पूरा करते हैं, तो उनका संयुक्त समय = (t1×t2)/(t1+t2)।",
+   "कार्य‑वेतन सीधे अनुपात में होते हैं; अधिक कार्य = अधिक वेतन।",
+   "पाइप भरने‑खाली करने के प्रश्न में भरने की दर और खाली करने की दर का अंतर लेना चाहिए।",
+   "यदि कोई व्यक्ति कुछ दिनों में काम करता है और कुछ दिनों में नहीं, तो कुल कार्य = (काम करने वाले दिनों की संख्या) × (प्रति दिन दर)।",
+   "लघु अंशों को हल करने के लिए अक्सर कार्य का लघुतम समापवर्त्य (LCM) निकालना पड़ता है।"
+  ],
+  "facts_en": [
+   "Work = Rate × Time.",
+   "Rate = Work / Time.",
+   "Time = Work / Rate.",
+   "The combined rate of several people equals the sum of their individual rates.",
+   "Time and efficiency are inversely proportional.",
+   "If two workers finish the job in t1 and t2 days separately, their combined time = (t1×t2)/(t1+t2).",
+   "Wage is directly proportional to work done; more work means higher pay.",
+   "In pipe filling‑emptying problems, subtract the emptying rate from the filling rate.",
+   "When a person works on some days and rests on others, total work = (number of working days) × (daily rate).",
+   "Solving fractional work problems often requires finding the least common multiple (LCM) of denominators."
+  ],
+  "map": {
+   "hi": "समय व कार्य",
+   "en": "Time & Work",
+   "children": [
+    {
+     "hi": "मूलभूत सूत्र",
+     "en": "Basic Formulas",
+     "children": [
+      {
+       "hi": "कार्य = दर × समय",
+       "en": "Work = Rate × Time"
+      },
+      {
+       "hi": "दर = कार्य / समय",
+       "en": "Rate = Work / Time"
+      },
+      {
+       "hi": "समय = कार्य / दर",
+       "en": "Time = Work / Rate"
+      }
+     ]
+    },
+    {
+     "hi": "संयुक्त कार्य",
+     "en": "Combined Work",
+     "children": [
+      {
+       "hi": "कई लोगों की कुल दर = व्यक्तिगत दरों का योग",
+       "en": "Total rate of several persons = sum of individual rates"
+      },
+      {
+       "hi": "समय = कार्य / कुल दर",
+       "en": "Time = Work / total rate"
+      }
+     ]
+    },
+    {
+     "hi": "दक्षता और समय",
+     "en": "Efficiency & Time",
+     "children": [
+      {
+       "hi": "समय और दक्षता प्रतिलोम अनुपाती",
+       "en": "Time and efficiency are inversely proportional"
+      },
+      {
+       "hi": "एक व्यक्ति की दक्षता = 1 / (उसका समय)",
+       "en": "Efficiency of a person = 1 / (their time to complete work)"
+      }
+     ]
+    },
+    {
+     "hi": "कार्य‑वेतन संबंध",
+     "en": "Work‑Wage Relation",
+     "children": [
+      {
+       "hi": "वेतन सीधे कार्य के अनुपात में",
+       "en": "Wage is directly proportional to work done"
+      }
+     ]
+    },
+    {
+     "hi": "विशेष प्रश्न प्रकार",
+     "en": "Special Types of Problems",
+     "children": [
+      {
+       "hi": "पाइप भरना‑खाली करना",
+       "en": "Filling and emptying of pipes"
+      },
+      {
+       "hi": "काम में विश्राम दिवस",
+       "en": "Work with rest days"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-time_work",
+  "s": "maths",
+  "t": "time_work",
+  "tips_hi": [
+   "एमडीएस: दो समय को गुणा करें, फिर उनके योग से भाग दें, इससे संयुक्त समय मिलता है।",
+   "भिन्नों को हटाने के लिए हर के लघुत्तम समापवर्तक (LCM) का उपयोग करें।",
+   "वेतन भ्रम: क्या यह प्रति कार्य इकाई पर है या प्रति समय इकाई पर? यदि प्रति कार्य, तो पहले कार्य निकालें।",
+   "दर जोड़ने से पहले इकाइयों की जाँच करें; समान इकाई में बदलें।"
+  ],
+  "tips_en": [
+   "MDS: Multiply the two individual times, then divide by their sum to get combined time.",
+   "Use LCM of denominators to eliminate fractions early.",
+   "Wage confusion: Is it per unit of work or per unit of time? Compute work first if per work.",
+   "Always verify units before adding rates; convert to same unit."
+  ]
+ },
+ {
+  "summary_hi": "समय, चाल और दूरी का सम्बन्ध गति = दूरी/समय के सूत्र से निर्धारित होता है। इस मूलभूत सूत्र को पुनर्व्यवस्थित करके समय = दूरी/गति तथा दूरी = गति×समय प्राप्त होते हैं, जो सभी प्रकार के प्रश्नों में प्रयोग होते हैं। समान गति में चलने वाले वस्तु का औसत गति कुल दूरी को कुल समय से विभाजित करके निकाला जाता है। दो वस्तुओं की सापेक्ष गति दिशा के अनुसार अलग होती है: समान दिशा में गति का अंतर और विपरीत दिशा में गति का योग। इकाई परिवर्तन, जैसे km/h को m/s में बदलना (1 km/h ≈ 0.27778 m/s) तथा समय को घंटे‑मिनट‑सेकंड में बदलना, परीक्षा में अक्सर पूछे जाते हैं। स्थिर चाल के ग्राफ़ में दूरी‑समय रेखा की ढाल वही चाल होती है, जिससे ग्राफ़िक प्रश्न आसानी से हल होते हैं।",
+  "summary_en": "Time, speed and distance are linked by the fundamental relation speed = distance ÷ time. Rearranging gives time = distance ÷ speed and distance = speed × time, which are used in virtually every problem. For uniform motion, average speed is obtained by dividing total distance by total time. Relative speed depends on direction: it is the difference of speeds when moving in the same direction and the sum when moving oppositely. Unit conversions, such as converting km/h to m/s (1 km/h ≈ 0.27778 m/s) and converting hours‑minutes‑seconds, are frequently tested. In a constant‑speed distance‑time graph, the line’s slope equals the speed, simplifying graphical questions.",
+  "facts_hi": [
+   "गति (Speed) = दूरी / समय.",
+   "समय = दूरी / गति.",
+   "दूरी = गति × समय.",
+   "समान गति में चलने वाले वस्तु का औसत गति = कुल दूरी / कुल समय.",
+   "समान दिशा में दो वस्तुओं की सापेक्ष गति = बड़ी गति – छोटी गति.",
+   "विपरीत दिशा में दो वस्तुओं की सापेक्ष गति = दोनों गति का योग.",
+   "1 किमी/घंटा = 1000 मी/3600 सेकंड ≈ 0.27778 मी/से.",
+   "समय (घंटा) को मिनट में बदलने के लिये 60 से गुणा करें; मिनट को सेकंड में बदलने के लिये 60 से गुणा करें.",
+   "यदि गति स्थिर है तो ग्राफ़ एक सीधी रेखा होगी, ढाल = गति.",
+   "गति, दूरी, समय में से किसी एक को निकालने के लिये दो ज्ञात मानों को सूत्र में रखें."
+  ],
+  "facts_en": [
+   "Speed = distance ÷ time.",
+   "Time = distance ÷ speed.",
+   "Distance = speed × time.",
+   "For uniform motion, average speed = total distance ÷ total time.",
+   "Relative speed of two objects moving in the same direction = larger speed minus smaller speed.",
+   "Relative speed of two objects moving in opposite directions = sum of their speeds.",
+   "1 km/h = 1000 m / 3600 s ≈ 0.27778 m/s.",
+   "Convert hours to minutes by multiplying by 60; minutes to seconds by multiplying by 60.",
+   "With constant speed, the graph is a straight line; slope = speed.",
+   "To find any one of speed, distance, or time, plug the known two values into the appropriate formula."
+  ],
+  "map": {
+   "hi": "समय‑चाल‑दूरी",
+   "en": "Time‑Speed‑Distance",
+   "children": [
+    {
+     "hi": "परिभाषाएँ",
+     "en": "Definitions",
+     "children": [
+      {
+       "hi": "गति = दूरी/समय",
+       "en": "Speed = distance/time"
+      },
+      {
+       "hi": "समय = दूरी/गति",
+       "en": "Time = distance/speed"
+      },
+      {
+       "hi": "दूरी = गति×समय",
+       "en": "Distance = speed×time"
+      }
+     ]
+    },
+    {
+     "hi": "सूत्र",
+     "en": "Formulas",
+     "children": [
+      {
+       "hi": "औसत गति = कुल दूरी/कुल समय",
+       "en": "Average speed = total distance/total time"
+      },
+      {
+       "hi": "समान दिशा में सापेक्ष गति = बड़ी गति – छोटी गति",
+       "en": "Relative speed (same direction) = larger speed – smaller speed"
+      },
+      {
+       "hi": "विपरीत दिशा में सापेक्ष गति = दोनों गति का योग",
+       "en": "Relative speed (opposite direction) = sum of speeds"
+      }
+     ]
+    },
+    {
+     "hi": "इकाई परिवर्तन",
+     "en": "Unit conversion",
+     "children": [
+      {
+       "hi": "1 km/h = 0.27778 m/s",
+       "en": "1 km/h = 0.27778 m/s"
+      },
+      {
+       "hi": "घंटा → मिनट (×60), मिनट → सेकंड (×60)",
+       "en": "Hour → minute (×60), minute → second (×60)"
+      }
+     ]
+    },
+    {
+     "hi": "ग्राफ़िक अंतर्दृष्टि",
+     "en": "Graphical insight",
+     "children": [
+      {
+       "hi": "स्थिर चाल में दूरी‑समय ग्राफ़ सीधी रेखा, ढाल = गति",
+       "en": "Uniform motion gives a straight line on distance‑time graph; slope = speed"
+      },
+      {
+       "hi": "वक्रता दर्शाती है त्वरण",
+       "en": "Curvature indicates acceleration"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-time_speed_distance",
+  "s": "maths",
+  "t": "time_speed_distance",
+  "tips_hi": [
+   "किलोमीटर/घंटा से मीटर/सेकंड में बदलने के लिए 5/18 से गुणा करें, 1000/3600 की बजाय।",
+   "सापेक्ष गति में दिशा पहले देखें: एक ही दिशा में चलने पर घटाएँ, विपरीत दिशा में चलने पर जोड़ें।",
+   "यदि दूरी दो हिस्सों में दी गई है, तो पहले कुल दूरी निकालें, फिर कुल समय से भाग देकर औसत गति निकालें।",
+   "समय को घंटे‑मिनट में दिया हो तो मिनट को 60 से भाग देकर घंटे के अंश में बदलें, फिर फ़ॉर्मूला में डालें।",
+   "सभी इकाइयों की जाँच करें: दूरी km में और गति km/h में → समय घंटे में; दूरी km में और गति m/s में → दूरी को मीटर में बदलें।"
+  ],
+  "tips_en": [
+   "To convert km/h to m/s, multiply by 5/18 instead of doing 1000/3600.",
+   "For relative speed, first check direction: subtract when moving same way, add when moving opposite.",
+   "If distance is given in two parts, add them first to get total distance, then divide by total time for average speed.",
+   "When time is given in hours and minutes, convert minutes to a fraction of an hour (minutes/60) before using the formula.",
+   "Always verify units: distance in km with speed in km/h gives time in hours; if speed is in m/s, convert distance to meters first."
+  ]
+ },
+ {
+  "summary_hi": "क्षेत्रमिति गणित का वह भाग है जिसमें समतल और ठोस आकृतियों के क्षेत्रफल, परिधि, सतह क्षेत्रफल और आयतन की गणना की जाती है। परीक्षा में अक्सर त्रिभुज, आयत, वर्ग, वृत्त तथा घन, सिलिंडर, गोलक और शंकु के सूत्र पूछे जाते हैं। प्रत्येक आकृति के लिये मूलभूत सूत्र याद रखना तेज़ गणना में मदद करता है। π का मान 22/7 या 3.1416 प्रयोग किया जाता है। त्रिभुज का क्षेत्रफल आधा आधार गुणा ऊँचाई, आयत का लम्बाई×चौड़ाई, और वृत्त का πr² होता है। घन का सतह क्षेत्रफल 6a² तथा आयतन a³, सिलिंडर का सतह 2πr(r+h) और आयतन πr²h, गोलक का सतह 4πr² और आयतन 4/3πr³ होते हैं। शंकु का आयतन 1/3πr²h तथा सतह πr(r+√(r²+h²)) है। इन सूत्रों को सही क्रम में लिखना और इकाइयों का ध्यान रखना परीक्षा में अंक सुरक्षित करने की कुंजी है।",
+  "summary_en": "Mensuration deals with calculating area, perimeter, surface area and volume of plane and solid figures. Exams frequently test formulas for triangles, rectangles, squares, circles as well as cubes, cylinders, spheres and cones. Memorising the basic formulas for each shape speeds up computation. Use π as 22/7 or 3.1416. Triangle area is half base times height, rectangle area is length times breadth, and circle area is πr². Cube surface area is 6a² and volume a³; cylinder surface area is 2πr(r+h) and volume πr²h; sphere surface area is 4πr² and volume 4/3πr³. Cone volume is 1/3πr²h and its surface area πr(r+√(r²+h²)). Writing these formulas in order and keeping track of units is key to scoring well.",
+  "facts_hi": [
+   "π का मान लगभग 3.1416 होता है।",
+   "त्रिभुज का क्षेत्रफल = ½×आधार×ऊँचाई।",
+   "वृत्त का क्षेत्रफल = πr², परिधि = 2πr।",
+   "आयत का परिमाप = 2(l+b), क्षेत्रफल = l×b।",
+   "घन की सतह = 6a², आयतन = a³।",
+   "सिलिंडर की सतह = 2πr(r+h), आयतन = πr²h।",
+   "गोलक का सतह = 4πr², आयतन = 4/3πr³।",
+   "शंकु का आयतन = 1/3πr²h, सतह = πr(r+√(r²+h²))।",
+   "समकोण त्रिभुज में पायथागोरस सूत्र: a²+b²=c²।",
+   "त्रिज्या r और व्यास d के बीच d = 2r।"
+  ],
+  "facts_en": [
+   "π is approximately 3.1416.",
+   "Triangle area = ½×base×height.",
+   "Circle area = πr², perimeter = 2πr.",
+   "Rectangle perimeter = 2(l+b), area = l×b.",
+   "Cube surface = 6a², volume = a³.",
+   "Cylinder surface = 2πr(r+h), volume = πr²h.",
+   "Sphere surface = 4πr², volume = 4/3πr³.",
+   "Cone volume = 1/3πr²h, surface = πr(r+√(r²+h²)).",
+   "In a right triangle, a²+b²=c² (Pythagoras).",
+   "Diameter d equals 2 times radius r."
+  ],
+  "map": {
+   "hi": "क्षेत्रमिति",
+   "en": "Mensuration",
+   "children": [
+    {
+     "hi": "समतल आकृतियों के क्षेत्रफल",
+     "en": "Area of plane figures",
+     "children": [
+      {
+       "hi": "त्रिभुज: ½×आधार×ऊँचाई",
+       "en": "Triangle: ½ × base × height"
+      },
+      {
+       "hi": "आयत: लंबाई×चौड़ाई",
+       "en": "Rectangle: length × breadth"
+      },
+      {
+       "hi": "वृत्त: πr²",
+       "en": "Circle: πr²"
+      }
+     ]
+    },
+    {
+     "hi": "समतल आकृतियों की परिधि",
+     "en": "Perimeter of plane figures",
+     "children": [
+      {
+       "hi": "वर्ग: 4×भुजा",
+       "en": "Square: 4 × side"
+      },
+      {
+       "hi": "आयत: 2×(लंबाई+चौड़ाई)",
+       "en": "Rectangle: 2 × (length + breadth)"
+      },
+      {
+       "hi": "वृत्त: 2πr",
+       "en": "Circle: 2πr"
+      }
+     ]
+    },
+    {
+     "hi": "ठोस आकृतियों का सतह क्षेत्रफल",
+     "en": "Surface area of solids",
+     "children": [
+      {
+       "hi": "घन: 6a²",
+       "en": "Cube: 6a²"
+      },
+      {
+       "hi": "सिलिंडर: 2πr(r+h)",
+       "en": "Cylinder: 2πr(r+h)"
+      },
+      {
+       "hi": "गोलक: 4πr²",
+       "en": "Sphere: 4πr²"
+      }
+     ]
+    },
+    {
+     "hi": "ठोस आकृतियों का आयतन",
+     "en": "Volume of solids",
+     "children": [
+      {
+       "hi": "घन: a³",
+       "en": "Cube: a³"
+      },
+      {
+       "hi": "सिलिंडर: πr²h",
+       "en": "Cylinder: πr²h"
+      },
+      {
+       "hi": "शंकु: 1/3πr²h",
+       "en": "Cone: 1/3πr²h"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-mensuration",
+  "s": "maths",
+  "t": "mensuration",
+  "tips_hi": [
+   "TRIC: त्रिभुज (½ab), आयत (ab), वृत्त (πr²) – याद रखने के लिए यह संक्षिप्त नाम उपयोग करें।",
+   "सिलेंडर की सतह क्षेत्रफल 2πr(r+h) को 2πr² + 2πrh के रूप में तोड़कर गणना करें, जिससे कोष्ठक हट जाएँ।",
+   "स्फीयर का सतह क्षेत्रफल 4πr² और सिलेंडर का पार्श्व क्षेत्रफल 2πrh अक्सर भ्रमित करते हैं – सवाल में स्पष्ट रूप से पूछे गए शब्द पर ध्यान दें।",
+   "माप की इकाइयाँ हमेशा जाँचें: यदि त्रिज्या सेंटीमीटर में है, तो क्षेत्रफल cm² और आयतन cm³ में होगा।",
+   "शंकु का आयतन 1/3πr²h निकालने के लिए पहले आधार क्षेत्रफल (πr²) निकालें, फिर ऊँचाई से गुणा करके 3 से भाग दें।"
+  ],
+  "tips_en": [
+   "Use the mnemonic TRIC: Triangle (½ab), Rectangle (ab), Circle (πr²) to remember area formulas.",
+   "Rewrite cylinder surface area 2πr(r+h) as 2πr² + 2πrh to avoid parentheses during calculation.",
+   "Sphere surface area (4πr²) and cylinder lateral area (2πrh) are often mixed up – check the wording of the question.",
+   "Always keep track of units: if radius is in cm, area will be in cm² and volume in cm³.",
+   "For cone volume 1/3πr²h, first compute base area πr², multiply by height, then divide by 3."
+  ]
+ },
+ {
+  "summary_hi": "बीजगणित वह शाखा है जो चर, स्थिरांक और अभिव्यक्तियों के बीच के संबंधों को स्थापित करती है, जिससे समीकरणों का निर्माण और समाधान संभव होता है। यह रैखिक तथा द्विघात समीकरणों के मानक रूप, बहुपद की डिग्री और मूल, तथा फ़ंक्शन की परिभाषा को स्पष्ट करता है। रैखिक समीकरणों में एक या दो चर होते हैं, जबकि द्विघात समीकरणों में विवेचक के आधार पर मूलों की प्रकृति निर्धारित की जाती है। बहुपदों में फ़ैक्टर थ्योरम महत्वपूर्ण भूमिका निभाता है, जिससे मूल ज्ञात होने पर बहुपद को गुणकों में विभाजित किया जा सकता है। फ़ंक्शन प्रत्येक इनपुट को एक ही आउटपुट से जोड़ता है और यदि वह एक‑एक हो तो उसका इनवर्स मौजूद होता है। इन सभी अवधारणाओं का अभ्यास भारतीय रेलवे परीक्षा में अंक प्राप्त करने के लिए आवश्यक है।",
+  "summary_en": "Algebra is the branch that establishes relationships among variables, constants, and expressions, enabling the formation and solving of equations. It clarifies standard forms of linear and quadratic equations, polynomial degree and roots, and the definition of functions. Linear equations involve one or two variables, while quadratic equations use the discriminant to determine root nature. In polynomials, the factor theorem is crucial, allowing factorization once a root is known. A function maps each input to a single output, and an inverse exists only if the function is bijective. Mastery of these concepts is essential for scoring well in Indian Railways exams.",
+  "facts_hi": [
+   "बीजगणित में चर, स्थिरांक और अभिव्यक्तियों का अध्ययन किया जाता है।",
+   "रैखिक समीकरण का सामान्य रूप ax + b = 0 होता है, जहाँ a ≠ 0।",
+   "दो चर वाले रैखिक समीकरण को Ax + By = C के रूप में लिखा जाता है।",
+   "द्विघात समीकरण का मानक रूप ax² + bx + c = 0 है, a ≠ 0।",
+   "द्विघात समीकरण का विवेचक Δ = b² – 4ac मूलों की प्रकृति निर्धारित करता है।",
+   "बहुपद का डिग्री सबसे बड़े घातांक से निर्धारित होता है।",
+   "फ़ैक्टर थ्योरम के अनुसार, यदि p(x) का मूल r है तो (x – r) p(x) का गुणक है।",
+   "फ़ंक्शन को f(x) के रूप में परिभाषित किया जाता है, जहाँ प्रत्येक इनपुट का एक ही आउटपुट होता है।",
+   "इनवर्स फ़ंक्शन केवल तब अस्तित्व में होता है जब मूल फ़ंक्शन एक‑एक (bijective) हो।",
+   "समरूपता (similarity) और समानुपात (proportion) रैखिक बीजगणित में अक्सर प्रयुक्त अवधारणाएँ हैं।"
+  ],
+  "facts_en": [
+   "Algebra studies variables, constants, and expressions.",
+   "A linear equation in one variable is written as ax + b = 0, with a ≠ 0.",
+   "A linear equation in two variables takes the form Ax + By = C.",
+   "The standard form of a quadratic equation is ax² + bx + c = 0, where a ≠ 0.",
+   "The discriminant Δ = b² – 4ac determines the nature of the quadratic roots.",
+   "The degree of a polynomial is the highest exponent of its variable.",
+   "According to the factor theorem, if r is a root of p(x), then (x – r) is a factor of p(x).",
+   "A function is defined as f(x), assigning exactly one output to each input.",
+   "An inverse function exists only when the original function is bijective.",
+   "Similarity and proportion are frequently used concepts in linear algebra."
+  ],
+  "map": {
+   "hi": "बीजगणित",
+   "en": "Algebra",
+   "children": [
+    {
+     "hi": "रैखिक समीकरण",
+     "en": "Linear Equations",
+     "children": [
+      {
+       "hi": "एक चर वाला रैखिक समीकरण",
+       "en": "Linear equation in one variable"
+      },
+      {
+       "hi": "दो चर वाला रैखिक समीकरण",
+       "en": "Linear equation in two variables"
+      }
+     ]
+    },
+    {
+     "hi": "द्विघात समीकरण",
+     "en": "Quadratic Equations",
+     "children": [
+      {
+       "hi": "मानक रूप ax²+bx+c=0",
+       "en": "Standard form ax²+bx+c=0"
+      },
+      {
+       "hi": "विच्छेदक Δ = b²-4ac",
+       "en": "Discriminant Δ = b²-4ac"
+      }
+     ]
+    },
+    {
+     "hi": "बहुपद",
+     "en": "Polynomials",
+     "children": [
+      {
+       "hi": "डिग्री, मूल, गुणांक",
+       "en": "Degree, roots, coefficients"
+      },
+      {
+       "hi": "फ़ैक्टर थ्योरम",
+       "en": "Factor theorem"
+      }
+     ]
+    },
+    {
+     "hi": "फ़ंक्शन",
+     "en": "Functions",
+     "children": [
+      {
+       "hi": "परिभाषा f(x)",
+       "en": "Definition f(x)"
+      },
+      {
+       "hi": "इनवर्स फ़ंक्शन",
+       "en": "Inverse function"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-algebra",
+  "s": "maths",
+  "t": "algebra",
+  "tips_hi": [
+   "ब-र-ए: बदलें (b), रूट निकालें (√), ए से भाग दें (2a)",
+   "यदि b सम है तो Δ = (b/2)² - ac",
+   "Δ में + के बजाय - पर ध्यान दें",
+   "रूट्स को मूल समीकरण में रखकर जाँचें"
+  ],
+  "tips_en": [
+   "B-R-A: Bring b, Root, Divide by 2a",
+   "If b is even, compute Δ as (b/2)² - ac",
+   "Watch out for + instead of - in Δ",
+   "Plug the roots back into the original equation to verify"
+  ]
+ },
+ {
+  "summary_hi": "ज्यामिति बिंदु, रेखा, तल और आकारों के बीच के संबंधों को समझने का विज्ञान है। यह विषय बिंदु से शुरू होकर रेखा, कोण, त्रिभुज, चतुर्भुज और वृत्त जैसे मूलभूत आकृतियों को कवर करता है। त्रिभुज में कोन, भुजा और क्षेत्रफल के सूत्र विशेष महत्व रखते हैं, विशेषकर पायथागोरस सिद्धान्त। वृत्त के गुणों में त्रिज्या, व्यास, परिधि और क्षेत्रफल के सूत्र अनिवार्य हैं। समानता व समरूपता के नियमों से आकृतियों की तुलना आसान होती है, जबकि समन्वय ज्यामिति दूरी और मध्यबिंदु जैसे गणितीय उपकरण प्रदान करती है। इन मूलभूत सिद्धांतों को याद रखकर परीक्षा में तेज़ी से प्रश्न हल किए जा सकते हैं।",
+  "summary_en": "Geometry is the study of relationships between points, lines, planes, and shapes. It begins with the concept of a point and progresses through lines, angles, and basic figures such as triangles, quadrilaterals, and circles. In triangles, angle, side, and area formulas are crucial, especially the Pythagorean theorem. Circle properties rely on the radius, diameter, circumference, and area formulas. Rules of congruence and similarity make comparing figures straightforward, while coordinate geometry provides tools like distance and midpoint calculations. Mastering these fundamentals enables quick problem solving in the exam.",
+  "facts_hi": [
+   "बिंदु स्थान दर्शाता है, पर कोई आकार नहीं।",
+   "रेखा अनंत लंबी होती है, दो बिंदुओं से निर्धारित होती है।",
+   "त्रिभुज का सबसे छोटा कोण हमेशा 0° से बड़ा होता है।",
+   "समकोण त्रिभुज में पायथागोरस सिद्धान्त लागू होता है।",
+   "वृत्त का क्षेत्रफल πr² और परिधि 2πr होती है।",
+   "समरूप त्रिभुजों में सभी कोन समान होते हैं, लेकिन आकार अलग हो सकता है।",
+   "समान त्रिभुजों में सभी भुजाएँ और कोन समान होते हैं।",
+   "समन्वय तल में दो बिंदुओं के बीच की दूरी का सूत्र √[(x2−x1)²+(y2−y1)²] है।",
+   "त्रिभुज का क्षेत्रफल ½×भुजा×ऊँचाई से निकाला जाता है।",
+   "कोण माप के लिये डिग्री या रेडियन दोनों प्रयोग होते हैं, पर परीक्षा में डिग्री अधिक उपयोगी है।"
+  ],
+  "facts_en": [
+   "A point indicates a location but has no size.",
+   "A line extends infinitely and is defined by two points.",
+   "The smallest angle in a triangle is always greater than 0°.",
+   "The Pythagorean theorem applies to right-angled triangles.",
+   "A circle’s area is πr² and its circumference is 2πr.",
+   "Similar triangles have equal angles but can differ in size.",
+   "Congruent triangles have equal sides and equal angles.",
+   "The distance between two points in the coordinate plane is √[(x2−x1)²+(y2−y1)²].",
+   "The area of a triangle is calculated as ½ × base × height.",
+   "Angles can be measured in degrees or radians, though degrees are more common in exams."
+  ],
+  "map": {
+   "hi": "ज्यामिति",
+   "en": "Geometry",
+   "children": [
+    {
+     "hi": "बिंदु और रेखा",
+     "en": "Point and Line",
+     "children": [
+      {
+       "hi": "बिंदु का कोई आयाम नहीं",
+       "en": "A point has no dimension"
+      },
+      {
+       "hi": "रेखा अनंत लंबी",
+       "en": "A line extends infinitely in both directions"
+      }
+     ]
+    },
+    {
+     "hi": "त्रिभुज",
+     "en": "Triangle",
+     "children": [
+      {
+       "hi": "त्रिभुज के प्रकार (समकोण, समबाहु, समद्विबाहु)",
+       "en": "Types of triangles (right, equilateral, isosceles)"
+      },
+      {
+       "hi": "त्रिभुज का क्षेत्रफल = ½×भुजा×ऊँचाई",
+       "en": "Area = ½ × base × height"
+      },
+      {
+       "hi": "पायथागोरस सिद्धान्त: a²+b²=c²",
+       "en": "Pythagoras theorem: a²+b²=c²"
+      }
+     ]
+    },
+    {
+     "hi": "वृत्त",
+     "en": "Circle",
+     "children": [
+      {
+       "hi": "व्यास = 2×त्रिज्या",
+       "en": "Diameter = 2 × radius"
+      },
+      {
+       "hi": "परिधि = 2πr",
+       "en": "Circumference = 2πr"
+      },
+      {
+       "hi": "क्षेत्रफल = πr²",
+       "en": "Area = πr²"
+      }
+     ]
+    },
+    {
+     "hi": "समरूपता व समानता",
+     "en": "Similarity & Congruence",
+     "children": [
+      {
+       "hi": "समरूपता के लिये कोन समान, अनुपात समान",
+       "en": "Similarity requires equal angles and proportional sides"
+      },
+      {
+       "hi": "समानता के लिये तीन कोन और तीन भुजाएँ समान",
+       "en": "Congruence requires three equal angles and three equal sides"
+      }
+     ]
+    },
+    {
+     "hi": "समन्वय ज्यामिति",
+     "en": "Coordinate Geometry",
+     "children": [
+      {
+       "hi": "दूरी सूत्र: √[(x2−x1)²+(y2−y1)²]",
+       "en": "Distance formula: √[(x2−x1)²+(y2−y1)²]"
+      },
+      {
+       "hi": "मध्यबिंदु सूत्र: ((x1+x2)/2, (y1+y2)/2)",
+       "en": "Midpoint formula: ((x1+x2)/2, (y1+y2)/2)"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-geometry",
+  "s": "maths",
+  "t": "geometry",
+  "tips_hi": [
+   "बेस × ऊँचाई ÷ 2 – त्रिभुज का क्षेत्रफल निकालने के लिए ‘बेस‑ऊँचाई‑÷’ याद रखें।",
+   "व्यास का वर्ग करके 4 से भाग दें – यदि व्यास d है तो क्षेत्रफल = π·d²/4।",
+   "रेडियस को दोगुना करके व्यास निकालें, फिर परिधि/क्षेत्रफल निकालें – रेडियस‑व्यास भ्रम से बचें।",
+   "पहले जाँचें कि त्रिभुज 90° का है या नहीं, तभी पायथागोरस लागू करें।",
+   "तीन बिंदु एक ही रेखा पर हैं तो क्षेत्रफल 0; पहले रेखीयता जाँचें।"
+  ],
+  "tips_en": [
+   "Base × Height ÷ 2 – remember ‘Base‑Height‑Divide’ to compute triangle area.",
+   "Square the diameter and divide by 4 – if diameter d, area = π·d²/4.",
+   "Double the radius to get the diameter before using circle formulas – avoid radius‑diameter mix‑ups.",
+   "First confirm the triangle is right‑angled before applying Pythagoras.",
+   "If three points are collinear, area is 0; check collinearity first."
+  ]
+ },
+ {
+  "summary_hi": "आँकड़ों का विश्लेषण गणित के उन प्रश्नों का समूह है जो तालिकाओं, ग्राफ़ों और चार्टों से जानकारी निकालने की क्षमता का परीक्षण करता है। इस खंड में प्रतिशत परिवर्तन, औसत, मध्यिका, बहुलक तथा वृद्धि दर जैसी मूलभूत अवधारणाओं का उपयोग किया जाता है। अक्सर प्रश्न तालिका में कुल, भाग, अंतर या अनुपात निकालने, बार ग्राफ़ में तुलनात्मक मान पढ़ने और पाई चार्ट में कोण या प्रतिशत निर्धारित करने पर केंद्रित होते हैं। रेखा ग्राफ़ डेटा के रुझान को समझने, समय‑श्रृंखला में अंतर निकालने और रैखिक अंतःस्थापन करने में मदद करते हैं। सभी गणनाओं में सही इकाई, दशमलव स्थान और सूत्रों का सटीक प्रयोग आवश्यक है। इन कौशलों को नियमित अभ्यास और तेज़ी से पढ़ने की आदत से मजबूत किया जा सकता है।",
+  "summary_en": "Data Interpretation in mathematics tests the ability to extract information from tables, graphs, and charts. It relies on basic concepts such as percentage change, mean, median, mode, and growth rates. Typical questions ask for totals, parts, differences or ratios from tables, comparative values from bar graphs, and angles or percentages from pie charts. Line graphs help understand trends, compute differences in time‑series data, and perform linear interpolation. Correct use of units, decimal places, and formulas is essential. Regular practice and quick reading habits strengthen these skills.",
+  "facts_hi": [
+   "डेटा इंटरप्रिटेशन में तालिका, बार ग्राफ, पाई चार्ट और रेखा ग्राफ प्रमुख रूप से आते हैं।",
+   "प्रतिशत परिवर्तन = (नया‑पुराना)/पुराना ×100।",
+   "औसत = सभी मानों का योग ÷ मानों की संख्या।",
+   "मध्यिका वह मान है जो क्रमबद्ध डेटा में बीच में आता है।",
+   "बहुलक वह मान है जो सबसे अधिक बार प्रकट होता है।",
+   "वृद्धि दर = (अंतिम/प्रारम्भिक)^(1/वर्षों की संख्या)‑1।",
+   "पाई चार्ट में प्रत्येक सेक्टर का कोण = (प्रतिशत/100)×360°।",
+   "बार ग्राफ में दो मानों के बीच अंतर = बार की लंबाई का अंतर।",
+   "रेखा ग्राफ में रैखिक अंतःस्थापन से बीच के मान का अनुमान लगाया जाता है।",
+   "समय‑श्रृंखला डेटा में संचयी कुल निकालने के लिए क्रमिक जोड़ करना आवश्यक है।"
+  ],
+  "facts_en": [
+   "In data interpretation, tables, bar graphs, pie charts, and line graphs are the primary formats.",
+   "Percentage change = (new − old)/old × 100.",
+   "Mean = sum of all values ÷ number of values.",
+   "Median is the middle value when the data are ordered.",
+   "Mode is the value that appears most frequently.",
+   "Growth rate = (final/initial)^(1/number of years) − 1.",
+   "In a pie chart, sector angle = (percentage/100) × 360°.",
+   "In a bar graph, the difference between two values equals the difference in bar lengths.",
+   "Linear interpolation on a line graph estimates intermediate values.",
+   "Cumulative totals in time‑series data are obtained by successive addition."
+  ],
+  "map": {
+   "hi": "आँकड़ों का विश्लेषण",
+   "en": "Data Interpretation",
+   "children": [
+    {
+     "hi": "तालिका",
+     "en": "Tables",
+     "children": [
+      {
+       "hi": "पंक्तियों/स्तंभों का योग",
+       "en": "Row/Column totals"
+      },
+      {
+       "hi": "प्रतिशत गणना",
+       "en": "Percentage calculations"
+      }
+     ]
+    },
+    {
+     "hi": "बार ग्राफ",
+     "en": "Bar Graphs",
+     "children": [
+      {
+       "hi": "तुलनात्मक मान",
+       "en": "Comparative values"
+      },
+      {
+       "hi": "समूहित बार",
+       "en": "Grouped bars"
+      }
+     ]
+    },
+    {
+     "hi": "पाई चार्ट",
+     "en": "Pie Charts",
+     "children": [
+      {
+       "hi": "सेक्टर कोण",
+       "en": "Sector angles"
+      },
+      {
+       "hi": "प्रतिशत से कोण रूपांतरण",
+       "en": "Percentage to angle conversion"
+      }
+     ]
+    },
+    {
+     "hi": "रेखा ग्राफ",
+     "en": "Line Graphs",
+     "children": [
+      {
+       "hi": "रुझान विश्लेषण",
+       "en": "Trend analysis"
+      },
+      {
+       "hi": "रैखिक अंतःस्थापन",
+       "en": "Linear interpolation"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-data_interpretation",
+  "s": "maths",
+  "t": "data_interpretation",
+  "tips_hi": [
+   "टोटल, औसत, प्रतिशत (TAP) याद रखने के लिए एक छोटा सा संक्षिप्त शब्द",
+   "10% नियम: 10% = पुरानी वैल्यू का 1/10, जिससे त्वरित प्रतिशत परिवर्तन की गणना आसान हो जाती है",
+   "मीडियन और मोड को गड़बड़ न करें – दोनों अलग हैं, पर अक्सर परीक्षक इन्हें उलट देते हैं",
+   "उत्तर देने से पहले हमेशा इकाइयाँ और दशमलव स्थानों की जाँच करें"
+  ],
+  "tips_en": [
+   "Use the TAP mnemonic (Total, Average, Percentage) to remember the order of operations",
+   "Apply the 10% rule: 10% equals one‑tenth of the old value for quick percentage change calculations",
+   "Beware of the median vs. mode trap – they are distinct and often swapped by examiners",
+   "Always verify units and decimal places before finalizing your answer"
+  ]
+ },
+ {
+  "summary_hi": "त्रिकोणमिति एक त्रिभुज के भुजाओं और कोणों के बीच संबंधों का अध्ययन है। इसका मूल आधार समकोण त्रिभुज है, जहाँ पायथागोरस प्रमेय (a² + b² = c²) लागू होता है। मुख्य अनुपाक हैं: ज्या (sin), कोज्या (cos), और टेंजेंट (tan), जो विपरीत, समकोण और कर्ण भुजाओं के अनुपात हैं। इकाई वृत्त (Unit Circle) का उपयोग करके त्रिकोणमितीय फलनों की परिभाषा को सभी कोणों तक विस्तारित किया जाता है। त्रिकोणमितीय सर्वसमिकाएँ, जैसे sin²θ + cos²θ = 1, गणनाओं को सरल बनाती हैं। इन फलनों की आवर्तता (periodicity) उन्हें आवर्ती फलनों के रूप में परिभाषित करती है। त्रिकोणमिति भौतिकी, इंजीनियरिंग और गणित के अन्य क्षेत्रों में दूरी, ऊँचाई और तरंगों के विश्लेषण के लिए महत्वपूर्ण है।",
+  "summary_en": "Trigonometry is the branch of mathematics that studies the relationships between the sides and angles of triangles. Its foundation lies in right-angled triangles, governed by the Pythagorean theorem (a² + b² = c²). The primary ratios are sine (sin), cosine (cos), and tangent (tan), defined as the ratios of opposite, adjacent, and hypotenuse sides respectively. The concept is extended to all angles using the Unit Circle, which defines trigonometric functions based on coordinates on a circle of radius one. Fundamental identities, such as sin²θ + cos²θ = 1, simplify complex calculations and proofs. These functions are periodic, meaning they repeat their values at regular intervals. Trigonometry is essential in physics, engineering, and other mathematical fields for analyzing distances, heights, and wave patterns.",
+  "facts_hi": [
+   "समकोण त्रिभुज में, sin θ = विपरीत भुजा / कर्ण भुजा होता है।",
+   "cos θ = समकोण भुजा / कर्ण भुजा होता है।",
+   "tan θ = विपरीत भुजा / समकोण भुजा होता है।",
+   "पायथागोरस प्रमेय: a² + b² = c², जहाँ c कर्ण भुजा है।",
+   "प्रमुख सर्वसमिका: sin²θ + cos²θ = 1।",
+   "इकाई वृत्त का व्यास 1 होता है, जिससे sin θ = y-निर्देशांक और cos θ = x-निर्देशांक होता है।",
+   "त्रिकोणमितीय फलन आवर्ती होते हैं, जैसे sin(θ + 2π) = sin θ।",
+   "tan θ = sin θ / cos θ होता है।",
+   "कोणों के माप के लिए डिग्री (°) और रेडियन (rad) इकाइयाँ उपयोग होती हैं।",
+   "180° = π रेडियन होता है।"
+  ],
+  "facts_en": [
+   "In a right-angled triangle, sin θ = Opposite Side / Hypotenuse.",
+   "cos θ = Adjacent Side / Hypotenuse.",
+   "tan θ = Opposite Side / Adjacent Side.",
+   "Pythagorean Theorem: a² + b² = c², where c is the hypotenuse.",
+   "Key Identity: sin²θ + cos²θ = 1.",
+   "The Unit Circle has a radius of 1, where sin θ corresponds to the y-coordinate and cos θ to the x-coordinate.",
+   "Trigonometric functions are periodic, e.g., sin(θ + 2π) = sin θ.",
+   "tan θ is defined as sin θ / cos θ.",
+   "Angles are measured in degrees (°) or radians (rad).",
+   "180° is equivalent to π radians."
+  ],
+  "map": {
+   "hi": "त्रिकोणमिति",
+   "en": "Trigonometry",
+   "children": [
+    {
+     "hi": "मूल अनुपाक",
+     "en": "Basic Ratios",
+     "children": [
+      {
+       "hi": "ज्या (sin)",
+       "en": "Sine"
+      },
+      {
+       "hi": "कोज्या (cos)",
+       "en": "Cosine"
+      },
+      {
+       "hi": "टेंजेंट (tan)",
+       "en": "Tangent"
+      }
+     ]
+    },
+    {
+     "hi": "सर्वसमिकाएँ",
+     "en": "Identities",
+     "children": [
+      {
+       "hi": "पायथागोरस सर्वसमिका",
+       "en": "Pythagorean Identity"
+      },
+      {
+       "hi": "योग सूत्र",
+       "en": "Sum Formulas"
+      }
+     ]
+    },
+    {
+     "hi": "इकाई वृत्त",
+     "en": "Unit Circle",
+     "children": [
+      {
+       "hi": "कोणीय मापन",
+       "en": "Angular Measurement"
+      },
+      {
+       "hi": "आवर्तता",
+       "en": "Periodicity"
+      }
+     ]
+    },
+    {
+     "hi": "प्रयोग",
+     "en": "Applications",
+     "children": [
+      {
+       "hi": "ऊँचाई और दूरी",
+       "en": "Height and Distance"
+      },
+      {
+       "hi": "तरंग विश्लेषण",
+       "en": "Wave Analysis"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-maths-trigonometry",
+  "s": "maths",
+  "t": "trigonometry",
+  "tips_hi": [
+   "साइन-ओह-सी-ए-सी-ए-टी-ओ-ए",
+   "30°, 45°, 60° के साइन मान याद रखें: 0.5, √2/2, √3/2",
+   "साइन 30° = कॉस 60° है, पर उल्टा न करें",
+   "कैलकुलेटर में डालने से पहले जाँचें कि कोण डिग्री में है या रेडियन",
+   "यूनिट सर्कल से पता लगाएँ कि कोण किस क्वाड्रेंट में है और साइन/कोसाइन/टैन्जेंट का चिन्ह क्या होगा"
+  ],
+  "tips_en": [
+   "SOHCAHTOA",
+   "Remember sin values for 30°, 45°, 60°: 0.5, √2/2, √3/2",
+   "sin 30° = cos 60°, but don’t swap them in calculations",
+   "Check whether the angle is in degrees or radians before entering it into the calculator",
+   "Use the unit circle to determine the quadrant and the sign of sin/cos/tan"
+  ]
+ }
+]

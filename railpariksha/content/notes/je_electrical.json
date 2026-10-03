@@ -1,0 +1,666 @@
+[
+ {
+  "summary_hi": "परिपथ सिद्धांत इलेक्ट्रिकल इंजीनियरिंग की मूल नींव है जिसके अंतर्गत विद्युत परिपहाथों के विश्लेषण का अध्ययन किया जाता है। इसमें किरचॉफ के नियम (KCL और KVL), ओम का नियम, और विभिन्न नेटवर्क प्रमेयों जैसे कि थेवेनिन और नॉर्टन प्रमेय का उपयोग करके जटिल सर्किटों को सरल बनाया जाता है। एसी (AC) परिपथों में प्रतिबाधा (Impedance), अनुनाद (Resonance) और शक्ति गुणांक (Power Factor) जैसी अवधारणाएं महत्वपूर्ण भूमिका निभाती हैं। आरआरबी और आरपीएफ परीक्षाओं में इन नियमों पर आधारित संख्यात्मक (numerical) और वैचारिक प्रश्न अक्सर पूछे जाते हैं। सीरीज और पैरेलल कनेक्शन के बुनियादी सिद्धांतों को समझना किसी भी सर्किट को हल करने की कुंजी है। यह विषय पावर सिस्टम और मशीनों को समझने के लिए भी अत्यंत आवश्यक है।",
+  "summary_en": "Circuit theory is the fundamental core of electrical engineering dealing with the analysis of electrical networks. It utilizes Kirchhoff's laws (KCL and KVL), Ohm's law, and various network theorems such as Thevenin's and Norton's theorems to simplify complex circuits. In AC circuits, concepts like impedance, resonance, and power factor play crucial roles. RRB and RPF exams frequently feature numerical and conceptual questions based on these fundamental laws. Understanding the basics of series and parallel connections is the key to solving any electrical circuit. This topic is also essential for mastering power systems and electrical machines.",
+  "facts_hi": [
+   "ओम का नियम केवल रैखिक (linear) और द्विपक्षीय (bilateral) घटकों पर लागू होता है।",
+   "किरचॉफ का करंट नियम (KCL) आवेश संरक्षण (conservation of charge) के सिद्धांत पर आधारित है।",
+   "किरचॉफ का वोल्टेज नियम (KVL) ऊर्जा संरक्षण (conservation of energy) के सिद्धांत पर आधारित है।",
+   "शुद्ध प्रतिरोधक परिपथ में वोल्टेज और करंट के बीच कला अंतर (phase difference) शून्य होता है।",
+   "आरएलसी (RLC) श्रेणी अनुनाद परिपथ में, अनुनाद आवृत्ति पर प्रतिबाधा न्यूनतम और करंट अधिकतम होती है।",
+   "सुपरपोजिशन प्रमेय केवल रैखिक और द्विपक्षीय नेटवर्कों पर ही लागू की जा सकती है।",
+   "थेवेनिन प्रमेय के अनुसार किसी भी जटिल सक्रिय सर्किट को एक तुल्य वोल्टेज स्रोत और श्रेणी में प्रतिरोध से बदला जा सकता है।",
+   "नॉर्टन प्रमेय थेवेनिन प्रमेय का द्वैत (dual) है, जिसमें एक समांतर धारा स्रोत और प्रतिरोध होता है।",
+   "एसी परिपथ में वास्तविक शक्ति (Active Power) का मात्रक वाट है, जबकि आभासी शक्ति (Apparent Power) का मात्रक VA है।",
+   "एक आदर्श वोल्टेज स्रोत का आंतरिक प्रतिरोध शून्य होता है।"
+  ],
+  "facts_en": [
+   "Ohm's law is applicable only to linear and bilateral components.",
+   "Kirchhoff's Current Law (KCL) is based on the principle of conservation of charge.",
+   "Kirchhoff's Voltage Law (KVL) is based on the principle of conservation of energy.",
+   "In a pure resistive circuit, the phase difference between voltage and current is zero.",
+   "In an RLC series resonance circuit, impedance is minimum and current is maximum at resonance frequency.",
+   "Superposition theorem can only be applied to linear and bilateral networks.",
+   "Thevenin's theorem states that any complex active circuit can be replaced by an equivalent voltage source in series with a resistance.",
+   "Norton's theorem is the dual of Thevenin's theorem, consisting of a parallel current source and resistance.",
+   "In an AC circuit, active power is measured in Watts, while apparent power is measured in VA.",
+   "An ideal voltage source has zero internal resistance."
+  ],
+  "tips_hi": [
+   "KCL लगाते समय नोड पर आने वाली धाराओं को धनात्मक और जाने वाली धाराओं को ऋणात्मक मानने की एक निश्चित आदत डालें, ताकि चिन्ह की गलती न हो।",
+   "परीक्षा में थेवेनिन प्रतिरोध (Rth) निकालते समय सभी स्वतंत्र वोल्टेज स्रोतों को शॉर्ट सर्किट और स्वतंत्र धारा स्रोतों को ओपन सर्किट करना न भूलें।",
+   "यदि किसी एसी परिपथ में अनुनाद (Resonance) शब्द दिखाई दे, तो तुरंत मान लें कि प्रेरणिक प्रतिघात (XL) और धारिता प्रतिघात (XC) एक दूसरे के बराबर हैं।"
+  ],
+  "tips_en": [
+   "Always maintain a consistent sign convention for KCL (e.g., incoming currents positive, outgoing negative) to avoid calculation errors.",
+   "When calculating Thevenin's resistance (Rth) in exam problems, never forget to short independent voltage sources and open independent current sources.",
+   "If the word 'resonance' appears in an AC circuit question, immediately equate inductive reactance (XL) to capacitive reactance (XC)."
+  ],
+  "map": {
+   "hi": "परिपथ सिद्धांत",
+   "en": "Circuit Theory",
+   "children": [
+    {
+     "hi": "मूल नियम और कानून",
+     "en": "Basic Laws and Rules",
+     "children": [
+      {
+       "hi": "ओम का नियम",
+       "en": "Ohm's Law"
+      },
+      {
+       "hi": "किरचॉफ के नियम (KCL और KVL)",
+       "en": "Kirchhoff's Laws (KCL & KVL)"
+      },
+      {
+       "hi": "वोल्टेज और करंट डिवीजन",
+       "en": "Voltage and Current Division"
+      }
+     ]
+    },
+    {
+     "hi": "एसी परिपथ विश्लेषण",
+     "en": "AC Circuit Analysis",
+     "children": [
+      {
+       "hi": "प्रतिबाधा और प्रवेश्यता",
+       "en": "Impedance and Admittance"
+      },
+      {
+       "hi": "शक्ति और शक्ति गुणांक",
+       "en": "Power and Power Factor"
+      },
+      {
+       "hi": "अनुनाद (Resonance)",
+       "en": "Resonance"
+      }
+     ]
+    },
+    {
+     "hi": "नेटवर्क प्रमेय",
+     "en": "Network Theorems",
+     "children": [
+      {
+       "hi": "थेवेनिन और नॉर्टन प्रमेय",
+       "en": "Thevenin's and Norton's Theorems"
+      },
+      {
+       "hi": "सुपरपोजिशन प्रमेय",
+       "en": "Superposition Theorem"
+      },
+      {
+       "hi": "अधिकतम शक्ति स्थानांतरण प्रमेय",
+       "en": "Maximum Power Transfer Theorem"
+      }
+     ]
+    },
+    {
+     "hi": "युग्मित परिपथ",
+     "en": "Coupled Circuits",
+     "children": [
+      {
+       "hi": "पारस्परिक प्रेरण",
+       "en": "Mutual Inductance"
+      },
+      {
+       "hi": "युग्मन गुणांक",
+       "en": "Coefficient of Coupling"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_electrical-circuit_theory",
+  "s": "je_electrical",
+  "t": "circuit_theory"
+ },
+ {
+  "summary_hi": "विद्युत मशीनें विद्युत ऊर्जा और यांत्रिक ऊर्जा के बीच रूपांतरण करने वाले प्रमुख उपकरण हैं, जो आरआरबी और आरपीएफ परीक्षाओं की दृष्टि से अत्यंत महत्वपूर्ण विषय है। इसके अंतर्गत मुख्य रूप से डीसी मशीनें, ट्रांसफॉर्मर, तुल्यकालिक मशीनें (सिंक्रोनस मशीनें) और प्रेरण मशीनें (इंडक्शन मशीनें) आती हैं। डीसी जनरेटर फैराडे के विद्युत चुम्बकीय प्रेरण के सिद्धांत पर कार्य करता है, जबकि डीसी मोटर विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलती है। ट्रांसफॉर्मर का मुख्य कार्य एसी वोल्टेज को कम या ज्यादा करना है और यह केवल प्रत्यावर्ती धारा (AC) पर कार्य करता है। प्रेरण मोटरें अपनी मजबूती और सरल बनावट के कारण उद्योगों में सबसे अधिक उपयोग की जाती हैं। परीक्षा में इन मशीनों के हानियों, दक्षता, और गति नियंत्रण से जुड़े प्रश्न बार-बार पूछे जाते हैं।",
+  "summary_en": "Electrical machines are core devices for energy conversion between electrical and mechanical forms, holding high weightage in RRB and RPF examinations. The primary categories include DC machines, transformers, synchronous machines, and induction machines. A DC generator operates on Faraday's law of electromagnetic induction, whereas a DC motor converts electrical energy into mechanical energy. Transformers exclusively handle alternating current (AC) to step up or step down voltage levels. Induction motors are widely favored in industries due to their robust construction and simplicity. Exams frequently test concepts related to machine losses, efficiency, and speed control methods.",
+  "facts_hi": [
+   "डीसी जनरेटर फैराडे के विद्युत चुम्बकीय प्रेरण के नियम पर कार्य करता है।",
+   "डीसी मोटर में आर्मेचर टॉर्क सीधे तौर पर फ्लक्स और आर्मेचर धारा के गुणनफल के समानुपाती होता है।",
+   "ट्रांसफॉर्मर केवल प्रत्यावर्ती धारा (AC) पर कार्य करता है और यह आवृत्ति को नहीं बदलता है।",
+   "ट्रांसफॉर्मर की क्रोड (Core) सिलिकॉन स्टील की बनाई जाती है ताकि भंवर धारा (Eddy Current) हानि को कम किया जा सके।",
+   "प्रेरण मोटर (Induction Motor) कभी भी तुल्यकालिक गति (Synchronous Speed) पर नहीं चलती है।",
+   "स्लिप (Slip) का मान स्थिर अवस्था में अधिकतम (1) और चालू होने पर कम होता है।",
+   "तुल्यकालिक मोटर (Synchronous Motor) स्वतः प्रारम्भ होने वाली (Self-starting) मशीन नहीं है।",
+   "डीसी मशीनों में कम्यूटेटर का मुख्य कार्य एसी को डीसी में या इसके विपरीत बदलना है।"
+  ],
+  "facts_en": [
+   "A DC generator operates on Faraday's law of electromagnetic induction.",
+   "Armature torque in a DC motor is directly proportional to the product of flux and armature current.",
+   "A transformer operates exclusively on alternating current (AC) and does not alter frequency.",
+   "Transformer cores are constructed from silicon steel to minimize eddy current losses.",
+   "An induction motor never runs at synchronous speed under load.",
+   "The slip of an induction motor is maximum (unity) at standstill.",
+   "A synchronous motor is not a self-starting machine.",
+   "The primary function of a commutator in DC machines is to convert AC to DC or vice versa."
+  ],
+  "tips_hi": [
+   "यदि प्रश्न में पूछा जाए कि ट्रांसफॉर्मर क्या बदलता है, तो याद रखें कि यह वोल्टेज और धारा बदलता है लेकिन आवृत्ति (Frequency) और शक्ति (Power) को स्थिर रखता है।",
+   "डीसी मोटर की गति नियंत्रण विधियों में आर्मेचर रियोस्टैट विधि में 'कम दक्षता' और वार्ड-लियोनार्ड विधि में 'उत्कृष्ट गति नियमन' की विशेषता होती है, इन्हें आपस में न मिलाएं।",
+   "परीक्षा में 'डीसी मोटर की दिशा उलटने' के लिए केवल आर्मेचर या केवल फील्ड के टर्मिनलों को आपस में बदलें, दोनों को एक साथ बदलने पर दिशा नहीं बदलेगी।"
+  ],
+  "tips_en": [
+   "If a question asks what a transformer changes, remember it alters voltage and current while keeping frequency and power constant.",
+   "In DC motor speed control, keep in mind that the armature rheostat method suffers from low efficiency, whereas the Ward-Leonard method provides excellent speed regulation.",
+   "To reverse the direction of rotation of a DC motor, interchange terminals of either the armature or the field winding alone, not both simultaneously."
+  ],
+  "map": {
+   "hi": "विद्युत मशीनें",
+   "en": "Electrical Machines",
+   "children": [
+    {
+     "hi": "डीसी मशीनें",
+     "en": "DC Machines",
+     "children": [
+      {
+       "hi": "डीसी जनरेटर",
+       "en": "DC Generator"
+      },
+      {
+       "hi": "डीसी मोटर",
+       "en": "DC Motor"
+      }
+     ]
+    },
+    {
+     "hi": "ट्रांसफॉर्मर",
+     "en": "Transformers",
+     "children": [
+      {
+       "hi": "स्टेप-अप और स्टेप-डाउन",
+       "en": "Step-up and Step-down"
+      },
+      {
+       "hi": "हानियाँ और दक्षता",
+       "en": "Losses and Efficiency"
+      }
+     ]
+    },
+    {
+     "hi": "प्रेरण मशीनें",
+     "en": "Induction Machines",
+     "children": [
+      {
+       "hi": "तीन-कला प्रेरण मोटर",
+       "en": "Three-Phase Induction Motor"
+      },
+      {
+       "hi": "स्लिप और टॉर्क",
+       "en": "Slip and Torque"
+      }
+     ]
+    },
+    {
+     "hi": "तुल्यकालिक मशीनें",
+     "en": "Synchronous Machines",
+     "children": [
+      {
+       "hi": "अल्टरनेटर (तुल्यकालिक जनरेटर)",
+       "en": "Alternator"
+      },
+      {
+       "hi": "तुल्यकालिक मोटर",
+       "en": "Synchronous Motor"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_electrical-electrical_machines",
+  "s": "je_electrical",
+  "t": "electrical_machines"
+ },
+ {
+  "summary_hi": "पावर सिस्टम विद्युत अभियांत्रिकी का एक महत्वपूर्ण भाग है जो विद्युत ऊर्जा के उत्पादन, पारेषण और वितरण से संबंधित है। इसमें जनरेटिंग स्टेशनों पर ऊर्जा उत्पन्न की जाती है और ट्रांसमिशन लाइनों के माध्यम से उच्च वोल्टेज पर दूर-दराज के क्षेत्रों तक भेजी जाती है। पारेषण हानियों को कम करने के लिए स्टेप-अप ट्रांसफॉर्मर का उपयोग किया जाता है। सबस्टेशनों पर वोल्टेज को कम करके वितरण नेटवर्क के माध्यम से उपभोक्ताओं तक पहुंचाया जाता है। ग्रिड की स्थिरता और सुरक्षा बनाए रखने के लिए सुरक्षात्मक रिले और सर्किट ब्रेकर का उपयोग किया जाता है। रेलवे ट्रैक्शन और अन्य भारी उद्योगों के लिए निरंतर और विश्वसनीय विद्युत आपूर्ति आवश्यक है। पावर सिस्टम के अध्ययन में लोड फैक्टर, डाइवर्सिटी फैक्टर और टैरिफ संरचनाओं का भी विशेष महत्व है। प्रतियोगी परीक्षाओं में इस विषय से दक्षता, हानियों और ट्रांसमिशन दक्षता पर आधारित प्रश्न अक्सर पूछे जाते हैं।",
+  "summary_en": "Power Systems is a crucial branch of electrical engineering dealing with the generation, transmission, and distribution of electrical energy. Energy is generated at power stations and transmitted over long distances at high voltages via transmission lines. Step-up transformers are used to reduce transmission losses by lowering current. At substations, voltage is stepped down and supplied to consumers through distribution networks. Protective relays and circuit breakers are employed to maintain grid stability and safety. Continuous and reliable power supply is essential for railway traction and heavy industries. The study of power systems also involves load factor, diversity factor, and various tariff structures. Competitive exams frequently feature numerical and conceptual questions based on efficiency, losses, and transmission parameters.",
+  "facts_hi": [
+   "भारत में मानक पारेषण वोल्टेज 11kV, 33kV, 66kV, 132kV, 220kV, 400kV और 765kV हैं।",
+   "डीसी पारेषण की तुलना में एसी पारेषण का मुख्य लाभ यह है कि ट्रांसफॉर्मर द्वारा वोल्टेज स्तर को आसानी से बदला जा सकता है।",
+   "केल्विन का नियम (Kelvin's Law) ट्रांसमिशन लाइन कंडक्टर के सबसे किफायती आकार (economic size) को निर्धारित करने के लिए उपयोग किया जाता है।",
+   "कोरोना प्रभाव (Corona effect) उच्च वोल्टेज लाइनों पर हवा के आयनीकरण के कारण होता है, जिससे शक्ति हानि और रेडियो हस्तक्षेप होता है।",
+   "लोड फैक्टर (Load Factor) औसत लोड और अधिकतम डिमांड का अनुपात होता है, जो हमेशा एक से कम होता है।",
+   "डाइवर्सिटी फैक्टर (Diversity Factor) हमेशा एक से अधिक होता है, और इसके बढ़ने से कुल स्थापित क्षमता की आवश्यकता कम होती है।",
+   "सर्किट ब्रेकर शॉर्ट सर्किट या फॉल्ट की स्थिति में फॉल्ट करंट को स्वतः तोड़ (interrupt) सकता है।",
+   "डिफरेंशियल प्रोटेक्शन रिले का उपयोग ट्रांसफॉर्मर और बड़े अल्टरनेटर की आंतरिक सुरक्षा के लिए किया जाता है।",
+   "सिंक्रोनस फेज मॉडिफायर या स्टैटिक वार जेनरेटर का उपयोग पावर सिस्टम में वोल्टेज नियंत्रण और पावर फैक्टर सुधार के लिए किया जाता है।"
+  ],
+  "facts_en": [
+   "Standard transmission voltages in India include 11kV, 33kV, 66kV, 132kV, 220kV, 400kV, and 765kV.",
+   "The primary advantage of AC transmission over DC is the ease of changing voltage levels using transformers.",
+   "Kelvin's Law is used to determine the most economical cross-sectional area of a transmission line conductor.",
+   "The corona effect occurs due to the ionization of air surrounding high-voltage lines, causing power loss and radio interference.",
+   "Load factor is the ratio of average load to maximum demand and is always less than one.",
+   "Diversity factor is always greater than one, and a higher diversity factor reduces the required plant capacity.",
+   "A circuit breaker can automatically interrupt fault current under short-circuit or abnormal conditions.",
+   "Differential protection relays are primarily used for the internal protection of transformers and large alternators.",
+   "Synchronous phase modifiers or static var generators are used for voltage control and power factor improvement in power systems."
+  ],
+  "tips_hi": [
+   "याद रखें: 'लोड फैक्टर' हमेशा < 1 होता है, जबकि 'डाइवर्सिटी फैक्टर' हमेशा > 1 होता है; परीक्षा में इन्हें अक्सर आपस में बदल दिया जाता है।",
+   "गणना प्रश्नों में जब ट्रांसमिशन लाइन की लंबाई न दी गई हो, तो उसे शॉर्ट लाइन मानकर संधारित्र (Capacitance) प्रभाव को नगण्य मान सकते हैं।",
+   "कोरोना लॉस हमेशा आवृत्ति (Frequency) और (V - Vd) के सीधे समानुपाती होता है, इसे फॉर्मूला आधारित प्रश्नों के लिए याद रखें।",
+   "हमेशा जांच लें कि प्रश्न में 'परसेंटेज इम्पीडेंट' दिया गया है या 'ओम में', बेस वैल्यू बदलते समय बेस MVA फॉर्मूला न भूलें।"
+  ],
+  "tips_en": [
+   "Remember: 'Load Factor' is always < 1, while 'Diversity Factor' is always > 1; examiners love swapping these in conceptual questions.",
+   "In calculation problems, if transmission line length is not specified, treat it as a short line and neglect capacitance effects.",
+   "Keep in mind that corona loss is directly proportional to frequency and (V - Vd), crucial for formula-based questions.",
+   "Always check whether reactance is given in percentage or ohms; don't forget the base MVA formula when shifting base values."
+  ],
+  "map": {
+   "hi": "पावर सिस्टम",
+   "en": "Power Systems",
+   "children": [
+    {
+     "hi": "विद्युत उत्पादन",
+     "en": "Power Generation",
+     "children": [
+      {
+       "hi": "थर्मल पावर प्लांट",
+       "en": "Thermal Power Plant"
+      },
+      {
+       "hi": "हाइड्रो इलेक्ट्रिक प्लांट",
+       "en": "Hydroelectric Plant"
+      },
+      {
+       "hi": "परमाणु ऊर्जा संयंत्र",
+       "en": "Nuclear Power Plant"
+      }
+     ]
+    },
+    {
+     "hi": "पारेषण प्रणाली",
+     "en": "Transmission System",
+     "children": [
+      {
+       "hi": "शॉर्ट, मीडियम और लॉन्ग ट्रांसमिशन लाइनें",
+       "en": "शॉर्ट, मीडियम और लॉन्ग ट्रांसमिशन लाइनें"
+      },
+      {
+       "hi": "कोरोना और स्किन प्रभाव",
+       "en": "कोरोना और स्किन प्रभाव"
+      },
+      {
+       "hi": "केल्विन का नियम और पारेषण दक्षता",
+       "en": "केल्विन का नियम और पारेषण दक्षता"
+      }
+     ]
+    },
+    {
+     "hi": "वितरण प्रणाली",
+     "en": "Distribution System",
+     "children": [
+      {
+       "hi": "रेडियल, रिंग मेन और इंटरकनेक्टेड सिस्टम",
+       "en": "रेडियल, रिंग मेन और इंटरकनेक्टेड सिस्टम"
+      },
+      {
+       "hi": "सबस्टेशन उपकरण",
+       "en": "सबस्टेशन उपकरण"
+      }
+     ]
+    },
+    {
+     "hi": "सुरक्षा और स्विचगियर",
+     "en": "Protection and Switchgear",
+     "children": [
+      {
+       "hi": "सर्किट ब्रेकर और फ्यूज",
+       "en": "सर्किट ब्रेकर और फ्यूज"
+      },
+      {
+       "hi": "रिले के प्रकार",
+       "en": "डिफरेंशियल, ओवरकरेंट"
+      },
+      {
+       "hi": "लाइटनिंग अरेस्टर",
+       "en": "तड़ित रोधक"
+      }
+     ]
+    },
+    {
+     "hi": "आर्थिक पहलू",
+     "en": "Economic Aspects",
+     "children": [
+      {
+       "hi": "लोड फैक्टर और डाइवर्सिटी फैक्टर",
+       "en": "लोड फैक्टर और डाइवर्सिटी फैक्टर"
+      },
+      {
+       "hi": "विद्युत टैरिफ के प्रकार",
+       "en": "विद्युत टैरिफ के प्रकार"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_electrical-power_systems",
+  "s": "je_electrical",
+  "t": "power_systems"
+ },
+ {
+  "summary_hi": "विद्युत मापन और इंस्ट्रूमेंटेशन रेलवे परीक्षाओं (RRB/RPF) के विद्युत अभियांत्रिकी पाठ्यक्रम का एक महत्वपूर्ण हिस्सा है। इसके अंतर्गत विभिन्न विद्युत राशियों जैसे धारा, वोल्टेज, शक्ति, ऊर्जा और प्रतिरोध को मापने वाले उपकरणों का अध्ययन किया जाता है। मापक यंत्रों में मुख्य रूप से विक्षेपण बल, नियंत्रण बल और अवमंदन बल कार्य करते हैं, जो सटीक माप सुनिश्चित करते हैं। चल-कुंडल (PMMC) यंत्र केवल डीसी (DC) माप के लिए उपयोग किए जाते हैं, जबकि चल-लोहा (MI) यंत्र एसी और डीसी दोनों के लिए उपयुक्त होते हैं। ऊर्जा मीटर और वाटमीटर का उपयोग क्रमशः विद्युत ऊर्जा और शक्ति को मापने के लिए किया जाता है। त्रुटियों के प्रकार और उनके निवारण के उपाय भी इस विषय के अंतर्गत परीक्षा की दृष्टि से अत्यंत महत्वपूर्ण हैं।",
+  "summary_en": "Measurements and Instrumentation is a crucial topic in the Electrical Engineering syllabus for Indian Railways (RRB/RPF) exams. It covers devices used to measure various electrical quantities such as current, voltage, power, energy, and resistance. Measuring instruments primarily utilize deflecting, controlling, and damping torques to ensure accurate readings. Permanent Magnet Moving Coil (PMMC) instruments are used exclusively for DC measurements, whereas Moving Iron (MI) instruments are suitable for both AC and DC. Energy meters and wattmeters are used to measure electrical energy and power respectively. Understanding instrument errors and their remedies is also vital from an examination perspective.",
+  "facts_hi": [
+   "PMMC यंत्र केवल डीसी (DC) माप के लिए प्रयोग किए जाते हैं क्योंकि एसी पर उनका औसत विक्षेप शून्य होता है।",
+   "चल-लोहा (MI) यंत्र एसी (AC) और डीसी (DC) दोनों प्रकार की विद्युत धाराओं को माप सकते हैं।",
+   "अमीटर का आंतरिक प्रतिरोध बहुत कम होता है और इसे हमेशा परिपथ में श्रेणी (Series) में जोड़ा जाता है।",
+   " voltmeter का आंतरिक प्रतिरोध बहुत अधिक होता है और इसे हमेशा परिपथ में समांतर (Parallel) क्रम में जोड़ा जाता है।",
+   "PMMC यंत्रों में नियंत्रण बल मुख्य रूप से स्प्रिंग नियंत्रण (Spring control) द्वारा प्रदान किया जाता है।",
+   "भंवर धारा अवमंदन (Eddy current damping) का उपयोग केवल PMMC प्रकार के यंत्रों में किया जा सकता है।",
+   "ऊर्जा मीटर (Energy meter) एक समाकलक प्रकार (Integrating type) का यंत्र है जो कुल ऊर्जा को मापता है।",
+   "विस्तार सीमा (Range extension) बढ़ाने के लिए अमीटर के साथ 'शंट' (Shunt) प्रतिरोध समांतर में जोड़ा जाता है।",
+   "वोल्टमीटर की सीमा बढ़ाने के लिए इसके साथ उच्च प्रतिरोध 'मल्टीप्लायर' (Multiplier) श्रेणी में जोड़ा जाता है।",
+   "क्रॉस्कोल कॉइल विधि का उपयोग मुख्य रूप से कम प्रतिरोध मानों को सटीक रूप से मापने के लिए किया जाता है।"
+  ],
+  "facts_en": [
+   "PMMC instruments are used exclusively for DC measurements because their average deflection is zero on AC.",
+   "Moving Iron (MI) instruments can measure both alternating current (AC) and direct current (DC).",
+   "An ammeter has very low internal resistance and is always connected in series with the circuit.",
+   "A voltmeter has very high internal resistance and is always connected in parallel across the circuit.",
+   "Controlling torque in PMMC instruments is primarily provided by phosphor-bronze springs.",
+   "Eddy current damping can only be effectively used in instruments with a permanent magnet like PMMC.",
+   "An energy meter is an integrating type instrument that measures total electrical energy over time.",
+   "To extend the range of an ammeter, a low resistance known as a shunt is connected in parallel.",
+   "To extend the range of a voltmeter, a high resistance known as a multiplier is connected in series.",
+   "Kelvin's double bridge is specifically used for the precise measurement of very low electrical resistances."
+  ],
+  "tips_hi": [
+   "याद रखें: 'अमीटर श्रेणी में, वोल्टमीटर समांतर में' — परीक्षा में इस बुनियादी नियम को उलझाने वाले प्रश्न अक्सर आते हैं।",
+   "शंट हमेशा अमीटर के साथ 'समांतर' में और मल्टीप्लायर वोल्टमीटर के साथ 'श्रेणी' में जुड़ता है, इसे कभी न भूलें।",
+   "यदि प्रश्न में एसी (AC) और डीसी (DC) दोनों मापने की बात हो, तो बिना सोचे 'चल-लोहा (MI)' विकल्प चुनें।",
+   "भंवर धारा अवमंदन (Eddy current damping) केवल स्थायी चुंबक वाले यंत्रों (PMMC) में ही संभव है, वायु घर्षण में नहीं।"
+  ],
+  "tips_en": [
+   "Memory rule: 'Ammeter in Series, Voltmeter in Parallel' — examiners frequently test this basic connection rule.",
+   "Shunt is always in parallel with ammeter, and Multiplier is always in series with voltmeter; do not swap them.",
+   "If a question asks for an instrument that reads both AC and DC, the default correct answer is Moving Iron (MI).",
+   "Remember that Eddy current damping requires a permanent magnetic field, so it is never used in MI instruments."
+  ],
+  "map": {
+   "hi": "मापन व इंस्ट्रूमेंटेशन",
+   "en": "Measurements & Instrumentation",
+   "children": [
+    {
+     "hi": "मापक यंत्रों के बल",
+     "en": "Forces in Instruments",
+     "children": [
+      {
+       "hi": "विक्षेपण बल",
+       "en": "Deflecting Torque"
+      },
+      {
+       "hi": "नियंत्रण बल",
+       "en": "Controlling Torque"
+      },
+      {
+       "hi": "अवमंदन बल",
+       "en": "Damping Torque"
+      }
+     ]
+    },
+    {
+     "hi": "प्रमुख मापक यंत्र",
+     "en": "Major Measuring Instruments",
+     "children": [
+      {
+       "hi": "चल-कुंडल (PMMC) यंत्र",
+       "en": "PMMC Instruments"
+      },
+      {
+       "hi": "चल-लोहा (MI) यंत्र",
+       "en": "Moving Iron Instruments"
+      },
+      {
+       "hi": "डायनेमोमीटर प्रकार यंत्र",
+       "en": "Dynamometer Type Instruments"
+      }
+     ]
+    },
+    {
+     "hi": "विद्युत राशियाँ व मीटर",
+     "en": "Quantities & Meters",
+     "children": [
+      {
+       "hi": "अमीटर व वोल्टमीटर",
+       "en": "Ammeter & Voltmeter"
+      },
+      {
+       "hi": "वाटमीटर (शक्ति माप)",
+       "en": "Wattmeter (Power)"
+      },
+      {
+       "hi": "ऊर्जा मीटर (समाकलक)",
+       "en": "Energy Meter (Integrating)"
+      }
+     ]
+    },
+    {
+     "hi": "विस्तार और त्रुटियाँ",
+     "en": "Extension & Errors",
+     "children": [
+      {
+       "hi": "शंट और मल्टीप्लायर",
+       "en": "Shunt and Multiplier"
+      },
+      {
+       "hi": "यंत्रों में त्रुटियाँ",
+       "en": "Errors in Instruments"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_electrical-measurements_instrumentation",
+  "s": "je_electrical",
+  "t": "measurements_instrumentation"
+ },
+ {
+  "summary_hi": "नियंत्रण प्रणाली (Control Systems) इलेक्ट्रिकल इंजीनियरिंग का एक महत्वपूर्ण विषय है, जो रेलवे और प्रतियोगी परीक्षाओं में अक्सर पूछा जाता है। नियंत्रण प्रणालियों को मुख्य रूप से ओपन-लूप (Open-Loop) और क्लोज्ड-लूप (Closed-Loop) प्रणालियों में वर्गीकृत किया जाता है। क्लोज्ड-लूप प्रणाली में फीडबैक (Feedback) का उपयोग करके आउटपुट को वांछित मान पर नियंत्रित किया जाता है। ट्रांसफर फंक्शन (Transfer Function) लाप्लास रूपांतरण का उपयोग करके शून्य प्रारंभिक स्थितियों के साथ आउटपुट और इनपुट का अनुपात होता है। स्थिरता (Stability) का विश्लेषण करने के लिए राउथ-हर्विट्ज कसौटी (Routh-Hurwitz Criterion) और रूट लोकस (Root Locus) जैसी तकनीकों का उपयोग किया जाता है। बोडे प्लॉट (Bode Plot) और नाइक्विस्ट प्लॉट (Nyquist Plot) आवृत्ति प्रतिक्रिया (Frequency Response) के माध्यम से सिस्टम की स्थिरता निर्धारित करने में मदद करते हैं। त्रुटि गुणांक (Error Constants) स्थिर-अवस्था त्रुटि (Steady-State Error) की गणना करने के लिए अत्यधिक उपयोगी हैं। रेलवे परीक्षाओं में इन अवधारणाओं और उनके प्रत्यक्ष सूत्रों पर आधारित संख्यात्मक प्रश्न बहुतायत में आते हैं।",
+  "summary_en": "Control Systems is a vital subject in Electrical Engineering frequently featured in railway and competitive examinations. Control systems are broadly classified into open-loop and closed-loop systems, where closed-loop systems use feedback to maintain the desired output. The transfer function represents the ratio of the Laplace transform of output to input with zero initial conditions. Stability analysis is predominantly performed using techniques like the Routh-Hurwitz Criterion and Root Locus. Frequency response methods such as Bode plots and Nyquist plots are crucial for determining system stability and performance margins. Error constants are employed to calculate steady-state errors for step, ramp, and parabolic inputs. Railway recruitment examinations frequently test direct formulas, stability criteria, and conceptual understanding of these topics.",
+  "facts_hi": [
+   "ओपन-लूप नियंत्रण प्रणाली में फीडबैक तत्व अनुपस्थित होता है और आउटपुट नियंत्रण कार्रवाई को प्रभावित नहीं करता है।",
+   "क्लोज्ड-लूप नियंत्रण प्रणाली में फीडबैक होता है, जो इसे अधिक सटीक और बाहरी disturbances के प्रति कम संवेदनशील बनाता है।",
+   "ट्रांसफंक्शन केवल रैखिक समय-अपरिवर्तित (LTI) प्रणालियों के लिए शून्य प्रारंभिक शर्तों के साथ परिभाषित किया गया है।",
+   "एक नकारात्मक फीडबैक प्रणाली में बंद-लूप ट्रांसफर फंक्शन G(s) / (1 + G(s)H(s)) होता है।",
+   "राउथ-हर्विट्ज स्थिरता कसौटी किसी सिस्टम की निरपेक्ष स्थिरता निर्धारित करने के लिए बीजगणितीय विधि प्रदान करती है।",
+   "राउथ सरणी के पहले स्तंभ में संकेत परिवर्तन (sign changes) की संख्या सिस्टम के दाएँ आधे s-तल में स्थित ध्रुवों (poles) की संख्या दर्शाती है।",
+   "स्थिर-अवस्था त्रुटि (Steady-State Error) अंतिम मान प्रमेय (Final Value Theorem) का उपयोग करके निकाली जाती है।",
+   "टाइप-0 प्रणाली के लिए स्टेप इनपुट पर स्थिर-अवस्था त्रुटि परिमित (finite) होती है, जबकि रैंप इनपुट पर यह अनंत होती है।",
+   "टाइप-1 प्रणाली रैंप इनपुट के लिए एक परिमित स्थिर-अवस्था त्रुटि देती है।",
+   "रूट लोकस विधि (Root Locus) लाभ (gain) K के परिवर्तन के साथ s-तल में बंद-लूप ध्रुवों के मार्ग को दर्शाती है।",
+   "बोडे प्लॉट में गेन मार्जिन (Gain Margin) और फेज मार्जिन (Phase Margin) सापेक्ष स्थिरता (Relative Stability) मापते हैं।"
+  ],
+  "facts_en": [
+   "An open-loop control system lacks a feedback element and the output has no effect on the control action.",
+   "A closed-loop control system utilizes feedback, making it more accurate and less sensitive to external disturbances.",
+   "The transfer function is defined only for linear time-invariant (LTI) systems with zero initial conditions.",
+   "The closed-loop transfer function of a negative feedback system is given by G(s) / (1 + G(s)H(s)).",
+   "The Routh-Hurwitz stability criterion provides an algebraic method to determine absolute system stability.",
+   "The number of sign changes in the first column of the Routh array indicates the number of poles in the right half of the s-plane.",
+   "Steady-state error is evaluated using the Final Value Theorem in the frequency domain.",
+   "For a Type-0 system, the steady-state error for a step input is finite and for a ramp input it is infinity.",
+   "A Type-1 system yields a finite steady-state error for a ramp input.",
+   "The Root Locus method shows the trajectory of closed-loop poles in the s-plane as the gain K varies.",
+   "Gain margin and phase margin obtained from Bode plots measure the relative stability of the system."
+  ],
+  "tips_hi": [
+   "राउथ सरणी के पहले कॉलम में यदि कोई पद शून्य (0) हो जाता है, तो उसे 'ε' (एपिसाइलॉन) से प्रतिस्थापित करके आगे हल करें।",
+   "प्रश्न हल करते समय हमेशा ध्यान दें कि सिस्टम 'टाइप' (Type) इनपुट के समाकलनकर्ताओं (integrators) की संख्या से तय होता है, न कि 'ऑर्डर' (Order) से।",
+   "यदि परीक्षा में गेन मार्जिन dB में ऋणात्मक (negative) या फेज मार्जिन अंशों में ऋणात्मक दिया हो, तो सिस्टम को तुरंत 'अस्थिर' (Unstable) चिह्नित करें।",
+   "त्रुटि नियतांक (error constants: Kp, Kv, Ka) के सूत्र याद रखते समय स्टेप के लिए Kp, रैंप के लिए Kv और परवलयिक के लिए Ka का सही मिलान करें।"
+  ],
+  "tips_en": [
+   "If an entire row or the first element of a row in the Routh array becomes zero, replace it with a small positive number 'ε' and proceed.",
+   "Always remember that the system 'Type' is determined by the number of open-loop poles at the origin, not by the system 'Order'.",
+   "If the gain margin in dB or phase margin in degrees is negative, immediately mark the system as unstable.",
+   "When recalling error constants, always match Step input with Kp, Ramp input with Kv, and Parabolic input with Ka to avoid mixing up formulas in calculations."
+  ],
+  "map": {
+   "hi": "नियंत्रण प्रणाली",
+   "en": "Control Systems",
+   "children": [
+    {
+     "hi": "प्रणाली के प्रकार और ट्रांसफर फंक्शन",
+     "en": "System Types and Transfer Function",
+     "children": [
+      {
+       "hi": "ओपन-लूप बनाम क्लोज्ड-लूप",
+       "en": "Open-Loop vs Closed-Loop"
+      },
+      {
+       "hi": "ट्रांसफर फंक्शन की परिभाषा",
+       "en": "Definition of Transfer Function"
+      }
+     ]
+    },
+    {
+     "hi": "स्थिरता विश्लेषण",
+     "en": "Stability Analysis",
+     "children": [
+      {
+       "hi": "राउथ-हर्विट्ज कसौटी",
+       "en": "Routh-Hurwitz Criterion"
+      },
+      {
+       "hi": "रूट लोकस तकनीक",
+       "en": "Root Locus Technique"
+      }
+     ]
+    },
+    {
+     "hi": "स्थिर-अवस्था त्रुटि विश्लेषण",
+     "en": "Steady-State Error Analysis",
+     "children": [
+      {
+       "hi": "सिस्टम टाइप और ऑर्डर",
+       "en": "System Type and Order"
+      },
+      {
+       "hi": "त्रुटि नियतांक (Kp, Kv, Ka)",
+       "en": "Error Constants (Kp, Kv, Ka)"
+      }
+     ]
+    },
+    {
+     "hi": "आवृत्ति प्रतिक्रिया",
+     "en": "Frequency Response",
+     "children": [
+      {
+       "hi": "बोडे प्लॉट और मार्जिन",
+       "en": "Bode Plot and Margins"
+      },
+      {
+       "hi": "नाइक्विस्ट कसौटी",
+       "en": "Nyquist Criterion"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_electrical-control_systems",
+  "s": "je_electrical",
+  "t": "control_systems"
+ },
+ {
+  "summary_hi": "पावर इलेक्ट्रॉनिक्स इलेक्ट्रिकल इंजीनियरिंग की एक महत्वपूर्ण शाखा है जो उच्च शक्ति (High Power) वाले विद्युत ऊर्जा के नियंत्रण और रूपांतरण से संबंधित है। इसमें मुख्य रूप से सिलिकॉन कंट्रोलड रेक्टिफायर (SCR), डायोड, IGBT और MOSFET जैसे सेमीकंडक्टर स्विचिंग उपकरणों का उपयोग किया जाता है। ये उपकरण डीसी को एसी (इन्वर्टर), एसी को डीसी (रेक्टिफायर), एसी को एसी (साइक्लोकन्वर्टर) और डीसी को डीसी (चॉपर) में बदलने का कार्य करते हैं। रेलवे ट्रैक्शन, इलेक्ट्रिक लोकोमोटिव स्पीड कंट्रोल और पावर ट्रांसमिशन प्रणालियों में इन कन्वर्टर्स का व्यापक उपयोग होता है। आरआरबी और आरपीएफ परीक्षाओं में थ्योरी, सिंबल, वर्किंग प्रिंसिपल और लॉसेस पर आधारित प्रश्न अक्सर पूछे जाते हैं। पावर इलेक्ट्रॉनिक सर्किट्स की दक्षता बहुत उच्च होती है क्योंकि इसमें स्विच ऑन और ऑफ मोड में कार्य करते हैं। इसके अलावा, कम्यूटेशन तकनीकें और ट्रिगरिंग सर्किट इस विषय का एक अन्य महत्वपूर्ण हिस्सा हैं।",
+  "summary_en": "Power Electronics is a vital branch of electrical engineering dealing with the control and conversion of high-power electric energy. It primarily utilizes semiconductor switching devices such as Silicon Controlled Rectifiers (SCRs), diodes, IGBTs, and MOSFETs. These devices perform conversions like DC to AC (inverters), AC to DC (rectifiers), AC to AC (cycloconverters), and DC to DC (choppers). Such converters are extensively used in railway traction, electric locomotive speed control, and power transmission systems. RRB and RPF exams frequently feature questions based on theory, device symbols, working principles, and losses. Power electronic circuits exhibit high efficiency because the devices operate strictly in switching modes (on and off). Additionally, commutation techniques and triggering circuits form another crucial segment of this subject.",
+  "facts_hi": [
+   "SCR (सिलिकॉन कंट्रोलड रेक्टिफायर) एक चार-परत (PNPN) और तीन-टर्मिनल (एनोड, कैथोड, गेट) वाला यूनिडायरेक्शनल स्विच है।",
+   "गेट सिग्नल हटाने के बाद भी SCR चालन (conduction) जारी रखता है जब तक कि एनोड करंट होल्डिंग करंट से नीचे न आ जाए।",
+   "चॉपर (Chopper) एक ऐसा उपकरण है जो स्थिर डीसी (Fixed DC) को परिवर्तनीय डीसी (Variable DC) में बदलता है।",
+   "इन्वर्टर (Inverter) डीसी पावर को एसी पावर में परिवर्तित करने का कार्य करता है।",
+   "IGBT (इंसुलेटेड गेट बाइपोलर ट्रांजिस्टर) में MOSFET की उच्च इनपुट प्रतिबाधा और BJT का कम ऑन-स्टेट वोल्टेज ड्रॉप दोनों गुण होते हैं।",
+   "फ्रीव्हीलिंग डायोड (Freewheeling diode) का उपयोग मुख्य रूप से प्रेरक लोड (Inductive load) वाले सर्किट में वोल्टेज स्पाइक्स को रोकने के लिए किया जाता है।",
+   "साइक्लोकन्वर्टर (Cycloconverter) बिना किसी मध्यवर्ती डीसी लिंक के सीधे एसी को एक आवृत्ति से दूसरी आवृत्ति के एसी में बदलता है।",
+   "थायरिस्टर टर्न-ऑफ समय (Turn-off time) सर्किट कम्यूटेशन और डिवाइस के सुरक्षित संचालन के लिए एक अत्यंत महत्वपूर्ण पैरामीटर है।",
+   "पावर डायोड में रिवर्स रिकवरी समय (Reverse recovery time) उच्च आवृत्तियों पर स्विचिंग लॉस को प्रभावित करता है।"
+  ],
+  "facts_en": [
+   "An SCR (Silicon Controlled Rectifier) is a four-layer (PNPN), three-terminal (Anode, Cathode, Gate) unidirectional switch.",
+   "An SCR continues to conduct even after the gate signal is removed, until the anode current falls below the holding current.",
+   "A chopper is a device that converts fixed DC into variable DC.",
+   "An inverter performs the function of converting DC power into AC power.",
+   "An IGBT (Insulated Gate Bipolar Transistor) combines the high input impedance of a MOSFET with the low on-state voltage drop of a BJT.",
+   "A freewheeling diode is primarily used in circuits with inductive loads to prevent voltage spikes.",
+   "A cycloconverter converts AC of one frequency directly to AC of another frequency without any intermediate DC link.",
+   "Thyristor turn-off time is a critical parameter for circuit commutation and safe device operation.",
+   "The reverse recovery time in power diodes affects switching losses at high frequencies."
+  ],
+  "tips_hi": [
+   "लैचिंग करंट (Latching Current) हमेशा होल्डिंग करंट (Holding Current) से अधिक होता है; परीक्षा में अक्सर इन दोनों के मानों या परिभाषाओं को आपस में बदलकर भ्रमित किया जाता है।",
+   "याद रखें: रेक्टिफायर AC से DC बनाता है, इन्वर्टर DC से AC बनाता है, और चॉपर DC से DC बनाता है—इनके बीच कभी भी भ्रमित न हों।",
+   "यदि प्रश्न में उच्च गति (High speed) और मध्यम शक्ति (Medium power) स्विचिंग की बात हो, तो उत्तर हमेशा MOSFET चुनें; यदि उच्च शक्ति और उच्च वोल्टेज हो, तो SCR या IGBT चुनें।"
+  ],
+  "tips_en": [
+   "Latching current is always greater than holding current; exams frequently swap these definitions or values to create a trap.",
+   "Remember the core rule: Rectifier makes AC to DC, Inverter makes DC to AC, and Chopper makes DC to DC—never mix these up.",
+   "If a question mentions high speed and medium power switching, always choose MOSFET; for high power and high voltage, choose SCR or IGBT."
+  ],
+  "map": {
+   "hi": "पावर इलेक्ट्रॉनिक्स",
+   "en": "Power Electronics",
+   "children": [
+    {
+     "hi": "थायरिस्टर परिवार (SCR)",
+     "en": "Thyristor Family (SCR)",
+     "children": [
+      {
+       "hi": "लक्षण और विशेषताएं (Latching & Holding Current)",
+       "en": "Characteristics (Latching & Holding Current)"
+      },
+      {
+       "hi": "कम्यूटेशन तकनीकें (Commutation Techniques)",
+       "en": "Commutation Techniques"
+      }
+     ]
+    },
+    {
+     "hi": "कन्वर्टर्स के प्रकार",
+     "en": "Types of Converters",
+     "children": [
+      {
+       "hi": "रेक्टिफायर और इन्वर्टर",
+       "en": "Rectifiers and Inverters"
+      },
+      {
+       "hi": "चॉपर और साइक्लोकन्वर्टर",
+       "en": "Choppers and Cycloconverters"
+      }
+     ]
+    },
+    {
+     "hi": "आधुनिक सेमीकंडक्टर उपकरण",
+     "en": "Modern Semiconductor Devices",
+     "children": [
+      {
+       "hi": "IGBT और MOSFET",
+       "en": "IGBT and MOSFET"
+      },
+      {
+       "hi": "पावर डायोड और ट्रांजिस्टर",
+       "en": "Power Diodes and Transistors"
+      }
+     ]
+    },
+    {
+     "hi": "अनुप्रयोग (Applications)",
+     "en": "Applications",
+     "children": [
+      {
+       "hi": "रेलवे ट्रैक्शन और मोटर नियंत्रण",
+       "en": "Railway Traction and Motor Control"
+      }
+     ]
+    }
+   ]
+  },
+  "id": "note-je_electrical-power_electronics",
+  "s": "je_electrical",
+  "t": "power_electronics"
+ }
+]
