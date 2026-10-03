@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
@@ -10,6 +11,7 @@ import '../core/purchases.dart';
 import '../core/reminders.dart';
 import '../data/progress.dart';
 import '../core/transitions.dart';
+import '../logic/auth_service.dart';
 import '../widgets/common.dart';
 import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
@@ -31,6 +33,7 @@ class MeScreen extends StatelessWidget {
         Text(context.tr('मैं 🙋', 'Me 🙋'), style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
         const SizedBox(height: 12),
         if (exam != null) _IdCard(p: p, examName: exam.name.of(lang)),
+        if (AuthService.available) _AccountCard(p: p),
         SectionTitle(context.tr('प्रीमियम 👑', 'Premium 👑')),
         _PremiumCard(p: p, purchases: s.purchases),
         SectionTitle(context.tr('मेरी तैयारी 🎯', 'My preparation 🎯')),
@@ -364,6 +367,58 @@ class _IdCard extends StatelessWidget {
         ),
       ),
       ),
+    );
+  }
+}
+
+/// Google sign-in entry point -- deliberately lightweight: signing in only
+/// fills the leaderboard display name/photo in one tap instead of typing it,
+/// it never syncs progress/streaks to the cloud (see auth_service.dart). A
+/// StreamBuilder so the card reacts immediately to sign-in/sign-out without
+/// the rest of the Me screen needing to become stateful.
+class _AccountCard extends StatelessWidget {
+  final Progress p;
+  const _AccountCard({required this.p});
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder<User?>(
+      stream: AuthService.userChanges,
+      builder: (context, snap) {
+        final user = snap.data;
+        return Card(
+          margin: const EdgeInsets.only(top: 12),
+          child: user == null
+              ? ListTile(
+                  leading: const Icon(Icons.login, color: BrandColors.sky),
+                  title: Text(context.tr('Google से साइन इन करें', 'Sign in with Google')),
+                  subtitle: Text(context.tr('लीडरबोर्ड नाम अपने आप भर जाएगा', 'Auto-fills your leaderboard name')),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () async {
+                    HapticFeedback.selectionClick();
+                    final signedIn = await AuthService.signInWithGoogle();
+                    if (signedIn != null && (p.leaderboardName == null || p.leaderboardName!.isEmpty)) {
+                      final name = signedIn.displayName;
+                      if (name != null && name.trim().isNotEmpty) p.setLeaderboardName(name);
+                    }
+                  },
+                )
+              : ListTile(
+                  leading: user.photoURL != null
+                      ? CircleAvatar(backgroundImage: NetworkImage(user.photoURL!))
+                      : const Icon(Icons.account_circle, color: BrandColors.sky),
+                  title: Text(user.displayName ?? user.email ?? context.tr('साइन इन किया गया', 'Signed in')),
+                  subtitle: Text(context.tr('Google से साइन इन', 'Signed in with Google')),
+                  trailing: TextButton(
+                    onPressed: () {
+                      HapticFeedback.selectionClick();
+                      AuthService.signOut();
+                    },
+                    child: Text(context.tr('साइन आउट', 'Sign out')),
+                  ),
+                ),
+        );
+      },
     );
   }
 }
