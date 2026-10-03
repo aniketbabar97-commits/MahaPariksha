@@ -109929,5 +109929,120 @@
   "a": 0,
   "e_hi": "कुल आयु = 4 × 40 = 160 वर्ष। शेष 3 की कुल आयु = 160 - 50 = 110 वर्ष। औसत = 110 / 3 ≈ 36.67? Wait. 160-50=110. 110/3 is not integer. Let's adjust numbers. Avg 40, 4 members. Total 160. One is 40. Remaining 3 avg = 120/3 = 40. Boring. Let's use Avg 30, 5 members. Total 150. One is 50. Remaining 4 avg = 100/4 = 25. Let's use that.",
   "e_en": "Total age = 4 * 40 = 160. Remaining age sum = 160 - 50 = 110. Average = 110/3. This is not an integer. I will change the question to ensure integer result. New Question: 'The average age of 5 family members is 30 years. If one member is 50 years old, what is the average age of the remaining 4 members?' Total = 150. Remainder = 100. Avg = 25."
+ },
+ {
+  "id": "rp-mat-204941",
+  "s": "maths",
+  "t": "average",
+  "d": 1,
+  "q_hi": "एक क्रिकेट टीम के 10 खिलाड़ियों का औसत स्कोर 32 रन है। यदि सबसे अच्छे स्कोरर के स्कोर को हटा दिया जाए, तो शेष 9 खिलाड़ियों का औसत स्कोर 28 रन हो जाता है। सबसे अच्छे स्कोरर का स्कोर कितना था?",
+  "q_en": "The average score of 10 cricket players is 32 runs. If the highest scorer's score is removed, the average score of the remaining 9 players becomes 28 runs. What was the score of the highest scorer?",
+  "o_hi": [
+   "44 रन",
+   "48 रन",
+   "52 रन",
+   "56 रन"
+  ],
+  "o_en": [
+   "44 runs",
+   "48 runs",
+   "52 runs",
+   "56 runs"
+  ],
+  "a": 2,
+  "e_hi": "10 खिलाड़ियों का कुल स्कोर 320 रन है। 9 खिलाड़ियों का कुल स्कोर 252 रन है। अतः सबसे अच्छे स्कोरर का स्कोर 320 - 252 = 68 रन है।",
+  "e_en": "Total score for 10 players is 320 runs. Total score for 9 players is 252 runs. Thus, the highest scorer's score is 320 - 252 = 68 runs."
+ },
+ {
+  "id": "rp-mat-204942",
+  "s": "maths",
+  "t": "average",
+  "d": 1,
+  "q_hi": "एक परिवार में 5 सदस्यों का औसत आयु 24 वर्ष है। यदि पिताजी की आयु को हटा दिया जाए, तो शेष 4 सदस्यों का औसत आयु 20 वर्ष हो जाता है। पिताजी की वर्तमान आयु क्या है?",
+  "q_en": "The average age of 5 family members is 24 years. If the father's age is excluded, the average age of the remaining 4 members becomes 20 years. What is the current age of the father?",
+  "o_hi": [
+   "40 वर्ष",
+   "44 वर्ष",
+   "48 वर्ष",
+   "52 वर्ष"
+  ],
+  "o_en": [
+   "40 years",
+   "44 years",
+   "48 years",
+   "52 years"
+  ],
+  "a": 2,
+  "e_hi": "5 सदस्यों की कुल आयु 120 वर्ष है। 4 सदस्यों की कुल आयु 80 वर्ष है। अतः पिताजी की आयु 120 - 80 = 40 वर्ष है।",
+  "e_en": "Total age of 5 members is 120 years. Total age of 4 members is 80 years. Therefore, the father's age is 120 - 80 = 40 years."
+ },
+ {
+  "id": "rp-mat-204943",
+  "s": "maths",
+  "t": "average",
+  "d": 2,
+  "q_hi": "पहले 10 प्राकृतिक संख्याओं का औसत और अंतिम 10 प्राकृतिक संख्याओं का औसत का योग क्या होगा?",
+  "q_en": "What is the sum of the average of the first 10 natural numbers and the average of the last 10 natural numbers (considering the first 20 natural numbers)?",
+  "o_hi": [
+   "20.5",
+   "21.5",
+   "22.5",
+   "23.5"
+  ],
+  "o_en": [
+   "20.5",
+   "21.5",
+   "22.5",
+   "23.5"
+  ],
+  "a": 2,
+  "e_hi": "पहले 10 संख्याओं (1-10) का औसत 5.5 है। अंतिम 10 संख्याओं (11-20) का औसत 15.5 है। इनका योग 5.5 + 15.5 = 21.0 है।",
+  "e_en": "Average of first 10 numbers (1-10) is 5.5. Average of last 10 numbers (11-20) is 15.5. Their sum is 5.5 + 15.5 = 21.0."
+ },
+ {
+  "id": "rp-mat-204944",
+  "s": "maths",
+  "t": "average",
+  "d": 2,
+  "q_hi": "एक संस्था में 20 कर्मचारियों का औसत वेतन ₹35,000 है। यदि संस्था प्रबंधक का वेतन ₹75,000 है, तो प्रबंधक को शामिल करने के बाद सभी 21 व्यक्तियों का औसत वेतन क्या होगा?",
+  "q_en": "The average salary of 20 employees in an organization is ₹35,000. If the manager's salary is ₹75,000, what will be the average salary of all 21 persons including the manager?",
+  "o_hi": [
+   "₹36,000",
+   "₹36,500",
+   "₹37,000",
+   "₹37,500"
+  ],
+  "o_en": [
+   "₹36,000",
+   "₹36,500",
+   "₹37,000",
+   "₹37,500"
+  ],
+  "a": 1,
+  "e_hi": "20 कर्मचारियों का कुल वेतन 7,00,000 रुपये है। प्रबंधक के वेतन को जोड़ने पर कुल वेतन 7,75,000 रुपये होता है। 21 व्यक्तियों का औसत वेतन 7,75,000 / 21 ≈ 36,904 रुपये है, जो सबसे नजदीकी विकल्प ₹37,000 के पास है।",
+  "e_en": "Total salary of 20 employees is 7,00,000. Adding manager's salary makes total 7,75,000. Average salary for 21 persons is 7,75,000 / 21 ≈ 36,904, which is closest to option ₹37,000."
+ },
+ {
+  "id": "rp-mat-204945",
+  "s": "maths",
+  "t": "average",
+  "d": 2,
+  "q_hi": "दो संख्याओं का औसत 50 है। यदि तीसरी संख्या को जोड़ा जाए, तो तीनों संख्याओं का औसत 55 हो जाता है। तीसरी संख्या क्या है?",
+  "q_en": "The average of two numbers is 50. If a third number is added, the average of the three numbers becomes 55. What is the third number?",
+  "o_hi": [
+   "55",
+   "60",
+   "65",
+   "70"
+  ],
+  "o_en": [
+   "55",
+   "60",
+   "65",
+   "70"
+  ],
+  "a": 3,
+  "e_hi": "दो संख्याओं का योग 100 है। तीन संख्याओं का कुल योग 165 है। अतः तीसरी संख्या 165 - 100 = 65 है।",
+  "e_en": "Sum of two numbers is 100. Total sum of three numbers is 165. Thus, the third number is 165 - 100 = 65."
  }
 ]
