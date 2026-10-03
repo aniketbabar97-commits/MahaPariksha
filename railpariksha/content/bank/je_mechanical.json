@@ -2503,8 +2503,8 @@
    "1.5"
   ],
   "a": 3,
-  "e_hi": "दक्षता का सूत्र 1 - (1/r^(gamma-1)) है। 0.5 = 1 - (1/4^(gamma-1)) को हल करने पर गामा का मान 1.4 प्राप्त होता है।",
-  "e_en": "The efficiency formula is 1 - (1/r^(gamma-1)). Solving 0.5 = 1 - (1/4^(gamma-1)) gives the value of gamma as 1.4."
+  "e_hi": "दक्षता का सूत्र 1 - (1/r^(gamma-1)) है। 0.5 = 1 - (1/4^(gamma-1)) को हल करने पर 4^(gamma-1) = 2, अर्थात (gamma-1)*ln4 = ln2, जिससे gamma-1 = 0.5 और गामा का मान 1.5 प्राप्त होता है।",
+  "e_en": "The efficiency formula is 1 - (1/r^(gamma-1)). Solving 0.5 = 1 - (1/4^(gamma-1)) gives 4^(gamma-1) = 2, so (gamma-1)*ln4 = ln2, giving gamma-1 = 0.5 and gamma = 1.5."
  },
  {
   "id": "rp-je_-f00110",
@@ -19408,8 +19408,8 @@
    "Copper"
   ],
   "a": 3,
-  "e_hi": "मृदु इस्पात (Mild steel) की तन्यता अन्य विकल्पों की तुलना में सबसे अधिक होती है।",
-  "e_en": "Mild steel exhibits higher ductility compared to the other options listed."
+  "e_hi": "तांबा (Copper) दी गई सामग्रियों में सबसे अधिक तन्य (ductile) है; मृदु इस्पात भी तन्य है परंतु तांबे से कम।",
+  "e_en": "Copper is the most ductile of the materials listed; mild steel is also ductile, but less so than copper."
  },
  {
   "id": "rp-je_-h00846",
@@ -22550,17 +22550,17 @@
    "1 : 1.17",
    "1 : 1",
    "1.17 : 1",
-   "1 : 2"
+   "लगभग 1 : 2"
   ],
   "o_en": [
    "1 : 1.17",
    "1 : 1",
    "1.17 : 1",
-   "1 : 2"
+   "Approximately 1 : 2"
   ],
   "a": 3,
-  "e_hi": "मरोड़ प्रतिरोध ध्रुवीय जड़त्व आघूर्ण (Polar Moment of Inertia) के समानुपाती होता है। गणना करने पर खोखले शाफ्ट का मान ठोस से अधिक आता है।",
-  "e_en": "Torsional resistance is proportional to the Polar Moment of Inertia. Calculating both shows the hollow shaft has higher resistance."
+  "e_hi": "मरोड़ प्रतिरोध ध्रुवीय जड़त्व आघूर्ण (J) के समानुपाती होता है। J(ठोस) = (π/32)×40^4 = 2.56×10^6 मिमी^4। J(खोखला) = (π/32)×(50^4−30^4) = (π/32)×5.44×10^6 मिमी^4। अनुपात J(ठोस):J(खोखला) ≈ 2.56:5.44 ≈ 1:2.13, यानी लगभग 1:2।",
+  "e_en": "Torsional resistance is proportional to the Polar Moment of Inertia (J). J(solid) ∝ 40^4 = 2.56×10^6 mm^4. J(hollow) ∝ (50^4−30^4) = 5.44×10^6 mm^4. The ratio J(solid):J(hollow) ≈ 2.56:5.44 ≈ 1:2.13, i.e. approximately 1:2."
  },
  {
   "id": "rp-je_-h00983",
@@ -22766,8 +22766,8 @@
    "0.4"
   ],
   "a": 1,
-  "e_hi": "सूत्र E = 3K(1-2म्यू) और E = 2G(1+म्यू) का उपयोग करके हल करने पर म्यू का मान 0.25 प्राप्त होता है।",
-  "e_en": "Using the relations E = 3K(1-2mu) and E = 2G(1+mu), substituting the values K=100 and G=40 gives mu = 0.25."
+  "e_hi": "सूत्र μ = (3K − 2G) / (6K + 2G) का उपयोग करने पर, K=100 और G=40 रखने पर μ = (300−80)/(600+80) = 220/680 ≈ 0.33 प्राप्त होता है।",
+  "e_en": "Using the relation mu = (3K - 2G) / (6K + 2G), substituting K=100 and G=40 gives mu = (300-80)/(600+80) = 220/680 ≈ 0.33."
  },
  {
   "id": "rp-je_-h00992",
@@ -25962,9 +25962,9 @@
    "Iron Age",
    "Copper Age"
   ],
-  "a": 1,
-  "e_hi": "कांस्य युग के दौरान, धातुओं को गर्म करके और हथौड़े व निहाई का उपयोग करके आकार देने की तकनीक (फोर्जिंग) विकसित हुई।",
-  "e_en": "During the Bronze Age, the technique of shaping metals by heating and using a hammer and anvil (forging) was developed."
+  "a": 3,
+  "e_hi": "ताम्र युग (Chalcolithic / Copper Age) में मनुष्यों ने सबसे पहले प्राकृतिक तांबे को ठंडा हथौड़े से पीटकर (cold hammering) और बाद में निहाई का उपयोग करके आकार देना शुरू किया, जो कांस्य युग से पहले का काल है।",
+  "e_en": "In the Copper Age (Chalcolithic era), humans first began shaping native copper by cold hammering on an anvil, predating the Bronze Age."
  },
  {
   "id": "rp-je_-h01132",
@@ -27926,8 +27926,8 @@
   "s": "je_mechanical",
   "t": "manufacturing_processes",
   "d": 1,
-  "q_hi": "एक धातु की चादर को 500 मिलीमीटर चौड़ाई से 400 मिलीमीटर तक कम करने के लिए रोलिंग प्रक्रिया में, ड्राफ्ट का मान क्या होगा?",
-  "q_en": "In a rolling process where a metal sheet is reduced from 500 mm width to 400 mm, what will be the value of the draft?",
+  "q_hi": "एक धातु की चादर की मोटाई को 500 मिलीमीटर से 400 मिलीमीटर तक कम करने के लिए रोलिंग प्रक्रिया में, ड्राफ्ट का मान क्या होगा?",
+  "q_en": "In a rolling process where a metal sheet's thickness is reduced from 500 mm to 400 mm, what will be the value of the draft?",
   "o_hi": [
    "100 मिलीमीटर",
    "900 मिलीमीटर",
@@ -27942,7 +27942,7 @@
   ],
   "a": 0,
   "e_hi": "ड्राफ्ट प्रारंभिक मोटाई और अंतिम मोटाई का अंतर होता है। यहाँ 500 - 400 = 100 मिलीमीटर है।",
-  "e_en": "Draft is defined as the difference between the initial thickness and final thickness. Here, 500 - 400 = 100 mm."
+  "e_en": "Draft is defined as the difference between the initial thickness and the final thickness. Here, 500 - 400 = 100 mm."
  },
  {
   "id": "rp-je_-h01218",
@@ -31577,29 +31577,6 @@
   "a": 1,
   "e_hi": "बर्नोली का समीकरण ऊर्जा संरक्षण के सिद्धांत का एक रूप है जो बहते हुए द्रव के लिए लागू होता है।",
   "e_en": "Bernoulli's equation is a form of the principle of conservation of energy applied to flowing fluids."
- },
- {
-  "id": "rp-je_-h01376",
-  "s": "je_mechanical",
-  "t": "fluid_mechanics_machinery",
-  "d": 3,
-  "q_hi": "द्रव के वाष्प दाब (vapor pressure) का मान वायुमंडलीय दाब से कम होने पर क्या होता है?",
-  "q_en": "What happens when the vapor pressure of a liquid is lower than the atmospheric pressure?",
-  "o_hi": [
-   "द्रव उबलने लगता है",
-   "कैविटेशन (cavitation) होता है",
-   "द्रव का वाष्पीकरण रुक जाता है",
-   "कोई प्रभाव नहीं पड़ता"
-  ],
-  "o_en": [
-   "Liquid starts boiling",
-   "Cavitation occurs",
-   "Evaporation stops",
-   "No effect"
-  ],
-  "a": 3,
-  "e_hi": "जब द्रव का दाब उसके वाष्प दाब से नीचे गिर जाता है, तो बुलबुले बनते हैं, जिसे कैविटेशन कहते हैं।",
-  "e_en": "When the pressure of the fluid drops below its vapor pressure, bubbles form, a phenomenon known as cavitation."
  },
  {
   "id": "rp-je_-h01377",
