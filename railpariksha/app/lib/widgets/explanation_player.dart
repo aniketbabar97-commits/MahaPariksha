@@ -132,8 +132,7 @@ class _ExplanationPlayerState extends State<ExplanationPlayer> {
           },
         ),
         const SizedBox(width: 8),
-        Text(context.tr('${_index + 1} / ${_sentences.length}', '${_index + 1} / ${_sentences.length}'),
-            style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12)),
+        Text('${_index + 1} / ${_sentences.length}', style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12)),
       ]),
     ]);
   }
