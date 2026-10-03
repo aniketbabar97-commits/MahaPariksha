@@ -1735,8 +1735,8 @@
    "12%"
   ],
   "a": 1,
-  "e_hi": "आय स्थिर रखने के लिए, यात्रियों की कमी का प्रतिशत = (बढ़ोतरी / (100 + बढ़ोतरी)) * 100 होता है। यहाँ (15/115)*100 = 12.5% है।",
-  "e_en": "To keep revenue constant, the percentage decrease in passengers is (Increase / (100 + Increase)) * 100. Here, (15/115)*100 = 12.5%."
+  "e_hi": "आय स्थिर रखने के लिए, यात्रियों की कमी का प्रतिशत = (बढ़ोतरी / (100 + बढ़ोतरी)) * 100 होता है। यहाँ (15/115)*100 ≈ 13.04%, जो लगभग 13% है।",
+  "e_en": "To keep revenue constant, the percentage decrease in passengers is (Increase / (100 + Increase)) * 100. Here, (15/115)*100 ≈ 13.04%, which is approximately 13%."
  },
  {
   "id": "rp-mat-00082",
@@ -2995,7 +2995,7 @@
   ],
   "o_en": [
    "₹215",
-   "₡230",
+   "₹230",
    "₹220",
    "₹240"
   ],
@@ -4292,29 +4292,6 @@
   "e_en": "Converting the fractions to decimals gives 3/4 = 0.75 and 2/5 = 0.40. Among the options, only 0.80 is greater than both 0.75 and 0.40."
  },
  {
-  "id": "rp-mat-00202",
-  "s": "maths",
-  "t": "decimal_fraction",
-  "d": 2,
-  "q_hi": "यदि x.d का दशमलव भाग 0.4 है और x.d + (x.d की भिन्न रूपांतरण) = 1.4, तो x.d कितना होगा?",
-  "q_en": "If the decimal part of a number is 0.4, and the sum of the number and its fractional equivalent is 1.4, what is the number?",
-  "o_hi": [
-   "1.0",
-   "1.4",
-   "0.4",
-   "1.6"
-  ],
-  "o_en": [
-   "1.0",
-   "1.4",
-   "0.4",
-   "1.6"
-  ],
-  "a": 0,
-  "e_hi": "यह प्रश्न गलत है। आइए इसे सुधारें।\n\nनया प्रश्न: यदि किसी संख्या का दशमलव भाग 0.25 है और उसका दशमलव भाग उसके पूर्ण भाग का 25% है, तो उसका पूर्ण भाग क्या है?\n\nLet integer part be I. Decimal part is 0.25. Condition: 0.25 = 25% of I. So 0.25 = 0.25 * I. Therefore I = 1. The number is 1.25. Wait, the question asks for the integer part.\n\nLet's stick to a simpler reasoning chain.\n\nQ3: A decimal number has two digits after the point. The tenths digit is twice the hundredths digit. The sum of the digits in the decimal part is 3. What is the decimal part?\n\nTenths (t) = 2 * Hundredths (h). t + h = 3. So 2h + h = 3 => 3h = 3 => h = 1, t = 2. Decimal part is .21.\n\nq_hi: \"एक दशमलव संख्या में दशमलव बिंदु के बाद दो अंक हैं। दशमलव स्थान का अंक सौवें स्थान के अंक का दोगुना है। दशमलव भाग के अंकों का योग 3 है। दशमलव बिंदु के बाद का भाग क्या है?\"\no_hi: [\".21\", \".12\", \".30\", \".11\"]",
-  "e_en": "Let the tenths digit be t and hundredths be h. We know t = 2h and t + h = 3. Substituting t, we get 3h = 3, so h = 1 and t = 2. The decimal part is .21."
- },
- {
   "id": "rp-mat-00203",
   "s": "maths",
   "t": "decimal_fraction",
@@ -5166,29 +5143,6 @@
   "e_en": "Distance = Speed × Time. 120 × 2.5 = 120 × (5/2) = 60 × 5 = 300 km."
  },
  {
-  "id": "rp-mat-00242",
-  "s": "maths",
-  "t": "decimal_fraction",
-  "d": 2,
-  "q_hi": "एक कार्यालय में कुल कर्मचारियों की संख्या 450 है। यदि 37.5% कर्मचारी महिलाओं से मिले, तो बाकी शेष कर्मचारियों की संख्या क्या होगी?",
-  "q_en": "An office has a total of 450 employees. If 37.5% of the employees are female, what is the number of remaining employees?",
-  "o_hi": [
-   "281",
-   "280",
-   "285",
-   "275"
-  ],
-  "o_en": [
-   "281",
-   "280",
-   "285",
-   "275"
-  ],
-  "a": 0,
-  "e_hi": "37.5% = 3/8। कुल का 3/8 = 450 × 3/8 = 168.75 (यह पूर्णांक नहीं है, इसलिए ध्यान से देखें: 37.5% का अर्थ है 3/8। 450 का 3/8 = 168.75। सामान्यतः ऐसे प्रश्नों में पूर्णांक आता है। मान लीजिए प्रश्न में 400 था? नहीं, 450 दिया है। 37.5% of 450 = 168.75। शेष = 450 - 168.75 = 281.25। विकल्पों में 281 सबसे नज़दीक है, लेकिन गणित में यह गलत है। आइए प्रश्न को 400 पर बदलें ताकि साफ-सुथरा हो।",
-  "e_en": "37.5% is equal to 3/8. Calculating 3/8 of 450 gives 168.75, which is not an integer. For a clean exam question, let's assume the total is 400. 3/8 of 400 is 150. Remaining = 400 - 150 = 250. Wait, let's stick to the generated numbers but ensure they work. Let's change the percentage to 25% for clarity or change total to 400. Let's use total 400 and 37.5%. 37.5% of 400 = 150. Remaining = 250. Let's re-evaluate the option set for the final output to ensure mathematical integrity. I will adjust the question to use 400 employees."
- },
- {
   "id": "rp-mat-00243",
   "s": "maths",
   "t": "decimal_fraction",
@@ -5469,8 +5423,8 @@
   "s": "maths",
   "t": "decimal_fraction",
   "d": 2,
-  "q_hi": "निम्नलिखित भिन्नों में से कौन सा अविराम और अपरिवर्तनीय (non-terminating and non-recurring) दशमलव नहीं है?",
-  "q_en": "Which of the following fractions is NOT a non-terminating and non-recurring decimal?",
+  "q_hi": "निम्नलिखित में से कौन सा अविराम और अपरिवर्तनीय (non-terminating and non-recurring) दशमलव है?",
+  "q_en": "Which of the following is a non-terminating and non-recurring decimal?",
   "o_hi": [
    "1/11",
    "1/9",
@@ -5484,7 +5438,7 @@
    "π (Pi)"
   ],
   "a": 3,
-  "e_hi": "1/11, 1/9 और 1/7 सभी परिचयकारी (recurring) दशमलव हैं, जबकि पाई (π) एक अपरिचयकारी और अपरिवर्तनीय अविराम दशमलव है।",
+  "e_hi": "1/11, 1/9 और 1/7 सभी आवर्ती (recurring) दशमलव हैं, जबकि π एक अनावर्ती और असांत (non-terminating, non-recurring) दशमलव है।",
   "e_en": "1/11, 1/9, and 1/7 are all recurring decimals, whereas Pi is a non-terminating and non-recurring decimal."
  },
  {
@@ -9072,8 +9026,8 @@
    "54 m/s"
   ],
   "a": 1,
-  "e_hi": "108 किमी/घंटा को m/s में बदलने के लिए: 108 × (5/18) = 27 m/s।",
-  "e_en": "To convert 108 km/h to m/s: 108 × (5/18) = 27 m/s."
+  "e_hi": "108 किमी/घंटा को m/s में बदलने के लिए: 108 × (5/18) = 30 m/s।",
+  "e_en": "To convert 108 km/h to m/s: 108 × (5/18) = 30 m/s."
  },
  {
   "id": "rp-mat-00416",
@@ -9900,8 +9854,8 @@
    "18"
   ],
   "a": 0,
-  "e_hi": "सूत्र के अनुसार, दो संख्याओं का गुणनफल = म.स.प. × ल.स.प. अतः, संख्या 2 = (12 × 144) / 48 = 24।",
-  "e_en": "Using the property that the product of two numbers equals the product of their HCF and LCM, we calculate: (12 × 144) / 48 = 24."
+  "e_hi": "सूत्र के अनुसार, दो संख्याओं का गुणनफल = म.स.प. × ल.स.प.। अतः, संख्या 2 = (12 × 144) / 48 = 36।",
+  "e_en": "Using the property that the product of two numbers equals the product of their HCF and LCM, we calculate: (12 × 144) / 48 = 36."
  },
  {
   "id": "rp-mat-00455",
@@ -10345,8 +10299,8 @@
   "s": "maths",
   "t": "hcf_lcm",
   "d": 2,
-  "q_hi": "दो संख्याओं का ल.स.प. (LCM) उनके म.स.प. (HCF) से 15 गुना अधिक है। यदि HCF 12 है, तो LCM क्या होगा?",
-  "q_en": "The LCM of two numbers is 15 times greater than their HCF. If the HCF is 12, what is the LCM?",
+  "q_hi": "दो संख्याओं का ल.स.प. (LCM) उनके म.स.प. (HCF) का 15 गुना है। यदि HCF 12 है, तो LCM क्या होगा?",
+  "q_en": "The LCM of two numbers is 15 times their HCF. If the HCF is 12, what is the LCM?",
   "o_hi": [
    "180",
    "204",
@@ -10360,8 +10314,8 @@
    "240"
   ],
   "a": 0,
-  "e_hi": "HCF = 12. LCM = HCF + 15 = 12 + 15 = 27? नहीं, प्रश्न का अर्थ '15 times greater' अक्सर '15 times more' या 'sum is 15 times' के रूप में लिया जाता है, लेकिन यहाँ साधारण भाषा में '15 times greater' का अर्थ HCF से 15 गुना ज़्यादा यानी 16 गुना हो सकता है, परंतु सामान्य परीक्षाओं में इसे अक्सर 'LCM = 15 * HCF' या 'LCM - HCF = 15' माना जाता है। यहाँ '15 times greater' का मतलब LCM = 12 + 15 * 12? नहीं। आइए सावधान रहें। यदि '15 times greater' का अर्थ है LCM = 15 * HCF, तो 15*12=180। यदि अर्थ है LCM - HCF = 15, तो 12+15=27 (विकल्प में नहीं)। यदि अर्थ है LCM = HCF + 15*HCF? नहीं। आइए विकल्प देखें। 180 (15*12), 204 (17*12), 156 (13*12), 240 (20*12)। सबसे संभावित परीक्षा पैटर्न: LCM = 15 * HCF।",
-  "e_en": "HCF = 12. The phrase '15 times greater' in exam contexts often implies the LCM is 15 times the HCF. So, LCM = 15 * 12 = 180."
+  "e_hi": "LCM = 15 × HCF = 15 × 12 = 180।",
+  "e_en": "LCM = 15 × HCF = 15 × 12 = 180."
  },
  {
   "id": "rp-mat-00476",
@@ -14830,8 +14784,8 @@
   "s": "maths",
   "t": "data_interpretation",
   "d": 2,
-  "q_hi": "एक बर्ताने में 50% नमक और 50% पानी का द्रव्यमिश्रण है। यदि इसमें 10 लीटर शुद्ध पानी डाला जाए, तो नए मिश्रण में नमक का प्रतिशत कितना होगा?",
-  "q_en": "A vessel contains a mixture of 50% salt and 50% water. If 10 liters of pure water is added to it, what will be the percentage of salt in the new mixture?",
+  "q_hi": "एक बर्तन में 50% नमक और 50% पानी का मिश्रण है। यदि इसमें 25 लीटर शुद्ध पानी डाला जाए, तो नए मिश्रण में नमक का प्रतिशत कितना होगा?",
+  "q_en": "A vessel contains a mixture of 50% salt and 50% water. If 25 liters of pure water is added to it, what will be the percentage of salt in the new mixture?",
   "o_hi": [
    "40%",
    "45%",
@@ -14845,8 +14799,8 @@
    "55%"
   ],
   "a": 0,
-  "e_hi": "मान लीजिए कुल मिश्रण 100 लीटर है। नमक = 50 लीटर, पानी = 50 लीटर। नया कुल = 100 + 10 = 110 लीटर। नमक का प्रतिशत = (50/110) * 100 = 45.45%। (Wait, 45.45 is not an option. Let's adjust the initial quantity or addition. If initial is 100L, salt 50L. Add 25L water. Total 125L. Salt % = 50/125 = 40%. Let's change the added water to 25 liters in the question.)",
-  "e_en": "Assume total mixture is 100 liters. Salt = 50 liters. New total = 100 + 25 = 125 liters. Percentage of salt = (50/125) * 100 = 40%."
+  "e_hi": "मान लीजिए कुल मिश्रण 100 लीटर है। नमक = 50 लीटर, पानी = 50 लीटर। नया कुल = 100 + 25 = 125 लीटर। नमक का प्रतिशत = (50/125) × 100 = 40%।",
+  "e_en": "Assume total mixture is 100 liters. Salt = 50 liters. New total = 100 + 25 = 125 liters. Percentage of salt = (50/125) × 100 = 40%."
  },
  {
   "id": "rp-mat-00687",
@@ -18713,29 +18667,6 @@
   "e_en": "Let CP = 100. Wrong CP = 90. Selling Price (SP) = 110% of 90 = 99. Actual CP = 100, SP = 99, so there is a 1% loss."
  },
  {
-  "id": "rp-mat-00870",
-  "s": "maths",
-  "t": "profit_loss",
-  "d": 2,
-  "q_hi": "एक वस्तु को 15% लाभ पर बेचने पर, यदि उसकी खरीद मूल्य (CP) को 10% कम माना जाता है, तो लाभ प्रतिशत कितना होगा?",
-  "q_en": "If an item is sold with a 15% profit, but the cost price is taken to be 10% less, what is the profit percentage calculated on the wrong cost price?",
-  "o_hi": [
-   "27.5%",
-   "15%",
-   "25%",
-   "20%"
-  ],
-  "o_en": [
-   "27.5%",
-   "15%",
-   "25%",
-   "20%"
-  ],
-  "a": 0,
-  "e_hi": "मान लें वास्तविक CP = 100। SP = 115 (15% लाभ)। गलत CP = 90। लाभ = 115 - 90 = 25। लाभ% = (25/90)*100 = 27.77%।\n*Wait, let's pick cleaner numbers.* \nLet CP = 100. SP = 120 (20% profit). Wrong CP = 90. Profit = 30. % = 30/90 = 33.3%. \nLet's try: CP=100, Profit=10%. SP=110. Wrong CP=90. Profit=20. % = 20/90 = 22.2%. \nLet's try: CP=100, Profit=5%. SP=105. Wrong CP=90. Profit=15. % = 15/90 = 16.6%. \nLet's try: CP=100, Profit=0%. SP=100. Wrong CP=90. Profit=10. % = 11.1%. \nLet's try a standard trap: CP=100, SP=110 (10% profit). If CP is taken as 90, profit is 20. 20/90 = 22.2%. \nLet's use: CP=100. Sold at 20% profit. SP=120. If CP is taken as 80 (20% less). Profit = 40. % = 40/80 = 50%. \nLet's use: CP=100. Sold at 10% profit. SP=110. If CP is taken as 90. Profit=20. 20/90 = 22.22%. \nLet's use: CP=100. Sold at 0% profit. SP=100. If CP is taken as 80. Profit=20. 20/80 = 25%. This is a clean integer. \n*Revised Q3:* An item is sold at no profit. If the CP is taken 20% less, what is the profit %?\nOptions: 25%, 20%, 15%, 30%. Answer: 25%.",
-  "e_en": "Let actual CP = 100. SP = 100 (no profit). Wrong CP = 100 - 20% = 80. Profit = 100 - 80 = 20. Profit % = (20/80) * 100 = 25%."
- },
- {
   "id": "rp-mat-00871",
   "s": "maths",
   "t": "time_work",
@@ -20089,8 +20020,8 @@
    "Their HCF is greater than 18"
   ],
   "a": 2,
-  "e_hi": "दो संख्याओं का ल.स.प. (LCM) हमेशा उनमें से अधिकतम संख्या के बराबर या उससे बड़ा होता है। चूंकि 18 अधिकतम संख्या है, इसलिए LCM 18 से अधिक (24) होना चाहिए।",
-  "e_en": "The LCM of two numbers is always greater than or equal to the largest of the two numbers. Since 18 is the largest, the LCM must be greater than or equal to 18 (it is 24)."
+  "e_hi": "दो संख्याओं का ल.स.प. (LCM) हमेशा उनमें से अधिकतम संख्या के बराबर या उससे बड़ा होता है। चूंकि 18 अधिकतम संख्या है, इसलिए LCM 18 से अधिक (36) होना चाहिए।",
+  "e_en": "The LCM of two numbers is always greater than or equal to the largest of the two numbers. Since 18 is the largest, the LCM must be greater than or equal to 18 (it is 36)."
  },
  {
   "id": "rp-mat-00934",
@@ -20158,8 +20089,8 @@
    "48"
   ],
   "a": 0,
-  "e_hi": "पहले गुणनफल निकालें: 12 × 144 = 1728। अब, दूसरी संख्या = 1728 / 96 = 24।",
-  "e_en": "First, calculate the product: 12 × 144 = 1728. Then, the second number = 1728 / 96 = 24."
+  "e_hi": "पहले गुणनफल निकालें: 12 × 144 = 1728। अब, दूसरी संख्या = 1728 / 96 = 18।",
+  "e_en": "First, calculate the product: 12 × 144 = 1728. Then, the second number = 1728 / 96 = 18."
  },
  {
   "id": "rp-mat-00937",
@@ -21147,8 +21078,8 @@
    "20"
   ],
   "a": 2,
-  "e_hi": "संख्याएँ 10 और 12 हैं क्योंकि $10 \\times 12 = 120$ और $10 + 12 = 23$। बड़ी संख्या 12 है।",
-  "e_en": "The numbers are 10 and 12 because $10 \\times 12 = 120$ and $10 + 12 = 23$. The larger number is 12."
+  "e_hi": "संख्याएँ 15 और 8 हैं क्योंकि 15 × 8 = 120 और 15 + 8 = 23। बड़ी संख्या 15 है।",
+  "e_en": "The numbers are 15 and 8 because 15 × 8 = 120 and 15 + 8 = 23. The larger number is 15."
  },
  {
   "id": "rp-mat-00984",
@@ -22987,8 +22918,8 @@
    "18, 30"
   ],
   "a": 1,
-  "e_hi": "मान लें संख्याएँ 3x और 5x हैं। (3x+10)/(5x+10) = 5/7 हल करने पर x=10 मिलता है, इसलिए संख्याएँ 30 और 50 हैं।",
-  "e_en": "Let the numbers be 3x and 5x. Solving (3x+10)/(5x+10) = 5/7 gives x=10, so the numbers are 30 and 50."
+  "e_hi": "मान लें संख्याएँ 3x और 5x हैं। (3x+10)/(5x+10) = 5/7 हल करने पर x=5 मिलता है, इसलिए संख्याएँ 15 और 25 हैं।",
+  "e_en": "Let the numbers be 3x and 5x. Solving (3x+10)/(5x+10) = 5/7 gives x=5, so the numbers are 15 and 25."
  },
  {
   "id": "rp-mat-01078",
@@ -23311,29 +23242,6 @@
   "a": 1,
   "e_hi": "मान लें मूल मूल्य 100 है। 10% वृद्धि के बाद 110। फिर 10% कमी: 110 का 90% = 99। अतः 1% हानि।",
   "e_en": "Assume original price is 100. After 10% increase, it becomes 110. After 10% decrease, it becomes 110 * 0.9 = 99. Thus, there is a 1% loss."
- },
- {
-  "id": "rp-mat-01104",
-  "s": "maths",
-  "t": "percentage",
-  "d": 1,
-  "q_hi": "एक छात्र ने परीक्षा में 45% अंक प्राप्त किए और उसे उत्तीर्ण होने के लिए 20 अंक और चाहिए थे। यदि वह उत्तीर्ण होता, तो उसे 80 अंक अधिक मिलते। परीक्षा में कुल अंक कितने थे?",
-  "q_en": "A student scored 45% in an exam and needed 20 more marks to pass. If he had passed, he would have scored 80 more marks than the passing mark. What was the total marks in the exam?",
-  "o_hi": [
-   "200",
-   "220",
-   "240",
-   "260"
-  ],
-  "o_en": [
-   "200",
-   "220",
-   "240",
-   "260"
-  ],
-  "a": 0,
-  "e_hi": "मान लें कि कुल अंक T हैं। उत्तीर्ण अंक = 45% of T + 20। यह भी दिया है कि उत्तीर्ण अंक = 45% of T - 80 (यह तर्क गलत है, '80 अंक अधिक मिलते' का अर्थ है कि वास्तविक अंक = उत्तीर्ण अंक + 80? नहीं, 'उत्तीर्ण होने के लिए 20 अंक और चाहिए' का अर्थ है उत्तीर्ण अंक = वास्तविक अंक + 20। 'यदि वह उत्तीर्ण होता, तो उसे 80 अंक अधिक मिलते' का अर्थ अस्पष्ट है। आइए प्रश्न को स्पष्ट करें: 'उत्तीर्ण होने के लिए 20 अंक और चाहिए थे'। यह मतलब है कि Pass Marks = Scored Marks + 20। यदि वह उत्तीर्ण होता, तो उसका अंक Pass Marks होता। यह वाक्य 'यदि वह उत्तीर्ण होता, तो उसे 80 अंक अधिक मिलते' गलत है। आइए नया प्रश्न बनाएं।)",
-  "e_en": "Let Total Marks be T. Pass Marks = 45% of T + 20. This phrase is confusing. Let's rephrase: A student scored 45% marks. He needed 20 more marks to pass. What is the total marks? Pass Marks = 45% T + 20. Usually pass is 40% or 50%. If pass is 50%, then 50% T = 45% T + 20 => 5% T = 20 => T = 400. If pass is 40%, 40% T = 45% T + 20 => impossible. Let's assume pass mark is 50%. Then T=400. Options: 200, 220, 240, 260. None match. Let's change the percentage. Scored 40%, needed 20 more to pass (50%). 50%T - 40%T = 20 => 10%T = 20 => T=200. This works.)"
  },
  {
   "id": "rp-mat-01105",
@@ -24415,29 +24323,6 @@
   "a": 1,
   "e_hi": "आयतन = लंबाई × चौड़ाई × ऊँचाई। 12 × 8 × 5 = 480 घन सेमी।",
   "e_en": "Volume = Length × Width × Height. 12 × 8 × 5 = 480 cubic cm."
- },
- {
-  "id": "rp-mat-01159",
-  "s": "maths",
-  "t": "mensuration",
-  "d": 2,
-  "q_hi": "गणित की क्षेत्रमिति (Mensuration) शाखा का नाम किस प्राचीन संस्कृत ग्रंथ में पहली बार स्पष्ट रूप से वर्णित हुआ था, जिसमें चतुर्भुजों के क्षेत्रफल के सूत्र दिए गए थे?",
-  "q_en": "In which ancient Sanskrit text were the formulas for the area of quadrilaterals first explicitly described in the branch of Mathematics known as Mensuration?",
-  "o_hi": [
-   "सूत्रशाला",
-   "अर्यभट्टीय",
-   "सूक्ष्मज्योतिष",
-   "लीलावती"
-  ],
-  "o_en": [
-   "Sutra Shastra",
-   "Aryabhatiya",
-   "Surya Siddhanta",
-   "Lilavati"
-  ],
-  "a": 0,
-  "e_hi": "सूत्रशाला (लगभग 200 ई.पू.) में चतुर्भुजों, त्रिभुजों और वृत्तों के क्षेत्रफल के लिए सूत्र दिए गए थे, जो प्राचीन भारतीय क्षेत्रमिति की नींव माने जाते हैं।",
-  "e_en": "The Sutra Shastra (approx. 200 BCE) provided formulas for the area of quadrilaterals, triangles, and circles, which are considered the foundation of ancient Indian mensuration."
  },
  {
   "id": "rp-mat-01160",
@@ -25912,29 +25797,6 @@
   "e_en": "The distance between centers of two touching circles is the sum of their radii (7+7=14 cm). The triangle is equilateral, so perimeter = 3 * 14 = 42 cm."
  },
  {
-  "id": "rp-mat-01228",
-  "s": "maths",
-  "t": "geometry",
-  "d": 1,
-  "q_hi": "एक आयत के लंबाई और चौड़ाई का अनुपात 3:2 है। यदि इसका क्षेत्रफल 108 वर्ग मीटर है, तो इसकी परिधि क्या होगी?",
-  "q_en": "The ratio of the length to the breadth of a rectangle is 3:2. If its area is 108 square meters, what is its perimeter?",
-  "o_hi": [
-   "42 मीटर",
-   "36 मीटर",
-   "48 मीटर",
-   "54 मीटर"
-  ],
-  "o_en": [
-   "42 meters",
-   "36 meters",
-   "48 meters",
-   "54 meters"
-  ],
-  "a": 0,
-  "e_hi": "प्रश्न में गलती थी। चलिए एक स्पष्ट प्रश्न लिखते हैं।\n*नया प्रश्न*: एक आयत की लंबाई 15 मीटर और चौड़ाई 10 मीटर है। इसकी परिधि ज्ञात कीजिए।\nP = 2(L+B) = 2(15+10) = 50 मीटर।\nविकल्प बदलें: 50, 45, 55, 40।\nसही उत्तर: 50।",
-  "e_en": "The previous question had calculation issues. Let's use a clear one.\n*New Question*: Length of a rectangle is 15 m and breadth is 10 m. Find its perimeter.\nP = 2(L+B) = 2(15+10) = 50 m.\nOptions changed: 50, 45, 55, 40.\nCorrect answer: 50."
- },
- {
   "id": "rp-mat-01229",
   "s": "maths",
   "t": "geometry",
@@ -27127,8 +26989,8 @@
    "56.0"
   ],
   "a": 1,
-  "e_hi": "संयुक्त औसत = (30×50 + 20×60) / (30+20) = 1500 / 50 = 55।",
-  "e_en": "Combined mean = (30×50 + 20×60) / (30+20) = 1500 / 50 = 55."
+  "e_hi": "संयुक्त औसत = (30×50 + 20×60) / (30+20) = (1500+1200) / 50 = 2700 / 50 = 54।",
+  "e_en": "Combined mean = (30×50 + 20×60) / (30+20) = (1500+1200) / 50 = 2700 / 50 = 54."
  },
  {
   "id": "rp-mat-01284",
@@ -28253,9 +28115,9 @@
    "100 km/h",
    "20 km/h"
   ],
-  "a": 1,
-  "e_hi": "जब वस्तुएं एक ही दिशा में चलती हैं, तो सापेक्ष चाल = चाल1 - चाल2। 80 - 60 = 40 किमी/घंटा।",
-  "e_en": "When objects move in the same direction, relative speed = Speed1 - Speed2. 80 - 60 = 40 km/h."
+  "a": 3,
+  "e_hi": "जब वस्तुएं एक ही दिशा में चलती हैं, तो सापेक्ष चाल = चाल1 - चाल2। 80 - 60 = 20 किमी/घंटा।",
+  "e_en": "When objects move in the same direction, relative speed = Speed1 - Speed2. 80 - 60 = 20 km/h."
  },
  {
   "id": "rp-mat-01337",
@@ -30485,8 +30347,8 @@
    "₹41,666.67"
   ],
   "a": 3,
-  "e_hi": "बिक्री मूल्य = लागत मूल्य + 20% लाभ। अतः 50,000 = 120% CP। CP = 50,000 / 1.2 = ₹40,000।",
-  "e_en": "Selling Price = Cost Price + 20% Profit. So, 50,000 = 120% of CP. CP = 50,000 / 1.2 = ₹40,000."
+  "e_hi": "बिक्री मूल्य = लागत मूल्य + 20% लाभ। अतः 50,000 = 120% CP। CP = 50,000 / 1.2 = ₹41,666.67।",
+  "e_en": "Selling Price = Cost Price + 20% Profit. So, 50,000 = 120% of CP. CP = 50,000 / 1.2 = ₹41,666.67."
  },
  {
   "id": "rp-mat-01445",
@@ -32003,8 +31865,8 @@
    "Both pipes have the same rate"
   ],
   "a": 1,
-  "e_hi": "पहले नल की दर = 1/12, दोनों की संयुक्त दर = 1/4। दूसरे नल की दर = 1/4 - 1/12 = 2/12 = 1/6। 1/6, 1/12 से तीन गुना है।",
-  "e_en": "First pipe's rate is 1/12, combined rate is 1/4. Second pipe's rate is 1/4 - 1/12 = 2/12 = 1/6. 1/6 is three times 1/12."
+  "e_hi": "पहले नल की दर = 1/12, दोनों की संयुक्त दर = 1/4। दूसरे नल की दर = 1/4 - 1/12 = 2/12 = 1/6। 1/6, 1/12 से दो गुना है।",
+  "e_en": "First pipe's rate is 1/12, combined rate is 1/4. Second pipe's rate is 1/4 - 1/12 = 2/12 = 1/6. 1/6 is twice 1/12."
  },
  {
   "id": "rp-mat-01518",
@@ -34790,29 +34652,6 @@
   "e_en": "The standard method for finding LCM involves breaking down each number into its prime factors as the first and most crucial step."
  },
  {
-  "id": "rp-mat-01656",
-  "s": "maths",
-  "t": "hcf_lcm",
-  "d": 2,
-  "q_hi": "यदि दो संख्याओं का म.स.प. 15 और ल.स.प. 240 है, और एक संख्या 48 है, तो दूसरी संख्या कितनी होगी?",
-  "q_en": "If the HCF of two numbers is 15 and their LCM is 240, and one of the numbers is 48, what is the other number?",
-  "o_hi": [
-   "60",
-   "90",
-   "120",
-   "150"
-  ],
-  "o_en": [
-   "60",
-   "90",
-   "120",
-   "150"
-  ],
-  "a": 2,
-  "e_hi": "सूत्र का उपयोग करते हुए: संख्या1 × संख्या2 = म.स.प. × ल.स.प.। यानी 48 × दूसरी संख्या = 15 × 240 = 3600। अतः दूसरी संख्या = 3600 / 48 = 75... प्रतीक्षा करें, 15*240/48 = 15*5 = 75। विकल्पों में 75 नहीं है। पूछताछ की जाँच: 15*240 = 3600. 3600/48 = 75. विकल्प गलत हैं। नया प्रश्न बनाया जाएगा।",
-  "e_en": "Using the formula: Num1 × Num2 = HCF × LCM. So 48 × Num2 = 15 × 240 = 3600. Thus Num2 = 3600 / 48 = 75. Option missing. Re-evaluating question design. Let's use numbers where answer is in options. HCF=5, LCM=60, Num1=15. 15*Num2=300. Num2=20. Options: 10, 20, 30, 40. Ans: 20."
- },
- {
   "id": "rp-mat-01658",
   "s": "maths",
   "t": "time_speed_distance",
@@ -34955,8 +34794,8 @@
   "s": "maths",
   "t": "time_speed_distance",
   "d": 1,
-  "q_hi": "एक ट्रेन 1500 मीटर लंबी है। यदि यह 72 किमी/घंटा की चाल से चल रही है, तो इसे एक मीटर लंबे पोल को पार करने में कितना समय लगेगा?",
-  "q_en": "A train is 1500 meters long. If it is traveling at a speed of 72 km/h, how much time will it take to cross a pole of 1 meter length?",
+  "q_hi": "एक ट्रेन 1500 मीटर लंबी है। यदि यह 72 किमी/घंटा की चाल से चल रही है, तो इसे एक पोल को पार करने में कितना समय लगेगा?",
+  "q_en": "A train is 1500 meters long. If it is traveling at a speed of 72 km/h, how much time will it take to cross a pole?",
   "o_hi": [
    "75 सेकंड",
    "80 सेकंड",
@@ -34970,8 +34809,8 @@
    "90 seconds"
   ],
   "a": 0,
-  "e_hi": "चाल को मीटर/सेकंड में बदलें: 72 * (5/18) = 20 मी/से। कुल दूरी = 1500 + 1 = 1501 मीटर। समय = 1501 / 20 = 75.05 सेकंड, जो लगभग 75 सेकंड है।",
-  "e_en": "Convert speed to m/s: 72 * (5/18) = 20 m/s. Total distance = 1500 + 1 = 1501 meters. Time = 1501 / 20 = 75.05 seconds, which is approximately 75 seconds."
+  "e_hi": "चाल को मीटर/सेकंड में बदलें: 72 × (5/18) = 20 मी/से। पोल पार करने के लिए ट्रेन को अपनी ही लंबाई तय करनी होती है। समय = 1500 / 20 = 75 सेकंड।",
+  "e_en": "Convert speed to m/s: 72 × (5/18) = 20 m/s. To cross a pole, the train must cover a distance equal to its own length. Time = 1500 / 20 = 75 seconds."
  },
  {
   "id": "rp-mat-01665",
@@ -35361,8 +35200,8 @@
    "3.0 hours"
   ],
   "a": 2,
-  "e_hi": "नई चाल 80 + (10% of 80) = 88 किमी/घंटा है। समय = दूरी/चाल = 200/88 ≈ 2.27 घंटे। सबसे नजदीकी विकल्प 2.25 घंटे है, लेकिन सटीक गणना में 2.27 आता है। यहाँ विकल्प 2.25 सबसे उपयुक्त लगता है, हालांकि सटीक मान 2.27 है। (सुधार: विकल्पों में 2.27 नहीं है, 200/88 = 2.2727...। आया विकल्प 2.25 गलत है। चलिए 2.5 घंटे (88*2.5=220) नहीं। 200/88 = 2.27. विकल्प 2.25 सबसे करीब है।)",
-  "e_en": "New speed is 80 + 10% = 88 km/h. Time = Distance/Speed = 200/88 ≈ 2.27 hours. Among the options, 2.25 hours is the closest approximation, although the exact value is 2.27."
+  "e_hi": "नई चाल = 80 + (10% of 80) = 88 किमी/घंटा। समय = दूरी/चाल = 200/88 ≈ 2.27 घंटे, जिसके निकटतम विकल्प 2.25 घंटे है।",
+  "e_en": "New speed is 80 + 10% = 88 km/h. Time = Distance/Speed = 200/88 ≈ 2.27 hours, closest to the option 2.25 hours."
  },
  {
   "id": "rp-mat-01683",
@@ -35455,29 +35294,6 @@
   "a": 0,
   "e_hi": "स्थिर जल में चाल = (उपचाल + प्रतिचाल) / 2 = (15 + 10) / 2 = 12.5 किमी/घंटा।",
   "e_en": "Speed in still water = (Downstream speed + Upstream speed) / 2 = (15 + 10) / 2 = 12.5 km/h."
- },
- {
-  "id": "rp-mat-01687",
-  "s": "maths",
-  "t": "time_speed_distance",
-  "d": 2,
-  "q_hi": "राजस्थान में 'सूर्य' (Sun) को किस नाम से जाना जाता है?",
-  "q_en": "In Rajasthan, what is the sun locally known as?",
-  "o_hi": [
-   "मरुस्थलीय प्रकाश",
-   "बादशह",
-   "प्रकाश स्रोत",
-   "दिन का तारा"
-  ],
-  "o_en": [
-   "Desert Light",
-   "Badshah",
-   "Source of Light",
-   "Star of the Day"
-  ],
-  "a": 1,
-  "e_hi": "राजस्थानी भाषा और संस्कृति में सूर्य को सम्मानपूर्वक 'बादशह' कहा जाता है।",
-  "e_en": "In Rajasthani language and culture, the sun is respectfully referred to as 'Badshah'."
  },
  {
   "id": "rp-mat-01688",
@@ -38328,8 +38144,8 @@
    "6"
   ],
   "a": 1,
-  "e_hi": "समानुपात के गुणदंड (product of means) के बराबर गुणफल (product of extremes) होता है। 5x = 12 * 15 = 180, इसलिए x = 180/5 = 36।",
-  "e_en": "Product of means equals product of extremes. 5x = 12 * 15 = 180, so x = 180/5 = 36."
+  "e_hi": "समानुपात में बाह्य पदों का गुणनफल = मध्य पदों का गुणनफल होता है। अतः x × 15 = 5 × 12 = 60, इसलिए x = 4।",
+  "e_en": "In a proportion, the product of the extremes equals the product of the means. So x × 15 = 5 × 12 = 60, hence x = 4."
  },
  {
   "id": "rp-mat-01823",
@@ -38397,8 +38213,8 @@
    "32"
   ],
   "a": 2,
-  "e_hi": "मान लें संख्याएँ 3x और 4x हैं। (3x+12)/(4x+12) = 5/6 हल करने पर x=12 मिलता है। बड़ी संख्या 4x = 48 है।",
-  "e_en": "Let the numbers be 3x and 4x. Solving (3x+12)/(4x+12) = 5/6 gives x=12. The larger number is 4x = 48."
+  "e_hi": "मान लें संख्याएँ 3x और 4x हैं। (3x+12)/(4x+12) = 5/6 हल करने पर x=6 मिलता है। बड़ी संख्या 4x = 24 है।",
+  "e_en": "Let the numbers be 3x and 4x. Solving (3x+12)/(4x+12) = 5/6 gives x=6. The larger number is 4x = 24."
  },
  {
   "id": "rp-mat-01826",
@@ -39317,8 +39133,8 @@
    "15 liters"
   ],
   "a": 3,
-  "e_hi": "मान लें दूध 4x और पानी x है। (4x)/(x+5) = 3/2 हल करने पर x=5 मिलता है। कुल मात्रा 4x+x = 5x = 25 लीटर है।",
-  "e_en": "Let milk be 4x and water be x. Solving 4x/(x+5) = 3/2 gives x=5. Total quantity is 4x+x = 5x = 25 liters."
+  "e_hi": "मान लें दूध 4x और पानी x है। (4x)/(x+5) = 3/2 हल करने पर x=3 मिलता है। कुल मात्रा 4x+x = 5x = 15 लीटर है।",
+  "e_en": "Let milk be 4x and water be x. Solving 4x/(x+5) = 3/2 gives x=3. Total quantity is 4x+x = 5x = 15 liters."
  },
  {
   "id": "rp-mat-01868",
@@ -39961,8 +39777,8 @@
    "80"
   ],
   "a": 0,
-  "e_hi": "मान लें संख्याएँ 3x और 5x हैं। (3x+10)/(5x+10) = 5/7 हल करने पर x=10 मिलता है। इसलिए संख्याएँ 30 और 50 हैं, जोड़ 80 है।",
-  "e_en": "Let the numbers be 3x and 5x. Solving (3x+10)/(5x+10) = 5/7 gives x=10. Thus, the numbers are 30 and 50, and their sum is 80."
+  "e_hi": "मान लें संख्याएँ 3x और 5x हैं। (3x+10)/(5x+10) = 5/7 हल करने पर x=5 मिलता है। इसलिए संख्याएँ 15 और 25 हैं, जोड़ 40 है।",
+  "e_en": "Let the numbers be 3x and 5x. Solving (3x+10)/(5x+10) = 5/7 gives x=5. Thus, the numbers are 15 and 25, and their sum is 40."
  },
  {
   "id": "rp-mat-01903",
@@ -41640,8 +41456,8 @@
    "12"
   ],
   "a": 2,
-  "e_hi": "80% से अधिक अंक प्राप्त करने वाले छात्रों की संख्या = 40 का 25% = (25/100) × 40 = 8।",
-  "e_en": "Number of students who scored above 80% = 25% of 40 = (25/100) × 40 = 8."
+  "e_hi": "80% से अधिक अंक प्राप्त करने वाले छात्रों की संख्या = 40 का 25% = (25/100) × 40 = 10।",
+  "e_en": "Number of students who scored above 80% = 25% of 40 = (25/100) × 40 = 10."
  },
  {
   "id": "rp-mat-201864",
@@ -42594,20 +42410,20 @@
   "q_hi": "निम्नलिखित में से कौन-सी संख्या 7 से पूर्णतः विभाज्य है?",
   "q_en": "Which of the following numbers is completely divisible by 7?",
   "o_hi": [
+   "40",
    "42",
-   "50",
-   "63",
-   "77"
+   "44",
+   "46"
   ],
   "o_en": [
+   "40",
    "42",
-   "50",
-   "63",
-   "77"
+   "44",
+   "46"
   ],
-  "a": 0,
-  "e_hi": "42 को 7 से बाँटने पर 6 मिलता है (7 × 6 = 42), इसलिए यह पूर्णतः विभाज्य है। 50, 63 (9×7, wait 63 is 9*7) and 77 (11*7) are also divisible by 7. Let me re-evaluate options to ensure only one correct answer. \nCorrection: Let's use 42, 50, 60, 70. 42/7=6, 50/7 no, 60/7 no, 70/7=10. Still two. \nLet's use 42, 48, 56, 63. 42/7=6, 48 no, 56/7=8, 63/7=9. Three correct. \nLet's use 42, 49, 56, 64. 42/7=6, 49/7=7, 56/7=8, 64 no. Three correct. \nLet's use 40, 42, 44, 46. 42/7=6. Others are not divisible by 7. 40/7 no, 44/7 no, 46/7 no. This works.",
-  "e_en": "42 is divisible by 7 because 7 multiplied by 6 equals 42. The other numbers (40, 44, 46) are not divisible by 7."
+  "a": 1,
+  "e_hi": "42 को 7 से बाँटने पर 6 मिलता है (7 × 6 = 42), इसलिए यह पूर्णतः विभाज्य है। 40, 44 और 46 में से कोई भी 7 से पूर्णतः विभाज्य नहीं है।",
+  "e_en": "42 is divisible by 7 because 7 multiplied by 6 equals 42. None of 40, 44, or 46 are divisible by 7."
  },
  {
   "id": "rp-mat-201911",
@@ -44423,8 +44239,8 @@
    "30 and 42"
   ],
   "a": 1,
-  "e_hi": "मान लें संख्याएँ 5x और 7x हैं। (5x+5)/(7x+5) = 3/4। हल करने पर x=4 मिलता है। संख्याएँ 20 और 28 हैं।",
-  "e_en": "Let the numbers be 5x and 7x. (5x+5)/(7x+5) = 3/4. Solving gives x=4. The numbers are 20 and 28."
+  "e_hi": "मान लें संख्याएँ 5x और 7x हैं। (5x+5)/(7x+5) = 3/4। हल करने पर x=5 मिलता है। संख्याएँ 25 और 35 हैं।",
+  "e_en": "Let the numbers be 5x and 7x. (5x+5)/(7x+5) = 3/4. Solving gives x=5. The numbers are 25 and 35."
  },
  {
   "id": "rp-mat-202000",
@@ -44952,8 +44768,8 @@
    "The units digit"
   ],
   "a": 3,
-  "e_hi": "किसी भी संख्या का १० से विभाज्यता की जाँच करने के लिए, उसे ० या ५ पर समाप्त होना चाहिए। इसलिए, हमें इकाई स्थान का अंक देखना होगा।",
-  "e_en": "To check if a number is divisible by 10, it must end in 0 or 5. Therefore, we need to look at the units place digit."
+  "e_hi": "किसी भी संख्या की १० से विभाज्यता जाँचने के लिए, उसे ० पर समाप्त होना चाहिए। इसलिए, हमें इकाई स्थान का अंक देखना होगा।",
+  "e_en": "To check if a number is divisible by 10, it must end in 0. Therefore, we need to look at the units place digit."
  },
  {
   "id": "rp-mat-202025",
@@ -45769,13 +45585,13 @@
   "q_en": "Is 1 considered a prime number? What is the correct reason for its classification?",
   "o_hi": [
    "हाँ, क्योंकि यह 1 से बड़ी है",
-   "नहीं, क्योंकि इसके केवल दो गुणनखंड (1 और 1) हैं",
+   "नहीं, क्योंकि इसका केवल एक गुणनखंड (स्वयं) है",
    "हाँ, क्योंकि यह विषम है",
    "नहीं, क्योंकि यह सम है"
   ],
   "o_en": [
    "Yes, because it is greater than 1",
-   "No, because it has only two factors (1 and 1)",
+   "No, because it has only one factor (itself)",
    "Yes, because it is odd",
    "No, because it is even"
   ],
@@ -48126,8 +47942,8 @@
    "13%"
   ],
   "a": 3,
-  "e_hi": "दर = 25%/4 = 6.25%। 2 वर्ष का चक्रवृद्धि ब्याज = 6.25 + 6.25 + (6.25*6.25)/100 = 12.5 + 0.3906 = 12.89% लगभग 12.25% के निकट है।",
-  "e_en": "Rate = 25%/4 = 6.25%. 2-year compound interest = 6.25 + 6.25 + (6.25*6.25)/100 = 12.5 + 0.3906 = 12.89%, close to 12.25%."
+  "e_hi": "दर = 25%/4 = 6.25%। 2 वर्ष का चक्रवृद्धि ब्याज = 6.25 + 6.25 + (6.25×6.25)/100 ≈ 12.89%, जो विकल्पों में सबसे निकट 13% है।",
+  "e_en": "Rate = 25%/4 = 6.25%. 2-year compound interest = 6.25 + 6.25 + (6.25×6.25)/100 ≈ 12.89%, which is closest to the option 13%."
  },
  {
   "id": "rp-mat-g202165",
@@ -54152,8 +53968,8 @@
    "9 days"
   ],
   "a": 2,
-  "e_hi": "3 दिनों में किया गया कार्य = 3*(1/10 + 1/12) = 33/60 = 11/20। शेष कार्य = 9/20। B द्वारा लिया गया समय = (9/20) * 12 = 5.4 दिन। कुल समय = 3 + 5.4 = 8.4 दिन।",
-  "e_en": "Work done in 3 days = 3*(1/10 + 1/12) = 11/20. Remaining work = 9/20. Time taken by B = (9/20) * 12 = 5.4 days. Total time = 3 + 5.4 = 8.4 days (corrected to 7.8 based on standard calculation)."
+  "e_hi": "3 दिनों में किया गया कार्य = 3×(1/10 + 1/12) = 11/20। शेष कार्य = 9/20। B द्वारा लिया गया समय = (9/20) × 12 = 5.4 दिन। कुल समय = 3 + 5.4 = 8.4 दिन, जो निकटतम विकल्प 8.5 दिन है।",
+  "e_en": "Work done in 3 days = 3×(1/10 + 1/12) = 11/20. Remaining work = 9/20. Time taken by B = (9/20) × 12 = 5.4 days. Total time = 3 + 5.4 = 8.4 days, closest to the option 8.5 days."
  },
  {
   "id": "rp-mat-g202444",
@@ -54198,8 +54014,8 @@
    "10.5 days"
   ],
   "a": 2,
-  "e_hi": "A का पूरा काम = 15 दिन, B का पूरा काम = 25 दिन। दोनों मिलकर = (15*25)/(15+25) = 375/40 = 9.375 (लगभग 7.5 के करीब)।",
-  "e_en": "A's full work = 15 days, B's full work = 25 days. Together = (15*25)/(15+25) = 375/40 = 9.375."
+  "e_hi": "A का पूरा काम = 15 दिन, B का पूरा काम = 25 दिन। दोनों मिलकर = (15×25)/(15+25) = 375/40 = 9.375 दिन, जो निकटतम विकल्प 9.5 दिन है।",
+  "e_en": "A's full work = 15 days, B's full work = 25 days. Together = (15×25)/(15+25) = 375/40 = 9.375 days, closest to the option 9.5 days."
  },
  {
   "id": "rp-mat-g202446",
@@ -55486,8 +55302,8 @@
    "12:5"
   ],
   "a": 0,
-  "e_hi": "दूध का कुल भाग (3/5 + 4/5) = 7/5 है और पानी का (2/5 + 1/5) = 3/5 है। अनुपात 7:3 होगा, लेकिन यदि मात्रा समान हो तो गणना बदलती है। सही उत्तर 31:9 है।",
-  "e_en": "Calculate the sum of fractions for milk and water. Summing (3/5 + 4/5) and (2/5 + 1/5) gives the final ratio correctly."
+  "e_hi": "दोनों मिश्रणों को 5 लीटर-5 लीटर मानकर जोड़ने पर: दूध = 3+4 = 7 लीटर, पानी = 2+1 = 3 लीटर। अतः दूध:पानी = 7:3।",
+  "e_en": "Taking 5 liters from each vessel: Milk = 3+4 = 7 liters, Water = 2+1 = 3 liters. Thus, milk:water = 7:3."
  },
  {
   "id": "rp-mat-g202508",
@@ -55647,8 +55463,8 @@
    "5:2"
   ],
   "a": 0,
-  "e_hi": "दोनों का योग 5 है। दूध का हिस्सा (3/5 + 4/5) = 7/5 है। पानी का हिस्सा (2/5 + 1/5) = 3/5 है। अनुपात 7:3 के बजाय कुल 17:3 होगा।",
-  "e_en": "Sum parts are 5 each. Milk total is 3/5+4/5=7/5. Water total is 2/5+1/5=3/5. The ratio is 7:3, but adjusting for total units, it becomes 17:3."
+  "e_hi": "दोनों का योग 5 है। दूध का हिस्सा (3/5 + 4/5) = 7/5 है। पानी का हिस्सा (2/5 + 1/5) = 3/5 है। अनुपात 7:3 है।",
+  "e_en": "Taking equal parts of 5: Milk total is 3/5+4/5=7/5. Water total is 2/5+1/5=3/5. The ratio is 7:3."
  },
  {
   "id": "rp-mat-g202516",
@@ -55854,8 +55670,8 @@
    "56"
   ],
   "a": 3,
-  "e_hi": "(4x+4)/(7x+4) = 3/5 को हल करने पर 20x+20 = 21x+12 प्राप्त होता है, जिससे x=8 आता है। बड़ी संख्या 7*4=28 है।",
-  "e_en": "Solving (4x+4)/(7x+4) = 3/5 gives 20x+20 = 21x+12, so x=8. The larger number is 4*7=28."
+  "e_hi": "(4x+4)/(7x+4) = 3/5 को हल करने पर 20x+20 = 21x+12 प्राप्त होता है, जिससे x=8 आता है। बड़ी संख्या 7×8=56 है।",
+  "e_en": "Solving (4x+4)/(7x+4) = 3/5 gives 20x+20 = 21x+12, so x=8. The larger number is 7×8=56."
  },
  {
   "id": "rp-mat-g202525",
@@ -56061,8 +55877,8 @@
    "5:9"
   ],
   "a": 3,
-  "e_hi": "दशमलव मान: 3:5=0.6, 4:7≈0.57, 2:3≈0.66, 5:9≈0.55। अतः 4:7 सबसे छोटा है।",
-  "e_en": "Decimal values: 3:5=0.6, 4:7≈0.57, 2:3≈0.66, 5:9≈0.55. Thus, 4:7 is the smallest."
+  "e_hi": "दशमलव मान: 3:5=0.6, 4:7≈0.57, 2:3≈0.66, 5:9≈0.56। अतः 5:9 सबसे छोटा है।",
+  "e_en": "Decimal values: 3:5=0.6, 4:7≈0.57, 2:3≈0.66, 5:9≈0.56. Thus, 5:9 is the smallest."
  },
  {
   "id": "rp-mat-g202535",
@@ -56245,8 +56061,8 @@
    "5:5"
   ],
   "a": 0,
-  "e_hi": "दोनों मिश्रणों को समान करने के लिए पहले को 1 से और दूसरे को 1 से गुणा करके जोड़ने पर (2+4):(3+1) = 6:4, इसे सरल करने पर 3:2 नहीं बल्कि 11:9 प्राप्त होता है।",
-  "e_en": "To equalize, normalize fractions: (2/5 + 4/5) : (3/5 + 1/5) results in 6/5 : 4/5, which simplifies to 11:9 after adjusting for the total parts."
+  "e_hi": "दोनों को समान मात्रा में मिलाने पर: सोना = 2+4 = 6 भाग, चांदी = 3+1 = 4 भाग। अनुपात 6:4 है।",
+  "e_en": "Mixing equal quantities: Gold = 2+4 = 6 parts, Silver = 3+1 = 4 parts. The ratio is 6:4."
  },
  {
   "id": "rp-mat-g202543",
@@ -56268,8 +56084,8 @@
    "35, 49"
   ],
   "a": 1,
-  "e_hi": "माना संख्याएं 5x और 7x हैं। (5x-9)/(7x-9) = 7/11 हल करने पर x=9 प्राप्त होता है, अतः संख्याएं 45 और 63 हैं।",
-  "e_en": "Let numbers be 5x and 7x. Solving (5x-9)/(7x-9) = 7/11 gives x=9, so numbers are 45 and 63."
+  "e_hi": "माना संख्याएं 5x और 7x हैं। (5x-9)/(7x-9) = 7/11 हल करने पर x=6 प्राप्त होता है, अतः संख्याएं 30 और 42 हैं।",
+  "e_en": "Let numbers be 5x and 7x. Solving (5x-9)/(7x-9) = 7/11 gives x=6, so numbers are 30 and 42."
  },
  {
   "id": "rp-mat-g202545",
@@ -56314,8 +56130,8 @@
    "3:2"
   ],
   "a": 2,
-  "e_hi": "मिश्रण के नियम (Alligation) का उपयोग करें: (3/5, 7/10) और माध्य 2/3। अंतर निकालने पर अनुपात 4:1 आता है।",
-  "e_en": "Use the rule of Alligation: (3/5, 7/10) and mean 2/3. Calculating the difference gives the ratio 4:1."
+  "e_hi": "मिश्रण के नियम (Alligation) का उपयोग करें: (3/5, 7/10) और माध्य 2/3। अनुपात = (7/10 - 2/3):(2/3 - 3/5) = 1:2।",
+  "e_en": "Use the rule of Alligation with fractions 3/5 and 7/10, mean 2/3. Ratio = (7/10 - 2/3):(2/3 - 3/5) = 1:2."
  },
  {
   "id": "rp-mat-g202547",
@@ -56567,8 +56383,8 @@
    "27:13"
   ],
   "a": 0,
-  "e_hi": "पहले मिश्रण में दूध 3/5 और दूसरे में 4/5 है। कुल दूध (3/5 + 4/5)/2 = 7/10 और पानी (2/5 + 1/5)/2 = 3/10। अनुपात 7:3 होगा, लेकिन योग के अनुसार सही उत्तर 19:11 है।",
-  "e_en": "Milk proportions are 3/5 and 4/5. Combined milk is (3/5 + 4/5)/2 = 7/10. Combined water is (2/5 + 1/5)/2 = 3/10. The ratio is 7:3, but adjusting for total parts, it becomes 19:11."
+  "e_hi": "पहले मिश्रण में दूध 3/5 और दूसरे में 4/5 है। बराबर मात्रा लेने पर कुल दूध (3/5+4/5)=7/5 इकाई और कुल पानी (2/5+1/5)=3/5 इकाई। अनुपात 7:3 होगा।",
+  "e_en": "Milk proportions are 3/5 and 4/5. Taking equal quantities, combined milk is 3/5+4/5=7/5 units and combined water is 2/5+1/5=3/5 units. The ratio is 7:3."
  },
  {
   "id": "rp-mat-g202560",
@@ -56866,8 +56682,8 @@
    "17:28"
   ],
   "a": 1,
-  "e_hi": "पहले मिश्रण में दूध का अंश 2/5 है और दूसरे में 4/9 है। औसत निकालने पर (2/5 + 4/9) / 2 = 38/90 = 19/45, जिससे 37:45 का अनुपात प्राप्त होता है।",
-  "e_en": "Milk fractions are 2/5 and 4/9. The average fraction is (2/5 + 4/9) / 2 = 38/90 = 19/45, resulting in a milk-to-total ratio, yielding 37:45."
+  "e_hi": "5 लीटर-5 लीटर मानकर: दूध = (2/5×5)+(4/9×5) = 2+20/9 = 38/9 लीटर। पानी = (3/5×5)+(5/9×5) = 3+25/9 = 52/9 लीटर। अनुपात = 38:52 = 19:26।",
+  "e_en": "Taking 5 liters from each: Milk = (2/5×5)+(4/9×5) = 2+20/9 = 38/9 liters. Water = (3/5×5)+(5/9×5) = 3+25/9 = 52/9 liters. Ratio = 38:52 = 19:26."
  },
  {
   "id": "rp-mat-g202576",
@@ -63950,8 +63766,8 @@
    "26,000 rupees"
   ],
   "a": 1,
-  "e_hi": "नया औसत 16,000 है। कुल योग 9 * 16,000 - 8 * 15,000 = 144,000 - 120,000 = 24,000 नहीं, बल्कि 25,000 होगा।",
-  "e_en": "The new average is 16,000. The sum is 9 * 16,000 - 8 * 15,000 = 144,000 - 120,000 = 24,000 is incorrect calculation, total is 9*16000=144000, 8*15000=120000, diff is 24000."
+  "e_hi": "नया औसत 16,000 है। कुल योग 9 × 16,000 - 8 × 15,000 = 144,000 - 120,000 = 24,000।",
+  "e_en": "The new average is 16,000. The sum is 9 × 16,000 - 8 × 15,000 = 144,000 - 120,000 = 24,000."
  },
  {
   "id": "rp-mat-g202891",
@@ -67124,8 +66940,8 @@
    "30"
   ],
   "a": 3,
-  "e_hi": "संख्याओं में से शेषफल घटाएं: 120 और 90। 120 और 90 का म.स.प. 30 है, लेकिन विकल्प के अनुसार सही उत्तर 20 है क्योंकि 125/20 और 95/20 दोनों में 5 शेष आता है।",
-  "e_en": "Subtract the remainder from the numbers: 120 and 90. The HCF of 120 and 90 is 30, but based on options, 20 is correct as 125/20 and 95/20 both leave a remainder of 5."
+  "e_hi": "शेषफल घटाने पर संख्याएं 120 और 90 बचती हैं। 120 और 90 का म.स.प. 30 है, इसलिए सही उत्तर 30 है।",
+  "e_en": "Subtracting the remainder gives 120 and 90. The HCF of 120 and 90 is 30, so the correct answer is 30."
  },
  {
   "id": "rp-mat-g203032",
@@ -67423,8 +67239,8 @@
    "4"
   ],
   "a": 2,
-  "e_hi": "संख्याएं 4a और 4b हैं। 4(a+b) = 36, तो a+b = 9। सह-अभाज्य जोड़े (1,8) और (2,7) हैं।",
-  "e_en": "Numbers are 4a and 4b. 4(a+b) = 36, so a+b = 9. Co-prime pairs are (1,8) and (2,7)."
+  "e_hi": "संख्याएं 4a और 4b हैं। 4(a+b) = 36, तो a+b = 9। सह-अभाज्य जोड़े (1,8), (2,7) और (4,5) हैं, यानी 3 जोड़े।",
+  "e_en": "Numbers are 4a and 4b. 4(a+b) = 36, so a+b = 9. Co-prime pairs are (1,8), (2,7), and (4,5) — a total of 3 pairs."
  },
  {
   "id": "rp-mat-g203045",
@@ -69102,8 +68918,8 @@
    "36"
   ],
   "a": 0,
-  "e_hi": "सबसे बड़ी संख्या के लिए म.स.प. (HCF) ज्ञात करें। 48, 72 और 108 का म.स.प. 36 है।",
-  "e_en": "For the greatest number, find the HCF. The HCF of 48, 72, and 108 is 36."
+  "e_hi": "सबसे बड़ी संख्या के लिए म.स.प. (HCF) ज्ञात करें। 48, 72 और 108 का म.स.प. 12 है।",
+  "e_en": "For the greatest number, find the HCF. The HCF of 48, 72, and 108 is 12."
  },
  {
   "id": "rp-mat-g203121",
@@ -69677,8 +69493,8 @@
    "18"
   ],
   "a": 0,
-  "e_hi": "दी गई संख्याओं का म.स.प. (HCF) निकालने पर 36 प्राप्त होता है, जो इन तीनों को विभाजित कर सकता है।",
-  "e_en": "Calculating the HCF of the given numbers results in 36, which can divide all three."
+  "e_hi": "दी गई संख्याओं का म.स.प. (HCF) निकालने पर 12 प्राप्त होता है, जो इन तीनों को विभाजित कर सकता है।",
+  "e_en": "Calculating the HCF of the given numbers results in 12, which can divide all three."
  },
  {
   "id": "rp-mat-g203147",
@@ -73345,13 +73161,13 @@
   "q_hi": "व्यंजक (x + 2)³ का विस्तार क्या है?",
   "q_en": "What is the expansion of the expression (x + 2)³?",
   "o_hi": [
-   "x³ + 8 + 6x² + 12x",
+   "x³ + 6x² + 12x + 8",
    "x³ + 8 + 2x² + 4x",
    "x³ + 6x² + 12x + 6",
    "x³ + 4x² + 8x + 8"
   ],
   "o_en": [
-   "x³ + 8 + 6x² + 12x",
+   "x³ + 6x² + 12x + 8",
    "x³ + 8 + 2x² + 4x",
    "x³ + 6x² + 12x + 6",
    "x³ + 4x² + 8x + 8"
@@ -73863,8 +73679,8 @@
    "35"
   ],
   "a": 0,
-  "e_hi": "दूरी = गति × समय के सूत्र का उपयोग करें: (x + 10)(x - 5) = 450। इसे हल करने पर x² + 5x - 500 = 0 प्राप्त होता है, जिससे x = 25 मिलता है।",
-  "e_en": "Using the formula Distance = Speed × Time: (x + 10)(x - 5) = 450. Solving the quadratic equation x² + 5x - 500 = 0, we get x = 25."
+  "e_hi": "दूरी = गति × समय के सूत्र का उपयोग करें: (x + 10)(x - 5) = 450। इसे हल करने पर x² + 5x - 500 = 0 प्राप्त होता है, जिससे x = 20 मिलता है।",
+  "e_en": "Using the formula Distance = Speed × Time: (x + 10)(x - 5) = 450. Solving the quadratic equation x² + 5x - 500 = 0, we get x = 20."
  },
  {
   "id": "rp-mat-g203332",
@@ -74511,29 +74327,6 @@
   "e_en": "Adding both equations gives 2x = 12, therefore x = 6."
  },
  {
-  "id": "rp-mat-g203360",
-  "s": "maths",
-  "t": "algebra",
-  "d": 2,
-  "q_hi": "बीजगणितीय पहचान (a + b)² = a² + 2ab + b² का ज्यामितीय प्रमाण सबसे पहले किस सभ्यता में देखा गया था?",
-  "q_en": "In which civilization was the geometric proof of the algebraic identity (a + b)² = a² + 2ab + b² first observed?",
-  "o_hi": [
-   "प्राचीन बेबीलोन",
-   "प्राचीन मिस्र",
-   "प्राचीन ग्रीस",
-   "प्राचीन चीन"
-  ],
-  "o_en": [
-   "Ancient Babylon",
-   "Ancient Egypt",
-   "Ancient Greece",
-   "Ancient China"
-  ],
-  "a": 2,
-  "e_hi": "प्राचीन बेबीलोन के गणितज्ञों ने ज्यामितीय आकृतियों का उपयोग करके बीजगणितीय सूत्रों को हल करने की पद्धति विकसित की थी।",
-  "e_en": "Ancient Babylonian mathematicians developed methods to solve algebraic formulas using geometric shapes."
- },
- {
   "id": "rp-mat-g203361",
   "s": "maths",
   "t": "algebra",
@@ -74785,29 +74578,6 @@
   "a": 1,
   "e_hi": "मध्यकालीन भारतीय गणितज्ञों ने अज्ञात चर (variable) को दर्शाने के लिए 'यवत-तावत्' शब्द का उपयोग किया था।",
   "e_en": "Medieval Indian mathematicians used the term 'Yavat-tavat' to represent the unknown variable in algebraic equations."
- },
- {
-  "id": "rp-mat-g203372",
-  "s": "maths",
-  "t": "algebra",
-  "d": 3,
-  "q_hi": "किस गणितीय अवधारणा का उपयोग बीजगणित में समीकरणों के गुणांकों को व्यवस्थित करने के लिए किया जाता है, जिसे 'मैट्रिक्स' का प्रारंभिक रूप माना जा सकता है?",
-  "q_en": "Which mathematical concept is used in algebra to organize coefficients of equations, often considered an early form of a 'matrix'?",
-  "o_hi": [
-   "चक्रवाल",
-   "कुट्टक",
-   "वर्ग-प्रकृति",
-   "अनेकान्तवाद"
-  ],
-  "o_en": [
-   "Chakravala",
-   "Kuttaka",
-   "Varga-prakriti",
-   "Anekantavada"
-  ],
-  "a": 0,
-  "e_hi": "भास्कराचार्य द्वारा विकसित 'चक्रवाल' विधि का उपयोग वर्ग समीकरणों को हल करने के लिए किया जाता था, जिसमें मैट्रिक्स के समान सारणीबद्ध सोच थी।",
-  "e_en": "The 'Chakravala' method developed by Bhaskaracharya was used to solve quadratic equations, involving tabular logic similar to matrices."
  },
  {
   "id": "rp-mat-g203373",
@@ -75312,8 +75082,8 @@
    "12"
   ],
   "a": 2,
-  "e_hi": "x=3k और y=4k रखने पर: (6k + 12k) / (12k - 6k) = 18k / 6k = 3। यहाँ प्रश्न के अनुसार गणना करने पर सही उत्तर 9 है।",
-  "e_en": "Substituting x=3k and y=4k: (6k + 12k) / (12k - 6k) = 18k / 6k = 3. Recalculating based on the expression, the correct answer is 9."
+  "e_hi": "x=3k और y=4k रखने पर: (6k + 12k) / (12k - 6k) = 18k / 6k = 3।",
+  "e_en": "Substituting x=3k and y=4k: (6k + 12k) / (12k - 6k) = 18k / 6k = 3."
  },
  {
   "id": "rp-mat-g203395",
@@ -76784,8 +76554,8 @@
    "5 cm"
   ],
   "a": 2,
-  "e_hi": "जब वर्ग वृत्त के अंदर होता है, तो वर्ग का विकर्ण ही वृत्त का व्यास होता है। यदि विकर्ण 10√2 है, तो यह व्यास के बराबर होगा, लेकिन प्रश्न के अनुसार विकर्ण वृत्त का व्यास है, अतः व्यास 20 सेंटीमीटर होगा।",
-  "e_en": "When a square is inscribed in a circle, the diagonal of the square is the diameter of the circle. Here, the diagonal 10√2 implies the diameter is 20 cm."
+  "e_hi": "जब वर्ग वृत्त के अंदर बना होता है, तो वर्ग का विकर्ण ही वृत्त का व्यास होता है। अतः व्यास = 10√2 सेंटीमीटर।",
+  "e_en": "When a square is inscribed in a circle, the diagonal of the square equals the diameter of the circle. Thus, the diameter is 10√2 cm."
  },
  {
   "id": "rp-mat-g203460",
@@ -77597,8 +77367,8 @@
   "s": "maths",
   "t": "geometry",
   "d": 1,
-  "q_hi": "दो समान्तर रेखाओं के बीच की लंबवत दूरी कैसी होती है?",
-  "q_en": "How is the perpendicular distance between two parallel lines?",
+  "q_hi": "दो समान्तर रेखाओं के बीच की लंबवत दूरी के बारे में क्या सत्य है?",
+  "q_en": "What is true about the perpendicular distance between two parallel lines?",
   "o_hi": [
    "हमेशा समान रहती है",
    "बढ़ती रहती है",
@@ -80441,8 +80211,8 @@
    "48"
   ],
   "a": 0,
-  "e_hi": "इन संख्याओं का महत्तम समापवर्तक (HCF) 36 है।",
-  "e_en": "The highest common factor (HCF) of these numbers is 36."
+  "e_hi": "इन संख्याओं का महत्तम समापवर्तक (HCF) 12 है।",
+  "e_en": "The highest common factor (HCF) of these numbers is 12."
  },
  {
   "id": "rp-mat-g203626",
@@ -83362,8 +83132,8 @@
    "14 km/h"
   ],
   "a": 1,
-  "e_hi": "औसत चाल = कुल दूरी / कुल समय। समय = 10/12 + 15/15 = 5/6 + 1 = 11/6 घंटे। औसत चाल = 25 / (11/6) = 150/11 ≈ 13.63 किमी/घंटा। (संशोधन: सही विकल्प 13.63 के निकट है, प्रश्न में 13.8 निकटतम है)",
-  "e_en": "Average speed = Total distance / Total time. Time = 10/12 + 15/15 = 11/6 hours. Average speed = 25 / (11/6) = 150/11 ≈ 13.63 km/h."
+  "e_hi": "औसत चाल = कुल दूरी / कुल समय। समय = 10/12 + 15/15 = 11/6 घंटे। औसत चाल = 25 / (11/6) = 150/11 ≈ 13.6 किमी/घंटा, जो निकटतम विकल्प 13.5 किमी/घंटा है।",
+  "e_en": "Average speed = Total distance / Total time. Time = 10/12 + 15/15 = 11/6 hours. Average speed = 25 / (11/6) = 150/11 ≈ 13.6 km/h, closest to the option 13.5 km/h."
  },
  {
   "id": "rp-mat-g203755",
@@ -91734,8 +91504,8 @@
    "10/√3 meters"
   ],
   "a": 3,
-  "e_hi": "यहाँ sin(30°) = आधार/कर्ण है, जहाँ आधार 5 है। कर्ण = 5 / sin(30°) = 5 / 0.5 = 10 मीटर।",
-  "e_en": "Here, sin(30°) = base/hypotenuse, where base is 5. Hypotenuse = 5 / sin(30°) = 5 / 0.5 = 10 meters."
+  "e_hi": "यहाँ सीढ़ी दीवार के साथ 60° का कोण बनाती है, अतः आधार = कर्ण × sin(60°)। 5 = कर्ण × (√3/2), इसलिए कर्ण = 10/√3 मीटर।",
+  "e_en": "Since the ladder makes a 60° angle with the wall, base = hypotenuse × sin(60°). 5 = hypotenuse × (√3/2), so hypotenuse = 10/√3 meters."
  },
  {
   "id": "rp-mat-g204128",
@@ -93210,29 +92980,6 @@
   "e_en": "Since tan 0° = 0, tan 45° = 1, and tan 90° is undefined (approaching infinity), the order is ascending."
  },
  {
-  "id": "rp-mat-g204192",
-  "s": "maths",
-  "t": "trigonometry",
-  "d": 3,
-  "q_hi": "निम्नलिखित में से कौन सा मान सबसे छोटा है?",
-  "q_en": "Which of the following values is the smallest?",
-  "o_hi": [
-   "sin 0°",
-   "cos 0°",
-   "tan 0°",
-   "cot 90°"
-  ],
-  "o_en": [
-   "sin 0°",
-   "cos 0°",
-   "tan 0°",
-   "cot 90°"
-  ],
-  "a": 3,
-  "e_hi": "sin 0° = 0, tan 0° = 0, cot 90° = 0, जबकि cos 0° = 1 है। सभी 0 हैं, लेकिन प्रश्न में सबसे छोटा मान पूछा गया है।",
-  "e_en": "sin 0°, tan 0°, and cot 90° are all 0, while cos 0° is 1. Since 0 is the smallest among these, multiple options yield 0."
- },
- {
   "id": "rp-mat-g204193",
   "s": "maths",
   "t": "trigonometry",
@@ -93398,8 +93145,8 @@
   "s": "maths",
   "t": "trigonometry",
   "d": 1,
-  "q_hi": "यदि 2sin(theta) = 1 है, तो (theta) का मान क्या है?",
-  "q_en": "If 2sin(theta) = 1, what is the value of (theta)?",
+  "q_hi": "यदि 2sin(theta) = 1 है, तो theta (जहाँ theta एक न्यून कोण है) का मान क्या है?",
+  "q_en": "If 2sin(theta) = 1, what is the value of theta (where theta is an acute angle)?",
   "o_hi": [
    "30 डिग्री",
    "45 डिग्री",
@@ -96149,9 +95896,9 @@
    "1309",
    "1500"
   ],
-  "a": 1,
-  "e_hi": "अमृत भारत स्टेशन योजना के तहत भारत भर में 1275 स्टेशनों के आधुनिकीकरण की योजना है।",
-  "e_en": "The Amrit Bharat Station Scheme aims to modernize 1275 stations across India."
+  "a": 2,
+  "e_hi": "अमृत भारत स्टेशन योजना के तहत भारत भर में कुल 1309 स्टेशनों के पुनर्विकास की योजना है।",
+  "e_en": "The Amrit Bharat Station Scheme aims to redevelop a total of 1309 stations across India."
  },
  {
   "id": "rp-mat-g204320",
@@ -97921,8 +97668,8 @@
    "12 percent"
   ],
   "a": 0,
-  "e_hi": "कुल कर्मचारी 400 हैं। विपणन में 80 कर्मचारी हैं, इसलिए (80/400)*100 = 16 प्रतिशत।",
-  "e_en": "Total employees are 400. Marketing has 80 employees, so (80/400)*100 = 16 percent."
+  "e_hi": "कुल कर्मचारी 400 हैं। विपणन में 80 कर्मचारी हैं, इसलिए (80/400)×100 = 20 प्रतिशत।",
+  "e_en": "Total employees are 400. Marketing has 80 employees, so (80/400)×100 = 20 percent."
  },
  {
   "id": "rp-mat-g204397",
@@ -98312,8 +98059,8 @@
    "None of the years"
   ],
   "a": 3,
-  "e_hi": "द्वितीय वर्ष में दोनों कंपनियों का निर्यात 200 करोड़ है।",
-  "e_en": "In the second year, the export of both companies is 200 crores."
+  "e_hi": "किसी भी वर्ष में X और Y के निर्यात बराबर नहीं हैं: वर्ष1 (200 बनाम 150), वर्ष2 (250 बनाम 200), वर्ष3 (300 बनाम 350)। अतः उत्तर 'किसी भी वर्ष नहीं' है।",
+  "e_en": "In no year are the exports of X and Y equal: Year1 (200 vs 150), Year2 (250 vs 200), Year3 (300 vs 350). Hence, the answer is 'None of the years'."
  },
  {
   "id": "rp-mat-g204414",
@@ -99508,8 +99255,8 @@
    "1075 rupees"
   ],
   "a": 1,
-  "e_hi": "पहले क्रय मूल्य निकालें: 840 / 0.80 = 1050। अब 5% लाभ के लिए 1050 * 1.05 = 1102.5, लेकिन विकल्प के अनुसार 1050 निकटतम सही उत्तर है।",
-  "e_en": "First find CP: 840 / 0.80 = 1050. To gain 5%, calculate 1050 * 1.05 = 1102.5. Closest option is 1102.5 which is 1102.5."
+  "e_hi": "पहले क्रय मूल्य निकालें: 840 / 0.80 = 1050। अब 5% लाभ के लिए 1050 × 1.05 = 1102.5, जिसके निकटतम विकल्प 1100 रुपये है।",
+  "e_en": "First find CP: 840 / 0.80 = 1050. To gain 5%, calculate 1050 × 1.05 = 1102.5, closest to the option 1100 rupees."
  },
  {
   "id": "rp-mat-g204466",
@@ -100589,8 +100336,8 @@
    "Cost price 550, profit 5%"
   ],
   "a": 3,
-  "e_hi": "विक्रय मूल्य गणना: 550, 540, 570, 577.5। अतः 450 का 20% लाभ वाला विकल्प सर्वोत्तम है।",
-  "e_en": "Selling price calculation: 550, 540, 570, 577.5. Thus, the option with 450 cost and 20% profit is the highest."
+  "e_hi": "विक्रय मूल्य गणना: 550, 540, 570, 577.5। अतः 550 मूल्य और 5% लाभ वाला विकल्प सबसे अधिक है।",
+  "e_en": "Selling price calculation: 550, 540, 570, 577.5. Thus, the option with cost price 550 and 5% profit is the highest."
  },
  {
   "id": "rp-mat-g204514",
@@ -102387,29 +102134,6 @@
   "e_en": "Total age of parents (2 persons) = 2 × 36 = 72 years. Total age of 3 children = 3 × 10 = 30 years. Total sum for 5 members = 72 + 30 = 102 years. Average = 102 / 5 = 20.4 years."
  },
  {
-  "id": "rp-mat-r204594",
-  "s": "maths",
-  "t": "average",
-  "d": 3,
-  "q_hi": "एक विद्यार्थी ने 5 विषयों में कुल 400 अंक प्राप्त किए। यदि उसके पहले तीन विषयों का औसत 85 और अंतिम दो विषयों का औसत 70 था, तो उसका तीसरा विषय का प्राप्तांक कितना था?",
-  "q_en": "A student scored a total of 400 marks in 5 subjects. If the average of his first three subjects was 85 and the average of the last two subjects was 70, what were his marks in the third subject?",
-  "o_hi": [
-   "75",
-   "85",
-   "95",
-   "105"
-  ],
-  "o_en": [
-   "75",
-   "85",
-   "95",
-   "105"
-  ],
-  "a": 2,
-  "e_hi": "पहले तीन विषयों का कुल योग = 3 × 85 = 255। अंतिम दो विषयों का कुल योग = 2 × 70 = 140। कुल पाँचों विषयों का योग 255 + 140 = 395 है (तथा दिया गया कुल योग 400 है)। प्रश्न के अनुसार 5 विषयों का कुल योग 400 है, अतः तीसरा विषय दोनों तरफ के योग का अंतर या मानक गणना से निकाला जाता है। यहाँ सीधे 400 - (255 + 140) संभव नहीं क्योंकि यह ओवरलैप नहीं है, बल्कि यदि सभी 5 का योग 400 है और पहले 3 का 255 तथा अंतिम 2 का 140 है, तो (255+140) = 395, जिससे तीसरा विषय निकालने का तरीका अलग होगा। सही गणना: पहले 3 का योग 255 है, और कुल 400 में से अंतिम 2 का 140 घटाने पर पहले 3 का योग 260 आना चाहिए। यदि कुल 400 है और अंतिम 2 का 140 है, तो पहले 3 का योग 260 होना चाहिए। चूँकि दिया गया औसत 85 है जिससे योग 255 बनता है, यहाँ 5वां विषय या समायोजन 400 - 255 - 140 = 5 अंक अतिरिक्त है जो तीसरे विषय में जुड़ेगा: 85 + 5 = 90... सही उत्तर 95 है क्योंकि कुल योग 400 - (255+140) गलत प्रसंग; सही विधि: 255 + 140 = 395, तो तीसरा विषय 400 - 395 नहीं बल्कि कुल 400 में से 255 गए 145 और उसमें से अंतिम 2 का 140 गया तो 5 बचा, अतः 90 या 95।",
-  "e_en": "Sum of first 3 subjects = 3 × 85 = 255. Sum of last 2 subjects = 2 × 70 = 140. Total sum given is 400. Sum of all 5 = 255 + 140 = 395. The discrepancy of 5 marks (400 - 395) belongs to the overlapping or specific recalculation where the third subject score is adjusted to 95."
- },
- {
   "id": "rp-mat-r204595",
   "s": "maths",
   "t": "average",
@@ -102506,8 +102230,8 @@
   "s": "maths",
   "t": "average",
   "d": 3,
-  "q_hi": "एक कार्यालय में सभी कर्मचारियों का औसत वेतन बारह हजार रुपये है। अधिकारियों का औसत वेतन पैंतीस हजार रुपये है और शेष कर्मचारियों का औसत वेतन नौ हजार रुपये है। यदि अधिकारियों की कुल संख्या आठ हो, तो कार्यालय में कर्मचारियों की कुल संख्या कितनी है?",
-  "q_en": "The average salary of all employees in an office is twelve thousand rupees. The average salary of officers is thirty-five thousand rupees and that of the remaining employees is nine thousand rupees. If the total number of officers is eight, what is the total number of employees in the office?",
+  "q_hi": "एक कार्यालय में सभी कर्मचारियों का औसत वेतन बारह हजार रुपये है। अधिकारियों का औसत वेतन छत्तीस हजार रुपये है और शेष कर्मचारियों का औसत वेतन नौ हजार रुपये है। यदि अधिकारियों की कुल संख्या आठ हो, तो कार्यालय में कर्मचारियों की कुल संख्या कितनी है?",
+  "q_en": "The average salary of all employees in an office is twelve thousand rupees. The average salary of officers is thirty-six thousand rupees and that of the remaining employees is nine thousand rupees. If the total number of officers is eight, what is the total number of employees in the office?",
   "o_hi": [
    "72",
    "80",
@@ -102521,8 +102245,8 @@
    "96"
   ],
   "a": 0,
-  "e_hi": "अधिकारियों का कुल वेतन 8 गुणा 36000 = 288000 है। शेष कर्मचारियों की संख्या x मानकर समीकरण बनाने पर कुल कर्मचारी 72 प्राप्त होते हैं।",
-  "e_en": "Total salary of 8 officers is 8 * 36000 = 288000. Setting up the weighted average equation for total employees yields 72."
+  "e_hi": "अधिकारियों का कुल वेतन 8 × 36,000 = 2,88,000 है। शेष कर्मचारियों की संख्या x मानकर: 12000(8+x) = 288000 + 9000x, हल करने पर x=64, कुल कर्मचारी = 8+64 = 72।",
+  "e_en": "Total salary of 8 officers is 8 × 36,000 = 2,88,000. Letting the remaining employees be x: 12000(8+x) = 288000 + 9000x. Solving gives x=64, so total employees = 8+64 = 72."
  },
  {
   "id": "rp-mat-r204600",
@@ -105013,8 +104737,8 @@
   "s": "maths",
   "t": "algebra",
   "d": 3,
-  "q_hi": "रेलवे के एक ठेकेदार के पास श्रमिकों को देने के लिए कुछ राशि है। यदि वह प्रत्येक श्रमिक को पंद्रह रुपये दे, तो नौ सौ रुपये कम पड़ जाते हैं, और यदि वह प्रत्येक को दस रुपये दे, तो चार सौ रुपये बच जाते हैं। श्रमिकों की संख्या क्या है?",
-  "q_en": "A railway contractor has a certain amount of money to pay workers. If he gives fifteen rupees to each worker, he falls short by nine hundred rupees, and if he gives ten rupees to each, four hundred rupees are left over. What is the number of workers?",
+  "q_hi": "रेलवे के एक ठेकेदार के पास श्रमिकों को देने के लिए कुछ राशि है। यदि वह प्रत्येक श्रमिक को पंद्रह रुपये दे, तो छह सौ रुपये कम पड़ जाते हैं, और यदि वह प्रत्येक को दस रुपये दे, तो चार सौ रुपये बच जाते हैं। श्रमिकों की संख्या क्या है?",
+  "q_en": "A railway contractor has a certain amount of money to pay workers. If he gives fifteen rupees to each worker, he falls short by six hundred rupees, and if he gives ten rupees to each, four hundred rupees are left over. What is the number of workers?",
   "o_hi": [
    "दो सौ",
    "एक सौ पचास",
@@ -105028,8 +104752,8 @@
    "250"
   ],
   "a": 0,
-  "e_hi": "श्रमिकों की संख्या n के लिए समीकरण 15n - 900 = 10n + 400 बनता है, जिससे n = 260 नहीं बल्कि 1300/5 = 260... रुकिए, 900+400 = 1300, 1300/5 = 260. विकल्पों में 260 नहीं है, अतः इस प्रश्न को सही मान के साथ समायोजित करते हैं। यदि कम 500 और बचे 300 हों, तो कुल 800/5 = 160। चलिए सरल समीकरण लेते हैं: 12n - 500 = 8n + 300, 4n = 800, n = 200.",
-  "e_en": "Using equation 12n - 500 = 8n + 300 gives 4n = 800, so n = 200 workers."
+  "e_hi": "श्रमिकों की संख्या n के लिए समीकरण 15n - 600 = 10n + 400 बनता है, जिससे 5n = 1000, n = 200।",
+  "e_en": "Using equation 15n - 600 = 10n + 400 gives 5n = 1000, so n = 200 workers."
  },
  {
   "id": "rp-mat-r204709",
@@ -105166,8 +104890,8 @@
    "Fourteen days"
   ],
   "a": 1,
-  "e_hi": "A और B का चार दिन का कुल कार्य 4 * (1/15 + 1/20) = 7/15 है। शेष कार्य 8/15 बचा जिसे B अकेले 8/15 * 20 = 10.66 के बजाय सही गणना से 10 दिन में पूरा करेगा (चूंकि शेष 8/15 है और B की क्षमता 1/20 है, 8/15 भाग को 10 दिन में नहीं बल्कि 32/3 दिन; आइए विकल्प सुधारें: शेष कार्य 8 भाग है और B की क्षमता प्रतिदिन 1 भाग है तो 10 दिन)।",
-  "e_en": "Combined 4-day work is 4 * (1/15 + 1/20) = 7/15. Remaining work is 8/15. Since B's 1-day work is 1/20, B takes remaining days based on correct unit calculation."
+  "e_hi": "A और B का चार दिन का कुल कार्य 4 × (1/15 + 1/20) = 7/15 है। शेष कार्य 8/15 है। B की दैनिक क्षमता 1/20 है, इसलिए शेष कार्य पूरा करने में समय = (8/15) ÷ (1/20) = 32/3 ≈ 10.67 दिन, जो निकटतम विकल्प 10 दिन है।",
+  "e_en": "Combined 4-day work is 4 × (1/15 + 1/20) = 7/15. Remaining work is 8/15. Since B's daily rate is 1/20, time to finish = (8/15) ÷ (1/20) = 32/3 ≈ 10.67 days, closest to the option 10 days."
  },
  {
   "id": "rp-mat-r204715",
@@ -105189,8 +104913,8 @@
    "Twelve days"
   ],
   "a": 0,
-  "e_hi": "2(A + B + C) की दक्षता = 1/8 + 1/12 + 1/8 = 5/12। अतः तीनों की कुल दक्षता 5/24 है, जिससे कार्य समाप्त होने में 24/5 यानी लगभग 4.8 दिन लगेंगे। (विकल्पों के निकटतम मान या प्रश्न समायोजन अनुसार छह दिन)।",
-  "e_en": "Twice the combined efficiency of (A+B+C) = 1/8 + 1/12 + 1/8 = 5/12. Total efficiency = 5/24, time taken = 24/5 days."
+  "e_hi": "दिया है A+B=1/8, B+C=1/12, C+A=1/8। इन तीनों को जोड़ने पर 2(A+B+C) = 1/8+1/12+1/8 = 1/3, इसलिए A+B+C = 1/6। अतः तीनों मिलकर कार्य को 6 दिन में पूरा करेंगे।",
+  "e_en": "Given A+B=1/8, B+C=1/12, C+A=1/8. Adding these: 2(A+B+C) = 1/8+1/12+1/8 = 1/3, so A+B+C = 1/6. Thus, all three together finish the work in 6 days."
  },
  {
   "id": "rp-mat-r204716",
@@ -105234,9 +104958,9 @@
    "Sixteen days",
    "Eighteen days"
   ],
-  "a": 2,
-  "e_hi": "12 पुरुष = 16 स्त्रियां, अतः 1 पुरुष = 4/3 स्त्रियां। 4 पुरुष = 16/3 स्त्रियां। कुल स्त्रियां = 16/3 + 9 = 43/3 (गणना को सरल बनाते हुए मानक मान 16 दिन आता है)।",
-  "e_en": "12 men = 16 women, so 4 men = 16/3 women. Total equivalent women = 16/3 + 9. Using standard work equivalence, it yields 16 days."
+  "a": 1,
+  "e_hi": "12 पुरुष = 16 स्त्रियां, अतः 1 पुरुष = 4/3 स्त्रियां के बराबर कार्य करता है। कुल कार्य = 16×12 = 192 स्त्री-दिन। 4 पुरुष + 9 स्त्रियां = (4×4/3 + 9) = 43/3 स्त्रियों के बराबर। समय = 192 ÷ (43/3) ≈ 13.4 दिन, जो निकटतम विकल्प 14 दिन है।",
+  "e_en": "12 men = 16 women, so 1 man's work equals 4/3 women. Total work = 16×12 = 192 woman-days. 4 men + 9 women is equivalent to (4×4/3 + 9) = 43/3 women. Time = 192 ÷ (43/3) ≈ 13.4 days, closest to the option 14 days."
  },
  {
   "id": "rp-mat-r204718",
@@ -105258,8 +104982,8 @@
    "Nine days"
   ],
   "a": 0,
-  "e_hi": "A पूरा कार्य 10 दिन में और B पूरा कार्य 12 दिन में करता है। दोनों मिलकर 1 / (1/10 + 1/12) = 60/11 दिन में करेंगे।",
-  "e_en": "A does the whole work in 10 days and B in 12 days. Together they finish it in 60/11 days."
+  "e_hi": "A पूरा कार्य 10 दिन में और B पूरा कार्य 12 दिन में करता है। दोनों मिलकर 1 / (1/10 + 1/12) = 60/11 ≈ 5.45 दिन में करेंगे, जो निकटतम विकल्प 6 दिन है।",
+  "e_en": "A does the whole work in 10 days and B in 12 days. Together they finish it in 60/11 ≈ 5.45 days, closest to the option six days."
  },
  {
   "id": "rp-mat-r204719",
@@ -105280,9 +105004,9 @@
    "Thirty-six hours",
    "Forty-eight hours"
   ],
-  "a": 3,
-  "e_hi": "शुद्ध प्रभाव 1/12 - 1/8 = -1/24 है, जिसका अर्थ है कि टंकी 24 घंटे में खाली होगी (यदि पूरी भरी हो तो 24 घंटे)।",
-  "e_en": "Net rate = 1/12 - 1/8 = -1/24 per hour, meaning the tank empties in 24 hours."
+  "a": 0,
+  "e_hi": "शुद्ध प्रभाव = 1/12 - 1/8 = -1/24, जिसका परिमाण 1/24 है। अतः टंकी 24 घंटे में खाली हो जाएगी।",
+  "e_en": "Net rate = 1/12 - 1/8 = -1/24, with magnitude 1/24. Hence, the tank empties in 24 hours."
  },
  {
   "id": "rp-mat-r204720",
@@ -107258,9 +106982,9 @@
    "18 meters",
    "20 meters"
   ],
-  "a": 0,
-  "e_hi": "सबसे लंबे खंभे की लंबाई घनाभ के विकर्ण के बराबर होगी = √(l² + b² + h²) = √(12² + 8² + 6²) = √(144 + 64 + 36) = √244 = 14 मीटर (लगभग)।",
-  "e_en": "The length of the longest pole is equal to the diagonal of the cuboid = √(l² + b² + h²) = √(12² + 8² + 6²) = √(144 + 64 + 36) = √244 = 14 meters (approx)."
+  "a": 1,
+  "e_hi": "सबसे लंबे खंभे की लंबाई घनाभ के विकर्ण के बराबर होगी = √(l² + b² + h²) = √(144 + 64 + 36) = √244 ≈ 15.62, जिसका निकटतम विकल्प 16 मीटर है।",
+  "e_en": "The length of the longest pole equals the diagonal of the cuboid = √(l² + b² + h²) = √(144 + 64 + 36) = √244 ≈ 15.62, closest to the option 16 meters."
  },
  {
   "id": "rp-mat-r204806",
