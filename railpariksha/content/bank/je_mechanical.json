@@ -48068,5 +48068,143 @@
   "a": 1,
   "e_hi": "स्विच-ओवर राशिओ वह बिंदु दर्शाता है जहाँ सिलेंडर में हवा का संपीड़न दबाव ईंधन जेटिंग दबाव के बराबर हो जाता है, जिससे दहन शुरू होता है।",
   "e_en": "Switchover ratio indicates the point where the compression pressure in the cylinder equals the fuel injection pressure, initiating combustion."
+ },
+ {
+  "id": "rp-je_-02098",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक 4-स्ट्रोक IC इंजन में, यदि पिस्टन अंडर डेड सेंटर (BDC) से ऊपर डेड सेंटर (TDC) की ओर चल रहा है और दोनों वाल्व बंद हैं, तो यह कौन सा स्ट्रोक है?",
+  "q_en": "In a 4-stroke IC engine, if the piston is moving from Bottom Dead Center (BDC) to Top Dead Center (TDC) with both valves closed, which stroke is it?",
+  "o_hi": [
+   "सक्शन (Suction)",
+   "कंपेशन (Compression)",
+   "पावर (Power)",
+   "एग्जास्ट (Exhaust)"
+  ],
+  "o_en": [
+   "Suction",
+   "Compression",
+   "Power",
+   "Exhaust"
+  ],
+  "a": 1,
+  "e_hi": "कंपेशन स्ट्रोक में पिस्टन BDC से TDC की ओर चलता है और दोनों वाल्व बंद होते हैं ताकि हवा-ईंधन मिश्रण संपीड़ित हो सके।",
+  "e_en": "During the compression stroke, the piston moves from BDC to TDC with both valves closed to compress the air-fuel mixture."
+ },
+ {
+  "id": "rp-je_-02099",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "आइडियल कार्नोट प्रशीतन चक्र (Refrigeration Cycle) का प्रदर्शन गुणांक (COP) 5.0 है। यदि यह हीट पंप के रूप में कार्य कर रहा हो, तो उसका COP कितना होगा?",
+  "q_en": "The Coefficient of Performance (COP) of an ideal Carnot refrigeration cycle is 5.0. If this system operates as a heat pump, what will be its COP?",
+  "o_hi": [
+   "4.0",
+   "5.0",
+   "6.0",
+   "25.0"
+  ],
+  "o_en": [
+   "4.0",
+   "5.0",
+   "6.0",
+   "25.0"
+  ],
+  "a": 2,
+  "e_hi": "हीट पंप के लिए COP का सूत्र है: COP_HP = COP_R + 1। इसलिए, 5.0 + 1 = 6.0।",
+  "e_en": "For a heat pump, the relationship is COP_HP = COP_R + 1. Therefore, 5.0 + 1 = 6.0."
+ },
+ {
+  "id": "rp-je_-02100",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "एक ऑक्टेन नंबर 85 वाली पेट्रोल ईंधन का उपयोग करने वाले स्पार्क-इग्निशन इंजन में 'किलॉकिंग' (Knocking) की संभावना कैसी होगी?",
+  "q_en": "What is the likelihood of 'knocking' in a spark-ignition engine using petrol fuel with an octane number of 85?",
+  "o_hi": [
+   "बहुत कम",
+   "मध्यम",
+   "उच्च",
+   "शून्य"
+  ],
+  "o_en": [
+   "Very Low",
+   "Moderate",
+   "High",
+   "Zero"
+  ],
+  "a": 2,
+  "e_hi": "ऑक्टेन नंबर ईंधन की किलॉकिंग रोधी क्षमता को दर्शाता है। नंबर जितना कम, ईंधन जितना भड़कनशील (prone to knock) होता है, इसलिए 85 पर किलॉकिंग की उच्च संभावना होती है।",
+  "e_en": "Octane number indicates resistance to knocking. A lower number means higher susceptibility to knocking, so an octane rating of 85 implies a higher likelihood of knocking."
+ },
+ {
+  "id": "rp-je_-02101",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "आदर्श कैरनो इंजन 300 K के तापमान वाले ठंडा कर देने वाले रेसिवटर (cold reservoir) और 1200 K के तापमान वाले गर्म रेसिवटर (hot reservoir) के बीच कार्य करता है। इस इंजन की दक्षता (efficiency) क्या है?",
+  "q_en": "An ideal Carnot engine operates between a cold reservoir at 300 K and a hot reservoir at 1200 K. What is the efficiency of this engine?",
+  "o_hi": [
+   "25%",
+   "50%",
+   "75%",
+   "100%"
+  ],
+  "o_en": [
+   "25%",
+   "50%",
+   "75%",
+   "100%"
+  ],
+  "a": 2,
+  "e_hi": "कार्नो दक्षता = 1 - (T_c / T_h) = 1 - (300/1200) = 1 - 0.25 = 0.75 या 75%।",
+  "e_en": "Carnot efficiency = 1 - (T_c / T_h) = 1 - (300/1200) = 1 - 0.25 = 0.75 or 75%."
+ },
+ {
+  "id": "rp-je_-02102",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 1,
+  "q_hi": "प्रशीतन पदार्थ (Refrigerant) के रूप में फ्रीन-12 (R-12) का उपयोग बंद कर दिया गया है। इसका मुख्य कारण क्या है?",
+  "q_en": "The use of Freon-12 (R-12) as a refrigerant has been discontinued. What is the main reason for this?",
+  "o_hi": [
+   "यह अत्यधिक विषैला है",
+   "यह जलवायु परिवर्तन के लिए जवाबदेह Ozone Layer Depletion Index (ODI) के कारण है",
+   "यह बहुत महंगा है",
+   "यह आग लगने पर विस्फोटक है"
+  ],
+  "o_en": [
+   "It is highly toxic",
+   "It has a high Ozone Layer Depletion Index (ODI) responsible for atmospheric damage",
+   "It is very expensive",
+   "It is explosive upon ignition"
+  ],
+  "a": 1,
+  "e_hi": "R-12 एक CFC (क्लोरोफ्लोरोकार्बन) है जो ओज़ोन परत को नष्ट करता है, इसलिए मोन्ट्रियल प्रोटोकॉल के तहत इसका उपयोग बंद कर दिया गया है।",
+  "e_en": "R-12 is a CFC that depletes the ozone layer, leading to its phase-out under the Montreal Protocol."
+ },
+ {
+  "id": "rp-je_-02103",
+  "s": "je_mechanical",
+  "t": "ic_engines_refrigeration",
+  "d": 2,
+  "q_hi": "एक 4-स्ट्रोक इंजन का वोल्यूमेट्रिक दक्षता (Volumetric Efficiency) 80% है। यदि इसकी डिस्प्लेसमेंट वॉल्यूम 2000 cc है, तो प्रति चक्र (per cycle) सल्फेक्ट की गई वास्तविक हवा की मात्रा कितनी होगी?",
+  "q_en": "A 4-stroke engine has a volumetric efficiency of 80%. If its displacement volume is 2000 cc, what is the actual volume of air inducted per cycle?",
+  "o_hi": [
+   "1000 cc",
+   "1200 cc",
+   "1600 cc",
+   "2000 cc"
+  ],
+  "o_en": [
+   "1000 cc",
+   "1200 cc",
+   "1600 cc",
+   "2000 cc"
+  ],
+  "a": 2,
+  "e_hi": "वास्तविक मात्रा = वोल्यूमेट्रिक दक्षता × डिस्प्लेसमेंट वॉल्यूम = 0.80 × 2000 cc = 1600 cc।",
+  "e_en": "Actual volume = Volumetric Efficiency × Displacement Volume = 0.80 × 2000 cc = 1600 cc."
  }
 ]
