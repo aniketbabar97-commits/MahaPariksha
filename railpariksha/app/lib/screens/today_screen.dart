@@ -445,7 +445,7 @@ class TodayScreen extends StatelessWidget {
                         'tip' => context.tr('अध्ययन टिप', 'Study tip'),
                         _ => context.tr('सुविचार', 'Quote'),
                       },
-                      style: const TextStyle(fontWeight: FontWeight.w700, color: BrandColors.saffron)),
+                      style: TextStyle(fontWeight: FontWeight.w700, color: BrandColors.saffronText(context))),
                   const Spacer(),
                   IconButton(
                     icon: const Icon(Icons.share),

@@ -342,7 +342,8 @@ class _BeastBadge extends StatelessWidget {
               Row(children: [
                 Text(context.tr('बीस्ट मोड', 'Beast Mode'), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                 const SizedBox(width: 6),
-                Text(tier.of(lang), style: const TextStyle(fontWeight: FontWeight.w900, color: BrandColors.saffron, fontSize: 13)),
+                Text(tier.of(lang),
+                    style: TextStyle(fontWeight: FontWeight.w900, color: BrandColors.saffronText(context), fontSize: 13)),
               ]),
               const SizedBox(height: 6),
               ClipRRect(

@@ -38,6 +38,15 @@ class BrandColors {
   static const correct = Color(0xFF1E9E5A);
   static const wrong = Color(0xFFD64545);
 
+  /// Plain `saffron` text on a light-mode white background is only ~1.9:1
+  /// contrast -- WCAG AA needs 4.5:1 for normal-size text. Saffron itself
+  /// stays the brand accent everywhere (icons, gradients, borders); this is
+  /// only for the handful of places that render it as actual reading text.
+  /// Already passes AA on the dark-mode navy Card background, so dark mode
+  /// is untouched.
+  static Color saffronText(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.light ? const Color(0xFF9A6B00) : saffron;
+
   static const heroGradient = LinearGradient(
     colors: [sky, skyLight],
     begin: Alignment.topLeft,

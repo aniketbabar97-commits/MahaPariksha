@@ -21,7 +21,7 @@ class ExamPicker extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(4, 12, 4, 8),
               child: Text(g.name.of(lang),
                   style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                      fontWeight: FontWeight.w800, color: BrandColors.saffron, letterSpacing: 0.3)),
+                      fontWeight: FontWeight.w800, color: BrandColors.saffronText(context), letterSpacing: 0.3)),
             ),
             Wrap(
               spacing: 8,
