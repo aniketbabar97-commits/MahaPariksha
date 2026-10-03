@@ -260,7 +260,7 @@ class _TimeBudgetCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final q = exam.paperQuestions;
     final min = exam.paperMinutes;
-    if (q == null || min == null) {
+    if (q == null || q == 0 || min == null) {
       return Card(
         child: Padding(
           padding: const EdgeInsets.all(16),
