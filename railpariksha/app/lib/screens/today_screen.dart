@@ -127,6 +127,25 @@ class TodayScreen extends StatelessWidget {
                         const Icon(Icons.chevron_right, color: Colors.white70, size: 16),
                       ]),
                     ),
+                  ] else ...[
+                    // Setting the exam date is this screen's single highest-leverage
+                    // personalization step -- it's what turns on the Study plan /
+                    // pacing-gaps card below -- but it previously only showed up as
+                    // one more ActionCard at the bottom of a long scroll. Surface it
+                    // here instead, where every first-session user already looks.
+                    const SizedBox(height: 10),
+                    InkWell(
+                      onTap: () {
+                        HapticFeedback.selectionClick();
+                        push(context, (_) => const RevisionPlanScreen());
+                      },
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        const Icon(Icons.event_outlined, color: Colors.white70, size: 16),
+                        const SizedBox(width: 4),
+                        Text(context.tr('परीक्षा की तारीख डालें और निजी प्लान पाएं →', 'Set your exam date for a personalized plan →'),
+                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                      ]),
+                    ),
                   ],
                 ]),
               ),
@@ -380,16 +399,23 @@ class TodayScreen extends StatelessWidget {
           subtitle: context.tr('$dueCards कार्ड आज रिवीज़न के लिए', '$dueCards cards due today'),
           onTap: () => push(context, (_) => const FlashcardScreen()),
         ),
-        const SizedBox(height: 12),
-        ActionCard(
-          icon: Icons.replay_circle_filled,
-          color: BrandColors.wrong,
-          title: context.tr('गलतियों की कॉपी', 'Mistake book'),
-          subtitle: p.mistakes.isEmpty
-              ? context.tr('कोई गलती बाकी नहीं! 👏', 'No pending mistakes! 👏')
-              : context.tr('${p.mistakes.length} प्रश्न दोबारा हल करें', 'Retry ${p.mistakes.length} questions'),
-          onTap: p.mistakes.isEmpty ? null : () => startQuiz(context, s.builder.mistakes()),
-        ),
+        // Hidden rather than shown disabled when there's truly nothing to show yet --
+        // a brand-new user who has never answered a question sees an unclickable
+        // "no pending mistakes" card that reads like a premature congratulations for
+        // doing nothing. The congratulatory state still shows once there's real
+        // history (some answers given) and the mistake book is genuinely empty.
+        if (p.totalAnswered > 0) ...[
+          const SizedBox(height: 12),
+          ActionCard(
+            icon: Icons.replay_circle_filled,
+            color: BrandColors.wrong,
+            title: context.tr('गलतियों की कॉपी', 'Mistake book'),
+            subtitle: p.mistakes.isEmpty
+                ? context.tr('कोई गलती बाकी नहीं! 👏', 'No pending mistakes! 👏')
+                : context.tr('${p.mistakes.length} प्रश्न दोबारा हल करें', 'Retry ${p.mistakes.length} questions'),
+            onTap: p.mistakes.isEmpty ? null : () => startQuiz(context, s.builder.mistakes()),
+          ),
+        ],
         const SizedBox(height: 12),
         ActionCard(
           icon: Icons.timer,
