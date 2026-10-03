@@ -6624,29 +6624,6 @@
   "e_en": "Traffic flow (q) = Density (k) * Speed (v). 40 * 50 = 2000 vehicles per hour."
  },
  {
-  "id": "rp-je_c-f00291",
-  "s": "je_civil",
-  "t": "transportation_engineering",
-  "d": 3,
-  "q_hi": "एक रेलवे ट्रैक पर यदि गेज 1.676 मीटर है और वक्र की त्रिज्या 300 मीटर है, तो 60 किमी प्रति घंटा की गति के लिए आवश्यक गेज विस्तार (mm में) क्या होगा?",
-  "q_en": "On a railway track, if the gauge is 1.676 meters and the curve radius is 300 meters, what is the required gauge widening (in mm) for a speed of 60 kmph?",
-  "o_hi": [
-   "10 मिमी",
-   "15 मिमी",
-   "20 मिमी",
-   "25 मिमी"
-  ],
-  "o_en": [
-   "10 mm",
-   "15 mm",
-   "20 mm",
-   "25 mm"
-  ],
-  "a": 2,
-  "e_hi": "ब्रॉड गेज के लिए गेज विस्तार का सूत्र = (13 * B^2) / R है। गणना करने पर यह लगभग 20 मिमी के करीब आता है।",
-  "e_en": "The formula for gauge widening on broad gauge is (13 * B^2) / R. Calculation yields approximately 20 mm."
- },
- {
   "id": "rp-je_c-f00292",
   "s": "je_civil",
   "t": "transportation_engineering",
@@ -6720,8 +6697,8 @@
   "s": "je_civil",
   "t": "transportation_engineering",
   "d": 2,
-  "q_hi": "एक रेलवे ट्रैक पर 5 डिग्री के वक्र की त्रिज्या क्या होगी? (मान लें कि 1720 मीटर की मानक लंबाई का उपयोग किया जा रहा है)",
-  "q_en": "What will be the radius of a 5-degree curve on a railway track? (Assume the standard chord length of 1720 meters is used for degree calculation).",
+  "q_hi": "एक रेलवे ट्रैक पर 5 डिग्री के वक्र की त्रिज्या क्या होगी? (डिग्री वक्र सूत्र में उपयोग किया जाने वाला मानक स्थिरांक (constant) 1720 लें, अर्थात R = 1720/D)",
+  "q_en": "What will be the radius of a 5-degree curve on a railway track? (Take the standard constant used in the degree-of-curve formula as 1720, i.e. R = 1720/D)",
   "o_hi": [
    "344 मीटर",
    "350 मीटर",
@@ -7496,29 +7473,6 @@
   "a": 2,
   "e_hi": "प्रवाह = घनत्व * गति। 40 * 50 = 2000 वाहन/घंटा।",
   "e_en": "Flow = Density * Speed. 40 * 50 = 2000 vehicles/hour."
- },
- {
-  "id": "rp-je_c-f00329",
-  "s": "je_civil",
-  "t": "transportation_engineering",
-  "d": 3,
-  "q_hi": "एक रेलवे ट्रैक में, यदि गेज 1.676 मीटर है और वक्र की त्रिज्या 300 मीटर है, तो 60 किमी/घंटा की गति के लिए आवश्यक गेज विस्तार (Gauge Widening) क्या होगा?",
-  "q_en": "In a railway track, if the gauge is 1.676 meters and the radius of the curve is 300 meters, what is the required gauge widening for a speed of 60 km/h?",
-  "o_hi": [
-   "15 मिमी",
-   "20 मिमी",
-   "25 मिमी",
-   "30 मिमी"
-  ],
-  "o_en": [
-   "15 mm",
-   "20 mm",
-   "25 mm",
-   "30 mm"
-  ],
-  "a": 1,
-  "e_hi": "गेज विस्तार का सूत्र = 13*B^2 / R। यहाँ मान रखने पर लगभग 20 मिमी प्राप्त होता है।",
-  "e_en": "Formula for gauge widening = 13*B^2 / R. Plugging in the values results in approximately 20 mm."
  },
  {
   "id": "rp-je_c-f00330",
@@ -17407,8 +17361,8 @@
    "Five"
   ],
   "a": 3,
-  "e_hi": "नागपुर योजना में सड़कों को राष्ट्रीय राजमार्ग, राज्य राजमार्ग, जिला सड़कें और ग्रामीण सड़कों में वर्गीकृत किया गया था।",
-  "e_en": "The Nagpur plan classified roads into National Highways, State Highways, District Roads, and Village Roads."
+  "e_hi": "नागपुर योजना में सड़कों को पाँच वर्गों में वर्गीकृत किया गया था: राष्ट्रीय राजमार्ग, राज्य राजमार्ग, मुख्य जिला सड़कें, अन्य जिला सड़कें और ग्रामीण सड़कें।",
+  "e_en": "The Nagpur plan classified roads into five categories: National Highways, State Highways, Major District Roads, Other District Roads, and Village Roads."
  },
  {
   "id": "rp-je_c-f00765",
