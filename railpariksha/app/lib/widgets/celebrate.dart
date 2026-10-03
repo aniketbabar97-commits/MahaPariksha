@@ -83,8 +83,13 @@ class _CelebrationDialogState extends State<_CelebrationDialog> with SingleTicke
 
   @override
   Widget build(BuildContext context) {
+    final reduceMotion = BrandColors.reduceMotion(context);
     return Stack(children: [
-      Positioned.fill(child: IgnorePointer(child: AnimatedBuilder(animation: c, builder: (_, _) => CustomPaint(painter: _Confetti(c.value))))),
+      // "Remove animations" users get the dialog with no confetti burst --
+      // a rapid shower of spinning/falling pieces is a genuine motion-
+      // sickness trigger for some, not just unwanted decoration.
+      if (!reduceMotion)
+        Positioned.fill(child: IgnorePointer(child: AnimatedBuilder(animation: c, builder: (_, _) => CustomPaint(painter: _Confetti(c.value))))),
       Center(
         child: Material(
           color: Colors.transparent,
