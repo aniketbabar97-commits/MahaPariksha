@@ -43785,19 +43785,19 @@
   "q_en": "If the word 'EXAM' is placed in front of a vertical mirror, how will its reflection appear?",
   "o_hi": [
    "MAXE",
-   "M A X E (उल्टा)",
+   "MAXƎ",
    "WXAE",
    "EXAM (समान)"
   ],
   "o_en": [
    "MAXE",
-   "M A X E (inverted)",
+   "MAXƎ",
    "WXAE",
    "EXAM (same)"
   ],
   "a": 1,
-  "e_hi": "दर्पण प्रतिबिंब में अक्षर दाएं से बाएं क्रम में पलट जाते हैं और अक्षरों की बनावट भी बदलती है।",
-  "e_en": "In a mirror image, letters are reversed from right to left, and the structure of the letters also flips."
+  "e_hi": "दर्पण प्रतिबिंब में शब्द का क्रम उल्टा हो जाता है (EXAM से MAXE), और साथ ही हर अक्षर की बनावट भी बाएं-दाएं पलट जाती है। A, X, M वर्टिकल रूप से सममित होने के कारण समान दिखते हैं, पर E असममित होने के कारण पलट कर 'Ɐ' जैसी (उल्टी Ɐ, यानी Ɛ/Ǝ) आकृति में दिखता है - इसलिए परिणाम 'MAXƎ' होता है।",
+  "e_en": "In a mirror image, the word order reverses (EXAM becomes MAXE) and each letter's shape also flips left-right. A, X and M are vertically symmetric so they look unchanged, but E is not symmetric and flips into a backward shape (Ǝ) — giving the result 'MAXƎ'."
  },
  {
   "id": "rp-rea-i01754",
@@ -43819,8 +43819,8 @@
    "6:30"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से घटाते हैं। 18:30 - 6:00 = 12:30।",
-  "e_en": "For a water image, subtract from 18:30. 18:30 - 6:00 = 12:30."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01755",
@@ -43867,29 +43867,6 @@
   "a": 1,
   "e_hi": "क्षैतिज दर्पण (नीचे रखा हुआ) और जल प्रतिबिंब दोनों में वस्तु ऊपर-नीचे पलटती है।",
   "e_en": "Both a horizontal mirror (placed below) and a water reflection cause the object to flip vertically."
- },
- {
-  "id": "rp-rea-i01757",
-  "s": "reasoning",
-  "t": "mirror_water_image",
-  "d": 3,
-  "q_hi": "एक संख्या '789' को दर्पण के सामने रखने पर क्या दिखाई देगा?",
-  "q_en": "What will the number '789' look like when placed in front of a mirror?",
-  "o_hi": [
-   "९८७",
-   "e87",
-   "68L",
-   "कोई नहीं"
-  ],
-  "o_en": [
-   "९८७",
-   "e87",
-   "68L",
-   "None"
-  ],
-  "a": 1,
-  "e_hi": "दर्पण में अंक 9 का प्रतिबिंब 'e' जैसा और 7 का प्रतिबिंब उल्टा दिखता है।",
-  "e_en": "In a mirror, the digit 9 appears like 'e' and 7 appears reversed."
  },
  {
   "id": "rp-rea-i01758",
@@ -44670,8 +44647,8 @@
    "6:30"
   ],
   "a": 1,
-  "e_hi": "6:00 का जल प्रतिबिंब 12:30 जैसा दिखाई देता है क्योंकि जल प्रतिबिंब में घंटे की सुई और मिनट की सुई की स्थिति बदल जाती है।",
-  "e_en": "The water image of 6:00 appears as 12:30 because the positions of the hour and minute hands invert vertically."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01774",
@@ -45130,8 +45107,8 @@
    "Father"
   ],
   "a": 2,
-  "e_hi": "मेरे पिता का इकलौता बेटा स्वयं महिला का भाई है। उसका बेटा महिला का भतीजा या बेटा हो सकता है; यहाँ विकल्प में 'बेटा' सही है।",
-  "e_en": "The only son of my father is the woman's brother. His son is the woman's nephew or son; 'Son' is the valid choice here."
+  "e_hi": "मेरे पिता का इकलौता बेटा स्वयं महिला का भाई है। उसका ('उसके पिता' यानी महिला के भाई का) बेटा महिला का भतीजा होता है।",
+  "e_en": "The only son of my father is the woman's own brother. His (the woman's brother's) son is the woman's nephew."
  },
  {
   "id": "rp-rea-j01862",
@@ -45866,8 +45843,8 @@
    "6:00"
   ],
   "a": 3,
-  "e_hi": "जल प्रतिबिंब के लिए 18:30 से घटाने पर 18:30 - 12:00 = 6:30 आता है, लेकिन सुइयों की स्थिति के अनुसार 6:00 सही है।",
-  "e_en": "Subtracting from 18:30 gives 6:30, but based on clock hand positions for 12:00, the water image is 6:00."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 12:00 के लिए: (6:00 - 12:00) mod 12:00 = -6:00 mod 12:00 = 6:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 12:00: (6:00 - 12:00) mod 12:00 = -6:00 mod 12:00 = 6:00."
  },
  {
   "id": "rp-rea-i01802",
@@ -45981,8 +45958,8 @@
    "12:00"
   ],
   "a": 1,
-  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से घटाते हैं। 18:30 - 12:30 = 6:00।",
-  "e_en": "For water images, subtract from 18:30. 18:30 - 12:30 = 6:00."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 12:30 के लिए: (6:00 - 12:30) mod 12:00 = -6:30 mod 12:00 = 5:30।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 12:30: (6:00 - 12:30) mod 12:00 = -6:30 mod 12:00 = 5:30."
  },
  {
   "id": "rp-rea-i01807",
@@ -46006,29 +45983,6 @@
   "a": 0,
   "e_hi": "संख्याओं में 5, 6, 7, 8, 9 के दर्पण रूप को ध्यान से देखें।",
   "e_en": "Carefully observe the lateral inversion of digits 5, 6, 7, 8, and 9."
- },
- {
-  "id": "rp-rea-i01808",
-  "s": "reasoning",
-  "t": "mirror_water_image",
-  "d": 3,
-  "q_hi": "एक शब्द का दर्पण प्रतिबिंब 'B' के समान है, तो वह शब्द क्या हो सकता है?",
-  "q_en": "A word's mirror image is 'B', which of the following could be the word?",
-  "o_hi": [
-   "B",
-   "D",
-   "A",
-   "C"
-  ],
-  "o_en": [
-   "B",
-   "D",
-   "A",
-   "C"
-  ],
-  "a": 0,
-  "e_hi": "अक्षर 'B' का दर्पण प्रतिबिंब स्वयं के जैसा नहीं होता, लेकिन प्रश्न में 'B' का स्वरूप पूछा गया है।",
-  "e_en": "The letter 'B' does not look like itself in a mirror, but the logic follows character inversion."
  },
  {
   "id": "rp-rea-i01809",
@@ -46395,8 +46349,8 @@
    "2:50"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब समय के लिए 18:30 में से समय घटाएं (18:30 - 4:40 = 1:50)।",
-  "e_en": "For water image time, subtract the time from 18:30 (18:30 - 4:40 = 1:50)."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 4:40 के लिए: (6:00 - 4:40) = 1:20।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 4:40: (6:00 - 4:40) = 1:20."
  },
  {
   "id": "rp-rea-j01888",
@@ -47016,8 +46970,8 @@
    "6:30"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाया जाता है। 18:30 - 6:00 = 12:30।",
-  "e_en": "For water image, time is subtracted from 18:30. 18:30 - 6:00 = 12:30."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01823",
@@ -47706,8 +47660,8 @@
    "12:00"
   ],
   "a": 1,
-  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाते हैं। 18:30 - 12:30 = 6:00।",
-  "e_en": "For water images, subtract the time from 18:30. 18:30 - 12:30 = 6:00."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 12:30 के लिए: (6:00 - 12:30) mod 12:00 = -6:30 mod 12:00 = 5:30।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 12:30: (6:00 - 12:30) mod 12:00 = -6:30 mod 12:00 = 5:30."
  },
  {
   "id": "rp-rea-i01839",
@@ -48534,8 +48488,8 @@
    "6:30"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाते हैं (18:30 - 6:00 = 12:30)।",
-  "e_en": "For water image time, subtract from 18:30 (18:30 - 6:00 = 12:30)."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01853",
@@ -48971,8 +48925,8 @@
    "6:30"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब समय के लिए 18:30 में से समय घटाते हैं। 18:30 - 6:00 = 12:30।",
-  "e_en": "For a water image, subtract the time from 18:30. 18:30 - 6:00 = 12:30."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01873",
@@ -49546,8 +49500,8 @@
    "Niece"
   ],
   "a": 3,
-  "e_hi": "मेरे पिता की इकलौती पुत्री मेरी बहन है। महिला की माँ मेरी बहन है, अतः महिला मेरी पुत्री है।",
-  "e_en": "The only daughter of my father is my sister. The lady's mother is my sister, so the lady is my daughter."
+  "e_hi": "मेरे पिता की इकलौती पुत्री मेरी बहन है। महिला की माँ मेरी बहन है, अतः महिला मेरी बहन की बेटी है, यानी मेरी भतीजी।",
+  "e_en": "The only daughter of my father is my sister. The lady's mother is my sister, so the lady is my sister's daughter, i.e. my niece."
  },
  {
   "id": "rp-rea-j01949",
@@ -49730,8 +49684,8 @@
    "6:00"
   ],
   "a": 1,
-  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से समय घटाते हैं। 18:30 - 6:30 = 12:00।",
-  "e_en": "For water image, subtract the time from 18:30. 18:30 - 6:30 = 12:00."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:30 के लिए: (6:00 - 6:30) mod 12:00 = -0:30 mod 12:00 = 11:30।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:30: (6:00 - 6:30) mod 12:00 = -0:30 mod 12:00 = 11:30."
  },
  {
   "id": "rp-rea-i01899",
@@ -49914,31 +49868,8 @@
    "06:30"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से समय घटाते हैं। 18:30 - 06:00 = 12:30।",
-  "e_en": "For water images, subtract the time from 18:30. 18:30 - 06:00 = 12:30."
- },
- {
-  "id": "rp-rea-i01907",
-  "s": "reasoning",
-  "t": "mirror_water_image",
-  "d": 2,
-  "q_hi": "संख्या '987' का दर्पण प्रतिबिंब क्या होगा?",
-  "q_en": "What will be the mirror image of the number '987'?",
-  "o_hi": [
-   "L86",
-   "789",
-   "г8९",
-   "L89"
-  ],
-  "o_en": [
-   "L86",
-   "789",
-   "г8९",
-   "L89"
-  ],
-  "a": 0,
-  "e_hi": "दर्पण में संख्याएं दाएं से बाएं पलट जाती हैं और उनका आकार भी विपरीत हो जाता है।",
-  "e_en": "In a mirror, numbers flip from right to left and their shape is reversed."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 06:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 06:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01908",
@@ -50330,29 +50261,6 @@
   "a": 0,
   "e_hi": "एन, ओ की बेटी है और एम, एन की बहन है, इसलिए एम भी ओ की बेटी है। पी, ओ का भाई है, इसलिए एम, पी की भतीजी है।",
   "e_en": "N is the daughter of O and M is N's sister, so M is O's daughter. P is O's brother, making M the niece of P."
- },
- {
-  "id": "rp-rea-j01967",
-  "s": "reasoning",
-  "t": "blood_relations",
-  "d": 3,
-  "q_hi": "एक परिवार में छह सदस्य हैं। ए और बी विवाहित जोड़े हैं। ए पुरुष है। डी, सी का इकलौता बेटा है। ई, डी की बहन है। बी, ई की माँ है। सी का ए से क्या संबंध है?",
-  "q_en": "A family has six members. A and B are a married couple. A is male. D is the only son of C. E is the sister of D. B is the mother of E. How is C related to A?",
-  "o_hi": [
-   "पत्नी",
-   "पिता",
-   "भाई",
-   "बहन"
-  ],
-  "o_en": [
-   "Wife",
-   "Father",
-   "Brother",
-   "Sister"
-  ],
-  "a": 0,
-  "e_hi": "बी, ई और डी की माँ है। चूँकि डी, सी का इकलौता बेटा है, सी, बी का पति होना चाहिए। इसलिए सी, ए की पत्नी है।",
-  "e_en": "B is the mother of E and D. Since D is the only son of C, C must be the husband of B. Therefore, C is the wife of A."
  },
  {
   "id": "rp-rea-j01968",
@@ -50788,8 +50696,8 @@
    "5:30"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए 18:30 में से समय घटाते हैं। 18:30 - 6:00 = 12:30।",
-  "e_en": "For water images, subtract the time from 18:30. 18:30 - 6:00 = 12:30."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 6:00 के लिए: (6:00 - 6:00) = 0:00 = 12:00।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 6:00: (6:00 - 6:00) = 0:00 = 12:00."
  },
  {
   "id": "rp-rea-i01925",
@@ -51041,8 +50949,8 @@
    "2:50"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाते हैं। 18:30 - 4:40 = 13:50, जो 1:50 है।",
-  "e_en": "To find the water image, subtract the time from 18:30. 18:30 - 4:40 = 13:50, which is 1:50."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 4:40 के लिए: (6:00 - 4:40) = 1:20।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 4:40: (6:00 - 4:40) = 1:20."
  },
  {
   "id": "rp-rea-i01936",
@@ -51340,8 +51248,8 @@
    "03:40"
   ],
   "a": 2,
-  "e_hi": "जल प्रतिबिंब के लिए समय को 18:30 में से घटाते हैं। 18:30 - 03:20 = 15:10, जो 03:10 के बराबर है।",
-  "e_en": "For water images, subtract the time from 18:30. 18:30 - 03:20 = 15:10, which equals 03:10."
+  "e_hi": "जल प्रतिबिंब के लिए सही सूत्र है: नया समय = (6:00 - वास्तविक समय) mod 12:00। 03:20 के लिए: (6:00 - 3:20) = 2:40।",
+  "e_en": "The correct formula for a water image is: new time = (6:00 - actual time) mod 12:00. For 03:20: (6:00 - 3:20) = 2:40."
  },
  {
   "id": "rp-rea-i01949",
@@ -51455,8 +51363,8 @@
    "12:00"
   ],
   "a": 2,
-  "e_hi": "18:30 - 12:00 = 06:30। जल प्रतिबिंब के लिए यह सूत्र प्रभावी है।",
-  "e_en": "18:30 - 12:00 = 06:30. This formula is effective for water image calculations."
+  "e_hi": "यह परिवर्तन स्वयं का व्युत्क्रम (self-inverse) है, अतः वास्तविक समय = (6:00 - जल प्रतिबिंब समय) mod 12:00। 12:00 के लिए: (6:00 - 12:00) mod 12:00 = -6:00 mod 12:00 = 6:00।",
+  "e_en": "This transformation is self-inverse, so actual time = (6:00 - water image time) mod 12:00. For 12:00: (6:00 - 12:00) mod 12:00 = -6:00 mod 12:00 = 6:00."
  },
  {
   "id": "rp-rea-j01971",
@@ -53409,9 +53317,9 @@
    "4",
    "5"
   ],
-  "a": 1,
-  "e_hi": "पुरुष सदस्य हैं: R, P, T और U (यदि U, S का पिता है)। गणना करने पर पुरुष सदस्यों की संख्या 3 है।",
-  "e_en": "The male members are R, P, T, and U (since U is the father of T, U is male). Counting carefully, there are 3 males."
+  "a": 2,
+  "e_hi": "Q, R की पत्नी है (R पुरुष)। P, Q का बेटा है (P पुरुष)। S, P की बेटी है (S महिला)। T, S का भाई है (T पुरुष)। U, T का पिता है (U पुरुष)। इस प्रकार पुरुष सदस्य हैं: R, P, T, U - कुल 4 पुरुष।",
+  "e_en": "Q is the wife of R (R is male). P is the son of Q (P is male). S is the daughter of P (S is female). T is the brother of S (T is male). U is the father of T (U is male). So the male members are R, P, T, U — a total of 4 males."
  },
  {
   "id": "rp-rea-j02011",
@@ -53732,8 +53640,8 @@
    "Neither conclusion follows"
   ],
   "a": 0,
-  "e_hi": "कथन का अर्थ है कि शिक्षा विकास का आधार है। अतः दोनों निष्कर्ष कथन के अर्थ के अनुरूप हैं।",
-  "e_en": "The statement implies that education is the foundation of development. Thus, both conclusions are in line with the statement's meaning."
+  "e_hi": "कथन केवल यह कहता है कि शिक्षा महत्वपूर्ण है, न कि यह कि इसके बिना विकास 'असंभव' है - इस प्रकार निष्कर्ष 2 कथन से अधिक दावा करता है और अनुसरण नहीं करता। निष्कर्ष 1 (विकासशील देशों को शिक्षा पर ध्यान देना चाहिए) कथन के साथ सुसंगत एक उचित नीतिगत सिफारिश है, इसलिए केवल निष्कर्ष 1 अनुसरण करता है।",
+  "e_en": "The statement only says education is important, not that development is 'impossible' without it — so conclusion 2 overstates the premise and does not follow. Conclusion 1 (developing countries should focus on education) is a reasonable policy recommendation consistent with the statement, so only conclusion 1 follows."
  },
  {
   "id": "rp-rea-j02015",
@@ -53778,8 +53686,8 @@
    "Uncle"
   ],
   "a": 0,
-  "e_hi": "मेरे पिता की इकलौती बेटी मेरी बहन है। बहन का बेटा मेरा भतीजा होता है, लेकिन यदि वह व्यक्ति स्वयं की बात कर रहा है, तो उत्तर बेटा होगा। यहाँ सही उत्तर बेटा है।",
-  "e_en": "My father's only daughter is my sister. The son of my sister is my nephew, but in this specific context, the man is referring to his own son."
+  "e_hi": "मेरे पिता की इकलौती बेटी मेरी बहन है। जब कोई 'अमुक की बेटी' कहता है (बिना किसी अन्य विशेषण के), तो यह सामान्यतः स्वयं उस व्यक्ति (यहाँ बोलने वाले की बहन) का ही संदर्भ देता है। बहन का बेटा मेरा भतीजा होता है।",
+  "e_en": "My father's only daughter is my sister. When someone refers simply to 'the daughter of X' without further qualifier, it refers directly to that person (here, the speaker's sister). The son of my sister is my nephew."
  },
  {
   "id": "rp-rea-j02017",
@@ -54192,8 +54100,8 @@
    "Neither follows"
   ],
   "a": 0,
-  "e_hi": "वेतन कटौती के कारण कर्मचारी असंतोष (इस्तीफा) और कंपनी की वित्तीय स्थिति (संकट) के संकेत मिलते हैं।",
-  "e_en": "A salary cut often stems from financial distress and naturally leads to employee dissatisfaction, making both conclusions logical."
+  "e_hi": "वेतन में कटौती से यह निश्चित रूप से सिद्ध नहीं होता कि कंपनी वित्तीय संकट में है (कटौती के अन्य कारण भी हो सकते हैं), इसलिए निष्कर्ष II अनुसरण नहीं करता। परंतु वेतन कटौती से असंतुष्ट कर्मचारियों के इस्तीफा देने की संभावना एक उचित निष्कर्ष है, इसलिए केवल निष्कर्ष I अनुसरण करता है।",
+  "e_en": "A salary cut does not conclusively prove the company is in financial crisis (there could be other reasons for the cut), so conclusion II does not follow. However, the possibility of dissatisfied employees resigning is a reasonable conclusion, so only conclusion I follows."
  },
  {
   "id": "rp-rea-j02025",
@@ -54679,29 +54587,6 @@
   "e_en": "Each letter is substituted by its assigned digit. S=2, E=1, A=4, R=6, C=7, H=3."
  },
  {
-  "id": "rp-rea-j02036",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "यदि 'YELLOW' को 'WFO M X Z' लिखा जाता है, तो 'GREEN' के लिए कूट क्या होगा?",
-  "q_en": "If 'YELLOW' is written as 'WFO M X Z', what is the code for 'GREEN'?",
-  "o_hi": [
-   "E S F F H",
-   "E S F H F",
-   "F S E F H",
-   "E F S F H"
-  ],
-  "o_en": [
-   "E S F F H",
-   "E S F H F",
-   "F S E F H",
-   "E F S F H"
-  ],
-  "a": 0,
-  "e_hi": "अक्षरों को पीछे की ओर घुमाया गया है। Y-2=W, E+1=F, L+3=O आदि। सही तर्क पैटर्न का पालन करने पर GREEN का E S F F H होगा।",
-  "e_en": "The letters follow a shift pattern. Applying the logic to GREEN, the sequence results in E S F F H."
- },
- {
   "id": "rp-rea-j02037",
   "s": "reasoning",
   "t": "coding_decoding",
@@ -54859,8 +54744,8 @@
    "HSFDQ"
   ],
   "a": 0,
-  "e_hi": "शब्द को उल्टा करके प्रत्येक अक्षर में से 1 घटाया गया है। TIGER का उल्टा REGIT है, और -1 करने पर ISFDQ प्राप्त होता है।",
-  "e_en": "The word is reversed and each letter is shifted by -1. Reversing TIGER gives REGIT, and subtracting 1 from each gives ISFDQ."
+  "e_hi": "नियम है: शब्द को उल्टा करें, फिर हर अक्षर में से 1 घटाएं। TIGER का उल्टा REGIT है। अब प्रत्येक अक्षर से 1 घटाने पर: R-1=Q, E-1=D, G-1=F, I-1=H, T-1=S, जो 'QDFHS' देता है।",
+  "e_en": "The rule is: reverse the word, then subtract 1 from each letter. The reverse of TIGER is REGIT. Subtracting 1 from each letter: R-1=Q, E-1=D, G-1=F, I-1=H, T-1=S, giving 'QDFHS'."
  },
  {
   "id": "rp-rea-j02044",
@@ -54905,8 +54790,8 @@
    "455986"
   ],
   "a": 0,
-  "e_hi": "प्रत्यक्ष कोडिंग का उपयोग करें: A=4, C=5, E=9, P=7, T=8। अतः ACCEPT = 455968।",
-  "e_en": "Using direct coding: A=4, C=5, E=9, P=7, T=8. Therefore, ACCEPT = 455968."
+  "e_hi": "प्रत्यक्ष कोडिंग का उपयोग करें: A=4, C=5, E=9, P=7, T=8। अतः ACCEPT = A,C,C,E,P,T = 4,5,5,9,7,8 = 455978।",
+  "e_en": "Using direct coding: A=4, C=5, E=9, P=7, T=8. So ACCEPT = A,C,C,E,P,T = 4,5,5,9,7,8 = 455978."
  },
  {
   "id": "rp-rea-j02046",
@@ -55273,8 +55158,8 @@
    "RIT"
   ],
   "a": 1,
-  "e_hi": "यहाँ प्रत्येक अक्षर को अगले अक्षर से बदला गया है (G+1=H, O+1=P, लेकिन यहाँ स्वर/व्यंजन का पैटर्न है)। सरल शब्दों में, प्रत्येक अक्षर को +1 किया गया है।",
-  "e_en": "Each letter in the word is shifted by +1. Applying S+1=T, I+1=J, T+1=U results in TJU."
+  "e_hi": "नियम है: स्वर (vowel) अक्षर अपरिवर्तित रहते हैं, व्यंजन (consonant) अक्षरों में +1 किया जाता है। GOLD: G(व्यंजन)+1=H, O(स्वर)=O, L(व्यंजन)+1=M, D(व्यंजन)+1=E → HOME। COME: C(व्यंजन)+1=D, O(स्वर)=O, M(व्यंजन)+1=N, E(स्वर)=E → DONE। इसी नियम से SIT: S(व्यंजन)+1=T, I(स्वर)=I, T(व्यंजन)+1=U → TIU।",
+  "e_en": "The rule is: vowels stay unchanged, consonants shift by +1. GOLD: G(consonant)+1=H, O(vowel)=O, L(consonant)+1=M, D(consonant)+1=E → HOME. COME: C(consonant)+1=D, O(vowel)=O, M(consonant)+1=N, E(vowel)=E → DONE. Applying the same rule to SIT: S(consonant)+1=T, I(vowel)=I, T(consonant)+1=U → TIU."
  },
  {
   "id": "rp-rea-j02054",
@@ -55321,29 +55206,6 @@
   "a": 0,
   "e_hi": "अक्षरों के वर्णमाला स्थान का उपयोग किया गया है। D=4, I=9, A=1, M=13, O=15, N=14, D=4।",
   "e_en": "The letters are replaced by their alphabetical positions. D=4, I=9, A=1, M=13, O=15, N=14, D=4."
- },
- {
-  "id": "rp-rea-j02056",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "किसी कूट भाषा में, 'RED' को '6720' लिखा जाता है। 'GREEN' को कैसे लिखा जाएगा?",
-  "q_en": "In a certain code language, 'RED' is written as '6720'. How will 'GREEN' be written?",
-  "o_hi": [
-   "161822214",
-   "161922214",
-   "161823214",
-   "151822214"
-  ],
-  "o_en": [
-   "161822214",
-   "161922214",
-   "161823214",
-   "151822214"
-  ],
-  "a": 0,
-  "e_hi": "अक्षर के वर्णमाला स्थान में +1 जोड़ा गया है। R(18)+1=19, E(5)+1=6, D(4)+1=5। यहाँ पैटर्न उल्टा है।",
-  "e_en": "Each letter's position is incremented by 1 and reversed or shifted. For GREEN: G(7+1)=8, R(18+1)=19... pattern follows logic."
  },
  {
   "id": "rp-rea-j02057",
@@ -55641,8 +55503,8 @@
    "Both are wrong"
   ],
   "a": 3,
-  "e_hi": "केवल का अर्थ है कि प्रबंधक बनने के लिए इंजीनियर होना अनिवार्य है, लेकिन यह जरूरी नहीं कि हर इंजीनियर प्रबंधक हो। राम इंजीनियर है, इसलिए वह प्रबंधक बनने की योग्यता रखता है।",
-  "e_en": "The word 'only' implies that being an engineer is a necessary condition for being a manager, but not all engineers are managers. Ram is an engineer, so he satisfies the condition to become a manager."
+  "e_hi": "'केवल' शब्द से पता चलता है कि इंजीनियर होना प्रबंधक बनने के लिए आवश्यक (necessary) शर्त है, परंतु पर्याप्त (sufficient) नहीं। अतः निष्कर्ष (1) 'राम प्रबंधक बन सकता है' एक अधिक दावा है, क्योंकि केवल आवश्यक शर्त पूरी करने से यह सुनिश्चित नहीं होता कि वह प्रबंधक बन ही जाएगा। निष्कर्ष (2) 'सभी इंजीनियर प्रबंधक हैं' भी गलत है, क्योंकि 'केवल X ही Y बन सकते हैं' का अर्थ 'सभी X, Y हैं' नहीं होता (आवश्यक शर्त को पर्याप्त शर्त समझने की भ्रांति)। इसलिए दोनों निष्कर्ष गलत हैं।",
+  "e_en": "The word 'only' shows that being an engineer is a necessary condition for becoming a manager, but not a sufficient one. So conclusion (1) 'Ram can become a manager' overclaims, since merely satisfying a necessary condition does not guarantee the outcome. Conclusion (2) 'All engineers are managers' is also wrong, since 'only X can become Y' does not mean 'all X are Y' (this confuses a necessary condition with a sufficient one). So both conclusions are wrong."
  },
  {
   "id": "rp-rea-i02043",
@@ -56216,8 +56078,8 @@
    "FJCKS"
   ],
   "a": 1,
-  "e_hi": "प्रत्येक अक्षर में +2 जोड़ा गया है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। इसी प्रकार CHAIR में +2 करने पर EJCKS प्राप्त होता है।",
-  "e_en": "Each letter is shifted by +2. Applying this pattern to CHAIR gives EJCKS."
+  "e_hi": "प्रत्येक अक्षर में +2 जोड़ा गया है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। इसी प्रकार CHAIR में +2 करने पर: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, जो 'EJCKT' देता है।",
+  "e_en": "Each letter is shifted by +2. T+2=V, A+2=C, B+2=D, L+2=N, E+2=G. Applying the same +2 shift to CHAIR: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, giving 'EJCKT'."
  },
  {
   "id": "rp-rea-j02078",
@@ -56469,8 +56331,8 @@
    "25"
   ],
   "a": 1,
-  "e_hi": "यहाँ अक्षरों की संख्या का वर्ग किया गया है। APPLE में 5 अक्षर हैं (5 का वर्ग 25), BANANA में 6 हैं (6 का वर्ग 36), ORANGE में 7 हैं (7 का वर्ग 49)।",
-  "e_en": "The logic is the square of the number of letters in the word. ORANGE has 7 letters, so 7 squared equals 49."
+  "e_hi": "यहाँ अक्षरों की संख्या का वर्ग किया गया है। APPLE में 5 अक्षर हैं (5 का वर्ग=25), BANANA में 6 अक्षर हैं (6 का वर्ग=36)। ORANGE (O-R-A-N-G-E) में भी 6 अक्षर हैं, इसलिए इसका कोड भी 36 होगा।",
+  "e_en": "The logic is the square of the number of letters in the word. APPLE has 5 letters (5 squared=25), BANANA has 6 letters (6 squared=36). ORANGE (O-R-A-N-G-E) also has 6 letters, so its code is also 36."
  },
  {
   "id": "rp-rea-j02090",
@@ -56494,29 +56356,6 @@
   "a": 0,
   "e_hi": "प्रत्येक अक्षर में +1 की वृद्धि की गई है। FIRE के लिए F+1=G, I+1=J, R+1=S, E+1=F होगा।",
   "e_en": "Each letter is increased by +1. Thus, FIRE becomes GJSF."
- },
- {
-  "id": "rp-rea-j02091",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "यदि 'MASTER' को '61' लिखा जाता है, तो 'STUDENT' को क्या लिखा जाएगा?",
-  "q_en": "If 'MASTER' is coded as '61', how will 'STUDENT' be coded?",
-  "o_hi": [
-   "87",
-   "78",
-   "82",
-   "75"
-  ],
-  "o_en": [
-   "87",
-   "78",
-   "82",
-   "75"
-  ],
-  "a": 0,
-  "e_hi": "अक्षरों के वर्णमाला मानों का योग किया गया है (M=13, A=1, S=19, T=20, E=5, R=18, कुल=76, लेकिन यहाँ 61 है)। संशोधन: MASTER के अंकों का योग 76 है, यहाँ अक्षरों के स्थान के योग का लॉजिक है। STUDENT = 19+20+21+4+5+14+20 = 103।",
-  "e_en": "The sum of the alphabetical positions of the letters is used. For STUDENT, the sum is 19+20+21+4+5+14+20 = 103."
  },
  {
   "id": "rp-rea-j02092",
@@ -56584,8 +56423,8 @@
    "EIDJT"
   ],
   "a": 1,
-  "e_hi": "प्रत्येक अक्षर में +2 का पैटर्न है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। CHAIR में +2 करने पर EJCJT प्राप्त होगा।",
-  "e_en": "The pattern is +2 for each letter. Applying this to CHAIR gives EJCJT."
+  "e_hi": "प्रत्येक अक्षर में +2 का पैटर्न है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। CHAIR में +2 करने पर: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, जो 'EJCKT' प्राप्त होता है।",
+  "e_en": "The pattern is +2 for each letter. T+2=V, A+2=C, B+2=D, L+2=N, E+2=G. Applying this to CHAIR: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, giving 'EJCKT'."
  },
  {
   "id": "rp-rea-j02095",
@@ -56676,8 +56515,8 @@
    "Maternal Uncle's wife"
   ],
   "a": 1,
-  "e_hi": "पिता की पत्नी माँ है। माँ के पिता की बेटी यानी माँ की बहन चाची है। लेकिन यहाँ 'माँ के पिता की बेटी' का अर्थ माँ की बहन या माँ स्वयं नहीं, बल्कि माँ के बहन-भाई में से कोई बेटी है। प्रश्न के संदर्भ में, यदि 'माँ के पिता की बेटी' से तात्पर्य माँ की बहन है, तो वह चाची है। यदि यह अंतिम पीढ़ी की बेटी है, तो वह चाची है। सामान्यतः 'माँ के पिता की बेटी' माँ के बहन (चाची) का संकेत देती है।",
-  "e_en": "Father's wife is the mother. Mother's father's daughter is the sister of the mother, which is the maternal aunt. Thus, the person is Raj's maternal aunt."
+  "e_hi": "'मेरे पिता की पत्नी' स्वयं राज की माँ है। जब बिना किसी विशेष योग्यता (जैसे 'दूसरी' या 'और') के 'मेरी माँ के पिता की बेटी' कहा जाता है, तो यह स्वयं माँ का ही संदर्भ देता है (माँ अपने पिता की एक बेटी है)। इसलिए वह व्यक्ति राज की माँ है।",
+  "e_en": "'My father's wife' is Raj's own mother. When someone says 'my mother's father's daughter' without any further qualifier (like 'other' or 'another'), it naturally refers back to the mother herself (the mother is indeed a daughter of her own father). So that person is Raj's mother."
  },
  {
   "id": "rp-rea-o01488",
@@ -57642,8 +57481,8 @@
    "48684"
   ],
   "a": 2,
-  "e_hi": "दिए गए शब्दों से अक्षरों के मान निकालकर 'RIVER' के लिए मान रखे गए हैं (R=4, I=8, V=6, E=9)।",
-  "e_en": "Values are picked from the given words for letters in 'RIVER' (R=4, I=8, V=6, E=9)."
+  "e_hi": "GLOVE से: G=5,L=1,O=3,V=7,E=9। PRIDE से: P=2,R=4,I=8,D=6,E=9 (E=9 दोनों में मेल खाता है, जो पुष्टि करता है)। अब RIVER के लिए: R=4,I=8,V=7,E=9,R=4, जो '48794' देता है।",
+  "e_en": "From GLOVE: G=5, L=1, O=3, V=7, E=9. From PRIDE: P=2, R=4, I=8, D=6, E=9 (E=9 matches in both, confirming consistency). For RIVER: R=4, I=8, V=7, E=9, R=4, giving '48794'."
  },
  {
   "id": "rp-rea-i02079",
@@ -57880,8 +57719,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 1,
-  "q_hi": "यदि एक कूट भाषा में 'APPLE' को 'BQQLF' लिखा जाता है, तो उसी भाषा में 'MANGO' को कैसे लिखा जाएगा?",
-  "q_en": "If in a certain code language 'APPLE' is written as 'BQQLF', how will 'MANGO' be written in the same language?",
+  "q_hi": "यदि एक कूट भाषा में 'APPLE' को 'BQQMF' लिखा जाता है, तो उसी भाषा में 'MANGO' को कैसे लिखा जाएगा?",
+  "q_en": "If in a certain code language 'APPLE' is written as 'BQQMF', how will 'MANGO' be written in the same language?",
   "o_hi": [
    "NBOIP",
    "NBOHP",
@@ -57895,8 +57734,8 @@
    "NBOIQ"
   ],
   "a": 1,
-  "e_hi": "प्रत्येक अक्षर में +1 की वृद्धि की गई है। A+1=B, P+1=Q, L+1=M, E+1=F, अतः MANGO बनेगा NBOIP।",
-  "e_en": "Each letter is shifted forward by +1. Following this pattern, MANGO becomes NBOIP."
+  "e_hi": "प्रत्येक अक्षर में +1 की वृद्धि की गई है। A+1=B, P+1=Q, P+1=Q, L+1=M, E+1=F, अतः APPLE बनेगा BQQMF। इसी नियम से MANGO: M+1=N, A+1=B, N+1=O, G+1=H, O+1=P, जो 'NBOHP' देता है।",
+  "e_en": "Each letter is shifted forward by +1. A+1=B, P+1=Q, P+1=Q, L+1=M, E+1=F, so APPLE becomes BQQMF. Applying the same rule to MANGO: M+1=N, A+1=B, N+1=O, G+1=H, O+1=P, giving 'NBOHP'."
  },
  {
   "id": "rp-rea-j02121",

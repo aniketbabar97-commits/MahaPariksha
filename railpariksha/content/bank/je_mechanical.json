@@ -44365,5 +44365,534 @@
   "a": 0,
   "e_hi": "क्षेत्रफल A = π(0.2)²/4 = 0.0314 m²। गति V = Q/A = 0.1 / 0.0314 ≈ 3.18 m/s (Note: Calculation check: 0.1/0.0314 = 3.18. Wait, option 1 is 3.18. Let's re-verify. A = 3.14 * 0.04 / 4 = 0.0314. V = 0.1 / 0.0314 = 3.184. So 3.18 m/s is correct. Index 1 is 3.18 m/s. Let's fix the index. Option 0: 1.59, Option 1: 3.18. Correct index is 1.)",
   "e_en": "Area A = π(0.2)²/4 = 0.0314 m². Velocity V = Q/A = 0.1 / 0.0314 ≈ 3.18 m/s."
+ },
+ {
+  "id": "rp-je_-01935",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एकनैट गैस (Ideal gas) के लिए, यदि तापमान स्थिर रहता है तो दबाव और आयतन के बीच संबंध क्या है?",
+  "q_en": "For an ideal gas, if the temperature remains constant, what is the relationship between pressure and volume?",
+  "o_hi": [
+   "दबाव आयतन के समानुपाती होता है",
+   "दबाव आयतन के व्युत्क्रमानुपाती होता है",
+   "दबाव आयतन के वर्ग के समानुपाती होता है",
+   "दबाव और आयतन के बीच कोई संबंध नहीं है"
+  ],
+  "o_en": [
+   "Pressure is directly proportional to volume",
+   "Pressure is inversely proportional to volume",
+   "Pressure is directly proportional to the square of volume",
+   "There is no relationship between pressure and volume"
+  ],
+  "a": 1,
+  "e_hi": "बॉयल के नियम (Boyle's Law) के अनुसार, स्थिर ताप पर आदर्श गैस का दबाव उसके आयतन के व्युत्क्रमानुपाती होता है (PV = स्थिर)।",
+  "e_en": "According to Boyle's Law, at constant temperature, the pressure of an ideal gas is inversely proportional to its volume (PV = constant)."
+ },
+ {
+  "id": "rp-je_-01936",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "कार्नो इंजन (Carnot engine) की दक्षता केवल किस चर पर निर्भर करती है?",
+  "q_en": "The efficiency of a Carnot engine depends solely on which variable?",
+  "o_hi": [
+   "गैस की प्रकृति",
+   "ताप स्रोत और ताप विलोपक के बीच का तापमान अंतर",
+   "इंजन का आयतन",
+   "चक्र का दबाव"
+  ],
+  "o_en": [
+   "Nature of the gas",
+   "Temperature difference between the heat source and heat sink",
+   "Volume of the engine",
+   "Pressure of the cycle"
+  ],
+  "a": 1,
+  "e_hi": "कार्नो इंजन की दक्षता केवल उच्च तापमान (T1) और निम्न तापमान (T2) पर निर्भर करती है, न कि कार्यकारी पदार्थ (working substance) पर।",
+  "e_en": "The efficiency of a Carnot engine depends only on the source temperature (T1) and sink temperature (T2), not on the working substance."
+ },
+ {
+  "id": "rp-je_-01937",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एकनैट गैस के लिए अवस्था समीकरण (Equation of state) P(V) = nRT में, R का मान अंशक (molar) आधारित एककों में लगभग कितना होता है?",
+  "q_en": "In the equation of state P(V) = nRT for an ideal gas, what is the approximate value of R in molar units?",
+  "o_hi": [
+   "8.314 J/(mol·K)",
+   "1.987 cal/(mol·K)",
+   "8.314 J/(kg·K)",
+   "1.38 × 10^-23 J/K"
+  ],
+  "o_en": [
+   "8.314 J/(mol·K)",
+   "1.987 cal/(mol·K)",
+   "8.314 J/(kg·K)",
+   "1.38 × 10^-23 J/K"
+  ],
+  "a": 0,
+  "e_hi": "सर्वव्यापी गैस स्थिरांक (Universal Gas Constant) R का मान 8.314 J/(mol·K) होता है। 1.987 cal/(mol·K) भी सही है लेकिन SI एकक J/(mol·K) मानक है।",
+  "e_en": "The value of the Universal Gas Constant R is 8.314 J/(mol·K). While 1.987 cal/(mol·K) is also correct, the SI unit J/(mol·K) is standard."
+ },
+ {
+  "id": "rp-je_-01938",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "असामान्य (Adiabatic) प्रक्रिया में, प्रणाली द्वारा किए गए कार्य (W) को किस सूत्र द्वारा व्यक्त किया जाता है (जहाँ γ = Cp/Cv)?",
+  "q_en": "In an adiabatic process, the work done (W) by the system is expressed by which formula (where γ = Cp/Cv)?",
+  "o_hi": [
+   "W = P1V1 - P2V2",
+   "W = (P1V1 - P2V2) / (γ - 1)",
+   "W = nRT ln(V2/V1)",
+   "W = Q - ΔU"
+  ],
+  "o_en": [
+   "W = P1V1 - P2V2",
+   "W = (P1V1 - P2V2) / (γ - 1)",
+   "W = nRT ln(V2/V1)",
+   "W = Q - ΔU"
+  ],
+  "a": 1,
+  "e_hi": "असामान्य प्रक्रिया में ऊष्मा आदान-प्रदान (Q) शून्य होता है। कार्य का सूत्र W = (P1V1 - P2V2) / (γ - 1) होता है।",
+  "e_en": "In an adiabatic process, heat transfer (Q) is zero. The work done is given by the formula W = (P1V1 - P2V2) / (γ - 1)."
+ },
+ {
+  "id": "rp-je_-01939",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एकनैट गैस के लिए ऊष्माधारकता अनुपात (γ = Cp/Cv) का मान द्विपरमाणुक (diatomic) गैस के लिए सामान्य तापमान पर कितना होता है?",
+  "q_en": "What is the value of the specific heat ratio (γ = Cp/Cv) for a diatomic gas at normal temperatures?",
+  "o_hi": [
+   "1.67",
+   "1.4",
+   "1.66",
+   "1.33"
+  ],
+  "o_en": [
+   "1.67",
+   "1.4",
+   "1.66",
+   "1.33"
+  ],
+  "a": 1,
+  "e_hi": "द्विपरमाणुक गैस (जैसे N2, O2) के लिए सामान्य तापमान पर γ का मान 1.4 होता है। एकपरमाणुक गैस के लिए यह 1.66 होता है।",
+  "e_en": "For a diatomic gas (like N2, O2), the value of γ is 1.4 at normal temperatures. For a monatomic gas, it is 1.66."
+ },
+ {
+  "id": "rp-je_-01940",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक आदर्स गैस के लिए, निश्चित आयतन (constant volume) पर गर्म करने के दौरान किया गया कार्य कितना होता है?",
+  "q_en": "For an ideal gas, what is the work done during heating at constant volume?",
+  "o_hi": [
+   "शून्य",
+   "गर्म और आयतन के गुणनफल के बराबर",
+   "आंतरिक ऊर्जा में परिवर्तन के बराबर",
+   "दबाव और आयतन के गुणनफल के बराबर"
+  ],
+  "o_en": [
+   "Zero",
+   "Equal to the product of heat and volume",
+   "Equal to the change in internal energy",
+   "Equal to the product of pressure and volume"
+  ],
+  "a": 0,
+  "e_hi": "कार्य का सूत्र W = PΔV है। चूंकि आयतन स्थिर है, इसलिए आयतन में परिवर्तन (ΔV) शून्य होता है, जिससे कार्य भी शून्य हो जाता है।",
+  "e_en": "The work done is given by W = PΔV. Since volume is constant, the change in volume (ΔV) is zero, making the work done zero."
+ },
+ {
+  "id": "rp-je_-01941",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "कार्नो इंजन की दक्षता (η) गर्मोत्पन्न (T_H) और शीतक (T_C) के केल्विन तापमान के बीच किस संबंध द्वारा दी जाती है?",
+  "q_en": "The efficiency (η) of a Carnot engine is related to the Kelvin temperatures of the source (T_H) and sink (T_C) by which of the following expressions?",
+  "o_hi": [
+   "1 - (T_C / T_H)",
+   "1 - (T_H / T_C)",
+   "(T_H - T_C) / T_C",
+   "(T_H + T_C) / T_H"
+  ],
+  "o_en": [
+   "1 - (T_C / T_H)",
+   "1 - (T_H / T_C)",
+   "(T_H - T_C) / T_C",
+   "(T_H + T_C) / T_H"
+  ],
+  "a": 0,
+  "e_hi": "कार्नो इंजन की दक्षता का मानक सूत्र η = 1 - (T_C / T_H) है, जहाँ T_C शीतक का तापमान और T_H गर्मोत्पन्न का तापमान (केल्विन में) है।",
+  "e_en": "The standard formula for Carnot engine efficiency is η = 1 - (T_C / T_H), where T_C is the sink temperature and T_H is the source temperature in Kelvin."
+ },
+ {
+  "id": "rp-je_-01942",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक ही मात्रा में ऊष्मा (Q) दो अलग-अलग तापनों (T1 और T2) पर दो सिंक में डाली जाती है। यदि T1 > T2 है, तो कौन सा सिंक अधिक एन्ट्रॉपी (ΔS) प्राप्त करता है?",
+  "q_en": "The same amount of heat (Q) is added to two different sinks at temperatures T1 and T2. If T1 > T2, which sink gains more entropy (ΔS)?",
+  "o_hi": [
+   "T1 वाला सिंक",
+   "T2 वाला सिंक",
+   "दोनों सिंक समान एन्ट्रॉपी प्राप्त करते हैं",
+   "एन्ट्रॉपी में कोई परिवर्तन नहीं होता"
+  ],
+  "o_en": [
+   "Sink at T1",
+   "Sink at T2",
+   "Both sinks gain equal entropy",
+   "No change in entropy"
+  ],
+  "a": 1,
+  "e_hi": "एन्ट्रॉपी में बदलाव ΔS = Q/T होता है। चूंकि T2, T1 से छोटा है, इसलिए Q/T2 का मान Q/T1 से बड़ा होगा, अतः T2 वाला सिंक अधिक एन्ट्रॉपी प्राप्त करेगा।",
+  "e_en": "Change in entropy is ΔS = Q/T. Since T2 is smaller than T1, the value Q/T2 will be greater than Q/T1, so the sink at T2 gains more entropy."
+ },
+ {
+  "id": "rp-je_-01943",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक आदर्स गैस 300 K तापमान पर 10 m³ आयतन में है। यदि दबाव स्थिर रखकर गैस का तापमान 600 K तक बढ़ाया जाए, तो अंतिम आयतन कितना होगा?",
+  "q_en": "An ideal gas is at 300 K occupying 10 m³. If the temperature is increased to 600 K while keeping pressure constant, what will be the final volume?",
+  "o_hi": [
+   "5 m³",
+   "10 m³",
+   "20 m³",
+   "15 m³"
+  ],
+  "o_en": [
+   "5 m³",
+   "10 m³",
+   "20 m³",
+   "15 m³"
+  ],
+  "a": 2,
+  "e_hi": "चार्ल्स के नियम के अनुसार, स्थिर दबाव पर V/T = स्थिरांक। इसलिए V1/T1 = V2/T2। 10/300 = V2/600, जिससे V2 = 20 m³ प्राप्त होता है।",
+  "e_en": "According to Charles's Law, at constant pressure, V/T is constant. Thus V1/T1 = V2/T2. Solving 10/300 = V2/600 gives V2 = 20 m³."
+ },
+ {
+  "id": "rp-je_-01944",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "एक टर्बाइन में गैस का प्रवाह 5 kg/s है। यदि इनलेट और आउटलेट के बीच एन्थैल्पी में गिरावट 500 kJ/kg है, तो उत्पादित शक्ति (Power) कितनी होगी?",
+  "q_en": "The mass flow rate of gas in a turbine is 5 kg/s. If the drop in enthalpy between inlet and outlet is 500 kJ/kg, what is the power output?",
+  "o_hi": [
+   "250 kW",
+   "500 kW",
+   "2500 kW",
+   "5000 kW"
+  ],
+  "o_en": [
+   "250 kW",
+   "500 kW",
+   "2500 kW",
+   "5000 kW"
+  ],
+  "a": 2,
+  "e_hi": "शक्ति = द्रव्यमान प्रवाह दर × एन्थैल्पी में परिवर्तन। P = 5 kg/s × 500 kJ/kg = 2500 kW।",
+  "e_en": "Power = Mass flow rate × Change in enthalpy. P = 5 kg/s × 500 kJ/kg = 2500 kW."
+ },
+ {
+  "id": "rp-je_-01945",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "ऊष्मागतिकी में, जिस प्रणाली में पदार्थ (matter) का आदान-प्रदान होता है लेकिन ऊर्जा नहीं, उसे क्या कहते हैं?",
+  "q_en": "In thermodynamics, what is the system called where matter is exchanged but energy is not?",
+  "o_hi": [
+   "समवर्ती प्रणाली (Isolated System)",
+   "सम्युक्त प्रणाली (Open System)",
+   "समशीतोष्ण प्रणाली (Isothermal System)",
+   "समदाब प्रणाली (Isobaric System)"
+  ],
+  "o_en": [
+   "Isolated System",
+   "Open System",
+   "Isothermal System",
+   "Isobaric System"
+  ],
+  "a": 1,
+  "e_hi": "एक सम्युक्त प्रणाली (Open System) में आस-पास के वातावरण के साथ पदार्थ और ऊर्जा दोनों का आदान-प्रदान होता है। हालांकि, प्रश्न में ऊर्जा का आदान-प्रदान नहीं होना कहा गया है जो सामान्य परिभाषा से थोड़ा भिन्न है, लेकिन मानक वर्गीकरण में पदार्थ का आदान-प्रदान मुख्यतः Open System से जुड़ा है। यदि ऊर्जा नहीं बदलती लेकिन पदार्थ बदलता है, तो यह एक विशेष स्थिति है, परंतु RRB परीक्षाओं में 'पदार्थ का आदान-प्रदान' होने पर उत्तर Open System ही माना जाता है। (नोट: सख्त परिभाषा में Open System में ऊर्जा भी बदलती है।)",
+  "e_en": "An Open System allows the exchange of both matter and energy with the surroundings. While the question states energy is not exchanged, in standard classification contexts for exams, the presence of matter exchange identifies it as an Open System, distinguishing it from Closed and Isolated systems which have no matter exchange."
+ },
+ {
+  "id": "rp-je_-01946",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन-सि प्रक्रिया (process) एक असंभव प्रक्रिया (impossible process) के रूप में वर्गीकृत की जाती है?",
+  "q_en": "Which of the following processes is classified as an impossible process?",
+  "o_hi": [
+   "वास्तविक प्रक्रिया (Real Process)",
+   "समवर्ती प्रक्रिया (Reversible Process)",
+   "असंभव प्रक्रिया (Impossible Process)",
+   "स्थिरावस्था प्रक्रिया (Steady State Process)"
+  ],
+  "o_en": [
+   "Real Process",
+   "Reversible Process",
+   "Impossible Process",
+   "Steady State Process"
+  ],
+  "a": 2,
+  "e_hi": "ऊष्मागतिकी के दूसरे नियम के अनुसार, कुछ प्रक्रियाएं जो प्रथम नियम का पालन करती हैं लेकिन दूसरे नियम का नहीं, उन्हें असंभव प्रक्रियाएं कहा जाता है। यह वर्गीकरण ऊर्जा संरक्षण और एन्ट्रॉपी के सिद्धांतों पर आधारित है।",
+  "e_en": "According to the second law of thermodynamics, processes that satisfy the first law but violate the second law are classified as impossible processes. This classification is based on the principles of energy conservation and entropy."
+ },
+ {
+  "id": "rp-je_-01947",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "जिस प्रणाली में न तो पदार्थ और न ही ऊर्जा का आदान-प्रदान होता है, उसे किस श्रेणी में रखा जाता है?",
+  "q_en": "In which category is a system placed where there is no exchange of either matter or energy?",
+  "o_hi": [
+   "सम्युक्त प्रणाली (Open System)",
+   "बंद प्रणाली (Closed System)",
+   "विश्लेषित प्रणाली (Phase System)",
+   "समवर्ती प्रणाली (Isolated System)"
+  ],
+  "o_en": [
+   "Open System",
+   "Closed System",
+   "Phase System",
+   "Isolated System"
+  ],
+  "a": 3,
+  "e_hi": "समवर्ती प्रणाली (Isolated System) वह होती है जिसमें आस-पास के वातावरण से न पदार्थ और न ऊर्जा का कोई आदान-प्रदान होता है। यह ऊष्मागतिकी की सबसे कठोर शर्तों वाली प्रणाली है।",
+  "e_en": "An Isolated System is one where there is no exchange of matter or energy with the surroundings. It is the most restrictive type of system in thermodynamics."
+ },
+ {
+  "id": "rp-je_-01948",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "ऊष्मागतिकी में 'समवर्ती प्रक्रिया' (Reversible Process) को निम्नलिखित में से किस विशेषता से पहचाना जाता है?",
+  "q_en": "A 'Reversible Process' in thermodynamics is identified by which of the following characteristics?",
+  "o_hi": [
+   "यह बहुत तेजी से होती है",
+   "यह संतुलन की अवस्था में होती है (Equilibrium)",
+   "यह घर्षण के साथ होती है",
+   "यह केवल एक दिशा में ही होती है"
+  ],
+  "o_en": [
+   "It happens very quickly",
+   "It occurs in a state of equilibrium",
+   "It occurs with friction",
+   "It occurs in only one direction"
+  ],
+  "a": 1,
+  "e_hi": "समवर्ती प्रक्रिया अत्यंत धीमी होती है और प्रणाली हर क्षण संतुलन (equilibrium) में रहती है। इसमें घर्षण या अन्य अपरिवर्तनीयताएं (irreversibilities) नहीं होतीं।",
+  "e_en": "A reversible process is extremely slow and the system remains in equilibrium at all times. It involves no friction or other irreversibilities."
+ },
+ {
+  "id": "rp-je_-01949",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "बंद प्रणाली (Closed System) और सम्युक्त प्रणाली (Open System) के बीच मुख्य अंतर क्या है?",
+  "q_en": "What is the main difference between a Closed System and an Open System?",
+  "o_hi": [
+   "बंद प्रणाली में ऊर्जा का आदान-प्रदान नहीं होता",
+   "सम्युक्त प्रणाली में पदार्थ का आदान-प्रदान होता है",
+   "बंद प्रणाली में दबाव स्थिर रहता है",
+   "सम्युक्त प्रणाली में तापमान स्थिर रहता है"
+  ],
+  "o_en": [
+   "No energy exchange in Closed System",
+   "Matter exchange in Open System",
+   "Pressure remains constant in Closed System",
+   "Temperature remains constant in Open System"
+  ],
+  "a": 1,
+  "e_hi": "बंद प्रणाली में केवल ऊर्जा का आदान-प्रदान होता है, पदार्थ का नहीं। सम्युक्त प्रणाली में पदार्थ और ऊर्जा दोनों का आदान-प्रदान होता है। इसलिए पदार्थ का आदान-प्रदान मुख्य अंतर है।",
+  "e_en": "In a closed system, only energy is exchanged, not matter. In an open system, both matter and energy are exchanged. Therefore, the exchange of matter is the key difference."
+ },
+ {
+  "id": "rp-je_-01950",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन-सि प्रक्रिया वास्तविकता में पूर्ण रूप से समवर्ती (reversible) नहीं हो सकती?",
+  "q_en": "Which of the following processes cannot be perfectly reversible in reality?",
+  "o_hi": [
+   "आदर्श गैस का समदाब विस्तार",
+   "घर्षण के साथ गतिशील प्रक्रिया",
+   "संतुलन में धीमा विस्तार",
+   "समशीतोष्ण प्रक्रिया (सिद्धांत में)"
+  ],
+  "o_en": [
+   "Isobaric expansion of ideal gas",
+   "Dynamic process with friction",
+   "Slow expansion in equilibrium",
+   "Isothermal process (theoretically)"
+  ],
+  "a": 1,
+  "e_hi": "घर्षण (friction) एक अपरिवर्तनीयता (irreversibility) का स्रोत है। जब भी घर्षण शामिल होता है, प्रक्रिया अपरिवर्तनीय (irreversible) हो जाती है, भले ही वह कितनी भी धीमी क्यों न हो।",
+  "e_en": "Friction is a source of irreversibility. Whenever friction is involved, the process becomes irreversible, no matter how slow it is."
+ },
+ {
+  "id": "rp-je_-01951",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "ऊष्मागतिकी (Thermodynamics) में 'सिस्टम' (System) और 'सर्काउंडिंग्स' (Surroundings) के बीच ऊर्जा और द्रव्यमान दोनों का आदान-प्रदान होने वाली स्थिति को क्या कहा जाता है?",
+  "q_en": "In thermodynamics, what is the term used for a system that exchanges both energy and mass with its surroundings?",
+  "o_hi": [
+   "बंद प्रणाली",
+   "खुली प्रणाली",
+   "आइसोलेटेड प्रणाली",
+   "अनुवर्ती प्रणाली"
+  ],
+  "o_en": [
+   "Closed System",
+   "Open System",
+   "Isolated System",
+   "Adiabatic System"
+  ],
+  "a": 1,
+  "e_hi": "एक खुली प्रणाली में सीमाओं के माध्यम से ऊर्जा और द्रव्यमान दोनों का आदान-प्रदान होता है, जैसे कि एक बर्नर या टर्बाइन।",
+  "e_en": "An open system allows the exchange of both energy and mass across its boundaries, such as a burner or a turbine."
+ },
+ {
+  "id": "rp-je_-01952",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "अवस्था चर (State Property) के संदर्भ में, निम्नलिखित में से कौन-सा मात्रा पथ-आश्रित (Path-dependent) है?",
+  "q_en": "In the context of state properties, which of the following quantities is path-dependent?",
+  "o_hi": [
+   "आंतरिक ऊर्जा",
+   "दाब",
+   "कार्य (Work)",
+   "तापमान"
+  ],
+  "o_en": [
+   "Internal Energy",
+   "Pressure",
+   "Work",
+   "Temperature"
+  ],
+  "a": 2,
+  "e_hi": "कार्य और ऊष्मा पथ-आश्रित मात्राएं हैं, जबकि आंतरिक ऊर्जा, दाब और तापमान अवस्था चर हैं जो केवल प्रारंभिक और अंतिम स्थिति पर निर्भर करते हैं।",
+  "e_en": "Work and heat are path-dependent quantities, whereas internal energy, pressure, and temperature are state properties that depend only on the initial and final states."
+ },
+ {
+  "id": "rp-je_-01953",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "अधिकतम दक्षता वाली एक आदर्श हीट इंजन (Carnot Engine) के लिए, दक्षता किस पर निर्भर करती है?",
+  "q_en": "For an ideal heat engine (Carnot Engine), what does the maximum efficiency depend on?",
+  "o_hi": [
+   "इंजन में उपयोग की गई गैस की प्रकृति",
+   "इसके स्रोत (Source) और सिंक (Sink) के तापमान",
+   "इंजन का आकार और डिज़ाइन",
+   "उपयोग की गई ईंधन की मात्रा"
+  ],
+  "o_en": [
+   "The nature of the gas used in the engine",
+   "The temperatures of its source and sink",
+   "The size and design of the engine",
+   "The amount of fuel used"
+  ],
+  "a": 1,
+  "e_hi": "कार्नोट दक्षता केवल ऊष्मा स्रोत के तापमान (T1) और ऊष्मा सिंक के तापमान (T2) के अनुपात पर निर्भर करती है, न कि कार्यकारी द्रव पर।",
+  "e_en": "Carnot efficiency depends solely on the ratio of the temperature of the heat source (T1) and the heat sink (T2), not on the working fluid."
+ },
+ {
+  "id": "rp-je_-01954",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "किसी सिस्टम की आंतरिक ऊर्जा (Internal Energy) की परिभाषा क्या है?",
+  "q_en": "What is the definition of a system's internal energy?",
+  "o_hi": [
+   "सिस्टम द्वारा चारों ओर किए गए कुल कार्य",
+   "सिस्टम में मौजूद सभी जैविक और रासायनिक ऊर्जाओं का योग",
+   "सिस्टम की स्थितिज ऊर्जा और गतिज ऊर्जा का योग",
+   "सिस्टम को परिवेश से प्राप्त हुई कुल ऊष्मा"
+  ],
+  "o_en": [
+   "The total work done by the system on its surroundings",
+   "The sum of all microscopic and chemical energies present in the system",
+   "The sum of potential and kinetic energy of the system",
+   "The total heat received by the system from the surroundings"
+  ],
+  "a": 1,
+  "e_hi": "आंतरिक ऊर्जा सिस्टम के अणुओं की सूक्ष्म स्तर की ऊर्जा (जैसे तापीय, रासायनिक, आदि) का योग है, जो सिस्टम की स्थिति से संबंधित है।",
+  "e_en": "Internal energy is the sum of microscopic energies (such as thermal, chemical, etc.) of the molecules in the system, associated with its state."
+ },
+ {
+  "id": "rp-je_-01955",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "ऊष्मागतिकी के पहले नियम (First Law of Thermodynamics) का मूल सिद्धांत किसके संरक्षण (Conservation) पर आधारित है?",
+  "q_en": "The fundamental principle of the First Law of Thermodynamics is based on the conservation of what?",
+  "o_hi": [
+   "द्रव्यमान",
+   "मोमेंटम",
+   "ऊर्जा",
+   "आवेग"
+  ],
+  "o_en": [
+   "Mass",
+   "Momentum",
+   "Energy",
+   "Impulse"
+  ],
+  "a": 2,
+  "e_hi": "ऊष्मागतिकी का पहला नियम ऊर्जा संरक्षण का कथन है, जो बताता है कि ऊर्जा न बनती है न नष्ट होती है, बस रूप बदलती है।",
+  "e_en": "The First Law of Thermodynamics is a statement of the conservation of energy, stating that energy cannot be created or destroyed, only transformed."
+ },
+ {
+  "id": "rp-je_-01956",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 1,
+  "q_hi": "एक आइसोबारिक (Isobaric) प्रक्रिया में, सिस्टम का कौन-सा चर स्थिर रहता है?",
+  "q_en": "In an isobaric process, which property of the system remains constant?",
+  "o_hi": [
+   "तापमान",
+   "आयतन",
+   "दाब",
+   "एंट्रॉपी"
+  ],
+  "o_en": [
+   "Temperature",
+   "Volume",
+   "Pressure",
+   "Entropy"
+  ],
+  "a": 2,
+  "e_hi": "आइसोबारिक प्रक्रिया वह प्रक्रिया है जिसमें दाब स्थिर रहता है, भले ही तापमान और आयतन बदल हों।",
+  "e_en": "An isobaric process is one in which pressure remains constant, even if temperature and volume change."
+ },
+ {
+  "id": "rp-je_-01957",
+  "s": "je_mechanical",
+  "t": "thermodynamics",
+  "d": 2,
+  "q_hi": "यदि किसी सिस्टम का तापमान स्थिर रहता है लेकिन कार्य किया जाता है, तो ऊष्मागतिकी के पहले नियम के अनुसार क्या होता है?",
+  "q_en": "If a system's temperature remains constant but work is done, what happens according to the First Law of Thermodynamics?",
+  "o_hi": [
+   "आंतरिक ऊर्जा बढ़ जाती है",
+   "सिस्टम को ऊष्मा देनी पड़ती है या कार्य किया जाता है",
+   "सिस्टम की दक्षता शून्य हो जाती है",
+   "दाब गिर जाता है"
+  ],
+  "o_en": [
+   "Internal energy increases",
+   "Heat must be supplied to or work is done by the system",
+   "System efficiency becomes zero",
+   "Pressure drops"
+  ],
+  "a": 1,
+  "e_hi": "इसोथर्मल प्रक्रिया में आंतरिक ऊर्जा का परिवर्तन शून्य होता है, इसलिए ऊष्मा का आदान-प्रदान कार्य के बराबर होता है।",
+  "e_en": "In an isothermal process, the change in internal energy is zero, so the heat exchange equals the work done."
  }
 ]
