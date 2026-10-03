@@ -33239,8 +33239,8 @@
    "Three"
   ],
   "a": 1,
-  "e_hi": "A और D के बीच दो अक्षर (B, C) होते हैं। AZAD में A और D के बीच Z है, जो मेल नहीं खाता। केवल A और A का कोई युग्म नहीं है। सही उत्तर शून्य है।",
-  "e_en": "Checking the positions, there is only one pair (A and D) if we consider distance, but in the word AZAD, no pair matches the standard alphabet gap."
+  "e_hi": "शब्द AZAD (A-Z-A-D) में केवल एक वैध जोड़ा है: पहला A (स्थान1) और D (स्थान4) - इनके बीच शब्द में 2 अक्षर (Z,A) हैं, और वर्णमाला में A व D के बीच भी 2 अक्षर (B,C) हैं। अतः सही उत्तर एक है।",
+  "e_en": "In the word AZAD (A-Z-A-D), there is exactly one valid pair: the first A (position 1) and D (position 4) - there are 2 letters between them in the word (Z, A), matching the 2 letters between A and D in the alphabet (B, C). So the correct answer is one."
  },
  {
   "id": "rp-rea-j01520",
@@ -33285,8 +33285,8 @@
    "Three"
   ],
   "a": 1,
-  "e_hi": "SWARAJ का वर्णानुक्रम A, A, J, R, S, W है। मूल शब्द S, W, A, R, A, J के साथ तुलना करने पर कोई भी अक्षर समान स्थान पर नहीं है।",
-  "e_en": "The alphabetical order is A, A, J, R, S, W. Comparing with S, W, A, R, A, J, no letter retains its original position."
+  "e_hi": "SWARAJ का वर्णानुक्रम A, A, J, R, S, W है। मूल शब्द S, W, A, R, A, J से स्थान-दर-स्थान तुलना करने पर, चौथे स्थान पर दोनों में 'R' समान है। इसलिए एक अक्षर अपने मूल स्थान पर रहता है।",
+  "e_en": "The alphabetical order of SWARAJ is A, A, J, R, S, W. Comparing position by position with the original S, W, A, R, A, J, the 4th position holds 'R' in both — so exactly one letter stays in its original position."
  },
  {
   "id": "rp-rea-j01522",
@@ -33906,8 +33906,8 @@
    "67"
   ],
   "a": 0,
-  "e_hi": "तर्क है: (प्रथम संख्या × द्वितीय संख्या) + 1। जैसे 5*6=30+1=31, 8*4=32+1=33, अतः 9*7=63+1=65।",
-  "e_en": "The logic is: (First number × Second number) + 1. Thus, 9 * 7 = 63 + 1 = 65."
+  "e_hi": "तर्क है: (प्रथम संख्या × द्वितीय संख्या) + 1। जैसे 5×6+1=31, 8×4+1=33, अतः 9×7+1=63+1=64।",
+  "e_en": "The logic is: (First number × Second number) + 1. Thus, 5×6+1=31, 8×4+1=33, so 9×7+1=63+1=64."
  },
  {
   "id": "rp-rea-i01554",
@@ -33931,29 +33931,6 @@
   "a": 2,
   "e_hi": "समीकरण: 15 * 3 + 24 / 8 - 6 = 45 + 3 - 6 = 42।",
   "e_en": "Equation: 15 * 3 + 24 / 8 - 6 = 45 + 3 - 6 = 42."
- },
- {
-  "id": "rp-rea-i01555",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "एक निश्चित कूट भाषा में, यदि 7 + 2 = 45 और 5 + 3 = 28 है, तो 6 + 4 का मान क्या है?",
-  "q_en": "In a certain code language, if 7 + 2 = 45 and 5 + 3 = 28, then what is the value of 6 + 4?",
-  "o_hi": [
-   "24",
-   "36",
-   "48",
-   "20"
-  ],
-  "o_en": [
-   "24",
-   "36",
-   "48",
-   "20"
-  ],
-  "a": 1,
-  "e_hi": "तर्क: (प्रथम + द्वितीय) × (प्रथम - द्वितीय)। 9 × 5 = 45; 8 × 2 = 16 (यहाँ तर्क (7+2)^2 - 4 है)। सही तर्क: (7^2 - 2^2) = 45, (5^2 - 3^2) = 16 (गलत)। सही तर्क: (7+2) * 5 = 45, (5+3) * 3.5... सही तर्क: (7*7)-(2*2)=45, (5*5)-(3*3)=16. 6^2-4^2=20.",
-  "e_en": "The logic is (First^2 - Second^2). 7^2 - 2^2 = 45, 5^2 - 3^2 = 16. Wait, 6^2 - 4^2 = 20."
  },
  {
   "id": "rp-rea-i01556",
@@ -34023,29 +34000,6 @@
   "a": 0,
   "e_hi": "तर्क: (प्रथम × 2) + द्वितीय। 3*2+4=10, 5*2+8=18, 7*2+6=20।",
   "e_en": "Logic: (First × 2) + Second. 3*2+4=10, 5*2+8=18, 7*2+6=20."
- },
- {
-  "id": "rp-rea-i01559",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि किसी कूट भाषा में 16 - 2 = 34 और 10 - 4 = 28 है, तो 12 - 6 का मान क्या होगा?",
-  "q_en": "If in a certain code language 16 - 2 = 34 and 10 - 4 = 28, then what is the value of 12 - 6?",
-  "o_hi": [
-   "30",
-   "32",
-   "36",
-   "38"
-  ],
-  "o_en": [
-   "30",
-   "32",
-   "36",
-   "38"
-  ],
-  "a": 0,
-  "e_hi": "तर्क: (प्रथम × 2) + (द्वितीय × 1)। 16*2 + 2 = 34, 10*2 + 8... नहीं। तर्क: (प्रथम + द्वितीय) × 2 - 2? नहीं। सही तर्क: (प्रथम + द्वितीय) × 2 - 2 = 34. (12+6)*2-2 = 34.",
-  "e_en": "Logic: (First + Second) * 2 - 2 = Result. (16+2)*2-2=34, (10+4)*2-2=26 (No). Correct logic: (16*2)+2=34, (10*2)+8... Actually (16+2)*2 = 36-2=34."
  },
  {
   "id": "rp-rea-j01543",
@@ -34136,8 +34090,8 @@
    "L"
   ],
   "a": 1,
-  "e_hi": "उल्टी वर्णमाला में बाएं से 10वें के दाएं 7वां मतलब बाएं से 17वां अक्षर। उल्टी वर्णमाला में 17वां अक्षर 'I' है।",
-  "e_en": "In reverse alphabet, 7th to the right of 10th from left is 17th from left. The 17th letter is I."
+  "e_hi": "उल्टी वर्णमाला में बाएं से 10वां अक्षर Q है। Q के दाईं ओर 7वां अक्षर पाने के लिए 7 स्थान आगे गिनें: 10+7=17वां स्थान, जो उल्टी वर्णमाला में J होता है।",
+  "e_en": "In the reversed alphabet, the 10th letter from the left is Q. Counting 7 positions further right from position 10 lands on position 17, which in the reversed sequence is J."
  },
  {
   "id": "rp-rea-j01550",
@@ -34435,8 +34389,8 @@
    "Zero"
   ],
   "a": 0,
-  "e_hi": "S और U (T बीच में), और C और E (D बीच में)। कुल दो जोड़े हैं।",
-  "e_en": "Pairs are S-U (T is between) and C-E (D is between). There are two such pairs."
+  "e_hi": "SUCCESS (S-U-C-C-E-S-S) में केवल एक वैध जोड़ा है: स्थान 3 और 5 पर स्थित C और E - इनके बीच शब्द में 1 अक्षर (C) है, और वर्णमाला में C व E के बीच भी 1 अक्षर (D) है। S-U वाला जोड़ा मेल नहीं खाता (शब्द में 0 अक्षर बीच में, पर वर्णमाला में T एक अक्षर है)। इसलिए सही उत्तर एक है।",
+  "e_en": "In SUCCESS (S-U-C-C-E-S-S), only one valid pair exists: the C and E at positions 3 and 5 — there is 1 letter between them in the word (C), matching the 1 letter between C and E in the alphabet (D). The S-U pair does not actually match (0 letters between them in the word, but 1 letter, T, in the alphabet). So the correct answer is one."
  },
  {
   "id": "rp-rea-j01555",
@@ -34504,8 +34458,8 @@
    "K"
   ],
   "a": 1,
-  "e_hi": "उल्टी वर्णमाला में बाईं ओर से 10+7 = 17वां अक्षर 'I' होता है।",
-  "e_en": "In a reversed alphabet, the 17th letter from the left is 'I'."
+  "e_hi": "उल्टी वर्णमाला में बाएं से 10वां अक्षर Q है। उसके दाईं ओर 7 स्थान आगे यानी 17वां स्थान, जो उल्टी वर्णमाला में J होता है।",
+  "e_en": "In the reversed alphabet, the 10th letter from the left is Q. Seven positions further right is position 17, which in the reversed sequence is J."
  },
  {
   "id": "rp-rea-j01558",
@@ -34596,8 +34550,8 @@
    "Zero"
   ],
   "a": 0,
-  "e_hi": "शब्द में 'A' और 'Y' के बीच और 'R' और 'A' के बीच की स्थिति वर्णमाला के अनुसार मेल खाती है।",
-  "e_en": "The positions between 'A' and 'Y' and 'R' and 'A' match the alphabetical sequence."
+  "e_hi": "शब्द RAILWAY (R-A-I-L-W-A-Y) में केवल एक वैध जोड़ा है: स्थान 5 और 7 पर स्थित W और Y - इनके बीच शब्द में 1 अक्षर (A) है, और वर्णमाला में W व Y के बीच भी 1 अक्षर (X) है। इसलिए सही उत्तर एक है।",
+  "e_en": "In the word RAILWAY (R-A-I-L-W-A-Y), only one valid pair exists: the W and Y at positions 5 and 7 — there is 1 letter between them in the word (A), matching the 1 letter between W and Y in the alphabet (X). So the correct answer is one."
  },
  {
   "id": "rp-rea-j01564",
@@ -34642,8 +34596,8 @@
    "Three"
   ],
   "a": 0,
-  "e_hi": "TRAIN को वर्णमाला क्रम में व्यवस्थित करने पर A, I, N, R, T प्राप्त होता है। केवल 'N' अपने स्थान पर रहता है।",
-  "e_en": "Arranging TRAIN alphabetically gives A, I, N, R, T. Only the letter 'N' remains in its original position."
+  "e_hi": "TRAIN को वर्णमाला क्रम में व्यवस्थित करने पर A, I, N, R, T प्राप्त होता है। मूल क्रम T, R, A, I, N से स्थान-दर-स्थान तुलना करने पर, किसी भी स्थान पर अक्षर मेल नहीं खाता, इसलिए शून्य अक्षर अपने स्थान पर रहते हैं।",
+  "e_en": "Arranging TRAIN alphabetically gives A, I, N, R, T. Comparing position by position with the original T, R, A, I, N, no position matches at all, so zero letters remain in their original position."
  },
  {
   "id": "rp-rea-j01566",
@@ -34757,8 +34711,8 @@
    "25"
   ],
   "a": 3,
-  "e_hi": "समीकरण को बदलने पर: 20 ÷ 4 + 6 × 5 - 10 प्राप्त होता है। BODMAS नियम का पालन करते हुए: 5 + 30 - 10 = 25 - 10 = 15।",
-  "e_en": "Substituting the signs: 20 ÷ 4 + 6 × 5 - 10. Following BODMAS rule: 5 + 30 - 10 = 25 - 10 = 15."
+  "e_hi": "समीकरण में प्रत्येक चिह्न को उसके नए अर्थ से बदलने पर: 20 ÷ 4 + 6 × 5 - 10 प्राप्त होता है। BODMAS नियम से भाग और गुणा पहले: 20÷4=5, 6×5=30। फिर: 5 + 30 - 10 = 25।",
+  "e_en": "Substituting each sign with its new meaning gives: 20 ÷ 4 + 6 × 5 - 10. By BODMAS, division and multiplication first: 20÷4=5, 6×5=30. Then: 5 + 30 - 10 = 25."
  },
  {
   "id": "rp-rea-i01570",
@@ -34918,8 +34872,8 @@
    "Three"
   ],
   "a": 1,
-  "e_hi": "EXAMINATION में वर्णानुक्रम A, A, E, I, I, M, N, N, O, T, X है। केवल 'I' का स्थान 8वें स्थान पर समान रहता है।",
-  "e_en": "Arranging EXAMINATION alphabetically gives A, A, E, I, I, M, N, N, O, T, X. Only the letter 'I' remains at the 8th position."
+  "e_hi": "EXAMINATION को वर्णानुक्रम में व्यवस्थित करने पर A, A, E, I, I, M, N, N, O, T, X प्राप्त होता है। मूल शब्द E, X, A, M, I, N, A, T, I, O, N से तुलना करने पर, केवल 5वें स्थान पर दोनों में 'I' समान है। इसलिए केवल एक अक्षर अपने स्थान पर रहता है।",
+  "e_en": "Arranging EXAMINATION alphabetically gives A, A, E, I, I, M, N, N, O, T, X. Comparing with the original E, X, A, M, I, N, A, T, I, O, N, only position 5 matches (both have 'I'). So only one letter remains in its original position."
  },
  {
   "id": "rp-rea-j01574",
@@ -34964,8 +34918,8 @@
    "Six"
   ],
   "a": 3,
-  "e_hi": "युग्म हैं: RS, ST, DE, RT, IS। कुल 5 युग्म हैं।",
-  "e_en": "The pairs are: RS, ST, DE, RT, IS. There are 5 such pairs."
+  "e_hi": "DISTRIBUTE (D-I-S-T-R-I-B-U-T-E) में वैध युग्म हैं: (D,I) स्थान 1,6; (S,T) स्थान 3,4; (R,U) स्थान 5,8; (I,E) स्थान 6,10; (B,E) स्थान 7,10; और (U,T) स्थान 8,9। इस प्रकार कुल 6 युग्म हैं।",
+  "e_en": "In DISTRIBUTE (D-I-S-T-R-I-B-U-T-E), the valid pairs are: (D,I) at positions 1,6; (S,T) at positions 3,4; (R,U) at positions 5,8; (I,E) at positions 6,10; (B,E) at positions 7,10; and (U,T) at positions 8,9. That makes a total of 6 pairs."
  },
  {
   "id": "rp-rea-j01576",
@@ -35021,20 +34975,20 @@
   "q_hi": "शब्द 'PRACTICE' में कौन सा अक्षर बदलने पर वह एक सार्थक अंग्रेजी शब्द बन जाएगा?",
   "q_en": "Which letter in the word 'PRACTICE' should be changed to form a meaningful English word?",
   "o_hi": [
-   "C को S",
+   "दूसरे C को S",
    "P को B",
    "T को S",
    "I को U"
   ],
   "o_en": [
-   "C to S",
+   "second C to S",
    "P to B",
    "T to S",
    "I to U"
   ],
   "a": 0,
-  "e_hi": "PRACTICE में C को S बदलने पर 'PRACTISE' बनता है, जो एक क्रिया है।",
-  "e_en": "Changing C to S in PRACTICE forms 'PRACTISE', which is a valid verb."
+  "e_hi": "PRACTICE में दूसरे C (स्थान 7) को S में बदलने पर 'PRACTISE' बनता है, जो एक सार्थक अंग्रेजी क्रिया है।",
+  "e_en": "Changing the second C (position 7) to S in PRACTICE forms 'PRACTISE', a meaningful English verb."
  },
  {
   "id": "rp-rea-j01580",
@@ -35081,29 +35035,6 @@
   "a": 2,
   "e_hi": "BODMAS में 'O' का अर्थ 'Of' (का) होता है, जो गुणा से पहले हल किया जाता है।",
   "e_en": "In BODMAS, 'O' stands for 'Of', which is calculated before multiplication."
- },
- {
-  "id": "rp-rea-i01576",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 5 * 3 = 19 और 8 * 2 = 30 है, तो 7 * 4 का मान क्या होगा?",
-  "q_en": "If 5 * 3 = 19 and 8 * 2 = 30, what is the value of 7 * 4?",
-  "o_hi": [
-   "32",
-   "36",
-   "30",
-   "28"
-  ],
-  "o_en": [
-   "32",
-   "36",
-   "30",
-   "28"
-  ],
-  "a": 0,
-  "e_hi": "यहाँ तर्क (a * b) = (a * 4) + (b - 1) है। अतः (7 * 4) = (7 * 4) + (4 - 1) = 28 + 3 = 31 का विकल्प न होने पर, तर्क (a * 3) + (b * 2) का प्रयोग करें: (7*3)+(4*2) = 21+8=29 या (a+b)*3 + 2 = 32।",
-  "e_en": "The logic used is (a*3) + (b*2) + 1. For 5*3: 15+6+1=22 (incorrect). Correct logic: (a*4) + (b*2) = 20+6=26. Given the options, 32 fits (a+b)*3 + 2."
  },
  {
   "id": "rp-rea-i01577",
@@ -35217,8 +35148,8 @@
    "Three"
   ],
   "a": 0,
-  "e_hi": "वर्णानुक्रम में व्यवस्थित करने पर 'E, I, N, O, P, R, R, S' प्राप्त होता है, जिसमें केवल 'R' अपने स्थान पर रहता है।",
-  "e_en": "Arranging alphabetically gives 'E, I, N, O, P, R, R, S', where only the second 'R' remains in its original position."
+  "e_hi": "वर्णानुक्रम में व्यवस्थित करने पर 'E, I, N, O, P, R, R, S' प्राप्त होता है। मूल शब्द P,R,I,S,O,N,E,R से स्थान-दर-स्थान तुलना करने पर किसी भी स्थान पर अक्षर मेल नहीं खाता, इसलिए शून्य अक्षर अपने स्थान पर रहते हैं।",
+  "e_en": "Arranging alphabetically gives 'E, I, N, O, P, R, R, S'. Comparing position by position with the original P, R, I, S, O, N, E, R, no position matches, so zero letters remain in their original position."
  },
  {
   "id": "rp-rea-j01583",
@@ -35309,8 +35240,8 @@
    "Three"
   ],
   "a": 3,
-  "e_hi": "क्रमबद्ध करने पर 'E, E, M, O, R, T' प्राप्त होता है, जहाँ कोई भी अक्षर मूल स्थिति पर नहीं है।",
-  "e_en": "Arranging gives 'E, E, M, O, R, T', where no letter remains in its original position."
+  "e_hi": "क्रमबद्ध करने पर 'E, E, M, O, R, T' प्राप्त होता है। मूल शब्द R,E,M,O,T,E से तुलना करने पर, स्थान 2(E), 3(M) और 4(O) तीनों समान रहते हैं। इसलिए तीन अक्षर अपने स्थान पर रहते हैं।",
+  "e_en": "Arranging gives 'E, E, M, O, R, T'. Comparing with the original R, E, M, O, T, E, positions 2 (E), 3 (M) and 4 (O) all match. So three letters remain in their original position."
  },
  {
   "id": "rp-rea-j01587",
@@ -35363,8 +35294,8 @@
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 2,
-  "q_hi": "अंग्रेजी वर्णमाला में 'D' और 'S' के ठीक बीच में कौन सा अक्षर आता है?",
-  "q_en": "Which letter lies exactly in the middle of 'D' and 'S' in the English alphabet?",
+  "q_hi": "अंग्रेजी वर्णमाला में 'C' और 'S' के ठीक बीच में कौन सा अक्षर आता है?",
+  "q_en": "Which letter lies exactly in the middle of 'C' and 'S' in the English alphabet?",
   "o_hi": [
    "K",
    "L",
@@ -35378,8 +35309,8 @@
    "N"
   ],
   "a": 0,
-  "e_hi": "D का स्थान 4 और S का स्थान 19 है। मध्य का स्थान (4+19)/2 = 11.5 है, लेकिन अक्षरों में 11वां अक्षर K है।",
-  "e_en": "The position of D is 4 and S is 19. The middle position is (4+19)/2 = 11.5; however, the 11th letter is K."
+  "e_hi": "C का स्थान 3 और S का स्थान 19 है, इनके बीच 15 अक्षर (स्थान 4 से 18) हैं - यह एक विषम संख्या है, इसलिए ठीक बीच में एक अक्षर है: स्थान 4+7=11, जो K है।",
+  "e_en": "C is at position 3 and S is at position 19; there are 15 letters between them (positions 4 to 18) — an odd count, so there is a single exact middle letter: position 4+7=11, which is K."
  },
  {
   "id": "rp-rea-j01591",
@@ -35654,31 +35585,31 @@
    "None"
   ],
   "a": 3,
-  "e_hi": "T और R के बीच कोई अक्षर नहीं है, लेकिन वर्णमाला में S होता है। केवल R और N के बीच वर्णमाला के अनुसार अंतर नहीं है। केवल T और N का परीक्षण करें।",
-  "e_en": "Check pairs: T-R, T-A, T-I, T-N, R-A, R-I, R-N, A-I, A-N, I-N. Only R and N have a gap consistent with the alphabet sequence."
+  "e_hi": "शब्द TRAIN (T,R,A,I,N) के सभी 10 संभावित जोड़ों की जांच करने पर, कोई भी जोड़ा इस नियम को पूरा नहीं करता कि शब्द में उनके बीच के अक्षरों की संख्या वर्णमाला में उनके बीच के अक्षरों की संख्या के बराबर हो। इसलिए सही उत्तर 'कोई नहीं' है।",
+  "e_en": "Checking all 10 possible pairs in the word TRAIN (T, R, A, I, N), none of them satisfy the condition that the number of letters between them in the word equals the number of letters between them in the alphabet. So the correct answer is 'None'."
  },
  {
   "id": "rp-rea-j01601",
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 3,
-  "q_hi": "यदि शब्द 'PRISON' को 'QSKTPO' के रूप में लिखा जाता है, तो 'TARGET' को कैसे लिखा जाएगा?",
-  "q_en": "If the word 'PRISON' is written as 'QSKTPO', how will 'TARGET' be written?",
+  "q_hi": "यदि शब्द 'PRISON' को 'QSJTPO' के रूप में लिखा जाता है (प्रत्येक अक्षर +1), तो 'TARGET' को कैसे लिखा जाएगा?",
+  "q_en": "If the word 'PRISON' is written as 'QSJTPO' (each letter shifted by +1), how will 'TARGET' be written?",
   "o_hi": [
-   "UBSIFU",
+   "UBSHFU",
    "UBUHGU",
    "UBSIHU",
    "VBSIGU"
   ],
   "o_en": [
-   "UBSIFU",
+   "UBSHFU",
    "UBUHGU",
    "UBSIHU",
    "VBSIGU"
   ],
-  "a": 2,
-  "e_hi": "पैटर्न +1, +3, +1, +3... का पालन करता है। T+1=U, A+3=D (त्रुटि सुधार: पैटर्न +1, +2, +1, +2 है)। सही उत्तर UBSIHU है।",
-  "e_en": "The pattern follows +1, +2, +1, +2, +1, +2. Applying this to TARGET gives U, C, S, I, H, U (Correction: pattern is +1, +3, +1, +3...)."
+  "a": 0,
+  "e_hi": "नियम यह है कि प्रत्येक अक्षर को वर्णमाला में एक स्थान आगे खिसकाया जाता है (+1): P+1=Q, R+1=S, I+1=J, S+1=T, O+1=P, N+1=O, जो 'QSJTPO' देता है। इसी नियम से TARGET: T+1=U, A+1=B, R+1=S, G+1=H, E+1=F, T+1=U, जो 'UBSHFU' देता है।",
+  "e_en": "The rule is that each letter is shifted forward by one position in the alphabet (+1): P+1=Q, R+1=S, I+1=J, S+1=T, O+1=P, N+1=O, giving 'QSJTPO'. Applying the same rule to TARGET: T+1=U, A+1=B, R+1=S, G+1=H, E+1=F, T+1=U, giving 'UBSHFU'."
  },
  {
   "id": "rp-rea-j01603",
@@ -35714,17 +35645,17 @@
    "ACE",
    "GIK",
    "MOQ",
-   "RTV"
+   "RTW"
   ],
   "o_en": [
    "ACE",
    "GIK",
    "MOQ",
-   "RTV"
+   "RTW"
   ],
   "a": 3,
-  "e_hi": "ACE, GIK, MOQ में +2 का अंतर है। RTV में R-T(+2) है, लेकिन T-V(+2) है। सभी समान हैं, प्रश्न त्रुटिपूर्ण हो सकता है। RTV में R(18), T(20), V(22) है।",
-  "e_en": "All groups follow a +2, +2 pattern. ACE(1,3,5), GIK(7,9,11), MOQ(13,15,17), RTV(18,20,22). All follow the pattern."
+  "e_hi": "ACE(1,3,5), GIK(7,9,11), और MOQ(13,15,17) में लगातार अक्षरों के बीच सुसंगत +2 का अंतर है। RTW में R(18) से T(20) तक +2 है, लेकिन T से W(23) तक +3 है, जो पैटर्न से मेल नहीं खाता। इसलिए RTW अलग है।",
+  "e_en": "ACE (1,3,5), GIK (7,9,11) and MOQ (13,15,17) all have a consistent +2 gap between successive letters. In RTW, R(18) to T(20) is +2, but T to W(23) is +3, breaking the pattern. So RTW is the odd one out."
  },
  {
   "id": "rp-rea-i01591",
@@ -35884,8 +35815,8 @@
    "Three"
   ],
   "a": 0,
-  "e_hi": "GANDHI को वर्णानुक्रम में व्यवस्थित करने पर ADGHIN प्राप्त होता है। केवल 'H' अक्षर का स्थान अपरिवर्तित रहता है।",
-  "e_en": "Arranging GANDHI alphabetically gives ADGHIN. Only the letter 'H' remains in its original position."
+  "e_hi": "GANDHI को वर्णानुक्रम में व्यवस्थित करने पर ADGHIN प्राप्त होता है। मूल शब्द G,A,N,D,H,I से स्थान-दर-स्थान तुलना करने पर किसी भी स्थान पर अक्षर मेल नहीं खाता, इसलिए शून्य अक्षर अपने स्थान पर रहते हैं।",
+  "e_en": "Arranging GANDHI alphabetically gives ADGHIN. Comparing position by position with the original G, A, N, D, H, I, no position matches, so zero letters remain in their original position."
  },
  {
   "id": "rp-rea-j01608",
@@ -35953,8 +35884,8 @@
    "J"
   ],
   "a": 1,
-  "e_hi": "विपरीत क्रम में बायां 15वां मतलब सामान्य क्रम का 15वां (O) है। उसके दाईं ओर 4था मतलब 15-4 = 11वां अक्षर 'K' का विपरीत 'G' होगा।",
-  "e_en": "In reverse order, the 15th from the left is the 15th from the right in normal order, which is 'L'. Moving 4 to the right, we get 'G'."
+  "e_hi": "विपरीत क्रम में बाईं ओर से 15वां अक्षर L होता है (Z=1वां, Y=2वां, ... L=15वां)। L के दाईं ओर 4था अक्षर पाने के लिए 4 स्थान आगे गिनें: 15+4=19वां स्थान, जो विपरीत क्रम में H होता है।",
+  "e_en": "In the reversed sequence, the 15th letter from the left is L (Z=1st, Y=2nd, ... L=15th). Counting 4 positions further right from position 15 lands on position 19, which in the reversed sequence is H."
  },
  {
   "id": "rp-rea-j01611",
@@ -37471,8 +37402,8 @@
    "West"
   ],
   "a": 1,
-  "e_hi": "सूर्योदय के समय परछाईं पश्चिम में होती है। यदि परछाईं सुमित के बाईं ओर है, तो सुमित दक्षिण देख रहा है, जिसका अर्थ है अमित उत्तर देख रहा है।",
-  "e_en": "At sunrise, shadows fall to the West. If the shadow is to Sumit's left, Sumit is facing South, meaning Amit is facing North."
+  "e_hi": "सूर्योदय के समय परछाईं पश्चिम की ओर पड़ती है। यदि अमित की परछाईं सुमित के बाईं ओर है, तो सुमित का बायां हाथ पश्चिम की ओर होना चाहिए - यानी सुमित उत्तर की ओर मुख किए हुए है (उत्तर की ओर मुख करने पर बायां हाथ पश्चिम में होता है)। आमने-सामने खड़े होने के कारण अमित दक्षिण की ओर मुख किए हुए है।",
+  "e_en": "At sunrise, shadows fall towards the West. If Amit's shadow is to Sumit's left, Sumit's left hand must point West — meaning Sumit is facing North (facing north, your left hand points west). Since they stand facing each other, Amit must be facing South."
  },
  {
   "id": "rp-rea-j01650",
@@ -37494,8 +37425,8 @@
    "South-West"
   ],
   "a": 0,
-  "e_hi": "धुआं ट्रेन की गति के विपरीत (उत्तर) और हवा की दिशा (पूर्व) के प्रभाव में उत्तर-पूर्व जाएगा।",
-  "e_en": "The smoke will go North-East under the influence of the train's speed (North) and the wind direction (East)."
+  "e_hi": "ट्रेन उत्तर से दक्षिण की ओर जा रही है, अतः उसकी अपनी गति के विपरीत दिशा (पीछे की ओर खींचने वाली दिशा) उत्तर है। हवा पश्चिम से पूर्व बह रही है, यानी पूर्व की ओर धक्का देती है। दोनों प्रभावों को मिलाकर धुआं उत्तर-पूर्व दिशा में जाएगा।",
+  "e_en": "The train is moving from North to South, so the backward drag relative to its own motion is towards the North. The wind blows from West to East, pushing towards the East. Combining both effects, the smoke will drift North-East."
  },
  {
   "id": "rp-rea-j01651",
@@ -37866,29 +37797,6 @@
   "e_en": "After replacing the signs, the equation becomes 10 + 5 - 2 × 3 ÷ 6. Following BODMAS, 15 - 2 × 0.5 = 15 - 1 = 14."
  },
  {
-  "id": "rp-rea-i01643",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 5 * 3 = 19 और 8 * 4 = 44 है, तो 7 * 6 क्या होगा?",
-  "q_en": "If 5 * 3 = 19 and 8 * 4 = 44, then what is 7 * 6?",
-  "o_hi": [
-   "45",
-   "47",
-   "49",
-   "51"
-  ],
-  "o_en": [
-   "45",
-   "47",
-   "49",
-   "51"
-  ],
-  "a": 1,
-  "e_hi": "तर्क यह है: (पहली संख्या × दूसरी संख्या) + (पहली संख्या - दूसरी संख्या) या (5×3)+4=19. यहाँ तर्क है (A*B) = (A×B) + (A+B-1).",
-  "e_en": "The logic is: (A*B) = (A×B) + (A+B-1). For 7*6: (7×6) + (7+6-1) = 42 + 12 = 54. Wait, logic is (A×B) + (A+B-2) = 15+6=21. Let's use 5*3=15+4, 8*4=32+12. Logic: (A×B) + (A+B-4). 42+9=51."
- },
- {
   "id": "rp-rea-i01644",
   "s": "reasoning",
   "t": "mathematical_operations",
@@ -37933,29 +37841,6 @@
   "a": 1,
   "e_hi": "तर्क: (पहली संख्या) की घात (दूसरी संख्या - 1) = परिणाम। 2^(3-1) = 2^2 = 4 (नहीं)। सही तर्क: (पहली संख्या)^3 या (दूसरी संख्या-1)^3? 2^3=8, 3^3=27, 4^3=64. तो 5^3 = 125.",
   "e_en": "Logic: (First number)^3 = Result. 2^3=8, 3^3=27, 4^3=64. Therefore, 5^3 = 125."
- },
- {
-  "id": "rp-rea-i01646",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 9 + 7 = 58 और 8 + 4 = 32, तो 7 + 6 क्या होगा?",
-  "q_en": "If 9 + 7 = 58 and 8 + 4 = 32, then what is 7 + 6?",
-  "o_hi": [
-   "40",
-   "42",
-   "44",
-   "46"
-  ],
-  "o_en": [
-   "40",
-   "42",
-   "44",
-   "46"
-  ],
-  "a": 1,
-  "e_hi": "तर्क: (9×7) - 5 = 58. (8×4) = 32. यह पैटर्न नहीं है। (9+7)×4-6=58. 7+6=13. 13×3+3=42.",
-  "e_en": "Logic: (A×B) - (A-B). 63-2=61. Actually: (A×B) - 5 = 58. (8×4) = 32. Pattern: (A×B) - (A-B-3). 42+0=42."
  },
  {
   "id": "rp-rea-j01656",
@@ -38805,8 +38690,8 @@
    "South-West"
   ],
   "a": 0,
-  "e_hi": "दिशाओं में 135 डिग्री का वामावर्त (anti-clockwise) परिवर्तन हो रहा है, जिससे दक्षिण उत्तर-पश्चिम बन जाता है।",
-  "e_en": "There is a 135-degree anti-clockwise shift in directions, which transforms South into North-West."
+  "e_hi": "उत्तर-पूर्व (45°) को पश्चिम (270°) कहा जा रहा है, यानी परिवर्तन +225° है (या समानरूप से -135°)। इसे दक्षिण (180°) पर लागू करने पर: 180°+225°=405°, जो 360° घटाने पर 45° यानी उत्तर-पूर्व बनता है।",
+  "e_en": "North-East (45°) is being called West (270°), i.e. a shift of +225° (equivalently -135°). Applying this shift to South (180°): 180°+225°=405°, which reduces to 45° (North-East) after subtracting 360°."
  },
  {
   "id": "rp-rea-j01678",
@@ -38920,8 +38805,8 @@
    "West"
   ],
   "a": 2,
-  "e_hi": "दक्षिण से 90 डिग्री वामावर्त मुड़ने पर पूर्व होता है, और 45 डिग्री और मुड़ने पर वह पूर्व दिशा के समीप रहता है।",
-  "e_en": "Turning 90 degrees anti-clockwise from South leads to East; an additional 45 degrees leads to the East direction."
+  "e_hi": "दक्षिण (180°) से 135° वामावर्त घूमने का अर्थ है बेयरिंग मान से 135° घटाना: 180°-135°=45°, जो उत्तर-पूर्व है।",
+  "e_en": "Turning 135° anti-clockwise from South (180°) means subtracting 135° from the bearing: 180°-135°=45°, which is North-East."
  },
  {
   "id": "rp-rea-j01683",
@@ -40024,8 +39909,8 @@
    "West"
   ],
   "a": 1,
-  "e_hi": "यदि दाहिना हाथ पश्चिम में है, तो आप उत्तर की ओर देख रहे हैं।",
-  "e_en": "If your right hand is pointing West, you must be facing North."
+  "e_hi": "'स्टैच्यू ऑफ यूनिटी' की ओर मुख करके खड़े होने पर, यदि दाहिना हाथ पश्चिम की ओर है, तो व्यक्ति दक्षिण की ओर मुख किए हुए है (दक्षिण की ओर मुख करने पर दायां हाथ पश्चिम में होता है)।",
+  "e_en": "Standing facing the 'Statue of Unity', if your right hand points West, you must be facing South (when facing south, your right hand points west)."
  },
  {
   "id": "rp-rea-j01718",
@@ -40392,8 +40277,8 @@
    "East"
   ],
   "a": 1,
-  "e_hi": "दिशाओं को 45 डिग्री वामावर्त घुमाया गया है, इसलिए उत्तर अब उत्तर-पूर्व बन जाएगा।",
-  "e_en": "The directions are rotated 45 degrees counter-clockwise, so North becomes North-East."
+  "e_hi": "दक्षिण-पूर्व (135°) को पूर्व (90°) कहा गया, यानी परिवर्तन -45° है। उत्तर-पश्चिम (315°) को पश्चिम (270°) कहे जाने पर भी परिवर्तन -45° ही मिलता है, जो सुसंगत है। इसे उत्तर (0°) पर लागू करने पर: 0°-45°=-45°=315°, जो उत्तर-पश्चिम है।",
+  "e_en": "South-East (135°) is called East (90°), i.e. a shift of -45°. North-West (315°) being called West (270°) gives the same -45° shift, confirming consistency. Applying this to North (0°): 0°-45°=-45°=315°, which is North-West."
  },
  {
   "id": "rp-rea-j01724",
@@ -40783,8 +40668,8 @@
    "South"
   ],
   "a": 1,
-  "e_hi": "अंत में वह बाएं मुड़ा था, जो उसे उत्तर दिशा की ओर ले जाता है।",
-  "e_en": "He made a final left turn, which points him towards the North direction."
+  "e_hi": "राहुल पश्चिम की ओर चलते हुए दाईं ओर मुड़ता है, तो वह उत्तर की ओर हो जाता है (पश्चिम की ओर मुख करने पर दायां मोड़ उत्तर की ओर ले जाता है)। फिर उत्तर से बाईं ओर मुड़ने पर वह पश्चिम की ओर मुख कर लेता है। इसलिए अंत में वह पश्चिम दिशा की ओर मुख किए खड़ा है।",
+  "e_en": "While facing West, Rahul's right turn makes him face North (turning right while facing west points you north). Then turning left from North makes him face West again. So at the end he is facing West."
  },
  {
   "id": "rp-rea-j01741",
@@ -40898,8 +40783,8 @@
    "East"
   ],
   "a": 1,
-  "e_hi": "कार अंत में वापस उसी रेखा पर आ जाती है जो शुरुआती बिंदु से पूर्व दिशा में है।",
-  "e_en": "The car eventually returns to a position that lies directly East of the starting point."
+  "e_hi": "उत्तर 20 किमी के बाद स्थिति (0,20) है [पूर्व,उत्तर निर्देशांक]। बाईं ओर मुड़कर (अब पश्चिम दिशा) 20 किमी चलने पर स्थिति (-20,20) है। फिर दक्षिण-पश्चिम दिशा में 20√2 किमी चलने पर पूर्व और उत्तर दोनों घटक 20-20 घटते हैं, अंतिम स्थिति (-40,0) यानी शुरुआती बिंदु से ठीक 40 किमी पश्चिम में।",
+  "e_en": "After 20 km North, position is (0,20) [east,north coordinates]. Turning left (now facing West) and walking 20 km gives position (-20,20). Then walking 20√2 km South-West reduces both the east and north components by 20 each, giving a final position of (-40,0) — exactly 40 km West of the starting point."
  },
  {
   "id": "rp-rea-j01747",
@@ -41312,8 +41197,8 @@
    "North-West"
   ],
   "a": 2,
-  "e_hi": "दक्षिण से 90 डिग्री वामावर्त पूर्व है, और 45 डिग्री और चलने पर वह पूर्व की ओर होगा।",
-  "e_en": "Starting from South, a 90-degree counter-clockwise turn faces East, and another 45-degree turn keeps him facing East (relative to the quadrant)."
+  "e_hi": "दक्षिण (180°) से 135° वामावर्त (counter-clockwise) घूमने का अर्थ है बेयरिंग मान से 135° घटाना: 180°-135°=45°, जो उत्तर-पूर्व है।",
+  "e_en": "Turning 135° counter-clockwise from South (180°) means subtracting 135° from the bearing: 180°-135°=45°, which is North-East."
  },
  {
   "id": "rp-rea-j01765",
@@ -41615,29 +41500,6 @@
   "e_en": "Substituting the equation: 16 * 12 / 6 + 5 - 4 = 16 * 2 + 5 - 4 = 32 + 5 - 4 = 33."
  },
  {
-  "id": "rp-rea-i01703",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 24 - 4 = 2, 36 - 6 = 3, और 48 - 8 = 4 है, तो 60 - 5 का मान क्या होगा?",
-  "q_en": "If 24 - 4 = 2, 36 - 6 = 3, and 48 - 8 = 4, what is the value of 60 - 5?",
-  "o_hi": [
-   "12",
-   "10",
-   "6",
-   "5"
-  ],
-  "o_en": [
-   "12",
-   "10",
-   "6",
-   "5"
-  ],
-  "a": 1,
-  "e_hi": "तर्क यह है कि (प्रथम संख्या / द्वितीय संख्या) / 2 = परिणाम। 60 / 5 = 12 और 12 / 2 = 6। यहाँ तर्क है: (संख्या1 / संख्या2) का आधा।",
-  "e_en": "The logic is (First number / Second number) / 2 = result. 60 / 5 = 12 and 12 / 2 = 6. The pattern is half of the quotient."
- },
- {
   "id": "rp-rea-i01705",
   "s": "reasoning",
   "t": "mathematical_operations",
@@ -41937,29 +41799,6 @@
   "e_en": "Logic: (a + b) × a. E.g., (3+2)×2 = 10, (4+3)×3 = 21, so (5+4)×4 = 36."
  },
  {
-  "id": "rp-rea-i01711",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 2,
-  "q_hi": "अक्षरों को अंकों में बदलने के बाद व्यंजक 'A' B 'C' D का मान क्या होगा यदि A=10, B=5, C=2, D=1 और B का अर्थ भाग, D का अर्थ गुणा है?",
-  "q_en": "What is the value of the expression 'A' B 'C' D if A=10, B=5, C=2, D=1, where B means division and D means multiplication?",
-  "o_hi": [
-   "2",
-   "4",
-   "5",
-   "1"
-  ],
-  "o_en": [
-   "2",
-   "4",
-   "5",
-   "1"
-  ],
-  "a": 2,
-  "e_hi": "व्यंजक: 10 ÷ 2 × 1 = 5 × 1 = 5. त्रुटि: 10 ÷ 2 × 1 = 5. सही विकल्प 4 है यदि व्यंजक 10 ÷ 5 × 2 है।",
-  "e_en": "Expression: 10 ÷ 2 × 1 = 5. Re-check: 10 / 5 * 2 = 4."
- },
- {
   "id": "rp-rea-i01712",
   "s": "reasoning",
   "t": "mathematical_operations",
@@ -42186,8 +42025,8 @@
    "North-West"
   ],
   "a": 0,
-  "e_hi": "उत्तर-पश्चिम से 90 डिग्री घड़ी की दिशा में मुड़ने पर दिशा उत्तर-पूर्व हो जाती है। चूंकि दूरी समान है, वह उत्तर-पूर्व दिशा में होगा।",
-  "e_en": "Turning 90 degrees clockwise from North-West leads to North-East. Since the distance is equal, he will be in the North-East direction from the origin."
+  "e_hi": "उत्तर-पश्चिम (2 किमी) के घटक: पूर्व=-1.414, उत्तर=+1.414। 90° घड़ी की दिशा में मुड़ने पर नई दिशा उत्तर-पूर्व हो जाती है; उत्तर-पूर्व (2 किमी) के घटक: पूर्व=+1.414, उत्तर=+1.414। दोनों जोड़ने पर: पूर्व=0, उत्तर=2.828 - यानी मूल बिंदु से ठीक उत्तर दिशा में।",
+  "e_en": "North-West (2 km) gives components: east=-1.414, north=+1.414. Turning 90° clockwise changes the heading to North-East; North-East (2 km) gives: east=+1.414, north=+1.414. Adding both: east=0, north=2.828 — exactly due North of the starting point."
  },
  {
   "id": "rp-rea-i01713",
@@ -42255,8 +42094,8 @@
    "10 B 2 A 5 C 8 = 45"
   ],
   "a": 2,
-  "e_hi": "पहला विकल्प: 10×2 + 5 - 8 = 20 + 5 - 8 = 17 (गलत)। सभी विकल्पों को हल करने पर, सही का चयन करें।",
-  "e_en": "First option: 10×2 + 5 - 8 = 20 + 5 - 8 = 17 (Incorrect). Solving all options reveals the correct one."
+  "e_hi": "विकल्प [2]: 10 A 2 C 5 B 8 = 10+2×5-8। गणना क्रम (BODMAS) से पहले गुणा: 2×5=10, फिर 10+10-8=12, जो दिया गया मान 12 से मेल खाता है। इसलिए यह सही समीकरण है।",
+  "e_en": "Option [2]: 10 A 2 C 5 B 8 = 10+2×5-8. By order of operations, multiplication first: 2×5=10, then 10+10-8=12, which matches the stated value of 12. So this is the correct equation."
  },
  {
   "id": "rp-rea-i01716",
@@ -42301,8 +42140,8 @@
    "3 and 4"
   ],
   "a": 2,
-  "e_hi": "अंकों को बदलकर समीकरण की जाँच करें। 5 + 4 × 8 ÷ 3 - 2 = 3 संतुलित होना चाहिए।",
-  "e_en": "Check the equation by swapping the digits. It should balance to 5 + 4 × 8 ÷ 3 - 2 = 3."
+  "e_hi": "5 और 2 को आपस में बदलने पर समीकरण बनता है: 2 + 3 × 8 ÷ 4 - 5। गणना क्रम से: 3×8÷4=6, फिर 2+6-5=3, जो सही है।",
+  "e_en": "Swapping 5 and 2 gives the equation: 2 + 3 × 8 ÷ 4 - 5. By order of operations: 3×8÷4=6, then 2+6-5=3, which is correct."
  },
  {
   "id": "rp-rea-i01718",
@@ -42811,29 +42650,6 @@
   "e_en": "The differences are +4, +6, +8, so the next difference is +10. 20 + 10 = 30."
  },
  {
-  "id": "rp-rea-i01735",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 9 + 7 = 58 और 8 + 4 = 32 है, तो 7 + 5 का मान क्या होगा?",
-  "q_en": "If 9 + 7 = 58 and 8 + 4 = 32, what is the value of 7 + 5?",
-  "o_hi": [
-   "40",
-   "42",
-   "44",
-   "46"
-  ],
-  "o_en": [
-   "40",
-   "42",
-   "44",
-   "46"
-  ],
-  "a": 0,
-  "e_hi": "तर्क: (a + b) × (a - b) + 2। 9+7=16, 16×2=32 (नहीं)। सही तर्क: (a × b) - 5। 9*7=63-5=58। 8*4=32-0=32। 7*5=35-? ",
-  "e_en": "Logic: (a × b) + (a + b) / 2. 9*7=63 + 8 = 71 (no). Applying (a*b) + (a-b) logic."
- },
- {
   "id": "rp-rea-j01802",
   "s": "reasoning",
   "t": "direction_sense",
@@ -42901,29 +42717,6 @@
   "a": 0,
   "e_hi": "सूर्योदय के समय छाया पश्चिम में होती है। यदि छाया बाईं ओर है, तो राहुल का मुख उत्तर की ओर होगा।",
   "e_en": "At sunrise, shadows fall to the West. If the shadow is to his left, Rahul must be facing North."
- },
- {
-  "id": "rp-rea-j01805",
-  "s": "reasoning",
-  "t": "direction_sense",
-  "d": 2,
-  "q_hi": "एक व्यक्ति 10 मीटर सामने चलता है, फिर बाएं मुड़कर 10 मीटर चलता है, और अंत में बार-बार बाएं मुड़कर 5, 10 और 10 मीटर चलता है। वह प्रारंभिक बिंदु से कितनी दूर है?",
-  "q_en": "A person walks 10 meters ahead, turns left for 10 meters, and finally turns left repeatedly for 5, 10, and 10 meters. How far is he from the starting point?",
-  "o_hi": [
-   "5 मीटर",
-   "10 मीटर",
-   "15 मीटर",
-   "20 मीटर"
-  ],
-  "o_en": [
-   "5 meters",
-   "10 meters",
-   "15 meters",
-   "20 meters"
-  ],
-  "a": 2,
-  "e_hi": "विस्थापन की गणना करने पर, वह प्रारंभिक बिंदु से 5 मीटर की दूरी पर है।",
-  "e_en": "Calculating the displacement, he ends up 5 meters away from the starting point."
  },
  {
   "id": "rp-rea-j01806",
@@ -43382,8 +43175,8 @@
    "30m"
   ],
   "a": 0,
-  "e_hi": "यह एक समकोण त्रिभुज बनाता है जिसकी भुजाएं 10 और 10 हैं। कर्ण = वर्गमूल (100+100) = 10 वर्गमूल 2।",
-  "e_en": "This forms a right-angled triangle with sides 10 and 10. The hypotenuse = square root of (100+100) = 10 root 2."
+  "e_hi": "A और D दोनों की उत्तर दिशा में समान ऊँचाई (10 मीटर) है - A, B से 10मी उत्तर में है और D, C से 10मी उत्तर में है, जबकि C, B से 10मी पूर्व में है। इसलिए A और D के बीच की सीधी दूरी केवल पूर्व-पश्चिम की दूरी के बराबर है, जो 10 मीटर है।",
+  "e_en": "Both A and D are at the same northward height (10 m) — A is 10m north of B, and D is 10m north of C, while C is 10m east of B. So the straight-line distance between A and D equals only the east-west distance, which is 10 metres."
  },
  {
   "id": "rp-rea-j01818",
@@ -43612,8 +43405,8 @@
    "South-East"
   ],
   "a": 1,
-  "e_hi": "यह 180 डिग्री का रोटेशन है। अतः दक्षिण का विपरीत उत्तर-पूर्व होगा।",
-  "e_en": "This is a 180-degree rotation. Therefore, the opposite of South will be North-East."
+  "e_hi": "उत्तर-पूर्व (45°) को दक्षिण-पश्चिम (225°) कहा जा रहा है, यानी परिवर्तन 180° है (ठीक विपरीत दिशा)। इसे दक्षिण (180°) पर लागू करने पर: 180°+180°=360°=0°, जो उत्तर है।",
+  "e_en": "North-East (45°) is being called South-West (225°), i.e. a 180° shift (the exact opposite direction). Applying this to South (180°): 180°+180°=360°=0°, which is North."
  },
  {
   "id": "rp-rea-i01745",
