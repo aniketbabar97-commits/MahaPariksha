@@ -3054,23 +3054,23 @@
     "s": "maths",
     "t": "percentage",
     "d": 2,
-    "q_hi": "यदि A, B से 20% अधिक है, तो B, A से कितना प्रतिशत कम है?",
-    "q_en": "If A is 20% more than B, by what percentage is B less than A?",
+    "q_hi": "यदि P, Q से 25% अधिक है, तो Q, P से कितने प्रतिशत कम है?",
+    "q_en": "If P is 25% more than Q, by what percentage is Q less than P?",
     "o_hi": [
       "20%",
-      "16.67%",
       "25%",
-      "15%"
+      "15%",
+      "30%"
     ],
     "o_en": [
       "20%",
-      "16.67%",
       "25%",
-      "15%"
+      "15%",
+      "30%"
     ],
-    "a": 1,
-    "e_hi": "मान लें B = 100, तो A = 120। अंतर 20 है। B, A से कम होने का प्रतिशत = (20/120)*100 = 1/6 ≈ 16.67%।",
-    "e_en": "Let B = 100, then A = 120. Difference is 20. Percentage B is less than A = (20/120)*100 = 1/6 ≈ 16.67%."
+    "a": 0,
+    "e_hi": "P=1.25Q। Q/P = 1/1.25 = 0.8, अतः Q, P से 20% कम है।",
+    "e_en": "P=1.25Q. Q/P = 1/1.25 = 0.8, so Q is 20% less than P."
   },
   {
     "id": "rp-mat-00144",
@@ -16095,23 +16095,23 @@
     "s": "maths",
     "t": "trigonometry",
     "d": 2,
-    "q_hi": "यदि sin θ = 3/5 है, तो cos θ का मान क्या होगा (जहाँ θ एक लघु कोण है)?",
-    "q_en": "If sin θ = 3/5, what is the value of cos θ (where θ is an acute angle)?",
+    "q_hi": "यदि tan θ = 4/3 है, तो sec θ का मान क्या है (θ न्यून कोण है)?",
+    "q_en": "If tan θ = 4/3, what is the value of sec θ (θ is an acute angle)?",
     "o_hi": [
-      "4/5",
       "5/3",
-      "3/4",
-      "5/4"
+      "5/4",
+      "4/5",
+      "3/5"
     ],
     "o_en": [
-      "4/5",
       "5/3",
-      "3/4",
-      "5/4"
+      "5/4",
+      "4/5",
+      "3/5"
     ],
     "a": 0,
-    "e_hi": "sin²θ + cos²θ = 1 का उपयोग करने पर, cos²θ = 1 - (3/5)² = 1 - 9/25 = 16/25, अतः cos θ = 4/5 होता है।",
-    "e_en": "Using sin²θ + cos²θ = 1, cos²θ = 1 - (3/5)² = 1 - 9/25 = 16/25, so cos θ = 4/5."
+    "e_hi": "यदि tan θ=4/3, तो विपरीत=4, आधार=3, कर्ण=√(16+9)=5। sec θ = कर्ण/आधार = 5/3।",
+    "e_en": "If tan θ=4/3, opposite=4, adjacent=3, hypotenuse=√(16+9)=5. sec θ = hypotenuse/adjacent = 5/3."
   },
   {
     "id": "rp-mat-00750",
@@ -16233,23 +16233,23 @@
     "s": "maths",
     "t": "trigonometry",
     "d": 2,
-    "q_hi": "यदि sin A = 3/5 हो, तो cos A का मान क्या होगा? (A एक लघु कोण है)",
-    "q_en": "If sin A = 3/5, what is the value of cos A? (A is an acute angle)",
+    "q_hi": "यदि cos A = 12/13 है, तो sin A का मान क्या है (A न्यून कोण है)?",
+    "q_en": "If cos A = 12/13, what is the value of sin A (A is an acute angle)?",
     "o_hi": [
-      "4/5",
-      "5/3",
-      "3/4",
-      "5/4"
+      "5/13",
+      "12/5",
+      "13/5",
+      "5/12"
     ],
     "o_en": [
-      "4/5",
-      "5/3",
-      "3/4",
-      "5/4"
+      "5/13",
+      "12/5",
+      "13/5",
+      "5/12"
     ],
     "a": 0,
-    "e_hi": "सर्वसमिका sin²A + cos²A = 1 का उपयोग करने पर, (3/5)² + cos²A = 1। अतः cos²A = 1 - 9/25 = 16/25, जिससे cos A = 4/5।",
-    "e_en": "Using the identity sin²A + cos²A = 1, we get (3/5)² + cos²A = 1. Therefore, cos²A = 1 - 9/25 = 16/25, so cos A = 4/5."
+    "e_hi": "कर्ण=13, आधार=12, विपरीत=√(169-144)=5। sin A = विपरीत/कर्ण = 5/13।",
+    "e_en": "Hypotenuse=13, adjacent=12, opposite=√(169-144)=5. sin A = opposite/hypotenuse = 5/13."
   },
   {
     "id": "rp-mat-00756",
@@ -16347,24 +16347,24 @@
     "id": "rp-mat-00760",
     "s": "maths",
     "t": "trigonometry",
-    "d": 2,
-    "q_hi": "यदि sin A = 3/5 है, तो cos A का मान क्या होगा (जहाँ A एक लघु कोण है)?",
-    "q_en": "If sin A = 3/5, what is the value of cos A (where A is an acute angle)?",
+    "d": 3,
+    "q_hi": "यदि tan A = 1 है, तो sin A + cos A का मान क्या है (A न्यून कोण है)?",
+    "q_en": "If tan A = 1, what is the value of sin A + cos A (A is an acute angle)?",
     "o_hi": [
-      "4/5",
-      "3/4",
-      "5/4",
-      "√14/5"
+      "√2",
+      "1",
+      "2",
+      "1/√2"
     ],
     "o_en": [
-      "4/5",
-      "3/4",
-      "5/4",
-      "√14/5"
+      "√2",
+      "1",
+      "2",
+      "1/√2"
     ],
     "a": 0,
-    "e_hi": "सर्वसमिका sin² A + cos² A = 1 का उपयोग करने पर, cos² A = 1 - (3/5)² = 16/25। अतः cos A = 4/5।",
-    "e_en": "Using the identity sin² A + cos² A = 1, we get cos² A = 1 - (3/5)² = 16/25. Thus, cos A = 4/5."
+    "e_hi": "tan A=1 से A=45°। sin45°+cos45° = 1/√2+1/√2 = 2/√2 = √2।",
+    "e_en": "tan A=1 means A=45°. sin45°+cos45° = 1/√2+1/√2 = 2/√2 = √2."
   },
   {
     "id": "rp-mat-00761",
@@ -29273,24 +29273,24 @@
     "id": "rp-mat-01396",
     "s": "maths",
     "t": "percentage",
-    "d": 1,
-    "q_hi": "किसी संख्या का 40% 80 है। उस संख्या का 15% कितना होगा?",
-    "q_en": "If 40% of a number is 80, what is 15% of that number?",
+    "d": 2,
+    "q_hi": "यदि किसी संख्या का 25%, 50 है, तो उस संख्या का 60% क्या है?",
+    "q_en": "If 25% of a number is 50, what is 60% of that number?",
     "o_hi": [
-      "25",
-      "30",
-      "35",
-      "40"
+      "120",
+      "100",
+      "110",
+      "150"
     ],
     "o_en": [
-      "25",
-      "30",
-      "35",
-      "40"
+      "120",
+      "100",
+      "110",
+      "150"
     ],
-    "a": 1,
-    "e_hi": "पहले संख्या निकालें: 80 / 0.40 = 200। अब 200 का 15% निकालें: 200 * 0.15 = 30।",
-    "e_en": "First find the number: 80 / 0.40 = 200. Then calculate 15% of 200: 200 * 0.15 = 30."
+    "a": 0,
+    "e_hi": "संख्या = 50/0.25 = 200। 60% of 200 = 120।",
+    "e_en": "Number = 50/0.25 = 200. 60% of 200 = 120."
   },
   {
     "id": "rp-mat-01397",
@@ -30194,23 +30194,23 @@
     "s": "maths",
     "t": "percentage",
     "d": 1,
-    "q_hi": "प्रतिशत (Percentage) का अर्थ क्या होता है?",
-    "q_en": "What does the term 'Percentage' literally mean?",
+    "q_hi": "'प्रतिशत' (Percentage) शब्द की उत्पत्ति किस भाषा के शब्दों से हुई है?",
+    "q_en": "The word 'Percentage' originates from words in which language?",
     "o_hi": [
-      "प्रति सौ",
-      "प्रति हज़ार",
-      "प्रति दस",
-      "प्रति लाख"
+      "लैटिन (Latin)",
+      "ग्रीक (Greek)",
+      "फ्रेंच (French)",
+      "जर्मन (German)"
     ],
     "o_en": [
-      "Per hundred",
-      "Per thousand",
-      "Per ten",
-      "Per lakh"
+      "Latin",
+      "Greek",
+      "French",
+      "German"
     ],
     "a": 0,
-    "e_hi": "शब्द 'Percentage' लैटिन शब्द 'Per Centum' से आया है जिसका अर्थ है 'प्रति सौ'।",
-    "e_en": "The word 'Percentage' is derived from the Latin 'Per Centum', which means 'per hundred'."
+    "e_hi": "'Percentage' लैटिन शब्दों 'per centum' से बना है, जिसका अर्थ है 'प्रति सौ'।",
+    "e_en": "'Percentage' comes from the Latin words 'per centum', meaning 'per hundred'."
   },
   {
     "id": "rp-mat-01439",
@@ -35783,23 +35783,23 @@
     "s": "maths",
     "t": "geometry",
     "d": 1,
-    "q_hi": "एक समबाहु त्रिभुज की प्रत्येक भुजा 10 सेमी है। इसका परिमाप क्या होगा?",
-    "q_en": "Each side of an equilateral triangle is 10 cm. What is its perimeter?",
+    "q_hi": "एक समबाहु त्रिभुज की भुजा 15 cm है। इसका परिमाप क्या है?",
+    "q_en": "The side of an equilateral triangle is 15 cm. What is its perimeter?",
     "o_hi": [
-      "20 सेमी",
-      "30 सेमी",
-      "40 सेमी",
-      "100 सेमी"
+      "45 cm",
+      "30 cm",
+      "60 cm",
+      "15 cm"
     ],
     "o_en": [
-      "20 cm",
+      "45 cm",
       "30 cm",
-      "40 cm",
-      "100 cm"
+      "60 cm",
+      "15 cm"
     ],
-    "a": 1,
-    "e_hi": "समबाहु त्रिभुज का परिमाप = 3 × भुजा। अतः, 3 × 10 = 30 सेमी।",
-    "e_en": "Perimeter of an equilateral triangle = 3 × side. Thus, 3 × 10 = 30 cm."
+    "a": 0,
+    "e_hi": "परिमाप = 3 × भुजा = 3×15 = 45 cm।",
+    "e_en": "Perimeter = 3 × side = 3×15 = 45 cm."
   },
   {
     "id": "rp-mat-01713",
@@ -40245,23 +40245,23 @@
     "s": "maths",
     "t": "percentage",
     "d": 2,
-    "q_hi": "अगर A का 20% B का 25% के बराबर है, तो A और B का अनुपात क्या होगा?",
-    "q_en": "If 20% of A is equal to 25% of B, what is the ratio of A to B?",
+    "q_hi": "यदि P का 30%, Q के 40% के बराबर है, तो P:Q का अनुपात क्या है?",
+    "q_en": "If 30% of P equals 40% of Q, what is the ratio P:Q?",
     "o_hi": [
-      "4:5",
-      "5:4",
+      "4:3",
+      "3:4",
       "2:3",
       "3:2"
     ],
     "o_en": [
-      "4:5",
-      "5:4",
+      "4:3",
+      "3:4",
       "2:3",
       "3:2"
     ],
-    "a": 1,
-    "e_hi": "0.20A = 0.25B। इसलिए, A/B = 0.25/0.20 = 25/20 = 5/4। अतः A:B = 5:4।",
-    "e_en": "0.20A = 0.25B. Thus, A/B = 0.25/0.20 = 25/20 = 5/4. So, A:B = 5:4."
+    "a": 0,
+    "e_hi": "0.3P = 0.4Q => P/Q = 0.4/0.3 = 4/3, अतः P:Q = 4:3।",
+    "e_en": "0.3P = 0.4Q => P/Q = 0.4/0.3 = 4/3, so P:Q = 4:3."
   },
   {
     "id": "rp-mat-201807",
@@ -46731,23 +46731,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 2,
-    "q_hi": "साधारण ब्याज की किस दर पर कोई राशि 10 वर्षों में दोगुनी हो जाएगी?",
-    "q_en": "At what rate of simple interest will a sum double itself in 10 years?",
+    "q_hi": "किस साधारण ब्याज दर पर कोई धन राशि 20 वर्षों में दोगुनी हो जाएगी?",
+    "q_en": "At what rate of simple interest will a sum double itself in 20 years?",
     "o_hi": [
       "5%",
       "8%",
       "10%",
-      "12%"
+      "4%"
     ],
     "o_en": [
       "5%",
       "8%",
       "10%",
-      "12%"
+      "4%"
     ],
-    "a": 2,
-    "e_hi": "राशि दोगुनी होने के लिए ब्याज मूलधन के बराबर होना चाहिए। दर = (ब्याज * 100) / (मूलधन * समय) = (1 * 100) / 10 = 10%.",
-    "e_en": "For the sum to double, the interest must equal the principal. Rate = (Interest * 100) / (Principal * Time) = (1 * 100) / 10 = 10%."
+    "a": 0,
+    "e_hi": "दोगुना होना 100% वृद्धि है। दर = 100/20 = 5% प्रति वर्ष।",
+    "e_en": "Doubling is a 100% increase. Rate = 100/20 = 5% per year."
   },
   {
     "id": "rp-mat-g202114",
@@ -46845,24 +46845,24 @@
     "id": "rp-mat-g202118",
     "s": "maths",
     "t": "si_ci",
-    "d": 2,
-    "q_hi": "कोई धनराशि साधारण ब्याज की दर से 5 वर्षों में स्वयं की दोगुनी हो जाती है। वह कितने वर्षों में चार गुनी हो जाएगी?",
-    "q_en": "A sum of money doubles itself in 5 years at a simple interest rate. In how many years will it become four times itself?",
+    "d": 3,
+    "q_hi": "यदि कोई धन राशि साधारण ब्याज पर 4 वर्षों में तीन गुनी हो जाती है, तो वह पाँच गुनी कितने वर्षों में होगी?",
+    "q_en": "If a sum of money becomes three times itself in 4 years at simple interest, in how many years will it become five times itself?",
     "o_hi": [
-      "10 वर्ष",
-      "12 वर्ष",
-      "15 वर्ष",
-      "20 वर्ष"
+      "8 years",
+      "6 years",
+      "10 years",
+      "12 years"
     ],
     "o_en": [
+      "8 years",
+      "6 years",
       "10 years",
-      "12 years",
-      "15 years",
-      "20 years"
+      "12 years"
     ],
-    "a": 2,
-    "e_hi": "दोगुनी होने का अर्थ है ब्याज मूलधन के बराबर है। चार गुनी होने के लिए ब्याज मूलधन का तीन गुना होना चाहिए, अतः समय 5*3 = 15 वर्ष होगा।",
-    "e_en": "Doubling means the interest equals the principal. To become four times, the interest must be three times the principal, so time = 5*3 = 15 years."
+    "a": 0,
+    "e_hi": "3 गुना होने में 200% वृद्धि 4 वर्षों में, यानी 50% प्रति वर्ष। 5 गुना होने के लिए 400% वृद्धि चाहिए, जो 400/50=8 वर्षों में होगी।",
+    "e_en": "Becoming 3x is a 200% increase in 4 years, i.e. 50% per year. Becoming 5x needs a 400% increase, which takes 400/50=8 years."
   },
   {
     "id": "rp-mat-g202119",
@@ -47053,23 +47053,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 2,
-    "q_hi": "कोई राशि साधारण ब्याज पर 5 वर्षों में दोगुनी हो जाती है। यह कितने वर्षों में चार गुनी हो जाएगी?",
-    "q_en": "A sum of money doubles itself in 5 years at simple interest. In how many years will it become four times?",
+    "q_hi": "यदि कोई धन राशि साधारण ब्याज पर 4 वर्षों में दोगुनी हो जाती है, तो वह कितने वर्षों में तीन गुनी होगी?",
+    "q_en": "If a sum of money doubles itself in 4 years at simple interest, in how many years will it become three times itself?",
     "o_hi": [
-      "10 वर्ष",
-      "12 वर्ष",
-      "15 वर्ष",
-      "20 वर्ष"
+      "8 years",
+      "6 years",
+      "10 years",
+      "12 years"
     ],
     "o_en": [
+      "8 years",
+      "6 years",
       "10 years",
-      "12 years",
-      "15 years",
-      "20 years"
+      "12 years"
     ],
-    "a": 2,
-    "e_hi": "साधारण ब्याज में, यदि राशि n गुना होने में T समय लेती है, तो m गुना होने के लिए समय = (m-1)/(n-1) * T। यहाँ (3/1) * 5 = 15 वर्ष।",
-    "e_en": "In simple interest, if a sum becomes n times in T years, the time to become m times is (m-1)/(n-1) * T. Here, (3/1) * 5 = 15 years."
+    "a": 0,
+    "e_hi": "दोगुना होने में 100% वृद्धि 4 वर्षों में, यानी 25% प्रति वर्ष। तीन गुना के लिए 200% वृद्धि चाहिए, जो 200/25=8 वर्षों में होगी।",
+    "e_en": "Doubling is a 100% increase in 4 years, i.e. 25% per year. Tripling needs a 200% increase, which takes 200/25=8 years."
   },
   {
     "id": "rp-mat-g202128",
@@ -47581,24 +47581,24 @@
     "id": "rp-mat-g202150",
     "s": "maths",
     "t": "si_ci",
-    "d": 2,
-    "q_hi": "यदि कोई राशि साधारण ब्याज पर 5 वर्षों में दोगुनी हो जाती है, तो वह कितने वर्षों में चार गुनी हो जाएगी?",
-    "q_en": "If a sum doubles itself in 5 years at simple interest, in how many years will it become four times?",
+    "d": 3,
+    "q_hi": "यदि कोई धन राशि साधारण ब्याज पर 6 वर्षों में दोगुनी हो जाती है, तो वह चार गुनी कितने वर्षों में होगी?",
+    "q_en": "If a sum of money doubles itself in 6 years at simple interest, in how many years will it become four times itself?",
     "o_hi": [
-      "10 वर्ष",
-      "15 वर्ष",
-      "20 वर्ष",
-      "25 वर्ष"
+      "18 years",
+      "12 years",
+      "24 years",
+      "15 years"
     ],
     "o_en": [
-      "10 years",
-      "15 years",
-      "20 years",
-      "25 years"
+      "18 years",
+      "12 years",
+      "24 years",
+      "15 years"
     ],
-    "a": 1,
-    "e_hi": "साधारण ब्याज में ब्याज समान रहता है। दोगुनी (2x) होने में 5 वर्ष लगे, यानी 1x ब्याज मिला। 4x होने के लिए 3x ब्याज चाहिए, इसलिए 15 वर्ष लगेंगे।",
-    "e_en": "In simple interest, interest remains constant. Doubling (2x) takes 5 years, meaning 1x interest gained. To get 4x, 3x interest is needed, thus 15 years."
+    "a": 0,
+    "e_hi": "दोगुना होने में 100% वृद्धि 6 वर्षों में, यानी प्रति वर्ष 16.67%। चार गुना के लिए 300% वृद्धि चाहिए, जो 300/16.67=18 वर्षों में होगी।",
+    "e_en": "Doubling is a 100% increase in 6 years, i.e. 16.67% per year. Becoming 4x needs a 300% increase, which takes 300/16.67=18 years."
   },
   {
     "id": "rp-mat-g202151",
@@ -49651,24 +49651,24 @@
     "id": "rp-mat-g202242",
     "s": "maths",
     "t": "si_ci",
-    "d": 1,
-    "q_hi": "साधारण ब्याज की किस दर पर कोई राशि 8 वर्षों में स्वयं की दोगुनी हो जाएगी?",
-    "q_en": "At what rate of simple interest will a sum become double itself in 8 years?",
+    "d": 2,
+    "q_hi": "किस साधारण ब्याज दर पर कोई धन राशि 10 वर्षों में दोगुनी हो जाएगी?",
+    "q_en": "At what rate of simple interest will a sum of money double itself in 10 years?",
     "o_hi": [
       "10%",
-      "12%",
+      "8%",
       "12.5%",
-      "15%"
+      "20%"
     ],
     "o_en": [
       "10%",
-      "12%",
+      "8%",
       "12.5%",
-      "15%"
+      "20%"
     ],
-    "a": 2,
-    "e_hi": "सूत्र: दर = (100 * (गुना - 1)) / समय। दर = (100 * 1) / 8 = 12.5%。",
-    "e_en": "Formula: Rate = (100 * (times - 1)) / time. Rate = (100 * 1) / 8 = 12.5%."
+    "a": 0,
+    "e_hi": "दोगुना होना 100% वृद्धि है। दर = 100/10 = 10% प्रति वर्ष।",
+    "e_en": "Doubling is a 100% increase. Rate = 100/10 = 10% per year."
   },
   {
     "id": "rp-mat-g202243",
@@ -49996,24 +49996,24 @@
     "id": "rp-mat-g202258",
     "s": "maths",
     "t": "si_ci",
-    "d": 1,
-    "q_hi": "साधारण ब्याज की किस दर पर कोई राशि 8 वर्षों में स्वयं की दोगुनी हो जाएगी?",
-    "q_en": "At what rate of simple interest will a sum double itself in 8 years?",
+    "d": 2,
+    "q_hi": "किस साधारण ब्याज दर पर कोई धन राशि 4 वर्षों में दोगुनी हो जाएगी?",
+    "q_en": "At what rate of simple interest will a sum of money double itself in 4 years?",
     "o_hi": [
-      "10%",
-      "12%",
-      "12.5%",
-      "15%"
+      "25%",
+      "20%",
+      "15%",
+      "10%"
     ],
     "o_en": [
-      "10%",
-      "12%",
-      "12.5%",
-      "15%"
+      "25%",
+      "20%",
+      "15%",
+      "10%"
     ],
-    "a": 2,
-    "e_hi": "दोगुना होने का अर्थ 100% ब्याज। दर = ब्याज/समय = 100/8 = 12.5%。",
-    "e_en": "Doubling means 100% interest. Rate = Interest/Time = 100/8 = 12.5%."
+    "a": 0,
+    "e_hi": "दोगुना होना 100% वृद्धि है। दर = 100/4 = 25% प्रति वर्ष।",
+    "e_en": "Doubling is a 100% increase. Rate = 100/4 = 25% per year."
   },
   {
     "id": "rp-mat-g202259",
@@ -50273,23 +50273,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 3,
-    "q_hi": "यदि ब्याज की गणना अर्धवार्षिक की जाती है, तो 1000 रुपये पर 20% वार्षिक दर से 1 वर्ष का चक्रवृद्धि ब्याज क्या होगा?",
-    "q_en": "If interest is compounded half-yearly, what will be the compound interest on Rs 1000 at 20% per annum for 1 year?",
+    "q_hi": "यदि ब्याज तिमाही (quarterly) रूप से संयोजित होता है, तो ₹1000 पर 40% वार्षिक दर से 6 महीनों का चक्रवृद्धि ब्याज क्या होगा?",
+    "q_en": "If interest is compounded quarterly, what will be the compound interest on ₹1000 at 40% per annum for 6 months?",
     "o_hi": [
-      "200 रुपये",
-      "210 रुपये",
-      "220 रुपये",
-      "230 रुपये"
+      "₹210",
+      "₹200",
+      "₹220",
+      "₹205"
     ],
     "o_en": [
-      "Rs 200",
-      "Rs 210",
-      "Rs 220",
-      "Rs 230"
+      "₹210",
+      "₹200",
+      "₹220",
+      "₹205"
     ],
-    "a": 1,
-    "e_hi": "दर = 10% प्रति छमाही, समय = 2 छमाही। मिश्रधन = 1000 * (1.1)^2 = 1210 रुपये। ब्याज = 210 रुपये।",
-    "e_en": "Rate = 10% per half-year, Time = 2 half-years. Amount = 1000 * (1.1)^2 = 1210. Interest = 210."
+    "a": 0,
+    "e_hi": "तिमाही दर = 40/4=10%, 6 महीने=2 तिमाही। राशि = 1000×(1.1)² = 1210। ब्याज = 210।",
+    "e_en": "Quarterly rate = 40/4=10%, 6 months = 2 quarters. Amount = 1000×(1.1)² = 1210. Interest = 210."
   },
   {
     "id": "rp-mat-g202273",
@@ -50618,23 +50618,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 2,
-    "q_hi": "यदि कोई धन साधारण ब्याज की दर से 5 वर्षों में दोगुना हो जाता है, तो ब्याज की वार्षिक दर क्या है?",
-    "q_en": "If a sum of money doubles itself in 5 years at a simple interest rate, what is the annual rate of interest?",
+    "q_hi": "यदि कोई धन राशि साधारण ब्याज पर 8 वर्षों में तीन गुनी हो जाती है, तो वार्षिक ब्याज दर क्या है?",
+    "q_en": "If a sum of money becomes three times itself in 8 years at simple interest, what is the annual rate of interest?",
     "o_hi": [
-      "10%",
-      "15%",
+      "25%",
       "20%",
-      "25%"
+      "30%",
+      "15%"
     ],
     "o_en": [
-      "10%",
-      "15%",
+      "25%",
       "20%",
-      "25%"
+      "30%",
+      "15%"
     ],
-    "a": 2,
-    "e_hi": "माना मूलधन 100 है, तो मिश्रधन 200 होगा। ब्याज 100 हुआ। दर = (ब्याज × 100) / (मूलधन × समय) = (100 × 100) / (100 × 5) = 20%。",
-    "e_en": "Let principal be 100, then amount is 200. Interest is 100. Rate = (Interest × 100) / (Principal × Time) = (100 × 100) / (100 × 5) = 20%."
+    "a": 0,
+    "e_hi": "3 गुना होना 200% वृद्धि है। दर = 200/8 = 25% प्रति वर्ष।",
+    "e_en": "Becoming 3x is a 200% increase. Rate = 200/8 = 25% per year."
   },
   {
     "id": "rp-mat-g202289",
@@ -50801,24 +50801,24 @@
     "id": "rp-mat-g202296",
     "s": "maths",
     "t": "si_ci",
-    "d": 1,
-    "q_hi": "यदि 800 रुपये की धनराशि साधारण ब्याज पर 3 वर्षों में 920 रुपये हो जाती है, तो ब्याज की दर क्या है?",
-    "q_en": "If a sum of Rs. 800 becomes Rs. 920 in 3 years at simple interest, what is the rate of interest?",
+    "d": 2,
+    "q_hi": "यदि ₹600 की राशि 4 वर्षों में ₹720 हो जाती है, तो वार्षिक साधारण ब्याज दर क्या है?",
+    "q_en": "If a sum of ₹600 becomes ₹720 in 4 years at simple interest, what is the annual rate of interest?",
     "o_hi": [
-      "4%",
       "5%",
       "6%",
+      "4%",
       "8%"
     ],
     "o_en": [
-      "4%",
       "5%",
       "6%",
+      "4%",
       "8%"
     ],
-    "a": 1,
-    "e_hi": "ब्याज = 920 - 800 = 120 रुपये। दर = (ब्याज * 100) / (मूलधन * समय) = (120 * 100) / (800 * 3) = 5%。",
-    "e_en": "Interest = 920 - 800 = Rs. 120. Rate = (Interest * 100) / (Principal * Time) = (120 * 100) / (800 * 3) = 5%."
+    "a": 0,
+    "e_hi": "ब्याज = 720-600 = 120। दर = (120×100)/(600×4) = 5% प्रति वर्ष।",
+    "e_en": "Interest = 720-600 = 120. Rate = (120×100)/(600×4) = 5% per year."
   },
   {
     "id": "rp-mat-g202297",
@@ -51239,23 +51239,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 2,
-    "q_hi": "कोई राशि साधारण ब्याज पर 5 वर्षों में दोगुनी हो जाती है। ब्याज की वार्षिक दर क्या है?",
-    "q_en": "A sum of money doubles itself in 5 years at simple interest. What is the annual rate of interest?",
+    "q_hi": "यदि कोई धन राशि साधारण ब्याज पर 4 वर्षों में दोगुनी हो जाती है, तो वार्षिक ब्याज दर क्या है?",
+    "q_en": "If a sum of money doubles itself in 4 years at simple interest, what is the annual rate of interest?",
     "o_hi": [
-      "10%",
-      "15%",
+      "25%",
       "20%",
-      "25%"
+      "15%",
+      "10%"
     ],
     "o_en": [
-      "10%",
-      "15%",
+      "25%",
       "20%",
-      "25%"
+      "15%",
+      "10%"
     ],
-    "a": 2,
-    "e_hi": "दोगुना होने का अर्थ है ब्याज मूलधन के बराबर है। 100 = (100 * R * 5) / 100, अतः R = 20%।",
-    "e_en": "Doubling means the interest equals the principal. Using SI = (P * R * T) / 100, 100 = (100 * R * 5) / 100, so R = 20%."
+    "a": 0,
+    "e_hi": "दोगुना होना 100% वृद्धि है। दर = 100/4 = 25% प्रति वर्ष।",
+    "e_en": "Doubling is a 100% increase. Rate = 100/4 = 25% per year."
   },
   {
     "id": "rp-mat-g202316",
@@ -51446,23 +51446,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 2,
-    "q_hi": "₹ 2000 पर 5% वार्षिक चक्रवृद्धि ब्याज की दर से 2 वर्षों का ब्याज कितना होगा?",
-    "q_en": "How much will be the compound interest on ₹ 2000 at 5% per annum for 2 years?",
+    "q_hi": "₹3000 पर 10% वार्षिक दर से 2 वर्षों का चक्रवृद्धि ब्याज क्या होगा?",
+    "q_en": "What will be the compound interest on ₹3000 at 10% per annum for 2 years?",
     "o_hi": [
-      "₹ 205",
-      "₹ 210",
-      "₹ 200",
-      "₹ 220"
+      "₹630",
+      "₹600",
+      "₹660",
+      "₹615"
     ],
     "o_en": [
-      "₹ 205",
-      "₹ 210",
-      "₹ 200",
-      "₹ 220"
+      "₹630",
+      "₹600",
+      "₹660",
+      "₹615"
     ],
     "a": 0,
-    "e_hi": "चक्रवृद्धि ब्याज का सूत्र P[(1+r/100)^n - 1] है। 2000 * [(1.05)^2 - 1] = 2000 * 0.1025 = 205।",
-    "e_en": "The compound interest formula is P[(1+r/100)^n - 1]. 2000 * [(1.05)^2 - 1] = 2000 * 0.1025 = 205."
+    "e_hi": "राशि = 3000×(1.1)² = 3630। ब्याज = 3630-3000 = 630।",
+    "e_en": "Amount = 3000×(1.1)² = 3630. Interest = 3630-3000 = 630."
   },
   {
     "id": "rp-mat-g202325",
@@ -53148,23 +53148,23 @@
     "s": "maths",
     "t": "time_work",
     "d": 2,
-    "q_hi": "A, B और C एक कार्य को क्रमशः 10, 12 और 15 दिनों में पूरा कर सकते हैं। यदि वे एक साथ काम करते हैं, तो कार्य कितने दिनों में समाप्त होगा?",
-    "q_en": "A, B, and C can complete a task in 10, 12, and 15 days respectively. If they work together, in how many days will the task be completed?",
+    "q_hi": "A, B और C किसी काम को क्रमशः 6, 8 और 12 दिनों में पूरा कर सकते हैं। तीनों मिलकर काम कितने दिनों में पूरा करेंगे?",
+    "q_en": "A, B and C can complete a work in 6, 8 and 12 days respectively. In how many days will all three together complete the work?",
     "o_hi": [
-      "4 दिन",
-      "5 दिन",
-      "6 दिन",
-      "8 दिन"
+      "8/3 days",
+      "3 days",
+      "4 days",
+      "6 days"
     ],
     "o_en": [
+      "8/3 days",
+      "3 days",
       "4 days",
-      "5 days",
-      "6 days",
-      "8 days"
+      "6 days"
     ],
     "a": 0,
-    "e_hi": "कुल दर = 1/10 + 1/12 + 1/15 = (6+5+4)/60 = 15/60 = 1/4। समय = 4 दिन।",
-    "e_en": "Total rate = 1/10 + 1/12 + 1/15 = (6+5+4)/60 = 15/60 = 1/4. Time = 4 days."
+    "e_hi": "एक दिन का काम = 1/6+1/8+1/12 = 4/24+3/24+2/24 = 9/24 = 3/8। समय = 8/3 दिन।",
+    "e_en": "Work per day = 1/6+1/8+1/12 = 4/24+3/24+2/24 = 9/24 = 3/8. Time = 8/3 days."
   },
   {
     "id": "rp-mat-g202407",
@@ -53907,23 +53907,23 @@
     "s": "maths",
     "t": "time_work",
     "d": 2,
-    "q_hi": "राम की कार्यक्षमता श्याम से दोगुनी है। यदि वे दोनों मिलकर एक कार्य को 14 दिनों में पूरा करते हैं, तो राम अकेले उस कार्य को कितने दिनों में पूरा करेगा?",
-    "q_en": "Ram's efficiency is twice that of Shyam. If they both together complete a work in 14 days, in how many days will Ram alone complete the work?",
+    "q_hi": "A की कार्यक्षमता B से तीन गुनी है। यदि दोनों मिलकर काम 12 दिनों में पूरा करते हैं, तो A अकेले काम कितने दिनों में पूरा करेगा?",
+    "q_en": "A's efficiency is three times that of B. If they both together complete a work in 12 days, in how many days will A alone complete the work?",
     "o_hi": [
-      "21 दिन",
-      "28 दिन",
-      "35 दिन",
-      "42 दिन"
+      "16 days",
+      "18 days",
+      "24 days",
+      "36 days"
     ],
     "o_en": [
-      "21 days",
-      "28 days",
-      "35 days",
-      "42 days"
+      "16 days",
+      "18 days",
+      "24 days",
+      "36 days"
     ],
     "a": 0,
-    "e_hi": "कार्यक्षमता का अनुपात 2:1 है। कुल कार्य = (2+1)*14 = 42 इकाइयां। राम का समय = 42/2 = 21 दिन।",
-    "e_en": "Efficiency ratio is 2:1. Total work = (2+1)*14 = 42 units. Ram's time = 42/2 = 21 days."
+    "e_hi": "A:B दक्षता = 3:1, इसलिए समय अनुपात उल्टा = 1:3। मिलकर 12 दिन = दर 1/12। A की दर = (3/4)×(1/12) = 1/16। A अकेले = 16 दिन।",
+    "e_en": "A:B efficiency = 3:1, so time ratio (inverse) = 1:3. Combined rate = 1/12. A's rate = (3/4)×(1/12) = 1/16. A alone = 16 days."
   },
   {
     "id": "rp-mat-g202443",
@@ -54873,23 +54873,23 @@
     "s": "maths",
     "t": "time_work",
     "d": 2,
-    "q_hi": "एक पाइप एक टंकी को 20 घंटों में भर सकता है, जबकि दूसरा पाइप इसे 30 घंटों में खाली कर सकता है। यदि दोनों पाइप एक साथ खोल दिए जाएं, तो टंकी को भरने में कितना समय लगेगा?",
-    "q_en": "A pipe can fill a tank in 20 hours, while another pipe can empty it in 30 hours. If both pipes are opened simultaneously, how much time will it take to fill the tank?",
+    "q_hi": "एक पाइप किसी टंकी को 15 घंटों में भर सकता है, जबकि दूसरा पाइप उसे 25 घंटों में खाली कर सकता है। यदि दोनों पाइप एक साथ खोले जाएँ, तो टंकी भरने में कितना समय लगेगा?",
+    "q_en": "One pipe can fill a tank in 15 hours, while another pipe can empty it in 25 hours. If both pipes are opened simultaneously, how long will it take to fill the tank?",
     "o_hi": [
-      "40 घंटे",
-      "50 घंटे",
-      "60 घंटे",
-      "70 घंटे"
+      "37.5 hours",
+      "40 hours",
+      "35 hours",
+      "30 hours"
     ],
     "o_en": [
+      "37.5 hours",
       "40 hours",
-      "50 hours",
-      "60 hours",
-      "70 hours"
+      "35 hours",
+      "30 hours"
     ],
-    "a": 2,
-    "e_hi": "कुल कार्य क्षमता 1/20 - 1/30 = 1/60 है। टंकी 60 घंटों में भरेगी।",
-    "e_en": "The net efficiency is 1/20 - 1/30 = 1/60. The tank will be filled in 60 hours."
+    "a": 0,
+    "e_hi": "शुद्ध दर = 1/15 - 1/25 = 5/75-3/75 = 2/75। समय = 75/2 = 37.5 घंटे।",
+    "e_en": "Net rate = 1/15 - 1/25 = 5/75-3/75 = 2/75. Time = 75/2 = 37.5 hours."
   },
   {
     "id": "rp-mat-g202488",
@@ -55563,23 +55563,23 @@
     "s": "maths",
     "t": "ratio_proportion",
     "d": 2,
-    "q_hi": "दो संख्याओं का योग 40 है और उनका अंतर 4 है। संख्याओं का अनुपात क्या है?",
-    "q_en": "The sum of two numbers is 40 and their difference is 4. What is the ratio of the numbers?",
+    "q_hi": "दो संख्याओं का योग 50 है और उनका अंतर 10 है। उन संख्याओं का अनुपात क्या है?",
+    "q_en": "The sum of two numbers is 50 and their difference is 10. What is the ratio of those numbers?",
     "o_hi": [
-      "11:9",
-      "9:11",
+      "3:2",
+      "2:3",
       "5:4",
       "4:5"
     ],
     "o_en": [
-      "11:9",
-      "9:11",
+      "3:2",
+      "2:3",
       "5:4",
       "4:5"
     ],
     "a": 0,
-    "e_hi": "बड़ी संख्या (40+4)/2 = 22, छोटी संख्या (40-4)/2 = 18। 22:18 = 11:9।",
-    "e_en": "Larger number is (40+4)/2 = 22, smaller is (40-4)/2 = 18. Ratio 22:18 = 11:9."
+    "e_hi": "संख्याएँ = (50+10)/2=30 और (50-10)/2=20। अनुपात = 30:20 = 3:2।",
+    "e_en": "Numbers = (50+10)/2=30 and (50-10)/2=20. Ratio = 30:20 = 3:2."
   },
   {
     "id": "rp-mat-g202522",
@@ -56712,24 +56712,24 @@
     "id": "rp-mat-g202579",
     "s": "maths",
     "t": "ratio_proportion",
-    "d": 1,
-    "q_hi": "दो संख्याओं का योग 40 है और उनका अंतर 4 है। संख्याओं का अनुपात ज्ञात कीजिए।",
-    "q_en": "The sum of two numbers is 40 and their difference is 4. Find the ratio of the numbers.",
+    "d": 2,
+    "q_hi": "दो संख्याओं का योग 60 है और उनका अंतर 20 है। उन संख्याओं का अनुपात क्या है?",
+    "q_en": "The sum of two numbers is 60 and their difference is 20. What is the ratio of those numbers?",
     "o_hi": [
-      "11:9",
-      "9:11",
-      "10:9",
+      "2:1",
+      "1:2",
+      "3:2",
       "5:4"
     ],
     "o_en": [
-      "11:9",
-      "9:11",
-      "10:9",
+      "2:1",
+      "1:2",
+      "3:2",
       "5:4"
     ],
     "a": 0,
-    "e_hi": "संख्याएं (40+4)/2 = 22 और (40-4)/2 = 18 हैं। अनुपात 22:18 = 11:9।",
-    "e_en": "Numbers are (40+4)/2 = 22 and (40-4)/2 = 18. Ratio 22:18 simplifies to 11:9."
+    "e_hi": "संख्याएँ = (60+20)/2=40 और (60-20)/2=20। अनुपात = 40:20 = 2:1।",
+    "e_en": "Numbers = (60+20)/2=40 and (60-20)/2=20. Ratio = 40:20 = 2:1."
   },
   {
     "id": "rp-mat-g202580",
@@ -60439,23 +60439,23 @@
     "s": "maths",
     "t": "mensuration",
     "d": 1,
-    "q_hi": "यदि एक वर्ग की भुजा ७ सेमी है, तो उसका परिमाप क्या होगा?",
-    "q_en": "If the side of a square is 7 cm, what will be its perimeter?",
+    "q_hi": "एक वर्ग का क्षेत्रफल 49 sq cm है। इसका परिमाप क्या है?",
+    "q_en": "The area of a square is 49 sq cm. What is its perimeter?",
     "o_hi": [
-      "१४ सेमी",
-      "२१ सेमी",
-      "२८ सेमी",
-      "४९ सेमी"
-    ],
-    "o_en": [
+      "28 cm",
       "14 cm",
       "21 cm",
-      "28 cm",
       "49 cm"
     ],
-    "a": 2,
-    "e_hi": "वर्ग का परिमाप ४ गुना भुजा होता है। अतः ४ गुना ७ बराबर २८ सेमी।",
-    "e_en": "The perimeter of a square is 4 times the side. Thus, 4 times 7 equals 28 cm."
+    "o_en": [
+      "28 cm",
+      "14 cm",
+      "21 cm",
+      "49 cm"
+    ],
+    "a": 0,
+    "e_hi": "भुजा = √49 = 7 cm। परिमाप = 4×7 = 28 cm।",
+    "e_en": "Side = √49 = 7 cm. Perimeter = 4×7 = 28 cm."
   },
   {
     "id": "rp-mat-g202747",
@@ -60852,24 +60852,24 @@
     "id": "rp-mat-g202764",
     "s": "maths",
     "t": "mensuration",
-    "d": 1,
-    "q_hi": "एक बेलन के आधार की त्रिज्या 7 सेमी और ऊँचाई 10 सेमी है। उसका वक्र पृष्ठीय क्षेत्रफल क्या होगा?",
-    "q_en": "A cylinder has a base radius of 7 cm and height 10 cm. What is its curved surface area?",
+    "d": 2,
+    "q_hi": "एक बेलन का आधार त्रिज्या 14 cm और ऊँचाई 5 cm है। इसका पार्श्व सतह क्षेत्रफल (curved surface area) क्या होगा? (π=22/7)",
+    "q_en": "A cylinder has a base radius of 14 cm and height 5 cm. What will be its curved surface area? (π=22/7)",
     "o_hi": [
-      "440 वर्ग सेमी",
-      "220 वर्ग सेमी",
-      "880 वर्ग सेमी",
-      "154 वर्ग सेमी"
+      "440 sq cm",
+      "220 sq cm",
+      "880 sq cm",
+      "1540 sq cm"
     ],
     "o_en": [
       "440 sq cm",
       "220 sq cm",
       "880 sq cm",
-      "154 sq cm"
+      "1540 sq cm"
     ],
     "a": 0,
-    "e_hi": "वक्र पृष्ठीय क्षेत्रफल का सूत्र 2πrh है। (2 * 22/7 * 7 * 10) = 440।",
-    "e_en": "The formula for curved surface area is 2πrh. (2 * 22/7 * 7 * 10) = 440."
+    "e_hi": "पार्श्व सतह = 2πrh = 2×(22/7)×14×5 = 440 sq cm।",
+    "e_en": "Curved surface area = 2πrh = 2×(22/7)×14×5 = 440 sq cm."
   },
   {
     "id": "rp-mat-g202765",
@@ -61221,23 +61221,23 @@
     "s": "maths",
     "t": "mensuration",
     "d": 1,
-    "q_hi": "एक वृत्त की त्रिज्या 7 सेंटीमीटर है। वृत्त की परिधि क्या होगी? (पाई बराबर 22/7 लें)",
-    "q_en": "The radius of a circle is 7 centimeters. What will be the circumference of the circle? (Take pi = 22/7)",
+    "q_hi": "एक वृत्त का व्यास 14 cm है। इसकी परिधि क्या होगी? (π=22/7 मानें)",
+    "q_en": "The diameter of a circle is 14 cm. What will be its circumference? (Take π=22/7)",
     "o_hi": [
-      "44 सेंटीमीटर",
-      "22 सेंटीमीटर",
-      "88 सेंटीमीटर",
-      "154 सेंटीमीटर"
+      "44 cm",
+      "22 cm",
+      "88 cm",
+      "154 cm"
     ],
     "o_en": [
-      "44 centimeters",
-      "22 centimeters",
-      "88 centimeters",
-      "154 centimeters"
+      "44 cm",
+      "22 cm",
+      "88 cm",
+      "154 cm"
     ],
     "a": 0,
-    "e_hi": "वृत्त की परिधि का सूत्र 2 गुणा पाई गुणा त्रिज्या है। 2 गुणा (22/7) गुणा 7 बराबर 44 सेंटीमीटर।",
-    "e_en": "The formula for circumference is 2 multiplied by pi multiplied by radius. 2 times (22/7) times 7 equals 44 centimeters."
+    "e_hi": "परिधि = π × व्यास = (22/7) × 14 = 44 cm।",
+    "e_en": "Circumference = π × diameter = (22/7) × 14 = 44 cm."
   },
   {
     "id": "rp-mat-g202782",
@@ -63083,24 +63083,24 @@
     "id": "rp-mat-g202862",
     "s": "maths",
     "t": "average",
-    "d": 1,
-    "q_hi": "पाँच संख्याओं का औसत 20 है। यदि प्रत्येक संख्या में 5 जोड़ दिया जाए, तो नया औसत क्या होगा?",
-    "q_en": "The average of five numbers is 20. If 5 is added to each number, what will be the new average?",
+    "d": 2,
+    "q_hi": "6 संख्याओं का औसत 15 है। यदि प्रत्येक संख्या को 3 से गुणा किया जाए, तो नया औसत क्या होगा?",
+    "q_en": "The average of 6 numbers is 15. If each number is multiplied by 3, what will be the new average?",
     "o_hi": [
-      "20",
-      "25",
+      "45",
       "30",
-      "100"
+      "18",
+      "60"
     ],
     "o_en": [
-      "20",
-      "25",
+      "45",
       "30",
-      "100"
+      "18",
+      "60"
     ],
-    "a": 1,
-    "e_hi": "जब प्रत्येक संख्या में समान मान जोड़ा जाता है, तो औसत में भी वही मान जुड़ जाता है। अतः 20 + 5 = 25।",
-    "e_en": "When a constant value is added to each number, the average increases by that same value. Therefore, 20 + 5 = 25."
+    "a": 0,
+    "e_hi": "नया औसत = पुराना औसत × 3 = 15×3 = 45।",
+    "e_en": "New average = old average × 3 = 15×3 = 45."
   },
   {
     "id": "rp-mat-g202863",
@@ -63290,24 +63290,24 @@
     "id": "rp-mat-g202871",
     "s": "maths",
     "t": "average",
-    "d": 1,
-    "q_hi": "यदि 10 संख्याओं का औसत 20 है और प्रत्येक संख्या में 5 जोड़ दिया जाए, तो नया औसत क्या होगा?",
-    "q_en": "If the average of 10 numbers is 20 and 5 is added to each number, what will be the new average?",
+    "d": 2,
+    "q_hi": "8 संख्याओं का औसत 12 है। यदि प्रत्येक संख्या से 2 घटाया जाए, तो नया औसत क्या होगा?",
+    "q_en": "The average of 8 numbers is 12. If 2 is subtracted from each number, what will be the new average?",
     "o_hi": [
-      "20",
-      "25",
-      "30",
-      "15"
+      "10",
+      "14",
+      "6",
+      "16"
     ],
     "o_en": [
-      "20",
-      "25",
-      "30",
-      "15"
+      "10",
+      "14",
+      "6",
+      "16"
     ],
-    "a": 1,
-    "e_hi": "जब प्रत्येक संख्या में एक समान मान जोड़ा जाता है, तो औसत में भी वही मान जुड़ जाता है। अतः नया औसत 20 + 5 = 25 होगा।",
-    "e_en": "When a constant value is added to each number, the average also increases by the same value. Thus, the new average is 20 + 5 = 25."
+    "a": 0,
+    "e_hi": "नया औसत = पुराना औसत - 2 = 12-2 = 10।",
+    "e_en": "New average = old average - 2 = 12-2 = 10."
   },
   {
     "id": "rp-mat-g202872",
@@ -63544,23 +63544,23 @@
     "s": "maths",
     "t": "average",
     "d": 2,
-    "q_hi": "यदि 7 क्रमागत सम संख्याओं का औसत 20 है, तो सबसे बड़ी संख्या कौन सी है?",
-    "q_en": "If the average of 7 consecutive even numbers is 20, what is the largest number?",
+    "q_hi": "यदि 9 क्रमागत सम संख्याओं का औसत 30 है, तो सबसे बड़ी संख्या क्या है?",
+    "q_en": "If the average of 9 consecutive even numbers is 30, what is the largest number?",
     "o_hi": [
-      "24",
-      "26",
-      "28",
-      "22"
+      "38",
+      "36",
+      "40",
+      "34"
     ],
     "o_en": [
-      "24",
-      "26",
-      "28",
-      "22"
+      "38",
+      "36",
+      "40",
+      "34"
     ],
-    "a": 1,
-    "e_hi": "क्रमागत संख्याओं में औसत मध्य पद होता है। 20 मध्य संख्या है, तो 3 बड़ी संख्याएं 22, 24, 26 होंगी।",
-    "e_en": "In consecutive numbers, the average is the middle term. Since 20 is the middle, the next three even numbers are 22, 24, and 26."
+    "a": 0,
+    "e_hi": "मध्य (5वाँ) पद = औसत = 30। सबसे बड़ी संख्या = 30+(4×2) = 38।",
+    "e_en": "The middle (5th) term = average = 30. Largest number = 30+(4×2) = 38."
   },
   {
     "id": "rp-mat-g202883",
@@ -63750,24 +63750,24 @@
     "id": "rp-mat-g202891",
     "s": "maths",
     "t": "average",
-    "d": 1,
-    "q_hi": "तीन संख्याओं का औसत 20 है। यदि प्रत्येक संख्या में 5 जोड़ दिया जाए, तो नया औसत क्या होगा?",
-    "q_en": "The average of three numbers is 20. If 5 is added to each number, what will be the new average?",
+    "d": 3,
+    "q_hi": "4 संख्याओं का औसत 18 है। यदि इनमें एक नई संख्या 28 जोड़ दी जाए, तो नया औसत क्या होगा?",
+    "q_en": "The average of 4 numbers is 18. If a new number 28 is added to them, what will be the new average?",
     "o_hi": [
       "20",
+      "18",
       "22",
-      "25",
-      "30"
+      "19"
     ],
     "o_en": [
       "20",
+      "18",
       "22",
-      "25",
-      "30"
+      "19"
     ],
-    "a": 2,
-    "e_hi": "जब प्रत्येक संख्या में समान राशि जोड़ी जाती है, तो औसत में भी वही राशि जुड़ जाती है।",
-    "e_en": "When the same constant is added to each number, the average also increases by that same constant."
+    "a": 0,
+    "e_hi": "कुल योग = 4×18=72। नया योग = 72+28=100। नया औसत = 100/5 = 20।",
+    "e_en": "Total sum = 4×18=72. New sum = 72+28=100. New average = 100/5 = 20."
   },
   {
     "id": "rp-mat-g202892",
@@ -64533,23 +64533,23 @@
     "s": "maths",
     "t": "average",
     "d": 1,
-    "q_hi": "प्रथम 10 सम संख्याओं का औसत क्या होगा?",
-    "q_en": "What will be the average of the first 10 even numbers?",
+    "q_hi": "पहली 10 विषम संख्याओं का औसत क्या है?",
+    "q_en": "What is the average of the first 10 odd numbers?",
     "o_hi": [
       "10",
+      "9",
       "11",
-      "12",
-      "9"
+      "12"
     ],
     "o_en": [
       "10",
+      "9",
       "11",
-      "12",
-      "9"
+      "12"
     ],
-    "a": 1,
-    "e_hi": "प्रथम 'n' सम संख्याओं का औसत n+1 होता है। यहाँ n=10 है, इसलिए औसत 10+1 = 11 होगा।",
-    "e_en": "The average of the first 'n' even numbers is n+1. Here n=10, so the average is 10+1 = 11."
+    "a": 0,
+    "e_hi": "पहली n विषम संख्याओं का औसत = n होता है। अतः पहली 10 विषम संख्याओं का औसत = 10।",
+    "e_en": "The average of the first n odd numbers equals n. So the average of the first 10 odd numbers = 10."
   },
   {
     "id": "rp-mat-g202927",
@@ -64785,24 +64785,24 @@
     "id": "rp-mat-g202937",
     "s": "maths",
     "t": "average",
-    "d": 1,
-    "q_hi": "यदि 7 संख्याओं का औसत 20 है और यदि प्रत्येक संख्या में 5 जोड़ दिया जाए, तो नया औसत क्या होगा?",
-    "q_en": "If the average of 7 numbers is 20 and 5 is added to each number, what will be the new average?",
+    "d": 2,
+    "q_hi": "9 संख्याओं का औसत 14 है। यदि प्रत्येक संख्या को आधा कर दिया जाए, तो नया औसत क्या होगा?",
+    "q_en": "The average of 9 numbers is 14. If each number is halved, what will be the new average?",
     "o_hi": [
-      "20",
-      "25",
-      "30",
-      "35"
+      "7",
+      "14",
+      "28",
+      "9"
     ],
     "o_en": [
-      "20",
-      "25",
-      "30",
-      "35"
+      "7",
+      "14",
+      "28",
+      "9"
     ],
-    "a": 1,
-    "e_hi": "जब प्रत्येक संख्या में एक निश्चित मान जोड़ा जाता है, तो औसत में भी वही मान जुड़ जाता है। इसलिए, 20 + 5 = 25।",
-    "e_en": "When a constant value is added to each number, the average also increases by that same value. Therefore, 20 + 5 = 25."
+    "a": 0,
+    "e_hi": "नया औसत = पुराना औसत/2 = 14/2 = 7।",
+    "e_en": "New average = old average/2 = 14/2 = 7."
   },
   {
     "id": "rp-mat-g202938",
@@ -64947,23 +64947,23 @@
     "s": "maths",
     "t": "average",
     "d": 3,
-    "q_hi": "प्रथम 10 अभाज्य संख्याओं का औसत क्या होगा?",
-    "q_en": "What will be the average of the first 10 prime numbers?",
+    "q_hi": "पहली 10 भाज्य (composite) संख्याओं (4,6,8,9,10,12,14,15,16,18) का औसत क्या है?",
+    "q_en": "What is the average of the first 10 composite numbers (4,6,8,9,10,12,14,15,16,18)?",
     "o_hi": [
-      "12.5",
-      "12.9",
-      "13.2",
-      "13.5"
+      "11.2",
+      "11.5",
+      "12",
+      "10.8"
     ],
     "o_en": [
-      "12.5",
-      "12.9",
-      "13.2",
-      "13.5"
+      "11.2",
+      "11.5",
+      "12",
+      "10.8"
     ],
-    "a": 1,
-    "e_hi": "प्रथम 10 अभाज्य संख्याएं 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 हैं। इनका योग 129 है। औसत 129/10 = 12.9 है।",
-    "e_en": "The first 10 prime numbers are 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. Their sum is 129. The average is 129/10 = 12.9."
+    "a": 0,
+    "e_hi": "योग = 4+6+8+9+10+12+14+15+16+18 = 112। औसत = 112/10 = 11.2।",
+    "e_en": "Sum = 4+6+8+9+10+12+14+15+16+18 = 112. Average = 112/10 = 11.2."
   },
   {
     "id": "rp-mat-g202945",
@@ -65246,23 +65246,23 @@
     "s": "maths",
     "t": "average",
     "d": 2,
-    "q_hi": "5 संख्याओं का औसत 18 है। यदि एक संख्या हटा दी जाए, तो औसत 16 हो जाता है। हटाई गई संख्या क्या है?",
-    "q_en": "The average of 5 numbers is 18. If one number is removed, the average becomes 16. What is the removed number?",
+    "q_hi": "6 संख्याओं का औसत 20 है। यदि एक संख्या हटा दी जाए, तो औसत 18 हो जाता है। हटाई गई संख्या क्या है?",
+    "q_en": "The average of 6 numbers is 20. If one number is removed, the average becomes 18. What is the removed number?",
     "o_hi": [
-      "24",
-      "26",
+      "30",
       "28",
-      "30"
+      "26",
+      "24"
     ],
     "o_en": [
-      "24",
-      "26",
+      "30",
       "28",
-      "30"
+      "26",
+      "24"
     ],
-    "a": 1,
-    "e_hi": "हटाई गई संख्या = (5 * 18) - (4 * 16) = 90 - 64 = 26।",
-    "e_en": "Removed number = (5 * 18) - (4 * 16) = 90 - 64 = 26."
+    "a": 0,
+    "e_hi": "कुल योग = 6×20=120। 5 संख्याओं का योग = 5×18=90। हटाई गई संख्या = 120-90 = 30।",
+    "e_en": "Total sum = 6×20=120. Sum of 5 numbers = 5×18=90. Removed number = 120-90 = 30."
   },
   {
     "id": "rp-mat-g202958",
@@ -65591,23 +65591,23 @@
     "s": "maths",
     "t": "average",
     "d": 2,
-    "q_hi": "एक कक्षा में 20 छात्रों का औसत वजन 45 किग्रा है। यदि शिक्षक का वजन भी शामिल कर लिया जाए, तो औसत 2 किग्रा बढ़ जाता है। शिक्षक का वजन ज्ञात करें।",
-    "q_en": "The average weight of 20 students in a class is 45 kg. If the teacher's weight is included, the average increases by 2 kg. Find the teacher's weight.",
+    "q_hi": "एक कक्षा के 25 विद्यार्थियों का औसत वजन 48 किग्रा है। यदि शिक्षक का वजन शामिल किया जाए, तो औसत 1 किग्रा बढ़ जाता है। शिक्षक का वजन क्या है?",
+    "q_en": "The average weight of 25 students in a class is 48 kg. If the teacher's weight is included, the average increases by 1 kg. What is the teacher's weight?",
     "o_hi": [
-      "85 किग्रा",
-      "87 किग्रा",
-      "89 किग्रा",
-      "91 किग्रा"
+      "74 kg",
+      "72 kg",
+      "76 kg",
+      "78 kg"
     ],
     "o_en": [
-      "85 kg",
-      "87 kg",
-      "89 kg",
-      "91 kg"
+      "74 kg",
+      "72 kg",
+      "76 kg",
+      "78 kg"
     ],
-    "a": 1,
-    "e_hi": "नया औसत 47 किग्रा है। शिक्षक का वजन = (21 × 47) - (20 × 45) = 987 - 900 = 87 किग्रा।",
-    "e_en": "The new average is 47 kg. Teacher's weight = (21 × 47) - (20 × 45) = 987 - 900 = 87 kg."
+    "a": 0,
+    "e_hi": "शिक्षक का वजन = नया औसत×26 - पुराना योग = 49×26 - 25×48 = 1274-1200 = 74 किग्रा।",
+    "e_en": "Teacher's weight = new average×26 - old sum = 49×26-25×48 = 1274-1200 = 74 kg."
   },
   {
     "id": "rp-mat-g202973",
@@ -65683,23 +65683,23 @@
     "s": "maths",
     "t": "average",
     "d": 3,
-    "q_hi": "तीन संख्याओं में से, पहली संख्या दूसरी की दोगुनी है और दूसरी संख्या तीसरी की तीन गुनी है। यदि तीनों का औसत 20 है, तो सबसे बड़ी संख्या कौन सी है?",
-    "q_en": "Among three numbers, the first is twice the second, and the second is three times the third. If their average is 20, what is the largest number?",
+    "q_hi": "तीन संख्याओं में से पहली दूसरी की दोगुनी है और दूसरी तीसरी की चार गुनी है। यदि उनका औसत 13 है, तो सबसे छोटी संख्या क्या है?",
+    "q_en": "Among three numbers, the first is twice the second, and the second is four times the third. If their average is 13, what is the smallest number?",
     "o_hi": [
-      "30",
-      "36",
-      "40",
-      "45"
+      "3",
+      "12",
+      "24",
+      "6"
     ],
     "o_en": [
-      "30",
-      "36",
-      "40",
-      "45"
+      "3",
+      "12",
+      "24",
+      "6"
     ],
-    "a": 1,
-    "e_hi": "मान लीजिए तीसरी संख्या x है, तो दूसरी 3x और पहली 6x होगी। औसत (6x+3x+x)/3 = 20, जिससे 10x = 60, x = 6। सबसे बड़ी संख्या 6x = 36 है।",
-    "e_en": "Let the third number be x, then the second is 3x and the first is 6x. The average (6x+3x+x)/3 = 20 leads to 10x = 60, x = 6. The largest number is 6x = 36."
+    "a": 0,
+    "e_hi": "मान लें तीसरी संख्या=x। दूसरी=4x, पहली=8x। योग=13x=13×3=39 => x=3। सबसे छोटी संख्या (तीसरी) = 3।",
+    "e_en": "Let the third number = x. Second = 4x, first = 8x. Sum = 13x = 13×3 = 39 => x = 3. Smallest number (third) = 3."
   },
   {
     "id": "rp-mat-g202978",
@@ -65913,23 +65913,23 @@
     "s": "maths",
     "t": "average",
     "d": 2,
-    "q_hi": "पाँच क्रमिक सम संख्याओं का औसत ४० है। सबसे बड़ी संख्या ज्ञात कीजिए।",
-    "q_en": "The average of five consecutive even numbers is 40. Find the largest number.",
+    "q_hi": "7 क्रमागत विषम संख्याओं का औसत 23 है। सबसे बड़ी संख्या ज्ञात करें।",
+    "q_en": "The average of 7 consecutive odd numbers is 23. Find the largest number.",
     "o_hi": [
-      "४२",
-      "४४",
-      "४६",
-      "४८"
+      "29",
+      "27",
+      "31",
+      "25"
     ],
     "o_en": [
-      "42",
-      "44",
-      "46",
-      "48"
+      "29",
+      "27",
+      "31",
+      "25"
     ],
-    "a": 1,
-    "e_hi": "यदि औसत ४० है, तो संख्याएँ ३६, ३८, ४०, ४२, ४४ हैं। सबसे बड़ी संख्या ४४ है।",
-    "e_en": "Since the average is 40, the numbers are 36, 38, 40, 42, 44. The largest number is 44."
+    "a": 0,
+    "e_hi": "7 क्रमागत विषम संख्याओं का मध्य (4वाँ) पद = औसत = 23। सबसे बड़ी संख्या = मध्य पद + 3×2 = 23+6 = 29।",
+    "e_en": "The middle (4th) term of 7 consecutive odd numbers = average = 23. Largest number = middle term + 3×2 = 23+6 = 29."
   },
   {
     "id": "rp-mat-g202988",
@@ -66050,47 +66050,47 @@
     "id": "rp-mat-g202993",
     "s": "maths",
     "t": "average",
-    "d": 2,
-    "q_hi": "आठ व्यक्तियों का औसत वजन 2 किलोग्राम बढ़ जाता है जब 60 किलोग्राम वजन वाले एक व्यक्ति को नए व्यक्ति से बदला जाता है। नए व्यक्ति का वजन क्या है?",
-    "q_en": "The average weight of eight people increases by 2 kg when a person weighing 60 kg is replaced by a new person. What is the weight of the new person?",
+    "d": 3,
+    "q_hi": "10 लोगों के समूह का औसत वजन 3 किग्रा बढ़ जाता है जब 65 किग्रा वजन वाले व्यक्ति के स्थान पर एक नया व्यक्ति आता है। नए व्यक्ति का वजन क्या है?",
+    "q_en": "The average weight of a group of 10 people increases by 3 kg when a person weighing 65 kg is replaced by a new person. What is the weight of the new person?",
     "o_hi": [
-      "62 किलोग्राम",
-      "72 किलोग्राम",
-      "76 किलोग्राम",
-      "80 किलोग्राम"
+      "95 kg",
+      "90 kg",
+      "85 kg",
+      "100 kg"
     ],
     "o_en": [
-      "62 kg",
-      "72 kg",
-      "76 kg",
-      "80 kg"
+      "95 kg",
+      "90 kg",
+      "85 kg",
+      "100 kg"
     ],
-    "a": 2,
-    "e_hi": "कुल वृद्धि 8 गुणा 2 = 16 किलोग्राम है। नए व्यक्ति का वजन = 60 + 16 = 76 किलोग्राम।",
-    "e_en": "Total increase is 8 times 2 = 16 kg. The weight of the new person = 60 + 16 = 76 kg."
+    "a": 0,
+    "e_hi": "कुल वृद्धि = 10×3 = 30 किग्रा। नए व्यक्ति का वजन = 65+30 = 95 किग्रा।",
+    "e_en": "Total increase = 10×3 = 30 kg. New person's weight = 65+30 = 95 kg."
   },
   {
     "id": "rp-mat-g202994",
     "s": "maths",
     "t": "average",
-    "d": 2,
-    "q_hi": "एक बल्लेबाज की 11 पारियों का एक निश्चित औसत है। 12वीं पारी में वह 90 रन बनाता है, जिससे उसका औसत 5 रन बढ़ जाता है। 12वीं पारी के बाद उसका औसत क्या है?",
-    "q_en": "A batsman has a certain average for 11 innings. In the 12th innings, he scores 90 runs, increasing his average by 5 runs. What is his average after the 12th innings?",
+    "d": 3,
+    "q_hi": "एक बल्लेबाज का 10 पारियों में एक निश्चित औसत है। 11वीं पारी में वह 100 रन बनाता है, जिससे उसका औसत 4 रन बढ़ जाता है। 11वीं पारी के बाद उसका औसत क्या है?",
+    "q_en": "A batsman has a certain average for 10 innings. In the 11th inning, he scores 100 runs, increasing his average by 4 runs. What is his average after the 11th inning?",
     "o_hi": [
-      "30",
-      "35",
-      "40",
-      "45"
+      "60",
+      "56",
+      "64",
+      "52"
     ],
     "o_en": [
-      "30",
-      "35",
-      "40",
-      "45"
+      "60",
+      "56",
+      "64",
+      "52"
     ],
-    "a": 1,
-    "e_hi": "माना 11 पारियों का औसत x है। 12x + 90 = 12(x + 5)। हल करने पर x = 30, अतः नया औसत 30 + 5 = 35 है।",
-    "e_en": "Let the average of 11 innings be x. 11x + 90 = 12(x + 5). Solving gives x = 30, so the new average is 30 + 5 = 35."
+    "a": 0,
+    "e_hi": "मान लें पुराना औसत x। 10x+100=11(x+4) => 10x+100=11x+44 => x=56। नया औसत = 56+4 = 60।",
+    "e_en": "Let the old average be x. 10x+100=11(x+4) => 10x+100=11x+44 => x=56. New average = 56+4 = 60."
   },
   {
     "id": "rp-mat-g202996",
@@ -66119,24 +66119,24 @@
     "id": "rp-mat-g202997",
     "s": "maths",
     "t": "average",
-    "d": 3,
-    "q_hi": "तीन संख्याओं में से पहली संख्या दूसरी की दोगुनी है और दूसरी संख्या तीसरी की तीन गुनी है। यदि तीनों का औसत 20 है, तो सबसे बड़ी संख्या क्या है?",
-    "q_en": "Among three numbers, the first is twice the second and the second is thrice the third. If their average is 20, what is the largest number?",
+    "d": 2,
+    "q_hi": "तीन संख्याओं में से पहली दूसरी की तीन गुनी है और दूसरी तीसरी की दोगुनी है। यदि उनका औसत 18 है, तो सबसे छोटी संख्या क्या है?",
+    "q_en": "Among three numbers, the first is three times the second, and the second is twice the third. If their average is 18, what is the smallest number?",
     "o_hi": [
       "6",
-      "18",
-      "30",
-      "36"
+      "12",
+      "36",
+      "9"
     ],
     "o_en": [
       "6",
-      "18",
-      "30",
-      "36"
+      "12",
+      "36",
+      "9"
     ],
-    "a": 3,
-    "e_hi": "संख्याओं का अनुपात 6:3:1 है। योग = 20 गुणा 3 = 60। 10 भाग = 60, 1 भाग = 6। सबसे बड़ी संख्या 6 गुणा 6 = 36।",
-    "e_en": "Ratio of numbers is 6:3:1. Sum = 20 times 3 = 60. 10 parts = 60, 1 part = 6. Largest number = 6 times 6 = 36."
+    "a": 0,
+    "e_hi": "मान लें तीसरी=x, दूसरी=2x, पहली=6x। योग=9x=54(18×3) => x=6। सबसे छोटी संख्या = 6।",
+    "e_en": "Let third=x, second=2x, first=6x. Sum=9x=54(18×3) => x=6. Smallest number = 6."
   },
   {
     "id": "rp-mat-g202998",
@@ -66396,23 +66396,23 @@
     "s": "maths",
     "t": "average",
     "d": 2,
-    "q_hi": "एक कक्षा में 20 छात्रों का औसत वजन 40 किलोग्राम है। यदि शिक्षक का वजन भी शामिल कर लिया जाए, तो औसत 42 किलोग्राम हो जाता है। शिक्षक का वजन कितना है?",
-    "q_en": "The average weight of 20 students in a class is 40 kg. If the teacher's weight is included, the average becomes 42 kg. What is the teacher's weight?",
+    "q_hi": "एक कक्षा के 30 विद्यार्थियों का औसत वजन 35 किग्रा है। यदि शिक्षक का वजन शामिल करने पर औसत 36 किग्रा हो जाता है, तो शिक्षक का वजन क्या है?",
+    "q_en": "The average weight of 30 students in a class is 35 kg. If including the teacher's weight makes the average 36 kg, what is the teacher's weight?",
     "o_hi": [
-      "80 किलोग्राम",
-      "82 किलोग्राम",
-      "84 किलोग्राम",
-      "86 किलोग्राम"
+      "66 kg",
+      "64 kg",
+      "68 kg",
+      "70 kg"
     ],
     "o_en": [
-      "80 kg",
-      "82 kg",
-      "84 kg",
-      "86 kg"
+      "66 kg",
+      "64 kg",
+      "68 kg",
+      "70 kg"
     ],
-    "a": 1,
-    "e_hi": "शिक्षक का वजन = (नया औसत गुना नई संख्या) - (पुराना औसत गुना पुरानी संख्या) = (42*21) - (40*20) = 882 - 800 = 82 किलोग्राम।",
-    "e_en": "Teacher's weight = (New average * New count) - (Old average * Old count) = (42*21) - (40*20) = 882 - 800 = 82 kg."
+    "a": 0,
+    "e_hi": "शिक्षक का वजन = (31×36)-(30×35) = 1116-1050 = 66 किग्रा।",
+    "e_en": "Teacher's weight = (31×36)-(30×35) = 1116-1050 = 66 kg."
   },
   {
     "id": "rp-mat-g203010",
@@ -66465,23 +66465,23 @@
     "s": "maths",
     "t": "average",
     "d": 2,
-    "q_hi": "पांच संख्याओं का औसत 18 है। यदि एक संख्या हटा दी जाए, तो औसत 16 हो जाता है। हटाई गई संख्या क्या है?",
-    "q_en": "The average of five numbers is 18. If one number is removed, the average becomes 16. What is the removed number?",
+    "q_hi": "7 संख्याओं का औसत 22 है। यदि एक संख्या हटा दी जाए, तो औसत 20 हो जाता है। हटाई गई संख्या क्या है?",
+    "q_en": "The average of 7 numbers is 22. If one number is removed, the average becomes 20. What is the removed number?",
     "o_hi": [
-      "20",
-      "22",
-      "26",
+      "34",
+      "32",
+      "30",
       "28"
     ],
     "o_en": [
-      "20",
-      "22",
-      "26",
+      "34",
+      "32",
+      "30",
       "28"
     ],
-    "a": 2,
-    "e_hi": "हटाई गई संख्या = (5 * 18) - (4 * 16) = 90 - 64 = 26।",
-    "e_en": "Removed number = (5 * 18) - (4 * 16) = 90 - 64 = 26."
+    "a": 0,
+    "e_hi": "कुल योग = 7×22=154। 6 संख्याओं का योग = 6×20=120। हटाई गई संख्या = 154-120 = 34।",
+    "e_en": "Total sum = 7×22=154. Sum of 6 numbers = 6×20=120. Removed number = 154-120 = 34."
   },
   {
     "id": "rp-mat-g203013",
@@ -66626,23 +66626,23 @@
     "s": "maths",
     "t": "average",
     "d": 1,
-    "q_hi": "दस संख्याओं का औसत 15 है। यदि प्रत्येक संख्या को 3 से गुणा किया जाए, तो नया औसत क्या होगा?",
-    "q_en": "The average of ten numbers is 15. If each number is multiplied by 3, what will be the new average?",
+    "q_hi": "10 संख्याओं का औसत 15 है। यदि प्रत्येक संख्या में 5 जोड़ दिया जाए, तो नया औसत क्या होगा?",
+    "q_en": "The average of 10 numbers is 15. If 5 is added to each number, what will be the new average?",
     "o_hi": [
+      "20",
       "15",
-      "30",
-      "45",
-      "60"
+      "25",
+      "30"
     ],
     "o_en": [
+      "20",
       "15",
-      "30",
-      "45",
-      "60"
+      "25",
+      "30"
     ],
-    "a": 2,
-    "e_hi": "यदि प्रत्येक संख्या को किसी संख्या से गुणा किया जाता है, तो औसत भी उसी संख्या से गुणा हो जाता है। 15 * 3 = 45।",
-    "e_en": "If each number is multiplied by a constant, the average is also multiplied by that constant. 15 * 3 = 45."
+    "a": 0,
+    "e_hi": "नया औसत = पुराना औसत + 5 = 15+5 = 20।",
+    "e_en": "New average = old average + 5 = 15+5 = 20."
   },
   {
     "id": "rp-mat-g203020",
@@ -67660,24 +67660,24 @@
     "id": "rp-mat-g203065",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 1,
-    "q_hi": "दो संख्याओं का म.स.प. (HCF) 12 है और उनका ल.स.प. (LCM) 72 है। यदि एक संख्या 24 है, तो दूसरी संख्या क्या है?",
-    "q_en": "The HCF of two numbers is 12 and their LCM is 72. If one number is 24, what is the other number?",
+    "d": 2,
+    "q_hi": "दो संख्याओं का HCF 8 है और LCM 96 है। यदि एक संख्या 32 है, तो दूसरी संख्या क्या है?",
+    "q_en": "The HCF of two numbers is 8 and their LCM is 96. If one number is 32, what is the other number?",
     "o_hi": [
-      "36",
-      "48",
       "24",
-      "144"
+      "48",
+      "16",
+      "64"
     ],
     "o_en": [
-      "36",
-      "48",
       "24",
-      "144"
+      "48",
+      "16",
+      "64"
     ],
     "a": 0,
-    "e_hi": "सूत्र का प्रयोग करें: पहली संख्या × दूसरी संख्या = म.स.प. × ल.स.प.। यहाँ 24 × x = 12 × 72, जिससे x = 36 प्राप्त होता है।",
-    "e_en": "Use the formula: First number × Second number = HCF × LCM. Here, 24 × x = 12 × 72, which gives x = 36."
+    "e_hi": "HCF × LCM = दोनों संख्याओं का गुणनफल। 8×96 = 32×x => x = 768/32 = 24।",
+    "e_en": "HCF × LCM = product of the two numbers. 8×96 = 32×x => x = 768/32 = 24."
   },
   {
     "id": "rp-mat-g203066",
@@ -68028,24 +68028,24 @@
     "id": "rp-mat-g203082",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 2,
-    "q_hi": "वह सबसे छोटी संख्या ज्ञात कीजिए जिसे 12, 15 और 20 से विभाजित करने पर प्रत्येक स्थिति में शेषफल 4 बचता है।",
-    "q_en": "Find the smallest number which when divided by 12, 15, and 20 leaves a remainder of 4 in each case.",
+    "d": 3,
+    "q_hi": "वह छोटी से छोटी संख्या क्या है जो 8, 10 और 15 से विभाजित होने पर हर बार 3 शेष छोड़ती है?",
+    "q_en": "What is the smallest number which when divided by 8, 10, and 15 leaves a remainder of 3 in each case?",
     "o_hi": [
-      "64",
-      "60",
-      "66",
-      "74"
+      "123",
+      "120",
+      "117",
+      "126"
     ],
     "o_en": [
-      "64",
-      "60",
-      "66",
-      "74"
+      "123",
+      "120",
+      "117",
+      "126"
     ],
     "a": 0,
-    "e_hi": "12, 15 और 20 का ल.स.प. 60 है। अभीष्ट संख्या = ल.स.प. + शेषफल = 60 + 4 = 64।",
-    "e_en": "The LCM of 12, 15, and 20 is 60. The required number = LCM + remainder = 60 + 4 = 64."
+    "e_hi": "LCM(8,10,15) = 120। अतः संख्या = 120+3 = 123।",
+    "e_en": "LCM(8,10,15) = 120. So the number = 120+3 = 123."
   },
   {
     "id": "rp-mat-g203083",
@@ -68235,24 +68235,24 @@
     "id": "rp-mat-g203091",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 1,
-    "q_hi": "दो संख्याओं का म.स.प. 11 है और ल.स.प. 693 है। यदि एक संख्या 77 है, तो दूसरी संख्या क्या होगी?",
-    "q_en": "The HCF of two numbers is 11 and their LCM is 693. If one number is 77, what is the other number?",
+    "d": 2,
+    "q_hi": "दो संख्याओं का HCF 9 है और LCM 360 है। यदि एक संख्या 45 है, तो दूसरी संख्या क्या है?",
+    "q_en": "The HCF of two numbers is 9 and the LCM is 360. If one number is 45, what is the other number?",
     "o_hi": [
-      "99",
-      "88",
-      "121",
-      "63"
+      "72",
+      "45",
+      "90",
+      "81"
     ],
     "o_en": [
-      "99",
-      "88",
-      "121",
-      "63"
+      "72",
+      "45",
+      "90",
+      "81"
     ],
     "a": 0,
-    "e_hi": "सूत्र: पहली संख्या × दूसरी संख्या = म.स.प. × ल.स.प.। अतः, (11 × 693) / 77 = 99।",
-    "e_en": "Formula: First number × Second number = HCF × LCM. Thus, (11 × 693) / 77 = 99."
+    "e_hi": "HCF × LCM = 9×360 = 3240 = 45×x => x = 3240/45 = 72।",
+    "e_en": "HCF × LCM = 9×360 = 3240 = 45×x => x = 3240/45 = 72."
   },
   {
     "id": "rp-mat-g203093",
@@ -68327,9 +68327,9 @@
     "id": "rp-mat-g203096",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 3,
-    "q_hi": "दो संख्याओं का योग 36 है और उनका म.स.प. 3 है। ऐसी संख्याओं के कितने जोड़े संभव हैं?",
-    "q_en": "The sum of two numbers is 36 and their HCF is 3. How many such pairs of numbers are possible?",
+    "d": 2,
+    "q_hi": "दो संख्याओं का योग 45 है और उनका HCF 9 है। ऐसी कितनी जोड़ियाँ संभव हैं?",
+    "q_en": "The sum of two numbers is 45 and their HCF is 9. How many pairs of such numbers are possible?",
     "o_hi": [
       "1",
       "2",
@@ -68342,9 +68342,9 @@
       "3",
       "4"
     ],
-    "a": 1,
-    "e_hi": "संख्याएं 3a और 3b हैं। a+b=12। सह-अभाज्य जोड़े (1,11) और (5,7) हैं।",
-    "e_en": "Numbers are 3a and 3b. a+b=12. Co-prime pairs (a,b) are (1,11) and (5,7)."
+    "a": 0,
+    "e_hi": "45/9=5। 5 को दो सह-अभाज्य संख्याओं के योग में लिखने का एकमात्र तरीका: (1,4), यानी 1 जोड़ी।",
+    "e_en": "45/9=5. The only way to write 5 as a sum of two co-prime numbers is (1,4), i.e., 1 pair."
   },
   {
     "id": "rp-mat-g203097",
@@ -68397,23 +68397,23 @@
     "s": "maths",
     "t": "hcf_lcm",
     "d": 2,
-    "q_hi": "दो संख्याओं का ल.स.प. 120 है। निम्नलिखित में से कौन सी संख्या उनका म.स.प. नहीं हो सकती?",
-    "q_en": "The LCM of two numbers is 120. Which of the following cannot be their HCF?",
+    "q_hi": "दो संख्याओं का LCM 150 है। निम्नलिखित में से कौन सी संख्या उनका HCF नहीं हो सकती?",
+    "q_en": "The LCM of two numbers is 150. Which of the following cannot be their HCF?",
     "o_hi": [
-      "8",
-      "12",
-      "24",
-      "35"
+      "40",
+      "15",
+      "25",
+      "30"
     ],
     "o_en": [
-      "8",
-      "12",
-      "24",
-      "35"
+      "40",
+      "15",
+      "25",
+      "30"
     ],
-    "a": 3,
-    "e_hi": "म.स.प. हमेशा ल.स.प. को पूरी तरह विभाजित करता है। 35, 120 को विभाजित नहीं करता है।",
-    "e_en": "The HCF must always divide the LCM perfectly. 35 does not divide 120."
+    "a": 0,
+    "e_hi": "HCF हमेशा LCM का भाजक होना चाहिए। 150÷40 पूर्णांक नहीं है, अतः 40 कभी HCF नहीं हो सकता।",
+    "e_en": "The HCF must always be a factor of the LCM. 150÷40 is not an integer, so 40 can never be the HCF."
   },
   {
     "id": "rp-mat-g203100",
@@ -68811,23 +68811,23 @@
     "s": "maths",
     "t": "hcf_lcm",
     "d": 2,
-    "q_hi": "तीन घंटी 10, 15 और 20 मिनट के अंतराल पर बजती हैं। यदि वे सुबह 8:00 बजे एक साथ बजती हैं, तो अगली बार वे कब एक साथ बजेंगी?",
-    "q_en": "Three bells ring at intervals of 10, 15, and 20 minutes. If they ring together at 8:00 AM, when will they ring together next?",
+    "q_hi": "तीन घंटियाँ क्रमशः 6, 8 और 12 मिनट के अंतराल पर बजती हैं। यदि वे सुबह 9 बजे एक साथ बजती हैं, तो वे अगली बार एक साथ कब बजेंगी?",
+    "q_en": "Three bells ring at intervals of 6, 8, and 12 minutes respectively. If they ring together at 9:00 AM, when will they ring together next?",
     "o_hi": [
-      "8:30 पूर्वाह्न",
-      "9:00 पूर्वाह्न",
-      "9:30 पूर्वाह्न",
-      "10:00 पूर्वाह्न"
+      "9:24 AM",
+      "9:30 AM",
+      "9:20 AM",
+      "9:40 AM"
     ],
     "o_en": [
-      "8:30 AM",
-      "9:00 AM",
+      "9:24 AM",
       "9:30 AM",
-      "10:00 AM"
+      "9:20 AM",
+      "9:40 AM"
     ],
-    "a": 1,
-    "e_hi": "10, 15 और 20 का ल.स.प. 60 मिनट है। इसलिए, वे 60 मिनट (1 घंटा) बाद दोबारा बजेंगी।",
-    "e_en": "The LCM of 10, 15, and 20 is 60 minutes. Therefore, they will ring together again after 60 minutes (1 hour)."
+    "a": 0,
+    "e_hi": "LCM(6,8,12) = 24 मिनट। अतः वे 9:24 AM पर फिर एक साथ बजेंगी।",
+    "e_en": "LCM(6,8,12) = 24 minutes. So they will ring together again at 9:24 AM."
   },
   {
     "id": "rp-mat-g203118",
@@ -68902,24 +68902,24 @@
     "id": "rp-mat-g203121",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 3,
-    "q_hi": "दो संख्याओं का म.स.प. 8 है। निम्नलिखित में से कौन सी संख्या उनका ल.स.प. नहीं हो सकती?",
-    "q_en": "The HCF of two numbers is 8. Which of the following cannot be their LCM?",
+    "d": 2,
+    "q_hi": "दो संख्याओं का HCF 15 है। निम्नलिखित में से कौन सी संख्या उनका LCM कभी नहीं हो सकती?",
+    "q_en": "The HCF of two numbers is 15. Which of the following can never be their LCM?",
     "o_hi": [
-      "24",
-      "48",
-      "56",
-      "60"
+      "40",
+      "45",
+      "60",
+      "75"
     ],
     "o_en": [
-      "24",
-      "48",
-      "56",
-      "60"
+      "40",
+      "45",
+      "60",
+      "75"
     ],
-    "a": 3,
-    "e_hi": "ल.स.प. हमेशा म.स.प. से पूर्णतः विभाजित होना चाहिए। 60, 8 से विभाजित नहीं होता है।",
-    "e_en": "The LCM must always be perfectly divisible by the HCF. 60 is not divisible by 8."
+    "a": 0,
+    "e_hi": "LCM हमेशा HCF का गुणज होना चाहिए। 40÷15 पूर्णांक नहीं, अतः 40 कभी LCM नहीं हो सकता।",
+    "e_en": "The LCM must always be a multiple of the HCF. 40÷15 is not an integer, so 40 can never be the LCM."
   },
   {
     "id": "rp-mat-g203122",
@@ -69408,24 +69408,24 @@
     "id": "rp-mat-g203144",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 1,
-    "q_hi": "दो संख्याओं का म.स.प. (HCF) 12 है और उनका ल.स.प. (LCM) 72 है। यदि पहली संख्या 24 है, तो दूसरी संख्या ज्ञात कीजिए।",
-    "q_en": "The HCF of two numbers is 12 and their LCM is 72. If one number is 24, find the other number.",
+    "d": 2,
+    "q_hi": "दो संख्याओं का HCF 15 है और LCM 90 है। यदि एक संख्या 30 है, तो दूसरी संख्या क्या है?",
+    "q_en": "The HCF of two numbers is 15 and their LCM is 90. If one number is 30, what is the other number?",
     "o_hi": [
-      "36",
-      "48",
-      "24",
-      "60"
+      "45",
+      "60",
+      "30",
+      "15"
     ],
     "o_en": [
-      "36",
-      "48",
-      "24",
-      "60"
+      "45",
+      "60",
+      "30",
+      "15"
     ],
     "a": 0,
-    "e_hi": "सूत्र का प्रयोग करें: पहली संख्या × दूसरी संख्या = म.स.प. × ल.स.प.। अतः 24 × x = 12 × 72, जिससे x = 36 प्राप्त होता है।",
-    "e_en": "Use the formula: First number × Second number = HCF × LCM. Thus, 24 × x = 12 × 72, which gives x = 36."
+    "e_hi": "HCF × LCM = 15×90 = 1350 = 30×x => x = 1350/30 = 45।",
+    "e_en": "HCF × LCM = 15×90 = 1350 = 30×x => x = 1350/30 = 45."
   },
   {
     "id": "rp-mat-g203145",
@@ -69524,23 +69524,23 @@
     "s": "maths",
     "t": "hcf_lcm",
     "d": 2,
-    "q_hi": "वह न्यूनतम संख्या क्या है जिसे 12, 15 और 20 से विभाजित करने पर प्रत्येक स्थिति में 4 शेष बचता है?",
-    "q_en": "What is the minimum number which when divided by 12, 15, and 20 leaves a remainder of 4 in each case?",
+    "q_hi": "वह छोटी से छोटी संख्या क्या है जो 6, 9 और 12 से विभाजित होने पर हर बार 2 शेष छोड़ती है?",
+    "q_en": "What is the smallest number which when divided by 6, 9, and 12 leaves a remainder of 2 in each case?",
     "o_hi": [
-      "64",
-      "60",
-      "56",
-      "74"
+      "38",
+      "36",
+      "34",
+      "40"
     ],
     "o_en": [
-      "64",
-      "60",
-      "56",
-      "74"
+      "38",
+      "36",
+      "34",
+      "40"
     ],
     "a": 0,
-    "e_hi": "12, 15 और 20 का ल.स.प. 60 है। अभीष्ट संख्या = ल.स.प. + शेषफल = 60 + 4 = 64।",
-    "e_en": "The LCM of 12, 15, and 20 is 60. The required number = LCM + remainder = 60 + 4 = 64."
+    "e_hi": "LCM(6,9,12) = 36। अतः संख्या = 36+2 = 38।",
+    "e_en": "LCM(6,9,12) = 36. So the number = 36+2 = 38."
   },
   {
     "id": "rp-mat-g203150",
@@ -69639,23 +69639,23 @@
     "s": "maths",
     "t": "hcf_lcm",
     "d": 2,
-    "q_hi": "दो संख्याओं का HCF 11 है और उनका LCM 693 है। यदि एक संख्या 77 है, तो दूसरी संख्या क्या होगी?",
-    "q_en": "The HCF of two numbers is 11 and their LCM is 693. If one number is 77, what will be the other number?",
+    "q_hi": "दो संख्याओं का HCF 13 है और LCM 1014 है। यदि एक संख्या 78 है, तो दूसरी संख्या क्या है?",
+    "q_en": "The HCF of two numbers is 13 and the LCM is 1014. If one number is 78, what is the other number?",
     "o_hi": [
-      "99",
-      "88",
-      "77",
-      "66"
+      "169",
+      "78",
+      "143",
+      "117"
     ],
     "o_en": [
-      "99",
-      "88",
-      "77",
-      "66"
+      "169",
+      "78",
+      "143",
+      "117"
     ],
     "a": 0,
-    "e_hi": "सूत्र का उपयोग करें: पहली संख्या × दूसरी संख्या = HCF × LCM। अतः (11 × 693) / 77 = 99।",
-    "e_en": "Use the formula: First number × Second number = HCF × LCM. Thus, (11 × 693) / 77 = 99."
+    "e_hi": "HCF × LCM = 13×1014 = 13182 = 78×x => x = 13182/78 = 169।",
+    "e_en": "HCF × LCM = 13×1014 = 13182 = 78×x => x = 13182/78 = 169."
   },
   {
     "id": "rp-mat-g203155",
@@ -69685,23 +69685,23 @@
     "s": "maths",
     "t": "hcf_lcm",
     "d": 2,
-    "q_hi": "यदि दो सह-अभाज्य (Co-prime) संख्याओं का गुणनफल 117 है, तो उनका ल.स.प. (LCM) कितना होगा?",
-    "q_en": "If the product of two co-prime numbers is 117, what will be their LCM?",
+    "q_hi": "दो सह-अभाज्य संख्याओं का गुणनफल 221 है। उनका LCM क्या होगा?",
+    "q_en": "The product of two co-prime numbers is 221. What will be their LCM?",
     "o_hi": [
-      "1",
-      "9",
+      "221",
       "13",
-      "117"
+      "17",
+      "1"
     ],
     "o_en": [
-      "1",
-      "9",
+      "221",
       "13",
-      "117"
+      "17",
+      "1"
     ],
-    "a": 3,
-    "e_hi": "सह-अभाज्य संख्याओं का HCF हमेशा 1 होता है। अतः LCM = (संख्याओं का गुणनफल) / 1 = 117।",
-    "e_en": "The HCF of co-prime numbers is always 1. Therefore, LCM = (Product of numbers) / 1 = 117."
+    "a": 0,
+    "e_hi": "सह-अभाज्य संख्याओं का HCF सदैव 1 होता है, और LCM×HCF=गुणनफल, इसलिए LCM = 221/1 = 221।",
+    "e_en": "Co-prime numbers always have HCF=1, and LCM×HCF=product, so LCM = 221/1 = 221."
   },
   {
     "id": "rp-mat-g203157",
@@ -70167,47 +70167,47 @@
     "id": "rp-mat-g203177",
     "s": "maths",
     "t": "hcf_lcm",
-    "d": 1,
-    "q_hi": "यदि दो संख्याओं का ल.स.प. 120 है और उनका म.स.प. 10 है, तथा एक संख्या 30 है, तो दूसरी संख्या क्या होगी?",
-    "q_en": "If the LCM of two numbers is 120 and their HCF is 10, and one number is 30, what will be the other number?",
+    "d": 2,
+    "q_hi": "दो संख्याओं का LCM 150 है और उनका HCF 5 है। यदि एक संख्या 25 है, तो दूसरी संख्या क्या है?",
+    "q_en": "The LCM of two numbers is 150 and their HCF is 5. If one number is 25, what is the other number?",
     "o_hi": [
-      "40",
+      "30",
       "50",
-      "60",
+      "25",
       "20"
     ],
     "o_en": [
-      "40",
+      "30",
       "50",
-      "60",
+      "25",
       "20"
     ],
     "a": 0,
-    "e_hi": "सूत्र: पहली संख्या × दूसरी संख्या = LCM × HCF। 30 × दूसरी संख्या = 120 × 10, अतः दूसरी संख्या = 40।",
-    "e_en": "Formula: First number × Second number = LCM × HCF. 30 × Second number = 120 × 10, so Second number = 40."
+    "e_hi": "HCF × LCM = 5×150 = 750 = 25×x => x = 750/25 = 30।",
+    "e_en": "HCF × LCM = 5×150 = 750 = 25×x => x = 750/25 = 30."
   },
   {
     "id": "rp-mat-g203178",
     "s": "maths",
     "t": "hcf_lcm",
     "d": 2,
-    "q_hi": "दो संख्याओं का म.स.प. 12 है। निम्नलिखित में से कौन सी संख्या उनका ल.स.प. नहीं हो सकती?",
-    "q_en": "The HCF of two numbers is 12. Which of the following cannot be their LCM?",
+    "q_hi": "दो संख्याओं का HCF 20 है। निम्नलिखित में से कौन सी संख्या उनका LCM नहीं हो सकती?",
+    "q_en": "The HCF of two numbers is 20. Which of the following cannot be their LCM?",
     "o_hi": [
-      "60",
-      "72",
-      "84",
-      "90"
+      "45",
+      "80",
+      "100",
+      "120"
     ],
     "o_en": [
-      "60",
-      "72",
-      "84",
-      "90"
+      "45",
+      "80",
+      "100",
+      "120"
     ],
-    "a": 3,
-    "e_hi": "ल.स.प. हमेशा म.स.प. से पूर्णतः विभाजित होना चाहिए। 90, 12 से विभाजित नहीं होता है।",
-    "e_en": "The LCM must always be perfectly divisible by the HCF. 90 is not divisible by 12."
+    "a": 0,
+    "e_hi": "LCM हमेशा HCF का गुणज होना चाहिए। 45÷20 पूर्णांक नहीं, अतः 45 कभी LCM नहीं हो सकता।",
+    "e_en": "The LCM must always be a multiple of the HCF. 45÷20 is not an integer, so 45 can never be the LCM."
   },
   {
     "id": "rp-mat-g203179",
@@ -71548,23 +71548,23 @@
     "s": "maths",
     "t": "algebra",
     "d": 3,
-    "q_hi": "यदि x - 1/x = 4 है, तो x² + 1/x² का मान क्या है?",
-    "q_en": "If x - 1/x = 4, what is the value of x² + 1/x²?",
+    "q_hi": "यदि x + 1/x = 6 है, तो x² + 1/x² का मान क्या है?",
+    "q_en": "If x + 1/x = 6, what is the value of x² + 1/x²?",
     "o_hi": [
-      "18",
-      "16",
-      "20",
-      "14"
+      "34",
+      "36",
+      "32",
+      "30"
     ],
     "o_en": [
-      "18",
-      "16",
-      "20",
-      "14"
+      "34",
+      "36",
+      "32",
+      "30"
     ],
     "a": 0,
-    "e_hi": "(x-1/x)² = x² - 2 + 1/x² = 16। अतः x²+1/x² = 16+2 = 18।",
-    "e_en": "(x-1/x)² = x² - 2 + 1/x² = 16. So x²+1/x² = 16+2 = 18."
+    "e_hi": "(x+1/x)² = x²+2+1/x² = 36। अतः x²+1/x² = 36-2 = 34।",
+    "e_en": "(x+1/x)² = x²+2+1/x² = 36. So x²+1/x² = 36-2 = 34."
   },
   {
     "id": "rp-mat-g203238",
@@ -72559,24 +72559,24 @@
     "id": "rp-mat-g203281",
     "s": "maths",
     "t": "algebra",
-    "d": 1,
-    "q_hi": "यदि x + 1/x = 5 है, तो x² + 1/x² का मान क्या होगा?",
-    "q_en": "If x + 1/x = 5, then what is the value of x² + 1/x²?",
+    "d": 3,
+    "q_hi": "यदि x + 1/x = 7 है, तो x² + 1/x² का मान क्या है?",
+    "q_en": "If x + 1/x = 7, what is the value of x² + 1/x²?",
     "o_hi": [
-      "23",
-      "25",
-      "27",
-      "21"
+      "47",
+      "45",
+      "49",
+      "42"
     ],
     "o_en": [
-      "23",
-      "25",
-      "27",
-      "21"
+      "47",
+      "45",
+      "49",
+      "42"
     ],
     "a": 0,
-    "e_hi": "सूत्र (a+b)² = a² + b² + 2ab का उपयोग करें। यहाँ (5)² - 2 = 23 होगा।",
-    "e_en": "Use the formula (a+b)² = a² + b² + 2ab. Here, (5)² - 2 = 23."
+    "e_hi": "(x+1/x)² = x²+2+1/x² = 49। अतः x²+1/x² = 49-2 = 47।",
+    "e_en": "(x+1/x)² = x²+2+1/x² = 49. So x²+1/x² = 49-2 = 47."
   },
   {
     "id": "rp-mat-g203282",
@@ -74882,24 +74882,24 @@
     "id": "rp-mat-g203387",
     "s": "maths",
     "t": "algebra",
-    "d": 2,
-    "q_hi": "यदि x - 1/x = 4 है, तो x² + 1/x² का मान क्या होगा?",
-    "q_en": "If x - 1/x = 4, then what is the value of x² + 1/x²?",
+    "d": 3,
+    "q_hi": "यदि x - 1/x = 3 है, तो x² + 1/x² का मान क्या है?",
+    "q_en": "If x - 1/x = 3, what is the value of x² + 1/x²?",
     "o_hi": [
-      "14",
-      "18",
-      "16",
-      "20"
+      "11",
+      "9",
+      "13",
+      "7"
     ],
     "o_en": [
-      "14",
-      "18",
-      "16",
-      "20"
+      "11",
+      "9",
+      "13",
+      "7"
     ],
-    "a": 1,
-    "e_hi": "सूत्र (a-b)² = a² + b² - 2ab का उपयोग करने पर, x² + 1/x² = (4)² + 2 = 18.",
-    "e_en": "Using the formula (a-b)² = a² + b² - 2ab, we get x² + 1/x² = (4)² + 2 = 18."
+    "a": 0,
+    "e_hi": "(x-1/x)² = x²-2+1/x² = 9। अतः x²+1/x² = 9+2 = 11।",
+    "e_en": "(x-1/x)² = x²-2+1/x² = 9. So x²+1/x² = 9+2 = 11."
   },
   {
     "id": "rp-mat-g203388",
@@ -76079,23 +76079,23 @@
     "s": "maths",
     "t": "geometry",
     "d": 2,
-    "q_hi": "एक समचतुर्भुज (rhombus) के विकर्ण 16 सेमी और 12 सेमी हैं। इसका क्षेत्रफल क्या होगा?",
-    "q_en": "The diagonals of a rhombus are 16 cm and 12 cm. What will be its area?",
+    "q_hi": "एक समचतुर्भुज (rhombus) के विकर्ण 24 cm और 10 cm हैं। इसका क्षेत्रफल क्या है?",
+    "q_en": "The diagonals of a rhombus are 24 cm and 10 cm. What is its area?",
     "o_hi": [
-      "96 वर्ग सेमी",
-      "192 वर्ग सेमी",
-      "48 वर्ग सेमी",
-      "120 वर्ग सेमी"
+      "120 sq cm",
+      "240 sq cm",
+      "60 sq cm",
+      "170 sq cm"
     ],
     "o_en": [
-      "96 sq cm",
-      "192 sq cm",
-      "48 sq cm",
-      "120 sq cm"
+      "120 sq cm",
+      "240 sq cm",
+      "60 sq cm",
+      "170 sq cm"
     ],
     "a": 0,
-    "e_hi": "समचतुर्भुज का क्षेत्रफल (1/2) × d1 × d2 होता है। (1/2) × 16 × 12 = 96 वर्ग सेमी।",
-    "e_en": "The area of a rhombus is (1/2) × d1 × d2. (1/2) × 16 × 12 = 96 sq cm."
+    "e_hi": "क्षेत्रफल = (1/2) × d1 × d2 = (1/2) × 24 × 10 = 120 sq cm।",
+    "e_en": "Area = (1/2) × d1 × d2 = (1/2) × 24 × 10 = 120 sq cm."
   },
   {
     "id": "rp-mat-g203440",
@@ -76447,23 +76447,23 @@
     "s": "maths",
     "t": "geometry",
     "d": 2,
-    "q_hi": "दो वृत्तों की त्रिज्याओं का अनुपात 3 : 5 है। उनके क्षेत्रफलों का अनुपात क्या होगा?",
-    "q_en": "The ratio of radii of two circles is 3 : 5. What will be the ratio of their areas?",
+    "q_hi": "दो गोलों (spheres) की त्रिज्याओं का अनुपात 2:3 है। उनके आयतनों का अनुपात क्या होगा?",
+    "q_en": "The ratio of the radii of two spheres is 2:3. What will be the ratio of their volumes?",
     "o_hi": [
-      "3 : 5",
-      "6 : 10",
-      "9 : 25",
-      "27 : 125"
+      "8:27",
+      "2:3",
+      "4:9",
+      "4:27"
     ],
     "o_en": [
-      "3 : 5",
-      "6 : 10",
-      "9 : 25",
-      "27 : 125"
+      "8:27",
+      "2:3",
+      "4:9",
+      "4:27"
     ],
-    "a": 2,
-    "e_hi": "क्षेत्रफलों का अनुपात त्रिज्याओं के अनुपात का वर्ग होता है। (3^2) : (5^2) = 9 : 25।",
-    "e_en": "The ratio of areas is the square of the ratio of radii. (3^2) : (5^2) = 9 : 25."
+    "a": 0,
+    "e_hi": "गोले का आयतन त्रिज्या के घन के समानुपाती है। अनुपात = 2³:3³ = 8:27।",
+    "e_en": "A sphere's volume is proportional to the cube of its radius. Ratio = 2³:3³ = 8:27."
   },
   {
     "id": "rp-mat-g203456",
@@ -76584,24 +76584,24 @@
     "id": "rp-mat-g203462",
     "s": "maths",
     "t": "geometry",
-    "d": 1,
-    "q_hi": "यदि किसी चतुर्भुज के विकर्ण एक-दूसरे को समकोण पर विभाजित करते हैं, तो वह चतुर्भुज निश्चित रूप से क्या है?",
-    "q_en": "If the diagonals of a quadrilateral bisect each other at right angles, what is the quadrilateral definitely?",
+    "d": 2,
+    "q_hi": "यदि किसी चतुर्भुज के विकर्ण बराबर हों और एक दूसरे को समद्विभाजित करें, तो वह चतुर्भुज निश्चित रूप से क्या कहलाता है?",
+    "q_en": "If the diagonals of a quadrilateral are equal and bisect each other, what is the quadrilateral definitely called?",
     "o_hi": [
-      "आयत",
-      "समचतुर्भुज",
-      "समांतर चतुर्भुज",
-      "समलंब"
+      "आयत (Rectangle)",
+      "समचतुर्भुज (Rhombus)",
+      "समलंब (Trapezium)",
+      "पतंग (Kite)"
     ],
     "o_en": [
       "Rectangle",
       "Rhombus",
-      "Parallelogram",
-      "Trapezium"
+      "Trapezium",
+      "Kite"
     ],
-    "a": 1,
-    "e_hi": "जिस चतुर्भुज के विकर्ण एक-दूसरे को समकोण पर समद्विभाजित करते हैं, वह समचतुर्भुज (Rhombus) कहलाता है।",
-    "e_en": "A quadrilateral whose diagonals bisect each other at right angles is defined as a Rhombus."
+    "a": 0,
+    "e_hi": "समान और समद्विभाजित होने वाले विकर्ण आयत (Rectangle) की विशेष पहचान है।",
+    "e_en": "Equal diagonals that bisect each other is the defining property of a Rectangle."
   },
   {
     "id": "rp-mat-g203463",
@@ -83048,23 +83048,23 @@
     "s": "maths",
     "t": "time_speed_distance",
     "d": 1,
-    "q_hi": "एक रेलगाड़ी 90 किमी/घंटा की चाल से चल रही है। मीटर प्रति सेकंड में इसकी चाल ज्ञात कीजिए।",
-    "q_en": "A train is moving at a speed of 90 km/h. Find its speed in meters per second.",
+    "q_hi": "एक कार 72 किमी/घंटा की गति से चल रही है। मीटर प्रति सेकंड में इसकी गति क्या है?",
+    "q_en": "A car is moving at a speed of 72 km/h. What is its speed in meters per second?",
     "o_hi": [
-      "20 मी/से",
-      "25 मी/से",
-      "30 मी/से",
-      "35 मी/से"
+      "20 m/s",
+      "15 m/s",
+      "25 m/s",
+      "30 m/s"
     ],
     "o_en": [
       "20 m/s",
+      "15 m/s",
       "25 m/s",
-      "30 m/s",
-      "35 m/s"
+      "30 m/s"
     ],
-    "a": 1,
-    "e_hi": "किमी/घंटा को मी/से में बदलने के लिए 5/18 से गुणा करते हैं। 90 * (5/18) = 25 मी/से।",
-    "e_en": "To convert km/h to m/s, multiply by 5/18. 90 * (5/18) = 25 m/s."
+    "a": 0,
+    "e_hi": "किमी/घंटा को मी/सेकंड में बदलने के लिए 5/18 से गुणा करें: 72×5/18 = 20 m/s।",
+    "e_en": "To convert km/h to m/s, multiply by 5/18: 72×5/18 = 20 m/s."
   },
   {
     "id": "rp-mat-g203753",
@@ -84358,24 +84358,24 @@
     "id": "rp-mat-g203810",
     "s": "maths",
     "t": "time_speed_distance",
-    "d": 3,
-    "q_hi": "एक चोर दोपहर 2 बजे एक कार चुराता है और 60 किमी/घंटा की गति से भागता है। मालिक को 3 बजे पता चलता है और वह 80 किमी/घंटा की गति से पीछा करता है। वह चोर को कितने बजे पकड़ेगा?",
-    "q_en": "A thief steals a car at 2 PM and drives at 60 km/h. The owner discovers it at 3 PM and chases at 80 km/h. At what time will he catch the thief?",
+    "d": 2,
+    "q_hi": "एक चोर दोपहर 1 बजे एक कार चुराता है और 50 किमी/घंटा की गति से चलाता है। मालिक को इसका पता दोपहर 2 बजे चलता है और वह 70 किमी/घंटा की गति से पीछा करता है। मालिक चोर को किस समय पकड़ेगा?",
+    "q_en": "A thief steals a car at 1 PM and drives at 50 km/h. The owner discovers it at 2 PM and chases at 70 km/h. At what time will the owner catch the thief?",
     "o_hi": [
-      "शाम 6 बजे",
-      "शाम 5 बजे",
-      "रात 8 बजे",
-      "शाम 7 बजे"
+      "4:30 PM",
+      "5 PM",
+      "4 PM",
+      "5:30 PM"
     ],
     "o_en": [
-      "6 PM",
+      "4:30 PM",
       "5 PM",
-      "8 PM",
-      "7 PM"
+      "4 PM",
+      "5:30 PM"
     ],
     "a": 0,
-    "e_hi": "3 बजे चोर 60 किमी आगे था। सापेक्ष गति 20 किमी/घंटा है। समय = 60/20 = 3 घंटे। 3 बजे के 3 घंटे बाद यानी शाम 6 बजे।",
-    "e_en": "At 3 PM, the thief was 60 km ahead. Relative speed is 20 km/h. Time = 60/20 = 3 hours. 3 hours after 3 PM is 6 PM."
+    "e_hi": "2 बजे तक (1 घंटे में) चोर की बढ़त = 50×1 = 50 किमी। सापेक्ष चाल = 70-50=20 किमी/घंटा। समय = 50/20 = 2.5 घंटे, यानी 2 बजे + 2.5 घंटे = 4:30 PM।",
+    "e_en": "By the time the owner starts, the thief has a 50 km lead. Relative speed = 70-50=20 km/h. Time to catch up = 50/20 = 2.5 hours, i.e. 2 PM + 2.5 hours = 4:30 PM."
   },
   {
     "id": "rp-mat-g203811",
@@ -84450,47 +84450,47 @@
     "id": "rp-mat-g203815",
     "s": "maths",
     "t": "time_speed_distance",
-    "d": 1,
-    "q_hi": "एक आदमी अपनी यात्रा का आधा हिस्सा 20 किमी/घंटा और शेष आधा 30 किमी/घंटा की गति से तय करता है। पूरी यात्रा की औसत गति क्या है?",
-    "q_en": "A man covers half his journey at 20 km/h and the remaining half at 30 km/h. What is the average speed of the whole journey?",
+    "d": 2,
+    "q_hi": "एक व्यक्ति अपनी यात्रा का आधा हिस्सा 40 किमी/घंटा और बाकी आधा 60 किमी/घंटा की गति से तय करता है। पूरी यात्रा की औसत चाल क्या है?",
+    "q_en": "A man covers half of his journey at 40 km/h and the remaining half at 60 km/h. What is the average speed for the entire journey?",
     "o_hi": [
-      "25 किमी/घंटा",
-      "24 किमी/घंटा",
-      "26 किमी/घंटा",
-      "22 किमी/घंटा"
+      "48 km/h",
+      "50 km/h",
+      "52 km/h",
+      "45 km/h"
     ],
     "o_en": [
-      "25 km/h",
-      "24 km/h",
-      "26 km/h",
-      "22 km/h"
+      "48 km/h",
+      "50 km/h",
+      "52 km/h",
+      "45 km/h"
     ],
-    "a": 1,
-    "e_hi": "समान दूरी के लिए औसत गति = 2xy/(x+y) = 2*20*30/(20+30) = 1200/50 = 24 किमी/घंटा।",
-    "e_en": "For equal distances, average speed = 2xy/(x+y) = 2*20*30/(20+30) = 1200/50 = 24 km/h."
+    "a": 0,
+    "e_hi": "दो बराबर दूरियों के लिए औसत चाल = 2×v1×v2/(v1+v2) = 2×40×60/100 = 48 किमी/घंटा।",
+    "e_en": "For two equal distances, average speed = 2×v1×v2/(v1+v2) = 2×40×60/100 = 48 km/h."
   },
   {
     "id": "rp-mat-g203816",
     "s": "maths",
     "t": "time_speed_distance",
-    "d": 1,
-    "q_hi": "एक कार 60 किलोमीटर प्रति घंटा की गति से एक निश्चित दूरी 2 घंटे में तय करती है। उसी दूरी को 1.5 घंटे में तय करने के लिए कार की गति क्या होनी चाहिए?",
-    "q_en": "A car covers a certain distance in 2 hours at a speed of 60 km/h. What should be the speed of the car to cover the same distance in 1.5 hours?",
+    "d": 2,
+    "q_hi": "एक कार 5 घंटों में 50 किमी/घंटा की गति से एक निश्चित दूरी तय करती है। उसी दूरी को 4 घंटों में तय करने के लिए कार की गति क्या होनी चाहिए?",
+    "q_en": "A car covers a certain distance in 5 hours at a speed of 50 km/h. What should be the speed of the car to cover the same distance in 4 hours?",
     "o_hi": [
-      "70 किमी/घंटा",
-      "80 किमी/घंटा",
-      "90 किमी/घंटा",
-      "100 किमी/घंटा"
+      "62.5 km/h",
+      "60 km/h",
+      "65 km/h",
+      "70 km/h"
     ],
     "o_en": [
-      "70 km/h",
-      "80 km/h",
-      "90 km/h",
-      "100 km/h"
+      "62.5 km/h",
+      "60 km/h",
+      "65 km/h",
+      "70 km/h"
     ],
-    "a": 1,
-    "e_hi": "दूरी = चाल × समय। कुल दूरी = 60 × 2 = 120 किमी। नई चाल = 120 / 1.5 = 80 किमी/घंटा।",
-    "e_en": "Distance = Speed × Time. Total distance = 60 × 2 = 120 km. New speed = 120 / 1.5 = 80 km/h."
+    "a": 0,
+    "e_hi": "दूरी = 5×50 = 250 किमी। नई गति = 250/4 = 62.5 किमी/घंटा।",
+    "e_en": "Distance = 5×50 = 250 km. New speed = 250/4 = 62.5 km/h."
   },
   {
     "id": "rp-mat-g203817",
@@ -84589,23 +84589,23 @@
     "s": "maths",
     "t": "time_speed_distance",
     "d": 3,
-    "q_hi": "एक चोर 2:00 बजे एक कार चुराता है और 60 किमी/घंटा की गति से भागता है। मालिक को 3:00 बजे पता चलता है और वह 80 किमी/घंटा की गति से उसका पीछा करता है। मालिक चोर को कितने बजे पकड़ेगा?",
-    "q_en": "A thief steals a car at 2:00 PM and drives at 60 km/h. The owner discovers this at 3:00 PM and pursues him at 80 km/h. At what time will the owner catch the thief?",
+    "q_hi": "एक चोर कार दोपहर 1:00 बजे चुराता है और 50 किमी/घंटा की गति से भागता है। मालिक को इसका पता दोपहर 2:30 बजे चलता है और वह 70 किमी/घंटा की गति से पीछा करता है। मालिक चोर को किस समय पकड़ेगा?",
+    "q_en": "A thief steals a car at 1:00 PM and drives at 50 km/h. The owner discovers this at 2:30 PM and pursues at 70 km/h. At what time will the owner catch the thief?",
     "o_hi": [
-      "5:00 बजे",
-      "6:00 बजे",
-      "7:00 बजे",
-      "8:00 बजे"
+      "6:15 PM",
+      "5:00 PM",
+      "5:30 PM",
+      "6:00 PM"
     ],
     "o_en": [
+      "6:15 PM",
       "5:00 PM",
-      "6:00 PM",
-      "7:00 PM",
-      "8:00 PM"
+      "5:30 PM",
+      "6:00 PM"
     ],
-    "a": 1,
-    "e_hi": "3:00 बजे तक चोर द्वारा तय की गई दूरी = 60 किमी। सापेक्ष गति = 80 - 60 = 20 किमी/घंटा। समय = 60 / 20 = 3 घंटे। 3:00 PM + 3 घंटे = 6:00 PM।",
-    "e_en": "Distance covered by the thief by 3:00 PM = 60 km. Relative speed = 80 - 60 = 20 km/h. Time = 60 / 20 = 3 hours. 3:00 PM + 3 hours = 6:00 PM."
+    "a": 0,
+    "e_hi": "2:30 PM तक (1.5 घंटे में) चोर की बढ़त = 50×1.5 = 75 किमी। सापेक्ष चाल = 70-50 = 20 किमी/घंटा। समय = 75/20 = 3.75 घंटे = 3 घंटे 45 मिनट। 2:30 PM + 3 घंटे 45 मिनट = 6:15 PM।",
+    "e_en": "By 2:30 PM (1.5 hours later) the thief has a lead of 50×1.5=75 km. Relative speed = 70-50 = 20 km/h. Time = 75/20 = 3.75 hours = 3h 45m. 2:30 PM + 3h45m = 6:15 PM."
   },
   {
     "id": "rp-mat-g203822",
@@ -85095,23 +85095,23 @@
     "s": "maths",
     "t": "time_speed_distance",
     "d": 3,
-    "q_hi": "एक चोर दोपहर 2 बजे एक कार चुराता है और उसे 60 किमी/घंटा की गति से चलाता है। मालिक को दोपहर 3 बजे पता चलता है और वह 80 किमी/घंटा की गति से पीछा करता है। मालिक चोर को किस समय पकड़ लेगा?",
-    "q_en": "A thief steals a car at 2 PM and drives at 60 km/h. The owner discovers it at 3 PM and chases at 80 km/h. At what time will the owner catch the thief?",
+    "q_hi": "एक चोर दोपहर 12 बजे एक कार चुराता है और 40 किमी/घंटा की गति से चलाता है। मालिक को इसका पता दोपहर 2 बजे चलता है और वह 60 किमी/घंटा की गति से पीछा करता है। मालिक चोर को किस समय पकड़ेगा?",
+    "q_en": "A thief steals a car at 12 noon and drives at 40 km/h. The owner discovers it at 2 PM and chases at 60 km/h. At what time will the owner catch the thief?",
     "o_hi": [
-      "शाम 5 बजे",
-      "शाम 6 बजे",
-      "शाम 7 बजे",
-      "रात 8 बजे"
-    ],
-    "o_en": [
-      "5 PM",
       "6 PM",
+      "5 PM",
       "7 PM",
       "8 PM"
     ],
-    "a": 1,
-    "e_hi": "1 घंटे में चोर 60 किमी आगे निकल गया। सापेक्ष गति 20 किमी/घंटा है। पकड़ने का समय = 60 / 20 = 3 घंटे बाद (3 PM से)।",
-    "e_en": "In 1 hour, the thief gets 60 km ahead. Relative speed is 20 km/h. Time to catch = 60 / 20 = 3 hours after 3 PM."
+    "o_en": [
+      "6 PM",
+      "5 PM",
+      "7 PM",
+      "8 PM"
+    ],
+    "a": 0,
+    "e_hi": "2 बजे तक चोर की बढ़त = 40×2 = 80 किमी। सापेक्ष चाल = 60-40=20 किमी/घंटा। समय = 80/20=4 घंटे, यानी 2+4 = 6 PM।",
+    "e_en": "By 2 PM the thief has an 80 km lead (40×2). Relative speed = 60-40=20 km/h. Time to catch up = 80/20=4 hours, i.e. 2 PM+4h = 6 PM."
   },
   {
     "id": "rp-mat-g203844",
@@ -86705,23 +86705,23 @@
     "s": "maths",
     "t": "algebra",
     "d": 3,
-    "q_hi": "यदि x + y = 10 और xy = 21 है, तो x² + y² का मान क्या होगा?",
-    "q_en": "If x + y = 10 and xy = 21, what is the value of x² + y²?",
+    "q_hi": "यदि x + y = 12 और xy = 27 है, तो x² + y² का मान क्या है?",
+    "q_en": "If x + y = 12 and xy = 27, what is the value of x² + y²?",
     "o_hi": [
-      "58",
-      "62",
-      "79",
-      "100"
+      "90",
+      "94",
+      "99",
+      "108"
     ],
     "o_en": [
-      "58",
-      "62",
-      "79",
-      "100"
+      "90",
+      "94",
+      "99",
+      "108"
     ],
     "a": 0,
-    "e_hi": "सूत्र (x+y)² = x² + y² + 2xy का उपयोग करें। 10² = x² + y² + 2(21), तो 100 - 42 = 58।",
-    "e_en": "Use the formula (x+y)² = x² + y² + 2xy. 10² = x² + y² + 2(21), so 100 - 42 = 58."
+    "e_hi": "x²+y² = (x+y)²-2xy = 144-54 = 90।",
+    "e_en": "x²+y² = (x+y)²-2xy = 144-54 = 90."
   },
   {
     "id": "rp-mat-g203917",
@@ -87234,23 +87234,23 @@
     "s": "maths",
     "t": "algebra",
     "d": 2,
-    "q_hi": "यदि x/3 + x/2 = 10 है, तो x का मान क्या है?",
-    "q_en": "If x/3 + x/2 = 10, what is the value of x?",
+    "q_hi": "यदि x/4 + x/5 = 18 है, तो x का मान क्या है?",
+    "q_en": "If x/4 + x/5 = 18, what is the value of x?",
     "o_hi": [
-      "10",
-      "12",
-      "15",
-      "20"
+      "40",
+      "36",
+      "45",
+      "30"
     ],
     "o_en": [
-      "10",
-      "12",
-      "15",
-      "20"
+      "40",
+      "36",
+      "45",
+      "30"
     ],
-    "a": 1,
-    "e_hi": "(2x + 3x)/6 = 10, यानी 5x = 60, इसलिए x = 12.",
-    "e_en": "(2x + 3x)/6 = 10, which means 5x = 60, so x = 12."
+    "a": 0,
+    "e_hi": "x/4+x/5 = 5x/20+4x/20 = 9x/20 = 18 => x = 18×20/9 = 40।",
+    "e_en": "x/4+x/5 = 5x/20+4x/20 = 9x/20 = 18 => x = 18×20/9 = 40."
   },
   {
     "id": "rp-mat-g203940",
@@ -88200,23 +88200,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 2,
-    "q_hi": "यदि 10 वस्तुओं का क्रय मूल्य 8 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत ज्ञात कीजिए।",
-    "q_en": "If the cost price of 10 articles is equal to the selling price of 8 articles, find the profit percentage.",
+    "q_hi": "यदि 9 वस्तुओं का क्रय मूल्य 6 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत क्या है?",
+    "q_en": "If the cost price of 9 articles equals the selling price of 6 articles, what is the profit percentage?",
     "o_hi": [
-      "20%",
-      "25%",
-      "30%",
-      "15%"
+      "50%",
+      "40%",
+      "45%",
+      "60%"
     ],
     "o_en": [
-      "20%",
-      "25%",
-      "30%",
-      "15%"
+      "50%",
+      "40%",
+      "45%",
+      "60%"
     ],
-    "a": 1,
-    "e_hi": "लाभ प्रतिशत = [(वस्तुओं का अंतर / विक्रय की गई वस्तुएं) * 100] = (2/8) * 100 = 25%。",
-    "e_en": "Profit percentage = [(Difference in articles / Articles sold) * 100] = (2/8) * 100 = 25%."
+    "a": 0,
+    "e_hi": "9 का CP = 9 = 6 का SP। 1 वस्तु का SP=9/6=1.5। लाभ%=50%।",
+    "e_en": "CP of 9 = 9 = SP of 6. SP of 1 item = 9/6=1.5. Profit% = 50%."
   },
   {
     "id": "rp-mat-g203984",
@@ -89235,23 +89235,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 3,
-    "q_hi": "एक बेईमान दुकानदार वस्तु को क्रय मूल्य पर बेचने का दावा करता है लेकिन 1 किलोग्राम के स्थान पर 900 ग्राम वजन का उपयोग करता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
-    "q_en": "A dishonest shopkeeper claims to sell goods at cost price but uses a weight of 900 grams instead of 1 kilogram. What is his actual profit percentage?",
+    "q_hi": "एक दुकानदार 1 किलो के स्थान पर 800 ग्राम का उपयोग करता है और लागत मूल्य पर बेचने का दावा करता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
+    "q_en": "A shopkeeper uses 800 grams instead of 1 kilogram and claims to sell at cost price. What is his actual profit percentage?",
     "o_hi": [
-      "10%",
-      "11.11%",
+      "25%",
+      "20%",
       "12.5%",
-      "9.09%"
+      "16.67%"
     ],
     "o_en": [
-      "10%",
-      "11.11%",
+      "25%",
+      "20%",
       "12.5%",
-      "9.09%"
+      "16.67%"
     ],
-    "a": 1,
-    "e_hi": "लाभ = (त्रुटि / सही वजन - त्रुटि) * 100 = (100 / 900) * 100 = 11.11%。",
-    "e_en": "Profit = (Error / True weight - Error) * 100 = (100 / 900) * 100 = 11.11%."
+    "a": 0,
+    "e_hi": "लाभ% = (भार में कमी/दिया गया भार) × 100 = (200/800) × 100 = 25%।",
+    "e_en": "Profit% = (shortfall/weight given) × 100 = (200/800) × 100 = 25%."
   },
   {
     "id": "rp-mat-g204029",
@@ -89764,46 +89764,46 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 2,
-    "q_hi": "किसी वस्तु को 720 रुपये में बेचने पर 10% की हानि होती है। 5% का लाभ पाने के लिए विक्रय मूल्य क्या होना चाहिए?",
-    "q_en": "Selling an item for 720 rupees results in a 10% loss. What should be the selling price to gain a 5% profit?",
+    "q_hi": "एक वस्तु को 450 रुपये में बेचने पर 10% की हानि होती है। 8% का लाभ पाने के लिए विक्रय मूल्य क्या होना चाहिए?",
+    "q_en": "Selling an item for 450 rupees results in a 10% loss. What should be the selling price to gain an 8% profit?",
     "o_hi": [
-      "840 रुपये",
-      "800 रुपये",
-      "810 रुपये",
-      "780 रुपये"
+      "540 rupees",
+      "500 rupees",
+      "520 rupees",
+      "490 rupees"
     ],
     "o_en": [
-      "840 rupees",
-      "800 rupees",
-      "810 rupees",
-      "780 rupees"
+      "540 rupees",
+      "500 rupees",
+      "520 rupees",
+      "490 rupees"
     ],
     "a": 0,
-    "e_hi": "90% = 720, इसलिए 1% = 8, तो 105% = 840 रुपये।",
-    "e_en": "90% = 720, so 1% = 8, therefore 105% = 840 rupees."
+    "e_hi": "CP = 450/0.9 = 500। 8% लाभ के लिए SP = 500×1.08 = 540 रुपये।",
+    "e_en": "CP = 450/0.9 = 500. SP for 8% profit = 500×1.08 = 540 rupees."
   },
   {
     "id": "rp-mat-g204054",
     "s": "maths",
     "t": "profit_loss",
-    "d": 1,
-    "q_hi": "यदि एक वस्तु का विक्रय मूल्य उसके क्रय मूल्य का 4/3 गुना है, तो लाभ प्रतिशत क्या है?",
-    "q_en": "If the selling price of an item is 4/3 times its cost price, what is the profit percentage?",
+    "d": 2,
+    "q_hi": "यदि किसी वस्तु का विक्रय मूल्य उसके क्रय मूल्य का 5/4 गुना है, तो लाभ प्रतिशत क्या है?",
+    "q_en": "If the selling price of an item is 5/4 times its cost price, what is the profit percentage?",
     "o_hi": [
-      "33.33%",
       "25%",
-      "40%",
-      "20%"
+      "20%",
+      "30%",
+      "40%"
     ],
     "o_en": [
-      "33.33%",
       "25%",
-      "40%",
-      "20%"
+      "20%",
+      "30%",
+      "40%"
     ],
     "a": 0,
-    "e_hi": "विक्रय मूल्य/क्रय मूल्य = 4/3, लाभ = 1, लाभ% = (1/3)*100 = 33.33%。",
-    "e_en": "Selling Price/Cost Price = 4/3, Profit = 1, Profit% = (1/3)*100 = 33.33%."
+    "e_hi": "मान लें CP=4, तो SP=5। लाभ%=(5-4)/4×100=25%।",
+    "e_en": "Let CP=4, then SP=5. Profit%=(5-4)/4×100=25%."
   },
   {
     "id": "rp-mat-g204055",
@@ -89993,24 +89993,24 @@
     "id": "rp-mat-g204063",
     "s": "maths",
     "t": "profit_loss",
-    "d": 2,
-    "q_hi": "एक बेईमान दुकानदार वस्तु को क्रय मूल्य पर बेचने का दावा करता है, लेकिन वह 1 किलोग्राम के स्थान पर 900 ग्राम वजन का उपयोग करता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
-    "q_en": "A dishonest shopkeeper claims to sell goods at cost price, but uses 900 grams instead of 1 kilogram. What is his actual profit percentage?",
+    "d": 3,
+    "q_hi": "एक दुकानदार 1 किलो के स्थान पर 750 ग्राम का उपयोग करता है और लागत मूल्य पर बेचने का दावा करता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
+    "q_en": "A shopkeeper uses 750 grams instead of 1 kilogram and claims to sell at cost price. What is his actual profit percentage?",
     "o_hi": [
-      "10%",
-      "11.11%",
-      "9%",
-      "12.5%"
+      "33.33%",
+      "25%",
+      "20%",
+      "30%"
     ],
     "o_en": [
-      "10%",
-      "11.11%",
-      "9%",
-      "12.5%"
+      "33.33%",
+      "25%",
+      "20%",
+      "30%"
     ],
-    "a": 1,
-    "e_hi": "लाभ = (त्रुटि / सही मान - त्रुटि) * 100 = (100 / 900) * 100 = 11.11%。",
-    "e_en": "Profit = (Error / True value - Error) * 100 = (100 / 900) * 100 = 11.11%."
+    "a": 0,
+    "e_hi": "लाभ% = (250/750) × 100 = 33.33%।",
+    "e_en": "Profit% = (250/750) × 100 = 33.33%."
   },
   {
     "id": "rp-mat-g204064",
@@ -90039,24 +90039,24 @@
     "id": "rp-mat-g204065",
     "s": "maths",
     "t": "profit_loss",
-    "d": 1,
-    "q_hi": "एक वस्तु का विक्रय मूल्य उसके क्रय मूल्य का 4/3 गुना है। लाभ प्रतिशत क्या है?",
-    "q_en": "The selling price of an item is 4/3 times its cost price. What is the profit percentage?",
+    "d": 2,
+    "q_hi": "यदि किसी वस्तु का विक्रय मूल्य उसके क्रय मूल्य का 6/5 गुना है, तो लाभ प्रतिशत क्या है?",
+    "q_en": "If the selling price of an item is 6/5 times its cost price, what is the profit percentage?",
     "o_hi": [
+      "20%",
+      "16.67%",
       "25%",
-      "33.33%",
-      "40%",
-      "50%"
+      "30%"
     ],
     "o_en": [
+      "20%",
+      "16.67%",
       "25%",
-      "33.33%",
-      "40%",
-      "50%"
+      "30%"
     ],
-    "a": 1,
-    "e_hi": "लाभ = 4/3 - 1 = 1/3। प्रतिशत में = (1/3) * 100 = 33.33%。",
-    "e_en": "Profit = 4/3 - 1 = 1/3. In percentage = (1/3) * 100 = 33.33%."
+    "a": 0,
+    "e_hi": "मान लें CP=5, तो SP=6। लाभ%=(6-5)/5×100=20%।",
+    "e_en": "Let CP=5, then SP=6. Profit%=(6-5)/5×100=20%."
   },
   {
     "id": "rp-mat-g204066",
@@ -91511,14 +91511,14 @@
     "id": "rp-mat-g204130",
     "s": "maths",
     "t": "trigonometry",
-    "d": 3,
-    "q_hi": "एक मीनार की छाया उसकी ऊंचाई के बराबर है, तो सूर्य का उन्नयन कोण (angle of elevation) क्या होगा?",
-    "q_en": "The shadow of a tower is equal to its height, what is the angle of elevation of the sun?",
+    "d": 2,
+    "q_hi": "यदि किसी मीनार की छाया उसकी ऊँचाई की √3 गुनी है, तो सूर्य का उन्नयन कोण क्या है?",
+    "q_en": "If the shadow of a tower is √3 times its height, what is the angle of elevation of the sun?",
     "o_hi": [
-      "30 डिग्री",
-      "45 डिग्री",
-      "60 डिग्री",
-      "90 डिग्री"
+      "30 degrees",
+      "45 degrees",
+      "60 degrees",
+      "90 degrees"
     ],
     "o_en": [
       "30 degrees",
@@ -91526,9 +91526,9 @@
       "60 degrees",
       "90 degrees"
     ],
-    "a": 1,
-    "e_hi": "tan(θ) = ऊंचाई / छाया। चूँकि ऊंचाई = छाया, tan(θ) = 1, इसलिए θ = 45 डिग्री।",
-    "e_en": "tan(θ) = height / shadow. Since height = shadow, tan(θ) = 1, therefore θ = 45 degrees."
+    "a": 0,
+    "e_hi": "tan θ = ऊँचाई/छाया = 1/√3, इसलिए θ=30°।",
+    "e_en": "tan θ = height/shadow = 1/√3, so θ=30°."
   },
   {
     "id": "rp-mat-g204131",
@@ -94754,24 +94754,24 @@
     "id": "rp-mat-g204272",
     "s": "maths",
     "t": "trigonometry",
-    "d": 1,
-    "q_hi": "एक मीनार की परछाई उसकी ऊंचाई के बराबर है, तो सूर्य का उन्नयन कोण क्या होगा?",
-    "q_en": "The shadow of a tower is equal to its height, what will be the angle of elevation of the sun?",
+    "d": 2,
+    "q_hi": "यदि किसी मीनार की छाया उसकी ऊँचाई का 1/√3 गुना है, तो सूर्य का उन्नयन कोण क्या है?",
+    "q_en": "If the shadow of a tower is 1/√3 times its height, what is the angle of elevation of the sun?",
     "o_hi": [
-      "45 डिग्री",
-      "30 डिग्री",
-      "60 डिग्री",
-      "90 डिग्री"
-    ],
-    "o_en": [
+      "60 degrees",
       "45 degrees",
       "30 degrees",
+      "90 degrees"
+    ],
+    "o_en": [
       "60 degrees",
+      "45 degrees",
+      "30 degrees",
       "90 degrees"
     ],
     "a": 0,
-    "e_hi": "जब ऊंचाई और आधार बराबर होते हैं, तो टेन थीटा बराबर 1 होता है, जिसका अर्थ है कि थीटा 45 डिग्री है।",
-    "e_en": "When height and base are equal, tan theta equals 1, which means theta is 45 degrees."
+    "e_hi": "tan θ = ऊँचाई/छाया = √3, इसलिए θ=60°।",
+    "e_en": "tan θ = height/shadow = √3, so θ=60°."
   },
   {
     "id": "rp-mat-g204273",
@@ -98297,23 +98297,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 1,
-    "q_hi": "एक दुकानदार ने 500 रुपये में एक वस्तु खरीदी और उसे 600 रुपये में बेच दिया। दुकानदार का लाभ प्रतिशत ज्ञात कीजिए।",
-    "q_en": "A shopkeeper bought an item for 500 rupees and sold it for 600 rupees. Find the profit percentage of the shopkeeper.",
+    "q_hi": "एक दुकानदार ने एक छाता 300 रुपये में खरीदा और 360 रुपये में बेचा। दुकानदार का लाभ प्रतिशत ज्ञात करें।",
+    "q_en": "A shopkeeper bought an umbrella for 300 rupees and sold it for 360 rupees. Find the profit percentage of the shopkeeper.",
     "o_hi": [
-      "10 प्रतिशत",
-      "20 प्रतिशत",
-      "25 प्रतिशत",
-      "15 प्रतिशत"
+      "20 percent",
+      "15 percent",
+      "10 percent",
+      "25 percent"
     ],
     "o_en": [
-      "10 percent",
       "20 percent",
-      "25 percent",
-      "15 percent"
+      "15 percent",
+      "10 percent",
+      "25 percent"
     ],
-    "a": 1,
-    "e_hi": "लाभ = 600 - 500 = 100 रुपये। लाभ प्रतिशत = (100/500) * 100 = 20 प्रतिशत।",
-    "e_en": "Profit = 600 - 500 = 100 rupees. Profit percentage = (100/500) * 100 = 20 percent."
+    "a": 0,
+    "e_hi": "लाभ = 360-300 = 60। लाभ% = (60/300)×100 = 20%।",
+    "e_en": "Profit = 360-300 = 60. Profit% = (60/300)×100 = 20%."
   },
   {
     "id": "rp-mat-g204427",
@@ -99262,24 +99262,24 @@
     "id": "rp-mat-g204468",
     "s": "maths",
     "t": "profit_loss",
-    "d": 3,
-    "q_hi": "एक व्यक्ति ने दो साइकिलें प्रत्येक को 1200 रुपये में बेचीं। एक पर 20% का लाभ और दूसरी पर 20% की हानि हुई। पूरे सौदे में लाभ या हानि प्रतिशत क्या है?",
-    "q_en": "A man sold two bicycles for 1200 rupees each. He gained 20% on one and lost 20% on the other. What is the overall profit or loss percentage?",
+    "d": 2,
+    "q_hi": "एक व्यक्ति ने दो वस्तुएँ ₹900 प्रत्येक में बेची। एक पर उसे 10% का लाभ हुआ और दूसरी पर 10% की हानि। उसका कुल लाभ या हानि प्रतिशत क्या है?",
+    "q_en": "A person sold two items at ₹900 each. He gained 10% on one and lost 10% on the other. What is his overall profit or loss percentage?",
     "o_hi": [
-      "4% लाभ",
-      "4% हानि",
-      "0% लाभ या हानि",
+      "1% हानि",
+      "1% लाभ",
+      "कोई लाभ-हानि नहीं",
       "2% हानि"
     ],
     "o_en": [
-      "4% profit",
-      "4% loss",
-      "0% profit or loss",
+      "1% loss",
+      "1% profit",
+      "No profit no loss",
       "2% loss"
     ],
-    "a": 1,
-    "e_hi": "जब विक्रय मूल्य समान हो और प्रतिशत समान हो, तो हमेशा हानि होती है: (x^2)/100 = 20^2/100 = 4% हानि।",
-    "e_en": "When SP is same and percentages are same, it is always a loss: (x^2)/100 = 20^2/100 = 4% loss."
+    "a": 0,
+    "e_hi": "जब बराबर विक्रय मूल्यों पर समान प्रतिशत लाभ-हानि होता है, तो हमेशा हानि होती है = (प्रतिशत/10)² = (10/10)² = 1%।",
+    "e_en": "When equal selling prices have equal % profit and loss, there's always a net loss = (percentage/10)² = (10/10)² = 1%."
   },
   {
     "id": "rp-mat-g204470",
@@ -99470,23 +99470,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 2,
-    "q_hi": "एक व्यक्ति ने दो साइकिलें प्रत्येक 1200 रुपये में बेचीं। एक पर 20% लाभ और दूसरी पर 20% हानि हुई। पूरे सौदे में लाभ या हानि प्रतिशत क्या है?",
-    "q_en": "A person sold two bicycles for 1200 rupees each. He gained 20% on one and lost 20% on the other. What is the overall profit or loss percentage?",
+    "q_hi": "एक व्यक्ति ने दो वस्तुएँ ₹1500 प्रत्येक में बेची। एक पर उसे 25% का लाभ हुआ और दूसरी पर 25% की हानि। उसका कुल लाभ या हानि प्रतिशत क्या है?",
+    "q_en": "A person sold two items at ₹1500 each. He gained 25% on one and lost 25% on the other. What is his overall profit or loss percentage?",
     "o_hi": [
-      "4% हानि",
-      "4% लाभ",
-      "0% हानि या लाभ",
-      "2% हानि"
+      "6.25% हानि",
+      "6.25% लाभ",
+      "कोई लाभ-हानि नहीं",
+      "5% हानि"
     ],
     "o_en": [
-      "4% loss",
-      "4% profit",
-      "0% loss or profit",
-      "2% loss"
+      "6.25% loss",
+      "6.25% profit",
+      "No profit no loss",
+      "5% loss"
     ],
     "a": 0,
-    "e_hi": "समान लाभ और हानि के मामले में, हमेशा (x^2 / 100)% की हानि होती है। (20*20)/100 = 4% हानि।",
-    "e_en": "In cases of equal profit and loss percentage, there is always a loss of (x^2 / 100)%. (20*20)/100 = 4% loss."
+    "e_hi": "हानि = (25/10)² = 6.25%।",
+    "e_en": "Loss = (25/10)² = 6.25%."
   },
   {
     "id": "rp-mat-g204479",
@@ -99516,23 +99516,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 3,
-    "q_hi": "एक बेईमान दुकानदार अपना सामान क्रय मूल्य पर बेचने का दावा करता है, लेकिन वह 1 किलोग्राम के स्थान पर 900 ग्राम वजन का उपयोग करता है। उसका लाभ प्रतिशत क्या है?",
-    "q_en": "A dishonest shopkeeper claims to sell goods at cost price but uses a weight of 900 grams instead of 1 kilogram. What is his profit percentage?",
+    "q_hi": "एक दुकानदार 1 किलो के स्थान पर 960 ग्राम का उपयोग करता है और लागत मूल्य पर बेचने का दावा करता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
+    "q_en": "A shopkeeper uses 960 grams instead of 1 kilogram and claims to sell at cost price. What is his actual profit percentage?",
     "o_hi": [
-      "10%",
-      "11.11%",
-      "9%",
-      "12.5%"
+      "4.17%",
+      "5%",
+      "4%",
+      "6%"
     ],
     "o_en": [
-      "10%",
-      "11.11%",
-      "9%",
-      "12.5%"
+      "4.17%",
+      "5%",
+      "4%",
+      "6%"
     ],
-    "a": 1,
-    "e_hi": "लाभ प्रतिशत = (त्रुटि / सही मान - त्रुटि) * 100 = (100 / 900) * 100 = 11.11%。",
-    "e_en": "Profit percentage = (Error / True value - Error) * 100 = (100 / 900) * 100 = 11.11%."
+    "a": 0,
+    "e_hi": "लाभ% = (40/960) × 100 = 4.17%।",
+    "e_en": "Profit% = (40/960) × 100 = 4.17%."
   },
   {
     "id": "rp-mat-g204481",
@@ -99792,23 +99792,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 2,
-    "q_hi": "यदि 10 वस्तुओं का क्रय मूल्य 8 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत क्या है?",
-    "q_en": "If the cost price of 10 items equals the selling price of 8 items, what is the profit percentage?",
+    "q_hi": "यदि 14 वस्तुओं का क्रय मूल्य 10 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत क्या है?",
+    "q_en": "If the cost price of 14 articles equals the selling price of 10 articles, what is the profit percentage?",
     "o_hi": [
-      "20%",
-      "25%",
-      "30%",
-      "40%"
+      "40%",
+      "35%",
+      "45%",
+      "30%"
     ],
     "o_en": [
-      "20%",
-      "25%",
-      "30%",
-      "40%"
+      "40%",
+      "35%",
+      "45%",
+      "30%"
     ],
-    "a": 1,
-    "e_hi": "लाभ प्रतिशत = [(वस्तुओं का अंतर) / विक्रय की गई वस्तुएं] * 100 = (2/8) * 100 = 25%。",
-    "e_en": "Profit percentage = [(Difference in items) / Items sold] * 100 = (2/8) * 100 = 25%."
+    "a": 0,
+    "e_hi": "14 का CP = 14 = 10 का SP। 1 वस्तु का SP=14/10=1.4। लाभ%=40%।",
+    "e_en": "CP of 14 = 14 = SP of 10. SP of 1 item = 14/10=1.4. Profit% = 40%."
   },
   {
     "id": "rp-mat-g204493",
@@ -100297,24 +100297,24 @@
     "id": "rp-mat-g204514",
     "s": "maths",
     "t": "profit_loss",
-    "d": 2,
-    "q_hi": "यदि 10 वस्तुओं का क्रय मूल्य 8 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत क्या है?",
-    "q_en": "If the cost price of 10 articles is equal to the selling price of 8 articles, what is the profit percentage?",
+    "d": 3,
+    "q_hi": "यदि 12 वस्तुओं का क्रय मूल्य 10 वस्तुओं के विक्रय मूल्य के बराबर है, तो लाभ प्रतिशत क्या है?",
+    "q_en": "If the cost price of 12 articles equals the selling price of 10 articles, what is the profit percentage?",
     "o_hi": [
       "20%",
       "25%",
-      "22.5%",
-      "28%"
+      "16.67%",
+      "10%"
     ],
     "o_en": [
       "20%",
       "25%",
-      "22.5%",
-      "28%"
+      "16.67%",
+      "10%"
     ],
-    "a": 1,
-    "e_hi": "लाभ = (10-8)/8 * 100 = 2/8 * 100 = 25%。",
-    "e_en": "Profit = (10-8)/8 * 100 = 2/8 * 100 = 25%."
+    "a": 0,
+    "e_hi": "12 का CP = 12 = 10 का SP। 1 वस्तु का SP=12/10=1.2। लाभ%=20%।",
+    "e_en": "CP of 12 = 12 = SP of 10. SP of 1 item = 12/10=1.2. Profit% = 20%."
   },
   {
     "id": "rp-mat-g204515",
@@ -100619,24 +100619,24 @@
     "id": "rp-mat-g204529",
     "s": "maths",
     "t": "profit_loss",
-    "d": 1,
-    "q_hi": "एक व्यापारी अपने सामान पर क्रय मूल्य से 20% अधिक अंकित करता है और 10% की छूट देता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
-    "q_en": "A trader marks his goods 20% above the cost price and gives a 10% discount. What is his actual profit percentage?",
+    "d": 2,
+    "q_hi": "एक व्यापारी अपने माल का अंकित मूल्य लागत मूल्य से 25% अधिक रखता है। यदि वह 20% की छूट देता है, तो उसका शुद्ध लाभ प्रतिशत क्या है?",
+    "q_en": "A trader marks his goods 25% above the cost price. If he gives a 20% discount, what is his net profit percentage?",
     "o_hi": [
-      "8%",
+      "0%",
+      "5%",
       "10%",
-      "12%",
-      "6%"
+      "-5%"
     ],
     "o_en": [
-      "8%",
+      "0%",
+      "5%",
       "10%",
-      "12%",
-      "6%"
+      "-5%"
     ],
     "a": 0,
-    "e_hi": "सफल प्रतिशत = 20 - 10 - (20*10)/100 = 10 - 2 = 8%。",
-    "e_en": "Successive percentage formula: 20 - 10 - (20*10)/100 = 10 - 2 = 8%."
+    "e_hi": "मान लें CP=100। अंकित मूल्य=125। छूट के बाद विक्रय मूल्य=125×0.8=100। लाभ%=0%।",
+    "e_en": "Let CP=100. Marked price=125. SP after discount=125×0.8=100. Profit%=0%."
   },
   {
     "id": "rp-mat-g204530",
@@ -100964,24 +100964,24 @@
     "id": "rp-mat-g204545",
     "s": "maths",
     "t": "profit_loss",
-    "d": 3,
-    "q_hi": "एक बेईमान दुकानदार अपना सामान क्रय मूल्य पर बेचने का दावा करता है, लेकिन वह 1 किलोग्राम के स्थान पर 900 ग्राम वजन का उपयोग करता है। उसका लाभ प्रतिशत क्या है?",
-    "q_en": "A dishonest shopkeeper claims to sell his goods at cost price but uses a weight of 900 grams instead of 1 kilogram. What is his profit percentage?",
+    "d": 2,
+    "q_hi": "एक दुकानदार 1 किलो के स्थान पर 950 ग्राम का उपयोग करता है और लागत मूल्य पर बेचने का दावा करता है। उसका वास्तविक लाभ प्रतिशत क्या है?",
+    "q_en": "A shopkeeper uses 950 grams instead of 1 kilogram and claims to sell at cost price. What is his actual profit percentage?",
     "o_hi": [
-      "10%",
-      "11.11%",
-      "9%",
-      "12.5%"
+      "5.26%",
+      "5%",
+      "4.76%",
+      "6%"
     ],
     "o_en": [
-      "10%",
-      "11.11%",
-      "9%",
-      "12.5%"
+      "5.26%",
+      "5%",
+      "4.76%",
+      "6%"
     ],
-    "a": 1,
-    "e_hi": "लाभ % = ((त्रुटि)/(सही मान - त्रुटि)) * 100 = (100/900) * 100 = 11.11%。",
-    "e_en": "Profit % = ((Error)/(True Value - Error)) * 100 = (100/900) * 100 = 11.11%."
+    "a": 0,
+    "e_hi": "लाभ% = (50/950) × 100 = 5.26%।",
+    "e_en": "Profit% = (50/950) × 100 = 5.26%."
   },
   {
     "id": "rp-mat-g204546",
@@ -101148,24 +101148,24 @@
     "id": "rp-mat-g204553",
     "s": "maths",
     "t": "profit_loss",
-    "d": 2,
-    "q_hi": "एक व्यापारी अपने माल पर क्रय मूल्य से 20% अधिक अंकित करता है। यदि वह 10% की छूट देता है, तो उसका शुद्ध लाभ प्रतिशत क्या है?",
-    "q_en": "A trader marks his goods 20% above the cost price. If he gives a 10% discount, what is his net profit percentage?",
+    "d": 3,
+    "q_hi": "एक व्यापारी अपने माल का अंकित मूल्य लागत मूल्य से 50% अधिक रखता है। यदि वह 20% की छूट देता है, तो उसका शुद्ध लाभ प्रतिशत क्या है?",
+    "q_en": "A trader marks his goods 50% above the cost price. If he gives a 20% discount, what is his net profit percentage?",
     "o_hi": [
-      "5%",
-      "8%",
-      "10%",
-      "12%"
+      "20%",
+      "25%",
+      "30%",
+      "15%"
     ],
     "o_en": [
-      "5%",
-      "8%",
-      "10%",
-      "12%"
+      "20%",
+      "25%",
+      "30%",
+      "15%"
     ],
-    "a": 1,
-    "e_hi": "कुल लाभ = 20 - 10 - (20*10)/100 = 8%。",
-    "e_en": "Net profit = 20 - 10 - (20*10)/100 = 8%."
+    "a": 0,
+    "e_hi": "मान लें CP=100। अंकित मूल्य=150। छूट के बाद विक्रय मूल्य=150×0.8=120। लाभ%=20%।",
+    "e_en": "Let CP=100. Marked price=150. SP after discount=150×0.8=120. Profit%=20%."
   },
   {
     "id": "rp-mat-g204554",
@@ -101264,23 +101264,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 1,
-    "q_hi": "यदि एक घड़ी 800 रुपये में खरीदी गई और 15 प्रतिशत की हानि पर बेची गई, तो विक्रय मूल्य क्या होगा?",
-    "q_en": "If a watch was bought for 800 rupees and sold at a loss of 15 percent, what will be the selling price?",
+    "q_hi": "यदि एक घड़ी 600 रुपये में खरीदी गई और 20% की हानि पर बेची गई, तो विक्रय मूल्य क्या होगा?",
+    "q_en": "If a watch was bought for 600 rupees and sold at a loss of 20 percent, what will be the selling price?",
     "o_hi": [
-      "680 रुपये",
-      "720 रुपये",
-      "650 रुपये",
-      "700 रुपये"
+      "480 rupees",
+      "500 rupees",
+      "450 rupees",
+      "520 rupees"
     ],
     "o_en": [
-      "680 rupees",
-      "720 rupees",
-      "650 rupees",
-      "700 rupees"
+      "480 rupees",
+      "500 rupees",
+      "450 rupees",
+      "520 rupees"
     ],
     "a": 0,
-    "e_hi": "विक्रय मूल्य = क्रय मूल्य * (100 - हानि प्रतिशत) / 100 = 800 * 85 / 100 = 680 रुपये।",
-    "e_en": "Selling Price = Cost Price * (100 - Loss percentage) / 100 = 800 * 85 / 100 = 680 rupees."
+    "e_hi": "विक्रय मूल्य = 600×0.80 = 480 रुपये।",
+    "e_en": "Selling price = 600×0.80 = 480 rupees."
   },
   {
     "id": "rp-mat-g204559",
@@ -101586,23 +101586,23 @@
     "s": "maths",
     "t": "profit_loss",
     "d": 1,
-    "q_hi": "यदि किसी वस्तु का विक्रय मूल्य उसके क्रय मूल्य का 4/5 है, तो हानि प्रतिशत क्या है?",
-    "q_en": "If the selling price of an item is 4/5 of its cost price, what is the loss percentage?",
+    "q_hi": "यदि किसी वस्तु का विक्रय मूल्य उसके क्रय मूल्य का 7/10 है, तो हानि प्रतिशत क्या है?",
+    "q_en": "If the selling price of an item is 7/10 of its cost price, what is the loss percentage?",
     "o_hi": [
-      "10 प्रतिशत",
-      "15 प्रतिशत",
-      "20 प्रतिशत",
-      "25 प्रतिशत"
+      "30 percent",
+      "25 percent",
+      "20 percent",
+      "35 percent"
     ],
     "o_en": [
-      "10 percent",
-      "15 percent",
+      "30 percent",
+      "25 percent",
       "20 percent",
-      "25 percent"
+      "35 percent"
     ],
-    "a": 2,
-    "e_hi": "विक्रय मूल्य/क्रय मूल्य = 4/5। हानि = 1/5, जो 20 प्रतिशत है।",
-    "e_en": "Selling Price/Cost Price = 4/5. Loss = 1/5, which is 20 percent."
+    "a": 0,
+    "e_hi": "मान लें CP=10, तो SP=7। हानि%=(10-7)/10×100=30%।",
+    "e_en": "Let CP=10, then SP=7. Loss%=(10-7)/10×100=30%."
   },
   {
     "id": "rp-mat-g204573",
@@ -103288,23 +103288,23 @@
     "s": "maths",
     "t": "si_ci",
     "d": 2,
-    "q_hi": "साधारण ब्याज की किस दर से कोई धन 8 वर्षों में तिगुना हो जाएगा?",
-    "q_en": "At what rate of simple interest will a sum of money treble itself in 8 years?",
+    "q_hi": "किस साधारण ब्याज दर पर कोई धन राशि 10 वर्षों में तीन गुनी हो जाएगी?",
+    "q_en": "At what rate of simple interest will a sum of money triple itself in 10 years?",
     "o_hi": [
       "20%",
       "25%",
       "30%",
-      "35%"
+      "15%"
     ],
     "o_en": [
       "20%",
       "25%",
       "30%",
-      "35%"
+      "15%"
     ],
-    "a": 1,
-    "e_hi": "यदि मूलधन P है और धन तिगुना हो जाता है, तो ब्याज SI = 2P होगा। R = (SI × 100) / (P × T) = (2P × 100) / (P × 8) = 200 / 8 = 25%।",
-    "e_en": "If principal is P and it trebles, interest SI = 2P. R = (SI × 100) / (P × T) = (2P × 100) / (P × 8) = 200 / 8 = 25%."
+    "a": 0,
+    "e_hi": "3 गुना होना 200% वृद्धि है। दर = 200/10 = 20% प्रति वर्ष।",
+    "e_en": "Tripling is a 200% increase. Rate = 200/10 = 20% per year."
   },
   {
     "id": "rp-mat-r204648",
@@ -104138,24 +104138,24 @@
     "id": "rp-mat-r204684",
     "s": "maths",
     "t": "ratio_proportion",
-    "d": 3,
-    "q_hi": "ऐसी कौन सी संख्या है जिसे 6, 7, 15 और 17 में से प्रत्येक में जोड़ने पर परिणामी संख्याएँ समानुपात में हो जाएँ?",
-    "q_en": "What number must be added to each of 6, 7, 15, and 17 so that the resulting numbers are in proportion?",
+    "d": 2,
+    "q_hi": "9, 11, 21 और 25 में से प्रत्येक में कौन सी संख्या जोड़ी जाए कि परिणामी संख्याएँ समानुपात में हों?",
+    "q_en": "What number must be added to each of 9, 11, 21, and 25 so that the resulting numbers are in proportion?",
     "o_hi": [
-      "2",
       "3",
+      "2",
       "4",
       "5"
     ],
     "o_en": [
-      "2",
       "3",
+      "2",
       "4",
       "5"
     ],
-    "a": 1,
-    "e_hi": "माना जोड़ी जाने वाली संख्या x है। (6+x)/(7+x) = (15+x)/(17+x) को हल करने पर क्रॉस गुणा करने से x का मान 3 प्राप्त होता है।",
-    "e_en": "Let the number to be added be x. Solving (6+x)/(7+x) = (15+x)/(17+x) via cross multiplication yields x = 3."
+    "a": 0,
+    "e_hi": "मान लें x जोड़ा गया है। (9+x)/(11+x) = (21+x)/(25+x)। हल करने पर x=3। जाँच: 12/14 = 24/28 = 6/7 ✓।",
+    "e_en": "Let x be added. (9+x)/(11+x) = (21+x)/(25+x). Solving gives x=3. Check: 12/14 = 24/28 = 6/7 ✓."
   },
   {
     "id": "rp-mat-r204685",
@@ -105128,23 +105128,23 @@
     "s": "maths",
     "t": "time_work",
     "d": 2,
-    "q_hi": "ए, बी और सी एक कार्य को क्रमशः 10, 12 और 15 दिनों में पूरा कर सकते हैं। यदि वे एक साथ मिलकर कार्य करें, तो कार्य कितने दिनों में समाप्त होगा?",
-    "q_en": "A, B and C can complete a work in 10, 12 and 15 days respectively. If they work together, in how many days will the work be finished?",
+    "q_hi": "A, B और C किसी काम को क्रमशः 20, 30 और 60 दिनों में पूरा कर सकते हैं। तीनों मिलकर काम कितने दिनों में पूरा करेंगे?",
+    "q_en": "A, B and C can complete a work in 20, 30 and 60 days respectively. In how many days will all three together complete the work?",
     "o_hi": [
-      "4 दिन",
-      "5 दिन",
-      "6 दिन",
-      "3 दिन"
+      "10 days",
+      "15 days",
+      "20 days",
+      "12 days"
     ],
     "o_en": [
-      "4 days",
-      "5 days",
-      "6 days",
-      "3 days"
+      "10 days",
+      "15 days",
+      "20 days",
+      "12 days"
     ],
     "a": 0,
-    "e_hi": "कुल कार्य 60 इकाई मान लेते हैं। ए, बी और सी की कार्यक्षमता क्रमशः 6, 5 और 4 इकाई प्रति दिन है। कुल क्षमता 15 इकाई है, अतः 60/15 = 4 दिन लगेंगे।",
-    "e_en": "Let total work be 60 units. Efficiencies of A, B and C are 6, 5 and 4 units/day respectively. Total efficiency is 15 units, so 60/15 = 4 days."
+    "e_hi": "एक दिन का काम = 1/20+1/30+1/60 = 3/60+2/60+1/60 = 6/60 = 1/10। समय = 10 दिन।",
+    "e_en": "Work per day = 1/20+1/30+1/60 = 3/60+2/60+1/60 = 6/60 = 1/10. Time = 10 days."
   },
   {
     "id": "rp-mat-r204728",
@@ -105219,24 +105219,24 @@
     "id": "rp-mat-r204731",
     "s": "maths",
     "t": "time_work",
-    "d": 2,
-    "q_hi": "ए की कार्यकुशलता बी से दोगुनी है। यदि दोनों मिलकर किसी कार्य को 14 दिनों में पूरा करते हैं, तो ए अकेला उस कार्य को कितने दिनों में पूरा करेगा?",
-    "q_en": "A's working efficiency is twice that of B. If both together complete a work in 14 days, in how many days will A alone complete that work?",
+    "d": 3,
+    "q_hi": "A की कार्यक्षमता B से आधी है। यदि दोनों मिलकर काम 10 दिनों में पूरा करते हैं, तो B अकेले काम कितने दिनों में पूरा करेगा?",
+    "q_en": "A's efficiency is half that of B. If they both together complete a work in 10 days, in how many days will B alone complete the work?",
     "o_hi": [
-      "21 दिन",
-      "42 दिन",
-      "28 दिन",
-      "14 दिन"
+      "15 days",
+      "20 days",
+      "30 days",
+      "12 days"
     ],
     "o_en": [
-      "21 days",
-      "42 days",
-      "28 days",
-      "14 days"
+      "15 days",
+      "20 days",
+      "30 days",
+      "12 days"
     ],
     "a": 0,
-    "e_hi": "ए और बी की दक्षता का अनुपात 2:1 है। कुल इकाई = (2+1) × 14 = 42 इकाई। ए अकेला इसे 42/2 = 21 दिनों में पूरा करेगा।",
-    "e_en": "Efficiency ratio of A and B is 2:1. Total units = (2+1) × 14 = 42 units. A alone will complete it in 42/2 = 21 days."
+    "e_hi": "A:B दक्षता = 1:2। मिलकर दर = 1/10। B की दर = (2/3)×(1/10) = 1/15। B अकेले = 15 दिन।",
+    "e_en": "A:B efficiency = 1:2. Combined rate = 1/10. B's rate = (2/3)×(1/10) = 1/15. B alone = 15 days."
   },
   {
     "id": "rp-mat-r204732",
@@ -106185,24 +106185,24 @@
     "id": "rp-mat-r204773",
     "s": "maths",
     "t": "time_speed_distance",
-    "d": 1,
-    "q_hi": "एक आदमी अपनी यात्रा का आधा भाग 20 किमी/घंटा की चाल से और शेष आधा भाग 30 किमी/घंटा की चाल से तय करता है। पूरी यात्रा की औसत चाल क्या है?",
-    "q_en": "A man covers half of his journey at 20 km/h and the remaining half at 30 km/h. What is the average speed for the entire journey?",
+    "d": 2,
+    "q_hi": "एक व्यक्ति अपनी यात्रा का आधा हिस्सा 50 किमी/घंटा और बाकी आधा 70 किमी/घंटा की गति से तय करता है। पूरी यात्रा की औसत चाल क्या है?",
+    "q_en": "A man covers half of his journey at 50 km/h and the remaining half at 70 km/h. What is the average speed for the entire journey?",
     "o_hi": [
-      "24 किमी/घंटा",
-      "25 किमी/घंटा",
-      "22 किमी/घंटा",
-      "26 किमी/घंटा"
+      "58.33 km/h",
+      "60 km/h",
+      "55 km/h",
+      "62 km/h"
     ],
     "o_en": [
-      "24 km/h",
-      "25 km/h",
-      "22 km/h",
-      "26 km/h"
+      "58.33 km/h",
+      "60 km/h",
+      "55 km/h",
+      "62 km/h"
     ],
     "a": 0,
-    "e_hi": "जब दूरी समान हो, औसत चाल = 2xy / (x + y)। औसत चाल = (2 × 20 × 30) / (20 + 30) = 1200 / 50 = 24 किमी/घंटा।",
-    "e_en": "When distance is equal, average speed = 2xy / (x + y). Average speed = (2 × 20 × 30) / (20 + 30) = 1200 / 50 = 24 km/h."
+    "e_hi": "औसत चाल = 2×50×70/120 = 7000/120 = 58.33 किमी/घंटा।",
+    "e_en": "Average speed = 2×50×70/120 = 7000/120 = 58.33 km/h."
   },
   {
     "id": "rp-mat-r204774",
@@ -107151,24 +107151,24 @@
     "id": "rp-mat-204819",
     "s": "maths",
     "t": "mensuration",
-    "d": 1,
-    "q_hi": "एक आयत की लंबाई और चौड़ाई दोनों में 10% की वृद्धि की जाती है। आयत के क्षेत्रफल में कितना प्रतिशत वृद्धि होगी?",
-    "q_en": "If both the length and the breadth of a rectangle are increased by 10%, what is the percentage increase in its area?",
+    "d": 2,
+    "q_hi": "एक वर्ग की भुजा 20% बढ़ाई जाती है। इसके क्षेत्रफल में कितने प्रतिशत की वृद्धि होगी?",
+    "q_en": "The side of a square is increased by 20%. What is the percentage increase in its area?",
     "o_hi": [
-      "10%",
+      "44%",
+      "40%",
       "20%",
-      "21%",
-      "12%"
+      "48%"
     ],
     "o_en": [
-      "10%",
+      "44%",
+      "40%",
       "20%",
-      "21%",
-      "12%"
+      "48%"
     ],
-    "a": 2,
-    "e_hi": "यदि लंबाई और चौड़ाई दोनों में x% वृद्धि होती है, तो क्षेत्रफल में वृद्धि x + x + (x²/100)% होती है। यहाँ 10 + 10 + 1 = 21% होगी।",
-    "e_en": "If length and breadth both increase by x%, the area increases by x + x + (x²/100)%. Here, 10 + 10 + (100/100) = 21%."
+    "a": 0,
+    "e_hi": "शुद्ध % वृद्धि = x+x+x²/100 = 20+20+400/100 = 44%।",
+    "e_en": "Net % increase = x+x+x²/100 = 20+20+400/100 = 44%."
   },
   {
     "id": "rp-mat-204820",
