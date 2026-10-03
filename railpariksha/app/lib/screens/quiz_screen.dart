@@ -107,7 +107,7 @@ class _QuizScreenState extends State<QuizScreen> {
     final r = AppScope.read(context).progress.recordAnswer(q.id, correct);
     xpEarned += r.xp;
     if (spec.mode == QuizMode.speed) {
-      if (r.levelUp || r.streakMilestone != null || r.goalCompleted) _notable = r;
+      if (r.levelUp || r.streakMilestone != null || r.goalCompleted || r.freezeSaved) _notable = r;
       if (correct) speedCorrect++;
       await Future.delayed(const Duration(milliseconds: 350));
       if (!mounted) return;
@@ -147,7 +147,7 @@ class _QuizScreenState extends State<QuizScreen> {
         if (a == null) continue;
         final r = p.recordAnswer(spec.questions[i].id, a == spec.questions[i].answer);
         xpEarned += r.xp;
-        if (r.levelUp || r.streakMilestone != null || r.goalCompleted) notable = r;
+        if (r.levelUp || r.streakMilestone != null || r.goalCompleted || r.freezeSaved) notable = r;
       }
     }
     if (spec.mode == QuizMode.speed) p.recordSpeed(speedCorrect);

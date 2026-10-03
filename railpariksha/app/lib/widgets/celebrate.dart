@@ -33,6 +33,16 @@ Future<void> celebrate(BuildContext context, Reward r) async {
     shareText = context.tr(
         'मेरी RailPariksha पर ${r.streakMilestone} दिन की स्ट्रीक है! 🔥 आप भी शुरू करें: $kPlayUrl',
         "I'm on a ${r.streakMilestone}-day streak on RailPariksha! 🔥 Start yours: $kPlayUrl");
+  } else if (r.freezeSaved) {
+    // A freeze token silently bridging a missed day used to be invisible --
+    // the streak just kept going with no sign anything had happened, so the
+    // token's whole value (and the fact the user has one fewer left) went
+    // unnoticed. Not share-worthy like a level-up or milestone, just worth
+    // surfacing.
+    title = context.tr('स्ट्रीक बच गई! ❄️', 'Streak saved! ❄️');
+    sub = context.tr(
+        'आपके फ़्रीज़ टोकन ने कल का दिन छूटने पर भी आपकी स्ट्रीक बचा ली।', 'A freeze token covered yesterday — your streak lives on.');
+    icon = Icons.ac_unit;
   } else if (r.goalCompleted) {
     title = context.tr('आज का लक्ष्य पूरा! 🎯', 'Daily goal complete! 🎯');
     sub = context.tr('+50 XP बोनस। कल फिर मिलते हैं!', '+50 XP bonus. See you tomorrow!');

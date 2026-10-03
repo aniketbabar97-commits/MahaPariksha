@@ -106,7 +106,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     final p = AppScope.read(context).progress;
     final r = p.recordAnswer(q.id, correct);
     xpEarned += r.xp;
-    if (r.levelUp || r.streakMilestone != null || r.goalCompleted) _notable = r;
+    if (r.levelUp || r.streakMilestone != null || r.goalCompleted || r.freezeSaved) _notable = r;
     setState(() {
       _locked = true;
       _flashAnswer = i;

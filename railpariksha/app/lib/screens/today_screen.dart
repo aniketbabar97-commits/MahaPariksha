@@ -43,8 +43,10 @@ class TodayScreen extends StatelessWidget {
     final weakCount = s.builder.topicStats().where((t) => t.attempts >= 3 && t.accuracy < 0.7).length;
     // Gate Beast Mode behind ~50% overall accuracy — but only once there's enough answers
     // for accuracy to mean anything (same minAttempts spirit as pacingGaps above), so brand
-    // new users aren't locked out by a 0% accuracy that's really just "no data yet".
-    final beastUnlocked = p.totalAnswered < 20 || p.accuracy >= 0.5;
+    // new users aren't locked out by a 0% accuracy that's really just "no data yet". Sticky
+    // via beastEverUnlocked: once earned, later practice on a weak topic dragging cumulative
+    // accuracy back down must not re-lock a feature (and tier) the user already has.
+    final beastUnlocked = p.totalAnswered < 20 || p.accuracy >= 0.5 || p.beastEverUnlocked;
     final caDates = s.builder.currentAffairsByDate();
 
     return ListView(

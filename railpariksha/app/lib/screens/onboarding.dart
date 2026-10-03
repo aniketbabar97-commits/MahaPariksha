@@ -368,24 +368,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
           icon: const Icon(Icons.rocket_launch),
           label: Text(context.tr('सफ़र शुरू करें!', "Let's go!")),
-          onPressed: () async {
+          onPressed: () {
             HapticFeedback.selectionClick();
-            // Reminders default to "on" with nothing in onboarding that ever
-            // asks for the OS permission, so the streak-SOS/daily-reminder
-            // system -- the app's main retention lever -- would silently never
-            // fire for most fresh installs. Ask here, at the one moment every
-            // user passes through, instead of waiting for someone to visit the
-            // Me screen and toggle a switch that already looks "on".
-            final granted = await RailParikshaNotifications.requestPermission();
             final p = context.scope.progress;
             p.update((p) {
               p.examId = examId;
               p.dailyGoal = goal;
               p.placementLevel = placementLevel;
-              p.reminders = granted;
               p.onboarded = true;
             });
-            await applyReminders(p);
+            // Reminders default to "on" with nothing in onboarding that ever
+            // asks for the OS permission, so the streak-SOS/daily-reminder
+            // system -- the app's main retention lever -- would silently never
+            // fire for most fresh installs. Ask here, at the one moment every
+            // user passes through, instead of waiting for someone to visit the
+            // Me screen and toggle a switch that already looks "on". Fired
+            // without awaiting: the OS permission dialog must never block the
+            // user from reaching the home screen they just asked for.
+            RailParikshaNotifications.requestPermission().then((granted) {
+              p.update((p) => p.reminders = granted);
+              applyReminders(p);
+            });
           },
         ),
         TextButton(
