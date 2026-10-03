@@ -10,6 +10,24 @@ import '../data/progress.dart';
 /// Play Console setup steps.
 const kRemoveAdsProductId = 'remove_ads_offline';
 
+/// Deliberate launch-strategy decision (not a bug, not a missing feature):
+/// the first 3 months after launch are ads-only, no purchase option shown
+/// at all, to prioritize growth/word-of-mouth over revenue while the user
+/// base is still small. The real plan after that window is a recurring
+/// ₹30/month subscription (NOT this one-time product -- a subscription
+/// needs Play Billing's separate subscription API, renewal/grace-period
+/// handling, etc., so building that is its own task when the time comes).
+/// Flip this back to true (or just delete this flag and its one call site
+/// in me_screen.dart) once that 3-month window is over and monetization
+/// should go live again. Ads themselves are untouched by this flag -- they
+/// keep running the whole time, this only hides the purchase entry point.
+///
+/// Deliberately non-`const`: a `const false` used in an `if` gets
+/// constant-folded by the analyzer into a `dead_code` warning, which
+/// `flutter analyze` (run in CI) treats as a build failure just like an
+/// error.
+final bool kShowPremiumPurchase = false;
+
 /// Thin wrapper around the official `in_app_purchase` plugin for this app's
 /// single non-consumable product. Owns the purchase stream for the whole
 /// app lifetime; [Progress.removedAds] is the only thing call sites need to
