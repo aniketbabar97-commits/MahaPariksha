@@ -49,12 +49,18 @@ class PracticeScreen extends StatelessWidget {
         Row(children: [
           Expanded(
             child: Text(context.tr('अभ्यास 📝', 'Practice 📝'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
           ),
-          ActionChip(
-            avatar: const Icon(Icons.swap_horiz, size: 18),
-            label: Text(exam.name.of(lang)),
-            onPressed: () => showExamSwitcher(context),
+          const SizedBox(width: 8),
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 160),
+            child: ActionChip(
+              avatar: const Icon(Icons.swap_horiz, size: 18),
+              label: Text(exam.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis),
+              onPressed: () => showExamSwitcher(context),
+            ),
           ),
         ]),
         const SizedBox(height: 4),

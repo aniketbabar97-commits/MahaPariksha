@@ -220,6 +220,7 @@ class _NameDialogState extends State<_NameDialog> {
       actions: [
         TextButton(onPressed: () => Navigator.pop(context), child: Text(context.tr('रद्द करें', 'Cancel'))),
         FilledButton(
+          style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
           onPressed: () => Navigator.pop(context, _controller.text),
           child: Text(context.tr('सेव करें', 'Save')),
         ),

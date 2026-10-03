@@ -326,7 +326,11 @@ class _QuizScreenState extends State<QuizScreen> {
             : ctx.tr('सभी प्रश्न हल हो गए हैं। शाबाश!', 'All questions answered. Well done!')),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('रुकें', 'Wait'))),
-          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('सबमिट', 'Submit'))),
+          FilledButton(
+            style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(ctx.tr('सबमिट', 'Submit')),
+          ),
         ],
       ),
     );

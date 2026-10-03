@@ -242,6 +242,7 @@ class _FreezeTokenCard extends StatelessWidget {
             'एक छोटा विज्ञापन देखें और एक दिन मिस होने पर भी स्ट्रीक बचाने वाला टोकन पाएं',
             'Watch a short ad to earn a token that saves your streak if you miss a day')),
         trailing: FilledButton.icon(
+          style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
           icon: const Icon(Icons.play_circle_outline, size: 18),
           label: Text(context.tr('देखें', 'Watch')),
           onPressed: () {
