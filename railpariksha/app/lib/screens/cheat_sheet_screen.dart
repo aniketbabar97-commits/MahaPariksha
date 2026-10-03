@@ -103,6 +103,12 @@ class _CheatSheetScreenState extends State<CheatSheetScreen> {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
                 child: Row(children: [
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    decoration: BoxDecoration(color: color.withValues(alpha: 0.16), shape: BoxShape.circle),
+                    child: Icon(topicIcon(sheet.topic), color: color, size: 18),
+                  ),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Text(sheet.category.of(lang),
                         style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: color)),

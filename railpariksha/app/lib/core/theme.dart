@@ -120,6 +120,121 @@ ThemeData buildTheme(Brightness b) {
   );
 }
 
+/// Per-topic icon for cards/headers that list many topics side by side
+/// (cheat sheets, topic pickers) -- a single [subjectIcon] per subject
+/// made every topic within it look identical; this gives each of the 91
+/// distinct topic ids in taxonomy.json its own icon so cheat-sheet
+/// categories and similar lists read as visually distinct at a glance,
+/// not just color-coded. No raster image assets involved, same as
+/// [subjectIcon] -- these are Material's built-in vector glyphs.
+IconData topicIcon(String topicId) {
+  const map = {
+    // maths
+    'number_system': Icons.pin,
+    'hcf_lcm': Icons.join_full,
+    'decimal_fraction': Icons.percent,
+    'ratio_proportion': Icons.balance,
+    'percentage': Icons.percent,
+    'average': Icons.functions,
+    'profit_loss': Icons.currency_rupee,
+    'si_ci': Icons.account_balance,
+    'time_work': Icons.engineering,
+    'time_speed_distance': Icons.speed,
+    'mensuration': Icons.square_foot,
+    'algebra': Icons.functions,
+    'geometry': Icons.change_history,
+    'trigonometry': Icons.architecture,
+    'data_interpretation': Icons.bar_chart,
+    // reasoning
+    'analogy': Icons.compare_arrows,
+    'coding_decoding': Icons.key,
+    'series': Icons.linear_scale,
+    'classification': Icons.category,
+    'blood_relations': Icons.family_restroom,
+    'direction_sense': Icons.explore,
+    'syllogism': Icons.account_tree,
+    'statement_conclusion': Icons.fact_check,
+    'puzzle_seating': Icons.event_seat,
+    'alphabet_test': Icons.abc,
+    'mirror_water_image': Icons.flip,
+    'non_verbal_reasoning': Icons.extension,
+    'mathematical_operations': Icons.calculate,
+    // science
+    'physics_basics': Icons.bolt,
+    'chemistry_basics': Icons.science,
+    'biology_basics': Icons.biotech,
+    'human_body': Icons.accessibility_new,
+    'everyday_science': Icons.lightbulb,
+    'inventions_discoveries': Icons.emoji_objects,
+    'physics_chemistry': Icons.science,
+    'environment_pollution': Icons.eco,
+    'engineering_basics': Icons.precision_manufacturing,
+    // gk
+    'indian_history': Icons.account_balance,
+    'indian_polity': Icons.gavel,
+    'indian_geography': Icons.terrain,
+    'indian_economy': Icons.trending_up,
+    'static_gk': Icons.public,
+    'awards_honours': Icons.emoji_events,
+    'books_authors': Icons.menu_book,
+    'important_days': Icons.event,
+    'sports_gk': Icons.sports_cricket,
+    'environment_ecology': Icons.park,
+    'indian_culture': Icons.temple_hindu,
+    // railway_gk
+    'railway_history': Icons.history_edu,
+    'zones_divisions': Icons.map,
+    'gauges_tracks': Icons.straighten,
+    'trains_services': Icons.train,
+    'safety_signalling': Icons.traffic,
+    'railway_board_recruitment': Icons.badge,
+    'railway_current_affairs': Icons.train_outlined,
+    // computer
+    'computer_fundamentals': Icons.computer,
+    'ms_office': Icons.description,
+    'internet_networking': Icons.wifi,
+    'financial_awareness': Icons.currency_rupee,
+    'cyber_security': Icons.security,
+    // english
+    'grammar': Icons.spellcheck,
+    'vocabulary': Icons.translate,
+    'comprehension': Icons.menu_book,
+    'cloze_test': Icons.space_bar,
+    'error_spotting': Icons.find_replace,
+    // je_mechanical
+    'thermodynamics': Icons.local_fire_department,
+    'strength_of_materials': Icons.fitness_center,
+    'fluid_mechanics_machinery': Icons.water,
+    'manufacturing_processes': Icons.precision_manufacturing,
+    'ic_engines_refrigeration': Icons.ac_unit,
+    'engineering_mechanics': Icons.settings,
+    // je_civil
+    'building_materials': Icons.foundation,
+    'surveying': Icons.explore,
+    'structural_analysis': Icons.architecture,
+    'soil_mechanics_foundation': Icons.layers,
+    'transportation_engineering': Icons.directions_car,
+    'environmental_engineering': Icons.water_drop,
+    // je_electrical
+    'circuit_theory': Icons.electrical_services,
+    'electrical_machines': Icons.settings_input_component,
+    'power_systems': Icons.bolt,
+    'measurements_instrumentation': Icons.straighten,
+    'control_systems': Icons.tune,
+    'power_electronics': Icons.memory,
+    // current_affairs
+    'sports_news': Icons.sports_cricket,
+    'awards_news': Icons.emoji_events_outlined,
+    'schemes': Icons.account_balance_outlined,
+    'appointments': Icons.badge_outlined,
+    'sci_tech_news': Icons.science_outlined,
+    'banking_finance': Icons.currency_rupee,
+    'international': Icons.public,
+    'national': Icons.flag,
+  };
+  return map[topicId] ?? Icons.menu_book;
+}
+
 // A phosphor_flutter-based duotone icon set was tried here and reverted --
 // its PhosphorIconData extends IconData, which this Flutter SDK marks a
 // `final class` (no external package may extend it), so release AOT

@@ -110,7 +110,7 @@ class TopicScreen extends StatelessWidget {
               ),
             ),
           ),
-          MindMapView(root: note.map, lang: lang),
+          MindMapView(root: note.map, lang: lang, topicId: topic.id),
           if (note.hasTips)
             ListView.separated(
               padding: const EdgeInsets.all(16),
@@ -134,7 +134,8 @@ class TopicScreen extends StatelessWidget {
 class MindMapView extends StatefulWidget {
   final MapNode root;
   final String lang;
-  const MindMapView({super.key, required this.root, required this.lang});
+  final String? topicId;
+  const MindMapView({super.key, required this.root, required this.lang, this.topicId});
 
   @override
   State<MindMapView> createState() => _MindMapViewState();
@@ -153,9 +154,15 @@ class _MindMapViewState extends State<MindMapView> {
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
             decoration: BoxDecoration(gradient: BrandColors.heroGradient, borderRadius: BorderRadius.circular(30)),
-            child: Text(root.label.of(widget.lang),
-                textAlign: TextAlign.center,
-                style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+            child: Row(mainAxisSize: MainAxisSize.min, children: [
+              if (widget.topicId != null) ...[
+                Icon(topicIcon(widget.topicId!), color: Colors.white, size: 20),
+                const SizedBox(width: 8),
+              ],
+              Text(root.label.of(widget.lang),
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+            ]),
           ),
         ),
         Center(child: Container(width: 3, height: 18, color: BrandColors.saffron.withValues(alpha: 0.5))),
