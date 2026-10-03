@@ -6,6 +6,7 @@ import '../core/notifications.dart';
 import '../core/reminders.dart';
 import '../core/theme.dart';
 import '../logic/quiz_builder.dart';
+import '../widgets/animated_train.dart';
 import '../widgets/common.dart';
 import '../widgets/exam_picker.dart';
 
@@ -140,7 +141,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.train, color: BrandColors.sunrise, size: 40),
+              AnimatedTrainHero(icon: Icons.train, iconColor: BrandColors.sunrise, size: 40),
               SizedBox(height: 12),
               Text('RailPariksha', style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.w900)),
               Text('Train to succeed · सफलता की पटरी पर', style: TextStyle(color: Colors.white70, fontSize: 16)),
