@@ -44687,5 +44687,97 @@
   "a": 0,
   "e_hi": "कॉन्ट्रोल पॉइंट को दीर्घकालिक स्थिरता रखनी चाहिए ताकि भविष्य में भी वही एलिवेशन मान उपयोग किया जा सके।",
   "e_en": "A control point must be stable and permanent so its elevation remains reliable over time."
+ },
+ {
+  "id": "rp-je_c-01958",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक सरल समर्थनित बीम की लंबाई 6 m है और उस पर 10 kN/m समान वितरित भार है। प्रत्येक समर्थन पर प्रतिक्रिया कितनी होगी?",
+  "q_en": "A simply supported beam 6 m long carries a uniform load of 10 kN/m. What is the reaction at each support?",
+  "o_hi": [
+   "30 kN",
+   "20 kN",
+   "60 kN",
+   "40 kN"
+  ],
+  "o_en": [
+   "30 kN",
+   "20 kN",
+   "60 kN",
+   "40 kN"
+  ],
+  "a": 0,
+  "e_hi": "कुल लोड 10 kN/m × 6 m = 60 kN है, दोनो समर्थन बराबर बाँटते हैं, इसलिए प्रत्येक पर 30 kN प्रतिक्रिया होती है।",
+  "e_en": "Total load = 10 kN/m × 6 m = 60 kN, shared equally by two supports, so each reaction is 30 kN."
+ },
+ {
+  "id": "rp-je_c-01959",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 4 m लंबी कैंडिलिवर बीम के मुक्त सिरे पर 5 kN का बिंदु भार लटका है। स्थिर सिरे पर अधिकतम मोमेंट कितना होगा?",
+  "q_en": "A 4 m long cantilever beam has a 5 kN point load at its free end. What is the maximum moment at the fixed support?",
+  "o_hi": [
+   "10 kN·m",
+   "20 kN·m",
+   "5 kN·m",
+   "15 kN·m"
+  ],
+  "o_en": [
+   "10 kN·m",
+   "20 kN·m",
+   "5 kN·m",
+   "15 kN·m"
+  ],
+  "a": 1,
+  "e_hi": "कैंडिलिवर में अधिकतम मोमेंट P × L = 5 kN × 4 m = 20 kN·m होता है।",
+  "e_en": "Maximum moment = P × L = 5 kN × 4 m = 20 kN·m."
+ },
+ {
+  "id": "rp-je_c-01960",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 8 m लंबी सरल समर्थनित बीम के मध्य में 12 kN का बिंदु भार लगा है। अधिकतम शियर बल कितना होगा?",
+  "q_en": "A simply supported beam 8 m long has a 12 kN point load at mid‑span. What is the maximum shear force?",
+  "o_hi": [
+   "6 kN",
+   "12 kN",
+   "3 kN",
+   "9 kN"
+  ],
+  "o_en": [
+   "6 kN",
+   "12 kN",
+   "3 kN",
+   "9 kN"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक समर्थन पर प्रतिक्रिया = 12 kN/2 = 6 kN, जो अधिकतम शियर है।",
+  "e_en": "Each support reaction = 12 kN/2 = 6 kN, which is the maximum shear."
+ },
+ {
+  "id": "rp-je_c-01961",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक समकोण त्रिकोणीय ट्रस में दो समर्थन A और B 6 m दूरी पर हैं, शीर्ष C की ऊँचाई 4 m है और उस पर 10 kN का लोड लगा है। सदस्य AC में बल कितना होगा?",
+  "q_en": "In a right‑triangle truss with supports A and B 6 m apart, top joint C is 4 m high and carries a 10 kN load. What is the force in member AC?",
+  "o_hi": [
+   "5 kN",
+   "6.25 kN",
+   "8 kN",
+   "10 kN"
+  ],
+  "o_en": [
+   "5 kN",
+   "6.25 kN",
+   "8 kN",
+   "10 kN"
+  ],
+  "a": 1,
+  "e_hi": "C में दो समान सदस्य AC और BC हैं। sinθ=4/5, इसलिए 2F sinθ=10 kN → F=6.25 kN (तनाव)।",
+  "e_en": "Members AC and BC are symmetric; sinθ=4/5, so 2F sinθ=10 kN gives F=6.25 kN in tension."
  }
 ]
