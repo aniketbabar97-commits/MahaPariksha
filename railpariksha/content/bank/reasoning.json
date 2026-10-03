@@ -3688,29 +3688,6 @@
   "e_en": "A is B's father, and G is B's father's sister -- i.e. G is A's own sister. So G's relationship to A is: sister."
  },
  {
-  "id": "rp-rea-s00183",
-  "s": "reasoning",
-  "t": "blood_relations",
-  "d": 1,
-  "q_hi": "यदि अ, ब के पिता हैं और ग, ब के पिता के पिता हैं, तो अ और ग का क्या संबंध है?",
-  "q_en": "If A is B's father and G is B's paternal grandfather, what is the relationship between A and G?",
-  "o_hi": [
-   "पुत्र",
-   "पिता",
-   "भाई",
-   "भाभी"
-  ],
-  "o_en": [
-   "Son",
-   "Father",
-   "Brother",
-   "Sister‑in‑law"
-  ],
-  "a": 1,
-  "e_hi": "ग ब के पिता के पिता हैं, अतः ग अ के पिता हैं।",
-  "e_en": "G is B’s paternal grandfather, so G is A’s father."
- },
- {
   "id": "rp-rea-s00184",
   "s": "reasoning",
   "t": "blood_relations",
@@ -3801,29 +3778,6 @@
   "a": 0,
   "e_hi": "समान माता-पिता वाले लोगों को भाई-बहन कहा जाता है।",
   "e_en": "People with the same parents are called siblings."
- },
- {
-  "id": "rp-rea-s00189",
-  "s": "reasoning",
-  "t": "blood_relations",
-  "d": 1,
-  "q_hi": "किस रिश्ते को 'भाई का बेटा' कहते हैं?",
-  "q_en": "The relationship known as 'son of brother' is called what?",
-  "o_hi": [
-   "भाई का पुत्र",
-   "बहन का पुत्र",
-   "पिता का पुत्र",
-   "पुत्र का पुत्र"
-  ],
-  "o_en": [
-   "Brother’s son",
-   "Sister’s son",
-   "Father’s son",
-   "Son’s son"
-  ],
-  "a": 0,
-  "e_hi": "भाई का बेटा को 'भतीजा' कहा जाता है।",
-  "e_en": "A brother’s son is called a nephew (भतीजा)."
  },
  {
   "id": "rp-rea-s00190",
@@ -15046,8 +15000,8 @@
    "504"
   ],
   "a": 2,
-  "e_hi": "यह फैक्टोरियल श्रृंखला है: 1! 2! 3! 4! 5! 6! = 720, 7! = 5040।",
-  "e_en": "This is factorial series: 1! 2! 3! 4! 5! 6! = 720, next 7! = 5040."
+  "e_hi": "यह एक फैक्टोरियल श्रृंखला है: पद 0!, 1!, 2!, 3!, 4!, 5! = 1, 1, 2, 6, 24, 120 हैं। अगला पद 6! = 720 होगा।",
+  "e_en": "This is a factorial series: the terms are 0!, 1!, 2!, 3!, 4!, 5! = 1, 1, 2, 6, 24, 120. The next term is 6! = 720."
  },
  {
   "id": "rp-rea-s00732",
@@ -19090,7 +19044,7 @@
   "o_en": [
    "Brother",
    "Sister",
-   "Nephhew",
+   "Nephew",
    "Aunt"
   ],
   "a": 1,
@@ -27695,7 +27649,7 @@
    "G",
    "GZ"
   ],
-  "a": 3,
+  "a": 1,
   "e_hi": "कार्ड क्रम: 1(A), 2(BZ), 3(C), 4(DZ), 5(E), 6(FZ). छठा कार्ड F के बाद Z जोड़कर बनता है क्योंकि यह सम क्रमांक वाला कार्ड है।",
   "e_en": "Card sequence: 1(A), 2(BZ), 3(C), 4(DZ), 5(E), 6(FZ). The sixth card is F with Z added because it is an even-numbered card."
  },
@@ -39407,29 +39361,6 @@
   "e_en": "Turning 90 degrees anti-clockwise from South faces East, and another 45 degrees leads to North-East."
  },
  {
-  "id": "rp-rea-j01708",
-  "s": "reasoning",
-  "t": "direction_sense",
-  "d": 3,
-  "q_hi": "रवि 10 मीटर उत्तर में गया, फिर 10 मीटर दाएं मुड़ा, फिर हर बार बाएं मुड़ते हुए क्रमशः 5, 15 और 15 मीटर चला। अब वह प्रारंभिक बिंदु से किस दिशा में है?",
-  "q_en": "Ravi went 10m North, turned right 10m, then turned left and walked 5m, 15m, and 15m respectively. In which direction is he from the start?",
-  "o_hi": [
-   "उत्तर-पूर्व",
-   "उत्तर-पश्चिम",
-   "दक्षिण-पश्चिम",
-   "दक्षिण-पूर्व"
-  ],
-  "o_en": [
-   "North-East",
-   "North-West",
-   "South-West",
-   "South-East"
-  ],
-  "a": 2,
-  "e_hi": "अंतिम स्थिति प्रारंभिक बिंदु के पश्चिम और दक्षिण में स्थित है, इसलिए वह दक्षिण-पश्चिम दिशा में है।",
-  "e_en": "The final position is to the West and South of the starting point, hence he is in the South-West direction."
- },
- {
   "id": "rp-rea-j01709",
   "s": "reasoning",
   "t": "direction_sense",
@@ -42024,9 +41955,9 @@
    "Uncle",
    "Son-in-law"
   ],
-  "a": 1,
-  "e_hi": "कोड में 'चाची' का वास्तविक अर्थ 'बेटी' है। 'बेटी' के पुत्र को वास्तविकता में 'पुत्र' कहते हैं, लेकिन प्रश्न पूछ रहा है कि कोड के अनुसार क्या कहा जाएगा। यहाँ उलझन है, आइए इसे स्पष्ट करें: प्रश्न है 'चाची के पुत्र' को क्या कहेंगे? 'चाची' = 'बेटी'। 'बेटी' का पुत्र = 'पुत्र'। 'पुत्र' को कोड में क्या कहा जाता है? विकल्पों में 'पुत्र' नहीं है। आइए पुनर्विचार करें: यदि 'बेटी' को 'चाची' कहते हैं, तो 'चाची' का अर्थ 'बेटी' है। 'बेटी' के पुत्र को 'पुत्र' कहते हैं। क्या 'पुत्र' को कोड में बदला गया है? नहीं। तो उत्तर 'पुत्र' होना चाहिए। लेकिन विकल्प में 'पुत्र' है (Index 0)। आइए तर्क को सरल बनाएं: 'चाची' (code) = 'बेटी' (real). 'बेटी' का पुत्र = 'पुत्र' (real). क्या 'पुत्र' को कोड में बदला गया है? नहीं। तो उत्तर 'पुत्र' है।",
-  "e_en": "In the code, 'Aunt' means 'Daughter'. The son of a 'Daughter' is a 'Son'. Since 'Son' is not redefined in the code, the answer is 'Son'."
+  "a": 0,
+  "e_hi": "कोड में 'चाची' का वास्तविक अर्थ 'बेटी' है। (वास्तविक) बेटी के पुत्र को सीधे 'पुत्र' कहा जाता है, और चूँकि 'पुत्र' शब्द को कोड में पुनः परिभाषित नहीं किया गया है, वह अपने सामान्य अर्थ में ही रहता है। इसलिए 'चाची' के पुत्र को 'पुत्र' कहा जाएगा।",
+  "e_en": "In the code, 'Aunt' stands for the real 'Daughter'. The son of a (real) daughter is simply her 'Son' -- and since 'Son' is not one of the words redefined by the code, it keeps its normal meaning. So the son of 'Aunt' is called 'Son'."
  },
  {
   "id": "rp-rea-o01477",
@@ -51827,29 +51758,6 @@
   "e_en": "The father of my daughter is the man himself. Since the woman's brother is the man, she is the man's sister."
  },
  {
-  "id": "rp-rea-j01983",
-  "s": "reasoning",
-  "t": "blood_relations",
-  "d": 2,
-  "q_hi": "पांच सदस्यों वाले परिवार में, ए, बी का पति है। सी, डी की बेटी है। ए, सी का पिता है। डी का बी से क्या संबंध है?",
-  "q_en": "In a family of five, A is the husband of B. C is the daughter of D. A is the father of C. How is D related to B?",
-  "o_hi": [
-   "बहन",
-   "पत्नी",
-   "मां",
-   "भाई"
-  ],
-  "o_en": [
-   "Sister",
-   "Wife",
-   "Mother",
-   "Brother"
-  ],
-  "a": 1,
-  "e_hi": "ए, सी का पिता है और डी, सी की मां है (क्योंकि ए और बी पति-पत्नी हैं)। अतः डी, बी है।",
-  "e_en": "A is the father of C, and D is the mother of C. Since A is the husband of B, D must be B."
- },
- {
   "id": "rp-rea-j01984",
   "s": "reasoning",
   "t": "blood_relations",
@@ -53115,29 +53023,6 @@
   "e_en": "Q is the wife of R (R is male). P is the son of Q (P is male). S is the daughter of P (S is female). T is the brother of S (T is male). U is the father of T (U is male). So the male members are R, P, T, U — a total of 4 males."
  },
  {
-  "id": "rp-rea-j02011",
-  "s": "reasoning",
-  "t": "blood_relations",
-  "d": 2,
-  "q_hi": "X, Y का भाई है। Y, Z की पत्नी है। Z, W का बेटा है। W का X से क्या संबंध है?",
-  "q_en": "X is the brother of Y. Y is the wife of Z. Z is the son of W. How is W related to X?",
-  "o_hi": [
-   "पिता",
-   "सास या ससुर",
-   "माता",
-   "बहन"
-  ],
-  "o_en": [
-   "Father",
-   "Mother-in-law or Father-in-law",
-   "Mother",
-   "Sister"
-  ],
-  "a": 1,
-  "e_hi": "Y, Z की पत्नी है और Z, W का बेटा है। अतः W, Y के सास या ससुर होंगे। चूँकि X, Y का भाई है, W, X के भी सास या ससुर होंगे।",
-  "e_en": "Y is Z's wife, and Z is W's son, so W is Y's parent-in-law. Since X is Y's brother, W is the parent-in-law of X as well."
- },
- {
   "id": "rp-rea-j02012",
   "s": "reasoning",
   "t": "blood_relations",
@@ -53663,8 +53548,8 @@
    "Wife"
   ],
   "a": 0,
-  "e_hi": "सुनीता के भाई का इकलौता पुत्र रमेश का पुत्र है। अतः रमेश, सुनीता के भाई का पति नहीं बल्कि स्वयं भाई है या उसका साला/जीजा हो सकता है, लेकिन यहाँ बुआ का संबंध सटीक है।",
-  "e_en": "Sunita's brother's only son is Ramesh's son. Thus, Sunita is the aunt of that son and related to Ramesh as his sister or sister-in-law."
+  "e_hi": "सुनीता के भाई का इकलौता पुत्र ही यहाँ 'रमेश का पुत्र' भी बताया गया है। उस पुत्र का पिता केवल सुनीता का भाई ही हो सकता है, इसलिए रमेश स्वयं सुनीता का भाई है। अतः सुनीता, रमेश की बहन है।",
+  "e_en": "Sunita's brother's only son is also described here as 'Ramesh's son'. Since that son's father can only be Sunita's own brother, Ramesh must himself be Sunita's brother. Therefore, Sunita is Ramesh's sister."
  },
  {
   "id": "rp-rea-i02011",
@@ -54982,8 +54867,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "यदि 'PEARL' को '251912' के रूप में लिखा जाता है, तो 'DIAMOND' को कैसे लिखा जाएगा?",
-  "q_en": "If 'PEARL' is written as '251912', how will 'DIAMOND' be written?",
+  "q_hi": "यदि 'PEARL' को '16511812' के रूप में लिखा जाता है, तो 'DIAMOND' को कैसे लिखा जाएगा?",
+  "q_en": "If 'PEARL' is written as '16511812', how will 'DIAMOND' be written?",
   "o_hi": [
    "4911315144",
    "4911315145",
@@ -55143,8 +55028,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "यदि 'DEER' को 1221518 लिखा जाता है, तो 'FEEL' को कैसे लिखा जाएगा?",
-  "q_en": "If 'DEER' is coded as 1221518, how will 'FEEL' be coded?",
+  "q_hi": "यदि 'DEER' को 45518 लिखा जाता है, तो 'FEEL' को कैसे लिखा जाएगा?",
+  "q_en": "If 'DEER' is coded as 45518, how will 'FEEL' be coded?",
   "o_hi": [
    "65512",
    "65511",
@@ -55158,8 +55043,8 @@
    "66512"
   ],
   "a": 0,
-  "e_hi": "अक्षरों के स्थान मान को एक साथ लिखा गया है: D=4, E=5, E=5, R=18। यहाँ D(4) के बजाय 12 का तर्क है, पर FEEL में F=6, E=5, E=5, L=12 आता है।",
-  "e_en": "Positional values are concatenated: F=6, E=5, E=5, L=12. Resulting in 65512."
+  "e_hi": "प्रत्येक अक्षर को उसके वर्णमाला स्थान से दर्शाया गया है: D=4, E=5, E=5, R=18, जिससे 'DEER' का कूट 45518 बनता है। इसी नियम से FEEL के लिए: F=6, E=5, E=5, L=12, अतः कूट 65512 होगा।",
+  "e_en": "Each letter is represented by its alphabetical position: D=4, E=5, E=5, R=18, giving 'DEER' the code 45518. Applying the same rule to FEEL: F=6, E=5, E=5, L=12, giving the code 65512."
  },
  {
   "id": "rp-rea-j02064",
@@ -55917,8 +55802,8 @@
    "5237"
   ],
   "a": 1,
-  "e_hi": "G=5, A=4, T=2, E=7। अक्षरों के दिए गए मानों को उपयोग करके GATE का कोड 5427 बनता है।",
-  "e_en": "Using the given mappings G=5, A=4, T=2, and E=7, GATE is coded as 5427."
+  "e_hi": "'GIVE'=5137 से: G=5, I=1, V=3, E=7। 'BAT'=924 से: B=9, A=2, T=4। इन मानों का उपयोग करने पर, GATE = G(5) A(2) T(4) E(7) = 5247 बनता है।",
+  "e_en": "From 'GIVE'=5137: G=5, I=1, V=3, E=7. From 'BAT'=924: B=9, A=2, T=4. Using these mappings, GATE = G(5) A(2) T(4) E(7) = 5247."
  },
  {
   "id": "rp-rea-j02081",
@@ -58087,8 +57972,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 3,
-  "q_hi": "यदि 'APPLE' को '161612165' लिखा जाए, तो 'P' का मान क्या है?",
-  "q_en": "If 'APPLE' is written as '161612165', what is the value of 'P'?",
+  "q_hi": "यदि 'APPLE' को '11616125' लिखा जाए, तो 'P' का मान क्या है?",
+  "q_en": "If 'APPLE' is written as '11616125', what is the value of 'P'?",
   "o_hi": [
    "16",
    "12",
@@ -58930,8 +58815,8 @@
    "ROVE"
   ],
   "a": 2,
-  "e_hi": "अक्षरों के स्थान को पुनर्व्यवस्थित किया गया है - क्रम है 3-2-4-1 (GIVE के तीसरे अक्षर V को पहले, फिर दूसरा I, फिर चौथा E, फिर पहला G)। OVER (O-V-E-R) पर यही क्रम लगाने पर: तीसरा E, दूसरा V, चौथा R, पहला O = 'EVRO'।",
-  "e_en": "The letters are rearranged in the order 3-2-4-1 (from GIVE, the 3rd letter V comes first, then the 2nd letter I, then the 4th letter E, then the 1st letter G). Applying this same order to OVER (O-V-E-R): 3rd=E, 2nd=V, 4th=R, 1st=O, giving 'EVRO'."
+  "e_hi": "GIVE (स्थान 1-2-3-4) के अक्षरों को 3-2-4-1 क्रम में पुनर्व्यवस्थित करने पर VIEG बनता है। इसी 3-2-4-1 नियम को OVER (अक्षर O-V-E-R) पर लागू करने पर 'EVRO' प्राप्त होता है।",
+  "e_en": "The letters of GIVE (positions 1-2-3-4) are rearranged as 3-2-4-1 to form VIEG. Applying the same 3-2-4-1 rearrangement to OVER (letters O-V-E-R) gives 'EVRO'."
  },
  {
   "id": "rp-rea-i02119",
@@ -59300,29 +59185,6 @@
   "a": 0,
   "e_hi": "अक्षरों की संख्या का दोगुना: FLOWER(6*2=12, यहाँ 14 है, शायद स्वर/व्यंजन लॉजिक)। सही तर्क: अक्षरों की संख्या * 2। MOUNTAIN(8*2=16)।",
   "e_en": "Number of letters multiplied by 2. MOUNTAIN has 8 letters, 8*2=16."
- },
- {
-  "id": "rp-rea-j02165",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "किसी कूट में 'PEN' को '35' और 'KEY' को '42' लिखा जाता है, तो 'LOCK' को क्या लिखा जाएगा?",
-  "q_en": "If 'PEN' is coded as '35' and 'KEY' as '42' in a code, what will 'LOCK' be coded as?",
-  "o_hi": [
-   "48",
-   "50",
-   "52",
-   "54"
-  ],
-  "o_en": [
-   "48",
-   "50",
-   "52",
-   "54"
-  ],
-  "a": 0,
-  "e_hi": "अक्षरों के विपरीत मानों का योग। PEN: K(11)+V(22)+M(13)=46-11=35। LOCK: O(15)+L(12)+X(24)+P(16)=67। सही तर्क: अक्षरों के मान का योग + समायोजन।",
-  "e_en": "Sum of reverse positional values. PEN: K(11)+V(22)+M(13) adjusted. LOCK: O(15)+L(12)+X(24)+P(16) results in 48 based on specific offset."
  },
  {
   "id": "rp-rea-i02129",
@@ -60011,8 +59873,8 @@
    "DJCKS"
   ],
   "a": 1,
-  "e_hi": "प्रत्येक अक्षर में +2 किया गया है। T+2=V, A+2=C, B+2=D, L+2=N, E+2=G। इसी प्रकार CHAIR में +2 करने पर: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, जो 'EJCKT' प्राप्त होता है।",
-  "e_en": "Each letter is shifted by +2. T+2=V, A+2=C, B+2=D, L+2=N, E+2=G. Applying +2 to CHAIR: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, giving 'EJCKT'."
+  "e_hi": "प्रत्येक अक्षर में +2 किया गया है: T+2=V, A+2=C, B+2=D, L+2=N, E+2=G, जो 'TABLE'->'VCDNG' नियम की पुष्टि करता है। CHAIR पर +2 लागू करने पर: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, अतः 'EJCKT' प्राप्त होता है।",
+  "e_en": "Each letter is shifted by +2: T+2=V, A+2=C, B+2=D, L+2=N, E+2=G, confirming the rule from 'TABLE'->'VCDNG'. Applying +2 to CHAIR: C+2=E, H+2=J, A+2=C, I+2=K, R+2=T, giving 'EJCKT'."
  },
  {
   "id": "rp-rea-j02182",
@@ -60726,29 +60588,6 @@
   "a": 1,
   "e_hi": "प्यास बुझाने के लिए पानी पिया जाता है, और प्रश्न में पानी को हवा कहा गया है।",
   "e_en": "We drink water to quench thirst, and in this code, water is referred to as 'air'."
- },
- {
-  "id": "rp-rea-j02197",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "एक निश्चित कूट में '253' का अर्थ 'किताबें पुरानी हैं', '546' का अर्थ 'मैन पुरानी है', '378' का अर्थ 'किताबें अच्छी हैं'। 'हैं' के लिए कौन सा अंक है?",
-  "q_en": "In a certain code, '253' means 'books are old', '546' means 'man is old', '378' means 'books are good'. Which digit represents 'are'?",
-  "o_hi": [
-   "2",
-   "3",
-   "5",
-   "8"
-  ],
-  "o_en": [
-   "2",
-   "3",
-   "5",
-   "8"
-  ],
-  "a": 0,
-  "e_hi": "किताबें (Books) दोनों वाक्यों में है, अंक 3 कॉमन है। पुरानी (old) के लिए 5 कॉमन है। अतः 'हैं' (are) के लिए 2 बचता है।",
-  "e_en": "Books is common in two sentences with code 3. Old is common with code 5. Thus, 'are' must be 2."
  },
  {
   "id": "rp-rea-j02198",
@@ -61537,8 +61376,8 @@
   "s": "reasoning",
   "t": "coding_decoding",
   "d": 2,
-  "q_hi": "यदि 'DEER' को 1221518 लिखा जाता है, तो 'HIGH' को कैसे लिखा जाएगा?",
-  "q_en": "If 'DEER' is coded as 1221518, how will 'HIGH' be coded?",
+  "q_hi": "यदि 'DEER' को 45518 लिखा जाता है, तो 'HIGH' को कैसे लिखा जाएगा?",
+  "q_en": "If 'DEER' is coded as 45518, how will 'HIGH' be coded?",
   "o_hi": [
    "8978",
    "89718",
@@ -61552,8 +61391,8 @@
    "8979"
   ],
   "a": 0,
-  "e_hi": "अक्षरों के वास्तविक वर्णमाला क्रम को सीधे लिखा गया है: D=4, E=5, E=5, R=18 (यहाँ 1221518 एक अलग तर्क है)। चलिए सरल कोड लेते हैं: D=4, E=5, R=18।",
-  "e_en": "The letters are represented by their alphabetical positions. H=8, I=9, G=7, H=8."
+  "e_hi": "प्रत्येक अक्षर को उसके वर्णमाला स्थान से दर्शाया गया है: D=4, E=5, E=5, R=18, जिससे 'DEER' का कूट 45518 बनता है। इसी नियम से HIGH के लिए: H=8, I=9, G=7, H=8, अतः कूट 8978 होगा।",
+  "e_en": "Each letter is represented by its alphabetical position: D=4, E=5, E=5, R=18, giving 'DEER' the code 45518. Applying the same rule to HIGH: H=8, I=9, G=7, H=8, giving the code 8978."
  },
  {
   "id": "rp-rea-j02217",
@@ -72136,35 +71975,12 @@
   "e_en": "This is based on the pattern n^3 - 1. 5^3 - 1 = 124."
  },
  {
-  "id": "rp-rea-j02530",
-  "s": "reasoning",
-  "t": "series",
-  "d": 3,
-  "q_hi": "भारतीय स्वतंत्रता सेनानियों के जन्म वर्ष की श्रृंखला को पूरा करें: 1869 (गांधी), 1889 (नेहरू), 1897 (सुभाष चंद्र बोस), ?",
-  "q_en": "Complete the series of birth years of Indian freedom fighters: 1869 (Gandhi), 1889 (Nehru), 1897 (Subhash Chandra Bose), ?",
-  "o_hi": [
-   "1902",
-   "1904",
-   "1906",
-   "1908"
-  ],
-  "o_en": [
-   "1902",
-   "1904",
-   "1906",
-   "1908"
-  ],
-  "a": 1,
-  "e_hi": "यह श्रृंखला प्रमुख स्वतंत्रता सेनानियों के जन्म वर्षों पर आधारित है। गांधी(1869), नेहरू(1889), सुभाष चंद्र बोस(1897) के बाद, लाल बहादुर शास्त्री का जन्म वर्ष 1904 है - जो सही उत्तर है।",
-  "e_en": "This series is based on the birth years of prominent freedom fighters. After Gandhi(1869), Nehru(1889), and Subhash Chandra Bose(1897), Lal Bahadur Shastri was born in 1904 — the correct answer."
- },
- {
   "id": "rp-rea-j02531",
   "s": "reasoning",
   "t": "series",
   "d": 2,
-  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें: 1950, 1952, 1956, 1962, ?",
-  "q_en": "Find the missing number in the series: 1950, 1952, 1956, 1962, ?",
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें जो भारतीय गणतंत्र दिवस के वर्षों का क्रम दिखाती है: 1950, 1952, 1956, 1962, ?",
+  "q_en": "Find the missing number in the series representing Indian Republic Day years: 1950, 1952, 1956, 1962, ?",
   "o_hi": [
    "1968",
    "1970",
@@ -72178,8 +71994,8 @@
    "1974"
   ],
   "a": 1,
-  "e_hi": "अंतर क्रमशः +2, +4, +6 है, इसलिए अगला अंतर +8 होगा। 1962 + 8 = 1970।",
-  "e_en": "The differences are +2, +4, +6, so the next difference should be +8. 1962 + 8 = 1970."
+  "e_hi": "क्रमागत पदों के बीच अंतर +2, +4, +6 है, जो हर बार 2 से बढ़ रहा है। अगला अंतर +8 होगा, अतः 1962 + 8 = 1970।",
+  "e_en": "The differences between consecutive terms are +2, +4, +6, increasing by 2 each time. The next difference is +8, so 1962 + 8 = 1970."
  },
  {
   "id": "rp-rea-j02533",
@@ -73520,8 +73336,8 @@
   "s": "reasoning",
   "t": "series",
   "d": 2,
-  "q_hi": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) के मिशनों के वर्षों की श्रृंखला को पूरा करें: 2008, 2013, 2019, ?",
-  "q_en": "Complete the series of years for major ISRO lunar missions: 2008, 2013, 2019, ?",
+  "q_hi": "भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) के प्रमुख मिशनों के वर्षों की श्रृंखला को पूरा करें: 2008, 2013, 2019, ?",
+  "q_en": "Complete the series of years for major ISRO space missions: 2008, 2013, 2019, ?",
   "o_hi": [
    "2020",
    "2021",
@@ -73535,8 +73351,8 @@
    "2023"
   ],
   "a": 3,
-  "e_hi": "यह श्रृंखला चंद्रयान मिशनों के वर्षों का अनुसरण करती है: चंद्रयान-1, मार्स ऑर्बिटर मिशन, चंद्रयान-2, और चंद्रयान-3।",
-  "e_en": "The series follows the years of major Indian space missions: Chandrayaan-1, Mars Orbiter Mission, Chandrayaan-2, and Chandrayaan-3."
+  "e_hi": "यह क्रम ISRO के प्रमुख मिशनों के प्रक्षेपण वर्षों को दर्शाता है: चंद्रयान-1 (2008), मार्स ऑर्बिटर मिशन (2013), चंद्रयान-2 (2019), और चंद्रयान-3 (2023)।",
+  "e_en": "This sequence lists the launch years of major ISRO missions: Chandrayaan-1 (2008), Mars Orbiter Mission (2013), Chandrayaan-2 (2019), and Chandrayaan-3 (2023)."
  },
  {
   "id": "rp-rea-j02585",
@@ -73585,29 +73401,6 @@
   "e_en": "The list consists of medalists from the Tokyo 2020 Olympics, which includes Ravi Dahiya."
  },
  {
-  "id": "rp-rea-j02587",
-  "s": "reasoning",
-  "t": "series",
-  "d": 3,
-  "q_hi": "रेलवे के विद्युतीकरण के चरणों के आधार पर श्रृंखला पूरी करें: 1925, 1930, 1950, ?",
-  "q_en": "Complete the series based on milestones in Indian Railway electrification: 1925, 1930, 1950, ?",
-  "o_hi": [
-   "1955",
-   "1960",
-   "1965",
-   "1970"
-  ],
-  "o_en": [
-   "1955",
-   "1960",
-   "1965",
-   "1970"
-  ],
-  "a": 0,
-  "e_hi": "1925 में पहली इलेक्ट्रिक ट्रेन चली थी, जिसके बाद विद्युतीकरण के विभिन्न चरणों को दर्शाया गया है।",
-  "e_en": "The first electric train ran in 1925, followed by subsequent major milestones in electrification."
- },
- {
   "id": "rp-rea-j02588",
   "s": "reasoning",
   "t": "series",
@@ -73652,29 +73445,6 @@
   "a": 2,
   "e_hi": "यह श्रृंखला भारतीय नोबेल विजेताओं को उनके पुरस्कार प्राप्त करने के वर्ष के अनुसार व्यवस्थित करती है।",
   "e_en": "This series arranges Indian Nobel laureates in order of the year they received the award."
- },
- {
-  "id": "rp-rea-j02590",
-  "s": "reasoning",
-  "t": "series",
-  "d": 3,
-  "q_hi": "भारतीय संविधान के संशोधन वर्षों की श्रृंखला को पूरा करें: 1951, 1976, 1992, ?",
-  "q_en": "Complete the series based on significant Constitutional Amendment years: 1951, 1976, 1992, ?",
-  "o_hi": [
-   "2000",
-   "2002",
-   "2005",
-   "2010"
-  ],
-  "o_en": [
-   "2000",
-   "2002",
-   "2005",
-   "2010"
-  ],
-  "a": 1,
-  "e_hi": "यह श्रृंखला क्रमशः पहले संशोधन, 42वें संशोधन, और 73वें/74वें संशोधनों के वर्षों को दर्शाती है।",
-  "e_en": "The series represents the years of the 1st Amendment, 42nd Amendment, and 73rd/74th Amendments respectively."
  },
  {
   "id": "rp-rea-j02591",
@@ -75398,8 +75168,8 @@
    "Alphabet"
   ],
   "a": 1,
-  "e_hi": "खिलाड़ियों के समूह से टीम बनती है, उसी प्रकार पत्रों के समूह (संग्रह) से डाक बनती है।",
-  "e_en": "A group of players forms a team; similarly, a collection of letters constitutes mail."
+  "e_hi": "एक खिलाड़ी वह इकाई है जो अन्य खिलाड़ियों के साथ मिलकर टीम बनाता है; उसी प्रकार एक अक्षर वह इकाई है जो अन्य अक्षरों के साथ मिलकर शब्द बनाता है।",
+  "e_en": "A player is a unit that comes together with others to form a team; similarly, a letter is a unit that comes together with others to form a word."
  },
  {
   "id": "rp-rea-k02651",
@@ -77813,8 +77583,8 @@
    "31"
   ],
   "a": 2,
-  "e_hi": "तर्क है (n * 1.5) - 1। 14 * 1.5 - 1 = 20, तो 21 * 1.5 - 1 = 30.5, या (n/2 + 13)। 14/2 + 13 = 20, 21/2 + 13 = 23.5। सही विकल्प 30 है क्योंकि 14 + 6 = 20, 21 + 9 = 30 (जहाँ 6 और 9 संख्या का आधा है)।",
-  "e_en": "Logic: 14 + (14/2 - 1) = 20. Another approach: (14+6)=20, (21+9)=30."
+  "e_hi": "यहाँ संख्या में उसके आधे (पूर्णांक में) से 1 कम जोड़ा जाता है: 14 + 7 - 1 = 20। इसी प्रकार, 21 + 10 - 1 = 30।",
+  "e_en": "The pattern adds half of the number (rounded down) minus 1: 14 + 7 - 1 = 20. Similarly, 21 + 10 - 1 = 30."
  },
  {
   "id": "rp-rea-k02750",
@@ -79261,9 +79031,9 @@
    "90",
    "63"
   ],
-  "a": 0,
-  "e_hi": "तर्क यह है कि संख्या n को (n+1) से गुणा किया गया है (7*8=56)। अतः 9*10=90 होना चाहिए, लेकिन यहाँ 7*8=56 का अर्थ 7*(7+1) है। सही उत्तर 9*8=72 है क्योंकि 7*8=56 है।",
-  "e_en": "The pattern is n * (n+1). For 7, it is 7*8=56. For 9, it is 9*8=72 (using the same multiplier logic)."
+  "a": 2,
+  "e_hi": "यहाँ प्रतिरूप n x (n+1) है। 7 के लिए, 7x8=56 है। इसी प्रकार, 9 के लिए, 9x10=90 होगा।",
+  "e_en": "The pattern is n x (n+1). For 7, it is 7x8=56. Similarly, for 9, it is 9x10=90."
  },
  {
   "id": "rp-rea-k02809",
@@ -79630,8 +79400,8 @@
    "Alphabet"
   ],
   "a": 0,
-  "e_hi": "खिलाड़ियों के समूह से टीम बनती है, वैसे ही पत्रों के समूह या संग्रह को डाक (Mail) कहा जाता है।",
-  "e_en": "Players form a team, similarly, a collection of letters is referred to as mail."
+  "e_hi": "खिलाड़ी वे इकाइयाँ हैं जो मिलकर टीम बनाती हैं; उसी प्रकार अक्षर वे इकाइयाँ हैं जो मिलकर शब्द बनाते हैं।",
+  "e_en": "Players are units that come together to form a team; similarly, letters are units that come together to form a word."
  },
  {
   "id": "rp-rea-k02825",
@@ -87818,8 +87588,8 @@
    "PMBOTU"
   ],
   "a": 1,
-  "e_hi": "इस कूट भाषा में प्रत्येक अक्षर को ठीक अगले अक्षर से बदल दिया गया है, यानी सभी अक्षरों में +1 जोड़ा गया है। G(+1)=H, A(+1)=B, R(+1)=S, D(+1)=E, E(+1)=F, N(+1)=O। इसी नियम को 'PLANTS' पर लागू करने पर: P(+1)=Q, L(+1)=M, A(+1)=B, N(+1)=O, T(+1)=U, S(+1)=T प्राप्त होता है। अतः सही कूट 'QMBOTU' है।",
-  "e_en": "In this code language, each letter is shifted forward by 1 position (+1). G(+1)=H, A(+1)=B, R(+1)=S, D(+1)=E, E(+1)=F, N(+1)=O. Applying this same +1 rule to 'PLANTS': P(+1)=Q, L(+1)=M, A(+1)=B, N(+1)=O, T(+1)=U, S(+1)=T. Thus, the coded word is 'QMBOTU'."
+  "e_hi": "इस कूट भाषा में प्रत्येक अक्षर को ठीक अगले अक्षर से बदल दिया गया है, यानी सभी अक्षरों में +1 जोड़ा गया है। G(+1)=H, A(+1)=B, R(+1)=S, D(+1)=E, E(+1)=F, N(+1)=O। इसी नियम को 'PLANTS' पर लागू करने पर: P(+1)=Q, L(+1)=M, A(+1)=B, N(+1)=O, T(+1)=U, S(+1)=T प्राप्त होता है। अतः सही कूट 'QMBOUT' है।",
+  "e_en": "In this code language, each letter is shifted forward by 1 position (+1). G(+1)=H, A(+1)=B, R(+1)=S, D(+1)=E, E(+1)=F, N(+1)=O. Applying this same +1 rule to 'PLANTS': P(+1)=Q, L(+1)=M, A(+1)=B, N(+1)=O, T(+1)=U, S(+1)=T. Thus, the coded word is 'QMBOUT'."
  },
  {
   "id": "rp-rea-r03194",
