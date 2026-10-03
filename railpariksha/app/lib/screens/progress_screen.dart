@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/ads.dart';
 import '../core/app_scope.dart';
@@ -10,6 +9,7 @@ import '../data/models.dart';
 import '../data/progress.dart';
 import '../logic/percentile.dart';
 import '../widgets/common.dart';
+import '../widgets/share_card.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
 
@@ -35,11 +35,15 @@ class ProgressScreen extends StatelessWidget {
         Row(children: [
           Expanded(
             child: Text(context.tr('प्रगति 📈', 'Progress 📈'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
           ),
+          const SizedBox(width: 8),
           OutlinedButton.icon(
+            style: OutlinedButton.styleFrom(minimumSize: const Size(64, 36)),
             icon: const Icon(Icons.ios_share, size: 18),
-            label: Text(context.tr('साप्ताहिक कार्ड 🗓️', 'Weekly card 🗓️')),
+            label: Text(context.tr('साप्ताहिक कार्ड 🗓️', 'Weekly card 🗓️'), maxLines: 1, overflow: TextOverflow.ellipsis),
             onPressed: () {
               HapticFeedback.selectionClick();
               _shareWeeklyCard(context, p, lang);
@@ -63,8 +67,10 @@ class ProgressScreen extends StatelessWidget {
                     style: const TextStyle(color: Colors.white70)),
               ]),
             ),
-            Text('${p.xp}\nXP',
+            CountUpText(p.xp,
+                format: (v) => '$v\nXP',
                 textAlign: TextAlign.center,
+                duration: const Duration(milliseconds: 700),
                 style: const TextStyle(color: BrandColors.sunrise, fontWeight: FontWeight.w900, fontSize: 18)),
           ]),
         ),
@@ -242,6 +248,7 @@ class _FreezeTokenCard extends StatelessWidget {
             'एक छोटा विज्ञापन देखें और एक दिन मिस होने पर भी स्ट्रीक बचाने वाला टोकन पाएं',
             'Watch a short ad to earn a token that saves your streak if you miss a day')),
         trailing: FilledButton.icon(
+          style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
           icon: const Icon(Icons.play_circle_outline, size: 18),
           label: Text(context.tr('देखें', 'Watch')),
           onPressed: () {
@@ -511,12 +518,22 @@ void _shareWeeklyCard(BuildContext context, Progress p, String lang) {
       '🎯 कुल सटीकता: $acc%\n'
       '🔥 मौजूदा स्ट्रीक: $streak दिन\n'
       '🏅 स्तर: ${level.hi}\n\n'
-      'आप भी अभ्यास शुरू करें — मुफ़्त प्रैक्टिस ऐप 🚀';
+      'आप भी अभ्यास शुरू करें — मुफ़्त प्रैक्टिस ऐप 🚀 $kPlayUrl';
   final en = 'My RailPariksha weekly report 🗓️\n'
       '✅ $weekCount questions this week\n'
       '🎯 Overall accuracy: $acc%\n'
       '🔥 Current streak: $streak days\n'
       '🏅 Level: ${level.en}\n\n'
-      'Join me on RailPariksha — free practice app 🚀';
-  SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : hi));
+      'Join me on RailPariksha — free practice app 🚀 $kPlayUrl';
+  shareScoreCard(
+    context,
+    card: ScoreShareCard(
+      headline: context.tr('मेरी साप्ताहिक रिपोर्ट 🗓️', 'My weekly report 🗓️'),
+      scoreText: '$weekCount',
+      scoreSub: context.tr('प्रश्न हल किए · $acc% सटीकता · 🔥 $streak दिन', 'questions solved · $acc% accuracy · 🔥 $streak day streak'),
+      footer: context.tr('आप भी अभ्यास शुरू करें 🚀', 'Join me on RailPariksha 🚀'),
+      icon: Icons.local_fire_department,
+    ),
+    text: lang == 'en' ? en : hi,
+  );
 }

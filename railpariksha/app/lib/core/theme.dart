@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+/// Play Store listing URL. Shared here (rather than on one screen) because
+/// every share-to-a-friend message across the app needs it appended -- a
+/// share message without a download link gives the recipient no way to
+/// actually install the app, silently capping the value of every share.
+const kPlayUrl = 'https://play.google.com/store/apps/details?id=app.railpariksha';
+
 /// Shared spacing scale so padding/gaps stay consistent instead of scattering
 /// magic numbers across screens. Use these for new/updated layout code.
 class Spacing {

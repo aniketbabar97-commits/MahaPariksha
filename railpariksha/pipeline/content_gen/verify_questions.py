@@ -150,7 +150,7 @@ def main():
             idx += 1
             continue
         calls += 1
-        results = result.get("results", [])
+        results = result if isinstance(result, list) else result.get("results", [])
         seen_ids = set()
         for r in results:
             qid = r.get("id")

@@ -15,8 +15,6 @@ import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
 
-const kPlayUrl = 'https://play.google.com/store/apps/details?id=app.railpariksha';
-
 class MeScreen extends StatelessWidget {
   const MeScreen({super.key});
 
@@ -303,7 +301,11 @@ class _IdCard extends StatelessWidget {
         ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx), child: Text(ctx.tr('रद्द करें', 'Cancel'))),
-          FilledButton(onPressed: () => Navigator.pop(ctx, controller.text), child: Text(ctx.tr('सहेजें', 'Save'))),
+          FilledButton(
+            style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
+            onPressed: () => Navigator.pop(ctx, controller.text),
+            child: Text(ctx.tr('सहेजें', 'Save')),
+          ),
         ],
       ),
     );
@@ -321,7 +323,8 @@ class _IdCard extends StatelessWidget {
     return Semantics(
       button: true,
       label: context.tr('अपना नाम बदलें', 'Edit your name'),
-      child: InkWell(
+      child: TapScale(
+        child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: () {
           // The only prominent, hero-sized tap target on this screen with no
@@ -359,6 +362,7 @@ class _IdCard extends StatelessWidget {
           const Icon(Icons.edit, color: Colors.white54, size: 18),
         ]),
         ),
+      ),
       ),
     );
   }
@@ -414,13 +418,18 @@ class _PremiumCardState extends State<_PremiumCard> {
           child: Column(children: [
             ListTile(
               leading: const Icon(Icons.block, color: BrandColors.sky),
-              title: Text(context.tr('विज्ञापन हटाएं, ऑफ़लाइन मोड अनलॉक करें', 'Remove ads, unlock full offline mode')),
-              subtitle: Text(product != null
-                  ? context.tr('एक बार का भुगतान -- ${product.price}', 'One-time payment -- ${product.price}')
-                  : loading
-                      ? context.tr('लोड हो रहा है...', 'Loading...')
-                      : context.tr('अभी उपलब्ध नहीं', 'Not available right now')),
+              title: Text(context.tr('विज्ञापन हटाएं, ऑफ़लाइन मोड अनलॉक करें', 'Remove ads, unlock full offline mode'),
+                  maxLines: 2, overflow: TextOverflow.ellipsis),
+              subtitle: Text(
+                  product != null
+                      ? context.tr('एक बार का भुगतान -- ${product.price}', 'One-time payment -- ${product.price}')
+                      : loading
+                          ? context.tr('लोड हो रहा है...', 'Loading...')
+                          : context.tr('अभी उपलब्ध नहीं', 'Not available right now'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis),
               trailing: FilledButton(
+                style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
                 onPressed: (_busy || loading || product == null) ? null : () => _run(widget.purchases.buy),
                 child: _busy
                     ? const SizedBox(

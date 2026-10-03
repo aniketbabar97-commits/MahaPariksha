@@ -33,7 +33,8 @@ class ReviseScreen extends StatelessWidget {
         Text(context.tr('स्मार्ट रिवीज़न: भूलने से पहले याद करें! 🧠✨', 'Smart revision: remember before you forget! 🧠✨'),
             style: TextStyle(color: Theme.of(context).hintColor)),
         const SizedBox(height: 16),
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
@@ -77,6 +78,7 @@ class ReviseScreen extends StatelessWidget {
               ]),
             ),
           ),
+          ),
         ),
         const SizedBox(height: 12),
         ActionCard(
@@ -107,7 +109,8 @@ class ReviseScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 10),
                     child: SizedBox(
                       width: 120,
-                      child: Card(
+                      child: TapScale(
+                        child: Card(
                         clipBehavior: Clip.antiAlias,
                         child: InkWell(
                           onTap: () {
@@ -124,6 +127,7 @@ class ReviseScreen extends StatelessWidget {
                                   style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                             ]),
                           ),
+                        ),
                         ),
                       ),
                     ),
@@ -144,7 +148,8 @@ class ReviseScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(right: 10),
                     child: SizedBox(
                       width: 120,
-                      child: Card(
+                      child: TapScale(
+                        child: Card(
                         clipBehavior: Clip.antiAlias,
                         child: InkWell(
                           onTap: () {
@@ -161,6 +166,7 @@ class ReviseScreen extends StatelessWidget {
                                   style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
                             ]),
                           ),
+                        ),
                         ),
                       ),
                     ),

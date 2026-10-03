@@ -81,7 +81,8 @@ class _CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return TapScale(
+      child: Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
@@ -111,6 +112,7 @@ class _CategoryCard extends StatelessWidget {
             Icon(Icons.chevron_right, color: Theme.of(context).hintColor),
           ]),
         ),
+      ),
       ),
     );
   }

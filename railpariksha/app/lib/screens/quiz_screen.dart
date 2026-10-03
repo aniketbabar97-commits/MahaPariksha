@@ -12,6 +12,7 @@ import '../data/models.dart';
 import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/celebrate.dart';
+import '../widgets/common.dart';
 import 'results_screen.dart';
 
 const kSupportEmail = String.fromEnvironment('SUPPORT_EMAIL', defaultValue: 'support@railpariksha.app');
@@ -106,7 +107,7 @@ class _QuizScreenState extends State<QuizScreen> {
     final r = AppScope.read(context).progress.recordAnswer(q.id, correct);
     xpEarned += r.xp;
     if (spec.mode == QuizMode.speed) {
-      if (r.levelUp || r.streakMilestone != null || r.goalCompleted) _notable = r;
+      if (r.levelUp || r.streakMilestone != null || r.goalCompleted || r.freezeSaved) _notable = r;
       if (correct) speedCorrect++;
       await Future.delayed(const Duration(milliseconds: 350));
       if (!mounted) return;
@@ -146,7 +147,7 @@ class _QuizScreenState extends State<QuizScreen> {
         if (a == null) continue;
         final r = p.recordAnswer(spec.questions[i].id, a == spec.questions[i].answer);
         xpEarned += r.xp;
-        if (r.levelUp || r.streakMilestone != null || r.goalCompleted) notable = r;
+        if (r.levelUp || r.streakMilestone != null || r.goalCompleted || r.freezeSaved) notable = r;
       }
     }
     if (spec.mode == QuizMode.speed) p.recordSpeed(speedCorrect);
@@ -326,7 +327,11 @@ class _QuizScreenState extends State<QuizScreen> {
             : ctx.tr('सभी प्रश्न हल हो गए हैं। शाबाश!', 'All questions answered. Well done!')),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('रुकें', 'Wait'))),
-          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('सबमिट', 'Submit'))),
+          FilledButton(
+            style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(ctx.tr('सबमिट', 'Submit')),
+          ),
         ],
       ),
     );
@@ -368,7 +373,9 @@ class _OptionTile extends StatelessWidget {
     };
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: AnimatedContainer(
+      child: TapScale(
+        scale: state == _OptState.idle ? 0.98 : 1.0,
+        child: AnimatedContainer(
         duration: const Duration(milliseconds: 220),
         decoration: BoxDecoration(
           color: bg,
@@ -397,6 +404,7 @@ class _OptionTile extends StatelessWidget {
               if (icon != null) Icon(icon, color: border),
             ]),
           ),
+        ),
         ),
       ),
     );

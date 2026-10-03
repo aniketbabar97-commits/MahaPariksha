@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/progress.dart';
+import '../logic/leaderboard_service.dart';
 import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
+import '../widgets/share_card.dart';
 
 class ResultsScreen extends StatefulWidget {
   final QuizSpec spec;
@@ -46,6 +47,17 @@ class _ResultsScreenState extends State<ResultsScreen> {
       _recorded = true;
       final p = AppScope.read(context).progress;
       p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));
+      // Opt-in only: a device without a chosen leaderboard name has never opened the
+      // leaderboard screen, so it never silently starts appearing on one.
+      if (p.examId != null && p.leaderboardName != null) {
+        LeaderboardService.submitScore(
+          examId: p.examId!,
+          deviceId: p.ensureDeviceId(),
+          name: p.leaderboardName!,
+          score: score,
+          total: widget.spec.questions.length,
+        );
+      }
       // Natural break point: results are already recorded, so showing (or
       // skipping, if not preloaded in time) the ad here never blocks or
       // delays anything the user is waiting on. Frequency-capped per
@@ -85,9 +97,11 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 progress: pct,
                 size: 140,
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
-                  Text(isSpeed ? '${widget.speedScore}' : '$correct/$total',
+                  CountUpText(isSpeed ? widget.speedScore : correct,
+                      format: isSpeed ? null : (v) => '$v/$total',
                       style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900)),
-                  Text(isSpeed ? context.tr('60 सेकंड में', 'in 60 sec') : '${(pct * 100).round()}%',
+                  CountUpText((pct * 100).round(),
+                      format: (v) => isSpeed ? context.tr('60 सेकंड में', 'in 60 sec') : '$v%',
                       style: const TextStyle(color: Colors.white70)),
                 ]),
               ),
@@ -141,10 +155,23 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 label: Text(context.tr('शेयर करें', 'Share')),
                 onPressed: () {
                   HapticFeedback.selectionClick();
-                  SharePlus.instance.share(ShareParams(
-                      text: context.tr(
-                          'मैंने RailPariksha ऐप पर ${spec.titleHi} में ${isSpeed ? widget.speedScore : '$correct/$total'} अंक हासिल किए! 🔥 आप कितने लाएंगे?',
-                          'I scored ${isSpeed ? widget.speedScore : '$correct/$total'} in ${spec.titleEn} on RailPariksha! 🔥 Can you beat it?')));
+                  final scoreStr = isSpeed ? '${widget.speedScore}' : '$correct/$total';
+                  final title = lang == 'hi' ? spec.titleHi : spec.titleEn;
+                  shareScoreCard(
+                    context,
+                    card: ScoreShareCard(
+                      headline: context.tr('मैंने $title में यह स्कोर हासिल किया!', 'I scored this on $title!'),
+                      scoreText: scoreStr,
+                      scoreSub: isSpeed
+                          ? context.tr('60 सेकंड में सही उत्तर', 'correct answers in 60 sec')
+                          : context.tr('सही उत्तर', 'correct answers'),
+                      footer: context.tr('आप कितने लाएंगे? 🔥', 'Can you beat it? 🔥'),
+                      icon: isSpeed ? Icons.bolt : Icons.emoji_events,
+                    ),
+                    text: context.tr(
+                        'मैंने RailPariksha ऐप पर $title में $scoreStr अंक हासिल किए! 🔥 आप कितने लाएंगे? $kPlayUrl',
+                        'I scored $scoreStr in $title on RailPariksha! 🔥 Can you beat it? $kPlayUrl'),
+                  );
                 },
               ),
             ),

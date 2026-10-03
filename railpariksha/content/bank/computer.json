@@ -1250,23 +1250,23 @@
   "s": "computer",
   "t": "ms_office",
   "d": 3,
-  "q_hi": "Ribbon इंटरफ़ेस को सबसे पहले किस एप्लिकेशन ने पेश किया?",
-  "q_en": "Which application introduced the Ribbon interface first?",
+  "q_hi": "माइक्रोसॉफ्ट ऑफिस के किस संस्करण में रिबन इंटरफ़ेस को पहली बार पेश किया गया था?",
+  "q_en": "In which version of Microsoft Office was the Ribbon interface first introduced?",
   "o_hi": [
-   "Word 2007",
-   "Excel 2007",
-   "PowerPoint 2007",
-   "Access 2007"
+   "ऑफिस 2003",
+   "ऑफिस 2007",
+   "ऑफिस 2010",
+   "ऑफिस 2013"
   ],
   "o_en": [
-   "Word 2007",
-   "Excel 2007",
-   "PowerPoint 2007",
-   "Access 2007"
+   "Office 2003",
+   "Office 2007",
+   "Office 2010",
+   "Office 2013"
   ],
-  "a": 2,
-  "e_hi": "Ribbon इंटरफ़ेस को सबसे पहले PowerPoint 2007 ने पेश किया था।",
-  "e_en": "The Ribbon interface was first introduced in PowerPoint 2007."
+  "a": 1,
+  "e_hi": "रिबन इंटरफ़ेस को ऑफिस 2007 में पेश किया गया था (Word, Excel, PowerPoint और Access में एक साथ), जिसने पुरानी मेनू/टूलबार प्रणाली की जगह ली।",
+  "e_en": "The Ribbon interface was introduced across Office 2007 (Word, Excel, PowerPoint and Access simultaneously), replacing the older menu/toolbar system."
  },
  {
   "id": "rp-com-o00057",
@@ -2046,9 +2046,9 @@
    "Control peripherals",
    "All of the above"
   ],
-  "a": 3,
-  "e_hi": "CPU डेटा संग्रहीत करता है, गणनाएँ करता है और परिधीय उपकरणों को नियंत्रित करता है।",
-  "e_en": "The CPU stores data, performs calculations, and controls peripheral devices."
+  "a": 1,
+  "e_hi": "सीपीयू का मुख्य कार्य गणितीय और तार्किक गणनाएँ करके निर्देशों को निष्पादित करना है; डेटा मुख्य मेमोरी में रहता है, और पेरिफेरल्स का प्रबंधन सीधे सीपीयू द्वारा नहीं, बल्कि I/O नियंत्रकों द्वारा किया जाता है।",
+  "e_en": "The CPU's core function is to execute instructions by performing arithmetic and logical calculations; data is held in main memory, and peripherals are managed via I/O controllers, not directly by the CPU."
  },
  {
   "id": "rp-com-o00094",
@@ -2633,20 +2633,20 @@
   "q_hi": "DNS का मुख्य कार्य क्या है?",
   "q_en": "What is the primary function of DNS?",
   "o_hi": [
-   "IP पते को नाम में बदलना",
-   "सर्वर की पहचान",
-   "डेटा एन्क्रिप्शन",
+   "डोमेन नामों को IP पतों में बदलना",
+   "सर्वर की पहचान करना",
+   "डेटा एन्क्रिप्ट करना",
    "नेटवर्क टोपोलॉजी दिखाना"
   ],
   "o_en": [
-   "Convert IP address to name",
+   "Convert domain names to IP addresses",
    "Identify server",
    "Encrypt data",
    "Show network topology"
   ],
   "a": 0,
-  "e_hi": "DNS इंटरनेट पर डोमेन नाम को संबंधित IP पते में बदलता है, जिससे उपयोगकर्ता नाम से वेबसाइट तक पहुँच सकते हैं।",
-  "e_en": "DNS translates domain names into corresponding IP addresses, enabling users to access websites by name."
+  "e_hi": "DNS (डोमेन नेम सिस्टम) मानव-पठनीय डोमेन नामों को उन संख्यात्मक IP पतों में बदलता है जिनका उपयोग कंप्यूटर एक-दूसरे को खोजने के लिए करते हैं।",
+  "e_en": "DNS (Domain Name System) translates human-readable domain names into the numeric IP addresses computers use to locate each other."
  },
  {
   "id": "rp-com-o00121",
@@ -3128,8 +3128,8 @@
    "₹7,600"
   ],
   "a": 0,
-  "e_hi": "A = 5,000 × (1+0.08)^5 ≈ 5,000 × 1.4693 ≈ ₹7,346. अतः लगभग ₹7,400।",
-  "e_en": "A = 5,000 × (1+0.08)^5 ≈ 5,000 × 1.4693 ≈ ₹7,346, so about ₹7,400."
+  "e_hi": "A = 5,000 x (1+0.08)^5 ≈ 5,000 x 1.4693 ≈ ₹7,346.6, जो दिए गए विकल्पों में ₹7,300 के सबसे निकट है।",
+  "e_en": "A = 5,000 x (1+0.08)^5 ≈ 5,000 x 1.4693 ≈ ₹7,346.6, which is closest to ₹7,300 among the given options."
  },
  {
   "id": "rp-com-o00142",
@@ -16330,8 +16330,8 @@
    "2"
   ],
   "a": 2,
-  "e_hi": "COUNT फलन केवल संख्यात्मक मानों की गिनती करता है। दिए गए तर्कों में केवल 10, 20 और 30 संख्याएँ हैं, इसलिए परिणाम 3 होगा ('ABC' पाठ है और TRUE एक तार्किक मान है जिसे COUNT छोड़ देता है)।",
-  "e_en": "The COUNT function only counts numerical values. In the given arguments, only 10, 20, and 30 are numbers, so the result is 3 ('ABC' is text and TRUE is a boolean which COUNT ignores)."
+  "e_hi": "एक्सेल का COUNT फ़ंक्शन संख्यात्मक मानों को गिनता है, और जब TRUE/FALSE को सीधे शाब्दिक (literal) आर्गुमेंट के रूप में टाइप किया जाता है (किसी सेल संदर्भ से नहीं), तो यह उन्हें भी गिनता है। यहाँ 10, 20, TRUE और 30 सभी गिने जाते हैं (4), जबकि 'ABC' (टेक्स्ट) शामिल नहीं होता।",
+  "e_en": "Excel's COUNT function counts numeric values, and -- when typed directly as literal arguments (not from a cell reference) -- it also counts TRUE/FALSE. Here 10, 20, TRUE and 30 are all counted (4), while 'ABC' (text) is excluded."
  },
  {
   "id": "rp-com-l00716",
@@ -16468,8 +16468,8 @@
    "5"
   ],
   "a": 0,
-  "e_hi": "COUNTA फलन उन सभी सेलों या तर्कों की गिनती करता है जो खाली नहीं हैं। दिए गए उदाहरण में 10, 'रेलवे' और 20 तीन गैर-रिक्त मान हैं (रिक्त स्ट्रिंग खाली मानी जाती है), अतः कुल गिनती 3 है।",
-  "e_en": "The COUNTA function counts all cells or arguments that are not empty. In the given example, 10, 'Railway', and 20 are three non-empty values, so the total count is 3."
+  "e_hi": "एक्सेल का COUNTA फ़ंक्शन उन सभी आर्गुमेंट को गिनता है जो वास्तव में खाली सेल नहीं हैं -- इसमें संख्याएँ, टेक्स्ट, और एक शाब्दिक खाली-स्ट्रिंग मान ('') भी शामिल है। यहाँ 10, 'Railway', '' और 20 सभी गिने जाते हैं, जिससे कुल 4 प्राप्त होता है।",
+  "e_en": "Excel's COUNTA function counts all arguments that are not a genuinely empty cell -- this includes numbers, text, and even a literal empty-string value (''). Here 10, 'Railway', '' and 20 are all counted, giving 4."
  },
  {
   "id": "rp-com-l00722",
@@ -19619,8 +19619,8 @@
    "Bridge"
   ],
   "a": 1,
-  "e_hi": "फायरवॉल एक नेटवर्क सुरक्षा प्रणाली है जो पूर्व-निर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले नेटवर्क ट्रैफ़िक की निगरानी और नियंत्रण करती है।",
-  "e_en": "A firewall is a network security system that monitors and controls incoming and based on predetermined security rules."
+  "e_hi": "फ़ायरवॉल एक नेटवर्क सुरक्षा प्रणाली है जो पूर्वनिर्धारित सुरक्षा नियमों के आधार पर आने वाले और जाने वाले ट्रैफ़िक की निगरानी और नियंत्रण करती है।",
+  "e_en": "A firewall is a network security system that monitors and controls incoming and outgoing traffic based on predetermined security rules."
  },
  {
   "id": "rp-com-l00859",
@@ -21895,9 +21895,9 @@
    "Interconnected Network",
    "Internal Network"
   ],
-  "a": 1,
-  "e_hi": "शब्द 'इंटरनेट' मूल रूप से 'इंटरनेटवर्किंग' (Internetworking) से लिया गया है, जो विभिन्न कंप्यूटर नेटवर्कों को आपस में जोड़ने की प्रणाली है।",
-  "e_en": "The word 'Internet' is derived from 'Internetworking', which refers to the system of connecting various computer networks together."
+  "a": 2,
+  "e_hi": "'इंटरनेट' शब्द का सामान्यतः विस्तार 'Interconnected Network' (परस्पर जुड़ा नेटवर्क) के रूप में किया जाता है, जो विभिन्न कंप्यूटर नेटवर्कों को आपस में जोड़ने की प्रणाली को दर्शाता है।",
+  "e_en": "The word 'Internet' is commonly expanded as 'Interconnected Network', referring to the system of connecting various computer networks together."
  },
  {
   "id": "rp-com-l00958",
@@ -32545,8 +32545,8 @@
    "April 2"
   ],
   "a": 2,
-  "e_hi": "जनवरी में 31 दिन, फरवरी में 28 दिन (गैर-लीप वर्ष) और मार्च में 31 दिन होते हैं, जिनका योग 31+28+31 = 90 दिन होता है, अतः अंतिम तिथि 31 मार्च है।",
-  "e_en": "January has 31 days, February has 28 days, and March has 31 days, totaling 31+28+31 = 90 days, making March 31st the deadline."
+  "e_hi": "1 जनवरी से 90 दिन बाद की तारीख 1 अप्रैल होती है (जनवरी के बचे 30 दिन + फरवरी के 28 + मार्च के 31 = 89, और एक दिन और जोड़ने पर 1 अप्रैल), 31 मार्च नहीं।",
+  "e_en": "Jan 1 + 90 days lands on April 1 (31 remaining Jan days + 28 Feb + 31 Mar = 90, bringing the date to April 1), not March 31."
  },
  {
   "id": "rp-com-l01422",
@@ -34732,5 +34732,396 @@
   "a": 0,
   "e_hi": "सोशल इंजीनियरिंग में हमलावर तकनीकी कमियों के बजाय लोगों को धोखा देकर गोपनीय जानकारी प्राप्त करने के लिए मानसिक manipulation का उपयोग करते हैं।",
   "e_en": "Social engineering relies heavily on human interaction and often involves tricking people into breaking security procedures."
+ },
+ {
+  "id": "rp-com-01517",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक साइबर सुरक्षा सिमुलेशन में, एक मैलवेयर का संक्रमण दर यूनिकोड क्लोजर नियम का पालन करता है। यदि शुरुआती संक्रमण दर 5 नोड्स प्रति घंटा है और यह दर हर घंटे 10% बढ़ती है, तो 3 घंटों के बाद संक्रमण दर लगभग कितनी होगी?",
+  "q_en": "In a cybersecurity simulation, a malware's infection rate follows an exponential growth model. If the initial infection rate is 5 nodes per hour and it increases by 10% every hour, what will be the approximate infection rate after 3 hours?",
+  "o_hi": [
+   "7.65 नोड्स प्रति घंटा",
+   "6.50 नोड्स प्रति घंटा",
+   "8.00 नोड्स प्रति घंटा",
+   "7.00 नोड्स प्रति घंटा"
+  ],
+  "o_en": [
+   "7.65 nodes per hour",
+   "6.50 nodes per hour",
+   "8.00 nodes per hour",
+   "7.00 nodes per hour"
+  ],
+  "a": 1,
+  "e_hi": "R = P(1+r)^n सूत्र से, P=5, r=0.10, n=3 पर: R = 5 x (1.1)^3 = 5 x 1.331 = 6.655, जो दिए गए विकल्पों में 6.50 नोड प्रति घंटा के सबसे निकट है।",
+  "e_en": "Using R = P(1+r)^n with P=5, r=0.10, n=3: R = 5 x (1.1)^3 = 5 x 1.331 = 6.655, which is closest to 6.50 nodes per hour among the given options."
+ },
+ {
+  "id": "rp-com-01518",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "एक प्रणाली की सुरक्षा स्थिति (Security Posture) स्कोरिंग के लिए, यदि 'मजबूती' (Strength) का औसत 80 है और 'संवेदनशीलता' (Vulnerability) का औसत 20 है, तो 'सुरक्षा अनुपात' (Security Ratio) की गणना करें, जो कि मजबूती को संवेदनशीलता से विभाजित करके प्राप्त होती है।",
+  "q_en": "For scoring system security posture, if the average 'Strength' is 80 and the average 'Vulnerability' is 20, calculate the 'Security Ratio', which is obtained by dividing Strength by Vulnerability.",
+  "o_hi": [
+   "2.0",
+   "4.0",
+   "0.25",
+   "10.0"
+  ],
+  "o_en": [
+   "2.0",
+   "4.0",
+   "0.25",
+   "10.0"
+  ],
+  "a": 1,
+  "e_hi": "सुरक्षा अनुपात = मजबूती / संवेदनशीलता। दिए गए मानों पर: 80 / 20 = 4.0। अतः विकल्प B सही है।",
+  "e_en": "Security Ratio = Strength / Vulnerability. Using the given values: 80 / 20 = 4.0. Thus, option B is correct."
+ },
+ {
+  "id": "rp-com-01519",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "एक डेटाबेस में 1000 यूज़र हैं। यदि 5% यूज़रों के पास 'आउटडेटेड' पासवर्ड हैं और उनमें से 50% का पासवर्ड क्रैक किया जा सकता है, तो कुल कितने यूज़रों के पास ऐसे पासवर्ड हैं जो आसानी से क्रैक किए जा सकते हैं?",
+  "q_en": "A database has 1000 users. If 5% of users have 'outdated' passwords and 50% of those can be cracked, how many users in total have passwords that are easily crackable?",
+  "o_hi": [
+   "25",
+   "50",
+   "100",
+   "5"
+  ],
+  "o_en": [
+   "25",
+   "50",
+   "100",
+   "5"
+  ],
+  "a": 0,
+  "e_hi": "पहले आउटडेटेड पासवर्ड वाले यूज़र निकालें: 1000 का 5% = 50। फिर उनमें से क्रैक करने योग्य: 50 का 50% = 25। अतः उत्तर 25 है।",
+  "e_en": "First calculate users with outdated passwords: 5% of 1000 = 50. Then calculate crackable ones: 50% of 50 = 25. Thus, the answer is 25."
+ },
+ {
+  "id": "rp-com-01520",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक फायरवॉल नियम में, यदि 'अनुमत ट्रैफिक' (Allowed Traffic) की दर 1000 पैकेट प्रति सेकंड है और 'अवरुद्ध ट्रैफिक' (Blocked Traffic) की दर 150 पैकेट प्रति सेकंड है, तो 'कुल ट्रैफिक' में 'अनुमत ट्रैफिक' का प्रतिशत क्या होगा?",
+  "q_en": "In a firewall rule, if the 'Allowed Traffic' rate is 1000 packets per second and the 'Blocked Traffic' rate is 150 packets per second, what percentage of the 'Total Traffic' is the 'Allowed Traffic'?",
+  "o_hi": [
+   "87.0%",
+   "83.3%",
+   "15.0%",
+   "10.0%"
+  ],
+  "o_en": [
+   "87.0%",
+   "83.3%",
+   "15.0%",
+   "10.0%"
+  ],
+  "a": 0,
+  "e_hi": "कुल ट्रैफिक = अनुमत + अवरोधित = 1000 + 150 = 1150। अनुमत का प्रतिशत = (1000 / 1150) x 100 = 86.96%, जो लगभग 87.0% है।",
+  "e_en": "Total Traffic = Allowed + Blocked = 1000 + 150 = 1150. Percentage Allowed = (1000 / 1150) x 100 = 86.96%, which rounds to approximately 87.0%."
+ },
+ {
+  "id": "rp-com-01521",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "साइबर सुरक्षा के संदर्भ में, 'फिशिंग' (Phishing) और 'स्पीमिंग' (Spear Phishing) के बीच मुख्य अंतर क्या है?",
+  "q_en": "In the context of cybersecurity, what is the main difference between 'Phishing' and 'Spear Phishing'?",
+  "o_hi": [
+   "फिशिंग लक्षित है, जबकि स्पीमिंग यादृच्छिक है",
+   "फिशिंग यादृच्छिक है, जबकि स्पीमिंग विशेष लक्ष्य पर केंद्रित है",
+   "दोनों एक ही चीज़ हैं, बस नाम अलग हैं",
+   "स्पीमिंग केवल वायरस फैलाती है, फिशिंग केवल डेटा चुराती है"
+  ],
+  "o_en": [
+   "Phishing is targeted, while Spear Phishing is random",
+   "Phishing is random, while Spear Phishing is targeted at specific individuals",
+   "Both are the same thing, just with different names",
+   "Spear Phishing only spreads viruses, while Phishing only steals data"
+  ],
+  "a": 1,
+  "e_hi": "फिशिंग एक व्यापक, यादृच्छिक हमला है, जबकि स्पीमिंग फिशिंग एक अत्यंत लक्षित हमला है जो किसी विशिष्ट व्यक्ति या संगठन के खिलाफ किया जाता है।",
+  "e_en": "Phishing is a broad, random attack, whereas spear phishing is a highly targeted attack directed at a specific individual or organization."
+ },
+ {
+  "id": "rp-com-01522",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "साइबर सुरक्षा में, 'एन्क्रिप्शन' (Encryption) और 'डेक्रिप्शन' (Decryption) की तुलना करें। कौन सा कथन सही है?",
+  "q_en": "In cybersecurity, compare 'Encryption' and 'Decryption'. Which statement is correct?",
+  "o_hi": [
+   "एन्क्रिप्शन डेटा को पढ़ने योग्य बनाता है, डेक्रिप्शन उसे अर्थहीन बनाता है",
+   "एन्क्रिप्शन डेटा को अर्थहीन बनाता है, डेक्रिप्शन उसे मूल रूप में लौटाता है",
+   "दोनों प्रक्रियाएं अलग-अलग कुंजियों का उपयोग करती हैं और कभी एक ही नहीं होतीं",
+   "डेक्रिप्शन केवल सरकारी संगठनों द्वारा उपयोग किया जाता है"
+  ],
+  "o_en": [
+   "Encryption makes data readable, Decryption makes it meaningless",
+   "Encryption makes data meaningless, Decryption restores it to original form",
+   "Both processes always use different keys and never the same",
+   "Decryption is only used by government organizations"
+  ],
+  "a": 1,
+  "e_hi": "एन्क्रिप्शन संवेदनशील डेटा को अर्थहीन रूप में बदलता है ताकि अनधिकृत उपयोग न हो सके, और डेक्रिप्शन उसी कुंजी या संबंधित कुंजी का उपयोग करके उसे मूल पढ़ने योग्य रूप में लौटाता है।",
+  "e_en": "Encryption converts sensitive data into an unreadable format to prevent unauthorized access, and decryption restores it to its original readable form using the same or a related key."
+ },
+ {
+  "id": "rp-com-01523",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "साइबर सुरक्षा उपायों में से, 'अंतर्वेदन' (Antivirus) और 'अग्नि दीवार' (Firewall) में क्या अंतर है?",
+  "q_en": "Among cybersecurity measures, what is the difference between 'Antivirus' and 'Firewall'?",
+  "o_hi": [
+   "अंतर्वेदन नेटवर्क ट्रैफिक फिल्टर करता है, अग्नि दीवार फाईल स्कैन करता है",
+   "अंतर्वेदन मैलवेयर का पता लगाता है और हटाता है, अग्नि दीवार नेटवर्क ट्रैफिक की निगरानी करता है",
+   "दोनों एक ही कार्य करते हैं",
+   "अग्नि दीवार केवल वायरस को हटाती है, अंतर्वेदन केवल ट्रैफिक को ब्लॉक करता है"
+  ],
+  "o_en": [
+   "Antivirus filters network traffic, Firewall scans files",
+   "Antivirus detects and removes malware, Firewall monitors network traffic",
+   "Both perform the exact same function",
+   "Firewall only removes viruses, Antivirus only blocks traffic"
+  ],
+  "a": 1,
+  "e_hi": "अंतर्वेदन सॉफ्टवेयर मैलवेयर (वायरस, ट्रोजन आदि) को पहचानने और हटाने के लिए डिज़ाइन किया गया है, जबकि अग्नि दीवार आंतरिक और बाहरी नेटवर्क के बीच ट्रैफिक की निगरानी और नियंत्रण करती है।",
+  "e_en": "Antivirus software is designed to detect and remove malware (viruses, trojans, etc.), while a firewall monitors and controls traffic between internal and external networks."
+ },
+ {
+  "id": "rp-com-01524",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "साइबर सुरक्षा के प्रकारों में से, 'एंडपॉइंट सुरक्षा' (Endpoint Security) और 'नेटवर्क सुरक्षा' (Network Security) में कौन सा विवरण सटीक है?",
+  "q_en": "Among types of cybersecurity, which description accurately distinguishes 'Endpoint Security' and 'Network Security'?",
+  "o_hi": [
+   "एंडपॉइंट सुरक्षा सर्वर को संरक्षित करती है, नेटवर्क सुरक्षा लैपटॉप को संरक्षित करती है",
+   "एंडपॉइंट सुरक्षा व्यक्तिगत डिवाइस (जैसे मोबाइल, डेस्कटॉप) को संरक्षित करती है, नेटवर्क सुरक्षा डेटा ट्रांसमिशन को संरक्षित करती है",
+   "नेटवर्क सुरक्षा केवल वायरलेंस के लिए उपयोग की जाती है",
+   "एंडपॉइंट सुरक्षा केवल क्लाउड सर्वर के लिए होती है"
+  ],
+  "o_en": [
+   "Endpoint Security protects servers, Network Security protects laptops",
+   "Endpoint Security protects individual devices (like mobiles, desktops), Network Security protects data transmission",
+   "Network Security is only used for wireless connections",
+   "Endpoint Security is only for cloud servers"
+  ],
+  "a": 1,
+  "e_hi": "एंडपॉइंट सुरक्षा उन डिवाइसों (जैसे कंप्यूटर, मोबाइल) पर लागू होती है जो नेटवर्क का अंतिम बिंदु हैं, जबकि नेटवर्क सुरक्षा डेटा के संचार और नेटवर्कโครงสร้าง की अखंडता बनाए रखने के लिए होती है।",
+  "e_en": "Endpoint Security is applied to devices (like computers, mobiles) that are the final points of a network, while Network Security focuses on protecting data transmission and the integrity of the network infrastructure."
+ },
+ {
+  "id": "rp-com-01526",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "भारत की पहली साइबर सुरक्षा नीति किस वर्ष जारी की गई थी?",
+  "q_en": "In which year was the first National Cyber Security Policy of India released?",
+  "o_hi": [
+   "2000",
+   "2004",
+   "2013",
+   "2016"
+  ],
+  "o_en": [
+   "2000",
+   "2004",
+   "2013",
+   "2016"
+  ],
+  "a": 2,
+  "e_hi": "भारत सरकार ने 31 जुलाई 2013 को देश की पहली राष्ट्रीय साइबर सुरक्षा नीति जारी की थी।",
+  "e_en": "The Government of India released the first National Cyber Security Policy on July 31, 2013."
+ },
+ {
+  "id": "rp-com-01527",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "भारत में साइबर अपराधों की जांच और निगरानी के लिए बनाई गई विशेष एजेंसी का नाम क्या है?",
+  "q_en": "What is the name of the specialized agency created in India for investigating and monitoring cyber crimes?",
+  "o_hi": [
+   "सीआईडी (CID)",
+   "आरएफओ (RFO)",
+   "सीआइडी (Cyber Crime Cell)",
+   "आइटीसी (ITC)"
+  ],
+  "o_en": [
+   "CID",
+   "RFO",
+   "Cyber Crime Cell",
+   "ITC"
+  ],
+  "a": 2,
+  "e_hi": "भारत में साइबर अपराधों के खिलाफ कार्रवाई के लिए 'साइबर क्राइम सेल' (Cyber Crime Cell) की स्थापना की गई है, जो अक्सर एनसीआईबी या राज्य पुलिस विभागों के तहत कार्य करता है।",
+  "e_en": "The 'Cyber Crime Cell' has been established in India to take action against cyber crimes, often operating under NCB or state police departments."
+ },
+ {
+  "id": "rp-com-01532",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "राजेश ने ईमेल प्राप्त किया जिसमें लिखा है कि यदि वह 10 मिनट के भीतर अपना क्रेडिट कार्ड नंबर नहीं डालता, तो उसका खाता बंद कर दिया जाएगा। राजेश का सबसे सही कदम क्या होना चाहिए?",
+  "q_en": "Rajesh received an email stating that his credit card account will be blocked if he does not enter his card number within 10 minutes. What is the most appropriate action for Rajesh to take?",
+  "o_hi": [
+   "तुरंत ईमेल में दिए गए लिंक पर क्लिक कर कार्ड नंबर डालें",
+   "ईमेल को नजरअंदाज करें और उसे स्पाम या फ़िशिंग के रूप में रिपोर्ट करें",
+   "ईमेल भेजने वाले को कॉल करके पूछें कि यह झूठा है या सच",
+   "कार्ड नंबर की बजाय अपना ATM पिन डालें"
+  ],
+  "o_en": [
+   "Immediately click the link provided in the email and enter the card number",
+   "Ignore the email and report it as spam or phishing",
+   "Call the sender of the email to ask if it is fake or real",
+   "Enter your ATM PIN instead of the card number"
+  ],
+  "a": 1,
+  "e_hi": "यह एक क्लासिक फ़िशिंग एटैक का उदाहरण है। बैंकेव कभी भी ईमेल या SMS के माध्यम से आपसे पैन या पिन नहीं मांगते हैं। ऐसे संदेश को रिपोर्ट करना और नजरअंदाज करना सबसे सुरक्षित कदम है।",
+  "e_en": "This is a classic example of a phishing attack. Banks never ask for your PAN or PIN via email or SMS. Reporting and ignoring such messages is the safest course of action."
+ },
+ {
+  "id": "rp-com-01533",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "एक कर्मचारी ने ऑफिस के नेटवर्क में अपने कंप्यूटर को जोड़ने के लिए 'Admin' पासवर्ड का इस्तेमाल किया। कुछ घंटों बाद, पूरे डिपार्टमेंट की फ़ाइलों में अजीबोगरीब बदलाव पाए गए। इस सुरक्षा खतरे की सबसे संभावित वजह क्या है?",
+  "q_en": "An employee used the 'Admin' password to connect their computer to the office network. A few hours later, strange modifications were found in the files of the entire department. What is the most likely cause of this security breach?",
+  "o_hi": [
+   "कंप्यूटर का हार्ड ड्राइव खराब हो गया था",
+   "एडमिन अकाउंट का दुरुपयोग (Credential Stuffing) हुआ",
+   "इंटरनेट स्पीड बहुत धीमी थी",
+   "ऑपरेटिंग सिस्टम अपडेट होने में देरी हुई थी"
+  ],
+  "o_en": [
+   "The computer's hard drive was faulty",
+   "Abuse of the Admin account (Credential Stuffing/Compromise)",
+   "The internet speed was very slow",
+   "The operating system update was delayed"
+  ],
+  "a": 1,
+  "e_hi": "एडमिन अकाउंट का उपयोग सामान्य कार्यों के लिए कभी नहीं किया जाना चाहिए क्योंकि यह सबसे अधिक अधिकार देता है। यदि इसका पासवर्ड लीक हो जाता है या दुरुपयोग होता है, तो पूरा नेटवर्क जोखिम में पड़ जाता है।",
+  "e_en": "Admin accounts should never be used for routine tasks as they hold the highest privileges. If the password is leaked or misused, the entire network becomes vulnerable to widespread damage."
+ },
+ {
+  "id": "rp-com-01534",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "आपका कंप्यूटर अचानक बहुत धीमा हो गया और स्क्रीन पर अजीबोगरीब विंडो आने लगीं। एंटीवायरस स्कैन में 'Ransomware' मिला। Ransomware मुख्यतः क्या करता है?",
+  "q_en": "Your computer suddenly became very slow and strange windows started popping up. The antivirus scan detected 'Ransomware'. What does Ransomware primarily do?",
+  "o_hi": [
+   "यह कंप्यूटर के सभी फ़ाइलों को एन्क्रिप्ट कर देता है और डिक्रिप्ट करने के लिए पैसे मांगता है",
+   "यह आपके कंप्यूटर की स्पीड को बढ़ा देता है",
+   "यह केवल विज्ञापन दिखाता है और कुछ और नहीं",
+   "यह इंटरनेट कनेक्शन को स्थायी रूप से साइज कर देता है"
+  ],
+  "o_en": [
+   "It encrypts all files on the computer and demands payment for decryption",
+   "It increases the speed of your computer",
+   "It only displays advertisements and nothing else",
+   "It permanently shuts down the internet connection"
+  ],
+  "a": 0,
+  "e_hi": "रैन्समवेयर एक प्रकार का मलवेयर है जो उपयोगकर्ता की फ़ाइलों को एन्क्रिप्ट कर देता है और उन्हें वापस पाने के लिए 'बचत राशि' (ransom) मांगता है।",
+  "e_en": "Ransomware is a type of malware that encrypts a user's files and demands a ransom payment to provide the decryption key."
+ },
+ {
+  "id": "rp-com-01535",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 1,
+  "q_hi": "सुरक्षा के मद्देनजर, नीचे दिए गए में से कौन सा पासवर्ड सबसे मजबूत माना जाएगा?",
+  "q_en": "From a security perspective, which of the following passwords is considered the strongest?",
+  "o_hi": [
+   "12345678",
+   "password@2024",
+   "T$9#mK2!pL",
+   "Rajesh123"
+  ],
+  "o_en": [
+   "12345678",
+   "password@2024",
+   "T$9#mK2!pL",
+   "Rajesh123"
+  ],
+  "a": 2,
+  "e_hi": "एक मजबूत पासवर्ड में बड़े और छोटे अक्षरों, अंकों और विशेष चिह्नों का मिश्रण होना चाहिए और उसमें कोई आसान शब्द या नाम नहीं होना चाहिए। 'T$9#mK2!pL' सबसे अधिक जटिल है।",
+  "e_en": "A strong password should contain a mix of uppercase, lowercase letters, numbers, and special characters, and should not contain easy words or names. 'T$9#mK2!pL' is the most complex."
+ },
+ {
+  "id": "rp-com-01536",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 3,
+  "q_hi": "एक साइबर अपराधी ने एक लोकप्रिय वेबसाइट को हैक कर लिया और उसके डेटाबेस में छिपाया गया कोड डाल दिया। जब भी कोई उपयोगकर्ता उस साइट पर लॉगिन करता है, उसका क्रेडेंशियल अपराधी के पास भेज दिया जाता है। इस तकनीक को क्या कहते हैं?",
+  "q_en": "A cybercriminal hacked a popular website and injected hidden code into its database. Whenever a user logs in to that site, their credentials are sent to the criminal. What is this technique called?",
+  "o_hi": [
+   "DDoS Attack",
+   "SQL Injection",
+   "Man-in-the-Middle Attack",
+   "Phishing"
+  ],
+  "o_en": [
+   "DDoS Attack",
+   "SQL Injection",
+   "Man-in-the-Middle Attack",
+   "Phishing"
+  ],
+  "a": 1,
+  "e_hi": "SQL Injection एक साइबर अटैक है जिसमें अपराधी वेब ऐप्लिकेशन के डेटाबेस इंटरफेस में बुरे निवास (malicious code) डालकर डेटा चुराते हैं या नुकसान पहुंचाते हैं।",
+  "e_en": "SQL Injection is a cyber attack where an attacker inserts malicious code into the database interface of a web application to steal data or cause damage."
+ },
+ {
+  "id": "rp-com-01540",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "किस देश ने 'साइबर ऑपरेशन्स कमांड' (Cyber Operations Command) की स्थापना की, जो विश्व की प्रमुख साइबर युद्ध इकाइयों में से एक मानी जाती है?",
+  "q_en": "Which country established the 'Cyber Operations Command', considered one of the world's leading cyber warfare units?",
+  "o_hi": [
+   "भारत",
+   "अमेरिका",
+   "चीन",
+   "रूस"
+  ],
+  "o_en": [
+   "India",
+   "United States",
+   "China",
+   "Russia"
+  ],
+  "a": 1,
+  "e_hi": "अमेरिका ने 2018 में 'साइबर कॉमांड' (U.S. Cyber Command) को एक स्वतंत्र प्रत्यक्ष कमांड के रूप में स्थापित किया, जिसे अक्सर साइबर ऑपरेशन्स कमांड के संदर्भ में चर्चा का विषय बनाया जाता है।",
+  "e_en": "The United States established the U.S. Cyber Command as an independent direct command in 2018, often referenced in the context of cyber operations commands."
+ },
+ {
+  "id": "rp-com-01541",
+  "s": "computer",
+  "t": "cyber_security",
+  "d": 2,
+  "q_hi": "सूचना प्रौद्योगिकी (आईटी) अधिनियम, 2000 में 'साइबर अपराध' की व्याख्या किस धारा के तहत दी गई है?",
+  "q_en": "Under which section of the Information Technology (IT) Act, 2000 is 'cyber crime' defined?",
+  "o_hi": [
+   "धारा 43",
+   "धारा 66",
+   "धारा 79",
+   "धारा 90"
+  ],
+  "o_en": [
+   "Section 43",
+   "Section 66",
+   "Section 79",
+   "Section 90"
+  ],
+  "a": 1,
+  "e_hi": "आईटी एक्ट, 2000 की धारा 66 में कंप्यूटर सिस्टम या नेटवर्क के हानिकारक और जानबूझकर उपयोग के लिए दंडात्मक प्रावधान (साइबर अपराध) दिए गए हैं।",
+  "e_en": "Section 66 of the IT Act, 2000 provides for penalties for fraudulent and malicious use of a computer system or network (cyber crime)."
  }
 ]

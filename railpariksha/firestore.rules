@@ -1,0 +1,28 @@
+// RailPariksha leaderboard rules -- paste into Firebase Console > Firestore Database >
+// Rules tab > Publish. There is no Firebase Auth in this app (the leaderboard is
+// anonymous by design: device id + a chosen display name, no real accounts), so these
+// rules validate the SHAPE of a write, not "this write really came from that device" --
+// a client could in principle overwrite another device's entry. Accepted for v1; the
+// real hardening step later is Firebase App Check (free, Play Integrity-based) to at
+// least confirm writes come from the real app, not an arbitrary script.
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /leaderboards/{examId}/weeks/{weekId}/entries/{deviceId} {
+      allow read: if true;
+
+      allow write: if request.resource.data.keys().hasOnly(['name', 'score', 'total', 'updatedAt'])
+                   && request.resource.data.name is string
+                   && request.resource.data.name.size() > 0
+                   && request.resource.data.name.size() <= 20
+                   && request.resource.data.total is number
+                   && request.resource.data.total > 0
+                   && request.resource.data.total <= 200
+                   && request.resource.data.score is number
+                   && request.resource.data.score <= request.resource.data.total;
+    }
+
+    // Everything else is closed by default (no catch-all allow).
+  }
+}

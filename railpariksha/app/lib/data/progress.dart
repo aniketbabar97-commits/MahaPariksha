@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
@@ -81,7 +82,9 @@ class Reward {
   final bool goalCompleted;
   final bool levelUp;
   final int? streakMilestone;
-  const Reward(this.xp, {this.goalCompleted = false, this.levelUp = false, this.streakMilestone});
+  final bool freezeSaved;
+  const Reward(this.xp,
+      {this.goalCompleted = false, this.levelUp = false, this.streakMilestone, this.freezeSaved = false});
 }
 
 class Progress extends ChangeNotifier {
@@ -95,6 +98,15 @@ class Progress extends ChangeNotifier {
   /// or null if the user skipped it. Informational only -- never gates anything.
   String? placementLevel;
   DateTime? examDate;
+
+  /// Stable anonymous identity for the leaderboard (see logic/leaderboard_service.dart) --
+  /// generated once on first use and persisted, never tied to any real account. Null until
+  /// the leaderboard is opened for the first time.
+  String? deviceId;
+
+  /// Display name shown on the leaderboard (chosen by the user, not a real identity).
+  /// Null until they've set one.
+  String? leaderboardName;
   String theme = 'system';
   bool reminders = true;
   int reminderHour = 7;
@@ -128,6 +140,11 @@ class Progress extends ChangeNotifier {
   int bestSpeed = 0;
   double beastBestScore = 0;
   int beastBestStreak = 0;
+  // Sticky unlock flag: once overall accuracy ever clears the Beast Mode gate,
+  // it stays unlocked even if accuracy later dips from unrelated practice --
+  // otherwise a feature the user already earned (and may have a tier in) can
+  // vanish again, which reads as a bug/regression rather than a fair gate.
+  bool beastEverUnlocked = false;
   final Map<int, int> dayCounts = {};
 
   // Learning state
@@ -159,6 +176,8 @@ class Progress extends ChangeNotifier {
     dailyGoal = j['dailyGoal'] ?? 20;
     placementLevel = j['placementLevel'];
     examDate = j['examDate'] != null ? DateTime.tryParse(j['examDate']) : null;
+    deviceId = j['deviceId'];
+    leaderboardName = j['leaderboardName'];
     theme = j['theme'] ?? 'system';
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
@@ -173,6 +192,7 @@ class Progress extends ChangeNotifier {
     bestSpeed = j['bestSpeed'] ?? 0;
     beastBestScore = (j['beastBestScore'] as num?)?.toDouble() ?? 0;
     beastBestStreak = j['beastBestStreak'] ?? 0;
+    beastEverUnlocked = j['beastEverUnlocked'] ?? false;
     (j['dayCounts'] as Map? ?? {}).forEach((k, v) => dayCounts[int.parse(k)] = v);
     (j['qStats'] as Map? ?? {}).forEach((k, v) => qStats[k] = List<int>.from(v));
     mistakes.addAll(List<String>.from(j['mistakes'] ?? []));
@@ -190,6 +210,8 @@ class Progress extends ChangeNotifier {
         'dailyGoal': dailyGoal,
         'placementLevel': placementLevel,
         'examDate': examDate?.toIso8601String(),
+        'deviceId': deviceId,
+        'leaderboardName': leaderboardName,
         'theme': theme,
         'reminders': reminders,
         'reminderHour': reminderHour,
@@ -204,6 +226,7 @@ class Progress extends ChangeNotifier {
         'bestSpeed': bestSpeed,
         'beastBestScore': beastBestScore,
         'beastBestStreak': beastBestStreak,
+        'beastEverUnlocked': beastEverUnlocked,
         'dayCounts': dayCounts.map((k, v) => MapEntry('$k', v)),
         'qStats': qStats,
         'mistakes': mistakes.toList(),
@@ -290,10 +313,14 @@ class Progress extends ChangeNotifier {
   }
 
   // ---------- Mutations ----------
-  void _touchDay() {
+  /// Returns true if a freeze token was just spent to bridge a missed day,
+  /// so callers can surface that save instead of letting the streak silently
+  /// carry on as if nothing happened.
+  bool _touchDay() {
     final t = today();
-    if (lastActiveDay == t) return;
+    if (lastActiveDay == t) return false;
     final gap = t - lastActiveDay;
+    var freezeUsed = false;
     if (gap == 1) {
       streak += 1;
       comeback = false;
@@ -301,12 +328,14 @@ class Progress extends ChangeNotifier {
       freezeTokens -= 1;
       streak += 1;
       comeback = false;
+      freezeUsed = true;
     } else {
       comeback = lastActiveDay != 0;
       streak = 1;
     }
     lastActiveDay = t;
     if (streak > bestStreak) bestStreak = streak;
+    return freezeUsed;
   }
 
   static const milestones = [3, 7, 21, 50, 100, 200, 365];
@@ -315,7 +344,7 @@ class Progress extends ChangeNotifier {
     final wasActive = activeToday;
     final beforeLevel = level.index;
     final beforeGoal = todayCount >= dailyGoal;
-    _touchDay();
+    final freezeSaved = _touchDay();
     int? milestone;
     if (!wasActive && milestones.contains(streak)) {
       milestone = streak;
@@ -332,7 +361,10 @@ class Progress extends ChangeNotifier {
     // just-invalidated streak-SOS queued for later (see reminders.dart).
     if (!wasActive && activeToday) onActiveToday?.call();
     return Reward(gained,
-        goalCompleted: goalNow, levelUp: level.index > beforeLevel, streakMilestone: milestone);
+        goalCompleted: goalNow,
+        levelUp: level.index > beforeLevel,
+        streakMilestone: milestone,
+        freezeSaved: freezeSaved);
   }
 
   Reward recordAnswer(String qid, bool correct) {
@@ -345,6 +377,7 @@ class Progress extends ChangeNotifier {
     } else {
       mistakes.add(qid);
     }
+    if (!beastEverUnlocked && totalAnswered >= 20 && accuracy >= 0.5) beastEverUnlocked = true;
     return _gain(correct ? 10 : 2);
   }
 
@@ -396,6 +429,24 @@ class Progress extends ChangeNotifier {
     save();
   }
 
+  /// Lazily generates and persists this device's anonymous leaderboard identity on
+  /// first use, so most users who never open the leaderboard never get one at all.
+  String ensureDeviceId() {
+    var id = deviceId;
+    if (id == null) {
+      final rnd = Random();
+      id = List.generate(16, (_) => rnd.nextInt(36).toRadixString(36)).join();
+      deviceId = id;
+      save();
+    }
+    return id;
+  }
+
+  void setLeaderboardName(String name) {
+    leaderboardName = name.trim().isEmpty ? null : name.trim();
+    save();
+  }
+
   void toggleBookmark(String id) {
     bookmarks.contains(id) ? bookmarks.remove(id) : bookmarks.add(id);
     save();
@@ -420,6 +471,7 @@ class Progress extends ChangeNotifier {
     final keepLang = lang;
     xp = streak = bestStreak = lastActiveDay = freezeTokens = bestSpeed = beastBestStreak = lastShareDay = 0;
     beastBestScore = 0;
+    beastEverUnlocked = false;
     for (final c in [dayCounts, qStats, cards]) {
       c.clear();
     }

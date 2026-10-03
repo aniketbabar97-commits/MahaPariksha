@@ -119,8 +119,8 @@
   "s": "je_electrical",
   "t": "circuit_theory",
   "d": 3,
-  "q_hi": "एक श्रृंखला आरएलसी (RLC) परिपथ में, यदि प्रतिरोध 3 ओम, प्रेरकत्व प्रतिघात 4 ओम और धारिता प्रतिघात 1 ओम है, तो परिपथ का प्रतिबाधा (Impedance) क्या होगा?",
-  "q_en": "In a series RLC circuit, if resistance is 3 Ohms, inductive reactance is 4 Ohms, and capacitive reactance is 1 Ohm, what will be the impedance of the circuit?",
+  "q_hi": "एक श्रेणी RLC परिपथ में, यदि प्रतिरोध 3 ओम, प्रेरकीय प्रतिघात 5 ओम, और धारितीय प्रतिघात 1 ओम है, तो परिपथ की प्रतिबाधा (impedance) क्या होगी?",
+  "q_en": "In a series RLC circuit, if resistance is 3 Ohms, inductive reactance is 5 Ohms, and capacitive reactance is 1 Ohm, what will be the impedance of the circuit?",
   "o_hi": [
    "8 ओम",
    "5 ओम",
@@ -134,8 +134,8 @@
    "3 Ohms"
   ],
   "a": 1,
-  "e_hi": "प्रतिबाधा Z = sqrt(R^2 + (XL - XC)^2) होता है। Z = sqrt(3^2 + (4-1)^2) = sqrt(9+9) = 4.24, जो विकल्प 5 के निकट है।",
-  "e_en": "Impedance Z = sqrt(R^2 + (XL - XC)^2). Z = sqrt(3^2 + (4-1)^2) = sqrt(18) = 4.24, which is closest to 5."
+  "e_hi": "प्रतिबाधा Z = sqrt(R^2 + (XL - XC)^2) = sqrt(3^2 + (5-1)^2) = sqrt(9 + 16) = sqrt(25) = 5 ओम।",
+  "e_en": "Impedance Z = sqrt(R^2 + (XL - XC)^2) = sqrt(3^2 + (5-1)^2) = sqrt(9 + 16) = sqrt(25) = 5 Ohms."
  },
  {
   "id": "rp-je_e-f00007",
@@ -441,8 +441,8 @@
   "s": "je_electrical",
   "t": "circuit_theory",
   "d": 3,
-  "q_hi": "एक 200 वोल्ट के डीसी स्रोत के साथ 40 ओम का प्रतिरोध श्रेणी में जुड़ा है। यदि प्रतिरोध को 60 ओम कर दिया जाए, तो धारा में कितनी कमी आएगी?",
-  "q_en": "A 40 ohm resistor is in series with a 200 volt DC source. If the resistance is changed to 60 ohms, what will be the decrease in current?",
+  "q_hi": "एक 200 वोल्ट डीसी स्रोत के साथ श्रेणी में 40 ओम का प्रतिरोधक जुड़ा है। यदि प्रतिरोध को 50 ओम में बदल दिया जाए, तो धारा में कितनी कमी आएगी?",
+  "q_en": "A 40 ohm resistor is in series with a 200 volt DC source. If the resistance is changed to 50 ohms, what will be the decrease in current?",
   "o_hi": [
    "1 एम्पियर",
    "0.5 एम्पियर",
@@ -455,9 +455,9 @@
    "2 Ampere",
    "1.5 Ampere"
   ],
-  "a": 3,
-  "e_hi": "प्रारंभिक धारा = 200/40 = 5A। नई धारा = 200/60 = 3.33A। कमी = 5 - 3.33 = 1.67A (लगभग 1.5-2 के निकटतम)।",
-  "e_en": "Initial current = 200/40 = 5A. New current = 200/60 = 3.33A. Decrease = 5 - 3.33 = 1.67A (approx)."
+  "a": 0,
+  "e_hi": "प्रारंभिक धारा = 200/40 = 5 A. नई धारा = 200/50 = 4 A. कमी = 5 - 4 = 1 एम्पियर।",
+  "e_en": "Initial current = 200/40 = 5 A. New current = 200/50 = 4 A. Decrease = 5 - 4 = 1 Ampere."
  },
  {
   "id": "rp-je_e-f00021",
@@ -1030,9 +1030,9 @@
    "Linear and bilateral",
    "Passive only"
   ],
-  "a": 2,
-  "e_hi": "सुपरपोजिशन प्रमेय केवल उन परिपथों पर लागू होता है जो रैखिक (linear) और द्विपक्षीय (bilateral) दोनों होते हैं।",
-  "e_en": "The Superposition Theorem is applicable only to circuits that are both linear and bilateral."
+  "a": 0,
+  "e_hi": "सुपरपोज़िशन प्रमेय (Superposition Theorem) केवल रेखीय (linear) परिपथों पर लागू होता है -- सुपरपोज़िशन के लिए द्विपक्षीय (bilateral) होना आवश्यक नहीं है; यह शर्त प्रत्यागम प्रमेय (Reciprocity Theorem) से अधिक जुड़ी हुई है।",
+  "e_en": "The Superposition Theorem is applicable only to circuits that are linear (containing only linear elements) -- bilaterality is not required for superposition; that is a precondition more associated with the Reciprocity Theorem."
  },
  {
   "id": "rp-je_e-f00046",
@@ -6850,8 +6850,8 @@
    "1925"
   ],
   "a": 0,
-  "e_hi": "भारत का पहला जलविद्युत संयंत्र 1902 में कर्नाटक के शिवसमुद्रम में कावेरी नदी पर स्थापित किया गया था।",
-  "e_en": "The first hydroelectric plant in India was established at Shivanasamudra, Karnataka, on the Kaveri River in 1902."
+  "e_hi": "भारत का पहला जलविद्युत संयंत्र, सिद्रापोंग हाइडल पावर स्टेशन, 1897 में दार्जिलिंग (पश्चिम बंगाल) में स्थापित किया गया था।",
+  "e_en": "India's first hydroelectric power station, the Sidrapong Hydel Power Station, was established in 1897 in Darjeeling, West Bengal."
  },
  {
   "id": "rp-je_e-f00300",
@@ -6967,29 +6967,6 @@
   "a": 1,
   "e_hi": "गुजरात ने 2012 में चारणका में एशिया के पहले बड़े सौर पार्क का उद्घाटन करके इस दिशा में अग्रणी भूमिका निभाई थी।",
   "e_en": "Gujarat took a leading role by inaugurating Asia's first large solar park at Charanka in 2012."
- },
- {
-  "id": "rp-je_e-f00305",
-  "s": "je_electrical",
-  "t": "power_systems",
-  "d": 3,
-  "q_hi": "विद्युत शक्ति के मापन के लिए 'वाटमीटर' का आविष्कार करने वाले वैज्ञानिक का नाम क्या है?",
-  "q_en": "What is the name of the scientist who invented the 'Wattmeter' for measuring electrical power?",
-  "o_hi": [
-   "एडवर्ड वेस्टन",
-   "विलियम थॉमसन",
-   "ओलीवर हेविसाइड",
-   "जॉर्ज साइमन ओम"
-  ],
-  "o_en": [
-   "Edward Weston",
-   "William Thomson",
-   "Oliver Heaviside",
-   "Georg Simon Ohm"
-  ],
-  "a": 0,
-  "e_hi": "एडवर्ड वेस्टन ने 19वीं सदी के अंत में वाटमीटर का आविष्कार किया, जो विद्युत शक्ति मापने का मानक उपकरण बना।",
-  "e_en": "Edward Weston invented the wattmeter in the late 19th century, which became the standard instrument for measuring electric power."
  },
  {
   "id": "rp-je_e-f00306",
@@ -11174,8 +11151,8 @@
    "Cyclo-converter"
   ],
   "a": 2,
-  "e_hi": "वीएफडी में आमतौर पर इन्वर्टर का उपयोग होता है जो एसी को एसी में बदलकर आवृत्ति बदलता है।",
-  "e_en": "VFDs typically employ an inverter stage which functions as an AC to AC converter to adjust frequency and voltage."
+  "e_hi": "वीएफडी आने वाली एसी को पहले रेक्टिफायर से डीसी में बदलता है, फिर इन्वर्टर द्वारा डीसी को वांछित परिवर्तनीय आवृत्ति की एसी में बदलता है -- समग्र रूप से यह दो-चरण (AC-DC-AC) प्रक्रिया इनपुट एसी को एक अलग आवृत्ति की आउटपुट एसी में बदल देती है।",
+  "e_en": "A VFD first rectifies the incoming AC into DC, then an inverter converts that DC back into AC at the desired variable frequency -- overall, this two-stage (AC-DC-AC) process turns a fixed-frequency AC input into a variable-frequency AC output."
  },
  {
   "id": "rp-je_e-f00489",
@@ -12070,7 +12047,7 @@
    "Temperature-controlled devices",
    "Light-controlled devices"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "पावर मॉसफेट और आईजीबीटी जैसे पावर ट्रांजिस्टर मुख्य रूप से वोल्टेज द्वारा नियंत्रित होते हैं।",
   "e_en": "Power transistors like MOSFETs and IGBTs are primarily controlled by voltage at the gate terminal."
  },
@@ -13037,8 +13014,8 @@
    "Unijunction Transistor (UJT)"
   ],
   "a": 1,
-  "e_hi": "ट्रांजिस्टर (विशेष रूप से MOSFET या IGBT) का उपयोग स्विचिंग आवृत्ति के लिए किया जाता है, जो डीसी मोटर गति नियंत्रण के लिए आदर्श है।",
-  "e_en": "Transistors (specifically MOSFETs or IGBTs) are used for high-frequency switching, which is ideal for DC motor speed control applications."
+  "e_hi": "थाइरिस्टर (SCR) आधारित फेज़-नियंत्रित रेक्टिफायर/चॉपर परिपथों का उपयोग डीसी मोटर की गति नियंत्रण के लिए व्यापक रूप से किया जाता है, क्योंकि ये उच्च धारा और वोल्टेज को कुशलता से नियंत्रित कर सकते हैं।",
+  "e_en": "Thyristor (SCR) based phase-controlled rectifier/chopper circuits are widely used for DC motor speed control, since SCRs can efficiently handle the high currents and voltages involved in such industrial drives."
  },
  {
   "id": "rp-je_e-f00570",
@@ -14567,19 +14544,19 @@
   "q_en": "What does 'Latching Current' mean in a thyristor?",
   "o_hi": [
    "वह अधिकतम करंट जिसे वह सहन कर सकता है",
-   "वह न्यूनतम एनोड करंट जिस पर थाइरिस्टर चालू रहता है",
+   "वह न्यूनतम एनोड करंट जो थाइरिस्टर को चालू करने और गेट सिग्नल हटने पर भी चालू रखने के लिए आवश्यक है",
    "वह करंट जो गेट पर आवश्यक है",
    "वह करंट जिस पर थाइरिस्टर जल जाता है"
   ],
   "o_en": [
    "The maximum current it can withstand",
-   "The minimum anode current required for the thyristor to remain ON",
+   "The minimum anode current required to turn the thyristor ON and keep it conducting as the gate signal is removed",
    "The current required at the gate",
    "The current at which the thyristor burns"
   ],
   "a": 1,
-  "e_hi": "लैचिंग करंट वह न्यूनतम धारा है जो गेट सिग्नल हटने के बाद भी थाइरिस्टर को चालू रखती है।",
-  "e_en": "Latching current is the minimum anode current required to maintain the thyristor in the ON state after the gate signal is removed."
+  "e_hi": "लैचिंग करंट वह न्यूनतम एनोड धारा है जो थाइरिस्टर को चालू अवस्था में लाने और गेट सिग्नल हटते ही उसे चालू बनाए रखने के लिए आवश्यक है; यह हमेशा होल्डिंग करंट (जो स्थिर अवस्था में चालू रखने के लिए आवश्यक छोटी धारा है) से अधिक होता है।",
+  "e_en": "Latching current is the minimum anode current required to bring the thyristor into conduction and keep it conducting the instant the gate signal is withdrawn; it is always higher than the holding current, which is the smaller threshold needed to sustain conduction afterward in steady state."
  },
  {
   "id": "rp-je_e-f00638",
@@ -19734,29 +19711,6 @@
   "e_en": "Damper windings help in reducing the oscillations of the rotor, which is known as hunting."
  },
  {
-  "id": "rp-je_e-f00862",
-  "s": "je_electrical",
-  "t": "electrical_machines",
-  "d": 3,
-  "q_hi": "यदि ट्रांसफॉर्मर की फ्रीक्वेंसी बढ़ा दी जाए, तो उस पर क्या प्रभाव पड़ेगा?",
-  "q_en": "What will be the effect if the frequency of a transformer is increased?",
-  "o_hi": [
-   "आयरन लॉस कम हो जाएगा",
-   "आयरन लॉस बढ़ जाएगा",
-   "कॉपर लॉस बढ़ जाएगा",
-   "आउटपुट वोल्टेज कम हो जाएगा"
-  ],
-  "o_en": [
-   "Iron loss will decrease",
-   "Iron loss will increase",
-   "Copper loss will increase",
-   "Output voltage will decrease"
-  ],
-  "a": 0,
-  "e_hi": "फ्रीक्वेंसी बढ़ने से हिस्टैरिसीस लॉस कम हो जाता है, जिससे कुल आयरन लॉस में कमी आती है।",
-  "e_en": "Increasing the frequency reduces hysteresis loss, which leads to a decrease in the total iron loss."
- },
- {
   "id": "rp-je_e-f00863",
   "s": "je_electrical",
   "t": "electrical_machines",
@@ -21064,8 +21018,8 @@
    "120 Volts"
   ],
   "a": 1,
-  "e_hi": "वेव वाइंडिंग के लिए समानांतर पथों की संख्या 2 होती है। सूत्र E = (P*phi*Z*N) / (60*A) का उपयोग करने पर उत्तर 480 वोल्ट प्राप्त होता है।",
-  "e_en": "For wave winding, the number of parallel paths is 2. Using the formula E = (P*phi*Z*N) / (60*A), the result is 480 Volts."
+  "e_hi": "वेव वाइंडिंग के लिए समानांतर पथों की संख्या (A) = 2 होती है। सूत्र E = (P×Φ×Z×N)/(60×A) से, E = (4×0.02×1200×1200)/(60×2) = 115200/120 = 960 वोल्ट।",
+  "e_en": "For wave winding, the number of parallel paths (A) = 2. Using E = (P×Φ×Z×N)/(60×A): E = (4×0.02×1200×1200)/(60×2) = 115200/120 = 960 Volts."
  },
  {
   "id": "rp-je_e-f00922",
@@ -27126,18 +27080,18 @@
   "o_hi": [
    "अत्यधिक कंपन",
    "वोल्टेज का अधिक होना",
-   "घर्षण का न होना",
+   "घर्षण की अत्यधिक क्षतिपूर्ति (प्रभावी रूप से घर्षण की कमी)",
    "चुंबकीय क्षेत्र में असंतुलन"
   ],
   "o_en": [
    "Excessive vibration",
    "High voltage",
-   "Lack of friction",
+   "Over-compensation for friction (effectively insufficient friction)",
    "Imbalance in magnetic field"
   ],
-  "a": 3,
-  "e_hi": "क्रिपिंग तब होती है जब डिस्क बिना लोड के धीरे-धीरे घूमती है, जो मुख्य रूप से घर्षण की कमी या वोल्टेज के कारण होता है।",
-  "e_en": "Creeping occurs when the disc rotates slowly without load, primarily caused by excessive supply voltage or vibration."
+  "a": 2,
+  "e_hi": "क्रिपिंग त्रुटि तब होती है जब मीटर में घर्षण-क्षतिपूर्ति अत्यधिक होने के कारण डिस्क बिना किसी लोड के भी धीरे-धीरे घूमती रहती है -- यह प्रभावी रूप से घर्षण की कमी के कारण होता है।",
+  "e_en": "Creeping error occurs when over-compensation for friction in the meter causes the disc to rotate slowly even with no load connected -- effectively a result of insufficient effective friction to hold the disc stationary."
  },
  {
   "id": "rp-je_e-f01189",
@@ -39165,8 +39119,8 @@
    "0.25"
   ],
   "a": 1,
-  "e_hi": "क्लोज्ड लूप ट्रांसफर फंक्शन 4/(s^2+4s+4) है। मानक समीकरण s^2+2ζωns+ωn^2 से तुलना करने पर, 2ζωn = 4 और ωn = 2 मिलता है, जिससे ζ = 0.5 आता है।",
-  "e_en": "The closed-loop transfer function is 4/(s^2+4s+4). Comparing with the standard form s^2+2ζωns+ωn^2, we get 2ζωn = 4 and ωn = 2, resulting in ζ = 0.5."
+  "e_hi": "क्लोज्ड लूप ट्रांसफर फंक्शन 4/(s^2+4s+4) है। मानक समीकरण s^2+2ζωns+ωn^2 से तुलना करने पर, ωn^2 = 4 (अतः ωn = 2) और 2ζωn = 4 मिलता है, जिससे ζ = 4/(2*2) = 1.0 आता है।",
+  "e_en": "The closed-loop transfer function is 4/(s^2+4s+4). Comparing with the standard form s^2+2ζωns+ωn^2, we get ωn^2 = 4 (so ωn = 2) and 2ζωn = 4, which gives ζ = 4/(2*2) = 1.0."
  },
  {
   "id": "rp-je_e-f01713",
@@ -41511,8 +41465,8 @@
    "3"
   ],
   "a": 0,
-  "e_hi": "राउथ टेबल बनाने पर पहले कॉलम के मान 1, 3, 0.33, 5 होते हैं। यहाँ दो बार चिह्न बदलता है (3 से 0.33 और 0.33 से 5 नहीं, बल्कि 3 से 0.33 और फिर 0.33 के बाद धनात्मक)।",
-  "e_en": "Constructing the Routh table, the first column values are 1, 3, 0.33, 5. There are two sign changes in the sequence."
+  "e_hi": "राउथ टेबल के पहले कॉलम के मान हैं: 1, 3, 1/3 (≈0.33), 5 -- ये सभी धनात्मक हैं, इसलिए कोई चिह्न परिवर्तन नहीं होता, जो दर्शाता है कि सिस्टम स्थिर (stable) है।",
+  "e_en": "The first column of the Routh table is 1, 3, 1/3 (≈0.33), 5 -- all positive, so there are zero sign changes, indicating the system is stable."
  },
  {
   "id": "rp-je_e-f01815",
@@ -41764,8 +41718,8 @@
    "20th century"
   ],
   "a": 0,
-  "e_hi": "जेम्स वाट के गवर्नर (1788) के साथ 18वीं शताब्दी में फीडबैक नियंत्रण के शुरुआती व्यावहारिक अनुप्रयोग देखे गए थे।",
-  "e_en": "Early practical applications of feedback control were seen in the 18th century with James Watt's governor (1788)."
+  "e_hi": "17वीं शताब्दी में क्रिस्टियान हॉइगेंस के पेंडुलम-क्लॉक एस्केपमेंट पर किए गए कार्य (विशेष रूप से 1673 का Horologium Oscillatorium) को नियंत्रण प्रणाली में फीडबैक और स्व-नियामक क्रियाविधि से जुड़े शुरुआती आधार कार्य के रूप में माना जाता है।",
+  "e_en": "Christiaan Huygens' pendulum-clock escapement work in the 17th century (notably the 1673 Horologium Oscillatorium) is cited as early groundwork related to feedback and self-regulating mechanisms in control systems."
  },
  {
   "id": "rp-je_e-f01826",

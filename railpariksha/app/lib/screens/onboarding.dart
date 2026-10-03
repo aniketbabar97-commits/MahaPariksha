@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
+import '../core/notifications.dart';
+import '../core/reminders.dart';
 import '../core/theme.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
@@ -25,6 +27,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int pIndex = 0;
   List<int?> pAnswers = const [];
   String? placementLevel;
+
+  @override
+  void initState() {
+    super.initState();
+    // Exam selection is saved to Progress immediately (see _exam() below), so
+    // a user who picks it and then gets interrupted (call, OS kills the app)
+    // before finishing would otherwise restart from the language screen on
+    // relaunch -- annoying busywork for no reason, since that choice is
+    // already on disk. Resume straight to the placement step when it is.
+    final p = AppScope.read(context).progress;
+    if (p.examId != null) {
+      examId = p.examId;
+      step = 2;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -368,11 +385,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           label: Text(context.tr('सफ़र शुरू करें!', "Let's go!")),
           onPressed: () {
             HapticFeedback.selectionClick();
-            context.scope.progress.update((p) {
+            final p = context.scope.progress;
+            p.update((p) {
               p.examId = examId;
               p.dailyGoal = goal;
               p.placementLevel = placementLevel;
               p.onboarded = true;
+            });
+            // Reminders default to "on" with nothing in onboarding that ever
+            // asks for the OS permission, so the streak-SOS/daily-reminder
+            // system -- the app's main retention lever -- would silently never
+            // fire for most fresh installs. Ask here, at the one moment every
+            // user passes through, instead of waiting for someone to visit the
+            // Me screen and toggle a switch that already looks "on". Fired
+            // without awaiting: the OS permission dialog must never block the
+            // user from reaching the home screen they just asked for.
+            RailParikshaNotifications.requestPermission().then((granted) {
+              p.update((p) => p.reminders = granted);
+              applyReminders(p);
             });
           },
         ),
@@ -401,7 +431,9 @@ class _PlacementOption extends StatelessWidget {
     final border = selected ? BrandColors.saffron : scheme.outlineVariant;
     final bg =
         selected ? BrandColors.saffron.withValues(alpha: 0.12) : Theme.of(context).cardTheme.color ?? scheme.surface;
-    return AnimatedContainer(
+    return TapScale(
+      scale: selected ? 1.0 : 0.98,
+      child: AnimatedContainer(
       duration: const Duration(milliseconds: 180),
       decoration: BoxDecoration(
         color: bg,
@@ -424,6 +456,7 @@ class _PlacementOption extends StatelessWidget {
             if (selected) const Icon(Icons.radio_button_checked, color: BrandColors.saffron),
           ]),
         ),
+      ),
       ),
     );
   }

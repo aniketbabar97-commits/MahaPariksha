@@ -12,6 +12,7 @@ import 'ca_archive_screen.dart';
 import 'ca_digest_screen.dart';
 import 'flashcard_screen.dart';
 import 'gk_booster_screen.dart';
+import 'leaderboard_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
 import 'revision_plan_screen.dart';
@@ -42,8 +43,10 @@ class TodayScreen extends StatelessWidget {
     final weakCount = s.builder.topicStats().where((t) => t.attempts >= 3 && t.accuracy < 0.7).length;
     // Gate Beast Mode behind ~50% overall accuracy — but only once there's enough answers
     // for accuracy to mean anything (same minAttempts spirit as pacingGaps above), so brand
-    // new users aren't locked out by a 0% accuracy that's really just "no data yet".
-    final beastUnlocked = p.totalAnswered < 20 || p.accuracy >= 0.5;
+    // new users aren't locked out by a 0% accuracy that's really just "no data yet". Sticky
+    // via beastEverUnlocked: once earned, later practice on a weak topic dragging cumulative
+    // accuracy back down must not re-lock a feature (and tier) the user already has.
+    final beastUnlocked = p.totalAnswered < 20 || p.accuracy >= 0.5 || p.beastEverUnlocked;
     final caDates = s.builder.currentAffairsByDate();
 
     return ListView(
@@ -71,7 +74,8 @@ class TodayScreen extends StatelessWidget {
                 progress: p.goalProgress,
                 size: 110,
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
-                  Text('${p.todayCount}',
+                  CountUpText(p.todayCount,
+                      duration: const Duration(milliseconds: 700),
                       style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w900)),
                   Text('/ ${p.dailyGoal}', style: const TextStyle(color: Colors.white70)),
                 ]),
@@ -86,16 +90,26 @@ class TodayScreen extends StatelessWidget {
                     style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 17),
                   ),
                   const SizedBox(height: 6),
-                  Text('${level.of(lang)} · ${p.xp} XP', style: const TextStyle(color: BrandColors.sunrise, fontWeight: FontWeight.w700)),
+                  CountUpText(p.xp,
+                      duration: const Duration(milliseconds: 700),
+                      format: (v) => '${level.of(lang)} · $v XP',
+                      style: const TextStyle(color: BrandColors.sunrise, fontWeight: FontWeight.w700)),
                   if (level.nextXp != null) ...[
                     const SizedBox(height: 6),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(6),
-                      child: LinearProgressIndicator(
-                        value: (p.xp - level.minXp) / (level.nextXp! - level.minXp),
-                        minHeight: 7,
-                        backgroundColor: Colors.white24,
-                        color: BrandColors.sunrise,
+                      child: TweenAnimationBuilder<double>(
+                        tween: Tween(
+                            begin: 0,
+                            end: ((p.xp - level.minXp) / (level.nextXp! - level.minXp)).clamp(0.0, 1.0)),
+                        duration: const Duration(milliseconds: 900),
+                        curve: Curves.easeOutCubic,
+                        builder: (context, v, _) => LinearProgressIndicator(
+                          value: v,
+                          minHeight: 7,
+                          backgroundColor: Colors.white24,
+                          color: BrandColors.sunrise,
+                        ),
                       ),
                     ),
                   ],
@@ -111,6 +125,25 @@ class TodayScreen extends StatelessWidget {
                             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
                         const SizedBox(width: 4),
                         const Icon(Icons.chevron_right, color: Colors.white70, size: 16),
+                      ]),
+                    ),
+                  ] else ...[
+                    // Setting the exam date is this screen's single highest-leverage
+                    // personalization step -- it's what turns on the Study plan /
+                    // pacing-gaps card below -- but it previously only showed up as
+                    // one more ActionCard at the bottom of a long scroll. Surface it
+                    // here instead, where every first-session user already looks.
+                    const SizedBox(height: 10),
+                    InkWell(
+                      onTap: () {
+                        HapticFeedback.selectionClick();
+                        push(context, (_) => const RevisionPlanScreen());
+                      },
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        const Icon(Icons.event_outlined, color: Colors.white70, size: 16),
+                        const SizedBox(width: 4),
+                        Text(context.tr('परीक्षा की तारीख डालें और निजी प्लान पाएं →', 'Set your exam date for a personalized plan →'),
+                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
                       ]),
                     ),
                   ],
@@ -179,7 +212,8 @@ class TodayScreen extends StatelessWidget {
         ],
         const SizedBox(height: 16),
         // Reel Mode: the addictive endless swipe feed — most prominent CTA.
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
@@ -217,10 +251,12 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+          ),
         ),
         const SizedBox(height: 12),
         // Primary CTA
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
@@ -244,6 +280,7 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+          ),
         ),
         if (weakCount > 0) ...[
           const SizedBox(height: 12),
@@ -262,7 +299,8 @@ class TodayScreen extends StatelessWidget {
         const SizedBox(height: 12),
         // Beast Mode: a timed, streak-multiplier sprint — the "advanced" adrenaline mode,
         // gated behind decent overall accuracy so it reads as an earned challenge.
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () => beastUnlocked
@@ -322,6 +360,7 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+          ),
         ),
         const SizedBox(height: 12),
         ActionCard(
@@ -360,16 +399,23 @@ class TodayScreen extends StatelessWidget {
           subtitle: context.tr('$dueCards कार्ड आज रिवीज़न के लिए', '$dueCards cards due today'),
           onTap: () => push(context, (_) => const FlashcardScreen()),
         ),
-        const SizedBox(height: 12),
-        ActionCard(
-          icon: Icons.replay_circle_filled,
-          color: BrandColors.wrong,
-          title: context.tr('गलतियों की कॉपी', 'Mistake book'),
-          subtitle: p.mistakes.isEmpty
-              ? context.tr('कोई गलती बाकी नहीं! 👏', 'No pending mistakes! 👏')
-              : context.tr('${p.mistakes.length} प्रश्न दोबारा हल करें', 'Retry ${p.mistakes.length} questions'),
-          onTap: p.mistakes.isEmpty ? null : () => startQuiz(context, s.builder.mistakes()),
-        ),
+        // Hidden rather than shown disabled when there's truly nothing to show yet --
+        // a brand-new user who has never answered a question sees an unclickable
+        // "no pending mistakes" card that reads like a premature congratulations for
+        // doing nothing. The congratulatory state still shows once there's real
+        // history (some answers given) and the mistake book is genuinely empty.
+        if (p.totalAnswered > 0) ...[
+          const SizedBox(height: 12),
+          ActionCard(
+            icon: Icons.replay_circle_filled,
+            color: BrandColors.wrong,
+            title: context.tr('गलतियों की कॉपी', 'Mistake book'),
+            subtitle: p.mistakes.isEmpty
+                ? context.tr('कोई गलती बाकी नहीं! 👏', 'No pending mistakes! 👏')
+                : context.tr('${p.mistakes.length} प्रश्न दोबारा हल करें', 'Retry ${p.mistakes.length} questions'),
+            onTap: p.mistakes.isEmpty ? null : () => startQuiz(context, s.builder.mistakes()),
+          ),
+        ],
         const SizedBox(height: 12),
         ActionCard(
           icon: Icons.timer,
@@ -406,7 +452,7 @@ class TodayScreen extends StatelessWidget {
                     tooltip: context.tr('शेयर करें', 'Share'),
                     onPressed: () => SharePlus.instance.share(ShareParams(
                         text: '${motivation.text.of(lang)}${motivation.by != null ? '\n— ${motivation.by}' : ''}'
-                            '\n\n${context.tr('RailPariksha ऐप पर रोज़ाना प्रेरणा और अभ्यास', 'Daily practice & motivation on the RailPariksha app')} 🚀')),
+                            '\n\n${context.tr('RailPariksha ऐप पर रोज़ाना प्रेरणा और अभ्यास', 'Daily practice & motivation on the RailPariksha app')} 🚀 $kPlayUrl')),
                   ),
                 ]),
                 const SizedBox(height: 8),
@@ -433,6 +479,17 @@ class TodayScreen extends StatelessWidget {
           onTap: () {
             HapticFeedback.selectionClick();
             push(context, (_) => const RevisionPlanScreen());
+          },
+        ),
+        const SizedBox(height: 12),
+        ActionCard(
+          icon: Icons.leaderboard,
+          color: BrandColors.correct,
+          title: context.tr('लीडरबोर्ड 🏆', 'Leaderboard 🏆'),
+          subtitle: context.tr('इस हफ्ते के टॉप स्कोरर देखें', "See this week's top scorers"),
+          onTap: () {
+            HapticFeedback.selectionClick();
+            push(context, (_) => const LeaderboardScreen());
           },
         ),
         const SizedBox(height: 12),

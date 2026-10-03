@@ -42,8 +42,8 @@
    "5 to 10 percent"
   ],
   "a": 0,
-  "e_hi": "ईंट की मिट्टी में सिलिका की अधिकता ईंट को आकार बनाए रखने में मदद करती है और दरारें रोकती है।",
-  "e_en": "Excess silica in brick earth helps the brick retain its shape and prevents cracking."
+  "e_hi": "ईंट की मिट्टी में 50 से 60 प्रतिशत सिलिका ईंट को आकार में बनाए रखने और सिकुड़न रोकने में मदद करती है; इससे अधिक मात्रा में सिलिका ईंट को भंगुर बना देती है।",
+  "e_en": "Silica content of 50 to 60 percent in brick earth helps the brick retain its shape and resist shrinkage; excess silica beyond this, however, makes the brick brittle."
  },
  {
   "id": "rp-je_c-f00003",
@@ -1959,8 +1959,8 @@
   "s": "je_civil",
   "t": "surveying",
   "d": 2,
-  "q_hi": "एक समतल भूमि पर 100 मीटर की दूरी को 20 मीटर के चेन से मापा गया। यदि चेन 0.1 मीटर छोटी है, तो मापी गई दूरी कितनी होगी?",
-  "q_en": "A distance of 100m is measured on level ground using a 20m chain. If the chain is 0.1m too short, what will be the measured distance?",
+  "q_hi": "समतल भूमि पर एक दूरी को 20 मीटर के चेन से मापने पर 100 मीटर मापी गई। यदि चेन वास्तव में 0.1 मीटर छोटी है, तो दूरी का सही (वास्तविक) मान कितना होगा?",
+  "q_en": "A distance on level ground was measured as 100m using a 20m chain. If the chain is actually 0.1m too short, what is the true (correct) distance?",
   "o_hi": [
    "100.5 मीटर",
    "99.5 मीटर",
@@ -1973,9 +1973,9 @@
    "101.5 m",
    "98.5 m"
   ],
-  "a": 0,
-  "e_hi": "गलत दूरी = (सही दूरी * मानक लंबाई) / वास्तविक लंबाई। यहाँ (100 * 20) / 19.9 = 100.502 मीटर।",
-  "e_en": "Measured distance = (True distance * Nominal length) / Actual length. Here, (100 * 20) / 19.9 = 100.502 m."
+  "a": 1,
+  "e_hi": "सही दूरी = मापी गई दूरी * (वास्तविक लंबाई / मानक लंबाई)। यहाँ 100 * (19.9 / 20) = 99.5 मीटर। चेन छोटी होने पर सही दूरी मापी गई दूरी से कम होती है।",
+  "e_en": "True distance = Measured distance * (Actual chain length / Nominal length). Here, 100 * (19.9 / 20) = 99.5 m. Since the chain is shorter than nominal, the true distance is less than the measured (recorded) distance."
  },
  {
   "id": "rp-je_c-f00088",
@@ -2503,8 +2503,8 @@
    "50000 square meters"
   ],
   "a": 0,
-  "e_hi": "क्षेत्रफल का अनुपात = (पैमाने का वर्ग) = (1/1000)^2 = 1/1,000,000। 5 सेमी^2 = 5 * (1000*1000) / 10000 = 5000 मीटर^2।",
-  "e_en": "Area ratio = (Scale)^2 = (1/1000)^2 = 1/1,000,000. 5 cm^2 = 5 * (1000*1000) / 10000 = 5000 m^2."
+  "e_hi": "क्षेत्रफल का अनुपात = (रेखीय पैमाना)² = (1:1000)² = 1:1,000,000। 1 वर्ग सेमी नक्शे पर = 1,000,000 वर्ग सेमी = 100 वर्ग मीटर भूमि पर। अतः 5 वर्ग सेमी = 5 × 100 = 500 वर्ग मीटर।",
+  "e_en": "Area ratio = (linear scale)² = (1:1000)² = 1:1,000,000. 1 cm² on the map = 1,000,000 cm² = 100 m² on the ground. Hence, 5 cm² = 5 × 100 = 500 m²."
  },
  {
   "id": "rp-je_c-f00112",
@@ -6551,8 +6551,8 @@
    "0.25"
   ],
   "a": 1,
-  "e_hi": "सूत्र e + 0.15 = (60*60)/(127*100) का उपयोग करें। हल करने पर e = 0.36 - 0.15 = 0.21, लेकिन यहाँ पूर्ण घर्षण के साथ गणना करने पर 0.13 प्राप्त होता है।",
-  "e_en": "Using the formula e + 0.15 = (60*60)/(127*100). Solving gives e = 0.36 - 0.15 = 0.21, however with given standard constraints, 0.13 is the derived requirement."
+  "e_hi": "सूत्र e + f = v²/(127R) का उपयोग करें: (60)²/(127×100) = 3600/12700 ≈ 0.283। अतः e = 0.283 - 0.15 = 0.133 ≈ 0.13।",
+  "e_en": "Using e + f = v²/(127R): (60)²/(127×100) = 3600/12700 ≈ 0.283. Hence, e = 0.283 - 0.15 = 0.133 ≈ 0.13."
  },
  {
   "id": "rp-je_c-f00288",
@@ -6622,29 +6622,6 @@
   "a": 2,
   "e_hi": "ट्रैफिक प्रवाह (q) = घनत्व (k) * गति (v)। 40 * 50 = 2000 वाहन प्रति घंटा।",
   "e_en": "Traffic flow (q) = Density (k) * Speed (v). 40 * 50 = 2000 vehicles per hour."
- },
- {
-  "id": "rp-je_c-f00291",
-  "s": "je_civil",
-  "t": "transportation_engineering",
-  "d": 3,
-  "q_hi": "एक रेलवे ट्रैक पर यदि गेज 1.676 मीटर है और वक्र की त्रिज्या 300 मीटर है, तो 60 किमी प्रति घंटा की गति के लिए आवश्यक गेज विस्तार (mm में) क्या होगा?",
-  "q_en": "On a railway track, if the gauge is 1.676 meters and the curve radius is 300 meters, what is the required gauge widening (in mm) for a speed of 60 kmph?",
-  "o_hi": [
-   "10 मिमी",
-   "15 मिमी",
-   "20 मिमी",
-   "25 मिमी"
-  ],
-  "o_en": [
-   "10 mm",
-   "15 mm",
-   "20 mm",
-   "25 mm"
-  ],
-  "a": 2,
-  "e_hi": "ब्रॉड गेज के लिए गेज विस्तार का सूत्र = (13 * B^2) / R है। गणना करने पर यह लगभग 20 मिमी के करीब आता है।",
-  "e_en": "The formula for gauge widening on broad gauge is (13 * B^2) / R. Calculation yields approximately 20 mm."
  },
  {
   "id": "rp-je_c-f00292",
@@ -6720,8 +6697,8 @@
   "s": "je_civil",
   "t": "transportation_engineering",
   "d": 2,
-  "q_hi": "एक रेलवे ट्रैक पर 5 डिग्री के वक्र की त्रिज्या क्या होगी? (मान लें कि 1720 मीटर की मानक लंबाई का उपयोग किया जा रहा है)",
-  "q_en": "What will be the radius of a 5-degree curve on a railway track? (Assume the standard chord length of 1720 meters is used for degree calculation).",
+  "q_hi": "एक रेलवे ट्रैक पर 5 डिग्री के वक्र की त्रिज्या क्या होगी? (डिग्री वक्र सूत्र में उपयोग किया जाने वाला मानक स्थिरांक (constant) 1720 लें, अर्थात R = 1720/D)",
+  "q_en": "What will be the radius of a 5-degree curve on a railway track? (Take the standard constant used in the degree-of-curve formula as 1720, i.e. R = 1720/D)",
   "o_hi": [
    "344 मीटर",
    "350 मीटर",
@@ -7498,29 +7475,6 @@
   "e_en": "Flow = Density * Speed. 40 * 50 = 2000 vehicles/hour."
  },
  {
-  "id": "rp-je_c-f00329",
-  "s": "je_civil",
-  "t": "transportation_engineering",
-  "d": 3,
-  "q_hi": "एक रेलवे ट्रैक में, यदि गेज 1.676 मीटर है और वक्र की त्रिज्या 300 मीटर है, तो 60 किमी/घंटा की गति के लिए आवश्यक गेज विस्तार (Gauge Widening) क्या होगा?",
-  "q_en": "In a railway track, if the gauge is 1.676 meters and the radius of the curve is 300 meters, what is the required gauge widening for a speed of 60 km/h?",
-  "o_hi": [
-   "15 मिमी",
-   "20 मिमी",
-   "25 मिमी",
-   "30 मिमी"
-  ],
-  "o_en": [
-   "15 mm",
-   "20 mm",
-   "25 mm",
-   "30 mm"
-  ],
-  "a": 1,
-  "e_hi": "गेज विस्तार का सूत्र = 13*B^2 / R। यहाँ मान रखने पर लगभग 20 मिमी प्राप्त होता है।",
-  "e_en": "Formula for gauge widening = 13*B^2 / R. Plugging in the values results in approximately 20 mm."
- },
- {
   "id": "rp-je_c-f00330",
   "s": "je_civil",
   "t": "transportation_engineering",
@@ -7540,8 +7494,8 @@
    "350 meters"
   ],
   "a": 3,
-  "e_hi": "R = v^2 / (127 * (e + f))। गणना करने पर R लगभग 215 मीटर आता है।",
-  "e_en": "R = v^2 / (127 * (e + f)). The calculation results in R approximately 215 meters."
+  "e_hi": "R = v² / (127 × (e + f)) = 100² / (127 × 0.22) = 10000 / 27.94 ≈ 358 मीटर, जो निकटतम विकल्प 350 मीटर है।",
+  "e_en": "R = v² / (127 × (e + f)) = 100² / (127 × 0.22) = 10000 / 27.94 ≈ 358 meters, closest to the option 350 meters."
  },
  {
   "id": "rp-je_c-f00331",
@@ -14532,8 +14486,8 @@
    "Atterberg"
   ],
   "a": 1,
-  "e_hi": "ए.डब्ल्यू. स्कैम्पटन ने 1944 में क्ले की सेंसिटिविटी को परिभाषित किया था।",
-  "e_en": "A.W. Skempton defined the sensitivity of clay in 1944."
+  "e_hi": "मृदा की संवेदनशीलता (Sensitivity) शब्द का प्रतिपादन सबसे पहले टरज़ागी (Terzaghi) ने 1944 में किया था।",
+  "e_en": "The term 'Sensitivity' of soil was first coined by Terzaghi in 1944."
  },
  {
   "id": "rp-je_c-f00640",
@@ -15175,7 +15129,7 @@
    "The soil is very dense",
    "The soil has high water content"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "शून्य वायु रिक्तता रेखा सैद्धांतिक सीमा है; इससे अधिक सघनता प्राप्त करना भौतिक रूप से असंभव है।",
   "e_en": "The Zero Air Voids Line represents the theoretical limit of compaction; it is physically impossible for a compaction curve to exist to its left."
  },
@@ -16670,7 +16624,7 @@
    "Casagrande",
    "Bishop"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "ए.डब्ल्यू. स्केम्पटन ने 1953 में मृदा की संवेदनशीलता के गुणांक को प्रस्तावित किया था।",
   "e_en": "A.W. Skempton proposed the coefficient of sensitivity for soil in 1953."
  },
@@ -17407,8 +17361,8 @@
    "Five"
   ],
   "a": 3,
-  "e_hi": "नागपुर योजना में सड़कों को राष्ट्रीय राजमार्ग, राज्य राजमार्ग, जिला सड़कें और ग्रामीण सड़कों में वर्गीकृत किया गया था।",
-  "e_en": "The Nagpur plan classified roads into National Highways, State Highways, District Roads, and Village Roads."
+  "e_hi": "नागपुर योजना में सड़कों को पाँच वर्गों में वर्गीकृत किया गया था: राष्ट्रीय राजमार्ग, राज्य राजमार्ग, मुख्य जिला सड़कें, अन्य जिला सड़कें और ग्रामीण सड़कें।",
+  "e_en": "The Nagpur plan classified roads into five categories: National Highways, State Highways, Major District Roads, Other District Roads, and Village Roads."
  },
  {
   "id": "rp-je_c-f00765",
@@ -19477,8 +19431,8 @@
    "0.50"
   ],
   "a": 0,
-  "e_hi": "IRC के अनुसार, 100 किमी/घंटा गति के लिए अनुशंसित अनुदैर्ध्य घर्षण गुणांक (longitudinal friction) 0.36 है।",
-  "e_en": "As per IRC, the recommended longitudinal friction coefficient for 100 kmph speed is 0.36."
+  "e_hi": "IRC मानक सारणी के अनुसार, 100 किमी/घंटा गति के लिए अनुशंसित अनुदैर्ध्य घर्षण गुणांक (longitudinal friction coefficient) 0.35 है।",
+  "e_en": "As per the IRC standard table, the recommended longitudinal friction coefficient for a design speed of 100 kmph is 0.35."
  },
  {
   "id": "rp-je_c-f00855",
@@ -19615,8 +19569,8 @@
    "M+1"
   ],
   "a": 2,
-  "e_hi": "यहाँ 'M' रेल की लंबाई (मीटर में) को दर्शाता है। M+2 का अर्थ है रेल की लंबाई के साथ 2 अतिरिक्त स्लीपर।",
-  "e_en": "Here 'M' represents the length of the rail in meters. M+2 indicates the number of sleepers per rail length."
+  "e_hi": "यहाँ 'M' रेल की लंबाई (मीटर में) को दर्शाता है। उच्च गति और भारी यातायात वाले खंडों के लिए स्लीपर घनत्व का सूत्र M+7 प्रयुक्त होता है, जो सामान्य खंडों (M+4) की तुलना में अधिक स्लीपर प्रदान करता है।",
+  "e_en": "Here 'M' represents the length of the rail in meters. For high-speed and heavy-traffic sections, the sleeper density formula used is M+7, providing more sleepers than for ordinary sections (M+4)."
  },
  {
   "id": "rp-je_c-f00861",
@@ -20704,8 +20658,8 @@
   "s": "je_civil",
   "t": "structural_analysis",
   "d": 1,
-  "q_hi": "एक संरचनात्मक सदस्य जिसमें केवल अक्षीय बल (axial force) कार्य करते हैं, उसे क्या कहा जाता है?",
-  "q_en": "What is a structural member called that is subjected only to axial forces?",
+  "q_hi": "किस प्रकार की संरचना में सभी सदस्यों में केवल अक्षीय बल (axial force) ही कार्य करते हैं?",
+  "q_en": "What type of structure is made up of members that are subjected only to axial forces?",
   "o_hi": [
    "बीम",
    "स्ट्रट",
@@ -20720,7 +20674,7 @@
   ],
   "a": 3,
   "e_hi": "ट्रस एक ऐसी संरचना है जो त्रिभुजाकार इकाइयों से बनी होती है और इसके सदस्य केवल तनाव या संपीड़न (अक्षीय बल) का अनुभव करते हैं।",
-  "e_en": "A truss is a structure made of triangular units where members experience only tension or compression (axial forces)."
+  "e_en": "A truss is a structure made of triangular units where every member experiences only tension or compression (axial force), with no bending or shear."
  },
  {
   "id": "rp-je_c-f00909",
@@ -23916,8 +23870,8 @@
    "Data insufficient"
   ],
   "a": 0,
-  "e_hi": "परफेक्ट ट्रस के लिए m = 2j - 3 होना चाहिए। यहाँ 7 > (2*5 - 3) = 7, यह एक रिडंडेंट ट्रस है।",
-  "e_en": "For a perfect truss, m = 2j - 3. Here, 7 > (2*5 - 3) = 7, making it a redundant truss."
+  "e_hi": "परफेक्ट ट्रस के लिए m = 2j - 3 होना चाहिए। यहाँ 2×5 - 3 = 7 = m, अतः यह एक परफेक्ट (स्टेबल व निश्चित) ट्रस है।",
+  "e_en": "For a perfect truss, m = 2j - 3. Here, 2×5 - 3 = 7 = m, so it is a perfect (stable and determinate) truss."
  },
  {
   "id": "rp-je_c-f01049",
@@ -23970,8 +23924,8 @@
   "s": "je_civil",
   "t": "structural_analysis",
   "d": 3,
-  "q_hi": "यदि बीम का स्पैन दोगुना कर दिया जाए, तो उसके विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
-  "q_en": "If the span of a beam is doubled, what will be the effect on its deflection?",
+  "q_hi": "यदि केंद्रीय बिंदु भार वाले एक सरल आधारित बीम (simply supported beam) का स्पैन दोगुना कर दिया जाए (अन्य कारक स्थिर रहें), तो उसके विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the span of a simply supported beam carrying a central point load is doubled (keeping other factors constant), what will be the effect on its deflection?",
   "o_hi": [
    "यह दोगुना हो जाएगा",
    "यह चार गुना हो जाएगा",
@@ -23985,8 +23939,8 @@
    "It will be halved"
   ],
   "a": 2,
-  "e_hi": "साधारण बीम के लिए विक्षेपण स्पैन की चौथी घात (L^4) के समानुपाती होता है, इसलिए लंबाई दोगुनी होने पर यह 16 गुना हो जाता है; यहाँ विकल्प 8 गुना (भार के संदर्भ में) अक्सर भ्रमित करता है।",
-  "e_en": "For a standard beam, deflection is proportional to the fourth power of the span (L^4), making it 16 times; however, in many contexts, students confuse this with simpler load-span relationships."
+  "e_hi": "केंद्रीय बिंदु भार वाले सरल बीम के लिए विक्षेपण δ = PL³/48EI होता है, यानी यह स्पैन के घन (L³) के समानुपाती है। स्पैन दोगुना होने पर विक्षेपण 2³ = 8 गुना हो जाता है।",
+  "e_en": "For a simply supported beam with a central point load, deflection δ = PL³/48EI, i.e., it is proportional to the cube of the span (L³). Doubling the span increases deflection by 2³ = 8 times."
  },
  {
   "id": "rp-je_c-f01052",
@@ -26952,8 +26906,8 @@
    "20.4 meters"
   ],
   "a": 1,
-  "e_hi": "hL = (f L v^2) / (2 g D)। वेग v = Q/A = 0.05 / (π/4 × 0.2^2) ≈ 1.59 m/s। मान रखने पर hL ≈ 8.15 मीटर।",
-  "e_en": "hL = (f L v^2) / (2 g D). Velocity v = Q/A = 0.05 / (π/4 × 0.2^2) ≈ 1.59 m/s. Substituting values, hL ≈ 8.15 meters."
+  "e_hi": "hL = (f L v²) / (2 g D)। वेग v = Q/A = 0.05 / (π/4 × 0.2²) ≈ 1.59 m/s। मान रखने पर hL = (0.02×1000×1.59²)/(2×9.81×0.2) ≈ 12.9 मीटर, जो निकटतम विकल्प 12.5 मीटर है।",
+  "e_en": "hL = (f L v²) / (2 g D). Velocity v = Q/A = 0.05 / (π/4 × 0.2²) ≈ 1.59 m/s. Substituting values, hL = (0.02×1000×1.59²)/(2×9.81×0.2) ≈ 12.9 meters, closest to the option 12.5 meters."
  },
  {
   "id": "rp-je_c-f01181",
@@ -27320,8 +27274,8 @@
    "500 mg/l"
   ],
   "a": 3,
-  "e_hi": "सूत्र: BOD5 = Lo (1 - e^-kt)। यहाँ 200 = Lo (1 - e^-0.1*5)। गणना करने पर Lo लगभग 316 mg/l आता है।",
-  "e_en": "Formula: BOD5 = Lo (1 - e^-kt). Here 200 = Lo (1 - e^-0.1*5). Solving for Lo gives approximately 316 mg/l."
+  "e_hi": "सूत्र: BOD5 = Lo (1 - e^-kt)। यहाँ kt = 0.1×5 = 0.5। e^-0.5 ≈ 0.6065, इसलिए 1-e^-0.5 ≈ 0.3935। Lo = 200 / 0.3935 ≈ 508 mg/l, जो निकटतम विकल्प 500 mg/l है।",
+  "e_en": "Formula: BOD5 = Lo (1 - e^-kt). Here kt = 0.1×5 = 0.5. e^-0.5 ≈ 0.6065, so 1-e^-0.5 ≈ 0.3935. Lo = 200 / 0.3935 ≈ 508 mg/l, closest to the option 500 mg/l."
  },
  {
   "id": "rp-je_c-f01197",
@@ -27761,29 +27715,6 @@
   "e_en": "BOD = (DO_initial - DO_final) * (Dilution Factor). Here, dilution factor is 300/2 = 150. 6 * 150 = 900 mg/L."
  },
  {
-  "id": "rp-je_c-f01216",
-  "s": "je_civil",
-  "t": "environmental_engineering",
-  "d": 2,
-  "q_hi": "यदि किसी जल स्रोत में क्लोराइड की सांद्रता 250 मिलीग्राम प्रति लीटर है और पानी की कुल कठोरता 300 मिलीग्राम प्रति लीटर है, तो कठोरता का अंश (डिग्री में) क्या होगा?",
-  "q_en": "If the chloride concentration in a water source is 250 mg/L and total hardness is 300 mg/L, what is the hardness fraction?",
-  "o_hi": [
-   "0.54",
-   "0.83",
-   "1.20",
-   "0.45"
-  ],
-  "o_en": [
-   "0.54",
-   "0.83",
-   "1.20",
-   "0.45"
-  ],
-  "a": 1,
-  "e_hi": "कठोरता का अंश निकालने के लिए कठोरता को कुल घुलित ठोस या मानक सांद्रता से विभाजित किया जाता है। यहाँ सीधे अनुपात 250/300 है, लेकिन प्रश्न में कठोरता का मान ही मुख्य आधार है।",
-  "e_en": "Hardness fraction is calculated by dividing hardness by total dissolved solids. Here, the ratio is 250/300."
- },
- {
   "id": "rp-je_c-f01217",
   "s": "je_civil",
   "t": "environmental_engineering",
@@ -27860,20 +27791,20 @@
   "q_hi": "यदि किसी सीवेज का बीओडी5, 200 मिलीग्राम प्रति लीटर है और डी-ऑक्सीजन स्थिरांक (k) 0.23 प्रति दिन है, तो अंतिम बीओडी की गणना करें (आधार e का उपयोग करते हुए)।",
   "q_en": "If the BOD5 of a sewage is 200 mg/L and the deoxygenation constant (k) is 0.23 per day, calculate the ultimate BOD (using base e).",
   "o_hi": [
-   "285.5 मिलीग्राम प्रति लीटर",
+   "292.7 मिलीग्राम प्रति लीटर",
    "300 मिलीग्राम प्रति लीटर",
    "315.5 मिलीग्राम प्रति लीटर",
    "350 मिलीग्राम प्रति लीटर"
   ],
   "o_en": [
-   "285.5 mg/L",
+   "292.7 mg/L",
    "300 mg/L",
    "315.5 mg/L",
    "350 mg/L"
   ],
   "a": 0,
-  "e_hi": "BOD5 = BODu * (1 - e^(-kt))। 200 = BODu * (1 - e^(-0.23 * 5))। हल करने पर BODu लगभग 285.5 प्राप्त होता है।",
-  "e_en": "BOD5 = BODu * (1 - e^(-kt)). 200 = BODu * (1 - e^(-0.23 * 5)). Solving this yields BODu approximately 285.5 mg/L."
+  "e_hi": "BOD5 = BODu * (1 - e^(-kt))। kt = 0.23*5 = 1.15, e^(-1.15) ≈ 0.3166। 200 = BODu * (1 - 0.3166) = BODu * 0.6834। हल करने पर BODu लगभग 292.7 मिलीग्राम प्रति लीटर प्राप्त होता है।",
+  "e_en": "BOD5 = BODu * (1 - e^(-kt)). kt = 0.23*5 = 1.15, e^(-1.15) ≈ 0.3166. 200 = BODu * (1 - 0.3166) = BODu * 0.6834. Solving this yields BODu ≈ 292.7 mg/L."
  },
  {
   "id": "rp-je_c-f01221",
@@ -29252,8 +29183,8 @@
    "25 percent"
   ],
   "a": 2,
-  "e_hi": "प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा उनके सूखे वजन का अधिकतम 15% निर्धारित है।",
-  "e_en": "The water absorption limit for first-class bricks is set at a maximum of 15% of their dry weight."
+  "e_hi": "प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा उनके सूखे वजन के अधिकतम 20% निर्धारित है।",
+  "e_en": "The water absorption limit for first-class bricks is set at a maximum of 20% of their dry weight."
  },
  {
   "id": "rp-je_c-f01282",
@@ -29720,8 +29651,8 @@
   "s": "je_civil",
   "t": "building_materials",
   "d": 3,
-  "q_hi": "निम्नलिखित में से कौन सा सीमेंट का सबसे हल्का घटक है?",
-  "q_en": "Which of the following is the lightest constituent of cement?",
+  "q_hi": "निम्नलिखित में से कौन सा सीमेंट का सबसे हल्का (सबसे कम घनत्व वाला) घटक है?",
+  "q_en": "Which of the following cement constituent has the lowest density (is the 'lightest')?",
   "o_hi": [
    "कैल्शियम ऑक्साइड",
    "सिलिका",
@@ -29734,9 +29665,9 @@
    "Alumina",
    "Magnesia"
   ],
-  "a": 2,
-  "e_hi": "सीमेंट के घटकों में एल्यूमिना का घनत्व अन्य घटकों की तुलना में कम होता है।",
-  "e_en": "Among cement constituents, alumina has a lower density compared to others."
+  "a": 1,
+  "e_hi": "सीमेंट के मुख्य घटकों में सिलिका (SiO2) का घनत्व (लगभग 2.65 g/cm³) कैल्शियम ऑक्साइड, एल्यूमिना और मैग्नीशिया की तुलना में सबसे कम होता है।",
+  "e_en": "Among the main oxide constituents of cement, silica (SiO2, density ~2.65 g/cm3) has the lowest density compared to calcium oxide, alumina, and magnesia."
  },
  {
   "id": "rp-je_c-f01303",
@@ -31196,19 +31127,19 @@
   "q_en": "If timber suffers from 'Wet Rot', what is the root cause?",
   "o_hi": [
    "सूखी हवा का प्रभाव",
-   "बार-बार गीला और सूखा होना",
+   "लकड़ी का लगातार नम और सीलन भरी स्थिति में रहना",
    "दीमक का हमला",
    "अत्यधिक गर्मी"
   ],
   "o_en": [
    "Effect of dry air",
-   "Repeated alternate wetting and drying",
+   "Timber remaining continuously damp/moist",
    "Termite attack",
    "Excessive heat"
   ],
   "a": 1,
-  "e_hi": "वेट रॉट कवक (fungi) के कारण होता है जो लकड़ी में नमी के बार-बार बदलने से सक्रिय हो जाते हैं।",
-  "e_en": "Wet rot is caused by fungi that thrive in timber when it is subjected to cycles of alternate wetting and drying."
+  "e_hi": "वेट रॉट कवक (fungi) के कारण होता है जो लकड़ी के लगातार नम रहने (जैसे ज़मीन के संपर्क या रिसाव) पर सक्रिय हो जाते हैं।",
+  "e_en": "Wet rot is caused by fungi that thrive when timber remains persistently damp (such as from ground contact or leakage)."
  },
  {
   "id": "rp-je_c-f01368",
@@ -31698,8 +31629,8 @@
   "s": "je_civil",
   "t": "building_materials",
   "d": 2,
-  "q_hi": "किस वर्ष में भारतीय मानक ब्यूरो (BIS) ने सीमेंट के लिए आईएस कोड 456 प्रकाशित किया?",
-  "q_en": "In which year did the Bureau of Indian Standards (BIS) publish the IS Code 456 for concrete?",
+  "q_hi": "भारतीय मानक ब्यूरो (BIS) द्वारा सीमेंट कंक्रीट के लिए आईएस कोड 456 का वर्तमान (नवीनतम) संशोधन किस वर्ष प्रकाशित किया गया?",
+  "q_en": "In which year was the current (most recent) revision of IS Code 456 for concrete published by BIS?",
   "o_hi": [
    "1978",
    "2000",
@@ -31713,8 +31644,8 @@
    "1964"
   ],
   "a": 1,
-  "e_hi": "आईएस 456:2000 सादा और प्रबलित कंक्रीट के लिए भारतीय मानक कोड है।",
-  "e_en": "IS 456:2000 is the Indian Standard code of practice for plain and reinforced concrete."
+  "e_hi": "आईएस 456:2000 सादा और प्रबलित कंक्रीट के लिए भारतीय मानक कोड का नवीनतम संशोधन है (यह कोड मूलतः 1953 में प्रकाशित हुआ था)।",
+  "e_en": "IS 456:2000 is the latest revision of the Indian Standard code of practice for plain and reinforced concrete (the code was originally published in 1953)."
  },
  {
   "id": "rp-je_c-f01390",
@@ -31782,8 +31713,8 @@
    "M-60"
   ],
   "a": 3,
-  "e_hi": "भारतीय रेलवे के प्री-स्ट्रेस्ड कंक्रीट स्लीपरों के लिए M-45 ग्रेड का उपयोग मानक है।",
-  "e_en": "M-45 grade concrete is the standard for pre-stressed concrete sleepers in Indian Railways."
+  "e_hi": "भारतीय रेलवे के प्री-स्ट्रेस्ड कंक्रीट (PSC) स्लीपरों के लिए M-60 ग्रेड कंक्रीट का उपयोग मानक है, जो उच्च शक्ति और दीर्घायु सुनिश्चित करता है।",
+  "e_en": "M-60 grade concrete is the standard used for pre-stressed concrete (PSC) sleepers in Indian Railways, ensuring high strength and durability."
  },
  {
   "id": "rp-je_c-f01393",
@@ -31966,8 +31897,8 @@
    "180 kg"
   ],
   "a": 3,
-  "e_hi": "चूंकि अनुपात 1(सीमेंट):3(रेत) है, सीमेंट = 60/3 = 20 किलोग्राम।",
-  "e_en": "Since the ratio is 1(cement):3(sand), cement = 60/3 = 20 kg."
+  "e_hi": "अनुपात रेत : सीमेंट = 1 : 3 है। यहाँ रेत (60 किग्रा) अनुपात में 1 भाग है, अतः 1 भाग = 60 किग्रा। सीमेंट 3 भाग है, अतः सीमेंट = 3 × 60 = 180 किलोग्राम।",
+  "e_en": "The ratio of sand : cement is 1 : 3. Here sand (60 kg) corresponds to 1 part, so 1 part = 60 kg. Cement is 3 parts, so cement = 3 × 60 = 180 kg."
  },
  {
   "id": "rp-je_c-f01401",
@@ -32342,8 +32273,8 @@
   "s": "je_civil",
   "t": "building_materials",
   "d": 3,
-  "q_hi": "लकड़ी के संरक्षण (Preservation) के लिए 'एस्को' (ASCO) उपचार में कौन से तत्व शामिल होते हैं?",
-  "q_en": "Which elements are typically included in 'ASCO' treatment for timber preservation?",
+  "q_hi": "लकड़ी के संरक्षण (Preservation) के लिए 'एस्कू' (ASCU) उपचार में कौन से तत्व शामिल होते हैं?",
+  "q_en": "Which elements are typically included in 'ASCU' treatment for timber preservation?",
   "o_hi": [
    "आर्सेनिक, तांबा, क्रोमियम",
    "एल्यूमीनियम, सल्फर, कार्बन",
@@ -32357,8 +32288,8 @@
    "Carbon, Hydrogen, Nitrogen"
   ],
   "a": 0,
-  "e_hi": "ASCO का अर्थ आर्सेनिक, कॉपर और क्रोमियम के यौगिकों से है जो लकड़ी को कीड़ों से बचाते हैं।",
-  "e_en": "ASCO stands for Arsenic, Copper, and Chromium compounds used to protect timber from decay and insects."
+  "e_hi": "ASCU का अर्थ आर्सेनिक, कॉपर और क्रोमियम (Ascu - Dr. S. Kamesam द्वारा विकसित) के यौगिकों से है जो लकड़ी को कीड़ों और फफूंद से बचाते हैं।",
+  "e_en": "ASCU stands for a composition of Arsenic, Copper, and Chromium (developed by Dr. S. Kamesam in India) used to protect timber from insects and fungal decay."
  },
  {
   "id": "rp-je_c-f01418",
@@ -34381,8 +34312,8 @@
    "25 percent"
   ],
   "a": 2,
-  "e_hi": "भारतीय मानकों के अनुसार, प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा 15 प्रतिशत निर्धारित है।",
-  "e_en": "According to Indian standards, the water absorption limit for first-class bricks is set at 15 percent."
+  "e_hi": "भारतीय मानकों के अनुसार, प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा 20 प्रतिशत निर्धारित है।",
+  "e_en": "According to Indian standards, the water absorption limit for first-class bricks is set at 20 percent."
  },
  {
   "id": "rp-je_c-f01507",
@@ -34935,29 +34866,6 @@
   "a": 1,
   "e_hi": "बारीक मिलावा या महीन कण पानी को सोखकर उसे सतह पर आने से रोकने में मदद करते हैं।",
   "e_en": "Fine aggregates or finer particles help retain water, preventing it from rising to the surface."
- },
- {
-  "id": "rp-je_c-f01531",
-  "s": "je_civil",
-  "t": "building_materials",
-  "d": 3,
-  "q_hi": "लकड़ी के संरक्षण के लिए 'एस्को' (ASCO) उपचार में मुख्य रूप से क्या उपयोग किया जाता है?",
-  "q_en": "What is primarily used in the 'ASCO' treatment for the preservation of timber?",
-  "o_hi": [
-   "कोयला तार",
-   "कॉपर-क्रोम-बोरिक संरचना",
-   "पेंट",
-   "मिट्टी का तेल"
-  ],
-  "o_en": [
-   "Coal tar",
-   "Copper-chrome-boric composition",
-   "Paint",
-   "Kerosene oil"
-  ],
-  "a": 1,
-  "e_hi": "ASCO एक प्रसिद्ध लकड़ी संरक्षक है जिसमें आर्सेनिक, कॉपर और क्रोमियम के यौगिक होते हैं।",
-  "e_en": "ASCO is a well-known timber preservative containing compounds of Arsenic, Copper, and Chromium."
  },
  {
   "id": "rp-je_c-f01532",
@@ -43307,5 +43215,1454 @@
   "a": 1,
   "e_hi": "भूगणितीय सर्वेक्षण (Geodetic Survey) में पृथ्वी की वक्रता को ध्यान में रखा जाता है क्योंकि यह बड़े क्षेत्रों पर किया जाता है, जबकि समतल सर्वेक्षण में वक्रता की उपेक्षा की जाती है।",
   "e_en": "Geodetic surveying accounts for the curvature of the earth because it is conducted over large areas, whereas plane surveying treats the earth's surface as flat."
+ },
+ {
+  "id": "rp-je_c-01898",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन-सा उपकरण कोणीय माप में सबसे अधिक शुद्धता प्रदान करता है?",
+  "q_en": "Which of the following instruments provides the highest angular accuracy?",
+  "o_hi": [
+   "थियोडोलाइट",
+   "टोटल स्टेशन",
+   "निवल",
+   "टेप"
+  ],
+  "o_en": [
+   "Theodolite",
+   "Total Station",
+   "Level",
+   "Tape"
+  ],
+  "a": 0,
+  "e_hi": "थियोडोलाइट को कोणीय माप में सबसे अधिक शुद्धता वाला माना जाता है।",
+  "e_en": "The theodolite is considered to have the highest angular measurement accuracy."
+ },
+ {
+  "id": "rp-je_c-01899",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "एक ट्रैवर्स के क्रम में कुल त्रुटि को न्यूनतम करने के लिए कौन-सा समायोजन विधि उपयोग की जाती है?",
+  "q_en": "Which adjustment method is used to minimize cumulative error in a chain of traverses?",
+  "o_hi": [
+   "बाउडिच विधि",
+   "ट्रांजिट विधि",
+   "कम्पास विधि",
+   "रेसेक्शन विधि"
+  ],
+  "o_en": [
+   "Bowditch method",
+   "Transit method",
+   "Compass method",
+   "Resection method"
+  ],
+  "a": 0,
+  "e_hi": "बाउडिच (जॉर्जियन) विधि ट्रैवर्स में त्रुटि को वितरित करती है और कुल त्रुटि को न्यूनतम करती है।",
+  "e_en": "The Bowditch (or Georgian) method distributes errors across the traverse, minimizing total error."
+ },
+ {
+  "id": "rp-je_c-01900",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "डबल सेंट्रिंग विधि द्वारा लेवलिंग में किस त्रुटि को समाप्त किया जाता है?",
+  "q_en": "Which error is eliminated in levelling by using the double centering method?",
+  "o_hi": [
+   "कोलिमेशन त्रुटि",
+   "विचलन त्रुटि",
+   "वक्रता त्रुटि",
+   "सभी त्रुटियाँ"
+  ],
+  "o_en": [
+   "Collimation error",
+   "Refraction error",
+   "Curvature error",
+   "All errors"
+  ],
+  "a": 2,
+  "e_hi": "डबल सेंट्रिंग विधि पृथ्वी की वक्रता से उत्पन्न त्रुटि को समाप्त करती है।",
+  "e_en": "Double centering eliminates the curvature error caused by Earth's curvature."
+ },
+ {
+  "id": "rp-je_c-01901",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "निम्नलिखित में से कौन-सा प्लेन टेबल का हिस्सा नहीं है?",
+  "q_en": "Which of the following is NOT a component of a plane table?",
+  "o_hi": [
+   "एलिडेड",
+   "त्रिपॉड",
+   "प्रिज़्म",
+   "टैशियोमीटर"
+  ],
+  "o_en": [
+   "Alidade",
+   "Tripod",
+   "Prism",
+   "Tacheometer"
+  ],
+  "a": 2,
+  "e_hi": "प्रिज़्म प्लेन टेबल का भाग नहीं है; यह सामान्यतः लेज़र या दूरसंवेदक में प्रयोग होता है।",
+  "e_en": "A prism is not part of a plane table; it is typically used in laser or distance measuring devices."
+ },
+ {
+  "id": "rp-je_c-01902",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "GPS में कौन-सी आवृत्ति कैरियर फेज माप प्रदान करती है?",
+  "q_en": "Which GPS frequency provides carrier phase measurement?",
+  "o_hi": [
+   "L1",
+   "L2",
+   "L5",
+   "उपरोक्त सभी"
+  ],
+  "o_en": [
+   "L1",
+   "L2",
+   "L5",
+   "All of the above"
+  ],
+  "a": 3,
+  "e_hi": "GPS की सभी प्रमुख आवृत्तियों (L1, L2, L5) कैरियर फेज माप देती हैं।",
+  "e_en": "All major GPS frequencies (L1, L2, L5) provide carrier phase measurements."
+ },
+ {
+  "id": "rp-je_c-01903",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "30 m लम्बे स्टील टेप का विस्तारांक 11×10⁻⁶ / °C है। 20 °C से 35 °C तक तापमान बढ़ने पर नई लंबाई क्या होगी?",
+  "q_en": "A 30 m steel tape has a coefficient of expansion of 11×10⁻⁶ / °C. What will be its length when temperature rises from 20 °C to 35 °C?",
+  "o_hi": [
+   "30.00495 m",
+   "30.0045 m",
+   "30.0055 m",
+   "30.0035 m"
+  ],
+  "o_en": [
+   "30.00495 m",
+   "30.0045 m",
+   "30.0055 m",
+   "30.0035 m"
+  ],
+  "a": 0,
+  "e_hi": "ΔL = L·α·ΔT = 30·11×10⁻⁶·15 = 0.00495 m, इसलिए नई लंबाई 30.00495 m है।",
+  "e_en": "ΔL = L·α·ΔT = 30·11×10⁻⁶·15 = 0.00495 m, so the new length is 30.00495 m."
+ },
+ {
+  "id": "rp-je_c-01904",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "कौन-सा उपकरण ऊर्ध्वाधर डैटम स्थापित करने के लिए प्रयोग किया जाता है?",
+  "q_en": "Which instrument is used to establish a vertical datum?",
+  "o_hi": [
+   "लेवल",
+   "थियोडोलाइट",
+   "टोटल स्टेशन",
+   "GPS"
+  ],
+  "o_en": [
+   "Level",
+   "Theodolite",
+   "Total Station",
+   "GPS"
+  ],
+  "a": 0,
+  "e_hi": "लेवल को ऊँचाई मापने और डैटम स्थापित करने के लिए मुख्य उपकरण माना जाता है।",
+  "e_en": "The level is the primary instrument for measuring elevations and establishing a datum."
+ },
+ {
+  "id": "rp-je_c-01905",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "जिस बिंदु को प्रत्यक्ष रूप से नहीं देखा जा सकता, उसके निर्देशांक ज्ञात करने के लिए कौन-सी विधि सबसे उपयुक्त है?",
+  "q_en": "Which method is most suitable for determining the coordinates of a point that cannot be observed directly?",
+  "o_hi": [
+   "रेसेक्शन",
+   "इंटरसेक्शन",
+   "ट्रिलेटरेशन",
+   "ट्रायंगुलेशन"
+  ],
+  "o_en": [
+   "Resection",
+   "Intersection",
+   "Trilateration",
+   "Triangulation"
+  ],
+  "a": 0,
+  "e_hi": "रेसेक्शन विधि में ज्ञात बिंदुओं से कोन माप कर अनदेखे बिंदु के निर्देशांक निकाले जाते हैं।",
+  "e_en": "Resection uses measured angles from known points to compute the coordinates of an unseen point."
+ },
+ {
+  "id": "rp-je_c-01906",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "फोटोग्रैमी में किस प्रकार का स्टेरियोस्कोपिक दृश्य वास्तविक पैरालैक्स देता है?",
+  "q_en": "In photogrammetry, which type of stereoscopic viewing provides true parallax?",
+  "o_hi": [
+   "समानांतर",
+   "संविलयन",
+   "विचलन",
+   "कोई नहीं"
+  ],
+  "o_en": [
+   "Parallel",
+   "Convergent",
+   "Divergent",
+   "None"
+  ],
+  "a": 1,
+  "e_hi": "संविलयन (कन्वर्जेंट) दृश्य में वस्तु के दो चित्रों के बीच वास्तविक पैरालैक्स उत्पन्न होता है।",
+  "e_en": "Convergent viewing creates true parallax between the two images of an object."
+ },
+ {
+  "id": "rp-je_c-01907",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "लंबी दूरी पर दृष्टि माप करते समय कौन-सी त्रुटि अधिक बढ़ती है?",
+  "q_en": "Which error increases most with longer sight distances?",
+  "o_hi": [
+   "कोलिमेशन त्रुटि",
+   "विचलन त्रुटि",
+   "पृथ्वी की वक्रता त्रुटि",
+   "उपकरण पठन त्रुटि"
+  ],
+  "o_en": [
+   "Collimation error",
+   "Refraction error",
+   "Earth curvature error",
+   "Instrument reading error"
+  ],
+  "a": 2,
+  "e_hi": "पृथ्वी की वक्रता त्रुटि दूरी बढ़ने पर अधिक प्रभाव डालती है।",
+  "e_en": "Earth curvature error becomes more significant as sight distance increases."
+ },
+ {
+  "id": "rp-je_c-01908",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "लेवलिंग स्टाफ का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of a leveling staff?",
+  "o_hi": [
+   "क्षैतिज दूरी मापना",
+   "ऊर्ध्वाधर अंतर मापना",
+   "कोण मापना",
+   "तापमान मापना"
+  ],
+  "o_en": [
+   "Measure horizontal distance",
+   "Measure vertical difference",
+   "Measure angles",
+   "Measure temperature"
+  ],
+  "a": 1,
+  "e_hi": "लेवलिंग स्टाफ को ऊँचाई के अंतर को पढ़ने के लिए प्रयोग किया जाता है, न कि दूरी या कोण के लिये।",
+  "e_en": "A leveling staff is used to read height differences, not distances or angles."
+ },
+ {
+  "id": "rp-je_c-01909",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "एक बंद ट्रैवर्स में चतुर्भुज के भीतर के कोणों का योग कितना होना चाहिए?",
+  "q_en": "In a closed traverse, the sum of interior angles of a quadrilateral should be?",
+  "o_hi": [
+   "360°",
+   "540°",
+   "720°",
+   "180°"
+  ],
+  "o_en": [
+   "360°",
+   "540°",
+   "720°",
+   "180°"
+  ],
+  "a": 0,
+  "e_hi": "किसी भी चतुर्भुज के अंदर के कोणों का योग हमेशा 360 डिग्री होता है।",
+  "e_en": "The interior angles of any quadrilateral always sum to 360 degrees."
+ },
+ {
+  "id": "rp-je_c-01910",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "स्टील टेप में प्रणालीगत त्रुटि का मुख्य स्रोत क्या है?",
+  "q_en": "What is the main source of systematic error in a steel tape?",
+  "o_hi": [
+   "तापीय विस्तार",
+   "चुंबकीय क्षेत्र",
+   "आर्द्रता",
+   "हवा"
+  ],
+  "o_en": [
+   "Thermal expansion",
+   "Magnetic field",
+   "Humidity",
+   "Wind"
+  ],
+  "a": 0,
+  "e_hi": "स्टील टेप तापमान के बदलने पर लम्बाई में विस्तार या संकुचन करता है, जिससे प्रणालीगत त्रुटि आती है।",
+  "e_en": "A steel tape expands or contracts with temperature changes, causing systematic error."
+ },
+ {
+  "id": "rp-je_c-01911",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "डम्पी लेवल पढ़ते समय बैकसाइट रीडिंग किस रॉड पर ली जाती है?",
+  "q_en": "When reading a dumpy level, the backsight reading is taken on which rod?",
+  "o_hi": [
+   "उन्नयन बिंदु पर रखी रॉड",
+   "इंस्ट्रूमेंट पर रखी रॉड",
+   "बेंचमार्क पर रखी रॉड",
+   "टर्निंग पॉइंट पर रखी रॉड"
+  ],
+  "o_en": [
+   "Rod placed at the point of elevation",
+   "Rod placed at the instrument",
+   "Rod placed at the benchmark",
+   "Rod placed at the turning point"
+  ],
+  "a": 2,
+  "e_hi": "बैकसाइट हमेशा बेंचमार्क (ज्यादा ज्ञात उन्नयन) पर रखी रॉड से ली जाती है।",
+  "e_en": "The backsight is always taken on the rod placed at the benchmark (known elevation)."
+ },
+ {
+  "id": "rp-je_c-01912",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "स्टेडिया विधि में दो स्टेडिया हेयरों के बीच की दूरी 100 mm है। यदि स्टाफ पर स्टेडिया अंतर 0.5 m दिखता है, तो क्षैतिज दूरी कितनी होगी?",
+  "q_en": "In the stadia method, the distance between the two stadia hairs is 100 mm. If the staff shows a stadia interval of 0.5 m, what is the horizontal distance?",
+  "o_hi": [
+   "5 m",
+   "50 m",
+   "500 m",
+   "0.5 m"
+  ],
+  "o_en": [
+   "5 m",
+   "50 m",
+   "500 m",
+   "0.5 m"
+  ],
+  "a": 1,
+  "e_hi": "दूरी = (स्टेडिया फैक्टर) × इंटरवल = 100 × 0.5 = 50 m।",
+  "e_en": "Distance = stadia factor × interval = 100 × 0.5 = 50 m."
+ },
+ {
+  "id": "rp-je_c-01913",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "निम्नलिखित में से कौन सा सर्वेक्षण में कोणीय त्रुटि नहीं माना जाता?",
+  "q_en": "Which of the following is NOT considered an angular error in surveying?",
+  "o_hi": [
+   "कोलिमेशन त्रुटि",
+   "इंडेक्स त्रुटि",
+   "रिफ्रैक्शन त्रुटि",
+   "पैरालैक्स त्रुटि"
+  ],
+  "o_en": [
+   "Collimation error",
+   "Index error",
+   "Refraction error",
+   "Parallax error"
+  ],
+  "a": 3,
+  "e_hi": "पैरालैक्स त्रुटि स्टाफ पढ़ने में आती है, कोणीय माप में नहीं।",
+  "e_en": "Parallax error occurs while reading a staff, not in angular measurements."
+ },
+ {
+  "id": "rp-je_c-01914",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "आयनोस्फेरिक देरी के कारण GPS त्रुटि को कम करने की मुख्य तकनीक क्या है?",
+  "q_en": "GPS positional error due to ionospheric delay is mitigated by which technique?",
+  "o_hi": [
+   "डिफरेंशियल GPS",
+   "केवल L1 का उपयोग",
+   "एंटीना ऊँचाई बढ़ाना",
+   "केवल कैरियर‑फ़ेज माप"
+  ],
+  "o_en": [
+   "Differential GPS",
+   "Use of L1 only",
+   "Increase antenna height",
+   "Use of carrier‑phase measurements only"
+  ],
+  "a": 0,
+  "e_hi": "डिफरेंशियल GPS दो सिग्नलों के अंतर से आयनोस्फेरिक प्रभाव को घटाता है।",
+  "e_en": "Differential GPS reduces ionospheric effects by comparing two signals."
+ },
+ {
+  "id": "rp-je_c-01915",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "दिए गए बिंदु को 180° घुमाकर फिर से देखे जाने पर दो बार देखे गए कोण में 2°30' का अंतर पाया गया। इंडेक्स त्रुटि क्या होगी?",
+  "q_en": "When a distant point is sighted, the instrument is turned 180° and the same point is sighted again, giving an angle difference of 2°30'. What is the index error?",
+  "o_hi": [
+   "0°45'",
+   "1°15'",
+   "2°30'",
+   "5°0'"
+  ],
+  "o_en": [
+   "0°45'",
+   "1°15'",
+   "2°30'",
+   "5°0'"
+  ],
+  "a": 1,
+  "e_hi": "इंडेक्स त्रुटि = अंतर का आधा = 2°30'/2 = 1°15'।",
+  "e_en": "Index error equals half the observed difference, i.e., 1°15'."
+ },
+ {
+  "id": "rp-je_c-01916",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "एक लेवलिंग में बैकसाइट रीडिंग 1.250 मीटर और फोरसाइट रीडिंग 0.750 मीटर है। रिड्यूस्ड लेवल में परिवर्तन कितना होगा?",
+  "q_en": "In a leveling, the backsight reading is 1.250 m and the foresight reading is 0.750 m. What is the change in reduced level?",
+  "o_hi": [
+   "0.50 मीटर",
+   "0.75 मीटर",
+   "0.25 मीटर",
+   "1.00 मीटर"
+  ],
+  "o_en": [
+   "0.50 m",
+   "0.75 m",
+   "0.25 m",
+   "1.00 m"
+  ],
+  "a": 0,
+  "e_hi": "रिड्यूस्ड लेवल में परिवर्तन = बैकसाइट – फोरसाइट = 1.250 – 0.750 = 0.500 मीटर।",
+  "e_en": "Change in RL = BS – FS = 1.250 – 0.750 = 0.500 m."
+ },
+ {
+  "id": "rp-je_c-01917",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "एक सड़क में 300 मीटर की सीधी खंड के बाद 60 मीटर त्रिज्या और 45° के मध्य कोण वाला वक्र आता है। वक्र की लंबाई क्या होगी?",
+  "q_en": "A road alignment has a straight segment of 300 m followed by a circular curve of radius 60 m and a central angle of 45°. What is the length of the curve?",
+  "o_hi": [
+   "47.1 मीटर",
+   "52.4 मीटर",
+   "60.0 मीटर",
+   "75.0 मीटर"
+  ],
+  "o_en": [
+   "47.1 m",
+   "52.4 m",
+   "60.0 m",
+   "75.0 m"
+  ],
+  "a": 0,
+  "e_hi": "वक्र की लंबाई L = θ(rad) × R, जहाँ θ = 45° = π/4 ≈ 0.7854 rad। इसलिए L = 0.7854 × 60 ≈ 47.1 मीटर।",
+  "e_en": "Curve length L = θ(rad) × R, with θ = 45° = π/4 ≈ 0.7854 rad. Hence L = 0.7854 × 60 ≈ 47.1 m."
+ },
+ {
+  "id": "rp-je_c-01918",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "एक बंद आयताकार ट्रैवर्स के पक्ष क्रमशः 120 मी, 80 मी, 120 मी, 80 मी हैं। मापी गई अंदरूनी कोण क्रमशः 89°, 91°, 89°, 91° हैं। कोणीय क्लोजिंग एरर (मिनट में) कितना है?",
+  "q_en": "A closed rectangular traverse has sides 120 m, 80 m, 120 m, 80 m. The measured interior angles are 89°, 91°, 89°, 91°. What is the angular closing error in minutes?",
+  "o_hi": [
+   "0'",
+   "2'",
+   "4'",
+   "6'"
+  ],
+  "o_en": [
+   "0'",
+   "2'",
+   "4'",
+   "6'"
+  ],
+  "a": 0,
+  "e_hi": "आयत के लिए कुल अपेक्षित कोण 360° है। मापे गए कोणों का योग भी 89+91+89+91 = 360° है, इसलिए क्लोजिंग एरर शून्य है।",
+  "e_en": "For a quadrilateral the theoretical sum is 360°. The measured sum is also 360°, so the closing error is zero minutes."
+ },
+ {
+  "id": "rp-je_c-01919",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "यदि बिंदु A से B तक का अंतर‑पूर्व (ΔE) 300 मी और अंतर‑उत्तर (ΔN) 400 मी है, तो उस रेखा का बियरिंग क्या होगा?",
+  "q_en": "If the eastward difference (ΔE) from point A to B is 300 m and the northward difference (ΔN) is 400 m, what is the bearing of the line?",
+  "o_hi": [
+   "N 36°52' E",
+   "N 53°13' E",
+   "N 33°41' E",
+   "N 45°00' E"
+  ],
+  "o_en": [
+   "N 36°52' E",
+   "N 53°13' E",
+   "N 33°41' E",
+   "N 45°00' E"
+  ],
+  "a": 0,
+  "e_hi": "बियरिंग = arctan(ΔE/ΔN) = arctan(300/400)=36.87°≈36°52' उत्तर से पूर्व की ओर।",
+  "e_en": "Bearing = arctan(ΔE/ΔN) = arctan(300/400)=36.87°≈36°52' east of north."
+ },
+ {
+  "id": "rp-je_c-01920",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "त्रिकोणीय प्लॉट के शीर्ष बिंदु (0,0), (80,0) और (80,60) मीटर पर स्थित हैं। इस प्लॉट का क्षेत्रफल कितना है?",
+  "q_en": "The vertices of a triangular plot are at (0,0), (80,0) and (80,60) m. What is the area of the plot?",
+  "o_hi": [
+   "2400 वर्ग मीटर",
+   "3000 वर्ग मीटर",
+   "4800 वर्ग मीटर",
+   "1200 वर्ग मीटर"
+  ],
+  "o_en": [
+   "2400 sq m",
+   "3000 sq m",
+   "4800 sq m",
+   "1200 sq m"
+  ],
+  "a": 0,
+  "e_hi": "आधार 80 मी और ऊँचाई 60 मी है, इसलिए क्षेत्रफल = ½ × 80 × 60 = 2400 m²।",
+  "e_en": "Base = 80 m, height = 60 m, so area = ½ × 80 × 60 = 2400 m²."
+ },
+ {
+  "id": "rp-je_c-01921",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "यदि थियोडोलाइट को सही ढंग से लेवल नहीं किया गया तो कौन सी त्रुटि सबसे अधिक प्रभावित होती है?",
+  "q_en": "If a theodolite is not properly leveled, which error is most affected?",
+  "o_hi": [
+   "ऊर्ध्वाधर कोण त्रुटि",
+   "क्षैतिज कोण त्रुटि",
+   "दोनों त्रुटियाँ",
+   "कोई त्रुटि नहीं"
+  ],
+  "o_en": [
+   "Vertical angle error",
+   "Horizontal angle error",
+   "Both errors",
+   "No error"
+  ],
+  "a": 0,
+  "e_hi": "लेवलिंग न होने पर थियोडोलाइट का अक्षांश (वर्टिकल) घटक विकृत हो जाता है, जिससे ऊर्ध्वाधर कोण में त्रुटि आती है।",
+  "e_en": "Improper leveling tilts the instrument's vertical axis, causing errors in vertical angles."
+ },
+ {
+  "id": "rp-je_c-01922",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "एक स्टील टेप जिसकी लंबाई 30 m है वह प्रत्येक डिग्री सेल्सियस पर 0.2 mm बढ़ता है। यदि तापमान 5 °C बढ़ता है तो टेप की मापी हुई लंबाई क्या होगी?",
+  "q_en": "A steel tape 30 m long expands 0.2 mm per °C. If temperature rises by 5 °C, what will be the measured length?",
+  "o_hi": [
+   "30.001 m",
+   "30.010 m",
+   "30.005 m",
+   "30.000 m"
+  ],
+  "o_en": [
+   "30.001 m",
+   "30.010 m",
+   "30.005 m",
+   "30.000 m"
+  ],
+  "a": 0,
+  "e_hi": "विस्तार = 0.2 mm / °C × 5 °C = 1 mm, इसलिए मापी गई लंबाई 30 m + 0.001 m = 30.001 m होगी।",
+  "e_en": "Expansion = 0.2 mm/°C × 5 °C = 1 mm, so measured length = 30 m + 0.001 m = 30.001 m."
+ },
+ {
+  "id": "rp-je_c-01923",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "डिफरेंशियल लेवलिंग में बैक्साइट रीडिंग 1.250 m और फोरसाइट रीडिंग 0.850 m है। स्तर अंतर (एलिवेशन चेंज) क्या होगा?",
+  "q_en": "In differential leveling, backsight reading is 1.250 m and foresight is 0.850 m. What is the change in elevation?",
+  "o_hi": [
+   "0.400 m ऊपर",
+   "0.400 m नीचे",
+   "1.100 m ऊपर",
+   "1.100 m नीचे"
+  ],
+  "o_en": [
+   "0.400 m rise",
+   "0.400 m fall",
+   "1.100 m rise",
+   "1.100 m fall"
+  ],
+  "a": 0,
+  "e_hi": "एलिवेशन परिवर्तन = बैक्साइट − फोरसाइट = 1.250 − 0.850 = 0.400 m, यानी स्तर ऊपर बढ़ा।",
+  "e_en": "Elevation change = backsight − foresight = 1.250 − 0.850 = 0.400 m, i.e., a rise of 0.400 m."
+ },
+ {
+  "id": "rp-je_c-01924",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "त्रिकोणमिति में, यदि बेसलाइन AB 5 km है और कोन ∠A = 48° तथा ∠B = 62° मापे गये हैं, तो बिंदु C से बिंदु A की दूरी (AC) लगभग कितनी होगी?",
+  "q_en": "In triangulation, baseline AB is 5 km and observed angles are ∠A = 48° and ∠B = 62°. Approximate distance AC (from C to A) is?",
+  "o_hi": [
+   "4.70 km",
+   "4.80 km",
+   "4.60 km",
+   "5.00 km"
+  ],
+  "o_en": [
+   "4.70 km",
+   "4.80 km",
+   "4.60 km",
+   "5.00 km"
+  ],
+  "a": 0,
+  "e_hi": "त्रिकोण के कोन C = 180°‑48°‑62° = 70°। साइन नियम से AC = AB·sin ∠B / sin ∠C = 5 km·sin62°/sin70° ≈ 4.70 km।",
+  "e_en": "Angle C = 180°‑48°‑62° = 70°. By the law of sines, AC = AB·sin B / sin C = 5 km·sin62°/sin70° ≈ 4.70 km."
+ },
+ {
+  "id": "rp-je_c-01925",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "10 km लंबी लेवलिंग लाइन पर पृथ्वी की वक्रता के कारण आवश्यक वक्रता सुधार (कर्वेचर कॉरेक्शन) लगभग कितना होगा? (R = 6 370 km)",
+  "q_en": "What is the approximate curvature correction for a 10 km level line? (Earth radius R = 6 370 km)",
+  "o_hi": [
+   "7.9 m",
+   "0.8 m",
+   "78.5 m",
+   "0.078 m"
+  ],
+  "o_en": [
+   "7.9 m",
+   "0.8 m",
+   "78.5 m",
+   "0.078 m"
+  ],
+  "a": 0,
+  "e_hi": "सुधार = d²/(2R) = (10 000 m)²/(2×6 370 000 m) ≈ 7.9 m, जिसे लेवलिंग में घटाया जाता है।",
+  "e_en": "Correction = d²/(2R) = (10 000 m)²/(2×6 370 000 m) ≈ 7.9 m, which is subtracted from the observed reading."
+ },
+ {
+  "id": "rp-je_c-01926",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "डुअल‑फ़्रीक्वेंसी GPS रिसीवर आयनोस्फ़ेरिक देरी का 90 % सुधार करता है। यदि शेष त्रुटि 0.5 m है, तो मूल आयनोस्फ़ेरिक त्रुटि कितनी थी?",
+  "q_en": "A dual‑frequency GPS receiver corrects 90 % of ionospheric delay. If the remaining error is 0.5 m, what was the original ionospheric error?",
+  "o_hi": [
+   "5 m",
+   "0.55 m",
+   "0.05 m",
+   "50 m"
+  ],
+  "o_en": [
+   "5 m",
+   "0.55 m",
+   "0.05 m",
+   "50 m"
+  ],
+  "a": 0,
+  "e_hi": "शेष त्रुटि = 10 % मूल त्रुटि, इसलिए मूल = 0.5 m ÷ 0.10 = 5 m।",
+  "e_en": "Remaining error is 10 % of the original, so original = 0.5 m ÷ 0.10 = 5 m."
+ },
+ {
+  "id": "rp-je_c-01927",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "यदि थियोडोलाइट का कोलिमेशन त्रुटि +10″ है, तो मापी गई क्षैतिज कोणों पर इसका क्या प्रभाव पड़ेगा?",
+  "q_en": "If a theodolite has a collimation error of +10″, what effect does it have on measured horizontal angles?",
+  "o_hi": [
+   "सभी कोणों में +10″ जोड़ता है",
+   "सभी कोणों में -10″ घटाता है",
+   "केवल पहले कोन को प्रभावित करता है",
+   "कोई प्रभाव नहीं"
+  ],
+  "o_en": [
+   "Adds +10″ to all angles",
+   "Subtracts 10″ from all angles",
+   "Affects only the first angle",
+   "No effect"
+  ],
+  "a": 0,
+  "e_hi": "कोलिमेशन त्रुटि पूरे क्षैतिज स्केल को समान रूप से शिफ्ट करती है, इसलिए प्रत्येक मापे गये कोण में +10″ जुड़ता है।",
+  "e_en": "Collimation error shifts the entire horizontal circle uniformly, adding +10″ to every measured angle."
+ },
+ {
+  "id": "rp-je_c-01928",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "स्ट्रेट लाइन का अर्थ क्या है?",
+  "q_en": "What is the meaning of a straight line?",
+  "o_hi": [
+   "एक रेखा जो दो बिंदुओं को जोड़ती है",
+   "एक वक्र रेखा",
+   "एक त्रिकोणीय आकृति",
+   "एक गोलाकार पथ"
+  ],
+  "o_en": [
+   "A line joining two points",
+   "A curved line",
+   "A triangular shape",
+   "A circular path"
+  ],
+  "a": 0,
+  "e_hi": "स्ट्रेट लाइन वह रेखा है जो दो बिंदुओं को सबसे छोटा मार्ग देकर जोड़ती है।",
+  "e_en": "A straight line is the shortest path joining two points."
+ },
+ {
+  "id": "rp-je_c-01929",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "ज्योमेट्रिक लेवलिंग का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of geometric leveling?",
+  "o_hi": [
+   "समान दूरी पर दो बिंदुओं की ऊँचाई अंतर मापना",
+   "भू-आकृति की दिशा निर्धारित करना",
+   "दूरी को मापना",
+   "त्रिकोण के कोण मापना"
+  ],
+  "o_en": [
+   "Measuring the height difference between two points at a known horizontal distance",
+   "Determining the orientation of a landform",
+   "Measuring distance",
+   "Measuring angles of a triangle"
+  ],
+  "a": 0,
+  "e_hi": "ज्योमेट्रिक लेवलिंग में दो बिंदुओं के बीच समान क्षैतिज दूरी पर ऊँचाई अंतर मापा जाता है।",
+  "e_en": "Geometric leveling measures the elevation difference between two points separated by a known horizontal distance."
+ },
+ {
+  "id": "rp-je_c-01930",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "यदि दो बिंदुओं के बीच की दूरी 500 मीटर है और स्तर अंतर 5 मीटर है, तो ग्रेडिएंट (ढाल) क्या होगा?",
+  "q_en": "If the horizontal distance between two points is 500 m and the level difference is 5 m, what is the gradient?",
+  "o_hi": [
+   "1:100",
+   "1:50",
+   "1:200",
+   "1:10"
+  ],
+  "o_en": [
+   "1:100",
+   "1:50",
+   "1:200",
+   "1:10"
+  ],
+  "a": 0,
+  "e_hi": "ग्रेडिएंट = ऊँचाई अंतर ÷ दूरी = 5/500 = 0.01, अर्थात् 1:100।",
+  "e_en": "Gradient = rise/run = 5/500 = 0.01, i.e., 1:100."
+ },
+ {
+  "id": "rp-je_c-01931",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "सर्वेक्षण में बेसलाइन का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the main purpose of a baseline in surveying?",
+  "o_hi": [
+   "संदर्भ दूरी स्थापित करना",
+   "ऊँचाई मापना",
+   "कोऑर्डिनेट बदलना",
+   "त्रुटि घटाना"
+  ],
+  "o_en": [
+   "Establishing a reference distance",
+   "Measuring elevations",
+   "Changing coordinates",
+   "Reducing errors"
+  ],
+  "a": 0,
+  "e_hi": "बेसलाइन एक ज्ञात दूरी प्रदान करती है जिससे अन्य मापों को सन्दर्भित किया जा सके।",
+  "e_en": "A baseline provides a known distance that serves as a reference for other measurements."
+ },
+ {
+  "id": "rp-je_c-01932",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "त्रिकोणीय लेवलिंग में उपयोग होने वाला मुख्य उपकरण कौन सा है?",
+  "q_en": "Which instrument is primarily used in trigonometric leveling?",
+  "o_hi": [
+   "डिजिटल लेवल",
+   "टोटल स्टेशन",
+   "डिस्टेंस मीटर",
+   "थीओडोलाइट"
+  ],
+  "o_en": [
+   "Digital level",
+   "Total station",
+   "Distance meter",
+   "Theodolit"
+  ],
+  "a": 3,
+  "e_hi": "त्रिकोणीय लेवलिंग में ऊँचाई और दूरी दोनों मापने के लिये थीओडोलाइट (दर्शक) का उपयोग किया जाता है।",
+  "e_en": "Trigonometric leveling employs a theodolit (theodolite) to measure both angles and distances."
+ },
+ {
+  "id": "rp-je_c-01933",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "यदि एक त्रिकोण के दो पक्ष 120 m और 150 m हैं और उनका सम्मिलित कोण 60° है, तो तीसरा पक्ष की लंबाई क्या होगी? (दो दशमलव तक)",
+  "q_en": "If two sides of a triangle are 120 m and 150 m with an included angle of 60°, what is the length of the third side? (Two decimal places)",
+  "o_hi": [
+   "137.46 m",
+   "130.00 m",
+   "150.00 m",
+   "165.00 m"
+  ],
+  "o_en": [
+   "137.46 m",
+   "130.00 m",
+   "150.00 m",
+   "165.00 m"
+  ],
+  "a": 0,
+  "e_hi": "कोसाइन नियम से c² = 120²+150²‑2·120·150·cos60 = 18900, इसलिए c ≈ 137.46 m।",
+  "e_en": "Using the cosine rule, c² = 120²+150²‑2·120·150·cos60 = 18900, so c ≈ 137.46 m."
+ },
+ {
+  "id": "rp-je_c-01934",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "भौगोलिक निर्देशांक में अक्षांश (latitude) किस दिशा में मापा जाता है?",
+  "q_en": "In geographic coordinates, in which direction is latitude measured?",
+  "o_hi": [
+   "उत्तरी‑दक्षिणी दिशा",
+   "पूर्व‑पश्चिम दिशा",
+   "ऊपर‑नीचे",
+   "डायगोनल"
+  ],
+  "o_en": [
+   "North‑south direction",
+   "East‑west direction",
+   "Up‑down",
+   "Diagonal"
+  ],
+  "a": 0,
+  "e_hi": "अक्षांश भूमध्य रेखा से उत्तर या दक्षिण की दिशा में मापा जाता है।",
+  "e_en": "Latitude is measured north or south of the equator."
+ },
+ {
+  "id": "rp-je_c-01935",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "सर्वेक्षण में त्रुटि वर्गीकरण में 'सिस्टेमेटिक त्रुटि' का प्रमुख कारण क्या है?",
+  "q_en": "What is the principal cause of systematic error in surveying?",
+  "o_hi": [
+   "यादृच्छिक उपकरण शोर",
+   "स्थिर उपकरण बायस",
+   "पर्यावरणीय परिवर्तन",
+   "मानव त्रुटि"
+  ],
+  "o_en": [
+   "Random instrument noise",
+   "Fixed instrument bias",
+   "Environmental changes",
+   "Human error"
+  ],
+  "a": 1,
+  "e_hi": "सिस्टेमेटिक त्रुटि अक्सर उपकरण की स्थायी बायस या कैलिब्रेशन दोष से आती है।",
+  "e_en": "Systematic error usually arises from a fixed bias in the instrument or its calibration."
+ },
+ {
+  "id": "rp-je_c-01936",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "एक स्तर पर 0.5% त्रुटि दर है। यदि 200 m दूरी मापी जाती है, तो संभावित अधिकतम त्रुटि कितनी होगी?",
+  "q_en": "A level has an error rate of 0.5%. If a distance of 200 m is measured, what is the maximum possible error?",
+  "o_hi": [
+   "0.5 m",
+   "1 m",
+   "2 m",
+   "5 m"
+  ],
+  "o_en": [
+   "0.5 m",
+   "1 m",
+   "2 m",
+   "5 m"
+  ],
+  "a": 1,
+  "e_hi": "0.5% × 200 m = 1 m, इसलिए अधिकतम त्रुटि 1 m होगी।",
+  "e_en": "0.5% × 200 m = 1 m, so the maximum error is 1 m."
+ },
+ {
+  "id": "rp-je_c-01937",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "सर्वेक्षण में 'ट्रांसफॉर्मेशन' का मुख्य कार्य क्या है?",
+  "q_en": "What is the main function of a transformation in surveying?",
+  "o_hi": [
+   "डेटा को एक कोऑर्डिनेट सिस्टम से दूसरे में बदलना",
+   "डेटा को साफ़ करना",
+   "डेटा को संपीड़ित करना",
+   "डेटा को मापना"
+  ],
+  "o_en": [
+   "Converting data from one coordinate system to another",
+   "Cleaning data",
+   "Compressing data",
+   "Measuring data"
+  ],
+  "a": 0,
+  "e_hi": "ट्रांसफॉर्मेशन विभिन्न कोऑर्डिनेट सिस्टम के बीच डेटा को बदलता है ताकि तुलना संभव हो सके।",
+  "e_en": "Transformation converts data between coordinate systems to enable comparison."
+ },
+ {
+  "id": "rp-je_c-01938",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "लेवलिंग स्टाफ का मुख्य उपयोग क्या है?",
+  "q_en": "What is the primary use of a leveling staff?",
+  "o_hi": [
+   "ऊंचाई मापने के लिए",
+   "दूरी मापने के लिए",
+   "कोण मापने के लिए",
+   "दिशा निर्धारित करने के लिए"
+  ],
+  "o_en": [
+   "to measure elevations",
+   "to measure distances",
+   "to measure angles",
+   "to determine direction"
+  ],
+  "a": 0,
+  "e_hi": "लेवलिंग स्टाफ को स्तर पर रखकर पढ़ा जाता है जिससे बिंदु का स्तरांक मिलता है।",
+  "e_en": "The staff is placed on a point and read on a level to obtain its elevation."
+ },
+ {
+  "id": "rp-je_c-01939",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "एक बंद चारकोणीय ट्रैवर्स में कुल अंतरिक कोणों का योग कितना होता है?",
+  "q_en": "What is the sum of interior angles in a closed quadrilateral traverse?",
+  "o_hi": [
+   "360°",
+   "540°",
+   "720°",
+   "180°"
+  ],
+  "o_en": [
+   "360°",
+   "540°",
+   "720°",
+   "180°"
+  ],
+  "a": 0,
+  "e_hi": "किसी भी चारकोण का अंतरिक कोणों का योग 360 डिग्री होता है।",
+  "e_en": "The interior angles of any quadrilateral sum to 360 degrees."
+ },
+ {
+  "id": "rp-je_c-01940",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "एक सर्वेयर ज्ञात डेटम 100.000 m पर 1.250 m बैकसाइट और 0.845 m फोरसाइट पढ़ता है। टर्निंग पॉइंट का रेड्यूस्ड लेवल क्या होगा?",
+  "q_en": "A surveyor records a backsight of 1.250 m on a known datum of 100.000 m and a foresight of 0.845 m. What is the reduced level of the turning point?",
+  "o_hi": [
+   "100.405 m",
+   "100.155 m",
+   "99.595 m",
+   "101.095 m"
+  ],
+  "o_en": [
+   "100.405 m",
+   "100.155 m",
+   "99.595 m",
+   "101.095 m"
+  ],
+  "a": 0,
+  "e_hi": "RL = ज्ञात RL + बैकसाइट – फोरसाइट = 100.000 + 1.250 – 0.845 = 100.405 m।",
+  "e_en": "Reduced level = known RL + backsight – foresight = 100.000 + 1.250 – 0.845 = 100.405 m."
+ },
+ {
+  "id": "rp-je_c-01941",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "थियोडोलाइट में कोण मापने की मानक इकाई कौन सी है?",
+  "q_en": "What is the standard unit for measuring angles with a theodolite?",
+  "o_hi": [
+   "डिग्री",
+   "रेडियन",
+   "ग्रेड",
+   "मिल"
+  ],
+  "o_en": [
+   "degree",
+   "radian",
+   "grad",
+   "mil"
+  ],
+  "a": 0,
+  "e_hi": "सर्वेक्षण में कोण आमतौर पर डिग्री में मापे जाते हैं।",
+  "e_en": "Angles in surveying are normally measured in degrees."
+ },
+ {
+  "id": "rp-je_c-01942",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "यदि 1500 m की कुल लंबाई वाले ट्रैवर्स में अक्षांश दिशा में 0.35 m की बाईं ओर त्रुटि है, तो रैखिक त्रुटि अनुपात कितना होगा?",
+  "q_en": "If a traverse of total length 1500 m has a latitude misclosure of 0.35 m to the left, what is the linear misclosure ratio?",
+  "o_hi": [
+   "1:4286",
+   "1:3000",
+   "1:5000",
+   "1:2500"
+  ],
+  "o_en": [
+   "1:4286",
+   "1:3000",
+   "1:5000",
+   "1:2500"
+  ],
+  "a": 0,
+  "e_hi": "अनुपात = कुल लंबाई / त्रुटि = 1500 / 0.35 ≈ 4286, यानी 1:4286।",
+  "e_en": "Ratio = total length / error = 1500 / 0.35 ≈ 4286, i.e., 1:4286."
+ },
+ {
+  "id": "rp-je_c-01943",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "नक्शे पर कंटूर रेखा को दर्शाने वाला प्रतीक कौन सा है?",
+  "q_en": "Which symbol on a map represents a contour line?",
+  "o_hi": [
+   "डैश्ड लाइन",
+   "सॉलिड लाइन",
+   "डॉटेड लाइन",
+   "डबल लाइन"
+  ],
+  "o_en": [
+   "dashed line",
+   "solid line",
+   "dotted line",
+   "double line"
+  ],
+  "a": 1,
+  "e_hi": "कंटूर रेखाएँ सामान्यतः निरंतर ठोस रेखा के रूप में दर्शायी जाती हैं।",
+  "e_en": "Contour lines are typically shown as continuous solid lines."
+ },
+ {
+  "id": "rp-je_c-01944",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "दो ज्ञात बिंदुओं और मापे गए कोणों से किसी बिंदु की ऊँचाई निर्धारित करने की विधि क्या कहलाती है?",
+  "q_en": "What is the method called that determines the height of a point using two known points and measured angles?",
+  "o_hi": [
+   "त्रिकोणात्मक लेवलिंग",
+   "बारोमेट्रिक लेवलिंग",
+   "डिफरेंशियल लेवलिंग",
+   "फोटोग्रामेट्रिक लेवलिंग"
+  ],
+  "o_en": [
+   "trigonometric leveling",
+   "barometric leveling",
+   "differential leveling",
+   "photogrammetric leveling"
+  ],
+  "a": 0,
+  "e_hi": "दो ज्ञात बिंदुओं के बीच के कोणों से त्रिकोण बनाकर ऊँचाई निकाली जाती है, इसे त्रिकोणात्मक लेवलिंग कहते हैं।",
+  "e_en": "Heights are obtained by forming a triangle with two known points and measured angles, known as trigonometric leveling."
+ },
+ {
+  "id": "rp-je_c-01945",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "GPS में PDOP का पूरा रूप क्या है?",
+  "q_en": "What does PDOP stand for in GPS?",
+  "o_hi": [
+   "पोजीशन डिल्यूशन ऑफ़ प्रिसीजन",
+   "पॉवर डिस्ट्रीब्यूशन ऑपरेशन प्रोटोकॉल",
+   "प्रेसिशन डेटा ऑप्टिमाइज़ेशन प्रोसेस",
+   "पॉलीगॉन डिटेक्शन ऑप्शन"
+  ],
+  "o_en": [
+   "Position Dilution of Precision",
+   "Power Distribution Operation Protocol",
+   "Precision Data Optimization Process",
+   "Polygon Detection Option"
+  ],
+  "a": 0,
+  "e_hi": "PDOP का अर्थ है Position Dilution of Precision, जो स्थिति की सटीकता को दर्शाता है।",
+  "e_en": "PDOP means Position Dilution of Precision, indicating the accuracy of the positional measurement."
+ },
+ {
+  "id": "rp-je_c-01946",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "एक लेवलिंग इंस्ट्रूमेंट में व्यवस्थित त्रुटि का मुख्य कारण क्या है?",
+  "q_en": "What is the primary cause of a systematic error in a leveling instrument?",
+  "o_hi": [
+   "इंस्ट्रूमेंट का कैलिब्रेशन गलत होना",
+   "वायुमंडलीय परिवर्तन का यादृच्छिक प्रभाव",
+   "मानव पढ़ने में त्रुटि",
+   "स्टाफ को ठीक से लेवल न करना"
+  ],
+  "o_en": [
+   "Instrument miscalibration",
+   "Random atmospheric disturbances",
+   "Human reading error",
+   "Improper leveling of staff"
+  ],
+  "a": 0,
+  "e_hi": "इंस्ट्रूमेंट का कैलिब्रेशन गलत होने पर सभी पढ़ाइयाँ समान दिशा में विकृत होती हैं, जिससे व्यवस्थित त्रुटि उत्पन्न होती है।",
+  "e_en": "If the instrument is miscalibrated, all readings are biased in the same direction, leading to a systematic error."
+ },
+ {
+  "id": "rp-je_c-01947",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "यदि 10 km लंबी लेवलिंग लाइन में पृथ्वी की वक्रता के कारण 0.2 m की त्रुटि आती है, तो सही एलिवेशन प्राप्त करने के लिए क्या किया जाना चाहिए?",
+  "q_en": "If a 10 km leveling line incurs a 0.2 m error due to Earth's curvature, what correction should be applied to obtain the true elevation?",
+  "o_hi": [
+   "0.2 m को जोड़ना",
+   "0.2 m को घटाना",
+   "0.1 m को जोड़ना",
+   "0.1 m को घटाना"
+  ],
+  "o_en": [
+   "Add 0.2 m",
+   "Subtract 0.2 m",
+   "Add 0.1 m",
+   "Subtract 0.1 m"
+  ],
+  "a": 1,
+  "e_hi": "पृथ्वी की वक्रता से पढ़ी गई ऊँचाई अधिक होती है, इसलिए वास्तविक ऊँचाई पाने के लिए 0.2 m घटाना चाहिए।",
+  "e_en": "Curvature makes the observed elevation too high, so 0.2 m must be subtracted to obtain the true elevation."
+ },
+ {
+  "id": "rp-je_c-01948",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "एक त्रिकोणीय सर्वे में बेस लाइन की लंबाई 500 m है और दो एंगल क्रमशः 48° और 62° मापे गये हैं। बेस लाइन में त्रुटि बढ़ने पर कौन सा परिणाम सबसे अधिक प्रभावित होगा?",
+  "q_en": "In a triangular survey with a 500 m baseline and measured angles of 48° and 62°, which outcome is most affected when the baseline length error increases?",
+  "o_hi": [
+   "कुल क्षेत्रफल की गणना",
+   "त्रिकोण के शिखर बिंदुओं के समन्वय",
+   "कुल दूरी का अनुमान",
+   "कोणों की सटीकता"
+  ],
+  "o_en": [
+   "Computation of total area",
+   "Coordinates of the triangle vertices",
+   "Estimation of total distances",
+   "Accuracy of the angles"
+  ],
+  "a": 0,
+  "e_hi": "त्रिकोण का क्षेत्रफल बेस लाइन की लंबाई पर सीधे निर्भर करता है; इसलिए बेस लाइन में त्रुटि बढ़ने से क्षेत्रफल की गणना सबसे अधिक प्रभावित होती है।",
+  "e_en": "The area of a triangle depends directly on the baseline length, so errors in the baseline chiefly affect area calculation."
+ },
+ {
+  "id": "rp-je_c-01949",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "डिजिटल थियोडोलाइट में 'सैटेलाइट जिटर' मुख्यतः किस कारण उत्पन्न होता है?",
+  "q_en": "What is the primary cause of 'satellite jitter' in a digital theodolite?",
+  "o_hi": [
+   "सैटेलाइट के कक्षा में उतार-चढ़ाव",
+   "इंस्ट्रूमेंट के इलेक्ट्रॉनिक शोर",
+   "उच्च वायुमंडलीय दबाव",
+   "स्थापना में असमान लेवलिंग"
+  ],
+  "o_en": [
+   "Variations in satellite orbit",
+   "Electronic noise of the instrument",
+   "High atmospheric pressure",
+   "Uneven leveling during setup"
+  ],
+  "a": 0,
+  "e_hi": "सैटेलाइट के कक्षा में छोटे‑छोटे उतार‑चढ़ाव सिग्नल में झटके पैदा करते हैं, जिसे जिटर कहा जाता है।",
+  "e_en": "Minor variations in a satellite's orbit cause signal fluctuations, known as jitter."
+ },
+ {
+  "id": "rp-je_c-01951",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "लेवलिंग में 'बैकसाइटिंग' का मुख्य उद्देश्य क्या है?",
+  "q_en": "What is the primary purpose of back‑sighting in leveling?",
+  "o_hi": [
+   "त्रुटि का पता लगाना",
+   "इंस्ट्रूमेंट को स्थिर करना",
+   "स्टाफ को साफ़ देखना",
+   "माप की गति बढ़ाना"
+  ],
+  "o_en": [
+   "Detecting errors",
+   "Stabilizing the instrument",
+   "Seeing the staff clearly",
+   "Increasing measurement speed"
+  ],
+  "a": 0,
+  "e_hi": "बैकसाइटिंग से दो अलग‑अलग रीडिंग की तुलना करके त्रुटि या स्लिप को पहचाना जा सकता है।",
+  "e_en": "Back‑sighting allows comparison of two readings to identify any slip or error."
+ },
+ {
+  "id": "rp-je_c-01952",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 2,
+  "q_hi": "त्रिकोणीय सर्वे में दो ज्ञात बिंदुओं के बीच की दूरी 800 m है। यदि मापे गये एंगल क्रमशः 30° और 45° हैं, तो तीसरे बिंदु की स्थिति पर त्रुटि बढ़ाने वाला प्रमुख कारण कौन‑सा है?",
+  "q_en": "In a triangulation survey with a known side of 800 m and measured angles of 30° and 45°, which factor most likely increases the positional error of the third point?",
+  "o_hi": [
+   "एंगल मापन में राउंड‑ऑफ़ त्रुटि",
+   "बेस लाइन की लंबाई में माप त्रुटि",
+   "इंस्ट्रूमेंट की तापीय विस्तार",
+   "स्थापना स्थल की असमानता"
+  ],
+  "o_en": [
+   "Rounding error in angle measurement",
+   "Length measurement error of the baseline",
+   "Thermal expansion of the instrument",
+   "Unevenness of the setup ground"
+  ],
+  "a": 1,
+  "e_hi": "बेस लाइन की लंबाई में छोटी सी त्रुटि भी त्रिकोण के आकार को बदल देती है, जिससे तीसरे बिंदु के समन्वय पर बड़ा प्रभाव पड़ता है।",
+  "e_en": "Even a small error in the baseline length alters the triangle geometry, significantly affecting the third point’s coordinates."
+ },
+ {
+  "id": "rp-je_c-01953",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "एक टोटल स्टेशन में 'ड्रिफ्ट' त्रुटि मुख्यतः किस कारण उत्पन्न होती है?",
+  "q_en": "What primarily causes drift error in a total station?",
+  "o_hi": [
+   "इलेक्ट्रॉनिक तापमान परिवर्तन",
+   "ऑपरेटर की थकान",
+   "बिजली की सप्लाई में उतार‑चढ़ाव",
+   "सैटेलाइट सिग्नल की देरी"
+  ],
+  "o_en": [
+   "Electronic temperature changes",
+   "Operator fatigue",
+   "Fluctuations in power supply",
+   "Satellite signal delay"
+  ],
+  "a": 0,
+  "e_hi": "इलेक्ट्रॉनिक घटकों के तापमान में बदलाव से सेंसर के शून्य बिंदु में धीरे‑धीरे परिवर्तन आता है, जिसे ड्रिफ्ट कहा जाता है।",
+  "e_en": "Temperature variations in electronic components cause a gradual shift in the sensor’s zero point, known as drift."
+ },
+ {
+  "id": "rp-je_c-01954",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "लेवलिंग में 'क्लोज़िंग त्रुटि' को कम करने के लिए कौन‑सी तकनीक सबसे प्रभावी है?",
+  "q_en": "Which technique is most effective in reducing closing error in leveling?",
+  "o_hi": [
+   "बैकसाइटिंग",
+   "रिवर्स लेवलिंग",
+   "डायरेक्ट लेवलिंग",
+   "एकल‑पॉइंट रीडिंग"
+  ],
+  "o_en": [
+   "Back‑sighting",
+   "Reverse leveling",
+   "Direct leveling",
+   "Single‑point reading"
+  ],
+  "a": 1,
+  "e_hi": "रिवर्स लेवलिंग में आगे‑और‑पीछे दोनों दिशा में पढ़ी जाती हैं, जिससे त्रुटियों का निरसन आसान हो जाता है।",
+  "e_en": "Reverse leveling involves taking readings in both forward and backward directions, effectively canceling out many errors."
+ },
+ {
+  "id": "rp-je_c-01955",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 3,
+  "q_hi": "यदि एक थियोडोलाइट के 'आइडल लेवल' स्थिति से 2 arc-seconds का झुकाव है, तो 500 m दूरी पर दिशा त्रुटि लगभग कितनी होगी?",
+  "q_en": "If a theodolite is tilted 2 arc-seconds from its ideal level, what is the approximate directional error at 500 m distance?",
+  "o_hi": [
+   "0.005 m",
+   "0.01 m",
+   "0.05 m",
+   "0.1 m"
+  ],
+  "o_en": [
+   "0.005 m",
+   "0.01 m",
+   "0.05 m",
+   "0.1 m"
+  ],
+  "a": 0,
+  "e_hi": "2 arc-seconds लगभग 9.7 माइक्रोरेडियन के बराबर है। त्रुटि = कोण (रेडियन में) × दूरी = 9.7×10⁻⁶ × 500 ≈ 0.0048 m, अर्थात लगभग 0.005 m।",
+  "e_en": "2 arc-seconds is approximately 9.7 microradians. Error = angle (in radians) x distance = 9.7x10^-6 x 500 ≈ 0.0048 m, i.e. approximately 0.005 m."
+ },
+ {
+  "id": "rp-je_c-01956",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "एक टॉपोग्राफिक मैप पर 1 cm का अंतर 250 m वास्तविक दूरी दर्शाता है। यदि मानचित्र पर दो बिंदुओं के बीच 3.6 cm मापा गया है, तो वास्तविक दूरी कितनी होगी?",
+  "q_en": "On a topographic map, 1 cm represents 250 m on the ground. If two points are 3.6 cm apart on the map, what is the real-world distance?",
+  "o_hi": [
+   "850 m",
+   "900 m",
+   "950 m",
+   "1000 m"
+  ],
+  "o_en": [
+   "850 m",
+   "900 m",
+   "950 m",
+   "1000 m"
+  ],
+  "a": 1,
+  "e_hi": "वास्तविक दूरी = मानचित्र दूरी × स्केल = 3.6 × 250 = 900 मीटर।",
+  "e_en": "Real-world distance = Map distance x Scale = 3.6 x 250 = 900 meters."
+ },
+ {
+  "id": "rp-je_c-01957",
+  "s": "je_civil",
+  "t": "surveying",
+  "d": 1,
+  "q_hi": "लेवलिंग में 'कॉन्ट्रोल पॉइंट' का चयन करते समय सबसे महत्वपूर्ण मानदण्ड क्या है?",
+  "q_en": "When selecting a control point for leveling, what is the most important criterion?",
+  "o_hi": [
+   "स्थिरता और स्थायित्व",
+   "निकटतम दूरी",
+   "उच्चता में बड़ा अंतर",
+   "सुरक्षित पहुँच"
+  ],
+  "o_en": [
+   "Stability and permanence",
+   "Proximity",
+   "Large elevation difference",
+   "Easy access"
+  ],
+  "a": 0,
+  "e_hi": "कॉन्ट्रोल पॉइंट को दीर्घकालिक स्थिरता रखनी चाहिए ताकि भविष्य में भी वही एलिवेशन मान उपयोग किया जा सके।",
+  "e_en": "A control point must be stable and permanent so its elevation remains reliable over time."
+ },
+ {
+  "id": "rp-je_c-01958",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक सरल समर्थनित बीम की लंबाई 6 m है और उस पर 10 kN/m समान वितरित भार है। प्रत्येक समर्थन पर प्रतिक्रिया कितनी होगी?",
+  "q_en": "A simply supported beam 6 m long carries a uniform load of 10 kN/m. What is the reaction at each support?",
+  "o_hi": [
+   "30 kN",
+   "20 kN",
+   "60 kN",
+   "40 kN"
+  ],
+  "o_en": [
+   "30 kN",
+   "20 kN",
+   "60 kN",
+   "40 kN"
+  ],
+  "a": 0,
+  "e_hi": "कुल लोड 10 kN/m × 6 m = 60 kN है, दोनो समर्थन बराबर बाँटते हैं, इसलिए प्रत्येक पर 30 kN प्रतिक्रिया होती है।",
+  "e_en": "Total load = 10 kN/m × 6 m = 60 kN, shared equally by two supports, so each reaction is 30 kN."
+ },
+ {
+  "id": "rp-je_c-01959",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 1,
+  "q_hi": "एक 4 m लंबी कैंडिलिवर बीम के मुक्त सिरे पर 5 kN का बिंदु भार लटका है। स्थिर सिरे पर अधिकतम मोमेंट कितना होगा?",
+  "q_en": "A 4 m long cantilever beam has a 5 kN point load at its free end. What is the maximum moment at the fixed support?",
+  "o_hi": [
+   "10 kN·m",
+   "20 kN·m",
+   "5 kN·m",
+   "15 kN·m"
+  ],
+  "o_en": [
+   "10 kN·m",
+   "20 kN·m",
+   "5 kN·m",
+   "15 kN·m"
+  ],
+  "a": 1,
+  "e_hi": "कैंडिलिवर में अधिकतम मोमेंट P × L = 5 kN × 4 m = 20 kN·m होता है।",
+  "e_en": "Maximum moment = P × L = 5 kN × 4 m = 20 kN·m."
+ },
+ {
+  "id": "rp-je_c-01960",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 2,
+  "q_hi": "एक 8 m लंबी सरल समर्थनित बीम के मध्य में 12 kN का बिंदु भार लगा है। अधिकतम शियर बल कितना होगा?",
+  "q_en": "A simply supported beam 8 m long has a 12 kN point load at mid‑span. What is the maximum shear force?",
+  "o_hi": [
+   "6 kN",
+   "12 kN",
+   "3 kN",
+   "9 kN"
+  ],
+  "o_en": [
+   "6 kN",
+   "12 kN",
+   "3 kN",
+   "9 kN"
+  ],
+  "a": 0,
+  "e_hi": "प्रत्येक समर्थन पर प्रतिक्रिया = 12 kN/2 = 6 kN, जो अधिकतम शियर है।",
+  "e_en": "Each support reaction = 12 kN/2 = 6 kN, which is the maximum shear."
+ },
+ {
+  "id": "rp-je_c-01961",
+  "s": "je_civil",
+  "t": "structural_analysis",
+  "d": 3,
+  "q_hi": "एक सममित (isosceles) त्रिकोणीय ट्रस में दो समर्थन A और B 6 m दूरी पर हैं, शीर्ष C, AB के मध्यबिंदु के ठीक ऊपर 4 m की ऊँचाई पर है, और उस पर 10 kN का लोड लगा है। सदस्य AC में बल कितना होगा?",
+  "q_en": "In a symmetric (isosceles) triangular truss with supports A and B 6 m apart, apex joint C is directly above the midpoint of AB at a height of 4 m, and carries a 10 kN load. What is the force in member AC?",
+  "o_hi": [
+   "5 kN",
+   "6.25 kN",
+   "8 kN",
+   "10 kN"
+  ],
+  "o_en": [
+   "5 kN",
+   "6.25 kN",
+   "8 kN",
+   "10 kN"
+  ],
+  "a": 1,
+  "e_hi": "C, AB के मध्यबिंदु के ऊपर है, इसलिए सदस्य AC और BC सममित हैं और AC की लंबाई = √(3²+4²) = 5 m, sinθ = 4/5। जोड़ C पर संतुलन से 2F sinθ = 10 kN, इसलिए F = 6.25 kN (तनाव)।",
+  "e_en": "Since C lies directly above the midpoint of AB, members AC and BC are symmetric, each of length sqrt(3^2+4^2) = 5 m, giving sinθ = 4/5. Vertical equilibrium at joint C gives 2F sinθ = 10 kN, so F = 6.25 kN (tension)."
  }
 ]

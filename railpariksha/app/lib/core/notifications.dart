@@ -58,12 +58,24 @@ class RailParikshaNotifications {
   /// and 4 are only scheduled when reminders.dart finds a real reason to).
   /// [title]/[body] are already resolved to the user's chosen language by the
   /// caller. [urgent] swaps in the higher-priority streak-risk channel.
+  ///
+  /// [recurring] controls whether this alarm repeats daily at [hour]
+  /// (`matchDateTimeComponents: DateTimeComponents.time`) or fires exactly
+  /// once. Ids 1/2 are genuinely daily, so they stay recurring. Ids 3/4 are
+  /// conditional -- their title/body are a snapshot of "is this worth saying
+  /// right now", computed fresh by reminders.dart on app launch/resume/activity
+  /// (see its doc comment). A recurring alarm would keep firing that frozen
+  /// snapshot every day at [hour] for as long as the app happens to not be
+  /// reopened -- exactly the lapsed-user case these pings exist to recover,
+  /// turning a once-relevant nudge into a stale, inaccurate, spammy-feeling
+  /// one. A one-shot alarm self-limits to a single stale firing at worst.
   static Future<void> scheduleDaily({
     required int id,
     required int hour,
     required String title,
     required String body,
     bool urgent = false,
+    bool recurring = true,
   }) async {
     await init();
     final now = tz.TZDateTime.now(tz.local);
@@ -76,7 +88,7 @@ class RailParikshaNotifications {
       title: title,
       body: body,
       androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-      matchDateTimeComponents: DateTimeComponents.time,
+      matchDateTimeComponents: recurring ? DateTimeComponents.time : null,
     );
   }
 

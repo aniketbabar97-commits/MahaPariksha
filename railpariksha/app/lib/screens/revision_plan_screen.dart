@@ -71,7 +71,9 @@ class RevisionPlanScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(gradient: BrandColors.heroGradient, borderRadius: BorderRadius.circular(24)),
               child: Column(children: [
-                Text('$days', style: const TextStyle(color: Colors.white, fontSize: 44, fontWeight: FontWeight.w900)),
+                CountUpText(days,
+                    duration: const Duration(milliseconds: 800),
+                    style: const TextStyle(color: Colors.white, fontSize: 44, fontWeight: FontWeight.w900)),
                 Text(context.tr('दिन बाकी', 'days left'), style: const TextStyle(color: Colors.white70, fontSize: 15)),
               ]),
             ),

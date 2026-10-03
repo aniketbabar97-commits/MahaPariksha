@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:share_plus/share_plus.dart';
 
 import '../core/app_scope.dart';
 import '../core/theme.dart';
@@ -10,6 +9,7 @@ import '../core/transitions.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
+import '../widgets/share_card.dart';
 import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
 
@@ -106,7 +106,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
     final p = AppScope.read(context).progress;
     final r = p.recordAnswer(q.id, correct);
     xpEarned += r.xp;
-    if (r.levelUp || r.streakMilestone != null || r.goalCompleted) _notable = r;
+    if (r.levelUp || r.streakMilestone != null || r.goalCompleted || r.freezeSaved) _notable = r;
     setState(() {
       _locked = true;
       _flashAnswer = i;
@@ -418,7 +418,9 @@ class _BeastOptionTile extends StatelessWidget {
     };
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: AnimatedContainer(
+      child: TapScale(
+        scale: state == _BeastOptState.idle ? 0.98 : 1.0,
+        child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
         decoration: BoxDecoration(
           color: bg,
@@ -447,6 +449,7 @@ class _BeastOptionTile extends StatelessWidget {
               if (icon != null) Icon(icon, color: border),
             ]),
           ),
+        ),
         ),
       ),
     );
@@ -558,10 +561,20 @@ class _BeastResultsSheet extends StatelessWidget {
                 onPressed: () {
                   HapticFeedback.selectionClick();
                   final hi = 'मैंने RailPariksha बीस्ट मोड में ${score.toStringAsFixed(1)} अंक बनाए! ⚡ (स्ट्रीक $bestStreakRun) '
-                      'टियर: ${tier.hi}\n\nक्या आप मुझे हरा सकते हैं?';
+                      'टियर: ${tier.hi}\n\nक्या आप मुझे हरा सकते हैं? $kPlayUrl';
                   final en = 'I scored ${score.toStringAsFixed(1)} in RailPariksha Beast Mode! ⚡ (streak $bestStreakRun) '
-                      'Tier: ${tier.en}\n\nCan you beat me?';
-                  SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : hi));
+                      'Tier: ${tier.en}\n\nCan you beat me? $kPlayUrl';
+                  shareScoreCard(
+                    context,
+                    card: ScoreShareCard(
+                      headline: context.tr('मैंने बीस्ट मोड में यह टियर हासिल किया!', 'I reached this tier in Beast Mode!'),
+                      scoreText: score.toStringAsFixed(1),
+                      scoreSub: context.tr('स्ट्रीक $bestStreakRun · टियर ${tier.hi}', 'Streak $bestStreakRun · Tier ${tier.en}'),
+                      footer: context.tr('क्या आप मुझे हरा सकते हैं? ⚡', 'Can you beat me? ⚡'),
+                      icon: Icons.whatshot,
+                    ),
+                    text: lang == 'en' ? en : hi,
+                  );
                 },
               ),
             ),
