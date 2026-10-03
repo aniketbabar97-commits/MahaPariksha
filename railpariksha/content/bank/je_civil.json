@@ -1959,8 +1959,8 @@
   "s": "je_civil",
   "t": "surveying",
   "d": 2,
-  "q_hi": "एक समतल भूमि पर 100 मीटर की दूरी को 20 मीटर के चेन से मापा गया। यदि चेन 0.1 मीटर छोटी है, तो मापी गई दूरी कितनी होगी?",
-  "q_en": "A distance of 100m is measured on level ground using a 20m chain. If the chain is 0.1m too short, what will be the measured distance?",
+  "q_hi": "समतल भूमि पर एक दूरी को 20 मीटर के चेन से मापने पर 100 मीटर मापी गई। यदि चेन वास्तव में 0.1 मीटर छोटी है, तो दूरी का सही (वास्तविक) मान कितना होगा?",
+  "q_en": "A distance on level ground was measured as 100m using a 20m chain. If the chain is actually 0.1m too short, what is the true (correct) distance?",
   "o_hi": [
    "100.5 मीटर",
    "99.5 मीटर",
@@ -1973,9 +1973,9 @@
    "101.5 m",
    "98.5 m"
   ],
-  "a": 0,
-  "e_hi": "गलत दूरी = (सही दूरी * मानक लंबाई) / वास्तविक लंबाई। यहाँ (100 * 20) / 19.9 = 100.502 मीटर।",
-  "e_en": "Measured distance = (True distance * Nominal length) / Actual length. Here, (100 * 20) / 19.9 = 100.502 m."
+  "a": 1,
+  "e_hi": "सही दूरी = मापी गई दूरी * (वास्तविक लंबाई / मानक लंबाई)। यहाँ 100 * (19.9 / 20) = 99.5 मीटर। चेन छोटी होने पर सही दूरी मापी गई दूरी से कम होती है।",
+  "e_en": "True distance = Measured distance * (Actual chain length / Nominal length). Here, 100 * (19.9 / 20) = 99.5 m. Since the chain is shorter than nominal, the true distance is less than the measured (recorded) distance."
  },
  {
   "id": "rp-je_c-f00088",
@@ -20704,8 +20704,8 @@
   "s": "je_civil",
   "t": "structural_analysis",
   "d": 1,
-  "q_hi": "एक संरचनात्मक सदस्य जिसमें केवल अक्षीय बल (axial force) कार्य करते हैं, उसे क्या कहा जाता है?",
-  "q_en": "What is a structural member called that is subjected only to axial forces?",
+  "q_hi": "किस प्रकार की संरचना में सभी सदस्यों में केवल अक्षीय बल (axial force) ही कार्य करते हैं?",
+  "q_en": "What type of structure is made up of members that are subjected only to axial forces?",
   "o_hi": [
    "बीम",
    "स्ट्रट",
@@ -20720,7 +20720,7 @@
   ],
   "a": 3,
   "e_hi": "ट्रस एक ऐसी संरचना है जो त्रिभुजाकार इकाइयों से बनी होती है और इसके सदस्य केवल तनाव या संपीड़न (अक्षीय बल) का अनुभव करते हैं।",
-  "e_en": "A truss is a structure made of triangular units where members experience only tension or compression (axial forces)."
+  "e_en": "A truss is a structure made of triangular units where every member experiences only tension or compression (axial force), with no bending or shear."
  },
  {
   "id": "rp-je_c-f00909",
@@ -44459,29 +44459,6 @@
   "e_en": "Minor variations in a satellite's orbit cause signal fluctuations, known as jitter."
  },
  {
-  "id": "rp-je_c-01950",
-  "s": "je_civil",
-  "t": "surveying",
-  "d": 3,
-  "q_hi": "यदि एक स्टाफ की लंबाई 2 m है और इसे 2 mm अधिक मापा गया है, तो 5 km दूरी के लेवलिंग में कुल त्रुटि लगभग कितनी होगी?",
-  "q_en": "If a 2 m staff is read 2 mm too long, what is the approximate total error over a 5 km leveling run?",
-  "o_hi": [
-   "10 mm",
-   "20 mm",
-   "100 mm",
-   "200 mm"
-  ],
-  "o_en": [
-   "10 mm",
-   "20 mm",
-   "100 mm",
-   "200 mm"
-  ],
-  "a": 1,
-  "e_hi": "प्रति मीटर 2 mm की अतिरिक्त लंबाई 5 000 m पर 2 mm × 5 000 = 10 000 mm, अर्थात् 10 m की त्रुटि; परंतु स्टाफ को हर 100 m पर बदलते हैं, इसलिए प्रभाव लगभग 20 mm माना जाता है।",
-  "e_en": "A 2 mm over‑reading per meter would give 10 m over 5 km, but staff are usually changed every 100 m, reducing the cumulative effect to roughly 20 mm."
- },
- {
   "id": "rp-je_c-01951",
   "s": "je_civil",
   "t": "surveying",
@@ -44578,46 +44555,46 @@
   "s": "je_civil",
   "t": "surveying",
   "d": 3,
-  "q_hi": "यदि एक थियोडोलाइट के 'आइडली लेवल' स्थिति से 2 arc‑seconds का झुकाव है, तो 500 m दूरी पर दिशा त्रुटि लगभग कितनी होगी?",
-  "q_en": "If a theodolite is tilted 2 arc‑seconds from its ideal level, what is the approximate directional error at 500 m distance?",
+  "q_hi": "यदि एक थियोडोलाइट के 'आइडल लेवल' स्थिति से 2 arc-seconds का झुकाव है, तो 500 m दूरी पर दिशा त्रुटि लगभग कितनी होगी?",
+  "q_en": "If a theodolite is tilted 2 arc-seconds from its ideal level, what is the approximate directional error at 500 m distance?",
   "o_hi": [
-   "0.005 m",
-   "0.01 m",
-   "0.05 m",
-   "0.1 m"
+   "0.005 m",
+   "0.01 m",
+   "0.05 m",
+   "0.1 m"
   ],
   "o_en": [
-   "0.005 m",
-   "0.01 m",
-   "0.05 m",
-   "0.1 m"
+   "0.005 m",
+   "0.01 m",
+   "0.05 m",
+   "0.1 m"
   ],
-  "a": 2,
-  "e_hi": "2 arc‑seconds ≈ 9.7 µrad; 9.7 µrad × 500 m ≈ 0.0049 m, अर्थात लगभग 0.05 m।",
-  "e_en": "2 arc‑seconds ≈ 9.7 µrad; multiplied by 500 m gives about 0.005 m, rounded to 0.05 m for practical purposes."
+  "a": 0,
+  "e_hi": "2 arc-seconds लगभग 9.7 माइक्रोरेडियन के बराबर है। त्रुटि = कोण (रेडियन में) × दूरी = 9.7×10⁻⁶ × 500 ≈ 0.0048 m, अर्थात लगभग 0.005 m।",
+  "e_en": "2 arc-seconds is approximately 9.7 microradians. Error = angle (in radians) x distance = 9.7x10^-6 x 500 ≈ 0.0048 m, i.e. approximately 0.005 m."
  },
  {
   "id": "rp-je_c-01956",
   "s": "je_civil",
   "t": "surveying",
   "d": 1,
-  "q_hi": "एक टॉपोग्राफिक मैप पर 1 cm का अंतर 250 m वास्तविक दूरी दर्शाता है। यदि मानचित्र पर दो बिंदुओं के बीच 3.6 cm मापा गया है, तो वास्तविक दूरी कितनी होगी?",
-  "q_en": "On a topographic map, 1 cm represents 250 m on the ground. If two points are 3.6 cm apart on the map, what is the real-world distance?",
+  "q_hi": "एक टॉपोग्राफिक मैप पर 1 cm का अंतर 250 m वास्तविक दूरी दर्शाता है। यदि मानचित्र पर दो बिंदुओं के बीच 3.6 cm मापा गया है, तो वास्तविक दूरी कितनी होगी?",
+  "q_en": "On a topographic map, 1 cm represents 250 m on the ground. If two points are 3.6 cm apart on the map, what is the real-world distance?",
   "o_hi": [
-   "850 m",
-   "900 m",
-   "950 m",
-   "1000 m"
+   "850 m",
+   "900 m",
+   "950 m",
+   "1000 m"
   ],
   "o_en": [
-   "850 m",
-   "900 m",
-   "950 m",
-   "1000 m"
+   "850 m",
+   "900 m",
+   "950 m",
+   "1000 m"
   ],
-  "a": 2,
-  "e_hi": "250 m × 3.6 = 900 m; परंतु मानचित्र स्केल में अक्सर 1 : 250 000 होता है, जिससे 3.6 cm × 250 m = 900 m, अतः उत्तर 950 m नहीं, यहाँ 900 m सही है; विकल्प में त्रुटि के कारण 950 m को सही माना गया।",
-  "e_en": "250 m × 3.6 = 900 m; the correct distance is 900 m, which matches the second option."
+  "a": 1,
+  "e_hi": "वास्तविक दूरी = मानचित्र दूरी × स्केल = 3.6 × 250 = 900 मीटर।",
+  "e_en": "Real-world distance = Map distance x Scale = 3.6 x 250 = 900 meters."
  },
  {
   "id": "rp-je_c-01957",
