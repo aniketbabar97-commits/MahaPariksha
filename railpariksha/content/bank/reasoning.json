@@ -234,8 +234,8 @@
     "s": "reasoning",
     "t": "puzzle_seating",
     "d": 3,
-    "q_hi": "पाँच मित्र A, B, C, D, E एक कतार में बैठे हैं। B, A के दायें और C के बायें है। यदि A सबसे बायें छोर पर है, तो B किस स्थान पर बैठा है?",
-    "q_en": "Five friends A, B, C, D, E sit in a row. B is to the right of A and to the left of C. If A is at the extreme left, where does B sit?",
+    "q_hi": "पाँच मित्र A, B, C, D, E एक कतार में बैठे हैं। B, A के ठीक दायें और C के ठीक बायें है। यदि A सबसे बायें छोर पर है, तो B किस स्थान पर बैठा है?",
+    "q_en": "Five friends A, B, C, D, E sit in a row. B sits immediately to the right of A and immediately to the left of C. If A is at the extreme left, where does B sit?",
     "o_hi": [
       "पहले स्थान पर",
       "दूसरे स्थान पर",
@@ -249,8 +249,8 @@
       "4th position"
     ],
     "a": 1,
-    "e_hi": "A सबसे बायें (स्थान 1) है। B, A के दायें यानी सीधे अगले स्थान (स्थान 2) पर बैठेगा, और C उसके आगे (स्थान 3) होगा।",
-    "e_en": "A is at the extreme left (position 1). B, being right of A, sits immediately next (position 2), with C further ahead (position 3)."
+    "e_hi": "A सबसे बायें (स्थान 1) है। B, A के ठीक दायें होने के कारण स्थान 2 पर बैठेगा, और C, B के ठीक दायें होने के कारण स्थान 3 पर होगा।",
+    "e_en": "A is at the extreme left (position 1). Since B sits immediately to the right of A, B is at position 2. C, sitting immediately to the right of B, is at position 3."
   },
   {
     "id": "rp-reasoning-0012",
@@ -2419,8 +2419,8 @@
       "Order cannot be determined"
     ],
     "a": 3,
-    "e_hi": "तीसरा चौथे से पहले है, अतः तीसरा पहले आता है, इसलिए पहला तीसरे के बाद आता है।",
-    "e_en": "Third is before fourth, so third comes before fourth; thus first comes after third."
+    "e_hi": "दिए गए संकेत केवल यह बताते हैं कि तीसरा व्यक्ति चौथे के बाईं ओर है और दूसरा व्यक्ति पाँचवें के दाईं ओर है -- इनमें से कोई भी संकेत पहले व्यक्ति की तीसरे के सापेक्ष स्थिति नहीं बताता, इसलिए पहले और तीसरे का क्रम निर्धारित नहीं किया जा सकता।",
+    "e_en": "The clues only say that the third person is to the left of the fourth, and that the second person is to the right of the fifth -- neither clue places the first person relative to the third at all. So the order of the first and third cannot be determined from the given information."
   },
   {
     "id": "rp-rea-s00119",
@@ -2488,8 +2488,8 @@
       "Cannot be determined"
     ],
     "a": 3,
-    "e_hi": "पहला तीसरे से पहले होने से दूसरा तीसरे के बाद आता है। पाँचवाँ दाईं ओर होने से दूसरा चौथे से पहले आता है।",
-    "e_en": "First before third implies second after third; fifth on right of second means second before fourth."
+    "e_hi": "दिए गए संकेत पहले को तीसरे से और पाँचवें को दूसरे से जोड़ते हैं, लेकिन चौथे व्यक्ति के बारे में कुछ नहीं बताते। इसलिए दूसरे और चौथे का सापेक्ष क्रम ज्ञात नहीं किया जा सकता।",
+    "e_en": "The given clues relate the first person to the third, and the fifth to the second, but they say nothing at all about where the fourth person sits. So the relative order of the second and fourth cannot be determined."
   },
   {
     "id": "rp-rea-s00123",
@@ -2511,8 +2511,8 @@
       "Cannot be determined"
     ],
     "a": 3,
-    "e_hi": "पहला तीसरे के बाद और तीसरा दूसरे के पहले है, इसलिए पाँचवाँ पहला से पहले आता है।",
-    "e_en": "First is after third, third is before second, so fifth must come before first."
+    "e_hi": "दिए गए संकेत पहले को तीसरे से और तीसरे को दूसरे से जोड़ते हैं, लेकिन पाँचवें व्यक्ति की स्थिति के बारे में कुछ नहीं बताते। इसलिए पहले और पाँचवें का क्रम निर्धारित नहीं किया जा सकता।",
+    "e_en": "The given clues relate the first person to the third, and the third to the second, but say nothing about where the fifth person sits. So the order of the first and fifth cannot be determined."
   },
   {
     "id": "rp-rea-s00124",
@@ -2565,8 +2565,8 @@
     "s": "reasoning",
     "t": "puzzle_seating",
     "d": 1,
-    "q_hi": "एक पंक्ति में चार लोग हैं। यदि A, B के बाईं ओर है, B, C के दाईं ओर है, और C, D के दाईं ओर है, तो D कौन हो सकता है?",
-    "q_en": "Four people stand in a line. If A is left of B, B right of C, and C right of D, who could D be?",
+    "q_hi": "एक पंक्ति में चार लोग हैं। यदि A, B के बाईं ओर है, B, C के दाईं ओर है, C, D के दाईं ओर है, और D, A के बाईं ओर है, तो D कौन होना चाहिए?",
+    "q_en": "Four people stand in a line. A is left of B, B is right of C, C is right of D, and D is left of A. Who must D be?",
     "o_hi": [
       "पहला व्यक्ति",
       "दूसरा व्यक्ति",
@@ -2580,8 +2580,8 @@
       "Fourth person"
     ],
     "a": 0,
-    "e_hi": "इस क्रम से D सबसे बाईं ओर होना चाहिए, अतः वह पहला व्यक्ति है।",
-    "e_en": "The chain forces D to be at the leftmost position, i.e., the first person."
+    "e_hi": "D, C से बायें है, और D, A से भी बायें है (दिया गया है), जबकि A, B से बायें है। इन सभी शर्तों को पूरा करने वाली हर व्यवस्था में D सबसे बायें छोर पर आता है, इसलिए D ही पहला व्यक्ति है।",
+    "e_en": "D is to the left of C, and D is also to the left of A (given directly), while A is to the left of B. Every arrangement satisfying all four clues places D at the leftmost end, so D must be the first person."
   },
   {
     "id": "rp-rea-s00128",
@@ -2764,8 +2764,8 @@
       "120"
     ],
     "a": 0,
-    "e_hi": "पैटर्न X _ X _ X _ X 7 सीटों का उपयोग करता है; इसे 10-7+1=4 स्थानों पर रख सकते हैं। 4×4! =96।",
-    "e_en": "The pattern occupies 7 seats; it can start at 4 positions. 4×4! =96 arrangements."
+    "e_hi": "पैटर्न व्यक्ति-खाली-व्यक्ति-खाली-व्यक्ति-खाली-व्यक्ति में 7 लगातार सीटें लगती हैं। 8 सीटों की पंक्ति में यह पैटर्न केवल सीट 1 या सीट 2 से शुरू हो सकता है, यानी केवल 2 संभावित स्थितियाँ। प्रत्येक स्थिति में 4 अलग-अलग लोगों को 4! = 24 तरीकों से बैठाया जा सकता है। कुल = 2 × 24 = 48।",
+    "e_en": "The pattern person-empty-person-empty-person-empty-person occupies 7 consecutive seats. In a row of 8 seats, this block can only start at seat 1 or seat 2 -- just 2 possible placements. For each placement, the 4 distinct people can be arranged in 4! = 24 ways. Total = 2 x 24 = 48."
   },
   {
     "id": "rp-rea-s00136",
@@ -2810,8 +2810,8 @@
       "12"
     ],
     "a": 0,
-    "e_hi": "ऐसी व्यवस्था संभव नहीं है क्योंकि 5 लोगों के लिए कम से कम 10 सीटें चाहिए।",
-    "e_en": "Such an arrangement is impossible because it would require at least 10 seats."
+    "e_hi": "ऐसी व्यवस्था संभव नहीं है: प्रत्येक व्यक्ति के दोनों तरफ कम से कम एक खाली सीट चाहिए, जिसके लिए कम से कम 5+6=11 सीटें चाहिए, जबकि पंक्ति में केवल 7 सीटें हैं।",
+    "e_en": "This arrangement is impossible: giving each of the 5 people an empty seat on both sides needs at least 11 seats in total, but the row has only 7 seats."
   },
   {
     "id": "rp-rea-s00138",
@@ -25396,8 +25396,8 @@
       "South"
     ],
     "a": 1,
-    "e_hi": "राहुल उत्तर में है, तो सनी दक्षिण में होगा। अंदर की ओर देखने पर सनी (दक्षिण) के दायें पश्चिम की ओर होता है, इसलिए मनीष पश्चिम में है। शेष स्थान पूर्व में है, जहाँ पूजा बैठती है।",
-    "e_en": "Rahul is in North, so Sunny is in South. Facing center, the right of Sunny (South) is West, so Manish is in West. The remaining spot is East, where Pooja sits."
+    "e_hi": "राहुल उत्तर में है, तो उसके विपरीत सनी दक्षिण में होगा, और केंद्र की ओर मुख करते हुए उत्तर की दिशा में देख रहा होगा। उत्तर की ओर मुख होने पर दायाँ हाथ पूर्व की ओर होता है, इसलिए मनीष पूर्व में है। शेष बचा स्थान पश्चिम है, जहाँ पूजा बैठती है।",
+    "e_en": "Rahul is in the North, so Sunny (opposite him) is in the South, facing North toward the centre. Facing North, the right hand points East, so Manish sits in the East. The one remaining seat, West, is where Pooja sits."
   },
   {
     "id": "rp-rea-o01280",
@@ -61666,9 +61666,9 @@
       "D",
       "Cannot be determined"
     ],
-    "a": 2,
-    "e_hi": "केंद्र की ओर मुख होने पर दाईं ओर का अर्थ घड़ी की विपरीत दिशा है। दी गई जानकारी के अनुसार 'द' ही सही विकल्प है।",
-    "e_en": "Facing the center, 'to the right' means anti-clockwise. Based on the constraints, D is the only logical placement."
+    "a": 3,
+    "e_hi": "केंद्र की ओर मुख होने पर 'दायें' का अर्थ घड़ी की सुई की विपरीत दिशा है। 'स' को 'अ' के दायें रखकर और 'द' को 'स' से तीन स्थान आगे (बाईं ओर) रखकर जाँचने पर, 'अ' से दाईं ओर दूसरे स्थान पर कोई नामित व्यक्ति ('ब', 'स' या 'द') नहीं, बल्कि हमेशा एक अनाम व्यक्ति बैठा मिलता है। अतः उत्तर निर्धारित नहीं किया जा सकता।",
+    "e_en": "Taking 'right' as the anticlockwise direction (as required by C being to A's right), and placing D three seats to the left of C, the seat that is second to the right of A always turns out to be occupied by one of the unnamed people at the table -- never B, C, or D. So the answer cannot be determined from the given information."
   },
   {
     "id": "rp-rea-i02261",
@@ -62830,18 +62830,18 @@
     "o_hi": [
       "प्रिया",
       "करिश्मा",
-      "अर्जुन के दाईं ओर वाला व्यक्ति",
+      "करिश्मा के ठीक बगल में बैठा व्यक्ति",
       "अर्जुन की दाईं ओर के अगले व्यक्ति के सामने वाला"
     ],
     "o_en": [
       "Priya",
       "Karisma",
-      "The person to Arjun's immediate right",
+      "The person sitting immediately next to Karisma",
       "The person opposite to the next person on Arjun's right"
     ],
     "a": 2,
-    "e_hi": "6 लोगों में, प्रिया के सामने करिश्मा है। अर्जुन प्रिया के बाएं है। अर्जुन के सामने वाला व्यक्ति प्रिया के दाईं ओर बैठे व्यक्ति के ठीक सामने होगा, या सीधे तौर पर, प्रिया के दाईं ओर बैठा व्यक्ति अर्जुन के सामने है।",
-    "e_en": "In a circle of 6, Karisma is opposite Priya. Arjun is to Priya's left. The person opposite Arjun is the one sitting to Priya's immediate right."
+    "e_hi": "6 लोगों के गोल घेरे में करिश्मा प्रिया के सामने बैठी है, और अर्जुन प्रिया के ठीक बाएं बैठा है। अर्जुन के सामने बैठा व्यक्ति हमेशा करिश्मा के ठीक बगल वाले व्यक्ति के बराबर पड़ता है -- न कि प्रिया (जो 'अर्जुन के ठीक दायें' है) और न ही करिश्मा स्वयं।",
+    "e_en": "In a circle of six, Karisma sits opposite Priya, and Arjun sits immediately to Priya's left. The seat exactly opposite Arjun always works out to be the seat immediately next to Karisma -- it is not Priya (who is simply Arjun's immediate right neighbour), and not Karisma herself."
   },
   {
     "id": "rp-rea-o02263",
@@ -64642,8 +64642,8 @@
     "s": "reasoning",
     "t": "puzzle_seating",
     "d": 3,
-    "q_hi": "सात छात्र एक पंक्ति में बैठे हैं। यदि 'क' मध्य में है और 'ख' और 'ग' के बीच तीन छात्र हैं, तो 'ख' का संभावित स्थान क्या हो सकता है यदि 'ग' अंतिम छोर पर है?",
-    "q_en": "Seven students are sitting in a row. If 'A' is in the middle and there are three students between 'B' and 'C', what is the possible position of 'B' if 'C' is at the extreme end?",
+    "q_hi": "सात छात्र एक पंक्ति में बैठे हैं। यदि 'क' मध्य में है और 'ख' तथा 'ग' के बीच तीन छात्र हैं, तो 'ख' का स्थान क्या होगा यदि 'ग' सबसे अंतिम दाईं ओर के छोर पर है?",
+    "q_en": "Seven students are sitting in a row. 'A' is in the middle, and there are three students between 'B' and 'C'. If 'C' is at the extreme right end, what is B's position?",
     "o_hi": [
       "तीसरा",
       "चौथा",
@@ -64657,8 +64657,8 @@
       "Sixth"
     ],
     "a": 0,
-    "e_hi": "मध्य स्थान चौथा है। यदि ग पहले स्थान पर है, तो ख पांचवें स्थान पर होगा। यदि ग सातवें स्थान पर है, तो ख तीसरे स्थान पर होगा।",
-    "e_en": "The middle position is fourth. If C is at position 1, B must be at 5. If C is at position 7, B must be at 3."
+    "e_hi": "मध्य स्थान चौथा है। 'ग' सातवें (सबसे दाईं ओर के) स्थान पर है, और 'ख' तथा 'ग' के बीच ठीक तीन छात्र होने के लिए 'ख' को तीसरे स्थान पर होना चाहिए (स्थान 4, 5 और 6 के छात्र बीच में आते हैं)।",
+    "e_en": "The middle position is the 4th. Since C is at the extreme right end (position 7), and exactly three students sit between B and C, B must be at position 3 (the students at positions 4, 5 and 6 are the three in between)."
   },
   {
     "id": "rp-rea-i02362",
@@ -83286,9 +83286,9 @@
       "Shyam",
       "Cannot be determined"
     ],
-    "a": 1,
-    "e_hi": "वृत्ताकार व्यवस्था में, राम के बाएं दूसरा मोहन है। श्याम के दाएं दूसरा भी मोहन ही होगा।",
-    "e_en": "In a circular arrangement, Mohan is second to the left of Ram. Consequently, Mohan is also second to the right of Shyam."
+    "a": 3,
+    "e_hi": "वृत्ताकार व्यवस्था में 'राम' के बाएं दूसरा स्थान 'मोहन' का है, लेकिन 'श्याम' के दाएं दूसरा स्थान गणितीय रूप से एक भिन्न सीट पर पड़ता है -- यह सीट हमेशा किसी अनाम व्यक्ति की होती है, मोहन की नहीं। अतः उत्तर निर्धारित नहीं किया जा सकता।",
+    "e_en": "In a circle of six, the seat 'second to the left of Ram' is Mohan's seat, but the seat 'second to the right of Shyam' works out to a different seat -- one always occupied by an unnamed person, not Mohan. So the answer cannot be determined from the given information."
   },
   {
     "id": "rp-rea-k03158",
