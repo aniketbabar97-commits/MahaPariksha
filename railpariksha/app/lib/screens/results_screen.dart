@@ -6,6 +6,7 @@ import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/progress.dart';
+import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 
@@ -101,9 +102,28 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 if (isSpeed) _pill(context.tr('सर्वश्रेष्ठ ${p.bestSpeed}', 'Best ${p.bestSpeed}'), Icons.emoji_events),
                 if (spec.negative > 0)
                   _pill(context.tr('अंक ${score.toStringAsFixed(2)}', 'Score ${score.toStringAsFixed(2)}'), Icons.calculate),
+                if (spec.mode == QuizMode.mock && total > 0)
+                  _pill(context.tr('अनुमानित टॉप ${100 - estimatedPercentile(correct / total)}%',
+                      'Est. top ${100 - estimatedPercentile(correct / total)}%'), Icons.leaderboard),
               ]),
             ]),
           ),
+          if (spec.mode == QuizMode.mock && total > 0) ...[
+            const SizedBox(height: 10),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Icon(Icons.info_outline, size: 14, color: Theme.of(context).hintColor),
+              const SizedBox(width: 4),
+              Flexible(
+                child: Text(
+                  context.tr(
+                      'यह एक सांख्यिकीय अनुमान है, असली उपयोगकर्ताओं की लाइव रैंकिंग नहीं',
+                      'A statistical estimate, not a live ranking against real users'),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 11.5, color: Theme.of(context).hintColor),
+                ),
+              ),
+            ]),
+          ],
           if (spec.negative > 0) ...[
             const SizedBox(height: 10),
             Text(

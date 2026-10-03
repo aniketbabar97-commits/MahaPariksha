@@ -4,7 +4,7 @@ import '../data/content_repo.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 
-enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs, placement }
+enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs, placement, weakSpots }
 
 class QuizSpec {
   final QuizMode mode;
@@ -82,6 +82,44 @@ class QuizBuilder {
     final qs = _pick(_pool(subject: subject, topic: topic), count, Random());
     return QuizSpec(QuizMode.practice, qs, t?.name.hi ?? s?.name.hi ?? 'अभ्यास',
         t?.name.en ?? s?.name.en ?? 'Practice');
+  }
+
+  /// How many questions a weak-topic are worth drawing from any single topic in
+  /// [weakSpots], so one very-weak, well-stocked topic can't crowd out the rest --
+  /// the drill should feel like a round of all the user's weak spots, not a retake
+  /// of just the single worst one.
+  static const _weakSpotsPerTopic = 3;
+
+  /// Cross-subject drill built purely from the user's weak topics (same accuracy/
+  /// attempts bar as the Daily 10's weak-topic slice, see [daily]), but not capped
+  /// at 6 slots and not mixed with filler -- every question in here is from a topic
+  /// the user is demonstrably struggling with, for a focused "grind my weak spots"
+  /// session. Empty when there isn't enough answered history yet to call anything
+  /// weak (same bar [daily] and [pacingGaps] use), so the UI can hide the entry
+  /// point rather than open on nothing.
+  QuizSpec weakSpots({int count = 15}) {
+    final rnd = Random();
+    final weak = topicStats().where((t) => t.attempts >= 3 && t.accuracy < 0.7).toList()
+      ..sort((a, b) => a.accuracy.compareTo(b.accuracy));
+    final chosen = <Question>[];
+    final seen = <String>{};
+    for (final t in weak) {
+      if (chosen.length >= count) break;
+      final topicPool = _pool(subject: t.subject, topic: t.topic).where((q) => !seen.contains(q.id)).toList();
+      final take = min(_weakSpotsPerTopic, count - chosen.length);
+      final picked = _pick(topicPool, take, rnd);
+      seen.addAll(picked.map((q) => q.id));
+      chosen.addAll(picked);
+    }
+    if (chosen.length < count && weak.isNotEmpty) {
+      final topUpPool = weak
+          .expand((t) => _pool(subject: t.subject, topic: t.topic))
+          .where((q) => !seen.contains(q.id))
+          .toList();
+      chosen.addAll(_pick(topUpPool, count - chosen.length, rnd));
+    }
+    chosen.shuffle(rnd);
+    return QuizSpec(QuizMode.weakSpots, chosen, 'कमज़ोर टॉपिक ड्रिल 🎯', 'Weak Spots Drill 🎯');
   }
 
   List<TopicStat> topicStats() {

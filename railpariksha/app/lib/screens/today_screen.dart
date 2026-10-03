@@ -14,6 +14,7 @@ import 'flashcard_screen.dart';
 import 'gk_booster_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
+import 'revision_plan_screen.dart';
 import 'search_screen.dart';
 
 class TodayScreen extends StatelessWidget {
@@ -38,6 +39,7 @@ class TodayScreen extends StatelessWidget {
     final days = p.daysToExam;
     final level = p.level;
     final gaps = days == null ? <PacingGap>[] : s.builder.pacingGaps();
+    final weakCount = s.builder.topicStats().where((t) => t.attempts >= 3 && t.accuracy < 0.7).length;
     // Gate Beast Mode behind ~50% overall accuracy — but only once there's enough answers
     // for accuracy to mean anything (same minAttempts spirit as pacingGaps above), so brand
     // new users aren't locked out by a 0% accuracy that's really just "no data yet".
@@ -99,8 +101,18 @@ class TodayScreen extends StatelessWidget {
                   ],
                   if (days != null) ...[
                     const SizedBox(height: 10),
-                    Text(context.tr('परीक्षा में $days दिन बाकी ⏳', '$days days to exam ⏳'),
-                        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                    InkWell(
+                      onTap: () {
+                        HapticFeedback.selectionClick();
+                        push(context, (_) => const RevisionPlanScreen());
+                      },
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        Text(context.tr('परीक्षा में $days दिन बाकी ⏳', '$days days to exam ⏳'),
+                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                        const SizedBox(width: 4),
+                        const Icon(Icons.chevron_right, color: Colors.white70, size: 16),
+                      ]),
+                    ),
                   ],
                 ]),
               ),
@@ -233,6 +245,20 @@ class TodayScreen extends StatelessWidget {
             ),
           ),
         ),
+        if (weakCount > 0) ...[
+          const SizedBox(height: 12),
+          ActionCard(
+            icon: Icons.center_focus_strong,
+            color: BrandColors.wrong,
+            title: context.tr('कमज़ोर टॉपिक ड्रिल 🎯', 'Weak Spots Drill 🎯'),
+            subtitle: context.tr('$weakCount कमज़ोर टॉपिक मिले — सीधे उन पर अभ्यास करें',
+                '$weakCount weak topics found — drill them directly'),
+            onTap: () {
+              HapticFeedback.selectionClick();
+              startQuiz(context, s.builder.weakSpots());
+            },
+          ),
+        ],
         const SizedBox(height: 12),
         // Beast Mode: a timed, streak-multiplier sprint — the "advanced" adrenaline mode,
         // gated behind decent overall accuracy so it reads as an earned challenge.
@@ -397,6 +423,19 @@ class TodayScreen extends StatelessWidget {
           ),
         ],
         SectionTitle(context.tr('आगे क्या?', "What's next?")),
+        ActionCard(
+          icon: Icons.map,
+          color: BrandColors.saffron,
+          title: context.tr('रिवीज़न प्लान', 'Revision plan'),
+          subtitle: days == null
+              ? context.tr('परीक्षा की तारीख डालें और निजी प्लान पाएं', 'Set your exam date for a personalized plan')
+              : context.tr('$days दिन बाकी — आज क्या करना है देखें', '$days days left — see what to do today'),
+          onTap: () {
+            HapticFeedback.selectionClick();
+            push(context, (_) => const RevisionPlanScreen());
+          },
+        ),
+        const SizedBox(height: 12),
         ActionCard(
           icon: Icons.assignment,
           color: BrandColors.sky,

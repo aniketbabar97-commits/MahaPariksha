@@ -123,6 +123,31 @@ void main() {
       expect(b.mistakes().questions.map((q) => q.id), [q.id]);
     });
 
+    test('weak spots drill pulls only from topics below the weak-accuracy bar', () {
+      // Pick one real topic from each subject (one with >= 4 questions so the
+      // >=3-attempts-per-topic bar can actually be reached) and make it clearly
+      // weak (wrong answers) or clearly strong (right answers).
+      final byTopic = <String, List<String>>{};
+      for (final q in repo.questionsFor(repo.exam('rrb_group_d')!)) {
+        byTopic.putIfAbsent('${q.subject}/${q.topic}', () => []).add(q.id);
+      }
+      final weakKey = byTopic.entries.firstWhere((e) => e.key.startsWith('maths/') && e.value.length >= 4).key;
+      final strongKey = byTopic.entries.firstWhere((e) => e.key.startsWith('reasoning/') && e.value.length >= 4).key;
+      for (final id in byTopic[weakKey]!.take(4)) {
+        p.recordAnswer(id, false);
+      }
+      for (final id in byTopic[strongKey]!.take(4)) {
+        p.recordAnswer(id, true);
+      }
+      final drill = b.weakSpots();
+      expect(drill.questions, isNotEmpty);
+      expect(drill.questions.every((q) => '${q.subject}/${q.topic}' == weakKey), isTrue);
+    });
+
+    test('weak spots drill is empty with no answered history yet', () {
+      expect(b.weakSpots().questions, isEmpty);
+    });
+
     test('due flashcards: reviews first, new cards capped per day, future cards excluded', () {
       final first = b.dueCards(limit: 9999);
       expect(first.length, Progress.newCardsPerDay);
