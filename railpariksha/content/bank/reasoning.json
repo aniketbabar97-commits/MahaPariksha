@@ -67187,8 +67187,8 @@
    "C"
   ],
   "a": 1,
-  "e_hi": "B पहले (A,B,C में) और दूसरे (B,D,E में) दृश्य में दिखता है, अतः B, A,C,D,E चारों से सटा हुआ है - इसलिए B के विपरीत F है। C पहले (A,B,C) और तीसरे (C,E,F) दृश्य में दिखता है, अतः C, A,B,E,F से सटा हुआ है - इसलिए C के विपरीत D है। शेष बचे A और E का जोड़ा स्वतः विपरीत फलक बनता है। अतः A के विपरीत E है; A ऊपर होने पर E नीचे होगा।",
-  "e_en": "B appears in the 1st view (A,B,C) and 2nd view (B,D,E), so B is adjacent to all of A,C,D,E — meaning B is opposite F. C appears in the 1st view (A,B,C) and 3rd view (C,E,F), so C is adjacent to A,B,E,F — meaning C is opposite D. The remaining pair, A and E, must then be opposite each other. So A is opposite E; if A is on top, E is at the bottom."
+  "e_hi": "दृश्य (A-B-C) से A, B और C दोनों के साथ जुड़ा (adjacent) है, इसलिए A किसी का भी विपरीत नहीं हो सकता। दृश्य (B-D-E) से B, D और E से जुड़ा है; दृश्य (C-E-F) से C, E और F से जुड़ा है। यदि A का विपरीत D या F माना जाए, तो बचे हुए दो फलकों को एक ऐसी जोड़ी में रखना पड़ेगा जो पहले से ही जुड़ी (adjacent) सिद्ध हो चुकी है (D-E या B-E) -- जो असंभव है। केवल 'A का विपरीत E' होने से ही कोई विरोधाभास नहीं बनता। अतः नीचे E होगा।",
+  "e_en": "From view (A-B-C), A is adjacent to both B and C, so A is not opposite either. From view (B-D-E), B is adjacent to D and E; from view (C-E-F), C is adjacent to E and F. Testing which face can be A's opposite without creating a contradiction: A opposite D or A opposite F both force the remaining two faces into a pair that is already known to be adjacent (D-E or B-E respectively) -- impossible. Only 'A opposite E' avoids any contradiction with the given adjacencies. So E is at the bottom."
  },
  {
   "id": "rp-rea-j02428",
@@ -67442,29 +67442,6 @@
   "a": 0,
   "e_hi": "पैटर्न में घूर्णन और प्रतिबिंब का ध्यान रखना आवश्यक है।",
   "e_en": "It is essential to pay attention to rotation and reflection in the pattern."
- },
- {
-  "id": "rp-rea-j02439",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 3,
-  "q_hi": "यदि एक घन की तीन स्थितियाँ दी गई हैं, तो 4 के विपरीत कौन सी संख्या होगी?",
-  "q_en": "If three positions of a cube are given, what number will be opposite to 4?",
-  "o_hi": [
-   "1",
-   "2",
-   "3",
-   "6"
-  ],
-  "o_en": [
-   "1",
-   "2",
-   "3",
-   "6"
-  ],
-  "a": 2,
-  "e_hi": "मानक पासे (dice) में विपरीत फलकों का योग सदैव 7 होता है। अतः 4 के विपरीत फलक 7-4=3 होगा।",
-  "e_en": "On a standard dice, opposite faces always add up to 7. So the face opposite 4 is 7-4=3."
  },
  {
   "id": "rp-rea-j02440",
