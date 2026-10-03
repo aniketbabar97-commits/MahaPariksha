@@ -518,12 +518,12 @@ void _shareWeeklyCard(BuildContext context, Progress p, String lang) {
       '🎯 कुल सटीकता: $acc%\n'
       '🔥 मौजूदा स्ट्रीक: $streak दिन\n'
       '🏅 स्तर: ${level.hi}\n\n'
-      'आप भी अभ्यास शुरू करें — मुफ़्त प्रैक्टिस ऐप 🚀';
+      'आप भी अभ्यास शुरू करें — मुफ़्त प्रैक्टिस ऐप 🚀 $kPlayUrl';
   final en = 'My RailPariksha weekly report 🗓️\n'
       '✅ $weekCount questions this week\n'
       '🎯 Overall accuracy: $acc%\n'
       '🔥 Current streak: $streak days\n'
       '🏅 Level: ${level.en}\n\n'
-      'Join me on RailPariksha — free practice app 🚀';
+      'Join me on RailPariksha — free practice app 🚀 $kPlayUrl';
   SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : hi));
 }

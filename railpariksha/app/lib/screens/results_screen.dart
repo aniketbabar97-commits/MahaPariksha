@@ -157,8 +157,8 @@ class _ResultsScreenState extends State<ResultsScreen> {
                   HapticFeedback.selectionClick();
                   SharePlus.instance.share(ShareParams(
                       text: context.tr(
-                          'मैंने RailPariksha ऐप पर ${spec.titleHi} में ${isSpeed ? widget.speedScore : '$correct/$total'} अंक हासिल किए! 🔥 आप कितने लाएंगे?',
-                          'I scored ${isSpeed ? widget.speedScore : '$correct/$total'} in ${spec.titleEn} on RailPariksha! 🔥 Can you beat it?')));
+                          'मैंने RailPariksha ऐप पर ${spec.titleHi} में ${isSpeed ? widget.speedScore : '$correct/$total'} अंक हासिल किए! 🔥 आप कितने लाएंगे? $kPlayUrl',
+                          'I scored ${isSpeed ? widget.speedScore : '$correct/$total'} in ${spec.titleEn} on RailPariksha! 🔥 Can you beat it? $kPlayUrl')));
                 },
               ),
             ),

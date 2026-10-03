@@ -15,8 +15,6 @@ import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
 
-const kPlayUrl = 'https://play.google.com/store/apps/details?id=app.railpariksha';
-
 class MeScreen extends StatelessWidget {
   const MeScreen({super.key});
 

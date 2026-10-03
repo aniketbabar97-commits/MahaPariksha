@@ -424,7 +424,7 @@ class TodayScreen extends StatelessWidget {
                     tooltip: context.tr('शेयर करें', 'Share'),
                     onPressed: () => SharePlus.instance.share(ShareParams(
                         text: '${motivation.text.of(lang)}${motivation.by != null ? '\n— ${motivation.by}' : ''}'
-                            '\n\n${context.tr('RailPariksha ऐप पर रोज़ाना प्रेरणा और अभ्यास', 'Daily practice & motivation on the RailPariksha app')} 🚀')),
+                            '\n\n${context.tr('RailPariksha ऐप पर रोज़ाना प्रेरणा और अभ्यास', 'Daily practice & motivation on the RailPariksha app')} 🚀 $kPlayUrl')),
                   ),
                 ]),
                 const SizedBox(height: 8),

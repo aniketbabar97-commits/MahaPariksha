@@ -561,9 +561,9 @@ class _BeastResultsSheet extends StatelessWidget {
                 onPressed: () {
                   HapticFeedback.selectionClick();
                   final hi = 'मैंने RailPariksha बीस्ट मोड में ${score.toStringAsFixed(1)} अंक बनाए! ⚡ (स्ट्रीक $bestStreakRun) '
-                      'टियर: ${tier.hi}\n\nक्या आप मुझे हरा सकते हैं?';
+                      'टियर: ${tier.hi}\n\nक्या आप मुझे हरा सकते हैं? $kPlayUrl';
                   final en = 'I scored ${score.toStringAsFixed(1)} in RailPariksha Beast Mode! ⚡ (streak $bestStreakRun) '
-                      'Tier: ${tier.en}\n\nCan you beat me?';
+                      'Tier: ${tier.en}\n\nCan you beat me? $kPlayUrl';
                   SharePlus.instance.share(ShareParams(text: lang == 'en' ? en : hi));
                 },
               ),
