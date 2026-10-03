@@ -74,7 +74,14 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                       child: FutureBuilder(
                         future: _future,
                         builder: (context, snap) {
-                          if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+                          if (!snap.hasData) {
+                            return ListView(
+                              padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+                              children: [
+                                for (var i = 0; i < 8; i++) SkeletonListTile(titleWidth: 140.0 + (i % 3) * 30),
+                              ],
+                            );
+                          }
                           final (top, rank) = snap.data!;
                           final lang = context.lang;
                           return ListView(

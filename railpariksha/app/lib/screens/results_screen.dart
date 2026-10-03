@@ -97,9 +97,11 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 progress: pct,
                 size: 140,
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
-                  Text(isSpeed ? '${widget.speedScore}' : '$correct/$total',
+                  CountUpText(isSpeed ? widget.speedScore : correct,
+                      format: isSpeed ? null : (v) => '$v/$total',
                       style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900)),
-                  Text(isSpeed ? context.tr('60 सेकंड में', 'in 60 sec') : '${(pct * 100).round()}%',
+                  CountUpText((pct * 100).round(),
+                      format: (v) => isSpeed ? context.tr('60 सेकंड में', 'in 60 sec') : '$v%',
                       style: const TextStyle(color: Colors.white70)),
                 ]),
               ),

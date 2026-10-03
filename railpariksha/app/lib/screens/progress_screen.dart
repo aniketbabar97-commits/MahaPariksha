@@ -35,11 +35,15 @@ class ProgressScreen extends StatelessWidget {
         Row(children: [
           Expanded(
             child: Text(context.tr('प्रगति 📈', 'Progress 📈'),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900)),
           ),
+          const SizedBox(width: 8),
           OutlinedButton.icon(
+            style: OutlinedButton.styleFrom(minimumSize: const Size(64, 36)),
             icon: const Icon(Icons.ios_share, size: 18),
-            label: Text(context.tr('साप्ताहिक कार्ड 🗓️', 'Weekly card 🗓️')),
+            label: Text(context.tr('साप्ताहिक कार्ड 🗓️', 'Weekly card 🗓️'), maxLines: 1, overflow: TextOverflow.ellipsis),
             onPressed: () {
               HapticFeedback.selectionClick();
               _shareWeeklyCard(context, p, lang);
@@ -63,8 +67,10 @@ class ProgressScreen extends StatelessWidget {
                     style: const TextStyle(color: Colors.white70)),
               ]),
             ),
-            Text('${p.xp}\nXP',
+            CountUpText(p.xp,
+                format: (v) => '$v\nXP',
                 textAlign: TextAlign.center,
+                duration: const Duration(milliseconds: 700),
                 style: const TextStyle(color: BrandColors.sunrise, fontWeight: FontWeight.w900, fontSize: 18)),
           ]),
         ),

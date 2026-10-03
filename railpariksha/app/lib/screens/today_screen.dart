@@ -72,7 +72,8 @@ class TodayScreen extends StatelessWidget {
                 progress: p.goalProgress,
                 size: 110,
                 child: Column(mainAxisSize: MainAxisSize.min, children: [
-                  Text('${p.todayCount}',
+                  CountUpText(p.todayCount,
+                      duration: const Duration(milliseconds: 700),
                       style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w900)),
                   Text('/ ${p.dailyGoal}', style: const TextStyle(color: Colors.white70)),
                 ]),
@@ -87,16 +88,26 @@ class TodayScreen extends StatelessWidget {
                     style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 17),
                   ),
                   const SizedBox(height: 6),
-                  Text('${level.of(lang)} · ${p.xp} XP', style: const TextStyle(color: BrandColors.sunrise, fontWeight: FontWeight.w700)),
+                  CountUpText(p.xp,
+                      duration: const Duration(milliseconds: 700),
+                      format: (v) => '${level.of(lang)} · $v XP',
+                      style: const TextStyle(color: BrandColors.sunrise, fontWeight: FontWeight.w700)),
                   if (level.nextXp != null) ...[
                     const SizedBox(height: 6),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(6),
-                      child: LinearProgressIndicator(
-                        value: (p.xp - level.minXp) / (level.nextXp! - level.minXp),
-                        minHeight: 7,
-                        backgroundColor: Colors.white24,
-                        color: BrandColors.sunrise,
+                      child: TweenAnimationBuilder<double>(
+                        tween: Tween(
+                            begin: 0,
+                            end: ((p.xp - level.minXp) / (level.nextXp! - level.minXp)).clamp(0.0, 1.0)),
+                        duration: const Duration(milliseconds: 900),
+                        curve: Curves.easeOutCubic,
+                        builder: (context, v, _) => LinearProgressIndicator(
+                          value: v,
+                          minHeight: 7,
+                          backgroundColor: Colors.white24,
+                          color: BrandColors.sunrise,
+                        ),
                       ),
                     ),
                   ],

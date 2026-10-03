@@ -12,6 +12,7 @@ import '../data/models.dart';
 import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/celebrate.dart';
+import '../widgets/common.dart';
 import 'results_screen.dart';
 
 const kSupportEmail = String.fromEnvironment('SUPPORT_EMAIL', defaultValue: 'support@railpariksha.app');
@@ -372,7 +373,9 @@ class _OptionTile extends StatelessWidget {
     };
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
-      child: AnimatedContainer(
+      child: TapScale(
+        scale: state == _OptState.idle ? 0.98 : 1.0,
+        child: AnimatedContainer(
         duration: const Duration(milliseconds: 220),
         decoration: BoxDecoration(
           color: bg,
@@ -401,6 +404,7 @@ class _OptionTile extends StatelessWidget {
               if (icon != null) Icon(icon, color: border),
             ]),
           ),
+        ),
         ),
       ),
     );
