@@ -35,9 +35,9 @@ DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
 # current_affairs is kept small: date-sensitive facts age out fast, so we don't
-# want thousands of them going stale. Everything else scales up to 1000/topic.
+# want thousands of them going stale. Everything else scales up to 500/topic.
 TARGETS = {"current_affairs": 15}
-DEFAULT_TARGET = 1000
+DEFAULT_TARGET = 500
 BATCH = 10
 
 ANGLES = [
