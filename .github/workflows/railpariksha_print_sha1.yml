@@ -1,0 +1,30 @@
+# One-off helper: prints the release keystore's SHA-1/SHA-256 fingerprints so
+# they can be pasted into Firebase Console -> Project Settings -> the Android
+# app -> Add fingerprint (needed for Google Sign-In). Run manually from the
+# Actions tab (workflow_dispatch) -- never on a push/PR, since there's no
+# reason to burn CI minutes on this except when someone actually needs the
+# fingerprint. Only the fingerprint lines are ever echoed; the keystore file,
+# its password, and the key alias/password are written to the runner's
+# ephemeral workspace and discarded when the job ends, never printed or
+# uploaded as an artifact.
+name: RailPariksha print SHA-1 fingerprint
+on:
+  workflow_dispatch:
+
+jobs:
+  print-fingerprint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: "17" }
+      - name: Decode keystore and print fingerprints
+        env:
+          KEYSTORE: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_PW: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          if [ -z "$KEYSTORE" ]; then echo "::error::ANDROID_KEYSTORE_BASE64 secret missing"; exit 1; fi
+          echo "$KEYSTORE" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          keytool -list -v -keystore "$RUNNER_TEMP/upload.jks" -storepass "$STORE_PW" -alias "$ALIAS" \
+            | grep -E "SHA1:|SHA256:"
+          rm -f "$RUNNER_TEMP/upload.jks"
