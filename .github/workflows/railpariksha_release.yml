@@ -93,6 +93,20 @@ jobs:
           # Gradle build type (isMinifyEnabled/R8 and our proguard-rules.pro all apply),
           # so it still exercises exactly the bug class this test exists to catch.
           script: cd railpariksha/app && flutter drive --driver=test_driver/integration_test.dart --target=integration_test/golden_path_test.dart -d emulator-5554 --profile --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      # Unconditional (unlike the GitHub Release step below, which only fires
+      # on an actual tag push): a workflow_dispatch run against a branch has
+      # no tag, so without this the signed AAB/APK would be built, verified
+      # by the e2e gate above, and then simply discarded with nothing
+      # downloadable anywhere -- this makes a manually-dispatched run useful
+      # on its own, not just as a tag-push-only path.
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: railpariksha-release-build
+          path: |
+            railpariksha/app/build/app/outputs/bundle/release/app-release.aab
+            railpariksha/app/build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 14
       - name: Upload to Google Play
         if: ${{ env.PLAY_JSON != '' }}
         uses: r0adkll/upload-google-play@v1
