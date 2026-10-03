@@ -161,7 +161,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                     context,
                     card: ScoreShareCard(
                       headline: context.tr('मैंने $title में यह स्कोर हासिल किया!', 'I scored this on $title!'),
-                      scoreText: isSpeed ? scoreStr : '$scoreStr',
+                      scoreText: scoreStr,
                       scoreSub: isSpeed
                           ? context.tr('60 सेकंड में सही उत्तर', 'correct answers in 60 sec')
                           : context.tr('सही उत्तर', 'correct answers'),
