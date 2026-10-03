@@ -29,6 +29,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   String? placementLevel;
 
   @override
+  void initState() {
+    super.initState();
+    // Exam selection is saved to Progress immediately (see _exam() below), so
+    // a user who picks it and then gets interrupted (call, OS kills the app)
+    // before finishing would otherwise restart from the language screen on
+    // relaunch -- annoying busywork for no reason, since that choice is
+    // already on disk. Resume straight to the placement step when it is.
+    final p = AppScope.read(context).progress;
+    if (p.examId != null) {
+      examId = p.examId;
+      step = 2;
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     final p = context.scope.progress;
     return Scaffold(
