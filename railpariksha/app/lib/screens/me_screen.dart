@@ -325,7 +325,8 @@ class _IdCard extends StatelessWidget {
     return Semantics(
       button: true,
       label: context.tr('अपना नाम बदलें', 'Edit your name'),
-      child: InkWell(
+      child: TapScale(
+        child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: () {
           // The only prominent, hero-sized tap target on this screen with no
@@ -363,6 +364,7 @@ class _IdCard extends StatelessWidget {
           const Icon(Icons.edit, color: Colors.white54, size: 18),
         ]),
         ),
+      ),
       ),
     );
   }

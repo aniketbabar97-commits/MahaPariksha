@@ -162,7 +162,8 @@ class _QuestionResultTile extends StatelessWidget {
     final subject = s.repo.subject(question.subject);
     final topic = s.repo.topic(question.subject, question.topic);
     final label = [subject?.name.of(lang), topic?.name.of(lang)].whereType<String>().join(' · ');
-    return Card(
+    return TapScale(
+      child: Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
@@ -203,6 +204,7 @@ class _QuestionResultTile extends StatelessWidget {
           ]),
         ),
       ),
+      ),
     );
   }
 }
@@ -219,7 +221,8 @@ class _NoteResultTile extends StatelessWidget {
     final topic = s.repo.topic(note.subject, note.topic);
     if (subject == null || topic == null) return const SizedBox.shrink();
     final label = '${subject.name.of(lang)} · ${topic.name.of(lang)}';
-    return Card(
+    return TapScale(
+      child: Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
         onTap: () {
@@ -248,6 +251,7 @@ class _NoteResultTile extends StatelessWidget {
             Icon(Icons.chevron_right, color: Theme.of(context).hintColor),
           ]),
         ),
+      ),
       ),
     );
   }

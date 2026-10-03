@@ -191,7 +191,8 @@ class TodayScreen extends StatelessWidget {
         ],
         const SizedBox(height: 16),
         // Reel Mode: the addictive endless swipe feed — most prominent CTA.
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
@@ -229,10 +230,12 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+          ),
         ),
         const SizedBox(height: 12),
         // Primary CTA
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () {
@@ -256,6 +259,7 @@ class TodayScreen extends StatelessWidget {
               ]),
             ),
           ),
+          ),
         ),
         if (weakCount > 0) ...[
           const SizedBox(height: 12),
@@ -274,7 +278,8 @@ class TodayScreen extends StatelessWidget {
         const SizedBox(height: 12),
         // Beast Mode: a timed, streak-multiplier sprint — the "advanced" adrenaline mode,
         // gated behind decent overall accuracy so it reads as an earned challenge.
-        Card(
+        TapScale(
+          child: Card(
           clipBehavior: Clip.antiAlias,
           child: InkWell(
             onTap: () => beastUnlocked
@@ -333,6 +338,7 @@ class TodayScreen extends StatelessWidget {
                 if (beastUnlocked) const Icon(Icons.chevron_right, color: Colors.white70),
               ]),
             ),
+          ),
           ),
         ),
         const SizedBox(height: 12),

@@ -52,7 +52,8 @@ class CaArchiveScreen extends StatelessWidget {
                 final date = dates[i];
                 final qs = byDate[date]!;
                 final count = qs.length.clamp(0, 10);
-                return Card(
+                return TapScale(
+                  child: Card(
                   clipBehavior: Clip.antiAlias,
                   child: InkWell(
                     onTap: () {
@@ -81,6 +82,7 @@ class CaArchiveScreen extends StatelessWidget {
                         const Icon(Icons.chevron_right),
                       ]),
                     ),
+                  ),
                   ),
                 );
               },

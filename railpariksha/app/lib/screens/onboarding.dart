@@ -401,7 +401,9 @@ class _PlacementOption extends StatelessWidget {
     final border = selected ? BrandColors.saffron : scheme.outlineVariant;
     final bg =
         selected ? BrandColors.saffron.withValues(alpha: 0.12) : Theme.of(context).cardTheme.color ?? scheme.surface;
-    return AnimatedContainer(
+    return TapScale(
+      scale: selected ? 1.0 : 0.98,
+      child: AnimatedContainer(
       duration: const Duration(milliseconds: 180),
       decoration: BoxDecoration(
         color: bg,
@@ -424,6 +426,7 @@ class _PlacementOption extends StatelessWidget {
             if (selected) const Icon(Icons.radio_button_checked, color: BrandColors.saffron),
           ]),
         ),
+      ),
       ),
     );
   }

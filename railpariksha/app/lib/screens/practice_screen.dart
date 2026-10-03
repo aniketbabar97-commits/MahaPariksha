@@ -153,7 +153,8 @@ class _QuickTile extends StatelessWidget {
   const _QuickTile({required this.icon, required this.color, required this.label, required this.onTap});
 
   @override
-  Widget build(BuildContext context) => Card(
+  Widget build(BuildContext context) => TapScale(
+        child: Card(
         clipBehavior: Clip.antiAlias,
         child: InkWell(
           onTap: () {
@@ -168,6 +169,7 @@ class _QuickTile extends StatelessWidget {
               Text(label, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
             ]),
           ),
+        ),
         ),
       );
 }
