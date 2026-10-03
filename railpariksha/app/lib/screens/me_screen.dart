@@ -34,8 +34,10 @@ class MeScreen extends StatelessWidget {
         const SizedBox(height: 12),
         if (exam != null) _IdCard(p: p, examName: exam.name.of(lang)),
         if (AuthService.available) _AccountCard(p: p),
-        SectionTitle(context.tr('प्रीमियम 👑', 'Premium 👑')),
-        _PremiumCard(p: p, purchases: s.purchases),
+        if (kShowPremiumPurchase) ...[
+          SectionTitle(context.tr('प्रीमियम 👑', 'Premium 👑')),
+          _PremiumCard(p: p, purchases: s.purchases),
+        ],
         SectionTitle(context.tr('मेरी तैयारी 🎯', 'My preparation 🎯')),
         Card(
           child: Column(children: [

@@ -21,6 +21,7 @@ WHY ASPIRANTS LOVE RAILPARIKSHA
 • Flashcards with smart spaced repetition — remember before you forget
 • Mistake book — every wrong answer comes back until you master it
 • Full mock tests with a timer and the real negative-marking rules of your exam (1/3 for RRB, 1/4 for RPF)
+• Weekly leaderboard — see your rank against other aspirants preparing for your exam
 • 60-second speed round — perfect for platform waits and train journeys
 • Streaks, XP, train-class levels (General → Rajdhani), goal ring and daily motivation to keep you going
 • Works fully offline · small download · Hindi ⇄ English on every question
@@ -47,6 +48,7 @@ RailPariksha — भारतीय रेलवे भर्ती परीक
 • रोज़ का Daily 10 — आपके कमज़ोर टॉपिक पर खास प्रश्न
 • स्मार्ट फ्लैशकार्ड और गलतियों की कॉपी
 • समय सीमा के साथ मॉक टेस्ट (असली नकारात्मक अंकन के नियमों के साथ)
+• साप्ताहिक लीडरबोर्ड — अन्य अभ्यर्थियों के बीच अपनी रैंक देखें
 • स्ट्रीक, XP, ट्रेन-क्लास स्तर और रोज़ाना प्रेरणा 🔥
 • इंटरनेट के बिना चलता है · कोई पंजीकरण नहीं · कोई छुपा खर्च नहीं
 

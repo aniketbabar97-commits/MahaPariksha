@@ -9,6 +9,7 @@ import '../logic/leaderboard_service.dart';
 import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
+import '../widgets/explanation_player.dart';
 import '../widgets/share_card.dart';
 
 class ResultsScreen extends StatefulWidget {
@@ -235,7 +236,7 @@ class _ReviewTile extends StatelessWidget {
             Text('✗ ${opts[answer!]}', style: const TextStyle(color: BrandColors.wrong)),
           Text('✓ ${opts[q.answer]}', style: const TextStyle(color: BrandColors.correct, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
-          Text(q.explanation.of(lang), style: const TextStyle(height: 1.5)),
+          ExplanationPlayer(text: q.explanation.of(lang)),
           if (q.hook != null) ...[
             const SizedBox(height: 6),
             Text('💡 ${q.hook!.of(lang)}', style: const TextStyle(height: 1.5)),

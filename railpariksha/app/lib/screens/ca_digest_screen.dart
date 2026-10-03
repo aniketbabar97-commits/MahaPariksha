@@ -143,7 +143,7 @@ class _DigestCard extends StatelessWidget {
               Expanded(
                 child: Text(
                   context.scope.repo.topic(q.subject, q.topic)?.name.of(lang) ?? q.topic,
-                  style: const TextStyle(fontWeight: FontWeight.w700, color: BrandColors.saffron, fontSize: 13),
+                  style: TextStyle(fontWeight: FontWeight.w700, color: BrandColors.saffronText(context), fontSize: 13),
                 ),
               ),
             ]),
