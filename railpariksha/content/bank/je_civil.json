@@ -42,8 +42,8 @@
    "5 to 10 percent"
   ],
   "a": 0,
-  "e_hi": "ईंट की मिट्टी में सिलिका की अधिकता ईंट को आकार बनाए रखने में मदद करती है और दरारें रोकती है।",
-  "e_en": "Excess silica in brick earth helps the brick retain its shape and prevents cracking."
+  "e_hi": "ईंट की मिट्टी में 50 से 60 प्रतिशत सिलिका ईंट को आकार में बनाए रखने और सिकुड़न रोकने में मदद करती है; इससे अधिक मात्रा में सिलिका ईंट को भंगुर बना देती है।",
+  "e_en": "Silica content of 50 to 60 percent in brick earth helps the brick retain its shape and resist shrinkage; excess silica beyond this, however, makes the brick brittle."
  },
  {
   "id": "rp-je_c-f00003",
@@ -2503,8 +2503,8 @@
    "50000 square meters"
   ],
   "a": 0,
-  "e_hi": "क्षेत्रफल का अनुपात = (पैमाने का वर्ग) = (1/1000)^2 = 1/1,000,000। 5 सेमी^2 = 5 * (1000*1000) / 10000 = 5000 मीटर^2।",
-  "e_en": "Area ratio = (Scale)^2 = (1/1000)^2 = 1/1,000,000. 5 cm^2 = 5 * (1000*1000) / 10000 = 5000 m^2."
+  "e_hi": "क्षेत्रफल का अनुपात = (रेखीय पैमाना)² = (1:1000)² = 1:1,000,000। 1 वर्ग सेमी नक्शे पर = 1,000,000 वर्ग सेमी = 100 वर्ग मीटर भूमि पर। अतः 5 वर्ग सेमी = 5 × 100 = 500 वर्ग मीटर।",
+  "e_en": "Area ratio = (linear scale)² = (1:1000)² = 1:1,000,000. 1 cm² on the map = 1,000,000 cm² = 100 m² on the ground. Hence, 5 cm² = 5 × 100 = 500 m²."
  },
  {
   "id": "rp-je_c-f00112",
@@ -6551,8 +6551,8 @@
    "0.25"
   ],
   "a": 1,
-  "e_hi": "सूत्र e + 0.15 = (60*60)/(127*100) का उपयोग करें। हल करने पर e = 0.36 - 0.15 = 0.21, लेकिन यहाँ पूर्ण घर्षण के साथ गणना करने पर 0.13 प्राप्त होता है।",
-  "e_en": "Using the formula e + 0.15 = (60*60)/(127*100). Solving gives e = 0.36 - 0.15 = 0.21, however with given standard constraints, 0.13 is the derived requirement."
+  "e_hi": "सूत्र e + f = v²/(127R) का उपयोग करें: (60)²/(127×100) = 3600/12700 ≈ 0.283। अतः e = 0.283 - 0.15 = 0.133 ≈ 0.13।",
+  "e_en": "Using e + f = v²/(127R): (60)²/(127×100) = 3600/12700 ≈ 0.283. Hence, e = 0.283 - 0.15 = 0.133 ≈ 0.13."
  },
  {
   "id": "rp-je_c-f00288",
@@ -7540,8 +7540,8 @@
    "350 meters"
   ],
   "a": 3,
-  "e_hi": "R = v^2 / (127 * (e + f))। गणना करने पर R लगभग 215 मीटर आता है।",
-  "e_en": "R = v^2 / (127 * (e + f)). The calculation results in R approximately 215 meters."
+  "e_hi": "R = v² / (127 × (e + f)) = 100² / (127 × 0.22) = 10000 / 27.94 ≈ 358 मीटर, जो निकटतम विकल्प 350 मीटर है।",
+  "e_en": "R = v² / (127 × (e + f)) = 100² / (127 × 0.22) = 10000 / 27.94 ≈ 358 meters, closest to the option 350 meters."
  },
  {
   "id": "rp-je_c-f00331",
@@ -14532,8 +14532,8 @@
    "Atterberg"
   ],
   "a": 1,
-  "e_hi": "ए.डब्ल्यू. स्कैम्पटन ने 1944 में क्ले की सेंसिटिविटी को परिभाषित किया था।",
-  "e_en": "A.W. Skempton defined the sensitivity of clay in 1944."
+  "e_hi": "मृदा की संवेदनशीलता (Sensitivity) शब्द का प्रतिपादन सबसे पहले टरज़ागी (Terzaghi) ने 1944 में किया था।",
+  "e_en": "The term 'Sensitivity' of soil was first coined by Terzaghi in 1944."
  },
  {
   "id": "rp-je_c-f00640",
@@ -15175,7 +15175,7 @@
    "The soil is very dense",
    "The soil has high water content"
   ],
-  "a": 0,
+  "a": 1,
   "e_hi": "शून्य वायु रिक्तता रेखा सैद्धांतिक सीमा है; इससे अधिक सघनता प्राप्त करना भौतिक रूप से असंभव है।",
   "e_en": "The Zero Air Voids Line represents the theoretical limit of compaction; it is physically impossible for a compaction curve to exist to its left."
  },
@@ -16670,7 +16670,7 @@
    "Casagrande",
    "Bishop"
   ],
-  "a": 1,
+  "a": 0,
   "e_hi": "ए.डब्ल्यू. स्केम्पटन ने 1953 में मृदा की संवेदनशीलता के गुणांक को प्रस्तावित किया था।",
   "e_en": "A.W. Skempton proposed the coefficient of sensitivity for soil in 1953."
  },
@@ -19477,8 +19477,8 @@
    "0.50"
   ],
   "a": 0,
-  "e_hi": "IRC के अनुसार, 100 किमी/घंटा गति के लिए अनुशंसित अनुदैर्ध्य घर्षण गुणांक (longitudinal friction) 0.36 है।",
-  "e_en": "As per IRC, the recommended longitudinal friction coefficient for 100 kmph speed is 0.36."
+  "e_hi": "IRC मानक सारणी के अनुसार, 100 किमी/घंटा गति के लिए अनुशंसित अनुदैर्ध्य घर्षण गुणांक (longitudinal friction coefficient) 0.35 है।",
+  "e_en": "As per the IRC standard table, the recommended longitudinal friction coefficient for a design speed of 100 kmph is 0.35."
  },
  {
   "id": "rp-je_c-f00855",
@@ -19615,8 +19615,8 @@
    "M+1"
   ],
   "a": 2,
-  "e_hi": "यहाँ 'M' रेल की लंबाई (मीटर में) को दर्शाता है। M+2 का अर्थ है रेल की लंबाई के साथ 2 अतिरिक्त स्लीपर।",
-  "e_en": "Here 'M' represents the length of the rail in meters. M+2 indicates the number of sleepers per rail length."
+  "e_hi": "यहाँ 'M' रेल की लंबाई (मीटर में) को दर्शाता है। उच्च गति और भारी यातायात वाले खंडों के लिए स्लीपर घनत्व का सूत्र M+7 प्रयुक्त होता है, जो सामान्य खंडों (M+4) की तुलना में अधिक स्लीपर प्रदान करता है।",
+  "e_en": "Here 'M' represents the length of the rail in meters. For high-speed and heavy-traffic sections, the sleeper density formula used is M+7, providing more sleepers than for ordinary sections (M+4)."
  },
  {
   "id": "rp-je_c-f00861",
@@ -23916,8 +23916,8 @@
    "Data insufficient"
   ],
   "a": 0,
-  "e_hi": "परफेक्ट ट्रस के लिए m = 2j - 3 होना चाहिए। यहाँ 7 > (2*5 - 3) = 7, यह एक रिडंडेंट ट्रस है।",
-  "e_en": "For a perfect truss, m = 2j - 3. Here, 7 > (2*5 - 3) = 7, making it a redundant truss."
+  "e_hi": "परफेक्ट ट्रस के लिए m = 2j - 3 होना चाहिए। यहाँ 2×5 - 3 = 7 = m, अतः यह एक परफेक्ट (स्टेबल व निश्चित) ट्रस है।",
+  "e_en": "For a perfect truss, m = 2j - 3. Here, 2×5 - 3 = 7 = m, so it is a perfect (stable and determinate) truss."
  },
  {
   "id": "rp-je_c-f01049",
@@ -23970,8 +23970,8 @@
   "s": "je_civil",
   "t": "structural_analysis",
   "d": 3,
-  "q_hi": "यदि बीम का स्पैन दोगुना कर दिया जाए, तो उसके विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
-  "q_en": "If the span of a beam is doubled, what will be the effect on its deflection?",
+  "q_hi": "यदि केंद्रीय बिंदु भार वाले एक सरल आधारित बीम (simply supported beam) का स्पैन दोगुना कर दिया जाए (अन्य कारक स्थिर रहें), तो उसके विक्षेपण (deflection) पर क्या प्रभाव पड़ेगा?",
+  "q_en": "If the span of a simply supported beam carrying a central point load is doubled (keeping other factors constant), what will be the effect on its deflection?",
   "o_hi": [
    "यह दोगुना हो जाएगा",
    "यह चार गुना हो जाएगा",
@@ -23985,8 +23985,8 @@
    "It will be halved"
   ],
   "a": 2,
-  "e_hi": "साधारण बीम के लिए विक्षेपण स्पैन की चौथी घात (L^4) के समानुपाती होता है, इसलिए लंबाई दोगुनी होने पर यह 16 गुना हो जाता है; यहाँ विकल्प 8 गुना (भार के संदर्भ में) अक्सर भ्रमित करता है।",
-  "e_en": "For a standard beam, deflection is proportional to the fourth power of the span (L^4), making it 16 times; however, in many contexts, students confuse this with simpler load-span relationships."
+  "e_hi": "केंद्रीय बिंदु भार वाले सरल बीम के लिए विक्षेपण δ = PL³/48EI होता है, यानी यह स्पैन के घन (L³) के समानुपाती है। स्पैन दोगुना होने पर विक्षेपण 2³ = 8 गुना हो जाता है।",
+  "e_en": "For a simply supported beam with a central point load, deflection δ = PL³/48EI, i.e., it is proportional to the cube of the span (L³). Doubling the span increases deflection by 2³ = 8 times."
  },
  {
   "id": "rp-je_c-f01052",
@@ -26952,8 +26952,8 @@
    "20.4 meters"
   ],
   "a": 1,
-  "e_hi": "hL = (f L v^2) / (2 g D)। वेग v = Q/A = 0.05 / (π/4 × 0.2^2) ≈ 1.59 m/s। मान रखने पर hL ≈ 8.15 मीटर।",
-  "e_en": "hL = (f L v^2) / (2 g D). Velocity v = Q/A = 0.05 / (π/4 × 0.2^2) ≈ 1.59 m/s. Substituting values, hL ≈ 8.15 meters."
+  "e_hi": "hL = (f L v²) / (2 g D)। वेग v = Q/A = 0.05 / (π/4 × 0.2²) ≈ 1.59 m/s। मान रखने पर hL = (0.02×1000×1.59²)/(2×9.81×0.2) ≈ 12.9 मीटर, जो निकटतम विकल्प 12.5 मीटर है।",
+  "e_en": "hL = (f L v²) / (2 g D). Velocity v = Q/A = 0.05 / (π/4 × 0.2²) ≈ 1.59 m/s. Substituting values, hL = (0.02×1000×1.59²)/(2×9.81×0.2) ≈ 12.9 meters, closest to the option 12.5 meters."
  },
  {
   "id": "rp-je_c-f01181",
@@ -27320,8 +27320,8 @@
    "500 mg/l"
   ],
   "a": 3,
-  "e_hi": "सूत्र: BOD5 = Lo (1 - e^-kt)। यहाँ 200 = Lo (1 - e^-0.1*5)। गणना करने पर Lo लगभग 316 mg/l आता है।",
-  "e_en": "Formula: BOD5 = Lo (1 - e^-kt). Here 200 = Lo (1 - e^-0.1*5). Solving for Lo gives approximately 316 mg/l."
+  "e_hi": "सूत्र: BOD5 = Lo (1 - e^-kt)। यहाँ kt = 0.1×5 = 0.5। e^-0.5 ≈ 0.6065, इसलिए 1-e^-0.5 ≈ 0.3935। Lo = 200 / 0.3935 ≈ 508 mg/l, जो निकटतम विकल्प 500 mg/l है।",
+  "e_en": "Formula: BOD5 = Lo (1 - e^-kt). Here kt = 0.1×5 = 0.5. e^-0.5 ≈ 0.6065, so 1-e^-0.5 ≈ 0.3935. Lo = 200 / 0.3935 ≈ 508 mg/l, closest to the option 500 mg/l."
  },
  {
   "id": "rp-je_c-f01197",
@@ -27759,29 +27759,6 @@
   "a": 1,
   "e_hi": "बीओडी = (DO_initial - DO_final) * (Dilution Factor)। यहाँ डाइल्यूशन फैक्टर 300/2 = 150 है। 6 * 150 = 900 मिलीग्राम प्रति लीटर।",
   "e_en": "BOD = (DO_initial - DO_final) * (Dilution Factor). Here, dilution factor is 300/2 = 150. 6 * 150 = 900 mg/L."
- },
- {
-  "id": "rp-je_c-f01216",
-  "s": "je_civil",
-  "t": "environmental_engineering",
-  "d": 2,
-  "q_hi": "यदि किसी जल स्रोत में क्लोराइड की सांद्रता 250 मिलीग्राम प्रति लीटर है और पानी की कुल कठोरता 300 मिलीग्राम प्रति लीटर है, तो कठोरता का अंश (डिग्री में) क्या होगा?",
-  "q_en": "If the chloride concentration in a water source is 250 mg/L and total hardness is 300 mg/L, what is the hardness fraction?",
-  "o_hi": [
-   "0.54",
-   "0.83",
-   "1.20",
-   "0.45"
-  ],
-  "o_en": [
-   "0.54",
-   "0.83",
-   "1.20",
-   "0.45"
-  ],
-  "a": 1,
-  "e_hi": "कठोरता का अंश निकालने के लिए कठोरता को कुल घुलित ठोस या मानक सांद्रता से विभाजित किया जाता है। यहाँ सीधे अनुपात 250/300 है, लेकिन प्रश्न में कठोरता का मान ही मुख्य आधार है।",
-  "e_en": "Hardness fraction is calculated by dividing hardness by total dissolved solids. Here, the ratio is 250/300."
  },
  {
   "id": "rp-je_c-f01217",
@@ -29252,8 +29229,8 @@
    "25 percent"
   ],
   "a": 2,
-  "e_hi": "प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा उनके सूखे वजन का अधिकतम 15% निर्धारित है।",
-  "e_en": "The water absorption limit for first-class bricks is set at a maximum of 15% of their dry weight."
+  "e_hi": "प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा उनके सूखे वजन के अधिकतम 20% निर्धारित है।",
+  "e_en": "The water absorption limit for first-class bricks is set at a maximum of 20% of their dry weight."
  },
  {
   "id": "rp-je_c-f01282",
@@ -31196,19 +31173,19 @@
   "q_en": "If timber suffers from 'Wet Rot', what is the root cause?",
   "o_hi": [
    "सूखी हवा का प्रभाव",
-   "बार-बार गीला और सूखा होना",
+   "लकड़ी का लगातार नम और सीलन भरी स्थिति में रहना",
    "दीमक का हमला",
    "अत्यधिक गर्मी"
   ],
   "o_en": [
    "Effect of dry air",
-   "Repeated alternate wetting and drying",
+   "Timber remaining continuously damp/moist",
    "Termite attack",
    "Excessive heat"
   ],
   "a": 1,
-  "e_hi": "वेट रॉट कवक (fungi) के कारण होता है जो लकड़ी में नमी के बार-बार बदलने से सक्रिय हो जाते हैं।",
-  "e_en": "Wet rot is caused by fungi that thrive in timber when it is subjected to cycles of alternate wetting and drying."
+  "e_hi": "वेट रॉट कवक (fungi) के कारण होता है जो लकड़ी के लगातार नम रहने (जैसे ज़मीन के संपर्क या रिसाव) पर सक्रिय हो जाते हैं।",
+  "e_en": "Wet rot is caused by fungi that thrive when timber remains persistently damp (such as from ground contact or leakage)."
  },
  {
   "id": "rp-je_c-f01368",
@@ -31698,8 +31675,8 @@
   "s": "je_civil",
   "t": "building_materials",
   "d": 2,
-  "q_hi": "किस वर्ष में भारतीय मानक ब्यूरो (BIS) ने सीमेंट के लिए आईएस कोड 456 प्रकाशित किया?",
-  "q_en": "In which year did the Bureau of Indian Standards (BIS) publish the IS Code 456 for concrete?",
+  "q_hi": "भारतीय मानक ब्यूरो (BIS) द्वारा सीमेंट कंक्रीट के लिए आईएस कोड 456 का वर्तमान (नवीनतम) संशोधन किस वर्ष प्रकाशित किया गया?",
+  "q_en": "In which year was the current (most recent) revision of IS Code 456 for concrete published by BIS?",
   "o_hi": [
    "1978",
    "2000",
@@ -31713,8 +31690,8 @@
    "1964"
   ],
   "a": 1,
-  "e_hi": "आईएस 456:2000 सादा और प्रबलित कंक्रीट के लिए भारतीय मानक कोड है।",
-  "e_en": "IS 456:2000 is the Indian Standard code of practice for plain and reinforced concrete."
+  "e_hi": "आईएस 456:2000 सादा और प्रबलित कंक्रीट के लिए भारतीय मानक कोड का नवीनतम संशोधन है (यह कोड मूलतः 1953 में प्रकाशित हुआ था)।",
+  "e_en": "IS 456:2000 is the latest revision of the Indian Standard code of practice for plain and reinforced concrete (the code was originally published in 1953)."
  },
  {
   "id": "rp-je_c-f01390",
@@ -31782,8 +31759,8 @@
    "M-60"
   ],
   "a": 3,
-  "e_hi": "भारतीय रेलवे के प्री-स्ट्रेस्ड कंक्रीट स्लीपरों के लिए M-45 ग्रेड का उपयोग मानक है।",
-  "e_en": "M-45 grade concrete is the standard for pre-stressed concrete sleepers in Indian Railways."
+  "e_hi": "भारतीय रेलवे के प्री-स्ट्रेस्ड कंक्रीट (PSC) स्लीपरों के लिए M-60 ग्रेड कंक्रीट का उपयोग मानक है, जो उच्च शक्ति और दीर्घायु सुनिश्चित करता है।",
+  "e_en": "M-60 grade concrete is the standard used for pre-stressed concrete (PSC) sleepers in Indian Railways, ensuring high strength and durability."
  },
  {
   "id": "rp-je_c-f01393",
@@ -31966,8 +31943,8 @@
    "180 kg"
   ],
   "a": 3,
-  "e_hi": "चूंकि अनुपात 1(सीमेंट):3(रेत) है, सीमेंट = 60/3 = 20 किलोग्राम।",
-  "e_en": "Since the ratio is 1(cement):3(sand), cement = 60/3 = 20 kg."
+  "e_hi": "अनुपात रेत : सीमेंट = 1 : 3 है। यहाँ रेत (60 किग्रा) अनुपात में 1 भाग है, अतः 1 भाग = 60 किग्रा। सीमेंट 3 भाग है, अतः सीमेंट = 3 × 60 = 180 किलोग्राम।",
+  "e_en": "The ratio of sand : cement is 1 : 3. Here sand (60 kg) corresponds to 1 part, so 1 part = 60 kg. Cement is 3 parts, so cement = 3 × 60 = 180 kg."
  },
  {
   "id": "rp-je_c-f01401",
@@ -34381,8 +34358,8 @@
    "25 percent"
   ],
   "a": 2,
-  "e_hi": "भारतीय मानकों के अनुसार, प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा 15 प्रतिशत निर्धारित है।",
-  "e_en": "According to Indian standards, the water absorption limit for first-class bricks is set at 15 percent."
+  "e_hi": "भारतीय मानकों के अनुसार, प्रथम श्रेणी की ईंटों के लिए जल अवशोषण सीमा 20 प्रतिशत निर्धारित है।",
+  "e_en": "According to Indian standards, the water absorption limit for first-class bricks is set at 20 percent."
  },
  {
   "id": "rp-je_c-f01507",

@@ -3845,8 +3845,8 @@
    "Son’s son"
   ],
   "a": 0,
-  "e_hi": "भतीजा भाई या बहन का पुत्र होता है।",
-  "e_en": "A nephew (भतीजा) is the son of one’s brother or sister."
+  "e_hi": "'भतीजा' विशेष रूप से भाई के पुत्र को कहा जाता है, जबकि बहन के पुत्र को 'भांजा' कहा जाता है। इस प्रकार 'भतीजा' = भाई का पुत्र।",
+  "e_en": "The term 'भतीजा' specifically refers to one's brother's son; a sister's son is instead called 'भांजा'. So 'भतीजा' = brother's son."
  },
  {
   "id": "rp-rea-s00192",
@@ -4106,8 +4106,8 @@
   "s": "reasoning",
   "t": "blood_relations",
   "d": 1,
-  "q_hi": "रमेश का दादा, रमेश के पिता के पिता के समान व्यक्ति है। रमेश के पिता की माँ, रमेश की परदादी हैं। रमेश और उसकी परदादी के बीच कितने पीढ़ी का अंतर है?",
-  "q_en": "Ramesh's grandfather is the same person as his father's father. Ramesh's father's mother is his great-grandmother. How many generations separate Ramesh and his great-grandmother?",
+  "q_hi": "रमेश का दादा, रमेश के पिता के पिता के समान व्यक्ति है। रमेश के पिता की माँ उसकी दादी है। रमेश और उसकी दादी के बीच कितनी पीढ़ियों का अंतर है?",
+  "q_en": "Ramesh's grandfather is the same person as his father's father. Ramesh's father's mother is his grandmother. How many generations separate Ramesh and his grandmother?",
   "o_hi": [
    "1",
    "2",
@@ -4121,8 +4121,8 @@
    "4"
   ],
   "a": 1,
-  "e_hi": "रमेश और परदादी के बीच दो पीढ़ी का अंतर है।",
-  "e_en": "There is a two-generation gap between Ramesh and his great-grandmother."
+  "e_hi": "रमेश (पीढ़ी 1) से उसके पिता (पीढ़ी 2) और फिर दादी (पीढ़ी 3) तक जाने पर रमेश और उसकी दादी के बीच दो पीढ़ियों का अंतर है।",
+  "e_en": "Going from Ramesh (generation 1) to his father (generation 2) to his grandmother (generation 3), there is a two-generation gap between Ramesh and his grandmother."
  },
  {
   "id": "rp-rea-s00208",
@@ -5684,9 +5684,9 @@
    "48",
    "42"
   ],
-  "a": 1,
-  "e_hi": "हर बार घटाव 10, 9, 8, 7 है। अगला घटाव 6, इसलिए 63-6=57।",
-  "e_en": "Subtracting amounts are 10, 9, 8, 7. Next subtract 6, so 63-6=57."
+  "a": 0,
+  "e_hi": "घटाव क्रम 10, 9, 8, 7 है; इसलिए अगला घटाव 6 होगा। 63-6=57, जो विकल्प [0] है।",
+  "e_en": "The amounts subtracted follow the sequence 10, 9, 8, 7; so the next amount subtracted is 6. 63-6=57, which is option [0]."
  },
  {
   "id": "rp-rea-s00283",
@@ -7479,8 +7479,8 @@
    "Hexagon"
   ],
   "a": 1,
-  "e_hi": "श्रेणी हर तीन चरणों पर दोहराती है: वर्ग → त्रिकोण → वृत्त। इसलिए चौथा चरण फिर से वर्ग, पाँचवाँ चरण वृत्त।",
-  "e_en": "The sequence repeats every three shapes: square → triangle → circle. After square comes circle."
+  "e_hi": "श्रेणी हर तीन आकृतियों पर दोहराती है: वर्ग → त्रिकोण → वृत्त। चौथा पद (वर्ग) इस चक्र को दोहराता है, इसलिए पांचवां पद त्रिकोण होगा।",
+  "e_en": "The sequence repeats every three shapes: square → triangle → circle. The fourth term (square) restarts the cycle, so the fifth term is triangle."
  },
  {
   "id": "rp-rea-s00365",
@@ -7594,8 +7594,8 @@
    "Star"
   ],
   "a": 0,
-  "e_hi": "कॉलम1 में वृत्त, त्रिकोण, ? हैं; दो वृत्त और एक त्रिकोण चाहिए, इसलिए तीसरी आकृति त्रिकोण होनी चाहिए।",
-  "e_en": "Column 1 currently has circle, triangle, ?. To have two circles and one triangle, the missing shape must be a triangle."
+  "e_hi": "कॉलम 1 में अभी वृत्त, त्रिकोण, ? है। हर कॉलम में दो वृत्त और एक त्रिकोण होना चाहिए, इसलिए तीसरी आकृति वृत्त होनी चाहिए।",
+  "e_en": "Column 1 currently has circle, triangle, ?. Since each column must have two circles and one triangle, the missing shape must be a circle."
  },
  {
   "id": "rp-rea-s00370",
@@ -7814,18 +7814,18 @@
   "o_hi": [
    "वृत्त",
    "त्रिभुज",
-   "वर्ग",
+   "अंडाकार",
    "आयत"
   ],
   "o_en": [
    "Circle",
    "Triangle",
-   "Square",
+   "Ellipse",
    "Rectangle"
   ],
   "a": 0,
-  "e_hi": "वृत्त को घुमाने पर उसका स्वरूप नहीं बदलता।",
-  "e_en": "A circle remains the same after any rotation."
+  "e_hi": "वृत्त को किसी भी कोण पर घुमाने पर उसका स्वरूप नहीं बदलता, जबकि त्रिभुज, अंडाकार और आयत 90° घुमाने पर अपना रूप बदल देते हैं।",
+  "e_en": "A circle remains unchanged after rotation by any angle, whereas the triangle, ellipse and rectangle all change orientation after a 90° rotation."
  },
  {
   "id": "rp-rea-s00380",
@@ -8100,8 +8100,8 @@
    "West"
   ],
   "a": 3,
-  "e_hi": "चार कदमों के बाद वह फिर उत्तर की ओर लौटता है, इसलिए पाँचवाँ कदम भी उत्तर की ओर है।",
-  "e_en": "After four turns he returns to north; the fifth turn brings him back to north."
+  "e_hi": "उत्तर से शुरू करके हर 90° बायीं ओर मोड़ पर दिशा इस प्रकार बदलती है: उत्तर→पश्चिम→दक्षिण→पूर्व→उत्तर→पश्चिम। चौथे मोड़ पर वह फिर उत्तर की ओर आता है, और पांचवें मोड़ पर वह पश्चिम की ओर मुड़ जाता है।",
+  "e_en": "Starting from north, each 90° left turn changes the facing direction: North→West→South→East→North→West. After the fourth turn he is back to north, and the fifth turn brings him to face West."
  },
  {
   "id": "rp-rea-s00392",
@@ -8426,29 +8426,6 @@
   "e_en": "It’s a 1 to 9 sequential grid; the missing middle number is 5."
  },
  {
-  "id": "rp-rea-s00408",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 3,
-  "q_hi": "एक घन के ऊपर लाल, सामने नीला रंग है। इसे ऊर्ध्वाधर अक्ष के चारों ओर 90° घड़ी की दिशा में घुमाने पर सामने कौन सा रंग आएगा? (नीचे दिया गया रंग मानचित्र देखें)",
-  "q_en": "A cube has a red top and blue front. After a 90° clockwise rotation around the vertical axis, which color will face front?",
-  "o_hi": [
-   "लाल",
-   "नीला",
-   "हरा",
-   "पीला"
-  ],
-  "o_en": [
-   "Red",
-   "Blue",
-   "Green",
-   "Yellow"
-  ],
-  "a": 2,
-  "e_hi": "90° घुमाव पर सामने का पक्ष दाहिना पक्ष बन जाता है, जो हरा है।",
-  "e_en": "After a 90° clockwise rotation, the front becomes the right face, which is green."
- },
- {
   "id": "rp-rea-s00409",
   "s": "reasoning",
   "t": "non_verbal_reasoning",
@@ -8606,8 +8583,8 @@
    "Image is always inverted"
   ],
   "a": 0,
-  "e_hi": "पानी की सतह पर परावर्तित प्रकाश के कारण प्रतिमा वस्तु के ऊपर दिखाई देती है।",
-  "e_en": "The reflected image appears above the object on a water surface."
+  "e_hi": "पानी की सतह दर्पण की तरह कार्य करती है; परावर्तन के कारण वस्तु का प्रतिबिंब वस्तु के नीचे (जल सतह के भीतर) दिखाई देता है।",
+  "e_en": "A water surface behaves like a mirror; due to reflection, the image of an object above the water appears below the object, beneath the surface."
  },
  {
   "id": "rp-rea-s00416",
@@ -8675,8 +8652,8 @@
    "No image will form"
   ],
   "a": 0,
-  "e_hi": "प्रतिमा की चमक वस्तु से दूरी पर निर्भर नहीं करती, परंतु निकटवर्ती मोमबत्ती की प्रतिमा दूरी कम होने के कारण स्पष्ट दिखेगी।",
-  "e_en": "Image brightness is not affected by distance, but a closer candle’s image appears clearer due to smaller distance."
+  "e_hi": "प्रकाश की तीव्रता दूरी के वर्ग के व्युत्क्रमानुपाती होती है (प्रतिलोम वर्ग नियम), इसलिए निकटवर्ती मोमबत्ती की प्रतिमा अधिक तेज़ दिखाई देगी, जबकि दूरस्थ मोमबत्ती की प्रतिमा अपेक्षाकृत मंद दिखेगी।",
+  "e_en": "Light intensity decreases with the square of the distance (inverse-square law), so the closer candle's image will appear brighter than the farther candle's image."
  },
  {
   "id": "rp-rea-s00419",
@@ -8748,35 +8725,12 @@
   "e_en": "The image size is equal to the object size in a plane mirror."
  },
  {
-  "id": "rp-rea-s00422",
-  "s": "reasoning",
-  "t": "mirror_water_image",
-  "d": 3,
-  "q_hi": "किस स्थिति में पानी की सतह पर बनी प्रतिमा वास्तविक होगी?",
-  "q_en": "Under what condition will the image on a water surface be real?",
-  "o_hi": [
-   "वस्तु पानी के ऊपर हो",
-   "वस्तु पानी के नीचे हो",
-   "वस्तु फोकस पर हो",
-   "वस्तु अनंत दूरी पर हो"
-  ],
-  "o_en": [
-   "Object above water",
-   "Object below water",
-   "Object at focus",
-   "Object at infinite distance"
-  ],
-  "a": 1,
-  "e_hi": "पानी की सतह पर वास्तविक प्रतिमा तब बनती है जब वस्तु पानी के नीचे हो।",
-  "e_en": "A real image on a water surface forms only when the object is below the water."
- },
- {
   "id": "rp-rea-s00424",
   "s": "reasoning",
   "t": "mirror_water_image",
   "d": 3,
-  "q_hi": "कौन सा कथन सही है जब एक सपाट दर्पण में एक वस्तु को उसकी फोकस दूरी पर रखा जाए?",
-  "q_en": "Which statement is correct when an object is placed at the focus of a plane mirror?",
+  "q_hi": "समतल दर्पण द्वारा प्रतिमा बनने के बारे में कौन सा कथन सही है?",
+  "q_en": "Which statement correctly describes image formation by a plane mirror?",
   "o_hi": [
    "कोई प्रतिमा नहीं बनेगी",
    "प्रतिमा अनंत दूरी पर बनेगी",
@@ -8790,8 +8744,8 @@
    "Image will form behind the mirror"
   ],
   "a": 3,
-  "e_hi": "सपाट दर्पण में फोकस की अवधारणा नहीं होती, इसलिए यह प्रश्न भ्रामक है; सही उत्तर यह है कि कोई प्रतिमा नहीं बनेगी।",
-  "e_en": "Plane mirrors have no focal point; thus the correct answer is that no image forms."
+  "e_hi": "समतल दर्पण में फोकस की कोई अवधारणा नहीं होती; किसी भी स्थिति में रखी वस्तु की प्रतिमा दर्पण के पीछे, वस्तु के समान दूरी पर बनती है।",
+  "e_en": "A plane mirror has no focal point; for an object at any position, the image is always formed behind the mirror, at the same distance as the object."
  },
  {
   "id": "rp-rea-s00425",
@@ -8813,8 +8767,8 @@
    "Above the mirror"
   ],
   "a": 1,
-  "e_hi": "समतल दर्पण में प्रतिमा दर्पण के सामने, वस्तु से समान दूरी पर बनती है।",
-  "e_en": "In a plane mirror, the image is formed in front of the mirror, at the same distance as the object."
+  "e_hi": "समतल दर्पण में प्रतिमा दर्पण के पीछे, वस्तु से समान दूरी पर बनती है।",
+  "e_en": "In a plane mirror, the image is formed behind the mirror, at the same distance as the object."
  },
  {
   "id": "rp-rea-s00426",
@@ -8848,19 +8802,19 @@
   "q_en": "If an object is placed beyond the focus of a concave mirror, where will the image form?",
   "o_hi": [
    "वस्तु के पीछे, वास्तविक",
-   "दर्पण के सामने, आभासी",
+   "दर्पण के सामने, वास्तविक",
    "दर्पण के अंदर",
    "किसी भी स्थान पर नहीं"
   ],
   "o_en": [
    "Behind the object, real",
-   "In front of the mirror, virtual",
+   "In front of the mirror, real",
    "Inside the mirror",
    "Not formed"
   ],
-  "a": 0,
-  "e_hi": "वस्तु के पीछे वास्तविक प्रतिमा बनती है, जो उलटी और वास्तविक होती है।",
-  "e_en": "A real image forms behind the object, inverted and real."
+  "a": 1,
+  "e_hi": "जब वस्तु अवतल दर्पण के फोकस से परे रखी जाती है, तो उसी ओर दर्पण के सामने एक वास्तविक, उलटी प्रतिमा बनती है।",
+  "e_en": "When an object is placed beyond the focus of a concave mirror, a real, inverted image forms in front of the mirror, on the same side as the object."
  },
  {
   "id": "rp-rea-s00428",
@@ -8951,8 +8905,8 @@
    "Real, upright, large"
   ],
   "a": 1,
-  "e_hi": "फोकस के भीतर वस्तु रखने पर प्रतिमा आभासी, सीधी और छोटी बनती है।",
-  "e_en": "When the object is inside the focal length, the image is virtual, upright, and reduced."
+  "e_hi": "फोकस के भीतर वस्तु रखने पर प्रतिमा आभासी, सीधी और बड़ी (आवर्धित) बनती है।",
+  "e_en": "When the object is inside the focal length, the image is virtual, upright, and enlarged (magnified)."
  },
  {
   "id": "rp-rea-s00432",
@@ -9043,8 +8997,8 @@
    "Right"
   ],
   "a": 1,
-  "e_hi": "पानी के प्रतिबिंब में ऊर्ध्वाधर दिशा समान रहती है, इसलिए फूल का प्रतिबिंब ऊपर की ओर दिखाई देगा।",
-  "e_en": "In a water reflection, the vertical orientation is preserved; thus the flower's image appears above its real position."
+  "e_hi": "पानी में बनने वाला प्रतिबिंब वस्तु के नीचे, जल की सतह के भीतर दिखाई देता है।",
+  "e_en": "A reflection formed in water appears below the object, beneath the surface of the water."
  },
  {
   "id": "rp-rea-s00436",
@@ -9204,8 +9158,8 @@
    "east"
   ],
   "a": 0,
-  "e_hi": "दर्पण बाएँ-दाएँ को उलट देता है, पर सामने-पीछे की दिशा वही रहती है। इसलिए प्रतिबिंब भी उत्तर दिशा में ही देखेगा।",
-  "e_en": "A plane mirror reverses left‑right, not front‑back. Thus the image also faces north."
+  "e_hi": "दर्पण में प्रतिबिंब सामने की ओर देखने वाले (viewer की ओर) प्रतीत होता है, इस कारण उत्तर की ओर मुख किए व्यक्ति का प्रतिबिंब दक्षिण की ओर मुख किया हुआ दिखता है।",
+  "e_en": "A mirror image appears to face back towards the viewer; so a person facing north sees their reflection appearing to face south."
  },
  {
   "id": "rp-rea-s00444",
@@ -9319,8 +9273,8 @@
    "reversed 9"
   ],
   "a": 2,
-  "e_hi": "दर्पण में 6 का बाएँ‑दाएँ उलटा रूप 9 जैसा दिखाई देता है।",
-  "e_en": "In a mirror, 6 is horizontally inverted and looks like a 9."
+  "e_hi": "दर्पण केवल बायाँ-दायाँ उलटता है, घुमाता नहीं; अतः 6, दर्पण में 9 नहीं बनता बल्कि बायें-दायें उलटा हुआ (reversed) 6 दिखाई देता है।",
+  "e_en": "A mirror only reverses left-right; it does not rotate the image. So '6' does not turn into '9' in a mirror — it appears as a left-right reversed ('mirror-image') 6."
  },
  {
   "id": "rp-rea-s00449",
@@ -9641,8 +9595,8 @@
    "West"
   ],
   "a": 1,
-  "e_hi": "दर्पण में चित्र का बायाँ-दायाँ उलटा होता है, पर सामने-पीछे की दिशा वही रहती है।",
-  "e_en": "In a plane mirror the image is laterally inverted, but the front–back orientation remains the same."
+  "e_hi": "दर्पण में प्रतिबिंब दर्शक की ओर (सामने की दिशा में) मुख किया हुआ प्रतीत होता है, इसलिए उत्तर की ओर मुख किए व्यक्ति का प्रतिबिंब दक्षिण की ओर मुख किया हुआ दिखाई देता है।",
+  "e_en": "A mirror reflection appears to face back towards the viewer; so a person facing north sees their reflection appearing to face south."
  },
  {
   "id": "rp-rea-s00466",
@@ -9710,8 +9664,8 @@
    "30 cm in front"
   ],
   "a": 3,
-  "e_hi": "1/f = 1/do + 1/di से 1/10 = 1/15 + 1/di ⇒ di = 30 सेमी। प्रतिमा वास्तविक, उल्टी और पीछे बनेगी।",
-  "e_en": "Using 1/f = 1/do + 1/di, we get di = 30 cm. The image is real, inverted and behind the mirror."
+  "e_hi": "1/f = 1/do + 1/di से: 1/10 = 1/15 + 1/di ⇒ di = 30 सेमी। प्रतिमा वास्तविक, उल्टी और दर्पण के सामने (वस्तु की ओर) बनती है।",
+  "e_en": "Using 1/f = 1/do + 1/di: 1/10 = 1/15 + 1/di ⇒ di = 30 cm. The image is real, inverted, and forms in front of the mirror (on the object's side)."
  },
  {
   "id": "rp-rea-s00469",
@@ -9940,8 +9894,8 @@
    "Both convex and concave"
   ],
   "a": 3,
-  "e_hi": "उत्तल दर्पण हमेशा आभासी छवि बनाता है।",
-  "e_en": "A convex mirror always forms a virtual image."
+  "e_hi": "उत्तल दर्पण वस्तु की स्थिति से स्वतंत्र हमेशा आभासी छवि बनाता है, और अवतल दर्पण भी तब आभासी छवि बनाता है जब वस्तु फोकस के भीतर हो। इसलिए दोनों प्रकार के दर्पण इस स्थिति में आभासी छवि बना सकते हैं।",
+  "e_en": "A convex mirror always forms a virtual image regardless of object position, and a concave mirror also forms a virtual image when the object is inside its focal length. So both types of mirrors can form a virtual image in this situation."
  },
  {
   "id": "rp-rea-s00479",
@@ -10009,8 +9963,8 @@
    "Both reversed"
   ],
   "a": 1,
-  "e_hi": "पानी में प्रतिबिंब ऊर्ध्वाधर दिशा को नहीं उलटता।",
-  "e_en": "The image in water retains the same vertical orientation."
+  "e_hi": "पानी में बना प्रतिबिंब ऊर्ध्वाधर दिशा में उलट जाता है, इसलिए ऊपर रखे पेन का प्रतिबिंब उलटा (upside down) दिखाई देता है।",
+  "e_en": "The image formed in water is vertically inverted, so the image of a pen placed upright above the water appears upside down."
  },
  {
   "id": "rp-rea-s00482",
@@ -10607,8 +10561,8 @@
    "South"
   ],
   "a": 1,
-  "e_hi": "निम्न दिशा में चलने के बाद दाईं ओर मुड़ने पर वह पूर्व की ओर जाता है।",
-  "e_en": "After heading south, a right turn leads east."
+  "e_hi": "दक्षिण की ओर चलते हुए दाईं ओर मुड़ने पर वह पश्चिम दिशा में जाता है (दक्षिण की ओर मुख करने पर दायाँ हाथ पश्चिम की ओर होता है)।",
+  "e_en": "While heading south, a right turn points him towards the west (when facing south, your right hand side is west)."
  },
  {
   "id": "rp-rea-s00517",
@@ -11113,8 +11067,8 @@
    "70°"
   ],
   "a": 1,
-  "e_hi": "हवा के वेक्टर को (0, -50) माना जाये तो परिणामी वेक्टर के घटक (200cos70°,200sin70°−50) होंगे, जिससे दिशा tan⁻¹((200sin70°−50)/200cos70°)≈60° बनती है।",
-  "e_en": "Treat the wind as (0,−50). Resultant components: (200cos70°, 200sin70°−50). The direction tan⁻¹((200sin70°−50)/200cos70°)≈60°."
+  "e_hi": "दक्षिण से चलने वाली हवा उत्तर दिशा के घटक को बढ़ाती है, इसलिए हवा का सदिश (0, +50) माना जाता है। परिणामी घटक: उत्तर = 200cos70°+50 ≈ 118.4, पूर्व = 200sin70° ≈ 187.9। दिशा tan⁻¹(187.9/118.4) ≈ 58°, जो दिए गए विकल्पों में 60° के सबसे निकट है।",
+  "e_en": "Wind blowing from the south adds to the northward component, so the wind vector is (0, +50). Resultant components: north = 200cos70°+50 ≈ 118.4, east = 200sin70° ≈ 187.9. Direction = tan⁻¹(187.9/118.4) ≈ 58°, which is closest to 60° among the given options."
  },
  {
   "id": "rp-rea-s00539",
@@ -11182,8 +11136,8 @@
    "About 45°"
   ],
   "a": 0,
-  "e_hi": "दोनों चरणों के घटक जोड़कर कुल वेक्टर (6.18,12.99) मिलता है, जिसका दिशा tan⁻¹(12.99/6.18)≈75° है।",
-  "e_en": "Adding components gives (6.18,12.99); direction tan⁻¹(12.99/6.18)≈75°."
+  "e_hi": "घटकों को जोड़ने पर: उत्तर = 10cos30°+15cos120° ≈ 8.66-7.5 = 1.16, पूर्व = 10sin30°+15sin120° ≈ 5+12.99 = 17.99। दिशा = tan⁻¹(17.99/1.16) ≈ 86°, जो दिए गए विकल्पों में 'लगभग 90°' के सबसे निकट है।",
+  "e_en": "Adding the components: north = 10cos30°+15cos120° ≈ 8.66-7.5 = 1.16, east = 10sin30°+15sin120° ≈ 5+12.99 = 17.99. Direction = tan⁻¹(17.99/1.16) ≈ 86°, which is closest to 'About 90°' among the given options."
  },
  {
   "id": "rp-rea-s00545",
@@ -11876,29 +11830,6 @@
   "e_en": "Some engineers are scientists, and all scientists are mathematicians, so some engineers are mathematicians."
  },
  {
-  "id": "rp-rea-s00579",
-  "s": "reasoning",
-  "t": "statement_conclusion",
-  "d": 1,
-  "q_hi": "किसी भी वृक्ष में पत्ते होते हैं। कुछ पत्तों वाले जीव पंख वाले होते हैं। निष्कर्ष क्या है?",
-  "q_en": "No tree has leaves. Some leaf-bearing creatures are feathered. What conclusion?",
-  "o_hi": [
-   "किसी भी वृक्ष के पंख होते हैं।",
-   "किसी भी वृक्ष के पंख नहीं होते।",
-   "किसी भी वृक्ष के पत्ते नहीं होते।",
-   "किसी भी वृक्ष के पत्ते होते हैं।"
-  ],
-  "o_en": [
-   "Every tree has feathers.",
-   "No tree has feathers.",
-   "No tree has leaves.",
-   "Every tree has leaves."
-  ],
-  "a": 2,
-  "e_hi": "कथन से यह स्पष्ट है कि सभी वृक्षों के पत्ते होते हैं, अतः चौथा विकल्प सही है।",
-  "e_en": "The statement says all trees have leaves, so option 4 is correct."
- },
- {
   "id": "rp-rea-s00581",
   "s": "reasoning",
   "t": "statement_conclusion",
@@ -11964,8 +11895,8 @@
    "Some rivers may be alive."
   ],
   "a": 3,
-  "e_hi": "कथन से यह नहीं निकलता कि कोई नदी जीवित है; अतः निष्कर्ष असंभव है।",
-  "e_en": "The statements do not allow a river to be alive; thus the conclusion is impossible."
+  "e_hi": "जब 'सभी A, B हैं' और 'कुछ B, C हैं' रूप के कथन दिए जाते हैं, तो कोई निश्चित निष्कर्ष नहीं निकलता, परंतु यह संभावना बनी रहती है कि कुछ A, C हो सकते हैं। इसलिए 'कुछ नदियाँ जीवित हो सकती हैं' (संभाव्यता-आधारित निष्कर्ष) सही निष्कर्ष है।",
+  "e_en": "When the statements are of the form 'All A are B' and 'Some B are C', no definite conclusion follows, but the possibility that some A are C cannot be ruled out. Hence the possibility-based conclusion 'Some rivers may be alive' is the correct one."
  },
  {
   "id": "rp-rea-s00584",
@@ -12150,29 +12081,6 @@
   "a": 1,
   "e_hi": "सभी 5 का कुल 100 है। ज्ञात 3 का योग 64 है, अतः शेष 2 का योग 36 है, न कि 20।",
   "e_en": "Total of all 5 is 100. Sum of known 3 is 64, so remaining two sum to 36, not 20."
- },
- {
-  "id": "rp-rea-s00592",
-  "s": "reasoning",
-  "t": "statement_conclusion",
-  "d": 1,
-  "q_hi": "एक ट्रेन 360 किमी 6 घंटे में तय करती है।",
-  "q_en": "A train covers 360 km in 6 hours.",
-  "o_hi": [
-   "सत्य है",
-   "असत्य है",
-   "निर्धारित नहीं किया जा सकता",
-   "कोई नहीं"
-  ],
-  "o_en": [
-   "True",
-   "False",
-   "Cannot be determined",
-   "None"
-  ],
-  "a": 1,
-  "e_hi": "गति 360÷6 = 60 किमी/घंटा है, अतः कथन असत्य है।",
-  "e_en": "Speed is 360÷6 = 60 km/h, so the statement is false."
  },
  {
   "id": "rp-rea-s00593",
@@ -12562,8 +12470,8 @@
    "Only correct if both numbers are odd"
   ],
   "a": 0,
-  "e_hi": "उदाहरण के लिए 3 और 5 का गुणनफल 15 है, पर दोनों 4 से कम हैं, इसलिए निष्कर्ष गलत है।",
-  "e_en": "For example, 3 and 5 give a product of 15 but both are less than 4, so the conclusion is incorrect."
+  "e_hi": "यदि दोनों संख्याएँ 4 या उससे कम होतीं, तो 4 से कम के दो भिन्न धनात्मक पूर्णांकों का अधिकतम गुणनफल 3×4=12 होता, जो 12 से अधिक नहीं है। इसलिए यदि गुणनफल 12 से अधिक है, तो कम से कम एक संख्या 4 से अधिक होनी ही चाहिए - निष्कर्ष सही है।",
+  "e_en": "If both numbers were 4 or less, the maximum possible product of two distinct positive integers each at most 4 is 3×4=12, which is not greater than 12. So if the product exceeds 12, at least one number must be greater than 4 — the conclusion is correct."
  },
  {
   "id": "rp-rea-s00610",
@@ -12815,8 +12723,8 @@
    "1-4-2-3"
   ],
   "a": 0,
-  "e_hi": "बारिश से नदी बाढ़ आती है, जिससे खेतों में पानी भरता है और अंत में फसल को नुकसान होता है।",
-  "e_en": "Rain causes river flooding, which waters the fields, ultimately damaging the crops."
+  "e_hi": "बारिश के कारण नदी में बाढ़ आती है, जिससे खेत अत्यधिक पानी से भर जाते हैं (जलभराव), और इस जलभराव से अंततः फसल को नुकसान होता है।",
+  "e_en": "Rain causes the river to flood, which inundates the fields with excess water, and this waterlogging ultimately damages the crops."
  },
  {
   "id": "rp-rea-s00621",
@@ -12998,9 +12906,9 @@
    "Kolkata",
    "New Delhi"
   ],
-  "a": 0,
-  "e_hi": "थाने स्टेशन, बंबई-थाने लाइन का हिस्सा, भारत का पहला रेलवे स्टेशन था।",
-  "e_en": "Thane station, part of the Bombay‑Thane line, was the first railway station in India."
+  "a": 1,
+  "e_hi": "भारत की पहली यात्री रेलगाड़ी 16 अप्रैल 1853 को बोरी बंदर (मुंबई) से थाने के बीच चली थी; बोरी बंदर स्टेशन, जो मुंबई में स्थित था, भारत का पहला रेलवे स्टेशन माना जाता है।",
+  "e_en": "India's first passenger train ran on 16 April 1853 between Bori Bunder and Thane; Bori Bunder station, located in Mumbai, is considered India's first railway station."
  },
  {
   "id": "rp-rea-s00634",
@@ -13022,8 +12930,8 @@
    "Kashi Express"
   ],
   "a": 0,
-  "e_hi": "राजधनी एक्सप्रेस ने 1981 में एसी कोच पेश किए, जिससे एयर कंडीशन्ड यात्रा शुरू हुई।",
-  "e_en": "Rajdhani Express launched AC coaches in 1981, pioneering air‑conditioned travel."
+  "e_hi": "राजधनी एक्सप्रेस ने 1969 में एसी कोच पेश किए, जिससे एयर कंडीशन्ड यात्रा की शुरुआत हुई।",
+  "e_en": "Rajdhani Express introduced AC coaches in 1969, pioneering air-conditioned rail travel in India."
  },
  {
   "id": "rp-rea-s00636",
@@ -13035,18 +12943,18 @@
   "o_hi": [
    "ईस्ट इंडिया कंपनी",
    "ब्रिटिश ईस्ट इंडिया कंपनी",
-   "ग्रेट इंडियन रेलवे",
+   "ग्रेट इंडियन पेनिनसुला रेलवे",
    "इंडियन रेलवे कंपनी"
   ],
   "o_en": [
    "East India Company",
    "British East India Company",
-   "Great Indian Railway",
+   "Great Indian Peninsula Railway",
    "Indian Railway Company"
   ],
-  "a": 0,
-  "e_hi": "ईस्ट इंडिया कंपनी ने बंबई-थाने लाइन बनाई, जो भारत की पहली रेलवे लाइन थी।",
-  "e_en": "The East India Company constructed the Bombay‑Thane line, the first railway in India."
+  "a": 2,
+  "e_hi": "भारत की पहली रेलवे लाइन (बंबई-थाने, 1853) ग्रेट इंडियन पेनिनसुला रेलवे (GIPR) नामक कंपनी द्वारा बनाई गई थी।",
+  "e_en": "India's first railway line (Bombay–Thane, 1853) was built by the Great Indian Peninsula Railway (GIPR) company."
  },
  {
   "id": "rp-rea-s00637",
@@ -13527,9 +13435,9 @@
    "1951",
    "1960"
   ],
-  "a": 1,
-  "e_hi": "भारत सरकार ने 1948 में रेलवे का राष्ट्रीयकरण किया।",
-  "e_en": "The Indian Railways was nationalised in 1948."
+  "a": 2,
+  "e_hi": "भारत सरकार ने 1951 में रेलवे का राष्ट्रीयकरण किया, जिससे भारतीय रेल का गठन हुआ।",
+  "e_en": "The Indian government nationalised the railways in 1951, forming Indian Railways."
  },
  {
   "id": "rp-rea-s00661",
@@ -13559,8 +13467,8 @@
   "s": "reasoning",
   "t": "classification",
   "d": 1,
-  "q_hi": "भारत में कौन सी गेज का प्रयोग नहीं होता?",
-  "q_en": "Which gauge is NOT used in India?",
+  "q_hi": "भारतीय रेलवे द्वारा कौन सी गेज का उपयोग नहीं किया जाता (केवल मेट्रो प्रणालियों को छोड़कर)?",
+  "q_en": "Which gauge is NOT used by Indian Railways (excluding separate metro systems)?",
   "o_hi": [
    "Broad gauge",
    "Meter gauge",
@@ -13574,8 +13482,8 @@
    "Standard gauge"
   ],
   "a": 3,
-  "e_hi": "Standard gauge (4 ft 8.5 in) भारत में उपयोग नहीं होता।",
-  "e_en": "Standard gauge (4 ft 8.5 in) is not used in India."
+  "e_hi": "Standard gauge (4 ft 8.5 in) का उपयोग भारतीय रेलवे के मुख्य नेटवर्क में नहीं होता; यह केवल कुछ मेट्रो प्रणालियों में उपयोग होता है।",
+  "e_en": "Standard gauge (4 ft 8.5 in) is not used on the main Indian Railways network; it is used only by some separate metro systems."
  },
  {
   "id": "rp-rea-s00664",
@@ -13619,9 +13527,9 @@
    "Kolkata-Mumbai",
    "Delhi-Agra"
   ],
-  "a": 1,
-  "e_hi": "Delhi-Mumbai मार्ग लगभग 1420 किमी लंबा है, जो इसे सबसे लंबा बनाता है।",
-  "e_en": "The Delhi–Mumbai route is about 1420 km long, making it the longest."
+  "a": 2,
+  "e_hi": "दिए गए विकल्पों में, कोलकाता-मुंबई मार्ग (नागपुर के रास्ते) लगभग 1965 किमी लंबा है, जो इनमें सबसे लंबा है।",
+  "e_en": "Among the given options, the Kolkata–Mumbai route (via Nagpur) is about 1965 km long, making it the longest of these."
  },
  {
   "id": "rp-rea-s00666",
@@ -13665,9 +13573,9 @@
    "Shatabdi Express",
    "Duronto Express"
   ],
-  "a": 0,
-  "e_hi": "Vande Bharat Express भारत का पहला हाइपरस्पीड ट्रेन है।",
-  "e_en": "Vande Bharat Express is India's first high‑speed train."
+  "a": 2,
+  "e_hi": "शताब्दी एक्सप्रेस (1988 में शुरू) को इसकी उच्च गति (140-150 किमी/घं) के कारण भारत की पहली सेमी-हाई-स्पीड ट्रेन माना जाता है।",
+  "e_en": "The Shatabdi Express (launched in 1988) is considered India's first semi-high-speed train, owing to its high speed (140-150 km/h) at the time."
  },
  {
   "id": "rp-rea-s00668",
@@ -14677,9 +14585,9 @@
    "G",
    "H"
   ],
-  "a": 2,
-  "e_hi": "अक्षर क्रम में +2, +4, +6; अगला +8, Y(25)+8=33→7→E।",
-  "e_en": "Letter increments +2, +4, +6; next +8 gives E."
+  "a": 0,
+  "e_hi": "अक्षर वृद्धि +2, +4, +6 है; अगली वृद्धि भी +6 होनी चाहिए (2,4,6 के क्रम में)। Y(25)+6=31, 31-26=5, जो E है।",
+  "e_en": "Letter increments are +2, +4, +6; following this pattern (2,4,6), the next increment should also be +6. Y(25)+6=31, 31-26=5, which is E."
  },
  {
   "id": "rp-rea-s00712",
@@ -15816,20 +15724,20 @@
   "q_hi": "कुत्ता : पिल्ला :: बिल्ली : ?",
   "q_en": "Dog : puppy :: Cat : ?",
   "o_hi": [
-   "बिल्ली का शिशु",
+   "बिल्ली का बच्चा (किट्टन)",
    "बिल्ली का पिल्ला",
    "बिल्ली का पालतू",
    "बिल्ली का शिकार"
   ],
   "o_en": [
-   "cat's baby",
+   "kitten",
    "cat's puppy",
    "cat's pet",
    "cat's prey"
   ],
   "a": 0,
-  "e_hi": "कुत्ते का पिल्ला उसके शिशु रूप को दर्शाता है, उसी तरह बिल्ली का शिशु 'बिल्ली का शिशु' होता है।",
-  "e_en": "A puppy is a young dog; similarly a kitten is the young form of a cat."
+  "e_hi": "पिल्ला कुत्ते का शिशु रूप है, उसी प्रकार किट्टन (kitten) बिल्ली का शिशु रूप है।",
+  "e_en": "A puppy is the young form of a dog; similarly a kitten is the young form of a cat."
  },
  {
   "id": "rp-rea-s00762",
@@ -16149,9 +16057,9 @@
    "Sea",
    "Lake"
   ],
-  "a": 1,
-  "e_hi": "सागर एक बड़ी जलधारा है, उसी तरह नदी एक छोटी जलधारा है।",
-  "e_en": "The ocean is a large water body, similarly a river is a smaller water body."
+  "a": 0,
+  "e_hi": "सागर एक बड़ी जलधारा है, उसी तरह नदी एक छोटी जलधारा (छोटी जल राशि) है।",
+  "e_en": "The ocean is a large water body, similarly a river is a small water body."
  },
  {
   "id": "rp-rea-s00776",
@@ -16637,29 +16545,6 @@
   "e_en": "A pencil is used for writing; similarly, an eraser is used for erasing."
  },
  {
-  "id": "rp-rea-s00797",
-  "s": "reasoning",
-  "t": "analogy",
-  "d": 1,
-  "q_hi": "निम्न में से कौन-सा सादृश्य का प्रकार नहीं है?",
-  "q_en": "Which of the following is NOT a type of analogy?",
-  "o_hi": [
-   "समानार्थी",
-   "विलोम",
-   "श्रेणीगत",
-   "भाग-भाग"
-  ],
-  "o_en": [
-   "Synonymic",
-   "Antonymic",
-   "Categorical",
-   "Part-whole"
-  ],
-  "a": 2,
-  "e_hi": "श्रेणीगत सादृश्य एक मानक प्रकार नहीं है।",
-  "e_en": "'Categorical' is not a recognized type of analogy."
- },
- {
   "id": "rp-rea-s00798",
   "s": "reasoning",
   "t": "analogy",
@@ -17078,8 +16963,8 @@
   "s": "reasoning",
   "t": "classification",
   "d": 1,
-  "q_hi": "निम्नलिखित में से कौन सा रेलवे ट्रैक का मानक चौड़ाई (ब्रीड गेज) है?",
-  "q_en": "Which of the following is the standard gauge used in Indian railways?",
+  "q_hi": "निम्नलिखित में से कौन सी चौड़ाई भारतीय रेलवे में सबसे अधिक उपयोग होने वाली गेज है?",
+  "q_en": "Which of the following is the most widely used gauge on Indian railways?",
   "o_hi": [
    "1.067 m",
    "1.676 m",
@@ -17093,8 +16978,8 @@
    "1.200 m"
   ],
   "a": 1,
-  "e_hi": "भारत में मानक रेल चौड़ाई 5 ft 6 in अर्थात 1.676 m है।",
-  "e_en": "The standard gauge in India is 5 ft 6 in or 1.676 m."
+  "e_hi": "भारत में सबसे अधिक उपयोग होने वाली रेल चौड़ाई 'ब्रॉड गेज' है, जो 5 ft 6 in अर्थात 1.676 m के बराबर है।",
+  "e_en": "The most widely used rail gauge in India is the 'Broad Gauge', which measures 5 ft 6 in, or 1.676 m."
  },
  {
   "id": "rp-rea-s00819",
@@ -17118,29 +17003,6 @@
   "a": 0,
   "e_hi": "राजधनी एक्सप्रेस को राजधनी श्रेणी में रखा गया है।",
   "e_en": "The Rajdhani Express is part of the Rajdhani category."
- },
- {
-  "id": "rp-rea-s00821",
-  "s": "reasoning",
-  "t": "classification",
-  "d": 3,
-  "q_hi": "निम्नलिखित में से कौन सा स्टेशन भारत का सबसे अधिक यात्री यातायात वाला स्टेशन है?",
-  "q_en": "Which of the following stations has the highest passenger traffic in India?",
-  "o_hi": [
-   "मुंबई सेंट्रल",
-   "नई दिल्ली जंक्शन",
-   "कोलकाता हॉरह",
-   "चेन्नई सेंट्रल"
-  ],
-  "o_en": [
-   "Mumbai Central",
-   "New Delhi Junction",
-   "Kolkata Howrah",
-   "Chennai Central"
-  ],
-  "a": 1,
-  "e_hi": "नई दिल्ली जंक्शन भारत का सबसे अधिक यात्री यातायात वाला स्टेशन है।",
-  "e_en": "New Delhi Junction is the busiest station in India by passenger traffic."
  },
  {
   "id": "rp-rea-s00822",
@@ -17455,7 +17317,7 @@
    "इंडोनेशिया"
   ],
   "o_en": [
-   "Nepa",
+   "Nepal",
    "China",
    "Pakistan",
    "Indonesia"
@@ -18780,8 +18642,8 @@
   "s": "reasoning",
   "t": "mathematical_operations",
   "d": 1,
-  "q_hi": "निम्नलिखित में से कौन सा गुणधर्म गुणा के लिए सही है?",
-  "q_en": "Which of the following is a correct property for multiplication?",
+  "q_hi": "निम्नलिखित में से (a×b)×c = a×(b×c) किस गुणधर्म को दर्शाता है?",
+  "q_en": "Which property of multiplication is illustrated by (a×b)×c = a×(b×c)?",
   "o_hi": [
    "परिवर्तनीय गुणधर्म (Commutative)",
    "संयोजक गुणधर्म (Associative)",
@@ -18795,8 +18657,8 @@
    "None"
   ],
   "a": 1,
-  "e_hi": "गुणा का संयोजक गुणधर्म (a*b)*c = a*(b*c) सही है।",
-  "e_en": "The associative property of multiplication (a*b)*c = a*(b*c) holds."
+  "e_hi": "(a×b)×c = a×(b×c) गुणा के संयोजक (Associative) गुणधर्म को दर्शाता है।",
+  "e_en": "(a×b)×c = a×(b×c) illustrates the associative property of multiplication."
  },
  {
   "id": "rp-rea-s00896",
@@ -19600,8 +19462,8 @@
    "90°"
   ],
   "a": 1,
-  "e_hi": "उत्तर से 30° पूर्व की ओर झुकाव का मतलब है कि बेयरिंग 90°–30°=60° होगी।",
-  "e_en": "An inclination of 30° east of north yields a bearing of 90°−30°=60°."
+  "e_hi": "उत्तर से 30° पूर्व की ओर झुकाव का अर्थ है कि दिशा उत्तर से घड़ी की दिशा में 30° पर है, इसलिए बेयरिंग सीधे 30° होती है।",
+  "e_en": "An inclination of 30° east of north means the direction is 30° clockwise from north, so the bearing is simply 30°."
  },
  {
   "id": "rp-rea-s00932",
@@ -19623,8 +19485,8 @@
    "Northeast"
   ],
   "a": 0,
-  "e_hi": "उत्तर से दाईं ओर 90° मुड़ने पर वह दक्षिण दिशा में जाता है।",
-  "e_en": "Turning 90° right from north points the truck south."
+  "e_hi": "उत्तर से दाईं ओर 90° मुड़ने पर ट्रक पूर्व दिशा में जाता है।",
+  "e_en": "Turning 90° to the right from north points the truck towards the east."
  },
  {
   "id": "rp-rea-s00933",
@@ -19669,8 +19531,8 @@
    "315°"
   ],
   "a": 3,
-  "e_hi": "135° का उलटा 45° होता है, क्योंकि दोनों के बीच 180° का अंतर होता है।",
-  "e_en": "The reverse bearing differs by 180°, so 135° becomes 45°."
+  "e_hi": "उलटी दिशा (reverse bearing) मूल बेयरिंग में 180° जोड़कर प्राप्त होती है। 135°+180°=315°।",
+  "e_en": "The reverse bearing is obtained by adding 180° to the original bearing. 135°+180°=315°."
  },
  {
   "id": "rp-rea-s00935",
@@ -19930,8 +19792,8 @@
   "s": "reasoning",
   "t": "direction_sense",
   "d": 2,
-  "q_hi": "एक व्यक्ति एक वृत्ताकार पथ पर चल रहा है। वह पहले 90° दाईं ओर मुड़ता है, फिर 180° बाईं ओर, फिर 90° दाईं ओर, और अंत में 180° दाईं ओर। अब वह किस दिशा में है?",
-  "q_en": "A person is moving around a circular path. He first turns 90° right, then 180° left, then 90° right, and finally 180° right. Which direction is he facing now?",
+  "q_hi": "एक व्यक्ति उत्तर की ओर मुख करके एक वृत्ताकार पथ पर चलना शुरू करता है। वह पहले 90° दाईं ओर मुड़ता है, फिर 180° बाईं ओर, फिर 90° दाईं ओर, और अंत में 180° दाईं ओर। अब वह किस दिशा में है?",
+  "q_en": "A person starts facing north and is moving around a circular path. He first turns 90° right, then 180° left, then 90° right, and finally 180° right. Which direction is he facing now?",
   "o_hi": [
    "उत्तर",
    "दक्षिण",
@@ -19945,8 +19807,8 @@
    "East"
   ],
   "a": 1,
-  "e_hi": "इन सभी मोड़ों के बाद वह दक्षिण दिशा में मुख करेगा।",
-  "e_en": "After the sequence of turns, the final heading is south."
+  "e_hi": "कुल मोड़: +90-180+90+180 = 180° दाईं ओर (दक्षिणावर्त)। उत्तर से शुरू करने पर 180° का मोड़ उसे दक्षिण दिशा में ला देता है।",
+  "e_en": "Net turn: +90-180+90+180 = 180° to the right (clockwise). Starting from north, a 180° turn brings him to face south."
  },
  {
   "id": "rp-rea-s00947",
@@ -20083,8 +19945,8 @@
    "90° east of north"
   ],
   "a": 2,
-  "e_hi": "पहले 10 किमी उत्तर‑पूर्व (45°) और फिर 5 किमी पूर्व दिशा में चलने से अंतिम स्थिति लगभग 30° पूर्व की ओर उत्तर की दिशा में है।",
-  "e_en": "After the first 10 km at 45° (NE) and then 5 km east, the final direction is about 30° east of north."
+  "e_hi": "पहले 10 किमी उत्तर-पूर्व (45°) से घटक: उत्तर=10cos45°≈7.07, पूर्व=10sin45°≈7.07। फिर 45° दाईं ओर मुड़ने पर नई दिशा पूर्व (90°) हो जाती है, और 5 किमी पूर्व चलने से पूर्व घटक में 5 और जुड़ता है। कुल: उत्तर≈7.07, पूर्व≈12.07। दिशा = tan⁻¹(12.07/7.07) ≈ 60° पूर्व की ओर उत्तर।",
+  "e_en": "The first 10 km at 45° (NE) gives components: north=10cos45°≈7.07, east=10sin45°≈7.07. Turning right by 45° changes the heading to due east (90°), and walking 5 km east adds 5 to the east component. Total: north≈7.07, east≈12.07. Direction = tan⁻¹(12.07/7.07) ≈ 60° east of north."
  },
  {
   "id": "rp-rea-s00953",
@@ -20129,8 +19991,8 @@
    "Southwest"
   ],
   "a": 2,
-  "e_hi": "कुल विस्थापन लगभग 5.5 किमी पूर्व और 0.5 किमी दक्षिण के बराबर है, अतः दिशा लगभग पूर्व है।",
-  "e_en": "The net displacement is roughly 5.5 km east and 0.5 km south, so the direction is almost east."
+  "e_hi": "घटक जोड़ने पर: उत्तर = 8 - 5cos45° ≈ 8-3.54 = 4.46, पूर्व = 6 + 5sin45° - 2 ≈ 6+3.54-2 = 7.54। दिशा = tan⁻¹(7.54/4.46) ≈ 59° (उत्तर से), जो दिए गए विकल्पों में 'उत्तरी-पूर्व' के सबसे निकट है।",
+  "e_en": "Adding the components: north = 8 - 5cos45° ≈ 8-3.54 = 4.46, east = 6 + 5sin45° - 2 ≈ 6+3.54-2 = 7.54. Direction = tan⁻¹(7.54/4.46) ≈ 59° from north, which among the given options is closest to 'Northeast'."
  },
  {
   "id": "rp-rea-s00955",
@@ -20198,8 +20060,8 @@
    "Southwest"
   ],
   "a": 1,
-  "e_hi": "कुल विस्थापन लगभग 5.5 किमी पूर्व और 0.5 किमी दक्षिण के बराबर है, अतः दिशा लगभग पूर्व है।",
-  "e_en": "The net displacement is roughly 5.5 km east and 0.5 km south, so the direction is almost east."
+  "e_hi": "घटक जोड़ने पर: उत्तर ≈ 4.46 किमी, पूर्व ≈ 7.54 किमी, यानी दिशा उत्तर से लगभग 59° है। इस प्रश्न के विकल्पों (उत्तरी-पश्चिम, पूर्व, दक्षिण-पूर्व, दक्षिण-पश्चिम) में से 'पूर्व' इसके सबसे निकट है।",
+  "e_en": "Adding the components: north ≈ 4.46 km, east ≈ 7.54 km, i.e. the direction is about 59° from north. Among this question's options (Northwest, East, Southeast, Southwest), 'East' is the closest match."
  },
  {
   "id": "rp-rea-s00960",
@@ -21853,9 +21715,9 @@
    "28",
    "24"
   ],
-  "a": 2,
-  "e_hi": "अंतर क्रमशः 4, 6, 8 और अगला 10 होना चाहिए। 20 + 10 = 30।",
-  "e_en": "The differences are 4, 6, 8, and the next should be 10. 20 + 10 = 30."
+  "a": 0,
+  "e_hi": "अंतर क्रमशः 4, 6, 8 हैं, और अगला अंतर 10 होना चाहिए। 20 + 10 = 30, जो विकल्प [0] है।",
+  "e_en": "The differences are 4, 6, 8, and the next difference should be 10. 20 + 10 = 30, which is option [0]."
  },
  {
   "id": "rp-rea-o01035",
@@ -21876,9 +21738,9 @@
    "M",
    "P"
   ],
-  "a": 1,
-  "e_hi": "अक्षरों के बीच के अंतर क्रमशः 2, 3, 4 और 5 हैं। J के बाद 5 अक्षर आगे जाकर N मिलता है।",
-  "e_en": "The gaps between letters are 2, 3, 4, and 5. Five letters after J is N."
+  "a": 0,
+  "e_hi": "अक्षरों के बीच के अंतर क्रमशः 2, 3, 4 और 5 हैं। J के बाद 5 अक्षर आगे जाने पर O मिलता है।",
+  "e_en": "The gaps between letters are 2, 3, 4, and 5. Five letters after J is O."
  },
  {
   "id": "rp-rea-o01036",
@@ -21991,9 +21853,9 @@
    "Kolkata",
    "Hyderabad"
   ],
-  "a": 3,
-  "e_hi": "दिल्ली, मुंबई और कोलकाता भारत के राजधानियों के रूप में या प्रमुख महानगरों के रूप में समूह में आते हैं, लेकिन यहाँ का मुख्य भेद यह है कि दिल्ली, मुंबई और कोलकाता सीधे सागर या तटबंध से नहीं जुड़े हैं (या अन्य किसी समानता से)। वास्तविक तर्क: दिल्ली, मुंबई और कोलकाता भारत के तीन सबसे बड़े शहर हैं, लेकिन इस प्रश्न में अक्सर 'हैदराबाद' को अलग माना जाता है क्योंकि यह तेलंगाना की राजधानी है, जबकि अन्य कई राज्यों की राजधानियाँ नहीं हैं। संशोधित तर्क: दिल्ली, मुंबई और कोलकाता भारत के प्रमुख उपमहाद्वीपीय शहर हैं।",
-  "e_en": "Delhi, Mumbai, and Kolkata are major metropolitan cities in India. Hyderabad is also a major city, but in classification questions, it is often distinguished based on specific geographical or administrative criteria not shared by the others in a specific context. However, a stronger classification is that Delhi, Mumbai, and Kolkata are not state capitals (Delhi is UT, Mumbai/Kolkata are not capitals), while Hyderabad is a state capital. Wait, Delhi is a UT capital. Let's use a clearer logic: Delhi, Mumbai, Kolkata are coastal or riverine deltas? No. Let's use: Delhi, Mumbai, Kolkata are NOT landlocked in the same way? No. Let's use: Delhi, Mumbai, Kolkata are NOT state capitals (Delhi is UT, Mumbai/Kolkata are not capitals), Hyderabad IS a state capital. This is a common trap."
+  "a": 0,
+  "e_hi": "दिल्ली एक संघ राज्य क्षेत्र (केंद्र शासित प्रदेश) है और किसी राज्य की राजधानी नहीं है, जबकि मुंबई, कोलकाता और हैदराबाद क्रमशः महाराष्ट्र, पश्चिम बंगाल और तेलंगाना की राज्य राजधानियाँ हैं। इस प्रकार दिल्ली अलग है।",
+  "e_en": "Delhi is a Union Territory and is not the capital of any state, whereas Mumbai, Kolkata and Hyderabad are the state capitals of Maharashtra, West Bengal and Telangana respectively. So Delhi is the odd one out."
  },
  {
   "id": "rp-rea-o01041",
@@ -22084,8 +21946,8 @@
    "Rajkot"
   ],
   "a": 0,
-  "e_hi": "जयपुर राजस्थान का राजधानी शहर है, जबकि पुणे, अहमदाबाद और राजकोट महाराष्ट्र और गुजरात के शहर हैं (यहाँ मुख्य भेद यह है कि जयपुर एक राज्य की राजधानी है, जबकि अन्य दिए गए विकल्प मुख्यतः महाराष्ट्र और गुजरात के शहर हैं, हालांकि सबसे स्पष्ट भेद यह है कि जयपुर राजस्थान का है और बाकी तीनों या तो महाराष्ट्र (पुणे) या गुजरात (अहमदाबाद, राजकोट) के हैं। एक और स्पष्ट दृष्टिकोण: जयपुर राजस्थान का है, पुणे महाराष्ट्र का है, अहमदाबाद और राजकोट गुजरात के हैं। यहाँ 'भिन्न' वाला विकल्प अक्सर राज्य आधारित होता है। चलिए एक और स्पष्ट उदाहरण रखते हैं।\n\nसमाधान: यह प्रश्न थोड़ा धुंधला हो सकता है। चलिए एक और स्पष्ट प्रश्न बनाते हैं।\n\nनया प्रश्न: निम्नलिखित में से कौन-सा राज्य बाकी तीन राज्यों के समूह से भिन्न है?\nविकल्प: कर्नाटक, केरल, तमिलनाडु, महाराष्ट्र।\nउत्तर: महाराष्ट्र (पश्चिम भारत), बाकी दक्षिण भारत के हैं।\n\nलेकिन चूंकि मैंने पहले से ही विकल्प लिख दिए हैं, तो मैं उन्हें बदल दूंगा ताकि उत्तर स्पष्ट हो।\n\nनए विकल्प: जयपुर (राजस्थान), पुणे (महाराष्ट्र), अहमदाबाद (गुजरात), बेंगलुरु (कर्नाटक)। यह भी अच्छा नहीं है।\n\nचलिए एक और स्पष्ट प्रश्न लेते हैं: निम्नलिखित में से कौन-सा पशु बाकी तीन पशुओं के समूह से भिन्न है?\nविकल्प: कबूतर, तोता, तोता, कबूतर? नहीं।\n\nविकल्प: खरगोश (Lagomorph), गिलहरी (Rodent), चूहा (Rodent), कंगारू (Marsupial)? यह बहुत कठिन है।\n\nआसान और स्पष्ट: निम्नलिखित में से कौन-सा फल बाकी तीन फलों के समूह से भिन्न है?\nविकल्प: आम, केला, पपीता, नींबू।\nउत्तर: नींबू (घी/टार्ट फल), बाकी मीठे फल हैं।\n\nमैं प्रश्न को इस प्रकार संशोधित कर रहा हूं:",
-  "e_en": "Jaipur is the capital of Rajasthan, while Pune is in Maharashtra and Ahmedabad/Rajkot are in Gujarat. This mix is slightly ambiguous. Let's stick to a clearer classification.\n\nActually, looking at the options provided in the draft: Jaipur (Rajasthan), Pune (Maharashtra), Ahmedabad (Gujarat), Rajkot (Gujarat). This is not a clean 'odd one out' unless the criterion is 'Capital City' vs 'Non-Capital'. Jaipur is a capital. Pune, Ahmedabad, Rajkot are not capitals. Thus, Jaipur is the odd one out."
+  "e_hi": "जयपुर राजस्थान की राजधानी है, जबकि पुणे (महाराष्ट्र), अहमदाबाद और राजकोट (गुजरात) अपने-अपने राज्यों की राजधानियाँ नहीं हैं। इसलिए राज्य-राजधानी होने के आधार पर जयपुर अलग है।",
+  "e_en": "Jaipur is the capital of Rajasthan, while Pune (Maharashtra), Ahmedabad and Rajkot (Gujarat) are not the capitals of their respective states. So based on being a state capital, Jaipur is the odd one out."
  },
  {
   "id": "rp-rea-o01045",
@@ -22548,52 +22410,6 @@
   "e_en": "In Classification, 'Symbol' is used to represent objects or words."
  },
  {
-  "id": "rp-rea-o01065",
-  "s": "reasoning",
-  "t": "classification",
-  "d": 3,
-  "q_hi": "वर्गीकरण के प्रश्न में, यदि विकल्पों में से दो विकल्प एक ही श्रेणी में आते हैं और दो विकल्प अलग हैं, तो क्या प्रश्न सही माना जाता है?",
-  "q_en": "In a Classification question, if two options fall into one category and two options are different, is the question considered valid?",
-  "o_hi": [
-   "हाँ, क्योंकि दो विकल्प समान हैं",
-   "नहीं, क्योंकि एक विकल्प बाकी से भिन्न होना चाहिए",
-   "हाँ, यदि विकल्प अंक हैं",
-   "नहीं, यदि विकल्प अक्षर हैं"
-  ],
-  "o_en": [
-   "Yes, because two options are the same",
-   "No, because one option should be different from the rest",
-   "Yes, if the options are numbers",
-   "No, if the options are letters"
-  ],
-  "a": 1,
-  "e_hi": "वर्गीकरण के प्रश्न में एक विकल्प बाकी से भिन्न होना चाहिए। यदि दो विकल्प अलग हैं, तो प्रश्न सही नहीं माना जाता है।",
-  "e_en": "In a Classification question, one option should be different from the rest. If two options are different, the question is not considered valid."
- },
- {
-  "id": "rp-rea-o01066",
-  "s": "reasoning",
-  "t": "classification",
-  "d": 1,
-  "q_hi": "वर्गीकरण में 'समूह' (Group) का अर्थ क्या है?",
-  "q_en": "In Classification, what is the meaning of 'Group'?",
-  "o_hi": [
-   "एक अलग-अलग वस्तु",
-   "दो या अधिक समान वस्तुओं का समूह",
-   "एक अंक",
-   "एक अक्षर"
-  ],
-  "o_en": [
-   "A single object",
-   "A group of two or more similar objects",
-   "One number",
-   "One letter"
-  ],
-  "a": 1,
-  "e_hi": "वर्गीकरण में 'समूह' (Group) का अर्थ दो या अधिक समान वस्तुओं का समूह है।",
-  "e_en": "In Classification, 'Group' means a group of two or more similar objects."
- },
- {
   "id": "rp-rea-o01067",
   "s": "reasoning",
   "t": "classification",
@@ -22778,52 +22594,6 @@
   "e_en": "Volcano, Earthquake, and Tsunami are related to volcanic or geological activities, whereas a Cyclone is a meteorological phenomenon."
  },
  {
-  "id": "rp-rea-o01075",
-  "s": "reasoning",
-  "t": "classification",
-  "d": 2,
-  "q_hi": "निम्नलिखित में से कौन सा शब्द अलग है? (विचार: भारतीय संविधान के प्रमुख प्रवर्तक)",
-  "q_en": "Which of the following is the odd one out? (Context: Key framers of the Indian Constitution)",
-  "o_hi": [
-   "डॉ. बी.आर. अम्बेडकर",
-   "डॉ. राजेंद्र प्रसाद",
-   "जवाहरलाल नेहरू",
-   "डॉ. राजमाधव"
-  ],
-  "o_en": [
-   "Dr. B.R. Ambedkar",
-   "Dr. Rajendra Prasad",
-   "Jawaharlal Nehru",
-   "Dr. Rajagopalachari"
-  ],
-  "a": 2,
-  "e_hi": "डॉ. अम्बेडकर, डॉ. राजेंद्र प्रसाद और डॉ. राजमाधव संविधान सभा के सदस्य थे और संविधान निर्माण में सीधा योगदान दिया, जबकि जवाहरलाल नेहरू संसद के सदस्य नहीं थे।",
-  "e_en": "Dr. Ambedkar, Dr. Rajendra Prasad, and Dr. Rajagopalachari were members of the Constituent Assembly and directly contributed to drafting the Constitution, whereas Jawaharlal Nehru was not a member of the Assembly."
- },
- {
-  "id": "rp-rea-o01076",
-  "s": "reasoning",
-  "t": "classification",
-  "d": 2,
-  "q_hi": "निम्नलिखित में से कौन सा शब्द अलग है? (विचार: भारतीय राष्ट्रीय कांग्रेस के संस्थापक)",
-  "q_en": "Which of the following is the odd one out? (Context: Founders of the Indian National Congress)",
-  "o_hi": [
-   "ए.ओ. ह्यूम",
-   "बाल गंगाधर तिलक",
-   "ए.सी. बज्जाली",
-   "एफ. जे. रिचर्डसन"
-  ],
-  "o_en": [
-   "A.O. Hume",
-   "Bal Gangadhar Tilak",
-   "A.C. Bajiavalekar",
-   "F.J. Richardsson"
-  ],
-  "a": 1,
-  "e_hi": "ए.ओ. ह्यूम, ए.सी. बज्जाली और एफ. जे. रिचर्डसन भारतीय राष्ट्रीय कांग्रेस के संस्थापक माने जाते हैं, जबकि बाल गंगाधर तिलक बाद में हुए 'अग्रिमवादी' थे।",
-  "e_en": "A.O. Hume, A.C. Bajiavalekar, and F.J. Richardsson are considered founders of the Indian National Congress, while Bal Gangadhar Tilak emerged later as a 'Extremist'."
- },
- {
   "id": "rp-rea-o01077",
   "s": "reasoning",
   "t": "classification",
@@ -22960,29 +22730,6 @@
   "a": 2,
   "e_hi": "नोट, मोहर और पैसा सभी प्रचलित मुद्रा के रूप हैं, जबकि टोकन एक प्रतीकात्मक वस्तु है जो मुद्रा के रूप में उपयोग नहीं होती।",
   "e_en": "Note, Coin, and Money are all forms of currency, whereas Token is a symbolic item not used as currency."
- },
- {
-  "id": "rp-rea-o01083",
-  "s": "reasoning",
-  "t": "classification",
-  "d": 1,
-  "q_hi": "निम्नलिखित देशों में से कौन-सा देश बाकी तीनों से असंगत है?",
-  "q_en": "Which of the following countries is the odd one out?",
-  "o_hi": [
-   "भारत",
-   "पाकिस्तान",
-   "अफगानिस्तान",
-   "नेपाल"
-  ],
-  "o_en": [
-   "India",
-   "Pakistan",
-   "Afghanistan",
-   "Nepal"
-  ],
-  "a": 3,
-  "e_hi": "भारत, पाकिस्तान और अफगानिस्तान लगभग समान भौगोलिक क्षेत्र में स्थित हैं और एक-दूसरे की सीमाओं को साझा करते हैं, जबकि नेपाल एक अलग भौगोलिक क्षेत्र में स्थित है।",
-  "e_en": "India, Pakistan, and Afghanistan are in a similar geographical region and share borders, while Nepal is in a distinct geographical location."
  },
  {
   "id": "rp-rea-o01084",
@@ -23855,8 +23602,8 @@
    "Q"
   ],
   "a": 1,
-  "e_hi": "अंतर क्रमशः 2, 3, 4 है; अगला अंतर 5 होगा, इसलिए J के बाद N आएगा।",
-  "e_en": "The differences are 2, 3, 4; the next difference is 5, so N comes after J."
+  "e_hi": "अंतर क्रमशः 2, 3, 4 हैं; अगला अंतर 5 होगा, इसलिए J के बाद O आएगा।",
+  "e_en": "The differences are 2, 3, 4; the next difference is 5, so O comes after J."
  },
  {
   "id": "rp-rea-o01124",
@@ -24062,8 +23809,8 @@
    "P"
   ],
   "a": 2,
-  "e_hi": "अक्षरों के बीच के अंतर क्रमशः 2, 3, 4 हैं। अगला अंतर 5 होगा। J के बाद 5 अक्षर आगे जाने पर N मिलता है।",
-  "e_en": "The differences between letters are 2, 3, 4 respectively. The next difference is 5. Moving 5 letters ahead from J gives N."
+  "e_hi": "अक्षरों के बीच के अंतर क्रमशः 2, 3, 4 हैं। अगला अंतर 5 होगा। J के बाद 5 अक्षर आगे जाने पर O मिलता है।",
+  "e_en": "The differences between letters are 2, 3, 4 respectively. The next difference is 5. Moving 5 letters ahead from J gives O."
  },
  {
   "id": "rp-rea-o01133",
@@ -24246,8 +23993,8 @@
    "Rhinoceros"
   ],
   "a": 1,
-  "e_hi": "हाथी, बाघ और गीभ सभी स्तनधारी हैं, लेकिन चांग (Pangolin) भी स्तनधारी है। यहाँ ट्रैप यह है कि बाघ एक शिकारी है, जबकि अन्य शाकाहारी हैं। लेकिन वर्गीकरण के अनुसार, बाघ ही अलग है क्योंकि यह एक शिकारी (carnivore) है, जबकि अन्य शाकाहारी हैं।",
-  "e_en": "Elephant, Pangolin, and Rhinoceros are herbivores, while the Tiger is a carnivore/predator."
+  "e_hi": "हाथी, बाघ और गैंडा तीनों की त्वचा रोमयुक्त/सामान्य होती है, जबकि चांग (Pangolin) का शरीर कठोर शल्कों (scales) से ढका होता है। इस कारण चांग अलग है।",
+  "e_en": "Elephant, Tiger and Rhinoceros all have ordinary skin/fur, whereas the Pangolin's body is covered in hard scales. This makes the Pangolin the odd one out."
  },
  {
   "id": "rp-rea-o01141",
@@ -24659,9 +24406,9 @@
    "36",
    "81"
   ],
-  "a": 2,
-  "e_hi": "पहली जोड़ी में, 4 का वर्ग 16 है। इसी प्रकार, दूसरी जोड़ी में, 9 का वर्ग 81 होना चाहिए।",
-  "e_en": "In the first pair, the square of 4 is 16. Similarly, in the second pair, the square of 9 should be 81."
+  "a": 3,
+  "e_hi": "पहली जोड़ी में 4 का वर्ग 16 है। इसी प्रकार दूसरी जोड़ी में 9 का वर्ग 81 होता है, जो विकल्प [3] है।",
+  "e_en": "In the first pair, the square of 4 is 16. Similarly, in the second pair, the square of 9 is 81, which is option [3]."
  },
  {
   "id": "rp-rea-o01163",
@@ -24683,8 +24430,8 @@
    "X"
   ],
   "a": 1,
-  "e_hi": "अंतर क्रमशः +2, +3, +4, +5 है। अतः अगला अंतर +6 होगा। O के बाद 6 अक्षर आगे जाने पर T प्राप्त होता है।",
-  "e_en": "The differences are +2, +3, +4, +5. The next difference should be +6. Moving 6 letters forward from O gives T."
+  "e_hi": "अंतर क्रमशः +2, +3, +4, +5 है। अतः अगला अंतर +6 होगा। O के बाद 6 अक्षर आगे जाने पर U प्राप्त होता है।",
+  "e_en": "The differences are +2, +3, +4, +5. The next difference should be +6. Moving 6 letters forward from O gives U."
  },
  {
   "id": "rp-rea-o01164",
@@ -24775,8 +24522,8 @@
    "U"
   ],
   "a": 0,
-  "e_hi": "अक्षरों के बीच का अंतर क्रमशः +2, +3, +4, +5 है। अगला अंतर +6 होगा। P के बाद 6 अक्षर आगे जाने पर W प्राप्त होता है।",
-  "e_en": "The gaps between letters are +2, +3, +4, +5. The next gap should be +6. Moving 6 letters forward from P gives W."
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः +2, +3, +4, +5 है। अगला अंतर +6 होगा। P के बाद 6 अक्षर आगे जाने पर V प्राप्त होता है।",
+  "e_en": "The gaps between letters are +2, +3, +4, +5. The next gap should be +6. Moving 6 letters forward from P gives V."
  },
  {
   "id": "rp-rea-o01168",
@@ -25142,9 +24889,9 @@
    "Buffalo",
    "Cow"
   ],
-  "a": 2,
-  "e_hi": "यह प्रश्न पुनर्निर्मित करने की आवश्यकता है। सही विकल्प: चिड़िया, कबूतर, बाज, चमगादड़। चमगादड़ स्तनधारी है, बाकी पक्षी।",
-  "e_en": "The question needs to be revised for clarity. Correct set: Crow, Pigeon, Eagle, Bat. Bat is a mammal, the others are birds."
+  "a": 1,
+  "e_hi": "हाथी, भैंस और बैल को भारत में पारंपरिक रूप से पालतू/श्रम पशु के रूप में उपयोग किया जाता रहा है, जबकि गैंडा एक जंगली, संरक्षित पशु है जिसे पालतू नहीं बनाया जाता। इसलिए गैंडा अलग है।",
+  "e_en": "The Elephant, Buffalo and Cow have traditionally been domesticated/working animals in India, whereas the Rhinoceros is a wild, protected animal that is not domesticated. So the Rhinoceros is the odd one out."
  },
  {
   "id": "rp-rea-o01184",
@@ -25281,8 +25028,8 @@
    "Q"
   ],
   "a": 0,
-  "e_hi": "अक्षरों के बीच के अंतर 2, 3, 4, 5 हैं। J के बाद 5 अक्षर आगे जाना है, जो N होगा।",
-  "e_en": "The gaps between letters are 2, 3, 4, 5. Moving 5 steps forward from J gives N."
+  "e_hi": "अक्षरों के बीच के अंतर 2, 3, 4, 5 हैं। J के बाद 5 अक्षर आगे जाने पर O मिलता है।",
+  "e_en": "The gaps between letters are 2, 3, 4, 5. Moving 5 steps forward from J gives O."
  },
  {
   "id": "rp-rea-o01190",
@@ -25326,9 +25073,9 @@
    "Earth",
    "Mars"
   ],
-  "a": 3,
-  "e_hi": "बुध, शुक्र और पृथ्वी चट्टानी ग्रह हैं, जबकि मंगल भी चट्टानी है। यह प्रश्न गलत निर्मित है, आइए इसे सुधारें। सभी चारों चट्टानी हैं। बदलें: बुध, शुक्र, पृथ्वी, मंगल में से कोई नहीं अलग है। चलिए दूसरा उदाहरण लें।",
-  "e_en": "Let's use a clearer distinction. All four are terrestrial. Let's swap Mars for Jupiter to make it clear. Actually, let's use: Sun, Moon, Mars, Jupiter. Sun is a star. Let's stick to the original but fix the logic or options. Let's use: Mercury, Venus, Earth, Jupiter. Jupiter is a gas giant, others are terrestrial."
+  "a": 2,
+  "e_hi": "बुध, शुक्र और मंगल पर जीवन संभव नहीं है, जबकि पृथ्वी ही एक ऐसा ग्रह है जिसमें जीवन-योग्य वातावरण और जल उपलब्ध है। इसलिए पृथ्वी अलग है।",
+  "e_en": "Life is not possible on Mercury, Venus or Mars, whereas Earth is the only planet among these with a life-supporting atmosphere and water. So Earth is the odd one out."
  },
  {
   "id": "rp-rea-o01192",
@@ -25364,13 +25111,13 @@
    "अनुमानात्मक तर्क",
    "न्यायवाक्य (Syllogism)",
    "वास्तुनिष्ठ तर्क",
-   "द्वितीयोत्तर तर्क"
+   "निगमनात्मक तर्क"
   ],
   "o_en": [
    "Inductive reasoning",
    "Syllogism",
    "Abductive reasoning",
-   "Deductive reasoning (General term, but Syllogism is specific)"
+   "Deductive reasoning"
   ],
   "a": 1,
   "e_hi": "यह एक क्लासिक न्यायवाक्य (Syllogism) है जिसमें दो प्रमेयों (premises) से एक निष्कर्ष निकाला गया है। यह एक वैध तर्कीय संरचना है।",
@@ -25718,8 +25465,8 @@
    "Neither Conclusion I nor II follows."
   ],
   "a": 2,
-  "e_hi": "चूँकि 'कुछ शिक्षित समझदार हैं', इसलिए हमारे पास यह पक्का नहीं है कि वे डॉक्टर भी होंगे। उसी तरह, यह भी पक्का नहीं है कि कोई डॉक्टर समझदार नहीं है। इसलिए कोई निष्कर्ष अवश्य सत्य नहीं है।",
-  "e_en": "Since 'some educated are wise', it is not guaranteed that any doctor is wise, nor is it guaranteed that no doctor is wise. Therefore, neither conclusion follows necessarily."
+  "e_hi": "'कुछ डॉक्टर समझदार हैं' और 'कोई डॉक्टर समझदार नहीं है' एक-दूसरे के ठीक विपरीत (complementary) कथन हैं - इनमें से कोई एक अवश्य सत्य होना चाहिए, दोनों एक साथ असत्य नहीं हो सकते। इसलिए नियमानुसार 'निष्कर्ष I या II में से कोई एक सत्य है' सही उत्तर है।",
+  "e_en": "'Some doctors are wise' and 'No doctor is wise' are exact logical complements of each other — at least one of them must be true; they cannot both be false at once. By the standard either-or rule for complementary conclusions, 'Either Conclusion I or II follows' is the correct answer."
  },
  {
   "id": "rp-rea-o01209",
@@ -25933,8 +25680,8 @@
   "s": "reasoning",
   "t": "blood_relations",
   "d": 1,
-  "q_hi": "राहुल और प्रिया का संबंध क्या है, यदि प्रिया का कहना है, 'राहुल मेरे पिता की एकमात्र बेटी है?'",
-  "q_en": "What is the relationship between Rahul and Priya, if Priya says, 'Rahul is the only daughter of my father?'",
+  "q_hi": "राहुल और प्रिया का संबंध क्या है, यदि प्रिया कहती है, 'राहुल मेरे पिता का एकमात्र पुत्र है'?",
+  "q_en": "What is the relationship between Rahul and Priya, if Priya says, 'Rahul is the only son of my father?'",
   "o_hi": [
    "भाई और बहन",
    "पति और पत्नी",
@@ -25948,8 +25695,8 @@
    "Son and Mother"
   ],
   "a": 0,
-  "e_hi": "प्रिया का सिर्फ एक ही बेटा/बेटी है जो उसके पिता की बेटी है, यानी वह प्रिया की ही बेटी है। अतः राहुल प्रिया का भाई है।",
-  "e_en": "Priya's only daughter who is also her father's daughter must be Priya herself. Therefore, Rahul is Priya's brother."
+  "e_hi": "राहुल, प्रिया के पिता का एकमात्र पुत्र है, यानी प्रिया के पिता का पुत्र। इसलिए राहुल, प्रिया का भाई है, और दोनों भाई-बहन हैं।",
+  "e_en": "Rahul is the only son of Priya's father, i.e. Priya's father's son. So Rahul is Priya's brother, making them brother and sister."
  },
  {
   "id": "rp-rea-o01221",
@@ -25994,8 +25741,8 @@
    "Friend"
   ],
   "a": 2,
-  "e_hi": "उसके पिता की एकमात्र बेटी 'वह व्यक्ति' की माँ है। इसका अर्थ है कि 'वह व्यक्ति' उसकी पत्नी का भाई/बहन नहीं, बल्कि वह उसकी माँ है, अतः बोलने वाला उसका पति है।",
-  "e_en": "The only daughter of his father is the speaker's mother. This implies the speaker is married to that person. Thus, the speaker is the husband."
+  "e_hi": "'उसके पिता की एकमात्र बेटी' स्वयं वक्ता (बोलने वाले) की माँ है। इसका अर्थ है कि वह बेटी 'उस व्यक्ति' (जिसके पिता की बात हो रही है) की सगी बहन है, अतः वह व्यक्ति वक्ता का मामा है।",
+  "e_en": "'The only daughter of his father' is the speaker's mother. This means that daughter is the sibling of 'that person' (whose father is being referred to), making that person the speaker's maternal uncle."
  },
  {
   "id": "rp-rea-o01223",
@@ -26523,8 +26270,8 @@
    "2"
   ],
   "a": 0,
-  "e_hi": "शब्द में O, E, E, E कुल चार स्वर अक्षर हैं।",
-  "e_en": "The word contains O, E, E, E, totaling four vowels."
+  "e_hi": "शब्द GOVERNMENT के अक्षर हैं G-O-V-E-R-N-M-E-N-T। इनमें स्वर केवल O, E, E हैं - कुल तीन स्वर।",
+  "e_en": "The letters of GOVERNMENT are G-O-V-E-R-N-M-E-N-T. The vowels among these are only O, E, E — a total of three vowels."
  },
  {
   "id": "rp-rea-o01249",
@@ -26546,8 +26293,8 @@
    "Q"
   ],
   "a": 1,
-  "e_hi": "अंतर 2, 3, 4, 5 है। K के बाद 5 अक्षर आगे जानने पर N मिलता है।",
-  "e_en": "The differences are 2, 3, 4, 5. Moving 5 letters forward from K gives N."
+  "e_hi": "अंतर 2, 3, 4, 5 है। K के बाद 5 अक्षर आगे जाने पर P मिलता है।",
+  "e_en": "The differences are 2, 3, 4, 5. Moving 5 letters forward from K gives P."
  },
  {
   "id": "rp-rea-o01250",
@@ -26569,8 +26316,8 @@
    "2, 4, 1, 3"
   ],
   "a": 3,
-  "e_hi": "APPLE (P से समाप्त) पहले आता है, फिर APPLETS (T से), फिर APPEAL (L से), और अंत में APPEASE (S से)।",
-  "e_en": "APPLE (ends with P) comes first, then APPLETS (T), then APPEAL (L), and finally APPEASE (S)."
+  "e_hi": "सभी शब्द 'APP' से शुरू होते हैं। 5वां अक्षर देखें: APPEAL और APPEASE में 'E' है, APPLE और APPLETS में 'L' है, इसलिए APPEAL/APPEASE पहले आएंगे। APPEAL और APPEASE में 6ठा अक्षर 'A' बनाम 'S' है, तो APPEAL पहले आता है। APPLE, APPLETS का ही प्रारम्भिक भाग है, इसलिए APPLE, APPLETS से पहले आता है। क्रम: APPEAL(2), APPEASE(4), APPLE(1), APPLETS(3) = 2,4,1,3।",
+  "e_en": "All words start with 'APP'. Looking at the 5th letter: APPEAL and APPEASE have 'E', while APPLE and APPLETS have 'L', so APPEAL/APPEASE come first. Between APPEAL and APPEASE, the 6th letter is 'A' vs 'S', so APPEAL comes first. APPLE is a prefix of APPLETS, so APPLE comes before APPLETS. Order: APPEAL(2), APPEASE(4), APPLE(1), APPLETS(3) = 2,4,1,3."
  },
  {
   "id": "rp-rea-o01251",
@@ -26730,8 +26477,8 @@
    "O"
   ],
   "a": 0,
-  "e_hi": "R से 6 स्थान पीछे जाने पर हम M पर पहुँचते हैं (Q, P, O, N, M).",
-  "e_en": "Counting 6 positions back from R leads to M (Q, P, O, N, M)."
+  "e_hi": "R से 6 स्थान पीछे जाने पर क्रम इस प्रकार है: Q, P, O, N, M, L - यानी 6 स्थान पीछे L आता है।",
+  "e_en": "Counting 6 positions back from R: Q, P, O, N, M, L — six positions back is L."
  },
  {
   "id": "rp-rea-o01258",
@@ -27075,8 +26822,8 @@
    "Grape"
   ],
   "a": 0,
-  "e_hi": "यह एक गलत धारणा है, आइए विकल्प बदलें। सही वर्गीकरण: कद्दू, टमाटर, अनार, संतरे। कद्दू और टमाटर को वनस्पति विज्ञान में फल माना जाता है जबकि अन्य ड्रूपी या बर्री हैं? नहीं, यह भ्रमित करने वाला है। आइए सरल रखें: आलू, टमाटर, मिर्च, चिली।",
-  "e_en": "Let's correct the options for clarity. Options: Potato, Tomato, Chili, Capsicum. Potato is a tuber (stem), while the others are fruits or berries botanically."
+  "e_hi": "टमाटर को आमतौर पर भोजन में सब्जी (नमकीन व्यंजन) के रूप में उपयोग किया जाता है, जबकि प्लांटेन, केला और अंगूर को मीठे फल के रूप में खाया जाता है। इस सामान्य उपयोग के आधार पर टमाटर अलग है।",
+  "e_en": "Tomato is commonly used as a savory vegetable in cooking, whereas plantain, banana and grape are eaten as sweet fruits. Based on this common culinary usage, tomato is the odd one out."
  },
  {
   "id": "rp-rea-o01274",
@@ -27401,52 +27148,6 @@
   "e_en": "The distance of the object from the mirror is exactly equal to the distance of its image from the mirror."
  },
  {
-  "id": "rp-rea-o01289",
-  "s": "reasoning",
-  "t": "alphabet_test",
-  "d": 1,
-  "q_hi": "निम्नलिखित में से किस शब्द को अलग करके एक समूह बनाया जा सकता है? अक्षरों की संख्या के आधार पर वर्गीकरण करें।",
-  "q_en": "Which of the following words can be grouped together differently based on the number of letters they contain?",
-  "o_hi": [
-   "पानी",
-   "सूअर",
-   "हाथी",
-   "बिल्ली"
-  ],
-  "o_en": [
-   "Paani",
-   "Suwar",
-   "Haathi",
-   "Billi"
-  ],
-  "a": 1,
-  "e_hi": "पानी, हाथी और बिल्ली में प्रत्येक तीन अक्षर हैं, जबकि 'सूअर' में चार अक्षर हैं।",
-  "e_en": "Paani, Haathi, and Billi each have three letters, whereas 'Suwar' has four letters."
- },
- {
-  "id": "rp-rea-o01290",
-  "s": "reasoning",
-  "t": "alphabet_test",
-  "d": 1,
-  "q_hi": "वर्णमाला के क्रम के आधार पर, निम्नलिखित में से कौन सा शब्द अलग श्रेणी में आता है?",
-  "q_en": "Based on the alphabetical order of their first letter, which of the following words belongs to a different category?",
-  "o_hi": [
-   "अंगूर",
-   "आलू",
-   "इमली",
-   "एकड़"
-  ],
-  "o_en": [
-   "Angur",
-   "Aloo",
-   "Imli",
-   "Ekad"
-  ],
-  "a": 1,
-  "e_hi": "अंगूर, इमली और एकड़ के पहले अक्षर क्रमशः 'अ', 'इ' और 'ए' हैं जो कि वokal (स्वर) हैं, जबकि 'आलू' का पहला अक्षर 'आ' है। यहाँ उद्देश्य स्वर वर्गों का अंतर देखना है।",
-  "e_en": "Angur, Imli, and Ekad start with vowels 'A', 'I', and 'E' respectively, while 'Aloo' starts with 'AA'. This distinguishes it based on specific vowel categories."
- },
- {
   "id": "rp-rea-o01291",
   "s": "reasoning",
   "t": "alphabet_test",
@@ -27491,29 +27192,6 @@
   "a": 3,
   "e_hi": "राशि, मूल्य और कीमत तीनों कीमत या आर्थिक मान से संबंधित हैं, जबकि वजन भार से संबंधित है।",
   "e_en": "Raasi, Mulya, and Keemat are all related to price or monetary value, whereas Wajan is related to weight."
- },
- {
-  "id": "rp-rea-o01293",
-  "s": "reasoning",
-  "t": "alphabet_test",
-  "d": 1,
-  "q_hi": "निम्नलिखित शब्दों में से कौन सा शब्द अलग श्रेणी में आता है? लिंग (Gender) के आधार पर वर्गीकरण करें।",
-  "q_en": "Which of the following words belongs to a different category? Classify based on gender.",
-  "o_hi": [
-   "बैल",
-   "गाय",
-   "भैंस",
-   "सांड"
-  ],
-  "o_en": [
-   "Bail (Ox)",
-   "Gaay (Cow)",
-   "Bhains (Buffalo)",
-   "Saand (Bull)"
-  ],
-  "a": 0,
-  "e_hi": "गाय और भैंस नर नहीं हैं (मादा), सांड नर है, लेकिन बैल काstrated (उपनयन) नर है। यहाँ सटीक वर्गीकरण मुश्किल है, आइए दूसरा विकल्प देखें। नियम: नर बनाम मादा। गाया (मादा), सांड (नर), भैंस (मादा)। बैल भी नर है। यह सवाल गलत है।",
-  "e_en": "Correction: Let's use a clearer set. Male vs Female animals. Cow (Female), Bull (Male), Buffalo (Female), Ox (Castrated Male - often grouped with males or separate). Let's swap options for clarity. Options: Cow, Bull, Goat, Cat. Answer: Cat. Explanation: Cow, Bull, Goat are farm animals, Cat is a pet. Or Male/Female. Let's use: Cow, Buffalo, Goat, Cat. Answer: Cat. Explanation: First three are farm animals, Cat is a pet. Let's re-evaluate the generated question to ensure accuracy."
  },
  {
   "id": "rp-rea-o01294",
@@ -28662,8 +28340,8 @@
    "M"
   ],
   "a": 2,
-  "e_hi": "अक्षरों के बीच का अंतर क्रमशः 1, 2, 3, 4 है। अगला अंतर 5 होगा। K (11) + 5 = 16, जो कि N है।",
-  "e_en": "The difference between the letters increases by 1 each time (1, 2, 3, 4). The next difference is 5. K (11) + 5 = 16, which is N."
+  "e_hi": "अक्षरों के बीच का अंतर क्रमशः 1, 2, 3, 4 है। अगला अंतर 5 होगा। K (11) + 5 = 16, जो कि P है।",
+  "e_en": "The difference between the letters increases by 1 each time (1, 2, 3, 4). The next difference is 5. K (11) + 5 = 16, which is P."
  },
  {
   "id": "rp-rea-o01345",
@@ -28984,8 +28662,8 @@
    "Y"
   ],
   "a": 1,
-  "e_hi": "अंतर क्रमशः +2, +3, +4, +5 हैं। अगला अंतर +6 होगा, अतः P के 6 अक्षर आगे W आएगा।",
-  "e_en": "The differences are +2, +3, +4, +5. The next difference is +6, so the letter 6 steps after P is W."
+  "e_hi": "अंतर क्रमशः +2, +3, +4, +5 हैं। अगला अंतर +6 होगा, अतः P के 6 अक्षर आगे V आएगा (P(16)+6=22=V)।",
+  "e_en": "The differences are +2, +3, +4, +5. The next difference is +6, so the letter 6 steps after P is V (P(16)+6=22=V)."
  },
  {
   "id": "rp-rea-o01359",
@@ -29496,7 +29174,7 @@
  {
   "id": "rp-rea-o01384",
   "s": "reasoning",
-  "t": "syllogism",
+  "t": "mathematical_operations",
   "d": 2,
   "q_hi": "तीन मित्र A, B और C एक काम 12 दिनों में पूरा करते हैं। A, B से 20% तेज़ और B, C से 25% तेज़ काम करता है। यदि A अकेला काम करता है, तो उसे कितने दिन लगेंगे?",
   "q_en": "Three friends A, B, and C finish a job in 12 days. A is 20% faster than B, and B is 25% faster than C. If A works alone, how many days will he take?",
@@ -30276,35 +29954,12 @@
   "e_en": "Since no giraffe is slow and some cows are slow, those slow cows cannot be giraffes. Therefore, some cows are not giraffes."
  },
  {
-  "id": "rp-rea-o01419",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 1,
-  "q_hi": "भारत में 'विश्व गणित दिवस' कब मनाया जाता है?",
-  "q_en": "When is World Maths Day celebrated in India?",
-  "o_hi": [
-   "12 मार्च",
-   "6 मार्च",
-   "14 मई",
-   "22 अप्रैल"
-  ],
-  "o_en": [
-   "12 March",
-   "6 March",
-   "14 May",
-   "22 April"
-  ],
-  "a": 1,
-  "e_hi": "विश्व गणित दिवस हर साल 12 मार्च को मनाया जाता है।",
-  "e_en": "World Maths Day is celebrated every year on 12 March."
- },
- {
   "id": "rp-rea-o01420",
   "s": "reasoning",
   "t": "non_verbal_reasoning",
   "d": 1,
-  "q_hi": "यह पहचानें कि निम्नलिखित में से कौन सी तारीख 'विश्व विज्ञान दिवस' के रूप में मान्यता प्राप्त है?",
-  "q_en": "Identify the date recognized as 'World Science Day' from the following.",
+  "q_hi": "निम्नलिखित में से कौन सी तारीख भारत में 'राष्ट्रीय विज्ञान दिवस' के रूप में मनाई जाती है?",
+  "q_en": "Identify the date recognized as 'National Science Day' in India.",
   "o_hi": [
    "28 फरवरी",
    "4 फरवरी",
@@ -30318,8 +29973,8 @@
    "10 October"
   ],
   "a": 0,
-  "e_hi": "UNESCO द्वारा विश्व विज्ञान दिवस 28 फरवरी को मनाया जाता है।",
-  "e_en": "World Science Day is celebrated on 28 February by UNESCO."
+  "e_hi": "भारत में राष्ट्रीय विज्ञान दिवस रमन प्रभाव की खोज की स्मृति में हर वर्ष 28 फरवरी को मनाया जाता है।",
+  "e_en": "India's National Science Day is celebrated every year on 28 February, commemorating the discovery of the Raman Effect."
  },
  {
   "id": "rp-rea-o01421",
@@ -30740,8 +30395,8 @@
   "s": "reasoning",
   "t": "non_verbal_reasoning",
   "d": 1,
-  "q_hi": "निम्नलिखित आकृति श्रृंखला में कौन सी आकृति अगली आने वाली है? (ट्रैप: कभी-कभी छात्र केवल रोटेशन देखते हैं, लेकिन यहाँ आकृति का उल्टा-सीधा (flip) भी बदल रहा है।)",
-  "q_en": "Which figure comes next in the following figure series? (Trap: Students often look only at rotation, but here the figure is also being flipped.)",
+  "q_hi": "निम्नलिखित आकृति श्रृंखला में कौन सी आकृति अगली आने वाली है?",
+  "q_en": "Which figure comes next in the following figure series?",
   "o_hi": [
    "आकृति 1",
    "आकृति 2",
@@ -30849,29 +30504,6 @@
   "a": 0,
   "e_hi": "आकृति हमेशा 45 डिग्री की घड़ी की विपरीत दिशा (anti-clockwise) में घूमती है।",
   "e_en": "The figure always rotates 45 degrees in the anti-clockwise direction."
- },
- {
-  "id": "rp-rea-o01446",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 1,
-  "q_hi": "एक शब्द को 'GHOST' के रूप में कोड किया गया है। इसी नियम से 'GHOST' कौन सा शब्द है?",
-  "q_en": "A word is coded as 'GHOST'. According to this rule, what is the word 'GHOST'?",
-  "o_hi": [
-   "SIGHT",
-   "HOUST",
-   "GHOST",
-   "TOUGH"
-  ],
-  "o_en": [
-   "SIGHT",
-   "HOUST",
-   "GHOST",
-   "TOUGH"
-  ],
-  "a": 2,
-  "e_hi": "यह एक ट्रैप प्रश्न है। प्रश्न यही पूछ रहा है कि 'GHOST' कौन सा शब्द है, जिसका उत्तर स्वयं 'GHOST' ही है, जब तक कि कोई अन्य परिवर्तन का संकेत न दिया गया हो।",
-  "e_en": "This is a trap question. The question asks what the word 'GHOST' is, and the answer is 'GHOST' itself unless a specific transformation is indicated."
  },
  {
   "id": "rp-rea-o01448",
@@ -31062,8 +30694,8 @@
   "s": "reasoning",
   "t": "puzzle_seating",
   "d": 3,
-  "q_hi": "एक वर्गाकार कमरे में 4 दीवारों के बीच में एक मेज़ रखी है। यदि राम उत्तर की दीवार से 2 मीटर दूर और पश्चिम की दीवार से 3 मीटर दूर बैठा है, तो वह दक्षिण-पूर्व कोने से कितनी दूर है?",
-  "q_en": "In a square room, a table is in the center. If Ram is sitting 2 meters from the North wall and 3 meters from the West wall, how far is he from the South-East corner?",
+  "q_hi": "एक वर्गाकार कमरे की हर दीवार की लंबाई 6 मीटर है। यदि राम उत्तर की दीवार से 2 मीटर दूर और पश्चिम की दीवार से 3 मीटर दूर बैठा है, तो वह दक्षिण-पूर्व कोने से कितनी दूर है?",
+  "q_en": "In a square room whose each wall is 6 metres long, Ram is sitting 2 metres from the North wall and 3 metres from the West wall. How far is he from the South-East corner?",
   "o_hi": [
    "5 मीटर",
    "4 मीटर",
@@ -31077,8 +30709,8 @@
    "7 meters"
   ],
   "a": 0,
-  "e_hi": "मान लें कि कमरे की चौड़ाई 5 मीटर है (इस प्रश्न के संदर्भ में)। दक्षिण की दीवार से दूरी = 5 - 2 = 3 मीटर। पूर्व की दीवार से दूरी = 5 - 3 = 2 मीटर। दूरी = √(3² + 2²) = √13 ≈ 3.6। ध्यान दें: यह प्रश्न मानक ज्यामिति पर आधारित है, लेकिन विकल्पों में 5 मीटर सबसे नज़दीकी पूर्ण संख्या है यदि हम कोणों के बीच की सीधी दूरी (hypotenuse) की गणना करते हैं जहाँ पायथागोरस प्रमेय लागू होता है (3-4-5 त्रिकोण का उदाहरण)।",
-  "e_en": "Assume room width is 5m. Distance from South wall = 5-2=3m. Distance from East wall = 5-3=2m. The straight line distance to the SE corner involves Pythagoras. Note: This is a tricky geometry context often simplified in exams to test Pythagoras triplets (3-4-5)."
+  "e_hi": "दक्षिण की दीवार से दूरी = 6-2=4 मीटर। पूर्व की दीवार से दूरी = 6-3=3 मीटर। पायथागोरस प्रमेय से दक्षिण-पूर्व कोने की दूरी = √(4²+3²) = √25 = 5 मीटर।",
+  "e_en": "Distance from South wall = 6-2=4 m. Distance from East wall = 6-3=3 m. By the Pythagorean theorem, distance to the SE corner = √(4²+3²) = √25 = 5 m."
  },
  {
   "id": "rp-rea-o01458",
@@ -31091,13 +30723,13 @@
    "13-15-21-19-5",
    "13-15-19-19-5",
    "13-15-21-19-21",
-   "13-15-21-19-5 (Note: Check U=21)"
+   "13-15-5-19-5"
   ],
   "o_en": [
    "13-15-21-19-5",
    "13-15-19-19-5",
    "13-15-21-19-21",
-   "13-15-21-19-5 (Trap: U is 21, not 5)"
+   "13-15-5-19-5"
   ],
   "a": 0,
   "e_hi": "M=13, O=15, U=21, S=19, E=5। इसलिए सही कोड 13-15-21-19-5 है।",
@@ -31173,29 +30805,6 @@
   "e_en": "In FROG, each letter is shifted one place backward to form EODF. Following this logic, C becomes B, O becomes N, and W becomes V, so the code is BNV."
  },
  {
-  "id": "rp-rea-o01464",
-  "s": "reasoning",
-  "t": "coding_decoding",
-  "d": 3,
-  "q_hi": "यदि 'CAT' को '723' के रूप में कोड किया जाता है, जहाँ प्रत्येक अक्षर की संख्या उसकी अंग्रेज़ी वर्णमाला में स्थिति के बराबर है, तो 'DOG' कोड कैसे होगा?",
-  "q_en": "If 'CAT' is coded as '723', where each letter's number corresponds to its position in the English alphabet, how will 'DOG' be coded?",
-  "o_hi": [
-   "4157",
-   "4156",
-   "4147",
-   "3157"
-  ],
-  "o_en": [
-   "4157",
-   "4156",
-   "4147",
-   "3157"
-  ],
-  "a": 0,
-  "e_hi": "C की स्थिति 3, A की 1 और T की 20 है, लेकिन यहाँ 723 दिया गया है, जो सामान्य स्थिति नहीं है। प्रश्न में स्पष्ट है कि संख्या स्थिति के बराबर है, परन्तु उदाहरण 723 है। C=3, A=1, T=20. 3,1,20 का योग 24 है। 7+2+3=12. यह तर्क नहीं बनता। आइए मान लें कि प्रश्न में गलती है या यह एक विशिष्ट कोड है। यदि हम मान लें कि यह एक साधारण वर्णमाला कोड है, तो D=4, O=15, G=7। विकल्प 4157 सबसे नज़दीकी है।",
-  "e_en": "C is 3, A is 1, T is 20. The code 723 does not match standard positions. Assuming the question implies standard alphabetical positions for the answer despite the example discrepancy, D=4, O=15, G=7. Thus, the code is 4157."
- },
- {
   "id": "rp-rea-o01465",
   "s": "reasoning",
   "t": "blood_relations",
@@ -31237,9 +30846,9 @@
    "Sister",
    "Daughter-in-law"
   ],
-  "a": 2,
-  "e_hi": "'मेरे पिता की एकमात्र पुत्री' का अर्थ है वह व्यक्ति स्वयं (या उसकी बहन, यदि वह पुरुष है)। यदि वह पुरुष है, तो उसकी पिता की पुत्री उसकी बहन है। बहन की पुत्री उसकी भतीजी होगी, लेकिन विकल्पों में भतीजी नहीं है। आइए पुनः देखें: 'मेरे पिता की एकमात्र पुत्री' वह स्वयं है (यदि वह महिला है) या उसकी बहन (यदि वह पुरुष है)। प्रश्न में 'वह व्यक्ति' पुरुष माना जा सकता है। यदि वह पुरुष है, तो 'पिता की एकमात्र पुत्री' उसकी बहन है। बहन की पुत्री = भतीजी। विकल्पों में भतीजी नहीं है। शायद प्रश्न का अर्थ 'मेरी एकमात्र पुत्री' है? नहीं, 'पिता की एकमात्र पुत्री'। यदि बोलने वाला महिला है, तो वह स्वयं पिता की एकमात्र पुत्री है। उसकी पुत्री = मेरी पुत्री। विकल्प A 'पुत्री' है। यह सही लगता है।",
-  "e_en": "'The only daughter of my father' refers to the speaker if the speaker is female, or the speaker's sister if the speaker is male. If the speaker is female, the person is her daughter. If the speaker is male, the person is his niece. 'Daughter' is an option, implying the speaker is likely female or the context assumes the direct line. Given standard exam logic, if 'only daughter of my father' is the speaker (female), then her daughter is the answer. If the speaker is male, it would be niece (not an option). Thus, the relation is Daughter."
+  "a": 0,
+  "e_hi": "'मेरे पिता की एकमात्र पुत्री' वक्ता स्वयं है (मानते हुए वक्ता महिला है)। इसलिए 'वह महिला' जो इस पुत्री (वक्ता) की स्वयं की पुत्री है, वक्ता की पुत्री है।",
+  "e_en": "'The only daughter of my father' refers to the speaker herself (assuming the speaker is female). So 'that woman', who is the daughter of this daughter (the speaker), is the speaker's own daughter."
  },
  {
   "id": "rp-rea-o01467",
@@ -31330,8 +30939,8 @@
    "K"
   ],
   "a": 1,
-  "e_hi": "विपरीत क्रम में बाएं से 7वां अक्षर T है, और T के दाईं ओर 10वां अक्षर I होगा।",
-  "e_en": "In reverse order, the 7th letter from the left is T, and the 10th letter to the right of T is I."
+  "e_hi": "विपरीत क्रम में बाएं से 7वां अक्षर T है। T के दाईं ओर 10वां अक्षर पाने के लिए 10 स्थान आगे गिनें: 7+10=17वां स्थान, जो विपरीत क्रम में J होता है।",
+  "e_en": "In reverse order, the 7th letter from the left is T. Moving 10 positions further right from position 7 lands on position 17, which in the reversed sequence is J."
  },
  {
   "id": "rp-rea-j01471",
@@ -31352,9 +30961,9 @@
    "Four",
    "One"
   ],
-  "a": 1,
-  "e_hi": "शब्द में (A,C), (C,A), और (L,O) के जोड़े वर्णमाला के क्रम के समान दूरी पर हैं।",
-  "e_en": "In the word, the pairs (A,C), (C,A), and (L,O) maintain the same relative distance as in the English alphabet."
+  "a": 0,
+  "e_hi": "शब्द CALCULATOR (C-A-L-C-U-L-A-T-O-R) में केवल दो वास्तविक जोड़े मिलते हैं: स्थिति 2,4 पर (A,C) - इनके बीच 1 अक्षर है और वर्णमाला में A,C के बीच भी 1 अक्षर (B) है; और स्थिति 6,9 पर (L,O) - इनके बीच 2 अक्षर हैं और वर्णमाला में L,O के बीच भी 2 अक्षर (M,N) हैं। (C,A) को (A,C) से अलग नहीं गिना जाता क्योंकि यह वही जोड़ा है। इसलिए सही उत्तर दो है।",
+  "e_en": "In the word CALCULATOR (C-A-L-C-U-L-A-T-O-R), only two genuine pairs qualify: positions 2,4 (A,C) - with 1 letter between them in the word, matching the 1 letter (B) between A and C in the alphabet; and positions 6,9 (L,O) - with 2 letters between them, matching the 2 letters (M,N) between L and O in the alphabet. (C,A) is not a separate pair from (A,C) - it is the same pair. So the correct answer is two."
  },
  {
   "id": "rp-rea-j01473",
@@ -31399,8 +31008,8 @@
    "Three"
   ],
   "a": 2,
-  "e_hi": "वर्णानुक्रम में व्यवस्थित करने पर केवल 'N' अपने स्थान पर रहता है।",
-  "e_en": "When arranged in alphabetical order, only the letter 'N' remains in its original position."
+  "e_hi": "REASONING (R-E-A-S-O-N-I-N-G) को वर्णानुक्रम में व्यवस्थित करने पर A-E-G-I-N-N-O-R-S मिलता है। स्थिति 2 पर मूल और वर्णानुक्रम दोनों में 'E' है, और स्थिति 6 पर दोनों में 'N' है। इस प्रकार कुल दो अक्षर (E और N) अपने मूल स्थान पर ही रहते हैं।",
+  "e_en": "Arranging REASONING (R-E-A-S-O-N-I-N-G) alphabetically gives A-E-G-I-N-N-O-R-S. At position 2, both the original and sorted word have 'E', and at position 6, both have 'N'. So exactly two letters (E and N) remain in their original positions."
  },
  {
   "id": "rp-rea-j01475",
@@ -31514,8 +31123,8 @@
    "12"
   ],
   "a": 2,
-  "e_hi": "बाएं से 10वां J है और दाएं से 5वां V है। J और V के बीच 10 अक्षर होते हैं।",
-  "e_en": "The 10th letter from the left is J and the 5th from the right is V. There are 10 letters between J and V."
+  "e_hi": "बाएं से 10वां अक्षर J है और दाएं से 5वां अक्षर V है। J(10) और V(22) के बीच के अक्षरों की संख्या = 22-10-1 = 11।",
+  "e_en": "The 10th letter from the left is J and the 5th from the right is V. The number of letters between J(10) and V(22) = 22-10-1 = 11."
  },
  {
   "id": "rp-rea-j01481",
@@ -31652,8 +31261,8 @@
    "W"
   ],
   "a": 1,
-  "e_hi": "दाएं से 10वें के दाएं 4था मतलब दाएं से 6ठा अक्षर। दाएं से 6ठा अक्षर T है।",
-  "e_en": "4th to the right of 10th from the right means 6th from the right. The 6th letter from the right is T."
+  "e_hi": "दाएं से 10वें के दाएं 4था मतलब दाएं से 6ठा अक्षर (10-4=6)। दाएं से 6ठा अक्षर की स्थिति = 26-6+1 = 21, जो U है।",
+  "e_en": "4th to the right of the 10th from the right means the 6th from the right (10-4=6). The position of the 6th letter from the right = 26-6+1 = 21, which is U."
  },
  {
   "id": "rp-rea-j01487",
@@ -31965,17 +31574,17 @@
    "BDF",
    "CEG",
    "KMO",
-   "PRT"
+   "PRU"
   ],
   "o_en": [
    "BDF",
    "CEG",
    "KMO",
-   "PRT"
+   "PRU"
   ],
   "a": 3,
-  "e_hi": "BDF, CEG, और KMO में अक्षरों के बीच +2 का अंतर है, जबकि PRT में भी यही है, लेकिन यहाँ यह एक समान वर्णमाला क्रम का अनुसरण करते हैं। त्रुटि: PRT में P(16), R(18), T(20) है। सभी विकल्प समान हैं? वास्तव में, BDF (2,4,6), CEG (3,5,7), KMO (11,13,15), PRT (16,18,20) - सभी समान हैं, प्रश्न पुनरीक्षित: (क) BDF, (ख) CEG, (ग) KMO, (घ) TVX. TVX (20,22,24) भी समान है। चलिए विकल्प (घ) को 'TVY' करते हैं।",
-  "e_en": "Actually, looking at the pattern, BDF, CEG, KMO, and PRT all follow +2. Let's assume the question meant a different set where one does not fit. If we take (d) as TVY, it breaks the pattern."
+  "e_hi": "BDF, CEG, और KMO में लगातार अक्षरों के बीच +2 का सुसंगत अंतर है। PRU में P से R तक +2 है, लेकिन R से U तक +3 है, जो पैटर्न से मेल नहीं खाता। इसलिए PRU अलग है।",
+  "e_en": "BDF, CEG and KMO all have a consistent +2 gap between successive letters. In PRU, P to R is +2, but R to U is +3, breaking the pattern. So PRU is the odd one out."
  },
  {
   "id": "rp-rea-j01493",
@@ -32434,8 +32043,8 @@
    "R M B O F"
   ],
   "a": 0,
-  "e_hi": "प्रत्येक अक्षर में +1 किया गया है और अक्षरों को उल्टा क्रम दिया गया है।",
-  "e_en": "Each letter is shifted by +1 and the resulting string is reversed."
+  "e_hi": "प्रत्येक अक्षर में केवल +1 किया गया है (कोई उल्टा क्रम नहीं): T+1=U, R+1=S, A+1=B, I+1=J, N+1=O, जो 'USBJO' देता है। इसी नियम से PLANE: P+1=Q, L+1=M, A+1=B, N+1=O, E+1=F, जो 'QMBOF' देता है।",
+  "e_en": "Each letter is simply shifted by +1 (no reversal): T+1=U, R+1=S, A+1=B, I+1=J, N+1=O, giving 'USBJO'. Applying the same rule to PLANE: P+1=Q, L+1=M, A+1=B, N+1=O, E+1=F, giving 'QMBOF'."
  },
  {
   "id": "rp-rea-j01501",
@@ -32816,17 +32425,17 @@
    "AZ",
    "BY",
    "CX",
-   "DW"
+   "DV"
   ],
   "o_en": [
    "AZ",
    "BY",
    "CX",
-   "DW"
+   "DV"
   ],
   "a": 3,
-  "e_hi": "यहाँ सभी युग्म वर्णमाला के विपरीत अक्षरों (opposite letters) के हैं, लेकिन DW का स्थान क्रम के अनुसार अन्य से भिन्न पैटर्न दर्शाता है।",
-  "e_en": "All pairs are opposite letters of the alphabet, but the positioning of DW follows a different pattern relative to the sequence."
+  "e_hi": "AZ, BY, CX प्रत्येक में दोनों अक्षरों का योग 27 है (A+Z=1+26=27, B+Y=2+25=27, C+X=3+24=27), जो इन्हें वर्णमाला के 'पूरक जोड़े' बनाता है। DV में D+V=4+22=26 है, जो इस नियम से मेल नहीं खाता, इसलिए DV अलग है।",
+  "e_en": "In AZ, BY and CX, the two letters always add up to 27 (A+Z=1+26=27, B+Y=2+25=27, C+X=3+24=27), making them 'complementary pairs' of the alphabet. In DV, D+V=4+22=26, which breaks this rule, so DV is the odd one out."
  },
  {
   "id": "rp-rea-j01513",
@@ -32905,20 +32514,20 @@
   "q_hi": "दिए गए विकल्पों में से विषम अक्षर समूह चुनें: (क) BD (ख) CE (ग) DF (घ) EG",
   "q_en": "Choose the odd letter group from the given options: (a) BD (b) CE (c) DF (d) EG",
   "o_hi": [
-   "BD",
+   "BC",
    "CE",
    "DF",
    "EG"
   ],
   "o_en": [
-   "BD",
+   "BC",
    "CE",
    "DF",
    "EG"
   ],
   "a": 0,
-  "e_hi": "इस प्रश्न में सभी के बीच एक अक्षर का अंतर है, लेकिन अक्षरों के मान के आधार पर वर्गीकरण में BD सबसे अलग है।",
-  "e_en": "In this question, all have a gap of one letter, but based on the alphabetical value classification, BD is distinct."
+  "e_hi": "CE, DF, EG में दोनों अक्षरों के बीच ठीक एक अक्षर का अंतर (गैप 2) है, जबकि BC में दोनों अक्षर लगातार (गैप 1) हैं। इस कारण BC अलग है।",
+  "e_en": "In CE, DF and EG, there is exactly one letter's gap (a difference of 2) between the two letters, whereas in BC the letters are consecutive (a difference of 1). This makes BC the odd one out."
  },
  {
   "id": "rp-rea-j01517",
@@ -33034,29 +32643,6 @@
   "a": 0,
   "e_hi": "समीकरण: 12 × 4 ÷ 2 + 6 - 3 = 12 × 2 + 6 - 3 = 24 + 6 - 3 = 27.",
   "e_en": "Equation: 12 × 4 ÷ 2 + 6 - 3 = 12 × 2 + 6 - 3 = 24 + 6 - 3 = 27."
- },
- {
-  "id": "rp-rea-i01507",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 9 + 7 = 58 और 4 + 6 = 22, तो 8 + 3 = क्या होगा?",
-  "q_en": "If 9 + 7 = 58 and 4 + 6 = 22, then what is 8 + 3?",
-  "o_hi": [
-   "26",
-   "29",
-   "32",
-   "35"
-  ],
-  "o_en": [
-   "26",
-   "29",
-   "32",
-   "35"
-  ],
-  "a": 1,
-  "e_hi": "तर्क: (पहली संख्या × दूसरी संख्या) + (पहली संख्या - दूसरी संख्या) या (9×7)+(-1)=62. सही तर्क: (9×7)-5 = 58, (4×6)-2 = 22. (8×3)-(-5) = 29.",
-  "e_en": "Logic: (9×7)-5 = 58, (4×6)-2 = 22. The pattern of subtraction is 5, 2... follows a sequence."
  },
  {
   "id": "rp-rea-i01508",
@@ -33335,29 +32921,6 @@
   "e_en": "Logic: (5+7) × 2 = 24, (9+6) × 2 = 30, so (8+4) × 2 = 24."
  },
  {
-  "id": "rp-rea-i01524",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 16 - 2 = 34, 10 - 4 = 26, तो 12 - 5 का मान क्या होगा?",
-  "q_en": "If 16 - 2 = 34, 10 - 4 = 26, what is the value of 12 - 5?",
-  "o_hi": [
-   "30",
-   "32",
-   "34",
-   "36"
-  ],
-  "o_en": [
-   "30",
-   "32",
-   "34",
-   "36"
-  ],
-  "a": 1,
-  "e_hi": "तर्क: (16 × 2) + 2 = 34, (10 × 2) + 6 = 26, पैटर्न: (12 × 2) + 10 = 34.",
-  "e_en": "Logic: (16 × 2) + 2 = 34, (10 × 2) + 6 = 26, pattern: (12 × 2) + 10 = 34."
- },
- {
   "id": "rp-rea-i01525",
   "s": "reasoning",
   "t": "mathematical_operations",
@@ -33423,8 +32986,8 @@
    "63"
   ],
   "a": 0,
-  "e_hi": "तर्क यह है: (पहली संख्या × दूसरी संख्या) + 1। 5×6+1=31, 8×4+1=33, तो 9×7+1=64+1=65।",
-  "e_en": "The logic is: (First number × Second number) + 1. Thus, 9×7+1 = 64+1 = 65."
+  "e_hi": "तर्क यह है: (पहली संख्या × दूसरी संख्या) + 1। 5×6+1=31, 8×4+1=33, तो 9×7+1=63+1=64।",
+  "e_en": "The logic is: (First number × Second number) + 1. Thus, 9×7+1 = 63+1 = 64."
  },
  {
   "id": "rp-rea-i01528",
@@ -33494,29 +33057,6 @@
   "a": 0,
   "e_hi": "समीकरण: 12 × 4 ÷ 2 + 8 - 6 = 12 × 2 + 8 - 6 = 24 + 8 - 6 = 26।",
   "e_en": "Equation: 12 × 4 ÷ 2 + 8 - 6 = 12 × 2 + 8 - 6 = 24 + 8 - 6 = 26."
- },
- {
-  "id": "rp-rea-i01531",
-  "s": "reasoning",
-  "t": "mathematical_operations",
-  "d": 3,
-  "q_hi": "यदि 16 - 2 = 34 और 10 - 4 = 66 है, तो 8 - 3 का मान क्या होगा?",
-  "q_en": "If 16 - 2 = 34 and 10 - 4 = 66, what is the value of 8 - 3?",
-  "o_hi": [
-   "511",
-   "55",
-   "515",
-   "510"
-  ],
-  "o_en": [
-   "511",
-   "55",
-   "515",
-   "510"
-  ],
-  "a": 0,
-  "e_hi": "तर्क: (a-b) और (a+b) को जोड़ें। 16-2=14, 16+2=18, लेकिन यहाँ तर्क (a-b) और (a+b) का संयोजन है। 16-2=14, 16+2=18, 14+18=32+2=34? नहीं। तर्क: (a-b) और (a+b) का अंक। 16-2=14, 16+2=18, 14+18=32? यहाँ 16-2=14, 16+2=18, 14+18=32. सही तर्क: (a-b) और (a+b) का योग 14+20? नहीं। सही तर्क: (a-b) और (a+b) को साथ लिखें। 16-2=14, 16+2=18. यहाँ 16-2=14 और 16+2=18. 14+18=32. सही तर्क: (a-b) और (a+b) का योग। 16-2=14, 16+2=18, 14+18=32. यहाँ 34 है, तो +2. 10-4=6, 10+4=14, 6+14=20. यहाँ 66 है, तो तर्क गलत है। सही तर्क: (a-b) और (a+b) का योग। 16-2=14, 16+2=18. 16-2=14, 16+2=20 (18+2). 10-4=6, 10+4=14 (6+8).",
-  "e_en": "The logic is: (a-b) and (a+b) concatenated. 16-2=14, 16+2=18. Wait, the pattern is (a-b) and (a+b) digits. 16-2=14, 16+2=18. Correct logic: 16-2=14, 16+2=18, 14+18=32+2=34. 10-4=6, 10+4=14, 6+14+46... Actually, logic is (a-b) and (a+b) combined: 16-2=14, 16+2=18 -> 14+20. The logic is (a-b) and (a+b) sequence."
  },
  {
   "id": "rp-rea-i01532",
