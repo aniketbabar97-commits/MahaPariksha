@@ -45492,5 +45492,258 @@
   "a": 0,
   "e_hi": "ऊष्मागतिकी के पहले नियम (ΔU = Q - W) के अनुसार, यदि प्रणाली पर किया गया कार्य (W) प्रणाली द्वारा दी गई ऊष्मा (Q) से अधिक है (यहाँ संचारण का चिह्न ध्यान दें: यदि कार्य प्रणाली पर किया जाता है तो W ऋणात्मक माना जाता है या सूत्र ΔU = Q + W_on होता है), तो अंतर्गत ऊर्जा बढ़ती है। सरल शब्दों में, यदि प्रणाली पर किए गए कार्य का परिमाण दी गई ऊष्मा से अधिक है, तो अंतर्गत ऊर्जा बढ़ती है।",
   "e_en": "According to the first law of thermodynamics (ΔU = Q - W_out), if the magnitude of work done on the system is greater than the heat supplied, the internal energy increases. Essentially, adding more energy via work than is removed via heat increases the system's internal energy."
+ },
+ {
+  "id": "rp-je_-01986",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक छड़ (rod) पर 10 kN का अक्षीय खिंचाव बल (tensile force) लगाया जाता है और इसकी अनुप्रस्थ काट क्षेत्रफल (cross-sectional area) 500 mm² है। छड़ में उत्पन्न सामान्य तनाव (normal stress) क्या होगा?",
+  "q_en": "An axial tensile force of 10 kN is applied to a rod with a cross-sectional area of 500 mm². What is the normal stress induced in the rod?",
+  "o_hi": [
+   "20 MPa",
+   "200 MPa",
+   "2 MPa",
+   "2000 MPa"
+  ],
+  "o_en": [
+   "20 MPa",
+   "200 MPa",
+   "2 MPa",
+   "2000 MPa"
+  ],
+  "a": 0,
+  "e_hi": "तनाव (Stress) = बल (Force) / क्षेत्रफल (Area)। 10 kN = 10,000 N। 10,000 N / 500 mm² = 20 N/mm², जो कि 20 MPa के बराबर है।",
+  "e_en": "Stress = Force / Area. 10 kN = 10,000 N. 10,000 N / 500 mm² = 20 N/mm², which is equal to 20 MPa."
+ },
+ {
+  "id": "rp-je_-01987",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "यदि किसी सामग्री की यंग मॉड्यूलस (Young's Modulus) 200 GPa है और इसमें 100 MPa का तनाव (stress) उत्पन्न होता है, तो उसका रेखीय विकृति (linear strain) कितना होगा?",
+  "q_en": "If the Young's Modulus of a material is 200 GPa and the stress induced in it is 100 MPa, what will be its linear strain?",
+  "o_hi": [
+   "0.0005",
+   "0.005",
+   "0.05",
+   "0.5"
+  ],
+  "o_en": [
+   "0.0005",
+   "0.005",
+   "0.05",
+   "0.5"
+  ],
+  "a": 0,
+  "e_hi": "यंग मॉड्यूलस (E) = तनाव (Stress) / विकृति (Strain)। इसलिए, विकृति = तनाव / E = 100 MPa / 200,000 MPa = 0.0005।",
+  "e_en": "Young's Modulus (E) = Stress / Strain. Therefore, Strain = Stress / E = 100 MPa / 200,000 MPa = 0.0005."
+ },
+ {
+  "id": "rp-je_-01988",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक स्टील की छड़ जिसका मूल लंबाई 2 मीटर है, पर खिंचाव बल लगाने पर इसकी लंबाई में 1 मिमी की वृद्धि होती है। छड़ की विकृति (strain) की गणना करें।",
+  "q_en": "A steel rod of original length 2 meters undergoes an increase in length of 1 mm when a tensile force is applied. Calculate the strain of the rod.",
+  "o_hi": [
+   "0.0005",
+   "0.005",
+   "0.05",
+   "0.5"
+  ],
+  "o_en": [
+   "0.0005",
+   "0.005",
+   "0.05",
+   "0.5"
+  ],
+  "a": 0,
+  "e_hi": "विकृति (Strain) = लंबाई में परिवर्तन / मूल लंबाई। 1 mm / 2000 mm = 0.0005।",
+  "e_en": "Strain = Change in length / Original length. 1 mm / 2000 mm = 0.0005."
+ },
+ {
+  "id": "rp-je_-01989",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "सिरपॉइंट (Shear) तनाव (stress) 50 MPa है और सामग्री का सिरपॉइंट मॉड्यूलस (Shear Modulus) 80 GPa है। उत्पन्न सिरपॉइंट विकृति (shear strain) कितनी होगी?",
+  "q_en": "The shear stress is 50 MPa and the shear modulus of the material is 80 GPa. What is the resulting shear strain?",
+  "o_hi": [
+   "0.000625",
+   "0.00625",
+   "0.0625",
+   "0.625"
+  ],
+  "o_en": [
+   "0.000625",
+   "0.00625",
+   "0.0625",
+   "0.625"
+  ],
+  "a": 0,
+  "e_hi": "सिरपॉइंट मॉड्यूलस (G) = सिरपॉइंट तनाव / सिरपॉइंट विकृति। विकृति = 50 MPa / 80,000 MPa = 0.000625।",
+  "e_en": "Shear Modulus (G) = Shear Stress / Shear Strain. Strain = 50 MPa / 80,000 MPa = 0.000625."
+ },
+ {
+  "id": "rp-je_-01990",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी सामग्री के लिए यंग मॉड्यूलस (E) और सिरपॉइंट मॉड्यूलस (G) का अनुपात 2.5 है, तो उसका पुआसन अनुपात (Poisson's ratio) क्या होगा?",
+  "q_en": "If the ratio of Young's Modulus (E) to Shear Modulus (G) for a material is 2.5, what is its Poisson's ratio?",
+  "o_hi": [
+   "0.15",
+   "0.25",
+   "0.35",
+   "0.45"
+  ],
+  "o_en": [
+   "0.15",
+   "0.25",
+   "0.35",
+   "0.45"
+  ],
+  "a": 1,
+  "e_hi": "संबंध है: E = 2G(1 + ν), जहाँ ν पुआसन अनुपात है। E/G = 2(1 + ν) = 2.5। इसलिए, 1 + ν = 1.25, और ν = 0.25।",
+  "e_en": "The relation is: E = 2G(1 + ν), where ν is Poisson's ratio. E/G = 2(1 + ν) = 2.5. Therefore, 1 + ν = 1.25, and ν = 0.25."
+ },
+ {
+  "id": "rp-je_-01991",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "शेयर (Shear) तनाव के दौरान, यदि कोई ठोस पदार्थ गतिशील संतुलन में है, तो उस पर लगने वाले लंबवत तनाव (normal stress) का मान क्या होता है?",
+  "q_en": "During shear stress, if a solid material is in dynamic equilibrium, what is the value of the normal stress acting on it?",
+  "o_hi": [
+   "शेयर तनाव के बराबर",
+   "शून्य",
+   "अनंत",
+   "शेयर तनाव का आधा"
+  ],
+  "o_en": [
+   "Equal to shear stress",
+   "Zero",
+   "Infinity",
+   "Half of shear stress"
+  ],
+  "a": 1,
+  "e_hi": "प्राथमिक (pure) शेयर तनाव की परिभाषा के अनुसार, तल पर लंबवत दिशा में कोई तनाव नहीं होता, इसलिए लंबवत तनाव शून्य होता है।",
+  "e_en": "By definition of pure shear stress, there is no stress in the direction perpendicular to the plane, hence normal stress is zero."
+ },
+ {
+  "id": "rp-je_-01992",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी छड़ (rod) पर आघूर्ण (moment) लगाने के कारण उसका घुमाव (twist) कम करना हो, तो छड़ का व्यास कैसे बदला जाना चाहिए?",
+  "q_en": "If the twist of a rod caused by an applied moment needs to be reduced, how should the diameter of the rod be changed?",
+  "o_hi": [
+   "व्यास बढ़ाया जाना चाहिए",
+   "व्यास घटाया जाना चाहिए",
+   "व्यास को स्थिर रखना चाहिए",
+   "व्यास को डुबल करना चाहिए"
+  ],
+  "o_en": [
+   "Diameter should be increased",
+   "Diameter should be decreased",
+   "Diameter should be kept constant",
+   "Diameter should be doubled"
+  ],
+  "a": 0,
+  "e_hi": "घुमाव (theta) का सूत्र θ = TL/(GJ) है, जहाँ J (ध्रुवीय जड़त्व आघूर्ण) व्यास के चौथे घात (d^4) के समानुपाती है। इसलिए, घुमाव कम करने के लिए J को बढ़ाना होगा, जिसका अर्थ है व्यास बढ़ाना।",
+  "e_en": "The twist angle formula is θ = TL/(GJ), where J (polar moment of inertia) is proportional to the fourth power of the diameter (d^4). Therefore, to reduce twist, J must be increased, which means increasing the diameter."
+ },
+ {
+  "id": "rp-je_-01993",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "एक बेलनाकार घोंसले (cylindrical shell) के लिए, दीवार का अनुपात (slenderness ratio) किस संयोजन पर निर्भर करता है?",
+  "q_en": "For a cylindrical shell, the slenderness ratio depends on which combination of parameters?",
+  "o_hi": [
+   "लंबाई और व्यास",
+   "लंबाई और दीवार के मोटाई",
+   "व्यास और दीवार के मोटाई",
+   "लंबाई और मोटाई का वर्ग"
+  ],
+  "o_en": [
+   "Length and diameter",
+   "Length and wall thickness",
+   "Diameter and wall thickness",
+   "Length and square of thickness"
+  ],
+  "a": 1,
+  "e_hi": "बेलनाकार घोंसलों में, अनुपात (slenderness ratio) आमतौर पर L/t के रूप में परिभाषित किया जाता है, जहाँ L लंबाई है और t दीवार की मोटाई है। यह स्लेंडरनेस को मापने का मानक पैरामीटर है।",
+  "e_en": "In cylindrical shells, the slenderness ratio is typically defined as L/t, where L is the length and t is the wall thickness. This is the standard parameter for measuring slenderness."
+ },
+ {
+  "id": "rp-je_-01994",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 2,
+  "q_hi": "यदि किसी वस्तु पर लगाया गया भार (load) दो गुना किया जाता है और उसकी लंबाई भी दो गुना कर दी जाती है, तो उसका विरूपण (deformation) कितना गुना होगा?",
+  "q_en": "If the load applied to an object is doubled and its length is also doubled, by what factor will its deformation increase?",
+  "o_hi": [
+   "दो गुना",
+   "चार गुना",
+   "आधा",
+   "समान रहेगा"
+  ],
+  "o_en": [
+   "Two times",
+   "Four times",
+   "Half",
+   "Remains the same"
+  ],
+  "a": 1,
+  "e_hi": "विरूपण (δ) का सूत्र δ = PL/AE है। चूँकि δ P (भार) और L (लंबाई) दोनों के सीधे समानुपाती है, इसलिए 2 * 2 = 4 गुना विरूपण होगा।",
+  "e_en": "The deformation formula is δ = PL/AE. Since δ is directly proportional to both P (load) and L (length), doubling both results in 2 * 2 = 4 times the deformation."
+ },
+ {
+  "id": "rp-je_-01995",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "बेंडिंग (bending) के दौरान, निट्रल एक्सिस (neutral axis) के सापेक्ष ऊपरी और निचली सतहों पर अक्षर तनाव (axial stress) का व्यवहार कैसा होता है?",
+  "q_en": "During bending, what is the behavior of axial stress on the upper and lower surfaces relative to the neutral axis?",
+  "o_hi": [
+   "दोनों सतहों पर तनाव समान है",
+   "ऊपरी सतह पर संपीडन और निचली पर तनन (या इसके विपरीत)",
+   "दोनों सतहों पर तनन तनाव होता है",
+   "दोनों सतहों पर संपीडन तनाव होता है"
+  ],
+  "o_en": [
+   "Stress is equal on both surfaces",
+   "Compression on upper and tension on lower (or vice versa)",
+   "Tensile stress on both surfaces",
+   "Compressive stress on both surfaces"
+  ],
+  "a": 1,
+  "e_hi": "बेंडिंग के दौरान, निट्रल एक्सिस एक सतह होती है जहाँ तनाव शून्य होता है। इससे ऊपर और नीचे की सतहों पर विरुद्ध दिशाओं में तनाव उत्पन्न होता है (एक तरफ संपीडन, दूसरी तरफ तनन)।",
+  "e_en": "During bending, the neutral axis is the surface where stress is zero. Surfaces above and below it experience stress in opposite directions (compression on one side, tension on the other)."
+ },
+ {
+  "id": "rp-je_-01996",
+  "s": "je_mechanical",
+  "t": "strength_of_materials",
+  "d": 1,
+  "q_hi": "यदि किसी छड़ का अनुप्रस्थ काट क्षेत्रफल (cross-sectional area) आधा कर दिया जाए, तो उसी भार के तहत उसमें उत्पन्न यांत्रिक तनाव (mechanical stress) क्या होगा?",
+  "q_en": "If the cross-sectional area of a rod is halved, what happens to the mechanical stress produced under the same load?",
+  "o_hi": [
+   "तनाव आधा हो जाएगा",
+   "तनाव दोगुना हो जाएगा",
+   "तनाव अपरिवर्तित रहेगा",
+   "तनाव चार गुना हो जाएगा"
+  ],
+  "o_en": [
+   "Stress will be halved",
+   "Stress will be doubled",
+   "Stress will remain unchanged",
+   "Stress will be quadrupled"
+  ],
+  "a": 1,
+  "e_hi": "तनाव (σ) का सूत्र σ = F/A है। चूँकि तनाव क्षेत्रफल (A) के व्युत्क्रमानुपाती (inversely proportional) है, इसलिए क्षेत्रफल आधा करने से तनाव दोगुना हो जाएगा।",
+  "e_en": "The stress formula is σ = F/A. Since stress is inversely proportional to area (A), halving the area will double the stress."
  }
 ]

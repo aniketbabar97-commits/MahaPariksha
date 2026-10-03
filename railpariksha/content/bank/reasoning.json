@@ -33722,8 +33722,8 @@
    "None"
   ],
   "a": 3,
-  "e_hi": "S और T के बीच वर्णमाला में कोई अक्षर नहीं है, और शब्द में भी कोई नहीं है। अतः एक जोड़ा (S, T) है।",
-  "e_en": "There is no letter between S and T in the alphabet, and similarly, there are no letters between them in the word SMART. Thus, (S, T) is a pair."
+  "e_hi": "S(19) और T(20) वर्णमाला में लगातार हैं (उनके बीच 0 अक्षर), परंतु शब्द SMART में S पहले स्थान पर और T पांचवें स्थान पर है - इनके बीच 3 अक्षर (M,A,R) हैं, जो वर्णमाला के 0 से मेल नहीं खाता। शब्द के सभी संभावित जोड़ों की जांच करने पर कोई भी जोड़ा यह शर्त पूरी नहीं करता, इसलिए सही उत्तर 'कोई नहीं' है।",
+  "e_en": "S(19) and T(20) are consecutive in the alphabet (0 letters between them), but in the word SMART, S is at position 1 and T at position 5 — there are 3 letters (M,A,R) between them in the word, which does not match the alphabet's 0. Checking all possible pairs in the word, none satisfies the condition, so the correct answer is 'None'."
  },
  {
   "id": "rp-rea-j01532",
@@ -33753,8 +33753,8 @@
   "s": "reasoning",
   "t": "alphabet_test",
   "d": 3,
-  "q_hi": "अंग्रेजी वर्णमाला में कौन सा अक्षर बाएं से 5वें और दाएं से 5वें के ठीक बीच में स्थित है?",
-  "q_en": "Which letter is exactly in the middle of the 5th letter from the left and the 5th letter from the right in the English alphabet?",
+  "q_hi": "अंग्रेजी वर्णमाला में कौन सा अक्षर बाएं से 5वें और दाएं से 6ठे के ठीक बीच में स्थित है?",
+  "q_en": "Which letter is exactly in the middle of the 5th letter from the left and the 6th letter from the right in the English alphabet?",
   "o_hi": [
    "M",
    "N",
@@ -33768,8 +33768,8 @@
    "P"
   ],
   "a": 0,
-  "e_hi": "बाएं से 5वां E है और दाएं से 5वां V (22वां) है। 5 और 22 का औसत 13.5 है, अतः बीच में M और N होंगे।",
-  "e_en": "The 5th from the left is E and the 5th from the right is V (22nd). The average is 13.5, placing M and N in the center."
+  "e_hi": "बाएं से 5वां अक्षर E(5) है और दाएं से 6ठा अक्षर U(21) है। इनके बीच 15 अक्षर (स्थान 6 से 20) हैं - यह एक विषम संख्या है, इसलिए ठीक बीच में एक अक्षर है: स्थान 6+7=13, जो M है।",
+  "e_en": "The 5th letter from the left is E(5) and the 6th letter from the right is U(21). There are 15 letters between them (positions 6 to 20) — an odd count, so there is a single exact middle letter: position 6+7=13, which is M."
  },
  {
   "id": "rp-rea-j01535",
@@ -66704,8 +66704,8 @@
    "Cannot determine"
   ],
   "a": 3,
-  "e_hi": "वाई हॉकी नहीं खेलता और जेड क्रिकेट नहीं खेलता, इस तर्क से वाई केवल क्रिकेट खेल सकता है।",
-  "e_en": "Since Y does not play Hockey and Z does not play Cricket, by elimination, Y must play Cricket."
+  "e_hi": "दो स्थितियाँ संभव हैं: (1) एक्स=क्रिकेट, वाई=फुटबॉल, जेड=हॉकी, या (2) एक्स=हॉकी, वाई=क्रिकेट, जेड=फुटबॉल। दोनों ही स्थितियाँ सभी शर्तों को पूरा करती हैं, और दोनों में वाई का खेल अलग-अलग है, इसलिए निश्चित रूप से तय नहीं किया जा सकता।",
+  "e_en": "Two scenarios are possible: (1) X=Cricket, Y=Football, Z=Hockey, or (2) X=Hockey, Y=Cricket, Z=Football. Both scenarios satisfy all the given conditions, and Y plays a different sport in each, so it cannot be determined with certainty."
  },
  {
   "id": "rp-rea-i02341",
@@ -66896,8 +66896,8 @@
   "s": "reasoning",
   "t": "non_verbal_reasoning",
   "d": 2,
-  "q_hi": "यदि आकृति 'क' का संबंध 'ख' से है, तो 'ग' का संबंध किससे होगा? (आकृति अनुक्रम: एक वृत्त के अंदर त्रिभुज -> त्रिभुज के अंदर वृत्त)",
-  "q_en": "If figure 'A' relates to 'B', what will 'C' relate to? (Figure sequence: Triangle inside a circle -> Circle inside a triangle)",
+  "q_hi": "यदि आकृति 'क' का संबंध 'ख' से है (वृत्त के अंदर त्रिभुज -> त्रिभुज के अंदर वृत्त), और आकृति 'ग' = 'वर्ग के अंदर आयत' है, तो 'ग' का संबंध किससे होगा?",
+  "q_en": "If figure 'A' (triangle inside a circle) relates to 'B' (circle inside a triangle), and figure 'C' is a 'Rectangle inside a square', what will 'C' relate to?",
   "o_hi": [
    "वर्ग के अंदर आयत",
    "आयत के अंदर वर्ग",
@@ -66911,8 +66911,8 @@
    "Circle inside a square"
   ],
   "a": 1,
-  "e_hi": "तर्क यह है कि अंदर की आकृति बाहर आ जाती है और बाहर की आकृति अंदर चली जाती है। अतः वर्ग के अंदर आयत का संबंध आयत के अंदर वर्ग से होगा।",
-  "e_en": "The logic is that the inner figure comes out and the outer figure goes inside. Thus, a rectangle inside a square relates to a square inside a rectangle."
+  "e_hi": "तर्क यह है कि भीतर की आकृति और बाहर की आकृति आपस में स्थान बदल लेती हैं (जैसे वृत्त के अंदर त्रिभुज, त्रिभुज के अंदर वृत्त बन जाता है)। इसी नियम से, वर्ग के अंदर आयत का संबंध आयत के अंदर वर्ग से होगा।",
+  "e_en": "The rule is that the inner and outer shapes swap places (just as 'triangle inside a circle' becomes 'circle inside a triangle'). By the same rule, 'rectangle inside a square' relates to 'square inside a rectangle'."
  },
  {
   "id": "rp-rea-j02327",
@@ -66982,29 +66982,6 @@
   "a": 0,
   "e_hi": "यह एक क्रमिक श्रृंखला है जिसमें प्रत्येक चरण में एक बिंदु जुड़ रहा है।",
   "e_en": "This is a sequential series where one dot is added at each step."
- },
- {
-  "id": "rp-rea-j02330",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 2,
-  "q_hi": "यदि एक घड़ी में 3:00 बजे हैं, और इसे 90 डिग्री घड़ी की दिशा में घुमाया जाए, तो बड़ी सुई किस अंक पर होगी?",
-  "q_en": "If a clock shows 3:00, and it is rotated 90 degrees clockwise, at which number will the minute hand be?",
-  "o_hi": [
-   "छह",
-   "नौ",
-   "बारह",
-   "तीन"
-  ],
-  "o_en": [
-   "Six",
-   "Nine",
-   "Twelve",
-   "Three"
-  ],
-  "a": 0,
-  "e_hi": "3:00 बजे बड़ी सुई 12 पर होती है। 90 डिग्री घुमाने पर वह 3 पर आ जाएगी।",
-  "e_en": "At 3:00, the minute hand is at 12. Rotating it 90 degrees clockwise moves it to the 3 position."
  },
  {
   "id": "rp-rea-j02331",
@@ -67099,52 +67076,6 @@
   "e_en": "Due to financial losses, the company cut salaries to reduce costs."
  },
  {
-  "id": "rp-rea-i02348",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच मित्र एक पंक्ति में बैठे हैं। ए, बी के दाईं ओर है और सी, डी के बाईं ओर है। यदि बी, ई के दाईं ओर है और डी, ए के बाईं ओर है, तो पंक्ति के बीच में कौन बैठा है?",
-  "q_en": "Five friends are sitting in a row. A is to the right of B and C is to the left of D. If B is to the right of E and D is to the left of A, who is sitting in the middle of the row?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "डी"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "D"
-  ],
-  "a": 0,
-  "e_hi": "बैठने का क्रम ई, बी, ए, डी, सी है। अतः ए बीच में स्थित है।",
-  "e_en": "The seating arrangement is E, B, A, D, C. Therefore, A is in the middle."
- },
- {
-  "id": "rp-rea-i02349",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह व्यक्ति एक गोलाकार मेज के चारों ओर बैठे हैं। पी, क्यू के ठीक दाएं है। आर, एस के विपरीत है। टी, यू और पी के बीच में है। यदि एस, क्यू के ठीक बाएं है, तो यू के दाईं ओर कौन है?",
-  "q_en": "Six people are sitting around a circular table. P is immediately right of Q. R is opposite S. T is between U and P. If S is immediately left of Q, who is to the right of U?",
-  "o_hi": [
-   "पी",
-   "क्यू",
-   "आर",
-   "एस"
-  ],
-  "o_en": [
-   "P",
-   "Q",
-   "R",
-   "S"
-  ],
-  "a": 2,
-  "e_hi": "क्रम इस प्रकार है: पी, टी, यू, आर, एस, क्यू। यू के दाईं ओर आर बैठा है।",
-  "e_en": "The order is P, T, U, R, S, Q. R is sitting to the right of U."
- },
- {
   "id": "rp-rea-i02350",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -67189,29 +67120,6 @@
   "a": 0,
   "e_hi": "अंकों का क्रम सी > ए > बी > डी है। ए दूसरे स्थान पर है।",
   "e_en": "The order of marks is C > A > B > D. A is in the second position."
- },
- {
-  "id": "rp-rea-i02352",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "सात छात्र एक पंक्ति में खड़े हैं। एम, एन के बगल में है। ओ, पी के बगल में है। क्यू, आर के दाईं ओर है। यदि एन, आर के बाईं ओर है और ओ, एम के दाईं ओर है, तो मध्य में कौन है?",
-  "q_en": "Seven students are standing in a row. M is next to N. O is next to P. Q is to the right of R. If N is to the left of R and O is to the right of M, who is in the middle?",
-  "o_hi": [
-   "एम",
-   "एन",
-   "ओ",
-   "पी"
-  ],
-  "o_en": [
-   "M",
-   "N",
-   "O",
-   "P"
-  ],
-  "a": 0,
-  "e_hi": "क्रम पी, ओ, एम, एन, आर, क्यू है। एम मध्य में स्थित है।",
-  "e_en": "The order is P, O, M, N, R, Q. M is in the middle."
  },
  {
   "id": "rp-rea-i02353",
@@ -67260,29 +67168,6 @@
   "e_en": "The weight order is P > Q > S > R. Thus, R is the lightest."
  },
  {
-  "id": "rp-rea-i02355",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह लोग एक पंक्ति में उत्तर की ओर मुंह करके बैठे हैं। ए, ई और एफ के बीच में है। ई, बी के दाईं ओर है। सी, डी के बाईं ओर है। यदि एफ, डी के बगल में है, तो पंक्ति के दोनों सिरों पर कौन है?",
-  "q_en": "Six people are sitting in a row facing North. A is between E and F. E is to the right of B. C is to the left of D. If F is next to D, who is at both ends of the row?",
-  "o_hi": [
-   "बी और सी",
-   "बी और डी",
-   "ई और सी",
-   "ए और सी"
-  ],
-  "o_en": [
-   "B and C",
-   "B and D",
-   "E and C",
-   "A and C"
-  ],
-  "a": 0,
-  "e_hi": "क्रम बी, ई, ए, एफ, डी, सी है। बी और सी छोरों पर हैं।",
-  "e_en": "The order is B, E, A, F, D, C. B and C are at the ends."
- },
- {
   "id": "rp-rea-i02356",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -67304,29 +67189,6 @@
   "a": 3,
   "e_hi": "उम्र का क्रम आर > पी > क्यू > एस > टी है। टी सबसे छोटा है।",
   "e_en": "The age order is R > P > Q > S > T. T is the youngest."
- },
- {
-  "id": "rp-rea-i02357",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच मेजें एक के ऊपर एक रखी हैं। एम, एन के ऊपर है। ओ, पी के नीचे है। क्यू, एम के नीचे है। यदि पी, एन के ऊपर है, तो सबसे नीचे कौन सी मेज है?",
-  "q_en": "Five tables are stacked one above another. M is above N. O is below P. Q is below M. If P is above N, which table is at the bottom?",
-  "o_hi": [
-   "एम",
-   "एन",
-   "ओ",
-   "क्यू"
-  ],
-  "o_en": [
-   "M",
-   "N",
-   "O",
-   "Q"
-  ],
-  "a": 3,
-  "e_hi": "क्रम पी > ओ > एन > एम > क्यू है। क्यू सबसे नीचे है।",
-  "e_en": "The order is P > O > N > M > Q. Q is at the bottom."
  },
  {
   "id": "rp-rea-i02358",
@@ -67444,29 +67306,6 @@
   "e_en": "Total students = (7 + 26 - 1) + 5 = 32 + 5 = 37."
  },
  {
-  "id": "rp-rea-i02363",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "पांच मित्र एक बेंच पर बैठे हैं। यदि ए, बी के बगल में है, सी, डी के बगल में है, डी, ई के साथ नहीं बैठा है, और ई बेंच के बाएं छोर पर है, तो ए और सी के बीच कितने व्यक्ति बैठे हैं?",
-  "q_en": "Five friends are sitting on a bench. If A is next to B, C is next to D, D is not sitting with E, and E is at the left end of the bench, how many people are sitting between A and C?",
-  "o_hi": [
-   "शून्य",
-   "एक",
-   "दो",
-   "तीन"
-  ],
-  "o_en": [
-   "Zero",
-   "One",
-   "Two",
-   "Three"
-  ],
-  "a": 1,
-  "e_hi": "बैठने का क्रम E, B, A, D, C है। ए और सी के बीच केवल डी बैठा है।",
-  "e_en": "The seating arrangement is E, B, A, D, C. Only D is sitting between A and C."
- },
- {
   "id": "rp-rea-i02364",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -67532,8 +67371,8 @@
    "75"
   ],
   "a": 0,
-  "e_hi": "मान लें लड़कियां x, लड़के 2x हैं। (2x-5)/(x-5) = 3/1। हल करने पर x = 15। कुल छात्र 3x = 45।",
-  "e_en": "Let girls be x, boys be 2x. (2x-5)/(x-5) = 3/1. Solving gives x = 15. Total students 3x = 45."
+  "e_hi": "मान लें लड़कियां x, लड़के 2x हैं। (2x-5)/(x-5) = 3/1 => 2x-5 = 3x-15 => 10 = x। अतः x=10, कुल मूल छात्र = 3x = 30।",
+  "e_en": "Let girls be x, boys be 2x. (2x-5)/(x-5) = 3/1 => 2x-5 = 3x-15 => 10 = x. So x=10, and the original total number of students = 3x = 30."
  },
  {
   "id": "rp-rea-i02367",
@@ -67766,29 +67605,6 @@
   "e_en": "Square, rectangle, and triangle are made of straight lines, while a circle has no straight lines."
  },
  {
-  "id": "rp-rea-j02345",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 2,
-  "q_hi": "नीचे दी गई आकृति श्रृंखला को पूरा करने के लिए सही विकल्प चुनें: एक वर्ग जिसके अंदर एक बिंदु है, फिर एक त्रिभुज जिसके अंदर एक बिंदु है, फिर एक वृत्त जिसके अंदर एक बिंदु है। अगला क्रम क्या होगा?",
-  "q_en": "Choose the correct option to complete the pattern: A square with a dot inside, followed by a triangle with a dot inside, then a circle with a dot inside. What comes next?",
-  "o_hi": [
-   "एक पंचभुज जिसके अंदर एक बिंदु है",
-   "एक बिंदु जिसके अंदर एक वर्ग है",
-   "एक खाली आयत",
-   "एक वर्ग जिसके अंदर दो बिंदु हैं"
-  ],
-  "o_en": [
-   "A pentagon with a dot inside",
-   "A dot with a square inside",
-   "An empty rectangle",
-   "A square with two dots inside"
-  ],
-  "a": 0,
-  "e_hi": "श्रृंखला भुजाओं की संख्या के आधार पर बढ़ रही है (4, 3, 1 के बजाय आकृति का आकार)। यहाँ 4 भुजाओं से 3 भुजाओं और फिर वक्र (0 भुजा) की ओर बढ़ते हुए, अगला तार्किक रूप से 5 भुजा वाला बहुभुज होगा।",
-  "e_en": "The series progresses based on the number of sides. Moving from 4 sides to 3 sides and then a curve (0 sides), a 5-sided polygon is the logical next step."
- },
- {
   "id": "rp-rea-j02346",
   "s": "reasoning",
   "t": "non_verbal_reasoning",
@@ -67996,52 +67812,6 @@
   "e_en": "This is an alternating series where a square and a rectangle appear in turns."
  },
  {
-  "id": "rp-rea-i02368",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच मित्र एक पंक्ति में उत्तर की ओर मुख करके बैठे हैं। ए, बी के ठीक बाईं ओर है। सी, डी के दाईं ओर है। यदि ई पंक्ति के एक छोर पर है और बी, ई के बगल में नहीं है, तो पंक्ति के बीच में कौन बैठा है?",
-  "q_en": "Five friends are sitting in a row facing North. A is to the immediate left of B. C is to the right of D. If E is at one end and B is not next to E, who is sitting in the middle of the row?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "डी"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "D"
-  ],
-  "a": 2,
-  "e_hi": "व्यवस्था ई-डी-सी-ए-बी है। अतः सी बीच में है।",
-  "e_en": "The arrangement is E-D-C-A-B. Thus, C is in the middle."
- },
- {
-  "id": "rp-rea-i02370",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह लोग एक घेरे में केंद्र की ओर मुख करके बैठे हैं। ए, बी के बाईं ओर दूसरा है। सी, डी के दाईं ओर दूसरा है। यदि ई, एफ के बगल में है, तो ए के सामने कौन बैठा है?",
-  "q_en": "Six people are sitting in a circle facing the center. A is second to the left of B. C is second to the right of D. If E is next to F, who is sitting opposite A?",
-  "o_hi": [
-   "सी",
-   "डी",
-   "ई",
-   "एफ"
-  ],
-  "o_en": [
-   "C",
-   "D",
-   "E",
-   "F"
-  ],
-  "a": 0,
-  "e_hi": "व्यवस्था में ए के सामने सी आता है।",
-  "e_en": "In the arrangement, C sits opposite A."
- },
- {
   "id": "rp-rea-i02371",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -68109,29 +67879,6 @@
   "a": 2,
   "e_hi": "क्रम है: डी, बी, ए, सी। सी सबसे पीछे है।",
   "e_en": "The order is: D, B, A, C. C is at the back."
- },
- {
-  "id": "rp-rea-i02374",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह दोस्त एक वर्गाकार मेज के चारों ओर बैठे हैं। प्रत्येक भुजा पर एक व्यक्ति है और दो कोनों पर हैं। यदि ए, बी के सामने है और सी, डी के दाईं ओर है, तो कौन सा जोड़ा आमने-सामने नहीं है?",
-  "q_en": "Six friends are sitting around a square table. One person on each side and two at corners. If A is opposite B and C is to the right of D, which pair is not opposite each other?",
-  "o_hi": [
-   "ए-बी",
-   "सी-ई",
-   "डी-एफ",
-   "ए-सी"
-  ],
-  "o_en": [
-   "A-B",
-   "C-E",
-   "D-F",
-   "A-C"
-  ],
-  "a": 3,
-  "e_hi": "ए-सी पड़ोसी हो सकते हैं, वे आमने-सामने नहीं हैं।",
-  "e_en": "A-C can be neighbors; they are not opposite each other."
  },
  {
   "id": "rp-rea-i02375",
@@ -68247,29 +67994,6 @@
   "a": 1,
   "e_hi": "दर्पण प्रतिबिंब में अक्षर उल्टे हो जाते हैं और क्रम दाईं से बाईं ओर बदल जाता है।",
   "e_en": "In a mirror image, letters are reversed and the sequence changes from right to left."
- },
- {
-  "id": "rp-rea-j02357",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 2,
-  "q_hi": "यदि एक पारदर्शी शीट को बिंदीदार रेखा पर मोड़ा जाए, तो कौन सी आकृति बनेगी: एक वृत्त के अंदर एक त्रिभुज?",
-  "q_en": "If a transparent sheet is folded on the dotted line, which figure will be formed: a triangle inside a circle?",
-  "o_hi": [
-   "आधा वृत्त और आधा त्रिभुज",
-   "केवल एक वृत्त",
-   "एक पूर्ण त्रिभुज",
-   "कोई नहीं"
-  ],
-  "o_en": [
-   "Half circle and half triangle",
-   "Only a circle",
-   "A full triangle",
-   "None"
-  ],
-  "a": 0,
-  "e_hi": "मोड़ने पर आकृति का हिस्सा दूसरे हिस्से के ऊपर आ जाता है, जिससे दोनों का आधा हिस्सा दिखाई देता है।",
-  "e_en": "Upon folding, one part of the figure overlaps the other, resulting in half of both shapes being visible."
  },
  {
   "id": "rp-rea-j02358",
@@ -68456,29 +68180,6 @@
   "e_en": "Heavy rainfall is the cause that results in waterlogging, leading the corporation to decide to move people to safer locations."
  },
  {
-  "id": "rp-rea-i02379",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पाँच मित्र - ए, बी, सी, डी और ई एक पंक्ति में बैठे हैं। सी, डी के दाईं ओर है। बी, ई के बाईं ओर है लेकिन ए के दाईं ओर है। डी, ई के बाईं ओर है। बीच में कौन बैठा है?",
-  "q_en": "Five friends - A, B, C, D, and E are sitting in a row. C is to the right of D. B is to the left of E but to the right of A. D is to the left of E. Who is sitting in the middle?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "ई",
-   "डी"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "E",
-   "D"
-  ],
-  "a": 2,
-  "e_hi": "बैठने का क्रम है: ए, बी, ई, डी, सी। अतः ई बीच में है।",
-  "e_en": "The seating arrangement is: A, B, E, D, C. Thus, E is in the middle."
- },
- {
   "id": "rp-rea-i02380",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -68520,9 +68221,9 @@
    "T",
    "Q"
   ],
-  "a": 1,
-  "e_hi": "गोलाकार व्यवस्था में क्रम घड़ी की दिशा में इस प्रकार है: पी, आर, टी, यू, क्यू, एस। पी के दाईं ओर आर है।",
-  "e_en": "In the circular arrangement, the order clockwise is P, R, T, U, Q, S. R is to the right of P."
+  "a": 0,
+  "e_hi": "'एस, टी आर के बाईं ओर है' और 'पी, आर और एस के बीच में है' तथा 'यू, क्यू और टी के बीच में है' - इन्हें मिलाकर घड़ी की दिशा में क्रम बनता है: क्यू, यू, टी, आर, पी, एस (वापस क्यू पर)। इस क्रम में पी के ठीक दाईं ओर एस है।",
+  "e_en": "Combining 'T is to the left of R', 'P is between R and S', and 'U is between Q and T' gives the clockwise order: Q, U, T, R, P, S (back to Q). In this order, S is immediately to the right of P."
  },
  {
   "id": "rp-rea-i02382",
@@ -68546,29 +68247,6 @@
   "a": 0,
   "e_hi": "बढ़ता हुआ अपराध एक समस्या (कारण) है, जिसके जवाब में पुलिस ने सुरक्षा (प्रभाव) बढ़ाई है।",
   "e_en": "Increasing crime is a problem (cause), in response to which the police have increased security (effect)."
- },
- {
-  "id": "rp-rea-i02383",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "चार दोस्त - एम, एन, ओ, पी एक वर्गाकार मेज के चारों ओर बैठे हैं। एम, एन के सामने है। ओ, पी के दाईं ओर है। यदि एम, ओ के दाईं ओर बैठा है, तो पी किसके सामने है?",
-  "q_en": "Four friends - M, N, O, P are sitting around a square table. M is opposite N. O is to the right of P. If M is sitting to the right of O, who is opposite P?",
-  "o_hi": [
-   "एम",
-   "एन",
-   "ओ",
-   "कोई नहीं"
-  ],
-  "o_en": [
-   "M",
-   "N",
-   "O",
-   "None"
-  ],
-  "a": 2,
-  "e_hi": "बैठने का क्रम: एम, ओ, एन, पी (घड़ी की दिशा में)। पी के सामने ओ है।",
-  "e_en": "Sitting order: M, O, N, P (clockwise). O is opposite P."
  },
  {
   "id": "rp-rea-i02384",
@@ -68638,29 +68316,6 @@
   "a": 0,
   "e_hi": "परीक्षा का कठिन होना छात्रों के कम होने का एक संभावित कारण हो सकता है।",
   "e_en": "The difficulty of the exam can be a potential cause for the decrease in students."
- },
- {
-  "id": "rp-rea-i02387",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "सात छात्र एक बेंच पर बैठे हैं। ए, बी के बाईं ओर है लेकिन सी के दाईं ओर है। डी, ई के दाईं ओर है। एफ, जी के बाईं ओर है। सी और डी के बीच केवल एक छात्र है। बीच में कौन है?",
-  "q_en": "Seven students are sitting on a bench. A is to the left of B but to the right of C. D is to the right of E. F is to the left of G. There is only one student between C and D. Who is in the middle?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "डी"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "D"
-  ],
-  "a": 0,
-  "e_hi": "व्यवस्थित क्रम: जी, एफ, ई, सी, ए, डी, बी। मध्य में ए है।",
-  "e_en": "Arranged order: G, F, E, C, A, D, B. A is in the middle."
  },
  {
   "id": "rp-rea-j02365",
@@ -69537,29 +69192,6 @@
   "e_en": "The clockwise arrangement is P, U, S, R, Q, T. Q is to the immediate left of T."
  },
  {
-  "id": "rp-rea-i02389",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "चार लड़कियां - एम, एन, ओ और पी एक वर्गाकार मेज के कोनों पर बैठी हैं। एम, ओ के सामने है। पी, एन के दायीं ओर बैठी है। ओ के दायीं ओर कौन बैठा है?",
-  "q_en": "Four girls - M, N, O, and P are sitting at the corners of a square table. M is facing O. P is sitting to the right of N. Who is sitting to the right of O?",
-  "o_hi": [
-   "एम",
-   "एन",
-   "पी",
-   "तय नहीं किया जा सकता"
-  ],
-  "o_en": [
-   "M",
-   "N",
-   "P",
-   "Cannot be determined"
-  ],
-  "a": 2,
-  "e_hi": "कोनों पर बैठने पर ओ के दायीं ओर पी होगी।",
-  "e_en": "Sitting at the corners, P will be to the right of O."
- },
- {
   "id": "rp-rea-i02390",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -69581,29 +69213,6 @@
   "a": 1,
   "e_hi": "व्यवस्था वाई, एक्स, जेड है। अतः वाई सबसे बायीं ओर है।",
   "e_en": "The arrangement is Y, X, Z. Therefore, Y is at the extreme left."
- },
- {
-  "id": "rp-rea-i02391",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "पाँच पुस्तकें एक मेज पर एक के ऊपर एक रखी हैं। गणित की पुस्तक भौतिकी के ऊपर है। रसायन विज्ञान की पुस्तक इतिहास के नीचे है। भूगोल की पुस्तक भौतिकी के नीचे है और इतिहास गणित के ऊपर है। सबसे नीचे कौन सी पुस्तक है?",
-  "q_en": "Five books are stacked on a table. The Math book is above Physics. Chemistry is below History. Geography is below Physics and History is above Math. Which book is at the bottom?",
-  "o_hi": [
-   "गणित",
-   "भौतिकी",
-   "रसायन विज्ञान",
-   "भूगोल"
-  ],
-  "o_en": [
-   "Math",
-   "Physics",
-   "Chemistry",
-   "Geography"
-  ],
-  "a": 3,
-  "e_hi": "क्रम ऊपर से नीचे: इतिहास, गणित, भौतिकी, भूगोल, रसायन विज्ञान है। अतः रसायन विज्ञान सबसे नीचे है।",
-  "e_en": "Order from top to bottom: History, Math, Physics, Geography, Chemistry. Thus, Chemistry is at the bottom."
  },
  {
   "id": "rp-rea-i02392",
@@ -69650,29 +69259,6 @@
   "a": 1,
   "e_hi": "क्रम ए, बी, सी, डी, ई, एफ है। मध्य में डी और ई हैं।",
   "e_en": "The sequence is A, B, C, D, E, F. D and E are in the middle."
- },
- {
-  "id": "rp-rea-i02394",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "एक पंक्ति में पांच घर हैं। ए, बी के दायीं ओर है, सी, ए के दायीं ओर है, और ई, डी के दायीं ओर है। यदि बी, डी के बायीं ओर है, तो बीच में कौन सा घर है?",
-  "q_en": "There are five houses in a row. A is to the right of B, C is to the right of A, and E is to the right of D. If B is to the left of D, which house is in the middle?",
-  "o_hi": [
-   "ए",
-   "बी",
-   "सी",
-   "डी"
-  ],
-  "o_en": [
-   "A",
-   "B",
-   "C",
-   "D"
-  ],
-  "a": 0,
-  "e_hi": "क्रम डी, ई, बी, ए, सी है। अतः ए मध्य में है।",
-  "e_en": "The sequence is D, E, B, A, C. Therefore, A is in the middle."
  },
  {
   "id": "rp-rea-i02395",
@@ -69859,29 +69445,6 @@
   "e_en": "This is simple coding based on the alphabetical position. A=1, B=2, C=3, D=4."
  },
  {
-  "id": "rp-rea-j02408",
-  "s": "reasoning",
-  "t": "non_verbal_reasoning",
-  "d": 2,
-  "q_hi": "एक घन के विपरीत फलक का चयन करें यदि उसे खोला जाता है।",
-  "q_en": "Select the opposite face of a cube if it is unfolded.",
-  "o_hi": [
-   "एक छोड़कर अगला",
-   "साथ वाला",
-   "विकर्ण वाला",
-   "इनमें से कोई नहीं"
-  ],
-  "o_en": [
-   "The next one skipping one",
-   "Adjacent",
-   "Diagonal",
-   "None of these"
-  ],
-  "a": 0,
-  "e_hi": "खुले घन में, एक फलक छोड़कर अगला फलक हमेशा एक-दूसरे के विपरीत होता है।",
-  "e_en": "In an unfolded cube, the face alternate to another is always opposite to each other."
- },
- {
   "id": "rp-rea-j02409",
   "s": "reasoning",
   "t": "non_verbal_reasoning",
@@ -69974,52 +69537,6 @@
   "e_en": "The seating arrangement is: E, B, A, C, D. Therefore, D is at the extreme right."
  },
  {
-  "id": "rp-rea-i02398",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "चार व्यक्ति - पी, क्यू, आर और एस एक वर्गाकार मेज के चारों ओर बैठे हैं। पी, क्यू के सामने है। आर, एस के बाईं ओर है। यदि पी, आर के दाईं ओर है, तो क्यू के बाईं ओर कौन है?",
-  "q_en": "Four people - P, Q, R, and S are sitting around a square table. P is facing Q. R is to the left of S. If P is to the right of R, who is to the left of Q?",
-  "o_hi": [
-   "पी",
-   "आर",
-   "एस",
-   "इनमें से कोई नहीं"
-  ],
-  "o_en": [
-   "P",
-   "R",
-   "S",
-   "None of these"
-  ],
-  "a": 2,
-  "e_hi": "क्रम इस प्रकार है: पी के बाईं ओर एस, क्यू के बाईं ओर आर है।",
-  "e_en": "The arrangement is: S is to the left of P, and R is to the left of Q."
- },
- {
-  "id": "rp-rea-i02399",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "छह लोग एक घेरे में केंद्र की ओर मुख करके बैठे हैं। ए, बी के बगल में है और सी, डी के बगल में है। ई, एफ के बगल में है जो दाईं ओर बैठा है। यदि ए, सी के बाईं ओर है, तो बी के ठीक दाईं ओर कौन है?",
-  "q_en": "Six people are sitting in a circle facing the center. A is next to B and C is next to D. E is next to F who is sitting on the right. If A is to the left of C, who is to the immediate right of B?",
-  "o_hi": [
-   "ए",
-   "डी",
-   "ई",
-   "एफ"
-  ],
-  "o_en": [
-   "A",
-   "D",
-   "E",
-   "F"
-  ],
-  "a": 1,
-  "e_hi": "व्यवस्था में डी, बी के दाईं ओर स्थित है।",
-  "e_en": "In the arrangement, D is positioned to the immediate right of B."
- },
- {
   "id": "rp-rea-i02400",
   "s": "reasoning",
   "t": "puzzle_seating",
@@ -70062,54 +69579,8 @@
    "Cannot be determined"
   ],
   "a": 3,
-  "e_hi": "एम हॉकी, एन फुटबॉल और ओ क्रिकेट खेलता है।",
-  "e_en": "M plays Hockey, N plays Football, and O plays Cricket."
- },
- {
-  "id": "rp-rea-i02402",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 2,
-  "q_hi": "पांच इमारतें - ए, बी, सी, डी और ई एक पंक्ति में हैं। ए, बी के दाईं ओर है। ई, सी के बाईं ओर है। डी, ई के दाईं ओर है। बी, डी के बाईं ओर है। कौन सी इमारत बीच में है?",
-  "q_en": "Five buildings - A, B, C, D, and E are in a row. A is to the right of B. E is to the left of C. D is to the right of E. B is to the left of D. Which building is in the middle?",
-  "o_hi": [
-   "बी",
-   "सी",
-   "डी",
-   "ए"
-  ],
-  "o_en": [
-   "B",
-   "C",
-   "D",
-   "A"
-  ],
-  "a": 2,
-  "e_hi": "क्रम है: सी, ई, डी, बी, ए। डी बीच में है।",
-  "e_en": "The order is: C, E, D, B, A. D is in the middle."
- },
- {
-  "id": "rp-rea-i02403",
-  "s": "reasoning",
-  "t": "puzzle_seating",
-  "d": 3,
-  "q_hi": "सात छात्र एक पंक्ति में खड़े हैं। आर, एस के ठीक बाईं ओर है। पी, क्यू के दाईं ओर है। टी, यू के बाईं ओर है। वी, यू के दाईं ओर है। यदि पी, टी के दाईं ओर है और एस, पी के दाईं ओर है, तो पंक्ति के मध्य में कौन है?",
-  "q_en": "Seven students are standing in a row. R is to the immediate left of S. P is to the right of Q. T is to the left of U. V is to the right of U. If P is to the right of T and S is to the right of P, who is in the middle?",
-  "o_hi": [
-   "पी",
-   "एस",
-   "क्यू",
-   "टी"
-  ],
-  "o_en": [
-   "P",
-   "S",
-   "Q",
-   "T"
-  ],
-  "a": 0,
-  "e_hi": "क्रम: क्यू, पी, टी, यू, वी, आर, एस। पी मध्य में है।",
-  "e_en": "Order: Q, P, T, U, V, R, S. P is in the middle."
+  "e_hi": "दो स्थितियाँ संभव हैं: (1) एम=हॉकी, एन=फुटबॉल, ओ=क्रिकेट, या (2) एम=फुटबॉल, एन=क्रिकेट, ओ=हॉकी। दोनों स्थितियाँ सभी शर्तों को पूरा करती हैं, और दोनों में एन का खेल अलग-अलग है, इसलिए निश्चित रूप से तय नहीं किया जा सकता।",
+  "e_en": "Two scenarios are possible: (1) M=Hockey, N=Football, O=Cricket, or (2) M=Football, N=Cricket, O=Hockey. Both satisfy all the given conditions, and N plays a different sport in each, so it cannot be determined with certainty."
  },
  {
   "id": "rp-rea-i02404",
@@ -70545,8 +70016,8 @@
    "C"
   ],
   "a": 1,
-  "e_hi": "घन के मानकों के अनुसार, A के विपरीत D स्थित है क्योंकि अन्य फलक B और C उसके साथ जुड़े हुए हैं।",
-  "e_en": "Based on cube standard positions, D is opposite A because B and C are adjacent faces."
+  "e_hi": "B पहले (A,B,C में) और दूसरे (B,D,E में) दृश्य में दिखता है, अतः B, A,C,D,E चारों से सटा हुआ है - इसलिए B के विपरीत F है। C पहले (A,B,C) और तीसरे (C,E,F) दृश्य में दिखता है, अतः C, A,B,E,F से सटा हुआ है - इसलिए C के विपरीत D है। शेष बचे A और E का जोड़ा स्वतः विपरीत फलक बनता है। अतः A के विपरीत E है; A ऊपर होने पर E नीचे होगा।",
+  "e_en": "B appears in the 1st view (A,B,C) and 2nd view (B,D,E), so B is adjacent to all of A,C,D,E — meaning B is opposite F. C appears in the 1st view (A,B,C) and 3rd view (C,E,F), so C is adjacent to A,B,E,F — meaning C is opposite D. The remaining pair, A and E, must then be opposite each other. So A is opposite E; if A is on top, E is at the bottom."
  },
  {
   "id": "rp-rea-j02428",
@@ -70751,9 +70222,9 @@
    "Four holes",
    "Eight holes"
   ],
-  "a": 2,
-  "e_hi": "कागज को दो बार मोड़ने के बाद छेद करने पर खोलने पर चार सममित छेद दिखाई देंगे।",
-  "e_en": "Punching a paper folded twice results in four symmetrical holes when unfolded."
+  "a": 1,
+  "e_hi": "कागज को केवल एक बार मोड़ा गया है, जिससे दो परतें बनती हैं। बीच में एक छेद करने पर वह दोनों परतों से होकर गुजरता है, इसलिए खोलने पर क्रीज़ रेखा के दोनों ओर सममित रूप से दो छेद दिखाई देंगे।",
+  "e_en": "The paper is folded only once, creating two layers. Punching a hole in the middle passes through both layers, so unfolding it reveals two holes symmetric about the fold line."
  },
  {
   "id": "rp-rea-j02437",
@@ -70811,18 +70282,18 @@
   "o_hi": [
    "1",
    "2",
-   "5",
+   "3",
    "6"
   ],
   "o_en": [
    "1",
    "2",
-   "5",
+   "3",
    "6"
   ],
   "a": 2,
-  "e_hi": "पासे के नियमों का उपयोग करते हुए, 4 के विपरीत फलक की गणना करें।",
-  "e_en": "Using the rules of dice, calculate the face opposite to 4."
+  "e_hi": "मानक पासे (dice) में विपरीत फलकों का योग सदैव 7 होता है। अतः 4 के विपरीत फलक 7-4=3 होगा।",
+  "e_en": "On a standard dice, opposite faces always add up to 7. So the face opposite 4 is 7-4=3."
  },
  {
   "id": "rp-rea-j02440",
@@ -72890,17 +72361,17 @@
    "1906",
    "1908"
   ],
-  "a": 3,
-  "e_hi": "यह श्रृंखला लाल बहादुर शास्त्री के जन्म वर्ष (1904) पर आधारित है, लेकिन तार्किक अंतर 20, 8, 11 का है, सही उत्तर 1904 के निकटतम विकल्प 1908 हो सकता है यदि हम पैटर्न देखें।",
-  "e_en": "This series tracks birth years. Lal Bahadur Shastri was born in 1904, but based on the progression logic, 1904 is the historically correct sequence."
+  "a": 1,
+  "e_hi": "यह श्रृंखला प्रमुख स्वतंत्रता सेनानियों के जन्म वर्षों पर आधारित है। गांधी(1869), नेहरू(1889), सुभाष चंद्र बोस(1897) के बाद, लाल बहादुर शास्त्री का जन्म वर्ष 1904 है - जो सही उत्तर है।",
+  "e_en": "This series is based on the birth years of prominent freedom fighters. After Gandhi(1869), Nehru(1889), and Subhash Chandra Bose(1897), Lal Bahadur Shastri was born in 1904 — the correct answer."
  },
  {
   "id": "rp-rea-j02531",
   "s": "reasoning",
   "t": "series",
   "d": 2,
-  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें जो भारतीय गणतंत्र दिवस के वर्षों का क्रम दिखाती है: 1950, 1952, 1956, 1962, ?",
-  "q_en": "Find the missing number in the series representing Indian Republic Day years: 1950, 1952, 1956, 1962, ?",
+  "q_hi": "श्रृंखला में लुप्त संख्या ज्ञात करें: 1950, 1952, 1956, 1962, ?",
+  "q_en": "Find the missing number in the series: 1950, 1952, 1956, 1962, ?",
   "o_hi": [
    "1968",
    "1970",
@@ -72914,8 +72385,8 @@
    "1974"
   ],
   "a": 1,
-  "e_hi": "अंतर +2, +4, +6 है, इसलिए अगला अंतर +8 होगा। 1962 + 8 = 1970, विकल्प में नहीं है, 1962+6=1968।",
-  "e_en": "The differences increase by 2: +2, +4, +6, +8. 1962 + 8 = 1970. Since 1970 is not the intended sequence logic, 1968 is the next logical step."
+  "e_hi": "अंतर क्रमशः +2, +4, +6 है, इसलिए अगला अंतर +8 होगा। 1962 + 8 = 1970।",
+  "e_en": "The differences are +2, +4, +6, so the next difference should be +8. 1962 + 8 = 1970."
  },
  {
   "id": "rp-rea-j02533",
