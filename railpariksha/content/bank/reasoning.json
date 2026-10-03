@@ -25400,29 +25400,6 @@
   "e_en": "Here 'literary figures' is the middle term, but it is not stated that journalists are poets. 'Some literary figures are journalists' does not imply they are poets. Hence, no conclusion follows."
  },
  {
-  "id": "rp-rea-o01206",
-  "s": "reasoning",
-  "t": "syllogism",
-  "d": 2,
-  "q_hi": "कथन: सभी घड़े मिट्टी के होते हैं। कुछ मिट्टी की चीज़ें दीवारें नहीं होतीं। निष्कर्ष: I. कुछ घड़े दीवारें नहीं होते। II. कुछ दीवारें घड़े हैं।",
-  "q_en": "Statement: All pots are made of clay. Some clay items are not walls. Conclusions: I. Some pots are not walls. II. Some walls are pots.",
-  "o_hi": [
-   "केवल निष्कर्ष I सही है",
-   "केवल निष्कर्ष II सही है",
-   "दोनों निष्कर्ष I और II सही हैं",
-   "कोई भी निष्कर्ष सही नहीं है"
-  ],
-  "o_en": [
-   "Only conclusion I follows",
-   "Only conclusion II follows",
-   "Both conclusions I and II follow",
-   "Neither conclusion I nor II follows"
-  ],
-  "a": 3,
-  "e_hi": "हालांकि सभी घड़े मिट्टी के हैं, लेकिन यह अनिश्चित है कि वे दीवारें हैं या नहीं, क्योंकि 'कुछ मिट्टी की चीज़ें दीवारें नहीं होतीं' में यह स्पष्ट नहीं है कि वे घड़े हैं या अन्य वस्तुएँ। अतः कोई निष्कर्ष निश्चित रूप से सही नहीं है।",
-  "e_en": "Although all pots are clay, it is uncertain if they are walls because 'some clay items are not walls' does not specify if those items are pots. Thus, no conclusion is definitely correct."
- },
- {
   "id": "rp-rea-o01207",
   "s": "reasoning",
   "t": "syllogism",
@@ -29512,9 +29489,9 @@
    "Both I and II follow",
    "None follows"
   ],
-  "a": 3,
-  "e_hi": "कागज लकड़ी से बने होते हैं, लेकिन इसका मतलब यह नहीं कि लकड़ी कागज है या किताबें सीधे लकड़ी से बनी हैं। दोनों निष्कर्ष पुर्जों से निश्चित रूप से नहीं निकलते।",
-  "e_en": "Paper is made from wood, but it does not mean wood is paper or that books are directly made of wood in the logical sense of identity. Neither conclusion follows strictly."
+  "a": 1,
+  "e_hi": "निष्कर्ष I नहीं निकलता: 'सभी किताबें कागज हैं' और 'कुछ कागज लकड़ी है' में सिर्फ 'कागज' मध्य पद साझा है, और लकड़ी-कागज वाला हिस्सा पूरी तरह किताबों के बाहर भी हो सकता है, इसलिए किताबों और लकड़ी के बीच कोई निश्चित संबंध नहीं बनता। परन्तु निष्कर्ष II दूसरे कथन का सीधा व्युत्क्रम (conversion) है: 'कुछ कागज लकड़ी है' हमेशा वैध रूप से 'कुछ लकड़ी कागज है' में बदला जा सकता है (कुछ-सकारात्मक कथन का व्युत्क्रम सदैव वैध होता है), इसलिए यह निश्चित रूप से सही है।",
+  "e_en": "Conclusion I does not follow: 'All books are paper' and 'Some paper is wood' share only the middle term 'paper', and the wood-paper overlap could lie entirely outside books, so no link between books and wood is forced. Conclusion II, however, is just the valid conversion of the second statement: 'Some paper is wood' always converts to 'Some wood is paper' (a particular affirmative statement converts validly), so it follows regardless of the real-world phrasing."
  },
  {
   "id": "rp-rea-o01399",
@@ -29811,9 +29788,9 @@
    "Both Conclusion I and II follow",
    "Neither Conclusion I nor II follows"
   ],
-  "a": 1,
-  "e_hi": "चूँकि सभी फूल सुगंधित हैं और कुछ सुगंधित चीज़ें फल हैं, यह संभव है कि कुछ फूल फल न हों, लेकिन यह अनिवार्य नहीं है कि कोई फल फूल हो।",
-  "e_en": "Since all flowers are fragrant and some fragrant things are fruits, it is possible that some flowers are not fruits, but it is not necessary that any fruit is a flower."
+  "a": 3,
+  "e_hi": "'सभी फूल सुगंधित हैं' और 'कुछ सुगंधित चीज़ें फल हैं' केवल फूल और फल दोनों को 'सुगंधित' के बड़े समूह में रखते हैं -- इनके बीच कोई निश्चित संबंध नहीं बनता। निष्कर्ष I ('कुछ फल फूल होते हैं') निश्चित नहीं है, क्योंकि सुगंधित-फल वाला हिस्सा पूरी तरह फूलों के बाहर भी हो सकता है। निष्कर्ष II ('कुछ फूल फल न हो सकते हैं') भी मात्र एक संभावना है -- यह भी संभव है कि सभी फूल वास्तव में फल ही हों। चूंकि दोनों में से कोई भी निश्चित नहीं है, इसलिए कोई भी निष्कर्ष निश्चित रूप से सही नहीं है।",
+  "e_en": "All flowers are fragrant and some fragrant things are fruits only places flowers and fruits in the same 'fragrant' superset -- it does not pin down any overlap between them. Conclusion I ('Some fruits are flowers') is not guaranteed, since the fragrant-fruit items could all lie outside the flowers. Conclusion II ('Some flowers may not be fruits') is only a possibility too -- it is equally consistent with the statements that every flower happens to be a fruit. Since neither is a certainty, neither conclusion definitely follows."
  },
  {
   "id": "rp-rea-o01414",
@@ -29837,29 +29814,6 @@
   "a": 0,
   "e_hi": "यदि सभी शिक्षक पढ़े-लिखे हैं और सभी पढ़े-लिखे सफल हैं, तो लॉजिकल चेन के अनुसार सभी शिक्षक सफल होने चाहिए।",
   "e_en": "If all teachers are educated and all educated people are successful, then according to the logical chain, all teachers must be successful."
- },
- {
-  "id": "rp-rea-o01415",
-  "s": "reasoning",
-  "t": "syllogism",
-  "d": 3,
-  "q_hi": "कथन: कुछ डॉक्टर नर्नर्स नहीं हैं। सभी नर्नर्स स्टाफ हैं। निष्कर्ष I: कुछ डॉक्टर स्टाफ नहीं हैं। निष्कर्ष II: कुछ स्टाफ डॉक्टर हैं। कौन सा निष्कर्ष सही है?",
-  "q_en": "Statements: Some doctors are not nurses. All nurses are staff. Conclusion I: Some doctors are not staff. Conclusion II: Some staff are doctors. Which conclusion is correct?",
-  "o_hi": [
-   "केवल निष्कर्ष I सही है",
-   "केवल निष्कर्ष II सही है",
-   "दोनों निष्कर्ष सही हैं",
-   "कोई भी निष्कर्ष निश्चित नहीं है"
-  ],
-  "o_en": [
-   "Only Conclusion I follows",
-   "Only Conclusion II follows",
-   "Both conclusions follow",
-   "Neither conclusion follows"
-  ],
-  "a": 3,
-  "e_hi": "यह ज्ञात नहीं है कि वे डॉक्टर जो नर्नर्स नहीं हैं, स्टाफ हैं या नहीं। इसी तरह, यह भी ज्ञात नहीं है कि कोई स्टाफ डॉक्टर है या नहीं, क्योंकि डॉक्टरों का समूह नर्नर्स/स्टाफ से अलग हो सकता है।",
-  "e_en": "It is not known if the doctors who are not nurses are staff. Similarly, it is not known if any staff member is a doctor, as the doctor group may be entirely separate from nurses/staff."
  },
  {
   "id": "rp-rea-o01416",
