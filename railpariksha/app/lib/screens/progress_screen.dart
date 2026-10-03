@@ -8,6 +8,7 @@ import '../core/theme.dart';
 import '../core/transitions.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
+import '../logic/percentile.dart';
 import '../widgets/common.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
@@ -136,7 +137,17 @@ class ProgressScreen extends StatelessWidget {
           ),
         ),
         if (weak.isNotEmpty) ...[
-          SectionTitle(context.tr('सुधार की ज़रूरत वाले टॉपिक 💪', 'Topics to improve 💪')),
+          Row(children: [
+            Expanded(child: SectionTitle(context.tr('सुधार की ज़रूरत वाले टॉपिक 💪', 'Topics to improve 💪'))),
+            TextButton.icon(
+              icon: const Icon(Icons.center_focus_strong, size: 16),
+              label: Text(context.tr('सभी ड्रिल करें', 'Drill all')),
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                startQuiz(context, s.builder.weakSpots());
+              },
+            ),
+          ]),
           for (final t in weak.take(5))
             Card(
               margin: const EdgeInsets.only(bottom: 8),
@@ -165,6 +176,10 @@ class ProgressScreen extends StatelessWidget {
                   leading: const Icon(Icons.assignment_turned_in, color: BrandColors.sky),
                   title: Text('${m.score.toStringAsFixed(m.score == m.score.roundToDouble() ? 0 : 2)} / ${m.total}'),
                   subtitle: Text(_dateOf(m.day)),
+                  trailing: m.total > 0
+                      ? Text('~${context.tr('टॉप', 'Top')} ${100 - estimatedPercentile(m.score.clamp(0, m.total.toDouble()) / m.total)}%',
+                          style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12.5))
+                      : null,
                 ),
             ]),
           ),
