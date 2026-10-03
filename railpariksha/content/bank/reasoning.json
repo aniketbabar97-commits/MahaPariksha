@@ -22551,24 +22551,24 @@
     "id": "rp-rea-o01136",
     "s": "reasoning",
     "t": "classification",
-    "d": 1,
-    "q_hi": "श्रृंखला को देखें: 4, 9, 16, 25, ? अगला पद क्या होगा?",
-    "q_en": "Look at the sequence: 4, 9, 16, 25, ? What is the next term?",
+    "d": 2,
+    "q_hi": "शृंखला देखें: 2, 5, 10, 17, 26, ? अगला पद क्या होगा?",
+    "q_en": "Look at the sequence: 2, 5, 10, 17, 26, ? What is the next term?",
     "o_hi": [
-      "30",
-      "36",
-      "49",
-      "32"
+      "37",
+      "35",
+      "39",
+      "41"
     ],
     "o_en": [
-      "30",
-      "36",
-      "49",
-      "32"
+      "37",
+      "35",
+      "39",
+      "41"
     ],
-    "a": 1,
-    "e_hi": "यह संख्याओं के वर्गों की श्रृंखला है (2², 3², 4², 5²)। अगली संख्या 6 का वर्ग होगी, यानी 36।",
-    "e_en": "This is a sequence of perfect squares (2², 3², 4², 5²). The next number is the square of 6, which is 36."
+    "a": 0,
+    "e_hi": "अंतर क्रमशः +3, +5, +7, +9 हैं (विषम संख्याएँ), इसलिए अगला अंतर +11 होगा: 26+11=37।",
+    "e_en": "The differences are +3, +5, +7, +9 (odd numbers), so the next difference is +11: 26+11=37."
   },
   {
     "id": "rp-rea-o01137",
@@ -25012,24 +25012,24 @@
     "id": "rp-rea-o01253",
     "s": "reasoning",
     "t": "alphabet_test",
-    "d": 2,
-    "q_hi": "अक्षरों की श्रृंखला को देखें: A, B, D, G, K, ? अगला अक्षर क्या होगा?",
-    "q_en": "Observe the letter sequence: A, B, D, G, K, ?. What is the next letter?",
+    "d": 3,
+    "q_hi": "अक्षर शृंखला देखें: C, F, J, O, ?. अगला अक्षर क्या होगा?",
+    "q_en": "Observe the letter sequence: C, F, J, O, ?. What is the next letter?",
     "o_hi": [
-      "P",
-      "O",
-      "N",
-      "Q"
+      "U",
+      "T",
+      "V",
+      "S"
     ],
     "o_en": [
-      "P",
-      "O",
-      "N",
-      "Q"
+      "U",
+      "T",
+      "V",
+      "S"
     ],
     "a": 0,
-    "e_hi": "अंतर 1, 2, 3, 4, 5 है। K के बाद 5 अक्षर आगे जानने पर P मिलता है।",
-    "e_en": "The differences are 1, 2, 3, 4, 5. Moving 5 letters forward from K gives P."
+    "e_hi": "अंतर क्रमशः +3, +4, +5 है, इसलिए अगला अंतर +6 होगा: O(15)+6=U(21)।",
+    "e_en": "The differences are +3, +4, +5, so the next difference is +6: O(15)+6=U(21)."
   },
   {
     "id": "rp-rea-o01254",
@@ -32487,24 +32487,24 @@
     "id": "rp-rea-j01552",
     "s": "reasoning",
     "t": "alphabet_test",
-    "d": 1,
-    "q_hi": "यदि अंग्रेजी वर्णमाला में 'A' को '1', 'B' को '3', 'C' को '5' के रूप में लिखा जाता है, तो 'E' का मान क्या होगा?",
-    "q_en": "If in the English alphabet, 'A' is written as '1', 'B' as '3', and 'C' as '5', what will be the value of 'E'?",
+    "d": 2,
+    "q_hi": "यदि अंग्रेजी वर्णमाला में 'Z' को 1, 'Y' को 3, और 'X' को 5 लिखा जाए, तो 'V' का मान क्या होगा?",
+    "q_en": "If in the English alphabet 'Z' is written as 1, 'Y' as 3, and 'X' as 5, what will be the value of 'V'?",
     "o_hi": [
+      "9",
       "7",
       "8",
-      "9",
       "10"
     ],
     "o_en": [
+      "9",
       "7",
       "8",
-      "9",
       "10"
     ],
-    "a": 2,
-    "e_hi": "यह अनुक्रम 2n-1 का पालन करता है। E का स्थान 5 है, अतः 2(5)-1 = 9।",
-    "e_en": "The sequence follows the pattern 2n-1. Since E is the 5th letter, 2(5)-1 = 9."
+    "a": 0,
+    "e_hi": "पैटर्न: हर अक्षर पीछे जाने पर मान 2 बढ़ता है (Z=1, Y=3, X=5, W=7, V=9)।",
+    "e_en": "Pattern: each letter going backward increases the value by 2 (Z=1, Y=3, X=5, W=7, V=9)."
   },
   {
     "id": "rp-rea-j01553",
@@ -36075,24 +36075,24 @@
     "id": "rp-rea-j01663",
     "s": "reasoning",
     "t": "direction_sense",
-    "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand is pointing North-East, in which direction will the hour hand be pointing?",
+    "d": 2,
+    "q_hi": "एक घड़ी 6:00 बजा रही है। यदि मिनट की सुई उत्तर दिशा में इंगित कर रही है, तो घंटे की सुई किस दिशा में इंगित करेगी?",
+    "q_en": "A clock shows 6:00. If the minute hand points towards North, in which direction will the hour hand point?",
     "o_hi": [
-      "उत्तर-पश्चिम",
-      "दक्षिण-पूर्व",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "दक्षिण",
+      "उत्तर",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "North-West",
-      "South-East",
-      "South-West",
-      "North-East"
+      "South",
+      "North",
+      "East",
+      "West"
     ],
-    "a": 1,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) होती है। यदि यह उत्तर-पूर्व है, तो घड़ी 45 डिग्री घूम गई है। घंटे की सुई 3 पर (पूर्व) होती है, जो 45 डिग्री घूमने पर दक्षिण-पूर्व बन जाएगी।",
-    "e_en": "At 3:00, the minute hand is at 12 (North). If it is North-East, the clock has rotated 45 degrees. The hour hand is at 3 (East), which becomes South-East after a 45-degree rotation."
+    "a": 0,
+    "e_hi": "6:00 पर मिनट और घंटे की सुइयों के बीच 180° का कोण होता है, इसलिए यदि मिनट की सुई उत्तर में है तो घंटे की सुई ठीक विपरीत दिशा यानी दक्षिण में होगी।",
+    "e_en": "At 6:00, the angle between the minute and hour hands is 180°, so if the minute hand points North, the hour hand points in the exact opposite direction, South."
   },
   {
     "id": "rp-rea-j01664",
@@ -36283,23 +36283,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "यदि दक्षिण-पूर्व को उत्तर कहा जाए, और उत्तर-पूर्व को पश्चिम कहा जाए, तो पश्चिम क्या कहलाएगा?",
-    "q_en": "If South-East is called North, and North-East is called West, then what will West be called?",
+    "q_hi": "यदि उत्तर-पश्चिम को दक्षिण कहा जाए और दक्षिण-पश्चिम को पूर्व कहा जाए, तो मूल रूप से उत्तर-पूर्व दिशा को अब क्या कहा जाएगा?",
+    "q_en": "If North-West is called South, and South-West is called East, what will the original North-East direction now be called?",
     "o_hi": [
-      "उत्तर-पूर्व",
-      "दक्षिण-पश्चिम",
+      "पश्चिम",
       "उत्तर-पश्चिम",
-      "दक्षिण-पूर्व"
+      "उत्तर-पूर्व",
+      "दक्षिण-पश्चिम"
     ],
     "o_en": [
-      "North-East",
-      "South-West",
+      "West",
       "North-West",
-      "South-East"
+      "North-East",
+      "South-West"
     ],
-    "a": 3,
-    "e_hi": "दिशाओं का चक्र 135 डिग्री वामावर्त घूम रहा है, इसलिए पश्चिम 'दक्षिण-पूर्व' बन जाएगा।",
-    "e_en": "The directions are rotating 135 degrees counter-clockwise; thus, West becomes 'South-East'."
+    "a": 0,
+    "e_hi": "उत्तर-पश्चिम(315°)→दक्षिण(180°): घुमाव = 180-315 = -135° (यानी 225° जोड़ना)। दक्षिण-पश्चिम(225°)→पूर्व(90°): 90-225 = -135° भी इसी घुमाव की पुष्टि करता है। उत्तर-पूर्व(45°) पर यही घुमाव लगाने से 45+225=270°, यानी पश्चिम।",
+    "e_en": "North-West(315°)→South(180°): rotation = 180-315 = -135° (equivalently, +225°). South-West(225°)→East(90°): 90-225 = -135° confirms the same rotation. Applying it to North-East(45°): 45+225=270°, i.e., West."
   },
   {
     "id": "rp-rea-j01667",
@@ -36328,24 +36328,24 @@
     "id": "rp-rea-j01668",
     "s": "reasoning",
     "t": "direction_sense",
-    "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand is pointing North-East, which direction will the hour hand point?",
+    "d": 2,
+    "q_hi": "एक घड़ी 6:00 बजा रही है। यदि मिनट की सुई पूर्व दिशा में इंगित कर रही है, तो घंटे की सुई किस दिशा में इंगित करेगी?",
+    "q_en": "A clock shows 6:00. If the minute hand points towards East, in which direction will the hour hand point?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "पश्चिम",
+      "उत्तर",
+      "दक्षिण",
+      "पूर्व"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North-East"
+      "West",
+      "North",
+      "South",
+      "East"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे सुइयां एक-दूसरे से 90 डिग्री पर होती हैं। मिनट की सुई से 90 डिग्री घड़ी की दिशा में दक्षिण-पूर्व होता है।",
-    "e_en": "At 3:00, hands are at 90 degrees. 90 degrees clockwise from North-East is South-East."
+    "e_hi": "6:00 पर दोनों सुइयों के बीच 180° का कोण होता है, इसलिए पूर्व में मिनट की सुई होने पर घंटे की सुई विपरीत दिशा, पश्चिम में होगी।",
+    "e_en": "At 6:00, the two hands are 180° apart, so if the minute hand points East, the hour hand points in the opposite direction, West."
   },
   {
     "id": "rp-rea-j01669",
@@ -36789,23 +36789,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand points towards North-East, in which direction will the hour hand point?",
+    "q_hi": "एक घड़ी 9:00 बजा रही है। यदि मिनट की सुई उत्तर दिशा में इंगित कर रही है, तो घंटे की सुई किस दिशा में इंगित करेगी?",
+    "q_en": "A clock shows 9:00. If the minute hand points towards North, in which direction will the hour hand point?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "पश्चिम",
+      "उत्तर",
+      "पूर्व",
+      "दक्षिण"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North-East"
+      "West",
+      "North",
+      "East",
+      "South"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) होती है और घंटे की सुई 3 पर (पूर्व) होती है। 45 डिग्री का बदलाव करने पर दक्षिण-पूर्व सही उत्तर है।",
-    "e_en": "At 3:00, the minute hand is at 12 (North) and the hour hand is at 3 (East). Applying the 45-degree shift, South-East is correct."
+    "e_hi": "9:00 पर घंटे की सुई मिनट की सुई से 270° क्लॉकवाइज़ आगे होती है। उत्तर (0°) + 270° = 270° यानी पश्चिम।",
+    "e_en": "At 9:00, the hour hand is 270° clockwise ahead of the minute hand. North (0°) + 270° = 270°, i.e., West."
   },
   {
     "id": "rp-rea-j01679",
@@ -37088,23 +37088,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand is pointing towards North-East, which direction will the hour hand point?",
+    "q_hi": "एक घड़ी 9:00 बजा रही है। यदि मिनट की सुई दक्षिण दिशा में इंगित कर रही है, तो घंटे की सुई किस दिशा में इंगित करेगी?",
+    "q_en": "A clock shows 9:00. If the minute hand points towards South, in which direction will the hour hand point?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर"
+      "पूर्व",
+      "उत्तर",
+      "पश्चिम",
+      "दक्षिण"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North"
+      "East",
+      "North",
+      "West",
+      "South"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) और घंटे की सुई 3 पर (पूर्व) होती है। उत्तर को उत्तर-पूर्व बनाने के लिए 45 डिग्री घुमाने पर, पूर्व दक्षिण-पूर्व हो जाता है।",
-    "e_en": "At 3:00, the minute hand is at 12 (North) and the hour hand is at 3 (East). Rotating 45 degrees clockwise to move North to North-East makes East turn to South-East."
+    "e_hi": "घंटे की सुई मिनट की सुई से 270° आगे होती है। दक्षिण (180°) + 270° = 450° mod 360° = 90° यानी पूर्व।",
+    "e_en": "The hour hand is 270° ahead of the minute hand. South (180°) + 270° = 450° mod 360° = 90°, i.e., East."
   },
   {
     "id": "rp-rea-j01689",
@@ -37594,23 +37594,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand is pointing towards North-East, in which direction will the hour hand point?",
+    "q_hi": "सूर्योदय के समय एक व्यक्ति की छाया ठीक उसकी दाईं ओर पड़ रही थी। वह किस दिशा की ओर मुख किए खड़ा था?",
+    "q_en": "At sunrise, a man's shadow fell exactly to his right side. Which direction was he facing?",
     "o_hi": [
-      "उत्तर-पश्चिम",
-      "दक्षिण-पूर्व",
-      "दक्षिण-पश्चिम",
-      "उत्तर"
+      "दक्षिण",
+      "उत्तर",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "North-West",
-      "South-East",
-      "South-West",
-      "North"
+      "South",
+      "North",
+      "East",
+      "West"
     ],
-    "a": 1,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) और घंटे की सुई 3 पर (पूर्व) होती है। मिनट की सुई को उत्तर से उत्तर-पूर्व (45 डिग्री दाएं) घुमाया गया है, इसलिए घंटे की सुई भी 45 डिग्री दाएं घूमकर दक्षिण-पूर्व होगी।",
-    "e_en": "At 3:00, the minute hand is at 12 (North) and hour hand is at 3 (East). Since the minute hand is shifted 45 degrees clockwise to North-East, the hour hand also shifts 45 degrees clockwise to South-East."
+    "a": 0,
+    "e_hi": "सूर्योदय के समय सूर्य पूर्व में होता है, अतः छाया पश्चिम की ओर पड़ती है। छाया दाईं ओर होने के लिए व्यक्ति को दक्षिण की ओर मुख करना होगा (दक्षिण मुख करने पर दायाँ हाथ पश्चिम की ओर होता है)।",
+    "e_en": "At sunrise the sun is in the East, so the shadow falls to the West. For the shadow to be on his right, he must be facing South (facing South, the right hand points West)."
   },
   {
     "id": "rp-rea-j01706",
@@ -38307,23 +38307,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand points towards the North-East, which direction will the hour hand point?",
+    "q_hi": "सूर्यास्त के समय एक व्यक्ति की छाया ठीक उसकी दाईं ओर पड़ रही थी। वह किस दिशा की ओर मुख किए खड़ा था?",
+    "q_en": "At sunset, a man's shadow fell exactly to his right side. Which direction was he facing?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "उत्तर",
+      "दक्षिण",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North-East"
+      "North",
+      "South",
+      "East",
+      "West"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर और घंटे की सुई 3 पर होती है। 90 डिग्री का अंतर है, इसलिए घंटे की सुई दक्षिण-पूर्व में होगी।",
-    "e_en": "At 3:00, the minute hand is at 12 and the hour hand is at 3. There is a 90-degree difference, so the hour hand points South-East."
+    "e_hi": "सूर्यास्त के समय सूर्य पश्चिम में होता है, अतः छाया पूर्व की ओर पड़ती है। छाया दाईं ओर होने के लिए व्यक्ति को उत्तर की ओर मुख करना होगा (उत्तर मुख करने पर दायाँ हाथ पूर्व की ओर होता है)।",
+    "e_en": "At sunset the sun is in the West, so the shadow falls to the East. For the shadow to be on his right, he must be facing North (facing North, the right hand points East)."
   },
   {
     "id": "rp-rea-j01723",
@@ -39158,23 +39158,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand points North-East, in which direction does the hour hand point?",
+    "q_hi": "सूर्योदय के समय एक व्यक्ति की छाया ठीक उसकी बाईं ओर पड़ रही थी। वह किस दिशा की ओर मुख किए खड़ा था?",
+    "q_en": "At sunrise, a man's shadow fell exactly to his left side. Which direction was he facing?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "उत्तर",
+      "दक्षिण",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North-East"
+      "North",
+      "South",
+      "East",
+      "West"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) होती है और घंटे की सुई 3 पर (पूर्व) होती है। उत्तर को उत्तर-पूर्व बनाने पर पूर्व दक्षिण-पूर्व बन जाएगा।",
-    "e_en": "At 3:00, the minute hand is at 12 (North) and the hour hand is at 3 (East). Shifting North to North-East makes East become South-East."
+    "e_hi": "सूर्योदय के समय छाया पश्चिम की ओर पड़ती है। छाया बाईं ओर होने के लिए व्यक्ति को उत्तर की ओर मुख करना होगा (उत्तर मुख करने पर बायाँ हाथ पश्चिम की ओर होता है)।",
+    "e_en": "At sunrise the shadow falls to the West. For the shadow to be on his left, he must be facing North (facing North, the left hand points West)."
   },
   {
     "id": "rp-rea-j01761",
@@ -39342,23 +39342,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand points towards North-East, which direction will the hour hand point?",
+    "q_hi": "सूर्यास्त के समय एक व्यक्ति की छाया ठीक उसकी बाईं ओर पड़ रही थी। वह किस दिशा की ओर मुख किए खड़ा था?",
+    "q_en": "At sunset, a man's shadow fell exactly to his left side. Which direction was he facing?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "दक्षिण",
+      "उत्तर",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North-East"
+      "South",
+      "North",
+      "East",
+      "West"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे, मिनट की सुई 12 पर (उत्तर) होती है। यदि उत्तर 45 डिग्री घूमकर उत्तर-पूर्व हो गया, तो 3 (पूर्व) भी 45 डिग्री घूमकर दक्षिण-पूर्व हो जाएगा।",
-    "e_en": "At 3:00, the minute hand points to 12 (North). If North shifts 45 degrees to North-East, the 3 (East) also shifts 45 degrees to South-East."
+    "e_hi": "सूर्यास्त के समय छाया पूर्व की ओर पड़ती है। छाया बाईं ओर होने के लिए व्यक्ति को दक्षिण की ओर मुख करना होगा (दक्षिण मुख करने पर बायाँ हाथ पूर्व की ओर होता है)।",
+    "e_en": "At sunset the shadow falls to the East. For the shadow to be on his left, he must be facing South (facing South, the left hand points East)."
   },
   {
     "id": "rp-rea-j01769",
@@ -39917,23 +39917,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand is pointing North-East, which direction is the hour hand pointing?",
+    "q_hi": "यदि पूर्व को उत्तर कहा जाए और दक्षिण को पूर्व कहा जाए, तो मूल रूप से पश्चिम दिशा को अब क्या कहा जाएगा?",
+    "q_en": "If East is called North, and South is called East, what will the original West direction now be called?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर"
+      "दक्षिण",
+      "उत्तर",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North"
+      "South",
+      "North",
+      "East",
+      "West"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर (उत्तर) होती है। यदि इसे उत्तर-पूर्व में घुमाया गया है, तो घंटे की सुई (3 पर) को भी 45 डिग्री घुमाने पर वह दक्षिण-पूर्व में होगी।",
-    "e_en": "At 3:00, the minute hand points North. If it is shifted to North-East (45 degrees clockwise), the hour hand at 3 o'clock also moves 45 degrees clockwise to South-East."
+    "e_hi": "दिशा-बेयरिंग में पूर्व(90°)→उत्तर(0°) का अर्थ है 90° एंटी-क्लॉकवाइज़ घुमाव। दक्षिण(180°)→पूर्व(90°) भी 90° की पुष्टि करता है। पश्चिम(270°) पर यही घुमाव लगाने से 270-90=180°, यानी दक्षिण।",
+    "e_en": "In bearing terms, East(90°)→North(0°) means a 90° counter-clockwise rotation. South(180°)→East(90°) confirms the same 90°. Applying it to West(270°): 270-90=180°, i.e., South."
   },
   {
     "id": "rp-rea-j01787",
@@ -40745,23 +40745,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 3,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand is pointing North-East, in which direction will the hour hand point?",
+    "q_hi": "यदि उत्तर को पूर्व कहा जाए और पश्चिम को उत्तर कहा जाए, तो मूल रूप से दक्षिण दिशा को अब क्या कहा जाएगा?",
+    "q_en": "If North is called East, and West is called North, what will the original South direction now be called?",
     "o_hi": [
-      "उत्तर-पश्चिम",
-      "दक्षिण-पूर्व",
-      "दक्षिण-पश्चिम",
-      "उत्तर"
+      "पश्चिम",
+      "उत्तर",
+      "पूर्व",
+      "दक्षिण"
     ],
     "o_en": [
-      "North-West",
-      "South-East",
-      "South-West",
-      "North"
+      "West",
+      "North",
+      "East",
+      "South"
     ],
-    "a": 1,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर और घंटे की सुई 3 पर होती है। 90 डिग्री के अंतर के आधार पर दिशा दक्षिण-पूर्व होगी।",
-    "e_en": "At 3:00, the minute hand is at 12 and the hour hand is at 3. Based on the 90-degree angle, the hour hand points South-East."
+    "a": 0,
+    "e_hi": "उत्तर(0°)→पूर्व(90°) का अर्थ है 90° क्लॉकवाइज़ घुमाव। पश्चिम(270°)→उत्तर(0° या 360°) भी 90° की पुष्टि करता है। दक्षिण(180°) पर यही घुमाव लगाने से 180+90=270°, यानी पश्चिम।",
+    "e_en": "North(0°)→East(90°) means a 90° clockwise rotation. West(270°)→North(360°) confirms the same 90°. Applying it to South(180°): 180+90=270°, i.e., West."
   },
   {
     "id": "rp-rea-j01807",
@@ -41067,23 +41067,23 @@
     "s": "reasoning",
     "t": "direction_sense",
     "d": 2,
-    "q_hi": "एक घड़ी में 3:00 बजे हैं। यदि मिनट की सुई उत्तर-पूर्व दिशा में है, तो घंटे की सुई किस दिशा में होगी?",
-    "q_en": "A clock shows 3:00. If the minute hand points towards the North-East, in which direction will the hour hand point?",
+    "q_hi": "एक व्यक्ति उत्तर की ओर मुख किए खड़ा है। वह 90° क्लॉकवाइज़ घूमता है, फिर 135° एंटी-क्लॉकवाइज़ घूमता है, और अंत में 45° क्लॉकवाइज़ घूमता है। अब वह किस दिशा की ओर मुख किए है?",
+    "q_en": "A man is facing North. He turns 90° clockwise, then 135° anticlockwise, and finally 45° clockwise. Which direction is he now facing?",
     "o_hi": [
-      "दक्षिण-पूर्व",
-      "उत्तर-पश्चिम",
-      "दक्षिण-पश्चिम",
-      "उत्तर-पूर्व"
+      "उत्तर",
+      "दक्षिण",
+      "पूर्व",
+      "पश्चिम"
     ],
     "o_en": [
-      "South-East",
-      "North-West",
-      "South-West",
-      "North-East"
+      "North",
+      "South",
+      "East",
+      "West"
     ],
     "a": 0,
-    "e_hi": "3:00 बजे मिनट की सुई 12 पर होती है। यदि 12 उत्तर-पूर्व है, तो 3 (घंटे की सुई) 90 डिग्री घड़ी की दिशा में दक्षिण-पूर्व होगी।",
-    "e_en": "At 3:00, the minute hand is at 12. If 12 represents North-East, then 3 (hour hand) is 90 degrees clockwise, which is South-East."
+    "e_hi": "उत्तर(0°)+90°=90°(पूर्व); 90°-135°=-45°=315°(उत्तर-पश्चिम); 315°+45°=360°=0°, यानी फिर उत्तर।",
+    "e_en": "North(0°)+90°=90°(East); 90°-135°=-45°=315°(North-West); 315°+45°=360°=0°, i.e., back to North."
   },
   {
     "id": "rp-rea-j01813",
@@ -43113,24 +43113,24 @@
     "id": "rp-rea-j01862",
     "s": "reasoning",
     "t": "blood_relations",
-    "d": 3,
-    "q_hi": "एक तस्वीर की ओर इशारा करते हुए, एक व्यक्ति ने कहा: 'मेरे कोई भाई या बहन नहीं हैं, लेकिन उस व्यक्ति का पिता मेरे पिता का बेटा है।' तस्वीर में कौन है?",
-    "q_en": "Pointing to a photograph, a man says: 'I have no brothers or sisters, but that man's father is my father's son.' Who is in the photograph?",
+    "d": 2,
+    "q_hi": "एक तस्वीर की ओर इशारा करते हुए एक महिला ने कहा, 'इस व्यक्ति के पिता मेरे पिता के इकलौते पुत्र हैं।' तस्वीर में कौन है, यदि महिला की कोई बहन नहीं है?",
+    "q_en": "Pointing to a photograph, a woman said, 'This person's father is the only son of my father.' Who is in the photograph, if the woman has no sisters?",
     "o_hi": [
-      "उसका बेटा",
-      "उसका पिता",
+      "उसका भतीजा/भतीजी",
+      "उसका भाई",
       "वह स्वयं",
-      "उसका भतीजा"
+      "उसका पुत्र/पुत्री"
     ],
     "o_en": [
-      "His son",
-      "His father",
-      "Himself",
-      "His nephew"
+      "Her nephew/niece",
+      "Her brother",
+      "Herself",
+      "Her son/daughter"
     ],
     "a": 0,
-    "e_hi": "चूंकि व्यक्ति का कोई भाई-बहन नहीं है, 'मेरे पिता का बेटा' वह स्वयं है। अतः, 'तस्वीर वाले व्यक्ति का पिता = मैं', जिसका अर्थ है कि वह व्यक्ति उसका बेटा है।",
-    "e_en": "Since the man has no siblings, 'my father's son' is himself. Thus, 'the person's father is me', which means the person in the photo is his son."
+    "e_hi": "महिला के पिता का इकलौता पुत्र महिला का भाई है। तस्वीर वाले व्यक्ति का पिता यह भाई है, इसलिए तस्वीर में भाई की संतान है — यानी महिला का भतीजा/भतीजी।",
+    "e_en": "The woman's father's only son is her own brother. The photograph's subject's father is this brother, so the photograph shows the brother's child — the woman's nephew/niece."
   },
   {
     "id": "rp-rea-j01863",
@@ -45736,23 +45736,23 @@
     "s": "reasoning",
     "t": "blood_relations",
     "d": 3,
-    "q_hi": "एक तस्वीर की ओर इशारा करते हुए, एक व्यक्ति ने कहा, 'मेरा कोई भाई या बहन नहीं है, लेकिन उस आदमी का पिता मेरे पिता का बेटा है।' तस्वीर में कौन है?",
-    "q_en": "Pointing to a photograph, a man said, 'I have no brother or sister, but that man's father is my father's son.' Who is in the photograph?",
+    "q_hi": "एक पुरुष ने एक महिला की ओर इशारा करते हुए कहा, 'उसकी माँ मेरी माँ की इकलौती बेटी है।' वह पुरुष उस महिला से किस प्रकार संबंधित है?",
+    "q_en": "A man, pointing to a woman, said, 'Her mother is the only daughter of my mother.' How is the man related to the woman?",
     "o_hi": [
-      "उसका बेटा",
-      "उसका पिता",
-      "वह स्वयं",
-      "उसका भतीजा"
+      "पुत्र (Son)",
+      "भाई",
+      "पिता",
+      "मामा (Maternal uncle)"
     ],
     "o_en": [
-      "His son",
-      "His father",
-      "Himself",
-      "His nephew"
+      "Son",
+      "Brother",
+      "Father",
+      "Maternal uncle"
     ],
-    "a": 0,
-    "e_hi": "'मेरे पिता का बेटा' का अर्थ है 'मैं स्वयं' (क्योंकि मेरा कोई भाई-बहन नहीं है)। अतः तस्वीर में उसका बेटा है।",
-    "e_en": "'My father's son' means 'myself' since he has no siblings. Therefore, the man in the photo is his son."
+    "a": 3,
+    "e_hi": "'मेरी माँ की इकलौती बेटी' वक्ता पुरुष की अपनी बहन है। अतः महिला की माँ वक्ता की बहन है, जिससे वक्ता महिला का मामा होता है।",
+    "e_en": "'My mother's only daughter' refers to the speaker's own sister. So the woman's mother is the speaker's sister, which makes the speaker (the man) the woman's maternal uncle (mama)."
   },
   {
     "id": "rp-rea-j01924",
@@ -82236,14 +82236,14 @@
     "id": "rp-rea-k03093",
     "s": "reasoning",
     "t": "syllogism",
-    "d": 2,
-    "q_hi": "कथन: कुछ नीले काले हैं। सभी काले सफेद हैं। निष्कर्ष: (I) कुछ नीले सफेद हैं। (II) कोई नीला सफेद नहीं है।",
-    "q_en": "Statements: Some blues are black. All blacks are white. Conclusions: (I) Some blues are white. (II) No blue is white.",
+    "d": 3,
+    "q_hi": "कथन: कुछ नीले लाल हैं। कोई भी लाल हरा नहीं है। निष्कर्ष: (I) कुछ नीले हरे नहीं हैं। (II) कोई भी नीला हरा नहीं है।",
+    "q_en": "Statements: Some blues are red. No red is green. Conclusions: (I) Some blues are not green. (II) No blue is green.",
     "o_hi": [
-      "केवल (I) सही है",
-      "केवल (II) सही है",
-      "या तो (I) या (II) सही है",
-      "कोई सही नहीं है"
+      "केवल (I) अनुसरण करता है",
+      "केवल (II) अनुसरण करता है",
+      "या तो (I) या (II) अनुसरण करता है",
+      "कोई अनुसरण नहीं करता"
     ],
     "o_en": [
       "Only (I) follows",
@@ -82252,8 +82252,8 @@
       "None follow"
     ],
     "a": 0,
-    "e_hi": "क्योंकि कुछ नीले काले हैं और सभी काले सफेद हैं, तो नीले का वह हिस्सा जो काला है, वह सफेद भी होगा।",
-    "e_en": "Since some blues are black and all blacks are white, the part of blue that is black must also be white."
+    "e_hi": "'कुछ नीले लाल हैं' और 'कोई लाल हरा नहीं है' से यह निश्चित रूप से निकलता है कि 'कुछ नीले हरे नहीं हैं' (I)। लेकिन (II) 'कोई नीला हरा नहीं' एक निश्चित सार्वभौमिक निष्कर्ष है जो नहीं निकलता, क्योंकि कुछ नीले (जो लाल नहीं हैं) हरे हो भी सकते हैं।",
+    "e_en": "From 'Some blues are red' and 'No red is green', it definitely follows that 'Some blues are not green' (I). But (II), the universal 'No blue is green', does not follow, since some blues (not among those that are red) could still be green."
   },
   {
     "id": "rp-rea-k03094",
@@ -84950,24 +84950,24 @@
     "id": "rp-rea-r03229",
     "s": "reasoning",
     "t": "alphabet_test",
-    "d": 1,
-    "q_hi": "अंग्रेजी वर्णमाला में, बाईं ओर से 15वें अक्षर के दाईं ओर 7वां अक्षर कौन सा होगा?",
-    "q_en": "In the English alphabet, which letter will be 7th to the right of the 15th letter from the left?",
+    "d": 2,
+    "q_hi": "अंग्रेजी वर्णमाला में, दायें से 10वें अक्षर से बायीं ओर 5वाँ अक्षर कौन सा होगा?",
+    "q_en": "In the English alphabet, which letter will be 5th to the left of the 10th letter from the right end?",
     "o_hi": [
-      "V",
-      "W",
-      "U",
-      "X"
+      "L",
+      "K",
+      "M",
+      "N"
     ],
     "o_en": [
-      "V",
-      "W",
-      "U",
-      "X"
+      "L",
+      "K",
+      "M",
+      "N"
     ],
     "a": 0,
-    "e_hi": "चरण 1: बाईं ओर से 15वां अक्षर = O (जो 15 है)। चरण 2: O के दाईं ओर 7वां अक्षर ज्ञात करने के लिए, 15 में 7 जोड़ें, जिससे 22 प्राप्त होता है। चरण 3: 22वां अक्षर V है। अतः सही उत्तर V है।",
-    "e_en": "Step 1: The 15th letter from the left is O (position 15). Step 2: To find the 7th letter to the right of O, add 7 to 15, which gives 22. Step 3: The 22nd letter of the alphabet is V. Thus, the correct answer is V."
+    "e_hi": "दायें से 10वाँ अक्षर = 26-10+1 = 17वाँ अक्षर = Q। Q से बायीं ओर 5वाँ अक्षर = 17-5 = 12वाँ अक्षर = L।",
+    "e_en": "The 10th letter from the right = 26-10+1 = 17th letter from the left = Q. The letter 5th to the left of Q = 17-5 = 12th letter = L."
   },
   {
     "id": "rp-rea-r03230",
