@@ -1528,7 +1528,7 @@
    "200"
   ],
   "a": 0,
-  "e_hi": "50 का 50% = 25। मान लें कि संख्या x है। 25 का 25% = 25% * x = 25। x = 100? नहीं, 25% of 100 is 25. Wait. 50% of 50 is 25. 25% of x is 25. x = 100. Let me re-read options. Option A is 100. Option C is 150. 25% of 100 is 25. So answer is 100. Index 0.",
+  "e_hi": "50 का 50% = 25। मान लीजिए दूसरी संख्या x है। 25% of x = 25, इसलिए x = 25 / 0.25 = 100।",
   "e_en": "50% of 50 is 25. Let the number be x. 25% of x = 25. Therefore, x = 25 / 0.25 = 100."
  },
  {
@@ -1712,7 +1712,7 @@
    "20%"
   ],
   "a": 2,
-  "e_hi": "संख्याएँ 150 और 100 हैं। अंतर 50 है। प्रतिशत = (50/100)*100 = 50%। (Wait, sum 250, diff 50 -> x+y=250, x-y=50 -> 2x=300 -> x=150, y=100. % more than smaller = (150-100)/100 = 50%. Option C is 50%. Let me re-check my previous logic. I said 33.33% in option B. 50 is option C. Correct index is 2. Let's verify. 150 is 50% more than 100. Yes. So answer is 2.)",
+  "e_hi": "मान लीजिए संख्याएँ x और y हैं (x > y), x+y=250 और x−y=50। जोड़ने पर 2x=300, x=150, y=100। बड़ी संख्या छोटी से कितना % अधिक = (150−100)/100 × 100 = 50%।",
   "e_en": "The numbers are 150 and 100. The difference is 50. Percentage increase = (50/100)*100 = 50%."
  },
  {
@@ -2793,7 +2793,7 @@
    "500"
   ],
   "a": 1,
-  "e_hi": "20% of 500 = 100. This equals 50% of the second number. So, 50% of second number = 100. Therefore, second number = 100 / 0.50 = 200.",
+  "e_hi": "500 का 20% = 100। यह दूसरी संख्या के 50% के बराबर है। अतः दूसरी संख्या का 50% = 100, इसलिए दूसरी संख्या = 100 / 0.50 = 200।",
   "e_en": "20% of 500 is 100. This is equal to 50% of the second number. Therefore, 50% of the second number is 100, making the whole number 200."
  },
  {
@@ -2816,7 +2816,7 @@
    "12.5%"
   ],
   "a": 0,
-  "e_hi": "Let CP = 100. Required SP for 10% profit = 110. Discount is 10%, so SP = 90% of MP. Thus, 0.90 * MP = 110. MP = 110 / 0.90 = 122.22. MP is 22.22% more than CP.",
+  "e_hi": "मान लीजिए C.P. = 100। 10% लाभ के लिए S.P. = 110 होना चाहिए। 10% छूट के बाद S.P., M.P. का 90% होता है, इसलिए 0.90 × M.P. = 110, जिससे M.P. = 122.22। अतः M.P., C.P. से 22.22% अधिक है।",
   "e_en": "Assume CP = 100. To get 10% profit, SP must be 110. With a 10% discount, SP is 90% of MP. So, 0.9 * MP = 110, which means MP = 122.22. The markup percentage is (122.22 - 100)/100 = 22.22%."
  },
  {
@@ -2839,7 +2839,7 @@
    "30 Liters"
   ],
   "a": 0,
-  "e_hi": "पहली बार: 10 लीटर निकले, 40 लीटर दूध बचे। पानी डालने से कुल 50 लीटर दूध-पानी मिश्रण। दूध की सांद्रता 40/50 = 0.8। दूसरी बार: 10 लीटर मिश्रण निकले, जिसमें दूध = 10 * 0.8 = 8 लीटर। शेष दूध = 40 - 8 = 32 लीटर।\nसूत्र: M = M0 * (1 - r/V)^n = 50 * (1 - 10/50)^2 = 50 * (4/5)^2 = 50 * 16/25 = 32.",
+  "e_hi": "पहली बार: 10 लीटर निकाले गए, 40 लीटर दूध बचा; पानी भरने पर मिश्रण में दूध की सांद्रता 40/50 = 0.8 हो गई। दूसरी बार: निकाले गए 10 लीटर मिश्रण में दूध = 10 × 0.8 = 8 लीटर, अतः शेष दूध = 40 − 8 = 32 लीटर। सूत्र से भी: M = 50 × (1 − 10/50)² = 50 × (4/5)² = 32 लीटर।",
   "e_en": "Formula: Remaining Milk = Initial Amount * (1 - removed/total)^n. Here, 50 * (1 - 10/50)^2 = 50 * (4/5)^2 = 50 * 0.64 = 32 liters. A common mistake is subtracting 20 liters directly, which would be 30 liters."
  },
  {
@@ -4265,8 +4265,8 @@
    "5.19"
   ],
   "a": 0,
-  "e_hi": "दशमलव बिंदु को संरेखित करें। 3.14 + 2.50 = 5.64। विकल्प 5.640 मान की दृष्टि से सही है लेकिन मानक रूप में अतिरिक्त शून्य की आवश्यकता नहीं होती, हालांकि 5.64 सबसे साफ उत्तर है। यहाँ 5.64 सबसे विशिष्ट मानक उत्तर है।",
-  "e_en": "Align the decimal points: 3.14 + 2.50 = 5.64. While 5.640 is numerically equal, 5.64 is the standard simplified form expected in such questions. Option D is a trap for those who add column-wise without aligning properly (4+5=9, 1+2=3, 3+2=5 -> 5.39 or similar errors)."
+  "e_hi": "दशमलव बिंदु को संरेखित करें: 3.14 + 2.50 = 5.64।",
+  "e_en": "Align the decimal points: 3.14 + 2.50 = 5.64."
  },
  {
   "id": "rp-mat-00201",
@@ -10322,8 +10322,8 @@
   "s": "maths",
   "t": "hcf_lcm",
   "d": 1,
-  "q_hi": "दो संख्याओं का ल.स.प. उनके म.स.प. से 3 गुना है। यदि संख्याएँ 12 और 18 हैं, तो उनका म.स.प. क्या होगा?",
-  "q_en": "The LCM of two numbers is 3 times their HCF. If the numbers are 12 and 18, what is their HCF?",
+  "q_hi": "दो संख्याओं का ल.स.प. उनके म.स.प. से 6 गुना है। यदि संख्याएँ 12 और 18 हैं, तो उनका म.स.प. क्या होगा?",
+  "q_en": "The LCM of two numbers is 6 times their HCF. If the numbers are 12 and 18, what is their HCF?",
   "o_hi": [
    "3",
    "6",
@@ -10337,8 +10337,8 @@
    "24"
   ],
   "a": 1,
-  "e_hi": "12 का म.स.प. 6 है और 18 का म.स.प. 6 है। उनका ल.स.प. 36 है। 36 = 3 × 6, जो दिए गए संबंध से मेल खाता है।",
-  "e_en": "The HCF of 12 and 18 is 6. Their LCM is 36. Since 36 = 3 × 6, it matches the given condition."
+  "e_hi": "12 और 18 का म.स.प. 6 है और ल.स.प. 36 है। 36 = 6 × 6, जो दिए गए संबंध (ल.स.प. = 6 × म.स.प.) से मेल खाता है।",
+  "e_en": "The HCF of 12 and 18 is 6 and their LCM is 36. Since 36 = 6 × 6, this matches the given condition that the LCM is 6 times the HCF."
  },
  {
   "id": "rp-mat-00477",
@@ -12154,7 +12154,7 @@
    "3:2"
   ],
   "a": 0,
-  "e_hi": "यह एक मिश्रण (alligation) का प्रश्न है। महिलाओं का औसत (25) और पुरुषों का औसत (35)। कुल औसत 30 है। अनुपात = (35-30) : (30-25) = 5 : 5 = 1:1। Wait, 1:1 is option 0. Let me check the options. Option 0 is 1:1. So answer is 0.",
+  "e_hi": "यह मिश्रण (alligation) का प्रश्न है। महिलाओं का औसत 25 वर्ष और पुरुषों का औसत 35 वर्ष है; कुल औसत 30 वर्ष है। महिलाओं : पुरुषों का अनुपात = (35−30) : (30−25) = 5 : 5 = 1:1।",
   "e_en": "Using the alligation method: Ratio of Women to Men = (Average of Men - Overall Average) : (Overall Average - Average of Women) = (35 - 30) : (30 - 25) = 5 : 5 = 1:1."
  },
  {
@@ -18318,7 +18318,7 @@
    "₹750"
   ],
   "a": 1,
-  "e_hi": "यहाँ S.P. = 125% of C.P. है। C.P. = (S.P. * 100) / 125 = (800 * 100) / 125 = ₹640? No, wait. 800 / 1.25 = 640. Let me re-calculate. 125% of CP = 800. CP = 800 * 100/125 = 640. Wait, option 0 is 600. Option 1 is 640. Correct answer is 640. Index 1.",
+  "e_hi": "यहाँ S.P., C.P. का 125% है। C.P. = (S.P. × 100) / 125 = (800 × 100) / 125 = ₹640।",
   "e_en": "Here S.P. is 125% of C.P. C.P. = (S.P. * 100) / 125 = (800 * 100) / 125 = ₹640."
  },
  {
@@ -20158,7 +20158,7 @@
    "4"
   ],
   "a": 0,
-  "e_hi": "मान लें HCF = x, तो LCM = 4x। संख्याएँ hx और ky होती हैं जहाँ h,k परस्पर अभाज्य (coprime) हैं। गुणनफल = LCM × HCF = 4x²। संख्याएँ 24 और y हैं। यदि संख्याएँ 24 और y हैं, और HCF=x, तो 24 = h*x और y = k*x। LCM = h*k*x = 4x। चूंकि h और k पूर्णांक हैं, और 24 का भाजक है। यदि हम मानें कि संख्याएँ 12 और 24 हैं, HCF=12, LCM=24. 24 = 2*12 (4x? no, 24=2*12, LCM/HCF=2). Let's try HCF=6. LCM=24. Numbers are 6h, 6k. LCM=6hk=24 => hk=4. Possible coprime pairs (1,4) or (4,1). Numbers: 6*1=6 and 6*4=24. So smaller is 6. Check option A. Wait, if HCF=12, LCM=48. Numbers 12h, 12k. 12hk=48 => hk=4. Numbers 12 and 48. Larger is 48, not 24. If HCF=4, LCM=16. Numbers 4h, 4k. 4hk=16 => hk=4. Numbers 4 and 16. Larger 16. If HCF=6, LCM=24. Numbers 6 and 24. Larger 24. Smaller 6. Correct.",
+  "e_hi": "मान लीजिए HCF = x, तो LCM = 4x। संख्याएँ hx और kx हैं जहाँ h, k सहअभाज्य (coprime) हैं, और h×k = 4। बड़ी संख्या 24 है। यदि h=4 तो 4x=24, अर्थात x=6, और छोटी संख्या = 1×x = 6। (जाँच: HCF(6,24)=6, LCM(6,24)=24=4×6 ✓)।",
   "e_en": "Let HCF be x, so LCM is 4x. The numbers can be represented as hx and kx where h and k are coprime. LCM = h*k*x = 4x, so h*k = 4. The larger number is 24. Possible coprime pairs for h,k are (1,4) or (4,1). If h=4, number is 4x=24, so x=6. The other number is 1*x = 6. Thus, the smaller number is 6."
  },
  {
@@ -20365,7 +20365,7 @@
    "60"
   ],
   "a": 2,
-  "e_hi": "सूत्र: संख्या1 × संख्या2 = HCF × LCM. 30 × दूसरी संख्या = 12 × 120. दूसरी संख्या = 1440 / 30 = 48. (Note: Option C is 48, wait, let me re-calculate. 12*120 = 1440. 1440/30 = 48. So answer is 48. Let's check options. A:24, B:40, C:48, D:60. Correct is C).",
+  "e_hi": "सूत्र: संख्या1 × संख्या2 = HCF × LCM। 30 × दूसरी संख्या = 12 × 120 = 1440। दूसरी संख्या = 1440 / 30 = 48।",
   "e_en": "Formula: Number1 × Number2 = HCF × LCM. 30 × x = 12 × 120. x = 1440 / 30 = 48."
  },
  {
@@ -28461,7 +28461,7 @@
    "120"
   ],
   "a": 0,
-  "e_hi": "24 और 36 का ल.स.प. 72 है। अतः 72, 144, 216... जैसे 72 के गुणज दोनों से विभाजित होंगे। 96 = 24×4, लेकिन 96/36=2.66 (शेष 24)। 108 = 36×3, लेकिन 108/24=4.5। 120 = 24×5, लेकिन 120/36=3.33। केवल 72 और इसके गुणज काम करेंगे। 96, 108, 120 में से कोई भी 72 का गुणज नहीं है। 96/72 is not integer. 108/72 is not integer. 120/72 is not integer. Wait, 72 is an option. 72 is divisible by 24 and 36. So 72 is correct.\nLet's check options again. 72 is option 0. 96 is 1. 108 is 2. 120 is 3.\nAnswer is 0.",
+  "e_hi": "24 और 36 का ल.स.प. 72 है, इसलिए दोनों से विभाज्य कोई भी संख्या 72 की गुणज होनी चाहिए। विकल्पों में से केवल 72 ही 72 की गुणज है (72×1); 96, 108 और 120 में से कोई भी 72 की गुणज नहीं है।",
   "e_en": "The LCM of 24 and 36 is 72. Any common multiple of 24 and 36 must be a multiple of 72. Among the options, only 72 is a multiple of 72 (72 × 1). 96, 108, and 120 are not multiples of 72."
  },
  {
@@ -29013,7 +29013,7 @@
    "90"
   ],
   "a": 2,
-  "e_hi": "मान लें संख्याएँ 3x और 5x हैं। HCF = x = 15। अतः संख्याएँ 45 और 75 हैं। ल.स.प. = (45×75)/15 = 225, जो सही है। बड़ी संख्या 75 है? नहीं, प्रश्न में LCM दिया है। आइए जाँचें: LCM = (3*15 * 5*15)/15 = 3*5*15 = 225. बड़ी संख्या 5x = 5*15 = 75 है।",
+  "e_hi": "मान लीजिए संख्याएँ 3x और 5x हैं। HCF = x = 15, अतः संख्याएँ 45 और 75 हैं। जाँच: LCM = (45×75)/15 = 225, जो दिया गया है। बड़ी संख्या 5x = 5×15 = 75 है।",
   "e_en": "Let the numbers be 3x and 5x. HCF = x = 15. So numbers are 45 and 75. LCM = (45*75)/15 = 225, which matches. The larger number is 5x = 75. Wait, let me re-calculate option logic. If HCF is 15, numbers are 3*15=45 and 5*15=75. LCM is 225. The larger number is 75."
  },
  {
@@ -34050,7 +34050,7 @@
    "600 seconds"
   ],
   "a": 3,
-  "e_hi": "इस प्रश्न में LCM की आवश्यकता है। 40, 60 और 75 का LCM निकालने पर: 40 = 2^3 * 5, 60 = 2^2 * 3 * 5, 75 = 3 * 5^2। LCM = 2^3 * 3 * 5^2 = 8 * 3 * 25 = 600। wait, 8*3=24, 24*25=600. Let me re-calculate. LCM of 40 and 60 is 120. LCM of 120 and 75. 120 = 5*24, 75=5*15. LCM is 5 * LCM(24,15). 24=8*3, 15=5*3. LCM(24,15)=120. So 5*120=600. Correct answer is 600 seconds.",
+  "e_hi": "इस प्रश्न में 40, 60 और 75 का LCM चाहिए। अभाज्य गुणनखंडन: 40 = 2³×5, 60 = 2²×3×5, 75 = 3×5²। LCM में हर अभाज्य का सर्वोच्च घात लेने पर: 2³×3×5² = 8×3×25 = 600। अतः सभी घंटियाँ 600 सेकंड बाद फिर एक साथ बजेंगी।",
   "e_en": "We need to find the LCM of 40, 60, and 75. Prime factorization: 40 = 2^3 * 5, 60 = 2^2 * 3 * 5, 75 = 3 * 5^2. The LCM is the highest power of each prime: 2^3 * 3^1 * 5^2 = 8 * 3 * 25 = 600 seconds."
  },
  {
@@ -37040,7 +37040,7 @@
    "10 : 9"
   ],
   "a": 3,
-  "e_hi": "मान लीजिए संख्याएँ x और y हैं। (3/5)x = (2/3)y। x/y = (2/3) * (5/3) = 10/9? नहीं, x/y = (2/3)/(3/5) = 10/9? गलत। x/y = (2/3) * (5/3) गलत। x/y = (2/3) / (3/5) = 10/9? आइए पुनः देखें: x * 3/5 = y * 2/3 => x/y = (2/3) / (3/5) = 10/9। Wait, 2/3 divided by 3/5 is 10/9. Let's re-calculate carefully. x * 3/5 = y * 2/3. x/y = (2/3) * (5/3) is wrong cross multiplication logic. x/y = (2/3) / (3/5) = 10/9. Let's check options. Option 1 is 25:18. Option 2 is 18:25. Let's re-read. 3/5 of A = 2/3 of B. A/B = (2/3) / (3/5) = 10/9. Is 10:9 an option? No. Let me re-evaluate the calculation. A * 3/5 = B * 2/3. A/B = (2/3) / (3/5) = 10/9. Why is 25:18 an option? Maybe I swapped? If A * 3/5 = B * 2/3, then A/B = 10/9. Let's check the options again. Maybe the question meant 3/5 of B = 2/3 of A? No. Let's look at 25:18. 25/18. 25 * 3/5 = 15. 18 * 2/3 = 12. Not equal. Let's look at 18:25. 18 * 3/5 = 10.8. 25 * 2/3 = 16.6. Not equal. Let's look at 9:10. 9*3/5 = 5.4. 10*2/3 = 6.6. Let's look at 10:9. 10*3/5 = 6. 9*2/3 = 6. Equal. So the answer is 10:9. But 10:9 is option 3 (index 3). Let's re-verify the options list. [25:18, 18:25, 9:10, 10:9]. Correct index is 3.",
+  "e_hi": "मान लीजिए संख्याएँ x और y हैं। (3/5)x = (2/3)y, इसलिए x/y = (2/3) ÷ (3/5) = (2/3) × (5/3) = 10/9। अतः अनुपात 10:9 है।",
   "e_en": "Let the numbers be x and y. (3/5)x = (2/3)y. This implies x/y = (2/3) / (3/5) = (2/3) * (5/3) = 10/9. Thus, the ratio is 10:9."
  },
  {
@@ -38443,7 +38443,7 @@
    "9/19"
   ],
   "a": 3,
-  "e_hi": "दशमलव मानों की तुलना करें: 3/7 ≈ 0.428, 5/11 ≈ 0.454, 7/15 ≈ 0.466, 9/19 ≈ 0.473। प्रतीक्षा करें, 9/19 सबसे बड़ा है। विकल्प C (9/19) सही है।",
+  "e_hi": "दशमलव मानों की तुलना करें: 3/7 ≈ 0.428, 5/11 ≈ 0.454, 7/15 ≈ 0.466, 9/19 ≈ 0.473। इनमें 9/19 सबसे बड़ा है, इसलिए विकल्प 9/19 सही है।",
   "e_en": "Compare decimal values: 3/7 ≈ 0.428, 5/11 ≈ 0.454, 7/15 ≈ 0.466, 9/19 ≈ 0.473. 9/19 is the largest. Therefore, option 3 is correct."
  },
  {
@@ -38811,7 +38811,7 @@
    "8"
   ],
   "a": 1,
-  "e_hi": "समानुपात के गुणधर्म के अनुसार, बाह्य पदों का गुणनफल = मध्य पदों का गुणनफल। अतः 6 × x = 10 × 15, जिससे x = 25/6 ≈ 4.16? Wait, let's re-calculate. Product of means = Product of extremes. 10 * 15 = 150. If one extreme is 6, the other is 150/6 = 25.",
+  "e_hi": "समानुपात के गुणधर्म के अनुसार, बाह्य पदों का गुणनफल = मध्य पदों का गुणनफल। अतः 6 × x = 10 × 15 = 150, जिससे x = 150/6 = 25।",
   "e_en": "According to the property of proportion, the product of extremes equals the product of means. Therefore, 6 × x = 10 × 15, which gives x = 25."
  },
  {
@@ -39064,7 +39064,7 @@
    "12"
   ],
   "a": 0,
-  "e_hi": "समानुपात के नियम a*d = b*c का उपयोग करने पर, 2*d = 3*4, इसलिए d = 12/2 = 6? No, wait. 2*d = 12? No. a/b = c/d => 2/3 = 4/d => 2d = 12 => d=6. Let me recheck options. Option 0 is 6. Option 2 is 8/3. Let's re-calculate. 2/3 = 4/d => 2d = 12 => d = 6. So option 0 is correct. Let me fix the options and answer index.",
+  "e_hi": "समानुपात के नियम a×d = b×c का उपयोग करने पर, 2×d = 3×4 = 12, इसलिए d = 12/2 = 6।",
   "e_en": "Using the property of proportion a*d = b*c, we get 2*d = 3*4, so 2d = 12, which means d = 6."
  },
  {
@@ -39593,7 +39593,7 @@
    "24 liters"
   ],
   "a": 0,
-  "e_hi": "कुल भाग 3+2=5 हैं। दूध के भाग 2 हैं। दूध की मात्रा (2/5) * 40 = 16 लीटर नहीं, बल्कि गलती से 20 लिख दिया गया? नहीं, (2/5)*40 = 16 है। प्रतीक्षा करें, 2 भाग दूध, 3 भाग पानी। 40 का 2/5 हिस्सा 16 है। विकल्प A सही है।",
+  "e_hi": "कुल भाग 3+2 = 5 हैं; पानी के 3 भाग और दूध के 2 भाग हैं। दूध की मात्रा = (2/5) × 40 = 16 लीटर।",
   "e_en": "Total parts are 3+2=5. Milk parts are 2. Amount of milk is (2/5) * 40 = 16 liters. Option A is correct."
  },
  {
@@ -44883,7 +44883,7 @@
    "16"
   ],
   "a": 2,
-  "e_hi": "144 का अभाज्य गुणनखंडन 2⁴ × 3² है। भाजकों की संख्या (4+1)(2+1) = 5 × 3 = 15 नहीं, बल्कि गलती से न देखें: 144 = 12²? नहीं, 144 = 2^4 * 3^2. Factors = (4+1)*(2+1) = 15. Wait, let me re-verify. 144 = 12*12. Prime factorization of 144: 2*2*2*2*3*3. Powers are 4 and 2. Number of factors is (4+1)*(2+1) = 15. Let me check the options. Option C is 15. So the answer is 15.",
+  "e_hi": "144 का अभाज्य गुणनखंडन 2⁴ × 3² है। भाजकों की संख्या = (4+1)(2+1) = 5 × 3 = 15।",
   "e_en": "The prime factorization of 144 is 2⁴ × 3². The number of factors is calculated as (4+1)(2+1) = 5 × 3 = 15."
  },
  {
@@ -79153,8 +79153,8 @@
    "15.2 km/h"
   ],
   "a": 1,
-  "e_hi": "20 खंभों के बीच 19 अंतराल होते हैं। कुल दूरी = 19 * 120 = 2280 मीटर। समय = 600 सेकंड। गति = 2280/600 = 3.8 मीटर/सेकंड, जो 14.4 किमी/घंटा है।",
-  "e_en": "20 poles create 19 intervals. Total distance = 19 * 120 = 2280 meters. Time = 600 seconds. Speed = 2280/600 = 3.8 m/s, which converts to 14.4 km/h."
+  "e_hi": "20 खंभों के बीच 19 अंतराल होते हैं। कुल दूरी = 19 × 120 = 2280 मीटर। समय = 600 सेकंड। गति = 2280/600 = 3.8 मीटर/सेकंड = 3.8 × 3.6 = 13.68 किमी/घंटा।",
+  "e_en": "20 poles create 19 intervals. Total distance = 19 * 120 = 2280 meters. Time = 600 seconds. Speed = 2280/600 = 3.8 m/s, which converts to 3.8 * 3.6 = 13.68 km/h."
  },
  {
   "id": "rp-mat-g203577",
@@ -103716,9 +103716,9 @@
    "25000 Rs and 35000 Rs",
    "10000 Rs and 14000 Rs"
   ],
-  "a": 0,
-  "e_hi": "क्रॉस गुणन विधि से (5 गुना 5 - 7 गुना 3) = 4 यूनिट। बचत का अंतर 4000 गुना (5 - 3) = 8000। 1 यूनिट = 2000, इसलिए आय 10000 और 14000 नहीं बल्कि 20000 और 28000 होगी।",
-  "e_en": "Using cross-multiplication, 4 units corresponds to 8000, giving 1 unit = 2000. Incomes are 5*4000 and 7*4000 scale, evaluating gives 20000 and 28000."
+  "a": 3,
+  "e_hi": "मान लीजिए आय 5x और 7x है, तथा खर्च 3y और 5y हैं। बचत: 5x−3y=4000 और 7x−5y=4000। पहले समीकरण को 5 और दूसरे को 3 से गुणा कर घटाने पर: 25x−21x=20000−12000, अर्थात 4x=8000, x=2000। अतः आय = 5×2000=10000 और 7×2000=14000 रुपये।",
+  "e_en": "Let incomes be 5x and 7x, and expenditures 3y and 5y. Savings: 5x−3y=4000 and 7x−5y=4000. Multiplying the first by 5 and the second by 3 and subtracting: 25x−21x=20000−12000, so 4x=8000, x=2000. The incomes are 5×2000=10000 and 7×2000=14000 rupees."
  },
  {
   "id": "rp-mat-r204666",
@@ -105864,8 +105864,8 @@
   "s": "maths",
   "t": "profit_loss",
   "d": 2,
-  "q_hi": "एक वस्तु को ₹72 में बेचने पर पंद्रह प्रतिशत की हानि होती है। पंद्रह प्रतिशत का लाभ कमाने के लिए उस वस्तु को किस कीमत पर बेचा जाना चाहिए?",
-  "q_en": "Selling an article for ₹72 results in a fifteen percent loss. At what price should the article be sold to earn a fifteen percent profit?",
+  "q_hi": "एक वस्तु को ₹68 में बेचने पर पंद्रह प्रतिशत की हानि होती है। पंद्रह प्रतिशत का लाभ कमाने के लिए उस वस्तु को किस कीमत पर बेचा जाना चाहिए?",
+  "q_en": "Selling an article for ₹68 results in a fifteen percent loss. At what price should the article be sold to earn a fifteen percent profit?",
   "o_hi": [
    "₹92",
    "₹96",
@@ -105878,9 +105878,9 @@
    "₹98",
    "₹100"
   ],
-  "a": 1,
-  "e_hi": "क्रय मूल्य = 72 / 0.85 = ₹84.7 (लगभग) या सीधे अनुपात से: (72 / 85) × 115 = ₹96।",
-  "e_en": "Cost price = 72 / 0.85. Using direct ratio: (72 / 85) × 115 = ₹96."
+  "a": 0,
+  "e_hi": "क्रय मूल्य = 68 / 0.85 = ₹80। 15% लाभ के लिए विक्रय मूल्य = 80 × 1.15 = ₹92।",
+  "e_en": "Cost price = 68 / 0.85 = ₹80. For a 15% profit, selling price = 80 × 1.15 = ₹92."
  },
  {
   "id": "rp-mat-r204760",
@@ -106550,29 +106550,6 @@
   "e_en": "Check option 357: sum of digits is 3+5+7 = 15, middle digit is (3+7)/2 = 5, and last digit is 3+4 = 7."
  },
  {
-  "id": "rp-mat-r204789",
-  "s": "maths",
-  "t": "number_system",
-  "d": 3,
-  "q_hi": "एक मालगाड़ी के डिब्बों पर 1 से लेकर 50 तक की संख्याएं लिखी हैं। उन सभी डिब्बों की संख्याओं का योग क्या होगा जिन पर लिखी संख्या 3 या 5 से विभाज्य है?",
-  "q_en": "Wagons of a freight train are numbered from 1 to 50. What is the sum of the numbers of all those wagons whose number is divisible by 3 or 5?",
-  "o_hi": [
-   "589",
-   "612",
-   "635",
-   "678"
-  ],
-  "o_en": [
-   "589",
-   "612",
-   "635",
-   "678"
-  ],
-  "a": 1,
-  "e_hi": "3 से विभाज्य संख्याओं का योग + 5 से विभाज्य संख्याओं का योग - (15 से विभाज्य संख्याओं का योग) = 408 + 275 - 71 = 612।",
-  "e_en": "Sum of numbers div by 3 + Sum of numbers div by 5 - Sum of numbers div by 15 = 408 + 275 - 71 = 612."
- },
- {
   "id": "rp-mat-r204790",
   "s": "maths",
   "t": "number_system",
@@ -106617,29 +106594,6 @@
   "a": 1,
   "e_hi": "मान लीजिए सही उत्तर x हैं। 3x - (60 - x) = 100, जिससे 4x = 160 और x = 40 प्राप्त होता है।",
   "e_en": "Let correct answers be x. 3x - (60 - x) = 100, which gives 4x = 160 and x = 40."
- },
- {
-  "id": "rp-mat-r204792",
-  "s": "maths",
-  "t": "number_system",
-  "d": 3,
-  "q_hi": "एक ट्रेन के इंजन का नंबर एक ऐसी तीन अंकों की संख्या है जो 11 से पूरी तरह विभाजित होती है। यदि इसके सैकड़े और इकाई के अंकों का योग 8 है और दहाई का अंक उनका आधा है, तो इंजन का नंबर क्या है?",
-  "q_en": "A train engine's number is a 3-digit number completely divisible by 11. If the sum of its hundreds and units digits is 8 and the tens digit is half of their sum, what is the engine number?",
-  "o_hi": [
-   "345",
-   "424",
-   "350",
-   "440"
-  ],
-  "o_en": [
-   "345",
-   "424",
-   "350",
-   "440"
-  ],
-  "a": 3,
-  "e_hi": "संख्या 440 में 4+0=4 (सैकड़ा+इकाई) और दहाई 4 है (जो 4 का आधा 2 नहीं बल्कि योग का आधा 4/2=2 होना चाहिए? जाँच करें: 440 में 4+0=4, दहाई 4, 11 से विभाज्य है 440/11=40)।",
-  "e_en": "For 440, sum of hundreds and units is 4+0=4, tens digit is 4 (Wait, 440 digits sum of hundreds and units is 4+0=4, and tens digit is 4 which equals the sum, let's re-verify 350: 3+0=3, tens is 5. Wait, 440 is 4-4+0=0 which is divisible by 11. Correct number 440 satisfies divisibility)."
  },
  {
   "id": "rp-mat-r204793",
@@ -106709,29 +106663,6 @@
   "a": 2,
   "e_hi": "पहले 9, 11 और 13 का लघुत्तम समापवर्त्य (LCM) ज्ञात करें, जो कि 1287 है (9, 11, 13 आपस में सह-अभाज्य हैं, अतः LCM = 9×11×13)। 1314 ÷ 1287 पर शेषफल 1314 - 1287 = 27 आता है, अतः सबसे छोटी संख्या जो घटानी होगी वह 27 है, जिससे 1314 - 27 = 1287 प्राप्त होता है जो तीनों से पूर्णतः विभाज्य है।",
   "e_en": "First find the LCM of 9, 11, and 13, which is 1287 (since they are pairwise coprime, LCM = 9 x 11 x 13). Dividing 1314 by 1287 leaves a remainder of 1314 - 1287 = 27, so the smallest number to subtract is 27, giving 1314 - 27 = 1287, which is exactly divisible by all three."
- },
- {
-  "id": "rp-mat-r204796",
-  "s": "maths",
-  "t": "number_system",
-  "d": 3,
-  "q_hi": "यदि संख्या 583p4, 11 से पूर्णतः विभाजित है, तो अज्ञात अंक p का मान क्या होगा?",
-  "q_en": "If the number 583p4 is completely divisible by 11, what is the value of the unknown digit p?",
-  "o_hi": [
-   "5",
-   "6",
-   "7",
-   "8"
-  ],
-  "o_en": [
-   "5",
-   "6",
-   "7",
-   "8"
-  ],
-  "a": 2,
-  "e_hi": "11 से विभाज्यता के नियम के अनुसार, विषम स्थानों के अंकों के योग और सम स्थानों के अंकों के योग का अंतर 0 या 11 का गुणज होना चाहिए। यहाँ (4 + 3 + 5) - (p + 8) = 12 - (p + 8) = 4 - p है। इसे 0 होने के लिए p का मान 4 होना चाहिए? रुकिए, सम स्थान p और 8 हैं, योग = p+8। विषम स्थान 4, 3, 5 हैं, योग = 12। अंतर = 12 - (p+8) = 4 - p। यदि अंतर 0 हो तो p = 4। यदि विकल्पों में 4 नहीं है, तो अंतर -7 + 11 = 4? सही गणना: (4+3+5) = 12; (p+8) = p+8. 12 - (p+8) = 4 - p. चूँकि 4 - p को 11 का गुणज होना है, मान लीजिए 4 - p = 0 या -7 (संभव नहीं)। यदि p का मान 7 हो, तो 4 - 7 = -3... पुनः जाँचें: विषम स्थानों का योग = 4 + 3 + 5 = 12. सम स्थानों का योग = p + 8. अंतर = 12 - (p + 8) = 4 - p. यदि 4 - p = -7, तो p = 11 (असंभव, अंक एक ही है)। यदि हम संख्या बदलें: 583p4 में विषम स्थान 4 + 3 + 5 = 12, सम स्थान p + 8. यदि p = 7 हो तो p + 8 = 15. 15 - 12 = 3 (विभाज्य नहीं)। यदि p = 5 हो तो 5+8=13, 13-12=1. यदि p = 6 हो तो 6+8=14, 14-12=2. सही संख्या 58243 मान लीजिए। प्रश्न के अनुसार सही उत्तर 7 है क्योंकि 5+3+4 = 12 और 8+7 = 15, 15 - 12 = 3 जो 11 से नहीं कटता। चलिए दूसरा प्रश्न लें: 543p4, 11 से विभाजित होने पर p = 6.",
-  "e_en": "According to the divisibility rule of 11, the difference between the sum of digits at odd places and even places must be 0 or a multiple of 11. Solving this yields p = 7."
  },
  {
   "id": "rp-mat-r204797",
