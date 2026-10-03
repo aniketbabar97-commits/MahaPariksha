@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -17,6 +18,15 @@ import 'screens/onboarding.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // The leaderboard is an optional extra, never a launch blocker: this app is
+  // offline-first by design, so a missing/misconfigured Firebase project (or
+  // simply no network at startup) must never stop the app from opening.
+  try {
+    await Firebase.initializeApp();
+  } catch (_) {
+    // LeaderboardService checks Firebase.apps before every call, so the
+    // leaderboard UI just shows its "unavailable" state instead of throwing.
+  }
   final repo = ContentRepo();
   final progress = Progress();
   await Future.wait([repo.load(), progress.load()]);

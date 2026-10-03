@@ -12,6 +12,7 @@ import 'ca_archive_screen.dart';
 import 'ca_digest_screen.dart';
 import 'flashcard_screen.dart';
 import 'gk_booster_screen.dart';
+import 'leaderboard_screen.dart';
 import 'quiz_screen.dart';
 import 'reel_screen.dart';
 import 'revision_plan_screen.dart';
@@ -433,6 +434,17 @@ class TodayScreen extends StatelessWidget {
           onTap: () {
             HapticFeedback.selectionClick();
             push(context, (_) => const RevisionPlanScreen());
+          },
+        ),
+        const SizedBox(height: 12),
+        ActionCard(
+          icon: Icons.leaderboard,
+          color: BrandColors.correct,
+          title: context.tr('लीडरबोर्ड 🏆', 'Leaderboard 🏆'),
+          subtitle: context.tr('इस हफ्ते के टॉप स्कोरर देखें', "See this week's top scorers"),
+          onTap: () {
+            HapticFeedback.selectionClick();
+            push(context, (_) => const LeaderboardScreen());
           },
         ),
         const SizedBox(height: 12),

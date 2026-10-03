@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
@@ -95,6 +96,15 @@ class Progress extends ChangeNotifier {
   /// or null if the user skipped it. Informational only -- never gates anything.
   String? placementLevel;
   DateTime? examDate;
+
+  /// Stable anonymous identity for the leaderboard (see logic/leaderboard_service.dart) --
+  /// generated once on first use and persisted, never tied to any real account. Null until
+  /// the leaderboard is opened for the first time.
+  String? deviceId;
+
+  /// Display name shown on the leaderboard (chosen by the user, not a real identity).
+  /// Null until they've set one.
+  String? leaderboardName;
   String theme = 'system';
   bool reminders = true;
   int reminderHour = 7;
@@ -159,6 +169,8 @@ class Progress extends ChangeNotifier {
     dailyGoal = j['dailyGoal'] ?? 20;
     placementLevel = j['placementLevel'];
     examDate = j['examDate'] != null ? DateTime.tryParse(j['examDate']) : null;
+    deviceId = j['deviceId'];
+    leaderboardName = j['leaderboardName'];
     theme = j['theme'] ?? 'system';
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
@@ -190,6 +202,8 @@ class Progress extends ChangeNotifier {
         'dailyGoal': dailyGoal,
         'placementLevel': placementLevel,
         'examDate': examDate?.toIso8601String(),
+        'deviceId': deviceId,
+        'leaderboardName': leaderboardName,
         'theme': theme,
         'reminders': reminders,
         'reminderHour': reminderHour,
@@ -393,6 +407,24 @@ class Progress extends ChangeNotifier {
   void recordBeast(double score, int streakRun) {
     if (score > beastBestScore) beastBestScore = score;
     if (streakRun > beastBestStreak) beastBestStreak = streakRun;
+    save();
+  }
+
+  /// Lazily generates and persists this device's anonymous leaderboard identity on
+  /// first use, so most users who never open the leaderboard never get one at all.
+  String ensureDeviceId() {
+    var id = deviceId;
+    if (id == null) {
+      final rnd = Random();
+      id = List.generate(16, (_) => rnd.nextInt(36).toRadixString(36)).join();
+      deviceId = id;
+      save();
+    }
+    return id;
+  }
+
+  void setLeaderboardName(String name) {
+    leaderboardName = name.trim().isEmpty ? null : name.trim();
     save();
   }
 

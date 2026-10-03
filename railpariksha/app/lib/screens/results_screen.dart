@@ -6,6 +6,7 @@ import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/progress.dart';
+import '../logic/leaderboard_service.dart';
 import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
@@ -46,6 +47,17 @@ class _ResultsScreenState extends State<ResultsScreen> {
       _recorded = true;
       final p = AppScope.read(context).progress;
       p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));
+      // Opt-in only: a device without a chosen leaderboard name has never opened the
+      // leaderboard screen, so it never silently starts appearing on one.
+      if (p.examId != null && p.leaderboardName != null) {
+        LeaderboardService.submitScore(
+          examId: p.examId!,
+          deviceId: p.ensureDeviceId(),
+          name: p.leaderboardName!,
+          score: score,
+          total: widget.spec.questions.length,
+        );
+      }
       // Natural break point: results are already recorded, so showing (or
       // skipping, if not preloaded in time) the ad here never blocks or
       // delays anything the user is waiting on. Frequency-capped per

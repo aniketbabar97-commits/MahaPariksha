@@ -10,6 +10,10 @@ plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+    // Reads google-services.json (present only once the Firebase project is set up) for the
+    // leaderboard backend's Firestore config. Applied conditionally so the build doesn't break
+    // for anyone building this app without that file.
+    id("com.google.gms.google-services") apply file("google-services.json").exists()
 }
 
 android {
