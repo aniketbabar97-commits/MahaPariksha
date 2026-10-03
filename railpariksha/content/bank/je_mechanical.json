@@ -46642,5 +46642,166 @@
   "a": 1,
   "e_hi": "यह प्रश्न दोहराव से बचने के लिए एक मूलभूत तथ्य पर आधारित है: जॉर्ज जेम्स स्टोक्स (George Gabriel Stokes) ने न्यूटन के बाद द्रवों के घर्षण और कोशिश (viscosity) के गणितीय मॉडल को परिष्कृत किया। (नोट: 'मेंडेलसन' यहाँ एक विकल्प के रूप में दिया गया है, लेकिन सही ऐतिहासिक संदर्भ में स्टोक्स का योगदान अधिक प्रमुख है, हालाँकि प्रश्न का संदर्भ थोड़ा अस्पष्ट हो सकता है, इसलिए हम एक और स्पष्ट तथ्य पर जाते हैं)।",
   "e_en": "This question is re-evaluated for clarity. Let's replace it with a clearer fact. Who formulated the 'Stokes' Law' for the drag force on a sphere moving through a viscous fluid?"
+ },
+ {
+  "id": "rp-je_-02036",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "एक स्थिर नियमित प्रवाह (steady uniform flow) में, संचयी त्वरण (convective acceleration) का मान क्या होता है?",
+  "q_en": "In a steady uniform flow, what is the value of convective acceleration?",
+  "o_hi": [
+   "शून्य",
+   "अनंत",
+   "गतिमान",
+   "स्थिर लेकिन शून्य नहीं"
+  ],
+  "o_en": [
+   "Zero",
+   "Infinite",
+   "Variable",
+   "Constant but not zero"
+  ],
+  "a": 0,
+  "e_hi": "सूत्र a_c = V(dV/ds) में, नियमित प्रवाह में वेग (V) स्थिर होता है, इसलिए dV/ds शून्य हो जाता है और संचयी त्वरण शून्य होता है।",
+  "e_en": "In the formula a_c = V(dV/ds), for uniform flow, velocity (V) is constant, making dV/ds zero, hence convective acceleration is zero."
+ },
+ {
+  "id": "rp-je_-02037",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "एक ऊर्ध्वाधर दीवार पर द्रव का दबाव कौन-सा वक्र बनाता है?",
+  "q_en": "What type of curve represents the pressure distribution of a liquid on a vertical wall?",
+  "o_hi": [
+   "अतिपरवलय (Hyperbola)",
+   "पैराबोला (Parabola)",
+   "रैखिक (Straight line)",
+   "समांतर वक्र (Parallel curve)"
+  ],
+  "o_en": [
+   "Hyperbola",
+   "Parabola",
+   "Straight line",
+   "Parallel curve"
+  ],
+  "a": 2,
+  "e_hi": "द्रव का दबाव गहराई के साथ रैखिक रूप से बढ़ता है (P = ρgh), इसलिए दबाव वितरण एक सीधी रेखा (triangle) बनाता है। पैराबोला हाइड्रोस्टैटिक लोड के लिए होता है, दबाव के लिए नहीं।",
+  "e_en": "Liquid pressure increases linearly with depth (P = ρgh), so the pressure distribution forms a straight line (triangle). A parabola represents the hydrostatic load, not pressure."
+ },
+ {
+  "id": "rp-je_-02038",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "असंपीड्य द्रव के एक समान अनुप्रस्थ काट (uniform cross-section) वाली नली में प्रवाहित होने पर, यदि घर्षण न होता तो नली के अंत पर वेग कैसा होगा?",
+  "q_en": "For an incompressible fluid flowing through a pipe of uniform cross-section, neglecting friction, how does the velocity at the outlet compare to the inlet?",
+  "o_hi": [
+   "वेग बढ़ जाता है",
+   "वेग घट जाता है",
+   "वेग समान रहता है",
+   "वेग शून्य हो जाता है"
+  ],
+  "o_en": [
+   "Velocity increases",
+   "Velocity decreases",
+   "Velocity remains constant",
+   "Velocity becomes zero"
+  ],
+  "a": 2,
+  "e_hi": "असतता समीकरण (Continuity Equation) A1V1 = A2V2 के अनुसार, यदि क्षेत्रफल (A) स्थिर है, तो वेग (V) भी स्थिर रहना चाहिए।",
+  "e_en": "According to the Continuity Equation (A1V1 = A2V2), if the cross-sectional area (A) is constant, the velocity (V) must also remain constant."
+ },
+ {
+  "id": "rp-je_-02039",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "यदि एक पंप का प्रतिरोध (head) बढ़ाया जाए, तो उसकी दक्षता (efficiency) सामान्यतः कैसी प्रभावित होती है?",
+  "q_en": "If the head of a pump is increased significantly beyond its design point, how is its efficiency generally affected?",
+  "o_hi": [
+   "दक्षता बढ़ती है",
+   "दक्षता घटती है",
+   "दक्षता अपरिवर्तित रहती है",
+   "दक्षता दो गुना हो जाती है"
+  ],
+  "o_en": [
+   "Efficiency increases",
+   "Efficiency decreases",
+   "Efficiency remains constant",
+   "Efficiency doubles"
+  ],
+  "a": 1,
+  "e_hi": "पंप अपने डिज़ाइन बिंदु (Best Efficiency Point - BEP) पर अधिकतम दक्षता देते हैं। यदि हेड या प्रवाह दर BEP से बहुत अधिक या कम हो जाती है, तो दक्षता तेजी से घटती है।",
+  "e_en": "Pumps operate at maximum efficiency at their Best Efficiency Point (BEP). If the head or flow rate deviates significantly from the BEP, efficiency drops rapidly."
+ },
+ {
+  "id": "rp-je_-02040",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 3,
+  "q_hi": "युलेरके पंख समीकरण (Euler's turbine equation) में, शक्ति (Power) किस राशियों के गुणनफल के समानुपाती होती है?",
+  "q_en": "In Euler's turbine equation, power is directly proportional to the product of which quantities?",
+  "o_hi": [
+   "प्रवाह दर और घनत्व",
+   "वेग और त्रिज्या",
+   "कोणीय वेग और रेडियल वेग",
+   "दबाव और आयतन"
+  ],
+  "o_en": [
+   "Flow rate and density",
+   "Velocity and radius",
+   "Angular velocity and radial velocity",
+   "Pressure and volume"
+  ],
+  "a": 1,
+  "e_hi": "युलेर समीकरण P = ρQ(Vw1*u1 - Vw2*u2) में, शक्ति मुख्य रूप से परिघीय वेग (tangential velocity, u) और कोणीय वेग (angular velocity, ω) के गुणनफल पर निर्भर करती है, जहाँ u = rω होता है।",
+  "e_en": "In Euler's equation P = ρQ(Vw1*u1 - Vw2*u2), power depends primarily on the product of tangential velocity (u) and angular velocity (ω), where u = rω."
+ },
+ {
+  "id": "rp-je_-02041",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 1,
+  "q_hi": "रेनाल्ड संख्या (Reynolds number) कम होने पर द्रव प्रवाह की प्रकृति कैसी होती है?",
+  "q_en": "When the Reynolds number is low, the flow of a fluid is characterized as?",
+  "o_hi": [
+   "प्रकोलायमान (Turbulent)",
+   "प्रवाही (Laminar)",
+   "अतिध्वनि (Supersonic)",
+   "प्रेरित (Forced)"
+  ],
+  "o_en": [
+   "Turbulent",
+   "Laminar",
+   "Supersonic",
+   "Forced"
+  ],
+  "a": 1,
+  "e_hi": "जब रेनाल्ड संख्या 2000 से कम होती है (सामान्यतः), तो प्रवाह प्रवाही (laminar) होता है, जिसमें द्रव की परतें एक-दूसरे के ऊपर बिना मिश्रण के सरकती हैं।",
+  "e_en": "When the Reynolds number is below 2000 (typically), the flow is laminar, where fluid layers slide over each other without mixing."
+ },
+ {
+  "id": "rp-je_-02042",
+  "s": "je_mechanical",
+  "t": "fluid_mechanics_machinery",
+  "d": 2,
+  "q_hi": "बर्नौली के समीकरण के अनुप्रयोग के लिए, द्रव की प्रकृति क्या होनी चाहिए?",
+  "q_en": "For the application of Bernoulli's equation, the fluid must be?",
+  "o_hi": [
+   "संपीड्य (Compressible)",
+   "असंपीड्य और गैर-viscous",
+   "शुद्ध (Pure) और ठोस",
+   "विद्युत चालक"
+  ],
+  "o_en": [
+   "Compressible",
+   "Incompressible and non-viscous",
+   "Pure and solid",
+   "Electrically conductive"
+  ],
+  "a": 1,
+  "e_hi": "बर्नौली का समीकरण आदर्श द्रवों (incompressible, non-viscous, and steady flow) के लिए लागू होता है। वास्तविक द्रवों में घर्षण हानि को अलग से जोड़ना पड़ता है।",
+  "e_en": "Bernoulli's equation applies to ideal fluids (incompressible, non-viscous, and steady flow). For real fluids, friction losses must be accounted for separately."
  }
 ]
