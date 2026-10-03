@@ -47,6 +47,17 @@ class BrandColors {
   static Color saffronText(BuildContext context) =>
       Theme.of(context).brightness == Brightness.light ? const Color(0xFF9A6B00) : saffron;
 
+  /// Android/iOS "Remove animations" accessibility setting -- for users with
+  /// vestibular disorders/motion sensitivity, for whom things like a confetti
+  /// burst of spinning falling pieces are a genuine discomfort trigger, not
+  /// just a taste preference. Flutter does NOT auto-respect this system
+  /// setting; every continuous/decorative animation has to check it itself.
+  /// Scoped to the two most disruptive animations in the app (celebration
+  /// confetti, the onboarding train's looping bob/smoke-puffs) rather than
+  /// every transition -- a brief fade/slide between screens is not the kind
+  /// of motion this setting exists to suppress.
+  static bool reduceMotion(BuildContext context) => MediaQuery.of(context).disableAnimations;
+
   static const heroGradient = LinearGradient(
     colors: [sky, skyLight],
     begin: Alignment.topLeft,

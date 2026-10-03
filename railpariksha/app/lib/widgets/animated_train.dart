@@ -2,6 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../core/theme.dart';
+
 /// The onboarding hero (first screen a new user ever sees) showed a
 /// completely static train icon -- every other step transition in
 /// onboarding already has real motion (AnimatedSwitcher fade+slide, the
@@ -30,6 +32,13 @@ class _AnimatedTrainHeroState extends State<AnimatedTrainHero> with SingleTicker
 
   @override
   Widget build(BuildContext context) {
+    if (BrandColors.reduceMotion(context)) {
+      // "Remove animations" is on -- skip the looping bob/puffs entirely
+      // rather than just freezing it at frame 0 (which would still cost a
+      // Ticker/AnimationController for a system-setting user who asked for
+      // none of this).
+      return Icon(widget.icon, color: widget.iconColor, size: widget.size);
+    }
     return SizedBox(
       width: widget.size + 48,
       height: widget.size + 28,
