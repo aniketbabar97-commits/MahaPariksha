@@ -89,6 +89,7 @@ Future<void> applyReminders(Progress p) async {
       hour: middayHour,
       title: midday.$1,
       body: midday.$2,
+      recurring: false,
     );
   }
 
@@ -101,6 +102,7 @@ Future<void> applyReminders(Progress p) async {
         title: sos.$1,
         body: sos.$2,
         urgent: true,
+        recurring: false,
       );
     }
   }
