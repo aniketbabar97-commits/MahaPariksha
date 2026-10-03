@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/app_scope.dart';
 import '../core/theme.dart';
 
 /// The closest thing to a "video explanation" this app can realistically
