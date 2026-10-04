@@ -26,6 +26,26 @@ void startQuiz(BuildContext context, QuizSpec spec) {
   push(context, (_) => QuizScreen(spec: spec));
 }
 
+/// "PYQ · RRB JE CBT-1 2025 · 19 Feb 2026 · Shift 1": where a previous-year question appeared.
+class _PyqBadge extends StatelessWidget {
+  final String label;
+  const _PyqBadge(this.label);
+
+  @override
+  Widget build(BuildContext context) => Align(
+        alignment: Alignment.centerLeft,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          decoration: BoxDecoration(
+            color: BrandColors.saffron.withValues(alpha: 0.15),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Text('PYQ · $label',
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
+        ),
+      );
+}
+
 const _labelsHi = ['अ', 'ब', 'क', 'ड'];
 const _labelsEn = ['A', 'B', 'C', 'D'];
 
@@ -235,7 +255,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
     // loop -- instead of per question, which batch-grading a mock test would
     // otherwise fire several dialogs back to back for.
     Reward? notable = _notable;
-    if (spec.mode == QuizMode.mock) {
+    if (spec.isTest) {
       for (var i = 0; i < spec.questions.length; i++) {
         final a = answers[i];
         if (a == null) continue;
@@ -377,8 +397,13 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
                         padding: const EdgeInsets.only(right: 6),
                         child: Icon(Icons.flag, size: 18, color: _PaletteState.marked.color),
                       ),
-                    _DifficultyDots(q.difficulty),
+                    // Imported PYQs carry no difficulty rating of their own.
+                    if (q.pyq == null) _DifficultyDots(q.difficulty),
                   ]),
+                  if (q.pyq != null) ...[
+                    const SizedBox(height: 10),
+                    _PyqBadge(q.pyq!),
+                  ],
                   const SizedBox(height: 14),
                   Text(q.text.of(qLang), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w700, height: 1.45)),
                   const SizedBox(height: 18),

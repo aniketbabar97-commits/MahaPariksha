@@ -20,7 +20,10 @@ TOPICS = {s["id"]: {t["id"] for t in s["topics"]} for s in taxonomy["subjects"]}
 EXAM_IDS = {e["id"] for e in taxonomy["exams"]}
 
 Q_FIELDS = {"id", "s", "t", "d", "q_hi", "q_en", "o_hi", "o_en", "a", "e_hi", "e_en"}
-Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date"}
+Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date", "pyq"}
+# Previous-year questions imported from English-only sources may omit the Hindi
+# fields; the app shows their English text in both languages.
+Q_HI = {"q_hi", "o_hi", "e_hi"}
 F_FIELDS = {"id", "s", "t", "f_hi", "b_hi", "f_en", "b_en"}
 M_FIELDS = {"id", "type", "hi", "en"}
 M_OPTIONAL = {"by"}
@@ -32,16 +35,20 @@ def nonempty(v):
 
 def check_question(q, where, errs):
     keys = set(q)
-    if not Q_FIELDS <= keys:
-        errs.append(f"{where}: missing {sorted(Q_FIELDS - keys)}")
+    is_pyq = "pyq" in q
+    need = Q_FIELDS - Q_HI if is_pyq and not (Q_HI & keys) else Q_FIELDS
+    if not need <= keys:
+        errs.append(f"{where}: missing {sorted(need - keys)}")
         return
+    if is_pyq and not nonempty(q["pyq"]):
+        errs.append(f"{where}: pyq label empty")
     if keys - Q_FIELDS - Q_OPTIONAL:
         errs.append(f"{where}: unknown fields {sorted(keys - Q_FIELDS - Q_OPTIONAL)}")
     if q["s"] not in TOPICS or q["t"] not in TOPICS[q["s"]]:
         errs.append(f"{where}: bad subject/topic {q['s']}/{q['t']}")
     if q["d"] not in (1, 2, 3):
         errs.append(f"{where}: d must be 1,2,3")
-    for lang in ("hi", "en"):
+    for lang in ("hi", "en") if "q_hi" in q else ("en",):
         opts = q[f"o_{lang}"]
         if not (isinstance(opts, list) and len(opts) == 4 and all(nonempty(o) for o in opts)):
             errs.append(f"{where}: o_{lang} must be 4 non-empty strings")
@@ -193,7 +200,7 @@ def validate_file(path, seen_ids, errs):
         errs.append(f"{path}: top level must be a list")
         return 0
     kind = path.parent.name
-    checker = {"bank": check_question, "flashcards": check_flashcard, "motivation": check_motivation,
+    checker = {"bank": check_question, "pyq": check_question, "flashcards": check_flashcard, "motivation": check_motivation,
                "notes": check_note, "cheat_sheets": check_cheat_sheet}.get(kind)
     if checker is None:
         return 0
@@ -254,7 +261,7 @@ def check_gk_booster(path, errs):
 def main(argv):
     explicit = [Path(a).resolve() for a in argv]
     files = explicit or sorted(
-        p for d in ("bank", "flashcards", "motivation", "notes", "cheat_sheets") for p in (CONTENT / d).glob("*.json")
+        p for d in ("bank", "pyq", "flashcards", "motivation", "notes", "cheat_sheets") for p in (CONTENT / d).glob("*.json")
     )
     errs, seen, total = [], set(), 0
     for f in files:

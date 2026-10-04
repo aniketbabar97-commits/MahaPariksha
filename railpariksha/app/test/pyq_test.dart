@@ -1,0 +1,102 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:railpariksha/core/app_scope.dart';
+import 'package:railpariksha/core/purchases.dart';
+import 'package:railpariksha/data/content_repo.dart';
+import 'package:railpariksha/data/models.dart';
+import 'package:railpariksha/data/progress.dart';
+import 'package:railpariksha/data/pyq_repo.dart';
+import 'package:railpariksha/screens/pyq_screen.dart';
+
+void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
+  test('English-only PYQ items fall back to English for the Hindi fields', () {
+    final q = Question.fromJson({
+      'id': 'pyq-x', 's': 'maths', 't': 'percentage', 'd': 2,
+      'q_en': 'What is 10% of 50?', 'o_en': ['5', '10', '15', '20'], 'a': 0,
+      'e_en': 'Correct answer: 5.', 'pyq': 'SSC CGL 2024 · 17 Sep 2024 · Shift 2',
+    });
+    expect(q.text.of('hi'), 'What is 10% of 50?');
+    expect(q.options('hi'), ['5', '10', '15', '20']);
+    expect(q.explanation.of('hi'), 'Correct answer: 5.');
+    expect(q.pyq, 'SSC CGL 2024 · 17 Sep 2024 · Shift 2');
+  });
+
+  test('the PYQ pack index matches its set files', () async {
+    final repo = PyqRepo();
+    final sets = await repo.sets();
+    expect(sets, isNotEmpty, reason: 'run pipeline/build_bundle.py to generate assets/pyq/');
+    expect(sets.first.railway, isTrue, reason: 'railway papers are listed first');
+    final je = sets.firstWhere((s) => s.exam == 'RRB JE' && s.year == 2025);
+    final qs = await repo.questions(je);
+    expect(qs, hasLength(je.count));
+    for (final q in qs) {
+      expect(q.pyq, isNotNull);
+      expect(q.optionsEn, hasLength(4));
+      expect(q.answer, inInclusiveRange(0, 3));
+    }
+    for (final p in je.papers) {
+      expect(qs.where((q) => q.pyq == p.label), hasLength(p.count));
+    }
+  });
+
+  Future<Progress> pump(WidgetTester tester, {required bool adFree}) async {
+    final repo = ContentRepo();
+    await tester.runAsync(repo.load);
+    final progress = Progress()
+      ..lang = 'en'
+      ..examId = 'rrb_je_civil'
+      ..removedAds = adFree;
+    await tester.pumpWidget(AppScope(
+      repo: repo,
+      progress: progress,
+      purchases: PurchaseManager(progress),
+      child: const MaterialApp(home: PyqScreen()),
+    ));
+    await tester.runAsync(() => pyqRepo.sets());
+    await tester.pumpAndSettle();
+    return progress;
+  }
+
+  testWidgets('an ad-free user opens a railway paper straight into an exam-style test', (tester) async {
+    PyqAccess.reset();
+    await pump(tester, adFree: true);
+    expect(find.text('Railway papers 🚆'), findsOneWidget);
+    expect(find.textContaining('Ad-free'), findsOneWidget);
+
+    await tester.tap(find.text('RRB JE 2025'));
+    await tester.pump();
+    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.title == 'RRB JE 2025');
+    await tester.runAsync(() => pyqRepo.questions(set));
+    await tester.pumpAndSettle();
+    expect(find.text('Attempt a full paper 📝'), findsOneWidget);
+
+    final paper = set.papers.first;
+    await tester.scrollUntilVisible(find.text(paper.shortLabel), 200);
+    await tester.tap(find.text(paper.shortLabel));
+    await tester.pumpAndSettle();
+    expect(find.text('PYQ · ${paper.label}'), findsOneWidget);
+    expect(find.text('1 / ${paper.count}'), findsOneWidget);
+    expect(find.text('Mark for review'), findsOneWidget, reason: 'papers use the CBT exam interface');
+  });
+
+  testWidgets('without ad-free access, starting PYQ practice asks to watch an ad first', (tester) async {
+    PyqAccess.reset();
+    await pump(tester, adFree: false);
+    expect(find.textContaining('Watch one short ad'), findsOneWidget);
+
+    await tester.tap(find.text('RRB JE 2024'));
+    await tester.pump();
+    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.title == 'RRB JE 2024');
+    await tester.runAsync(() => pyqRepo.questions(set));
+    await tester.pumpAndSettle();
+    await tester.tap(find.textContaining('Mixed practice'));
+    await tester.pumpAndSettle();
+    expect(find.text('Unlock PYQs'), findsOneWidget);
+    await tester.tap(find.text('Later'));
+    await tester.pumpAndSettle();
+    expect(find.text('Unlock PYQs'), findsNothing);
+    expect(find.textContaining('Mixed practice'), findsOneWidget, reason: 'declining stays on the set screen');
+  });
+}

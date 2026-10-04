@@ -69,6 +69,10 @@ class Question {
   /// current-affairs items -- see pipeline/build_bundle.py.
   final String? src;
 
+  /// Previous-year question: the paper it appeared in, e.g.
+  /// "RRB JE CBT-1 2025 · 19 Feb 2026 · Shift 1". Null for the regular bank.
+  final String? pyq;
+
   const Question({
     required this.id,
     required this.subject,
@@ -83,6 +87,7 @@ class Question {
     this.fact,
     this.date,
     this.src,
+    this.pyq,
   });
 
   List<String> options(String lang) => lang == 'en' ? optionsEn : optionsHi;
@@ -92,20 +97,23 @@ class Question {
           ? Bi(j['${k}_hi'] ?? j['${k}_en'], j['${k}_en'] ?? j['${k}_hi'])
           : null;
 
+  // Previous-year questions imported from English-only papers have no *_hi
+  // fields; they show their English text in both languages.
   factory Question.fromJson(Map<String, dynamic> j) => Question(
         id: j['id'],
         subject: j['s'],
         topic: j['t'],
         difficulty: j['d'],
-        text: Bi(j['q_hi'], j['q_en']),
-        optionsHi: List<String>.from(j['o_hi']),
+        text: Bi(j['q_hi'] ?? j['q_en'], j['q_en']),
+        optionsHi: List<String>.from(j['o_hi'] ?? j['o_en']),
         optionsEn: List<String>.from(j['o_en']),
         answer: j['a'],
-        explanation: Bi(j['e_hi'], j['e_en']),
+        explanation: Bi(j['e_hi'] ?? j['e_en'], j['e_en']),
         hook: _opt(j, 'hook'),
         fact: _opt(j, 'fact'),
         date: j['date'],
         src: j['src'],
+        pyq: j['pyq'],
       );
 }
 

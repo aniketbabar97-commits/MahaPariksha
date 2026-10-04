@@ -16,15 +16,25 @@ import urllib.request
 import urllib.error
 
 
-def groq_ask(model, prompt, retries=5, temperature=0.7):
+def _json_in(text):
+    """Parse the first JSON object in free text (for calls made without JSON mode)."""
+    start, end = text.find("{"), text.rfind("}")
+    return json.loads(text[start:end + 1])
+
+
+def groq_ask(model, prompt, retries=5, temperature=0.7, json_mode=True):
+    """json_mode=False skips Groq's response_format, which rejects reasoning models'
+    long outputs with a 400 json_validate_failed; the reply is parsed with _json_in."""
     api_key = os.environ["GROQ_API_KEY"]
     url = "https://api.groq.com/openai/v1/chat/completions"
-    body = json.dumps({
+    payload = {
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
-        "response_format": {"type": "json_object"},
         "temperature": temperature,
-    }).encode()
+    }
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
+    body = json.dumps(payload).encode()
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, data=body, headers={
@@ -32,9 +42,10 @@ def groq_ask(model, prompt, retries=5, temperature=0.7):
                 # Groq blocks Python's default urllib User-Agent with a 403; a
                 # normal browser/curl-looking one works fine.
                 "User-Agent": "curl/8.5.0"}, method="POST")
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=180) as r:
                 data = json.loads(r.read())
-            return json.loads(data["choices"][0]["message"]["content"])
+            content = data["choices"][0]["message"]["content"]
+            return json.loads(content) if json_mode else _json_in(content)
         except urllib.error.HTTPError as e:
             if e.code in (429, 403, 500, 503) and attempt < retries - 1:
                 body_err = e.read().decode(errors="ignore")
@@ -45,7 +56,7 @@ def groq_ask(model, prompt, retries=5, temperature=0.7):
                 time.sleep(wait)
                 continue
             raise
-        except (json.JSONDecodeError, KeyError) as e:
+        except (json.JSONDecodeError, KeyError, ValueError) as e:
             if attempt < retries - 1:
                 time.sleep(4)
                 continue

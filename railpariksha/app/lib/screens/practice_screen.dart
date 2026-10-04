@@ -8,6 +8,7 @@ import '../data/models.dart';
 import '../widgets/common.dart';
 import '../widgets/exam_picker.dart';
 import 'cheat_sheet_screen.dart';
+import 'pyq_screen.dart';
 import 'quiz_screen.dart';
 import 'topic_screen.dart';
 
@@ -107,6 +108,15 @@ class PracticeScreen extends StatelessWidget {
             onTap: () => startQuiz(context, s.builder.mock(full: true)),
           ),
         ],
+        const SizedBox(height: 10),
+        ActionCard(
+          icon: Icons.history_edu,
+          color: BrandColors.correct,
+          title: context.tr('पिछले वर्ष के प्रश्न (PYQ) 📜', 'Previous year questions (PYQ) 📜'),
+          subtitle: context.tr('असली परीक्षाओं के 80,000+ प्रश्न · पूरे प्रश्नपत्र हल करें',
+              '80,000+ real exam questions · attempt full papers'),
+          onTap: () => push(context, (_) => const PyqScreen()),
+        ),
         SectionTitle(context.tr('विषयवार अभ्यास 📚', 'Practice by subject 📚')),
         for (final sub in subjects) ...[
           _SubjectTile(
