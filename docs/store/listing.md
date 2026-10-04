@@ -41,6 +41,6 @@ Disclaimer: Bharari is an independent educational app and is not affiliated with
 ## Store settings
 - Category: Education · Tags: exam prep, test preparation
 - Content rating: Everyone · Target audience: 18+ (aspirants); not designed for children
-- Data safety: no data collected, no data shared (progress stays on device)
+- Data safety: collects Device or other IDs (advertising ID, AdMob) and App interactions (Firebase Analytics, anonymous); progress stays on device. See ADS.md
 - Privacy policy URL: https://<pages-url>/privacy.html
 - Assets: icon `docs/store/play_icon_512.png`; screenshots to capture from a device (Today, question with explanation, flashcard, results, progress)

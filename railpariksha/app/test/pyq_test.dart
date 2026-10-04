@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:railpariksha/core/app_scope.dart';
+import 'package:railpariksha/logic/quiz_builder.dart';
+import 'package:railpariksha/core/ads.dart';
 import 'package:railpariksha/core/purchases.dart';
 import 'package:railpariksha/data/content_repo.dart';
 import 'package:railpariksha/data/models.dart';
@@ -109,7 +111,7 @@ void main() {
   testWidgets('without ad-free access, starting PYQ practice asks to watch an ad first', (tester) async {
     PyqAccess.reset();
     await pump(tester, adFree: false);
-    expect(find.textContaining('Watch one short ad'), findsOneWidget);
+    expect(find.textContaining('Practice sets: one ad'), findsOneWidget);
 
     final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
     // Load (and cache) the set for real first: the screen's own load would run
@@ -124,5 +126,52 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Unlock PYQs'), findsNothing);
     expect(find.textContaining('Mixed practice'), findsOneWidget, reason: 'declining stays on the set screen');
+  });
+
+  testWidgets('a full paper asks for its own ad, even while the practice window is open', (tester) async {
+    PyqAccess.reset();
+    PyqAccess.grant(); // practice window open
+    await pump(tester, adFree: false);
+    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
+    await tester.runAsync(() => pyqRepo.questions(set));
+    await tester.tap(find.text(set.title).first);
+    await tester.pumpAndSettle();
+    final paper = set.papers.first;
+    await tester.scrollUntilVisible(find.text(paper.shortLabel), 200);
+    await tester.tap(find.text(paper.shortLabel));
+    await tester.pumpAndSettle();
+    expect(find.text('Unlock this paper'), findsOneWidget, reason: 'the 30-min window does not cover full papers');
+    await tester.tap(find.text('Later'));
+    await tester.pumpAndSettle();
+    PyqAccess.reset();
+  });
+
+  test('per-paper access: one paper unlocked does not unlock another, ad-free covers all', () {
+    PyqAccess.reset();
+    final free = Progress();
+    expect(PyqAccess.paperUnlocked(free, 'A'), isFalse);
+    PyqAccess.grantPaper('A');
+    expect(PyqAccess.paperUnlocked(free, 'A'), isTrue);
+    expect(PyqAccess.paperUnlocked(free, 'B'), isFalse);
+    expect(PyqAccess.paperUnlocked(Progress()..removedAds = true, 'B'), isTrue);
+    expect(PyqAccess.grantCourtesy(paper: 'B'), isTrue, reason: 'a failed ad load opens that paper');
+    expect(PyqAccess.paperUnlocked(free, 'B'), isTrue);
+    expect(PyqAccess.unlocked(free), isFalse, reason: 'a paper courtesy does not open the practice window');
+    PyqAccess.reset();
+  });
+
+  test('interstitial pacing: 2 free quizzes, then every 3rd, never closer than 3 minutes', () {
+    AdPacing.reset();
+    final t0 = DateTime(2026, 10, 4, 12);
+    expect([for (var n = 1; n <= 9; n++) AdPacing.shouldShow(n, now: t0)], [false, false, true, false, false, true, false, false, true]);
+    AdPacing.markShown(t0);
+    expect(AdPacing.shouldShow(6, now: t0.add(const Duration(minutes: 1))), isFalse, reason: 'too soon after the last one');
+    expect(AdPacing.shouldShow(6, now: t0.add(const Duration(minutes: 3))), isTrue);
+    expect(AdPacing.due(3), isTrue);
+    expect(AdPacing.due(4), isFalse);
+    expect(AdPacing.eligibleMode(QuizMode.placement), isFalse);
+    expect(AdPacing.eligibleMode(QuizMode.speed), isFalse);
+    expect(AdPacing.eligibleMode(QuizMode.pyqPaper), isTrue);
+    AdPacing.reset();
   });
 }

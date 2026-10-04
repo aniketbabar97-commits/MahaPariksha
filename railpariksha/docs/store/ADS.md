@@ -2,38 +2,42 @@
 
 AdMob App ID: `ca-app-pub-9100209280220037~3428622385`
 
-## What's live in v1
+## What's live
 
-- **Banner** — bottom of the Progress screen only. Never shown on a
-  quiz-taking screen (mock, practice, Beast Mode, flashcards) where it would
-  interrupt focus.
-- **Interstitial** — only after a **mock test** (`QuizMode.mock`), on the
-  Results screen — not after Daily 10, practice, or Beast Mode. Frequency is
-  capped (`InterstitialAdManager.shouldShowForMockCount`): the first 2 mocks
-  a user ever takes are always ad-free (protects first-session retention
-  while the daily habit is still forming), then it shows on every other mock
-  after that — an ad on literally every mock would fatigue the most engaged
-  users, who take several a day. Preloaded when the mock starts
-  (`quiz_screen.dart` initState) so it's usually ready by the time results
-  appear; if it isn't ready in time, or this mock falls in a skipped slot,
-  it's silently skipped rather than delaying the results screen.
-- **Rewarded** — opt-in only, from a card on the Progress screen, offering
-  one streak-freeze token (capped at 2, see `Progress.freezeTokens`) per
-  watch, shown only while the user is below that cap. This is a user-
-  requested exchange rather than a forced interruption, and opt-in rewarded
-  ads typically carry a higher eCPM than interstitials — preferred over
-  interstitials wherever a genuine reward moment exists in the UI.
+Interstitials are paced by `AdPacing` (`lib/core/ads.dart`); everything below is skipped for
+ad-free purchasers (`Progress.removedAds`).
+
+- **Banner** — anchored adaptive banner (full screen width) at the bottom of Progress, Practice,
+  the PYQ lists and the results screen. Never on a quiz-taking screen (mock, practice, Beast Mode,
+  flashcards) where it would interrupt focus. Shown only once loaded, labelled "Advertisement" and
+  spaced away from buttons.
+- **Native** — a small native ad card in the PYQ lists (after every 8th exam set, and after the
+  6th paper inside a set).
+- **Interstitial** — on the results screen after a completed quiz or paper in any mode except
+  the onboarding placement quiz and the 60-second speed round. The first 2 quizzes a user ever
+  finishes are ad-free, then every 3rd completion shows one, never closer than 3 minutes to the
+  previous. It is skipped on a turn when the in-app review sheet is due, so two interruptions never
+  stack. It is preloaded when a quiz that is due for an ad starts (`quiz_screen.dart`); if it isn't
+  ready in time it is silently skipped rather than delaying the results screen.
+- **Rewarded — PYQ.** Practice sets: one ad opens the PYQ section's practice sets for 30 minutes.
+  Full papers: one ad per paper, valid for 2 hours (a paper is a 90-minute sitting). If no ad can
+  load (two failed loads in a row) the PYQ opens for 20 minutes on us, at most twice per app
+  session; nobody earns from an ad that can't load. See `PyqAccess` in `pyq_screen.dart`.
+- **Rewarded — streak freeze.** Opt-in card on the Progress screen, one freeze token per watch
+  (capped at 2, see `Progress.freezeTokens`).
+
+## Analytics
+
+`Analytics.log` (`lib/core/analytics.dart`) sends anonymous Firebase Analytics events and does
+nothing when Firebase isn't configured. Events: `pyq_open`, `pyq_set_open`, `pyq_gate_shown`,
+`pyq_unlocked` (via ad or courtesy), `pyq_ad_not_ready`, `pyq_paper_start`, `quiz_start`,
+`quiz_complete`, `interstitial_shown`. No names, emails or question text are ever logged.
 
 ## Reserved, not yet wired anywhere
 
-Ad unit IDs exist in `lib/core/ads_config.dart` for **Rewarded
-Interstitial**, **Native**, and **App Open**, but nothing in the app shows
-them yet. Candidate future uses:
-- App Open: has to be used sparingly (not on every cold start) to avoid
-  feeling intrusive -- needs its own design pass before wiring up.
-- Native: would need an in-feed placement (e.g. between practice topic
-  tiles) with a custom native ad layout -- more design/implementation work
-  than banner/interstitial.
+Ad unit IDs exist in `lib/core/ads_config.dart` for **Rewarded Interstitial** and **App Open**,
+but nothing shows them. App Open has to be used sparingly (not on every cold start) and needs its
+own design pass.
 
 ## Test vs real ads
 
@@ -47,11 +51,10 @@ real ad units above. This means:
   policy violation for invalid traffic on the real, brand-new ad units.
 - Only a real tagged release (`railpariksha-v*`) ever serves real ads.
 
-## Play Console declarations still needed
+## Play Console declarations needed
 
-Once this ships, the Play Console **Ads** declaration must say "Yes, my
-app contains ads," and the Data safety section needs to disclose that
-AdMob collects an advertising identifier for ad personalization. The
-privacy policy (`docs/store/PRIVACY_POLICY_for_google_doc.md`) already has
-placeholder language for this -- update the "Ads (when enabled)" section
-to remove the "if and when" hedging once this is live.
+- **Ads:** "Yes, my app contains ads".
+- **Data safety:** declare *Device or other IDs* (advertising ID, AdMob) and *App activity / App
+  interactions* (Firebase Analytics, collected, not linked to identity). The privacy policy
+  (`PRIVACY_POLICY_for_google_doc.md`) already covers both; publish the updated policy before this
+  release, since analytics is new.

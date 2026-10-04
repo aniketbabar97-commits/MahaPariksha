@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../core/ads.dart';
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
@@ -34,6 +35,20 @@ class PyqAccess {
 
   static void grant() => _until = DateTime.now().add(window);
 
+  /// A full paper is a 90-minute sitting, so it is unlocked per paper (one ad each) rather than by
+  /// the 30-minute window that covers practice sets. [paperWindow] leaves room to finish it and
+  /// to come back to the same paper without paying twice.
+  static const paperWindow = Duration(hours: 2);
+  static final Map<String, DateTime> _papers = {};
+
+  static bool paperUnlocked(Progress p, String label) {
+    if (p.removedAds) return true;
+    final until = _papers[label];
+    return until != null && until.isAfter(DateTime.now());
+  }
+
+  static void grantPaper(String label, {Duration? window}) => _papers[label] = DateTime.now().add(window ?? paperWindow);
+
   /// When no ad can be loaded (no fill, no network) a student must not be locked out of the
   /// papers they came for -- and nobody earns anything from an ad that can't load. So a failed
   /// load opens the section for [courtesyWindow], at most [courtesyLimit] times per app session.
@@ -41,34 +56,45 @@ class PyqAccess {
   static const courtesyLimit = 2;
   static int _courtesyUsed = 0;
 
-  static bool grantCourtesy() {
+  /// [paper] is the label of the full paper being opened, if that is what the student asked for.
+  static bool grantCourtesy({String? paper}) {
     if (_courtesyUsed >= courtesyLimit) return false;
     _courtesyUsed++;
-    _until = DateTime.now().add(courtesyWindow);
+    if (paper != null) {
+      grantPaper(paper, window: courtesyWindow);
+    } else {
+      _until = DateTime.now().add(courtesyWindow);
+    }
     return true;
   }
 
   @visibleForTesting
   static void reset() {
     _until = null;
+    _papers.clear();
     _courtesyUsed = 0;
   }
 }
 
-/// Runs [start] if the PYQ section is unlocked; otherwise offers a rewarded ad
-/// that unlocks it, then runs [start].
-Future<void> withPyqAccess(BuildContext context, VoidCallback start) async {
+/// Runs [start] if the PYQ section is unlocked; otherwise offers a rewarded ad that unlocks it,
+/// then runs [start]. Pass [paper] (the paper's label) for a full paper: those are unlocked one
+/// by one, while practice sets share a 30-minute window.
+Future<void> withPyqAccess(BuildContext context, VoidCallback start, {String? paper}) async {
   final p = AppScope.read(context).progress;
-  if (PyqAccess.unlocked(p)) return start();
+  final open = paper == null ? PyqAccess.unlocked(p) : PyqAccess.paperUnlocked(p, paper);
+  if (open) return start();
   RewardedAdManager.preload();
+  Analytics.log('pyq_gate_shown', {'kind': paper == null ? 'practice' : 'paper'});
   final watch = await showDialog<bool>(
     context: context,
     builder: (ctx) => AlertDialog(
       icon: const Icon(Icons.lock_open, size: 36),
-      title: Text(ctx.tr('PYQ अनलॉक करें', 'Unlock PYQs')),
-      content: Text(ctx.tr(
-          'एक छोटा विज्ञापन देखें और अगले ${PyqAccess.window.inMinutes} मिनट तक सभी पिछले वर्ष के प्रश्नपत्र हल करें।',
-          'Watch one short ad to unlock every previous-year paper for the next ${PyqAccess.window.inMinutes} minutes.')),
+      title: Text(paper == null ? ctx.tr('PYQ अनलॉक करें', 'Unlock PYQs') : ctx.tr('यह प्रश्नपत्र अनलॉक करें', 'Unlock this paper')),
+      content: Text(paper == null
+          ? ctx.tr('एक छोटा विज्ञापन देखें और अगले ${PyqAccess.window.inMinutes} मिनट तक सभी अभ्यास सेट हल करें।',
+              'Watch one short ad to unlock all practice sets for the next ${PyqAccess.window.inMinutes} minutes.')
+          : ctx.tr('एक छोटा विज्ञापन देखें और यह पूरा प्रश्नपत्र ${PyqAccess.paperWindow.inHours} घंटे तक खोलें।',
+              'Watch one short ad to open this full paper for ${PyqAccess.paperWindow.inHours} hours.')),
       actions: [
         TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('बाद में', 'Later'))),
         FilledButton.icon(
@@ -81,10 +107,16 @@ Future<void> withPyqAccess(BuildContext context, VoidCallback start) async {
   );
   if (watch != true || !context.mounted) return;
   final shown = RewardedAdManager.showIfReady(onReward: () {
-    PyqAccess.grant();
+    if (paper == null) {
+      PyqAccess.grant();
+    } else {
+      PyqAccess.grantPaper(paper);
+    }
+    Analytics.log('pyq_unlocked', {'kind': paper == null ? 'practice' : 'paper', 'via': 'ad'});
     if (context.mounted) start();
   });
-  if (!shown && context.mounted && RewardedAdManager.unavailable && PyqAccess.grantCourtesy()) {
+  if (!shown && context.mounted && RewardedAdManager.unavailable && PyqAccess.grantCourtesy(paper: paper)) {
+    Analytics.log('pyq_unlocked', {'kind': paper == null ? 'practice' : 'paper', 'via': 'courtesy'});
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text(context.tr('अभी कोई विज्ञापन उपलब्ध नहीं — ${PyqAccess.courtesyWindow.inMinutes} मिनट के लिए PYQ खुले हैं।',
             'No ad is available right now — PYQs are open for ${PyqAccess.courtesyWindow.inMinutes} minutes on us.'))));
@@ -92,6 +124,7 @@ Future<void> withPyqAccess(BuildContext context, VoidCallback start) async {
     return;
   }
   if (!shown && context.mounted) {
+    Analytics.log('pyq_ad_not_ready');
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text(context.tr('विज्ञापन लोड हो रहा है, कुछ सेकंड में फिर कोशिश करें। (इंटरनेट चालू रखें)',
             'The ad is still loading. Try again in a few seconds (needs internet).'))));
@@ -129,6 +162,7 @@ class _PyqScreenState extends State<PyqScreen> {
   @override
   void initState() {
     super.initState();
+    Analytics.log('pyq_open', {'from_exam': AppScope.read(context).progress.examId ?? ''});
     // Warm up the unlock ad -- unless this user never sees ads.
     if (!PyqAccess.unlocked(AppScope.read(context).progress)) RewardedAdManager.preload();
   }
@@ -171,7 +205,10 @@ class _PyqScreenState extends State<PyqScreen> {
               _AccessBanner(total: total),
               if (rail.isNotEmpty) ...[
                 SectionTitle(context.tr('रेलवे प्रश्नपत्र 🚆', 'Railway papers 🚆')),
-                for (final x in rail) _SetTile(set: x, relevant: relevant(x)),
+                for (var i = 0; i < rail.length; i++) ...[
+                  _SetTile(set: rail[i], relevant: relevant(rail[i])),
+                  if (!s.progress.removedAds && i % 8 == 7 && i < rail.length - 1) const NativeAdTile(),
+                ],
               ],
               if (other.isNotEmpty) ...[
                 SectionTitle(context.tr('समान पाठ्यक्रम वाली परीक्षाएँ (SSC) 📘', 'Same-syllabus exams (SSC) 📘')),
@@ -186,6 +223,7 @@ class _PyqScreenState extends State<PyqScreen> {
                 ),
                 for (final x in other) _SetTile(set: x, relevant: relevant(x)),
               ],
+              if (!s.progress.removedAds) const Center(child: AdBanner()),
             ],
           );
         },
@@ -206,8 +244,8 @@ class _AccessBanner extends StatelessWidget {
         ? context.tr('विज्ञापन-मुक्त: हमेशा अनलॉक ✅', 'Ad-free: always unlocked ✅')
         : left > Duration.zero
             ? context.tr('अनलॉक: ${left.inMinutes + 1} मिनट बाकी 🔓', 'Unlocked: ${left.inMinutes + 1} min left 🔓')
-            : context.tr('एक छोटा विज्ञापन देखकर ${PyqAccess.window.inMinutes} मिनट के लिए अनलॉक करें 🔒',
-                'Watch one short ad to unlock for ${PyqAccess.window.inMinutes} min 🔒');
+            : context.tr('अभ्यास सेट: एक विज्ञापन = ${PyqAccess.window.inMinutes} मिनट · पूरा प्रश्नपत्र: हर पेपर पर एक 🔒',
+                'Practice sets: one ad = ${PyqAccess.window.inMinutes} min · Full papers: one ad each 🔒');
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(14),
@@ -259,6 +297,12 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
   late final Future<List<Question>> _qs = pyqRepo.questions(widget.set);
   static const _practiceSize = 20;
 
+  @override
+  void initState() {
+    super.initState();
+    Analytics.log('pyq_set_open', {'set': widget.set.title});
+  }
+
   /// Questions in the student's language first; a single-language paper in the
   /// other language is used only when nothing else is available.
   List<Question> _inLang(List<Question> qs) {
@@ -283,11 +327,15 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
     final minutes = max(1, (qs.length * 0.9).round());
     withPyqAccess(
       context,
-      () => startQuiz(
-        context,
-        QuizSpec(QuizMode.pyqPaper, qs, paper.label, paper.label,
-            timeLimit: Duration(minutes: minutes), negative: _negativeFor(widget.set)),
-      ),
+      () {
+        Analytics.log('pyq_paper_start', {'paper': paper.label, 'n': qs.length});
+        startQuiz(
+          context,
+          QuizSpec(QuizMode.pyqPaper, qs, paper.label, paper.label,
+              timeLimit: Duration(minutes: minutes), negative: _negativeFor(widget.set)),
+        );
+      },
+      paper: paper.label,
     );
   }
 
@@ -332,8 +380,21 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
                   ),
               ]),
               SectionTitle(context.tr('पूरे प्रश्नपत्र हल करें 📝', 'Attempt a full paper 📝')),
-              for (final paper in widget.set.papers)
-                Padding(
+              for (var i = 0; i < widget.set.papers.length; i++) ...[
+                if (!s.progress.removedAds && i == 6) const NativeAdTile(),
+                _paperTile(all, widget.set.papers[i]),
+              ],
+              if (!s.progress.removedAds) const Center(child: AdBanner()),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _paperTile(List<Question> all, PyqPaper paper) {
+    return Builder(builder: (context) {
+      return Padding(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: ActionCard(
                     icon: Icons.description,
@@ -344,11 +405,7 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
                         '${paper.count} questions · ${max(1, (paper.count * 0.9).round())} min · exam-hall style'),
                     onTap: () => _paper(all, paper),
                   ),
-                ),
-            ],
-          );
-        },
-      ),
-    );
+      );
+    });
   }
 }

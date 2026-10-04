@@ -16,6 +16,7 @@ import '../widgets/explanation_player.dart';
 import '../widgets/share_card.dart';
 import 'next_steps_card.dart';
 import 'quiz_screen.dart';
+import '../core/analytics.dart';
 
 class ResultsScreen extends StatefulWidget {
   final QuizSpec spec;
@@ -67,6 +68,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
     // Recording notifies Progress listeners (AppScope), which must not happen
     // while this screen is still in its first build.
     if (widget.spec.mode == QuizMode.mock) WidgetsBinding.instance.addPostFrameCallback((_) => _recordMock());
+    if (AdPacing.eligibleMode(widget.spec.mode)) WidgetsBinding.instance.addPostFrameCallback((_) => _quizFinished());
     // Practice-style sessions only: a mock's results may already be showing
     // an interstitial ad, and stacking two interruptions would sour the moment.
     if (widget.spec.instantFeedback && widget.spec.mode != QuizMode.speed) {
@@ -107,12 +109,27 @@ class _ResultsScreenState extends State<ResultsScreen> {
         total: widget.spec.questions.length,
       );
     }
-    // Natural break point: results are already recorded, so showing (or
-    // skipping, if not preloaded in time) the ad here never blocks or
-    // delays anything the user is waiting on. Frequency-capped per
-    // InterstitialAdManager.shouldShowForMockCount -- see its doc comment.
-    if (!p.removedAds && InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
-      InterstitialAdManager.showIfReady();
+  }
+
+  /// Counts the finished quiz and, on the pacing rule's turn, shows an interstitial. The results
+  /// are already on screen and recorded, so a missing or late ad never blocks anything.
+  void _quizFinished() {
+    if (!mounted) return;
+    final p = AppScope.read(context).progress;
+    final done = p.recordQuizDone();
+    Analytics.log('quiz_complete', {'mode': widget.spec.mode.name, 'n': widget.spec.questions.length, 'count': done});
+    if (p.removedAds || !AdPacing.shouldShow(done)) return;
+    // The in-app review sheet is also due on practice-style results; stacking two
+    // interruptions would sour the moment, so the ad waits for the next turn.
+    final total = widget.spec.questions.length;
+    final reviewDue = widget.spec.instantFeedback &&
+        widget.spec.mode != QuizMode.speed &&
+        total >= 5 &&
+        p.shouldAskForReview(sessionScore: correct / total);
+    if (reviewDue) return;
+    if (InterstitialAdManager.showIfReady()) {
+      AdPacing.markShown();
+      Analytics.log('interstitial_shown', {'mode': widget.spec.mode.name});
     }
   }
 
@@ -262,6 +279,8 @@ class _ResultsScreenState extends State<ResultsScreen> {
             const SizedBox(height: 12),
             NextStepsCard(steps: NextSteps.from(spec.questions, widget.answers, context.scope.builder.topicStats())),
           ],
+          // Below the actions and the coaching card, well clear of the buttons above.
+          if (!p.removedAds && AdPacing.eligibleMode(spec.mode)) const Center(child: AdBanner()),
           if (!spec.instantFeedback && total > 0)
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[

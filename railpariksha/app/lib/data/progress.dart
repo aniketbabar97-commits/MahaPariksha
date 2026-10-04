@@ -184,6 +184,9 @@ class Progress extends ChangeNotifier {
   /// or successful restore; never set directly from UI.
   bool removedAds = false;
 
+  /// Quizzes and papers finished to the results screen; paces interstitials (see AdPacing).
+  int quizzesDone = 0;
+
   /// Fired once, right as [_gain] marks the user active for today (i.e. the
   /// first qualifying activity of the day just landed). Set by main.dart to
   /// reschedule reminders immediately, so a late-night streak-SOS already
@@ -249,6 +252,7 @@ class Progress extends ChangeNotifier {
     reminderHour = j['reminderHour'] ?? 7;
     streakRiskAlerts = j['streakRiskAlerts'] ?? true;
     removedAds = j['removedAds'] ?? false;
+    quizzesDone = j['quizzesDone'] ?? 0;
     xp = j['xp'] ?? 0;
     streak = j['streak'] ?? 0;
     bestStreak = j['bestStreak'] ?? 0;
@@ -291,6 +295,7 @@ class Progress extends ChangeNotifier {
         'reminderHour': reminderHour,
         'streakRiskAlerts': streakRiskAlerts,
         'removedAds': removedAds,
+        'quizzesDone': quizzesDone,
         'xp': xp,
         'streak': streak,
         'bestStreak': bestStreak,
@@ -489,6 +494,13 @@ class Progress extends ChangeNotifier {
     }
     c.due = t + c.interval;
     return _gain(3, countsTowardGoal: false);
+  }
+
+  /// A quiz or paper reached its results screen. Returns the new total.
+  int recordQuizDone() {
+    quizzesDone++;
+    save();
+    return quizzesDone;
   }
 
   void recordMock(MockResult r) {

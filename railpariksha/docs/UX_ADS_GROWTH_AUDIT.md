@@ -73,7 +73,7 @@ Reading it: with today's ad setup the target needs roughly 9 lakh installs. The 
 triples revenue per user, which brings the install need down to about 3 lakh. Whichever way, **users are
 the bigger lever**: ad changes move the number about 3×, while acquisition moves it 10×+.
 
-## 5. Proposed ad plan (not yet built, needs your yes)
+## 5. Ad plan (approved and built; see store/ADS.md for the live rules)
 
 Impressions per daily user per day, current → proposed: banner 0.4 → 3, interstitial 0.1 → 1,
 rewarded 0.6 → 1.25, native 0 → 1.
