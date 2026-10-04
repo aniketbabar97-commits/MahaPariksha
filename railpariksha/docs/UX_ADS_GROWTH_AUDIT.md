@@ -65,22 +65,22 @@ All inputs below are my assumptions and should be replaced with AdMob data after
 | Current ads, eCPM ×0.5 | 0.08 | 68,000 | 18.2 lakh |
 | **Current ads, base eCPM** | **0.16** | **34,000** | **9.1 lakh** |
 | Current ads, eCPM ×1.5 | 0.25 | 23,000 | 6.1 lakh |
-| Proposed ads, eCPM ×0.5 | 0.25 | 22,000 | 6.0 lakh |
-| **Proposed ads, base eCPM** | **0.50** | **11,000** | **3.0 lakh** |
-| Proposed ads, eCPM ×1.5 | 0.75 | 7,000 | 2.0 lakh |
+| Proposed ads, eCPM ×0.5 | 0.21 | 27,000 | 7.2 lakh |
+| **Proposed ads, base eCPM** | **0.41** | **13,000** | **3.6 lakh** |
+| Proposed ads, eCPM ×1.5 | 0.62 | 9,000 | 2.4 lakh |
 
-Reading it: with today's ad setup the target needs roughly 9 lakh installs. The proposed setup roughly
-triples revenue per user, which brings the install need down to about 3 lakh. Whichever way, **users are
-the bigger lever**: ad changes move the number about 3×, while acquisition moves it 10×+.
+Reading it: with today's ad setup the target needs roughly 9 lakh installs. The built ad plan (interstitial every 10th quiz) roughly
+triples revenue per user, which brings the install need down to about 3.6 lakh. Whichever way, **users are
+the bigger lever**: ad changes move the number about 2.5×, while acquisition moves it 10×+.
 
 ## 5. Ad plan (approved and built; see store/ADS.md for the live rules)
 
-Impressions per daily user per day, current → proposed: banner 0.4 → 3, interstitial 0.1 → 1,
+Impressions per daily user per day, current → proposed: banner 0.4 → 3, interstitial 0.1 → 0.3,
 rewarded 0.6 → 1.25, native 0 → 1.
 
 1. **PYQ: unlock per full paper, keep the 30-minute window for practice sets.** A paper is a 90-minute
    sitting; one ad per paper is the norm in Indian exam apps and is the single biggest lever.
-2. **Interstitial after every 10th completed quiz or paper (any mode), not just mocks.** First two sessions
+2. **Interstitial after every 10th completed quiz or paper (any mode), not just mocks** (your call: 10, not 3). First two sessions
    ad-free, at least 3 minutes between interstitials, never during a question.
 3. **Anchored banner on Practice, the PYQ lists and the bottom of results**, not only Progress.
 4. **Native ad every ~10 rows in the PYQ list and search results.**
