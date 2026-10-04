@@ -74,7 +74,10 @@ class _NavButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = selected ? BrandColors.saffron : Theme.of(context).hintColor;
+    // The selected tab gets a wider slot so its label fits inside the pill instead of spilling out
+    // (a fifth of a 360dp phone is only ~65dp, too narrow for icon + "Practice" / "Progress").
     return Expanded(
+      flex: selected ? 5 : 3,
       child: Semantics(
         button: true,
         selected: selected,
@@ -86,7 +89,7 @@ class _NavButton extends StatelessWidget {
             duration: const Duration(milliseconds: 280),
             curve: Curves.easeOutCubic,
             margin: const EdgeInsets.symmetric(vertical: 8),
-            padding: EdgeInsets.symmetric(horizontal: selected ? 14 : 8),
+            padding: EdgeInsets.symmetric(horizontal: selected ? 10 : 4),
             decoration: BoxDecoration(
               color: selected ? BrandColors.saffron.withValues(alpha: 0.14) : Colors.transparent,
               borderRadius: BorderRadius.circular(18),
@@ -98,17 +101,24 @@ class _NavButton extends StatelessWidget {
                 curve: Curves.elasticOut,
                 child: Icon(selected ? item.selectedIcon : item.icon, color: color, size: 24),
               ),
-              AnimatedSize(
-                duration: const Duration(milliseconds: 220),
-                curve: Curves.easeOutCubic,
-                child: selected
-                    ? Padding(
-                        padding: const EdgeInsets.only(left: 6),
-                        child: Text(item.label,
-                            style: TextStyle(color: color, fontWeight: FontWeight.w800, fontSize: 12.5),
-                            overflow: TextOverflow.ellipsis),
-                      )
-                    : const SizedBox(width: 0, height: 0),
+              Flexible(
+                child: AnimatedSize(
+                  duration: const Duration(milliseconds: 220),
+                  curve: Curves.easeOutCubic,
+                  alignment: Alignment.centerLeft,
+                  child: selected
+                      ? Padding(
+                          padding: const EdgeInsets.only(left: 6),
+                          // Shrinks (never clips or overflows) for long labels or large text sizes.
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(item.label,
+                                maxLines: 1,
+                                style: TextStyle(color: color, fontWeight: FontWeight.w800, fontSize: 12.5)),
+                          ),
+                        )
+                      : const SizedBox(width: 0, height: 0),
+                ),
               ),
             ]),
           ),
