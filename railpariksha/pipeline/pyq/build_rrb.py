@@ -173,6 +173,17 @@ def strip_promo(q):
 
 
 # Some candidates take the CBT in a regional language; the app is Hindi/English only.
+# Some sheets use a legacy Hindi font that extracts as garbage: letters from Latin Extended / IPA
+# blocks standing in for conjuncts ("िनɻिलİखत मŐ से" for "निम्नलिखित में से"), or the vowel sign ि
+# opening a word ("िकस" for "किस"). Such Hindi is unreadable, so it is dropped and regenerated from the
+# English twin by the translation pipeline.
+GARBLED_HI = re.compile(r"[\u0100-\u02FF\u1E00-\u1EFF]|(?<![\u0900-\u097F])\u093f[\u0915-\u0939]")
+
+
+def garbled_hi(q):
+    return bool(GARBLED_HI.search(q["q"] + " ".join(q["o"])))
+
+
 REGIONAL = re.compile(r"[\u0980-\u0DFF\u0600-\u06FF]")  # Bengali..Malayalam, Urdu
 # Marathi shares Hindi's script, so it's recognised by words Hindi doesn't use.
 MARATHI = re.compile(r"(?<![\u0900-\u097F])(आहे|आहेत|खालीलपैकी|कोणता|कोणती|कोणते|आणि|नाही|म्हणून|यांच्या|"
@@ -338,6 +349,10 @@ def main():
         all_q = [q for sh in sheets for q in sh["qs"]]
         en = [q for q in all_q if not DEV.search(q["q"])]
         hi = [q for q in all_q if DEV.search(q["q"])]
+        bad = [q for q in hi if garbled_hi(q)]
+        if bad:
+            stats["garbled_hi_dropped"] += len(bad)
+            hi = [q for q in hi if not garbled_hi(q)]
         # Each candidate's sheet shuffles question AND option order, so Hindi and
         # English versions are matched on content, never on question number.
         idx = defaultdict(list)
@@ -451,16 +466,32 @@ def main():
             keep.append(r)
         recs[:] = keep
 
+    # Real explanations (explain.py), keyed by the English text so they survive rebuilds.
+    import explain
+    explained = {}
+    for slug, recs in out.items():
+        explained[slug] = explain.apply_family(slug, recs)
+        stats[f"explained_{slug}"] = len(explained[slug])
+
     # Repair words that lost their reph in the sheets' fonts (after ids/translations, which key on the raw text).
     import hindi_fix
-    fixes = hindi_fix.build_map(t for recs in out.values() for r in recs if "q_hi" in r and r.get("tr") != "hi"
-                                for t in [r["q_hi"], *r["o_hi"]])
-    for recs in out.values():
+    native_texts = [t for recs in out.values() for r in recs if "q_hi" in r and r.get("tr") != "hi"
+                    for t in [r["q_hi"], *r["o_hi"]]]
+    clean_texts = [t for recs in out.values() for r in recs if r.get("tr") == "hi" for t in [r["q_hi"], *r["o_hi"]]]
+    for bp in (ROOT / "content/bank").glob("*.json"):  # hand-written bank Hindi is trusted vocabulary
+        if bp.name != "pyq_rrb.json":
+            clean_texts += [t for b in json.loads(bp.read_text(encoding="utf-8")) if "q_hi" in b
+                            for t in [b["q_hi"], *b.get("o_hi", [])]]
+    fixes = hindi_fix.build_map(native_texts)
+    joins = hindi_fix.build_joins(native_texts, clean_texts)
+    repair = lambda t: hindi_fix.fix_matras(hindi_fix.fix_spaces(hindi_fix.fix(t, fixes), joins))
+    for slug, recs in out.items():
         for r in recs:
             if "q_hi" in r and r.get("tr") != "hi":
-                r["q_hi"], r["o_hi"] = hindi_fix.fix(r["q_hi"], fixes), [hindi_fix.fix(o, fixes) for o in r["o_hi"]]
-                r["e_hi"] = f"सही उत्तर: {r['o_hi'][r['a']]} (आधिकारिक उत्तर कुंजी)।"
-    stats["hindi_words_repaired"] = len(fixes)
+                r["q_hi"], r["o_hi"] = repair(r["q_hi"]), [repair(o) for o in r["o_hi"]]
+                if r["id"] not in explained[slug]:  # keep a real explanation; only the generic line follows the repair
+                    r["e_hi"] = f"सही उत्तर: {r['o_hi'][r['a']]} (आधिकारिक उत्तर कुंजी)।"
+    stats["hindi_words_repaired"], stats["hindi_joins"] = len(fixes), len(joins)
     dest = ROOT / "content/pyq"
     dest.mkdir(exist_ok=True)
     for slug, recs in sorted(out.items()):
