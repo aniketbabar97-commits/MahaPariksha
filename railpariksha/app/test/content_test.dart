@@ -173,4 +173,22 @@ void main() {
       expect(byDate.values.expand((qs) => qs).every((q) => q.date != null), isTrue);
     });
   });
+
+  group('content pack selection', () {
+    test('peeks the version without decoding the whole pack', () {
+      expect(ContentRepo.peekVersion('{"version":202610030716,"taxonomy":{}}'), 202610030716);
+      expect(ContentRepo.peekVersion('  { "version" : 7 , "x": 1}'), 7);
+      expect(ContentRepo.peekVersion('{"taxonomy":{},"version":7}'), isNull);
+    });
+
+    test('a newer cached pack wins, a stale or corrupt one falls back to the bundle', () {
+      const bundled = '{"version":5,"which":"bundled"}';
+      expect(ContentRepo.decodeNewestPack(bundled, null)['which'], 'bundled');
+      expect(ContentRepo.decodeNewestPack(bundled, '{"version":9,"which":"cached"}')['which'], 'cached');
+      expect(ContentRepo.decodeNewestPack(bundled, '{"version":3,"which":"cached"}')['which'], 'bundled');
+      expect(ContentRepo.decodeNewestPack(bundled, '{"version":9,"which":')['which'], 'bundled');
+      // Version not first in the cached pack: still decoded and compared properly.
+      expect(ContentRepo.decodeNewestPack(bundled, '{"which":"cached","version":9}')['which'], 'cached');
+    });
+  });
 }

@@ -28,7 +28,7 @@ class TopicScreen extends StatelessWidget {
     final s = context.scope;
     final lang = context.lang;
     final note = s.repo.note(subject.id, topic.id);
-    final count = s.repo.questions.where((q) => q.subject == subject.id && q.topic == topic.id).length;
+    final count = s.repo.topicQuestionCount(subject.id, topic.id);
 
     final practice = SafeArea(
       top: false,

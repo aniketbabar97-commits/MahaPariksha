@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:isolate';
 
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -48,6 +49,7 @@ class ContentRepo {
   // rescan the full question/flashcard lists on every call (those are invoked from
   // screen build() methods, so at 20,000+ questions a linear scan there would jank).
   final Map<String, List<Question>> _questionsBySubject = {};
+  final Map<String, int> _topicQuestionCounts = {};
   final Map<String, List<Flashcard>> _flashcardsBySubject = {};
 
   /// Whether this subject has ANY flashcards at all, regardless of what's due
@@ -73,6 +75,11 @@ class ContentRepo {
       .where((s) => (_questionsBySubject[s.id] ?? const []).isNotEmpty)
       .toList();
 
+  /// One subject's questions, from the precomputed index (safe in build()).
+  List<Question> questionsInSubject(String subject) => _questionsBySubject[subject] ?? const [];
+
+  int topicQuestionCount(String subject, String topic) => _topicQuestionCounts['$subject/$topic'] ?? 0;
+
   List<Question> questionsFor(Exam e) =>
       [for (final s in e.subjects) ...?_questionsBySubject[s]];
 
@@ -84,17 +91,39 @@ class ContentRepo {
 
   Future<void> load() async {
     final bundled = await rootBundle.loadString('assets/content/bundle.json');
-    Map<String, dynamic> data = jsonDecode(bundled);
+    String? cached;
     try {
       final f = await _cacheFile();
-      if (await f.exists()) {
-        final cached = jsonDecode(await f.readAsString());
-        if ((cached['version'] ?? 0) > (data['version'] ?? 0)) data = cached;
-      }
+      if (await f.exists()) cached = await f.readAsString();
     } catch (_) {
-      // Corrupt cache: fall back to the bundled pack.
+      // Unreadable cache: the bundled pack is always the fallback.
     }
-    _apply(data);
+    // The pack is ~28 MB; decoding it on the UI isolate stalls launch on
+    // budget phones, so it happens in the background.
+    _apply(await Isolate.run(() => decodeNewestPack(bundled, cached)));
+  }
+
+  static final _versionHeader = RegExp(r'^\s*\{\s*"version"\s*:\s*(\d+)');
+
+  /// Reads a pack's version from its leading `{"version":N` without decoding
+  /// the whole document. Null when the pack doesn't start that way.
+  static int? peekVersion(String pack) =>
+      int.tryParse(_versionHeader.firstMatch(pack.length > 64 ? pack.substring(0, 64) : pack)?.group(1) ?? '');
+
+  /// Decodes whichever of the bundled/cached packs is newer -- only that one,
+  /// so a stale cache never costs a second full decode.
+  static Map<String, dynamic> decodeNewestPack(String bundled, String? cached) {
+    final bundledVersion = peekVersion(bundled) ?? 0;
+    final cachedVersion = cached == null ? null : peekVersion(cached);
+    if (cached != null && (cachedVersion == null || cachedVersion > bundledVersion)) {
+      try {
+        final c = jsonDecode(cached) as Map<String, dynamic>;
+        if (((c['version'] as num?) ?? 0) > bundledVersion) return c;
+      } catch (_) {
+        // Corrupt cache: fall back to the bundled pack.
+      }
+    }
+    return jsonDecode(bundled) as Map<String, dynamic>;
   }
 
   /// Returns true when a newer pack was downloaded (applied on next launch).
@@ -103,9 +132,15 @@ class ContentRepo {
     try {
       final res = await http.get(Uri.parse(kContentUrl)).timeout(const Duration(seconds: 20));
       if (res.statusCode != 200) return false;
-      final body = utf8.decode(res.bodyBytes);
-      final data = jsonDecode(body);
-      if ((data['version'] ?? 0) <= version) return false;
+      final bytes = res.bodyBytes;
+      // Validate the full download off the UI isolate: this runs while the
+      // user is using the app, where a ~28 MB decode would visibly jank.
+      final (body, remoteVersion) = await Isolate.run(() {
+        final b = utf8.decode(bytes);
+        final d = jsonDecode(b) as Map<String, dynamic>;
+        return (b, (d['version'] as num?)?.toInt() ?? 0);
+      });
+      if (remoteVersion <= version) return false;
       await (await _cacheFile()).writeAsString(body);
       return true;
     } catch (_) {
@@ -187,8 +222,10 @@ class ContentRepo {
       ..clear()
       ..addEntries(questions.map((q) => MapEntry(q.id, q)));
     _questionsBySubject.clear();
+    _topicQuestionCounts.clear();
     for (final q in questions) {
       (_questionsBySubject[q.subject] ??= []).add(q);
+      _topicQuestionCounts.update('${q.subject}/${q.topic}', (n) => n + 1, ifAbsent: () => 1);
     }
     _flashcardsBySubject.clear();
     for (final c in flashcards) {
