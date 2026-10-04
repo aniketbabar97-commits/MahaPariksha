@@ -17,7 +17,6 @@ import '../widgets/common.dart';
 import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
-import '../core/format.dart';
 import '../core/ads.dart';
 
 class MeScreen extends StatelessWidget {
@@ -233,39 +232,39 @@ class MeScreen extends StatelessWidget {
             ),
           ]),
         ),
-        SectionTitle(context.tr('जानकारी ℹ️', 'About ℹ️')),
+        const SizedBox(height: 12),
+        // One short line; the full disclaimer and official links open on tap (Play needs them in the
+        // app, students don't need them on screen every visit).
         Card(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(context.tr('RailPariksha — सफलता की पटरी पर', 'RailPariksha — Train to succeed'),
-                  style: const TextStyle(fontWeight: FontWeight.w800)),
-              const SizedBox(height: 6),
-              Text(context.tr(
-                  'RailPariksha एक स्वतंत्र शैक्षणिक ऐप है। यह सरकारी ऐप नहीं है और भारतीय रेलवे, RRB, RPF या किसी भी सरकारी संस्था का प्रतिनिधित्व नहीं करता, न ही उनसे संबद्ध है। परीक्षा की जानकारी नीचे दिए आधिकारिक स्रोतों से ली गई है; अधिसूचना, तिथि व परिणाम वहीं जाँचें।',
-                  'RailPariksha is an independent educational app. It is not a government app and does not represent, and is not affiliated with, Indian Railways, RRB, RPF or any government body. Exam information comes from the official sources below; always confirm notifications, dates and results there.')),
-              const SizedBox(height: 10),
-              Text(context.tr('आधिकारिक स्रोत', 'Official sources'), style: const TextStyle(fontWeight: FontWeight.w700)),
-              for (final src in officialSources)
-                InkWell(
-                  onTap: () => launchUrl(Uri.parse(src.$2), mode: LaunchMode.externalApplication),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
-                    child: Row(children: [
-                      const Icon(Icons.open_in_new, size: 16),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text('${context.tr(src.$1.hi, src.$1.en)} — ${src.$2}',
-                            style: const TextStyle(decoration: TextDecoration.underline)),
-                      ),
-                    ]),
+          clipBehavior: Clip.antiAlias,
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: ExpansionTile(
+              leading: const Icon(Icons.info_outline),
+              title: Text(context.tr('ऐप के बारे में', 'About the app')),
+              subtitle: Text(context.tr('स्वतंत्र ऐप · सरकारी नहीं', 'Independent app · not a government app'),
+                  style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12.5)),
+              childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(context.tr(
+                    'RailPariksha एक स्वतंत्र शैक्षणिक ऐप है, भारतीय रेलवे, RRB या RPF से संबद्ध नहीं। अधिसूचना, तिथि व परिणाम आधिकारिक साइट पर जाँचें:',
+                    'RailPariksha is an independent study app, not affiliated with Indian Railways, RRB or RPF. Check notifications, dates and results on the official sites:')),
+                const SizedBox(height: 6),
+                for (final src in officialSources)
+                  InkWell(
+                    onTap: () => launchUrl(Uri.parse(src.$2), mode: LaunchMode.externalApplication),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      child: Row(children: [
+                        const Icon(Icons.open_in_new, size: 16),
+                        const SizedBox(width: 8),
+                        Expanded(child: Text(context.tr(src.$1.hi, src.$1.en))),
+                      ]),
+                    ),
                   ),
-                ),
-              const SizedBox(height: 6),
-              Text(context.tr('प्रश्न सेट संस्करण: ${s.repo.version} · ${fmtCount(s.repo.questions.length)} प्रश्न',
-                  'Content version: ${s.repo.version} · ${fmtCount(s.repo.questions.length)} questions'),
-                  style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12)),
-            ]),
+              ],
+            ),
           ),
         ),
         const SizedBox(height: 12),

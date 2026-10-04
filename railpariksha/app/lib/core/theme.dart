@@ -101,6 +101,12 @@ ThemeData buildTheme(Brightness b) {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
+        // Brand blue with white text in both themes (Material's seed-derived pale lavender looked
+        // washed out on the dark background).
+        backgroundColor: b == Brightness.light ? BrandColors.sky : BrandColors.skyLight,
+        foregroundColor: Colors.white,
+        disabledBackgroundColor: b == Brightness.light ? const Color(0xFFDDE3EF) : const Color(0xFF242C40),
+        disabledForegroundColor: b == Brightness.light ? const Color(0xFF8A93A6) : const Color(0xFF6E7891),
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         textStyle: const TextStyle(fontFamily: 'Mukta', fontSize: 16, fontWeight: FontWeight.w700),
