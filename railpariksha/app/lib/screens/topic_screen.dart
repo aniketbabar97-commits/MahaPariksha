@@ -99,7 +99,7 @@ class TopicScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(color: BrandColors.sky.withValues(alpha: 0.1), shape: BoxShape.circle),
-                      child: Icon(topicIcon(topic.id), color: BrandColors.sky, size: 20),
+                      child: Icon(topicIcon(topic.id), color: BrandColors.skyOn(context), size: 20),
                     ),
                     const SizedBox(width: 10),
                     Expanded(child: Text(topic.name.of(lang), style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15))),

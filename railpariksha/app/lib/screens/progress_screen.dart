@@ -185,7 +185,7 @@ class ProgressScreen extends StatelessWidget {
               for (final m in examMocks.reversed.take(8))
                 ListTile(
                   dense: true,
-                  leading: const Icon(Icons.assignment_turned_in, color: BrandColors.sky),
+                  leading: Icon(Icons.assignment_turned_in, color: BrandColors.skyOn(context)),
                   title: Text('${m.score.toStringAsFixed(m.score == m.score.roundToDouble() ? 0 : 2)} / ${m.total}'),
                   subtitle: Text(_dateOf(m.day)),
                   trailing: m.total > 0

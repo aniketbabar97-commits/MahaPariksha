@@ -37,7 +37,7 @@ class RevisionPlanScreen extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(20),
                 child: Column(children: [
-                  const Icon(Icons.event, color: BrandColors.sky, size: 40),
+                  Icon(Icons.event, color: BrandColors.skyOn(context), size: 40),
                   const SizedBox(height: 10),
                   Text(context.tr('कोई परीक्षा तारीख सेट नहीं है', 'No exam date set'),
                       style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),

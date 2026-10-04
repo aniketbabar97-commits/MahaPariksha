@@ -187,7 +187,7 @@ class TodayScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(children: [
-                  const Icon(Icons.insights, color: BrandColors.sky, size: 20),
+                  Icon(Icons.insights, color: BrandColors.skyOn(context), size: 20),
                   const SizedBox(width: 8),
                   Text(context.tr('अध्ययन योजना', 'Study plan'),
                       style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
@@ -254,7 +254,7 @@ class TodayScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(color: BrandColors.saffron, borderRadius: BorderRadius.circular(20)),
-                        child: Text(context.tr('नया', 'NEW'), style: const TextStyle(color: BrandColors.sky, fontSize: 11, fontWeight: FontWeight.w900)),
+                        child: Text(context.tr('नया', 'NEW'), style: TextStyle(color: BrandColors.skyOn(context), fontSize: 11, fontWeight: FontWeight.w900)),
                       ),
                     ]),
                     const SizedBox(height: 2),

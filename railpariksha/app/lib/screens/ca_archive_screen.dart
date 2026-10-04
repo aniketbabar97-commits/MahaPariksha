@@ -68,7 +68,7 @@ class CaArchiveScreen extends StatelessWidget {
                           height: 48,
                           decoration: BoxDecoration(
                               color: BrandColors.sky.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(14)),
-                          child: Icon(subjectIcon('newspaper'), color: BrandColors.sky),
+                          child: Icon(subjectIcon('newspaper'), color: BrandColors.skyOn(context)),
                         ),
                         const SizedBox(width: 14),
                         Expanded(

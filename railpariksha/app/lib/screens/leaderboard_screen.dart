@@ -201,7 +201,7 @@ class _NamePrompt extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          const Icon(Icons.leaderboard, color: BrandColors.sky, size: 48),
+          Icon(Icons.leaderboard, color: BrandColors.skyOn(context), size: 48),
           const SizedBox(height: 12),
           Text(context.tr('लीडरबोर्ड में शामिल हों', 'Join the leaderboard'),
               style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 17)),

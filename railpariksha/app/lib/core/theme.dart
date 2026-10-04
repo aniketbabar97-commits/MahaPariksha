@@ -47,6 +47,14 @@ class BrandColors {
   /// only for the handful of places that render it as actual reading text.
   /// Already passes AA on the dark-mode navy Card background, so dark mode
   /// is untouched.
+  /// Brand blue for text and icons. The deep navy [sky] is unreadable on dark-mode cards, so dark
+  /// mode gets a lighter blue.
+  static Color skyOn(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark ? const Color(0xFF8DB0F5) : sky;
+
+  /// Any brand colour used as text/icon colour: [sky] is swapped for its readable dark-mode tint.
+  static Color readable(BuildContext context, Color c) => c == sky ? skyOn(context) : c;
+
   static Color saffronText(BuildContext context) =>
       Theme.of(context).brightness == Brightness.light ? const Color(0xFF9A6B00) : saffron;
 

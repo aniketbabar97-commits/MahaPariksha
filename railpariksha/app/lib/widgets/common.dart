@@ -273,7 +273,7 @@ class ActionCard extends StatelessWidget {
               height: 48,
               decoration: BoxDecoration(
                   color: (disabled ? hint : color).withValues(alpha: 0.15), borderRadius: BorderRadius.circular(14)),
-              child: Icon(icon, color: disabled ? hint : color),
+              child: Icon(icon, color: disabled ? hint : BrandColors.readable(context, color)),
             ),
             const SizedBox(width: 14),
             Expanded(
