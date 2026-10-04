@@ -21,6 +21,7 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 
+VERSION = 1  # bump when extraction output changes (invalidates build_rrb's cache)
 GREEN, RED = 0x40C64B, 0xF61818
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 OPT_LABEL = re.compile(r"^\s*([A-D]|[1-4])\.\s*$|^\s*([A-D]|[1-4])\.\s")

@@ -46,7 +46,19 @@ SECTION_SUBJECT = [
     (r"general science|basic science", "science"), (r"computer", "computer"),
     (r"awareness|current affairs|general knowledge", "gk"),
 ]
-TECH_SUBJECTS = ["je_mechanical", "je_electrical", "je_civil", "science"]
+def tech_subjects(label):
+    """Subjects a technical (trade/branch) question may belong to, from its paper:
+    a JE CBT-2 paper is its branch; ALP/Technician trades are mechanical/electrical."""
+    l = label.lower()
+    if "civil" in l:
+        return ["je_civil"]
+    if "mechanical" in l and "electronics" not in l:
+        return ["je_mechanical"]
+    if re.search(r"electrical|electronics|wiremen|electrician|signal", l):
+        return ["je_electrical"]
+    if "rrb je" in l:  # other JE branches (chemical, computer, ...) have no subject in the app
+        return ["science"]
+    return ["je_mechanical", "je_electrical", "science"]
 
 
 def section_subject(section):
@@ -151,7 +163,23 @@ def norm_key(text, opts):
     return n(text) + "|" + "|".join(sorted(n(o) for o in opts))
 
 
+CACHE = Path("/tmp/pyq-extract-cache")
+
+
 def extract_one(path):
+    """Extract one sheet, cached by file content hash (re-runs skip the slow PDF pass)."""
+    import pickle
+    h = hashlib.sha1(Path(path).read_bytes()).hexdigest()
+    cf = CACHE / f"{h}-{rs.VERSION}.pkl"
+    if cf.exists():
+        return pickle.loads(cf.read_bytes())
+    res = _extract(path)
+    CACHE.mkdir(exist_ok=True)
+    cf.write_bytes(pickle.dumps(res))
+    return res
+
+
+def _extract(path):
     try:
         info, qs, _ = rs.extract(path)
         qs, _ = rs.figure_scan(path, qs)
@@ -165,9 +193,11 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdfs", required=True)
     ap.add_argument("--extra", nargs="*", default=[], help="more PDF dirs (family guessed from file name)")
+    ap.add_argument("--min-margin", type=float, default=0.15,
+                    help="min per-token topic-score gap for an item to be copied into the bank")
     ap.add_argument("--bank-cap", type=int, default=150, help="max bilingual PYQs per topic copied into the bank")
     a = ap.parse_args()
-    bank_cap = a.bank_cap
+    bank_cap, min_margin = a.bank_cap, a.min_margin
 
     catalog = {name_for(r["url"]): r for r in json.loads((HERE / "catalog.json").read_text(encoding="utf-8"))}
     files = []
@@ -286,28 +316,32 @@ def main():
 
     clf = Classifier.from_bank()
     out = defaultdict(list)
-    used_ids = set()
+    used_ids, bank_excluded = set(), set()
     for it in unique:
         slug, exam_id = FAMILY[it["family"]]
         subj = section_subject(it["section"])
         allowed = EXAM_SUBJECTS[exam_id]
         if subj == "gk":  # "General Awareness" sections mix GK, science, current affairs, railways
             subj, allowed = None, ["gk", "science", "current_affairs", "railway_gk", "computer"]
+        no_bank = False
         if subj is None and is_technical(it["section"], it["pyq"]):
-            allowed = TECH_SUBJECTS
+            allowed = tech_subjects(it["pyq"])
+            # A branch the app has no subject for: PYQ section only, never the bank.
+            no_bank = allowed == ["science"]
         q = {"q_en": it.get("q_en"), "q_hi": it.get("q_hi"), "o_en": it.get("o_en"), "o_hi": it.get("o_hi")}
-        s, t = clf.classify(q, subjects=[x for x in allowed if x in clf.topic] or None, subject=subj)
-        a = it["a"]
+        s, t, margin = clf.classify(q, subjects=[x for x in allowed if x in clf.topic] or None, subject=subj,
+                                    with_margin=True)
+        ans = it["a"]
         rec = {"id": "", "s": s, "t": t, "d": 2}
         if "q_hi" in it:
             rec.update(q_hi=it["q_hi"], o_hi=it["o_hi"])
         if "q_en" in it:
             rec.update(q_en=it["q_en"], o_en=it["o_en"])
-        rec["a"] = a
+        rec["a"] = ans
         if "q_en" in it:
-            rec["e_en"] = f"Correct answer: {it['o_en'][a]} (official answer key)."
+            rec["e_en"] = f"Correct answer: {it['o_en'][ans]} (official answer key)."
         if "q_hi" in it:
-            rec["e_hi"] = f"सही उत्तर: {it['o_hi'][a]} (आधिकारिक उत्तर कुंजी)।"
+            rec["e_hi"] = f"सही उत्तर: {it['o_hi'][ans]} (आधिकारिक उत्तर कुंजी)।"
         rec["pyq"] = it["pyq"]
         # Content-derived, so ids stay stable across re-runs.
         base = "pyq-" + hashlib.sha1(f"{it['pyq']}|{it['lang']}|{norm_key(it.get('q_en') or it['q_hi'], it.get('o_en') or it['o_hi'])}".encode()).hexdigest()[:12]
@@ -317,6 +351,9 @@ def main():
             rec["id"], k = f"{base}-{k}", k + 1
         used_ids.add(rec["id"])
         out[slug].append(rec)
+        # The bank serves topic-wise practice, so it only takes confidently-tagged items.
+        if no_bank or margin < min_margin:
+            bank_excluded.add(rec["id"])
         stats[f"lang_{it['lang']}"] += 1
 
     dest = ROOT / "content/pyq"
@@ -339,7 +376,7 @@ def main():
     per_topic = defaultdict(list)
     for recs in out.values():
         for r in recs:
-            if "q_en" in r and "q_hi" in r:
+            if "q_en" in r and "q_hi" in r and r["id"] not in bank_excluded:
                 per_topic[(r["s"], r["t"])].append(r)
     bank = []
     for key, recs in sorted(per_topic.items()):

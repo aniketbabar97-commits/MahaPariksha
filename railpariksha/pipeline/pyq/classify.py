@@ -70,16 +70,24 @@ class Classifier:
             self.topic[q["s"]].add(q["t"], t)
 
     @classmethod
-    def from_bank(cls, exclude_prefix="pyq-"):
+    def from_bank(cls, exclude_prefix="pyq"):  # never learn from imported PYQs (pyq-/pyqb-)
         items = []
         for p in sorted((ROOT / "content/bank").glob("*.json")):
             items += [q for q in json.loads(p.read_text(encoding="utf-8")) if not q["id"].startswith(exclude_prefix)]
         return cls(items)
 
-    def classify(self, q, subjects=None, subject=None):
+    def classify(self, q, subjects=None, subject=None, with_margin=False):
         t = tokens(text_of(q))
         s = subject or self.subject.predict(t, subjects)
-        return s, self.topic[s].predict(t)
+        sc = self.topic[s].scores(t)
+        top = sorted(sc.values(), reverse=True)
+        best = max(sc, key=sc.get)
+        if not with_margin:
+            return s, best
+        # Log-likelihood gap between the best and second-best topic (per token):
+        # a small gap means the topic guess is a coin-flip.
+        margin = (top[0] - top[1]) / max(1, len(t)) if len(top) > 1 else 99.0
+        return s, best, margin
 
 
 if __name__ == "__main__":
