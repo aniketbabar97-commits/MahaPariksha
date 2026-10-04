@@ -12,6 +12,7 @@ import '../data/progress.dart';
 import '../data/pyq_repo.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
+import 'pyq_modes.dart';
 import 'quiz_screen.dart';
 import '../core/format.dart';
 
@@ -136,7 +137,7 @@ Future<void> withPyqAccess(BuildContext context, VoidCallback start, {String? pa
 double _negativeFor(PyqSet set) => set.railway ? 1 / 3 : 0.25;
 
 /// Exam id -> how that exam's PYQ sets are named in the pack (RRB JE branches share "RRB JE").
-const _setPrefix = {
+const pyqSetPrefix = {
   'rrb_ntpc': 'RRB NTPC',
   'rrb_group_d': 'RRB Group D',
   'rrb_alp': 'RRB ALP',
@@ -172,9 +173,19 @@ class _PyqScreenState extends State<PyqScreen> {
     final s = context.scope;
     final exam = s.builder.exam;
     final subjects = exam?.subjects.toSet();
-    return Scaffold(
-      appBar: AppBar(title: Text(context.tr('पिछले वर्ष के प्रश्न 📜', 'Previous year papers 📜'))),
-      body: FutureBuilder<List<PyqSet>>(
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+      appBar: AppBar(
+        title: Text(context.tr('पिछले वर्ष के प्रश्न 📜', 'Previous year papers 📜')),
+        bottom: TabBar(tabs: [
+          Tab(text: context.tr('वर्षवार', 'By year')),
+          Tab(text: context.tr('टॉपिकवार', 'By topic')),
+          Tab(text: context.tr('फुल एग्ज़ाम', 'Full exams')),
+        ]),
+      ),
+      body: TabBarView(children: [
+      FutureBuilder<List<PyqSet>>(
         future: _sets,
         builder: (context, snap) {
           if (!snap.hasData) return const Center(child: CircularProgressIndicator());
@@ -183,7 +194,7 @@ class _PyqScreenState extends State<PyqScreen> {
               ? set.count
               : set.subjects.entries.where((e) => subjects.contains(e.key)).fold(0, (a, e) => a + e.value);
           // The student's own exam first (stable: the rest keep their order).
-          final mine = _setPrefix[s.builder.exam?.id];
+          final mine = pyqSetPrefix[s.builder.exam?.id];
           final all = snap.data!.where((x) => relevant(x) > 0).toList();
           final sets = mine == null
               ? all
@@ -227,6 +238,10 @@ class _PyqScreenState extends State<PyqScreen> {
             ],
           );
         },
+      ),
+      const PyqTopicTab(),
+      const PyqExamTab(),
+      ]),
       ),
     );
   }

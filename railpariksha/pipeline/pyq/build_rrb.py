@@ -457,6 +457,10 @@ def main():
     for slug, recs in out.items():
         keep, seen = [], set()
         for r in sorted(recs, key=lambda r: (r.get("tr") != "hi", r["pyq"], r["id"])):
+            if "q_en" not in r:
+                # Hindi-only and never translated (its garbled Hindi was dropped, or no translation yet).
+                stats["dropped_untranslated"] += 1
+                continue
             if "q_en" in r:
                 k = final_key(r)
                 if k in seen:

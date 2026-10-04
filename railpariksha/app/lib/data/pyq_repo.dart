@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:isolate';
+import 'dart:math';
 
 import 'package:flutter/services.dart';
 
@@ -46,6 +47,26 @@ class PyqSet {
       );
 }
 
+/// Every PYQ of one topic, shipped as its own small file (see build_bundle.py).
+class PyqTopic {
+  final String subject;
+  final String topic;
+  final int count;
+  final String file;
+
+  /// Question count per exam name ("RRB NTPC Graduate CBT-1" -> 812).
+  final Map<String, int> byExam;
+  const PyqTopic(this.subject, this.topic, this.count, this.file, this.byExam);
+
+  /// Questions in this topic from exams whose name starts with [prefix] ("RRB NTPC"), or all if null.
+  int countFor(String? prefix) => prefix == null
+      ? count
+      : byExam.entries.where((e) => e.key.startsWith(prefix)).fold(0, (a, e) => a + e.value);
+
+  factory PyqTopic.fromJson(Map<String, dynamic> j) =>
+      PyqTopic(j['s'], j['t'], j['n'], j['file'], Map<String, int>.from(j['by_exam']));
+}
+
 /// Previous-year questions live outside the main content pack (~80k of them, from
 /// English-only sources) so they cost nothing at launch: the small index loads when
 /// the PYQ section opens, and each exam/year file only when that set is opened.
@@ -56,6 +77,7 @@ class PyqRepo {
   PyqRepo([AssetBundle? bundle]) : _bundle = bundle ?? rootBundle;
 
   List<PyqSet>? _sets;
+  List<PyqTopic>? _topics;
   final Map<String, List<Question>> _loaded = {};
 
   /// The set index, or an empty list if this build has no PYQ pack.
@@ -64,10 +86,56 @@ class PyqRepo {
     try {
       final j = jsonDecode(await _bundle.loadString('$_dir/index.json')) as Map<String, dynamic>;
       _sets = [for (final s in j['sets']) PyqSet.fromJson(s)];
+      _topics = [for (final t in (j['topics'] as List? ?? const [])) PyqTopic.fromJson(t)];
     } catch (_) {
       _sets = const [];
+      _topics = const [];
     }
     return _sets!;
+  }
+
+  /// The topic index (empty if this build has no PYQ pack).
+  Future<List<PyqTopic>> topics() async {
+    await sets();
+    return _topics ?? const [];
+  }
+
+  /// Every question of [topic], from all exams. Callers filter by `Question.pyq` prefix.
+  Future<List<Question>> topicQuestions(PyqTopic topic) async {
+    final cached = _loaded[topic.file];
+    if (cached != null) return cached;
+    final raw = await _bundle.loadString('$_dir/${topic.file}');
+    final qs = await Isolate.run(() => [
+          for (final q in jsonDecode(raw) as List) Question.fromJson(q as Map<String, dynamic>),
+        ]);
+    if (_loaded.length >= 3) _loaded.remove(_loaded.keys.first);
+    return _loaded[topic.file] = qs;
+  }
+
+  /// A random draw of previous-year questions for an exam: [quota] questions per subject, taken
+  /// from [candidates] (the exam's sets) a few at a time, so a full 100-question exam reads two or
+  /// three year-files rather than the whole pack. [accept] filters (language, exam name).
+  /// Subjects with too few questions in the sampled sets are topped up from the remaining sets.
+  Future<Map<String, List<Question>>> sampleBySubject(
+    List<PyqSet> candidates,
+    Map<String, int> quota, {
+    bool Function(Question q)? accept,
+    Random? random,
+  }) async {
+    final rnd = random ?? Random();
+    final order = [...candidates]..shuffle(rnd);
+    final pool = {for (final s in quota.keys) s: <Question>[]};
+    for (final set in order) {
+      // Done when every subject has plenty to choose from (3x its quota).
+      if (quota.entries.every((e) => pool[e.key]!.length >= e.value * 3)) break;
+      for (final q in await questions(set)) {
+        final list = pool[q.subject];
+        if (list != null && (accept == null || accept(q))) list.add(q);
+      }
+    }
+    return {
+      for (final e in quota.entries) e.key: (pool[e.key]!..shuffle(rnd)).take(e.value).toList(),
+    };
   }
 
   /// Every question in [set]. Decoded off the UI isolate (a set can be a few MB).

@@ -302,6 +302,10 @@ class QuizBuilder {
   /// (e.g. only 4 current-affairs questions in the bank) running out doesn't dump its
   /// shortfall as flat-random noise onto whichever subject happens to have leftover; the
   /// real subject weights keep governing where the rest goes.
+  /// Splits [total] across keys in proportion to [weights], never exceeding each key's [capacity].
+  static Map<String, int> weightedAllocate(Map<String, int> weights, Map<String, int> capacity, int total) =>
+      _weightedAllocate(weights, capacity, total);
+
   static Map<String, int> _weightedAllocate(Map<String, int> weights, Map<String, int> capacity, int total) {
     final result = <String, int>{for (final k in weights.keys) k: 0};
     var remainingKeys = weights.keys.where((k) => capacity[k]! > 0).toSet();
