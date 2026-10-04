@@ -343,11 +343,16 @@ class QuizBuilder {
       final weights = {for (final s in bySubject.keys) s: e?.weights[s] ?? 1};
       final capacity = {for (final s in bySubject.keys) s: bySubject[s]!.length};
       final alloc = _weightedAllocate(weights, capacity, targetCount);
-      for (final s in bySubject.keys) {
+      // Section-wise like the real CBT paper: subjects in the exam's own
+      // order, questions shuffled within each section.
+      final order = [
+        ...?e?.subjects.where(bySubject.containsKey),
+        ...bySubject.keys.where((s) => !(e?.subjects.contains(s) ?? false)),
+      ];
+      for (final s in order) {
         final list = bySubject[s]!..shuffle(rnd);
         chosen.addAll(list.take(alloc[s]!));
       }
-      chosen.shuffle(rnd);
     }
     final negative = e?.negative ?? 0.0;
     final timeLimit = full && e?.paperMinutes != null

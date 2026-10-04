@@ -115,4 +115,25 @@ void main() {
       expect(diffs, [...diffs]..sort());
     });
   });
+
+  group('mock layout', () {
+    late ContentRepo repo;
+
+    setUpAll(() async {
+      repo = ContentRepo();
+      await repo.load();
+    });
+
+    test('mock papers are section-wise, in the exam\'s own subject order', () {
+      final p = Progress()..examId = 'rrb_ntpc';
+      final qs = QuizBuilder(repo, p).mock(full: true).questions;
+      final runs = <String>[];
+      for (final q in qs) {
+        if (runs.isEmpty || runs.last != q.subject) runs.add(q.subject);
+      }
+      expect(runs.toSet().length, runs.length, reason: 'each subject forms one contiguous section: $runs');
+      final examOrder = repo.exam('rrb_ntpc')!.subjects.where(runs.contains).toList();
+      expect(runs, examOrder);
+    });
+  });
 }

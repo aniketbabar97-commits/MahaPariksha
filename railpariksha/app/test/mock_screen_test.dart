@@ -90,6 +90,12 @@ void main() {
     expect(find.text('Performance analysis 📊'), findsOneWidget);
     expect(find.textContaining('Negative marking cost you 0.33 marks'), findsOneWidget);
     expect(progress.mocks, hasLength(1));
+
+    // One wrong answer (Q5): retrying opens a practice round of just that question.
+    await tester.tap(find.text('Retry the 1 you got wrong now'));
+    await tester.pumpAndSettle();
+    expect(find.text('Question 5'), findsOneWidget);
+    expect(find.text('1 / 1'), findsOneWidget);
   });
 
   testWidgets('topic screen shows the learner level that drives practice difficulty', (tester) async {
@@ -206,5 +212,26 @@ void main() {
     expect(progress.pausedMock, isNull);
     expect(find.text('Resume your test'), findsNothing);
     await tester.pump(const Duration(seconds: 1)); // let Progress's debounced save fire
+  });
+
+  testWidgets('the palette groups a section-wise paper under subject headers', (tester) async {
+    final repo = ContentRepo();
+    await tester.runAsync(repo.load);
+    final progress = Progress()
+      ..lang = 'en'
+      ..removedAds = true;
+    final qs = [...repo.questionsInSubject('maths').take(2), ...repo.questionsInSubject('reasoning').take(3)];
+    final spec = QuizSpec(QuizMode.mock, qs, 'मॉक', 'Mock');
+    await tester.pumpWidget(AppScope(
+      repo: repo,
+      progress: progress,
+      purchases: PurchaseManager(progress),
+      child: MaterialApp(home: QuizScreen(spec: spec)),
+    ));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byTooltip('Question palette'));
+    await tester.pumpAndSettle();
+    expect(find.text('${repo.subject('maths')!.name.en} · 0/2'), findsOneWidget);
+    expect(find.text('${repo.subject('reasoning')!.name.en} · 0/3'), findsOneWidget);
   });
 }

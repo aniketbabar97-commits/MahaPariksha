@@ -12,6 +12,7 @@ import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import '../widgets/explanation_player.dart';
 import '../widgets/share_card.dart';
+import 'quiz_screen.dart';
 
 class ResultsScreen extends StatefulWidget {
   final QuizSpec spec;
@@ -196,6 +197,21 @@ class _ResultsScreenState extends State<ResultsScreen> {
               ),
             ),
           ]),
+          if (!isSpeed && wrong > 0) ...[
+            const SizedBox(height: 10),
+            OutlinedButton.icon(
+              icon: const Icon(Icons.replay),
+              label: Text(context.tr('गलत हुए $wrong प्रश्न तुरंत दोबारा हल करें', 'Retry the $wrong you got wrong now')),
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                final missed = [
+                  for (var i = 0; i < total; i++)
+                    if (widget.answers[i] != null && widget.answers[i] != spec.questions[i].answer) spec.questions[i],
+                ];
+                startQuiz(context, QuizSpec(QuizMode.practice, missed, 'गलत प्रश्न दोबारा', 'Retry mistakes'));
+              },
+            ),
+          ],
           if (!spec.instantFeedback && total > 0)
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[

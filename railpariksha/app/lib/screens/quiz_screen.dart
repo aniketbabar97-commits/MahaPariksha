@@ -491,6 +491,23 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
         ],
       );
 
+  /// Consecutive runs of same-subject questions -- the paper's sections.
+  /// A paper that isn't laid out section-wise (more runs than subjects) is
+  /// shown as one unlabelled block instead of many tiny sections.
+  List<({String? subject, List<int> indices})> _sections() {
+    final runs = <({String? subject, List<int> indices})>[];
+    for (var i = 0; i < spec.questions.length; i++) {
+      final s = spec.questions[i].subject;
+      if (runs.isEmpty || runs.last.subject != s) runs.add((subject: s, indices: <int>[]));
+      runs.last.indices.add(i);
+    }
+    final distinct = spec.questions.map((q) => q.subject).toSet().length;
+    if (runs.length <= 1 || runs.length > distinct) {
+      return [(subject: null, indices: [for (var i = 0; i < spec.questions.length; i++) i])];
+    }
+    return runs;
+  }
+
   Future<void> _showPalette() async {
     HapticFeedback.selectionClick();
     _pauseTimer();
@@ -509,27 +526,43 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
               _legend(ctx, _statusCounts()),
               const SizedBox(height: 14),
               Flexible(
-                child: GridView.builder(
-                  shrinkWrap: true,
-                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 52, mainAxisSpacing: 10, crossAxisSpacing: 10),
-                  itemCount: spec.questions.length,
-                  itemBuilder: (_, i) => Semantics(
-                    button: true,
-                    label: '${i + 1}, ${_status(i).label(ctx)}',
-                    child: InkWell(
-                      customBorder: const CircleBorder(),
-                      onTap: () => Navigator.pop(ctx, i),
-                      child: _PaletteDot(
-                        state: _status(i),
-                        size: 44,
-                        current: i == index,
-                        child: Text('${i + 1}',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                color: _status(i) == _PaletteState.notVisited ? Theme.of(ctx).colorScheme.onSurface : Colors.white)),
-                      ),
-                    ),
-                  ),
+                child: SingleChildScrollView(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    for (final sec in _sections()) ...[
+                      if (sec.subject != null)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4, bottom: 8),
+                          child: Text(
+                            '${context.scope.repo.subject(sec.subject!)?.name.of(qLang) ?? sec.subject} · '
+                            '${sec.indices.where((i) => answers[i] != null).length}/${sec.indices.length}',
+                            style: TextStyle(fontWeight: FontWeight.w700, color: Theme.of(ctx).hintColor),
+                          ),
+                        ),
+                      Wrap(spacing: 10, runSpacing: 10, children: [
+                        for (final i in sec.indices)
+                          Semantics(
+                            button: true,
+                            label: '${i + 1}, ${_status(i).label(ctx)}',
+                            child: InkWell(
+                              customBorder: const CircleBorder(),
+                              onTap: () => Navigator.pop(ctx, i),
+                              child: _PaletteDot(
+                                state: _status(i),
+                                size: 44,
+                                current: i == index,
+                                child: Text('${i + 1}',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w800,
+                                        color: _status(i) == _PaletteState.notVisited
+                                            ? Theme.of(ctx).colorScheme.onSurface
+                                            : Colors.white)),
+                              ),
+                            ),
+                          ),
+                      ]),
+                      const SizedBox(height: 12),
+                    ],
+                  ]),
                 ),
               ),
               const SizedBox(height: 14),
