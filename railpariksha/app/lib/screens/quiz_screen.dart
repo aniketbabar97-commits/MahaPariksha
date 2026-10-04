@@ -712,7 +712,21 @@ class _OptionTile extends StatelessWidget {
       _OptState.dim => (scheme.outlineVariant, Colors.transparent, null),
       _OptState.idle => (scheme.outlineVariant, Theme.of(context).cardTheme.color ?? scheme.surface, null),
     };
-    return Padding(
+    // Colour and the trailing icon carry the result visually; screen-reader
+    // users need it spoken.
+    final stateLabel = switch (state) {
+      _OptState.correct => context.tr('सही उत्तर', 'correct answer'),
+      _OptState.wrong => context.tr('आपका उत्तर, गलत', 'your answer, wrong'),
+      _OptState.selected => context.tr('चुना गया', 'selected'),
+      _ => null,
+    };
+    return Semantics(
+      button: true,
+      selected: state == _OptState.selected,
+      label: [label, text, ?stateLabel].join(', '),
+      onTap: onTap,
+      excludeSemantics: true,
+      child: Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: TapScale(
         scale: state == _OptState.idle ? 0.98 : 1.0,
@@ -747,6 +761,7 @@ class _OptionTile extends StatelessWidget {
           ),
         ),
         ),
+      ),
       ),
     );
   }

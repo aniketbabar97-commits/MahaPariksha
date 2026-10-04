@@ -234,4 +234,32 @@ void main() {
     expect(find.text('${repo.subject('maths')!.name.en} · 0/2'), findsOneWidget);
     expect(find.text('${repo.subject('reasoning')!.name.en} · 0/3'), findsOneWidget);
   });
+
+  testWidgets('answer options announce the result to screen readers', (tester) async {
+    final handle = tester.ensureSemantics();
+    final repo = ContentRepo();
+    await tester.runAsync(repo.load);
+    final progress = Progress()..lang = 'en';
+    final spec = QuizSpec(QuizMode.practice, [_q(1)], 'अभ्यास', 'Practice');
+    await tester.pumpWidget(AppScope(
+      repo: repo,
+      progress: progress,
+      purchases: PurchaseManager(progress),
+      child: MaterialApp(home: QuizScreen(spec: spec)),
+    ));
+    await tester.pumpAndSettle();
+    expect(find.bySemanticsLabel('A, opt A'), findsOneWidget);
+
+    await tester.tap(find.text('opt B'));
+    await tester.pumpAndSettle();
+    // A celebration dialog may follow the first answer of the day; dismiss it.
+    if (find.byType(Dialog).evaluate().isNotEmpty) {
+      await tester.tapAt(const Offset(5, 5));
+      await tester.pumpAndSettle();
+    }
+    expect(find.bySemanticsLabel('A, opt A, correct answer'), findsOneWidget);
+    expect(find.bySemanticsLabel('B, opt B, your answer, wrong'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 1));
+    handle.dispose();
+  });
 }
