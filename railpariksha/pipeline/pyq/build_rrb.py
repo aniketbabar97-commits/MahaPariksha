@@ -170,7 +170,32 @@ def strip_promo(q):
     return q
 
 
+# Some candidates take the CBT in a regional language; the app is Hindi/English only.
+REGIONAL = re.compile(r"[\u0980-\u0DFF\u0600-\u06FF]")  # Bengali..Malayalam, Urdu
+# Marathi shares Hindi's script, so it's recognised by words Hindi doesn't use.
+MARATHI = re.compile(r"(?<![\u0900-\u097F])(आहे|आहेत|खालीलपैकी|कोणता|कोणती|कोणते|आणि|नाही|म्हणून|यांच्या|"
+                     r"दिलेल्या|कोणत्या|करण्यासाठी|असलेल्या)(?![\u0900-\u097F])")
+# Questions about a chart whose image isn't in the text layer can't be answered.
+CHART = re.compile(r"pie[- ]?chart|bar[- ]?graph|line[- ]?graph|histogram|पाई[- ]?चार्ट|दंड[- ]?आरेख|बार[- ]?ग्राफ|"
+                   r"रेखा[- ]?(ग्राफ|आलेख)", re.I)
+
+
+def is_marathi_sheet(qs):
+    dev = [q for q in qs if DEV.search(q["q"])]
+    if len(dev) < 5:
+        return False
+    hits = sum(bool(MARATHI.search(q["q"] + " " + " ".join(q["o"]))) for q in dev)
+    return hits / len(dev) >= 0.3
+
+
 def quality_ok(q):
+    if REGIONAL.search(q["q"] + " ".join(q["o"])) or CHART.search(q["q"]):
+        return False
+    if len(MARATHI.findall(q["q"] + " " + " ".join(q["o"]))) >= 2:  # a stray Marathi item
+        return False
+    # Empty "( )" slots are formulas/images the text layer lost; the stem is incomplete.
+    if re.search(r"\(\s*\)", q["q"]) or any(re.fullmatch(r"\(?\s*\)?", o.strip()) for o in q["o"]):
+        return False
     stem, opts = q["q"], q["o"]
     if len(stem) < 12 or BAD.search(stem) or any(BAD.search(o) for o in opts):
         return False
@@ -256,6 +281,9 @@ def main():
         d = parse_date(info["date"]) or catalog_date(catalog.get(p.name), p.name)
         if not qs or d is None:
             stats["no_text" if not qs else "no_date"] += 1
+            continue
+        if is_marathi_sheet(qs):
+            stats["marathi_sheet"] += 1
             continue
         stats["papers_ok"] += 1
         stats["q_extracted"] += len(qs)
