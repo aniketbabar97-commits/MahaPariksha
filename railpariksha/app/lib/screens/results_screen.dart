@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:in_app_review/in_app_review.dart';
 
 import '../core/ads.dart';
 import '../core/app_scope.dart';
@@ -53,6 +54,29 @@ class _ResultsScreenState extends State<ResultsScreen> {
     // Recording notifies Progress listeners (AppScope), which must not happen
     // while this screen is still in its first build.
     if (widget.spec.mode == QuizMode.mock) WidgetsBinding.instance.addPostFrameCallback((_) => _recordMock());
+    // Practice-style sessions only: a mock's results may already be showing
+    // an interstitial ad, and stacking two interruptions would sour the moment.
+    if (widget.spec.instantFeedback && widget.spec.mode != QuizMode.speed) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => _maybeAskForReview());
+    }
+  }
+
+  Future<void> _maybeAskForReview() async {
+    final total = widget.spec.questions.length;
+    if (!mounted || total < 5) return;
+    final p = AppScope.read(context).progress;
+    if (!p.shouldAskForReview(sessionScore: correct / total)) return;
+    try {
+      final review = InAppReview.instance;
+      if (!await review.isAvailable()) return;
+      // Let the score land first; the ask should follow the good moment.
+      await Future.delayed(const Duration(milliseconds: 1200));
+      if (!mounted) return;
+      p.markReviewAsked();
+      await review.requestReview();
+    } catch (_) {
+      // No Play Store / services on this device: a rating ask is optional.
+    }
   }
 
   void _recordMock() {

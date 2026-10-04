@@ -199,6 +199,8 @@ class Progress extends ChangeNotifier {
   int lastActiveDay = 0;
   int freezeTokens = 0;
   int lastShareDay = 0;
+  int lastReviewAskDay = 0;
+  int reviewAsks = 0;
   bool comeback = false;
   int bestSpeed = 0;
   double beastBestScore = 0;
@@ -253,6 +255,8 @@ class Progress extends ChangeNotifier {
     lastActiveDay = j['lastActiveDay'] ?? 0;
     freezeTokens = j['freezeTokens'] ?? 0;
     lastShareDay = j['lastShareDay'] ?? 0;
+    lastReviewAskDay = j['lastReviewAskDay'] ?? 0;
+    reviewAsks = j['reviewAsks'] ?? 0;
     bestSpeed = j['bestSpeed'] ?? 0;
     beastBestScore = (j['beastBestScore'] as num?)?.toDouble() ?? 0;
     beastBestStreak = j['beastBestStreak'] ?? 0;
@@ -293,6 +297,8 @@ class Progress extends ChangeNotifier {
         'lastActiveDay': lastActiveDay,
         'freezeTokens': freezeTokens,
         'lastShareDay': lastShareDay,
+        'lastReviewAskDay': lastReviewAskDay,
+        'reviewAsks': reviewAsks,
         'bestSpeed': bestSpeed,
         'beastBestScore': beastBestScore,
         'beastBestStreak': beastBestStreak,
@@ -369,6 +375,23 @@ class Progress extends ChangeNotifier {
   int get totalAnswered => qStats.values.fold(0, (a, s) => a + s[0]);
   int get totalCorrect => qStats.values.fold(0, (a, s) => a + s[1]);
   double get accuracy => totalAnswered == 0 ? 0 : totalCorrect / totalAnswered;
+
+  /// Whether now is a good moment to ask for a Play Store rating: only an
+  /// engaged learner (real history, a streak going) right after a good
+  /// session, at most 3 times ever and never within 60 days of the last ask.
+  /// Play's own quota still decides whether the dialog actually shows.
+  bool shouldAskForReview({required double sessionScore}) =>
+      sessionScore >= 0.7 &&
+      totalAnswered >= 100 &&
+      liveStreak >= 3 &&
+      reviewAsks < 3 &&
+      (lastReviewAskDay == 0 || today() - lastReviewAskDay >= 60);
+
+  void markReviewAsked() {
+    lastReviewAskDay = today();
+    reviewAsks++;
+    save();
+  }
 
   static const newCardsPerDay = 20;
   int get newCardsSeenToday => cards.values.where((c) => c.firstSeen == today()).length;
