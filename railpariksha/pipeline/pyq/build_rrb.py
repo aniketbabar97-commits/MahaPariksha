@@ -474,6 +474,12 @@ def main():
     import explain
     explained = {}
     for slug, recs in out.items():
+        # A question that depends on a chart/figure the sheet text doesn't contain can't be answered;
+        # drop it rather than show a riddle.
+        dead = explain.unsolvable(slug)
+        before = len(recs)
+        recs[:] = [r for r in recs if explain.ex_key(r) not in dead]
+        stats[f"unsolvable_dropped_{slug}"] = before - len(recs)
         explained[slug] = explain.apply_family(slug, recs)
         stats[f"explained_{slug}"] = len(explained[slug])
 

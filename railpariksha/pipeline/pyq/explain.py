@@ -145,6 +145,25 @@ def ingest(a):
     print(dict(stats))
 
 
+_UNSOLVABLE = re.compile(
+    r"(missing|not (given|shown|provided|included|available)|absent)\W+(\w+\W+){0,4}(chart|graph|figure|image|symbol|diagram|picture|table|expression|data)"
+    r"|(chart|graph|figure|image|symbol|diagram|picture|expression)\W+(\w+\W+){0,4}(missing|not (given|shown|provided|included))", re.I)
+
+
+def unsolvable(family):
+    """Keys of questions a solver found cannot be answered as printed (the chart, figure or expression
+    they depend on is not in the text)."""
+    p = EX / f"{family}.flags.jsonl"
+    if not p.exists():
+        return set()
+    out = set()
+    for line in p.open(encoding="utf-8"):
+        r = json.loads(line)
+        if _UNSOLVABLE.search(r.get("note", "")):
+            out.add(r["k"])
+    return out
+
+
 def apply_family(family, recs):
     """Set e_en/e_hi on each rec that has a stored explanation. Returns the ids it filled."""
     done = load(family)
