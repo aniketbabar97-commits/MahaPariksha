@@ -29,15 +29,32 @@ void startQuiz(BuildContext context, QuizSpec spec) {
 const _labelsHi = ['अ', 'ब', 'क', 'ड'];
 const _labelsEn = ['A', 'B', 'C', 'D'];
 
+/// Reopens a mock test the user left (or the OS killed) before submitting.
+/// Returns false when it can no longer be rebuilt, e.g. a content update
+/// removed one of its questions; the snapshot is discarded in that case.
+bool resumeMock(BuildContext context, PausedMock m) {
+  final scope = AppScope.read(context);
+  final qs = m.questionIds.map(scope.repo.question).whereType<Question>().toList();
+  if (qs.isEmpty || qs.length != m.questionIds.length || m.answers.length != qs.length) {
+    scope.progress.setPausedMock(null);
+    return false;
+  }
+  final spec = QuizSpec(QuizMode.mock, qs, m.titleHi, m.titleEn,
+      timeLimit: m.timeLimitSec == null ? null : Duration(seconds: m.timeLimitSec!), negative: m.negative);
+  push(context, (_) => QuizScreen(spec: spec, resume: m));
+  return true;
+}
+
 class QuizScreen extends StatefulWidget {
   final QuizSpec spec;
-  const QuizScreen({super.key, required this.spec});
+  final PausedMock? resume;
+  const QuizScreen({super.key, required this.spec, this.resume});
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
   int index = 0;
   late final List<int?> answers = List.filled(widget.spec.questions.length, null);
   late String qLang;
@@ -63,6 +80,7 @@ class _QuizScreenState extends State<QuizScreen> {
   final Stopwatch _qWatch = Stopwatch()..start();
 
   QuizSpec get spec => widget.spec;
+  bool get _resumable => spec.mode == QuizMode.mock;
   Question get q => spec.questions[index];
   bool get answered => answers[index] != null;
 
@@ -73,7 +91,53 @@ class _QuizScreenState extends State<QuizScreen> {
     qLang = p.lang;
     if (spec.mode == QuizMode.mock && !p.removedAds) InterstitialAdManager.preload();
     remaining = spec.timeLimit?.inSeconds ?? 0;
+    final r = widget.resume;
+    if (r != null) {
+      for (var i = 0; i < answers.length && i < r.answers.length; i++) {
+        answers[i] = r.answers[i];
+      }
+      for (var i = 0; i < _timeMs.length && i < r.timeMs.length; i++) {
+        _timeMs[i] = r.timeMs[i];
+      }
+      _marked.addAll(r.marked);
+      _visited.addAll(r.visited);
+      index = r.index.clamp(0, spec.questions.length - 1);
+      _visited.add(index);
+      if (spec.timeLimit != null) remaining = r.remainingSec.clamp(1, spec.timeLimit!.inSeconds);
+    }
+    WidgetsBinding.instance.addObserver(this);
     _startTimer();
+  }
+
+  PausedMock _snapshot() {
+    final ms = List<int>.from(_timeMs);
+    ms[index] += _qWatch.elapsedMilliseconds;
+    return PausedMock(
+      examId: AppScope.read(context).progress.examId ?? '',
+      questionIds: [for (final q in spec.questions) q.id],
+      titleHi: spec.titleHi,
+      titleEn: spec.titleEn,
+      negative: spec.negative,
+      timeLimitSec: spec.timeLimit?.inSeconds,
+      remainingSec: remaining,
+      answers: List<int?>.from(answers),
+      marked: _marked.toList(),
+      visited: _visited.toList(),
+      index: index,
+      timeMs: ms,
+    );
+  }
+
+  void _persist({bool now = false}) {
+    if (!_resumable || _finished || !mounted) return;
+    AppScope.read(context).progress.setPausedMock(_snapshot(), now: now);
+  }
+
+  // Backgrounding is the last reliable moment before Android may kill the
+  // process, so the snapshot is written synchronously-ish (no debounce).
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused || state == AppLifecycleState.hidden) _persist(now: true);
   }
 
   void _startTimer() {
@@ -108,10 +172,12 @@ class _QuizScreenState extends State<QuizScreen> {
       index = i;
       _visited.add(i);
     });
+    _persist();
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     timer?.cancel();
     super.dispose();
   }
@@ -162,6 +228,7 @@ class _QuizScreenState extends State<QuizScreen> {
     _bankTime();
     _qWatch.stop();
     final p = AppScope.read(context).progress;
+    if (_resumable) p.setPausedMock(null);
     // Only one of these per-question Rewards can ever carry a notable event
     // (level/streak/goal are once-a-day state crossings, not per-question),
     // so collecting the last non-trivial one and celebrating once after the
@@ -199,15 +266,19 @@ class _QuizScreenState extends State<QuizScreen> {
     final r = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(ctx.tr('अभ्यास रोकना है?', 'Stop practice?')),
-        content: Text(ctx.tr('अब तक की प्रगति सहेज ली गई है।', 'Your progress so far is saved.')),
+        title: Text(_resumable ? ctx.tr('टेस्ट छोड़ना है?', 'Leave the test?') : ctx.tr('अभ्यास रोकना है?', 'Stop practice?')),
+        content: Text(_resumable
+            ? ctx.tr('आपके उत्तर सहेज लिए जाएंगे। "आज" स्क्रीन से इसे वहीं से फिर शुरू करें।',
+                'Your answers will be saved. Resume right where you left off from the Today screen.')
+            : ctx.tr('अब तक की प्रगति सहेज ली गई है।', 'Your progress so far is saved.')),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('जारी रखें', 'Continue'))),
-          TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('रोकें', 'Stop'))),
+          TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(_resumable ? ctx.tr('बाद में', 'Later') : ctx.tr('रोकें', 'Stop'))),
         ],
       ),
     );
     final exiting = r ?? false;
+    if (exiting) _persist(now: true);
     if (!exiting && !_finished) _startTimer();
     return exiting;
   }

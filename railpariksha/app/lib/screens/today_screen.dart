@@ -5,6 +5,7 @@ import 'package:share_plus/share_plus.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
+import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import 'beast_mode_screen.dart';
@@ -52,6 +53,10 @@ class TodayScreen extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
       children: [
+        if (p.pausedMock != null) ...[
+          _ResumeMockCard(mock: p.pausedMock!),
+          const SizedBox(height: 12),
+        ],
         // Hero: greeting, level, streak, goal ring
         Container(
           padding: const EdgeInsets.all(20),
@@ -121,8 +126,10 @@ class TodayScreen extends StatelessWidget {
                         push(context, (_) => const RevisionPlanScreen());
                       },
                       child: Row(mainAxisSize: MainAxisSize.min, children: [
-                        Text(context.tr('परीक्षा में $days दिन बाकी ⏳', '$days days to exam ⏳'),
-                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                        Flexible(
+                          child: Text(context.tr('परीक्षा में $days दिन बाकी ⏳', '$days days to exam ⏳'),
+                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                        ),
                         const SizedBox(width: 4),
                         const Icon(Icons.chevron_right, color: Colors.white70, size: 16),
                       ]),
@@ -142,8 +149,10 @@ class TodayScreen extends StatelessWidget {
                       child: Row(mainAxisSize: MainAxisSize.min, children: [
                         const Icon(Icons.event_outlined, color: Colors.white70, size: 16),
                         const SizedBox(width: 4),
-                        Text(context.tr('परीक्षा की तारीख डालें और निजी प्लान पाएं →', 'Set your exam date for a personalized plan →'),
-                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                        Flexible(
+                          child: Text(context.tr('परीक्षा की तारीख डालें और निजी प्लान पाएं →', 'Set your exam date for a personalized plan →'),
+                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                        ),
                       ]),
                     ),
                   ],
@@ -560,4 +569,52 @@ void _pickBeastDuration(BuildContext context, AppScope s) {
     if (seconds == null || !context.mounted) return;
     startBeastMode(context, s.builder.beast(seconds: seconds), seconds);
   });
+}
+
+class _ResumeMockCard extends StatelessWidget {
+  final PausedMock mock;
+  const _ResumeMockCard({required this.mock});
+
+  @override
+  Widget build(BuildContext context) {
+    final total = mock.questionIds.length;
+    final timed = mock.timeLimitSec != null;
+    final left = '${mock.remainingSec ~/ 60}:${(mock.remainingSec % 60).toString().padLeft(2, '0')}';
+    return ActionCard(
+      icon: Icons.play_circle_fill,
+      color: BrandColors.saffron,
+      title: context.tr('अधूरा टेस्ट जारी रखें', 'Resume your test'),
+      subtitle: [
+        context.lang == 'en' ? mock.titleEn : mock.titleHi,
+        context.tr('${mock.answeredCount}/$total हल', '${mock.answeredCount}/$total answered'),
+        if (timed) context.tr('$left बाकी', '$left left'),
+      ].join(' · '),
+      onTap: () {
+        HapticFeedback.selectionClick();
+        if (!resumeMock(context, mock)) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text(context.tr('प्रश्न सेट अपडेट होने से यह टेस्ट अब उपलब्ध नहीं है।',
+                  'This test is no longer available after a content update.'))));
+        }
+      },
+      trailing: IconButton(
+        tooltip: context.tr('टेस्ट हटाएं', 'Discard test'),
+        icon: const Icon(Icons.close),
+        onPressed: () async {
+          final ok = await showDialog<bool>(
+            context: context,
+            builder: (ctx) => AlertDialog(
+              title: Text(ctx.tr('अधूरा टेस्ट हटाएं?', 'Discard this test?')),
+              content: Text(ctx.tr('इसके उत्तर हमेशा के लिए हट जाएंगे।', 'Its answers will be lost for good.')),
+              actions: [
+                TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('रखें', 'Keep'))),
+                TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('हटाएं', 'Discard'))),
+              ],
+            ),
+          );
+          if (ok == true && context.mounted) context.scope.progress.setPausedMock(null);
+        },
+      ),
+    );
+  }
 }

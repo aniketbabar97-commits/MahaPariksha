@@ -76,6 +76,69 @@ class MockResult {
       MockResult(j['day'], j['exam'], (j['score'] as num).toDouble(), j['total']);
 }
 
+/// A mock test left before submitting. A full paper runs 90+ minutes and
+/// Android may kill a backgrounded app, so the attempt is saved to resume.
+class PausedMock {
+  final String examId;
+  final List<String> questionIds;
+  final String titleHi;
+  final String titleEn;
+  final double negative;
+  final int? timeLimitSec;
+  final int remainingSec;
+  final List<int?> answers;
+  final List<int> marked;
+  final List<int> visited;
+  final int index;
+  final List<int> timeMs;
+  const PausedMock({
+    required this.examId,
+    required this.questionIds,
+    required this.titleHi,
+    required this.titleEn,
+    required this.negative,
+    required this.timeLimitSec,
+    required this.remainingSec,
+    required this.answers,
+    required this.marked,
+    required this.visited,
+    required this.index,
+    required this.timeMs,
+  });
+
+  int get answeredCount => answers.where((a) => a != null).length;
+
+  Map<String, dynamic> toJson() => {
+        'exam': examId,
+        'ids': questionIds,
+        'titleHi': titleHi,
+        'titleEn': titleEn,
+        'negative': negative,
+        'limit': timeLimitSec,
+        'remaining': remainingSec,
+        'answers': answers,
+        'marked': marked,
+        'visited': visited,
+        'index': index,
+        'timeMs': timeMs,
+      };
+
+  factory PausedMock.fromJson(Map<String, dynamic> j) => PausedMock(
+        examId: j['exam'] ?? '',
+        questionIds: List<String>.from(j['ids']),
+        titleHi: j['titleHi'] ?? '',
+        titleEn: j['titleEn'] ?? '',
+        negative: (j['negative'] as num?)?.toDouble() ?? 0,
+        timeLimitSec: j['limit'],
+        remainingSec: j['remaining'] ?? 0,
+        answers: List<int?>.from(j['answers']),
+        marked: List<int>.from(j['marked'] ?? const []),
+        visited: List<int>.from(j['visited'] ?? const []),
+        index: j['index'] ?? 0,
+        timeMs: List<int>.from(j['timeMs'] ?? const []),
+      );
+}
+
 /// Events the UI celebrates after an answer or review.
 class Reward {
   final int xp;
@@ -154,6 +217,7 @@ class Progress extends ChangeNotifier {
   final Set<String> reported = {};
   final Map<String, CardState> cards = {};
   final List<MockResult> mocks = [];
+  PausedMock? pausedMock;
 
   File? _file;
   Timer? _saveTimer;
@@ -200,6 +264,12 @@ class Progress extends ChangeNotifier {
     reported.addAll(List<String>.from(j['reported'] ?? []));
     (j['cards'] as Map? ?? {}).forEach((k, v) => cards[k] = CardState.fromJson(v));
     mocks.addAll((j['mocks'] as List? ?? []).map((m) => MockResult.fromJson(m)));
+    try {
+      final pm = j['pausedMock'];
+      pausedMock = pm == null ? null : PausedMock.fromJson(pm);
+    } catch (_) {
+      pausedMock = null; // Malformed snapshot: losing one paused test beats failing to load.
+    }
   }
 
   Map<String, dynamic> _toJson() => {
@@ -234,6 +304,7 @@ class Progress extends ChangeNotifier {
         'reported': reported.toList(),
         'cards': cards.map((k, v) => MapEntry(k, v.toJson())),
         'mocks': mocks.map((m) => m.toJson()).toList(),
+        'pausedMock': pausedMock?.toJson(),
       };
 
   void save({bool now = false}) {
@@ -467,6 +538,13 @@ class Progress extends ChangeNotifier {
     save();
   }
 
+  /// Saves (or with null, clears) the in-progress mock. [now] writes
+  /// immediately, for when the process may be killed right after.
+  void setPausedMock(PausedMock? m, {bool now = false}) {
+    pausedMock = m;
+    save(now: now);
+  }
+
   Future<void> reset() async {
     final keepLang = lang;
     xp = streak = bestStreak = lastActiveDay = freezeTokens = bestSpeed = beastBestStreak = lastShareDay = 0;
@@ -479,6 +557,7 @@ class Progress extends ChangeNotifier {
     bookmarks.clear();
     reported.clear();
     mocks.clear();
+    pausedMock = null;
     onboarded = false;
     examId = null;
     placementLevel = null;

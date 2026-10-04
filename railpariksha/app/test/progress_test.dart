@@ -141,4 +141,27 @@ void main() {
     p.examDate = DateTime.now().subtract(const Duration(days: 1));
     expect(p.daysToExam, isNull);
   });
+
+  test('a paused mock survives a save/load JSON round trip', () {
+    const m = PausedMock(
+      examId: 'rrb_ntpc',
+      questionIds: ['a', 'b', 'c'],
+      titleHi: 'मॉक',
+      titleEn: 'Mock',
+      negative: 1 / 3,
+      timeLimitSec: 600,
+      remainingSec: 321,
+      answers: [1, null, 3],
+      marked: [1],
+      visited: [0, 1, 2],
+      index: 2,
+      timeMs: [1000, 2000, 0],
+    );
+    final back = PausedMock.fromJson(m.toJson());
+    expect(back.questionIds, m.questionIds);
+    expect(back.answers, m.answers);
+    expect(back.marked, m.marked);
+    expect(back.remainingSec, 321);
+    expect(back.answeredCount, 2);
+  });
 }
