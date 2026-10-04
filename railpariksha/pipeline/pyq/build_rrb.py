@@ -432,6 +432,16 @@ def main():
             stats[f"tr_migrated_{slug}"] = migrate(slug, json.loads(old_path.read_text(encoding="utf-8")), recs,
                                                    clean=scrub)
         stats[f"translated_{slug}"] = apply_family(slug, recs, clean=scrub)
+    # Repair words that lost their reph in the sheets' fonts (after ids/translations, which key on the raw text).
+    import hindi_fix
+    fixes = hindi_fix.build_map(t for recs in out.values() for r in recs if "q_hi" in r and r.get("tr") != "hi"
+                                for t in [r["q_hi"], *r["o_hi"]])
+    for recs in out.values():
+        for r in recs:
+            if "q_hi" in r and r.get("tr") != "hi":
+                r["q_hi"], r["o_hi"] = hindi_fix.fix(r["q_hi"], fixes), [hindi_fix.fix(o, fixes) for o in r["o_hi"]]
+                r["e_hi"] = f"सही उत्तर: {r['o_hi'][r['a']]} (आधिकारिक उत्तर कुंजी)।"
+    stats["hindi_words_repaired"] = len(fixes)
     dest = ROOT / "content/pyq"
     dest.mkdir(exist_ok=True)
     for slug, recs in sorted(out.items()):
