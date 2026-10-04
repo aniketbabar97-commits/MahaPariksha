@@ -41,7 +41,11 @@ class TodayScreen extends StatelessWidget {
     final days = p.daysToExam;
     final level = p.level;
     final gaps = days == null ? <PacingGap>[] : s.builder.pacingGaps();
-    final weakCount = s.builder.topicStats().where((t) => t.attempts >= 3 && t.accuracy < 0.7).length;
+    final weakTopics = s.builder.topicStats().where((t) => t.attempts >= 3 && t.accuracy < 0.7).toList()
+      ..sort((a, b) => a.accuracy.compareTo(b.accuracy));
+    final weakCount = weakTopics.length;
+    final weakest = weakTopics.isEmpty ? null : weakTopics.first;
+    final weakestName = weakest == null ? null : s.repo.topic(weakest.subject, weakest.topic)?.name;
     // Gate Beast Mode behind ~50% overall accuracy — but only once there's enough answers
     // for accuracy to mean anything (same minAttempts spirit as pacingGaps above), so brand
     // new users aren't locked out by a 0% accuracy that's really just "no data yet". Sticky
@@ -291,17 +295,20 @@ class TodayScreen extends StatelessWidget {
           ),
           ),
         ),
-        if (weakCount > 0) ...[
+        if (weakest != null && weakestName != null) ...[
           const SizedBox(height: 12),
+          // Names the single weakest topic (not just a count): a concrete "fix this
+          // one thing" pulls a returning student straight into a short session.
           ActionCard(
             icon: Icons.center_focus_strong,
             color: BrandColors.wrong,
-            title: context.tr('कमज़ोर टॉपिक ड्रिल 🎯', 'Weak Spots Drill 🎯'),
-            subtitle: context.tr('$weakCount कमज़ोर टॉपिक मिले — सीधे उन पर अभ्यास करें',
-                '$weakCount weak topics found — drill them directly'),
+            title: context.tr('आज का कमज़ोर टॉपिक: ${weakestName.hi} 🎯', "Today's weak spot: ${weakestName.en} 🎯"),
+            subtitle: context.tr(
+                'अचूकता ${(weakest.accuracy * 100).round()}% — 10 प्रश्नों में सुधारें${weakCount > 1 ? ' · +${weakCount - 1} और' : ''}',
+                '${(weakest.accuracy * 100).round()}% accuracy — fix it in 10 questions${weakCount > 1 ? ' · +${weakCount - 1} more' : ''}'),
             onTap: () {
               HapticFeedback.selectionClick();
-              startQuiz(context, s.builder.weakSpots());
+              startQuiz(context, s.builder.practice(subject: weakest.subject, topic: weakest.topic));
             },
           ),
         ],

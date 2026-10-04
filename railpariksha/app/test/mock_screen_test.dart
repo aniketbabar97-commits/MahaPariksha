@@ -89,13 +89,18 @@ void main() {
     await tester.tap(find.widgetWithText(FilledButton, 'Submit').last);
     await tester.pumpAndSettle();
 
-    expect(find.text('Performance analysis 📊'), findsOneWidget);
-    expect(find.textContaining('Negative marking cost you 0.33 marks'), findsOneWidget);
     expect(progress.mocks, hasLength(2));
     // Score 1 - 1/3 = 0.67 of 5 = 13% up on the previous 0/5.
     expect(find.text('+13% vs last mock'), findsOneWidget);
 
+    // The analysis sits below the "Your next step" card, further down the list.
+    final list = find.byType(Scrollable).first;
+    await tester.scrollUntilVisible(find.text('Performance analysis 📊'), 300, scrollable: list);
+    expect(find.text('Performance analysis 📊'), findsOneWidget);
+    expect(find.textContaining('Negative marking cost you 0.33 marks'), findsOneWidget);
+
     // One wrong answer (Q5): retrying opens a practice round of just that question.
+    await tester.scrollUntilVisible(find.text('Retry the 1 you got wrong now'), -300, scrollable: list);
     await tester.tap(find.text('Retry the 1 you got wrong now'));
     await tester.pumpAndSettle();
     expect(find.text('Question 5'), findsOneWidget);

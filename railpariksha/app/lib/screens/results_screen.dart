@@ -8,11 +8,13 @@ import '../core/theme.dart';
 import '../data/progress.dart';
 import '../logic/leaderboard_service.dart';
 import '../logic/mock_analysis.dart';
+import '../logic/next_steps.dart';
 import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import '../widgets/explanation_player.dart';
 import '../widgets/share_card.dart';
+import 'next_steps_card.dart';
 import 'quiz_screen.dart';
 
 class ResultsScreen extends StatefulWidget {
@@ -253,6 +255,10 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 startQuiz(context, QuizSpec(QuizMode.practice, missed, 'गलत प्रश्न दोबारा', 'Retry mistakes'));
               },
             ),
+          ],
+          if (spec.mode != QuizMode.placement && total > 0) ...[
+            const SizedBox(height: 12),
+            NextStepsCard(steps: NextSteps.from(spec.questions, widget.answers, context.scope.builder.topicStats())),
           ],
           if (!spec.instantFeedback && total > 0)
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
