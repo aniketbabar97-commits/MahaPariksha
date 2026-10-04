@@ -133,13 +133,14 @@ def ingest(a):
 
 
 def content_key(item, clean=lambda t: t):
-    """Paper + source language + normalised content: stable across extraction fixes
-    that only change formatting (superscripts, stripped watermarks), so translations
-    keyed by an item's old id can follow it to its new id."""
+    """Source language + normalised content: stable across extraction fixes that only
+    change formatting (superscripts, stripped watermarks) or a paper's label (shift
+    numbers), so translations keyed by an item's old id can follow it to its new id.
+    The paper is left out on purpose; the build already dedupes questions per family."""
     import unicodedata
     lang = "hi" if "q_hi" in item and item.get("tr") != "hi" else "en"
     n = lambda t: re.sub(r"[^0-9a-z\u0900-\u097F]+", "", unicodedata.normalize("NFKC", clean(t)).lower())
-    return "|".join([item["pyq"], lang, n(item[f"q_{lang}"])] + sorted(n(o) for o in item[f"o_{lang}"]))
+    return "|".join(["", lang, n(item[f"q_{lang}"])] + sorted(n(o) for o in item[f"o_{lang}"]))
 
 
 def migrate(family, old_items, new_items, clean=lambda t: t):
@@ -203,7 +204,7 @@ def reingest(a):
                 continue
             for r in results:
                 s0 = src.get(r.get("id"))
-                if s0 is None or r["id"] in done or r["id"] not in old:
+                if s0 is None or r["id"] not in old:
                     continue
                 twin = by_loose.get(loose(old[r["id"]], scrub))
                 if twin is None or twin["id"] in done:
