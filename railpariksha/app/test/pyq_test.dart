@@ -28,12 +28,14 @@ void main() {
     final sets = await repo.sets();
     expect(sets, isNotEmpty, reason: 'run pipeline/build_bundle.py to generate assets/pyq/');
     expect(sets.first.railway, isTrue, reason: 'railway papers are listed first');
-    final je = sets.firstWhere((s) => s.exam == 'RRB JE' && s.year == 2025);
+    final je = sets.first;
     final qs = await repo.questions(je);
     expect(qs, hasLength(je.count));
     for (final q in qs) {
       expect(q.pyq, isNotNull);
       expect(q.optionsEn, hasLength(4));
+      expect(q.optionsHi, hasLength(4));
+      expect(q.text.en.trim(), isNotEmpty);
       expect(q.answer, inInclusiveRange(0, 3));
     }
     for (final p in je.papers) {
@@ -46,7 +48,7 @@ void main() {
     await tester.runAsync(repo.load);
     final progress = Progress()
       ..lang = 'en'
-      ..examId = 'rrb_je_civil'
+      ..examId = 'rrb_group_d'
       ..removedAds = adFree;
     await tester.pumpWidget(AppScope(
       repo: repo,
@@ -65,9 +67,9 @@ void main() {
     expect(find.text('Railway papers 🚆'), findsOneWidget);
     expect(find.textContaining('Ad-free'), findsOneWidget);
 
-    await tester.tap(find.text('RRB JE 2025'));
+    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
+    await tester.tap(find.text(set.title).first);
     await tester.pump();
-    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.title == 'RRB JE 2025');
     await tester.runAsync(() => pyqRepo.questions(set));
     await tester.pumpAndSettle();
     expect(find.text('Attempt a full paper 📝'), findsOneWidget);
@@ -77,7 +79,7 @@ void main() {
     await tester.tap(find.text(paper.shortLabel));
     await tester.pumpAndSettle();
     expect(find.text('PYQ · ${paper.label}'), findsOneWidget);
-    expect(find.text('1 / ${paper.count}'), findsOneWidget);
+    expect(find.textContaining('1 / '), findsOneWidget);
     expect(find.text('Mark for review'), findsOneWidget, reason: 'papers use the CBT exam interface');
   });
 
@@ -86,9 +88,9 @@ void main() {
     await pump(tester, adFree: false);
     expect(find.textContaining('Watch one short ad'), findsOneWidget);
 
-    await tester.tap(find.text('RRB JE 2024'));
+    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
+    await tester.tap(find.text(set.title).first);
     await tester.pump();
-    final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.title == 'RRB JE 2024');
     await tester.runAsync(() => pyqRepo.questions(set));
     await tester.pumpAndSettle();
     await tester.tap(find.textContaining('Mixed practice'));

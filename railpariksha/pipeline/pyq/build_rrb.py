@@ -167,6 +167,7 @@ def main():
     ap.add_argument("--extra", nargs="*", default=[], help="more PDF dirs (family guessed from file name)")
     ap.add_argument("--bank-cap", type=int, default=150, help="max bilingual PYQs per topic copied into the bank")
     a = ap.parse_args()
+    bank_cap = a.bank_cap
 
     catalog = {name_for(r["url"]): r for r in json.loads((HERE / "catalog.json").read_text(encoding="utf-8"))}
     files = []
@@ -343,7 +344,7 @@ def main():
     bank = []
     for key, recs in sorted(per_topic.items()):
         recs.sort(key=paper_date, reverse=True)
-        bank += [{**r, "id": "pyqb-" + r["id"][4:]} for r in recs[:a.bank_cap]]
+        bank += [{**r, "id": "pyqb-" + r["id"][4:]} for r in recs[:bank_cap]]
     bank.sort(key=lambda r: (r["s"], r["t"], r["id"]))
     (ROOT / "content/bank/pyq_rrb.json").write_text(
         "[\n" + ",\n".join(json.dumps(r, ensure_ascii=False) for r in bank) + "\n]\n", encoding="utf-8")
