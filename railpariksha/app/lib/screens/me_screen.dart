@@ -17,6 +17,7 @@ import '../widgets/common.dart';
 import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
+import '../core/format.dart';
 
 class MeScreen extends StatelessWidget {
   const MeScreen({super.key});
@@ -260,8 +261,8 @@ class MeScreen extends StatelessWidget {
                   ),
                 ),
               const SizedBox(height: 6),
-              Text(context.tr('प्रश्न सेट संस्करण: ${s.repo.version} · ${s.repo.questions.length} प्रश्न',
-                  'Content version: ${s.repo.version} · ${s.repo.questions.length} questions'),
+              Text(context.tr('प्रश्न सेट संस्करण: ${s.repo.version} · ${fmtCount(s.repo.questions.length)} प्रश्न',
+                  'Content version: ${s.repo.version} · ${fmtCount(s.repo.questions.length)} questions'),
                   style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12)),
             ]),
           ),

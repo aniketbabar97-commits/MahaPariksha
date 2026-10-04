@@ -28,6 +28,7 @@ def load_dir(name):
 
 
 RAIL_EXAMS = ("RRB", "RPF")
+MAX_PAPER, TARGET_PAPER = 150, 110  # questions
 
 # Options that point at each other ("All of the above", "Both A and B") or at a letter must
 # keep their order, as must numeric options already listed in order.
@@ -75,6 +76,21 @@ def build_pyq_pack(out_dir):
     import re
     from collections import Counter, defaultdict
     questions = load_dir("pyq")
+    # Some sheets print no shift time, so every shift of a day lands in one "paper" (up to 760
+    # questions). A real paper has ~100-120 questions; cut an oversized one into equal parts
+    # (in the shipped pack only) so "attempt a full paper" stays a realistic sitting.
+    by_label = defaultdict(list)
+    for q in questions:
+        by_label[q["pyq"]].append(q)
+    questions = []
+    for label, qs in by_label.items():
+        if len(qs) <= MAX_PAPER:
+            questions.extend(qs)
+            continue
+        parts = max(2, round(len(qs) / TARGET_PAPER))
+        qs = sorted(qs, key=lambda q: hashlib.md5(q["id"].encode()).hexdigest())
+        for i in range(parts):
+            questions.extend({**q, "pyq": f"{label} · Part {i + 1}"} for q in qs[i::parts])
     sets = defaultdict(list)
     for q in questions:
         # Labels look like "RRB Group D CBT-1 · 19 Dec 2025 · Shift 2" (exam/stage, date, shift).
