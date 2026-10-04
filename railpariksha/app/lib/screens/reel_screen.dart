@@ -273,12 +273,24 @@ class _McqCardState extends State<_McqCard> {
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(Spacing.lg, 80, Spacing.lg, Spacing.xl),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center, children: [
+          // A long question + four long options can be taller than a small phone. Scaling the
+          // card down to fit (rather than scrolling it) keeps the vertical swipe to the next card.
+          child: LayoutBuilder(
+            builder: (context, c) => FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: SizedBox(
+                width: c.maxWidth,
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
             Row(children: [
               Icon(Icons.bolt, color: BrandColors.sunrise, size: 18),
               const SizedBox(width: 6),
-              Text(subject?.name.of(widget.lang) ?? context.tr('झटपट सवाल', 'Quick question'),
-                  style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w700)),
+              Flexible(
+                child: Text(subject?.name.of(widget.lang) ?? context.tr('झटपट सवाल', 'Quick question'),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w700)),
+              ),
               if (xpEarned != null) ...[
                 const Spacer(),
                 AnimatedOpacity(
@@ -303,7 +315,10 @@ class _McqCardState extends State<_McqCard> {
               child: Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'),
                   style: const TextStyle(color: Colors.white54, fontSize: 13)),
             ),
-          ]),
+                ]),
+              ),
+            ),
+          ),
         ),
       ),
     );
@@ -391,7 +406,12 @@ class _FlashcardCardState extends State<_FlashcardCard> {
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(Spacing.lg, 80, Spacing.lg, Spacing.xl),
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          child: LayoutBuilder(
+            builder: (context, c) => FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SizedBox(
+                width: c.maxWidth,
+                child: Column(mainAxisSize: MainAxisSize.min, children: [
             Align(
               alignment: Alignment.topLeft,
               child: Text(subject?.name.of(widget.lang) ?? context.tr('फ्लैशकार्ड', 'Flashcard'),
@@ -449,7 +469,10 @@ class _FlashcardCardState extends State<_FlashcardCard> {
               ])
             else
               Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'), style: const TextStyle(color: Colors.white38, fontSize: 13)),
-          ]),
+                ]),
+              ),
+            ),
+          ),
         ),
       ),
     );
@@ -479,7 +502,12 @@ class _MotivationCard extends StatelessWidget {
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(Spacing.xxl, 80, Spacing.xxl, Spacing.xl),
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.center, children: [
+          child: LayoutBuilder(
+            builder: (context, c) => FittedBox(
+              fit: BoxFit.scaleDown,
+              child: SizedBox(
+                width: c.maxWidth,
+                child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.center, children: [
             Icon(icon, color: Colors.white, size: 44),
             const SizedBox(height: Spacing.lg),
             Text(kicker.toUpperCase(), style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w800, letterSpacing: 1.2)),
@@ -491,7 +519,10 @@ class _MotivationCard extends StatelessWidget {
             ],
             const SizedBox(height: Spacing.xxl),
             Text(context.tr('↑ ऊपर स्वाइप करें', '↑ Swipe up'), style: const TextStyle(color: Colors.white54, fontSize: 13)),
-          ]),
+                ]),
+              ),
+            ),
+          ),
         ),
       ),
     );
