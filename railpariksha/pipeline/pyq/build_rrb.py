@@ -157,7 +157,8 @@ PROMO = re.compile(r"\s*(?:Join\s*)?(?:Telegram\s*)?Railway\s*News\s*Ro+ms?\b(?:
 
 
 # A page-header field the sheets print beside some questions; it leaks into option text.
-HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+", re.I)
+HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+|\s*\bPage\s*\d{1,3}\b|\s*\b20\d\d/\d\d/\d\d-\d\d:\d\d:\d\d\b",
+                         re.I)
 
 
 def scrub(t):
@@ -291,10 +292,27 @@ def main():
                        "date": d, "time": info["time"], "qs": [q for q in (strip_promo(x) for x in qs) if quality_ok(q)],
                        "file": p.name})
 
+    # Some sheets print no test date/time (the date then comes from the catalog). Give
+    # such a sheet the time of the same-day paper it shares questions with, so it joins
+    # that shift instead of posing as a shift of its own; with no clear match it stays
+    # untimed and gets no shift number.
+    sigs = [{s for s in map(pair_signature, pp["qs"]) if s} for pp in papers]
+    stats["untimed"] = sum(1 for pp in papers if not pp["time"])
+    for i, pp in enumerate(papers):
+        if pp["time"] or not sigs[i]:
+            continue
+        cands = [(len(sigs[i] & sigs[j]), j) for j, o in enumerate(papers)
+                 if o["time"] and o["family"] == pp["family"] and o["date"] == pp["date"]]
+        best = max(cands, default=(0, None))
+        if best[0] >= max(5, len(sigs[i]) // 10):
+            pp["time"], pp["stage"] = papers[best[1]]["time"], papers[best[1]]["stage"]
+            stats["untimed_matched"] += 1
+
     # Shift numbers: order of start times among that exam's papers on that day.
     starts = defaultdict(set)
     for pp in papers:
-        starts[(pp["family"], pp["date"])].add(pp["time"])
+        if pp["time"]:
+            starts[(pp["family"], pp["date"])].add(pp["time"])
 
     def start_key(t):
         try:
