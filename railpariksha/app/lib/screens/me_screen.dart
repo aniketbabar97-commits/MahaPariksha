@@ -5,6 +5,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../core/app_scope.dart';
+import '../data/models.dart';
 import '../core/theme.dart';
 import '../core/notifications.dart';
 import '../core/purchases.dart';
@@ -239,8 +240,25 @@ class MeScreen extends StatelessWidget {
                   style: const TextStyle(fontWeight: FontWeight.w800)),
               const SizedBox(height: 6),
               Text(context.tr(
-                  'RailPariksha एक स्वतंत्र शैक्षणिक ऐप है। इसका भारतीय रेलवे, RRB, RPF या किसी भी भर्ती बोर्ड से कोई संबंध नहीं है। आधिकारिक जानकारी के लिए संबंधित वेबसाइट देखें।',
-                  'RailPariksha is an independent educational app. It is not affiliated with Indian Railways, RRB, RPF or any recruitment board. Refer to official websites for official information.')),
+                  'RailPariksha एक स्वतंत्र शैक्षणिक ऐप है। यह सरकारी ऐप नहीं है और भारतीय रेलवे, RRB, RPF या किसी भी सरकारी संस्था का प्रतिनिधित्व नहीं करता, न ही उनसे संबद्ध है। परीक्षा की जानकारी नीचे दिए आधिकारिक स्रोतों से ली गई है; अधिसूचना, तिथि व परिणाम वहीं जाँचें।',
+                  'RailPariksha is an independent educational app. It is not a government app and does not represent, and is not affiliated with, Indian Railways, RRB, RPF or any government body. Exam information comes from the official sources below; always confirm notifications, dates and results there.')),
+              const SizedBox(height: 10),
+              Text(context.tr('आधिकारिक स्रोत', 'Official sources'), style: const TextStyle(fontWeight: FontWeight.w700)),
+              for (final src in officialSources)
+                InkWell(
+                  onTap: () => launchUrl(Uri.parse(src.$2), mode: LaunchMode.externalApplication),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: Row(children: [
+                      const Icon(Icons.open_in_new, size: 16),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text('${context.tr(src.$1.hi, src.$1.en)} — ${src.$2}',
+                            style: const TextStyle(decoration: TextDecoration.underline)),
+                      ),
+                    ]),
+                  ),
+                ),
               const SizedBox(height: 6),
               Text(context.tr('प्रश्न सेट संस्करण: ${s.repo.version} · ${s.repo.questions.length} प्रश्न',
                   'Content version: ${s.repo.version} · ${s.repo.questions.length} questions'),
@@ -506,3 +524,12 @@ class _PremiumCardState extends State<_PremiumCard> {
     );
   }
 }
+
+/// Official government sources for the exam information in the app (also listed in
+/// the Play Store description, as Google Play's Misleading Claims policy requires).
+const officialSources = [
+  (Bi('भारतीय रेलवे', 'Indian Railways'), 'https://indianrailways.gov.in'),
+  (Bi('RRB ऑनलाइन आवेदन पोर्टल', 'RRB online application portal'), 'https://www.rrbapply.gov.in'),
+  (Bi('RRB चंडीगढ़ (CEN सूचनाएँ, उत्तर कुंजी)', 'RRB Chandigarh (CEN notices, answer keys)'), 'https://www.rrbcdg.gov.in'),
+  (Bi('रेलवे सुरक्षा बल (RPF)', 'Railway Protection Force (RPF)'), 'https://rpf.indianrailways.gov.in'),
+];

@@ -4,7 +4,7 @@ import '../data/content_repo.dart';
 import '../data/models.dart';
 import '../data/progress.dart';
 
-enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs, placement, weakSpots }
+enum QuizMode { practice, daily, mock, speed, mistakes, bookmarks, beast, currentAffairs, placement, weakSpots, pyqPaper }
 
 class QuizSpec {
   final QuizMode mode;
@@ -17,7 +17,12 @@ class QuizSpec {
       {this.timeLimit, this.negative = 0});
 
   /// Instant feedback after each answer (practice-style) vs reveal at the end (test-style).
-  bool get instantFeedback => mode != QuizMode.mock && mode != QuizMode.placement;
+  bool get instantFeedback => mode != QuizMode.mock && mode != QuizMode.placement && mode != QuizMode.pyqPaper;
+
+  /// Exam-hall style (CBT palette, graded at the end, recorded per answer on submit):
+  /// mocks and previous-year papers. Only real mocks are resumable and count
+  /// toward mock history -- PYQ papers live outside the main question bank.
+  bool get isTest => mode == QuizMode.mock || mode == QuizMode.pyqPaper;
 }
 
 /// A learner's level in one subject/topic, from their answer history there.
