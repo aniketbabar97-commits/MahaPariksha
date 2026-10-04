@@ -61,7 +61,7 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
         body: EmptyState(
           icon: Icons.newspaper_outlined,
           text: context.tr('आज का डाइजेस्ट जल्द आ रहा है — रोज़ नए अपडेट जुड़ेंगे।',
-              "Today's digest is coming soon -- new ones get added daily."),
+              "Today's digest is coming soon — new ones get added daily."),
         ),
       );
     }

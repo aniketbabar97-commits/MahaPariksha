@@ -405,7 +405,7 @@ class _WeightageCard extends StatelessWidget {
           Text(
             context.tr(
                 'असली पेपर में हर विषय से कितने प्रश्न आते हैं — ज़्यादा हिस्सेदारी वाले विषय को पहले मज़बूत करें',
-                "Each subject's share of questions in the real paper -- strengthen the heavier ones first"),
+                "Each subject's share of questions in the real paper — strengthen the heavier ones first"),
             style: TextStyle(fontSize: 12.5, color: Theme.of(context).hintColor),
           ),
           const SizedBox(height: 12),
