@@ -93,6 +93,8 @@ class PyqTopicTab extends StatelessWidget {
       ));
     }
     if (tiles.isEmpty) return const [];
+    // A native ad inside long subjects, so the ad sits where students scroll, not only at the foot.
+    if (tiles.length > 6 && !AppScope.read(context).progress.removedAds) tiles.insert(4, const NativeAdTile());
     return [SectionTitle(sub.name.of(lang)), ...tiles];
   }
 }
@@ -281,6 +283,7 @@ class PyqExamTab extends StatelessWidget {
               '$total questions · $minutes min · negative marking · ${exam.name.en}'),
           onTap: () => _start(context, exam, exam.subjects, total, Duration(minutes: minutes), full: true),
         ),
+        if (!s.progress.removedAds) const AdSlot(),
         SectionTitle(context.tr('विषयवार टेस्ट', 'Subject tests')),
         for (final sid in exam.subjects)
           if (s.repo.subject(sid) != null)
