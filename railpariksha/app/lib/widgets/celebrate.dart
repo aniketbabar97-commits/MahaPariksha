@@ -125,7 +125,7 @@ class _CelebrationDialogState extends State<_CelebrationDialog> with SingleTicke
                 const SizedBox(height: 10),
               ],
               FilledButton(
-                style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+                style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron, foregroundColor: BrandColors.onSaffron),
                 onPressed: () => Navigator.pop(context),
                 child: Text(context.tr('आगे बढ़ते रहें! 💪', 'Onwards! 💪')),
               ),

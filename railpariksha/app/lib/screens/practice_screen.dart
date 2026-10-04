@@ -223,7 +223,7 @@ class SubjectScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
         children: [
           FilledButton.icon(
-            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron, foregroundColor: BrandColors.onSaffron),
             icon: const Icon(Icons.shuffle),
             label: Text(context.tr('सभी टॉपिक से मिश्रित अभ्यास 🔀', 'Mixed practice from all topics 🔀')),
             onPressed: () {

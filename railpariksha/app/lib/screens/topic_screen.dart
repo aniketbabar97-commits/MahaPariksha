@@ -50,7 +50,7 @@ class TopicScreen extends StatelessWidget {
             ),
           if (count > 0) _LevelLine(level: s.builder.mastery(subject.id, topic.id)),
           FilledButton.icon(
-            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron, foregroundColor: BrandColors.onSaffron),
             icon: const Icon(Icons.play_arrow_rounded),
             label: Text(context.tr('इस टॉपिक का अभ्यास करें ($count)', 'Practice this topic ($count)')),
             onPressed: count == 0
