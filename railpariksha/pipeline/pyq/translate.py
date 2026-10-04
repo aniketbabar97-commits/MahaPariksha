@@ -176,7 +176,7 @@ def apply_family(family, items, clean=lambda t: t):
             continue
         lang = r["lang"]
         it[f"q_{lang}"], it[f"o_{lang}"] = clean(r["q"]), [clean(o) for o in r["o"]]
-        ans = r["o"][it["a"]]
+        ans = it[f"o_{lang}"][it["a"]]  # the cleaned option text
         it[f"e_{lang}"] = (f"Correct answer: {ans} (official answer key)." if lang == "en"
                            else f"सही उत्तर: {ans} (आधिकारिक उत्तर कुंजी)।")
         it["tr"] = lang
