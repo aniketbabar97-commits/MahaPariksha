@@ -328,7 +328,13 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(qLang == 'en' ? spec.titleEn : spec.titleHi, overflow: TextOverflow.ellipsis),
+          // With the timer and three icons there is little room; shrink the title rather than cut it
+          // to "Full-Len…".
+          title: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(qLang == 'en' ? spec.titleEn : spec.titleHi, maxLines: 1),
+          ),
           actions: [
             if (spec.timeLimit != null)
               Padding(
