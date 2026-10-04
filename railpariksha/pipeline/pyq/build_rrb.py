@@ -149,6 +149,27 @@ FIGURE_WORDS = re.compile(r"given (figure|image|diagram|picture)|following (figu
                           r"(दी गई|निम्न) (आकृति|चित्र)|shown below|figure given", re.I)
 
 
+# A channel promo some re-hosted sheets stamp into the text ("Join Telegram Railway
+# News Room - Complete Railway Exams Updates", sometimes truncated). Real mentions
+# of Telegram (e.g. "Telegram and Safari") don't match: the promo always names the room.
+PROMO = re.compile(r"\s*(?:Join\s*)?(?:Telegram\s*)?Railway\s*News\s*Ro+ms?\b(?:\s*-?\s*Complete\s+Railway\s+Exams?\s+Updates)?",
+                   re.I)
+
+
+# A page-header field the sheets print beside some questions; it leaks into option text.
+HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+", re.I)
+
+
+def scrub(t):
+    return HEADER_LEAK.sub("", PROMO.sub("", t)).strip()
+
+
+def strip_promo(q):
+    q["q"] = scrub(q["q"])
+    q["o"] = [scrub(o) for o in q["o"]]
+    return q
+
+
 def quality_ok(q):
     stem, opts = q["q"], q["o"]
     if len(stem) < 12 or BAD.search(stem) or any(BAD.search(o) for o in opts):
@@ -239,7 +260,8 @@ def main():
         stats["papers_ok"] += 1
         stats["q_extracted"] += len(qs)
         papers.append({"family": fam, "stage": stage_label(fam, info["subject"], cstage), "header": info["subject"],
-                       "date": d, "time": info["time"], "qs": [q for q in qs if quality_ok(q)], "file": p.name})
+                       "date": d, "time": info["time"], "qs": [q for q in (strip_promo(x) for x in qs) if quality_ok(q)],
+                       "file": p.name})
 
     # Shift numbers: order of start times among that exam's papers on that day.
     starts = defaultdict(set)
@@ -356,6 +378,14 @@ def main():
             bank_excluded.add(rec["id"])
         stats[f"lang_{it['lang']}"] += 1
 
+    # Re-apply stored Hindi<->English translations (keyed by id), so rebuilding never drops them.
+    from translate import apply_family, migrate
+    for slug, recs in out.items():
+        old_path = ROOT / "content/pyq" / f"{slug}.json"
+        if old_path.exists():
+            stats[f"tr_migrated_{slug}"] = migrate(slug, json.loads(old_path.read_text(encoding="utf-8")), recs,
+                                                   clean=scrub)
+        stats[f"translated_{slug}"] = apply_family(slug, recs, clean=scrub)
     dest = ROOT / "content/pyq"
     dest.mkdir(exist_ok=True)
     for slug, recs in sorted(out.items()):

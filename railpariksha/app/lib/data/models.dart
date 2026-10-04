@@ -73,6 +73,10 @@ class Question {
   /// "RRB JE CBT-1 2025 · 19 Feb 2026 · Shift 1". Null for the regular bank.
   final String? pyq;
 
+  /// For a PYQ published in one language: the language we translated it into
+  /// ('hi' or 'en'), so the app can label that text as a translation.
+  final String? translated;
+
   /// Which languages this question has text in: 'both', 'hi' or 'en'.
   final String langs;
   bool hasLang(String lang) => langs == 'both' || langs == lang;
@@ -93,6 +97,7 @@ class Question {
     this.src,
     this.pyq,
     this.langs = 'both',
+    this.translated,
   });
 
   List<String> options(String lang) => lang == 'en' ? optionsEn : optionsHi;
@@ -115,6 +120,7 @@ class Question {
         answer: j['a'],
         explanation: Bi(j['e_hi'] ?? j['e_en'], j['e_en'] ?? j['e_hi']),
         langs: j['q_hi'] == null ? 'en' : (j['q_en'] == null ? 'hi' : 'both'),
+        translated: j['tr'],
         hook: _opt(j, 'hook'),
         fact: _opt(j, 'fact'),
         date: j['date'],

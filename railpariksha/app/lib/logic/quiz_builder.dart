@@ -111,6 +111,18 @@ class QuizBuilder {
         t?.name.en ?? s?.name.en ?? 'Practice');
   }
 
+  /// Up to [count] previous-year questions from the bank in one topic (newest-
+  /// paper PYQs are copied into the bank by the pipeline), unseen first.
+  QuizSpec pyqForTopic({required String subject, required String topic, int count = 10}) {
+    final t = repo.topic(subject, topic);
+    final pool = _pool(subject: subject, topic: topic).where((q) => q.pyq != null).toList();
+    return QuizSpec(QuizMode.practice, _pick(pool, count, Random()), 'PYQ · ${t?.name.hi ?? ''}',
+        'PYQ · ${t?.name.en ?? ''}');
+  }
+
+  int pyqCountForTopic(String subject, String topic) =>
+      _pool(subject: subject, topic: topic).where((q) => q.pyq != null).length;
+
   /// [attempts, correct] answered so far in a subject, or one topic of it.
   List<int> _scopeStats(String subject, String? topic) {
     var attempts = 0, correct = 0;
