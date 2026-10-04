@@ -11,6 +11,7 @@ import 'cheat_sheet_screen.dart';
 import 'pyq_screen.dart';
 import 'quiz_screen.dart';
 import 'topic_screen.dart';
+import '../core/format.dart';
 
 Future<void> showExamSwitcher(BuildContext context) => showModalBottomSheet(
       context: context,
@@ -65,7 +66,7 @@ class PracticeScreen extends StatelessWidget {
           ),
         ]),
         const SizedBox(height: 4),
-        Text(context.tr('${pool.length} प्रश्न · ${subjects.length} विषय', '${pool.length} questions · ${subjects.length} subjects'),
+        Text(context.tr('${fmtCount(pool.length)} प्रश्न · ${subjects.length} विषय', '${fmtCount(pool.length)} questions · ${subjects.length} subjects'),
             style: TextStyle(color: Theme.of(context).hintColor)),
         const SizedBox(height: 16),
         Row(children: [
@@ -113,8 +114,8 @@ class PracticeScreen extends StatelessWidget {
           icon: Icons.history_edu,
           color: BrandColors.correct,
           title: context.tr('पिछले वर्ष के प्रश्न (PYQ) 📜', 'Previous year questions (PYQ) 📜'),
-          subtitle: context.tr('RRB व RPF के 55,000+ आधिकारिक प्रश्न · पूरे प्रश्नपत्र हल करें',
-              '55,000+ official RRB & RPF questions · attempt full papers'),
+          subtitle: context.tr('RRB व RPF के 50,000+ आधिकारिक प्रश्न · पूरे प्रश्नपत्र हल करें',
+              '50,000+ official RRB & RPF questions · attempt full papers'),
           onTap: () => push(context, (_) => const PyqScreen()),
         ),
         SectionTitle(context.tr('विषयवार अभ्यास 📚', 'Practice by subject 📚')),
@@ -148,8 +149,8 @@ class _EnglishBonusTile extends StatelessWidget {
       icon: subjectIcon(sub.icon),
       color: BrandColors.correct,
       title: sub.name.of(context.lang),
-      subtitle: context.tr('$count प्रश्न · परीक्षा के पाठ्यक्रम का हिस्सा नहीं, बोनस अभ्यास',
-          '$count questions · not part of the exam syllabus, bonus practice'),
+      subtitle: context.tr('${fmtCount(count)} प्रश्न · परीक्षा के पाठ्यक्रम का हिस्सा नहीं, बोनस अभ्यास',
+          '${fmtCount(count)} questions · not part of the exam syllabus, bonus practice'),
       onTap: () => push(context, (_) => SubjectScreen(subject: sub)),
     );
   }
@@ -198,8 +199,8 @@ class _SubjectTile extends StatelessWidget {
       color: BrandColors.skyLight,
       title: subject.name.of(context.lang),
       subtitle: acc == null
-          ? context.tr('$count प्रश्न · शुरू करें', '$count questions · start now')
-          : context.tr('$count प्रश्न · अचूकता ${(acc * 100).round()}%', '$count questions · ${(acc * 100).round()}% accuracy'),
+          ? context.tr('${fmtCount(count)} प्रश्न · शुरू करें', '${fmtCount(count)} questions · start now')
+          : context.tr('${fmtCount(count)} प्रश्न · अचूकता ${(acc * 100).round()}%', '${fmtCount(count)} questions · ${(acc * 100).round()}% accuracy'),
       onTap: () => push(context, (_) => SubjectScreen(subject: subject)),
     );
   }

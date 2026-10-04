@@ -17,17 +17,32 @@ jobs:
     runs-on: ubuntu-latest
     defaults: { run: { working-directory: railpariksha } }
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      # Without a drafting key there is nothing to run; say so instead of failing every morning.
+      - id: keys
+        working-directory: .
+        run: |
+          if [ -n "$GEMINI_API_KEY$GROK_API_KEY" ]; then echo "have=true" >> "$GITHUB_OUTPUT"
+          else echo "::notice::No GEMINI_API_KEY/GROK_API_KEY secret set; skipping daily current affairs."; fi
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
+      - if: steps.keys.outputs.have == 'true'
+        uses: actions/checkout@v4
+      - if: steps.keys.outputs.have == 'true'
+        uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install -r pipeline/requirements.txt
-      - run: python pipeline/ca_daily.py
+      - if: steps.keys.outputs.have == 'true'
+        run: pip install -r pipeline/requirements.txt
+      - if: steps.keys.outputs.have == 'true'
+        run: python pipeline/ca_daily.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GROK_API_KEY: ${{ secrets.GROK_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - run: python pipeline/validate.py
-      - uses: peter-evans/create-pull-request@v7
+      - if: steps.keys.outputs.have == 'true'
+        run: python pipeline/validate.py
+      - if: steps.keys.outputs.have == 'true'
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: content/railpariksha-current-affairs-daily
           title: "RailPariksha current affairs: ${{ github.run_id }}"

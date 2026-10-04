@@ -27,7 +27,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   }
 
   Future<(List<LeaderboardEntry>, int?)> _load() async {
-    final p = context.scope.progress;
+    // read(), not scope: this runs from initState, where subscribing to AppScope is not allowed.
+    final p = AppScope.read(context).progress;
     final examId = p.examId;
     if (examId == null) return (const <LeaderboardEntry>[], null);
     final top = await LeaderboardService.top(examId: examId);

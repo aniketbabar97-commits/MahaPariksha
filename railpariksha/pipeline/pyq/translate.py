@@ -139,7 +139,8 @@ def content_key(item, clean=lambda t: t):
     The paper is left out on purpose; the build already dedupes questions per family."""
     import unicodedata
     lang = "hi" if "q_hi" in item and item.get("tr") != "hi" else "en"
-    n = lambda t: re.sub(r"[^0-9a-z\u0900-\u097F]+", "", unicodedata.normalize("NFKC", clean(t)).lower())
+    # "र्" is dropped so text repaired by hindi_fix still matches its unrepaired twin.
+    n = lambda t: re.sub(r"[^0-9a-z\u0900-\u097F]+", "", unicodedata.normalize("NFKC", clean(t)).lower().replace("र्", ""))
     return "|".join(["", lang, n(item[f"q_{lang}"])] + sorted(n(o) for o in item[f"o_{lang}"]))
 
 

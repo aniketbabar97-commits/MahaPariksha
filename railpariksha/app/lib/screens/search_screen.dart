@@ -86,8 +86,14 @@ class _SearchScreenState extends State<SearchScreen> {
                   n.summary.en.toLowerCase().contains(needle) ||
                   n.factsHi.any((f) => f.toLowerCase().contains(needle)) ||
                   n.factsEn.any((f) => f.toLowerCase().contains(needle))))
-          .take(20)
           .toList();
+      // A note whose topic is named by the query ("percentage" -> Mathematics · Percentage) comes
+      // before one that merely mentions the word; the sort is stable, so the rest keep their order.
+      bool named(TopicNote n) {
+        final t = s.repo.topic(n.subject, n.topic)?.name;
+        return t != null && (t.hi.toLowerCase().contains(needle) || t.en.toLowerCase().contains(needle));
+      }
+      noteResults = [...noteResults.where(named), ...noteResults.where((n) => !named(n))].take(20).toList();
     }
     // The debounce timer hasn't fired yet for the latest keystroke -- without
     // this, a narrow query on a 25k+ question bank could look like a complete

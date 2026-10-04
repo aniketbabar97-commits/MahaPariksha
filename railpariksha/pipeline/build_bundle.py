@@ -5,7 +5,9 @@ Output defaults to app/assets/content/bundle.json. The version is a UTC timestam
 so a downloaded pack with a newer version replaces the bundled one on devices.
 """
 import argparse
+import hashlib
 import json
+import re
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -26,6 +28,44 @@ def load_dir(name):
 
 
 RAIL_EXAMS = ("RRB", "RPF")
+MAX_PAPER, TARGET_PAPER = 150, 110  # questions
+
+# Options that point at each other ("All of the above", "Both A and B") or at a letter must
+# keep their order, as must numeric options already listed in order.
+RELATIONAL = re.compile(r"(?i)\b(above|these|both|neither|all of|none of|option|statements?)\b|"
+                        r"उपरोक्त|ऊपर|सभी|कोई नहीं|दोनों|विकल्प|कथन|\b[A-D]\b\s*(?:and|और|,)\s*\b[A-D]\b|\([a-dA-D1-4]\)")
+
+
+def _number(o):
+    try:
+        return float(re.sub(r"[,\s]", "", o))
+    except ValueError:
+        return None
+
+
+def balance_answer_positions(q):
+    """The hand/AI-written bank puts the right answer in A or B far too often (71%), which a
+    student can learn. Move the correct option to a position drawn from the question's id
+    (stable across builds), keeping the distractors in their original order. PYQs keep the
+    paper's own order. Returns True when the question was changed."""
+    if q.get("pyq") or q["id"].startswith("pyq"):
+        return False
+    opts = {l: q[f"o_{l}"] for l in ("hi", "en") if f"o_{l}" in q}
+    texts = [t for o in opts.values() for t in o] + [q.get("e_en", ""), q.get("e_hi", "")]
+    if any(RELATIONAL.search(t) for t in texts):
+        return False
+    for o in opts.values():
+        nums = [_number(t) for t in o]
+        if None not in nums and (nums == sorted(nums) or nums == sorted(nums, reverse=True)):
+            return False
+    a, target = q["a"], int(hashlib.md5(q["id"].encode()).hexdigest(), 16) % 4
+    if a == target:
+        return False
+    for l, o in opts.items():
+        rest = o[:a] + o[a + 1:]
+        q[f"o_{l}"] = rest[:target] + [o[a]] + rest[target:]
+    q["a"] = target
+    return True
 
 
 def build_pyq_pack(out_dir):
@@ -36,6 +76,21 @@ def build_pyq_pack(out_dir):
     import re
     from collections import Counter, defaultdict
     questions = load_dir("pyq")
+    # Some sheets print no shift time, so every shift of a day lands in one "paper" (up to 760
+    # questions). A real paper has ~100-120 questions; cut an oversized one into equal parts
+    # (in the shipped pack only) so "attempt a full paper" stays a realistic sitting.
+    by_label = defaultdict(list)
+    for q in questions:
+        by_label[q["pyq"]].append(q)
+    questions = []
+    for label, qs in by_label.items():
+        if len(qs) <= MAX_PAPER:
+            questions.extend(qs)
+            continue
+        parts = max(2, round(len(qs) / TARGET_PAPER))
+        qs = sorted(qs, key=lambda q: hashlib.md5(q["id"].encode()).hexdigest())
+        for i in range(parts):
+            questions.extend({**q, "pyq": f"{label} · Part {i + 1}"} for q in qs[i::parts])
     sets = defaultdict(list)
     for q in questions:
         # Labels look like "RRB Group D CBT-1 · 19 Dec 2025 · Shift 2" (exam/stage, date, shift).
@@ -76,6 +131,8 @@ def main():
     gk_booster_path = CONTENT / "gk_booster.json"
     gk_booster = json.loads(gk_booster_path.read_text(encoding="utf-8")) if gk_booster_path.exists() else None
     questions = load_dir("bank")
+    moved = sum(balance_answer_positions(q) for q in questions)
+    print(f"answer positions rebalanced on {moved} questions")
     for q in questions:
         # Source links stay in the repo, not on devices, for the bulk of the bank (keeps
         # the pack small, and most content has no use for one in the app). Exception:

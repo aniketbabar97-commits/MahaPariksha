@@ -12,6 +12,7 @@ import '../data/pyq_repo.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import 'quiz_screen.dart';
+import '../core/format.dart';
 
 /// App-wide PYQ pack loader (index + per-set files, cached in memory).
 PyqRepo pyqRepo = PyqRepo();
@@ -168,7 +169,7 @@ class _AccessBanner extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text(context.tr('$total असली परीक्षा प्रश्न', '$total real exam questions'),
+          Text(context.tr('${fmtCount(total)} असली परीक्षा प्रश्न', '${fmtCount(total)} real exam questions'),
               style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
           const SizedBox(height: 4),
           Text(status),
@@ -196,8 +197,8 @@ class _SetTile extends StatelessWidget {
           icon: set.railway ? Icons.train : Icons.menu_book,
           color: set.railway ? BrandColors.saffron : BrandColors.skyLight,
           title: set.title,
-          subtitle: context.tr('$relevant प्रश्न · ${set.papers.length} प्रश्नपत्र',
-              '$relevant questions · ${set.papers.length} papers'),
+          subtitle: context.tr('${fmtCount(relevant)} प्रश्न · ${set.papers.length} प्रश्नपत्र',
+              '${fmtCount(relevant)} questions · ${set.papers.length} papers'),
           onTap: () => push(context, (_) => PyqSetScreen(set: set)),
         ),
       );
@@ -274,8 +275,8 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
                 icon: Icons.shuffle,
                 color: BrandColors.correct,
                 title: context.tr('मिश्रित अभ्यास ($_practiceSize प्रश्न)', 'Mixed practice ($_practiceSize questions)'),
-                subtitle: context.tr('${pool.length} प्रश्नों में से · तुरंत उत्तर और व्याख्या',
-                    'From ${pool.length} questions · instant answers & explanations'),
+                subtitle: context.tr('${fmtCount(pool.length)} प्रश्नों में से · तुरंत उत्तर और व्याख्या',
+                    'From ${fmtCount(pool.length)} questions · instant answers & explanations'),
                 onTap: pool.isEmpty ? null : () => _practice(pool, null),
               ),
               const SizedBox(height: 10),
