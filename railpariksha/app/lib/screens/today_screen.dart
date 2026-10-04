@@ -282,14 +282,14 @@ class TodayScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.fireGradient),
               child: Row(children: [
-                const Icon(Icons.play_circle_fill, color: Colors.white, size: 48),
+                const Icon(Icons.play_circle_fill, color: BrandColors.onSaffron, size: 48),
                 const SizedBox(width: 14),
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(context.tr('आज का Daily 10', "Today's Daily 10"),
-                        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                        style: const TextStyle(color: BrandColors.onSaffron, fontSize: 20, fontWeight: FontWeight.w900)),
                     Text(context.tr('आपके कमज़ोर विषयों पर खास प्रश्न', 'Picked for your weak topics'),
-                        style: const TextStyle(color: Colors.white)),
+                        style: TextStyle(color: BrandColors.onSaffron.withValues(alpha: 0.8), fontWeight: FontWeight.w600)),
                   ]),
                 ),
               ]),

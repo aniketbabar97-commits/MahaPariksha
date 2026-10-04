@@ -94,10 +94,13 @@ class StreakWings extends StatelessWidget {
           child: Row(mainAxisSize: MainAxisSize.min, children: [
             Transform.translate(
               offset: Offset(0, -lvl.toDouble()),
-              child: Icon(lvl >= 3 ? Icons.flight : Icons.local_fire_department, color: Colors.white, size: 20),
+              child: Icon(lvl >= 3 ? Icons.flight : Icons.local_fire_department,
+                  color: streak > 0 ? BrandColors.onSaffron : Colors.white, size: 20),
             ),
             const SizedBox(width: Spacing.xs),
-            Text('$streak', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16)),
+            Text('$streak',
+                style: TextStyle(
+                    color: streak > 0 ? BrandColors.onSaffron : Colors.white, fontWeight: FontWeight.w900, fontSize: 16)),
           ]),
         ),
       ),
@@ -355,7 +358,7 @@ class _EmptyStateState extends State<EmptyState> with SingleTickerProviderStateM
                     width: 60,
                     height: 60,
                     decoration: const BoxDecoration(gradient: BrandColors.fireGradient, shape: BoxShape.circle),
-                    child: Icon(widget.icon, size: 30, color: Colors.white),
+                    child: Icon(widget.icon, size: 30, color: BrandColors.onSaffron),
                   ),
                 ]),
               ),

@@ -38,6 +38,9 @@ class BrandColors {
   static const correct = Color(0xFF1E9E5A);
   static const wrong = Color(0xFFD64545);
 
+  /// Text and icons on saffron/yellow surfaces: white there is barely readable (~1.6:1).
+  static const onSaffron = Color(0xFF2B1D00);
+
   /// Plain `saffron` text on a light-mode white background is only ~1.9:1
   /// contrast -- WCAG AA needs 4.5:1 for normal-size text. Saffron itself
   /// stays the brand accent everywhere (icons, gradients, borders); this is
