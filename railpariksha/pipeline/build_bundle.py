@@ -114,6 +114,9 @@ def build_pyq_pack(out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
     for old in out_dir.glob("*.json"):
         old.unlink()
+    (out_dir / "topics").mkdir(exist_ok=True)
+    for old in (out_dir / "topics").glob("*.json"):
+        old.unlink()
     index = []
     for (exam, year), qs in sorted(sets.items(), key=lambda kv: (not kv[0][0].startswith(RAIL_EXAMS), kv[0][0], -kv[0][1])):
         file = f"{re.sub(r'[^a-z0-9]+', '_', exam.lower())}_{year}.json"
@@ -122,9 +125,21 @@ def build_pyq_pack(out_dir):
         index.append({"exam": exam, "year": year, "rail": exam.startswith(RAIL_EXAMS), "file": file, "n": len(qs),
                       "subjects": dict(Counter(q["s"] for q in qs)),
                       "papers": [{"label": k, "n": v} for k, v in sorted(papers.items())]})
-    (out_dir / "index.json").write_text(json.dumps({"sets": index}, ensure_ascii=False, separators=(",", ":")),
-                                        encoding="utf-8")
-    size = sum(p.stat().st_size for p in out_dir.glob("*.json")) // 1024
+    # Topic shards: every PYQ of one topic in one small file, so topic-wise practice and topic
+    # tests open instantly instead of loading every year's set. "by_exam" counts the topic's
+    # questions per exam, so the app can show a student only their own exam's number.
+    by_topic = defaultdict(list)
+    for q in questions:
+        by_topic[(q["s"], q["t"])].append(q)
+    topics = []
+    for (subj, topic), qs in sorted(by_topic.items()):
+        file = f"topics/{subj}__{topic}.json"
+        (out_dir / file).write_text(json.dumps(qs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        topics.append({"s": subj, "t": topic, "n": len(qs), "file": file,
+                       "by_exam": dict(Counter(q["pyq"].split(" · ")[0] for q in qs))})
+    (out_dir / "index.json").write_text(json.dumps({"sets": index, "topics": topics}, ensure_ascii=False,
+                                                   separators=(",", ":")), encoding="utf-8")
+    size = sum(p.stat().st_size for p in out_dir.rglob("*.json")) // 1024
     print(f"wrote {out_dir}: {len(questions)} PYQs in {len(index)} sets, {size} KB")
 
 
