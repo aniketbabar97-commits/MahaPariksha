@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:railpariksha/data/content_repo.dart';
+import 'package:railpariksha/data/models.dart';
 import 'package:railpariksha/data/progress.dart';
 import 'package:railpariksha/logic/percentile.dart';
 import 'package:railpariksha/logic/quiz_builder.dart';
@@ -56,6 +57,62 @@ void main() {
       expect(plannerWithDaysLeft(RevisionPlanner.weakFocusFrom).phase, RevisionPhase.weakFocus);
       expect(plannerWithDaysLeft(RevisionPlanner.weakFocusFrom - 1).phase, RevisionPhase.finalRevision);
       expect(plannerWithDaysLeft(0).phase, RevisionPhase.finalRevision);
+    });
+  });
+
+  group('adaptive practice', () {
+    late ContentRepo repo;
+
+    setUpAll(() async {
+      repo = ContentRepo();
+      await repo.load();
+    });
+
+    test('mastery levels follow accuracy once there is enough history', () {
+      expect(Mastery.of(2, 1.0), Mastery.newcomer);
+      expect(Mastery.of(10, 0.3), Mastery.building);
+      expect(Mastery.of(10, 0.6), Mastery.steady);
+      expect(Mastery.of(10, 0.9), Mastery.strong);
+    });
+
+    Map<int, int> tierCounts(List<Question> qs) {
+      final c = {1: 0, 2: 0, 3: 0};
+      for (final q in qs) {
+        final d = q.difficulty.clamp(1, 3);
+        c[d] = c[d]! + 1;
+      }
+      return c;
+    }
+
+    test('a strong learner gets harder sets than a struggling one', () {
+      const subject = 'maths', topic = 'percentage';
+      final topicQs = repo.questions.where((q) => q.subject == subject && q.topic == topic).toList();
+
+      Progress withAccuracy(double acc) {
+        final p = Progress();
+        for (var i = 0; i < 20; i++) {
+          p.qStats[topicQs[i].id] = [1, i < acc * 20 ? 1 : 0, 0];
+        }
+        return p;
+      }
+
+      final strong = QuizBuilder(repo, withAccuracy(0.95));
+      final weak = QuizBuilder(repo, withAccuracy(0.2));
+      expect(strong.mastery(subject, topic), Mastery.strong);
+      expect(weak.mastery(subject, topic), Mastery.building);
+
+      final strongSet = strong.practice(subject: subject, topic: topic, count: 10).questions;
+      final weakSet = weak.practice(subject: subject, topic: topic, count: 10).questions;
+      expect(strongSet, hasLength(10));
+      expect(weakSet, hasLength(10));
+      expect(tierCounts(strongSet)[3]!, greaterThan(tierCounts(weakSet)[3]!));
+      expect(tierCounts(weakSet)[1]!, greaterThan(tierCounts(strongSet)[1]!));
+    });
+
+    test('practice sets warm up easy-to-hard', () {
+      final qs = QuizBuilder(repo, Progress()).practice(subject: 'maths', topic: 'percentage', count: 10).questions;
+      final diffs = [for (final q in qs) q.difficulty.clamp(1, 3)];
+      expect(diffs, [...diffs]..sort());
     });
   });
 }

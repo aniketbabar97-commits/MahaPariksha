@@ -20,6 +20,28 @@ class QuizSpec {
   bool get instantFeedback => mode != QuizMode.mock && mode != QuizMode.placement;
 }
 
+/// A learner's level in one subject/topic, from their answer history there.
+/// [weights] is the easy/medium/hard (1/2/3) mix their practice sets draw.
+enum Mastery {
+  newcomer({1: 5, 2: 4, 3: 1}),
+  building({1: 6, 2: 3, 3: 1}),
+  steady({1: 2, 2: 5, 3: 3}),
+  strong({1: 1, 2: 4, 3: 5});
+
+  final Map<int, int> weights;
+  const Mastery(this.weights);
+
+  /// Fewer than this many answers is too little history to judge accuracy.
+  static const minAttempts = 5;
+
+  static Mastery of(int attempts, double accuracy) {
+    if (attempts < minAttempts) return newcomer;
+    if (accuracy < 0.5) return building;
+    if (accuracy < 0.75) return steady;
+    return strong;
+  }
+}
+
 class TopicStat {
   final String subject;
   final String topic;
@@ -79,9 +101,52 @@ class QuizBuilder {
   QuizSpec practice({required String subject, String? topic, int count = 10}) {
     final s = repo.subject(subject);
     final t = topic == null ? null : repo.topic(subject, topic);
-    final qs = _pick(_pool(subject: subject, topic: topic), count, Random());
+    final qs = _pickAdaptive(_pool(subject: subject, topic: topic), count, Random(), mastery(subject, topic));
     return QuizSpec(QuizMode.practice, qs, t?.name.hi ?? s?.name.hi ?? 'अभ्यास',
         t?.name.en ?? s?.name.en ?? 'Practice');
+  }
+
+  /// [attempts, correct] answered so far in a subject, or one topic of it.
+  List<int> _scopeStats(String subject, String? topic) {
+    var attempts = 0, correct = 0;
+    progress.qStats.forEach((id, s) {
+      final q = repo.question(id);
+      if (q == null || q.subject != subject || (topic != null && q.topic != topic)) return;
+      attempts += s[0];
+      correct += s[1];
+    });
+    return [attempts, correct];
+  }
+
+  /// The learner's current level in a subject/topic, driving how hard their
+  /// practice sets are.
+  Mastery mastery(String subject, [String? topic]) {
+    final st = _scopeStats(subject, topic);
+    return Mastery.of(st[0], st[0] == 0 ? 0 : st[1] / st[0]);
+  }
+
+  /// Like [_pick], but splits [count] across difficulty tiers according to
+  /// [level] so sets get harder as accuracy rises, then orders easy→hard so
+  /// each session warms up before the tough questions.
+  List<Question> _pickAdaptive(List<Question> pool, int count, Random rnd, Mastery level) {
+    final byTier = <String, List<Question>>{};
+    for (final q in pool) {
+      byTier.putIfAbsent('${q.difficulty.clamp(1, 3)}', () => []).add(q);
+    }
+    if (byTier.length < 2) return _pick(pool, count, rnd);
+    final weights = {for (final k in byTier.keys) k: level.weights[int.parse(k)]!};
+    final alloc = _weightedAllocate(weights, {for (final e in byTier.entries) e.key: e.value.length}, count);
+    final chosen = <Question>[];
+    for (final k in (byTier.keys.toList()..sort())) {
+      chosen.addAll(_pick(byTier[k]!, alloc[k] ?? 0, rnd));
+    }
+    // Every tier had a non-zero weight, so the allocation can only fall short
+    // of [count] when the whole pool is smaller; top up just in case.
+    if (chosen.length < count) {
+      final rest = pool.where((q) => !chosen.contains(q)).toList();
+      chosen.addAll(_pick(rest, count - chosen.length, rnd));
+    }
+    return chosen;
   }
 
   /// How many questions a weak-topic are worth drawing from any single topic in

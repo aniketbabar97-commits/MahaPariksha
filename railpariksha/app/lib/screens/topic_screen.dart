@@ -5,6 +5,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
 import '../widgets/common.dart';
+import '../logic/quiz_builder.dart';
 import 'quiz_screen.dart';
 
 const _branchColors = [
@@ -46,6 +47,7 @@ class TopicScreen extends StatelessWidget {
                 style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13),
               ),
             ),
+          if (count > 0) _LevelLine(level: s.builder.mastery(subject.id, topic.id)),
           FilledButton.icon(
             style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
             icon: const Icon(Icons.play_arrow_rounded),
@@ -279,4 +281,33 @@ class _MindMapViewState extends State<MindMapView> {
           ),
         ]),
       );
+}
+
+class _LevelLine extends StatelessWidget {
+  final Mastery level;
+  const _LevelLine({required this.level});
+
+  @override
+  Widget build(BuildContext context) {
+    final (label, detail, color) = switch (level) {
+      Mastery.newcomer => (context.tr('शुरुआत', 'Getting started'), context.tr('आसान प्रश्नों से शुरू', 'starting with easier questions'), BrandColors.skyLight),
+      Mastery.building => (context.tr('आधार बना रहे हैं', 'Building basics'), context.tr('ज़्यादातर आसान प्रश्न', 'mostly easier questions'), BrandColors.saffron),
+      Mastery.steady => (context.tr('स्थिर', 'Steady'), context.tr('मध्यम और कठिन प्रश्नों का मिश्रण', 'a mix of medium and hard questions'), BrandColors.correct),
+      Mastery.strong => (context.tr('मज़बूत', 'Strong'), context.tr('कठिन प्रश्नों पर ज़ोर', 'tougher sets, more hard questions'), BrandColors.correct),
+    };
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Icon(Icons.signal_cellular_alt, size: 16, color: color),
+        const SizedBox(width: 6),
+        Flexible(
+          child: Text(
+            context.tr('आपका स्तर: $label · $detail', 'Your level: $label · $detail'),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 12.5, color: Theme.of(context).hintColor),
+          ),
+        ),
+      ]),
+    );
+  }
 }

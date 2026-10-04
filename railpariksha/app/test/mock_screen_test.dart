@@ -7,6 +7,7 @@ import 'package:railpariksha/data/models.dart';
 import 'package:railpariksha/data/progress.dart';
 import 'package:railpariksha/logic/quiz_builder.dart';
 import 'package:railpariksha/screens/quiz_screen.dart';
+import 'package:railpariksha/screens/topic_screen.dart';
 
 Question _q(int i) => Question(
       id: 'mock-test-$i',
@@ -88,5 +89,19 @@ void main() {
     expect(find.text('Performance analysis 📊'), findsOneWidget);
     expect(find.textContaining('Negative marking cost you 0.33 marks'), findsOneWidget);
     expect(progress.mocks, hasLength(1));
+  });
+
+  testWidgets('topic screen shows the learner level that drives practice difficulty', (tester) async {
+    final repo = ContentRepo();
+    await tester.runAsync(repo.load);
+    final progress = Progress()..lang = 'en';
+    await tester.pumpWidget(AppScope(
+      repo: repo,
+      progress: progress,
+      purchases: PurchaseManager(progress),
+      child: MaterialApp(home: TopicScreen(subject: repo.subject('maths')!, topic: repo.topic('maths', 'percentage')!)),
+    ));
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Your level: Getting started'), findsOneWidget);
   });
 }
