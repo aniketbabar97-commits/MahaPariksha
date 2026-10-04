@@ -6,6 +6,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/progress.dart';
 import '../logic/leaderboard_service.dart';
+import '../logic/mock_analysis.dart';
 import '../logic/percentile.dart';
 import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
@@ -18,6 +19,10 @@ class ResultsScreen extends StatefulWidget {
   final int xpEarned;
   final Duration elapsed;
   final int speedScore;
+
+  /// Time spent on each question, parallel to [answers]. Null for callers
+  /// that don't track it.
+  final List<Duration>? timePerQuestion;
   const ResultsScreen({
     super.key,
     required this.spec,
@@ -25,6 +30,7 @@ class ResultsScreen extends StatefulWidget {
     required this.xpEarned,
     required this.elapsed,
     required this.speedScore,
+    this.timePerQuestion,
   });
 
   @override
@@ -32,7 +38,6 @@ class ResultsScreen extends StatefulWidget {
 }
 
 class _ResultsScreenState extends State<ResultsScreen> {
-  bool _recorded = false;
 
   int get correct => [for (var i = 0; i < widget.answers.length; i++) widget.answers[i] == widget.spec.questions[i].answer]
       .where((c) => c)
@@ -42,30 +47,34 @@ class _ResultsScreenState extends State<ResultsScreen> {
   double get score => correct - wrong * widget.spec.negative;
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    if (!_recorded && widget.spec.mode == QuizMode.mock) {
-      _recorded = true;
-      final p = AppScope.read(context).progress;
-      p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));
-      // Opt-in only: a device without a chosen leaderboard name has never opened the
-      // leaderboard screen, so it never silently starts appearing on one.
-      if (p.examId != null && p.leaderboardName != null) {
-        LeaderboardService.submitScore(
-          examId: p.examId!,
-          deviceId: p.ensureDeviceId(),
-          name: p.leaderboardName!,
-          score: score,
-          total: widget.spec.questions.length,
-        );
-      }
-      // Natural break point: results are already recorded, so showing (or
-      // skipping, if not preloaded in time) the ad here never blocks or
-      // delays anything the user is waiting on. Frequency-capped per
-      // InterstitialAdManager.shouldShowForMockCount -- see its doc comment.
-      if (!p.removedAds && InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
-        InterstitialAdManager.showIfReady();
-      }
+  void initState() {
+    super.initState();
+    // Recording notifies Progress listeners (AppScope), which must not happen
+    // while this screen is still in its first build.
+    if (widget.spec.mode == QuizMode.mock) WidgetsBinding.instance.addPostFrameCallback((_) => _recordMock());
+  }
+
+  void _recordMock() {
+    if (!mounted) return;
+    final p = AppScope.read(context).progress;
+    p.recordMock(MockResult(today(), p.examId ?? '', score, widget.spec.questions.length));
+    // Opt-in only: a device without a chosen leaderboard name has never opened the
+    // leaderboard screen, so it never silently starts appearing on one.
+    if (p.examId != null && p.leaderboardName != null) {
+      LeaderboardService.submitScore(
+        examId: p.examId!,
+        deviceId: p.ensureDeviceId(),
+        name: p.leaderboardName!,
+        score: score,
+        total: widget.spec.questions.length,
+      );
+    }
+    // Natural break point: results are already recorded, so showing (or
+    // skipping, if not preloaded in time) the ad here never blocks or
+    // delays anything the user is waiting on. Frequency-capped per
+    // InterstitialAdManager.shouldShowForMockCount -- see its doc comment.
+    if (!p.removedAds && InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
+      InterstitialAdManager.showIfReady();
     }
   }
 
@@ -187,9 +196,18 @@ class _ResultsScreenState extends State<ResultsScreen> {
               ),
             ),
           ]),
+          if (!spec.instantFeedback && total > 0)
+            _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[
             SectionTitle(context.tr('उत्तरों की समीक्षा 🔍', 'Answer review 🔍')),
-            for (var i = 0; i < total; i++) _ReviewTile(index: i, spec: spec, answer: widget.answers[i], lang: lang),
+            for (var i = 0; i < total; i++)
+              _ReviewTile(
+                index: i,
+                spec: spec,
+                answer: widget.answers[i],
+                lang: lang,
+                time: widget.timePerQuestion != null && i < widget.timePerQuestion!.length ? widget.timePerQuestion![i] : null,
+              ),
           ],
         ],
       ),
@@ -207,12 +225,130 @@ class _ResultsScreenState extends State<ResultsScreen> {
       );
 }
 
+String _fmtDuration(Duration d) => d.inMinutes > 0 ? '${d.inMinutes}m ${d.inSeconds % 60}s' : '${d.inSeconds}s';
+
+class _AnalysisSection extends StatelessWidget {
+  final MockAnalysis analysis;
+  final String lang;
+  const _AnalysisSection({required this.analysis, required this.lang});
+
+  @override
+  Widget build(BuildContext context) {
+    final a = analysis;
+    final repo = context.scope.repo;
+    final hint = Theme.of(context).hintColor;
+    return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+      SectionTitle(context.tr('प्रदर्शन विश्लेषण 📊', 'Performance analysis 📊')),
+      if (a.subjects.length > 1)
+        for (final s in a.subjects)
+          Card(
+            margin: const EdgeInsets.only(bottom: 10),
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Row(children: [
+                  Expanded(
+                    child: Text(repo.subject(s.subject)?.name.of(lang) ?? s.subject,
+                        style: const TextStyle(fontWeight: FontWeight.w800), overflow: TextOverflow.ellipsis),
+                  ),
+                  Text('${s.correct}/${s.total}', style: const TextStyle(fontWeight: FontWeight.w800)),
+                ]),
+                const SizedBox(height: 8),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(6),
+                  child: LinearProgressIndicator(
+                    value: s.total == 0 ? 0 : s.correct / s.total,
+                    minHeight: 8,
+                    color: s.accuracy() >= 0.7
+                        ? BrandColors.correct
+                        : (s.accuracy() >= 0.4 ? BrandColors.saffron : BrandColors.wrong),
+                    backgroundColor: hint.withValues(alpha: 0.15),
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  [
+                    context.tr('प्रयास ${s.attempted}', 'Attempted ${s.attempted}'),
+                    if (s.attempted > 0) context.tr('सटीकता ${(s.accuracy() * 100).round()}%', 'Accuracy ${(s.accuracy() * 100).round()}%'),
+                    if (a.negative > 0) context.tr('शुद्ध ${s.net(a.negative).toStringAsFixed(2)}', 'Net ${s.net(a.negative).toStringAsFixed(2)}'),
+                    if (s.time > Duration.zero) _fmtDuration(s.time),
+                  ].join(' · '),
+                  style: TextStyle(fontSize: 12.5, color: hint),
+                ),
+              ]),
+            ),
+          ),
+      if (a.negative > 0 && a.wrong > 0)
+        _InsightTile(
+          icon: Icons.remove_circle_outline,
+          color: BrandColors.wrong,
+          text: context.tr(
+              'नकारात्मक अंकन से आपके ${a.marksLostToNegative.toStringAsFixed(2)} अंक कटे (${a.wrong} गलत उत्तर)।',
+              'Negative marking cost you ${a.marksLostToNegative.toStringAsFixed(2)} marks (${a.wrong} wrong answers).'),
+        ),
+      if (a.tip == StrategyTip.overAttempting)
+        _InsightTile(
+          icon: Icons.lightbulb_outline,
+          color: BrandColors.saffron,
+          text: context.tr(
+              'आधे से ज़्यादा प्रयास गलत रहे। जिस प्रश्न में आप कम से कम 2 विकल्प नहीं हटा पा रहे, उसे छोड़ दें — अंदाज़ा लगाना महंगा पड़ रहा है।',
+              'Over half your attempts were wrong. Skip any question where you can\'t eliminate at least 2 options — guessing is costing you marks.'),
+        ),
+      if (a.tip == StrategyTip.underAttempting)
+        _InsightTile(
+          icon: Icons.trending_up,
+          color: BrandColors.correct,
+          text: context.tr(
+              'आपकी सटीकता बहुत अच्छी है, पर कई प्रश्न छोड़े। अगर 2 विकल्पों तक पहुँच जाएँ तो उत्तर दें — इस अंकन में यह औसतन फ़ायदेमंद है।',
+              'Your accuracy is excellent but you skipped a lot. When you can narrow it to 2 options, answer — with this marking scheme that pays off on average.'),
+        ),
+      if (a.avgTime != null)
+        _InsightTile(
+          icon: Icons.timer_outlined,
+          color: BrandColors.skyLight,
+          text: a.targetPace != null
+              ? context.tr('औसत ${_fmtDuration(a.avgTime!)} प्रति प्रश्न · परीक्षा की गति ${_fmtDuration(a.targetPace!)} प्रति प्रश्न',
+                  'Avg ${_fmtDuration(a.avgTime!)} per question · exam pace ${_fmtDuration(a.targetPace!)} per question')
+              : context.tr('औसत ${_fmtDuration(a.avgTime!)} प्रति प्रश्न', 'Avg ${_fmtDuration(a.avgTime!)} per question'),
+        ),
+      if (a.slowest.isNotEmpty)
+        _InsightTile(
+          icon: Icons.hourglass_bottom,
+          color: BrandColors.saffron,
+          text: context.tr('सबसे ज़्यादा समय लगा: ', 'Took the longest: ') +
+              a.slowest.map((i) => context.tr('प्र.${i + 1}', 'Q${i + 1}')).join(', '),
+        ),
+    ]);
+  }
+}
+
+class _InsightTile extends StatelessWidget {
+  final IconData icon;
+  final Color color;
+  final String text;
+  const _InsightTile({required this.icon, required this.color, required this.text});
+
+  @override
+  Widget build(BuildContext context) => Card(
+        margin: const EdgeInsets.only(bottom: 10),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Icon(icon, color: color, size: 22),
+            const SizedBox(width: 12),
+            Expanded(child: Text(text, style: const TextStyle(height: 1.45))),
+          ]),
+        ),
+      );
+}
+
 class _ReviewTile extends StatelessWidget {
   final int index;
   final QuizSpec spec;
   final int? answer;
   final String lang;
-  const _ReviewTile({required this.index, required this.spec, required this.answer, required this.lang});
+  final Duration? time;
+  const _ReviewTile({required this.index, required this.spec, required this.answer, required this.lang, this.time});
 
   @override
   Widget build(BuildContext context) {
@@ -227,6 +363,9 @@ class _ReviewTile extends StatelessWidget {
         leading: Icon(answer == null ? Icons.remove_circle_outline : (ok ? Icons.check_circle : Icons.cancel),
             color: answer == null ? Colors.grey : (ok ? BrandColors.correct : BrandColors.wrong)),
         title: Text('${index + 1}. ${q.text.of(lang)}', maxLines: 2, overflow: TextOverflow.ellipsis),
+        subtitle: time == null || time!.inSeconds == 0
+            ? null
+            : Text('⏱ ${_fmtDuration(time!)}', style: TextStyle(fontSize: 12, color: Theme.of(context).hintColor)),
         childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
         expandedCrossAxisAlignment: CrossAxisAlignment.start,
         children: [
