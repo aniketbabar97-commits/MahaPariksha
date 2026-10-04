@@ -160,15 +160,15 @@ void main() {
     PyqAccess.reset();
   });
 
-  test('interstitial pacing: 2 free quizzes, then every 3rd, never closer than 3 minutes', () {
+  test('interstitial pacing: 2 free quizzes, then every 10th, never closer than 3 minutes', () {
     AdPacing.reset();
     final t0 = DateTime(2026, 10, 4, 12);
-    expect([for (var n = 1; n <= 9; n++) AdPacing.shouldShow(n, now: t0)], [false, false, true, false, false, true, false, false, true]);
+    expect([for (var n = 1; n <= 21; n++) if (AdPacing.shouldShow(n, now: t0)) n], [10, 20]);
     AdPacing.markShown(t0);
-    expect(AdPacing.shouldShow(6, now: t0.add(const Duration(minutes: 1))), isFalse, reason: 'too soon after the last one');
-    expect(AdPacing.shouldShow(6, now: t0.add(const Duration(minutes: 3))), isTrue);
-    expect(AdPacing.due(3), isTrue);
-    expect(AdPacing.due(4), isFalse);
+    expect(AdPacing.shouldShow(20, now: t0.add(const Duration(minutes: 1))), isFalse, reason: 'too soon after the last one');
+    expect(AdPacing.shouldShow(20, now: t0.add(const Duration(minutes: 3))), isTrue);
+    expect(AdPacing.due(10), isTrue);
+    expect(AdPacing.due(3), isFalse);
     expect(AdPacing.eligibleMode(QuizMode.placement), isFalse);
     expect(AdPacing.eligibleMode(QuizMode.speed), isFalse);
     expect(AdPacing.eligibleMode(QuizMode.pyqPaper), isTrue);

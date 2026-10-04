@@ -15,7 +15,7 @@ ad-free purchasers (`Progress.removedAds`).
   6th paper inside a set).
 - **Interstitial** — on the results screen after a completed quiz or paper in any mode except
   the onboarding placement quiz and the 60-second speed round. The first 2 quizzes a user ever
-  finishes are ad-free, then every 3rd completion shows one, never closer than 3 minutes to the
+  finishes are ad-free, then every 10th completion shows one, never closer than 3 minutes to the
   previous. It is skipped on a turn when the in-app review sheet is due, so two interruptions never
   stack. It is preloaded when a quiz that is due for an ad starts (`quiz_screen.dart`); if it isn't
   ready in time it is silently skipped rather than delaying the results screen.

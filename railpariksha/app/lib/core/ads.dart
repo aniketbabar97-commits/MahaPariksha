@@ -157,7 +157,7 @@ class _NativeAdTileState extends State<NativeAdTile> {
 /// after that every [every]th completion shows one, and never closer than [minGap] to the last.
 class AdPacing {
   static const graceQuizzes = 2;
-  static const every = 3;
+  static const every = 10;
   static const minGap = Duration(minutes: 3);
   static DateTime? _lastShown;
 

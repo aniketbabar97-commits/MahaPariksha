@@ -80,7 +80,7 @@ rewarded 0.6 → 1.25, native 0 → 1.
 
 1. **PYQ: unlock per full paper, keep the 30-minute window for practice sets.** A paper is a 90-minute
    sitting; one ad per paper is the norm in Indian exam apps and is the single biggest lever.
-2. **Interstitial after every 3rd completed quiz or paper (any mode), not just mocks.** First two sessions
+2. **Interstitial after every 10th completed quiz or paper (any mode), not just mocks.** First two sessions
    ad-free, at least 3 minutes between interstitials, never during a question.
 3. **Anchored banner on Practice, the PYQ lists and the bottom of results**, not only Progress.
 4. **Native ad every ~10 rows in the PYQ list and search results.**
