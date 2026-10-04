@@ -254,7 +254,7 @@ class TodayScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(color: BrandColors.saffron, borderRadius: BorderRadius.circular(20)),
-                        child: Text(context.tr('नया', 'NEW'), style: TextStyle(color: BrandColors.skyOn(context), fontSize: 11, fontWeight: FontWeight.w900)),
+                        child: Text(context.tr('नया', 'NEW'), style: const TextStyle(color: BrandColors.onSaffron, fontSize: 11, fontWeight: FontWeight.w900)),
                       ),
                     ]),
                     const SizedBox(height: 2),
