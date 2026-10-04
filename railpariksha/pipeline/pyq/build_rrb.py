@@ -191,6 +191,9 @@ def is_marathi_sheet(qs):
 def quality_ok(q):
     if REGIONAL.search(q["q"] + " ".join(q["o"])) or CHART.search(q["q"]):
         return False
+    # Empty "( )" slots are formulas/images the text layer lost; the stem is incomplete.
+    if re.search(r"\(\s*\)", q["q"]) or any(re.fullmatch(r"\(?\s*\)?", o.strip()) for o in q["o"]):
+        return False
     stem, opts = q["q"], q["o"]
     if len(stem) < 12 or BAD.search(stem) or any(BAD.search(o) for o in opts):
         return False
