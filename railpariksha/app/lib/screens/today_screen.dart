@@ -403,8 +403,8 @@ class TodayScreen extends StatelessWidget {
           subtitle: caDates.isEmpty
               ? context.tr('रोज़ाना अपडेट जल्द आ रहे हैं', 'Daily updates coming soon')
               : context.tr(
-                  '${caDates.values.first.length} नई बातें · ${formatCaDate(caDates.keys.first).hi}',
-                  '${caDates.values.first.length} new updates · ${formatCaDate(caDates.keys.first).en}'),
+                  '${digestStories(caDates.values.first).length} नई बातें · ${formatCaDate(caDates.keys.first).hi}',
+                  '${digestStories(caDates.values.first).length} new updates · ${formatCaDate(caDates.keys.first).en}'),
           onTap: () => push(context, (_) => const CaDigestScreen()),
         ),
         const SizedBox(height: 12),
