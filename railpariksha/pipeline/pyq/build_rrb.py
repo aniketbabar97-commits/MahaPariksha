@@ -157,7 +157,8 @@ PROMO = re.compile(r"\s*(?:Join\s*)?(?:Telegram\s*)?Railway\s*News\s*Ro+ms?\b(?:
 
 
 # A page-header field the sheets print beside some questions; it leaks into option text.
-HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+", re.I)
+HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+|\s*\bPage\s*\d{1,3}\b|\s*\b20\d\d/\d\d/\d\d-\d\d:\d\d:\d\d\b",
+                         re.I)
 
 
 def scrub(t):

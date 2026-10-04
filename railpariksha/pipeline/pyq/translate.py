@@ -174,6 +174,60 @@ def migrate(family, old_items, new_items, clean=lambda t: t):
     return moved
 
 
+def reingest(a):
+    """Re-validate translations that were rejected against a question's OLD text,
+    against the same question after an extraction fix (e.g. a stray digit removed).
+    Old items come from a saved copy of content/pyq (--old); each is matched to its
+    rebuilt twin by the loose content key (unique matches only)."""
+    sys.path.insert(0, str(HERE))
+    from build_rrb import scrub
+    stats = Counter()
+    for d in a.dirs:
+        d = Path(d)
+        family = d.name
+        old = {i["id"]: i for i in json.loads((Path(a.old) / f"{family}.json").read_text(encoding="utf-8"))}
+        new_items = json.loads((PYQ / f"{family}.json").read_text(encoding="utf-8"))
+        def loose(item, cl=lambda t: t):
+            k = content_key(item, cl).split("|")
+            return "|".join([k[0], k[1], re.sub(r"\d", "", k[2])] + k[3:])
+        nl = Counter(loose(i) for i in new_items)
+        by_loose = {loose(i): i for i in new_items if nl[loose(i)] == 1}
+        done = load_tr(family)
+        new = []
+        for res_path in sorted(d.glob("*.out.json")):
+            src_path = res_path.with_name(res_path.name.replace(".out.json", ".json"))
+            src = {s["id"]: s for s in json.loads(src_path.read_text(encoding="utf-8"))}
+            try:
+                results = json.loads(res_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                continue
+            for r in results:
+                s0 = src.get(r.get("id"))
+                if s0 is None or r["id"] in done or r["id"] not in old:
+                    continue
+                twin = by_loose.get(loose(old[r["id"]], scrub))
+                if twin is None or twin["id"] in done:
+                    stats["no_twin"] += 1
+                    continue
+                lang_from = s0["from"]
+                if f"q_{lang_from}" not in twin:
+                    stats["no_twin"] += 1
+                    continue
+                s1 = {"q": twin[f"q_{lang_from}"], "o": twin[f"o_{lang_from}"], "subject": twin["s"]}
+                why = check(s1, s0["to"], r)
+                if why:
+                    stats[f"still rejected: {why}"] += 1
+                    continue
+                rec = {"id": twin["id"], "lang": s0["to"], "q": r["q"].strip(), "o": [x.strip() for x in r["o"]]}
+                done[twin["id"]] = rec
+                new.append(rec)
+        with (TR / f"{family}.jsonl").open("a", encoding="utf-8") as f:
+            for rec in new:
+                f.write(json.dumps(rec, ensure_ascii=False) + "\n")
+        stats[f"accepted_{family}"] += len(new)
+    print(dict(stats))
+
+
 def apply_family(family, items, clean=lambda t: t):
     """Fill the missing language of each item from translations/. Marks it with
     "tr" (the translated language) so the app can label machine-made text."""
@@ -212,6 +266,9 @@ if __name__ == "__main__":
     i = sub.add_parser("ingest")
     i.add_argument("dirs", nargs="+")
     sub.add_parser("apply")
+    r = sub.add_parser("reingest")
+    r.add_argument("--old", required=True, help="saved copy of content/pyq from before the rebuild")
+    r.add_argument("dirs", nargs="+", help="batch dirs, named after their family")
     a = ap.parse_args()
-    {"export": export, "ingest": ingest, "apply": apply}[a.cmd](a)
+    {"export": export, "ingest": ingest, "apply": apply, "reingest": reingest}[a.cmd](a)
     sys.exit(0)
