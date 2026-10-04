@@ -90,7 +90,8 @@ class _PyqScreenState extends State<PyqScreen> {
   @override
   void initState() {
     super.initState();
-    RewardedAdManager.preload();
+    // Warm up the unlock ad -- unless this user never sees ads.
+    if (!PyqAccess.unlocked(AppScope.read(context).progress)) RewardedAdManager.preload();
   }
 
   @override

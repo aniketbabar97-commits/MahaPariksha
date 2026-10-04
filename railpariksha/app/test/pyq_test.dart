@@ -68,9 +68,10 @@ void main() {
     expect(find.textContaining('Ad-free'), findsOneWidget);
 
     final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
-    await tester.tap(find.text(set.title).first);
-    await tester.pump();
+    // Load (and cache) the set for real first: the screen's own load would run
+    // inside the test's fake clock, where its background isolate never finishes.
     await tester.runAsync(() => pyqRepo.questions(set));
+    await tester.tap(find.text(set.title).first);
     await tester.pumpAndSettle();
     expect(find.text('Attempt a full paper 📝'), findsOneWidget);
 
@@ -89,9 +90,10 @@ void main() {
     expect(find.textContaining('Watch one short ad'), findsOneWidget);
 
     final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
-    await tester.tap(find.text(set.title).first);
-    await tester.pump();
+    // Load (and cache) the set for real first: the screen's own load would run
+    // inside the test's fake clock, where its background isolate never finishes.
     await tester.runAsync(() => pyqRepo.questions(set));
+    await tester.tap(find.text(set.title).first);
     await tester.pumpAndSettle();
     await tester.tap(find.textContaining('Mixed practice'));
     await tester.pumpAndSettle();

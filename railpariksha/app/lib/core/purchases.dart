@@ -34,7 +34,9 @@ final bool kShowPremiumPurchase = false;
 /// check (see ads.dart call sites in progress_screen/quiz_screen/results_screen).
 class PurchaseManager {
   final Progress progress;
-  final InAppPurchase _iap = InAppPurchase.instance;
+  // Lazy: touching the instance starts a Play Billing connection, which must not
+  // happen before [init] (or at all in tests that never call it).
+  late final InAppPurchase _iap = InAppPurchase.instance;
   StreamSubscription<List<PurchaseDetails>>? _sub;
   ProductDetails? product;
   bool available = false;
