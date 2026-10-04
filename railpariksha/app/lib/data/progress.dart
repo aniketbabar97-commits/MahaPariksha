@@ -170,7 +170,7 @@ class Progress extends ChangeNotifier {
   /// Display name shown on the leaderboard (chosen by the user, not a real identity).
   /// Null until they've set one.
   String? leaderboardName;
-  String theme = 'system';
+  String theme = 'dark'; // dark is the house look; Light / System stay available in Me
   bool reminders = true;
   int reminderHour = 7;
   bool streakRiskAlerts = true;
@@ -247,7 +247,7 @@ class Progress extends ChangeNotifier {
     examDate = j['examDate'] != null ? DateTime.tryParse(j['examDate']) : null;
     deviceId = j['deviceId'];
     leaderboardName = j['leaderboardName'];
-    theme = j['theme'] ?? 'system';
+    theme = j['theme'] ?? 'dark';
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
     streakRiskAlerts = j['streakRiskAlerts'] ?? true;

@@ -111,7 +111,7 @@ void main() {
   testWidgets('without ad-free access, starting PYQ practice asks to watch an ad first', (tester) async {
     PyqAccess.reset();
     await pump(tester, adFree: false);
-    expect(find.textContaining('Practice sets: one ad'), findsOneWidget);
+    expect(find.textContaining('one ad'), findsNothing, reason: 'ad mechanics are explained in the unlock dialog only');
 
     final set = (await tester.runAsync(() => pyqRepo.sets()))!.firstWhere((s) => s.railway);
     // Load (and cache) the set for real first: the screen's own load would run
