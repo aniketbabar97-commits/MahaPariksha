@@ -40,6 +40,8 @@ class ResultsScreen extends StatefulWidget {
 }
 
 class _ResultsScreenState extends State<ResultsScreen> {
+  /// This exam's previous mock, captured before this one is recorded.
+  MockResult? _prevMock;
 
   int get correct => [for (var i = 0; i < widget.answers.length; i++) widget.answers[i] == widget.spec.questions[i].answer]
       .where((c) => c)
@@ -51,6 +53,15 @@ class _ResultsScreenState extends State<ResultsScreen> {
   @override
   void initState() {
     super.initState();
+    if (widget.spec.mode == QuizMode.mock) {
+      final p = AppScope.read(context).progress;
+      for (final m in p.mocks.reversed) {
+        if (m.examId == (p.examId ?? '') && m.total > 0) {
+          _prevMock = m;
+          break;
+        }
+      }
+    }
     // Recording notifies Progress listeners (AppScope), which must not happen
     // while this screen is still in its first build.
     if (widget.spec.mode == QuizMode.mock) WidgetsBinding.instance.addPostFrameCallback((_) => _recordMock());
@@ -151,6 +162,13 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 if (isSpeed) _pill(context.tr('सर्वश्रेष्ठ ${p.bestSpeed}', 'Best ${p.bestSpeed}'), Icons.emoji_events),
                 if (spec.negative > 0)
                   _pill(context.tr('अंक ${score.toStringAsFixed(2)}', 'Score ${score.toStringAsFixed(2)}'), Icons.calculate),
+                if (_prevMock != null && total > 0)
+                  () {
+                    final delta = ((score / total - _prevMock!.score / _prevMock!.total) * 100).round();
+                    final sign = delta > 0 ? '+' : (delta < 0 ? '−' : '±');
+                    return _pill(context.tr('पिछले मॉक से $sign${delta.abs()}%', '$sign${delta.abs()}% vs last mock'),
+                        delta >= 0 ? Icons.trending_up : Icons.trending_down);
+                  }(),
                 if (spec.mode == QuizMode.mock && total > 0)
                   _pill(context.tr('अनुमानित टॉप ${100 - estimatedPercentile(correct / total)}%',
                       'Est. top ${100 - estimatedPercentile(correct / total)}%'), Icons.leaderboard),

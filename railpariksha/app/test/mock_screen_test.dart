@@ -30,7 +30,9 @@ void main() {
     await tester.runAsync(repo.load);
     final progress = Progress()
       ..lang = 'en'
-      ..removedAds = true;
+      ..removedAds = true
+      ..examId = 'rrb_ntpc';
+    progress.mocks.add(MockResult(today() - 1, 'rrb_ntpc', 0, 5));
     final spec = QuizSpec(QuizMode.mock, [for (var i = 1; i <= 5; i++) _q(i)], 'मॉक', 'Mock', negative: 1 / 3);
 
     await tester.pumpWidget(AppScope(
@@ -89,7 +91,9 @@ void main() {
 
     expect(find.text('Performance analysis 📊'), findsOneWidget);
     expect(find.textContaining('Negative marking cost you 0.33 marks'), findsOneWidget);
-    expect(progress.mocks, hasLength(1));
+    expect(progress.mocks, hasLength(2));
+    // Score 1 - 1/3 = 0.67 of 5 = 13% up on the previous 0/5.
+    expect(find.text('+13% vs last mock'), findsOneWidget);
 
     // One wrong answer (Q5): retrying opens a practice round of just that question.
     await tester.tap(find.text('Retry the 1 you got wrong now'));
