@@ -29,7 +29,10 @@ void startQuiz(BuildContext context, QuizSpec spec) {
 /// "PYQ · RRB JE CBT-1 2025 · 19 Feb 2026 · Shift 1": where a previous-year question appeared.
 class _PyqBadge extends StatelessWidget {
   final String label;
-  const _PyqBadge(this.label);
+
+  /// The text on screen is our translation, not the paper's own wording.
+  final bool translated;
+  const _PyqBadge(this.label, {this.translated = false});
 
   @override
   Widget build(BuildContext context) => Align(
@@ -40,7 +43,7 @@ class _PyqBadge extends StatelessWidget {
             color: BrandColors.saffron.withValues(alpha: 0.15),
             borderRadius: BorderRadius.circular(20),
           ),
-          child: Text('PYQ · $label',
+          child: Text('PYQ · $label${translated ? context.tr(' · अनूदित', ' · translated') : ''}',
               style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700)),
         ),
       );
@@ -402,7 +405,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
                   ]),
                   if (q.pyq != null) ...[
                     const SizedBox(height: 10),
-                    _PyqBadge(q.pyq!),
+                    _PyqBadge(q.pyq!, translated: q.translated == qLang),
                   ],
                   const SizedBox(height: 14),
                   Text(q.text.of(qLang), style: const TextStyle(fontSize: 19, fontWeight: FontWeight.w700, height: 1.45)),

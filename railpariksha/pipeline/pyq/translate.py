@@ -70,7 +70,10 @@ def check(src, lang, res):
     for a, b in zip(src["o"], o):
         if Counter(nums(a)) - Counter(nums(b)):
             return "option numbers changed"
-    if lang == "en":  # Latin codes inside a Hindi question must survive verbatim
+    # Latin codes inside a Hindi reasoning question (letter series, coded words) must
+    # survive verbatim. Elsewhere Latin text is mostly an English gloss in brackets,
+    # e.g. "पोतगाह (dockyard)", which a good translation rightly absorbs.
+    if lang == "en" and src.get("subject") == "reasoning":
         missing = Counter(latin_words(src["q"])) - Counter(latin_words(q))
         if missing:
             return f"lost Latin text {sorted(missing)[:3]}"
@@ -129,7 +132,40 @@ def ingest(a):
     print(dict(stats))
 
 
-def apply_family(family, items):
+def content_key(item, clean=lambda t: t):
+    """Paper + source language + normalised content: stable across extraction fixes
+    that only change formatting (superscripts, stripped watermarks), so translations
+    keyed by an item's old id can follow it to its new id."""
+    import unicodedata
+    lang = "hi" if "q_hi" in item and item.get("tr") != "hi" else "en"
+    n = lambda t: re.sub(r"[^0-9a-z\u0900-\u097F]+", "", unicodedata.normalize("NFKC", clean(t)).lower())
+    return "|".join([item["pyq"], lang, n(item[f"q_{lang}"])] + sorted(n(o) for o in item[f"o_{lang}"]))
+
+
+def migrate(family, old_items, new_items, clean=lambda t: t):
+    """Re-key translations from old item ids to the ids of the same questions after a rebuild."""
+    tr = load_tr(family)
+    if not tr:
+        return 0
+    new_by_key = {content_key(i): i["id"] for i in new_items}
+    moved, out = 0, {}
+    for old in old_items:
+        r = tr.get(old["id"])
+        if r is None:
+            continue
+        nid = new_by_key.get(content_key(old, clean))
+        if nid and nid != old["id"]:
+            r = {**r, "id": nid}
+            moved += 1
+        out[r["id"]] = r
+    for k, r in tr.items():  # translations of items not in old_items stay as they are
+        out.setdefault(k, r)
+    (TR / f"{family}.jsonl").write_text("".join(json.dumps(r, ensure_ascii=False) + "\n" for r in out.values()),
+                                        encoding="utf-8")
+    return moved
+
+
+def apply_family(family, items, clean=lambda t: t):
     """Fill the missing language of each item from translations/. Marks it with
     "tr" (the translated language) so the app can label machine-made text."""
     tr = load_tr(family)
@@ -139,7 +175,7 @@ def apply_family(family, items):
         if not r or f"q_{r['lang']}" in it:
             continue
         lang = r["lang"]
-        it[f"q_{lang}"], it[f"o_{lang}"] = r["q"], r["o"]
+        it[f"q_{lang}"], it[f"o_{lang}"] = clean(r["q"]), [clean(o) for o in r["o"]]
         ans = r["o"][it["a"]]
         it[f"e_{lang}"] = (f"Correct answer: {ans} (official answer key)." if lang == "en"
                            else f"सही उत्तर: {ans} (आधिकारिक उत्तर कुंजी)।")

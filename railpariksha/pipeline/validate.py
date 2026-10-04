@@ -20,7 +20,7 @@ TOPICS = {s["id"]: {t["id"] for t in s["topics"]} for s in taxonomy["subjects"]}
 EXAM_IDS = {e["id"] for e in taxonomy["exams"]}
 
 Q_FIELDS = {"id", "s", "t", "d", "q_hi", "q_en", "o_hi", "o_en", "a", "e_hi", "e_en"}
-Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date", "pyq"}
+Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date", "pyq", "tr"}
 # Previous-year questions imported from English-only sources may omit the Hindi
 # fields; the app shows their English text in both languages.
 Q_HI = {"q_hi", "o_hi", "e_hi"}
@@ -48,6 +48,8 @@ def check_question(q, where, errs):
         return
     if is_pyq and not nonempty(q["pyq"]):
         errs.append(f"{where}: pyq label empty")
+    if "tr" in q and q["tr"] not in ("hi", "en"):
+        errs.append(f"{where}: tr must be 'hi' or 'en' (the translated language)")
     if keys - Q_FIELDS - Q_OPTIONAL:
         errs.append(f"{where}: unknown fields {sorted(keys - Q_FIELDS - Q_OPTIONAL)}")
     if q["s"] not in TOPICS or q["t"] not in TOPICS[q["s"]]:

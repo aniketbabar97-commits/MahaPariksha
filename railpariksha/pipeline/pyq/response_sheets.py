@@ -21,13 +21,25 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 
-VERSION = 1  # bump when extraction output changes (invalidates build_rrb's cache)
+VERSION = 2  # bump when extraction output changes (invalidates build_rrb's cache)
 GREEN, RED = 0x40C64B, 0xF61818
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 OPT_LABEL = re.compile(r"^\s*([A-D]|[1-4])\.\s*$|^\s*([A-D]|[1-4])\.\s")
 NOISE = re.compile(r"^(Question ID|Option \d ID|Status|Chosen Option|Participant|Test Center|Roll No|"
                    r"Participants Name|Test Center Name|\* Note|Correct Answer will|Incorrect Answer will|"
                    r"\d\. Options shown|\d\. Chosen option|Note|Answered|Not Answered|Marked For Review)", re.I)
+
+
+SUP = str.maketrans("0123456789+-−=()nixyz", "⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁻⁼⁽⁾ⁿⁱˣʸᶻ")
+
+
+def superscript(t):
+    """Render a superscript span: Unicode superscripts when every character has one
+    ("2" -> "²"), else caret notation ("0.27" -> "^0.27") so 87^0.27 doesn't read as 870.27."""
+    core = t.strip()
+    if core and all(c in "0123456789+-−=()nixyz" for c in core):
+        return t.replace(core, core.translate(SUP))
+    return t.replace(core, "^" + (core if " " not in core else f"({core})")) if core else t
 
 
 def lines_of(page):
@@ -51,6 +63,8 @@ def lines_of(page):
             text, prev = "", None
             for s in spans:
                 t = s["text"]
+                if s["flags"] & 1 and prev is not None:  # PyMuPDF marks superscript spans
+                    t = superscript(t)
                 if prev is not None:
                     gap = s["bbox"][0] - prev["bbox"][2]
                     if gap > 1.2 and not text.endswith(" ") and not t.startswith(" "):
