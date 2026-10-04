@@ -2,11 +2,13 @@
 
 _Last updated: 3 October 2026_
 
-RailPariksha does not require sign-up or account creation. There is no name, email, or phone number collected to use the app.
+RailPariksha does not require sign-up or account creation. There is no name, email, or phone number collected to use the app. Signing in with Google is optional (see below).
 
 **Your progress is stored only on your device.** Your answers, streaks, XP, Beast Mode scores, and settings are saved locally on your phone. Uninstalling the app deletes all of it. "Reset progress" in Settings clears your answers, streaks, XP, Beast Mode scores, and exam selection, but keeps your app preferences (language, theme, daily goal, reminder times) so you don't have to redo them.
 
 **Internet use.** The app connects to the internet to download updated question packs, show ads, and (optionally) submit your score to the leaderboard described below.
+
+**Sign in with Google (optional).** If you choose to sign in with Google, Google Firebase Authentication stores your Google account ID, name and email address so we can recognise you and pre-fill your leaderboard name. You can sign out at any time. To have this record deleted, follow the steps at our "Delete your account and data" page or email asbshield@proton.me.
 
 **Leaderboard (optional).** If you choose to use the exam leaderboard, the app generates a random device ID (not your name, email, or any account) and asks you to pick a display name. Your chosen name, that random ID, and your mock-test score are stored in our database (Google Firebase/Firestore) so other users can see the leaderboard. You can change or stop using this feature at any time; it is entirely optional and skipped if you never open the leaderboard screen.
 
