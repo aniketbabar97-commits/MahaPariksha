@@ -61,7 +61,7 @@ class PracticeScreen extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 160),
             child: ActionChip(
               avatar: const Icon(Icons.swap_horiz, size: 18),
-              label: Text(exam.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis),
+              label: Text(shortExamName(exam.id, lang) ?? exam.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis),
               onPressed: () => showExamSwitcher(context),
             ),
           ),
@@ -306,3 +306,22 @@ class SubjectScreen extends StatelessWidget {
     );
   }
 }
+
+/// A chip-sized exam name ("JE Electrical" rather than "RRB Junior Engineer (Electrical)", which
+/// never fits and was cut to "RRB Junior Engi…").
+String? shortExamName(String id, String lang) {
+  const en = {
+    'rrb_ntpc': 'NTPC', 'rrb_group_d': 'Group D', 'rrb_alp': 'ALP', 'rrb_technician': 'Technician',
+    'rrb_je': 'JE', 'rrb_paramedical': 'Paramedical', 'rpf_constable': 'RPF Constable', 'rpf_si': 'RPF SI',
+    'dfccil_executive': 'DFCCIL', 'rrb_je_mechanical': 'JE Mechanical', 'rrb_je_civil': 'JE Civil',
+    'rrb_je_electrical': 'JE Electrical',
+  };
+  const hi = {
+    'rrb_ntpc': 'NTPC', 'rrb_group_d': 'ग्रुप डी', 'rrb_alp': 'ALP', 'rrb_technician': 'टेक्नीशियन',
+    'rrb_je': 'JE', 'rrb_paramedical': 'पैरामेडिकल', 'rpf_constable': 'RPF कांस्टेबल', 'rpf_si': 'RPF SI',
+    'dfccil_executive': 'DFCCIL', 'rrb_je_mechanical': 'JE मैकेनिकल', 'rrb_je_civil': 'JE सिविल',
+    'rrb_je_electrical': 'JE इलेक्ट्रिकल',
+  };
+  return (lang == 'hi' ? hi : en)[id];
+}
+
