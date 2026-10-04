@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../core/ads.dart';
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
@@ -112,7 +113,9 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
     super.initState();
     final p = AppScope.read(context).progress;
     qLang = p.lang;
-    if (spec.mode == QuizMode.mock && !p.removedAds) InterstitialAdManager.preload();
+    if (AdPacing.eligibleMode(spec.mode) && !p.removedAds && AdPacing.due(p.quizzesDone + 1)) InterstitialAdManager.preload();
+    Analytics.log('quiz_start', {'mode': spec.mode.name, 'n': spec.questions.length});
+    AdGuard.enter();
     remaining = spec.timeLimit?.inSeconds ?? 0;
     final r = widget.resume;
     if (r != null) {
@@ -200,6 +203,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
 
   @override
   void dispose() {
+    AdGuard.leave();
     WidgetsBinding.instance.removeObserver(this);
     timer?.cancel();
     super.dispose();

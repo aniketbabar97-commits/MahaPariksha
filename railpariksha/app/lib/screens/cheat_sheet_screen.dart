@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
+import '../core/ads.dart';
 
 const _catColors = [
   BrandColors.saffron,
@@ -73,7 +74,8 @@ class _CheatSheetScreenState extends State<CheatSheetScreen> {
                   ),
                 ]),
                 for (var i = 0; i < sheets.length; i++) _category(i, sheets[i], lang),
-              ],
+                      const AdSlot(),
+      ],
             ),
     );
   }

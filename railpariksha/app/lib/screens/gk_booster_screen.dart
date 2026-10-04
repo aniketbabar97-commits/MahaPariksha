@@ -8,6 +8,7 @@ import '../core/theme.dart';
 import '../core/transitions.dart';
 import '../data/models.dart';
 import '../widgets/common.dart';
+import '../core/ads.dart';
 
 /// Icon for a GK booster category, keyed by the id strings used in
 /// content/gk_booster.json (distinct from [subjectIcon]'s question-bank set).
@@ -67,6 +68,7 @@ class GkBoosterScreen extends StatelessWidget {
                   _CategoryCard(category: categories[i], color: _boosterColors[i % _boosterColors.length], lang: lang),
                   const SizedBox(height: Spacing.md),
                 ],
+                const AdSlot(),
               ],
             ),
     );

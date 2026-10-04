@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
@@ -131,6 +132,7 @@ class PracticeScreen extends StatelessWidget {
           SectionTitle(context.tr('बोनस अभ्यास 🎁', 'Bonus practice 🎁')),
           _EnglishBonusTile(),
         ],
+        if (!s.progress.removedAds) const Center(child: AdBanner()),
       ],
     );
   }
@@ -298,6 +300,7 @@ class SubjectScreen extends StatelessWidget {
             }),
             const SizedBox(height: 8),
           ],
+          const AdSlot(),
         ],
       ),
     );

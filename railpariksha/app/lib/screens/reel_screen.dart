@@ -8,6 +8,8 @@ import '../core/theme.dart';
 import '../data/models.dart';
 import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import '../core/ads_config.dart';
 
 /// How many items each growth batch adds to the queue.
 const int _kBatchSize = 40;
@@ -16,7 +18,7 @@ const int _kBatchSize = 40;
 /// fast swiper never hits a dead end.
 const int _kGrowThreshold = 5;
 
-enum _CardKind { mcq, flashcard, motivation }
+enum _CardKind { mcq, flashcard, motivation, ad }
 
 /// One entry in the endless reel. Exactly one of [question]/[card]/[tip] is set,
 /// matching [kind].
@@ -25,18 +27,29 @@ class _ReelEntry {
   final Question? question;
   final Flashcard? card;
   final Motivation? tip;
+  final NativeAd? ad;
   const _ReelEntry.mcq(this.question)
       : kind = _CardKind.mcq,
         card = null,
-        tip = null;
+        tip = null,
+        ad = null;
   const _ReelEntry.flashcard(this.card)
       : kind = _CardKind.flashcard,
         question = null,
-        tip = null;
+        tip = null,
+        ad = null;
   const _ReelEntry.motivation(this.tip)
       : kind = _CardKind.motivation,
         question = null,
-        card = null;
+        card = null,
+        ad = null;
+
+  /// A sponsored card. Only ever created for an ad that has already loaded.
+  const _ReelEntry.sponsored(this.ad)
+      : kind = _CardKind.ad,
+        question = null,
+        card = null,
+        tip = null;
 }
 
 /// TikTok/Reels-style endless vertical feed mixing quick MCQs, flashcards and
@@ -68,6 +81,12 @@ class _ReelScreenState extends State<ReelScreen> {
   String _lang = 'hi';
   int _currentIndex = 0;
 
+  /// Native ads that have finished loading and are waiting to be dropped into the feed. A card
+  /// is only inserted for a loaded ad, so a swipe never lands on an empty "sponsored" page.
+  final List<NativeAd> _readyAds = [];
+  final List<NativeAd> _usedAds = [];
+  static const _adEvery = 8;
+
   @override
   void initState() {
     super.initState();
@@ -83,11 +102,40 @@ class _ReelScreenState extends State<ReelScreen> {
     _flashcardPool = s.repo.flashcardsFor(exam);
     _motivationPool = s.repo.motivation;
     _queue.addAll(_generateBatch(_kBatchSize));
+    if (!s.progress.removedAds) {
+      _loadReelAd();
+      _loadReelAd();
+    }
+  }
+
+  Future<void> _loadReelAd() async {
+    try {
+      await NativeAd(
+        adUnitId: AdIds.native,
+        request: const AdRequest(),
+        nativeTemplateStyle: NativeTemplateStyle(templateType: TemplateType.medium),
+        listener: NativeAdListener(
+          onAdLoaded: (ad) {
+            if (!mounted) {
+              ad.dispose();
+              return;
+            }
+            _readyAds.add(ad as NativeAd);
+          },
+          onAdFailedToLoad: (ad, _) => ad.dispose(),
+        ),
+      ).load();
+    } catch (_) {
+      // No ads plugin: the feed simply has no sponsored cards.
+    }
   }
 
   @override
   void dispose() {
     _pageController.dispose();
+    for (final ad in [..._readyAds, ..._usedAds]) {
+      ad.dispose();
+    }
     super.dispose();
   }
 
@@ -129,6 +177,13 @@ class _ReelScreenState extends State<ReelScreen> {
   void _onPageChanged(int i) {
     HapticFeedback.selectionClick();
     _currentIndex = i;
+    // Every few cards, slot in a loaded sponsored card a couple of pages ahead.
+    if (i > 0 && i % _adEvery == 0 && _readyAds.isNotEmpty) {
+      final ad = _readyAds.removeAt(0);
+      _usedAds.add(ad);
+      setState(() => _queue.insert(min(i + 2, _queue.length), _ReelEntry.sponsored(ad)));
+      _loadReelAd();
+    }
     if (_queue.length - i <= _kGrowThreshold) {
       final more = _generateBatch(_kBatchSize);
       if (more.isNotEmpty) setState(() => _queue.addAll(more));
@@ -209,6 +264,7 @@ class _ReelScreenState extends State<ReelScreen> {
                   m: entry.tip!,
                   lang: _lang,
                 ),
+              _CardKind.ad => _SponsoredCard(key: ValueKey('ad-$i'), ad: entry.ad!),
             },
           );
         },
@@ -473,6 +529,39 @@ class _FlashcardCardState extends State<_FlashcardCard> {
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// A sponsored native ad as a full-page reel card: clearly labelled, no buttons of ours near it.
+class _SponsoredCard extends StatelessWidget {
+  final NativeAd ad;
+  const _SponsoredCard({super.key, required this.ad});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: const BoxDecoration(gradient: BrandColors.heroGradient),
+      child: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(Spacing.lg, 80, Spacing.lg, Spacing.xl),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Text(context.tr('प्रायोजित', 'Sponsored'),
+                style: const TextStyle(color: Colors.white70, fontSize: 12, letterSpacing: 1)),
+            const SizedBox(height: 10),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(Corners.md),
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minHeight: 320, maxHeight: 420),
+                child: AdWidget(ad: ad),
+              ),
+            ),
+            const SizedBox(height: Spacing.xl),
+            Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'),
+                style: const TextStyle(color: Colors.white54, fontSize: 13)),
+          ]),
         ),
       ),
     );

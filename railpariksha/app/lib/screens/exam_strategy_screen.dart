@@ -4,6 +4,7 @@ import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
 import '../widgets/common.dart';
+import '../core/ads.dart';
 
 const _stageColors = [
   BrandColors.sky,
@@ -97,7 +98,8 @@ class ExamStrategyScreen extends StatelessWidget {
                 'This information is researched from public sources. Refer to the relevant recruitment board\'s official website for the latest and authoritative details.'),
             style: TextStyle(color: Theme.of(context).hintColor, fontSize: 11.5, height: 1.4),
           ),
-        ],
+                const AdSlot(),
+      ],
       ),
     );
   }

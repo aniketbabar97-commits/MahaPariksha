@@ -7,6 +7,7 @@ import '../data/models.dart';
 import '../widgets/common.dart';
 import '../logic/quiz_builder.dart';
 import 'quiz_screen.dart';
+import '../core/ads.dart';
 
 const _branchColors = [
   BrandColors.saffron,
@@ -108,6 +109,7 @@ class TopicScreen extends StatelessWidget {
                 ]),
               ),
             ),
+            const AdSlot(),
           ]),
           ListView.separated(
             padding: const EdgeInsets.all(16),

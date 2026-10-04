@@ -16,6 +16,7 @@ import '../widgets/explanation_player.dart';
 import '../widgets/share_card.dart';
 import 'next_steps_card.dart';
 import 'quiz_screen.dart';
+import '../core/analytics.dart';
 
 class ResultsScreen extends StatefulWidget {
   final QuizSpec spec;
@@ -67,6 +68,10 @@ class _ResultsScreenState extends State<ResultsScreen> {
     // Recording notifies Progress listeners (AppScope), which must not happen
     // while this screen is still in its first build.
     if (widget.spec.mode == QuizMode.mock) WidgetsBinding.instance.addPostFrameCallback((_) => _recordMock());
+    if (AdPacing.eligibleMode(widget.spec.mode)) WidgetsBinding.instance.addPostFrameCallback((_) => _quizFinished());
+    if (AdPacing.eligibleMode(widget.spec.mode) && widget.xpEarned >= 5 && !AppScope.read(context).progress.removedAds) {
+      RewardedAdManager.preload();
+    }
     // Practice-style sessions only: a mock's results may already be showing
     // an interstitial ad, and stacking two interruptions would sour the moment.
     if (widget.spec.instantFeedback && widget.spec.mode != QuizMode.speed) {
@@ -92,6 +97,32 @@ class _ResultsScreenState extends State<ResultsScreen> {
     }
   }
 
+  bool _xpDoubled = false;
+
+  /// An opt-in reward on practice-style results: watch an ad, get the XP of this quiz again.
+  bool get _canDoubleXp =>
+      !_xpDoubled &&
+      widget.xpEarned >= 5 &&
+      AdPacing.eligibleMode(widget.spec.mode) &&
+      !AppScope.read(context).progress.removedAds &&
+      !RewardedAdManager.unavailable;
+
+  void _doubleXp() {
+    HapticFeedback.selectionClick();
+    final p = AppScope.read(context).progress;
+    final shown = RewardedAdManager.showIfReady(onReward: () {
+      p.bonusXp(widget.xpEarned);
+      Analytics.log('double_xp_claimed');
+      if (mounted) setState(() => _xpDoubled = true);
+    });
+    if (!shown) {
+      RewardedAdManager.preload();
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(context.tr('विज्ञापन लोड हो रहा है, कुछ सेकंड में फिर कोशिश करें।',
+              'The ad is still loading. Try again in a few seconds.'))));
+    }
+  }
+
   void _recordMock() {
     if (!mounted) return;
     final p = AppScope.read(context).progress;
@@ -107,12 +138,27 @@ class _ResultsScreenState extends State<ResultsScreen> {
         total: widget.spec.questions.length,
       );
     }
-    // Natural break point: results are already recorded, so showing (or
-    // skipping, if not preloaded in time) the ad here never blocks or
-    // delays anything the user is waiting on. Frequency-capped per
-    // InterstitialAdManager.shouldShowForMockCount -- see its doc comment.
-    if (!p.removedAds && InterstitialAdManager.shouldShowForMockCount(p.mocks.length)) {
-      InterstitialAdManager.showIfReady();
+  }
+
+  /// Counts the finished quiz and, on the pacing rule's turn, shows an interstitial. The results
+  /// are already on screen and recorded, so a missing or late ad never blocks anything.
+  void _quizFinished() {
+    if (!mounted) return;
+    final p = AppScope.read(context).progress;
+    final done = p.recordQuizDone();
+    Analytics.log('quiz_complete', {'mode': widget.spec.mode.name, 'n': widget.spec.questions.length, 'count': done});
+    if (p.removedAds || !AdPacing.shouldShow(done)) return;
+    // The in-app review sheet is also due on practice-style results; stacking two
+    // interruptions would sour the moment, so the ad waits for the next turn.
+    final total = widget.spec.questions.length;
+    final reviewDue = widget.spec.instantFeedback &&
+        widget.spec.mode != QuizMode.speed &&
+        total >= 5 &&
+        p.shouldAskForReview(sessionScore: correct / total);
+    if (reviewDue) return;
+    if (InterstitialAdManager.showIfReady()) {
+      AdPacing.markShown();
+      Analytics.log('interstitial_shown', {'mode': widget.spec.mode.name});
     }
   }
 
@@ -171,7 +217,9 @@ class _ResultsScreenState extends State<ResultsScreen> {
                     return _pill(context.tr('पिछले मॉक से $sign${delta.abs()}%', '$sign${delta.abs()}% vs last mock'),
                         delta >= 0 ? Icons.trending_up : Icons.trending_down);
                   }(),
-                if (spec.mode == QuizMode.mock && total > 0)
+                // "Est. top 99%" for a near-zero score reads as nonsense, so only show a rank
+                // once it is a respectable one.
+                if (spec.mode == QuizMode.mock && total > 0 && estimatedPercentile(correct / total) >= 25)
                   _pill(context.tr('अनुमानित टॉप ${100 - estimatedPercentile(correct / total)}%',
                       'Est. top ${100 - estimatedPercentile(correct / total)}%'), Icons.leaderboard),
               ]),
@@ -256,15 +304,34 @@ class _ResultsScreenState extends State<ResultsScreen> {
               },
             ),
           ],
+          if (_canDoubleXp || _xpDoubled) ...[
+            const SizedBox(height: 12),
+            Card(
+              child: ListTile(
+                leading: Icon(_xpDoubled ? Icons.check_circle : Icons.bolt, color: BrandColors.sunrise),
+                title: Text(_xpDoubled
+                    ? context.tr('XP दोगुना हो गया! 🎉', 'XP doubled! 🎉')
+                    : context.tr('अपना XP दोगुना करें (+${widget.xpEarned} XP)', 'Double your XP (+${widget.xpEarned} XP)')),
+                subtitle: _xpDoubled
+                    ? null
+                    : Text(context.tr('एक छोटा विज्ञापन देखें', 'Watch one short ad')),
+                trailing: _xpDoubled ? null : const Icon(Icons.play_circle_outline),
+                onTap: _xpDoubled ? null : _doubleXp,
+              ),
+            ),
+          ],
           if (spec.mode != QuizMode.placement && total > 0) ...[
             const SizedBox(height: 12),
             NextStepsCard(steps: NextSteps.from(spec.questions, widget.answers, context.scope.builder.topicStats())),
           ],
+          // Below the actions and the coaching card, well clear of the buttons above.
+          if (!p.removedAds && AdPacing.eligibleMode(spec.mode)) const Center(child: AdBanner()),
           if (!spec.instantFeedback && total > 0)
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[
             SectionTitle(context.tr('उत्तरों की समीक्षा 🔍', 'Answer review 🔍')),
-            for (var i = 0; i < total; i++)
+            for (var i = 0; i < total; i++) ...[
+              if (!p.removedAds && i > 0 && i % 8 == 0 && AdPacing.eligibleMode(spec.mode)) const NativeAdTile(),
               _ReviewTile(
                 index: i,
                 spec: spec,
@@ -272,6 +339,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 lang: lang,
                 time: widget.timePerQuestion != null && i < widget.timePerQuestion!.length ? widget.timePerQuestion![i] : null,
               ),
+            ],
           ],
         ],
       ),

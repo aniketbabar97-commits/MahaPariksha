@@ -28,7 +28,7 @@ def load_dir(name):
 
 
 RAIL_EXAMS = ("RRB", "RPF")
-MAX_PAPER, TARGET_PAPER = 150, 110  # questions
+MIN_PAPER, MAX_PAPER, TARGET_PAPER = 40, 150, 110  # questions
 
 # Options that point at each other ("All of the above", "Both A and B") or at a letter must
 # keep their order, as must numeric options already listed in order.
@@ -82,6 +82,20 @@ def build_pyq_pack(out_dir):
     by_label = defaultdict(list)
     for q in questions:
         by_label[q["pyq"]].append(q)
+    # Sheets that mostly failed to extract leave a "paper" of a handful of questions (an exam-hall
+    # test of 10). Gather those, per exam and year, into shared "Partial sheets" papers instead.
+    def head_year(label):
+        parts = label.split(" · ")
+        m = re.search(r"(20\d\d)", parts[1] if len(parts) > 1 else label)
+        return parts[0], m.group(1) if m else ""
+    for label in [l for l, qs in by_label.items() if len(qs) < MIN_PAPER]:
+        head, year = head_year(label)
+        by_label[f"{head} · Partial sheets {year}".strip()].extend(by_label.pop(label))
+    for label in [l for l, qs in by_label.items() if len(qs) < MIN_PAPER and "Partial sheets" in l]:
+        head, year = head_year(label)
+        siblings = [l for l in by_label if l != label and head_year(l) == (head, year)]
+        if siblings:  # still only a handful: ride along with the exam's biggest paper that year
+            by_label[max(siblings, key=lambda l: len(by_label[l]))].extend(by_label.pop(label))
     questions = []
     for label, qs in by_label.items():
         if len(qs) <= MAX_PAPER:

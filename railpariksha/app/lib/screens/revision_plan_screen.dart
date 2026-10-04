@@ -8,6 +8,7 @@ import '../logic/revision_planner.dart';
 import '../widgets/common.dart';
 import 'flashcard_screen.dart';
 import 'quiz_screen.dart';
+import '../core/ads.dart';
 
 /// Turns the exam countdown (set in the Me tab) into a concrete three-phase
 /// plan -- Foundation, Weak-Topic Focus, Final Revision -- so "I have an app"
@@ -238,6 +239,7 @@ class _TodayActions extends StatelessWidget {
           onTap: () => startQuiz(context, s.builder.mock(full: true)),
         ),
       ],
-    ]);
+            const AdSlot(),
+      ]);
   }
 }
