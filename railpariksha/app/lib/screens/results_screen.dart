@@ -171,7 +171,9 @@ class _ResultsScreenState extends State<ResultsScreen> {
                     return _pill(context.tr('पिछले मॉक से $sign${delta.abs()}%', '$sign${delta.abs()}% vs last mock'),
                         delta >= 0 ? Icons.trending_up : Icons.trending_down);
                   }(),
-                if (spec.mode == QuizMode.mock && total > 0)
+                // "Est. top 99%" for a near-zero score reads as nonsense, so only show a rank
+                // once it is a respectable one.
+                if (spec.mode == QuizMode.mock && total > 0 && estimatedPercentile(correct / total) >= 25)
                   _pill(context.tr('अनुमानित टॉप ${100 - estimatedPercentile(correct / total)}%',
                       'Est. top ${100 - estimatedPercentile(correct / total)}%'), Icons.leaderboard),
               ]),

@@ -9,6 +9,20 @@ import 'package:railpariksha/data/pyq_repo.dart';
 import 'package:railpariksha/screens/pyq_screen.dart';
 
 void main() {
+  test('courtesy access when no ad can load: opens the section, but only twice per session', () {
+    PyqAccess.reset();
+    final p = Progress();
+    expect(PyqAccess.unlocked(p), isFalse);
+    expect(PyqAccess.grantCourtesy(), isTrue);
+    expect(PyqAccess.unlocked(p), isTrue);
+    expect(PyqAccess.remaining(), lessThanOrEqualTo(PyqAccess.courtesyWindow));
+    expect(PyqAccess.grantCourtesy(), isTrue);
+    expect(PyqAccess.grantCourtesy(), isFalse, reason: 'limited to ${PyqAccess.courtesyLimit} a session');
+    PyqAccess.reset();
+    expect(PyqAccess.grantCourtesy(), isTrue, reason: 'reset() starts a fresh session');
+    PyqAccess.reset();
+  });
+
   TestWidgetsFlutterBinding.ensureInitialized();
 
   test('English-only PYQ items fall back to English for the Hindi fields', () {
@@ -60,6 +74,14 @@ void main() {
     await tester.pumpAndSettle();
     return progress;
   }
+
+  testWidgets("the PYQ list puts the student's own exam first", (tester) async {
+    PyqAccess.reset();
+    await pump(tester, adFree: true); // exam: rrb_group_d
+    final tiles = tester.widgetList<Text>(find.byType(Text)).map((t) => t.data ?? '').toList();
+    final firstSet = tiles.indexWhere((t) => t.startsWith('RRB Group D') || t.startsWith('RPF') || t.startsWith('RRB ALP'));
+    expect(tiles[firstSet], startsWith('RRB Group D'), reason: 'Group D papers are listed before RPF/ALP for a Group D student');
+  });
 
   testWidgets('an ad-free user opens a railway paper straight into an exam-style test', (tester) async {
     PyqAccess.reset();

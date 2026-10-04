@@ -18,6 +18,7 @@ import 'quiz_screen.dart';
 import 'reel_screen.dart';
 import 'revision_plan_screen.dart';
 import 'search_screen.dart';
+import 'pyq_screen.dart';
 
 class TodayScreen extends StatelessWidget {
   final ValueChanged<int> onNavigate;
@@ -312,6 +313,20 @@ class TodayScreen extends StatelessWidget {
             },
           ),
         ],
+        const SizedBox(height: 12),
+        // The previous-year papers are the app's main draw, so they get a front-door card
+        // (before this they were only reachable from Practice, one tap deeper).
+        ActionCard(
+          icon: Icons.history_edu,
+          color: BrandColors.saffron,
+          title: context.tr('पिछले वर्ष के प्रश्नपत्र 📜', 'Previous year papers 📜'),
+          subtitle: context.tr('RRB व RPF के 50,000+ असली प्रश्न · अपनी परीक्षा के पेपर हल करें',
+              '50,000+ real RRB & RPF questions · attempt your exam\'s papers'),
+          onTap: () {
+            HapticFeedback.selectionClick();
+            push(context, (_) => const PyqScreen());
+          },
+        ),
         const SizedBox(height: 12),
         // Beast Mode: a timed, streak-multiplier sprint — the "advanced" adrenaline mode,
         // gated behind decent overall accuracy so it reads as an earned challenge.

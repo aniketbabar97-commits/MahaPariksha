@@ -125,7 +125,13 @@ class RewardedAdManager {
   static RewardedAd? _ad;
   static bool _loading = false;
 
+  /// Rewarded loads that failed in a row (no fill, no network). Reset by any success.
+  static int loadFailures = 0;
+
   static bool get isReady => _ad != null;
+
+  /// No ad is ready and the last loads failed: there is nothing to wait for.
+  static bool get unavailable => _ad == null && !_loading && loadFailures >= 2;
 
   static void preload() {
     if (_ad != null || _loading) return;
@@ -137,8 +143,12 @@ class RewardedAdManager {
         onAdLoaded: (ad) {
           _ad = ad;
           _loading = false;
+          loadFailures = 0;
         },
-        onAdFailedToLoad: (_) => _loading = false,
+        onAdFailedToLoad: (_) {
+          _loading = false;
+          loadFailures++;
+        },
       ),
     );
   }

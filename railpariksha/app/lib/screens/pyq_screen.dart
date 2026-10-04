@@ -34,8 +34,25 @@ class PyqAccess {
 
   static void grant() => _until = DateTime.now().add(window);
 
+  /// When no ad can be loaded (no fill, no network) a student must not be locked out of the
+  /// papers they came for -- and nobody earns anything from an ad that can't load. So a failed
+  /// load opens the section for [courtesyWindow], at most [courtesyLimit] times per app session.
+  static const courtesyWindow = Duration(minutes: 20);
+  static const courtesyLimit = 2;
+  static int _courtesyUsed = 0;
+
+  static bool grantCourtesy() {
+    if (_courtesyUsed >= courtesyLimit) return false;
+    _courtesyUsed++;
+    _until = DateTime.now().add(courtesyWindow);
+    return true;
+  }
+
   @visibleForTesting
-  static void reset() => _until = null;
+  static void reset() {
+    _until = null;
+    _courtesyUsed = 0;
+  }
 }
 
 /// Runs [start] if the PYQ section is unlocked; otherwise offers a rewarded ad
@@ -67,6 +84,13 @@ Future<void> withPyqAccess(BuildContext context, VoidCallback start) async {
     PyqAccess.grant();
     if (context.mounted) start();
   });
+  if (!shown && context.mounted && RewardedAdManager.unavailable && PyqAccess.grantCourtesy()) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(context.tr('अभी कोई विज्ञापन उपलब्ध नहीं — ${PyqAccess.courtesyWindow.inMinutes} मिनट के लिए PYQ खुले हैं।',
+            'No ad is available right now — PYQs are open for ${PyqAccess.courtesyWindow.inMinutes} minutes on us.'))));
+    start();
+    return;
+  }
   if (!shown && context.mounted) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
         content: Text(context.tr('विज्ञापन लोड हो रहा है, कुछ सेकंड में फिर कोशिश करें। (इंटरनेट चालू रखें)',
@@ -77,6 +101,20 @@ Future<void> withPyqAccess(BuildContext context, VoidCallback start) async {
 /// Negative marking per wrong answer, as a fraction of one question's marks:
 /// RRB/RPF CBTs deduct 1/3; SSC Tier-I deducts 0.5 of 2 marks.
 double _negativeFor(PyqSet set) => set.railway ? 1 / 3 : 0.25;
+
+/// Exam id -> how that exam's PYQ sets are named in the pack (RRB JE branches share "RRB JE").
+const _setPrefix = {
+  'rrb_ntpc': 'RRB NTPC',
+  'rrb_group_d': 'RRB Group D',
+  'rrb_alp': 'RRB ALP',
+  'rrb_technician': 'RRB Technician',
+  'rrb_je': 'RRB JE',
+  'rrb_je_mechanical': 'RRB JE',
+  'rrb_je_civil': 'RRB JE',
+  'rrb_je_electrical': 'RRB JE',
+  'rpf_constable': 'RPF Constable',
+  'rpf_si': 'RPF SI',
+};
 
 class PyqScreen extends StatefulWidget {
   const PyqScreen({super.key});
@@ -110,7 +148,12 @@ class _PyqScreenState extends State<PyqScreen> {
           int relevant(PyqSet set) => subjects == null
               ? set.count
               : set.subjects.entries.where((e) => subjects.contains(e.key)).fold(0, (a, e) => a + e.value);
-          final sets = snap.data!.where((x) => relevant(x) > 0).toList();
+          // The student's own exam first (stable: the rest keep their order).
+          final mine = _setPrefix[s.builder.exam?.id];
+          final all = snap.data!.where((x) => relevant(x) > 0).toList();
+          final sets = mine == null
+              ? all
+              : [...all.where((x) => x.exam.startsWith(mine)), ...all.where((x) => !x.exam.startsWith(mine))];
           if (sets.isEmpty) {
             return Center(
               child: Padding(
