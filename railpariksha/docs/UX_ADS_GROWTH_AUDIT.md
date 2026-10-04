@@ -17,7 +17,7 @@ table in section 4.
 | Interstitial | After a mock test result | Every 2nd mock, none in the first 2 |
 | Rewarded | PYQ unlock (30-minute window) | Once per window |
 | Rewarded | Progress: bonus streak freeze | Opt-in |
-| Native, App-open, Rewarded-interstitial | IDs exist in `ads_config.dart` | **Never shown** |
+| Native, App-open, Rewarded-interstitial | IDs exist in `ads_config.dart` | Were never shown; native and app-open are now live (see `store/ADS.md`) |
 
 Ad-free purchasers see none of the above. The unlock window is in memory only, so it resets when the app
 restarts. Two of the three placements sit on screens most students open rarely (Progress, mock results).
@@ -56,7 +56,7 @@ Left as is, for your call:
 
 All inputs below are my assumptions and should be replaced with AdMob data after about two weeks live.
 
-- eCPM in ₹ per 1,000 impressions: banner 8, interstitial 120, rewarded 250, native 40.
+- eCPM in ₹ per 1,000 impressions: banner 8, interstitial 120, rewarded 250, native 40, app-open 100.
 - Retention: 35% on day 1, 15% on day 7, 9% on day 30, 4% on day 90.
 - Installs ramp up linearly over the 180 days.
 
@@ -65,18 +65,18 @@ All inputs below are my assumptions and should be replaced with AdMob data after
 | Current ads, eCPM ×0.5 | 0.08 | 68,000 | 18.2 lakh |
 | **Current ads, base eCPM** | **0.16** | **34,000** | **9.1 lakh** |
 | Current ads, eCPM ×1.5 | 0.25 | 23,000 | 6.1 lakh |
-| Proposed ads, eCPM ×0.5 | 0.21 | 27,000 | 7.2 lakh |
-| **Proposed ads, base eCPM** | **0.41** | **13,000** | **3.6 lakh** |
-| Proposed ads, eCPM ×1.5 | 0.62 | 9,000 | 2.4 lakh |
+| Built ads, eCPM ×0.5 | 0.32 | 17,000 | 4.6 lakh |
+| **Built ads, base eCPM** | **0.65** | **9,000** | **2.3 lakh** |
+| Built ads, eCPM ×1.5 | 0.97 | 6,000 | 1.5 lakh |
 
-Reading it: with today's ad setup the target needs roughly 9 lakh installs. The built ad plan (interstitial every 10th quiz) roughly
-triples revenue per user, which brings the install need down to about 3.6 lakh. Whichever way, **users are
-the bigger lever**: ad changes move the number about 2.5×, while acquisition moves it 10×+.
+Reading it: with today's ad setup the target needs roughly 9 lakh installs. The built ad plan (every placement below, interstitial every 10th quiz) roughly
+quadruples revenue per user, which brings the install need down to about 2.3 lakh. Whichever way, **users are
+the bigger lever**: ad changes move the number about 4×, while acquisition moves it 10×+.
 
 ## 5. Ad plan (approved and built; see store/ADS.md for the live rules)
 
-Impressions per daily user per day, current → proposed: banner 0.4 → 3, interstitial 0.1 → 0.3,
-rewarded 0.6 → 1.25, native 0 → 1.
+Impressions per daily user per day, current → built: banner 0.4 → 6, interstitial 0.1 → 0.3,
+rewarded 0.6 → 1.75 (PYQ papers, double XP), native 0 → 2.5, app-open 0 → 0.25.
 
 1. **PYQ: unlock per full paper, keep the 30-minute window for practice sets.** A paper is a 90-minute
    sitting; one ad per paper is the norm in Indian exam apps and is the single biggest lever.

@@ -11,6 +11,7 @@ import '../logic/quiz_builder.dart';
 import '../widgets/common.dart';
 import 'quiz_screen.dart';
 import 'topic_screen.dart';
+import '../core/ads.dart';
 
 /// Search across the current exam's question bank and topic notes.
 ///
@@ -146,11 +147,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                   'Questions (top ${questionResults.length} of $questionMatchCount)')
                               : context.tr(
                                   'प्रश्न (${questionResults.length})', 'Questions (${questionResults.length})')),
-                          for (final q in questionResults) ...[
-                            _QuestionResultTile(question: q),
+                          for (var i = 0; i < questionResults.length; i++) ...[
+                            _QuestionResultTile(question: questionResults[i]),
                             const SizedBox(height: 8),
+                            if (!s.progress.removedAds && i % 10 == 9 && i < questionResults.length - 1) const NativeAdTile(),
                           ],
                         ],
+                        const AdSlot(),
                       ],
                     ),
     );

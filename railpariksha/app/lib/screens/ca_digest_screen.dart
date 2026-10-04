@@ -9,6 +9,7 @@ import '../data/models.dart';
 import '../widgets/common.dart';
 import 'ca_archive_screen.dart';
 import 'quiz_screen.dart';
+import '../core/ads.dart';
 
 /// Topic-flavoured icon for a digest card -- purely decorative, so an unknown
 /// topic id just falls back to the generic current-affairs icon instead of
@@ -97,7 +98,11 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
               const SizedBox(height: 2),
               Text(formatCaDate(date).of(lang), style: TextStyle(color: Theme.of(context).hintColor)),
               const SizedBox(height: 14),
-              for (final q in items) _DigestCard(q: q, lang: lang),
+              for (var i = 0; i < items.length; i++) ...[
+                _DigestCard(q: items[i], lang: lang),
+                if (!context.scope.progress.removedAds && i % 4 == 3 && i < items.length - 1) const NativeAdTile(),
+              ],
+              const AdSlot(),
               const SizedBox(height: 8),
               FilledButton.icon(
                 icon: const Icon(Icons.play_arrow_rounded),

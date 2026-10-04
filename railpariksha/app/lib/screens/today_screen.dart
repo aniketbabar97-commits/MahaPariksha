@@ -19,6 +19,7 @@ import 'reel_screen.dart';
 import 'revision_plan_screen.dart';
 import 'search_screen.dart';
 import 'pyq_screen.dart';
+import '../core/ads.dart';
 
 class TodayScreen extends StatelessWidget {
   final ValueChanged<int> onNavigate;
@@ -388,7 +389,8 @@ class TodayScreen extends StatelessWidget {
                   ]),
                 ),
                 if (beastUnlocked) const Icon(Icons.chevron_right, color: Colors.white70),
-              ]),
+                      const AdSlot(),
+      ]),
             ),
           ),
           ),

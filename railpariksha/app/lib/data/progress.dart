@@ -496,6 +496,12 @@ class Progress extends ChangeNotifier {
     return _gain(3, countsTowardGoal: false);
   }
 
+  /// Extra XP from an opt-in reward (e.g. "double your XP" after watching an ad).
+  void bonusXp(int amount) {
+    xp += amount;
+    save();
+  }
+
   /// A quiz or paper reached its results screen. Returns the new total.
   int recordQuizDone() {
     quizzesDone++;

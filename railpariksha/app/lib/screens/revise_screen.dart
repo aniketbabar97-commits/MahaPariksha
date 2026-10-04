@@ -9,6 +9,7 @@ import 'cheat_sheet_screen.dart';
 import 'flashcard_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
+import '../core/ads.dart';
 
 class ReviseScreen extends StatelessWidget {
   const ReviseScreen({super.key});
@@ -193,6 +194,7 @@ class ReviseScreen extends StatelessWidget {
             ),
             const SizedBox(height: 8),
           ],
+              const AdSlot(),
       ],
     );
   }

@@ -300,6 +300,7 @@ class SubjectScreen extends StatelessWidget {
             }),
             const SizedBox(height: 8),
           ],
+          const AdSlot(),
         ],
       ),
     );

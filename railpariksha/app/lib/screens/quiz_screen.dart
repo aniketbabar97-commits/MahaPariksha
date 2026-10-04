@@ -115,6 +115,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
     qLang = p.lang;
     if (AdPacing.eligibleMode(spec.mode) && !p.removedAds && AdPacing.due(p.quizzesDone + 1)) InterstitialAdManager.preload();
     Analytics.log('quiz_start', {'mode': spec.mode.name, 'n': spec.questions.length});
+    AdGuard.enter();
     remaining = spec.timeLimit?.inSeconds ?? 0;
     final r = widget.resume;
     if (r != null) {
@@ -202,6 +203,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
 
   @override
   void dispose() {
+    AdGuard.leave();
     WidgetsBinding.instance.removeObserver(this);
     timer?.cancel();
     super.dispose();

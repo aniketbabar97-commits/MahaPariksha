@@ -46,6 +46,7 @@ Future<void> main() async {
   runApp(AppScope(repo: repo, progress: progress, purchases: purchases, child: const RailParikshaApp()));
   repo.checkForUpdate();
   initAds();
+  AppOpenAdManager.start(progress);
   // Fire-and-forget: a slow/unavailable Play Billing connection must never
   // delay startup. removedAds is already loaded from disk by progress.load()
   // above, so ads stay off for a paying user even before this resolves.

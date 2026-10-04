@@ -7,12 +7,17 @@ AdMob App ID: `ca-app-pub-9100209280220037~3428622385`
 Interstitials are paced by `AdPacing` (`lib/core/ads.dart`); everything below is skipped for
 ad-free purchasers (`Progress.removedAds`).
 
-- **Banner** — anchored adaptive banner (full screen width) at the bottom of Progress, Practice,
-  the PYQ lists and the results screen. Never on a quiz-taking screen (mock, practice, Beast Mode,
-  flashcards) where it would interrupt focus. Shown only once loaded, labelled "Advertisement" and
+- **Banner** — anchored adaptive banner (full screen width), via `AdSlot` at the end of: Today,
+  Practice, subject screens, Revise, Progress, Me, topic notes, GK Booster, revision plan, exam
+  strategy, cheat sheets, current-affairs digest, search results, the PYQ lists and the results
+  screen. **Never** on a screen where a question is open (mock, practice, Beast Mode, flashcards,
+  Reel cards): an ad beside answer buttons causes accidental taps, which AdMob treats as invalid
+  traffic and can suspend the account for. Shown only once loaded, labelled "Advertisement" and
   spaced away from buttons.
-- **Native** — a small native ad card in the PYQ lists (after every 8th exam set, and after the
-  6th paper inside a set).
+- **Native** — small native cards in feeds and lists: the PYQ lists (every 8th exam set, and after
+  the 6th paper in a set), the current-affairs digest (every 4th item), search results (every 10th),
+  and the results answer review (every 8th question). In Reel Mode, a full-page labelled "Sponsored"
+  card every 8 cards, inserted only once an ad has actually loaded.
 - **Interstitial** — on the results screen after a completed quiz or paper in any mode except
   the onboarding placement quiz and the 60-second speed round. The first 2 quizzes a user ever
   finishes are ad-free, then every 10th completion shows one, never closer than 3 minutes to the
@@ -23,6 +28,8 @@ ad-free purchasers (`Progress.removedAds`).
   Full papers: one ad per paper, valid for 2 hours (a paper is a 90-minute sitting). If no ad can
   load (two failed loads in a row) the PYQ opens for 20 minutes on us, at most twice per app
   session; nobody earns from an ad that can't load. See `PyqAccess` in `pyq_screen.dart`.
+- **Rewarded — double XP.** Opt-in card on practice-style results: watch one ad, get that quiz's
+  XP again (once per result screen). Hidden when ads can't load.
 - **Rewarded — streak freeze.** Opt-in card on the Progress screen, one freeze token per watch
   (capped at 2, see `Progress.freezeTokens`).
 
@@ -33,11 +40,13 @@ nothing when Firebase isn't configured. Events: `pyq_open`, `pyq_set_open`, `pyq
 `pyq_unlocked` (via ad or courtesy), `pyq_ad_not_ready`, `pyq_paper_start`, `quiz_start`,
 `quiz_complete`, `interstitial_shown`. No names, emails or question text are ever logged.
 
+- **App open** — only when a student *returns* to the app: never on a cold start, never while a
+  question is open (`AdGuard`), only after 30+ minutes in the background, at most once per 4 hours,
+  and not until 3 quizzes are finished. Switch off with `AppOpenAdManager.enabled = false`.
+
 ## Reserved, not yet wired anywhere
 
-Ad unit IDs exist in `lib/core/ads_config.dart` for **Rewarded Interstitial** and **App Open**,
-but nothing shows them. App Open has to be used sparingly (not on every cold start) and needs its
-own design pass.
+An ad unit ID exists in `lib/core/ads_config.dart` for **Rewarded Interstitial**, but nothing shows it.
 
 ## Test vs real ads
 

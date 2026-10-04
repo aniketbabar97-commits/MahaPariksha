@@ -12,6 +12,7 @@ import '../logic/quiz_builder.dart';
 import '../widgets/share_card.dart';
 import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
+import '../core/ads.dart';
 
 /// A question wrong in a row this many times in a row ends the sprint early — "knocked out".
 /// Telegraphed one step ahead in the HUD (see [_KnockoutWarning]).
@@ -84,6 +85,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
   @override
   void initState() {
     super.initState();
+    AdGuard.enter();
     qLang = AppScope.read(context).progress.lang;
     remaining = widget.seconds;
     queue = List.of(spec.questions)..shuffle();
@@ -96,6 +98,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
 
   @override
   void dispose() {
+    AdGuard.leave();
     timer?.cancel();
     super.dispose();
   }

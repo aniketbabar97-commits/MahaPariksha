@@ -18,6 +18,7 @@ import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
 import '../core/format.dart';
+import '../core/ads.dart';
 
 class MeScreen extends StatelessWidget {
   const MeScreen({super.key});
@@ -296,6 +297,7 @@ class MeScreen extends StatelessWidget {
           },
           child: Text(context.tr('प्रगति रीसेट करें', 'Reset progress')),
         ),
+        const AdSlot(),
       ],
     );
   }

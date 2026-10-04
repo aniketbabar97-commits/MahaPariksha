@@ -69,6 +69,9 @@ class _ResultsScreenState extends State<ResultsScreen> {
     // while this screen is still in its first build.
     if (widget.spec.mode == QuizMode.mock) WidgetsBinding.instance.addPostFrameCallback((_) => _recordMock());
     if (AdPacing.eligibleMode(widget.spec.mode)) WidgetsBinding.instance.addPostFrameCallback((_) => _quizFinished());
+    if (AdPacing.eligibleMode(widget.spec.mode) && widget.xpEarned >= 5 && !AppScope.read(context).progress.removedAds) {
+      RewardedAdManager.preload();
+    }
     // Practice-style sessions only: a mock's results may already be showing
     // an interstitial ad, and stacking two interruptions would sour the moment.
     if (widget.spec.instantFeedback && widget.spec.mode != QuizMode.speed) {
@@ -91,6 +94,32 @@ class _ResultsScreenState extends State<ResultsScreen> {
       await review.requestReview();
     } catch (_) {
       // No Play Store / services on this device: a rating ask is optional.
+    }
+  }
+
+  bool _xpDoubled = false;
+
+  /// An opt-in reward on practice-style results: watch an ad, get the XP of this quiz again.
+  bool get _canDoubleXp =>
+      !_xpDoubled &&
+      widget.xpEarned >= 5 &&
+      AdPacing.eligibleMode(widget.spec.mode) &&
+      !AppScope.read(context).progress.removedAds &&
+      !RewardedAdManager.unavailable;
+
+  void _doubleXp() {
+    HapticFeedback.selectionClick();
+    final p = AppScope.read(context).progress;
+    final shown = RewardedAdManager.showIfReady(onReward: () {
+      p.bonusXp(widget.xpEarned);
+      Analytics.log('double_xp_claimed');
+      if (mounted) setState(() => _xpDoubled = true);
+    });
+    if (!shown) {
+      RewardedAdManager.preload();
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(context.tr('विज्ञापन लोड हो रहा है, कुछ सेकंड में फिर कोशिश करें।',
+              'The ad is still loading. Try again in a few seconds.'))));
     }
   }
 
@@ -275,6 +304,22 @@ class _ResultsScreenState extends State<ResultsScreen> {
               },
             ),
           ],
+          if (_canDoubleXp || _xpDoubled) ...[
+            const SizedBox(height: 12),
+            Card(
+              child: ListTile(
+                leading: Icon(_xpDoubled ? Icons.check_circle : Icons.bolt, color: BrandColors.sunrise),
+                title: Text(_xpDoubled
+                    ? context.tr('XP दोगुना हो गया! 🎉', 'XP doubled! 🎉')
+                    : context.tr('अपना XP दोगुना करें (+${widget.xpEarned} XP)', 'Double your XP (+${widget.xpEarned} XP)')),
+                subtitle: _xpDoubled
+                    ? null
+                    : Text(context.tr('एक छोटा विज्ञापन देखें', 'Watch one short ad')),
+                trailing: _xpDoubled ? null : const Icon(Icons.play_circle_outline),
+                onTap: _xpDoubled ? null : _doubleXp,
+              ),
+            ),
+          ],
           if (spec.mode != QuizMode.placement && total > 0) ...[
             const SizedBox(height: 12),
             NextStepsCard(steps: NextSteps.from(spec.questions, widget.answers, context.scope.builder.topicStats())),
@@ -285,7 +330,8 @@ class _ResultsScreenState extends State<ResultsScreen> {
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[
             SectionTitle(context.tr('उत्तरों की समीक्षा 🔍', 'Answer review 🔍')),
-            for (var i = 0; i < total; i++)
+            for (var i = 0; i < total; i++) ...[
+              if (!p.removedAds && i > 0 && i % 8 == 0 && AdPacing.eligibleMode(spec.mode)) const NativeAdTile(),
               _ReviewTile(
                 index: i,
                 spec: spec,
@@ -293,6 +339,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                 lang: lang,
                 time: widget.timePerQuestion != null && i < widget.timePerQuestion!.length ? widget.timePerQuestion![i] : null,
               ),
+            ],
           ],
         ],
       ),

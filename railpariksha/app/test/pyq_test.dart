@@ -174,4 +174,18 @@ void main() {
     expect(AdPacing.eligibleMode(QuizMode.pyqPaper), isTrue);
     AdPacing.reset();
   });
+
+  test('app-open ad: only on a return after a long absence, once per 4h, never mid-quiz or for ad-free', () {
+    final now = DateTime(2026, 10, 4, 12);
+    bool show({bool removed = false, int quizzes = 5, int awayMin = 45, DateTime? last, bool busy = false}) =>
+        AppOpenAdManager.shouldShow(
+            removedAds: removed, quizzesDone: quizzes, away: Duration(minutes: awayMin), now: now, lastShown: last, busy: busy);
+    expect(show(), isTrue);
+    expect(show(awayMin: 10), isFalse, reason: 'a quick app switch is not a return');
+    expect(show(quizzes: 2), isFalse, reason: 'new users get a grace period');
+    expect(show(removed: true), isFalse);
+    expect(show(busy: true), isFalse, reason: 'never over an open question');
+    expect(show(last: now.subtract(const Duration(hours: 1))), isFalse);
+    expect(show(last: now.subtract(const Duration(hours: 5))), isTrue);
+  });
 }

@@ -3,6 +3,7 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../logic/quiz_builder.dart' show QuizMode;
 import 'ads_config.dart';
+import '../data/progress.dart';
 import 'app_scope.dart';
 
 /// Call once at app startup, before runApp.
@@ -87,6 +88,16 @@ class _AdBannerState extends State<AdBanner> {
   }
 }
 
+/// The banner for the end of a browse/list screen: nothing for ad-free purchasers, otherwise a
+/// centred [AdBanner]. Never put one on a screen where the student is answering a question.
+class AdSlot extends StatelessWidget {
+  const AdSlot({super.key});
+
+  @override
+  Widget build(BuildContext context) =>
+      AppScope.of(context).progress.removedAds ? const SizedBox.shrink() : const Center(child: AdBanner());
+}
+
 /// A small native ad card for list screens (between rows, with generous spacing). Shows nothing
 /// until loaded and when it fails, like [AdBanner]. Callers only add it for users who haven't
 /// bought ad removal.
@@ -121,7 +132,7 @@ class _NativeAdTileState extends State<NativeAdTile> {
         ),
       );
       _ad = ad;
-      ad.load();
+      ad.load().catchError((_) {});
     } catch (_) {
       // No ads plugin: stay invisible.
     }
@@ -288,5 +299,136 @@ class RewardedAdManager {
     );
     ad.show(onUserEarnedReward: (_, _) => onReward());
     return true;
+  }
+}
+
+
+/// Screens where a full-screen ad must never appear on top of the student (a question is open).
+class AdGuard {
+  static int _busy = 0;
+  static bool get busy => _busy > 0;
+  static void enter() => _busy++;
+  static void leave() => _busy = _busy > 0 ? _busy - 1 : 0;
+}
+
+/// App-open ad, shown only when a student comes *back* to the app: never on a cold start, never
+/// while a question is open, only after [minAway] in the background, at most once per [minGap],
+/// and not until they have finished [graceQuizzes] quizzes. Skipped for ad-free purchasers.
+///
+/// To switch it off entirely, set [enabled] to false.
+class AppOpenAdManager {
+  static const enabled = true;
+  static const minAway = Duration(minutes: 30);
+  static const minGap = Duration(hours: 4);
+  static const graceQuizzes = 3;
+  static const _maxAge = Duration(hours: 3); // AdMob expires app-open ads after 4h
+
+  static AppOpenAd? _ad;
+  static DateTime? _loadedAt;
+  static bool _loading = false;
+  static DateTime? _pausedAt;
+  static DateTime? _lastShown;
+  static bool _showing = false;
+
+  /// Pure rule, so it can be tested.
+  static bool shouldShow({
+    required bool removedAds,
+    required int quizzesDone,
+    required Duration away,
+    required DateTime now,
+    DateTime? lastShown,
+    bool busy = false,
+  }) {
+    if (!enabled || removedAds || busy || quizzesDone < graceQuizzes) return false;
+    if (away < minAway) return false;
+    return lastShown == null || now.difference(lastShown) >= minGap;
+  }
+
+  static void start(Progress progress) {
+    if (!enabled) return;
+    WidgetsBinding.instance.addObserver(_Observer(progress));
+    preload();
+  }
+
+  static void preload() {
+    if (_loading || _ad != null) return;
+    _loading = true;
+    try {
+      AppOpenAd.load(
+        adUnitId: AdIds.appOpen,
+        request: const AdRequest(),
+        adLoadCallback: AppOpenAdLoadCallback(
+          onAdLoaded: (ad) {
+            _ad = ad;
+            _loadedAt = DateTime.now();
+            _loading = false;
+          },
+          onAdFailedToLoad: (_) => _loading = false,
+        ),
+      ).catchError((_) => _loading = false);
+    } catch (_) {
+      _loading = false;
+    }
+  }
+
+  static void _onResume(Progress p) {
+    final paused = _pausedAt;
+    _pausedAt = null;
+    if (paused == null || _showing) return;
+    final now = DateTime.now();
+    final ok = shouldShow(
+        removedAds: p.removedAds,
+        quizzesDone: p.quizzesDone,
+        away: now.difference(paused),
+        now: now,
+        lastShown: _lastShown,
+        busy: AdGuard.busy);
+    final ad = _ad;
+    final fresh = _loadedAt != null && now.difference(_loadedAt!) < _maxAge;
+    if (!ok) return;
+    if (ad == null || !fresh) {
+      ad?.dispose();
+      _ad = null;
+      preload();
+      return;
+    }
+    _ad = null;
+    _showing = true;
+    _lastShown = now;
+    ad.fullScreenContentCallback = FullScreenContentCallback(
+      onAdDismissedFullScreenContent: (ad) {
+        ad.dispose();
+        _showing = false;
+        preload();
+      },
+      onAdFailedToShowFullScreenContent: (ad, _) {
+        ad.dispose();
+        _showing = false;
+        preload();
+      },
+    );
+    ad.show();
+  }
+
+  @visibleForTesting
+  static void resetForTest() {
+    _ad = null;
+    _pausedAt = null;
+    _lastShown = null;
+    _showing = false;
+  }
+}
+
+class _Observer with WidgetsBindingObserver {
+  final Progress progress;
+  _Observer(this.progress);
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused) {
+      AppOpenAdManager._pausedAt = DateTime.now();
+    } else if (state == AppLifecycleState.resumed) {
+      AppOpenAdManager._onResume(progress);
+    }
   }
 }
