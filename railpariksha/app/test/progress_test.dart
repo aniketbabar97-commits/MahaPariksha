@@ -141,4 +141,57 @@ void main() {
     p.examDate = DateTime.now().subtract(const Duration(days: 1));
     expect(p.daysToExam, isNull);
   });
+
+  test('a paused mock survives a save/load JSON round trip', () {
+    const m = PausedMock(
+      examId: 'rrb_ntpc',
+      questionIds: ['a', 'b', 'c'],
+      titleHi: 'मॉक',
+      titleEn: 'Mock',
+      negative: 1 / 3,
+      timeLimitSec: 600,
+      remainingSec: 321,
+      answers: [1, null, 3],
+      marked: [1],
+      visited: [0, 1, 2],
+      index: 2,
+      timeMs: [1000, 2000, 0],
+    );
+    final back = PausedMock.fromJson(m.toJson());
+    expect(back.questionIds, m.questionIds);
+    expect(back.answers, m.answers);
+    expect(back.marked, m.marked);
+    expect(back.remainingSec, 321);
+    expect(back.answeredCount, 2);
+  });
+
+  group('rating prompt', () {
+    Progress engaged() {
+      final p = Progress()
+        ..lastActiveDay = today()
+        ..streak = 5;
+      for (var i = 0; i < 120; i++) {
+        p.qStats['q$i'] = [1, 1, 1];
+      }
+      return p;
+    }
+
+    test('asks an engaged learner after a good session', () {
+      expect(engaged().shouldAskForReview(sessionScore: 0.8), isTrue);
+    });
+
+    test('never asks after a poor session, or a brand-new user', () {
+      expect(engaged().shouldAskForReview(sessionScore: 0.5), isFalse);
+      expect(Progress().shouldAskForReview(sessionScore: 1.0), isFalse);
+    });
+
+    test('waits 60 days between asks and stops after 3', () {
+      final p = engaged()..markReviewAsked();
+      expect(p.shouldAskForReview(sessionScore: 0.9), isFalse);
+      p.lastReviewAskDay = today() - 60;
+      expect(p.shouldAskForReview(sessionScore: 0.9), isTrue);
+      p.reviewAsks = 3;
+      expect(p.shouldAskForReview(sessionScore: 0.9), isFalse);
+    });
+  });
 }

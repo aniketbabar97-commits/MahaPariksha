@@ -29,15 +29,32 @@ void startQuiz(BuildContext context, QuizSpec spec) {
 const _labelsHi = ['अ', 'ब', 'क', 'ड'];
 const _labelsEn = ['A', 'B', 'C', 'D'];
 
+/// Reopens a mock test the user left (or the OS killed) before submitting.
+/// Returns false when it can no longer be rebuilt, e.g. a content update
+/// removed one of its questions; the snapshot is discarded in that case.
+bool resumeMock(BuildContext context, PausedMock m) {
+  final scope = AppScope.read(context);
+  final qs = m.questionIds.map(scope.repo.question).whereType<Question>().toList();
+  if (qs.isEmpty || qs.length != m.questionIds.length || m.answers.length != qs.length) {
+    scope.progress.setPausedMock(null);
+    return false;
+  }
+  final spec = QuizSpec(QuizMode.mock, qs, m.titleHi, m.titleEn,
+      timeLimit: m.timeLimitSec == null ? null : Duration(seconds: m.timeLimitSec!), negative: m.negative);
+  push(context, (_) => QuizScreen(spec: spec, resume: m));
+  return true;
+}
+
 class QuizScreen extends StatefulWidget {
   final QuizSpec spec;
-  const QuizScreen({super.key, required this.spec});
+  final PausedMock? resume;
+  const QuizScreen({super.key, required this.spec, this.resume});
 
   @override
   State<QuizScreen> createState() => _QuizScreenState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
   int index = 0;
   late final List<int?> answers = List.filled(widget.spec.questions.length, null);
   late String qLang;
@@ -53,7 +70,17 @@ class _QuizScreenState extends State<QuizScreen> {
   // _finish() instead, same pattern as the mock-mode batch below.
   Reward? _notable;
 
+  // Test-mode (mock/placement) state mirroring the real RRB CBT interface:
+  // the palette's "not visited" vs "not answered" distinction needs to know
+  // which questions were ever opened, and Mark for Review is independent of
+  // whether an answer is chosen (answered+marked still gets evaluated).
+  final Set<int> _visited = {0};
+  final Set<int> _marked = {};
+  late final List<int> _timeMs = List.filled(widget.spec.questions.length, 0);
+  final Stopwatch _qWatch = Stopwatch()..start();
+
   QuizSpec get spec => widget.spec;
+  bool get _resumable => spec.mode == QuizMode.mock;
   Question get q => spec.questions[index];
   bool get answered => answers[index] != null;
 
@@ -64,10 +91,57 @@ class _QuizScreenState extends State<QuizScreen> {
     qLang = p.lang;
     if (spec.mode == QuizMode.mock && !p.removedAds) InterstitialAdManager.preload();
     remaining = spec.timeLimit?.inSeconds ?? 0;
+    final r = widget.resume;
+    if (r != null) {
+      for (var i = 0; i < answers.length && i < r.answers.length; i++) {
+        answers[i] = r.answers[i];
+      }
+      for (var i = 0; i < _timeMs.length && i < r.timeMs.length; i++) {
+        _timeMs[i] = r.timeMs[i];
+      }
+      _marked.addAll(r.marked);
+      _visited.addAll(r.visited);
+      index = r.index.clamp(0, spec.questions.length - 1);
+      _visited.add(index);
+      if (spec.timeLimit != null) remaining = r.remainingSec.clamp(1, spec.timeLimit!.inSeconds);
+    }
+    WidgetsBinding.instance.addObserver(this);
     _startTimer();
   }
 
+  PausedMock _snapshot() {
+    final ms = List<int>.from(_timeMs);
+    ms[index] += _qWatch.elapsedMilliseconds;
+    return PausedMock(
+      examId: AppScope.read(context).progress.examId ?? '',
+      questionIds: [for (final q in spec.questions) q.id],
+      titleHi: spec.titleHi,
+      titleEn: spec.titleEn,
+      negative: spec.negative,
+      timeLimitSec: spec.timeLimit?.inSeconds,
+      remainingSec: remaining,
+      answers: List<int?>.from(answers),
+      marked: _marked.toList(),
+      visited: _visited.toList(),
+      index: index,
+      timeMs: ms,
+    );
+  }
+
+  void _persist({bool now = false}) {
+    if (!_resumable || _finished || !mounted) return;
+    AppScope.read(context).progress.setPausedMock(_snapshot(), now: now);
+  }
+
+  // Backgrounding is the last reliable moment before Android may kill the
+  // process, so the snapshot is written synchronously-ish (no debounce).
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.paused || state == AppLifecycleState.hidden) _persist(now: true);
+  }
+
   void _startTimer() {
+    _qWatch.start();
     if (spec.timeLimit == null) return;
     timer = Timer.periodic(const Duration(seconds: 1), (_) {
       if (!mounted) return;
@@ -83,10 +157,27 @@ class _QuizScreenState extends State<QuizScreen> {
   void _pauseTimer() {
     timer?.cancel();
     timer = null;
+    _qWatch.stop();
+  }
+
+  void _bankTime() {
+    _timeMs[index] += _qWatch.elapsedMilliseconds;
+    _qWatch.reset();
+  }
+
+  void _goTo(int i) {
+    if (i == index || i < 0 || i >= spec.questions.length) return;
+    _bankTime();
+    setState(() {
+      index = i;
+      _visited.add(i);
+    });
+    _persist();
   }
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
     timer?.cancel();
     super.dispose();
   }
@@ -112,7 +203,7 @@ class _QuizScreenState extends State<QuizScreen> {
       await Future.delayed(const Duration(milliseconds: 350));
       if (!mounted) return;
       if (index + 1 < spec.questions.length) {
-        setState(() => index++);
+        _goTo(index + 1);
       } else {
         _finish();
       }
@@ -123,7 +214,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   void _next() {
     if (index + 1 < spec.questions.length) {
-      setState(() => index++);
+      _goTo(index + 1);
     } else {
       _finish();
     }
@@ -134,7 +225,10 @@ class _QuizScreenState extends State<QuizScreen> {
     if (_finished) return;
     _finished = true;
     timer?.cancel();
+    _bankTime();
+    _qWatch.stop();
     final p = AppScope.read(context).progress;
+    if (_resumable) p.setPausedMock(null);
     // Only one of these per-question Rewards can ever carry a notable event
     // (level/streak/goal are once-a-day state crossings, not per-question),
     // so collecting the last non-trivial one and celebrating once after the
@@ -161,6 +255,7 @@ class _QuizScreenState extends State<QuizScreen> {
         xpEarned: xpEarned,
         elapsed: DateTime.now().difference(started),
         speedScore: speedCorrect,
+        timePerQuestion: [for (final ms in _timeMs) Duration(milliseconds: ms)],
       ),
     );
   }
@@ -171,15 +266,19 @@ class _QuizScreenState extends State<QuizScreen> {
     final r = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
-        title: Text(ctx.tr('अभ्यास रोकना है?', 'Stop practice?')),
-        content: Text(ctx.tr('अब तक की प्रगति सहेज ली गई है।', 'Your progress so far is saved.')),
+        title: Text(_resumable ? ctx.tr('टेस्ट छोड़ना है?', 'Leave the test?') : ctx.tr('अभ्यास रोकना है?', 'Stop practice?')),
+        content: Text(_resumable
+            ? ctx.tr('आपके उत्तर सहेज लिए जाएंगे। "आज" स्क्रीन से इसे वहीं से फिर शुरू करें।',
+                'Your answers will be saved. Resume right where you left off from the Today screen.')
+            : ctx.tr('अब तक की प्रगति सहेज ली गई है।', 'Your progress so far is saved.')),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('जारी रखें', 'Continue'))),
-          TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('रोकें', 'Stop'))),
+          TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(_resumable ? ctx.tr('बाद में', 'Later') : ctx.tr('रोकें', 'Stop'))),
         ],
       ),
     );
     final exiting = r ?? false;
+    if (exiting) _persist(now: true);
     if (!exiting && !_finished) _startTimer();
     return exiting;
   }
@@ -221,6 +320,12 @@ class _QuizScreenState extends State<QuizScreen> {
                 setState(() => qLang = qLang == 'en' ? 'hi' : 'en');
               },
             ),
+            if (!spec.instantFeedback)
+              IconButton(
+                tooltip: context.tr('प्रश्न पैलेट', 'Question palette'),
+                icon: const Icon(Icons.grid_view_rounded),
+                onPressed: _showPalette,
+              ),
             IconButton(
               tooltip: p.bookmarks.contains(q.id)
                   ? context.tr('सहेजा गया, हटाएं', 'Saved, remove')
@@ -267,6 +372,11 @@ class _QuizScreenState extends State<QuizScreen> {
                       child: Text('${subject?.name.of(qLang) ?? ''} · ${topic?.name.of(qLang) ?? ''}',
                           overflow: TextOverflow.ellipsis, style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13)),
                     ),
+                    if (_marked.contains(index))
+                      Padding(
+                        padding: const EdgeInsets.only(right: 6),
+                        child: Icon(Icons.flag, size: 18, color: _PaletteState.marked.color),
+                      ),
                     _DifficultyDots(q.difficulty),
                   ]),
                   const SizedBox(height: 14),
@@ -294,19 +404,54 @@ class _QuizScreenState extends State<QuizScreen> {
                         onPressed: answered ? _next : null,
                         child: Text(index + 1 < total ? context.tr('अगला प्रश्न →', 'Next question →') : context.tr('परिणाम देखें 🏁', 'See results 🏁')),
                       )
-                    : Row(children: [
-                        if (index > 0)
+                    : Column(mainAxisSize: MainAxisSize.min, children: [
+                        Row(children: [
                           Expanded(
-                            child: OutlinedButton(onPressed: () => setState(() => index--), child: Text(context.tr('← वापस', '← Back'))),
+                            child: TextButton.icon(
+                              style: TextButton.styleFrom(minimumSize: const Size(0, 40)),
+                              onPressed: answered
+                                  ? () {
+                                      HapticFeedback.selectionClick();
+                                      setState(() => answers[index] = null);
+                                    }
+                                  : null,
+                              icon: const Icon(Icons.backspace_outlined, size: 18),
+                              label: Text(context.tr('उत्तर हटाएं', 'Clear response'), overflow: TextOverflow.ellipsis),
+                            ),
                           ),
-                        if (index > 0) const SizedBox(width: 12),
-                        Expanded(
-                          flex: 2,
-                          child: FilledButton(
-                            onPressed: index + 1 < total ? () => setState(() => index++) : _confirmSubmit,
-                            child: Text(index + 1 < total ? context.tr('आगे →', 'Next →') : context.tr('सबमिट करें', 'Submit')),
+                          Expanded(
+                            child: TextButton.icon(
+                              style: TextButton.styleFrom(
+                                minimumSize: const Size(0, 40),
+                                foregroundColor: _PaletteState.marked.color,
+                              ),
+                              onPressed: () {
+                                HapticFeedback.selectionClick();
+                                setState(() => _marked.contains(index) ? _marked.remove(index) : _marked.add(index));
+                              },
+                              icon: Icon(_marked.contains(index) ? Icons.flag : Icons.outlined_flag, size: 18),
+                              label: Text(
+                                  _marked.contains(index)
+                                      ? context.tr('रिव्यू हटाएं', 'Unmark review')
+                                      : context.tr('रिव्यू के लिए चिह्नित', 'Mark for review'),
+                                  overflow: TextOverflow.ellipsis),
+                            ),
                           ),
-                        ),
+                        ]),
+                        Row(children: [
+                          if (index > 0)
+                            Expanded(
+                              child: OutlinedButton(onPressed: () => _goTo(index - 1), child: Text(context.tr('← वापस', '← Back'))),
+                            ),
+                          if (index > 0) const SizedBox(width: 12),
+                          Expanded(
+                            flex: 2,
+                            child: FilledButton(
+                              onPressed: index + 1 < total ? () => _goTo(index + 1) : _confirmSubmit,
+                              child: Text(index + 1 < total ? context.tr('सेव करें और आगे →', 'Save & next →') : context.tr('सबमिट करें', 'Submit')),
+                            ),
+                          ),
+                        ]),
                       ]),
               ),
             ),
@@ -315,16 +460,150 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
+  _PaletteState _status(int i) {
+    final a = answers[i] != null;
+    final m = _marked.contains(i);
+    if (a && m) return _PaletteState.answeredMarked;
+    if (m) return _PaletteState.marked;
+    if (a) return _PaletteState.answered;
+    if (_visited.contains(i)) return _PaletteState.notAnswered;
+    return _PaletteState.notVisited;
+  }
+
+  Map<_PaletteState, int> _statusCounts() {
+    final counts = {for (final s in _PaletteState.values) s: 0};
+    for (var i = 0; i < spec.questions.length; i++) {
+      counts[_status(i)] = counts[_status(i)]! + 1;
+    }
+    return counts;
+  }
+
+  Widget _legend(BuildContext ctx, Map<_PaletteState, int> counts) => Wrap(
+        spacing: 12,
+        runSpacing: 8,
+        children: [
+          for (final s in _PaletteState.values)
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              _PaletteDot(state: s, size: 22, child: Text('${counts[s]}', style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w800, color: Colors.white))),
+              const SizedBox(width: 6),
+              Text(s.label(ctx), style: const TextStyle(fontSize: 12.5)),
+            ]),
+        ],
+      );
+
+  /// Consecutive runs of same-subject questions -- the paper's sections.
+  /// A paper that isn't laid out section-wise (more runs than subjects) is
+  /// shown as one unlabelled block instead of many tiny sections.
+  List<({String? subject, List<int> indices})> _sections() {
+    final runs = <({String? subject, List<int> indices})>[];
+    for (var i = 0; i < spec.questions.length; i++) {
+      final s = spec.questions[i].subject;
+      if (runs.isEmpty || runs.last.subject != s) runs.add((subject: s, indices: <int>[]));
+      runs.last.indices.add(i);
+    }
+    final distinct = spec.questions.map((q) => q.subject).toSet().length;
+    if (runs.length <= 1 || runs.length > distinct) {
+      return [(subject: null, indices: [for (var i = 0; i < spec.questions.length; i++) i])];
+    }
+    return runs;
+  }
+
+  Future<void> _showPalette() async {
+    HapticFeedback.selectionClick();
+    _pauseTimer();
+    final target = await showModalBottomSheet<Object>(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      builder: (ctx) => SafeArea(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxHeight: MediaQuery.of(ctx).size.height * 0.75),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(ctx.tr('प्रश्न पैलेट', 'Question palette'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800)),
+              const SizedBox(height: 12),
+              _legend(ctx, _statusCounts()),
+              const SizedBox(height: 14),
+              Flexible(
+                child: SingleChildScrollView(
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    for (final sec in _sections()) ...[
+                      if (sec.subject != null)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4, bottom: 8),
+                          child: Text(
+                            '${context.scope.repo.subject(sec.subject!)?.name.of(qLang) ?? sec.subject} · '
+                            '${sec.indices.where((i) => answers[i] != null).length}/${sec.indices.length}',
+                            style: TextStyle(fontWeight: FontWeight.w700, color: Theme.of(ctx).hintColor),
+                          ),
+                        ),
+                      Wrap(spacing: 10, runSpacing: 10, children: [
+                        for (final i in sec.indices)
+                          Semantics(
+                            button: true,
+                            label: '${i + 1}, ${_status(i).label(ctx)}',
+                            child: InkWell(
+                              customBorder: const CircleBorder(),
+                              onTap: () => Navigator.pop(ctx, i),
+                              child: _PaletteDot(
+                                state: _status(i),
+                                size: 44,
+                                current: i == index,
+                                child: Text('${i + 1}',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w800,
+                                        color: _status(i) == _PaletteState.notVisited
+                                            ? Theme.of(ctx).colorScheme.onSurface
+                                            : Colors.white)),
+                              ),
+                            ),
+                          ),
+                      ]),
+                      const SizedBox(height: 12),
+                    ],
+                  ]),
+                ),
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () => Navigator.pop(ctx, 'submit'),
+                  child: Text(ctx.tr('टेस्ट सबमिट करें', 'Submit test')),
+                ),
+              ),
+            ]),
+          ),
+        ),
+      ),
+    );
+    if (!mounted || _finished) return;
+    if (target == 'submit') {
+      await _confirmSubmit();
+      return;
+    }
+    _startTimer();
+    if (target is int) _goTo(target);
+  }
+
   Future<void> _confirmSubmit() async {
-    final unanswered = answers.where((a) => a == null).length;
+    final counts = _statusCounts();
     _pauseTimer();
     final ok = await showDialog<bool>(
       context: context,
       builder: (ctx) => AlertDialog(
         title: Text(ctx.tr('टेस्ट सबमिट करना है?', 'Submit test?')),
-        content: Text(unanswered > 0
-            ? ctx.tr('$unanswered प्रश्न अभी हल करना बाकी हैं।', '$unanswered questions unanswered.')
-            : ctx.tr('सभी प्रश्न हल हो गए हैं। शाबाश!', 'All questions answered. Well done!')),
+        content: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+          _legend(ctx, counts),
+          if (counts[_PaletteState.answeredMarked]! > 0) ...[
+            const SizedBox(height: 12),
+            Text(
+                ctx.tr('रिव्यू के लिए चिह्नित जिन प्रश्नों का उत्तर दिया गया है, उनका मूल्यांकन होगा — असली परीक्षा की तरह।',
+                    'Marked questions that have an answer will be evaluated — just like the real exam.'),
+                style: TextStyle(fontSize: 12.5, color: Theme.of(ctx).hintColor)),
+          ],
+        ]),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('रुकें', 'Wait'))),
           FilledButton(
@@ -354,6 +633,68 @@ class _QuizScreenState extends State<QuizScreen> {
 
 enum _OptState { idle, selected, correct, wrong, dim }
 
+/// The five question states of the RRB/TCS iON CBT palette, with the same
+/// colour language students see on exam day.
+enum _PaletteState {
+  answered(BrandColors.correct),
+  notAnswered(BrandColors.wrong),
+  notVisited(Colors.transparent),
+  marked(Color(0xFF6A3FB5)),
+  answeredMarked(Color(0xFF6A3FB5));
+
+  final Color color;
+  const _PaletteState(this.color);
+
+  String label(BuildContext context) => switch (this) {
+        answered => context.tr('उत्तर दिया', 'Answered'),
+        notAnswered => context.tr('उत्तर नहीं दिया', 'Not answered'),
+        notVisited => context.tr('नहीं देखा', 'Not visited'),
+        marked => context.tr('रिव्यू के लिए', 'Marked for review'),
+        answeredMarked => context.tr('उत्तर + रिव्यू', 'Answered & marked'),
+      };
+}
+
+class _PaletteDot extends StatelessWidget {
+  final _PaletteState state;
+  final double size;
+  final bool current;
+  final Widget child;
+  const _PaletteDot({required this.state, required this.size, required this.child, this.current = false});
+
+  @override
+  Widget build(BuildContext context) {
+    final scheme = Theme.of(context).colorScheme;
+    return Stack(clipBehavior: Clip.none, children: [
+      Container(
+        width: size,
+        height: size,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: state == _PaletteState.notVisited ? scheme.surfaceContainerHighest : state.color,
+          shape: BoxShape.circle,
+          border: current ? Border.all(color: BrandColors.saffron, width: 3) : null,
+        ),
+        child: child,
+      ),
+      if (state == _PaletteState.answeredMarked)
+        Positioned(
+          right: -1,
+          bottom: -1,
+          child: Container(
+            width: size * 0.36,
+            height: size * 0.36,
+            decoration: BoxDecoration(
+              color: BrandColors.correct,
+              shape: BoxShape.circle,
+              border: Border.all(color: scheme.surface, width: 1.5),
+            ),
+            child: Icon(Icons.check, size: size * 0.24, color: Colors.white),
+          ),
+        ),
+    ]);
+  }
+}
+
 class _OptionTile extends StatelessWidget {
   final String label;
   final String text;
@@ -371,7 +712,21 @@ class _OptionTile extends StatelessWidget {
       _OptState.dim => (scheme.outlineVariant, Colors.transparent, null),
       _OptState.idle => (scheme.outlineVariant, Theme.of(context).cardTheme.color ?? scheme.surface, null),
     };
-    return Padding(
+    // Colour and the trailing icon carry the result visually; screen-reader
+    // users need it spoken.
+    final stateLabel = switch (state) {
+      _OptState.correct => context.tr('सही उत्तर', 'correct answer'),
+      _OptState.wrong => context.tr('आपका उत्तर, गलत', 'your answer, wrong'),
+      _OptState.selected => context.tr('चुना गया', 'selected'),
+      _ => null,
+    };
+    return Semantics(
+      button: true,
+      selected: state == _OptState.selected,
+      label: [label, text, ?stateLabel].join(', '),
+      onTap: onTap,
+      excludeSemantics: true,
+      child: Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: TapScale(
         scale: state == _OptState.idle ? 0.98 : 1.0,
@@ -406,6 +761,7 @@ class _OptionTile extends StatelessWidget {
           ),
         ),
         ),
+      ),
       ),
     );
   }

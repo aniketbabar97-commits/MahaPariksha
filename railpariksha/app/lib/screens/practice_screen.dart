@@ -133,7 +133,7 @@ class _EnglishBonusTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final sub = context.scope.repo.subject('english');
     if (sub == null) return const SizedBox();
-    final count = context.scope.repo.questions.where((q) => q.subject == 'english').length;
+    final count = context.scope.repo.questionsInSubject('english').length;
     return ActionCard(
       icon: subjectIcon(sub.icon),
       color: BrandColors.correct,
@@ -203,7 +203,6 @@ class SubjectScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final s = context.scope;
     final lang = context.lang;
-    final qs = s.repo.questions.where((q) => q.subject == subject.id).toList();
     final topicStats = {for (final t in s.builder.topicStats().where((t) => t.subject == subject.id)) t.topic: t};
     return Scaffold(
       appBar: AppBar(title: Text(subject.name.of(lang))),
@@ -233,7 +232,7 @@ class SubjectScreen extends StatelessWidget {
           SectionTitle(context.tr('टॉपिक 🧩', 'Topics 🧩')),
           for (final t in subject.topics) ...[
             Builder(builder: (context) {
-              final n = qs.where((q) => q.topic == t.id).length;
+              final n = s.repo.topicQuestionCount(subject.id, t.id);
               final st = topicStats[t.id];
               final acc = st == null || st.attempts == 0 ? null : st.accuracy;
               return Card(

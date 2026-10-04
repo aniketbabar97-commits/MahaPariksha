@@ -100,7 +100,7 @@ class ReviseScreen extends StatelessWidget {
         if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasNotes(sub.id))) ...[
           SectionTitle(context.tr('नोट्स व माइंड मैप 🧠🗺️', 'Notes & mind maps 🧠🗺️')),
           SizedBox(
-            height: 104,
+            height: _tileRowHeight(context),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -139,7 +139,7 @@ class ReviseScreen extends StatelessWidget {
         if (s.repo.subjectsFor(exam).any((sub) => s.repo.hasCheatSheets(sub.id))) ...[
           SectionTitle(context.tr('चीट शीट ⚡', 'Cheat sheets ⚡')),
           SizedBox(
-            height: 104,
+            height: _tileRowHeight(context),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -197,3 +197,7 @@ class ReviseScreen extends StatelessWidget {
     );
   }
 }
+
+/// Height for the horizontal subject-tile rows: 104 at default text size,
+/// growing with the user's text scale so a two-line name never clips.
+double _tileRowHeight(BuildContext context) => 104 + (MediaQuery.textScalerOf(context).scale(13) - 13) * 2 * 1.8;
