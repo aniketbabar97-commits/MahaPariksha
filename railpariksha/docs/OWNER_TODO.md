@@ -15,7 +15,7 @@ Kept in the repo so it travels with the project. Tick items off as you go.
       and `docs/store/play_desc_hi.txt`.
 
 ## Daily current-affairs job
-- [ ] **Add the API key as a GitHub secret:** repo → Settings → Secrets and variables → Actions →
+- [x] **Add the API key as a GitHub secret** (done: `GEMINI_API_KEY` added): repo → Settings → Secrets and variables → Actions →
       *New repository secret* → `GEMINI_API_KEY` (optionally also `GROK_API_KEY`,
       `ANTHROPIC_API_KEY` for the extra Claude check). Then Actions → "RailPariksha daily current
       affairs" → *Run workflow* to test it. Until a key exists the job skips quietly (no failure
