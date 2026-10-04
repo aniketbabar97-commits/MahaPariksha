@@ -39,6 +39,12 @@ class CaDigestScreen extends StatefulWidget {
   State<CaDigestScreen> createState() => _CaDigestScreenState();
 }
 
+/// One entry per news story: several quiz questions are drafted from one story and share its write-up.
+List<Question> digestStories(List<Question> qs) {
+  final seen = <String>{};
+  return [for (final q in qs) if (seen.add(q.src ?? q.explanation.en.trim())) q];
+}
+
 class _CaDigestScreenState extends State<CaDigestScreen> {
   String? _selected;
 
@@ -55,13 +61,15 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
         body: EmptyState(
           icon: Icons.newspaper_outlined,
           text: context.tr('आज का डाइजेस्ट जल्द आ रहा है — रोज़ नए अपडेट जुड़ेंगे।',
-              "Today's digest is coming soon -- new ones get added daily."),
+              "Today's digest is coming soon — new ones get added daily."),
         ),
       );
     }
 
     final date = (_selected != null && dates.contains(_selected)) ? _selected! : dates.first;
-    final items = byDate[date]!;
+    // Several quiz questions are drafted from one news story and share its write-up; the digest is
+    // for reading, so each story appears once.
+    final items = digestStories(byDate[date]!);
 
     return Scaffold(
       appBar: AppBar(title: Text(context.tr('करेंट अफेयर्स डाइजेस्ट 📰', 'Current Affairs digest 📰'))),

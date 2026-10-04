@@ -428,6 +428,9 @@ class _ReelOption extends StatelessWidget {
 /// pushes the card's next-due date out exactly as Revise would. If the user
 /// just swipes past without judging it (never flips or never taps a button),
 /// nothing is recorded, so it can't corrupt existing due-card state.
+/// Readable text colour on the saffron gradient.
+const _onSaffron = BrandColors.onSaffron;
+
 class _FlashcardCard extends StatefulWidget {
   final Flashcard c;
   final String lang;
@@ -490,13 +493,17 @@ class _FlashcardCardState extends State<_FlashcardCard> {
                     border: Border.all(color: Colors.white24, width: 1),
                   ),
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
-                    Icon(flipped ? Icons.lightbulb : Icons.help_outline, color: Colors.white, size: 32),
+                    Icon(flipped ? Icons.lightbulb : Icons.help_outline, color: flipped ? Colors.white : _onSaffron, size: 32),
                     const SizedBox(height: 14),
                     Text(flipped ? widget.c.back.of(widget.lang) : widget.c.front.of(widget.lang),
-                        textAlign: TextAlign.center, style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w700, height: 1.4)),
+                        textAlign: TextAlign.center,
+                        // White on saffron was ~1.6:1 contrast; the front uses a dark brown instead.
+                        style: TextStyle(
+                            color: flipped ? Colors.white : _onSaffron, fontSize: 21, fontWeight: FontWeight.w800, height: 1.4)),
                     if (!flipped) ...[
                       const SizedBox(height: 14),
-                      Text(context.tr('टैप करके उत्तर देखें', 'Tap to reveal'), style: const TextStyle(color: Colors.white70)),
+                      Text(context.tr('टैप करके उत्तर देखें', 'Tap to reveal'),
+                          style: TextStyle(color: _onSaffron.withValues(alpha: 0.75), fontWeight: FontWeight.w600)),
                     ],
                   ]),
                 ),
@@ -524,7 +531,7 @@ class _FlashcardCardState extends State<_FlashcardCard> {
                 ),
               ])
             else
-              Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'), style: const TextStyle(color: Colors.white38, fontSize: 13)),
+              Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'), style: const TextStyle(color: Colors.white60, fontSize: 13)),
                 ]),
               ),
             ),
@@ -597,17 +604,22 @@ class _MotivationCard extends StatelessWidget {
               child: SizedBox(
                 width: c.maxWidth,
                 child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.center, children: [
-            Icon(icon, color: Colors.white, size: 44),
+            Icon(icon, color: _onSaffron, size: 44),
             const SizedBox(height: Spacing.lg),
-            Text(kicker.toUpperCase(), style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w800, letterSpacing: 1.2)),
+            Text(kicker.toUpperCase(),
+                style: TextStyle(color: _onSaffron.withValues(alpha: 0.7), fontWeight: FontWeight.w800, letterSpacing: 1.2)),
             const SizedBox(height: Spacing.lg),
-            Text(m.text.of(lang), textAlign: TextAlign.center, style: const TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w900, height: 1.4)),
+            Text(m.text.of(lang),
+                textAlign: TextAlign.center,
+                style: const TextStyle(color: _onSaffron, fontSize: 26, fontWeight: FontWeight.w900, height: 1.4)),
             if (m.by != null) ...[
               const SizedBox(height: Spacing.lg),
-              Text('— ${m.by}', style: const TextStyle(color: Colors.white70, fontStyle: FontStyle.italic, fontSize: 16)),
+              Text('— ${m.by}',
+                  style: TextStyle(color: _onSaffron.withValues(alpha: 0.75), fontStyle: FontStyle.italic, fontSize: 16)),
             ],
             const SizedBox(height: Spacing.xxl),
-            Text(context.tr('↑ ऊपर स्वाइप करें', '↑ Swipe up'), style: const TextStyle(color: Colors.white54, fontSize: 13)),
+            Text(context.tr('↑ ऊपर स्वाइप करें', '↑ Swipe up'),
+                style: TextStyle(color: _onSaffron.withValues(alpha: 0.6), fontSize: 13)),
                 ]),
               ),
             ),

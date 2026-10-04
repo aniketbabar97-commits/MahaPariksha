@@ -130,7 +130,7 @@ class _StageRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = _stageColors[index % _stageColors.length];
+    final color = BrandColors.readable(context, _stageColors[index % _stageColors.length]);
     return IntrinsicHeight(
       child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Column(children: [

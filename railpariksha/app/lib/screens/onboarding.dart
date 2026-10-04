@@ -381,7 +381,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         option(50, 'जी-जान से तैयारी', 'Serious aspirant'),
         const Spacer(),
         FilledButton.icon(
-          style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+          style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron, foregroundColor: BrandColors.onSaffron),
           icon: const Icon(Icons.rocket_launch),
           label: Text(context.tr('सफ़र शुरू करें!', "Let's go!")),
           onPressed: () {

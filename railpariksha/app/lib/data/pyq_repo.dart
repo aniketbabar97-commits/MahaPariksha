@@ -85,7 +85,8 @@ class PyqRepo {
     if (_sets != null) return _sets!;
     try {
       final j = jsonDecode(await _bundle.loadString('$_dir/index.json')) as Map<String, dynamic>;
-      _sets = [for (final s in j['sets']) PyqSet.fromJson(s)];
+      // A 'year' with only a handful of stray questions is noise, not a paper students can practise.
+      _sets = [for (final s in j['sets']) PyqSet.fromJson(s)].where((s) => s.count >= 20).toList();
       _topics = [for (final t in (j['topics'] as List? ?? const [])) PyqTopic.fromJson(t)];
     } catch (_) {
       _sets = const [];

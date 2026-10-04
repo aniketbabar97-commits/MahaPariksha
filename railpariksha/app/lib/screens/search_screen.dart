@@ -197,7 +197,7 @@ class _QuestionResultTile extends StatelessWidget {
               height: 40,
               decoration: BoxDecoration(
                   color: BrandColors.sky.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(12)),
-              child: Icon(subjectIcon(subject?.icon ?? ''), color: BrandColors.sky, size: 20),
+              child: Icon(subjectIcon(subject?.icon ?? ''), color: BrandColors.skyOn(context), size: 20),
             ),
             const SizedBox(width: 12),
             Expanded(

@@ -187,7 +187,7 @@ class TodayScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Row(children: [
-                  const Icon(Icons.insights, color: BrandColors.sky, size: 20),
+                  Icon(Icons.insights, color: BrandColors.skyOn(context), size: 20),
                   const SizedBox(width: 8),
                   Text(context.tr('अध्ययन योजना', 'Study plan'),
                       style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
@@ -254,7 +254,7 @@ class TodayScreen extends StatelessWidget {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(color: BrandColors.saffron, borderRadius: BorderRadius.circular(20)),
-                        child: Text(context.tr('नया', 'NEW'), style: const TextStyle(color: BrandColors.sky, fontSize: 11, fontWeight: FontWeight.w900)),
+                        child: Text(context.tr('नया', 'NEW'), style: const TextStyle(color: BrandColors.onSaffron, fontSize: 11, fontWeight: FontWeight.w900)),
                       ),
                     ]),
                     const SizedBox(height: 2),
@@ -282,14 +282,14 @@ class TodayScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: const BoxDecoration(gradient: BrandColors.fireGradient),
               child: Row(children: [
-                const Icon(Icons.play_circle_fill, color: Colors.white, size: 48),
+                const Icon(Icons.play_circle_fill, color: BrandColors.onSaffron, size: 48),
                 const SizedBox(width: 14),
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Text(context.tr('आज का Daily 10', "Today's Daily 10"),
-                        style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                        style: const TextStyle(color: BrandColors.onSaffron, fontSize: 20, fontWeight: FontWeight.w900)),
                     Text(context.tr('आपके कमज़ोर विषयों पर खास प्रश्न', 'Picked for your weak topics'),
-                        style: const TextStyle(color: Colors.white)),
+                        style: TextStyle(color: BrandColors.onSaffron.withValues(alpha: 0.8), fontWeight: FontWeight.w600)),
                   ]),
                 ),
               ]),
@@ -321,8 +321,8 @@ class TodayScreen extends StatelessWidget {
           icon: Icons.history_edu,
           color: BrandColors.saffron,
           title: context.tr('पिछले वर्ष के प्रश्नपत्र 📜', 'Previous year papers 📜'),
-          subtitle: context.tr('RRB व RPF के 50,000+ असली प्रश्न · अपनी परीक्षा के पेपर हल करें',
-              '50,000+ real RRB & RPF questions · attempt your exam\'s papers'),
+          subtitle: context.tr('RRB व RPF के 45,000+ असली प्रश्न · अपनी परीक्षा के पेपर हल करें',
+              '45,000+ real RRB & RPF questions · attempt your exam\'s papers'),
           onTap: () {
             HapticFeedback.selectionClick();
             push(context, (_) => const PyqScreen());
@@ -389,12 +389,12 @@ class TodayScreen extends StatelessWidget {
                   ]),
                 ),
                 if (beastUnlocked) const Icon(Icons.chevron_right, color: Colors.white70),
-                      const AdSlot(),
       ]),
             ),
           ),
           ),
         ),
+        if (!p.removedAds) const AdSlot(),
         const SizedBox(height: 12),
         ActionCard(
           icon: subjectIcon('newspaper'),
@@ -403,8 +403,8 @@ class TodayScreen extends StatelessWidget {
           subtitle: caDates.isEmpty
               ? context.tr('रोज़ाना अपडेट जल्द आ रहे हैं', 'Daily updates coming soon')
               : context.tr(
-                  '${caDates.values.first.length} नई बातें · ${formatCaDate(caDates.keys.first).hi}',
-                  '${caDates.values.first.length} new updates · ${formatCaDate(caDates.keys.first).en}'),
+                  '${digestStories(caDates.values.first).length} नई बातें · ${formatCaDate(caDates.keys.first).hi}',
+                  '${digestStories(caDates.values.first).length} new updates · ${formatCaDate(caDates.keys.first).en}'),
           onTap: () => push(context, (_) => const CaDigestScreen()),
         ),
         const SizedBox(height: 12),
@@ -413,7 +413,7 @@ class TodayScreen extends StatelessWidget {
           color: BrandColors.saffron,
           title: context.tr('जीके बूस्टर', 'GK Booster'),
           subtitle: context.tr('दिवस, योजनाएं, पुरस्कार — रटने लायक रेफरेंस लिस्ट',
-              'Days, schemes, awards -- cram-ready reference lists'),
+              'Days, schemes, awards — cram-ready reference lists'),
           onTap: () => push(context, (_) => const GkBoosterScreen()),
         ),
         const SizedBox(height: 12),

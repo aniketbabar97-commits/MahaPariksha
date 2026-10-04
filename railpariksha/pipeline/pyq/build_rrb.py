@@ -457,8 +457,9 @@ def main():
     for slug, recs in out.items():
         keep, seen = [], set()
         for r in sorted(recs, key=lambda r: (r.get("tr") != "hi", r["pyq"], r["id"])):
-            if "q_en" not in r:
-                # Hindi-only and never translated (its garbled Hindi was dropped, or no translation yet).
+            if "q_en" not in r or "q_hi" not in r:
+                # One language missing: Hindi-only and never translated, or English whose Hindi
+                # translation hasn't landed yet. Every PYQ in the app is bilingual.
                 stats["dropped_untranslated"] += 1
                 continue
             if "q_en" in r:
@@ -474,6 +475,12 @@ def main():
     import explain
     explained = {}
     for slug, recs in out.items():
+        # A question that depends on a chart/figure the sheet text doesn't contain can't be answered;
+        # drop it rather than show a riddle.
+        dead = explain.unsolvable(slug)
+        before = len(recs)
+        recs[:] = [r for r in recs if explain.ex_key(r) not in dead]
+        stats[f"unsolvable_dropped_{slug}"] = before - len(recs)
         explained[slug] = explain.apply_family(slug, recs)
         stats[f"explained_{slug}"] = len(explained[slug])
 

@@ -20,6 +20,23 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 
 
+_SUP = str.maketrans("0123456789-n", "⁰¹²³⁴⁵⁶⁷⁸⁹⁻ⁿ")
+_POW = re.compile(r"\^\(?(-?\d{1,3}|n)\)?")
+
+
+def pretty(o):
+    """Show powers the way a textbook does: x^2 -> x², 10^-3 -> 10⁻³ (the sheets and some generated
+    items use a bare caret, which reads as a typo on a phone)."""
+    if isinstance(o, str):
+        o = o.replace(" -- ", " — ")
+        return _POW.sub(lambda m: m.group(1).translate(_SUP), o) if "^" in o else o
+    if isinstance(o, list):
+        return [pretty(x) for x in o]
+    if isinstance(o, dict):
+        return {k: (v if k in ("id", "src", "file") else pretty(v)) for k, v in o.items()}
+    return o
+
+
 def load_dir(name):
     items = []
     for p in sorted((CONTENT / name).glob("*.json")):
@@ -120,7 +137,7 @@ def build_pyq_pack(out_dir):
     index = []
     for (exam, year), qs in sorted(sets.items(), key=lambda kv: (not kv[0][0].startswith(RAIL_EXAMS), kv[0][0], -kv[0][1])):
         file = f"{re.sub(r'[^a-z0-9]+', '_', exam.lower())}_{year}.json"
-        (out_dir / file).write_text(json.dumps(qs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        (out_dir / file).write_text(json.dumps(pretty(qs), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         papers = Counter(q["pyq"] for q in qs)
         index.append({"exam": exam, "year": year, "rail": exam.startswith(RAIL_EXAMS), "file": file, "n": len(qs),
                       "subjects": dict(Counter(q["s"] for q in qs)),
@@ -134,7 +151,7 @@ def build_pyq_pack(out_dir):
     topics = []
     for (subj, topic), qs in sorted(by_topic.items()):
         file = f"topics/{subj}__{topic}.json"
-        (out_dir / file).write_text(json.dumps(qs, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        (out_dir / file).write_text(json.dumps(pretty(qs), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         topics.append({"s": subj, "t": topic, "n": len(qs), "file": file,
                        "by_exam": dict(Counter(q["pyq"].split(" · ")[0] for q in qs))})
     (out_dir / "index.json").write_text(json.dumps({"sets": index, "topics": topics}, ensure_ascii=False,
@@ -184,7 +201,7 @@ def main():
         bundle["gk_booster"] = gk_booster
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(bundle, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    out.write_text(json.dumps(pretty(bundle), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"wrote {out} v{bundle['version']}: {len(questions)} questions, "
           f"{len(bundle['flashcards'])} flashcards, {len(bundle['motivation'])} motivation, "
           f"{len(bundle['cheat_sheets'])} cheat sheets, "

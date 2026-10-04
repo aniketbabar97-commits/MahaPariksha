@@ -79,7 +79,7 @@ class _WeakTopic extends StatelessWidget {
           if (practiceCount > 0)
             ActionChip(
               avatar: const Icon(Icons.play_arrow_rounded, size: 18),
-              label: Text(context.tr('10 प्रश्न अभ्यास', 'Practise 10')),
+              label: Text(context.tr('10 प्रश्न अभ्यास', 'Practice 10')),
               onPressed: () {
                 HapticFeedback.selectionClick();
                 startQuiz(context, s.builder.practice(subject: v.subject, topic: v.topic));

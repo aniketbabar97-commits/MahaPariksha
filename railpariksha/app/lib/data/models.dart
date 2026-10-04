@@ -73,6 +73,12 @@ class Question {
   /// "RRB JE CBT-1 2025 · 19 Feb 2026 · Shift 1". Null for the regular bank.
   final String? pyq;
 
+  /// A previous-year question whose only "explanation" is the official key restated
+  /// ("Correct answer: X (official answer key)"); the UI shows a short note instead of repeating it.
+  bool get keyOnly =>
+      pyq != null &&
+      (explanation.en.contains('official answer key') || explanation.hi.contains('आधिकारिक उत्तर कुंजी'));
+
   /// For a PYQ published in one language: the language we translated it into
   /// ('hi' or 'en'), so the app can label that text as a translation.
   final String? translated;

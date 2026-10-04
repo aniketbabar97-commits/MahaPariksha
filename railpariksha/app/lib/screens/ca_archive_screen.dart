@@ -42,7 +42,7 @@ class CaArchiveScreen extends StatelessWidget {
           ? EmptyState(
               icon: Icons.newspaper_outlined,
               text: context.tr('करेंट अफेयर्स क्विज़ जल्द आ रहे हैं — रोज़ नए अपडेट जुड़ेंगे।',
-                  'Current-affairs quizzes are coming soon -- new ones get added daily.'),
+                  'Current-affairs quizzes are coming soon — new ones get added daily.'),
             )
           : ListView.separated(
               padding: const EdgeInsets.all(16),
@@ -68,7 +68,7 @@ class CaArchiveScreen extends StatelessWidget {
                           height: 48,
                           decoration: BoxDecoration(
                               color: BrandColors.sky.withValues(alpha: 0.12), borderRadius: BorderRadius.circular(14)),
-                          child: Icon(subjectIcon('newspaper'), color: BrandColors.sky),
+                          child: Icon(subjectIcon('newspaper'), color: BrandColors.skyOn(context)),
                         ),
                         const SizedBox(width: 14),
                         Expanded(

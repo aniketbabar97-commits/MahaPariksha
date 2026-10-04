@@ -17,7 +17,6 @@ import '../widgets/common.dart';
 import 'exam_strategy_screen.dart';
 import 'practice_screen.dart';
 import 'quiz_screen.dart';
-import '../core/format.dart';
 import '../core/ads.dart';
 
 class MeScreen extends StatelessWidget {
@@ -45,7 +44,7 @@ class MeScreen extends StatelessWidget {
         Card(
           child: Column(children: [
             ListTile(
-              leading: const Icon(Icons.school, color: BrandColors.sky),
+              leading: Icon(Icons.school, color: BrandColors.skyOn(context)),
               title: Text(context.tr('परीक्षा', 'Exam')),
               subtitle: Text(exam?.name.of(lang) ?? '-'),
               trailing: const Icon(Icons.chevron_right),
@@ -55,7 +54,7 @@ class MeScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.event, color: BrandColors.sky),
+              leading: Icon(Icons.event, color: BrandColors.skyOn(context)),
               title: Text(context.tr('परीक्षा की तारीख', 'Exam date')),
               subtitle: Text(p.examDate == null
                   ? context.tr('सेट करें — काउंटडाउन शुरू होगा', 'Set it to start a countdown')
@@ -65,6 +64,9 @@ class MeScreen extends StatelessWidget {
                 HapticFeedback.selectionClick();
                 final now = DateTime.now();
                 final d = await showDatePicker(
+                  helpText: context.tr('परीक्षा की तारीख चुनें', 'Select exam date'),
+                  cancelText: context.tr('रद्द करें', 'Cancel'),
+                  confirmText: context.tr('ठीक है', 'OK'),
                   context: context,
                   initialDate: p.examDate ?? now.add(const Duration(days: 60)),
                   firstDate: now,
@@ -74,7 +76,7 @@ class MeScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.flag, color: BrandColors.sky),
+              leading: Icon(Icons.flag, color: BrandColors.skyOn(context)),
               title: Text(context.tr('रोज़ का लक्ष्य', 'Daily goal')),
               trailing: SegmentedButton<int>(
                 showSelectedIcon: false,
@@ -107,7 +109,7 @@ class MeScreen extends StatelessWidget {
         Card(
           child: Column(children: [
             SwitchListTile(
-              secondary: const Icon(Icons.notifications_active, color: BrandColors.sky),
+              secondary: Icon(Icons.notifications_active, color: BrandColors.skyOn(context)),
               title: Text(context.tr('रोज़ का रिमाइंडर 🔔', 'Daily reminders 🔔')),
               subtitle: Text(context.tr(
                   'सुबह और शाम की सूचना, कभी-कभी ज़रूरत पड़ने पर अतिरिक्त',
@@ -129,13 +131,16 @@ class MeScreen extends StatelessWidget {
             ),
             if (p.reminders)
               ListTile(
-                leading: const Icon(Icons.schedule, color: BrandColors.sky),
+                leading: Icon(Icons.schedule, color: BrandColors.skyOn(context)),
                 title: Text(context.tr('सुबह का समय', 'Morning time')),
                 subtitle: Text('${p.reminderHour.toString().padLeft(2, '0')}:00'),
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () async {
                   HapticFeedback.selectionClick();
                   final t = await showTimePicker(
+                    helpText: context.tr('रिमाइंडर का समय चुनें', 'Select reminder time'),
+                    cancelText: context.tr('रद्द करें', 'Cancel'),
+                    confirmText: context.tr('ठीक है', 'OK'),
                     context: context,
                     initialTime: TimeOfDay(hour: p.reminderHour, minute: 0),
                   );
@@ -146,11 +151,11 @@ class MeScreen extends StatelessWidget {
               ),
             if (p.reminders)
               SwitchListTile(
-                secondary: const Icon(Icons.local_fire_department, color: BrandColors.sky),
+                secondary: Icon(Icons.local_fire_department, color: BrandColors.skyOn(context)),
                 title: Text(context.tr('स्ट्रीक SOS चेतावनी 🚨', 'Streak SOS alert 🚨')),
                 subtitle: Text(context.tr(
                     'रात 9 बजे एक अतिरिक्त अलर्ट — सिर्फ तब, जब स्ट्रीक खतरे में हो',
-                    'An extra alert at 9pm -- only when your streak is actually at risk')),
+                    'An extra alert at 9pm — only when your streak is actually at risk')),
                 value: p.streakRiskAlerts,
                 onChanged: (v) async {
                   HapticFeedback.selectionClick();
@@ -159,7 +164,7 @@ class MeScreen extends StatelessWidget {
                 },
               ),
             ListTile(
-              leading: const Icon(Icons.translate, color: BrandColors.sky),
+              leading: Icon(Icons.translate, color: BrandColors.skyOn(context)),
               title: Text(context.tr('भाषा', 'Language')),
               trailing: SegmentedButton<String>(
                 showSelectedIcon: false,
@@ -175,7 +180,7 @@ class MeScreen extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.dark_mode, color: BrandColors.sky),
+              leading: Icon(Icons.dark_mode, color: BrandColors.skyOn(context)),
               title: Text(context.tr('थीम', 'Theme')),
               trailing: DropdownButton<String>(
                 value: p.theme,
@@ -233,39 +238,39 @@ class MeScreen extends StatelessWidget {
             ),
           ]),
         ),
-        SectionTitle(context.tr('जानकारी ℹ️', 'About ℹ️')),
+        const SizedBox(height: 12),
+        // One short line; the full disclaimer and official links open on tap (Play needs them in the
+        // app, students don't need them on screen every visit).
         Card(
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(context.tr('RailPariksha — सफलता की पटरी पर', 'RailPariksha — Train to succeed'),
-                  style: const TextStyle(fontWeight: FontWeight.w800)),
-              const SizedBox(height: 6),
-              Text(context.tr(
-                  'RailPariksha एक स्वतंत्र शैक्षणिक ऐप है। यह सरकारी ऐप नहीं है और भारतीय रेलवे, RRB, RPF या किसी भी सरकारी संस्था का प्रतिनिधित्व नहीं करता, न ही उनसे संबद्ध है। परीक्षा की जानकारी नीचे दिए आधिकारिक स्रोतों से ली गई है; अधिसूचना, तिथि व परिणाम वहीं जाँचें।',
-                  'RailPariksha is an independent educational app. It is not a government app and does not represent, and is not affiliated with, Indian Railways, RRB, RPF or any government body. Exam information comes from the official sources below; always confirm notifications, dates and results there.')),
-              const SizedBox(height: 10),
-              Text(context.tr('आधिकारिक स्रोत', 'Official sources'), style: const TextStyle(fontWeight: FontWeight.w700)),
-              for (final src in officialSources)
-                InkWell(
-                  onTap: () => launchUrl(Uri.parse(src.$2), mode: LaunchMode.externalApplication),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
-                    child: Row(children: [
-                      const Icon(Icons.open_in_new, size: 16),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text('${context.tr(src.$1.hi, src.$1.en)} — ${src.$2}',
-                            style: const TextStyle(decoration: TextDecoration.underline)),
-                      ),
-                    ]),
+          clipBehavior: Clip.antiAlias,
+          child: Theme(
+            data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+            child: ExpansionTile(
+              leading: const Icon(Icons.info_outline),
+              title: Text(context.tr('ऐप के बारे में', 'About the app')),
+              subtitle: Text(context.tr('स्वतंत्र ऐप · सरकारी नहीं', 'Independent app · not a government app'),
+                  style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12.5)),
+              childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
+              expandedCrossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(context.tr(
+                    'RailPariksha एक स्वतंत्र शैक्षणिक ऐप है, भारतीय रेलवे, RRB या RPF से संबद्ध नहीं। अधिसूचना, तिथि व परिणाम आधिकारिक साइट पर जाँचें:',
+                    'RailPariksha is an independent study app, not affiliated with Indian Railways, RRB or RPF. Check notifications, dates and results on the official sites:')),
+                const SizedBox(height: 6),
+                for (final src in officialSources)
+                  InkWell(
+                    onTap: () => launchUrl(Uri.parse(src.$2), mode: LaunchMode.externalApplication),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      child: Row(children: [
+                        const Icon(Icons.open_in_new, size: 16),
+                        const SizedBox(width: 8),
+                        Expanded(child: Text(context.tr(src.$1.hi, src.$1.en))),
+                      ]),
+                    ),
                   ),
-                ),
-              const SizedBox(height: 6),
-              Text(context.tr('प्रश्न सेट संस्करण: ${s.repo.version} · ${fmtCount(s.repo.questions.length)} प्रश्न',
-                  'Content version: ${s.repo.version} · ${fmtCount(s.repo.questions.length)} questions'),
-                  style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12)),
-            ]),
+              ],
+            ),
           ),
         ),
         const SizedBox(height: 12),
@@ -342,7 +347,10 @@ class _IdCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final displayName = p.name.isEmpty ? context.tr('अभ्यर्थी', 'Aspirant') : p.name;
+    final googleName = AuthService.currentUser?.displayName?.trim();
+    final displayName = p.name.isNotEmpty
+        ? p.name
+        : (googleName != null && googleName.isNotEmpty ? googleName : context.tr('अभ्यर्थी', 'Aspirant'));
     // Stable per-device "ID number" -- not a real identifier, just a badge
     // detail that stays the same across app restarts instead of re-randomizing.
     final idNumber = 100000 + (p.examId.hashCode.abs() % 900000);
@@ -413,7 +421,7 @@ class _AccountCard extends StatelessWidget {
           margin: const EdgeInsets.only(top: 12),
           child: user == null
               ? ListTile(
-                  leading: const Icon(Icons.login, color: BrandColors.sky),
+                  leading: Icon(Icons.login, color: BrandColors.skyOn(context)),
                   title: Text(context.tr('Google से साइन इन करें', 'Sign in with Google')),
                   subtitle: Text(context.tr('लीडरबोर्ड नाम अपने आप भर जाएगा', 'Auto-fills your leaderboard name')),
                   trailing: const Icon(Icons.chevron_right),
@@ -424,12 +432,15 @@ class _AccountCard extends StatelessWidget {
                       final name = signedIn.displayName;
                       if (name != null && name.trim().isNotEmpty) p.setLeaderboardName(name);
                     }
+                    // The profile card shows the Google name too, unless the student already chose one.
+                    final gName = signedIn?.displayName?.trim();
+                    if (gName != null && gName.isNotEmpty && p.name.isEmpty) p.update((p) => p.name = gName);
                   },
                 )
               : ListTile(
                   leading: user.photoURL != null
                       ? CircleAvatar(backgroundImage: NetworkImage(user.photoURL!))
-                      : const Icon(Icons.account_circle, color: BrandColors.sky),
+                      : Icon(Icons.account_circle, color: BrandColors.skyOn(context)),
                   title: Text(user.displayName ?? user.email ?? context.tr('साइन इन किया गया', 'Signed in')),
                   subtitle: Text(context.tr('Google से साइन इन', 'Signed in with Google')),
                   trailing: TextButton(
@@ -482,8 +493,8 @@ class _PremiumCardState extends State<_PremiumCard> {
           leading: const Icon(Icons.verified, color: BrandColors.saffron),
           title: Text(context.tr('प्रीमियम सक्रिय ✅', 'Premium active ✅')),
           subtitle: Text(context.tr(
-              'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड -- धन्यवाद! 🙏',
-              'No ads, full offline mode -- thank you! 🙏')),
+              'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड — धन्यवाद! 🙏',
+              'No ads, full offline mode — thank you! 🙏')),
         ),
       );
     }
@@ -495,12 +506,12 @@ class _PremiumCardState extends State<_PremiumCard> {
         return Card(
           child: Column(children: [
             ListTile(
-              leading: const Icon(Icons.block, color: BrandColors.sky),
+              leading: Icon(Icons.block, color: BrandColors.skyOn(context)),
               title: Text(context.tr('विज्ञापन हटाएं, ऑफ़लाइन मोड अनलॉक करें', 'Remove ads, unlock full offline mode'),
                   maxLines: 2, overflow: TextOverflow.ellipsis),
               subtitle: Text(
                   product != null
-                      ? context.tr('एक बार का भुगतान -- ${product.price}', 'One-time payment -- ${product.price}')
+                      ? context.tr('एक बार का भुगतान — ${product.price}', 'One-time payment — ${product.price}')
                       : loading
                           ? context.tr('लोड हो रहा है...', 'Loading...')
                           : context.tr('अभी उपलब्ध नहीं', 'Not available right now'),
@@ -517,7 +528,7 @@ class _PremiumCardState extends State<_PremiumCard> {
             ),
             ListTile(
               dense: true,
-              leading: const Icon(Icons.restore, color: BrandColors.sky),
+              leading: Icon(Icons.restore, color: BrandColors.skyOn(context)),
               title: Text(context.tr('पहले खरीदा है? पुनर्स्थापित करें', 'Already purchased? Restore it')),
               onTap: _busy ? null : () => _run(widget.purchases.restore),
             ),

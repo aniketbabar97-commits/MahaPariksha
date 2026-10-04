@@ -225,6 +225,12 @@ class _ResultsScreenState extends State<ResultsScreen> {
               ]),
             ]),
           ),
+          // Right under the score, where every student looks first (a banner at the foot of a long
+          // results page is rarely seen). Spaced away from the score card and the buttons below.
+          if (!p.removedAds && AdPacing.eligibleMode(spec.mode)) ...[
+            const SizedBox(height: 12),
+            const Center(child: AdBanner()),
+          ],
           if (spec.mode == QuizMode.mock && total > 0) ...[
             const SizedBox(height: 10),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -324,8 +330,6 @@ class _ResultsScreenState extends State<ResultsScreen> {
             const SizedBox(height: 12),
             NextStepsCard(steps: NextSteps.from(spec.questions, widget.answers, context.scope.builder.topicStats())),
           ],
-          // Below the actions and the coaching card, well clear of the buttons above.
-          if (!p.removedAds && AdPacing.eligibleMode(spec.mode)) const Center(child: AdBanner()),
           if (!spec.instantFeedback && total > 0)
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[
@@ -507,7 +511,7 @@ class _ReviewTile extends StatelessWidget {
             Text('✗ ${opts[answer!]}', style: const TextStyle(color: BrandColors.wrong)),
           Text('✓ ${opts[q.answer]}', style: const TextStyle(color: BrandColors.correct, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
-          ExplanationPlayer(text: q.explanation.of(lang)),
+          if (!q.keyOnly) ExplanationPlayer(text: q.explanation.of(lang)),
           if (q.hook != null) ...[
             const SizedBox(height: 6),
             Text('💡 ${q.hook!.of(lang)}', style: const TextStyle(height: 1.5)),

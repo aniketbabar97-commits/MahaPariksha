@@ -38,12 +38,23 @@ class BrandColors {
   static const correct = Color(0xFF1E9E5A);
   static const wrong = Color(0xFFD64545);
 
+  /// Text and icons on saffron/yellow surfaces: white there is barely readable (~1.6:1).
+  static const onSaffron = Color(0xFF2B1D00);
+
   /// Plain `saffron` text on a light-mode white background is only ~1.9:1
   /// contrast -- WCAG AA needs 4.5:1 for normal-size text. Saffron itself
   /// stays the brand accent everywhere (icons, gradients, borders); this is
   /// only for the handful of places that render it as actual reading text.
   /// Already passes AA on the dark-mode navy Card background, so dark mode
   /// is untouched.
+  /// Brand blue for text and icons. The deep navy [sky] is unreadable on dark-mode cards, so dark
+  /// mode gets a lighter blue.
+  static Color skyOn(BuildContext context) =>
+      Theme.of(context).brightness == Brightness.dark ? const Color(0xFF8DB0F5) : sky;
+
+  /// Any brand colour used as text/icon colour: [sky] is swapped for its readable dark-mode tint.
+  static Color readable(BuildContext context, Color c) => c == sky ? skyOn(context) : c;
+
   static Color saffronText(BuildContext context) =>
       Theme.of(context).brightness == Brightness.light ? const Color(0xFF9A6B00) : saffron;
 
@@ -78,7 +89,7 @@ ThemeData buildTheme(Brightness b) {
   );
   final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b, fontFamily: 'Mukta');
   return base.copyWith(
-    scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFF5F7FC) : const Color(0xFF0E1320),
+    scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFEDF1F8) : const Color(0xFF0E1320),
     cardTheme: CardThemeData(
       // A flat elevation:0 made every card and the content behind it blur
       // into one plane -- a soft colored shadow (sky-tinted, not pure black)
@@ -101,6 +112,12 @@ ThemeData buildTheme(Brightness b) {
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
+        // Brand blue with white text in both themes (Material's seed-derived pale lavender looked
+        // washed out on the dark background).
+        backgroundColor: b == Brightness.light ? BrandColors.sky : BrandColors.skyLight,
+        foregroundColor: Colors.white,
+        disabledBackgroundColor: b == Brightness.light ? const Color(0xFFDDE3EF) : const Color(0xFF242C40),
+        disabledForegroundColor: b == Brightness.light ? const Color(0xFF8A93A6) : const Color(0xFF6E7891),
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         textStyle: const TextStyle(fontFamily: 'Mukta', fontSize: 16, fontWeight: FontWeight.w700),

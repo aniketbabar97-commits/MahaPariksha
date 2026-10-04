@@ -111,8 +111,14 @@ class ProgressScreen extends StatelessWidget {
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
-                      SizedBox(width: 96, child: Text(sub.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      // Full subject name (two lines if needed), not "General Intelli…".
                       Expanded(
+                          flex: 5,
+                          child: Text(sub.name.of(lang),
+                              maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(height: 1.2))),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        flex: 4,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
                           child: TweenAnimationBuilder<double>(
@@ -179,7 +185,7 @@ class ProgressScreen extends StatelessWidget {
               for (final m in examMocks.reversed.take(8))
                 ListTile(
                   dense: true,
-                  leading: const Icon(Icons.assignment_turned_in, color: BrandColors.sky),
+                  leading: Icon(Icons.assignment_turned_in, color: BrandColors.skyOn(context)),
                   title: Text('${m.score.toStringAsFixed(m.score == m.score.roundToDouble() ? 0 : 2)} / ${m.total}'),
                   subtitle: Text(_dateOf(m.day)),
                   trailing: m.total > 0
@@ -262,7 +268,7 @@ class _FreezeTokenCard extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text(
                       context.tr('विज्ञापन अभी तैयार नहीं है, कृपया थोड़ी देर बाद कोशिश करें',
-                          'Ad isn\'t ready yet -- please try again shortly'))));
+                          'Ad isn\'t ready yet — please try again shortly'))));
             }
           },
         ),
@@ -399,7 +405,7 @@ class _WeightageCard extends StatelessWidget {
           Text(
             context.tr(
                 'असली पेपर में हर विषय से कितने प्रश्न आते हैं — ज़्यादा हिस्सेदारी वाले विषय को पहले मज़बूत करें',
-                "Each subject's share of questions in the real paper -- strengthen the heavier ones first"),
+                "Each subject's share of questions in the real paper — strengthen the heavier ones first"),
             style: TextStyle(fontSize: 12.5, color: Theme.of(context).hintColor),
           ),
           const SizedBox(height: 12),
@@ -417,8 +423,14 @@ class _WeightageCard extends StatelessWidget {
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
-                      SizedBox(width: 96, child: Text(sub.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      // Full subject name (two lines if needed), not "General Intelli…".
                       Expanded(
+                          flex: 5,
+                          child: Text(sub.name.of(lang),
+                              maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(height: 1.2))),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        flex: 4,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
                           child: TweenAnimationBuilder<double>(

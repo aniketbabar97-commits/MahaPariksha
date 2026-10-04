@@ -61,7 +61,7 @@ class PracticeScreen extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 160),
             child: ActionChip(
               avatar: const Icon(Icons.swap_horiz, size: 18),
-              label: Text(exam.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis),
+              label: Text(shortExamName(exam.id, lang) ?? exam.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis),
               onPressed: () => showExamSwitcher(context),
             ),
           ),
@@ -115,8 +115,8 @@ class PracticeScreen extends StatelessWidget {
           icon: Icons.history_edu,
           color: BrandColors.correct,
           title: context.tr('पिछले वर्ष के प्रश्न (PYQ) 📜', 'Previous year questions (PYQ) 📜'),
-          subtitle: context.tr('RRB व RPF के 50,000+ आधिकारिक प्रश्न · पूरे प्रश्नपत्र हल करें',
-              '50,000+ official RRB & RPF questions · attempt full papers'),
+          subtitle: context.tr('RRB व RPF के 45,000+ आधिकारिक प्रश्न · पूरे प्रश्नपत्र हल करें',
+              '45,000+ official RRB & RPF questions · attempt full papers'),
           onTap: () => push(context, (_) => const PyqScreen()),
         ),
         SectionTitle(context.tr('विषयवार अभ्यास 📚', 'Practice by subject 📚')),
@@ -223,7 +223,7 @@ class SubjectScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
         children: [
           FilledButton.icon(
-            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron),
+            style: FilledButton.styleFrom(backgroundColor: BrandColors.saffron, foregroundColor: BrandColors.onSaffron),
             icon: const Icon(Icons.shuffle),
             label: Text(context.tr('सभी टॉपिक से मिश्रित अभ्यास 🔀', 'Mixed practice from all topics 🔀')),
             onPressed: () {
@@ -306,3 +306,22 @@ class SubjectScreen extends StatelessWidget {
     );
   }
 }
+
+/// A chip-sized exam name ("JE Electrical" rather than "RRB Junior Engineer (Electrical)", which
+/// never fits and was cut to "RRB Junior Engi…").
+String? shortExamName(String id, String lang) {
+  const en = {
+    'rrb_ntpc': 'NTPC', 'rrb_group_d': 'Group D', 'rrb_alp': 'ALP', 'rrb_technician': 'Technician',
+    'rrb_je': 'JE', 'rrb_paramedical': 'Paramedical', 'rpf_constable': 'RPF Constable', 'rpf_si': 'RPF SI',
+    'dfccil_executive': 'DFCCIL', 'rrb_je_mechanical': 'JE Mechanical', 'rrb_je_civil': 'JE Civil',
+    'rrb_je_electrical': 'JE Electrical',
+  };
+  const hi = {
+    'rrb_ntpc': 'NTPC', 'rrb_group_d': 'ग्रुप डी', 'rrb_alp': 'ALP', 'rrb_technician': 'टेक्नीशियन',
+    'rrb_je': 'JE', 'rrb_paramedical': 'पैरामेडिकल', 'rpf_constable': 'RPF कांस्टेबल', 'rpf_si': 'RPF SI',
+    'dfccil_executive': 'DFCCIL', 'rrb_je_mechanical': 'JE मैकेनिकल', 'rrb_je_civil': 'JE सिविल',
+    'rrb_je_electrical': 'JE इलेक्ट्रिकल',
+  };
+  return (lang == 'hi' ? hi : en)[id];
+}
+

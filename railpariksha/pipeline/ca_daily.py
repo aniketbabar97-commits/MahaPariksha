@@ -216,6 +216,37 @@ def blind_solve(backend, d: Draft, source_text: str) -> Solve:
     return backend.solve(prompt)
 
 
+_OTHER_INDIC = re.compile(r"[\u0980-\u0DFF]")  # Bengali..Malayalam: never valid inside our Hindi
+_LATIN_WORD = re.compile(r"\b[a-z]{4,}\b")
+_GLUED = re.compile(r"[\u0900-\u097F][A-Za-z]|[A-Za-z][\u0900-\u097F]")
+_DIGITS = re.compile(r"\d[\d,.]*")
+
+
+def quality_issues(d) -> list:
+    """Cheap checks that catch the drafting model's usual slips before a question ships."""
+    issues = []
+    hindi = [d.q_hi, d.e_hi, *d.o_hi]
+    if any(_OTHER_INDIC.search(t) for t in hindi):
+        issues.append("non-Devanagari Indic script in Hindi")
+    # English glossed in brackets, e.g. "होर्मुज जलडमरूमध्य (Strait of Hormuz)", is fine; loose English
+    # words, or English glued onto a Hindi word ("सेashore"), are not.
+    unbracketed = [re.sub(r"\([^)]*\)", "", t) for t in [d.q_hi, d.e_hi, *d.o_hi]]
+    if any(_LATIN_WORD.search(t) or _GLUED.search(t) for t in unbracketed):
+        issues.append("English words inside Hindi")
+    right = d.o_en[d.a].strip().lower()
+    if len(right) >= 4 and right in d.q_en.lower():
+        issues.append("question gives the answer away")
+    nums = lambda t: sorted(_DIGITS.findall(t.replace(",", "")))
+    # Numbers may be spelled out in one language ("3 months" / "तीन महीने"), so only compare when both
+    # sides use digits.
+    differ = lambda e, h: not (set(nums(e)) <= set(nums(h)) or set(nums(h)) <= set(nums(e)))
+    if differ(d.q_en, d.q_hi) or any(differ(e, h) for e, h in zip(d.o_en, d.o_hi)):
+        issues.append("Hindi and English numbers differ")
+    if d.topic == "railway_current_affairs" and not re.search(r"rail|train|metro|loco|station", f"{d.q_en} {d.e_en}", re.I):
+        issues.append("tagged railway but not about railways")
+    return issues
+
+
 def main():
     gen_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     news = fetch_news()
@@ -246,6 +277,10 @@ def main():
         ok_shape = (len(d.o_hi) == 4 and len(d.o_en) == 4 and 0 <= d.a <= 3 and d.topic in TOPICS
                     and src is not None and d.q_en.strip().lower() not in seen_q)
         if not ok_shape:
+            continue
+        bad = quality_issues(d)
+        if bad:
+            print(f"rejected ({'; '.join(bad)}): {d.q_en[:80]}")
             continue
         source_text = f"{src['title']}\n{src['summary']}"
         cross = blind_solve(checker, d, source_text)

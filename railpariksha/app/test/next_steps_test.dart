@@ -89,11 +89,11 @@ void main() {
     expect(find.text('Your next step 🎯'), findsOneWidget);
     expect(find.text(repo.topic('maths', 'percentage')!.name.en), findsOneWidget);
     expect(find.text('This quiz 0/3 · overall 0%'), findsOneWidget);
-    expect(find.text('Practise 10'), findsOneWidget);
+    expect(find.text('Practice 10'), findsOneWidget);
 
-    await tester.ensureVisible(find.text('Practise 10'));
+    await tester.ensureVisible(find.text('Practice 10'));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Practise 10'));
+    await tester.tap(find.text('Practice 10'));
     await tester.pumpAndSettle();
     expect(find.text('1 / 10'), findsOneWidget, reason: 'opens a 10-question practice set on that topic');
     await tester.pump(const Duration(seconds: 1));
