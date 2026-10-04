@@ -107,7 +107,7 @@ void main() {
       await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 200)));
       await tester.pump(const Duration(milliseconds: 300));
     }
-    expect(find.textContaining('Practise ('), findsOneWidget);
+    expect(find.textContaining('Practice ('), findsOneWidget);
     expect(find.textContaining('Topic test ('), findsOneWidget);
   });
 }

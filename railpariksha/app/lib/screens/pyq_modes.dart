@@ -58,7 +58,7 @@ class PyqTopicTab extends StatelessWidget {
                 padding: const EdgeInsets.all(14),
                 child: Text(
                   context.tr('हर टॉपिक के असली पिछले वर्ष के प्रश्न: अभ्यास करें, फिर उस टॉपिक का टेस्ट दें और अपनी पकड़ परखें।',
-                      'Real previous-year questions for every topic: practise, then take a timed topic test to prove you have it.'),
+                      'Real previous-year questions for every topic: practice, then take a timed topic test to prove you have it.'),
                 ),
               ),
             ),
@@ -99,7 +99,7 @@ class PyqTopicTab extends StatelessWidget {
   }
 }
 
-/// One topic: practise its previous-year questions, or take a timed topic test.
+/// One topic: practice its previous-year questions, or take a timed topic test.
 class PyqTopicScreen extends StatefulWidget {
   final PyqTopic topic;
   final Bi topicName;
@@ -223,7 +223,7 @@ class _PyqTopicScreenState extends State<PyqTopicScreen> {
               ActionCard(
                 icon: Icons.play_arrow_rounded,
                 color: BrandColors.correct,
-                title: context.tr('अभ्यास करें ($_practiceSize प्रश्न)', 'Practise ($_practiceSize questions)'),
+                title: context.tr('अभ्यास करें ($_practiceSize प्रश्न)', 'Practice ($_practiceSize questions)'),
                 subtitle: context.tr('तुरंत उत्तर और व्याख्या · नए प्रश्न पहले', 'Instant answers and explanations · new questions first'),
                 onTap: pool.isEmpty ? null : () => _practice(pool),
               ),
