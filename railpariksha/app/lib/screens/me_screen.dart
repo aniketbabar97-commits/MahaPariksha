@@ -64,6 +64,9 @@ class MeScreen extends StatelessWidget {
                 HapticFeedback.selectionClick();
                 final now = DateTime.now();
                 final d = await showDatePicker(
+                  helpText: context.tr('परीक्षा की तारीख चुनें', 'Select exam date'),
+                  cancelText: context.tr('रद्द करें', 'Cancel'),
+                  confirmText: context.tr('ठीक है', 'OK'),
                   context: context,
                   initialDate: p.examDate ?? now.add(const Duration(days: 60)),
                   firstDate: now,
@@ -135,6 +138,9 @@ class MeScreen extends StatelessWidget {
                 onTap: () async {
                   HapticFeedback.selectionClick();
                   final t = await showTimePicker(
+                    helpText: context.tr('रिमाइंडर का समय चुनें', 'Select reminder time'),
+                    cancelText: context.tr('रद्द करें', 'Cancel'),
+                    confirmText: context.tr('ठीक है', 'OK'),
                     context: context,
                     initialTime: TimeOfDay(hour: p.reminderHour, minute: 0),
                   );

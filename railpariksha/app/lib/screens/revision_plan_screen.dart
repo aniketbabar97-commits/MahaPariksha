@@ -55,6 +55,9 @@ class RevisionPlanScreen extends StatelessWidget {
                       HapticFeedback.selectionClick();
                       final now = DateTime.now();
                       final d = await showDatePicker(
+                        helpText: context.tr('परीक्षा की तारीख चुनें', 'Select exam date'),
+                        cancelText: context.tr('रद्द करें', 'Cancel'),
+                        confirmText: context.tr('ठीक है', 'OK'),
                         context: context,
                         initialDate: now.add(const Duration(days: 60)),
                         firstDate: now,

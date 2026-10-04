@@ -457,8 +457,9 @@ def main():
     for slug, recs in out.items():
         keep, seen = [], set()
         for r in sorted(recs, key=lambda r: (r.get("tr") != "hi", r["pyq"], r["id"])):
-            if "q_en" not in r:
-                # Hindi-only and never translated (its garbled Hindi was dropped, or no translation yet).
+            if "q_en" not in r or "q_hi" not in r:
+                # One language missing: Hindi-only and never translated, or English whose Hindi
+                # translation hasn't landed yet. Every PYQ in the app is bilingual.
                 stats["dropped_untranslated"] += 1
                 continue
             if "q_en" in r:

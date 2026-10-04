@@ -45,7 +45,7 @@ class BeastTier {
 /// Beast Mode tiers, unlocked by the best sprint score achieved so far (see
 /// [Progress.beastBestScore]). Mirrors [_levels]' shape/lookup pattern.
 const _beastTiers = [
-  (0.0, 'रूकी', 'Rookie'),
+  (0.0, 'नौसिखिया', 'Rookie'),
   (15.0, 'योद्धा', 'Warrior'),
   (30.0, 'बीस्ट', 'Beast'),
   (50.0, 'आयरन बीस्ट', 'Iron Beast'),
