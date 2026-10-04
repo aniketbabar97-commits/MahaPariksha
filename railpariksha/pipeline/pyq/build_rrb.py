@@ -157,8 +157,9 @@ PROMO = re.compile(r"\s*(?:Join\s*)?(?:Telegram\s*)?Railway\s*News\s*Ro+ms?\b(?:
 
 
 # A page-header field the sheets print beside some questions; it leaks into option text.
-HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+|\s*\bPage\s*\d{1,3}\b|\s*\b20\d\d/\d\d/\d\d-\d\d:\d\d:\d\d\b",
-                         re.I)
+HEADER_LEAK = re.compile(r"\s*Question\s+Type\s*:\s*\w+|\s*\bPage\s*\d{1,3}\b|\s*\b20\d\d/\d\d/\d\d-\d\d:\d\d:\d\d\b"
+                         r"|\s*\bQ\s*\.\s*\d(?:\s*\d)*\s+A\b.*",  # the next question's header + options, glued on
+                         re.I | re.S)
 
 
 def scrub(t):
@@ -432,6 +433,24 @@ def main():
             stats[f"tr_migrated_{slug}"] = migrate(slug, json.loads(old_path.read_text(encoding="utf-8")), recs,
                                                    clean=scrub)
         stats[f"translated_{slug}"] = apply_family(slug, recs, clean=scrub)
+    # A question whose options are plain words can't be paired by content, so its Hindi and English
+    # halves arrive as two items and each gets translated into the other language: the same question
+    # twice. Once translations are in, drop the repeats (keeping the copy with the original English).
+    def final_key(r):
+        return (re.sub(r"\W+", "", r["q_en"].lower()) + "|" +
+                "|".join(sorted(re.sub(r"\W+", "", o.lower()) for o in r["o_en"])))
+    for slug, recs in out.items():
+        keep, seen = [], set()
+        for r in sorted(recs, key=lambda r: (r.get("tr") != "hi", r["pyq"], r["id"])):
+            if "q_en" in r:
+                k = final_key(r)
+                if k in seen:
+                    stats["dup_after_translation"] += 1
+                    continue
+                seen.add(k)
+            keep.append(r)
+        recs[:] = keep
+
     # Repair words that lost their reph in the sheets' fonts (after ids/translations, which key on the raw text).
     import hindi_fix
     fixes = hindi_fix.build_map(t for recs in out.values() for r in recs if "q_hi" in r and r.get("tr") != "hi"
