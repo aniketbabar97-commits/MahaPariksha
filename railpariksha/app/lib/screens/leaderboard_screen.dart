@@ -136,7 +136,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                                   child: EmptyState(
                                     icon: Icons.emoji_events,
                                     text: context.tr('अभी कोई स्कोर नहीं — पहला मॉक टेस्ट देकर टॉप पर आएं!',
-                                        'No scores yet -- take a mock test to be the first on the board!'),
+                                        'No scores yet — take a mock test to be the first on the board!'),
                                   ),
                                 )
                               else
@@ -208,7 +208,7 @@ class _NamePrompt extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
               context.tr('कोई लॉगिन नहीं — सिर्फ एक नाम चुनें, आपकी पहचान गुप्त रहेगी',
-                  'No login needed -- just pick a name, your real identity stays private'),
+                  'No login needed — just pick a name, your real identity stays private'),
               textAlign: TextAlign.center,
               style: TextStyle(color: Theme.of(context).hintColor)),
           const SizedBox(height: 16),

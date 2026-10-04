@@ -111,8 +111,14 @@ class ProgressScreen extends StatelessWidget {
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
-                      SizedBox(width: 96, child: Text(sub.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      // Full subject name (two lines if needed), not "General Intelli…".
                       Expanded(
+                          flex: 5,
+                          child: Text(sub.name.of(lang),
+                              maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(height: 1.2))),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        flex: 4,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
                           child: TweenAnimationBuilder<double>(
@@ -262,7 +268,7 @@ class _FreezeTokenCard extends StatelessWidget {
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                   content: Text(
                       context.tr('विज्ञापन अभी तैयार नहीं है, कृपया थोड़ी देर बाद कोशिश करें',
-                          'Ad isn\'t ready yet -- please try again shortly'))));
+                          'Ad isn\'t ready yet — please try again shortly'))));
             }
           },
         ),
@@ -417,8 +423,14 @@ class _WeightageCard extends StatelessWidget {
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
-                      SizedBox(width: 96, child: Text(sub.name.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      // Full subject name (two lines if needed), not "General Intelli…".
                       Expanded(
+                          flex: 5,
+                          child: Text(sub.name.of(lang),
+                              maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(height: 1.2))),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        flex: 4,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(6),
                           child: TweenAnimationBuilder<double>(

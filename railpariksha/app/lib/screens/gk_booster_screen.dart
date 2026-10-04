@@ -60,7 +60,7 @@ class GkBoosterScreen extends StatelessWidget {
               children: [
                 Text(
                   context.tr('परीक्षा से पहले रटने लायक रेफरेंस लिस्ट — दिवस, योजनाएं, पुरस्कार और बहुत कुछ।',
-                      'Cram-ready reference lists for last-minute revision -- days, schemes, awards and more.'),
+                      'Cram-ready reference lists for last-minute revision — days, schemes, awards and more.'),
                   style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13),
                 ),
                 const SizedBox(height: Spacing.lg),

@@ -50,7 +50,7 @@ import '../data/progress.dart';
 /// server push or a background callback, neither of which this app has (by
 /// design -- no new dependency). This is the accepted tradeoff.
 const _streakSosThreshold = 3;
-const _streakSosHour = 21; // 9pm local -- inside the "getting late" window, well before midnight.
+const _streakSosHour = 21; // 9pm local — inside the "getting late" window, well before midnight.
 
 String _tr(Progress p, String hi, String en) => p.lang == 'en' ? en : hi;
 
@@ -125,7 +125,7 @@ Future<void> applyReminders(Progress p) async {
       '$streak दिन, और रात होने वाली है ⏳🔥',
       '$streak days, and night is closing in ⏳🔥',
       'अभी एक क्विज़ खेलो, स्ट्रीक मत टूटने दो!',
-      "Play one quiz right now -- don't let it break!",
+      "Play one quiz right now — don't let it break!",
     ),
   ]);
 }
@@ -146,11 +146,11 @@ Future<void> applyReminders(Progress p) async {
         '$streak दिन की स्ट्रीक अभी बचाओ! 🔥',
         'Save your $streak-day streak right now! 🔥',
         'आज अभी तक कुछ नहीं किया — एक क्विज़ खेलो!',
-        "You haven't practiced today yet -- play one quiz!",
+        "You haven't practiced today yet — play one quiz!",
       ),
       (
         'दोपहर हो गई, स्ट्रीक का क्या? ⏳',
-        'It\'s midday -- what about your streak? ⏳',
+        'It\'s midday — what about your streak? ⏳',
         '$streak दिन बचाने के लिए बस एक क्विज़ चाहिए।',
         'Just one quiz saves your $streak-day streak.',
       ),
@@ -170,19 +170,19 @@ Future<void> applyReminders(Progress p) async {
   if (days != null && days <= 3) {
     return (
       _tr(p, '🚨 सिर्फ $days दिन बाकी! 🚨', '🚨 Only $days days left! 🚨'),
-      _tr(p, 'अभी रिवीज़न शुरू करो, एक मिनट भी बर्बाद मत करो!', "Start revising right now -- don't waste a single minute!"),
+      _tr(p, 'अभी रिवीज़न शुरू करो, एक मिनट भी बर्बाद मत करो!', "Start revising right now — don't waste a single minute!"),
     );
   }
   if (days != null && days <= 7) {
     return (
       _tr(p, 'परीक्षा में सिर्फ $days दिन! ⏰', 'Only $days days to your exam! ⏰'),
-      _tr(p, 'आज का रिवीज़न अभी शुरू करो, हर घंटा कीमती है।', 'Start revising now -- every hour counts.'),
+      _tr(p, 'आज का रिवीज़न अभी शुरू करो, हर घंटा कीमती है।', 'Start revising now — every hour counts.'),
     );
   }
   if (days != null && days <= 14) {
     return (
       _tr(p, 'परीक्षा में सिर्फ $days दिन बाकी! ⏰', 'Only $days days left for your exam! ⏰'),
-      _tr(p, 'आज का रिवीज़न अभी शुरू करें, एक भी दिन बर्बाद न करें।', "Start today's revision now -- every day counts."),
+      _tr(p, 'आज का रिवीज़न अभी शुरू करें, एक भी दिन बर्बाद न करें।', "Start today's revision now — every day counts."),
     );
   }
   return _pick(p, const [
@@ -190,7 +190,7 @@ Future<void> applyReminders(Progress p) async {
       'उठो चैंपियन! 🔥',
       'Rise and grind, champion! 🔥',
       'तुम्हारा आज का Daily 10 तैयार है — सिर्फ 5 मिनट में बाज़ी मार लो!',
-      'Your Daily 10 is ready -- smash it in just 5 minutes!',
+      'Your Daily 10 is ready — smash it in just 5 minutes!',
     ),
     (
       'भारतीय रेलवे बुला रही है 🚆',
@@ -202,7 +202,7 @@ Future<void> applyReminders(Progress p) async {
       'हर सुबह एक जीत 🏆',
       'Every morning, a new win 🏆',
       'सिर्फ 10 सवाल, 5 मिनट — आज की जीत शुरू करो।',
-      "Just 10 questions, 5 minutes -- start today's win.",
+      "Just 10 questions, 5 minutes — start today's win.",
     ),
     (
       'तुम्हारी सीट तुम्हारा इंतज़ार कर रही है 🚂',
@@ -251,7 +251,7 @@ Future<void> applyReminders(Progress p) async {
         'राजधानी बनने से एक क्विज़ दूर हो 🚄',
         'One quiz away from Rajdhani rank 🚄',
         '$streak दिन की मेहनत बर्बाद मत करो — आज भी खेलो!',
-        "Don't waste $streak days of hard work -- play today too!",
+        "Don't waste $streak days of hard work — play today too!",
       ),
       (
         'तुम्हारी स्ट्रीक को तुम्हारी ज़रूरत है! 💪',
@@ -263,7 +263,7 @@ Future<void> applyReminders(Progress p) async {
         'वंदे भारत बनने से एक क्विज़ दूर हो 🚅',
         'One quiz away from Vande Bharat rank 🚅',
         '$streak दिन की स्पीड मत गिरने दो — आज भी खेलो!',
-        "Don't let your $streak-day speed drop -- play today too!",
+        "Don't let your $streak-day speed drop — play today too!",
       ),
     ]);
   }
@@ -274,7 +274,7 @@ Future<void> applyReminders(Progress p) async {
         '$mistakes गलतियां बदला लेने का इंतज़ार कर रही हैं 😤',
         '$mistakes mistakes are waiting for their revenge match 😤',
         'इन्हें आज हरा दो, एग्ज़ाम में दोबारा मौका नहीं मिलेगा!',
-        "Beat them today -- exam day won't give you a second chance!",
+        "Beat them today — exam day won't give you a second chance!",
       ),
       (
         '$mistakes गलतियां, एक मौका ⚔️',
@@ -289,7 +289,7 @@ Future<void> applyReminders(Progress p) async {
       'दिन खत्म होने से पहले! ⏳',
       'Before the day ends! ⏳',
       'सिर्फ 5 मिनट बचे हैं आज की जीत के लिए — अभी शुरू करो!',
-      "Just 5 minutes stand between you and today's win -- go now!",
+      "Just 5 minutes stand between you and today's win — go now!",
     ),
     (
       'आज की बाज़ी अभी बाकी है 🎯',
@@ -301,7 +301,7 @@ Future<void> applyReminders(Progress p) async {
       'कामयाबी इंतज़ार नहीं करती ⚡',
       "Success doesn't wait ⚡",
       'आज थोड़ा अभ्यास कर लो, कल खुद को शुक्रिया कहोगे।',
-      "Practice a little today -- you'll thank yourself tomorrow.",
+      "Practice a little today — you'll thank yourself tomorrow.",
     ),
   ]);
 }

@@ -150,7 +150,7 @@ class MeScreen extends StatelessWidget {
                 title: Text(context.tr('स्ट्रीक SOS चेतावनी 🚨', 'Streak SOS alert 🚨')),
                 subtitle: Text(context.tr(
                     'रात 9 बजे एक अतिरिक्त अलर्ट — सिर्फ तब, जब स्ट्रीक खतरे में हो',
-                    'An extra alert at 9pm -- only when your streak is actually at risk')),
+                    'An extra alert at 9pm — only when your streak is actually at risk')),
                 value: p.streakRiskAlerts,
                 onChanged: (v) async {
                   HapticFeedback.selectionClick();
@@ -342,7 +342,10 @@ class _IdCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final displayName = p.name.isEmpty ? context.tr('अभ्यर्थी', 'Aspirant') : p.name;
+    final googleName = AuthService.currentUser?.displayName?.trim();
+    final displayName = p.name.isNotEmpty
+        ? p.name
+        : (googleName != null && googleName.isNotEmpty ? googleName : context.tr('अभ्यर्थी', 'Aspirant'));
     // Stable per-device "ID number" -- not a real identifier, just a badge
     // detail that stays the same across app restarts instead of re-randomizing.
     final idNumber = 100000 + (p.examId.hashCode.abs() % 900000);
@@ -424,6 +427,9 @@ class _AccountCard extends StatelessWidget {
                       final name = signedIn.displayName;
                       if (name != null && name.trim().isNotEmpty) p.setLeaderboardName(name);
                     }
+                    // The profile card shows the Google name too, unless the student already chose one.
+                    final gName = signedIn?.displayName?.trim();
+                    if (gName != null && gName.isNotEmpty && p.name.isEmpty) p.update((p) => p.name = gName);
                   },
                 )
               : ListTile(
@@ -482,8 +488,8 @@ class _PremiumCardState extends State<_PremiumCard> {
           leading: const Icon(Icons.verified, color: BrandColors.saffron),
           title: Text(context.tr('प्रीमियम सक्रिय ✅', 'Premium active ✅')),
           subtitle: Text(context.tr(
-              'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड -- धन्यवाद! 🙏',
-              'No ads, full offline mode -- thank you! 🙏')),
+              'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड — धन्यवाद! 🙏',
+              'No ads, full offline mode — thank you! 🙏')),
         ),
       );
     }
@@ -500,7 +506,7 @@ class _PremiumCardState extends State<_PremiumCard> {
                   maxLines: 2, overflow: TextOverflow.ellipsis),
               subtitle: Text(
                   product != null
-                      ? context.tr('एक बार का भुगतान -- ${product.price}', 'One-time payment -- ${product.price}')
+                      ? context.tr('एक बार का भुगतान — ${product.price}', 'One-time payment — ${product.price}')
                       : loading
                           ? context.tr('लोड हो रहा है...', 'Loading...')
                           : context.tr('अभी उपलब्ध नहीं', 'Not available right now'),

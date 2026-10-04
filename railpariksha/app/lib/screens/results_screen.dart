@@ -225,6 +225,12 @@ class _ResultsScreenState extends State<ResultsScreen> {
               ]),
             ]),
           ),
+          // Right under the score, where every student looks first (a banner at the foot of a long
+          // results page is rarely seen). Spaced away from the score card and the buttons below.
+          if (!p.removedAds && AdPacing.eligibleMode(spec.mode)) ...[
+            const SizedBox(height: 12),
+            const Center(child: AdBanner()),
+          ],
           if (spec.mode == QuizMode.mock && total > 0) ...[
             const SizedBox(height: 10),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -324,8 +330,6 @@ class _ResultsScreenState extends State<ResultsScreen> {
             const SizedBox(height: 12),
             NextStepsCard(steps: NextSteps.from(spec.questions, widget.answers, context.scope.builder.topicStats())),
           ],
-          // Below the actions and the coaching card, well clear of the buttons above.
-          if (!p.removedAds && AdPacing.eligibleMode(spec.mode)) const Center(child: AdBanner()),
           if (!spec.instantFeedback && total > 0)
             _AnalysisSection(analysis: MockAnalysis.from(spec, widget.answers, widget.timePerQuestion), lang: lang),
           if (!isSpeed) ...[

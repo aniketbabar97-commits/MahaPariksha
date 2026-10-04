@@ -255,20 +255,20 @@ class _AccessBanner extends StatelessWidget {
   Widget build(BuildContext context) {
     final p = context.scope.progress;
     final left = PyqAccess.remaining();
+    // Only say something when there is good news; how the unlock works is explained at the moment it
+    // matters (the unlock dialog), not on every visit.
     final status = p.removedAds
-        ? context.tr('विज्ञापन-मुक्त: हमेशा अनलॉक ✅', 'Ad-free: always unlocked ✅')
+        ? context.tr('विज्ञापन-मुक्त ✅', 'Ad-free ✅')
         : left > Duration.zero
             ? context.tr('अनलॉक: ${left.inMinutes + 1} मिनट बाकी 🔓', 'Unlocked: ${left.inMinutes + 1} min left 🔓')
-            : context.tr('अभ्यास सेट: एक विज्ञापन = ${PyqAccess.window.inMinutes} मिनट · पूरा प्रश्नपत्र: हर पेपर पर एक 🔒',
-                'Practice sets: one ad = ${PyqAccess.window.inMinutes} min · Full papers: one ad each 🔒');
+            : null;
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(14),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(context.tr('${fmtCount(total)} असली परीक्षा प्रश्न', '${fmtCount(total)} real exam questions'),
               style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
-          const SizedBox(height: 4),
-          Text(status),
+          if (status != null) ...[const SizedBox(height: 4), Text(status)],
           const SizedBox(height: 4),
           Text(
             context.tr('RRB/RPF के आधिकारिक प्रश्नपत्रों व उत्तर कुंजी से। जहाँ उपलब्ध हो, आपकी भाषा में।',
@@ -294,7 +294,7 @@ class _SetTile extends StatelessWidget {
           color: set.railway ? BrandColors.saffron : BrandColors.skyLight,
           title: set.title,
           subtitle: context.tr('${fmtCount(relevant)} प्रश्न · ${set.papers.length} प्रश्नपत्र',
-              '${fmtCount(relevant)} questions · ${set.papers.length} papers'),
+              '${fmtCount(relevant)} questions · ${set.papers.length} ${set.papers.length == 1 ? 'paper' : 'papers'}'),
           onTap: () => push(context, (_) => PyqSetScreen(set: set)),
         ),
       );
