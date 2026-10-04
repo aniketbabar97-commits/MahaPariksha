@@ -148,12 +148,21 @@ def migrate(family, old_items, new_items, clean=lambda t: t):
     if not tr:
         return 0
     new_by_key = {content_key(i): i["id"] for i in new_items}
+    # Fallback for fixes that change digits in the stem (e.g. a stray question-number
+    # digit removed): paper + language + options + the stem's letters only. Used
+    # only when it identifies exactly one question on both sides.
+    def loose(item, cl=lambda t: t):
+        k = content_key(item, cl).split("|")
+        return "|".join([k[0], k[1], re.sub(r"\d", "", k[2])] + k[3:])
+    from collections import Counter as _C
+    nl = _C(loose(i) for i in new_items)
+    new_by_loose = {loose(i): i["id"] for i in new_items if nl[loose(i)] == 1}
     moved, out = 0, {}
     for old in old_items:
         r = tr.get(old["id"])
         if r is None:
             continue
-        nid = new_by_key.get(content_key(old, clean))
+        nid = new_by_key.get(content_key(old, clean)) or new_by_loose.get(loose(old, clean))
         if nid and nid != old["id"]:
             r = {**r, "id": nid}
             moved += 1

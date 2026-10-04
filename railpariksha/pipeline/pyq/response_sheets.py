@@ -21,7 +21,7 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 
-VERSION = 2  # bump when extraction output changes (invalidates build_rrb's cache)
+VERSION = 3  # bump when extraction output changes (invalidates build_rrb's cache)
 GREEN, RED = 0x40C64B, 0xF61818
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 OPT_LABEL = re.compile(r"^\s*([A-D]|[1-4])\.\s*$|^\s*([A-D]|[1-4])\.\s")
@@ -178,7 +178,8 @@ def extract(path):
                 finish()
                 stats["q_seen"] += 1
                 cur = {"n": int(m.group(1)), "section": section, "stem": [m.group(2)] if m.group(2) else [],
-                       "opts": [], "in_opts": False, "page": pno, "y0": ln["y"], "figure": False}
+                       "opts": [], "in_opts": False, "page": pno, "y0": ln["y"], "figure": False,
+                       "label_x": ln["x"], "stem_x": None}
                 continue
             sm = re.match(r"^Section\s*:[\s\xa0]*(.+)$", t)
             if sm:
@@ -205,6 +206,14 @@ def extract(path):
                     o["text"] = join_lines([o["text"], t])
                     o["colors"] |= ln["colors"]
             else:
+                # A long question number wraps in the narrow label column ("Q.8" / "3" = Q.83):
+                # a lone number left of where the stem text starts belongs to the label.
+                if (re.fullmatch(r"\d{1,3}", t) and not cur["stem"][1:] and
+                        (cur["stem_x"] is None or ln["x"] < cur["stem_x"] - 3) and ln["x"] < cur["label_x"] + 12):
+                    cur["n"] = int(f"{cur['n']}{t}")
+                    continue
+                if cur["stem_x"] is None:
+                    cur["stem_x"] = ln["x"]
                 cur["stem"].append(t)
         # A figure inside a stem: an image between the question's first line and its "Ans" line.
         if cur and not cur["in_opts"]:
