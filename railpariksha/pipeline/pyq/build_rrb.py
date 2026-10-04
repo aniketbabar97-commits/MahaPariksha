@@ -21,6 +21,7 @@ import re
 import sys
 from collections import Counter, defaultdict
 from datetime import datetime
+from multiprocessing import Pool
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -150,10 +151,21 @@ def norm_key(text, opts):
     return n(text) + "|" + "|".join(sorted(n(o) for o in opts))
 
 
+def extract_one(path):
+    try:
+        info, qs, _ = rs.extract(path)
+        qs, _ = rs.figure_scan(path, qs)
+        return info, qs
+    except Exception as e:  # one corrupt PDF must not stop the batch
+        print(f"ERR {path}: {e}", file=sys.stderr)
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pdfs", required=True)
     ap.add_argument("--extra", nargs="*", default=[], help="more PDF dirs (family guessed from file name)")
+    ap.add_argument("--bank-cap", type=int, default=150, help="max bilingual PYQs per topic copied into the bank")
     a = ap.parse_args()
 
     catalog = {name_for(r["url"]): r for r in json.loads((HERE / "catalog.json").read_text(encoding="utf-8"))}
@@ -173,30 +185,30 @@ def main():
 
     stats = Counter()
     papers = []  # one per sheet
-    seen_hash = set()
-    for i, (p, fam, cstage) in enumerate(files):
-        h = hashlib.sha1(p.read_bytes()).hexdigest()
+    # Skip byte-identical files (the same sheet is often hosted under two names).
+    seen_hash, unique_files = set(), []
+    for f in files:
+        h = hashlib.sha1(f[0].read_bytes()).hexdigest()
         if h in seen_hash:
             stats["dup_file"] += 1
-            continue
-        seen_hash.add(h)
-        try:
-            info, qs, st = rs.extract(str(p))
-            qs, _ = rs.figure_scan(str(p), qs)
-        except Exception as e:
-            print(f"ERR {p.name}: {e}", file=sys.stderr)
+        else:
+            seen_hash.add(h)
+            unique_files.append(f)
+    with Pool() as pool:
+        results = pool.map(extract_one, [str(f[0]) for f in unique_files], chunksize=4)
+    for (p, fam, cstage), res in zip(unique_files, results):
+        if res is None:
             stats["err_file"] += 1
             continue
+        info, qs = res
         d = parse_date(info["date"]) or catalog_date(catalog.get(p.name), p.name)
         if not qs or d is None:
-            stats["no_text_or_date" if not qs else "no_date"] += 1
+            stats["no_text" if not qs else "no_date"] += 1
             continue
         stats["papers_ok"] += 1
+        stats["q_extracted"] += len(qs)
         papers.append({"family": fam, "stage": stage_label(fam, info["subject"], cstage), "header": info["subject"],
                        "date": d, "time": info["time"], "qs": [q for q in qs if quality_ok(q)], "file": p.name})
-        stats["q_extracted"] += len(qs)
-        if (i + 1) % 100 == 0:
-            print(f"  extracted {i + 1}/{len(files)}", flush=True)
 
     # Shift numbers: order of start times among that exam's papers on that day.
     starts = defaultdict(set)
@@ -315,6 +327,27 @@ def main():
         print(f"{slug}: {len(recs)} questions, {len({r['pyq'] for r in recs})} papers")
     ids = [r["id"] for recs in out.values() for r in recs]
     assert len(ids) == len(set(ids)), "duplicate ids"
+
+    # Question-bank copy: bilingual items only (bank practice works in both languages),
+    # newest papers first, capped per topic so the always-loaded bundle stays light.
+    def paper_date(r):
+        try:
+            return datetime.strptime(r["pyq"].split(" · ")[1], "%d %b %Y")
+        except (IndexError, ValueError):
+            return datetime.min
+    per_topic = defaultdict(list)
+    for recs in out.values():
+        for r in recs:
+            if "q_en" in r and "q_hi" in r:
+                per_topic[(r["s"], r["t"])].append(r)
+    bank = []
+    for key, recs in sorted(per_topic.items()):
+        recs.sort(key=paper_date, reverse=True)
+        bank += [{**r, "id": "pyqb-" + r["id"][4:]} for r in recs[:a.bank_cap]]
+    bank.sort(key=lambda r: (r["s"], r["t"], r["id"]))
+    (ROOT / "content/bank/pyq_rrb.json").write_text(
+        "[\n" + ",\n".join(json.dumps(r, ensure_ascii=False) for r in bank) + "\n]\n", encoding="utf-8")
+    print(f"bank: {len(bank)} bilingual PYQs across {len(per_topic)} topics -> content/bank/pyq_rrb.json")
     print(dict(stats))
 
 

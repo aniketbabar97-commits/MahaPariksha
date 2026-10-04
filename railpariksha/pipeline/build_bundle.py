@@ -38,8 +38,10 @@ def build_pyq_pack(out_dir):
     questions = load_dir("pyq")
     sets = defaultdict(list)
     for q in questions:
-        exam, year = re.match(r"(.+?) (?:CBT-1 )?(20\d\d)", q["pyq"]).groups()
-        sets[(exam, int(year))].append(q)
+        # Labels look like "RRB Group D CBT-1 · 19 Dec 2025 · Shift 2" (exam/stage, date, shift).
+        head = q["pyq"].split(" · ")[0]
+        year = re.search(r"(20\d\d)", q["pyq"].split(" · ")[1] if " · " in q["pyq"] else q["pyq"]).group(1)
+        sets[(head, int(year))].append(q)
     out_dir.mkdir(parents=True, exist_ok=True)
     for old in out_dir.glob("*.json"):
         old.unlink()

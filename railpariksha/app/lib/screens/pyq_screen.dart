@@ -173,8 +173,8 @@ class _AccessBanner extends StatelessWidget {
           Text(status),
           const SizedBox(height: 4),
           Text(
-            context.tr('प्रश्न मूल प्रश्नपत्रों की तरह अंग्रेज़ी में हैं। हिंदी जल्द आएगी।',
-                'Questions are in English, as in the source papers. Hindi coming soon.'),
+            context.tr('RRB/RPF के आधिकारिक प्रश्नपत्रों व उत्तर कुंजी से। जहाँ उपलब्ध हो, आपकी भाषा में।',
+                'From official RRB/RPF question papers and answer keys. In your language where available.'),
             style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12.5),
           ),
         ]),
@@ -214,8 +214,17 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
   late final Future<List<Question>> _qs = pyqRepo.questions(widget.set);
   static const _practiceSize = 20;
 
+  /// Questions in the student's language first; a single-language paper in the
+  /// other language is used only when nothing else is available.
+  List<Question> _inLang(List<Question> qs) {
+    final lang = context.lang;
+    final mine = qs.where((q) => q.hasLang(lang)).toList();
+    return mine.isEmpty ? qs : mine;
+  }
+
   void _practice(List<Question> pool, String? subject) {
-    final picked = [...subject == null ? pool : pool.where((q) => q.subject == subject)]..shuffle(Random());
+    final picked = [..._inLang(subject == null ? pool : pool.where((q) => q.subject == subject).toList())]
+      ..shuffle(Random());
     final title = widget.set.title;
     withPyqAccess(
       context,
@@ -224,7 +233,7 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
   }
 
   void _paper(List<Question> all, PyqPaper paper) {
-    final qs = all.where((q) => q.pyq == paper.label).toList();
+    final qs = _inLang(all.where((q) => q.pyq == paper.label).toList());
     // CBT pace: RRB papers allow 0.9 min per question (100 in 90 min).
     final minutes = max(1, (qs.length * 0.9).round());
     withPyqAccess(

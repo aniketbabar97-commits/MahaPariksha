@@ -24,6 +24,7 @@ Q_OPTIONAL = {"hook_hi", "hook_en", "fact_hi", "fact_en", "src", "date", "pyq"}
 # Previous-year questions imported from English-only sources may omit the Hindi
 # fields; the app shows their English text in both languages.
 Q_HI = {"q_hi", "o_hi", "e_hi"}
+Q_EN = {"q_en", "o_en", "e_en"}
 F_FIELDS = {"id", "s", "t", "f_hi", "b_hi", "f_en", "b_en"}
 M_FIELDS = {"id", "type", "hi", "en"}
 M_OPTIONAL = {"by"}
@@ -36,7 +37,12 @@ def nonempty(v):
 def check_question(q, where, errs):
     keys = set(q)
     is_pyq = "pyq" in q
-    need = Q_FIELDS - Q_HI if is_pyq and not (Q_HI & keys) else Q_FIELDS
+    need = Q_FIELDS
+    if is_pyq:  # a PYQ may exist in just one language (an unpaired Hindi or English sheet)
+        if not (Q_HI & keys):
+            need = Q_FIELDS - Q_HI
+        elif not (Q_EN & keys):
+            need = Q_FIELDS - Q_EN
     if not need <= keys:
         errs.append(f"{where}: missing {sorted(need - keys)}")
         return
@@ -48,7 +54,7 @@ def check_question(q, where, errs):
         errs.append(f"{where}: bad subject/topic {q['s']}/{q['t']}")
     if q["d"] not in (1, 2, 3):
         errs.append(f"{where}: d must be 1,2,3")
-    for lang in ("hi", "en") if "q_hi" in q else ("en",):
+    for lang in [l for l in ("hi", "en") if f"q_{l}" in q]:
         opts = q[f"o_{lang}"]
         if not (isinstance(opts, list) and len(opts) == 4 and all(nonempty(o) for o in opts)):
             errs.append(f"{where}: o_{lang} must be 4 non-empty strings")

@@ -73,6 +73,10 @@ class Question {
   /// "RRB JE CBT-1 2025 · 19 Feb 2026 · Shift 1". Null for the regular bank.
   final String? pyq;
 
+  /// Which languages this question has text in: 'both', 'hi' or 'en'.
+  final String langs;
+  bool hasLang(String lang) => langs == 'both' || langs == lang;
+
   const Question({
     required this.id,
     required this.subject,
@@ -88,6 +92,7 @@ class Question {
     this.date,
     this.src,
     this.pyq,
+    this.langs = 'both',
   });
 
   List<String> options(String lang) => lang == 'en' ? optionsEn : optionsHi;
@@ -97,18 +102,19 @@ class Question {
           ? Bi(j['${k}_hi'] ?? j['${k}_en'], j['${k}_en'] ?? j['${k}_hi'])
           : null;
 
-  // Previous-year questions imported from English-only papers have no *_hi
-  // fields; they show their English text in both languages.
+  // Previous-year questions from a single-language paper have only *_hi or only
+  // *_en fields; they show that text in both languages.
   factory Question.fromJson(Map<String, dynamic> j) => Question(
         id: j['id'],
         subject: j['s'],
         topic: j['t'],
         difficulty: j['d'],
-        text: Bi(j['q_hi'] ?? j['q_en'], j['q_en']),
+        text: Bi(j['q_hi'] ?? j['q_en'], j['q_en'] ?? j['q_hi']),
         optionsHi: List<String>.from(j['o_hi'] ?? j['o_en']),
-        optionsEn: List<String>.from(j['o_en']),
+        optionsEn: List<String>.from(j['o_en'] ?? j['o_hi']),
         answer: j['a'],
-        explanation: Bi(j['e_hi'] ?? j['e_en'], j['e_en']),
+        explanation: Bi(j['e_hi'] ?? j['e_en'], j['e_en'] ?? j['e_hi']),
+        langs: j['q_hi'] == null ? 'en' : (j['q_en'] == null ? 'hi' : 'both'),
         hook: _opt(j, 'hook'),
         fact: _opt(j, 'fact'),
         date: j['date'],
