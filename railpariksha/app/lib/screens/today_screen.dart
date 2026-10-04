@@ -321,8 +321,8 @@ class TodayScreen extends StatelessWidget {
           icon: Icons.history_edu,
           color: BrandColors.saffron,
           title: context.tr('पिछले वर्ष के प्रश्नपत्र 📜', 'Previous year papers 📜'),
-          subtitle: context.tr('RRB व RPF के 50,000+ असली प्रश्न · अपनी परीक्षा के पेपर हल करें',
-              '50,000+ real RRB & RPF questions · attempt your exam\'s papers'),
+          subtitle: context.tr('RRB व RPF के 45,000+ असली प्रश्न · अपनी परीक्षा के पेपर हल करें',
+              '45,000+ real RRB & RPF questions · attempt your exam\'s papers'),
           onTap: () {
             HapticFeedback.selectionClick();
             push(context, (_) => const PyqScreen());

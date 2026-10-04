@@ -81,7 +81,7 @@ ThemeData buildTheme(Brightness b) {
   );
   final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b, fontFamily: 'Mukta');
   return base.copyWith(
-    scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFF5F7FC) : const Color(0xFF0E1320),
+    scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFEDF1F8) : const Color(0xFF0E1320),
     cardTheme: CardThemeData(
       // A flat elevation:0 made every card and the content behind it blur
       // into one plane -- a soft colored shadow (sky-tinted, not pure black)
