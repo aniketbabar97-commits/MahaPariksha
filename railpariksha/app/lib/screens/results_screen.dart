@@ -511,7 +511,7 @@ class _ReviewTile extends StatelessWidget {
             Text('✗ ${opts[answer!]}', style: const TextStyle(color: BrandColors.wrong)),
           Text('✓ ${opts[q.answer]}', style: const TextStyle(color: BrandColors.correct, fontWeight: FontWeight.w700)),
           const SizedBox(height: 8),
-          ExplanationPlayer(text: q.explanation.of(lang)),
+          if (!q.keyOnly) ExplanationPlayer(text: q.explanation.of(lang)),
           if (q.hook != null) ...[
             const SizedBox(height: 6),
             Text('💡 ${q.hook!.of(lang)}', style: const TextStyle(height: 1.5)),

@@ -859,7 +859,19 @@ class _Explanation extends StatelessWidget {
               style: TextStyle(
                   fontSize: 18, fontWeight: FontWeight.w900, color: correct ? BrandColors.correct : BrandColors.wrong),
             ),
-            _block(context, Icons.lightbulb, BrandColors.skyLight, en ? 'Explanation' : 'स्पष्टीकरण', q.explanation.of(lang)),
+            if (q.keyOnly)
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Row(children: [
+                  Icon(Icons.verified_outlined, size: 18, color: Theme.of(context).hintColor),
+                  const SizedBox(width: 8),
+                  Expanded(
+                      child: Text(en ? 'Answer as per the official answer key' : 'आधिकारिक उत्तर कुंजी के अनुसार उत्तर',
+                          style: TextStyle(color: Theme.of(context).hintColor))),
+                ]),
+              )
+            else
+              _block(context, Icons.lightbulb, BrandColors.skyLight, en ? 'Explanation' : 'स्पष्टीकरण', q.explanation.of(lang)),
             if (q.hook != null) _block(context, Icons.psychology_alt, BrandColors.saffron, en ? 'Memory trick' : 'याद रखने की तरकीब', q.hook!.of(lang)),
             if (q.fact != null) _block(context, Icons.star, BrandColors.correct, en ? 'Also remember' : 'यह भी याद रखें', q.fact!.of(lang)),
             Align(
