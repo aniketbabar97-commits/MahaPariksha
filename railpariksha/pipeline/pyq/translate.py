@@ -244,6 +244,21 @@ def align_options(src, tgt):
     return [by_tok[t] for t in ts]
 
 
+def match_options(cur, rec):
+    """For each option in `cur`, its index in `rec` (the same options, same language, possibly
+    re-ordered and lightly re-cleaned since), or None when that isn't a clear one-to-one match."""
+    from difflib import SequenceMatcher
+    n = lambda t: re.sub(r"\W+", "", t.lower())
+    idx = []
+    for o in cur:
+        scores = sorted(((SequenceMatcher(None, n(o), n(x)).ratio(), i) for i, x in enumerate(rec)), reverse=True)
+        best, second = scores[0], scores[1] if len(scores) > 1 else (0, None)
+        if best[0] < 0.85 or best[0] - second[0] < 0.05:
+            return None
+        idx.append(best[1])
+    return idx if len(set(idx)) == len(idx) else None
+
+
 def apply_family(family, items, clean=lambda t: t, stats=None):
     """Fill the missing language of each item from translations/. Marks it with
     "tr" (the translated language) so the app can label machine-made text.
@@ -260,8 +275,16 @@ def apply_family(family, items, clean=lambda t: t, stats=None):
             continue
         lang = r["lang"]
         opts = [clean(o) for o in r["o"]]
-        if it.get("shuffled"):
-            src = "hi" if lang == "en" else "en"
+        src = "hi" if lang == "en" else "en"
+        if r.get("src_o"):
+            # The translation records the source order it was made against: re-order by exact text.
+            idx = match_options(it[f"o_{src}"], r["src_o"])
+            if idx is None:
+                if stats is not None:
+                    stats[f"tr_unaligned_{family}"] += 1
+                continue
+            opts = [opts[i] for i in idx]
+        elif it.get("shuffled"):
             aligned = align_options(it[f"o_{src}"], opts)
             if aligned is None:
                 if stats is not None:
