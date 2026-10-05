@@ -29,6 +29,9 @@ def pretty(o):
     items use a bare caret, which reads as a typo on a phone)."""
     if isinstance(o, str):
         o = o.replace(" -- ", " — ")
+        # Invisible characters the PDFs carry (zero-width space, invisible function-application sign)
+        # draw as empty boxes on some phones; ⟂ is not in the symbol fallback font, ⊥ is, same meaning.
+        o = o.replace("\u200b", "").replace("\u2061", "").replace("\u27c2", "\u22a5")
         return _POW.sub(lambda m: m.group(1).translate(_SUP), o) if "^" in o else o
     if isinstance(o, list):
         return [pretty(x) for x in o]

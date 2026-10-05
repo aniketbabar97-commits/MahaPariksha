@@ -104,7 +104,7 @@ class _CelebrationDialogState extends State<_CelebrationDialog> with SingleTicke
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)),
               const SizedBox(height: 8),
-              Text(widget.sub, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70, fontSize: 16)),
+              Text(widget.sub, textAlign: TextAlign.center, style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 16)),
               const SizedBox(height: 20),
               if (widget.shareText != null) ...[
                 SizedBox(

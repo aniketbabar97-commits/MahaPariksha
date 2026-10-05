@@ -345,7 +345,7 @@ class _McqCardState extends State<_McqCard> {
                 child: Text(subject?.name.of(widget.lang) ?? context.tr('झटपट सवाल', 'Quick question'),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w700)),
+                    style: const TextStyle(color: BrandColors.onGradientMuted, fontWeight: FontWeight.w700)),
               ),
               if (xpEarned != null) ...[
                 const Spacer(),
@@ -369,7 +369,7 @@ class _McqCardState extends State<_McqCard> {
             const SizedBox(height: Spacing.lg),
             Center(
               child: Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'),
-                  style: const TextStyle(color: Colors.white54, fontSize: 13)),
+                  style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 13)),
             ),
                 ]),
               ),
@@ -474,7 +474,7 @@ class _FlashcardCardState extends State<_FlashcardCard> {
             Align(
               alignment: Alignment.topLeft,
               child: Text(subject?.name.of(widget.lang) ?? context.tr('फ्लैशकार्ड', 'Flashcard'),
-                  style: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w700)),
+                  style: const TextStyle(color: BrandColors.onGradientMuted, fontWeight: FontWeight.w700)),
             ),
             const SizedBox(height: Spacing.lg),
             GestureDetector(
@@ -531,7 +531,7 @@ class _FlashcardCardState extends State<_FlashcardCard> {
                 ),
               ])
             else
-              Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'), style: const TextStyle(color: Colors.white60, fontSize: 13)),
+              Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'), style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 13)),
                 ]),
               ),
             ),
@@ -556,7 +556,7 @@ class _SponsoredCard extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(Spacing.lg, 80, Spacing.lg, Spacing.xl),
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Text(context.tr('प्रायोजित', 'Sponsored'),
-                style: const TextStyle(color: Colors.white70, fontSize: 12, letterSpacing: 1)),
+                style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 12, letterSpacing: 1)),
             const SizedBox(height: 10),
             ClipRRect(
               borderRadius: BorderRadius.circular(Corners.md),
@@ -567,7 +567,7 @@ class _SponsoredCard extends StatelessWidget {
             ),
             const SizedBox(height: Spacing.xl),
             Text(context.tr('↑ ऊपर स्वाइप करें अगले के लिए', '↑ Swipe up for next'),
-                style: const TextStyle(color: Colors.white54, fontSize: 13)),
+                style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 13)),
           ]),
         ),
       ),

@@ -177,7 +177,7 @@ class _QuickTile extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
             child: Column(children: [
-              Icon(icon, color: color, size: 30),
+              Icon(icon, color: BrandColors.readable(context, color), size: 30),
               const SizedBox(height: 6),
               Text(label, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13)),
             ]),
@@ -234,7 +234,7 @@ class SubjectScreen extends StatelessWidget {
           if (s.repo.hasCheatSheets(subject.id)) ...[
             const SizedBox(height: Spacing.sm),
             OutlinedButton.icon(
-              icon: const Icon(Icons.bolt, color: BrandColors.saffron),
+              icon: Icon(Icons.bolt, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
               label: Text(context.tr('चीट शीट देखें ⚡', 'View cheat sheet ⚡')),
               onPressed: () {
                 HapticFeedback.selectionClick();
@@ -282,7 +282,7 @@ class SubjectScreen extends StatelessWidget {
                     ],
                   ]),
                   trailing: IconButton(
-                    icon: const Icon(Icons.play_circle, color: BrandColors.saffron, size: 34),
+                    icon: Icon(Icons.play_circle, color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 34),
                     tooltip: context.tr('अभ्यास शुरू करें', 'Start practice'),
                     onPressed: n == 0
                         ? null

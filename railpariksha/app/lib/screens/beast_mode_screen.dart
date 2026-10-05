@@ -272,7 +272,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
           backgroundColor: Colors.transparent,
           foregroundColor: Colors.white,
           title: Text(qLang == 'en' ? 'Beast Mode ⚡' : 'बीस्ट मोड ⚡',
-              style: const TextStyle(fontWeight: FontWeight.w900)),
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900)),
         ),
         body: SafeArea(
           child: Column(children: [
@@ -304,7 +304,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
                       Icon(Icons.local_fire_department, color: BrandColors.saffron, size: 16),
                       const SizedBox(width: 2),
                       Text(context.tr('स्ट्रीक $streak', 'Streak $streak'),
-                          style: const TextStyle(color: Colors.white70, fontSize: 13)),
+                          style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 13)),
                     ]),
                   ]),
                 ),
@@ -513,7 +513,7 @@ class _BeastResultsSheet extends StatelessWidget {
                 const SizedBox(width: 6),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(context.tr('अंक', 'points'), style: const TextStyle(color: Colors.white70)),
+                  child: Text(context.tr('अंक', 'points'), style: const TextStyle(color: BrandColors.onGradientMuted)),
                 ),
               ]),
               if (isNewBest)
@@ -530,7 +530,7 @@ class _BeastResultsSheet extends StatelessWidget {
           ),
           const SizedBox(height: Spacing.lg),
           Row(children: [
-            Icon(Icons.military_tech, color: BrandColors.saffron, size: 22),
+            Icon(Icons.military_tech, color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 22),
             const SizedBox(width: 8),
             Expanded(
               child: Text('${context.tr('टियर', 'Tier')}: ${tier.of(lang)}',

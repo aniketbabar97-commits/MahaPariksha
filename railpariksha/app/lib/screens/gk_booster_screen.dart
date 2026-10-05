@@ -98,7 +98,7 @@ class _CategoryCard extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(color: color.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(14)),
-              child: Icon(_boosterIcon(category.icon), color: color),
+              child: Icon(_boosterIcon(category.icon), color: BrandColors.readable(context, color)),
             ),
             const SizedBox(width: 14),
             Expanded(

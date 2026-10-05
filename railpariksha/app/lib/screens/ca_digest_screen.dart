@@ -151,7 +151,7 @@ class _DigestCard extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Row(children: [
-              Icon(_topicIcon(q.topic), color: BrandColors.saffron, size: 20),
+              Icon(_topicIcon(q.topic), color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 20),
               const SizedBox(width: 8),
               Expanded(
                 child: Text(
@@ -170,10 +170,10 @@ class _DigestCard extends StatelessWidget {
                   launchUrl(Uri.parse(q.src!), mode: LaunchMode.externalApplication);
                 },
                 child: Row(mainAxisSize: MainAxisSize.min, children: [
-                  const Icon(Icons.open_in_new, size: 15, color: BrandColors.skyLight),
+                  Icon(Icons.open_in_new, size: 15, color: BrandColors.skyOn(context)),
                   const SizedBox(width: 4),
                   Text(context.tr('स्रोत देखें', 'Read source'),
-                      style: const TextStyle(color: BrandColors.skyLight, fontWeight: FontWeight.w600, fontSize: 13)),
+                      style: TextStyle(color: BrandColors.skyOn(context), fontWeight: FontWeight.w600, fontSize: 13)),
                 ]),
               ),
             ],

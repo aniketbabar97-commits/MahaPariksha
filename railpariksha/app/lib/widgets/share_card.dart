@@ -61,7 +61,7 @@ class ScoreShareCard extends StatelessWidget {
             const SizedBox(height: 8),
             Text(scoreText, style: const TextStyle(color: Colors.white, fontSize: 48, fontWeight: FontWeight.w900)),
             const SizedBox(height: 4),
-            Text(scoreSub, style: const TextStyle(color: Colors.white70, fontSize: 16, fontWeight: FontWeight.w600)),
+            Text(scoreSub, style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 16, fontWeight: FontWeight.w600)),
           ]),
         ),
         const SizedBox(height: 32),

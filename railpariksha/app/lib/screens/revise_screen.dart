@@ -54,7 +54,7 @@ class ReviseScreen extends StatelessWidget {
                       Text(context.tr('आज का रिवीज़न 🌤️', "Today's review 🌤️"),
                           style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
                       Text(context.tr('$due कार्ड बाकी · $learned/${cards.length} पक्के', '$due due · $learned/${cards.length} mastered'),
-                          style: const TextStyle(color: Colors.white70)),
+                          style: const TextStyle(color: BrandColors.onGradientMuted)),
                     ]),
                   ),
                   const Icon(Icons.play_arrow_rounded, color: Colors.white, size: 36),
@@ -121,7 +121,7 @@ class ReviseScreen extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(12),
                             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                              Icon(subjectIcon(sub.icon), color: BrandColors.saffron, size: 30),
+                              Icon(subjectIcon(sub.icon), color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 30),
                               const SizedBox(height: 6),
                               Text(sub.name.of(lang),
                                   textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,
@@ -160,7 +160,7 @@ class ReviseScreen extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(12),
                             child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                              const Icon(Icons.bolt, color: BrandColors.saffron, size: 30),
+                              Icon(Icons.bolt, color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 30),
                               const SizedBox(height: 6),
                               Text(sub.name.of(lang),
                                   textAlign: TextAlign.center, maxLines: 2, overflow: TextOverflow.ellipsis,

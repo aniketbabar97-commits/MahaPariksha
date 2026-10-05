@@ -172,7 +172,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
           child: Row(children: [
             Expanded(
               child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(foregroundColor: BrandColors.wrong),
+                style: OutlinedButton.styleFrom(foregroundColor: BrandColors.readable(context, BrandColors.wrong)),
                 icon: const Icon(Icons.replay),
                 label: Text(context.tr('फिर देखें', 'Again')),
                 onPressed: () => _answer(false),
@@ -221,7 +221,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             const SizedBox(height: 16),
             if (!back)
               Text(context.tr('उत्तर देखने के लिए टैप करें', 'Tap to reveal'),
-                  style: const TextStyle(color: Colors.white70)),
+                  style: const TextStyle(color: BrandColors.onGradientMuted)),
           ]),
         ),
       ),

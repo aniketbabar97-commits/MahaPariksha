@@ -88,6 +88,14 @@ flutter:
           weight: 700
         - asset: assets/fonts/Mukta-ExtraBold.ttf
           weight: 800
+    # Greek letters, arrows, maths operators, superscripts: Mukta has none of them and phones with
+    # thin system-font coverage show empty boxes. A subset of DejaVu Sans (free licence, see
+    # assets/fonts/DEJAVU-LICENSE.txt) with no emoji, so colour emoji still come from the system.
+    - family: MathFallback
+      fonts:
+        - asset: assets/fonts/MathFallback-Regular.ttf
+        - asset: assets/fonts/MathFallback-Bold.ttf
+          weight: 700
 
   # To add assets to your application, add an assets section, like this:
   # assets:
