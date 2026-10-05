@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
@@ -46,10 +47,14 @@ class CaArchiveScreen extends StatelessWidget {
             )
           : ListView.separated(
               padding: const EdgeInsets.all(16),
-              itemCount: dates.length,
+              itemCount: dates.length + (dates.length > 6 ? 2 : 1),
               separatorBuilder: (_, _) => const SizedBox(height: 10),
               itemBuilder: (context, i) {
-                final date = dates[i];
+                // Banners: after the 6th date (for a long archive) and at the very end.
+                final adAt = dates.length > 6 ? {6, dates.length + 1} : {dates.length};
+                if (adAt.contains(i)) return const AdSlot();
+                final di = i - adAt.where((a) => a < i).length;
+                final date = dates[di];
                 final qs = byDate[date]!;
                 final count = qs.length.clamp(0, 10);
                 return TapScale(

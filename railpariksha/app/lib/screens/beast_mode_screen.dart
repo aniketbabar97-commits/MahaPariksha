@@ -555,6 +555,7 @@ class _BeastResultsSheet extends StatelessWidget {
               ),
             ),
           ),
+          const AdSlot(),
           const SizedBox(height: Spacing.xl),
           Row(children: [
             Expanded(
