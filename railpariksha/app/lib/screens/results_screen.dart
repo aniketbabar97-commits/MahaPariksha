@@ -354,7 +354,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: BoxDecoration(color: Colors.white.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(20)),
         child: Row(mainAxisSize: MainAxisSize.min, children: [
-          Icon(icon, color: BrandColors.sunrise, size: 16),
+          Icon(icon, color: Colors.white, size: 16),
           const SizedBox(width: 4),
           Text(t, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700)),
         ]),
