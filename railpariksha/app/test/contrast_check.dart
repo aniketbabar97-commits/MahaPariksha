@@ -59,8 +59,18 @@ Future<List<String>> contrastFindings(WidgetTester tester, GlobalKey boundaryKey
     return disabled;
   }
 
+  // Text that has scrolled underneath an opaque bar (e.g. the last option of a long question behind the
+  // quiz's bottom bar) is not on screen, even though its box is inside the viewport. A hit test at its
+  // centre tells: if the paragraph is not on the hit path, something else is painted over it.
+  bool coveredByAnotherLayer(RenderParagraph ro) {
+    final centre = ro.localToGlobal(ro.size.center(Offset.zero));
+    final result = HitTestResult();
+    tester.binding.hitTestInView(result, centre, tester.view.viewId);
+    return result.path.isNotEmpty && !result.path.any((e) => identical(e.target, ro));
+  }
+
   void visit(RenderObject ro) {
-    if (ro is RenderParagraph && ro.attached && ro.hasSize && !inDisabledButton(ro)) {
+    if (ro is RenderParagraph && ro.attached && ro.hasSize && !inDisabledButton(ro) && !coveredByAnotherLayer(ro)) {
       var text = ro.text.toPlainText().replaceAll(RegExp(r'\s+'), ' ').trim();
       // Icon-font glyphs (private-use code points) are non-text graphics: 3:1 and labelled ICON.
       final isIcon = text.isNotEmpty && text.runes.every((r) => r >= 0xE000 && r <= 0xF8FF);
