@@ -1,6 +1,7 @@
-# Drafts verified railway/national current-affairs MCQs every morning (06:45 IST) and opens a PR for
-# human review. Gemini and/or Grok do the drafting and cross-check; if ANTHROPIC_API_KEY is also set,
-# Claude runs one more blind-solve gate before an item is kept. Nothing reaches users until merged.
+# Drafts verified railway/national current-affairs MCQs every morning (06:45 IST), opens a PR and merges it
+# itself (last step). Gemini and/or Grok do the drafting, an exam-relevance check and the cross-check; if
+# ANTHROPIC_API_KEY is also set, Claude runs one more blind-solve gate before an item is kept. Merging the
+# PR publishes the day's digest to phones through content/ca_feed.json.
 # Needs at least one of: GEMINI_API_KEY, GROK_API_KEY (ANTHROPIC_API_KEY optional but recommended).
 name: RailPariksha daily current affairs
 on:
@@ -45,6 +46,7 @@ jobs:
       - if: steps.keys.outputs.have == 'true'
         run: python pipeline/build_ca_feed.py
       - if: steps.keys.outputs.have == 'true'
+        id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
           branch: content/railpariksha-current-affairs-daily
@@ -57,3 +59,12 @@ jobs:
           add-paths: |
             railpariksha/content/bank/current_affairs_auto.json
             railpariksha/content/ca_feed.json
+      # Merges automatically, as the repo owner asked. Every item has already passed the exam-relevance gate,
+      # the cross-model blind solve (plus the Claude gate when its key is set) and validate.py above; the job
+      # stops before this step if any of them fails. To go back to merging by hand, delete this step.
+      - if: steps.keys.outputs.have == 'true' && steps.cpr.outputs.pull-request-number != ''
+        working-directory: .
+        continue-on-error: true
+        run: gh pr merge "${{ steps.cpr.outputs.pull-request-number }}" --squash --delete-branch
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
