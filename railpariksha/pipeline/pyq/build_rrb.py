@@ -193,6 +193,16 @@ CHART = re.compile(r"pie[- ]?chart|bar[- ]?graph|line[- ]?graph|histogram|पा
                    r"रेखा[- ]?(ग्राफ|आलेख)", re.I)
 
 
+# Sheets whose green "correct" marks are wrong far too often to be the official key (e.g. the
+# first INC session marked as "December 28, 1852, Poona"); found when solving every PYQ, where
+# ~75% of their keys disagreed with worked answers. Every language version is listed.
+BAD_KEY_SHEETS = {
+    # RRB Technician Grade I, 13 Mar 2026, Shift 1 (English, Hindi, Bengali, Gujarati, Tamil, Telugu)
+    "ef5ee95f411b66cd.pdf", "3b6f288216672058.pdf", "5ffe2e81a3ee4c66.pdf", "1eb3094164f52b1b.pdf",
+    "b20af64ee907d3e9.pdf", "b38272548d458ea6.pdf",
+}
+
+
 def is_marathi_sheet(qs):
     dev = [q for q in qs if DEV.search(q["q"])]
     if len(dev) < 5:
@@ -297,6 +307,9 @@ def main():
             continue
         if is_marathi_sheet(qs):
             stats["marathi_sheet"] += 1
+            continue
+        if p.name in BAD_KEY_SHEETS:
+            stats["bad_key_sheet"] += 1
             continue
         stats["papers_ok"] += 1
         stats["q_extracted"] += len(qs)
