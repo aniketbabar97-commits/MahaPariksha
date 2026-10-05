@@ -137,15 +137,24 @@ class MeScreen extends StatelessWidget {
                 trailing: const Icon(Icons.chevron_right),
                 onTap: () async {
                   HapticFeedback.selectionClick();
-                  final t = await showTimePicker(
-                    helpText: context.tr('रिमाइंडर का समय चुनें', 'Select reminder time'),
-                    cancelText: context.tr('रद्द करें', 'Cancel'),
-                    confirmText: context.tr('ठीक है', 'OK'),
+                  // Reminders fire on the hour, so offer whole morning hours rather than a clock dial
+                  // whose minutes would be silently dropped.
+                  final h = await showDialog<int>(
                     context: context,
-                    initialTime: TimeOfDay(hour: p.reminderHour, minute: 0),
+                    builder: (ctx) => SimpleDialog(
+                      title: Text(context.tr('सुबह का रिमाइंडर कब?', 'Morning reminder at')),
+                      children: [
+                        for (var hour = 5; hour <= 11; hour++)
+                          ListTile(
+                            title: Text('${hour.toString().padLeft(2, '0')}:00'),
+                            trailing: hour == p.reminderHour ? const Icon(Icons.check) : null,
+                            onTap: () => Navigator.pop(ctx, hour),
+                          ),
+                      ],
+                    ),
                   );
-                  if (t == null) return;
-                  p.update((p) => p.reminderHour = t.hour);
+                  if (h == null) return;
+                  p.update((p) => p.reminderHour = h);
                   await applyReminders(p);
                 },
               ),
