@@ -230,9 +230,28 @@ def reingest(a):
     print(dict(stats))
 
 
-def apply_family(family, items, clean=lambda t: t):
+OPT_TOK = re.compile(r"[a-z]+|\d+(?:\.\d+)?")
+
+
+def align_options(src, tgt):
+    """`tgt` re-ordered to match `src` by the numbers/Latin words each option carries, or None
+    when those don't identify every option one-to-one."""
+    ts = [tuple(OPT_TOK.findall(o.lower())) for o in src]
+    tt = [tuple(OPT_TOK.findall(o.lower())) for o in tgt]
+    if not all(ts) or len(set(ts)) != len(ts) or sorted(ts) != sorted(tt):
+        return None
+    by_tok = dict(zip(tt, tgt))
+    return [by_tok[t] for t in ts]
+
+
+def apply_family(family, items, clean=lambda t: t, stats=None):
     """Fill the missing language of each item from translations/. Marks it with
-    "tr" (the translated language) so the app can label machine-made text."""
+    "tr" (the translated language) so the app can label machine-made text.
+
+    An item marked "shuffled" exists on other sheets with its options in another order, and its
+    translation may follow that other order (ids are order-free). Its translated options are
+    re-ordered by their numbers/Latin words; when that can't be done the translation is left out,
+    since a mismatched order would show the wrong option as the official answer."""
     tr = load_tr(family)
     n = 0
     for it in items:
@@ -240,7 +259,18 @@ def apply_family(family, items, clean=lambda t: t):
         if not r or f"q_{r['lang']}" in it:
             continue
         lang = r["lang"]
-        it[f"q_{lang}"], it[f"o_{lang}"] = clean(r["q"]), [clean(o) for o in r["o"]]
+        opts = [clean(o) for o in r["o"]]
+        if it.get("shuffled"):
+            src = "hi" if lang == "en" else "en"
+            aligned = align_options(it[f"o_{src}"], opts)
+            if aligned is None:
+                if stats is not None:
+                    stats[f"tr_unaligned_{family}"] += 1
+                continue
+            if stats is not None and aligned != opts:
+                stats[f"tr_reordered_{family}"] += 1
+            opts = aligned
+        it[f"q_{lang}"], it[f"o_{lang}"] = clean(r["q"]), opts
         ans = it[f"o_{lang}"][it["a"]]  # the cleaned option text
         it[f"e_{lang}"] = (f"Correct answer: {ans} (official answer key)." if lang == "en"
                            else f"सही उत्तर: {ans} (आधिकारिक उत्तर कुंजी)।")
