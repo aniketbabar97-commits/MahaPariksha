@@ -169,6 +169,8 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
         ),
         ),
       ),
+      // Flashcards are fast, so this banner gets the most refreshes of any screen.
+      const AdSlot(),
       SafeArea(
         top: false,
         child: Padding(

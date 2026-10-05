@@ -113,39 +113,56 @@ class TopicScreen extends StatelessWidget {
           ]),
           ListView.separated(
             padding: const EdgeInsets.all(16),
-            itemCount: note.facts(lang).length,
+            itemCount: _withAds(note.facts(lang).length),
             separatorBuilder: (_, _) => const SizedBox(height: 8),
-            itemBuilder: (context, i) => Card(
-              child: ListTile(
-                leading: CircleAvatar(
-                  radius: 15,
-                  backgroundColor: _branchColors[i % _branchColors.length].withValues(alpha: 0.18),
-                  child: Text('${i + 1}', style: const TextStyle(fontWeight: FontWeight.w800)),
+            itemBuilder: (context, row) {
+              if (_isAdRow(row, note.facts(lang).length)) return _adRow(context);
+              final i = _dataIndex(row, note.facts(lang).length);
+              return Card(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 15,
+                    backgroundColor: _branchColors[i % _branchColors.length].withValues(alpha: 0.18),
+                    child: Text('${i + 1}', style: const TextStyle(fontWeight: FontWeight.w800)),
+                  ),
+                  title: Text(note.facts(lang)[i], style: const TextStyle(height: 1.45)),
                 ),
-                title: Text(note.facts(lang)[i], style: const TextStyle(height: 1.45)),
-              ),
-            ),
+              );
+            },
           ),
           MindMapView(root: note.map, lang: lang, topicId: topic.id),
           if (note.hasTips)
             ListView.separated(
               padding: const EdgeInsets.all(16),
-              itemCount: note.tips(lang).length,
+              itemCount: _withAds(note.tips(lang).length),
               separatorBuilder: (_, _) => const SizedBox(height: 8),
-              itemBuilder: (context, i) => Card(
-                color: BrandColors.saffron.withValues(alpha: 0.08),
-                child: ListTile(
-                  leading: Icon(Icons.lightbulb, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
-                  title: Text(note.tips(lang)[i], style: const TextStyle(height: 1.45, fontWeight: FontWeight.w600)),
-                ),
-              ),
+              itemBuilder: (context, row) {
+                if (_isAdRow(row, note.tips(lang).length)) return _adRow(context);
+                final i = _dataIndex(row, note.tips(lang).length);
+                return Card(
+                  color: BrandColors.saffron.withValues(alpha: 0.08),
+                  child: ListTile(
+                    leading: Icon(Icons.lightbulb, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
+                    title: Text(note.tips(lang)[i], style: const TextStyle(height: 1.45, fontWeight: FontWeight.w600)),
+                  ),
+                );
+              },
             ),
         ]),
-        bottomNavigationBar: practice,
+        // A banner above the practice bar keeps an ad on every tab (Notes, Key facts, Mind map, Tips).
+        bottomNavigationBar: Column(mainAxisSize: MainAxisSize.min, children: [const AdSlot(), practice]),
       ),
     );
   }
 }
+
+// Native ad rows inside a facts/tips list: one after the 4th item (only when the list is longer) and
+// one at the end. Users who bought ad removal get an empty box instead.
+int _withAds(int n) => n + (n > 4 ? 2 : 1);
+bool _isAdRow(int row, int n) => n > 4 ? (row == 4 || row == n + 1) : row == n;
+int _dataIndex(int row, int n) => n > 4 && row > 4 ? row - 1 : row;
+Widget _adRow(BuildContext context) =>
+    context.scope.progress.removedAds ? const SizedBox.shrink() : const NativeAdTile();
 
 class MindMapView extends StatefulWidget {
   final MapNode root;

@@ -85,7 +85,7 @@ class _ReelScreenState extends State<ReelScreen> {
   /// is only inserted for a loaded ad, so a swipe never lands on an empty "sponsored" page.
   final List<NativeAd> _readyAds = [];
   final List<NativeAd> _usedAds = [];
-  static const _adEvery = 8;
+  static const _adEvery = 3;
 
   @override
   void initState() {
@@ -103,6 +103,7 @@ class _ReelScreenState extends State<ReelScreen> {
     _motivationPool = s.repo.motivation;
     _queue.addAll(_generateBatch(_kBatchSize));
     if (!s.progress.removedAds) {
+      _loadReelAd();
       _loadReelAd();
       _loadReelAd();
     }
