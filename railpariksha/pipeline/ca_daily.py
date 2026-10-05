@@ -48,7 +48,10 @@ FEEDS = [f for f in os.environ.get(
     "https://indianexpress.com/section/india/feed/,"
     "https://www.thehindu.com/news/national/feeder/default.rss",
 ).split(",") if f.strip()]
-MAX_ITEMS = int(os.environ.get("CA_MAX_ITEMS", "12"))
+# A few good questions a day beat a dozen mixed ones; the draft is asked for extra so the filters below
+# still leave about this many.
+MAX_ITEMS = int(os.environ.get("CA_MAX_ITEMS", "8"))
+DRAFT_EXTRA = 4
 TOPICS = ["national", "international", "sports_news", "awards_news", "schemes",
           "appointments", "sci_tech_news", "banking_finance", "railway_current_affairs"]
 
@@ -74,10 +77,20 @@ class Solve(BaseModel):
     confident: bool
 
 
+class Relevance(BaseModel):
+    relevant: bool
+    reason: str
+
+
 DRAFT_PROMPT = """You write current-affairs MCQs for Hindi-medium aspirants preparing for Indian Railways
 recruitment exams (RRB NTPC, RRB Group D, RRB ALP/JE, RPF Constable & SI). From the news items below
 (published {date}), pick the {n} most exam-relevant facts (prefer railways & transport, national schemes,
 appointments of constitutional/public posts, awards, sports, science & technology, defence, banking).
+
+Skip, even when it is in the news: film/TV/celebrity items, gossip, crime and accident reports, local or
+by-election politics, opinion and analysis, rumours, anything "reportedly" or "alleged", controversies
+and spats between public figures, and stories about one town, school or station. Prefer a fact a student
+could be asked about in 2027: who/what/where/when with a name, number, place or date the item states.
 
 Rules:
 - Use ONLY facts stated in the given item. Never add facts from memory.
@@ -95,6 +108,23 @@ No markdown fences, no commentary.
 
 News items:
 {items}"""
+
+RELEVANCE_PROMPT = """You decide whether a news-based MCQ belongs in a Hindi/English study app for Indian
+Railways recruitment exams (RRB NTPC, Group D, ALP/JE, RPF). Answer relevant=true ONLY if all of these hold:
+1. A student could plausibly be asked this in the General Awareness / Current Affairs section.
+2. It is a settled fact (an announcement, appointment, award, scheme, launch, result, agreement, record,
+   statistic), not an allegation, claim, rumour, opinion, or someone's remark.
+3. It is of national or wide interest, not about a single town, constituency, court case, celebrity or
+   one railway station's complaint.
+4. The question and the correct option follow directly from the source text, with nothing guessed.
+
+SOURCE:
+{source}
+
+Q: {q}
+Correct answer: {ans}
+
+Respond with ONLY a JSON object: {{"relevant": true, "reason": "<one short sentence>"}}"""
 
 SOLVE_PROMPT = """Using ONLY this source text, answer the MCQ. If the source does not clearly support
 exactly one option, set confident=false.
@@ -135,6 +165,9 @@ class GeminiBackend:
     def solve(self, prompt: str) -> Solve:
         return Solve.model_validate_json(_extract_json(self._generate(prompt, Solve)))
 
+    def judge(self, prompt: str) -> Relevance:
+        return Relevance.model_validate_json(_extract_json(self._generate(prompt, Relevance)))
+
 
 class GrokBackend:
     name = "grok"
@@ -156,6 +189,9 @@ class GrokBackend:
 
     def solve(self, prompt: str) -> Solve:
         return Solve.model_validate_json(_extract_json(self._generate(prompt)))
+
+    def judge(self, prompt: str) -> Relevance:
+        return Relevance.model_validate_json(_extract_json(self._generate(prompt)))
 
 
 class ClaudeGate:
@@ -222,6 +258,26 @@ _GLUED = re.compile(r"[\u0900-\u097F][A-Za-z]|[A-Za-z][\u0900-\u097F]")
 _DIGITS = re.compile(r"\d[\d,.]*")
 
 
+# Wording that marks gossip, crime, rumour or a spat: not a settled fact a student can be asked about.
+_NOT_EXAM_MATERIAL = re.compile(
+    r"\b(actor|actress|bollywood|tollywood|film|movie|web series|singer|celebrity|trolled|viral|"
+    r"bypolls?|by-elections?|stray dogs?|murder\w*|arrested|accused|rape|suicide|"
+    r"reportedly|allegedly?|alleg\w+|claims?|rumou?rs?|speculat\w+|mix-?up|clarif\w+|remarks?|"
+    r"controvers\w+|slams?|hits? out|row)\b", re.I)
+
+
+def relevance_issue(d, source_text: str, judge) -> Optional[str]:
+    """None when the item is exam material; otherwise why not. Fails closed: a judge error rejects."""
+    m = _NOT_EXAM_MATERIAL.search(f"{d.q_en} {d.e_en} {source_text.splitlines()[0]}")
+    if m:
+        return f"gossip/crime/unsettled wording ('{m.group(0)}')"
+    try:
+        r = judge.judge(RELEVANCE_PROMPT.format(source=source_text, q=d.q_en, ans=d.o_en[d.a]))
+    except Exception as e:
+        return f"relevance check failed ({e.__class__.__name__})"
+    return None if r.relevant else f"not exam material: {r.reason}"
+
+
 def quality_issues(d) -> list:
     """Cheap checks that catch the drafting model's usual slips before a question ships."""
     issues = []
@@ -264,7 +320,7 @@ def main():
     next_n = max([int(q["id"].split("-")[-1]) for q in existing] or [0]) + 1
 
     prompt = DRAFT_PROMPT.format(
-        date=datetime.now().strftime("%B %Y"), n=MAX_ITEMS, topics=", ".join(TOPICS),
+        date=datetime.now().strftime("%B %Y"), n=MAX_ITEMS + DRAFT_EXTRA, topics=", ".join(TOPICS),
         items="\n\n".join(f"- {n['title']}\n  {n['summary']}\n  link: {n['link']}" for n in news),
     )
     print(f"drafting with {drafter.name}, cross-checking with {checker.name}"
@@ -273,6 +329,8 @@ def main():
 
     kept = []
     for d in drafts:
+        if len(kept) >= MAX_ITEMS:
+            break
         src = by_link.get(d.src)
         ok_shape = (len(d.o_hi) == 4 and len(d.o_en) == 4 and 0 <= d.a <= 3 and d.topic in TOPICS
                     and src is not None and d.q_en.strip().lower() not in seen_q)
@@ -283,6 +341,10 @@ def main():
             print(f"rejected ({'; '.join(bad)}): {d.q_en[:80]}")
             continue
         source_text = f"{src['title']}\n{src['summary']}"
+        why = relevance_issue(d, source_text, checker)
+        if why:
+            print(f"rejected ({why}): {d.q_en[:80]}")
+            continue
         cross = blind_solve(checker, d, source_text)
         if not cross.confident or cross.answer_index != d.a:
             print(f"rejected ({checker.name} mismatch): {d.q_en[:80]}")
