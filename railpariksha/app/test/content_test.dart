@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:railpariksha/data/content_repo.dart';
 import 'package:railpariksha/data/progress.dart';
 import 'package:railpariksha/logic/quiz_builder.dart';
@@ -189,6 +191,53 @@ void main() {
       expect(ContentRepo.decodeNewestPack(bundled, '{"version":9,"which":')['which'], 'bundled');
       // Version not first in the cached pack: still decoded and compared properly.
       expect(ContentRepo.decodeNewestPack(bundled, '{"which":"cached","version":9}')['which'], 'cached');
+    });
+  });
+  group('current-affairs feed', () {
+    Map<String, dynamic> item(String id, String date) => {
+          'id': id,
+          's': 'current_affairs',
+          't': 'national',
+          'd': 1,
+          'date': date,
+          'q_hi': 'प्रश्न',
+          'q_en': 'Question',
+          'o_hi': ['क', 'ख', 'ग', 'घ'],
+          'o_en': ['A', 'B', 'C', 'D'],
+          'a': 2,
+          'e_hi': 'व्याख्या',
+          'e_en': 'Why',
+        };
+    String feed(int version, List<Map<String, dynamic>> qs) => jsonEncode({'version': version, 'questions': qs});
+
+    test('merges new questions, skips known ids, older feeds and garbage', () {
+      final r = ContentRepo();
+      // Run on a loaded repo so subject/topic indexes exist.
+      return r.load().then((_) {
+        final before = r.questions.length;
+        expect(r.mergeFeed(feed(5, [item('feedtest-1', '2099-01-02'), item('feedtest-2', '2099-01-02')])), 2);
+        expect(r.questions.length, before + 2);
+        expect(r.question('feedtest-1'), isNotNull);
+        // The same ids again, and an older version, add nothing.
+        expect(r.mergeFeed(feed(6, [item('feedtest-1', '2099-01-02')])), 0);
+        expect(r.mergeFeed(feed(4, [item('feedtest-9', '2099-01-02')])), 0);
+        expect(r.question('feedtest-9'), isNull);
+        // Not JSON / wrong shape: no throw, nothing added.
+        expect(r.mergeFeed('<html>404</html>'), 0);
+        expect(r.mergeFeed('[]'), 0);
+        expect(r.questions.length, before + 2);
+        // A newer feed with one fresh id adds exactly that one.
+        expect(r.mergeFeed(feed(7, [item('feedtest-1', '2099-01-02'), item('feedtest-3', '2099-01-03')])), 1);
+      });
+    });
+
+    test('merged questions show up in the Current Affairs digest, newest day first', () async {
+      final r = ContentRepo();
+      await r.load();
+      r.mergeFeed(feed(1, [item('feedtest-a', '2099-05-01')]));
+      final byDate = QuizBuilder(r, Progress()).currentAffairsByDate();
+      expect(byDate.keys.first, '2099-05-01');
+      expect(byDate['2099-05-01']!.single.id, 'feedtest-a');
     });
   });
 }

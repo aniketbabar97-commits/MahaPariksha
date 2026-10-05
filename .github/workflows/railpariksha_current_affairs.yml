@@ -41,6 +41,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - if: steps.keys.outputs.have == 'true'
         run: python pipeline/validate.py
+      # The app downloads this small feed on launch, so merging this PR is what publishes the day's digest.
+      - if: steps.keys.outputs.have == 'true'
+        run: python pipeline/build_ca_feed.py
       - if: steps.keys.outputs.have == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
@@ -51,4 +54,6 @@ jobs:
             Automatically drafted from news feeds, then cross-checked by an independent model
             (and gated by Claude when ANTHROPIC_API_KEY is set) via a blind re-solve against the
             source text. Review the questions (source links are in `src`) and merge to publish.
-          add-paths: railpariksha/content/bank/current_affairs_auto.json
+          add-paths: |
+            railpariksha/content/bank/current_affairs_auto.json
+            railpariksha/content/ca_feed.json
