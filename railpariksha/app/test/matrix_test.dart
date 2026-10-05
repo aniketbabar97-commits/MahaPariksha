@@ -190,4 +190,19 @@ void main() {
       }
     }
   }
+
+  // ---- tap targets + screen-reader labels (Android 48dp / labelled controls) ----
+  for (final lang in ['en']) {
+    for (final e in screens.entries) {
+      testWidgets('a11y: ${e.key} ($lang)', (tester) async {
+        final handle = tester.ensureSemantics();
+        await show(tester, e.value, lang: lang, brightness: Brightness.light, width: 360);
+        await expectLater(tester, meetsGuideline(androidTapTargetGuideline));
+        await expectLater(tester, meetsGuideline(labeledTapTargetGuideline));
+        handle.dispose();
+        await tester.pumpWidget(const SizedBox());
+        await tester.pump(const Duration(seconds: 2));
+      });
+    }
+  }
 }

@@ -124,7 +124,10 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             style: TextStyle(color: Theme.of(context).hintColor)),
       ),
       Expanded(
-        child: GestureDetector(
+        child: Semantics(
+          button: true,
+          label: context.tr('कार्ड पलटें', 'Flip card'),
+          child: GestureDetector(
           onTap: () => setState(() => flipped = !flipped),
           onHorizontalDragStart: (_) => _springCtrl.stop(),
           onHorizontalDragUpdate: (d) => setState(() => drag += d.delta.dx),
@@ -163,6 +166,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
               ),
             ),
           ),
+        ),
         ),
       ),
       SafeArea(

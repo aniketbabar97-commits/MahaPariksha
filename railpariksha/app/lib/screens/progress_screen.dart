@@ -107,7 +107,7 @@ class ProgressScreen extends StatelessWidget {
                       push(context, (_) => SubjectScreen(subject: sub));
                     },
                     child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    padding: const EdgeInsets.symmetric(vertical: 14),
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
@@ -419,7 +419,7 @@ class _WeightageCard extends StatelessWidget {
                     push(context, (_) => SubjectScreen(subject: sub));
                   },
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    padding: const EdgeInsets.symmetric(vertical: 14),
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),

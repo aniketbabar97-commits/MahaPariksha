@@ -76,9 +76,9 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
       body: Column(children: [
         if (dates.length > 1)
           SizedBox(
-            height: 48,
+            height: 56,
             child: ListView.separated(
-              padding: const EdgeInsets.fromLTRB(16, 8, 16, 4),
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
               scrollDirection: Axis.horizontal,
               itemCount: dates.length,
               separatorBuilder: (_, _) => const SizedBox(width: 8),
@@ -86,6 +86,7 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
                 final d = dates[i];
                 final selected = d == date;
                 return ChoiceChip(
+                  materialTapTargetSize: MaterialTapTargetSize.padded,
                   label: Text(formatCaDate(d).of(lang)),
                   selected: selected,
                   selectedColor: BrandColors.saffron.withValues(alpha: 0.25),
@@ -169,12 +170,15 @@ class _DigestCard extends StatelessWidget {
                   HapticFeedback.selectionClick();
                   launchUrl(Uri.parse(q.src!), mode: LaunchMode.externalApplication);
                 },
-                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(minHeight: 48),
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
                   Icon(Icons.open_in_new, size: 15, color: BrandColors.skyOn(context)),
                   const SizedBox(width: 4),
                   Text(context.tr('स्रोत देखें', 'Read source'),
                       style: TextStyle(color: BrandColors.skyOn(context), fontWeight: FontWeight.w600, fontSize: 13)),
-                ]),
+                  ]),
+                ),
               ),
             ],
           ]),
