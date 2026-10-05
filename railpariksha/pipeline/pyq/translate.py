@@ -230,9 +230,43 @@ def reingest(a):
     print(dict(stats))
 
 
-def apply_family(family, items, clean=lambda t: t):
+OPT_TOK = re.compile(r"[a-z]+|\d+(?:\.\d+)?")
+
+
+def align_options(src, tgt):
+    """`tgt` re-ordered to match `src` by the numbers/Latin words each option carries, or None
+    when those don't identify every option one-to-one."""
+    ts = [tuple(OPT_TOK.findall(o.lower())) for o in src]
+    tt = [tuple(OPT_TOK.findall(o.lower())) for o in tgt]
+    if not all(ts) or len(set(ts)) != len(ts) or sorted(ts) != sorted(tt):
+        return None
+    by_tok = dict(zip(tt, tgt))
+    return [by_tok[t] for t in ts]
+
+
+def match_options(cur, rec):
+    """For each option in `cur`, its index in `rec` (the same options, same language, possibly
+    re-ordered and lightly re-cleaned since), or None when that isn't a clear one-to-one match."""
+    from difflib import SequenceMatcher
+    n = lambda t: re.sub(r"\W+", "", t.lower())
+    idx = []
+    for o in cur:
+        scores = sorted(((SequenceMatcher(None, n(o), n(x)).ratio(), i) for i, x in enumerate(rec)), reverse=True)
+        best, second = scores[0], scores[1] if len(scores) > 1 else (0, None)
+        if best[0] < 0.85 or best[0] - second[0] < 0.05:
+            return None
+        idx.append(best[1])
+    return idx if len(set(idx)) == len(idx) else None
+
+
+def apply_family(family, items, clean=lambda t: t, stats=None):
     """Fill the missing language of each item from translations/. Marks it with
-    "tr" (the translated language) so the app can label machine-made text."""
+    "tr" (the translated language) so the app can label machine-made text.
+
+    An item marked "shuffled" exists on other sheets with its options in another order, and its
+    translation may follow that other order (ids are order-free). Its translated options are
+    re-ordered by their numbers/Latin words; when that can't be done the translation is left out,
+    since a mismatched order would show the wrong option as the official answer."""
     tr = load_tr(family)
     n = 0
     for it in items:
@@ -240,7 +274,26 @@ def apply_family(family, items, clean=lambda t: t):
         if not r or f"q_{r['lang']}" in it:
             continue
         lang = r["lang"]
-        it[f"q_{lang}"], it[f"o_{lang}"] = clean(r["q"]), [clean(o) for o in r["o"]]
+        opts = [clean(o) for o in r["o"]]
+        src = "hi" if lang == "en" else "en"
+        if r.get("src_o"):
+            # The translation records the source order it was made against: re-order by exact text.
+            idx = match_options(it[f"o_{src}"], r["src_o"])
+            if idx is None:
+                if stats is not None:
+                    stats[f"tr_unaligned_{family}"] += 1
+                continue
+            opts = [opts[i] for i in idx]
+        elif it.get("shuffled"):
+            aligned = align_options(it[f"o_{src}"], opts)
+            if aligned is None:
+                if stats is not None:
+                    stats[f"tr_unaligned_{family}"] += 1
+                continue
+            if stats is not None and aligned != opts:
+                stats[f"tr_reordered_{family}"] += 1
+            opts = aligned
+        it[f"q_{lang}"], it[f"o_{lang}"] = clean(r["q"]), opts
         ans = it[f"o_{lang}"][it["a"]]  # the cleaned option text
         it[f"e_{lang}"] = (f"Correct answer: {ans} (official answer key)." if lang == "en"
                            else f"सही उत्तर: {ans} (आधिकारिक उत्तर कुंजी)।")

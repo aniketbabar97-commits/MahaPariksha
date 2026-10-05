@@ -103,7 +103,8 @@ void main() {
     final tile = find.byIcon(Icons.topic_outlined).first;
     await tester.ensureVisible(tile);
     await tester.tap(tile);
-    for (var i = 0; i < 6; i++) {
+    // Wait on the outcome, not a fixed time: CI runners load the topic file much more slowly.
+    for (var i = 0; i < 50 && find.textContaining('Topic test (').evaluate().isEmpty; i++) {
       await tester.runAsync(() => Future.delayed(const Duration(milliseconds: 200)));
       await tester.pump(const Duration(milliseconds: 300));
     }

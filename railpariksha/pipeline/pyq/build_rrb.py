@@ -388,6 +388,18 @@ def main():
                 items.append({"n": e["n"], "lang": "en", "section": e["section"], "q_en": e["q"], "o_en": e["o"],
                               "a": e["a"], "pyq": label, "family": key[0]})
 
+    # RRB shuffles option order per candidate, so one question can reach us from several sheets in
+    # different orders. Those copies share an id (it is order-free), so a stored translation may
+    # have been made against another copy's order; translate.apply_family then has to re-check it.
+    orders = defaultdict(set)
+    for it in items:
+        if it["lang"] in ("hi", "en"):
+            lang = it["lang"]
+            orders[(it["pyq"], lang, norm_key(it[f"q_{lang}"], it[f"o_{lang}"]))].add(tuple(it[f"o_{lang}"]))
+    for it in items:
+        if it["lang"] in ("hi", "en"):
+            lang = it["lang"]
+            it["shuffled"] = len(orders[(it["pyq"], lang, norm_key(it[f"q_{lang}"], it[f"o_{lang}"]))]) > 1
     # De-duplicate across papers (the same sheet is often hosted under two names).
     seen, unique = set(), []
     for it in sorted(items, key=lambda x: ("q_en" in x) + ("q_hi" in x), reverse=True):
@@ -427,6 +439,8 @@ def main():
         if "q_hi" in it:
             rec["e_hi"] = f"सही उत्तर: {it['o_hi'][ans]} (आधिकारिक उत्तर कुंजी)।"
         rec["pyq"] = it["pyq"]
+        if it.get("shuffled"):
+            rec["shuffled"] = True  # transient: read by translate.apply_family, removed below
         # Content-derived, so ids stay stable across re-runs.
         base = "pyq-" + hashlib.sha1(f"{it['pyq']}|{it['lang']}|{norm_key(it.get('q_en') or it['q_hi'], it.get('o_en') or it['o_hi'])}".encode()).hexdigest()[:12]
         rec["id"] = base
@@ -447,7 +461,9 @@ def main():
         if old_path.exists():
             stats[f"tr_migrated_{slug}"] = migrate(slug, json.loads(old_path.read_text(encoding="utf-8")), recs,
                                                    clean=scrub)
-        stats[f"translated_{slug}"] = apply_family(slug, recs, clean=scrub)
+        stats[f"translated_{slug}"] = apply_family(slug, recs, clean=scrub, stats=stats)
+        for r in recs:
+            r.pop("shuffled", None)
     # A question whose options are plain words can't be paired by content, so its Hindi and English
     # halves arrive as two items and each gets translated into the other language: the same question
     # twice. Once translations are in, drop the repeats (keeping the copy with the original English).
