@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../logic/leaderboard_service.dart';
@@ -142,6 +143,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                               else
                                 for (var i = 0; i < top.length; i++)
                                   _Row(index: i, entry: top[i], isMe: top[i].deviceId == p.deviceId),
+                              const AdSlot(),
                             ],
                           );
                         },
