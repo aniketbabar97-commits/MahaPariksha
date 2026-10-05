@@ -11,6 +11,12 @@ import 'models.dart';
 /// Remote content pack. Empty disables updates; the bundled pack is always the fallback.
 const String kContentUrl = String.fromEnvironment('CONTENT_URL');
 
+/// A small feed of the last two weeks of current-affairs questions (tens of KB), fetched on launch so
+/// the daily digest stays current between app releases. Empty disables it.
+const String kCaFeedUrl = String.fromEnvironment('CA_FEED_URL',
+    defaultValue:
+        'https://raw.githubusercontent.com/aniketbabar97-commits/MahaPariksha/aniketai/relaxed-albattani-6kjmc7/railpariksha/content/ca_feed.json');
+
 class ContentRepo {
   int version = 0;
   final List<Subject> subjects = [];
@@ -101,6 +107,60 @@ class ContentRepo {
     // The pack is ~28 MB; decoding it on the UI isolate stalls launch on
     // budget phones, so it happens in the background.
     _apply(await Isolate.run(() => decodeNewestPack(bundled, cached)));
+    try {
+      final f = await _feedFile();
+      if (await f.exists()) mergeFeed(f.readAsStringSync());
+    } catch (_) {
+      // No or unreadable feed cache: the bundled questions are enough.
+    }
+  }
+
+  Future<File> _feedFile() async =>
+      File('${(await getApplicationSupportDirectory()).path}/ca_feed.json');
+
+  int _feedVersion = 0;
+
+  /// Adds the questions in a feed document (`{"version":N,"questions":[...]}`) that the app doesn't
+  /// already have, and returns how many were new. Questions the bundle already carries are left alone,
+  /// and a feed that isn't strictly newer than the last one merged is ignored. Malformed input adds
+  /// nothing instead of throwing.
+  int mergeFeed(String body) {
+    try {
+      final doc = jsonDecode(body) as Map<String, dynamic>;
+      final v = (doc['version'] as num?)?.toInt() ?? 0;
+      if (v <= _feedVersion) return 0;
+      var added = 0;
+      for (final j in (doc['questions'] as List?) ?? const []) {
+        final q = Question.fromJson((j as Map).cast<String, dynamic>());
+        if (_questionById.containsKey(q.id)) continue;
+        questions.add(q);
+        _questionById[q.id] = q;
+        (_questionsBySubject[q.subject] ??= []).add(q);
+        _topicQuestionCounts.update('${q.subject}/${q.topic}', (n) => n + 1, ifAbsent: () => 1);
+        added++;
+      }
+      _feedVersion = v;
+      return added;
+    } catch (_) {
+      return 0;
+    }
+  }
+
+  /// Downloads the current-affairs feed, caches it for the next launch and applies it right away.
+  /// Returns how many new questions it brought. Silent on any failure (offline, 404, bad JSON).
+  Future<int> checkCaFeed() async {
+    if (kCaFeedUrl.isEmpty) return 0;
+    try {
+      final res = await http.get(Uri.parse(kCaFeedUrl)).timeout(const Duration(seconds: 15));
+      if (res.statusCode != 200) return 0;
+      final body = utf8.decode(res.bodyBytes);
+      final added = mergeFeed(body);
+      // Only a feed that parsed and was newer is worth keeping.
+      if (_feedVersion > 0) await (await _feedFile()).writeAsString(body);
+      return added;
+    } catch (_) {
+      return 0;
+    }
   }
 
   static final _versionHeader = RegExp(r'^\s*\{\s*"version"\s*:\s*(\d+)');

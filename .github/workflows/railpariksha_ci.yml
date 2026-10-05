@@ -26,6 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: python railpariksha/pipeline/validate.py
+      # The app's over-the-air current-affairs feed must match the bank it is built from.
+      - run: python railpariksha/pipeline/build_ca_feed.py --check
 
   changes:
     runs-on: ubuntu-latest

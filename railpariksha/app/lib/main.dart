@@ -45,6 +45,7 @@ Future<void> main() async {
   final purchases = PurchaseManager(progress);
   runApp(AppScope(repo: repo, progress: progress, purchases: purchases, child: const RailParikshaApp()));
   repo.checkForUpdate();
+  repo.checkCaFeed();
   initAds();
   AppOpenAdManager.start(progress);
   // Fire-and-forget: a slow/unavailable Play Billing connection must never
