@@ -57,7 +57,7 @@ class ExamStrategyScreen extends StatelessWidget {
                   Text(
                       context.tr('चयन प्रक्रिया, निगेटिव मार्किंग व समय प्रबंधन',
                           'Selection process, negative marking & time management'),
-                      style: const TextStyle(color: Colors.white70, fontSize: 12.5)),
+                      style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 12.5)),
                 ]),
               ),
             ]),
@@ -75,7 +75,7 @@ class ExamStrategyScreen extends StatelessWidget {
               child: Card(
                 color: BrandColors.saffron.withValues(alpha: 0.08),
                 child: ListTile(
-                  leading: const Icon(Icons.lightbulb, color: BrandColors.saffron),
+                  leading: Icon(Icons.lightbulb, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
                   title: Text(tip.of(lang), style: const TextStyle(height: 1.45, fontWeight: FontWeight.w600)),
                 ),
               ),
@@ -140,7 +140,7 @@ class _StageRow extends StatelessWidget {
             decoration: BoxDecoration(color: color, shape: BoxShape.circle),
             child: Center(
                 child: Text('${index + 1}',
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 14))),
+                    style: TextStyle(color: BrandColors.onFill(color), fontWeight: FontWeight.w900, fontSize: 14))),
           ),
           if (!isLast) Expanded(child: Container(width: 3, color: color.withValues(alpha: 0.3))),
         ]),
@@ -153,7 +153,7 @@ class _StageRow extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(14),
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(stage.title.of(lang), style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: color)),
+                  Text(stage.title.of(lang), style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: BrandColors.readable(context, color))),
                   const SizedBox(height: 6),
                   Text(stage.detail.of(lang), style: const TextStyle(height: 1.45, fontSize: 13.5)),
                 ]),
@@ -248,7 +248,7 @@ class _ScoreRow extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 3),
         child: Row(children: [
           Expanded(child: Text(label, style: TextStyle(fontSize: 13.5, fontWeight: bold ? FontWeight.w800 : FontWeight.w500))),
-          Text(value, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: color)),
+          Text(value, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: BrandColors.readable(context, color))),
         ]),
       );
 }
@@ -336,14 +336,14 @@ class _StatBox extends StatelessWidget {
         decoration: BoxDecoration(color: color.withValues(alpha: 0.08), borderRadius: BorderRadius.circular(14)),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
-            Icon(icon, size: 16, color: color),
+            Icon(icon, size: 16, color: BrandColors.readable(context, color)),
             const SizedBox(width: 6),
             Expanded(
                 child: Text(label,
                     style: TextStyle(fontSize: 11.5, color: Theme.of(context).hintColor), overflow: TextOverflow.ellipsis)),
           ]),
           const SizedBox(height: 4),
-          Text(value, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: color)),
+          Text(value, style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900, color: BrandColors.readable(context, color))),
         ]),
       );
 }

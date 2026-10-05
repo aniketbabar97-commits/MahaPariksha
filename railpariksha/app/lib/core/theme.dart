@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 
 /// Play Store listing URL. Shared here (rather than on one screen) because
@@ -52,8 +54,39 @@ class BrandColors {
   static Color skyOn(BuildContext context) =>
       Theme.of(context).brightness == Brightness.dark ? const Color(0xFF8DB0F5) : sky;
 
-  /// Any brand colour used as text/icon colour: [sky] is swapped for its readable dark-mode tint.
-  static Color readable(BuildContext context, Color c) => c == sky ? skyOn(context) : c;
+  static double _lum(Color c) {
+    double lin(double v) => v <= 0.03928 ? v / 12.92 : math.pow((v + 0.055) / 1.055, 2.4).toDouble();
+    return 0.2126 * lin(c.r) + 0.7152 * lin(c.g) + 0.0722 * lin(c.b);
+  }
+
+  /// WCAG contrast ratio between two opaque colours.
+  static double contrast(Color a, Color b) {
+    final l1 = _lum(a), l2 = _lum(b);
+    return (math.max(l1, l2) + 0.05) / (math.min(l1, l2) + 0.05);
+  }
+
+  /// Any accent colour (a subject colour, saffron, green...) used as TEXT or an ICON on a card or
+  /// tinted tile: returned unchanged when it already reads on the current theme's surfaces,
+  /// otherwise the same hue darkened (light theme) or lightened (dark theme) until it does.
+  /// [min] is 4.5 for text and 3.0 for icons/large text (WCAG AA). Tiles are tinted with the
+  /// colour itself, so the check runs against a slightly darker/lighter surface than the card.
+  static Color readable(BuildContext context, Color c, {double min = 4.5}) {
+    final dark = Theme.of(context).brightness == Brightness.dark;
+    if (c == sky) return skyOn(context);
+    final bg = dark ? const Color(0xFF1F2A44) : const Color(0xFFE4E9F2);
+    var out = c;
+    for (var i = 0; i < 20 && contrast(out, bg) < min; i++) {
+      out = Color.lerp(out, dark ? Colors.white : Colors.black, 0.08)!;
+    }
+    return out;
+  }
+
+  /// Text/icon colour for something drawn ON a solid [fill]: whichever of white or the dark
+  /// brand brown reads better (white on saffron is only ~1.8:1).
+  static Color onFill(Color fill) => contrast(Colors.white, fill) >= contrast(onSaffron, fill) ? Colors.white : onSaffron;
+
+  /// Secondary text on the blue brand gradients: white at 70% was ~4.1:1, this is ~6:1.
+  static const onGradientMuted = Color(0xE6FFFFFF);
 
   static Color saffronText(BuildContext context) =>
       Theme.of(context).brightness == Brightness.light ? const Color(0xFF9A6B00) : saffron;
@@ -74,6 +107,13 @@ class BrandColors {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
+  /// Beast Mode card: deep red to burnt orange so white text clears 4.5:1 across the whole card
+  /// (the old red-to-saffron ended at ~1.8:1 on the right).
+  static const beastGradient = LinearGradient(
+    colors: [Color(0xFFB3261E), Color(0xFFB84B08)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
   static const fireGradient = LinearGradient(
     colors: [saffron, sunrise],
     begin: Alignment.topLeft,
@@ -87,7 +127,7 @@ ThemeData buildTheme(Brightness b) {
     brightness: b,
     secondary: BrandColors.saffron,
   );
-  final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b, fontFamily: 'Mukta');
+  final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b, fontFamily: 'Mukta', fontFamilyFallback: const ['MathFallback']);
   return base.copyWith(
     scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFEDF1F8) : const Color(0xFF0E1320),
     cardTheme: CardThemeData(
@@ -120,7 +160,7 @@ ThemeData buildTheme(Brightness b) {
         disabledForegroundColor: b == Brightness.light ? const Color(0xFF8A93A6) : const Color(0xFF6E7891),
         minimumSize: const Size.fromHeight(52),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        textStyle: const TextStyle(fontFamily: 'Mukta', fontSize: 16, fontWeight: FontWeight.w700),
+        textStyle: const TextStyle(fontFamily: 'Mukta', fontFamilyFallback: ['MathFallback'], fontSize: 16, fontWeight: FontWeight.w700),
       ),
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(

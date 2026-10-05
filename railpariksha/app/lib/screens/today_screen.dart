@@ -74,7 +74,7 @@ class TodayScreen extends StatelessWidget {
                   Text(_greeting(context),
                       style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w800)),
                   const SizedBox(height: 2),
-                  Text(exam?.name.of(lang) ?? '', style: const TextStyle(color: Colors.white70)),
+                  Text(exam?.name.of(lang) ?? '', style: const TextStyle(color: BrandColors.onGradientMuted)),
                 ]),
               ),
               StreakWings(streak: p.liveStreak),
@@ -88,7 +88,7 @@ class TodayScreen extends StatelessWidget {
                   CountUpText(p.todayCount,
                       duration: const Duration(milliseconds: 700),
                       style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w900)),
-                  Text('/ ${p.dailyGoal}', style: const TextStyle(color: Colors.white70)),
+                  Text('/ ${p.dailyGoal}', style: const TextStyle(color: BrandColors.onGradientMuted)),
                 ]),
               ),
               const SizedBox(width: 18),
@@ -172,7 +172,7 @@ class TodayScreen extends StatelessWidget {
           Card(
             color: BrandColors.saffron.withValues(alpha: 0.15),
             child: ListTile(
-              leading: const Icon(Icons.bolt, color: BrandColors.saffron),
+              leading: Icon(Icons.bolt, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
               title: Text(context.tr('वापसी पर स्वागत है! कमबैक बोनस 💪', 'Welcome back! Comeback bonus 💪'),
                   style: const TextStyle(fontWeight: FontWeight.w700)),
               subtitle: Text(context.tr('रुकना हार नहीं है, दोबारा शुरुआत करना ही असली जज़्बा है।',
@@ -206,7 +206,7 @@ class TodayScreen extends StatelessWidget {
                           startQuiz(context, s.builder.practice(subject: g.subject));
                         },
                         child: Row(children: [
-                          Icon(subjectIcon(sub?.icon ?? ''), color: BrandColors.saffron, size: 20),
+                          Icon(subjectIcon(sub?.icon ?? ''), color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 20),
                           const SizedBox(width: 10),
                           Expanded(
                             child: Text(
@@ -248,8 +248,12 @@ class TodayScreen extends StatelessWidget {
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Row(children: [
-                      Text(context.tr('रील मोड', 'Reel Mode'),
-                          style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                      Flexible(
+                        child: Text(context.tr('रील मोड', 'Reel Mode'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.w900)),
+                      ),
                       const SizedBox(width: 8),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
@@ -259,7 +263,7 @@ class TodayScreen extends StatelessWidget {
                     ]),
                     const SizedBox(height: 2),
                     Text(context.tr('स्वाइप करें, सीखते रहें — कभी न रुकने वाला अभ्यास 🔥', 'Swipe, learn, repeat — endless bite-sized practice 🔥'),
-                        style: const TextStyle(color: Colors.white70)),
+                        style: const TextStyle(color: BrandColors.onGradientMuted)),
                   ]),
                 ),
                 const Icon(Icons.chevron_right, color: Colors.white70),
@@ -342,10 +346,7 @@ class TodayScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 gradient: beastUnlocked
-                    ? const LinearGradient(
-                        colors: [BrandColors.wrong, BrandColors.saffron],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight)
+                    ? BrandColors.beastGradient
                     : null,
                 color: beastUnlocked ? null : Colors.grey.withValues(alpha: 0.12),
               ),
@@ -362,11 +363,15 @@ class TodayScreen extends StatelessWidget {
                 Expanded(
                   child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                     Row(children: [
-                      Text(context.tr('बीस्ट मोड', 'Beast Mode'),
-                          style: TextStyle(
-                              color: beastUnlocked ? Colors.white : Theme.of(context).hintColor,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900)),
+                      Flexible(
+                        child: Text(context.tr('बीस्ट मोड', 'Beast Mode'),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                color: beastUnlocked ? Colors.white : Theme.of(context).hintColor,
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900)),
+                      ),
                       if (beastUnlocked && p.beastBestScore > 0) ...[
                         const SizedBox(width: 8),
                         Container(
@@ -384,7 +389,7 @@ class TodayScreen extends StatelessWidget {
                           ? context.tr('टाइम्ड स्प्रिंट — स्ट्रीक मल्टीप्लायर के साथ रफ़्तार आज़माएं ⚡',
                               'Timed sprint — test your pace with streak multipliers ⚡')
                           : context.tr('अनलॉक के लिए 50% सटीकता चाहिए 🔒', '50% accuracy needed to unlock 🔒'),
-                      style: TextStyle(color: beastUnlocked ? Colors.white70 : Theme.of(context).hintColor),
+                      style: TextStyle(color: beastUnlocked ? BrandColors.onGradientMuted : Theme.of(context).hintColor),
                     ),
                   ]),
                 ),

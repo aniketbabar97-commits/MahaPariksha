@@ -108,19 +108,19 @@ class _CheatSheetScreenState extends State<CheatSheetScreen> {
                   Container(
                     padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(color: color.withValues(alpha: 0.16), shape: BoxShape.circle),
-                    child: Icon(topicIcon(sheet.topic), color: color, size: 18),
+                    child: Icon(topicIcon(sheet.topic), color: BrandColors.readable(context, color), size: 18),
                   ),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(sheet.category.of(lang),
-                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: color)),
+                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: BrandColors.readable(context, color))),
                   ),
-                  Text('${items.length}', style: TextStyle(color: color.withValues(alpha: 0.7), fontSize: 13)),
+                  Text('${items.length}', style: TextStyle(color: BrandColors.readable(context, color), fontSize: 13)),
                   const SizedBox(width: 6),
                   AnimatedRotation(
                     turns: isOpen ? 0.5 : 0,
                     duration: const Duration(milliseconds: 250),
-                    child: Icon(Icons.expand_more, color: color),
+                    child: Icon(Icons.expand_more, color: BrandColors.readable(context, color)),
                   ),
                 ]),
               ),

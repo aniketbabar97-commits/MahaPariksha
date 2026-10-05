@@ -196,7 +196,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                       style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900)),
                   CountUpText((pct * 100).round(),
                       format: (v) => isSpeed ? context.tr('60 सेकंड में', 'in 60 sec') : '$v%',
-                      style: const TextStyle(color: Colors.white70)),
+                      style: const TextStyle(color: BrandColors.onGradientMuted)),
                 ]),
               ),
               const SizedBox(height: 16),
@@ -314,7 +314,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
             const SizedBox(height: 12),
             Card(
               child: ListTile(
-                leading: Icon(_xpDoubled ? Icons.check_circle : Icons.bolt, color: BrandColors.sunrise),
+                leading: Icon(_xpDoubled ? Icons.check_circle : Icons.bolt, color: BrandColors.readable(context, BrandColors.sunrise, min: 3)),
                 title: Text(_xpDoubled
                     ? context.tr('XP दोगुना हो गया! 🎉', 'XP doubled! 🎉')
                     : context.tr('अपना XP दोगुना करें (+${widget.xpEarned} XP)', 'Double your XP (+${widget.xpEarned} XP)')),
@@ -470,7 +470,7 @@ class _InsightTile extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Icon(icon, color: color, size: 22),
+            Icon(icon, color: BrandColors.readable(context, color), size: 22),
             const SizedBox(width: 12),
             Expanded(child: Text(text, style: const TextStyle(height: 1.45))),
           ]),

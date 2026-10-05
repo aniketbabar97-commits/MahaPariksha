@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
@@ -98,11 +99,17 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
     );
   }
 
-  Widget _summary(BuildContext context) => EmptyState(
-        icon: Icons.emoji_events,
-        text: context.tr('शाबाश! $known कार्ड याद रहे। 🧠\nअगला रिवीज़न सही समय पर अपने आप आ जाएगा।',
-            'Well done! $known cards remembered. 🧠\nNext reviews are scheduled automatically.'),
-      );
+  // A finished deck is a natural break: the banner sits under the summary, never over a card.
+  Widget _summary(BuildContext context) => Column(children: [
+        Expanded(
+          child: EmptyState(
+            icon: Icons.emoji_events,
+            text: context.tr('शाबाश! $known कार्ड याद रहे। 🧠\nअगला रिवीज़न सही समय पर अपने आप आ जाएगा।',
+                'Well done! $known cards remembered. 🧠\nNext reviews are scheduled automatically.'),
+          ),
+        ),
+        const SafeArea(top: false, child: AdSlot()),
+      ]);
 
   Widget _deck(BuildContext context) {
     final c = deck[index];
@@ -117,7 +124,10 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             style: TextStyle(color: Theme.of(context).hintColor)),
       ),
       Expanded(
-        child: GestureDetector(
+        child: Semantics(
+          button: true,
+          label: context.tr('कार्ड पलटें', 'Flip card'),
+          child: GestureDetector(
           onTap: () => setState(() => flipped = !flipped),
           onHorizontalDragStart: (_) => _springCtrl.stop(),
           onHorizontalDragUpdate: (d) => setState(() => drag += d.delta.dx),
@@ -157,6 +167,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             ),
           ),
         ),
+        ),
       ),
       SafeArea(
         top: false,
@@ -165,7 +176,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
           child: Row(children: [
             Expanded(
               child: OutlinedButton.icon(
-                style: OutlinedButton.styleFrom(foregroundColor: BrandColors.wrong),
+                style: OutlinedButton.styleFrom(foregroundColor: BrandColors.readable(context, BrandColors.wrong)),
                 icon: const Icon(Icons.replay),
                 label: Text(context.tr('फिर देखें', 'Again')),
                 onPressed: () => _answer(false),
@@ -214,7 +225,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
             const SizedBox(height: 16),
             if (!back)
               Text(context.tr('उत्तर देखने के लिए टैप करें', 'Tap to reveal'),
-                  style: const TextStyle(color: Colors.white70)),
+                  style: const TextStyle(color: BrandColors.onGradientMuted)),
           ]),
         ),
       ),

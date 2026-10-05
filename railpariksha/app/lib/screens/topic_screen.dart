@@ -135,7 +135,7 @@ class TopicScreen extends StatelessWidget {
               itemBuilder: (context, i) => Card(
                 color: BrandColors.saffron.withValues(alpha: 0.08),
                 child: ListTile(
-                  leading: const Icon(Icons.lightbulb, color: BrandColors.saffron),
+                  leading: Icon(Icons.lightbulb, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
                   title: Text(note.tips(lang)[i], style: const TextStyle(height: 1.45, fontWeight: FontWeight.w600)),
                 ),
               ),
@@ -235,13 +235,13 @@ class _MindMapViewState extends State<MindMapView> {
                 child: Row(children: [
                   Expanded(
                     child: Text(b.label.of(widget.lang),
-                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: color)),
+                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: BrandColors.readable(context, color))),
                   ),
                   if (b.children.isNotEmpty)
                     AnimatedRotation(
                       turns: isOpen ? 0.5 : 0,
                       duration: const Duration(milliseconds: 250),
-                      child: Icon(Icons.expand_more, color: color),
+                      child: Icon(Icons.expand_more, color: BrandColors.readable(context, color)),
                     ),
                 ]),
               ),
@@ -300,7 +300,7 @@ class _LevelLine extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8),
       child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Icon(Icons.signal_cellular_alt, size: 16, color: color),
+        Icon(Icons.signal_cellular_alt, size: 16, color: BrandColors.readable(context, color)),
         const SizedBox(width: 6),
         Flexible(
           child: Text(

@@ -215,7 +215,9 @@ class InterstitialAdManager {
         },
         onAdFailedToLoad: (_) => _loading = false,
       ),
-    );
+    ).catchError((_) {
+      _loading = false; // plugin failure: no interstitial this time, never a crash
+    });
   }
 
   /// Shows the preloaded ad if one is ready; otherwise does nothing --
@@ -275,7 +277,11 @@ class RewardedAdManager {
           loadFailures++;
         },
       ),
-    );
+    ).catchError((_) {
+      // The ads plugin itself failed (not just "no fill"): treat it as a failed load, never a crash.
+      _loading = false;
+      loadFailures++;
+    });
   }
 
   /// Shows the preloaded ad and calls [onReward] once AdMob confirms a full

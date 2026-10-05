@@ -144,7 +144,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               AnimatedTrainHero(icon: Icons.train, iconColor: BrandColors.sunrise, size: 40),
               SizedBox(height: 12),
               Text('RailPariksha', style: TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.w900)),
-              Text('Train to succeed · सफलता की पटरी पर', style: TextStyle(color: Colors.white70, fontSize: 16)),
+              Text('Train to succeed · सफलता की पटरी पर', style: TextStyle(color: BrandColors.onGradientMuted, fontSize: 16)),
             ],
           ),
         ),
@@ -339,7 +339,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               title: Text(context.tr('$n प्रश्न / दिन', '$n questions / day'),
                   style: const TextStyle(fontWeight: FontWeight.w700)),
               subtitle: Text(context.tr(hi, en)),
-              trailing: goal == n ? const Icon(Icons.check_circle, color: BrandColors.saffron) : null,
+              trailing: goal == n ? Icon(Icons.check_circle, color: BrandColors.readable(context, BrandColors.saffron, min: 3)) : null,
               onTap: () {
                 HapticFeedback.selectionClick();
                 setState(() => goal = n);
@@ -363,7 +363,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 borderRadius: BorderRadius.circular(14),
               ),
               child: Row(children: [
-                const Icon(Icons.insights, color: BrandColors.saffron, size: 20),
+                Icon(Icons.insights, color: BrandColors.readable(context, BrandColors.saffron, min: 3), size: 20),
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
@@ -454,7 +454,7 @@ class _PlacementOption extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             Expanded(child: Text(text, style: const TextStyle(fontSize: 16, height: 1.35))),
-            if (selected) const Icon(Icons.radio_button_checked, color: BrandColors.saffron),
+            if (selected) Icon(Icons.radio_button_checked, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
           ]),
         ),
       ),

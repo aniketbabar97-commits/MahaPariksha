@@ -64,7 +64,7 @@ class ProgressScreen extends StatelessWidget {
                     level.nextXp == null
                         ? context.tr('सर्वोच्च स्तर! 👑', 'Top level! 👑')
                         : context.tr('अगले स्तर के लिए ${level.nextXp! - p.xp} XP', '${level.nextXp! - p.xp} XP to next level'),
-                    style: const TextStyle(color: Colors.white70)),
+                    style: const TextStyle(color: BrandColors.onGradientMuted)),
               ]),
             ),
             CountUpText(p.xp,
@@ -107,7 +107,7 @@ class ProgressScreen extends StatelessWidget {
                       push(context, (_) => SubjectScreen(subject: sub));
                     },
                     child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    padding: const EdgeInsets.symmetric(vertical: 14),
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),
@@ -164,7 +164,7 @@ class ProgressScreen extends StatelessWidget {
             Card(
               margin: const EdgeInsets.only(bottom: 8),
               child: ListTile(
-                leading: const Icon(Icons.trending_up, color: BrandColors.saffron),
+                leading: Icon(Icons.trending_up, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
                 title: Text(s.repo.topic(t.subject, t.topic)?.name.of(lang) ?? t.topic),
                 subtitle: Text(s.repo.subject(t.subject)?.name.of(lang) ?? ''),
                 trailing: Text('${(t.accuracy * 100).round()}%', style: const TextStyle(fontWeight: FontWeight.w800)),
@@ -200,7 +200,7 @@ class ProgressScreen extends StatelessWidget {
         Wrap(spacing: 10, runSpacing: 10, children: [
           for (final b in _badges(p))
             Chip(
-              avatar: Icon(b.$3 ? Icons.verified : Icons.lock_outline, color: b.$3 ? BrandColors.saffron : Colors.grey, size: 18),
+              avatar: Icon(b.$3 ? Icons.verified : Icons.lock_outline, color: b.$3 ? BrandColors.readable(context, BrandColors.saffron, min: 3) : Colors.grey, size: 18),
               label: Text(lang == 'en' ? b.$2 : b.$1),
             ),
         ]),
@@ -248,7 +248,7 @@ class _FreezeTokenCard extends StatelessWidget {
     RewardedAdManager.preload();
     return Card(
       child: ListTile(
-        leading: const Icon(Icons.ac_unit, color: BrandColors.saffron),
+        leading: Icon(Icons.ac_unit, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
         title: Text(context.tr('स्ट्रीक फ्रीज़ कमाएं ❄️', 'Earn a streak freeze ❄️')),
         subtitle: Text(context.tr(
             'एक छोटा विज्ञापन देखें और एक दिन मिस होने पर भी स्ट्रीक बचाने वाला टोकन पाएं',
@@ -299,7 +299,7 @@ class _Stat extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 8),
           child: Column(children: [
-            Icon(icon, color: BrandColors.saffron),
+            Icon(icon, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
             const SizedBox(height: 4),
             parsed == null
                 ? Text(value, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900))
@@ -419,7 +419,7 @@ class _WeightageCard extends StatelessWidget {
                     push(context, (_) => SubjectScreen(subject: sub));
                   },
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 6),
+                    padding: const EdgeInsets.symmetric(vertical: 14),
                     child: Row(children: [
                       Icon(subjectIcon(sub.icon), size: 16, color: Theme.of(context).hintColor),
                       const SizedBox(width: 6),

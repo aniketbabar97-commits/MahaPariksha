@@ -78,7 +78,7 @@ class RevisionPlanScreen extends StatelessWidget {
                 CountUpText(days,
                     duration: const Duration(milliseconds: 800),
                     style: const TextStyle(color: Colors.white, fontSize: 44, fontWeight: FontWeight.w900)),
-                Text(context.tr('दिन बाकी', 'days left'), style: const TextStyle(color: Colors.white70, fontSize: 15)),
+                Text(context.tr('दिन बाकी', 'days left'), style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 15)),
               ]),
             ),
             const SizedBox(height: 16),
@@ -151,7 +151,7 @@ class _PhaseCard extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Row(children: [
-            Icon(icon, color: color),
+            Icon(icon, color: BrandColors.readable(context, color)),
             const SizedBox(width: 10),
             Expanded(
               child: Text(context.tr(titleHi, titleEn),
@@ -161,7 +161,7 @@ class _PhaseCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(color: BrandColors.saffron, borderRadius: BorderRadius.circular(20)),
-                child: Text(context.tr('अभी', 'NOW'), style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w900)),
+                child: Text(context.tr('अभी', 'NOW'), style: const TextStyle(color: BrandColors.onSaffron, fontSize: 10.5, fontWeight: FontWeight.w900)),
               ),
           ]),
           const SizedBox(height: 4),

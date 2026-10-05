@@ -408,7 +408,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
                     if (_marked.contains(index))
                       Padding(
                         padding: const EdgeInsets.only(right: 6),
-                        child: Icon(Icons.flag, size: 18, color: _PaletteState.marked.color),
+                        child: Icon(Icons.flag, size: 18, color: BrandColors.readable(context, _PaletteState.marked.color)),
                       ),
                     // Imported PYQs carry no difficulty rating of their own.
                     if (q.pyq == null) _DifficultyDots(q.difficulty),
@@ -461,7 +461,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
                             child: TextButton.icon(
                               style: TextButton.styleFrom(
                                 minimumSize: const Size(0, 40),
-                                foregroundColor: _PaletteState.marked.color,
+                                foregroundColor: BrandColors.readable(context, _PaletteState.marked.color),
                               ),
                               onPressed: () {
                                 HapticFeedback.selectionClick();
@@ -835,11 +835,11 @@ class _Explanation extends StatelessWidget {
   Widget _block(BuildContext context, IconData icon, Color color, String title, String body) => Padding(
         padding: const EdgeInsets.only(top: 14),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Icon(icon, color: color, size: 22),
+          Icon(icon, color: BrandColors.readable(context, color), size: 22),
           const SizedBox(width: 10),
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(title, style: TextStyle(fontWeight: FontWeight.w800, color: color)),
+              Text(title, style: TextStyle(fontWeight: FontWeight.w800, color: BrandColors.readable(context, color))),
               const SizedBox(height: 4),
               Text(body, style: const TextStyle(fontSize: 15, height: 1.5)),
             ]),

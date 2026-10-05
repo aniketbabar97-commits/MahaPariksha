@@ -214,7 +214,7 @@ class MeScreen extends StatelessWidget {
         Card(
           child: Column(children: [
             ListTile(
-              leading: const Icon(Icons.share, color: BrandColors.saffron),
+              leading: Icon(Icons.share, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
               title: Text(context.tr('दोस्तों को बताएं 📣', 'Invite friends 📣')),
               subtitle: Text(context.tr('साथ पढ़ें, साथ आगे बढ़ें! (+25 XP रोज़ पहली बार)', 'Study together, soar together! (+25 XP first time daily)')),
               onTap: () async {
@@ -230,7 +230,7 @@ class MeScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.star_rate, color: BrandColors.saffron),
+              leading: Icon(Icons.star_rate, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
               title: Text(context.tr('ऐप को रेटिंग दें ⭐', 'Rate the app ⭐')),
               onTap: () {
                 HapticFeedback.selectionClick();
@@ -238,7 +238,7 @@ class MeScreen extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.mail, color: BrandColors.saffron),
+              leading: Icon(Icons.mail, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
               title: Text(context.tr('सुझाव / संपर्क 💬', 'Feedback / contact 💬')),
               onTap: () {
                 HapticFeedback.selectionClick();
@@ -389,7 +389,7 @@ class _IdCard extends StatelessWidget {
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(context.tr('भारतीय रेलवे अभ्यर्थी', 'Indian Railways Aspirant'),
-                  style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w700, letterSpacing: 0.5)),
+                  style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 11, fontWeight: FontWeight.w700, letterSpacing: 0.5)),
               const SizedBox(height: 2),
               Text(displayName,
                   style: const TextStyle(color: Colors.white, fontSize: 19, fontWeight: FontWeight.w900)),
@@ -399,10 +399,10 @@ class _IdCard extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
               const SizedBox(height: 4),
-              Text('ID #$idNumber', style: const TextStyle(color: Colors.white54, fontSize: 11)),
+              Text('ID #$idNumber', style: const TextStyle(color: BrandColors.onGradientMuted, fontSize: 11)),
             ]),
           ),
-          const Icon(Icons.edit, color: Colors.white54, size: 18),
+          const Icon(Icons.edit, color: BrandColors.onGradientMuted, size: 18),
         ]),
         ),
       ),
@@ -499,7 +499,7 @@ class _PremiumCardState extends State<_PremiumCard> {
     if (p.removedAds) {
       return Card(
         child: ListTile(
-          leading: const Icon(Icons.verified, color: BrandColors.saffron),
+          leading: Icon(Icons.verified, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
           title: Text(context.tr('प्रीमियम सक्रिय ✅', 'Premium active ✅')),
           subtitle: Text(context.tr(
               'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड — धन्यवाद! 🙏',
