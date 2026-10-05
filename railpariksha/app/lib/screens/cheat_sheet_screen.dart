@@ -73,9 +73,13 @@ class _CheatSheetScreenState extends State<CheatSheetScreen> {
                         : context.tr('सभी खोलें', 'Expand all')),
                   ),
                 ]),
-                for (var i = 0; i < sheets.length; i++) _category(i, sheets[i], lang),
-                      const AdSlot(),
-      ],
+                for (var i = 0; i < sheets.length; i++) ...[
+                  _category(i, sheets[i], lang),
+                  // An ad after every category: a cheat sheet is a long scroll of short sections.
+                  if (i < sheets.length - 1 && !context.scope.progress.removedAds) const NativeAdTile(),
+                ],
+                const AdSlot(),
+              ],
             ),
     );
   }
