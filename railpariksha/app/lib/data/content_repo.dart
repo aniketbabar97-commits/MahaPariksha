@@ -106,7 +106,15 @@ class ContentRepo {
     }
     // The pack is ~28 MB; decoding it on the UI isolate stalls launch on
     // budget phones, so it happens in the background.
-    _apply(await Isolate.run(() => decodeNewestPack(bundled, cached)));
+    _apply(await Isolate.run(() {
+      final d = decodeNewestPack(bundled, cached);
+      // Building ~33k Question objects is most of the launch cost after decoding, so it happens
+      // here too; Isolate.run returns its result with Isolate.exit, i.e. no copy back to the UI
+      // isolate. _apply accepts either raw JSON or ready objects.
+      d['questions'] = [for (final j in d['questions'] as List) Question.fromJson(j as Map<String, dynamic>)];
+      d['flashcards'] = [for (final j in d['flashcards'] as List) Flashcard.fromJson(j as Map<String, dynamic>)];
+      return d;
+    }));
     try {
       final f = await _feedFile();
       if (await f.exists()) mergeFeed(f.readAsStringSync());
@@ -241,10 +249,10 @@ class ContentRepo {
       ..addAll((tax['exam_groups'] as List).map((g) => ExamGroup(g['id'], Bi(g['hi'], g['en']))));
     questions
       ..clear()
-      ..addAll((data['questions'] as List).map((j) => Question.fromJson(j)));
+      ..addAll((data['questions'] as List).map((j) => j is Question ? j : Question.fromJson(j)));
     flashcards
       ..clear()
-      ..addAll((data['flashcards'] as List).map((j) => Flashcard.fromJson(j)));
+      ..addAll((data['flashcards'] as List).map((j) => j is Flashcard ? j : Flashcard.fromJson(j)));
     motivation
       ..clear()
       ..addAll((data['motivation'] as List).map((j) => Motivation.fromJson(j)));
