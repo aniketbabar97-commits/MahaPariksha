@@ -94,7 +94,7 @@ class ExamStrategyScreen extends StatelessWidget {
           const SizedBox(height: 4),
           Text(
             context.tr(
-                'यह जानकारी सार्वजनिक स्रोतों से शोध करके बनाई गई है। आधिकारिक व नवीनतम जानकारी के लिए संबंधित भर्ती बोर्ड की वेबसाइट देखें।',
+                'यह जानकारी सार्वजनिक स्रोतों से जुटाई गई है। आधिकारिक व नवीनतम जानकारी के लिए संबंधित भर्ती बोर्ड की वेबसाइट देखें।',
                 'This information is researched from public sources. Refer to the relevant recruitment board\'s official website for the latest and authoritative details.'),
             style: TextStyle(color: Theme.of(context).hintColor, fontSize: 11.5, height: 1.4),
           ),
@@ -219,7 +219,7 @@ class _NegativeMarkingCard extends StatelessWidget {
             const SizedBox(height: 10),
             Text(
                 context.tr(
-                    'यानी हर गलत जवाब सिर्फ़ उस 1 अंक को नहीं, बल्कि आपके स्कोर से $fracLabel अतिरिक्त अंक भी छीनता है — किसी प्रश्न को बिना किसी आधार के बेतरतीब छूना अक्सर खाली छोड़ने से बुरा साबित होता है।',
+                    'यानी हर गलत जवाब सिर्फ़ उस 1 अंक को नहीं, बल्कि आपके स्कोर से $fracLabel अतिरिक्त अंक भी छीनता है — बिना आधार का तुक्का अक्सर खाली छोड़ने से बुरा साबित होता है।',
                     'So every wrong answer costs more than just that 1 mark — it also strips an extra $fracLabel mark from your score. A pure, baseless guess is often worse than leaving the question unattempted.'),
                 style: TextStyle(color: Theme.of(context).hintColor, fontSize: 12.5, height: 1.4)),
           ] else
@@ -314,7 +314,7 @@ class _TimeBudgetCard extends StatelessWidget {
           const SizedBox(height: 12),
           Text(
               context.tr(
-                  'सुझाव: पहले $workMinutes मिनट में सभी प्रश्नों को एक बार हल करने की कोशिश करें (लगभग ${secPerQ.round()} सेकंड/प्रश्न की रफ़्तार से), और बचे हुए $reviewMinutes मिनट मार्क किए गए व छूटे प्रश्नों की समीक्षा के लिए रखें — कुल ${totalSeconds ~/ 60} मिनट में।',
+                  'सुझाव: पहले $workMinutes मिनट में सभी प्रश्नों को एक बार हल करने की कोशिश करें (लगभग ${secPerQ.round()} सेकंड/प्रश्न की रफ़्तार से), और बचे हुए $reviewMinutes मिनट मार्क किए गए व छूटे प्रश्नों के रिवीज़न के लिए रखें — कुल ${totalSeconds ~/ 60} मिनट में।',
                   'Suggestion: aim to attempt every question once in the first $workMinutes minutes (about ${secPerQ.round()} seconds/question), and reserve the remaining $reviewMinutes minutes to revisit flagged or skipped questions — all within the $min-minute limit.'),
               style: const TextStyle(height: 1.5, fontSize: 13.5)),
         ]),

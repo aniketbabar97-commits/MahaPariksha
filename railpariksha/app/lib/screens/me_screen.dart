@@ -131,7 +131,7 @@ class MeScreen extends StatelessWidget {
                 await applyReminders(p);
                 if (v && !granted && context.mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                      content: Text(context.tr('सूचना अनुमति नहीं मिली। सेटिंग्स में इसे चालू करें।',
+                      content: Text(context.tr('सूचना की अनुमति नहीं मिली। सेटिंग्स में इसे चालू करें।',
                           'Notification permission denied. Enable it in system settings.'))));
                 }
               },
@@ -507,7 +507,7 @@ class _PremiumCardState extends State<_PremiumCard> {
       return Card(
         child: ListTile(
           leading: Icon(Icons.verified, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
-          title: Text(context.tr('प्रीमियम सक्रिय ✅', 'Premium active ✅')),
+          title: Text(context.tr('प्रीमियम चालू ✅', 'Premium active ✅')),
           subtitle: Text(context.tr(
               'कोई विज्ञापन नहीं, पूरा ऑफ़लाइन मोड — धन्यवाद! 🙏',
               'No ads, full offline mode — thank you! 🙏')),
@@ -545,7 +545,7 @@ class _PremiumCardState extends State<_PremiumCard> {
             ListTile(
               dense: true,
               leading: Icon(Icons.restore, color: BrandColors.skyOn(context)),
-              title: Text(context.tr('पहले खरीदा है? पुनर्स्थापित करें', 'Already purchased? Restore it')),
+              title: Text(context.tr('पहले खरीदा है? रीस्टोर करें', 'Already purchased? Restore it')),
               onTap: _busy ? null : () => _run(widget.purchases.restore),
             ),
           ]),

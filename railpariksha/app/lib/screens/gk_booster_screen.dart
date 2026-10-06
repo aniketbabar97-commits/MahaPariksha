@@ -106,7 +106,7 @@ class _CategoryCard extends StatelessWidget {
                 Text(category.name.of(lang), style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
                 const SizedBox(height: 2),
                 Text(
-                  context.tr('${category.items.length} प्रविष्टियां', '${category.items.length} entries'),
+                  context.tr('${category.items.length} आइटम', '${category.items.length} entries'),
                   style: TextStyle(color: Theme.of(context).hintColor, fontSize: 13),
                 ),
               ]),
@@ -203,7 +203,7 @@ class _GkBoosterCategoryScreenState extends State<GkBoosterCategoryScreen> {
           child: items.isEmpty
               ? EmptyState(
                   icon: Icons.search_off,
-                  text: context.tr('कोई मिलान नहीं मिला।', 'No matches found.'),
+                  text: context.tr('कुछ नहीं मिला।', 'No matches found.'),
                 )
               : ListView.separated(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),

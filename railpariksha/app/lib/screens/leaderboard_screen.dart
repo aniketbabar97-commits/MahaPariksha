@@ -118,11 +118,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                                             headline: context.tr('${exam.name.hi} लीडरबोर्ड में मेरी रैंक!', 'My rank on the ${exam.name.en} leaderboard!'),
                                             scoreText: '#$rank',
                                             scoreSub: context.tr('रैंक', 'rank'),
-                                            footer: context.tr('मुझे हराओ! 🏆', 'Beat me! 🏆'),
+                                            footer: context.tr('मुझे हराइए! 🏆', 'Beat me! 🏆'),
                                             icon: Icons.military_tech,
                                           ),
                                           text: context.tr(
-                                              'मैं RailPariksha पर ${exam.name.hi} लीडरबोर्ड में #$rank रैंक पर हूं! 🏆 मुझे हराओ: $kPlayUrl',
+                                              'मैं RailPariksha पर ${exam.name.hi} लीडरबोर्ड में #$rank रैंक पर हूं! 🏆 मुझे हराइए: $kPlayUrl',
                                               "I'm #$rank on the RailPariksha ${exam.name.en} leaderboard! 🏆 Beat me: $kPlayUrl"),
                                         );
                                       },

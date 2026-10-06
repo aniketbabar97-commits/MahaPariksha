@@ -602,7 +602,7 @@ class _BeastResultsSheet extends StatelessWidget {
                 HapticFeedback.selectionClick();
                 onDone();
               },
-              child: Text(context.tr('पूर्ण', 'Done')),
+              child: Text(context.tr('हो गया', 'Done')),
             ),
           ),
         ]),

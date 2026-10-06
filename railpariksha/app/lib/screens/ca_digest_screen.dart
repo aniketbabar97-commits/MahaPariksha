@@ -113,7 +113,7 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
             children: [
-              Text(context.tr('आज जाननें लायक ${items.length} बातें', '${items.length} things worth knowing today'),
+              Text(context.tr('आज जानने लायक ${items.length} बातें', '${items.length} things worth knowing today'),
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
               const SizedBox(height: 2),
               Text(formatCaDate(date).of(lang), style: TextStyle(color: Theme.of(context).hintColor)),

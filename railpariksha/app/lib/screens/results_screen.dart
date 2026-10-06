@@ -163,7 +163,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
   }
 
   String _headline(BuildContext context, double pct) {
-    if (pct >= 0.9) return context.tr('शानदार! तुम वंदे भारत की रफ़्तार से चल रहे हो! 🏆', 'Outstanding! You\'re running at Vande Bharat speed! 🏆');
+    if (pct >= 0.9) return context.tr('शानदार! आप वंदे भारत की रफ़्तार से चल रहे हैं! 🏆', 'Outstanding! You\'re running at Vande Bharat speed! 🏆');
     if (pct >= 0.7) return context.tr('बढ़िया प्रदर्शन! ऐसे ही आगे बढ़ते रहें! 🚀', 'Great work! Keep soaring! 🚀');
     if (pct >= 0.4) return context.tr('अच्छी शुरुआत! थोड़ा और अभ्यास करें 💪', 'Good start! A bit more practice 💪');
     return context.tr('हर गलती एक सबक है। दोबारा कोशिश करें! 🔥', 'Every mistake is a lesson. Try again! 🔥');
@@ -239,7 +239,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
               Flexible(
                 child: Text(
                   context.tr(
-                      'यह एक सांख्यिकीय अनुमान है, असली उपयोगकर्ताओं की लाइव रैंकिंग नहीं',
+                      'यह सिर्फ़ अनुमान है, असली यूज़र्स की लाइव रैंकिंग नहीं',
                       'A statistical estimate, not a live ranking against real users'),
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 11.5, color: Theme.of(context).hintColor),
@@ -250,7 +250,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
           if (spec.negative > 0) ...[
             const SizedBox(height: 10),
             Text(
-              context.tr('नकारात्मक अंकन: हर गलत उत्तर पर −${spec.negative}. सही $correct · गलत $wrong · छोड़े ${total - attempted}',
+              context.tr('नेगेटिव मार्किंग: हर गलत उत्तर पर −${spec.negative}. सही $correct · गलत $wrong · छोड़े ${total - attempted}',
                   'Negative marking: −${spec.negative} per wrong. Correct $correct · Wrong $wrong · Skipped ${total - attempted}'),
               textAlign: TextAlign.center,
               style: TextStyle(color: Theme.of(context).hintColor),
@@ -291,7 +291,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                   HapticFeedback.selectionClick();
                   Navigator.pop(context);
                 },
-                child: Text(context.tr('पूर्ण', 'Done')),
+                child: Text(context.tr('हो गया', 'Done')),
               ),
             ),
           ]),
@@ -410,7 +410,7 @@ class _AnalysisSection extends StatelessWidget {
                   [
                     context.tr('प्रयास ${s.attempted}', 'Attempted ${s.attempted}'),
                     if (s.attempted > 0) context.tr('सटीकता ${(s.accuracy() * 100).round()}%', 'Accuracy ${(s.accuracy() * 100).round()}%'),
-                    if (a.negative > 0) context.tr('शुद्ध ${s.net(a.negative).toStringAsFixed(2)}', 'Net ${s.net(a.negative).toStringAsFixed(2)}'),
+                    if (a.negative > 0) context.tr('नेट ${s.net(a.negative).toStringAsFixed(2)}', 'Net ${s.net(a.negative).toStringAsFixed(2)}'),
                     if (s.time > Duration.zero) _fmtDuration(s.time),
                   ].join(' · '),
                   style: TextStyle(fontSize: 12.5, color: hint),
@@ -423,7 +423,7 @@ class _AnalysisSection extends StatelessWidget {
           icon: Icons.remove_circle_outline,
           color: BrandColors.wrong,
           text: context.tr(
-              'नकारात्मक अंकन से आपके ${a.marksLostToNegative.toStringAsFixed(2)} अंक कटे (${a.wrong} गलत उत्तर)।',
+              'नेगेटिव मार्किंग से आपके ${a.marksLostToNegative.toStringAsFixed(2)} अंक कटे (${a.wrong} गलत उत्तर)।',
               'Negative marking cost you ${a.marksLostToNegative.toStringAsFixed(2)} marks (${a.wrong} wrong answers).'),
         ),
       if (a.tip == StrategyTip.overAttempting)
@@ -439,7 +439,7 @@ class _AnalysisSection extends StatelessWidget {
           icon: Icons.trending_up,
           color: BrandColors.correct,
           text: context.tr(
-              'आपकी सटीकता बहुत अच्छी है, पर कई प्रश्न छोड़े। अगर 2 विकल्पों तक पहुँच जाएँ तो उत्तर दें — इस अंकन में यह औसतन फ़ायदेमंद है।',
+              'आपकी सटीकता बहुत अच्छी है, पर कई प्रश्न छोड़े। अगर 2 विकल्पों तक पहुँच जाएँ तो उत्तर दें — इस मार्किंग में यह औसतन फ़ायदेमंद है।',
               'Your accuracy is excellent but you skipped a lot. When you can narrow it to 2 options, answer — with this marking scheme that pays off on average.'),
         ),
       if (a.avgTime != null)

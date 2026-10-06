@@ -25,11 +25,11 @@ Future<void> celebrate(BuildContext context, Reward r) async {
     // only two celebration types worth a share prompt; a daily goal is too
     // routine to ask the user to post about every single day.
     shareText = context.tr(
-        'मैं RailPariksha पर ${p.level.hi} स्तर पर पहुंच गया! 🚀 आप भी आज से शुरू करें: $kPlayUrl',
+        'RailPariksha पर मेरा स्तर अब ${p.level.hi} है! 🚀 आप भी आज से शुरू करें: $kPlayUrl',
         'I just reached ${p.level.en} level on RailPariksha! 🚀 Start your own prep today: $kPlayUrl');
   } else if (r.streakMilestone != null) {
     title = context.tr('${r.streakMilestone} दिन की स्ट्रीक! 🔥', '${r.streakMilestone}-day streak! 🔥');
-    sub = context.tr('निरंतरता ही असली ताकत है। ऐसे ही आगे बढ़ते रहें!', 'Consistency is your superpower. Keep going!');
+    sub = context.tr('लगातार मेहनत ही असली ताकत है। ऐसे ही आगे बढ़ते रहें!', 'Consistency is your superpower. Keep going!');
     icon = Icons.local_fire_department;
     shareText = context.tr(
         'मेरी RailPariksha पर ${r.streakMilestone} दिन की स्ट्रीक है! 🔥 आप भी शुरू करें: $kPlayUrl',

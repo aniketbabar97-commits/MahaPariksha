@@ -202,7 +202,7 @@ class _SubjectTile extends StatelessWidget {
       title: subject.name.of(context.lang),
       subtitle: acc == null
           ? context.tr('${fmtCount(count)} प्रश्न · शुरू करें', '${fmtCount(count)} questions · start now')
-          : context.tr('${fmtCount(count)} प्रश्न · अचूकता ${(acc * 100).round()}%', '${fmtCount(count)} questions · ${(acc * 100).round()}% accuracy'),
+          : context.tr('${fmtCount(count)} प्रश्न · सटीकता ${(acc * 100).round()}%', '${fmtCount(count)} questions · ${(acc * 100).round()}% accuracy'),
       onTap: () => push(context, (_) => SubjectScreen(subject: subject)),
     );
   }

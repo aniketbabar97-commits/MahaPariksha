@@ -21,7 +21,7 @@ const kSupportEmail = String.fromEnvironment('SUPPORT_EMAIL', defaultValue: 'sup
 void startQuiz(BuildContext context, QuizSpec spec) {
   if (spec.questions.isEmpty) {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text(context.tr('इस विभाग में अभी प्रश्न नहीं हैं। जल्द आ रहे हैं!', 'No questions here yet. Coming soon!'))));
+        content: Text(context.tr('इस हिस्से में अभी प्रश्न नहीं हैं। जल्द आ रहे हैं!', 'No questions here yet. Coming soon!'))));
     return;
   }
   push(context, (_) => QuizScreen(spec: spec));
@@ -637,7 +637,7 @@ class _QuizScreenState extends State<QuizScreen> with WidgetsBindingObserver {
           if (counts[_PaletteState.answeredMarked]! > 0) ...[
             const SizedBox(height: 12),
             Text(
-                ctx.tr('रिव्यू के लिए चिह्नित जिन प्रश्नों का उत्तर दिया गया है, उनका मूल्यांकन होगा — असली परीक्षा की तरह।',
+                ctx.tr('रिव्यू के लिए चिह्नित जिन प्रश्नों का उत्तर दिया गया है, उनके अंक जुड़ेंगे — असली परीक्षा की तरह।',
                     'Marked questions that have an answer will be evaluated — just like the real exam.'),
                 style: TextStyle(fontSize: 12.5, color: Theme.of(ctx).hintColor)),
           ],
@@ -877,7 +877,7 @@ class _Explanation extends StatelessWidget {
                 ]),
               )
             else
-              _block(context, Icons.lightbulb, BrandColors.skyLight, en ? 'Explanation' : 'स्पष्टीकरण', q.explanation.of(lang)),
+              _block(context, Icons.lightbulb, BrandColors.skyLight, en ? 'Explanation' : 'व्याख्या', q.explanation.of(lang)),
             if (q.hook != null) _block(context, Icons.psychology_alt, BrandColors.saffron, en ? 'Memory trick' : 'याद रखने की तरकीब', q.hook!.of(lang)),
             if (q.fact != null) _block(context, Icons.star, BrandColors.correct, en ? 'Also remember' : 'यह भी याद रखें', q.fact!.of(lang)),
             Align(
@@ -899,7 +899,7 @@ class _Explanation extends StatelessWidget {
       context.tr('उत्तर गलत है', 'Answer is wrong'),
       context.tr('प्रश्न स्पष्ट नहीं है', 'Question is unclear'),
       context.tr('भाषा / टाइपिंग की गलती', 'Language / typo error'),
-      context.tr('स्पष्टीकरण गलत है', 'Explanation is wrong'),
+      context.tr('व्याख्या गलत है', 'Explanation is wrong'),
     ];
     final reason = await showModalBottomSheet<String>(
       context: context,
@@ -926,7 +926,7 @@ class _Explanation extends StatelessWidget {
     // Reports reach the owner through Analytics (question id), so a bad key gets fixed for everyone.
     Analytics.log('question_reported', {'id': q.id, 'pyq': q.pyq != null});
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(context.tr('धन्यवाद! यह प्रश्न समीक्षा के लिए छिपा दिया गया है।', 'Thanks! This question is hidden for review.')),
+      content: Text(context.tr('धन्यवाद! यह प्रश्न जांच के लिए हटा दिया गया है।', 'Thanks! This question is hidden for review.')),
       action: SnackBarAction(
         label: context.tr('ईमेल करें', 'Email us'),
         onPressed: () => launchUrl(Uri(
