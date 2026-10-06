@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
@@ -54,6 +55,7 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
     // Opening the digest completes the "read today's CA" item of the Today mission.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) AppScope.read(context).progress.markCaRead();
+      Analytics.log('ca_digest_open');
     });
   }
 

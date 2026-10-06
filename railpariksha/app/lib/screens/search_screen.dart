@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core/app_scope.dart';
+import '../logic/transliterate.dart';
 import '../core/theme.dart';
 import '../core/transitions.dart';
 import '../data/models.dart';
@@ -68,14 +69,17 @@ class _SearchScreenState extends State<SearchScreen> {
     final exam = s.builder.exam;
     if (exam == null) return const NoExamState();
 
-    final needle = _query.toLowerCase();
+    // Hinglish-aware: "pratishat", "प्रतिशत" and "percentage" all reach the same questions.
+    final needle = searchKey(_query.trim());
+    final plain = _query.trim().toLowerCase();
     List<Question> questionResults = const [];
     List<TopicNote> noteResults = const [];
     var questionMatchCount = 0;
     if (needle.isNotEmpty) {
       final pool = s.repo.questionsFor(exam);
       final questionMatches = pool
-          .where((q) => q.text.hi.toLowerCase().contains(needle) || q.text.en.toLowerCase().contains(needle))
+          .where((q) =>
+              q.text.en.toLowerCase().contains(plain) || cachedSearchKey('q:${q.id}', q.text.hi).contains(needle))
           .toList();
       questionMatchCount = questionMatches.length;
       questionResults = questionMatches.take(50).toList();
@@ -83,16 +87,16 @@ class _SearchScreenState extends State<SearchScreen> {
       noteResults = s.repo.allNotes
           .where((n) =>
               examSubjects.contains(n.subject) &&
-              (n.summary.hi.toLowerCase().contains(needle) ||
-                  n.summary.en.toLowerCase().contains(needle) ||
-                  n.factsHi.any((f) => f.toLowerCase().contains(needle)) ||
-                  n.factsEn.any((f) => f.toLowerCase().contains(needle))))
+              (cachedSearchKey('ns:${n.subject}/${n.topic}', n.summary.hi).contains(needle) ||
+                  n.summary.en.toLowerCase().contains(plain) ||
+                  cachedSearchKey('nf:${n.subject}/${n.topic}', n.factsHi.join(' ')).contains(needle) ||
+                  n.factsEn.any((f) => f.toLowerCase().contains(plain))))
           .toList();
       // A note whose topic is named by the query ("percentage" -> Mathematics · Percentage) comes
       // before one that merely mentions the word; the sort is stable, so the rest keep their order.
       bool named(TopicNote n) {
         final t = s.repo.topic(n.subject, n.topic)?.name;
-        return t != null && (t.hi.toLowerCase().contains(needle) || t.en.toLowerCase().contains(needle));
+        return t != null && (searchKey(t.hi).contains(needle) || t.en.toLowerCase().contains(plain));
       }
       noteResults = [...noteResults.where(named), ...noteResults.where((n) => !named(n))].take(20).toList();
     }

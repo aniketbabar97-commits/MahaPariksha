@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core/ads.dart';
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../core/theme.dart';
 import '../data/models.dart';
@@ -62,6 +63,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> with SingleTickerProv
       flipped = false;
       drag = 0;
     });
+    if (index >= deck.length) Analytics.log('flashcards_done', {'known': known, 'cards': deck.length});
     await celebrate(context, r);
   }
 
