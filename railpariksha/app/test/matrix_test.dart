@@ -102,6 +102,18 @@ void main() {
     'Quiz (practice)': (r, p) => QuizScreen(spec: QuizBuilder(r, p).practice(subject: 'maths', topic: 'percentage')),
     'Quiz (mock)': (r, p) => QuizScreen(spec: QuizBuilder(r, p).mock()),
     'Beast Mode': (r, p) => BeastModeScreen(spec: QuizBuilder(r, p).beast(seconds: 60), seconds: 60),
+    // The two on-demand PYQ states (not reachable with the full pack bundled in tests).
+    'PYQ download (loading)': (r, p) {
+      pyqRepo.downloading.value = 'rrb_group_d_cbt_2025.json';
+      return Scaffold(
+        appBar: AppBar(title: const Text('RRB Group D CBT 2025')),
+        body: const PyqLoading(file: 'rrb_group_d_cbt_2025.json', kb: 9400),
+      );
+    },
+    'PYQ download (offline)': (r, p) => Scaffold(
+          appBar: AppBar(title: const Text('RRB Group D CBT 2025')),
+          body: PyqLoadError(onRetry: () {}),
+        ),
     'Results (mock)': (r, p) {
       final spec = QuizBuilder(r, p).mock();
       return ResultsScreen(
