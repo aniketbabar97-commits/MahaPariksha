@@ -24,6 +24,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -151,13 +152,27 @@ class GeminiBackend:
         from google import genai
         self.client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
+    # Free tier: 15 requests/minute per model. Each kept item costs up to three calls (draft share,
+    # relevance judge, blind solve), so pace every call and wait out a 429 instead of dying on it.
+    _PACE_SECONDS = 4.5
+
     def _generate(self, prompt: str, schema) -> str:
-        resp = self.client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=prompt,
-            config={"response_mime_type": "application/json", "response_schema": schema},
-        )
-        return resp.text
+        from google.genai import errors
+        for attempt in range(6):
+            try:
+                resp = self.client.models.generate_content(
+                    model=GEMINI_MODEL,
+                    contents=prompt,
+                    config={"response_mime_type": "application/json", "response_schema": schema},
+                )
+                time.sleep(self._PACE_SECONDS)
+                return resp.text
+            except errors.APIError as e:
+                if getattr(e, "code", None) != 429 or attempt == 5:
+                    raise
+                print(f"gemini rate-limited (429); waiting 30 s (attempt {attempt + 1}/5)", file=sys.stderr)
+                time.sleep(30)
+        raise RuntimeError("unreachable")
 
     def draft(self, prompt: str) -> Drafts:
         return Drafts.model_validate_json(_extract_json(self._generate(prompt, Drafts)))

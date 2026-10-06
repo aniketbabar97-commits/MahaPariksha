@@ -312,12 +312,16 @@ class _ResultsScreenState extends State<ResultsScreen> {
           ],
           if (_canDoubleXp || _xpDoubled) ...[
             const SizedBox(height: 12),
+            // Tinted so the rewarded offer reads as the highlight of the sheet, not one more row.
             Card(
+              color: _xpDoubled ? null : BrandColors.saffron.withValues(alpha: 0.10),
               child: ListTile(
                 leading: Icon(_xpDoubled ? Icons.check_circle : Icons.bolt, color: BrandColors.readable(context, BrandColors.sunrise, min: 3)),
-                title: Text(_xpDoubled
-                    ? context.tr('XP दोगुना हो गया! 🎉', 'XP doubled! 🎉')
-                    : context.tr('अपना XP दोगुना करें (+${widget.xpEarned} XP)', 'Double your XP (+${widget.xpEarned} XP)')),
+                title: Text(
+                    _xpDoubled
+                        ? context.tr('XP दोगुना हो गया! 🎉', 'XP doubled! 🎉')
+                        : context.tr('अपना XP दोगुना करें (+${widget.xpEarned} XP)', 'Double your XP (+${widget.xpEarned} XP)'),
+                    style: const TextStyle(fontWeight: FontWeight.w800)),
                 subtitle: _xpDoubled
                     ? null
                     : Text(context.tr('एक छोटा विज्ञापन देखें', 'Watch one short ad')),
