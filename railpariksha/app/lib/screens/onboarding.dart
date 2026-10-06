@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../core/notifications.dart';
 import '../core/reminders.dart';
@@ -393,6 +394,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               p.placementLevel = placementLevel;
               p.onboarded = true;
             });
+            Analytics.log('onboarding_complete', {'exam': examId ?? '', 'goal': goal, 'placement': placementLevel ?? 'skipped'});
             // Reminders default to "on" with nothing in onboarding that ever
             // asks for the OS permission, so the streak-SOS/daily-reminder
             // system -- the app's main retention lever -- would silently never

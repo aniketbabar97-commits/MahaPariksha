@@ -6,6 +6,8 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 
+import '../core/analytics.dart';
+
 int dayIndex(DateTime t) => DateTime.utc(t.year, t.month, t.day).millisecondsSinceEpoch ~/ 86400000;
 int today() => dayIndex(DateTime.now());
 
@@ -211,8 +213,20 @@ class Progress extends ChangeNotifier {
   void markCaRead() {
     if (caReadToday) return;
     caReadDay = today();
+    _missionCheck();
     save();
     notifyListeners();
+  }
+
+  /// Day the three-item Today mission was last completed; logged once per day for analytics.
+  int? _missionDay;
+  bool get missionDoneToday => _missionDay == today();
+  void _missionCheck() {
+    if (_missionDay == today()) return;
+    if (todayCount >= dailyGoal && cardsReviewedToday >= 5 && caReadToday) {
+      _missionDay = today();
+      Analytics.log('mission_complete', {'streak': streak});
+    }
   }
 
   /// Flashcards reviewed today (any answer), for the Today mission.
@@ -292,6 +306,7 @@ class Progress extends ChangeNotifier {
     caReadDay = j['caReadDay'];
     _cardsDay = j['cardsDay'];
     _cardsToday = j['cardsToday'] ?? 0;
+    _missionDay = j['missionDay'];
     quizzesDone = j['quizzesDone'] ?? 0;
     xp = j['xp'] ?? 0;
     streak = j['streak'] ?? 0;
@@ -339,6 +354,7 @@ class Progress extends ChangeNotifier {
         if (caReadDay != null) 'caReadDay': caReadDay,
         if (_cardsDay != null) 'cardsDay': _cardsDay,
         'cardsToday': _cardsToday,
+        if (_missionDay != null) 'missionDay': _missionDay,
         'quizzesDone': quizzesDone,
         'xp': xp,
         'streak': streak,
@@ -498,7 +514,10 @@ class Progress extends ChangeNotifier {
       milestone = streak;
       if (streak % 7 == 0 && freezeTokens < 2) freezeTokens++;
     }
-    if (countsTowardGoal) dayCounts[today()] = todayCount + 1;
+    if (countsTowardGoal) {
+      dayCounts[today()] = todayCount + 1;
+      _missionCheck();
+    }
     var gained = amount;
     final goalNow = !beforeGoal && todayCount >= dailyGoal;
     if (goalNow) gained += 50;
@@ -536,6 +555,7 @@ class Progress extends ChangeNotifier {
       _cardsToday = 0;
     }
     _cardsToday++;
+    _missionCheck();
     final c = cards.putIfAbsent(id, () => CardState(due: t));
     if (good) {
       c.reps += 1;

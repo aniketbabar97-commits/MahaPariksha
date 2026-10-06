@@ -28,8 +28,8 @@ Add GitHub repo secrets (these are shared by name with Bharari's release workflo
 - [ ] Tag `railpariksha-vX.Y.Z` to trigger **RailPariksha release** (Actions), or run it manually via workflow_dispatch.
       Download `app-release.aab` from the run or release.
 - [ ] Upload that AAB manually to **Closed testing**. Google requires the first upload through the Console.
-- [ ] Fill in: privacy policy URL (step 4), Data safety ("no data collected / shared"), Content rating (Everyone),
-      Target audience (18+), Ads (No), Government-affiliation declaration (**not affiliated** with Indian Railways/RRB/RPF;
+- [ ] Fill in: privacy policy URL (step 4), Data safety (see the section below — the app DOES collect data), Content rating (Everyone),
+      Target audience (18+), **Ads: Yes** (AdMob banners, native, interstitial, rewarded, app-open), Government-affiliation declaration (**not affiliated** with Indian Railways/RRB/RPF;
       the app shows this disclaimer).
 - [ ] Recruit 12+ testers: RRB/RPF aspirants from Telegram groups or coaching circles, plus a paid testing service as a floor.
       Keep them opted in for 14 days, then apply for production.
@@ -57,3 +57,12 @@ Add GitHub repo secrets (these are shared by name with Bharari's release workflo
 - The `pyq-pack` release is a prerelease named "PYQ pack (auto-updated)"; never delete it, and never mark it as the
   latest release. If it is missing, the first release run creates it.
 - CI's `flutter test` runs against the full pack (plain `build_bundle.py`), so tests never need the network.
+
+## Play Console → Data safety (what to declare)
+The app shows AdMob ads and sends Firebase Analytics events, and Google sign-in is optional, so declare:
+- **Device or other IDs** — collected, shared (AdMob advertising ID; Analytics app-instance ID). Purpose: Advertising or marketing; Analytics. Not optional.
+- **App activity → App interactions** — collected (screens opened, quizzes/papers started, ads shown; never question text). Purpose: Analytics. Not optional.
+- **Personal info → Name, Email address** — collected only if the student signs in with Google (optional), used for the leaderboard name/profile. Purpose: App functionality / Account management. Optional: yes.
+- **Diagnostics → Crash logs** — Play's own vitals only; if Crashlytics is added later, declare it here.
+- Encrypted in transit: Yes. Deletion request: Yes (docs/store/DELETE_ACCOUNT_for_google_doc.md); local progress is deleted by uninstalling.
+- Ads declaration: **Yes, this app contains ads.** Content-rating questionnaire: ads = yes, shares location = no, user-generated content = no (the leaderboard name is the only user text).
