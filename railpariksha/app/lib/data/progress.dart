@@ -436,6 +436,11 @@ class Progress extends ChangeNotifier {
       reviewAsks < 3 &&
       (lastReviewAskDay == 0 || today() - lastReviewAskDay >= 60);
 
+  /// A level-up or a week-long streak is the other good moment for a rating ask: the student has
+  /// just been shown they are winning. Same throttle as the score-based ask.
+  bool shouldAskForReviewAfterMilestone() =>
+      totalAnswered >= 50 && reviewAsks < 3 && (lastReviewAskDay == 0 || today() - lastReviewAskDay >= 60);
+
   void markReviewAsked() {
     lastReviewAskDay = today();
     reviewAsks++;
