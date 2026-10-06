@@ -113,7 +113,7 @@ class PyqTopicScreen extends StatefulWidget {
 class _PyqTopicScreenState extends State<PyqTopicScreen> {
   static const _practiceSize = 20;
   static const _testSize = 25;
-  late final Future<List<Question>> _qs = pyqRepo.topicQuestions(widget.topic);
+  late Future<List<Question>> _qs = pyqRepo.topicQuestions(widget.topic);
   bool? _allExams; // null until decided from the counts
 
   @override
@@ -181,9 +181,9 @@ class _PyqTopicScreenState extends State<PyqTopicScreen> {
         future: _qs,
         builder: (context, snap) {
           if (snap.hasError) {
-            return Center(child: Text(context.tr('लोड नहीं हो सका', "Couldn't load these questions")));
+            return PyqLoadError(onRetry: () => setState(() => _qs = pyqRepo.topicQuestions(widget.topic)));
           }
-          if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+          if (!snap.hasData) return PyqLoading(file: widget.topic.file, kb: widget.topic.kb);
           final all = snap.data!;
           final mine = _prefix;
           final ownCount = mine == null ? all.length : all.where((q) => (q.pyq ?? '').startsWith(mine)).length;

@@ -26,7 +26,7 @@ WHY ASPIRANTS LOVE RAILPARIKSHA
 • Weekly leaderboard — see your rank against other aspirants preparing for your exam
 • 60-second speed round — perfect for platform waits and train journeys
 • Streaks, XP, train-class levels (General → Rajdhani), goal ring and daily motivation to keep you going
-• Works fully offline · small download · Hindi ⇄ English on every question
+• Works offline · small download (older PYQ papers download once, then stay offline) · Hindi ⇄ English on every question
 • No courses to buy. No sign-up. No hidden charges.
 
 Every question is checked by an independent review before release. Found an error? Tap "Report" — it is hidden instantly and corrected.

@@ -1,3 +1,9 @@
+import 'package:http/testing.dart';
+import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
+import 'dart:io';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:railpariksha/core/app_scope.dart';
@@ -11,6 +17,7 @@ import 'package:railpariksha/data/pyq_repo.dart';
 import 'package:railpariksha/screens/pyq_screen.dart';
 
 void main() {
+  _onDemandTests();
   test('courtesy access when no ad can load: opens the section, but only twice per session', () {
     PyqAccess.reset();
     final p = Progress();
@@ -187,5 +194,60 @@ void main() {
     expect(show(busy: true), isFalse, reason: 'never over an open question');
     expect(show(last: now.subtract(const Duration(hours: 1))), isFalse);
     expect(show(last: now.subtract(const Duration(hours: 5))), isTrue);
+  });
+}
+
+/// Fake asset bundle that only knows the index (everything else is "not bundled").
+class _IndexOnlyBundle extends CachingAssetBundle {
+  final String index;
+  _IndexOnlyBundle(this.index);
+  @override
+  Future<ByteData> load(String key) async {
+    if (key == 'assets/pyq/index.json') return ByteData.sublistView(Uint8List.fromList(utf8.encode(index)));
+    throw FlutterError('Unable to load asset: $key');
+  }
+}
+
+void _onDemandTests() {
+  group('PyqRepo on-demand sets', () {
+    const set = {
+      'version': 7, 'topics': <Object>[],
+      'sets': [{'exam': 'RRB Test', 'year': 2025, 'rail': true, 'file': 'rrb_test_2025.json', 'n': 20, 'kb': 3,
+        'subjects': {'maths': 20}, 'papers': [{'label': 'RRB Test · 1 Jan 2025', 'n': 20}]}],
+    };
+    List<Map<String, dynamic>> qs() => [
+      for (var i = 0; i < 20; i++) {'id': 'pyq-t-$i', 's': 'maths', 't': 'percentage', 'd': 1, 'pyq': 'RRB Test · 1 Jan 2025',
+        'q_en': 'Q$i', 'q_hi': 'प्र$i', 'o_en': ['a', 'b', 'c', 'd'], 'o_hi': ['क', 'ख', 'ग', 'घ'], 'a': 1, 'e_en': '', 'e_hi': ''},
+    ];
+
+    test('downloads a set that is not bundled, caches it, and serves the cache offline', () async {
+      final tmp = await Directory.systemTemp.createTemp('pyq');
+      var hits = 0;
+      PyqRepo repo() => PyqRepo(
+            _IndexOnlyBundle(jsonEncode(set)),
+            () => MockClient((req) async {
+              hits++;
+              expect(req.url.toString(), endsWith('/rrb_test_2025.json'));
+              return http.Response(jsonEncode(qs()), 200, headers: {'content-type': 'application/json; charset=utf-8'});
+            }),
+            () async => tmp,
+          );
+      final r1 = repo();
+      final s = (await r1.sets()).single;
+      expect((await r1.questions(s)).length, 20);
+      expect(hits, 1);
+      expect(File('${tmp.path}/7/rrb_test_2025.json').existsSync(), isTrue);
+      // A fresh repo (new launch) with no network must still open it from the cache.
+      final r2 = PyqRepo(_IndexOnlyBundle(jsonEncode(set)), () => MockClient((_) async => http.Response('', 500)), () async => tmp);
+      expect((await r2.questions((await r2.sets()).single)).length, 20);
+      expect(hits, 1);
+    });
+
+    test('offline with nothing cached throws PyqDownloadException (screens show retry)', () async {
+      final tmp = await Directory.systemTemp.createTemp('pyq');
+      final r = PyqRepo(_IndexOnlyBundle(jsonEncode(set)), () => MockClient((_) async => throw const SocketException('offline')), () async => tmp);
+      await expectLater(r.questions((await r.sets()).single), throwsA(isA<PyqDownloadException>()));
+      expect(r.downloading.value, isNull);
+    });
   });
 }

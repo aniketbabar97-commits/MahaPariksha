@@ -48,3 +48,12 @@ Add GitHub repo secrets (these are shared by name with Bharari's release workflo
       account manages both apps' releases; the workflow scopes uploads by `packageName: app.railpariksha`).
 - [ ] From then on, pushing a tag `railpariksha-vX.Y.Z` builds, signs and uploads to the internal track.
       Promote the release in the Console.
+
+## PYQ packs: what ships in the APK vs. downloads on demand
+- The release build bundles only the **newest year of each railway exam** (`build_bundle.py --pyq-full`), so a
+  student's own latest paper works offline from first launch. Older years and the topic shards are published as
+  assets of the **`pyq-pack` GitHub release** (the release workflow regenerates and re-uploads them with `--clobber`)
+  and the app downloads each one once, then caches it (`PyqRepo`). This keeps the Play download ~20 MB smaller.
+- The `pyq-pack` release is a prerelease named "PYQ pack (auto-updated)"; never delete it, and never mark it as the
+  latest release. If it is missing, the first release run creates it.
+- CI's `flutter test` runs against the full pack (plain `build_bundle.py`), so tests never need the network.
