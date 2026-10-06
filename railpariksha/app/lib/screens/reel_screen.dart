@@ -218,7 +218,10 @@ class _ReelScreenState extends State<ReelScreen> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        // The bar floats over whichever card is showing; a dark pill keeps white legible on the
+        // yellow flashcard cards too (white straight on saffron is 1.8:1).
         leading: IconButton(
+          style: IconButton.styleFrom(backgroundColor: Colors.black38),
           icon: const Icon(Icons.close, color: Colors.white),
           tooltip: context.tr('बंद करें', 'Close'),
           onPressed: () {
@@ -228,6 +231,7 @@ class _ReelScreenState extends State<ReelScreen> {
         ),
         actions: [
           IconButton(
+            style: IconButton.styleFrom(backgroundColor: Colors.black38),
             tooltip: context.tr('भाषा बदलें', 'Switch language'),
             icon: Text(_lang == 'en' ? 'हिं' : 'EN',
                 style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.white)),
@@ -623,7 +627,8 @@ class _MotivationCard extends StatelessWidget {
             ],
             const SizedBox(height: Spacing.xxl),
             Text(context.tr('↑ ऊपर स्वाइप करें', '↑ Swipe up'),
-                style: TextStyle(color: _onSaffron.withValues(alpha: 0.6), fontSize: 13)),
+                // Full-strength onSaffron: the 60% version measured 3.7:1 on the yellow card.
+                style: const TextStyle(color: _onSaffron, fontSize: 13)),
                 ]),
               ),
             ),
