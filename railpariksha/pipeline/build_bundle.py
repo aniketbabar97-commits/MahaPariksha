@@ -88,7 +88,14 @@ def balance_answer_positions(q):
     return True
 
 
-def build_pyq_pack(out_dir):
+def bundled_in_app(exam, year, newest_year):
+    """Which sets ship inside the APK: the newest year of every railway exam, so a student's own
+    latest paper works offline on first launch. Older years and the topic shards download on demand
+    (see PyqRepo in the app), which keeps the Play download ~20 MB smaller."""
+    return exam.startswith(RAIL_EXAMS) and year == newest_year
+
+
+def build_pyq_pack(out_dir, app_dir=None):
     """Previous-year questions ship as their own asset pack, separate from the main
     bundle: index.json lists every exam/year set (with per-paper and per-subject
     counts), and each set is its own file the app loads only when it's opened --
@@ -131,18 +138,27 @@ def build_pyq_pack(out_dir):
         head = q["pyq"].split(" · ")[0]
         year = re.search(r"(20\d\d)", q["pyq"].split(" · ")[1] if " · " in q["pyq"] else q["pyq"]).group(1)
         sets[(head, int(year))].append(q)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    for old in out_dir.glob("*.json"):
-        old.unlink()
-    (out_dir / "topics").mkdir(exist_ok=True)
-    for old in (out_dir / "topics").glob("*.json"):
-        old.unlink()
+    dirs = [out_dir] + ([app_dir] if app_dir else [])
+    for d in dirs:
+        d.mkdir(parents=True, exist_ok=True)
+        for old in d.glob("*.json"):
+            old.unlink()
+        (d / "topics").mkdir(exist_ok=True)
+        for old in (d / "topics").glob("*.json"):
+            old.unlink()
+    newest = {}
+    for (exam, year) in sets:
+        newest[exam] = max(newest.get(exam, 0), year)
     index = []
     for (exam, year), qs in sorted(sets.items(), key=lambda kv: (not kv[0][0].startswith(RAIL_EXAMS), kv[0][0], -kv[0][1])):
         file = f"{re.sub(r'[^a-z0-9]+', '_', exam.lower())}_{year}.json"
-        (out_dir / file).write_text(json.dumps(pretty(qs), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        text = json.dumps(pretty(qs), ensure_ascii=False, separators=(",", ":"))
+        (out_dir / file).write_text(text, encoding="utf-8")
+        if app_dir and bundled_in_app(exam, year, newest[exam]):
+            (app_dir / file).write_text(text, encoding="utf-8")
         papers = Counter(q["pyq"] for q in qs)
         index.append({"exam": exam, "year": year, "rail": exam.startswith(RAIL_EXAMS), "file": file, "n": len(qs),
+                      "kb": len(text.encode("utf-8")) // 1024,
                       "subjects": dict(Counter(q["s"] for q in qs)),
                       "papers": [{"label": k, "n": v} for k, v in sorted(papers.items())]})
     # Topic shards: every PYQ of one topic in one small file, so topic-wise practice and topic
@@ -154,11 +170,16 @@ def build_pyq_pack(out_dir):
     topics = []
     for (subj, topic), qs in sorted(by_topic.items()):
         file = f"topics/{subj}__{topic}.json"
-        (out_dir / file).write_text(json.dumps(pretty(qs), ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-        topics.append({"s": subj, "t": topic, "n": len(qs), "file": file,
+        text = json.dumps(pretty(qs), ensure_ascii=False, separators=(",", ":"))
+        (out_dir / file).write_text(text, encoding="utf-8")
+        topics.append({"s": subj, "t": topic, "n": len(qs), "file": file, "kb": len(text.encode("utf-8")) // 1024,
                        "by_exam": dict(Counter(q["pyq"].split(" · ")[0] for q in qs))})
-    (out_dir / "index.json").write_text(json.dumps({"sets": index, "topics": topics}, ensure_ascii=False,
-                                                   separators=(",", ":")), encoding="utf-8")
+    # The version names the app's download cache, so a new app build never reads packs cached by an
+    # older one.
+    index_doc = json.dumps({"version": int(datetime.now(timezone.utc).strftime("%Y%m%d%H%M")), "sets": index,
+                            "topics": topics}, ensure_ascii=False, separators=(",", ":"))
+    for d in dirs:
+        (d / "index.json").write_text(index_doc, encoding="utf-8")
     size = sum(p.stat().st_size for p in out_dir.rglob("*.json")) // 1024
     print(f"wrote {out_dir}: {len(questions)} PYQs in {len(index)} sets, {size} KB")
 
@@ -168,6 +189,9 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "app/assets/content/bundle.json"))
     ap.add_argument("--pyq-out", default=str(ROOT / "app/assets/pyq"),
                     help="where to write the PYQ pack ('' to skip, e.g. for the downloadable content pack)")
+    ap.add_argument("--pyq-full", default="",
+                    help="also write the complete pack here (every set + topic shard, for the pyq-pack release "
+                         "assets) and ship only the newest year per railway exam in --pyq-out")
     args = ap.parse_args()
 
     if subprocess.run([sys.executable, str(ROOT / "pipeline/validate.py")]).returncode != 0:
@@ -209,7 +233,9 @@ def main():
           f"{len(bundle['flashcards'])} flashcards, {len(bundle['motivation'])} motivation, "
           f"{len(bundle['cheat_sheets'])} cheat sheets, "
           f"{out.stat().st_size // 1024} KB")
-    if args.pyq_out:
+    if args.pyq_full:
+        build_pyq_pack(Path(args.pyq_full), app_dir=Path(args.pyq_out) if args.pyq_out else None)
+    elif args.pyq_out:
         build_pyq_pack(Path(args.pyq_out))
 
 

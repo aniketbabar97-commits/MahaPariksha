@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../core/ads.dart';
 import '../core/analytics.dart';
@@ -309,7 +310,7 @@ class PyqSetScreen extends StatefulWidget {
 }
 
 class _PyqSetScreenState extends State<PyqSetScreen> {
-  late final Future<List<Question>> _qs = pyqRepo.questions(widget.set);
+  late Future<List<Question>> _qs = pyqRepo.questions(widget.set);
   static const _practiceSize = 20;
 
   @override
@@ -364,9 +365,9 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
         future: _qs,
         builder: (context, snap) {
           if (snap.hasError) {
-            return Center(child: Text(context.tr('लोड नहीं हो सका', "Couldn't load these questions")));
+            return PyqLoadError(onRetry: () => setState(() => _qs = pyqRepo.questions(widget.set)));
           }
-          if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+          if (!snap.hasData) return PyqLoading(file: widget.set.file, kb: widget.set.kb);
           final all = snap.data!;
           final pool = examSubjects == null ? all : all.where((q) => examSubjects.contains(q.subject)).toList();
           final bySubject = <String, int>{};
@@ -423,4 +424,68 @@ class _PyqSetScreenState extends State<PyqSetScreen> {
       );
     });
   }
+}
+
+/// Loading state for a set or topic shard. Bundled files open instantly; a file that is not in the
+/// APK downloads once, and the student is told so (with its size) instead of staring at a spinner.
+class PyqLoading extends StatelessWidget {
+  final String file;
+  final int kb;
+  const PyqLoading({super.key, required this.file, required this.kb});
+
+  @override
+  Widget build(BuildContext context) => ValueListenableBuilder<String?>(
+        valueListenable: pyqRepo.downloading,
+        builder: (context, current, _) {
+          final mb = (kb / 1024).toStringAsFixed(kb >= 1024 ? 0 : 1);
+          return Center(
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              const CircularProgressIndicator(),
+              if (current == file) ...[
+                const SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Text(
+                    context.tr('पहली बार डाउनलोड हो रहा है (~$mb MB) — फिर ऑफ़लाइन भी चलेगा',
+                        'Downloading once (~$mb MB) — works offline after this'),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Theme.of(context).hintColor),
+                  ),
+                ),
+              ],
+            ]),
+          );
+        },
+      );
+}
+
+/// Could not load a set or shard: almost always "not bundled and no internet right now".
+class PyqLoadError extends StatelessWidget {
+  final VoidCallback onRetry;
+  const PyqLoadError({super.key, required this.onRetry});
+
+  @override
+  Widget build(BuildContext context) => Center(
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Icon(Icons.cloud_off, size: 40, color: Theme.of(context).hintColor),
+            const SizedBox(height: 12),
+            Text(
+              context.tr('यह पेपर एक बार इंटरनेट से डाउनलोड होता है। इंटरनेट चालू करके फिर कोशिश करें।',
+                  'This paper downloads once over the internet. Turn on data or Wi-Fi and try again.'),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 16),
+            FilledButton.icon(
+              onPressed: () {
+                HapticFeedback.selectionClick();
+                onRetry();
+              },
+              icon: const Icon(Icons.refresh),
+              label: Text(context.tr('फिर कोशिश करें', 'Try again')),
+            ),
+          ]),
+        ),
+      );
 }
