@@ -83,7 +83,7 @@ class TopicScreen extends StatelessWidget {
             labelStyle: const TextStyle(fontWeight: FontWeight.w800),
             tabs: [
               Tab(text: context.tr('नोट्स 📄', 'Notes 📄')),
-              Tab(text: context.tr('मुख्य मुद्दे 🔑', 'Key facts 🔑')),
+              Tab(text: context.tr('मुख्य तथ्य 🔑', 'Key facts 🔑')),
               Tab(text: context.tr('माइंड मैप 🗺️', 'Mind map 🗺️')),
               if (note.hasTips) Tab(text: context.tr('टिप्स 💡', 'Tips 💡')),
             ],

@@ -1,7 +1,7 @@
-// RailPariksha leaderboard rules -- paste into Firebase Console > Firestore Database >
-// Rules tab > Publish. There is no Firebase Auth in this app (the leaderboard is
-// anonymous by design: device id + a chosen display name, no real accounts), so these
-// rules validate the SHAPE of a write, not "this write really came from that device" --
+// RailPariksha Firestore rules -- paste into Firebase Console > Firestore Database >
+// Rules tab > Publish. The leaderboard is anonymous by design (device id + a chosen
+// display name; Google sign-in is optional and only pre-fills the name), so its rules
+// validate the SHAPE of a write, not "this write really came from that device" --
 // a client could in principle overwrite another device's entry. Accepted for v1; the
 // real hardening step later is Firebase App Check (free, Play Integrity-based) to at
 // least confirm writes come from the real app, not an arbitrary script.
@@ -21,6 +21,16 @@ service cloud.firestore {
                    && request.resource.data.total <= 200
                    && request.resource.data.score is number
                    && request.resource.data.score <= request.resource.data.total;
+    }
+
+    // Progress backup (Google sign-in required): each user reads/writes only their own document,
+    // and only in the shape the app writes (see lib/logic/progress_backup.dart).
+    match /users/{uid}/backup/progress {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+                   && request.resource.data.keys().hasOnly(['v', 'gz', 'xp', 'answered', 'streak', 'at'])
+                   && request.resource.data.gz is string
+                   && request.resource.data.gz.size() <= 950000;
     }
 
     // Everything else is closed by default (no catch-all allow).

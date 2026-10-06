@@ -307,6 +307,7 @@ class Progress extends ChangeNotifier {
     _cardsDay = j['cardsDay'];
     _cardsToday = j['cardsToday'] ?? 0;
     _missionDay = j['missionDay'];
+    backupDay = j['backupDay'];
     quizzesDone = j['quizzesDone'] ?? 0;
     xp = j['xp'] ?? 0;
     streak = j['streak'] ?? 0;
@@ -335,6 +336,19 @@ class Progress extends ChangeNotifier {
     }
   }
 
+  /// The full saved state (what ProgressBackup stores in the cloud).
+  Map<String, dynamic> toJson() => _toJson();
+
+  /// Replaces this phone's progress with a backup (see ProgressBackup); settings included.
+  void restoreFrom(Map<String, dynamic> j) {
+    _fromJson(j);
+    save();
+    notifyListeners();
+  }
+
+  /// Day of the last successful cloud backup; null when never backed up.
+  int? backupDay;
+
   Map<String, dynamic> _toJson() => {
         'onboarded': onboarded,
         'lang': lang,
@@ -355,6 +369,7 @@ class Progress extends ChangeNotifier {
         if (_cardsDay != null) 'cardsDay': _cardsDay,
         'cardsToday': _cardsToday,
         if (_missionDay != null) 'missionDay': _missionDay,
+        if (backupDay != null) 'backupDay': backupDay,
         'quizzesDone': quizzesDone,
         'xp': xp,
         'streak': streak,

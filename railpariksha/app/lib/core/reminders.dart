@@ -134,7 +134,7 @@ Future<void> applyReminders(Progress p) async {
     (
       '$streak दिन, और रात होने वाली है ⏳🔥',
       '$streak days, and night is closing in ⏳🔥',
-      'अभी एक क्विज़ खेलो, स्ट्रीक मत टूटने दो!',
+      'अभी एक क्विज़ खेलें, स्ट्रीक न टूटने दें!',
       "Play one quiz right now — don't let it break!",
     ),
   ]);
@@ -145,7 +145,7 @@ Future<void> applyReminders(Progress p) async {
 (String, String)? _middayMessage(Progress p, int? days) {
   if (days != null && days <= 7) {
     return (
-      _tr(p, '$days दिन! दोपहर का रिवीज़न छोड़ा मत! ⏰', "$days days left! Don't skip your midday revision! ⏰"),
+      _tr(p, '$days दिन! दोपहर का रिवीज़न न छोड़ें! ⏰', "$days days left! Don't skip your midday revision! ⏰"),
       _tr(p, 'आखिरी हफ्तों में हर सेशन मायने रखता है।', 'Every session counts in these final weeks.'),
     );
   }
@@ -153,9 +153,9 @@ Future<void> applyReminders(Progress p) async {
   if (streak >= 3 && !p.activeToday) {
     return _pick(p, [
       (
-        '$streak दिन की स्ट्रीक अभी बचाओ! 🔥',
+        '$streak दिन की स्ट्रीक अभी बचाएं! 🔥',
         'Save your $streak-day streak right now! 🔥',
-        'आज अभी तक कुछ नहीं किया — एक क्विज़ खेलो!',
+        'आज अभी तक कुछ नहीं किया — एक क्विज़ खेलें!',
         "You haven't practiced today yet — play one quiz!",
       ),
       (
@@ -170,7 +170,7 @@ Future<void> applyReminders(Progress p) async {
   if (mistakes >= 10) {
     return (
       _tr(p, '$mistakes गलतियां जमा हो गई हैं 😬', '$mistakes mistakes have piled up 😬'),
-      _tr(p, 'Mistake Book खोलो और आज ही साफ़ करो!', 'Open your Mistake Book and clear it today!'),
+      _tr(p, 'Mistake Book खोलें और आज ही साफ़ करें!', 'Open your Mistake Book and clear it today!'),
     );
   }
   return null;
@@ -180,13 +180,13 @@ Future<void> applyReminders(Progress p) async {
   if (days != null && days <= 3) {
     return (
       _tr(p, '🚨 सिर्फ $days दिन बाकी! 🚨', '🚨 Only $days days left! 🚨'),
-      _tr(p, 'अभी रिवीज़न शुरू करो, एक मिनट भी बर्बाद मत करो!', "Start revising right now — don't waste a single minute!"),
+      _tr(p, 'अभी रिवीज़न शुरू करें, एक मिनट भी बर्बाद न करें!', "Start revising right now — don't waste a single minute!"),
     );
   }
   if (days != null && days <= 7) {
     return (
       _tr(p, 'परीक्षा में सिर्फ $days दिन! ⏰', 'Only $days days to your exam! ⏰'),
-      _tr(p, 'आज का रिवीज़न अभी शुरू करो, हर घंटा कीमती है।', 'Start revising now — every hour counts.'),
+      _tr(p, 'आज का रिवीज़न अभी शुरू करें, हर घंटा कीमती है।', 'Start revising now — every hour counts.'),
     );
   }
   if (days != null && days <= 14) {
@@ -197,33 +197,33 @@ Future<void> applyReminders(Progress p) async {
   }
   return _pick(p, const [
     (
-      'उठो चैंपियन! 🔥',
+      'उठिए चैंपियन! 🔥',
       'Rise and grind, champion! 🔥',
-      'तुम्हारा आज का Daily 10 तैयार है — सिर्फ 5 मिनट में बाज़ी मार लो!',
+      'आपका आज का Daily 10 तैयार है — सिर्फ 5 मिनट में बाज़ी मार लें!',
       'Your Daily 10 is ready — smash it in just 5 minutes!',
     ),
     (
       'भारतीय रेलवे बुला रही है 🚆',
       'Indian Railways is calling 🚆',
-      'तैयार हो आज की सीट पक्की करने के लिए? चलो शुरू करें!',
+      'आज की सीट पक्की करने के लिए तैयार हैं? चलिए शुरू करें!',
       "Ready to lock in today's seat? Let's start!",
     ),
     (
       'हर सुबह एक जीत 🏆',
       'Every morning, a new win 🏆',
-      'सिर्फ 10 सवाल, 5 मिनट — आज की जीत शुरू करो।',
+      'सिर्फ 10 सवाल, 5 मिनट — आज की जीत शुरू करें।',
       "Just 10 questions, 5 minutes — start today's win.",
     ),
     (
-      'तुम्हारी सीट तुम्हारा इंतज़ार कर रही है 🚂',
+      'आपकी सीट आपका इंतज़ार कर रही है 🚂',
       'Your seat on that train is waiting 🚂',
       'आज का अभ्यास छोड़ा तो कोई और आगे निकल जाएगा!',
       'Skip today and someone else moves ahead!',
     ),
     (
-      'जोश में हो? चलो शुरू करें! ⚡',
+      'जोश में हैं? चलिए शुरू करें! ⚡',
       "Feeling it? Let's go! ⚡",
-      'आज का Daily 10 पूरा करके अपना दिन शुरू करो।',
+      'आज का Daily 10 पूरा करके अपना दिन शुरू करें।',
       "Kick off your day by finishing today's Daily 10.",
     ),
   ]);
@@ -254,25 +254,25 @@ Future<void> applyReminders(Progress p) async {
       (
         '$streak दिन की स्ट्रीक टूटने वाली है! 🔥🚨',
         'Your $streak-day streak is about to die! 🔥🚨',
-        'अभी एक क्विज़ खेलो और इसे ज़िंदा रखो!',
+        'अभी एक क्विज़ खेलें और इसे ज़िंदा रखें!',
         'Play one quiz right now and keep it alive!',
       ),
       (
-        'राजधानी बनने से एक क्विज़ दूर हो 🚄',
+        'राजधानी बनने से एक क्विज़ दूर हैं 🚄',
         'One quiz away from Rajdhani rank 🚄',
-        '$streak दिन की मेहनत बर्बाद मत करो — आज भी खेलो!',
+        '$streak दिन की मेहनत बर्बाद न करें — आज भी खेलें!',
         "Don't waste $streak days of hard work — play today too!",
       ),
       (
-        'तुम्हारी स्ट्रीक को तुम्हारी ज़रूरत है! 💪',
+        'आपकी स्ट्रीक को आपकी ज़रूरत है! 💪',
         'Your streak needs you! 💪',
-        '$streak दिन की स्ट्रीक — आज भी बरकरार रखो।',
+        '$streak दिन की स्ट्रीक — आज भी बरकरार रखें।',
         'Keep that $streak-day streak alive today too.',
       ),
       (
-        'वंदे भारत बनने से एक क्विज़ दूर हो 🚅',
+        'वंदे भारत बनने से एक क्विज़ दूर हैं 🚅',
         'One quiz away from Vande Bharat rank 🚅',
-        '$streak दिन की स्पीड मत गिरने दो — आज भी खेलो!',
+        '$streak दिन की स्पीड न गिरने दें — आज भी खेलें!',
         "Don't let your $streak-day speed drop — play today too!",
       ),
     ]);
@@ -283,13 +283,13 @@ Future<void> applyReminders(Progress p) async {
       (
         '$mistakes गलतियां बदला लेने का इंतज़ार कर रही हैं 😤',
         '$mistakes mistakes are waiting for their revenge match 😤',
-        'इन्हें आज हरा दो, एग्ज़ाम में दोबारा मौका नहीं मिलेगा!',
+        'इन्हें आज हरा दें, एग्ज़ाम में दोबारा मौका नहीं मिलेगा!',
         "Beat them today — exam day won't give you a second chance!",
       ),
       (
         '$mistakes गलतियां, एक मौका ⚔️',
         '$mistakes mistakes, one shot ⚔️',
-        'Mistake Book खोलो और स्कोर बराबर करो!',
+        'Mistake Book खोलें और स्कोर बराबर करें!',
         'Open your Mistake Book and even the score!',
       ),
     ]);
@@ -298,7 +298,7 @@ Future<void> applyReminders(Progress p) async {
     (
       'दिन खत्म होने से पहले! ⏳',
       'Before the day ends! ⏳',
-      'सिर्फ 5 मिनट बचे हैं आज की जीत के लिए — अभी शुरू करो!',
+      'सिर्फ 5 मिनट बचे हैं आज की जीत के लिए — अभी शुरू करें!',
       "Just 5 minutes stand between you and today's win — go now!",
     ),
     (
@@ -310,7 +310,7 @@ Future<void> applyReminders(Progress p) async {
     (
       'कामयाबी इंतज़ार नहीं करती ⚡',
       "Success doesn't wait ⚡",
-      'आज थोड़ा अभ्यास कर लो, कल खुद को शुक्रिया कहोगे।',
+      'आज थोड़ा अभ्यास कर लें, कल खुद को शुक्रिया कहेंगे।',
       "Practice a little today — you'll thank yourself tomorrow.",
     ),
   ]);

@@ -598,7 +598,7 @@ class _MotivationCard extends StatelessWidget {
     };
     final kicker = switch (m.type) {
       'story' => context.tr('प्रेरक कहानी', 'Inspiring story'),
-      'tip' => context.tr('अध्ययन टिप', 'Study tip'),
+      'tip' => context.tr('स्टडी टिप', 'Study tip'),
       _ => context.tr('सुविचार', 'Quote'),
     };
     return Container(

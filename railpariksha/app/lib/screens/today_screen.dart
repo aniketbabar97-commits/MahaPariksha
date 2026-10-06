@@ -189,7 +189,7 @@ class TodayScreen extends StatelessWidget {
                 Row(children: [
                   Icon(Icons.insights, color: BrandColors.skyOn(context), size: 20),
                   const SizedBox(width: 8),
-                  Text(context.tr('अध्ययन योजना', 'Study plan'),
+                  Text(context.tr('स्टडी प्लान', 'Study plan'),
                       style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
                 ]),
                 const SizedBox(height: 10),
@@ -312,7 +312,7 @@ class TodayScreen extends StatelessWidget {
             color: BrandColors.wrong,
             title: context.tr('आज का कमज़ोर टॉपिक: ${weakestName.hi} 🎯', "Today's weak spot: ${weakestName.en} 🎯"),
             subtitle: context.tr(
-                'अचूकता ${(weakest.accuracy * 100).round()}% — 10 प्रश्नों में सुधारें${weakCount > 1 ? ' · +${weakCount - 1} और' : ''}',
+                'सटीकता ${(weakest.accuracy * 100).round()}% — 10 प्रश्नों में सुधारें${weakCount > 1 ? ' · +${weakCount - 1} और' : ''}',
                 '${(weakest.accuracy * 100).round()}% accuracy — fix it in 10 questions${weakCount > 1 ? ' · +${weakCount - 1} more' : ''}'),
             onTap: () {
               HapticFeedback.selectionClick();
@@ -482,7 +482,7 @@ class TodayScreen extends StatelessWidget {
                   Text(
                       switch (motivation.type) {
                         'story' => context.tr('प्रेरक कहानी', 'Inspiring story'),
-                        'tip' => context.tr('अध्ययन टिप', 'Study tip'),
+                        'tip' => context.tr('स्टडी टिप', 'Study tip'),
                         _ => context.tr('सुविचार', 'Quote'),
                       },
                       style: TextStyle(fontWeight: FontWeight.w700, color: BrandColors.saffronText(context))),
@@ -536,7 +536,7 @@ class TodayScreen extends StatelessWidget {
         ActionCard(
           icon: Icons.assignment,
           color: BrandColors.sky,
-          title: context.tr('पूर्ण मॉक टेस्ट', 'Full mock test'),
+          title: context.tr('फुल मॉक टेस्ट', 'Full mock test'),
           subtitle: context.tr('समय सीमा के साथ · असली परीक्षा जैसा अनुभव', 'Timed · real exam feel'),
           onTap: () => startQuiz(context, s.builder.mock()),
         ),

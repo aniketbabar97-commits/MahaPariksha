@@ -62,7 +62,7 @@ class ProgressScreen extends StatelessWidget {
                 Text(level.of(lang), style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900)),
                 Text(
                     level.nextXp == null
-                        ? context.tr('सर्वोच्च स्तर! 👑', 'Top level! 👑')
+                        ? context.tr('सबसे ऊंचा स्तर! 👑', 'Top level! 👑')
                         : context.tr('अगले स्तर के लिए ${level.nextXp! - p.xp} XP', '${level.nextXp! - p.xp} XP to next level'),
                     style: const TextStyle(color: BrandColors.onGradientMuted)),
               ]),
