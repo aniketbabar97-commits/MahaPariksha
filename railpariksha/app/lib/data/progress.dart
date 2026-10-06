@@ -182,7 +182,43 @@ class Progress extends ChangeNotifier {
   /// ads.dart) -- there's nothing else to unlock there, it's marketing
   /// framing for a true today. Set by PurchaseManager on a verified purchase
   /// or successful restore; never set directly from UI.
-  bool removedAds = false;
+  bool _removedAds = false;
+
+  /// True while no ads should show: the one-time purchase, or an ad-free hour earned by
+  /// watching a rewarded ad (see [grantAdFreeHour]). Every ad surface checks this.
+  bool get removedAds => _removedAds || adFreeActive;
+  set removedAds(bool v) => _removedAds = v;
+
+  /// The purchase alone (what the Premium card and restore flow care about).
+  bool get premium => _removedAds;
+
+  /// End of an ad-free window earned by a rewarded ad; null when none was ever earned.
+  DateTime? adFreeUntil;
+  bool get adFreeActive => adFreeUntil != null && DateTime.now().isBefore(adFreeUntil!);
+  Duration get adFreeLeft => adFreeActive ? adFreeUntil!.difference(DateTime.now()) : Duration.zero;
+
+  /// Rewarded-ad reward: one hour without ads. Earns rewarded eCPM and gives heavy users a
+  /// breather; windows don't stack beyond an hour from now.
+  void grantAdFreeHour() {
+    adFreeUntil = DateTime.now().add(const Duration(hours: 1));
+    save();
+    notifyListeners();
+  }
+
+  /// Day the Current Affairs digest was last opened, for the Today mission.
+  int? caReadDay;
+  bool get caReadToday => caReadDay == today();
+  void markCaRead() {
+    if (caReadToday) return;
+    caReadDay = today();
+    save();
+    notifyListeners();
+  }
+
+  /// Flashcards reviewed today (any answer), for the Today mission.
+  int? _cardsDay;
+  int _cardsToday = 0;
+  int get cardsReviewedToday => _cardsDay == today() ? _cardsToday : 0;
 
   /// Quizzes and papers finished to the results screen; paces interstitials (see AdPacing).
   int quizzesDone = 0;
@@ -251,7 +287,11 @@ class Progress extends ChangeNotifier {
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
     streakRiskAlerts = j['streakRiskAlerts'] ?? true;
-    removedAds = j['removedAds'] ?? false;
+    _removedAds = j['removedAds'] ?? false;
+    adFreeUntil = j['adFreeUntil'] == null ? null : DateTime.tryParse(j['adFreeUntil']);
+    caReadDay = j['caReadDay'];
+    _cardsDay = j['cardsDay'];
+    _cardsToday = j['cardsToday'] ?? 0;
     quizzesDone = j['quizzesDone'] ?? 0;
     xp = j['xp'] ?? 0;
     streak = j['streak'] ?? 0;
@@ -294,7 +334,11 @@ class Progress extends ChangeNotifier {
         'reminders': reminders,
         'reminderHour': reminderHour,
         'streakRiskAlerts': streakRiskAlerts,
-        'removedAds': removedAds,
+        'removedAds': _removedAds,
+        if (adFreeUntil != null) 'adFreeUntil': adFreeUntil!.toIso8601String(),
+        if (caReadDay != null) 'caReadDay': caReadDay,
+        if (_cardsDay != null) 'cardsDay': _cardsDay,
+        'cardsToday': _cardsToday,
         'quizzesDone': quizzesDone,
         'xp': xp,
         'streak': streak,
@@ -482,6 +526,11 @@ class Progress extends ChangeNotifier {
 
   Reward reviewCard(String id, bool good) {
     final t = today();
+    if (_cardsDay != t) {
+      _cardsDay = t;
+      _cardsToday = 0;
+    }
+    _cardsToday++;
     final c = cards.putIfAbsent(id, () => CardState(due: t));
     if (good) {
       c.reps += 1;

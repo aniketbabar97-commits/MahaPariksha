@@ -49,6 +49,15 @@ class _CaDigestScreenState extends State<CaDigestScreen> {
   String? _selected;
 
   @override
+  void initState() {
+    super.initState();
+    // Opening the digest completes the "read today's CA" item of the Today mission.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) AppScope.read(context).progress.markCaRead();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final s = context.scope;
     final lang = context.lang;

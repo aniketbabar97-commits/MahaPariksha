@@ -194,4 +194,29 @@ void main() {
       expect(p.shouldAskForReview(sessionScore: 0.9), isFalse);
     });
   });
+
+  group('ad-free hour and today mission', () {
+    test('ad-free window hides ads without touching the purchase, then expires', () {
+      final p = Progress();
+      expect(p.removedAds, isFalse);
+      p.grantAdFreeHour();
+      expect(p.removedAds, isTrue);
+      expect(p.premium, isFalse);
+      expect(p.adFreeLeft.inMinutes, inInclusiveRange(58, 60));
+      p.adFreeUntil = DateTime.now().subtract(const Duration(minutes: 1));
+      expect(p.removedAds, isFalse);
+      expect(p.adFreeActive, isFalse);
+    });
+
+    test('mission counters: CA read once a day, cards reviewed today', () {
+      final p = Progress();
+      expect(p.caReadToday, isFalse);
+      p.markCaRead();
+      expect(p.caReadToday, isTrue);
+      expect(p.cardsReviewedToday, 0);
+      p.reviewCard('c1', true);
+      p.reviewCard('c2', false);
+      expect(p.cardsReviewedToday, 2);
+    });
+  });
 }
