@@ -109,6 +109,15 @@ jobs:
       # by the e2e gate above, and then simply discarded with nothing
       # downloadable anywhere -- this makes a manually-dispatched run useful
       # on its own, not just as a tag-push-only path.
+      # Real-emulator renders of the main screens from the e2e gate above (dark theme, English).
+      - name: Upload emulator screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: emulator-screenshots
+          path: railpariksha/app/screenshots
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:

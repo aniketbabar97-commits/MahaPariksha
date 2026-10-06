@@ -24,7 +24,23 @@ import 'package:railpariksha/main.dart' as app;
 import 'package:railpariksha/widgets/bottom_nav.dart';
 
 void main() {
-  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+  var surfaceConverted = false;
+
+  // Best-effort screenshot of the current screen (saved by test_driver/integration_test.dart).
+  // Never fails the gate: a screenshot problem is not a build problem.
+  Future<void> shot(WidgetTester tester, String name) async {
+    try {
+      if (!surfaceConverted) {
+        await binding.convertFlutterSurfaceToImage();
+        surfaceConverted = true;
+        await tester.pump();
+      }
+      await binding.takeScreenshot(name);
+    } catch (e) {
+      debugPrint('screenshot $name skipped: $e');
+    }
+  }
 
   testWidgets('onboarding, all 5 tabs, and a real mock test all load without crashing',
       (tester) async {
@@ -71,6 +87,7 @@ void main() {
       await tester.tap(tab(i));
       await tester.pumpAndSettle(const Duration(seconds: 2));
       expect(tester.takeException(), isNull, reason: 'tab $i threw while rendering');
+      await shot(tester, 'tab_$i');
     }
 
     // --- Start a real mock test (exercises QuizBuilder.mock() against the
@@ -90,6 +107,7 @@ void main() {
     await tester.pump(const Duration(seconds: 1));
     await tester.pump(const Duration(seconds: 1));
     expect(tester.takeException(), isNull, reason: 'mock test crashed on start');
+    await shot(tester, 'mock_quiz');
 
     // A mock test screen has no bottom nav (it's pushed full-screen) -- its
     // absence confirms we actually navigated into the quiz, not that the tap

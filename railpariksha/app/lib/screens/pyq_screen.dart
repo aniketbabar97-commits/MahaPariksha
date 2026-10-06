@@ -90,7 +90,8 @@ Future<void> withPyqAccess(BuildContext context, VoidCallback start, {String? pa
   final watch = await showDialog<bool>(
     context: context,
     builder: (ctx) => AlertDialog(
-      icon: const Icon(Icons.lock_open, size: 36),
+      // The dialog's default icon colour (theme secondary) is 1.5:1 on the light dialog surface.
+      icon: Icon(Icons.lock_open, size: 36, color: BrandColors.readable(ctx, BrandColors.sunrise, min: 3)),
       title: Text(paper == null ? ctx.tr('PYQ अनलॉक करें', 'Unlock PYQs') : ctx.tr('यह प्रश्नपत्र अनलॉक करें', 'Unlock this paper')),
       content: Text(paper == null
           ? ctx.tr('एक छोटा विज्ञापन देखें और अगले ${PyqAccess.window.inMinutes} मिनट तक सभी अभ्यास सेट हल करें।',
