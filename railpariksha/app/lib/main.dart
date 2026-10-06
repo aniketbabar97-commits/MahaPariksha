@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'core/ads.dart';
+import 'logic/progress_backup.dart';
 import 'core/app_scope.dart';
 import 'core/notifications.dart';
 import 'core/purchases.dart';
@@ -46,6 +47,7 @@ Future<void> main() async {
   runApp(AppScope(repo: repo, progress: progress, purchases: purchases, child: const RailParikshaApp()));
   repo.checkForUpdate();
   repo.checkCaFeed();
+  ProgressBackup.uploadIfDue(progress);
   initAds();
   AppOpenAdManager.start(progress);
   // Fire-and-forget: a slow/unavailable Play Billing connection must never

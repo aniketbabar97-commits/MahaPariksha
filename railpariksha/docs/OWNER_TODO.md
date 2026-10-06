@@ -39,3 +39,8 @@ Kept in the repo so it travels with the project. Tick items off as you go.
 5. From the next morning the daily workflow posts the day's digest + one quiz question there by itself
    (`pipeline/ca_post.py`). The same text works for a WhatsApp Channel; `--out dir` also writes a 60-second
    YouTube Shorts script (`shorts.txt`).
+
+## Firestore rules (needed for progress backup/restore)
+Paste the whole of `railpariksha/firestore.rules` into Firebase Console → Firestore Database → Rules → Publish.
+Until the `users/{uid}/backup/progress` block is published, the app's "Back up now" and the restore
+offer after Google sign-in quietly do nothing (they fail closed).

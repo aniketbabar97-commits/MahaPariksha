@@ -12,6 +12,7 @@ import '../data/models.dart';
 import '../core/theme.dart';
 import '../core/notifications.dart';
 import '../core/purchases.dart';
+import '../logic/progress_backup.dart';
 import '../core/reminders.dart';
 import '../data/progress.dart';
 import '../core/transitions.dart';
@@ -451,6 +452,7 @@ class _AccountCard extends StatelessWidget {
                     // The profile card shows the Google name too, unless the student already chose one.
                     final gName = signedIn?.displayName?.trim();
                     if (gName != null && gName.isNotEmpty && p.name.isEmpty) p.update((p) => p.name = gName);
+                    if (signedIn != null && context.mounted) await _offerRestore(context, p);
                   },
                 )
               : ListTile(
@@ -458,14 +460,33 @@ class _AccountCard extends StatelessWidget {
                       ? CircleAvatar(backgroundImage: NetworkImage(user.photoURL!))
                       : Icon(Icons.account_circle, color: BrandColors.skyOn(context)),
                   title: Text(user.displayName ?? user.email ?? context.tr('साइन इन किया गया', 'Signed in')),
-                  subtitle: Text(context.tr('Google से साइन इन', 'Signed in with Google')),
-                  trailing: TextButton(
-                    onPressed: () {
-                      HapticFeedback.selectionClick();
-                      AuthService.signOut();
-                    },
-                    child: Text(context.tr('साइन आउट', 'Sign out')),
-                  ),
+                  subtitle: Text(p.backupDay == null
+                      ? context.tr('प्रगति का बैकअप अभी नहीं हुआ', 'Progress not backed up yet')
+                      : p.backupDay == today()
+                          ? context.tr('प्रगति का बैकअप आज हो गया ☁️', 'Progress backed up today ☁️')
+                          : context.tr('बैकअप ${today() - p.backupDay!} दिन पुराना', 'Backup ${today() - p.backupDay!} days old')),
+                  trailing: Row(mainAxisSize: MainAxisSize.min, children: [
+                    IconButton(
+                      tooltip: context.tr('अभी बैकअप करें', 'Back up now'),
+                      icon: Icon(Icons.cloud_upload_outlined, color: BrandColors.skyOn(context)),
+                      onPressed: () async {
+                        HapticFeedback.selectionClick();
+                        final ok = await ProgressBackup.upload(p);
+                        if (!context.mounted) return;
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text(ok
+                                ? context.tr('बैकअप हो गया ☁️', 'Backed up ☁️')
+                                : context.tr('बैकअप नहीं हो सका — इंटरनेट देखें', "Couldn't back up — check your connection"))));
+                      },
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        HapticFeedback.selectionClick();
+                        AuthService.signOut();
+                      },
+                      child: Text(context.tr('साइन आउट', 'Sign out')),
+                    ),
+                  ]),
                 ),
         );
       },
@@ -634,5 +655,37 @@ class _AdFreeCardState extends State<_AdFreeCard> {
         ),
       ),
     );
+  }
+}
+
+/// Right after sign-in: if the cloud holds clearly more progress than this phone (a reinstall, a new
+/// phone), offer to bring it back; otherwise push this phone's progress up as the new backup.
+Future<void> _offerRestore(BuildContext context, Progress p) async {
+  final backup = await ProgressBackup.fetch();
+  if (!context.mounted) return;
+  if (backup == null || !ProgressBackup.isBetter(backup, p)) {
+    ProgressBackup.upload(p);
+    return;
+  }
+  final restore = await showDialog<bool>(
+    context: context,
+    builder: (ctx) => AlertDialog(
+      title: Text(ctx.tr('पुरानी प्रगति मिली ☁️', 'Earlier progress found ☁️')),
+      content: Text(ctx.tr(
+          'इस Google खाते में ${backup.xp} XP, ${backup.answered} हल किए प्रश्न और ${backup.streak} दिन की स्ट्रीक सुरक्षित है। इस फ़ोन की प्रगति उससे बदल दें?',
+          'This Google account has ${backup.xp} XP, ${backup.answered} questions answered and a ${backup.streak}-day streak saved. Replace this phone\'s progress with it?')),
+      actions: [
+        TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(ctx.tr('नहीं, यही रखें', 'No, keep this')) ),
+        FilledButton(onPressed: () => Navigator.pop(ctx, true), child: Text(ctx.tr('हाँ, वापस लाएँ', 'Yes, restore'))),
+      ],
+    ),
+  );
+  if (restore == true) {
+    p.restoreFrom(backup.json);
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('प्रगति वापस आ गई 🎉', 'Progress restored 🎉'))));
+    }
+  } else {
+    ProgressBackup.upload(p);
   }
 }
