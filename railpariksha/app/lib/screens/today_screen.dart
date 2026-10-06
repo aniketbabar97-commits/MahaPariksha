@@ -301,6 +301,8 @@ class TodayScreen extends StatelessWidget {
           ),
           ),
         ),
+        const SizedBox(height: 12),
+        _MissionCard(p: p),
         if (weakest != null && weakestName != null) ...[
           const SizedBox(height: 12),
           // Names the single weakest topic (not just a count): a concrete "fix this
@@ -643,6 +645,110 @@ class _ResumeMockCard extends StatelessWidget {
           );
           if (ok == true && context.mounted) context.scope.progress.setPausedMock(null);
         },
+      ),
+    );
+  }
+}
+
+/// Today's mission: three small, concrete items that together make a complete study day. A
+/// streak needs a reason to exist; "did I do my three things" is one a student can answer.
+class _MissionCard extends StatelessWidget {
+  final Progress p;
+  const _MissionCard({required this.p});
+
+  @override
+  Widget build(BuildContext context) {
+    final s = context.scope;
+    final exam = s.builder.exam;
+    final qDone = p.todayCount >= p.dailyGoal;
+    final cDone = p.cardsReviewedToday >= 5;
+    final caDone = p.caReadToday;
+    final done = [qDone, cDone, caDone].where((d) => d).length;
+    final allDone = done == 3;
+    final color = allDone ? BrandColors.correct : BrandColors.saffron;
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 6),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Row(children: [
+            Icon(allDone ? Icons.emoji_events : Icons.flag, color: BrandColors.readable(context, color, min: 3), size: 20),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                allDone ? context.tr('आज का मिशन पूरा! 🎉', "Today's mission done! 🎉") : context.tr('आज का मिशन', "Today's mission"),
+                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+              ),
+            ),
+            Text('$done/3', style: TextStyle(fontWeight: FontWeight.w800, color: BrandColors.readable(context, color))),
+          ]),
+          const SizedBox(height: 4),
+          _MissionRow(
+            done: qDone,
+            label: context.tr('${p.dailyGoal} प्रश्न हल करें', 'Solve ${p.dailyGoal} questions'),
+            progress: '${p.todayCount.clamp(0, p.dailyGoal)}/${p.dailyGoal}',
+            onTap: exam == null
+                ? null
+                : () {
+                    final subs = s.repo.subjectsFor(exam);
+                    if (subs.isEmpty) return;
+                    HapticFeedback.selectionClick();
+                    startQuiz(context, s.builder.practice(subject: subs.first.id));
+                  },
+          ),
+          _MissionRow(
+            done: cDone,
+            label: context.tr('5 फ्लैशकार्ड दोहराएं', 'Review 5 flashcards'),
+            progress: '${p.cardsReviewedToday.clamp(0, 5)}/5',
+            onTap: () {
+              HapticFeedback.selectionClick();
+              push(context, (_) => const FlashcardScreen());
+            },
+          ),
+          _MissionRow(
+            done: caDone,
+            label: context.tr('आज का करेंट अफेयर्स पढ़ें', "Read today's current affairs"),
+            progress: caDone ? '1/1' : '0/1',
+            onTap: () {
+              HapticFeedback.selectionClick();
+              push(context, (_) => const CaDigestScreen());
+            },
+          ),
+        ]),
+      ),
+    );
+  }
+}
+
+class _MissionRow extends StatelessWidget {
+  final bool done;
+  final String label;
+  final String progress;
+  final VoidCallback? onTap;
+  const _MissionRow({required this.done, required this.label, required this.progress, this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    final hint = Theme.of(context).hintColor;
+    return InkWell(
+      onTap: done ? null : onTap,
+      borderRadius: BorderRadius.circular(10),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 13),
+        child: Row(children: [
+          Icon(done ? Icons.check_circle : Icons.radio_button_unchecked,
+              color: done ? BrandColors.readable(context, BrandColors.correct, min: 3) : hint, size: 22),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(label,
+                style: TextStyle(
+                    fontSize: 14.5,
+                    color: done ? hint : null,
+                    decoration: done ? TextDecoration.lineThrough : null)),
+          ),
+          const SizedBox(width: 8),
+          Text(progress, style: TextStyle(color: hint, fontWeight: FontWeight.w700, fontSize: 13)),
+          if (!done && onTap != null) ...[const SizedBox(width: 4), Icon(Icons.chevron_right, color: hint, size: 20)],
+        ]),
       ),
     );
   }

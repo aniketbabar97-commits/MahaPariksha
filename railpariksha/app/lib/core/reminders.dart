@@ -72,6 +72,16 @@ Future<void> applyReminders(Progress p) async {
     body: morning.$2,
   );
 
+  // The day's current affairs land in the app each morning (over-the-air feed); the digest is the
+  // app's daily-habit hook, so it gets its own nudge an hour after the morning reminder.
+  await RailParikshaNotifications.scheduleDaily(
+    id: 5,
+    hour: (p.reminderHour + 1) % 24,
+    title: _tr(p, 'आज का करेंट अफेयर्स तैयार है 📰', "Today's current affairs are ready 📰"),
+    body: _tr(p, 'रेलवे परीक्षा के लिए आज की ज़रूरी खबरें — 2 मिनट में पढ़ें।',
+        "Today's must-know news for the railway exams — a 2-minute read."),
+  );
+
   final eveningHour = (p.reminderHour + 12) % 24;
   final evening = _eveningMessage(p, days);
   await RailParikshaNotifications.scheduleDaily(

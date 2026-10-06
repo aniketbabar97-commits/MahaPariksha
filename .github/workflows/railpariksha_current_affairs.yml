@@ -45,6 +45,14 @@ jobs:
       # The app downloads this small feed on launch, so merging this PR is what publishes the day's digest.
       - if: steps.keys.outputs.have == 'true'
         run: python pipeline/build_ca_feed.py
+      # Daily post for the Telegram channel (and the same text for WhatsApp / a YouTube Short). Posts
+      # only when the owner has set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID; otherwise just prints it.
+      - if: steps.keys.outputs.have == 'true'
+        continue-on-error: true
+        run: python pipeline/ca_post.py --telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       - if: steps.keys.outputs.have == 'true'
         id: cpr
         uses: peter-evans/create-pull-request@v7
