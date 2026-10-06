@@ -410,7 +410,8 @@ class _ReelOption extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
               child: Row(children: [
-                CircleAvatar(radius: 14, backgroundColor: Colors.white24, child: Text(label, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800))),
+                // A dark tint under the letter: white on a white-tinted circle over the gradient was 2.99:1.
+                CircleAvatar(radius: 14, backgroundColor: Colors.black26, child: Text(label, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800))),
                 const SizedBox(width: 12),
                 // Bold: white on the option tint over the blue gradient measures 4.47:1, a hair under AA
                 // for regular text; bold 16 px counts as large text (3:1) and reads better on a reel anyway.
