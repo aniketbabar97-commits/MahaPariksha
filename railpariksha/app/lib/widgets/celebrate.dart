@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:in_app_review/in_app_review.dart';
 import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -59,6 +60,19 @@ Future<void> celebrate(BuildContext context, Reward r) async {
     transitionBuilder: (ctx, a, _, child) =>
         ScaleTransition(scale: CurvedAnimation(parent: a, curve: Curves.elasticOut), child: child),
   );
+  // Ask for a Play rating right after a level-up or a 7-day-plus streak lands: the student has
+  // just celebrated, nothing was interrupted, and no ad is on screen. Throttled in Progress.
+  if ((r.levelUp || (r.streakMilestone ?? 0) >= 7) && context.mounted && p.shouldAskForReviewAfterMilestone()) {
+    try {
+      final review = InAppReview.instance;
+      if (await review.isAvailable()) {
+        p.markReviewAsked();
+        await review.requestReview();
+      }
+    } catch (_) {
+      // No Play services: a rating ask is optional.
+    }
+  }
 }
 
 class _CelebrationDialog extends StatefulWidget {

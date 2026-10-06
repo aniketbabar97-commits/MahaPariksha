@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../data/models.dart';
 import '../core/theme.dart';
@@ -596,6 +597,7 @@ class _AdFreeCardState extends State<_AdFreeCard> {
     HapticFeedback.selectionClick();
     final shown = RewardedAdManager.showIfReady(onReward: () {
       widget.p.grantAdFreeHour();
+      Analytics.log('ad_free_hour_claimed');
       if (mounted) setState(() {});
     });
     if (!shown) {

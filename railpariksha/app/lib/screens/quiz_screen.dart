@@ -923,6 +923,8 @@ class _Explanation extends StatelessWidget {
     );
     if (reason == null || !context.mounted) return;
     context.scope.progress.report(q.id);
+    // Reports reach the owner through Analytics (question id), so a bad key gets fixed for everyone.
+    Analytics.log('question_reported', {'id': q.id, 'pyq': q.pyq != null});
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(context.tr('धन्यवाद! यह प्रश्न समीक्षा के लिए छिपा दिया गया है।', 'Thanks! This question is hidden for review.')),
       action: SnackBarAction(
