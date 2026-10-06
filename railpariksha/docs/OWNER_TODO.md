@@ -30,3 +30,12 @@ Kept in the repo so it travels with the project. Tick items off as you go.
 - [ ] **Replace the model's guesses with real numbers.** Compare real eCPMs and ads per user from
       AdMob against `docs/UX_ADS_GROWTH_AUDIT.md` section 4 and re-run the 10 lakh / 180-day
       estimate.
+
+## Telegram channel (daily current affairs, automatic)
+1. Create a public channel, e.g. `@RailPariksha` (Telegram → New Channel). Pin the Play link in the description.
+2. Create a bot with @BotFather (`/newbot`); copy the token.
+3. Add the bot to the channel as an **admin** with "Post messages".
+4. GitHub → repo Settings → Secrets → Actions: add `TELEGRAM_BOT_TOKEN` (the token) and `TELEGRAM_CHAT_ID` (`@RailPariksha`).
+5. From the next morning the daily workflow posts the day's digest + one quiz question there by itself
+   (`pipeline/ca_post.py`). The same text works for a WhatsApp Channel; `--out dir` also writes a 60-second
+   YouTube Shorts script (`shorts.txt`).
