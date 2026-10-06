@@ -30,6 +30,8 @@ import 'package:railpariksha/screens/onboarding.dart';
 import 'package:railpariksha/screens/practice_screen.dart';
 import 'package:railpariksha/screens/progress_screen.dart';
 import 'package:railpariksha/screens/pyq_screen.dart';
+import 'package:railpariksha/widgets/celebrate.dart';
+import 'package:railpariksha/screens/reel_screen.dart';
 import 'package:railpariksha/screens/quiz_screen.dart';
 import 'package:railpariksha/screens/results_screen.dart';
 import 'package:railpariksha/screens/revise_screen.dart';
@@ -102,6 +104,11 @@ void main() {
     'Quiz (practice)': (r, p) => QuizScreen(spec: QuizBuilder(r, p).practice(subject: 'maths', topic: 'percentage')),
     'Quiz (mock)': (r, p) => QuizScreen(spec: QuizBuilder(r, p).mock()),
     'Beast Mode': (r, p) => BeastModeScreen(spec: QuizBuilder(r, p).beast(seconds: 60), seconds: 60),
+    'Reel': (r, p) => const ReelScreen(),
+    // Dialogs the app draws itself (Play's rating sheet and the Material date picker are not ours).
+    'Celebration (level up)': (r, p) => _Popup((ctx) => celebrate(ctx, const Reward(50, levelUp: true))),
+    'Celebration (streak)': (r, p) => _Popup((ctx) => celebrate(ctx, const Reward(20, streakMilestone: 7))),
+    'PYQ unlock dialog': (r, p) => _Popup((ctx) => withPyqAccess(ctx, () {})),
     // The two on-demand PYQ states (not reachable with the full pack bundled in tests).
     'PYQ download (loading)': (r, p) {
       pyqRepo.downloading.value = 'rrb_group_d_cbt_2025.json';
@@ -217,4 +224,27 @@ void main() {
       });
     }
   }
+}
+
+/// A screen that opens one of the app's own dialogs right after its first frame, so the matrix
+/// can audit the dialog (overflow, contrast, tap targets) like any other screen.
+class _Popup extends StatefulWidget {
+  final Future<void> Function(BuildContext) open;
+  const _Popup(this.open);
+
+  @override
+  State<_Popup> createState() => _PopupState();
+}
+
+class _PopupState extends State<_Popup> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) widget.open(context);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(appBar: AppBar(title: const Text('RailPariksha')));
 }
