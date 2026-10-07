@@ -82,7 +82,10 @@ class RailParikshaApp extends StatelessWidget {
       // Still respects the user's preference, just keeps it from breaking layout.
       builder: (context, child) => MediaQuery(
         data: MediaQuery.of(context).copyWith(
-          textScaler: MediaQuery.textScalerOf(context).clamp(minScaleFactor: 0.85, maxScaleFactor: 1.3),
+          // The in-app size (Me > Text size) multiplies the phone's setting; the result stays inside
+          // the same 0.85-1.3 band every layout is tested against.
+          textScaler: TextScaler.linear(
+              (MediaQuery.textScalerOf(context).scale(1) * p.textBoost).clamp(0.85, 1.3)),
         ),
         child: child!,
       ),
