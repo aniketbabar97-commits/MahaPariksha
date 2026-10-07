@@ -2,6 +2,23 @@
 
 Kept in the repo so it travels with the project. Tick items off as you go.
 
+## Shipping checklist (in order)
+1. **Firestore rules:** paste `railpariksha/firestore.rules` into Firebase Console → Firestore → Rules → Publish
+   (the backup rule was tightened after the first version, so re-publish even if you did it before).
+2. **Install the latest release build** from the Actions run (artifact `railpariksha-release-build`) and check:
+   a Hindi PYQ paper reads cleanly, an RPF question shows a real explanation, Me → Text size changes the
+   size, Google sign-in offers a restore on a reinstall, and search finds Hinglish ("railway" typed in Latin
+   for a Hindi question).
+3. **Play Console:** privacy policy URL, Data safety, Ads declaration and the new listing text (items above).
+4. **Store screenshots:** upload the seven files in `docs/store/play_console_assets/screenshots/`
+   (they are already framed with Hindi headlines; regenerate with `docs/store/tools/` after UI changes).
+5. **Release track:** promote the build the way you prefer; builds are dispatched to the *internal* track and
+   nothing is uploaded to Alpha automatically.
+
+Questions that still show the plain "Correct answer (official answer key)" line are the ones where an
+independent solve disagreed with the key or could not confirm a fact. They deliberately keep the official
+key; the list is in `pipeline/pyq/explanations/*.flags.jsonl` if you ever want to review them.
+
 ## Before the next Play Store release
 - [ ] **Publish the updated privacy policy.** Source: `docs/store/PRIVACY_POLICY_for_google_doc.md`
       (new "Usage analytics" paragraph in English and Hindi). It must be live before the release
