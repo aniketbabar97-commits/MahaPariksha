@@ -681,9 +681,12 @@ Future<void> _offerRestore(BuildContext context, Progress p) async {
     ),
   );
   if (restore == true) {
-    p.restoreFrom(backup.json);
+    final ok = p.restoreFrom(backup.json);
     if (context.mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(context.tr('प्रगति वापस आ गई 🎉', 'Progress restored 🎉'))));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          content: Text(ok
+              ? context.tr('प्रगति वापस आ गई 🎉', 'Progress restored 🎉')
+              : context.tr('बैकअप पढ़ा नहीं जा सका, इस फ़ोन की प्रगति रखी गई', "Couldn't read the backup, kept this phone's progress"))));
     }
   } else {
     ProgressBackup.upload(p);
