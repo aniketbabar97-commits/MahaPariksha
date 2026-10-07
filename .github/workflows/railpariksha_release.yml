@@ -52,8 +52,8 @@ jobs:
           printf 'storeFile=../upload.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' "$STORE_PW" "$ALIAS" "$KEY_PW" > android/key.properties
       - name: Version from run number
         run: echo "BUILD_NUMBER=$((100 + ${{ github.run_number }}))" >> $GITHUB_ENV
-      - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
-      - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false
+      - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false --dart-define=TELEGRAM_URL=${{ vars.TELEGRAM_URL }}
+      - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false --dart-define=TELEGRAM_URL=${{ vars.TELEGRAM_URL }}
       # Hard gate: a build that fails to even launch must never reach a GitHub
       # release or the Play Store, regardless of how the tag got pushed. v1.0.0
       # shipped a build that crashed on every launch (R8 stripped a class

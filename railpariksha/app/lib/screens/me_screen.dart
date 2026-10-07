@@ -7,6 +7,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../widgets/ad_free_card.dart';
+import '../core/analytics.dart';
 import '../core/app_scope.dart';
 import '../data/models.dart';
 import '../core/theme.dart';
@@ -254,6 +255,17 @@ class MeScreen extends StatelessWidget {
                 }
               },
             ),
+            if (kTelegramUrl.startsWith('https://'))
+              ListTile(
+                leading: Icon(Icons.send, color: BrandColors.skyOn(context)),
+                title: Text(context.tr('टेलीग्राम चैनल जुड़ें ✈️', 'Join our Telegram channel ✈️')),
+                subtitle: Text(context.tr('रोज़ करेंट अफेयर्स, क्विज़ और फ़ैक्ट — मुफ़्त', 'Daily current affairs, quizzes and facts, free')),
+                onTap: () {
+                  HapticFeedback.selectionClick();
+                  Analytics.log('telegram_open');
+                  launchUrl(Uri.parse(kTelegramUrl), mode: LaunchMode.externalApplication);
+                },
+              ),
             ListTile(
               leading: Icon(Icons.star_rate, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
               title: Text(context.tr('ऐप को रेटिंग दें ⭐', 'Rate the app ⭐')),

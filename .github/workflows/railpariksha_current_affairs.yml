@@ -45,11 +45,14 @@ jobs:
       # The app downloads this small feed on launch, so merging this PR is what publishes the day's digest.
       - if: steps.keys.outputs.have == 'true'
         run: python pipeline/build_ca_feed.py
-      # Daily post for the Telegram channel (and the same text for WhatsApp / a YouTube Short). Posts
-      # only when the owner has set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID; otherwise just prints it.
+      # The morning post for the Telegram channel: a picture card with the day's stories, then a quiz poll. The
+      # rest of the day's posts (polls, flashcards, tips) run from railpariksha_telegram.yml. Posts only when
+      # the owner has set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID; otherwise it does nothing.
+      - if: steps.keys.outputs.have == 'true'
+        run: sudo apt-get install -y --no-install-recommends libraqm0 || true
       - if: steps.keys.outputs.have == 'true'
         continue-on-error: true
-        run: python pipeline/ca_post.py --telegram
+        run: python pipeline/telegram_bot.py --slot ca
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

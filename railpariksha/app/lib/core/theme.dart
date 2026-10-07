@@ -8,6 +8,10 @@ import 'package:flutter/material.dart';
 /// actually install the app, silently capping the value of every share.
 const kPlayUrl = 'https://play.google.com/store/apps/details?id=app.railpariksha';
 
+/// The RailPariksha Telegram channel, set at build time (--dart-define=TELEGRAM_URL=https://t.me/...). Empty hides
+/// every "join our channel" prompt, so nothing dead ever shows before the channel exists.
+const kTelegramUrl = String.fromEnvironment('TELEGRAM_URL');
+
 /// Shared spacing scale so padding/gaps stay consistent instead of scattering
 /// magic numbers across screens. Use these for new/updated layout code.
 class Spacing {

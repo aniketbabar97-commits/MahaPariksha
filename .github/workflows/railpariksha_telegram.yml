@@ -1,0 +1,65 @@
+# Posts the RailPariksha Telegram channel's daily schedule (quiz polls, flashcards and cheat sheets, a study
+# tip, the Sunday recap). The morning current-affairs card is posted by the daily current-affairs workflow, right
+# after the day's feed is built. Everything comes from content already in the repo; see pipeline/telegram_bot.py.
+# The owner's only work: create the channel, add the bot as an admin (post, pin, change channel info), and set the
+# secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID. Without them every run ends quietly.
+name: RailPariksha Telegram
+on:
+  schedule:
+    - cron: "30 2 * * *"   # 08:00 IST  quiz poll (maths / reasoning)
+    - cron: "30 5 * * *"   # 11:00 IST  flashcard or cheat sheet
+    - cron: "0 8 * * *"    # 13:30 IST  quiz poll (science / railway GK / computer)
+    - cron: "30 11 * * *"  # 17:00 IST  study tip and the app link
+    - cron: "30 14 * * *"  # 20:00 IST  quiz poll (general knowledge / railway GK)
+    - cron: "30 13 * * 0"  # Sunday 19:00 IST  the week's current affairs
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: Which post to send now
+        type: choice
+        default: announce
+        options: [announce, setup, ca, poll_morning, fact, poll_noon, tip, poll_evening, weekly]
+      text:
+        description: Text for "announce" (plain text, sent as written)
+        required: false
+
+permissions:
+  contents: read
+
+# Posts must not overlap or be cancelled halfway.
+concurrency:
+  group: railpariksha-telegram
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - id: slot
+        run: |
+          case "${{ github.event.schedule }}" in
+            "30 2 * * *")  s=poll_morning ;;
+            "30 5 * * *")  s=fact ;;
+            "0 8 * * *")   s=poll_noon ;;
+            "30 11 * * *") s=tip ;;
+            "30 14 * * *") s=poll_evening ;;
+            "30 13 * * 0") s=weekly ;;
+            *)             s="${{ github.event.inputs.slot }}" ;;
+          esac
+          echo "slot=$s" >> "$GITHUB_OUTPUT"
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then echo "have=true" >> "$GITHUB_OUTPUT"
+          else echo "::notice::TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set; nothing to post."; fi
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      - if: steps.slot.outputs.have == 'true'
+        uses: actions/checkout@v4
+      - if: steps.slot.outputs.have == 'true'
+        uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - if: steps.slot.outputs.have == 'true'
+        run: python railpariksha/pipeline/telegram_bot.py --slot "${{ steps.slot.outputs.slot }}" ${ANNOUNCE:+--text "$ANNOUNCE"}
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANNOUNCE: ${{ github.event.inputs.text }}
