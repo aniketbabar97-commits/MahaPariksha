@@ -13,6 +13,10 @@ The first explanation pass (explain.py) solved from memory, so 2025-2026 current
       -> writes the stored explanations into content/pyq/*.json
 
 Nothing here changes an answer key.
+
+Budget: the search tool allows about 200 searches per turn, shared by every agent in that turn, and a question
+costs about 1 to 2 searches. Run 4 batches of 40 per turn, not 10: agents that hit the limit mark the rest
+"not searched", which ingest keeps eligible for the next run (about 1,500 factual questions are still waiting).
 """
 import argparse
 import json
@@ -32,6 +36,8 @@ DEV = re.compile(r"[ऀ-ॿ]")
 FACT_SUBJECTS = ("gk", "railway_gk", "current_affairs", "science", "computer")
 SKIP_NOTE = re.compile(r"missing|figure|image|diagram|truncat|ambig", re.I)
 INSTRUCTIONS = HERE / "web_verify_instructions.md"
+# An agent that ran out of search budget marks the rest "unconfirmed"; those were never searched and must stay eligible.
+NOT_SEARCHED = re.compile(r"budget|never searched|not searched|did not search|no search|unsearched|ran out", re.I)
 
 
 def checked():
@@ -121,6 +127,9 @@ def ingest(a):
                         f.write(json.dumps({"k": k, "q": s["q"], "key_text": s["o"][s["key"]], "source": r.get("source", ""),
                                             "found": r.get("found", "")}, ensure_ascii=False) + "\n")
                     stats["contradicted (key kept)"] += 1
+                elif NOT_SEARCHED.search(r.get("found", "")):
+                    stats["not searched (stays eligible)"] += 1
+                    continue
                 else:
                     stats["unconfirmed"] += 1
                 if verdict != "confirmed":
