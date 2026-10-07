@@ -26,8 +26,14 @@ class ProgressBackup {
 
   static String encode(Map<String, dynamic> json) => base64Encode(gzip.encode(utf8.encode(jsonEncode(json))));
 
-  static Map<String, dynamic> decode(String blob) =>
-      jsonDecode(utf8.decode(gzip.decode(base64Decode(blob)))) as Map<String, dynamic>;
+  /// Hard cap on the inflated size so a corrupt or hostile blob can't exhaust memory.
+  static const maxInflatedBytes = 8 * 1024 * 1024;
+
+  static Map<String, dynamic> decode(String blob) {
+    final bytes = gzip.decode(base64Decode(blob));
+    if (bytes.length > maxInflatedBytes) throw const FormatException('backup too large');
+    return jsonDecode(utf8.decode(bytes)) as Map<String, dynamic>;
+  }
 
   /// Uploads now. False when not signed in, too large, or the write failed.
   static Future<bool> upload(Progress p) async {

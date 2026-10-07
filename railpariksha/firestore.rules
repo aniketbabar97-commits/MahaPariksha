@@ -25,8 +25,10 @@ service cloud.firestore {
 
     // Progress backup (Google sign-in required): each user reads/writes only their own document,
     // and only in the shape the app writes (see lib/logic/progress_backup.dart).
+    // (Rules are OR-ed, so there is deliberately no blanket `allow write` here: a create or
+    // update must pass the shape check below, and only the owner may read or delete.)
     match /users/{uid}/backup/progress {
-      allow read, write: if request.auth != null && request.auth.uid == uid;
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
       allow create, update: if request.auth != null && request.auth.uid == uid
                    && request.resource.data.keys().hasOnly(['v', 'gz', 'xp', 'answered', 'streak', 'at'])
                    && request.resource.data.gz is string

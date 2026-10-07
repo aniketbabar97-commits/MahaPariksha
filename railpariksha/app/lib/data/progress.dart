@@ -340,10 +340,19 @@ class Progress extends ChangeNotifier {
   Map<String, dynamic> toJson() => _toJson();
 
   /// Replaces this phone's progress with a backup (see ProgressBackup); settings included.
-  void restoreFrom(Map<String, dynamic> j) {
-    _fromJson(j);
+  /// Replaces this phone's progress with a cloud backup. Returns false (and leaves the local
+  /// state untouched) when the backup can't be parsed, so a bad document never half-applies.
+  bool restoreFrom(Map<String, dynamic> j) {
+    final before = _toJson();
+    try {
+      _fromJson(j);
+    } catch (_) {
+      _fromJson(before);
+      return false;
+    }
     save();
     notifyListeners();
+    return true;
   }
 
   /// Day of the last successful cloud backup; null when never backed up.
