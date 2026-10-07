@@ -54,14 +54,12 @@ once the updated `firestore.rules` are published. See `docs/PYQ_KEY_REVIEW.md` f
       AdMob against `docs/UX_ADS_GROWTH_AUDIT.md` section 4 and re-run the 10 lakh / 180-day
       estimate.
 
-## Telegram channel (daily current affairs, automatic)
-1. Create a public channel, e.g. `@RailPariksha` (Telegram → New Channel). Pin the Play link in the description.
-2. Create a bot with @BotFather (`/newbot`); copy the token.
-3. Add the bot to the channel as an **admin** with "Post messages".
-4. GitHub → repo Settings → Secrets → Actions: add `TELEGRAM_BOT_TOKEN` (the token) and `TELEGRAM_CHAT_ID` (`@RailPariksha`).
-5. From the next morning the daily workflow posts the day's digest + one quiz question there by itself
-   (`pipeline/ca_post.py`). The same text works for a WhatsApp Channel; `--out dir` also writes a 60-second
-   YouTube Shorts script (`shorts.txt`).
+## Telegram channel (fully automatic once set up)
+Create the channel and the bot, add the bot as an admin (post, pin, change info), and set the GitHub secrets
+`TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`. Optional variable `TELEGRAM_URL` adds a join tile to the app.
+From then on the channel posts a picture card + quiz at about 06:50, three PYQ quiz polls, a flashcard or cheat
+sheet, a study tip and a Sunday recap by itself. Steps, schedule and the `announce` slot for your own notices:
+`docs/TELEGRAM.md`.
 
 ## Firestore rules (needed for progress backup/restore)
 Paste the whole of `railpariksha/firestore.rules` into Firebase Console → Firestore Database → Rules → Publish.
