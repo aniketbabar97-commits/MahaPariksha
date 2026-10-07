@@ -216,6 +216,23 @@ class MeScreen extends StatelessWidget {
                 },
               ),
             ),
+            ListTile(
+              leading: Icon(Icons.text_fields, color: BrandColors.skyOn(context)),
+              title: Text(context.tr('अक्षरों का आकार', 'Text size')),
+              trailing: DropdownButton<String>(
+                value: p.textSize,
+                underline: const SizedBox(),
+                items: [
+                  DropdownMenuItem(value: 'normal', child: Text(context.tr('सामान्य', 'Normal'))),
+                  DropdownMenuItem(value: 'large', child: Text(context.tr('बड़ा', 'Large'))),
+                  DropdownMenuItem(value: 'xlarge', child: Text(context.tr('सबसे बड़ा', 'Largest'))),
+                ],
+                onChanged: (v) {
+                  HapticFeedback.selectionClick();
+                  p.update((p) => p.textSize = v ?? 'normal');
+                },
+              ),
+            ),
           ]),
         ),
         SectionTitle(context.tr('RailPariksha परिवार 🫂', 'RailPariksha family 🫂')),

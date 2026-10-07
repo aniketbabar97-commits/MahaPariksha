@@ -172,6 +172,9 @@ class Progress extends ChangeNotifier {
   /// Display name shown on the leaderboard (chosen by the user, not a real identity).
   /// Null until they've set one.
   String? leaderboardName;
+  /// In-app reading size on top of the phone's own setting: 'normal', 'large' or 'xlarge'.
+  String textSize = 'normal';
+  double get textBoost => switch (textSize) { 'large' => 1.12, 'xlarge' => 1.25, _ => 1.0 };
   String theme = 'dark'; // dark is the house look; Light / System stay available in Me
   bool reminders = true;
   int reminderHour = 7;
@@ -298,6 +301,7 @@ class Progress extends ChangeNotifier {
     deviceId = j['deviceId'];
     leaderboardName = j['leaderboardName'];
     theme = j['theme'] ?? 'dark';
+    textSize = (j['textSize'] == 'large' || j['textSize'] == 'xlarge') ? j['textSize'] : 'normal';
     reminders = j['reminders'] ?? true;
     reminderHour = j['reminderHour'] ?? 7;
     streakRiskAlerts = j['streakRiskAlerts'] ?? true;
@@ -369,6 +373,7 @@ class Progress extends ChangeNotifier {
         'deviceId': deviceId,
         'leaderboardName': leaderboardName,
         'theme': theme,
+        'textSize': textSize,
         'reminders': reminders,
         'reminderHour': reminderHour,
         'streakRiskAlerts': streakRiskAlerts,
