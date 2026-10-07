@@ -35,6 +35,16 @@ service cloud.firestore {
                    && request.resource.data.gz.size() <= 950000;
     }
 
+    // Error reports from the quiz screen ("Report an error"): create-only and shape-checked, so a
+    // client can file a report but never read, change or delete anyone's. Read them in the console.
+    match /reports/{reportId} {
+      allow create: if request.resource.data.keys().hasOnly(['qid', 'reason', 'lang', 'pyq', 'at'])
+                   && request.resource.data.qid is string && request.resource.data.qid.size() > 0 && request.resource.data.qid.size() <= 60
+                   && request.resource.data.reason is string && request.resource.data.reason.size() <= 80
+                   && request.resource.data.lang in ['hi', 'en']
+                   && request.resource.data.pyq is bool;
+    }
+
     // Everything else is closed by default (no catch-all allow).
   }
 }

@@ -14,6 +14,10 @@ RailPariksha does not require sign-up or account creation. There is no name, ema
 
 **Usage analytics.** The app uses Google Analytics for Firebase to count anonymous usage events, such as which screen or previous-year paper was opened, whether an ad was shown, and how many questions a quiz had. These events carry no name, email, phone number or question text, and are tied only to a random app-instance ID that Google generates. We use them to find broken or unpopular parts of the app and fix them. Analytics is described in Google's privacy policy (https://policies.google.com/privacy).
 
+**Crash reports.** The app uses Firebase Crashlytics to receive a report when it crashes or stops responding. A report holds technical details only, such as the phone model, Android version, app version and where in the app the error happened. It contains no name, email, phone number or study data, and is used only to find and fix bugs.
+
+**Error reports you send.** If you tap "Report an error" on a question, the app sends the question's ID, the reason you chose and your app language to us so we can check and correct the question. It is not linked to your name or account.
+
 **Advertising.** This app shows ads using Google AdMob, which collects an advertising identifier and some device/usage data to show and measure ads, in line with Google's own privacy policy (https://policies.google.com/privacy).
 
 **Feedback and reporting.** If you choose to report a question or send feedback, your device's email app opens and you decide what to send to us. We do not automatically receive any information from you.
@@ -39,6 +43,10 @@ RailPariksha कोई व्यक्तिगत जानकारी एक�
 **लीडरबोर्ड (वैकल्पिक):** यदि आप लीडरबोर्ड का उपयोग करते हैं, तो ऐप एक रैंडम डिवाइस ID बनाता है (आपका नाम, ईमेल या खाता नहीं) और आपसे एक प्रदर्शन नाम चुनने को कहता है। आपका चुना हुआ नाम, वह रैंडम ID, और आपका मॉक-टेस्ट स्कोर हमारे डेटाबेस (Google Firebase/Firestore) में सहेजा जाता है ताकि अन्य उपयोगकर्ता लीडरबोर्ड देख सकें। यह पूर्णतः वैकल्पिक है।
 
 **उपयोग विश्लेषण:** ऐप Google Analytics for Firebase का उपयोग करके गुमनाम उपयोग-घटनाएँ गिनता है, जैसे कौन-सी स्क्रीन या पिछले वर्ष का प्रश्नपत्र खोला गया, विज्ञापन दिखा या नहीं, और किसी क्विज़ में कितने प्रश्न थे। इन घटनाओं में नाम, ईमेल, फ़ोन नंबर या प्रश्न का पाठ नहीं होता; ये केवल Google द्वारा बनाई गई एक रैंडम ऐप-इंस्टेंस ID से जुड़ी होती हैं। हम इनका उपयोग ऐप की खराब या अलोकप्रिय जगहें खोजकर सुधारने में करते हैं।
+
+**क्रैश रिपोर्ट:** ऐप के क्रैश होने या अटक जाने पर रिपोर्ट पाने के लिए ऐप Firebase Crashlytics का उपयोग करता है। रिपोर्ट में केवल तकनीकी जानकारी होती है, जैसे फ़ोन का मॉडल, Android संस्करण, ऐप संस्करण और ऐप में त्रुटि कहाँ हुई। इसमें आपका नाम, ईमेल, फ़ोन नंबर या पढ़ाई का डेटा नहीं होता; इसका उपयोग केवल बग ठीक करने के लिए होता है।
+
+**आपकी भेजी गलती की रिपोर्ट:** यदि आप किसी प्रश्न पर "गलती बताएं" दबाते हैं, तो प्रश्न की ID, आपका चुना कारण और ऐप की भाषा हमें भेजी जाती है ताकि हम प्रश्न जाँचकर सुधार सकें। यह आपके नाम या खाते से जुड़ी नहीं होती।
 
 यह ऐप Google AdMob के माध्यम से विज्ञापन दिखाता है, जो विज्ञापन दिखाने व मापने के लिए एक विज्ञापन पहचानकर्ता (advertising identifier) और कुछ डिवाइस/उपयोग डेटा एकत्र करता है।
 

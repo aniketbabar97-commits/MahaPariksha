@@ -19,6 +19,11 @@ Questions that still show the plain "Correct answer (official answer key)" line 
 independent solve disagreed with the key or could not confirm a fact. They deliberately keep the official
 key; the list is in `pipeline/pyq/explanations/*.flags.jsonl` if you ever want to review them.
 
+## Reading student error reports
+"Report an error" in the quiz now writes one small record per report to Firestore (Firebase
+Console → Firestore Database → `reports`: question id, reason, language, whether it is a PYQ). It works
+once the updated `firestore.rules` are published. See `docs/PYQ_KEY_REVIEW.md` for how to fix a key.
+
 ## Before the next Play Store release
 - [ ] **Publish the updated privacy policy.** Source: `docs/store/PRIVACY_POLICY_for_google_doc.md`
       (new "Usage analytics" paragraph in English and Hindi). It must be live before the release
@@ -26,6 +31,7 @@ key; the list is in `pipeline/pyq/explanations/*.flags.jsonl` if you ever want t
 - [ ] **Play Console → App content → Data safety.** Declare:
   - *Device or other IDs* (advertising ID, used by AdMob)
   - *App activity → App interactions* (Firebase Analytics; anonymous, not linked to identity)
+  - *App info and performance → Crash logs and Diagnostics* (Firebase Crashlytics; not linked to identity)
   - And the **Ads** declaration: "Yes, my app contains ads".
 - [ ] **Resubmit the store listing** with the new description (disclaimer at the top, Official
       Sources section) to clear the Misleading Claims rejection. Text: `docs/store/play_desc_en.txt`
