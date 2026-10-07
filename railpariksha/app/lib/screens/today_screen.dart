@@ -7,6 +7,7 @@ import '../core/theme.dart';
 import '../core/transitions.dart';
 import '../data/progress.dart';
 import '../logic/quiz_builder.dart';
+import '../widgets/ad_free_card.dart';
 import '../widgets/common.dart';
 import 'beast_mode_screen.dart';
 import 'ca_archive_screen.dart';
@@ -303,6 +304,11 @@ class TodayScreen extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         _MissionCard(p: p),
+        // Opt-in rewarded offer, the best-paying format: one short video buys an hour with no ads.
+        if (!p.premium) ...[
+          const SizedBox(height: 12),
+          AdFreeCard(p: p),
+        ],
         if (weakest != null && weakestName != null) ...[
           const SizedBox(height: 12),
           // Names the single weakest topic (not just a count): a concrete "fix this

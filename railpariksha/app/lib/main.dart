@@ -1,6 +1,10 @@
 import 'dart:async';
 
+import 'dart:ui' show PlatformDispatcher;
+
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -24,6 +28,15 @@ Future<void> main() async {
   // simply no network at startup) must never stop the app from opening.
   try {
     await Firebase.initializeApp();
+    // Crash reports: Flutter errors and anything uncaught on the platform side go to Crashlytics so
+    // Play's "Android vitals" never surprise us. Release builds only; debug stays on the console.
+    if (kReleaseMode) {
+      FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+      PlatformDispatcher.instance.onError = (error, stack) {
+        FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+        return true;
+      };
+    }
   } catch (_) {
     // LeaderboardService checks Firebase.apps before every call, so the
     // leaderboard UI just shows its "unavailable" state instead of throwing.

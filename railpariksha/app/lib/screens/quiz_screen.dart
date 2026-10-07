@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../logic/question_reports.dart';
 import '../core/ads.dart';
 import '../core/analytics.dart';
 import '../core/app_scope.dart';
@@ -925,6 +926,7 @@ class _Explanation extends StatelessWidget {
     context.scope.progress.report(q.id);
     // Reports reach the owner through Analytics (question id), so a bad key gets fixed for everyone.
     Analytics.log('question_reported', {'id': q.id, 'pyq': q.pyq != null});
+    QuestionReports.send(id: q.id, reason: reason, lang: context.scope.progress.lang, pyq: q.pyq != null);
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text(context.tr('धन्यवाद! यह प्रश्न जांच के लिए हटा दिया गया है।', 'Thanks! This question is hidden for review.')),
       action: SnackBarAction(

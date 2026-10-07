@@ -13,6 +13,7 @@ plugins {
     // Reads google-services.json (committed in this directory) for the leaderboard
     // backend's Firestore config.
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
