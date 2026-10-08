@@ -18,7 +18,7 @@ on:
         description: Which post to send now
         type: choice
         default: announce
-        options: [announce, setup, ca, poll_morning, fact, poll_noon, tip, poll_evening, weekly]
+        options: [announce, setup, refresh, ca, poll_morning, fact, poll_noon, tip, poll_evening, weekly]
       text:
         description: Text for "announce" (plain text, sent as written)
         required: false

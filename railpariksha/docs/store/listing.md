@@ -14,7 +14,7 @@
 **Full description:**
 ⚠️ DISCLAIMER: RailPariksha is an independent educational app. It is NOT a government app and does NOT represent, and is not affiliated with, Indian Railways, the Railway Recruitment Boards (RRBs), the Railway Protection Force (RPF) or any government body. Exam information in this app is taken from the official sources listed at the end of this description; always confirm notifications, dates and results there.
 
-RailPariksha (रेलपरीक्षा — "train to succeed") is the free, Hindi/English practice companion for every major Indian Railways recruitment exam: RRB NTPC (UG & Graduate), RRB Group D, RRB ALP & Technician, RRB Junior Engineer (JE), RRB Paramedical, RPF Constable and RPF Sub-Inspector (SI). Whether you're preparing for RRB NTPC, RRB Group D, RRB JE or RPF Constable, this RRB exam preparation app builds your practice around your actual exam's syllabus and weightage.
+We are students too, and RailPariksha is built by students, for students. RailPariksha (रेलपरीक्षा — "train to succeed") is the free, Hindi/English practice companion for every major Indian Railways recruitment exam: RRB NTPC (UG & Graduate), RRB Group D, RRB ALP & Technician, RRB Junior Engineer (JE), RRB Paramedical, RPF Constable and RPF Sub-Inspector (SI). Whether you're preparing for RRB NTPC, RRB Group D, RRB JE or RPF Constable, this RRB exam preparation app builds your practice around your actual exam's syllabus and weightage.
 
 WHY ASPIRANTS LOVE RAILPARIKSHA
 • Exam-wise, subject-wise, topic-wise MCQs — Maths, General Intelligence & Reasoning, General Science, General Awareness, Railway GK, Computer & Financial Awareness, English and more
