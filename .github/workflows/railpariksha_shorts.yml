@@ -1,0 +1,45 @@
+# Makes one YouTube Short from a previous-year question, twice a day, and uploads it when the YouTube secrets
+# exist (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN; see railpariksha/docs/YOUTUBE.md). Without them the
+# video is still built and kept as a workflow file, so it can be uploaded by hand. See pipeline/shorts.py.
+name: RailPariksha Shorts
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 09:00 IST
+    - cron: "30 13 * * *"  # 19:00 IST
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: Which slot to make
+        type: choice
+        options: [morning, evening]
+        default: morning
+permissions:
+  contents: read
+concurrency:
+  group: railpariksha-shorts
+  cancel-in-progress: false
+jobs:
+  short:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      TELEGRAM_URL: ${{ vars.TELEGRAM_URL }}
+      SLOT: ${{ github.event.inputs.slot || (github.event.schedule == '30 3 * * *' && 'morning' || 'evening') }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libraqm0
+      - run: pip install -q pillow requests
+      - run: python railpariksha/pipeline/shorts.py --slot "$SLOT" --out short_out
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: short-${{ env.SLOT }}
+          path: short_out/*.mp4
+          retention-days: 7
+          if-no-files-found: ignore

@@ -13,6 +13,7 @@ runs these slots, all in Hindi, all from content already in the repo:
   poll_evening  20:00       quiz poll (general knowledge / railway GK / current affairs)
   weekly        Sun 19:00   the week's current affairs in one post
   announce      manual      posts the text given with --text (the owner's own notices)
+  refresh       manual      rewrites the description and pins a fresh welcome message
   setup         automatic   description + a pinned welcome message; runs by itself when nothing is pinned
 
 Quiz polls carry the real answer and a Hindi explanation (Telegram shows it after a vote), and every
@@ -66,7 +67,7 @@ POLL_SLOTS = {
     "poll_noon": (1, ["science", "reasoning", "railway_gk", "science", "reasoning", "computer", "science"]),
     "poll_evening": (2, ["gk", "railway_gk", "gk", "current_affairs", "gk", "railway_gk", "gk"]),
 }
-SLOTS = ["ca", *POLL_SLOTS, "fact", "tip", "weekly", "announce", "setup"]
+SLOTS = ["ca", *POLL_SLOTS, "fact", "tip", "weekly", "announce", "setup", "refresh"]
 
 GENERIC = re.compile(r"official answer key|आधिकारिक उत्तर कुंजी|published answer key|प्रकाशित उत्तर कुंजी", re.I)
 # Anything that needs a picture, a diagram or a seating layout is skipped: a poll is text only.
@@ -74,19 +75,19 @@ VISUAL = re.compile(
     r"figure|diagram|image|picture|graph|chart|table|venn|mirror|dice|cube|चित्र|आकृति|ग्राफ|तालिका|आरेख|वेन|दर्पण|प्रतिबिंब|पासा", re.I)
 
 WELCOME = (
-    "🚆 <b>RailPariksha: रेलवे परीक्षा की रोज़ की तैयारी</b>\n"
-    "RRB NTPC • Group D • ALP • JE • RPF\n\n"
-    "यहाँ हर दिन मिलेगा:\n"
+    "🚆 <b>नमस्ते दोस्तों! हम भी आप ही की तरह रेलवे की तैयारी कर रहे हैं।</b>\n"
+    "RailPariksha स्टूडेंट्स ने स्टूडेंट्स के लिए बनाया है। कोई कोचिंग नहीं, कोई बड़ा दावा नहीं, बस रोज़ की मेहनत।\n\n"
+    "इस चैनल पर हर दिन:\n"
     "📰 सुबह: आज का करेंट अफेयर्स\n"
     "📝 दिन में 3 क्विज़, असली पिछले साल के प्रश्न (जवाब और व्याख्या के साथ)\n"
     "🧠 फ़ैक्ट, फ़ॉर्मूला और चीट शीट\n"
     "💪 शाम को पढ़ाई की टिप\n\n"
-    f"📲 मुफ़्त ऐप: 45,000+ असली PYQ, हिंदी और अंग्रेज़ी, ऑफलाइन भी\n{PLAY_URL}\n\n"
-    "🔔 नोटिफिकेशन चालू रखें और अपने दोस्तों को शेयर करें।"
+    f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {PLAY_URL}\n\n"
+    "कोई प्रश्न गलत लगे तो ऐप में Report कर दीजिए, हम सुधारते हैं। साथ पढ़ेंगे तो साथ निकलेंगे 🤝"
 )
 DESCRIPTION = (
-    "रेलवे परीक्षा (NTPC, Group D, ALP, JE, RPF) की रोज़ की तैयारी: करेंट अफेयर्स, PYQ क्विज़, फ़ैक्ट। "
-    f"मुफ़्त ऐप: {PLAY_URL}"
+    "हम भी आपकी तरह रेलवे की तैयारी कर रहे स्टूडेंट्स हैं। रोज़: करेंट अफेयर्स, PYQ क्विज़, फ़ैक्ट। "
+    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {PLAY_URL}"
 )
 
 
@@ -487,6 +488,18 @@ class Bot:
         self.sent += 1
         return r
 
+    def refresh_setup(self):
+        """Owner-triggered: overwrite the description and pin a new welcome post."""
+        if self.dry_run:
+            print("[dry-run] refresh: would rewrite the description and pin a new welcome message")
+            return
+        try:
+            self._call("setChatDescription", {"chat_id": self.chat_id, "description": DESCRIPTION[:255]})
+        except TelegramError as e:
+            if "not modified" not in e.description:
+                print(f"::warning::could not set the channel description ({e.description}); give the bot 'Change channel info'")
+        self.message(WELCOME, pin=True)
+
     def ensure_setup(self):
         """Description plus a pinned welcome post, only when the channel has none yet (stateless)."""
         if self.dry_run:
@@ -518,6 +531,9 @@ class Bot:
 def run_slot(bot, slot, day, text=None, out=None):
     if slot == "setup":
         bot.ensure_setup()
+        return
+    if slot == "refresh":
+        bot.refresh_setup()
         return
     if slot == "announce":
         if not text:
