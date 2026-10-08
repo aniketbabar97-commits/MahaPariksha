@@ -278,8 +278,8 @@ class _ResultsScreenState extends State<ResultsScreen> {
                       icon: isSpeed ? Icons.bolt : Icons.emoji_events,
                     ),
                     text: context.tr(
-                        'मैंने RailPariksha ऐप पर $title में $scoreStr अंक हासिल किए! 🔥 आप कितने लाएंगे? $kPlayUrl',
-                        'I scored $scoreStr in $title on RailPariksha! 🔥 Can you beat it? $kPlayUrl'),
+                        'मैंने RailPariksha ऐप पर $title में $scoreStr अंक हासिल किए! 🔥 आप कितने लाएंगे? $kPlayUrl$_tgLine',
+                        'I scored $scoreStr in $title on RailPariksha! 🔥 Can you beat it? $kPlayUrl$_tgLine'),
                   );
                 },
               ),
@@ -525,3 +525,6 @@ class _ReviewTile extends StatelessWidget {
     );
   }
 }
+
+/// Daily free quizzes channel, appended to score shares once the build knows its link.
+String get _tgLine => kTelegramUrl.startsWith('https://') ? '\n$kTelegramUrl' : '';

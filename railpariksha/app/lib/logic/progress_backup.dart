@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart' show compute;
 
 import '../data/progress.dart';
 import 'auth_service.dart';
@@ -35,12 +36,15 @@ class ProgressBackup {
     return jsonDecode(utf8.decode(bytes)) as Map<String, dynamic>;
   }
 
+  static String _encodeIso(Map<String, dynamic> json) => encode(json);
+  static Map<String, dynamic> _decodeIso(String blob) => decode(blob);
+
   /// Uploads now. False when not signed in, too large, or the write failed.
   static Future<bool> upload(Progress p) async {
     final doc = _doc();
     if (doc == null) return false;
     try {
-      final blob = encode(p.toJson());
+      final blob = await compute(_encodeIso, p.toJson());
       if (blob.length > maxBlobBytes) return false;
       await doc.set({
         'v': 1,
@@ -75,7 +79,7 @@ class ProgressBackup {
         xp: (d['xp'] as num?)?.toInt() ?? 0,
         answered: (d['answered'] as num?)?.toInt() ?? 0,
         streak: (d['streak'] as num?)?.toInt() ?? 0,
-        json: decode(d['gz'] as String),
+        json: await compute(_decodeIso, d['gz'] as String),
       );
     } catch (_) {
       return null;
