@@ -206,8 +206,25 @@ class Progress extends ChangeNotifier {
   /// breather; windows don't stack beyond an hour from now.
   void grantAdFreeHour() {
     adFreeUntil = DateTime.now().add(const Duration(hours: 1));
+    adFreeWatched = 0;
     save();
     notifyListeners();
+  }
+
+  /// Videos needed for one ad-free hour, and how many of them are already watched.
+  static const adFreeVideosNeeded = 3;
+  int adFreeWatched = 0;
+
+  /// Counts one finished video; the third one grants the hour. True when the hour was granted.
+  bool countAdFreeVideo() {
+    adFreeWatched++;
+    if (adFreeWatched >= adFreeVideosNeeded) {
+      grantAdFreeHour();
+      return true;
+    }
+    save();
+    notifyListeners();
+    return false;
   }
 
   /// Day the Current Affairs digest was last opened, for the Today mission.
@@ -307,6 +324,7 @@ class Progress extends ChangeNotifier {
     streakRiskAlerts = j['streakRiskAlerts'] ?? true;
     _removedAds = j['removedAds'] ?? false;
     adFreeUntil = j['adFreeUntil'] == null ? null : DateTime.tryParse(j['adFreeUntil']);
+    adFreeWatched = ((j['adFreeWatched'] as num?)?.toInt() ?? 0).clamp(0, adFreeVideosNeeded - 1);
     caReadDay = j['caReadDay'];
     _cardsDay = j['cardsDay'];
     _cardsToday = j['cardsToday'] ?? 0;
@@ -379,6 +397,7 @@ class Progress extends ChangeNotifier {
         'streakRiskAlerts': streakRiskAlerts,
         'removedAds': _removedAds,
         if (adFreeUntil != null) 'adFreeUntil': adFreeUntil!.toIso8601String(),
+        if (adFreeWatched > 0) 'adFreeWatched': adFreeWatched,
         if (caReadDay != null) 'caReadDay': caReadDay,
         if (_cardsDay != null) 'cardsDay': _cardsDay,
         'cardsToday': _cardsToday,

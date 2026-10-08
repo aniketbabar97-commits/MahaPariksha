@@ -41,8 +41,7 @@ class AdFreeCardState extends State<AdFreeCard> {
   void _watch() {
     HapticFeedback.selectionClick();
     final shown = RewardedAdManager.showIfReady(onReward: () {
-      widget.p.grantAdFreeHour();
-      Analytics.log('ad_free_hour_claimed');
+      if (widget.p.countAdFreeVideo()) Analytics.log('ad_free_hour_claimed');
       if (mounted) setState(() {});
     });
     if (!shown) {
@@ -70,7 +69,9 @@ class AdFreeCardState extends State<AdFreeCard> {
       child: ListTile(
         leading: Icon(Icons.play_circle_fill, color: BrandColors.readable(context, BrandColors.saffron, min: 3)),
         title: Text(context.tr('1 घंटा बिना विज्ञापन', '1 hour ad-free'), maxLines: 2, overflow: TextOverflow.ellipsis),
-        subtitle: Text(context.tr('एक छोटा वीडियो देखें, 60 मिनट बिना रुकावट पढ़ें', 'Watch one short video, study 60 minutes uninterrupted'),
+        subtitle: Text(
+            context.tr('3 छोटे वीडियो देखें (${p.adFreeWatched}/3), फिर 60 मिनट बिना रुकावट पढ़ें',
+                'Watch 3 short videos (${p.adFreeWatched}/3), then study 60 minutes uninterrupted'),
             maxLines: 2, overflow: TextOverflow.ellipsis),
         trailing: FilledButton(
           style: FilledButton.styleFrom(minimumSize: const Size(64, 36)),

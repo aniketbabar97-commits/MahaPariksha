@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../core/ads.dart';
 import '../core/app_scope.dart';
 import '../core/reminders.dart';
 import '../widgets/bottom_nav.dart';
@@ -66,11 +65,8 @@ class _HomeShellState extends State<HomeShell> with WidgetsBindingObserver {
     ];
     return Scaffold(
       body: SafeArea(bottom: false, child: IndexedStack(index: index, children: pages)),
-      // A banner sits above the tab bar on every main tab, so each screen of the app carries an ad.
-      bottomNavigationBar: Column(mainAxisSize: MainAxisSize.min, children: [
-        const AdSlot(),
-        RpBottomNav(index: index, items: items, onTap: goTo),
-      ]),
+      // No banner pinned above the tab bar: ads live inside the scrolling screens only.
+      bottomNavigationBar: RpBottomNav(index: index, items: items, onTap: goTo),
     );
   }
 }
