@@ -50,8 +50,10 @@ jobs:
           if [ -z "$KEYSTORE" ]; then echo "::error::ANDROID_KEYSTORE_BASE64 secret missing"; exit 1; fi
           echo "$KEYSTORE" | base64 -d > android/upload.jks
           printf 'storeFile=../upload.jks\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' "$STORE_PW" "$ALIAS" "$KEY_PW" > android/key.properties
-      - name: Version from run number
-        run: echo "BUILD_NUMBER=$((100 + ${{ github.run_number }}))" >> $GITHUB_ENV
+      # Play rejects a version code it has ever seen (run_number alone collided: "121 already used"). Minutes since
+      # a fixed 2026 date always grows and stays far above every earlier code (all were under 200).
+      - name: Version code from the clock
+        run: echo "BUILD_NUMBER=$(( ($(date -u +%s) - 1790000000) / 60 ))" >> $GITHUB_ENV
       - run: flutter build appbundle --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false --dart-define=TELEGRAM_URL=${{ vars.TELEGRAM_URL }}
       - run: flutter build apk --release --build-number=$BUILD_NUMBER --dart-define=CONTENT_URL=${{ vars.RAILPARIKSHA_CONTENT_URL }} --dart-define=USE_TEST_ADS=false --dart-define=TELEGRAM_URL=${{ vars.TELEGRAM_URL }}
       # Hard gate: a build that fails to even launch must never reach a GitHub
