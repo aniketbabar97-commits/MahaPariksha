@@ -5,9 +5,9 @@
 # See railpariksha/pipeline/rrb_notices.py.
 name: RailPariksha official notices
 on:
-  schedule:
-    - cron: "0 4 * * *"   # 09:30 IST
-    - cron: "30 14 * * *" # 20:00 IST
+  # Schedule switched off: a probe from GitHub's runners (Oct 2026) reached 0 of 14 official sites (connection
+  # refused, timeouts, wrong hosts). Turn it back on only after the sites answer from here, or run the script
+  # from an Indian IP. Re-add: cron "0 4 * * *" and "30 14 * * *".
   workflow_dispatch:
     inputs:
       probe:
