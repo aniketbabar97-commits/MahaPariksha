@@ -121,7 +121,23 @@ def neg_text_en(neg):
     return f"{frac or f'{neg:g}'} mark deducted for every wrong answer"
 
 
+ADSENSE_CLIENT = os.environ.get("ADSENSE_CLIENT", "")  # e.g. ca-pub-1234567890123456; empty = no ads at all
+ADSENSE_SLOT = os.environ.get("ADSENSE_SLOT", "")
+
+
+def ad_unit():
+    """One responsive AdSense unit, or nothing until the site is approved and the two env values are set."""
+    if not (ADSENSE_CLIENT and ADSENSE_SLOT):
+        return ""
+    return (f'<div class="muted" style="text-align:center;margin:14px 0">विज्ञापन · Advertisement'
+            f'<ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" '
+            f'data-ad-slot="{ADSENSE_SLOT}" data-ad-format="auto" data-full-width-responsive="true"></ins>'
+            f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></div>')
+
+
 def page(title, desc, body, canonical, base, structured="", og_type="website"):
+    ads_head = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='
+                f'{ADSENSE_CLIENT}" crossorigin="anonymous"></script>') if ADSENSE_CLIENT else ""
     return f"""<!doctype html><html lang="hi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
@@ -135,7 +151,7 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
-<style>{CSS}</style>{structured}</head><body>
+<style>{CSS}</style>{structured}{ads_head}</head><body>
 <header><div class="wrap"><a href="index.html"><strong>RailPariksha · रेलपरीक्षा</strong></a>
 <div class="tag">Train to succeed · सफलता की पटरी पर</div></div></header>
 <main class="wrap">{body}
@@ -378,6 +394,13 @@ def main():
                          body, url, base, structured), priority=0.9, changefreq="weekly")
         exam_cards.append(f"<a class='card' href='{name}'><strong>{esc(e['hi'])}</strong><br><span class='muted'>{esc(e['en'])}</span></a>")
 
+    # ---- Previous-year papers ---------------------------------------
+    import site_pyq
+    pyq_cards = site_pyq.add_pyq_pages(
+        dict(page=page, esc=esc, question_html=question_html, crumbs_html=crumbs_html, json_ld=json_ld,
+             breadcrumb_ld=breadcrumb_ld, faq_ld=faq_ld, ad_unit=ad_unit, ORG_NAME=ORG_NAME),
+        tax, CONTENT, base, write)
+
     # ---- Home ------------------------------------------------------
     subject_cards = [f"<a class='card' href='subject-{s['id']}.html'><strong>{esc(s['hi'])}</strong><br><span class='muted'>{esc(s['en'])}</span></a>"
                      for s in tax["subjects"] if any((s["id"], t["id"]) in topic_pages for t in s["topics"])]
@@ -395,6 +418,7 @@ def main():
     )
     body = (crumbs_html([("Home", None)]) + "<h1>रेलवे व RPF परीक्षाओं के लिए मुफ़्त अभ्यास</h1>" + answer_para +
             f"<a class='cta' href='{PLAY_URL}'>ऐप डाउनलोड करें</a><h2>परीक्षा चुनें · Choose your exam</h2><div class='grid'>{''.join(exam_cards)}</div>"
+            f"<h2>पिछले साल के प्रश्न पत्र · Previous year papers</h2><div class='grid'>{pyq_cards}</div>"
             f"<h2>विषय के अनुसार अभ्यास करें · Practice by subject</h2><div class='grid'>{''.join(subject_cards)}</div>")
     write("index.html", page(f"{ORG_NAME} — RRB NTPC, ग्रुप डी, RPF अभ्यास प्रश्न हिंदी में",
                              "RRB NTPC, Group D, ALP, JE, RPF Constable & SI practice questions in Hindi with answers & explanations. Free daily quiz, flashcards and mock tests.",
@@ -402,15 +426,19 @@ def main():
 
     privacy_url = f"{base}/privacy.html"
     privacy = f"""{crumbs_html([("Home", "index.html"), ("Privacy Policy", None)])}<h1>Privacy Policy · गोपनीयता नीति</h1><p class="muted">Last updated: {date.today().isoformat()}</p>
-<div class="card"><p><strong>RailPariksha does not collect personal data.</strong> There is no sign-up. Your progress (answers, streaks,
-settings) is stored only on your device and is deleted when you uninstall the app or use "Reset progress".</p>
-<p>The app connects to the internet only to download updated question packs. No analytics, advertising identifiers or
-location data are collected in this version.</p>
-<p>If you choose to report a question or send feedback, your email app opens and you decide what to send to {SUPPORT_EMAIL}.</p>
-<p>The app is an independent educational product and is not affiliated with Indian Railways, RRB or RPF.</p>
+<div class="card"><p><strong>Account and data.</strong> There is no sign-up. In the app, your progress (answers, streaks,
+settings) is stored on your phone. If you choose to sign in with Google, a backup of your progress is stored in our Firebase
+project under your account so it can be restored on a new phone, and you can delete it any time from the app.</p>
+<p><strong>Ads.</strong> The app and this website show ads served by Google (AdMob in the app, AdSense on the website). Google and its
+partners may use cookies or advertising identifiers to show and measure ads; you can control personalised ads in your Google
+account settings or your phone's ad settings, and learn how Google uses data at policies.google.com/technologies/partner-sites.</p>
+<p><strong>Analytics and crash reports.</strong> The app uses Firebase Analytics (which screens and features are used) and Crashlytics (crash
+reports) to find and fix problems. You can send an error report on any question; it contains the question and your note, not your name.</p>
+<p>If you send feedback, your email app opens and you decide what to send to {SUPPORT_EMAIL}.</p>
+<p>The app and website are an independent educational product, not affiliated with Indian Railways, RRB or RPF.</p>
 <p>Contact: {SUPPORT_EMAIL}</p></div>
 <div class="card"><p><strong>RailPariksha कोई व्यक्तिगत जानकारी एकत्र नहीं करता।</strong> आपकी प्रगति केवल आपके फोन में सहेजी जाती है।
-ऐप केवल नए प्रश्न पैक डाउनलोड करने के लिए इंटरनेट का उपयोग करता है।</p></div>"""
+ऐप और वेबसाइट पर Google द्वारा विज्ञापन दिखाए जाते हैं (ऐप में AdMob, वेबसाइट पर AdSense); ये कुकीज़/विज्ञापन आईडी का उपयोग कर सकते हैं। ऐप में Firebase Analytics और Crashlytics का उपयोग होता है। Google से साइन इन करने पर ही आपकी प्रगति का बैकअप सुरक्षित होता है।</p></div>"""
     write("privacy.html", page(f"Privacy Policy | {ORG_NAME}", "RailPariksha privacy policy", privacy, privacy_url, base),
           priority=0.3, changefreq="yearly")
 

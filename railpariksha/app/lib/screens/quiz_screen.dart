@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../logic/question_reports.dart';
@@ -881,18 +882,46 @@ class _Explanation extends StatelessWidget {
               _block(context, Icons.lightbulb, BrandColors.skyLight, en ? 'Explanation' : 'व्याख्या', q.explanation.of(lang)),
             if (q.hook != null) _block(context, Icons.psychology_alt, BrandColors.saffron, en ? 'Memory trick' : 'याद रखने की तरकीब', q.hook!.of(lang)),
             if (q.fact != null) _block(context, Icons.star, BrandColors.correct, en ? 'Also remember' : 'यह भी याद रखें', q.fact!.of(lang)),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton.icon(
+            Wrap(alignment: WrapAlignment.end, children: [
+              TextButton.icon(
+                icon: const Icon(Icons.share_outlined, size: 18),
+                label: Text(en ? 'Share this question' : 'यह प्रश्न शेयर करें'),
+                onPressed: () => _share(context),
+              ),
+              TextButton.icon(
                 icon: const Icon(Icons.flag_outlined, size: 18),
                 label: Text(en ? 'Report an error' : 'गलती बताएं'),
                 onPressed: () => _report(context),
               ),
-            ),
+            ]),
           ]),
         ),
       ),
     );
+  }
+
+  /// Sends the question, its answer and a short explanation to a study group, with the app and channel links.
+  void _share(BuildContext context) {
+    final hi = context.scope.progress.lang != 'en';
+    final opts = hi ? q.optionsHi : q.optionsEn;
+    final letters = ['A', 'B', 'C', 'D', 'E'];
+    final buf = StringBuffer(hi ? '🚆 रेलवे परीक्षा का प्रश्न\n\n' : '🚆 Railway exam question\n\n')
+      ..writeln(q.text.of(hi ? 'hi' : 'en'))
+      ..writeln();
+    for (var i = 0; i < opts.length && i < letters.length; i++) {
+      buf.writeln('${letters[i]}) ${opts[i]}');
+    }
+    buf.writeln();
+    buf.writeln('${hi ? 'उत्तर' : 'Answer'}: ${letters[q.answer]}) ${opts[q.answer]}');
+    if (!q.keyOnly) {
+      final e = q.explanation.of(hi ? 'hi' : 'en');
+      buf.writeln(e.length > 280 ? '${e.substring(0, 280)}…' : e);
+    }
+    buf.writeln();
+    buf.writeln(hi ? '📲 मुफ़्त ऐप: $kPlayUrl' : '📲 Free app: $kPlayUrl');
+    if (kTelegramUrl.startsWith('https://')) buf.writeln('💬 Telegram: $kTelegramUrl');
+    Analytics.log('question_shared', {'id': q.id});
+    SharePlus.instance.share(ShareParams(text: buf.toString()));
   }
 
   Future<void> _report(BuildContext context) async {
