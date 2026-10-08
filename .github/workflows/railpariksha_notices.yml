@@ -1,0 +1,45 @@
+# Watches the official RRB / RPF websites for new notice titles twice a day and tells the Telegram channel
+# "a new notice is on the official site, read it there". It states no dates or rules of its own. Government sites
+# often block automated or non-Indian traffic, so run it with probe=true first to see which sites answer; a site
+# that does not answer is skipped. State (what was already seen) lives in the Actions cache, nothing is committed.
+# See railpariksha/pipeline/rrb_notices.py.
+name: RailPariksha official notices
+on:
+  schedule:
+    - cron: "0 4 * * *"   # 09:30 IST
+    - cron: "30 14 * * *" # 20:00 IST
+  workflow_dispatch:
+    inputs:
+      probe:
+        description: Only test which official sites answer; post and save nothing
+        type: boolean
+        default: true
+permissions:
+  contents: read
+concurrency:
+  group: railpariksha-notices
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - if: ${{ github.event.inputs.probe != 'true' }}
+        uses: actions/cache@v4
+        with:
+          path: railpariksha/content/notices.json
+          key: notices-${{ github.run_id }}
+          restore-keys: notices-
+      - name: Probe sites
+        if: ${{ github.event.inputs.probe == 'true' }}
+        run: python railpariksha/pipeline/rrb_notices.py --probe
+      - name: Look for new notices
+        if: ${{ github.event.inputs.probe != 'true' }}
+        run: python railpariksha/pipeline/rrb_notices.py

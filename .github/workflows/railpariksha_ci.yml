@@ -29,6 +29,7 @@ jobs:
       # Offline checks of the Telegram channel automation (poll limits, rotation, HTML validity); sends nothing.
       - run: python railpariksha/pipeline/test_telegram_bot.py
       - run: python railpariksha/pipeline/test_shorts.py
+      - run: python railpariksha/pipeline/test_rrb_notices.py
       # The app's over-the-air current-affairs feed must match the bank it is built from.
       - run: python railpariksha/pipeline/build_ca_feed.py --check
 
