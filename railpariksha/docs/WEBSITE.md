@@ -4,6 +4,15 @@
 previous-year paper and subject (`pyq-...html`) with the real questions, answers and bilingual explanations,
 plus `sitemap.xml` and `robots.txt`.
 
+## Two languages, two addresses
+Every page is built twice: Hindi at `/x` and English at `/en/x` (home: `/` and `/en/`). Each has its own title,
+description, canonical address and `hreflang` links to the other, the language switch in the header is a plain link,
+and the sitemap lists both with alternates, so Google can rank each language for its own searches. The text is
+written once with both languages (`bi(hi, en)`); `localize()` in `pipeline/build_site.py` keeps one at build time.
+Question and answer blocks stay bilingual on both versions (the page's language first). New page types need an
+English title and description (`title_en`, `desc_en` in `page()`); `test_site.py` checks that every internal link and
+every sitemap address resolves in both languages.
+
 ## Putting it online (free, about 15 minutes)
 GitHub Pages in this repo already serves another site, so use **Cloudflare Pages** (free, no limits that matter):
 1. Cloudflare dashboard, Workers & Pages, Create, Pages, connect this GitHub repo, branch `aniketai/relaxed-albattani-6kjmc7`.

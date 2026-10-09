@@ -77,7 +77,7 @@ details summary{cursor:pointer;color:var(--navy2);font-weight:800;padding:6px 0}
 .appcta{background:linear-gradient(135deg,#0A1633,#17305E);color:#fff;border-radius:18px;padding:18px;margin:22px 0;text-align:center}.appcta a.cta{margin:4px}
 footer{background:var(--card);border-top:1px solid var(--line);padding:26px 16px;color:var(--muted);font-size:.9rem;margin-top:30px}
 footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}footer a{color:var(--muted)}footer h3{margin:.1em 0 .4em;color:var(--text)}
-@media (max-width:560px){.top .in{flex-wrap:nowrap}.brand small{display:none}.brand{font-size:1.02rem}.hero h1{font-size:1.55rem}body{font-size:16px}.nav a:not(.install){display:none}}
+@media (max-width:560px){.top .in{flex-wrap:nowrap}.brand small{display:none}.brand{font-size:1.02rem}.hero h1{font-size:1.55rem}body{font-size:16px}.nav a:not(.install):not(.lang){display:none}}
 
 /* ---- brand + motion ---- */
 .brand{display:flex;align-items:center;gap:10px}.brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 2px 8px rgba(0,0,0,.3);transition:transform .3s}
@@ -120,10 +120,11 @@ html[lang="hi"] .bi .L-hi,html[lang="en"] .bi .L-en{order:1}
 html[lang="hi"] .bi .L-en,html[lang="en"] .bi .L-hi{order:2;color:var(--muted);font-size:.9em}
 .lang{border:2px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-weight:800;cursor:pointer;font-size:.9rem}
 .lang:hover{background:rgba(255,255,255,.16)}
+a.lang{display:inline-flex;align-items:center;text-decoration:none}
 .q .bi{font-weight:700}.opts li .bi{font-weight:500}
 
-@font-face{font-family:"Mukta";font-weight:400;font-display:swap;src:url(mukta-400.woff2) format("woff2"),url(mukta-400.woff) format("woff")}
-@font-face{font-family:"Mukta";font-weight:700;font-display:swap;src:url(mukta-700.woff2) format("woff2"),url(mukta-700.woff) format("woff")}
+@font-face{font-family:"Mukta";font-weight:400;font-display:swap;src:url(/mukta-400.woff2) format("woff2"),url(/mukta-400.woff) format("woff")}
+@font-face{font-family:"Mukta";font-weight:700;font-display:swap;src:url(/mukta-700.woff2) format("woff2"),url(/mukta-700.woff) format("woff")}
 body{font-family:"Mukta","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.6;letter-spacing:.005em}
 h1,h2,h3,b,strong{font-weight:700}
 h2{position:relative;padding-left:14px;margin:2em 0 .7em;font-size:1.38rem}
@@ -161,7 +162,7 @@ html[lang="hi"] .q .bi .L-en,html[lang="en"] .q .bi .L-hi{font-weight:400}
 @media (max-width:560px){.brand em{display:none}.top .in{gap:8px}.nav{gap:6px;flex-wrap:nowrap;margin-left:auto}.lang{padding:4px 10px;font-size:.82rem}.nav a.install{padding:6px 10px;font-size:.82rem;white-space:nowrap}.brand span{font-size:1rem}}
 .lt{font-weight:700;color:var(--navy2);white-space:nowrap}
 
-@font-face{font-family:"Lora";font-weight:700;font-display:swap;src:url(lora-700.woff2) format("woff2"),url(lora-700.woff) format("woff")}
+@font-face{font-family:"Lora";font-weight:700;font-display:swap;src:url(/lora-700.woff2) format("woff2"),url(/lora-700.woff) format("woff")}
 h1,h2,.brand span,.stat b,.quote{font-family:"Lora","Mukta",Georgia,serif}
 .hero h1{color:#FFF1D0;font-weight:700;letter-spacing:0}
 .hero p{color:#dfe6f7}.badge{color:var(--gold)}
@@ -177,6 +178,7 @@ footer a{display:inline-block;padding:11px 0}
 .links a{display:inline-block;padding:11px 3px}summary{padding:11px 0;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px}.nav>a{padding-top:9px;padding-bottom:9px}
 .chips a{min-height:44px;display:inline-flex;align-items:center;gap:6px}.chips small{color:var(--muted);font-weight:700}
 .bnav{display:none}
+@media (max-width:480px){.pat th:last-child,.pat td:last-child{display:none}.pat th,.pat td{padding:9px 7px;font-size:.92rem}.pat{width:100%}}
 .xhero{background:linear-gradient(135deg,#0A1633,#17305E);color:#fff;border-radius:20px;padding:20px 22px;margin:8px 0 14px;box-shadow:var(--shadow)}
 .xhero h1{color:#FFF1D0;margin:0 0 8px}.xfacts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
 .xfacts>span{background:rgba(255,255,255,.14);border-radius:999px;padding:5px 14px;font-weight:700;font-size:.92rem}
@@ -197,6 +199,24 @@ def esc(s):
     return html.escape(str(s), quote=True)
 
 
+def fit_title(main, *extras, limit=60):
+    """main plus as many of the extras as fit (' | ' separated); search results cut a title at about 60 characters,
+    so the words that matter come first and the optional tail is dropped."""
+    title = main
+    for x in extras:
+        if x and len(title) + 3 + len(x) <= limit:
+            title += " | " + x
+    return title
+
+
+def cut_desc(text, limit=155):
+    """A description under the length search results show, cut at a word boundary."""
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+    return text[:limit - 1].rsplit(" ", 1)[0].rstrip(",;:—-· ") + "…"
+
+
 def json_ld(*blocks):
     """Render one or more structured-data objects as separate <script> blocks."""
     out = []
@@ -214,7 +234,7 @@ def breadcrumb_ld(base, items):
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "name": name,
+            {"@type": "ListItem", "position": i + 1, "name": name[1] if isinstance(name, tuple) else name,
              **({"item": f"{base}/{url}"} if url else {})}
             for i, (name, url) in enumerate(items)
         ],
@@ -239,7 +259,8 @@ def faq_ld(pairs):
 def crumbs_html(items):
     parts = []
     for name, url in items:
-        parts.append(f"<a href='{url}'>{esc(name)}</a>" if url else f"<span>{esc(name)}</span>")
+        label = bi(esc(name[0]), esc(name[1])) if isinstance(name, tuple) else esc(name)
+        parts.append(f"<a href='{url}'>{label}</a>" if url else f"<span>{label}</span>")
     return f"<nav class='crumbs'>{' › '.join(parts)}</nav>"
 
 
@@ -278,33 +299,31 @@ def ad_unit():
             f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></div>')
 
 
-LANG_JS = ("<script>(function(){var b=document.getElementById('lang');if(!b)return;b.addEventListener('click',function(){"
-           "var n=document.documentElement.lang==='en'?'hi':'en';document.documentElement.lang=n;"
-           "try{localStorage.setItem('lang',n)}catch(e){}})})();"
-           "document.addEventListener('click',function(ev){var li=ev.target.closest&&ev.target.closest('.opts li');if(!li)return;var ul=li.parentNode;"
+LANG_JS = ("<script>document.addEventListener('click',function(ev){var li=ev.target.closest&&ev.target.closest('.opts li');if(!li)return;var ul=li.parentNode;"
            "if(ul.classList.contains('done'))return;ul.classList.add('done');var a=+ul.dataset.a,i=+li.dataset.i;"
            "ul.children[a].classList.add('ok');if(i!==a)li.classList.add('bad');var d=ul.parentNode.querySelector('details');if(d)d.open=true});</script>")
 
 
-def page(title, desc, body, canonical, base, structured="", og_type="website"):
+def page(title, desc, body, canonical, base, structured="", og_type="website", title_en=None, desc_en=None):
     ads_head = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='
                 f'{ADSENSE_CLIENT}" crossorigin="anonymous"></script>') if ADSENSE_CLIENT else ""
-    return f"""<!doctype html><html lang="hi"><head><meta charset="utf-8">
+    meta = json.dumps({"t": title, "d": desc, "te": title_en or title, "de": desc_en or desc}, ensure_ascii=False).replace("--", "- -")
+    return f"""<!--META:{meta}--><!doctype html><html lang="hi"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{canonical}">
+<title>@@T@@</title><meta name="description" content="@@D@@">
+<link rel="canonical" href="@@CANON@@">@@ALT@@
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{ORG_NAME}">
-<meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
-<meta property="og:url" content="{canonical}">
+<meta property="og:title" content="@@T@@"><meta property="og:description" content="@@D@@"><meta property="og:locale" content="@@LOC@@">
+<meta property="og:url" content="@@CANON@@">
 <meta property="og:image" content="{base}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:title" content="@@T@@"><meta name="twitter:description" content="@@D@@">
 <meta name="twitter:image" content="{base}/og-image.png">
-<script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><link rel="preload" href="/lora-700.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/mukta-400.woff2" as="font" type="font/woff2" crossorigin><style>{CSS}</style>{structured}{ads_head}</head><body>
-<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-tile-96.webp" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha<em> · रेलपरीक्षा</em><small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
-<nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a><button class="lang" id="lang" type="button" aria-label="Language">हिं / EN</button><a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
+<link rel="preload" href="/lora-700.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/mukta-400.woff2" as="font" type="font/woff2" crossorigin><style>{CSS}</style>{structured}{ads_head}</head><body>
+<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-tile-96.webp" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha{bi("<em> · रेलपरीक्षा</em>", "")}<small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
+<nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a>@@LANGSWITCH@@<a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
 <main class="wrap">{body}
 <div class="appcta"><strong>{bi("रोज़ मुफ़्त अभ्यास करें!", "Practise free, every day!")}</strong><br>{bi("Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।", "Daily 10, flashcards, mock tests, streaks and 45,000+ real PYQs in Hindi and English.")}<br>
 <a class="cta" href="{PLAY_URL}">{bi("Google Play से डाउनलोड करें", "Get it on Google Play")}</a> <a class="btn2" href="{TELEGRAM_URL}">{bi("Telegram चैनल जुड़ें", "Join our Telegram")}</a></div></main>
@@ -312,6 +331,89 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <div><h3>{bi("लिंक", "Links")}</h3><a href="/">{bi("होम", "Home")}</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="privacy.html">Privacy Policy</a></div>
 <div><h3>{bi("सूचना", "Notice")}</h3>{bi("RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।", "RailPariksha is an independent educational app, not affiliated with Indian Railways, RRB or RPF. Check official notices on the official sites.")}<br>{SUPPORT_EMAIL}</div></div>{LANG_JS}</footer>
 <nav class="bnav" aria-label="Main"><a href="/"><b>🏠</b>{bi("होम", "Home")}</a><a href="/#exams"><b>🚉</b>{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers"><b>📄</b>{bi("प्रश्न पत्र", "Papers")}</a><a href="/#subjects"><b>📚</b>{bi("विषय", "Subjects")}</a><a class="go" href="{PLAY_URL}"><b>⬇️</b>{bi("ऐप", "App")}</a></nav></body></html>"""
+
+
+# ---- Two languages, two addresses --------------------------------------------------------------------
+# Every page is built once with both languages inline (bi/bib), then written twice: the Hindi page at /x and the
+# English page at /en/x. localize() keeps only that page's language in the inline text, fills the head (title,
+# description, canonical, hreflang) and points every internal link at the same language.
+BI_RE = re.compile(r'<span class="hi">(.*?)</span><span class="en">(.*?)</span>', re.S)
+META_RE = re.compile(r"<!--META:(.*?)-->", re.S)
+ASSET_EXT = (".png", ".webp", ".woff2", ".woff", ".json", ".xml", ".txt", ".jpg", ".jpeg", ".svg", ".ico")
+HREF_RE = re.compile(r"(href|src)=([\"'])([^\"']*)\2")
+
+
+def page_path(name, clean):
+    """/x for x.html (or /x.html without clean URLs); '/' for the home page."""
+    if name == "index.html":
+        return "/"
+    return "/" + (name[:-5] if clean and name.endswith(".html") else name)
+
+
+def lang_path(path, lang):
+    """The address of a root-relative page path in a language ('/' -> '/en/')."""
+    if lang == "hi":
+        return path
+    return "/en/" if path == "/" else "/en" + path
+
+
+def localize(t, lang, name, base, clean):
+    meta = json.loads(META_RE.search(t).group(1))
+    t = META_RE.sub("", t, count=1)
+    t = BI_RE.sub(lambda m: m.group(1 if lang == "hi" else 2), t)
+    t = t.replace("placeholder='खोजें / Search: NTPC 2025, गणित, Group D…'",
+                  "placeholder='खोजें: NTPC 2025, गणित, Group D…'" if lang == "hi" else "placeholder='Search: NTPC 2025, Maths, Group D…'")
+    if lang == "en":  # absolute page URLs (inside structured data) belong to the English page
+        t = re.sub(re.escape(base) + r"/(?!en/)([^\"'<\s]*)",
+                   lambda m: m.group(0) if m.group(1).lower().endswith(ASSET_EXT) else base + "/en/" + m.group(1), t)
+    title, desc = (meta["t"], meta["d"]) if lang == "hi" else (meta["te"], meta["de"])
+    here = lang_path(page_path(name, clean), lang)
+    other_lang = "en" if lang == "hi" else "hi"
+    hi_url, en_url = base + lang_path(page_path(name, clean), "hi"), base + lang_path(page_path(name, clean), "en")
+    alt = (f'<link rel="alternate" hreflang="hi" href="{hi_url}"><link rel="alternate" hreflang="en" href="{en_url}">'
+           f'<link rel="alternate" hreflang="x-default" href="{hi_url}">')
+    switch = (f'<a class="lang" id="lang" href="{base_less(en_url, base)}" hreflang="en" lang="en">English</a>' if lang == "hi"
+              else f'<a class="lang" id="lang" href="{base_less(hi_url, base)}" hreflang="hi" lang="hi">हिंदी</a>')
+    t = t.replace('<html lang="hi">', f'<html lang="{lang}">', 1)
+
+    def fix(m):
+        attr, q, v = m.group(1), m.group(2), m.group(3)
+        if v.startswith(("http:", "https:", "mailto:", "tel:", "#", "data:", "javascript:", "@@")):
+            return m.group(0)
+        frag = ""
+        if "#" in v:
+            v, frag = v.split("#", 1)
+            frag = "#" + frag
+        if v in ("", "/", "index.html", "/index.html"):
+            path = "/"
+        elif v.endswith(".html"):
+            path = ("/" + v.lstrip("/"))
+            path = path[:-5] if clean else path
+        elif v.lower().endswith(ASSET_EXT):
+            return f"{attr}={q}/{v.lstrip('/')}{frag}{q}"
+        elif v.startswith("/"):
+            path = v
+        else:
+            return m.group(0)
+        if attr == "src":
+            return m.group(0)
+        return f"{attr}={q}{lang_path(path, lang)}{frag}{q}"
+
+    t = HREF_RE.sub(fix, t)
+    t = re.sub(r"""(src)=(["'])(?!/|https?:|data:)([^"']+)\2""", r"\1=\2/\3\2", t)
+    t = t.replace("fetch('search.json')", "fetch('/search.json')" if lang == "hi" else "fetch('/search-en.json')")
+    if clean:
+        t = t.replace("/index.html", "/")
+        for q in ('"', "'", "#", "<"):
+            t = t.replace(".html" + q, q)
+    for tok, val in (("@@T@@", esc(title)), ("@@D@@", esc(desc)), ("@@CANON@@", base + here),
+                     ("@@ALT@@", alt), ("@@LOC@@", "hi_IN" if lang == "hi" else "en_IN"), ("@@LANGSWITCH@@", switch)):
+        t = t.replace(tok, val)  # last, so none of these URLs is rewritten again
+    return t
+
+
+def base_less(url, base):
+    return url[len(base):] if url.startswith(base) else url
 
 
 def bi(hi, en):
@@ -434,13 +536,19 @@ def main():
     subjects = {s["id"]: s for s in tax["subjects"]}
     url_meta = []  # (path, priority, changefreq)
 
-    search_index = []
+    search_index = []      # Hindi pages: [title, path]
+    search_index_en = []   # English pages
+    clean = clean_urls(base)
 
     def write(name, content, priority=0.5, changefreq="monthly"):
-        (out / name).write_text(content, encoding="utf-8")
-        m = re.search(r"<title>(.*?)</title>", content)
-        if m and name != "privacy.html":
-            search_index.append([html.unescape(m.group(1)).split(" | ")[0], name])
+        meta = json.loads(META_RE.search(content).group(1))
+        (out / "en").mkdir(parents=True, exist_ok=True)
+        (out / name).write_text(localize(content, "hi", name, base, clean), encoding="utf-8")
+        (out / "en" / name).write_text(localize(content, "en", name, base, clean), encoding="utf-8")
+        if name != "privacy.html":
+            path = page_path(name, clean)
+            search_index.append([meta["t"].split(" | ")[0], lang_path(path, "hi")])
+            search_index_en.append([meta["te"].split(" | ")[0], lang_path(path, "en")])
         url_meta.append((name, priority, changefreq))
 
     # ---- Topic pages -------------------------------------------------
@@ -465,13 +573,13 @@ def main():
             name = topic_pages[key]
             url = f"{base}/{name}"
             subj_page = f"subject-{s['id']}.html"
-            crumbs = crumbs_html([("Home", "index.html"), (s["hi"], subj_page), (t["hi"], None)])
+            crumbs = crumbs_html([(("होम", "Home"), "index.html"), ((s["hi"], s["en"]), subj_page), ((t["hi"], t["en"]), None)])
             answer_para = ("<div class='answer'>" + bi(
                 f"<strong>{esc(t['hi'])} ({esc(t['en'])})</strong> {n} अभ्यास प्रश्नों का अभ्यास कराता है, प्रत्येक का सही "
                 f"उत्तर व हिंदी-अंग्रेज़ी में सरल स्पष्टीकरण सहित। यह {esc(s['hi'])} ({esc(s['en'])}) विषय का हिस्सा है।",
                 f"There are {n} practice MCQs for <strong>{esc(t['en'])}</strong> here, each with the correct answer and a "
                 f"bilingual explanation. Part of {esc(s['en'])}.") + "</div>")
-            related = f"<p class='links muted'>विषय: <a href='{subj_page}'>{esc(s['hi'])} · {esc(s['en'])}</a></p>"
+            related = f"<p class='links muted'>{bi('विषय', 'Subject')}: <a href='{subj_page}'>{bi(esc(s['hi']), esc(s['en']))}</a></p>"
             faq_pairs = [
                 (f"How many practice questions are available for {t['en']}?",
                  f"RailPariksha currently has {n} {t['en']} practice questions with answers and explanations, "
@@ -480,17 +588,20 @@ def main():
                  f"RailPariksha पर {t['hi']} के {n} अभ्यास प्रश्न उपलब्ध हैं, सही उत्तर व स्पष्टीकरण सहित।"),
             ]
             structured = json_ld(
-                breadcrumb_ld(base, [("Home", "index.html"), (s["hi"], subj_page), (t["hi"], None)]),
+                breadcrumb_ld(base, [(("होम", "Home"), "index.html"), ((s["hi"], s["en"]), subj_page), ((t["hi"], t["en"]), None)]),
                 quiz_ld(f"{t['en']} — {s['en']} Quiz", url, items),
                 faq_ld(faq_pairs),
             )
-            body = (crumbs + f"<h1>{esc(t['hi'])} — {esc(s['hi'])} अभ्यास प्रश्न</h1>"
-                    f"<p class='muted'>{esc(t['en'])} · {esc(s['en'])} MCQ with answers & explanation · "
-                    f"{n} प्रश्न</p>" + answer_para + related +
+            body = (crumbs + "<h1>" + bi(f"{esc(t['hi'])} — {esc(s['hi'])} अभ्यास प्रश्न", f"{esc(t['en'])} — {esc(s['en'])} practice questions") + "</h1>"
+                    f"<p class='muted'>" + bi(f"{esc(t['en'])} · {esc(s['en'])} MCQ उत्तर व स्पष्टीकरण सहित · {n} प्रश्न",
+                                            f"{esc(t['en'])} · {esc(s['en'])} MCQs with answers and explanations · {n} questions") + "</p>" + answer_para + related +
                     "".join(question_html(q, i + 1) for i, q in enumerate(items)))
-            write(name, page(f"{t['hi']} ({t['en']}) अभ्यास प्रश्न उत्तर सहित | {s['hi']} MCQ | {ORG_NAME}",
-                             f"{t['hi']} पर {n} अभ्यास प्रश्न, सही उत्तर व सरल स्पष्टीकरण। {s['en']} {t['en']} MCQ in Hindi.",
-                             body, url, base, structured), priority=0.5, changefreq="monthly")
+            write(name, page(fit_title(f"{t['hi']} अभ्यास प्रश्न उत्तर सहित", s['hi'], ORG_NAME, limit=70),
+                             cut_desc(f"{t['hi']} पर {n} अभ्यास प्रश्न, सही उत्तर व सरल स्पष्टीकरण। {s['hi']} ({s['en']}) · RRB व RPF परीक्षा।"),
+                             body, url, base, structured,
+                             title_en=fit_title(f"{t['en']} MCQs with Answers", s['en'], ORG_NAME, limit=70),
+                             desc_en=cut_desc(f"{n} {t['en']} practice MCQs with correct answers and simple explanations in English and Hindi. {s['en']} for RRB and RPF exams.")),
+                  priority=0.5, changefreq="monthly")
 
     # ---- Subject pages -------------------------------------------------
     exams_by_subject = {}
@@ -499,16 +610,16 @@ def main():
             exams_by_subject.setdefault(entry["id"], []).append((e, entry["w"]))
 
     for s in tax["subjects"]:
-        topic_links = [f"<a href='{topic_pages[(s['id'], t['id'])]}'>{esc(t['hi'])} <small>{topic_counts[(s['id'], t['id'])]}</small></a>"
+        topic_links = [f"<a href='{topic_pages[(s['id'], t['id'])]}'>{bi(esc(t['hi']), esc(t['en']))} <small>{topic_counts[(s['id'], t['id'])]}</small></a>"
                        for t in s["topics"] if (s["id"], t["id"]) in topic_pages]
         if not topic_links:
             continue
-        exam_links = [f"<a href='exam-{e['id']}.html'>{esc(e['hi'])} <small>{w}%</small></a>"
+        exam_links = [f"<a href='exam-{e['id']}.html'>{bi(esc(e['hi']), esc(e['en']))} <small>{w}%</small></a>"
                       for e, w in exams_by_subject.get(s["id"], [])]
         name = f"subject-{s['id']}.html"
         total_qs = sum(topic_counts[(s["id"], t["id"])] for t in s["topics"] if (s["id"], t["id"]) in topic_counts)
         url = f"{base}/{name}"
-        crumbs = crumbs_html([("Home", "index.html"), (s["hi"], None)])
+        crumbs = crumbs_html([(("होम", "Home"), "index.html"), ((s["hi"], s["en"]), None)])
         in_hi = ", ".join(esc(e['hi']) for e, _ in exams_by_subject.get(s['id'], [])) or "कई परीक्षाओं"
         in_en = ", ".join(esc(e['en']) for e, _ in exams_by_subject.get(s['id'], [])) or "several exams"
         answer_para = ("<div class='answer'>" + bi(
@@ -517,7 +628,7 @@ def main():
             f"{esc(s['en'])} covers {len(topic_links)} topics with {total_qs} practice questions on RailPariksha, "
             f"and appears in {in_en}.") + "</div>")
         structured = json_ld(
-            breadcrumb_ld(base, [("Home", "index.html"), (s["hi"], None)]),
+            breadcrumb_ld(base, [(("होम", "Home"), "index.html"), ((s["hi"], s["en"]), None)]),
             {
                 "@context": "https://schema.org", "@type": "ItemList", "name": f"{s['en']} topics",
                 "itemListElement": [
@@ -527,16 +638,19 @@ def main():
                 ],
             },
         )
-        shero = (f"<section class='xhero'><h1>{esc(s['hi'])} ({esc(s['en'])}) अभ्यास प्रश्न</h1>"
+        shero = (f"<section class='xhero'><h1>{bi(esc(s['hi']) + ' (' + esc(s['en']) + ') अभ्यास प्रश्न', esc(s['en']) + ' practice questions')}</h1>"
                  f"<div class='xfacts'><span>{len(topic_links)} {bi('टॉपिक', 'topics')}</span><span>{total_qs:,} {bi('प्रश्न', 'questions')}</span></div>"
                  f"<div class='row'><a class='cta' href='{PLAY_URL}'>{bi('ऐप में मुफ़्त अभ्यास करें', 'Practise free in the app')}</a></div></section>")
         body = (crumbs + shero + answer_para +
                 f"<h2>{bi('टॉपिक चुनें', 'Choose a topic')}</h2><div class='chips'>{''.join(topic_links)}</div>" +
                 (f"<h2>{bi('यह विषय इन परीक्षाओं में आता है', 'Appears in these exams')}</h2>"
                  f"<div class='chips'>{''.join(exam_links)}</div>" if exam_links else ""))
-        write(name, page(f"{s['hi']} ({s['en']}) अभ्यास प्रश्न — सभी टॉपिक | {ORG_NAME}",
-                         f"{s['hi']} ({s['en']}) के {len(topic_links)} टॉपिक और {total_qs} अभ्यास प्रश्न, उत्तर व स्पष्टीकरण सहित।",
-                         body, url, base, structured), priority=0.7, changefreq="weekly")
+        write(name, page(fit_title(f"{s['hi']} अभ्यास प्रश्न", "सभी टॉपिक", ORG_NAME, limit=62),
+                         cut_desc(f"{s['hi']} ({s['en']}) के {len(topic_links)} टॉपिक और {total_qs} अभ्यास प्रश्न, उत्तर व स्पष्टीकरण सहित।"),
+                         body, url, base, structured,
+                         title_en=fit_title(f"{s['en']} Practice Questions", "All Topics", ORG_NAME, limit=62),
+                         desc_en=cut_desc(f"{total_qs:,} {s['en']} practice questions across {len(topic_links)} topics for RRB and RPF exams, with answers and explanations in English and Hindi.")),
+              priority=0.7, changefreq="weekly")
 
     # ---- Exam pages ------------------------------------------------
     exam_cards = []
@@ -547,11 +661,11 @@ def main():
             s = subjects.get(sid)
             if not s:
                 continue
-            tl = [f"<a href='{topic_pages[(sid, t['id'])]}'>{esc(t['hi'])} <small>{topic_counts[(sid, t['id'])]}</small></a>"
+            tl = [f"<a href='{topic_pages[(sid, t['id'])]}'>{bi(esc(t['hi']), esc(t['en']))} <small>{topic_counts[(sid, t['id'])]}</small></a>"
                   for t in s["topics"] if (sid, t["id"]) in topic_counts]
             if tl:
                 subj_links.append(
-                    f"<div class='card'><a class='sub-h' href='subject-{sid}.html'><strong>{esc(s['hi'])} · {esc(s['en'])} ({w}%)</strong></a><div class='chips'>{''.join(tl)}</div></div>")
+                    f"<div class='card'><a class='sub-h' href='subject-{sid}.html'><strong>{bi(esc(s['hi']) + ' · ' + esc(s['en']), esc(s['en']))} ({w}%)</strong></a><div class='chips'>{''.join(tl)}</div></div>")
         if not subj_links:
             continue
         name = f"exam-{e['id']}.html"
@@ -566,7 +680,7 @@ def main():
             f"<strong>{esc(e['hi'])} ({esc(e['en'])})</strong> में विषयवार भारांश (weightage) इस प्रकार है — "
             f"{esc(weight_bits_hi)} — और नकारात्मक अंकन: {negtxt}।",
             f"<strong>{esc(e['en'])}</strong> covers {esc(weight_bits_en)}, with {neg_en}.") + "</div>")
-        crumbs = crumbs_html([("Home", "index.html"), (e["hi"], None)])
+        crumbs = crumbs_html([(("होम", "Home"), "index.html"), ((e["hi"], e["en"]), None)])
         faq_pairs = [
             (f"What is the syllabus / subject weightage for {e['en']}?",
              f"{e['en']} syllabus weightage: {weight_bits_en}."),
@@ -578,7 +692,7 @@ def main():
              f"{e['hi']} में {negtxt} है।"),
         ]
         structured = json_ld(
-            breadcrumb_ld(base, [("Home", "index.html"), (e["hi"], None)]),
+            breadcrumb_ld(base, [(("होम", "Home"), "index.html"), ((e["hi"], e["en"]), None)]),
             course_ld(e, url, subjects, base),
             faq_ld(faq_pairs),
         )
@@ -605,36 +719,41 @@ def main():
         if pq and pm:
             facts = (f"<div class='xfacts'><span>{pq} {bi('प्रश्न', 'questions')}</span><span>{pm} {bi('मिनट', 'minutes')}</span>"
                      f"<span>{bi('नेगेटिव', 'Negative')} {neg_fraction(neg) if neg else '0'}</span></div>")
-        hero = (f"<section class='xhero'><h1>{esc(e['hi'])} अभ्यास प्रश्न {date.today().year}</h1>{facts}"
+        hero = (f"<section class='xhero'><h1>{bi(esc(e['hi']) + ' अभ्यास प्रश्न ' + str(date.today().year), esc(e['en']) + ' practice questions ' + str(date.today().year))}</h1>{facts}"
                 f"<div class='row'><a class='cta' href='{PLAY_URL}'>{bi('ऐप में मुफ़्त अभ्यास करें', 'Practise free in the app')}</a>"
                 f"<a class='btn2' href='#practice'>{bi('विषयवार अभ्यास', 'Practise by subject')}</a></div></section>")
         body = (crumbs + hero + answer_para + pattern + stages +
                 f"<h2 id='practice'>{bi('विषयवार अभ्यास', 'Practise by subject')}</h2>" + "".join(subj_links))
-        write(name, page(f"{e['hi']} अभ्यास प्रश्न {date.today().year} | {e['en']} MCQ Hindi | {ORG_NAME}",
+        write(name, page(fit_title(f"{e['hi']} अभ्यास प्रश्न {date.today().year}", ORG_NAME, limit=62),
                          f"{e['hi']} ({e['en']}) के लिए विषयवार अभ्यास प्रश्न, उत्तर व स्पष्टीकरण। {ORG_NAME} ऐप पर मुफ़्त मॉक टेस्ट।",
-                         body, url, base, structured), priority=0.9, changefreq="weekly")
+                         body, url, base, structured,
+                         title_en=fit_title(f"{e['en']} Practice Questions {date.today().year}", "Free MCQs", ORG_NAME, limit=62),
+                         desc_en=cut_desc(f"Free {e['en']} practice questions by subject, with answers and explanations in English and Hindi. Syllabus weightage, exam pattern and mock tests.")),
+              priority=0.9, changefreq="weekly")
         exam_cards.append(f"<a class='card tile' href='{name}'><span class='ic'>{EXAM_ICONS.get(e['id'], '📘')}</span><strong>{bib(esc(e['hi']), esc(e['en']))}</strong></a>")
 
     # ---- Previous-year papers ---------------------------------------
     import site_pyq
     pyq_cards = site_pyq.add_pyq_pages(
         dict(page=page, esc=esc, question_html=question_html, bi=bi, bib=bib, crumbs_html=crumbs_html, json_ld=json_ld,
-             breadcrumb_ld=breadcrumb_ld, faq_ld=faq_ld, ad_unit=ad_unit, ORG_NAME=ORG_NAME),
+             breadcrumb_ld=breadcrumb_ld, faq_ld=faq_ld, ad_unit=ad_unit, ORG_NAME=ORG_NAME, fit_title=fit_title, cut_desc=cut_desc),
         tax, CONTENT, base, write)
 
     # ---- Home ------------------------------------------------------
-    subject_cards = [f"<a class='card' href='subject-{s['id']}.html'><strong>{esc(s['hi'])}</strong><br><span class='muted'>{esc(s['en'])}</span></a>"
+    subject_cards = [f"<a class='card' href='subject-{s['id']}.html'><strong>{bib(esc(s['hi']), esc(s['en']))}</strong></a>"
                      for s in tax["subjects"] if any((s["id"], t["id"]) in topic_pages for t in s["topics"])]
     home_url = f"{base}/index.html"
-    answer_para = (
-        "<div class='answer'>RailPariksha, भारतीय रेलवे (RRB) व RPF भर्ती परीक्षाओं — जैसे RRB NTPC, ग्रुप डी, "
-        "ALP, JE, पैरामेडिकल, RPF कांस्टेबल व सब-इंस्पेक्टर — के लिए विषयवार व टॉपिकवार अभ्यास प्रश्न, सही उत्तर और "
-        "सरल हिंदी-अंग्रेज़ी स्पष्टीकरण मुफ़्त में उपलब्ध कराता है। RailPariksha offers free, subject-wise and "
-        "topic-wise practice MCQs with answers and bilingual explanations for every major RRB and RPF exam.</div>"
-    )
+    answer_para = ("<div class='answer'>" + bi(
+        "RailPariksha, भारतीय रेलवे (RRB) व RPF भर्ती परीक्षाओं — जैसे RRB NTPC, ग्रुप डी, ALP, JE, पैरामेडिकल, RPF कांस्टेबल "
+        "व सब-इंस्पेक्टर — के लिए विषयवार व टॉपिकवार अभ्यास प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी स्पष्टीकरण मुफ़्त में उपलब्ध कराता है।",
+        "RailPariksha offers free, subject-wise and topic-wise practice MCQs with answers and bilingual explanations for every "
+        "major RRB and RPF exam: NTPC, Group D, ALP, JE, Paramedical, RPF Constable and Sub-Inspector.") + "</div>")
     structured = json_ld(
         {"@context": "https://schema.org", "@type": "Organization", "name": ORG_NAME,
-         "url": home_url, "logo": f"{base}/og-image.png"},
+         "url": home_url, "logo": f"{base}/logo-tile-460.webp", "sameAs": [TELEGRAM_URL, PLAY_URL]},
+        {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": ORG_NAME,
+         "operatingSystem": "Android", "applicationCategory": "EducationApplication", "installUrl": PLAY_URL,
+         "inLanguage": ["hi", "en"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
         {"@context": "https://schema.org", "@type": "WebSite", "name": ORG_NAME, "url": home_url},
     )
     total_pyq = sum(len(v) for sub in site_pyq.load(CONTENT).values() for paper in sub.values() for v in paper.values())
@@ -702,8 +821,8 @@ def main():
         + bi('ऐप में और अभ्यास करें', 'Practise more in the app') + "</a></div></div></div>"
         "<script>(function(){var D=" + try_data + ",i=0,el=function(id){return document.getElementById(id)},"
         "L=function(){return document.documentElement.lang==='en'?1:0};"
-        "function bi(a){var s=document.createElement('span');s.innerHTML='<span class=\"hi\"></span><span class=\"en\"></span>';"
-        "s.firstChild.textContent=a[0];s.lastChild.textContent=a[1];return s}"
+        "function bi(a){var s=document.createElement('span'),h=document.createElement('span'),e=document.createElement('span');"
+        "h.className='hi';e.className='en';h.textContent=a[0];e.textContent=a[1];s.appendChild(h);s.appendChild(e);return s}"
         "function show(){if(!D.length)return;var d=D[i%D.length],t=el('try');t.classList.remove('done');"
         "el('tm').innerHTML='';el('tm').appendChild(bi(d.s));el('tc').textContent=d.x+'  ·  '+(i%D.length+1)+'/'+D.length;"
         "el('tq').innerHTML='';el('tq').appendChild(bi(d.q));var o=el('to');o.innerHTML='';"
@@ -712,6 +831,7 @@ def main():
         "o.children[d.a].classList.add('ok');if(k!==d.a)b.classList.add('bad');el('te').innerHTML='';el('te').appendChild(bi(d.e))});o.appendChild(b)})}"
         "el('tn').addEventListener('click',function(){i++;show()});show()})();</script>")
     shots_block = f"<h2>{bi('ऐप एक नज़र में', 'The app at a glance')}</h2><div class='shots rv'>{shots_html}</div>"
+    tick_html = "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>".replace("मुफ़्त · हिंदी + English", bi("मुफ़्त · हिंदी + English", "Free · Hindi + English"))
     body = (
         "<section class='hero'><div class='txt'><span class='badge'>" + bi('स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए', 'By students, for students') + " 🤝</span>"
         "<h1>" + bi('रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त', 'Railway exam preparation, completely free') + "</h1>"
@@ -721,11 +841,11 @@ def main():
         f"<div class='trust'><span>✓ {bi('मुफ़्त', 'Free')}</span><span>✓ {bi('बिना साइन-अप', 'No sign-up')}</span><span>✓ {bi('ऑफलाइन भी', 'Works offline')}</span><span>✓ {bi('हिंदी + English', 'Hindi + English')}</span></div></div>"
         "<span class='glow'></span><img class='logo' src='logo-tile-460.webp' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
         '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#E8BA4A"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0A1633"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0A1633"/><circle cx="203" cy="38" r="3" fill="#F3D27C"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
-        "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>"
+        f"{tick_html}"
         f"<div class='stats rv'><div class='stat'><b data-count='{total_pyq}'>{total_pyq:,}</b><span>{bi('असली PYQ प्रश्न', 'real PYQ questions')}</span></div>"
         f"<div class='stat'><b data-count='{n_papers}'>{n_papers}</b><span>{bi('पिछले प्रश्न पत्र', 'past papers')}</span></div>"
         f"<div class='stat'><b data-count='{len(tax['exams'])}'>{len(tax['exams'])}</b><span>{bi('परीक्षाएँ', 'exams')}</span></div>"
-        f"<div class='stat'><b>हिंदी + EN</b><span>{bi('हर प्रश्न दोनों भाषा में', 'every question in both')}</span></div></div>"
+        f"<div class='stat'><b>{bi('हिंदी + EN', 'Hindi + EN')}</b><span>{bi('हर प्रश्न दोनों भाषा में', 'every question in both')}</span></div></div>"
         "<div class='search'><input id='q' type='search' placeholder='खोजें / Search: NTPC 2025, गणित, Group D…' autocomplete='off' aria-label='Search'><div id='hits' hidden></div></div>"
         f"<h2 id='exams'>{bi('आप किस परीक्षा की तैयारी कर रहे हैं?', 'Which exam are you preparing for?')}</h2>"
         f"<div class='grid rv'>{''.join(exam_cards)}</div>"
@@ -758,10 +878,13 @@ def main():
     body += motion_js
     write("index.html", page(f"{ORG_NAME} — RRB NTPC, ग्रुप डी, RPF अभ्यास प्रश्न हिंदी में",
                              "RRB NTPC, Group D, ALP, JE, RPF Constable & SI practice questions in Hindi with answers & explanations. Free daily quiz, flashcards and mock tests.",
-                             body, home_url, base, structured), priority=1.0, changefreq="weekly")
+                             body, home_url, base, structured,
+                             title_en=f"{ORG_NAME} — Free RRB NTPC, Group D, ALP, JE & RPF Practice Questions",
+                             desc_en="Free RRB NTPC, Group D, ALP, JE and RPF previous-year questions and practice MCQs with answers and simple explanations in English and Hindi. Daily quiz and mock tests."),
+          priority=1.0, changefreq="weekly")
 
     privacy_url = f"{base}/privacy.html"
-    privacy = f"""{crumbs_html([("Home", "index.html"), ("Privacy Policy", None)])}<h1>Privacy Policy · गोपनीयता नीति</h1><p class="muted">Last updated: {date.today().isoformat()}</p>
+    privacy = f"""{crumbs_html([(("होम", "Home"), "index.html"), (("गोपनीयता नीति", "Privacy Policy"), None)])}<h1>Privacy Policy · गोपनीयता नीति</h1><p class="muted">Last updated: {date.today().isoformat()}</p>
 <div class="card"><p><strong>Account and data.</strong> There is no sign-up. In the app, your progress (answers, streaks,
 settings) is stored on your phone. If you choose to sign in with Google, a backup of your progress is stored in our Firebase
 project under your account so it can be restored on a new phone, and you can delete it any time from the app.</p>
@@ -787,22 +910,24 @@ reports) to find and fix problems. You can send an error report on any question;
     (out / "app-ads.txt").write_text("google.com, pub-9100209280220037, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
     today = date.today().isoformat()
-    sitemap_entries = "".join(
-        f"<url><loc>{base}/{name}</loc><lastmod>{today}</lastmod>"
-        f"<changefreq>{freq}</changefreq><priority>{prio}</priority></url>"
-        for name, prio, freq in url_meta
-    )
+    sitemap_entries = []
+    for name, prio, freq in url_meta:
+        hi_u = base + lang_path(page_path(name, clean), "hi")
+        en_u = base + lang_path(page_path(name, clean), "en")
+        alts = (f'<xhtml:link rel="alternate" hreflang="hi" href="{hi_u}"/>'
+                f'<xhtml:link rel="alternate" hreflang="en" href="{en_u}"/>'
+                f'<xhtml:link rel="alternate" hreflang="x-default" href="{hi_u}"/>')
+        for u in (hi_u, en_u):
+            sitemap_entries.append(f"<url><loc>{u}</loc><lastmod>{today}</lastmod>"
+                                   f"<changefreq>{freq}</changefreq><priority>{prio}</priority>{alts}</url>")
     (out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        + sitemap_entries + "</urlset>\n",
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'
+        + "".join(sitemap_entries) + "</urlset>\n",
         encoding="utf-8")
-    clean = clean_urls(base)
-    entries = [[t, ("/" if n == "index.html" else (n[:-5] if clean else n))] for t, n in search_index]
-    (out / "search.json").write_text(json.dumps(entries, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    if clean:
-        strip_html_extensions(out)
-    print(f"site: {len(url_meta)} pages -> {out}")
+    (out / "search.json").write_text(json.dumps(search_index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    (out / "search-en.json").write_text(json.dumps(search_index_en, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"site: {len(url_meta)} pages x 2 languages -> {out}")
 
 
 if __name__ == "__main__":

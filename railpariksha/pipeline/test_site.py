@@ -64,17 +64,70 @@ class SiteTests(unittest.TestCase):
             self.assertIn("https://railpariksha.in/privacy</loc>", sm)
             self.assertIn("sitemap.xml", (Path(t) / "robots.txt").read_text(encoding="utf-8"))
 
-    def test_language_switch_and_bilingual_questions(self):
+    def test_two_languages_two_addresses(self):
+        """Hindi at /x, English at /en/x: own language, canonical, hreflang, switch link, sitemap alternates."""
+        import re
         with tempfile.TemporaryDirectory() as t:
             subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t, "--base-url", "https://example.org"],
                            check=True, capture_output=True)
-            home = (Path(t) / "index.html").read_text(encoding="utf-8")
-            self.assertIn('id="lang"', home)
-            self.assertIn('<span class="en">Install app</span>', home)
-            page = next(Path(t).glob("pyq-rrb-ntpc*.html")).read_text(encoding="utf-8")
-            self.assertIn('class="L-hi"', page)
-            self.assertIn('class="L-en"', page)
-            self.assertIn('<span class="en">A</span>', page)
+            out = Path(t)
+            hi = (out / "index.html").read_text(encoding="utf-8")
+            en = (out / "en" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('<html lang="hi">', hi)
+            self.assertIn('<html lang="en">', en)
+            self.assertIn('rel="canonical" href="https://example.org/"', hi)
+            self.assertIn('rel="canonical" href="https://example.org/en/"', en)
+            for page in (hi, en):
+                self.assertIn('hreflang="hi" href="https://example.org/"', page)
+                self.assertIn('hreflang="en" href="https://example.org/en/"', page)
+                self.assertIn('hreflang="x-default" href="https://example.org/"', page)
+                self.assertNotIn("@@", page)
+                self.assertNotIn('class="hi"', page)  # only the page's own language is left inline
+            self.assertIn('href="/en/" hreflang="en"', hi)
+            self.assertIn('href="/" hreflang="hi"', en)
+            self.assertIn("Install app", en)
+            self.assertNotIn("Install app", hi)
+            self.assertIn("Free RRB NTPC", re.search(r"<title>(.*?)</title>", en).group(1))
+            exam = (out / "en" / "exam-rrb_ntpc.html").read_text(encoding="utf-8")
+            self.assertRegex(exam, r"""href=["']/en/subject-maths["']""")   # internal links stay in English
+            self.assertIn('rel="canonical" href="https://example.org/en/exam-rrb_ntpc"', exam)
+            paper = next((out / "en").glob("pyq-rrb-ntpc*.html")).read_text(encoding="utf-8")
+            self.assertIn('class="L-hi"', paper)   # questions stay bilingual on both
+            self.assertIn('class="L-en"', paper)
+            sm = (out / "sitemap.xml").read_text(encoding="utf-8")
+            self.assertIn("<loc>https://example.org/en/exam-rrb_ntpc</loc>", sm)
+            self.assertIn('hreflang="en" href="https://example.org/en/exam-rrb_ntpc"', sm)
+            self.assertTrue((out / "search-en.json").exists())
+            self.assertIn('"/en/', (out / "search-en.json").read_text(encoding="utf-8")[:400])
+
+    def test_every_internal_link_resolves(self):
+        import re
+        with tempfile.TemporaryDirectory() as t:
+            subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t, "--base-url", "https://example.org"],
+                           check=True, capture_output=True)
+            out = Path(t)
+
+            def exists(path):
+                path = path.split("#")[0].split("?")[0]
+                if not path:
+                    return True
+                if path.endswith("/"):
+                    return (out / path.lstrip("/") / "index.html").is_file()
+                return (out / path.lstrip("/")).is_file() or (out / (path.lstrip("/") + ".html")).is_file()
+
+            broken = []
+            pages = list(out.glob("*.html")) + list((out / "en").glob("*.html"))
+            for f in pages:
+                for q, v in re.findall(r"""(?:href|src)=(["'])([^"']*)\1""", f.read_text(encoding="utf-8")):
+                    if v.startswith(("http", "mailto:", "tel:", "data:", "javascript:", "#")):
+                        continue
+                    if not v.startswith("/") or not exists(v):
+                        broken.append((f.name, v))
+            self.assertEqual(broken[:5], [])
+            urls = re.findall(r"<loc>https://example.org([^<]*)</loc>", (out / "sitemap.xml").read_text(encoding="utf-8"))
+            self.assertGreater(len(urls), 2 * 2000)
+            self.assertEqual([u for u in urls if not exists(u or "/")][:5], [])
+            self.assertEqual(len(pages), len(urls))
 
     def test_ads_only_when_configured(self):
         env = dict(os.environ, ADSENSE_CLIENT="ca-pub-1", ADSENSE_SLOT="2")
