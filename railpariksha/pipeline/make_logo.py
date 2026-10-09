@@ -116,8 +116,9 @@ def main():
     for size in (192, 512):
         save(full.resize((size, size), Image.LANCZOS), SITE / f"logo-{size}.png", rgb=True)
     save(full.resize((180, 180), Image.LANCZOS), SITE / "apple-touch-icon.png", rgb=True)
-    for size in (192, 512):  # the tile alone on a transparent background, for the site header and hero
-        save(fit(tile, size, pad=0.0), SITE / f"logo-tile-{size}.png")
+    for size in (96, 460):  # the tile alone on a transparent background, for the site header and hero (2x sizes)
+        im = fit(tile, size, pad=0.0)
+        im.save(SITE / f"logo-tile-{size}.webp", quality=88, method=6)
     save(fit(tile, 32, pad=0.0), SITE / "favicon-32.png")
     # store banners
     save(banner(1024, 500, tile, 330, 104, 40), PLAY / "feature_graphic_1024x500.png", rgb=True)
