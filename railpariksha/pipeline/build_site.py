@@ -174,9 +174,13 @@ a{color:var(--navy2)}
 .lang{min-height:44px;min-width:44px}.nav a.install{min-height:44px;display:inline-flex;align-items:center}
 .crumbs a{display:inline-block;padding:11px 2px}.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:0 4px}
 footer a{display:inline-block;padding:11px 0}
-.links a{display:inline-block;padding:11px 3px}summary{padding:11px 0;cursor:pointer}.nav>a{padding-top:9px;padding-bottom:9px}
+.links a{display:inline-block;padding:11px 3px}summary{padding:11px 0;cursor:pointer;min-height:44px;display:flex;align-items:center;gap:6px}.nav>a{padding-top:9px;padding-bottom:9px}
 .chips a{min-height:44px;display:inline-flex;align-items:center;gap:6px}.chips small{color:var(--muted);font-weight:700}
 .bnav{display:none}
+.xhero{background:linear-gradient(135deg,#0A1633,#17305E);color:#fff;border-radius:20px;padding:20px 22px;margin:8px 0 14px;box-shadow:var(--shadow)}
+.xhero h1{color:#FFF1D0;margin:0 0 8px}.xfacts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.xfacts>span{background:rgba(255,255,255,.14);border-radius:999px;padding:5px 14px;font-weight:700;font-size:.92rem}
+.xhero .row{display:flex;gap:10px;flex-wrap:wrap}
 .sub-h{display:inline-block;padding:8px 0}.card .chips{margin-top:4px}
 @media (max-width:700px){
 body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
@@ -462,12 +466,11 @@ def main():
             url = f"{base}/{name}"
             subj_page = f"subject-{s['id']}.html"
             crumbs = crumbs_html([("Home", "index.html"), (s["hi"], subj_page), (t["hi"], None)])
-            answer_para = (
-                f"<div class='answer'><strong>{esc(t['hi'])} ({esc(t['en'])})</strong> "
-                f"{n} अभ्यास प्रश्नों का अभ्यास कराता है, प्रत्येक का सही उत्तर व हिंदी-अंग्रेज़ी में सरल "
-                f"स्पष्टीकरण सहित। यह {esc(s['hi'])} ({esc(s['en'])}) विषय का हिस्सा है। There are {n} practice "
-                f"MCQs for {esc(t['en'])} here, each with the correct answer and a bilingual explanation.</div>"
-            )
+            answer_para = ("<div class='answer'>" + bi(
+                f"<strong>{esc(t['hi'])} ({esc(t['en'])})</strong> {n} अभ्यास प्रश्नों का अभ्यास कराता है, प्रत्येक का सही "
+                f"उत्तर व हिंदी-अंग्रेज़ी में सरल स्पष्टीकरण सहित। यह {esc(s['hi'])} ({esc(s['en'])}) विषय का हिस्सा है।",
+                f"There are {n} practice MCQs for <strong>{esc(t['en'])}</strong> here, each with the correct answer and a "
+                f"bilingual explanation. Part of {esc(s['en'])}.") + "</div>")
             related = f"<p class='links muted'>विषय: <a href='{subj_page}'>{esc(s['hi'])} · {esc(s['en'])}</a></p>"
             faq_pairs = [
                 (f"How many practice questions are available for {t['en']}?",
@@ -524,7 +527,10 @@ def main():
                 ],
             },
         )
-        body = (crumbs + f"<h1>{esc(s['hi'])} ({esc(s['en'])}) अभ्यास प्रश्न</h1>" + answer_para +
+        shero = (f"<section class='xhero'><h1>{esc(s['hi'])} ({esc(s['en'])}) अभ्यास प्रश्न</h1>"
+                 f"<div class='xfacts'><span>{len(topic_links)} {bi('टॉपिक', 'topics')}</span><span>{total_qs:,} {bi('प्रश्न', 'questions')}</span></div>"
+                 f"<div class='row'><a class='cta' href='{PLAY_URL}'>{bi('ऐप में मुफ़्त अभ्यास करें', 'Practise free in the app')}</a></div></section>")
+        body = (crumbs + shero + answer_para +
                 f"<h2>{bi('टॉपिक चुनें', 'Choose a topic')}</h2><div class='chips'>{''.join(topic_links)}</div>" +
                 (f"<h2>{bi('यह विषय इन परीक्षाओं में आता है', 'Appears in these exams')}</h2>"
                  f"<div class='chips'>{''.join(exam_links)}</div>" if exam_links else ""))
@@ -556,11 +562,10 @@ def main():
                                      for entry in e["subjects"] if entry["id"] in subjects)
         weight_bits_en = ", ".join(f"{subjects[entry['id']]['en']} {entry['w']}%"
                                      for entry in e["subjects"] if entry["id"] in subjects)
-        answer_para = (
-            f"<div class='answer'><strong>{esc(e['hi'])} ({esc(e['en'])})</strong> में विषयवार भारांश (weightage) "
-            f"इस प्रकार है — {esc(weight_bits_hi)} — और नकारात्मक अंकन: {negtxt}। {esc(e['en'])} covers "
-            f"{esc(weight_bits_en)}, with {neg_en}.</div>"
-        )
+        answer_para = ("<div class='answer'>" + bi(
+            f"<strong>{esc(e['hi'])} ({esc(e['en'])})</strong> में विषयवार भारांश (weightage) इस प्रकार है — "
+            f"{esc(weight_bits_hi)} — और नकारात्मक अंकन: {negtxt}।",
+            f"<strong>{esc(e['en'])}</strong> covers {esc(weight_bits_en)}, with {neg_en}.") + "</div>")
         crumbs = crumbs_html([("Home", "index.html"), (e["hi"], None)])
         faq_pairs = [
             (f"What is the syllabus / subject weightage for {e['en']}?",
@@ -587,9 +592,6 @@ def main():
                 for en_ in e["subjects"] if en_["id"] in subjects)
             pattern = (
                 f"<h2>{bi('परीक्षा पैटर्न', 'Exam pattern')}</h2>"
-                f"<div class='stats'><div class='stat'><b>{pq}</b><span>{bi('प्रश्न', 'questions')}</span></div>"
-                f"<div class='stat'><b>{pm}</b><span>{bi('मिनट', 'minutes')}</span></div>"
-                f"<div class='stat'><b>{neg_fraction(neg) if neg else '0'}</b><span>{bi('नेगेटिव मार्किंग', 'negative marking')}</span></div></div>"
                 f"<table class='pat'><tr><th>{bi('विषय', 'Subject')}</th><th>{bi('भारांश', 'Weight')}</th><th>{bi('लगभग प्रश्न', 'Approx. questions')}</th><th></th></tr>{rows}</table>"
                 f"<p class='muted'>{bi('प्रश्नों की संख्या भारांश से निकाला गया अनुमान है; आधिकारिक अधिसूचना में अंतिम पैटर्न देखें।', 'Question counts are an estimate from the weightage; check the official notification for the final pattern.')}</p>")
         stages = ""
@@ -599,8 +601,15 @@ def main():
                 f"{bi(esc(st.get('detail_hi', '')), esc(st.get('detail_en', '')))}</div>"
                 for st in strat["stages"])
             stages = f"<h2>{bi('चयन के चरण', 'Selection stages')}</h2>{cards}"
-        body = (crumbs + f"<h1>{esc(e['hi'])} अभ्यास प्रश्न {date.today().year}</h1>" + answer_para + pattern + stages +
-                f"<h2>{bi('विषयवार अभ्यास', 'Practise by subject')}</h2>" + "".join(subj_links))
+        facts = ""
+        if pq and pm:
+            facts = (f"<div class='xfacts'><span>{pq} {bi('प्रश्न', 'questions')}</span><span>{pm} {bi('मिनट', 'minutes')}</span>"
+                     f"<span>{bi('नेगेटिव', 'Negative')} {neg_fraction(neg) if neg else '0'}</span></div>")
+        hero = (f"<section class='xhero'><h1>{esc(e['hi'])} अभ्यास प्रश्न {date.today().year}</h1>{facts}"
+                f"<div class='row'><a class='cta' href='{PLAY_URL}'>{bi('ऐप में मुफ़्त अभ्यास करें', 'Practise free in the app')}</a>"
+                f"<a class='btn2' href='#practice'>{bi('विषयवार अभ्यास', 'Practise by subject')}</a></div></section>")
+        body = (crumbs + hero + answer_para + pattern + stages +
+                f"<h2 id='practice'>{bi('विषयवार अभ्यास', 'Practise by subject')}</h2>" + "".join(subj_links))
         write(name, page(f"{e['hi']} अभ्यास प्रश्न {date.today().year} | {e['en']} MCQ Hindi | {ORG_NAME}",
                          f"{e['hi']} ({e['en']}) के लिए विषयवार अभ्यास प्रश्न, उत्तर व स्पष्टीकरण। {ORG_NAME} ऐप पर मुफ़्त मॉक टेस्ट।",
                          body, url, base, structured), priority=0.9, changefreq="weekly")
