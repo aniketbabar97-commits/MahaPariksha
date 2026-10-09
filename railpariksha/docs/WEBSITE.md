@@ -14,6 +14,17 @@ GitHub Pages in this repo already serves another site, so use **Cloudflare Pages
 6. Later: buy a domain and attach it in Pages, then change `SITE_URL`.
 7. In Google Search Console add the site and submit `SITE_URL/sitemap.xml`.
 
+## The day you buy the domain (about 10 minutes)
+1. Cloudflare, Workers & Pages, your `railpariksha` project, Settings, Domains & Routes, Add, Custom domain, type the
+   new `.in` address (add `www` too if you want). If the domain is bought elsewhere, point its nameservers to
+   Cloudflare first; Cloudflare shows the two nameservers.
+2. Same project, Settings, Variables and Secrets: change `SITE_URL` to the new address, for example
+   `https://railpariksha.in` (no trailing slash), then redeploy. Canonicals, sitemap, robots and social previews all
+   follow `SITE_URL`; nothing else in the repo needs editing. Links stay extension-less on a custom domain too.
+3. Check these four open in a browser: `/`, `/sitemap.xml`, `/robots.txt`, `/app-ads.txt`.
+4. Search Console: add the new address as a property and submit `/sitemap.xml`.
+5. AdMob: in the app's store listing set the developer website to the new address, so `app-ads.txt` is found.
+
 ## Turning on ads (only after Google approves the site)
 1. Apply at adsense.google.com with your site. Approval looks at original, useful content, an about/privacy page and
    a working site; there is no fixed traffic minimum. It can take days to weeks, and pages written only to rank get

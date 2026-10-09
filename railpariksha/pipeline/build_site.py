@@ -87,7 +87,7 @@ footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:r
 .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07);animation:drift 11s ease-in-out infinite}
 .hero:before{width:260px;height:260px;right:-60px;top:-80px}.hero:after{width:180px;height:180px;left:-50px;bottom:40px;animation-delay:-5s}
 .hero .txt{position:relative;z-index:2;padding-bottom:20px}
-.hero .logo{position:relative;z-index:2;justify-self:center;width:min(230px,100%);height:auto;aspect-ratio:1/1;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 14px 22px rgba(0,0,0,.35));border-radius:34px}
+.hero .logo{position:relative;z-index:2;justify-self:center;width:min(230px,100%);height:auto;aspect-ratio:1/1;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 14px 22px rgba(0,0,0,.35));border-radius:0}
 .glow{position:absolute;z-index:1;right:9%;top:18%;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(255,208,102,.45),transparent 65%);animation:pulse 3.6s ease-in-out infinite}
 .track{grid-column:1/-1;position:relative;height:74px;margin:0 -26px;overflow:hidden;z-index:2}
 .train{position:absolute;bottom:14px;left:0;width:210px;animation:ride 16s linear infinite}
@@ -129,7 +129,7 @@ h1,h2,h3,b,strong{font-weight:700}
 h2{position:relative;padding-left:14px;margin:2em 0 .7em;font-size:1.38rem}
 h2:before{content:"";position:absolute;left:0;top:.2em;bottom:.2em;width:5px;border-radius:4px;background:linear-gradient(var(--gold),#ff9d00)}
 main.wrap{max-width:980px;padding-top:22px}
-.trust{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.trust span{background:rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;font-size:.88rem;font-weight:700;color:#fff}
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.trust>span{background:rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;font-size:.88rem;font-weight:700;color:#fff}
 .opts li{cursor:pointer;transition:background .15s,border-color .15s,transform .1s}.opts li:hover{border-color:var(--navy2);transform:translateX(2px)}
 .opts li.ok{background:#e6f6ec;border-color:#1E9E5A}.opts li.bad{background:#fdeaea;border-color:#d64545}
 @media (prefers-color-scheme:dark){.opts li.ok{background:#12301f}.opts li.bad{background:#3a1a1a}}
@@ -283,7 +283,7 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
 <script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><link rel="preload" href="/lora-700.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/mukta-400.woff" as="font" type="font/woff" crossorigin><style>{CSS}</style>{structured}{ads_head}</head><body>
-<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha<em> · रेलपरीक्षा</em><small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
+<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-tile-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha<em> · रेलपरीक्षा</em><small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
 <nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a><button class="lang" id="lang" type="button" aria-label="Language">हिं / EN</button><a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
 <main class="wrap">{body}
 <div class="appcta"><strong>{bi("रोज़ मुफ़्त अभ्यास करें!", "Practise free, every day!")}</strong><br>{bi("Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।", "Daily 10, flashcards, mock tests, streaks and 45,000+ real PYQs in Hindi and English.")}<br>
@@ -371,12 +371,10 @@ def course_ld(e, url, subjects, base):
 
 
 def clean_urls(base):
-    """Cloudflare (workers.dev / pages.dev) answers /x.html with a redirect to /x, so links and the sitemap must
-    already use the extension-less address. CLEAN_URLS=1 forces it, CLEAN_URLS=0 forbids it."""
-    flag = os.environ.get("CLEAN_URLS")
-    if flag in ("0", "1"):
-        return flag == "1"
-    return base.split("//")[-1].split("/")[0].endswith((".workers.dev", ".pages.dev"))
+    """The site is served by Cloudflare, which answers /x.html with a redirect to /x on workers.dev and on a
+    custom domain alike, so links, canonicals and the sitemap always use the extension-less address.
+    CLEAN_URLS=0 turns that off (for hosting that serves .html as it is)."""
+    return os.environ.get("CLEAN_URLS") != "0"
 
 
 def strip_html_extensions(out):
@@ -697,7 +695,7 @@ def main():
                    'Real previous-year questions for RRB NTPC, Group D, ALP, JE and RPF, with answers and simple Hindi and English explanations.') + "</p>"
         f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a></div>"
         f"<div class='trust'><span>✓ {bi('मुफ़्त', 'Free')}</span><span>✓ {bi('बिना साइन-अप', 'No sign-up')}</span><span>✓ {bi('ऑफलाइन भी', 'Works offline')}</span><span>✓ {bi('हिंदी + English', 'Hindi + English')}</span></div></div>"
-        "<span class='glow'></span><img class='logo' src='logo-512.png' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
+        "<span class='glow'></span><img class='logo' src='logo-tile-512.png' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
         '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#E8BA4A"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0A1633"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0A1633"/><circle cx="203" cy="38" r="3" fill="#F3D27C"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
         "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>"
         f"<div class='stats rv'><div class='stat'><b data-count='{total_pyq}'>{total_pyq:,}</b><span>{bi('असली PYQ प्रश्न', 'real PYQ questions')}</span></div>"
