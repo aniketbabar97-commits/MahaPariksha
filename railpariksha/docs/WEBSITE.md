@@ -20,7 +20,7 @@ GitHub Pages in this repo already serves another site, so use **Cloudflare Pages
    rejected. These pages carry real questions with explanations, which is what it wants.
 2. After approval create one display ad unit and copy its client id (`ca-pub-...`) and slot id.
 3. In Cloudflare add `ADSENSE_CLIENT` and `ADSENSE_SLOT`, redeploy. Ads then appear twice per page. With them unset, no ad code is added.
-4. Add the line AdSense gives you to `app-ads.txt`/`ads.txt` at the site root if it asks.
+4. `app-ads.txt` for AdMob is already generated at the site root (publisher `pub-9100209280220037`). For AdSense, add the line it gives you if it asks.
 
 ## What to expect
 Indian education traffic usually pays about $1 to $5 per 1,000 page views. Search traffic to new pages takes weeks

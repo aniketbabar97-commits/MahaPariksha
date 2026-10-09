@@ -447,6 +447,8 @@ reports) to find and fix problems. You can send an error report on any question;
         for f in assets_src.iterdir():
             shutil.copy(f, out / f.name)
 
+    # app-ads.txt lets AdMob confirm the app's ads are sold by this developer; it must sit at the site root.
+    (out / "app-ads.txt").write_text("google.com, pub-9100209280220037, DIRECT, f08c47fec0942fa0\n", encoding="utf-8")
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
     today = date.today().isoformat()
     sitemap_entries = "".join(
