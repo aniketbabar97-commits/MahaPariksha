@@ -100,7 +100,7 @@ def _wrap(draw, text, font, width):
 
 def _background():
     from PIL import Image
-    top, bottom = (11, 61, 145), (6, 32, 84)
+    top, bottom = (10, 22, 51), (20, 38, 79)
     img = Image.new("RGB", (W, H), top)
     px = img.load()
     for y in range(H):
@@ -122,7 +122,7 @@ def render_frames(q, out_dir):
     def base(reveal=None, countdown=None):
         img = _background()
         d = ImageDraw.Draw(img)
-        d.text((pad, 90), "RailPariksha", font=fonts["head"], fill=(255, 214, 102))
+        d.text((pad, 90), "RailPariksha", font=fonts["head"], fill=(232, 186, 74))
         d.text((pad, 160), tb.exam_label(q.get("pyq")), font=fonts["small"], fill=(190, 210, 245))
         y = 280
         for line in _wrap(d, q["q_hi"].strip(), fonts["big"], W - 2 * pad):
@@ -136,8 +136,8 @@ def render_frames(q, out_dir):
             fill = (28, 138, 78) if right else (255, 255, 255, 30) if reveal is None else (255, 255, 255, 18)
             box = (pad, y, W - pad, y + h)
             d.rounded_rectangle(box, radius=28, fill=fill if right else None,
-                                outline=(255, 214, 102) if right else (120, 150, 210), width=4 if right else 3)
-            d.text((pad + 34, y + h / 2 - 34), labels[i], font=fonts["opt"], fill=(255, 214, 102))
+                                outline=(232, 186, 74) if right else (120, 150, 210), width=4 if right else 3)
+            d.text((pad + 34, y + h / 2 - 34), labels[i], font=fonts["opt"], fill=(232, 186, 74))
             ty = y + 20
             for line in lines:
                 d.text((pad + 130, ty), line, font=fonts["opt"], fill=(255, 255, 255))
@@ -151,7 +151,7 @@ def render_frames(q, out_dir):
     frames.append((p, QUESTION_SECONDS))
     for n in range(THINK_SECONDS, 0, -1):
         img, d, y = base()
-        d.text((W / 2 - 60, max(y + 20, 1380)), str(n), font=fonts["count"], fill=(255, 214, 102))
+        d.text((W / 2 - 60, max(y + 20, 1380)), str(n), font=fonts["count"], fill=(232, 186, 74))
         p = out_dir / f"c{n}.png"
         img.save(p)
         frames.append((p, 1))
@@ -161,7 +161,7 @@ def render_frames(q, out_dir):
     for line in _wrap(d, tb.shorten(q["e_hi"], 360), fonts["expl"], W - 2 * pad)[:6]:
         d.text((pad, y), line, font=fonts["expl"], fill=(255, 255, 255))
         y += 66
-    d.text((pad, H - 170), "मुफ़्त ऐप + रोज़ के क्विज़: Telegram @RailParikshaApp", font=fonts["small"], fill=(255, 214, 102))
+    d.text((pad, H - 170), "मुफ़्त ऐप + रोज़ के क्विज़: Telegram @RailParikshaApp", font=fonts["small"], fill=(232, 186, 74))
     d.text((pad, H - 110), "स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", font=fonts["small"], fill=(190, 210, 245))
     p = out_dir / "a.png"
     img.save(p)

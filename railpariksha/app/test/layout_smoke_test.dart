@@ -36,6 +36,10 @@ Future<void> _loadMukta() async {
     loader.addFont(Future.value(ByteData.view(bytes.buffer)));
   }
   await loader.load();
+  // English headlines (app-bar titles) use Lora; without it the test font draws solid blocks.
+  final lora = FontLoader('Lora')
+    ..addFont(Future.value(ByteData.view(File('assets/fonts/Lora-Bold.ttf').readAsBytesSync().buffer)));
+  await lora.load();
 }
 
 /// An active learner: exam chosen, history across subjects, a mock taken,

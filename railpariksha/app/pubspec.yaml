@@ -92,6 +92,11 @@ flutter:
     # Greek letters, arrows, maths operators, superscripts: Mukta has none of them and phones with
     # thin system-font coverage show empty boxes. A subset of DejaVu Sans (free licence, see
     # assets/fonts/DEJAVU-LICENSE.txt) with no emoji, so colour emoji still come from the system.
+    # English headlines (app-bar titles). Latin only; Hindi falls back to Mukta glyph by glyph. Lora is SIL OFL.
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/Lora-Bold.ttf
+          weight: 700
     - family: MathFallback
       fonts:
         - asset: assets/fonts/MathFallback-Regular.ttf
@@ -130,14 +135,14 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 
 flutter_native_splash:
-  color: "#0B3D91"
+  color: "#061E59"
   image: assets/splash_logo.png
-  color_dark: "#0B3D91"
+  color_dark: "#061E59"
   image_dark: assets/splash_logo.png
   android_12:
     image: assets/splash_logo.png
-    icon_background_color: "#0B3D91"
+    icon_background_color: "#061E59"
     image_dark: assets/splash_logo.png
-    icon_background_color_dark: "#0B3D91"
+    icon_background_color_dark: "#061E59"
   android: true
   ios: false

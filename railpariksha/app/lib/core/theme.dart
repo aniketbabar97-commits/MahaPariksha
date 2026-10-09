@@ -37,10 +37,10 @@ class Corners {
 const double kMinTapTarget = 48.0;
 
 class BrandColors {
-  static const sky = Color(0xFF0B3D91);
-  static const skyLight = Color(0xFF3A6FD8);
-  static const saffron = Color(0xFFF5B400);
-  static const sunrise = Color(0xFFFFD166);
+  static const sky = Color(0xFF0E2A63);
+  static const skyLight = Color(0xFF2B63CC);
+  static const saffron = Color(0xFFE8BA4A);
+  static const sunrise = Color(0xFFF3D27C);
   static const correct = Color(0xFF1E9E5A);
   static const wrong = Color(0xFFD64545);
 
@@ -77,7 +77,7 @@ class BrandColors {
   static Color readable(BuildContext context, Color c, {double min = 4.5}) {
     final dark = Theme.of(context).brightness == Brightness.dark;
     if (c == sky) return skyOn(context);
-    final bg = dark ? const Color(0xFF1F2A44) : const Color(0xFFE4E9F2);
+    final bg = dark ? const Color(0xFF1B2748) : const Color(0xFFE9E5D9);
     var out = c;
     for (var i = 0; i < 20 && contrast(out, bg) < min; i++) {
       out = Color.lerp(out, dark ? Colors.white : Colors.black, 0.08)!;
@@ -107,7 +107,7 @@ class BrandColors {
   static bool reduceMotion(BuildContext context) => MediaQuery.of(context).disableAnimations;
 
   static const heroGradient = LinearGradient(
-    colors: [sky, skyLight],
+    colors: [sky, Color(0xFF1A4799)],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
@@ -133,7 +133,7 @@ ThemeData buildTheme(Brightness b) {
   );
   final base = ThemeData(useMaterial3: true, colorScheme: scheme, brightness: b, fontFamily: 'Mukta', fontFamilyFallback: const ['MathFallback']);
   return base.copyWith(
-    scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFEDF1F8) : const Color(0xFF0E1320),
+    scaffoldBackgroundColor: b == Brightness.light ? const Color(0xFFF4F1E8) : const Color(0xFF0A1226),
     cardTheme: CardThemeData(
       // A flat elevation:0 made every card and the content behind it blur
       // into one plane -- a soft colored shadow (sky-tinted, not pure black)
@@ -143,7 +143,7 @@ ThemeData buildTheme(Brightness b) {
       elevation: b == Brightness.light ? 3 : 0,
       shadowColor: BrandColors.sky.withValues(alpha: b == Brightness.light ? 0.16 : 0),
       surfaceTintColor: Colors.transparent,
-      color: b == Brightness.light ? Colors.white : const Color(0xFF1A2133),
+      color: b == Brightness.light ? Colors.white : const Color(0xFF131E3D),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       margin: EdgeInsets.zero,
     ),
@@ -152,7 +152,8 @@ ThemeData buildTheme(Brightness b) {
       elevation: 0,
       scrolledUnderElevation: 0,
       centerTitle: false,
-      titleTextStyle: base.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700, color: scheme.onSurface),
+      titleTextStyle: base.textTheme.titleLarge?.copyWith(
+          fontFamily: 'Lora', fontFamilyFallback: const ['Mukta', 'MathFallback'], fontWeight: FontWeight.w700, color: scheme.onSurface),
     ),
     filledButtonTheme: FilledButtonThemeData(
       style: FilledButton.styleFrom(
