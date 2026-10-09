@@ -170,6 +170,22 @@ h1,h2,.brand span,.stat b,.quote{font-family:"Lora","Mukta",Georgia,serif}
 a{color:var(--navy2)}
 @media (prefers-color-scheme:dark){a{color:#8DB0F5}.hero h1{color:#FFF1D0}}
 .hero:before,.hero:after{background:rgba(232,186,74,.08)}
+/* touch comfort: every tap target is at least 44px, and phones get a bottom navigation bar */
+.lang{min-height:44px;min-width:44px}.nav a.install{min-height:44px;display:inline-flex;align-items:center}
+.crumbs a{display:inline-block;padding:11px 2px}.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:0 4px}
+footer a{display:inline-block;padding:11px 0}
+.links a{display:inline-block;padding:11px 3px}summary{padding:11px 0;cursor:pointer}.nav>a{padding-top:9px;padding-bottom:9px}
+.chips a{min-height:44px;display:inline-flex;align-items:center;gap:6px}.chips small{opacity:.7;font-weight:600}
+.bnav{display:none}
+.sub-h{display:inline-block;padding:8px 0}.card .chips{margin-top:4px}
+@media (max-width:700px){
+body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+.bnav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;background:#0A1633;box-shadow:0 -2px 14px rgba(0,0,0,.25);padding-bottom:env(safe-area-inset-bottom)}
+.bnav a{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:56px;color:#dbe4ff;text-decoration:none;font-size:.74rem;font-weight:700}
+.bnav a b{font-size:1.25rem;line-height:1}.bnav a.go{color:#E8BA4A}
+}
+@media print{.bnav,.top{display:none}}
+
 """
 
 
@@ -290,7 +306,8 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <a class="cta" href="{PLAY_URL}">{bi("Google Play से डाउनलोड करें", "Get it on Google Play")}</a> <a class="btn2" href="{TELEGRAM_URL}">{bi("Telegram चैनल जुड़ें", "Join our Telegram")}</a></div></main>
 <footer><div class="cols"><div><h4>RailPariksha</h4>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए बनाया गया मुफ़्त अभ्यास ऐप।", "A free practice app made by students, for students.")}</div>
 <div><h4>{bi("लिंक", "Links")}</h4><a href="/">{bi("होम", "Home")}</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="privacy.html">Privacy Policy</a></div>
-<div><h4>{bi("सूचना", "Notice")}</h4>{bi("RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।", "RailPariksha is an independent educational app, not affiliated with Indian Railways, RRB or RPF. Check official notices on the official sites.")}<br>{SUPPORT_EMAIL}</div></div>{LANG_JS}</footer></body></html>"""
+<div><h4>{bi("सूचना", "Notice")}</h4>{bi("RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।", "RailPariksha is an independent educational app, not affiliated with Indian Railways, RRB or RPF. Check official notices on the official sites.")}<br>{SUPPORT_EMAIL}</div></div>{LANG_JS}</footer>
+<nav class="bnav" aria-label="Main"><a href="/"><b>🏠</b>{bi("होम", "Home")}</a><a href="/#exams"><b>🚉</b>{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers"><b>📄</b>{bi("प्रश्न पत्र", "Papers")}</a><a href="/#subjects"><b>📚</b>{bi("विषय", "Subjects")}</a><a class="go" href="{PLAY_URL}"><b>⬇️</b>{bi("ऐप", "App")}</a></nav></body></html>"""
 
 
 def bi(hi, en):
@@ -479,25 +496,23 @@ def main():
             exams_by_subject.setdefault(entry["id"], []).append((e, entry["w"]))
 
     for s in tax["subjects"]:
-        topic_links = [f"<a href='{topic_pages[(s['id'], t['id'])]}'>{esc(t['hi'])}</a> ({topic_counts[(s['id'], t['id'])]})"
+        topic_links = [f"<a href='{topic_pages[(s['id'], t['id'])]}'>{esc(t['hi'])} <small>{topic_counts[(s['id'], t['id'])]}</small></a>"
                        for t in s["topics"] if (s["id"], t["id"]) in topic_pages]
         if not topic_links:
             continue
-        exam_links = [f"<a href='exam-{e['id']}.html'>{esc(e['hi'])}</a> ({w}%)"
+        exam_links = [f"<a href='exam-{e['id']}.html'>{esc(e['hi'])} <small>{w}%</small></a>"
                       for e, w in exams_by_subject.get(s["id"], [])]
         name = f"subject-{s['id']}.html"
         total_qs = sum(topic_counts[(s["id"], t["id"])] for t in s["topics"] if (s["id"], t["id"]) in topic_counts)
         url = f"{base}/{name}"
         crumbs = crumbs_html([("Home", "index.html"), (s["hi"], None)])
-        answer_para = (
-            f"<div class='answer'>{esc(s['hi'])} ({esc(s['en'])}) में {len(topic_links)} टॉपिक और कुल "
-            f"{total_qs} अभ्यास प्रश्न हैं। यह विषय " +
-            (", ".join(esc(e['hi']) for e, _ in exams_by_subject.get(s['id'], [])) or "कई परीक्षाओं") +
-            f" में पूछा जाता है। {esc(s['en'])} covers {len(topic_links)} topics with {total_qs} practice "
-            f"questions on RailPariksha, and appears in " +
-            (", ".join(esc(e['en']) for e, _ in exams_by_subject.get(s['id'], [])) or "several exams") +
-            ".</div>"
-        )
+        in_hi = ", ".join(esc(e['hi']) for e, _ in exams_by_subject.get(s['id'], [])) or "कई परीक्षाओं"
+        in_en = ", ".join(esc(e['en']) for e, _ in exams_by_subject.get(s['id'], [])) or "several exams"
+        answer_para = ("<div class='answer'>" + bi(
+            f"{esc(s['hi'])} ({esc(s['en'])}) में {len(topic_links)} टॉपिक और कुल {total_qs} अभ्यास प्रश्न हैं। "
+            f"यह विषय {in_hi} में पूछा जाता है।",
+            f"{esc(s['en'])} covers {len(topic_links)} topics with {total_qs} practice questions on RailPariksha, "
+            f"and appears in {in_en}.") + "</div>")
         structured = json_ld(
             breadcrumb_ld(base, [("Home", "index.html"), (s["hi"], None)]),
             {
@@ -510,9 +525,9 @@ def main():
             },
         )
         body = (crumbs + f"<h1>{esc(s['hi'])} ({esc(s['en'])}) अभ्यास प्रश्न</h1>" + answer_para +
-                f"<h2>टॉपिक चुनें · Topics</h2><p class='links'>{' · '.join(topic_links)}</p>" +
-                (f"<h2>यह विषय इन परीक्षाओं में आता है · Appears in these exams</h2>"
-                 f"<p class='links'>{' · '.join(exam_links)}</p>" if exam_links else ""))
+                f"<h2>{bi('टॉपिक चुनें', 'Choose a topic')}</h2><div class='chips'>{''.join(topic_links)}</div>" +
+                (f"<h2>{bi('यह विषय इन परीक्षाओं में आता है', 'Appears in these exams')}</h2>"
+                 f"<div class='chips'>{''.join(exam_links)}</div>" if exam_links else ""))
         write(name, page(f"{s['hi']} ({s['en']}) अभ्यास प्रश्न — सभी टॉपिक | {ORG_NAME}",
                          f"{s['hi']} ({s['en']}) के {len(topic_links)} टॉपिक और {total_qs} अभ्यास प्रश्न, उत्तर व स्पष्टीकरण सहित।",
                          body, url, base, structured), priority=0.7, changefreq="weekly")
@@ -526,11 +541,11 @@ def main():
             s = subjects.get(sid)
             if not s:
                 continue
-            tl = [f"<a href='{topic_pages[(sid, t['id'])]}'>{esc(t['hi'])}</a> ({topic_counts[(sid, t['id'])]})"
+            tl = [f"<a href='{topic_pages[(sid, t['id'])]}'>{esc(t['hi'])} <small>{topic_counts[(sid, t['id'])]}</small></a>"
                   for t in s["topics"] if (sid, t["id"]) in topic_counts]
             if tl:
                 subj_links.append(
-                    f"<div class='card'><a href='subject-{sid}.html'><strong>{esc(s['hi'])} · {esc(s['en'])} ({w}%)</strong></a><br>{' · '.join(tl)}</div>")
+                    f"<div class='card'><a class='sub-h' href='subject-{sid}.html'><strong>{esc(s['hi'])} · {esc(s['en'])} ({w}%)</strong></a><div class='chips'>{''.join(tl)}</div></div>")
         if not subj_links:
             continue
         name = f"exam-{e['id']}.html"
