@@ -82,7 +82,7 @@ def add_pyq_pages(h, tax, content_dir, base, write):
                     body = (crumbs + f"<h1>{esc(label)} — {bi(esc(s['hi']), esc(s['en']))}{part}</h1>"
                             f"<p class='muted'>{esc(ename_en)} · {bi('पिछले साल का प्रश्न पत्र', 'previous year paper')}</p>" + intro
                             + "".join(body_qs))
-                    write(name, page(f"{label} {s['hi']} प्रश्न उत्तर सहित{part} | {ename_en} PYQ | {org}",
+                    write(name, page(f"{label} · {s['hi']} PYQ{part} | {org}",
                                      f"{label}: {s['hi']} ({s['en']}) के {len(chunk)} प्रश्न, सही उत्तर व स्पष्टीकरण।",
                                      body, url, base, structured), priority=0.6, changefreq="yearly")
                     parts.append(f"<a href='{name}'>{esc(s['hi'])}{part} ({len(chunk)})</a>")
