@@ -25,7 +25,7 @@ class SiteTests(unittest.TestCase):
             for f in pyq[:50]:
                 self.assertNotIn("adsbygoogle", f.read_text(encoding="utf-8"))
             home = (Path(t) / "index.html").read_text(encoding="utf-8")
-            self.assertIn("pyq-rrb_ntpc.html".replace("_", "_"), home.replace("pyq-rrb_ntpc", "pyq-rrb_ntpc"))
+            self.assertIn("pyq-rrb_ntpc", home)
 
     def test_clean_urls_for_cloudflare(self):
         env = dict(os.environ, SITE_URL="https://railpariksha.example.workers.dev")
@@ -39,6 +39,19 @@ class SiteTests(unittest.TestCase):
             self.assertIn("/privacy</loc>", sm)
             page = next(Path(t).glob("pyq-rrb-ntpc*.html")).read_text(encoding="utf-8")
             self.assertNotIn('.html"', page)
+
+    def test_clean_urls_on_a_custom_domain(self):
+        """Cloudflare redirects /x.html to /x on a bought domain too, so canonicals and the sitemap stay extension-less."""
+        env = dict(os.environ, SITE_URL="https://railpariksha.in")
+        with tempfile.TemporaryDirectory() as t:
+            subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t],
+                           check=True, capture_output=True, env=env)
+            home = (Path(t) / "index.html").read_text(encoding="utf-8")
+            self.assertIn('rel="canonical" href="https://railpariksha.in/"', home)
+            sm = (Path(t) / "sitemap.xml").read_text(encoding="utf-8")
+            self.assertNotIn(".html", sm)
+            self.assertIn("https://railpariksha.in/privacy</loc>", sm)
+            self.assertIn("sitemap.xml", (Path(t) / "robots.txt").read_text(encoding="utf-8"))
 
     def test_language_switch_and_bilingual_questions(self):
         with tempfile.TemporaryDirectory() as t:
