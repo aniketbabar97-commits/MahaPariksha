@@ -11,12 +11,14 @@ import argparse
 import html
 import json
 import os
+import re
 import shutil
 from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
+TELEGRAM_URL = os.environ.get("TELEGRAM_URL") or "https://t.me/RailParikshaApp"
 PLAY_URL = "https://play.google.com/store/apps/details?id=app.railpariksha"
 SUPPORT_EMAIL = os.environ.get("SUPPORT_EMAIL", "support@railpariksha.app")
 LETTERS = ["अ", "ब", "क", "ड"]
@@ -32,21 +34,50 @@ DEFAULT_BASE_URL = "https://railpariksha.app"
 NEG_FRACTIONS = {0.3333: "1/3", 0.25: "1/4", 0: None}
 
 CSS = """
-:root{--navy:#0B3D91;--navy2:#154BAF;--gold:#F5B400;--sun:#FFD066;--bg:#F5F7FC;--card:#fff;--text:#16203a;--muted:#5b6479;--ok:#1E9E5A}
-@media (prefers-color-scheme:dark){:root{--bg:#0E1320;--card:#1A2133;--text:#e8ecf5;--muted:#9aa3b8}}
-*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Devanagari","Mukta",system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--navy2)}header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:28px 16px}
-header a{color:#fff;text-decoration:none}.wrap{max-width:860px;margin:0 auto;padding:0 16px}
-h1{margin:.2em 0;font-size:1.8rem}.tag{color:var(--sun);font-weight:700}
-.cta{display:inline-block;background:var(--gold);color:#16203a!important;font-weight:800;padding:12px 20px;border-radius:14px;text-decoration:none;margin-top:10px}
-.card{background:var(--card);border-radius:18px;padding:16px 18px;margin:14px 0;box-shadow:0 2px 10px rgba(0,0,0,.05)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.q{font-weight:700}.opts{margin:.4em 0 .6em;padding-left:0;list-style:none}.opts li{padding:2px 0}
-details summary{cursor:pointer;color:var(--navy2);font-weight:700}.ans{color:var(--ok);font-weight:800}
-.muted{color:var(--muted);font-size:.9rem}footer{padding:30px 16px;color:var(--muted);font-size:.9rem}
-.answer{background:var(--card);border-left:4px solid var(--gold);border-radius:8px;padding:12px 16px;margin:12px 0 18px;font-size:1.02rem}
-.crumbs{font-size:.85rem;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
+:root{--navy:#0B3D91;--navy2:#154BAF;--gold:#F5B400;--sun:#FFD066;--bg:#F4F6FB;--card:#fff;--text:#16203a;--muted:#5b6479;--ok:#1E9E5A;--line:#e3e8f3;--shadow:0 2px 12px rgba(20,40,90,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#0E1320;--card:#1A2133;--text:#e8ecf5;--muted:#9aa3b8;--line:#2a3350;--shadow:none;--navy2:#7aa7ff}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Devanagari","Mukta",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:17px}
+a{color:var(--navy2)}
+.top{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,#0B3D91,#154BAF);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.top .in{max-width:1040px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.top a{color:#fff;text-decoration:none}.brand{font-weight:800;font-size:1.15rem;letter-spacing:.2px}
+.brand small{display:block;color:var(--sun);font-weight:600;font-size:.72rem;letter-spacing:.3px}
+.nav{margin-left:auto;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.nav a{padding:6px 11px;border-radius:999px;font-size:.92rem;font-weight:600}.nav a:hover{background:rgba(255,255,255,.14)}
+.nav a.install{background:var(--gold);color:#16203a;font-weight:800}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+main.wrap{padding-top:18px;padding-bottom:30px;max-width:900px}
+h1{margin:.3em 0 .2em;font-size:1.75rem;line-height:1.3}h2{margin:1.7em 0 .5em;font-size:1.3rem}
+.hero{background:linear-gradient(135deg,#0B3D91 0%,#1B56C6 100%);color:#fff;border-radius:22px;padding:26px 22px;margin:6px 0 10px;box-shadow:var(--shadow)}
+.hero h1{color:#fff;font-size:2rem;margin:.1em 0 .25em}.hero p{margin:.2em 0 .8em;color:#e5eeff}
+.badge{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;padding:3px 12px;font-size:.84rem;font-weight:700;color:var(--sun)}
+.hero .row{display:flex;gap:10px;flex-wrap:wrap}.btn2{display:inline-block;border:2px solid rgba(255,255,255,.55);color:#fff!important;font-weight:700;padding:10px 18px;border-radius:14px;text-decoration:none}
+.cta{display:inline-block;background:var(--gold);color:#16203a!important;font-weight:800;padding:12px 20px;border-radius:14px;text-decoration:none}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
+.stat{background:var(--card);border-radius:16px;padding:12px 14px;text-align:center;box-shadow:var(--shadow)}.stat b{display:block;font-size:1.45rem;color:var(--navy2)}.stat span{font-size:.85rem;color:var(--muted)}
+.search{position:relative;margin:14px 0 4px}.search input{width:100%;padding:14px 16px;border:2px solid var(--line);border-radius:14px;font-size:1rem;background:var(--card);color:var(--text)}
+.search input:focus{outline:none;border-color:var(--navy2)}
+#hits{position:absolute;left:0;right:0;top:100%;background:var(--card);border-radius:14px;box-shadow:0 8px 28px rgba(0,0,0,.2);z-index:10;max-height:340px;overflow:auto;margin-top:6px}
+#hits a{display:block;padding:10px 14px;text-decoration:none;color:var(--text);border-bottom:1px solid var(--line);font-size:.95rem}#hits a:hover{background:var(--bg)}
+.card{background:var(--card);border-radius:18px;padding:16px 18px;margin:14px 0;box-shadow:var(--shadow);border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+.grid .card{margin:0;text-decoration:none;color:var(--text);display:block;transition:transform .12s,box-shadow .12s}.grid .card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(20,40,90,.14)}
+.tile .ic{font-size:1.7rem;display:block;margin-bottom:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chips a{background:var(--card);border:1px solid var(--line);padding:7px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.92rem}.chips a:hover{border-color:var(--navy2)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.steps .card{margin:0}.steps b{font-size:1.1rem;color:var(--navy2)}
+.q{font-weight:700;font-size:1.05rem}.opts{margin:.5em 0 .7em;padding-left:0;list-style:none;display:grid;gap:6px}
+.opts li{padding:8px 12px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+details summary{cursor:pointer;color:var(--navy2);font-weight:800;padding:6px 0}.ans{color:var(--ok);font-weight:800}
+.muted{color:var(--muted);font-size:.92rem}
+.answer{background:var(--card);border-left:4px solid var(--gold);border-radius:10px;padding:12px 16px;margin:12px 0 18px;font-size:1rem}
+.crumbs{font-size:.86rem;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
 .links{margin:.3em 0}.faq dt{font-weight:700;margin-top:10px}.faq dd{margin:.2em 0 0}
+.pager{display:flex;justify-content:space-between;gap:10px;margin:18px 0;flex-wrap:wrap}.pager a{background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+.appcta{background:linear-gradient(135deg,#0B3D91,#1B56C6);color:#fff;border-radius:18px;padding:18px;margin:22px 0;text-align:center}.appcta a.cta{margin:4px}
+footer{background:var(--card);border-top:1px solid var(--line);padding:26px 16px;color:var(--muted);font-size:.9rem;margin-top:30px}
+footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}footer a{color:var(--muted)}footer h4{margin:.1em 0 .4em;color:var(--text)}
+@media (max-width:560px){.hero h1{font-size:1.55rem}body{font-size:16px}.nav a:not(.install){display:none}}
 """
 
 
@@ -152,13 +183,14 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
 <style>{CSS}</style>{structured}{ads_head}</head><body>
-<header><div class="wrap"><a href="index.html"><strong>RailPariksha · रेलपरीक्षा</strong></a>
-<div class="tag">Train to succeed · सफलता की पटरी पर</div></div></header>
+<header class="top"><div class="in"><a class="brand" href="/">RailPariksha · रेलपरीक्षा<small>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए</small></a>
+<nav class="nav"><a href="/#exams">परीक्षाएँ</a><a href="/#papers">पिछले प्रश्न पत्र</a><a href="/#subjects">विषय</a><a href="{TELEGRAM_URL}">Telegram</a><a class="install" href="{PLAY_URL}">ऐप इंस्टॉल करें</a></nav></div></header>
 <main class="wrap">{body}
-<div class="card"><strong>रोज़ मुफ़्त अभ्यास करें!</strong><br>Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और भी बहुत कुछ।<br>
-<a class="cta" href="{PLAY_URL}">Google Play से डाउनलोड करें</a></div></main>
-<footer class="wrap">RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। ·
-<a href="privacy.html">Privacy Policy</a> · {SUPPORT_EMAIL}</footer></body></html>"""
+<div class="appcta"><strong>रोज़ मुफ़्त अभ्यास करें!</strong><br>Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।<br>
+<a class="cta" href="{PLAY_URL}">Google Play से डाउनलोड करें</a> <a class="btn2" href="{TELEGRAM_URL}">Telegram चैनल जुड़ें</a></div></main>
+<footer><div class="cols"><div><h4>RailPariksha</h4>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए बनाया गया मुफ़्त अभ्यास ऐप।</div>
+<div><h4>लिंक</h4><a href="/">होम</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="privacy.html">Privacy Policy</a></div>
+<div><h4>सूचना</h4>RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।<br>{SUPPORT_EMAIL}</div></div></footer></body></html>"""
 
 
 def question_html(q, n):
@@ -243,6 +275,12 @@ def strip_html_extensions(out):
         f.write_text(t, encoding="utf-8")
 
 
+EXAM_ICONS = {"rrb_ntpc": "🚉", "rrb_group_d": "🛤️", "rrb_alp": "🚂", "rrb_technician": "🔧", "rrb_je": "🏗️",
+              "rrb_je_mechanical": "⚙️", "rrb_je_civil": "🧱", "rrb_je_electrical": "⚡", "rrb_paramedical": "🩺",
+              "rpf_constable": "🛡️", "rpf_si": "🎖️", "dfccil_executive": "📦"}
+SUBJECT_ICONS = {"maths": "➗", "reasoning": "🧩", "science": "🔬", "gk": "🌍", "railway_gk": "🚆", "computer": "💻",
+                 "english": "🔤", "current_affairs": "📰"}
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="site")
@@ -261,8 +299,13 @@ def main():
     subjects = {s["id"]: s for s in tax["subjects"]}
     url_meta = []  # (path, priority, changefreq)
 
+    search_index = []
+
     def write(name, content, priority=0.5, changefreq="monthly"):
         (out / name).write_text(content, encoding="utf-8")
+        m = re.search(r"<title>(.*?)</title>", content)
+        if m and name != "privacy.html":
+            search_index.append([html.unescape(m.group(1)).split(" | ")[0], name])
         url_meta.append((name, priority, changefreq))
 
     # ---- Topic pages -------------------------------------------------
@@ -410,7 +453,7 @@ def main():
         write(name, page(f"{e['hi']} अभ्यास प्रश्न {date.today().year} | {e['en']} MCQ Hindi | {ORG_NAME}",
                          f"{e['hi']} ({e['en']}) के लिए विषयवार अभ्यास प्रश्न, उत्तर व स्पष्टीकरण। {ORG_NAME} ऐप पर मुफ़्त मॉक टेस्ट।",
                          body, url, base, structured), priority=0.9, changefreq="weekly")
-        exam_cards.append(f"<a class='card' href='{name}'><strong>{esc(e['hi'])}</strong><br><span class='muted'>{esc(e['en'])}</span></a>")
+        exam_cards.append(f"<a class='card tile' href='{name}'><span class='ic'>{EXAM_ICONS.get(e['id'], '📘')}</span><strong>{esc(e['hi'])}</strong><br><span class='muted'>{esc(e['en'])}</span></a>")
 
     # ---- Previous-year papers ---------------------------------------
     import site_pyq
@@ -434,10 +477,39 @@ def main():
          "url": home_url, "logo": f"{base}/og-image.png"},
         {"@context": "https://schema.org", "@type": "WebSite", "name": ORG_NAME, "url": home_url},
     )
-    body = (crumbs_html([("Home", None)]) + "<h1>रेलवे व RPF परीक्षाओं के लिए मुफ़्त अभ्यास</h1>" + answer_para +
-            f"<a class='cta' href='{PLAY_URL}'>ऐप डाउनलोड करें</a><h2>परीक्षा चुनें · Choose your exam</h2><div class='grid'>{''.join(exam_cards)}</div>"
-            f"<h2>पिछले साल के प्रश्न पत्र · Previous year papers</h2><div class='grid'>{pyq_cards}</div>"
-            f"<h2>विषय के अनुसार अभ्यास करें · Practice by subject</h2><div class='grid'>{''.join(subject_cards)}</div>")
+    total_pyq = sum(len(v) for sub in site_pyq.load(CONTENT).values() for paper in sub.values() for v in paper.values())
+    n_papers = sum(len(sub) for sub in site_pyq.load(CONTENT).values())
+    subject_chips = "".join(f"<a href='subject-{s2['id']}.html'>{SUBJECT_ICONS.get(s2['id'], '📘')} {esc(s2['hi'])}</a>"
+                            for s2 in tax["subjects"] if any((s2["id"], t["id"]) in topic_pages for t in s2["topics"]))
+    body = (
+        "<section class='hero'><span class='badge'>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए 🤝</span>"
+        "<h1>रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त</h1>"
+        "<p>RRB NTPC, ग्रुप D, ALP, JE, RPF के असली पिछले साल के प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी व्याख्या के साथ। "
+        "Free practice for every major railway exam, in Hindi and English.</p>"
+        f"<div class='row'><a class='cta' href='{PLAY_URL}'>ऐप डाउनलोड करें</a><a class='btn2' href='{TELEGRAM_URL}'>Telegram चैनल</a></div></section>"
+        f"<div class='stats'><div class='stat'><b>{total_pyq:,}</b><span>असली PYQ प्रश्न</span></div>"
+        f"<div class='stat'><b>{n_papers}</b><span>पिछले प्रश्न पत्र</span></div>"
+        f"<div class='stat'><b>{len(tax['exams'])}</b><span>परीक्षाएँ</span></div>"
+        "<div class='stat'><b>हिंदी + EN</b><span>हर प्रश्न दोनों भाषा में</span></div></div>"
+        "<div class='search'><input id='q' type='search' placeholder='खोजें: जैसे NTPC 2025, गणित, Group D…' autocomplete='off' aria-label='Search'><div id='hits' hidden></div></div>"
+        "<h2 id='exams'>आप किस परीक्षा की तैयारी कर रहे हैं? · Choose your exam</h2>"
+        f"<div class='grid'>{''.join(exam_cards)}</div>"
+        "<h2 id='papers'>पिछले साल के प्रश्न पत्र · Previous year papers</h2>"
+        f"<div class='grid'>{pyq_cards}</div>"
+        "<h2 id='subjects'>विषय के अनुसार अभ्यास · Practice by subject</h2>"
+        f"<div class='chips'>{subject_chips}</div>"
+        "<h2>कैसे काम करता है · How it works</h2><div class='steps'>"
+        "<div class='card'><b>1. परीक्षा चुनें</b><br>अपनी परीक्षा चुनें और उसका सिलेबस व पैटर्न देखें।</div>"
+        "<div class='card'><b>2. रोज़ अभ्यास करें</b><br>Daily 10, टॉपिक टेस्ट और असली PYQ, व्याख्या के साथ।</div>"
+        "<div class='card'><b>3. मॉक टेस्ट दें</b><br>ऐप में टाइमर और सही नेगेटिव मार्किंग के साथ पूरा मॉक।</div></div>"
+        + answer_para)
+    search_js = ("<script>(function(){var i=document.getElementById('q'),h=document.getElementById('hits'),d=null;"
+                 "function load(c){if(d)return c();fetch('search.json').then(function(r){return r.json()}).then(function(j){d=j;c()})}"
+                 "i.addEventListener('input',function(){var t=i.value.trim().toLowerCase();if(t.length<2){h.hidden=true;return}"
+                 "load(function(){var w=t.split(/\\s+/),o=[];for(var k=0;k<d.length&&o.length<12;k++){var s=d[k][0].toLowerCase(),m=true;"
+                 "for(var x=0;x<w.length;x++){if(s.indexOf(w[x])<0){m=false;break}}if(m)o.push(d[k])}"
+                 "h.innerHTML=o.length?o.map(function(e){return '<a href=\"'+e[1]+'\">'+e[0]+'</a>'}).join(''):'<a>कुछ नहीं मिला</a>';h.hidden=false})})})();</script>")
+    body += search_js
     write("index.html", page(f"{ORG_NAME} — RRB NTPC, ग्रुप डी, RPF अभ्यास प्रश्न हिंदी में",
                              "RRB NTPC, Group D, ALP, JE, RPF Constable & SI practice questions in Hindi with answers & explanations. Free daily quiz, flashcards and mock tests.",
                              body, home_url, base, structured), priority=1.0, changefreq="weekly")
@@ -479,7 +551,10 @@ reports) to find and fix problems. You can send an error report on any question;
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         + sitemap_entries + "</urlset>\n",
         encoding="utf-8")
-    if clean_urls(base):
+    clean = clean_urls(base)
+    entries = [[t, ("/" if n == "index.html" else (n[:-5] if clean else n))] for t, n in search_index]
+    (out / "search.json").write_text(json.dumps(entries, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    if clean:
         strip_html_extensions(out)
     print(f"site: {len(url_meta)} pages -> {out}")
 

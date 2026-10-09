@@ -49,6 +49,7 @@ def add_pyq_pages(h, tax, content_dir, base, write):
             by_subj = papers[label]
             total = sum(len(v) for v in by_subj.values())
             parts = []
+            first_pages = {sid: f"pyq-{slug(label)}-{sid}-1.html" for sid in by_subj}
             for sid in sorted(by_subj):
                 qs = by_subj[sid]
                 s = subj.get(sid, {"hi": sid, "en": sid})
@@ -66,6 +67,13 @@ def add_pyq_pages(h, tax, content_dir, base, write):
                         if i + 1 == AD_AFTER and len(chunk) > AD_AFTER + 3:
                             body_qs.append(ad_unit())
                     body_qs.append(ad_unit())
+                    prev_a = (f"<a href='pyq-{slug(label)}-{sid}-{n - 1}.html'>← पिछला भाग</a>" if n > 1 else "<span></span>")
+                    next_a = (f"<a href='pyq-{slug(label)}-{sid}-{n + 1}.html'>अगला भाग →</a>" if n < len(pages) else "<span></span>")
+                    body_qs.append(f"<div class='pager'>{prev_a}{next_a}</div>")
+                    others = "".join(f"<a href='{nm}'>{esc(subj.get(o, {'hi': o})['hi'])}</a>"
+                                     for o, nm in first_pages.items() if o != sid)
+                    if others:
+                        body_qs.append(f"<h2>इसी पेपर के अन्य विषय</h2><div class='chips'>{others}</div>")
                     intro = (f"<div class='answer'>{esc(label)} — {esc(s['hi'])} ({esc(s['en'])}) के "
                              f"{len(chunk)} प्रश्न{part}, सही उत्तर और हिंदी-अंग्रेज़ी स्पष्टीकरण सहित। "
                              f"These are the {s['en']} questions from {esc(label)} with answers and bilingual "
