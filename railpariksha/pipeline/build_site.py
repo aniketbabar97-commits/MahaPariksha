@@ -23,11 +23,11 @@ PLAY_URL = "https://play.google.com/store/apps/details?id=app.railpariksha"
 SUPPORT_EMAIL = os.environ.get("SUPPORT_EMAIL", "support@railpariksha.app")
 LETTERS = ["अ", "ब", "क", "ड"]
 ORG_NAME = "RailPariksha"
-# No production domain is live yet (see docs/LAUNCH.md); this placeholder keeps
-# canonical/OG/JSON-LD URLs absolute (required by the sitemap protocol and by
-# schema.org) instead of emitting protocol-relative "/page.html" URLs. Pass
-# --base-url or set SITE_URL once the real domain is bought to override it.
-DEFAULT_BASE_URL = "https://railpariksha.app"
+# The production address. Canonical/OG/JSON-LD URLs and the sitemap must be absolute (sitemap protocol,
+# schema.org). SITE_URL / --base-url can override it, except for preview addresses (workers.dev, pages.dev):
+# those are never the canonical home, so they always fall back to this one.
+DEFAULT_BASE_URL = "https://railpariksha.in"
+PREVIEW_HOSTS = (".workers.dev", ".pages.dev")
 
 # Known negative-marking fractions, spelled out for direct-answer / FAQ text.
 # Sourced from taxonomy.json's "neg" field on each exam (RRB = 1/3, RPF/PSU = 1/4).
@@ -403,9 +403,9 @@ def main():
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     base = (a.base_url or DEFAULT_BASE_URL).rstrip("/")
-    if not a.base_url:
-        print(f"note: --base-url/SITE_URL not set, using placeholder domain {base} "
-              f"for canonical/sitemap/JSON-LD URLs")
+    if base.split("//")[-1].split("/")[0].endswith(PREVIEW_HOSTS):
+        print(f"note: {base} is a preview address; canonical/sitemap/JSON-LD URLs use {DEFAULT_BASE_URL}")
+        base = DEFAULT_BASE_URL
     tax = json.loads((CONTENT / "taxonomy.json").read_text(encoding="utf-8"))
     qs = []
     for p in sorted((CONTENT / "bank").glob("*.json")):
