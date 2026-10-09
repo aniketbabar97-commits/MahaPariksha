@@ -469,7 +469,7 @@ class _FlashcardCardState extends State<_FlashcardCard> {
     final subject = context.scope.repo.subject(widget.c.subject);
     final dark = Theme.of(context).brightness == Brightness.dark;
     return Container(
-      color: dark ? const Color(0xFF0E1320) : BrandColors.sky,
+      color: dark ? const Color(0xFF0A1226) : BrandColors.sky,
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(Spacing.lg, 80, Spacing.lg, Spacing.xl),

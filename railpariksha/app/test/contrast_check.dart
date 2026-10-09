@@ -96,7 +96,18 @@ Future<List<String>> contrastFindings(WidgetTester tester, GlobalKey boundaryKey
             }
           }
           if (n > 0) {
-            final top = hist.entries.reduce((a, b) => a.value >= b.value ? a : b).key;
+            var top = hist.entries.reduce((a, b) => a.value >= b.value ? a : b).key;
+            // A big filled glyph (a 52px icon) can outnumber a gradient background that is split across
+            // several buckets. The background is then the biggest bucket that is NOT the glyph's own
+            // colour, as long as it is a real share of the box; a glyph that truly sits on its own
+            // colour has no such bucket and still reports 1.00.
+            final f = style!.color!;
+            final fgKey = ((f.r * 255).round() >> 4 << 8) | ((f.g * 255).round() >> 4 << 4) | ((f.b * 255).round() >> 4);
+            final others = hist.entries.where((e) => e.key != fgKey).toList();
+            if (others.isNotEmpty) {
+              final best = others.reduce((a, b) => a.value >= b.value ? a : b);
+              if (best.value >= n * 0.2) top = best.key;
+            }
             // Average the real pixels that fall in the winning bucket.
             double r = 0, g = 0, b = 0;
             var m = 0;
@@ -113,7 +124,7 @@ Future<List<String>> contrastFindings(WidgetTester tester, GlobalKey boundaryKey
               }
             }
             final bg = Color.from(alpha: 1, red: r / m, green: g / m, blue: b / m);
-            final fg = _over(style!.color!, bg);
+            final fg = _over(style.color!, bg);
             final fontSize = style.fontSize ?? 14;
             final bold = (style.fontWeight?.value ?? 400) >= 700;
             final large = fontSize >= 18 || (fontSize >= 14 && bold);

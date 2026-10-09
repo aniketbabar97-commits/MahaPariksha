@@ -267,7 +267,7 @@ class _BeastModeScreenState extends State<BeastModeScreen> {
         }
       },
       child: Scaffold(
-        backgroundColor: const Color(0xFF0E1320),
+        backgroundColor: const Color(0xFF0A1226),
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           foregroundColor: Colors.white,

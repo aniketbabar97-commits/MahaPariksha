@@ -354,7 +354,7 @@ def make_card(day, qs, count=4):
         return None
     from PIL import Image, ImageDraw, ImageFont, ImageFilter
     W, H = 1080, 1350
-    top, bottom = (11, 61, 145), (6, 32, 84)
+    top, bottom = (10, 22, 51), (20, 38, 79)
     img = Image.new("RGB", (W, H), top)
     px = img.load()
     for y in range(H):

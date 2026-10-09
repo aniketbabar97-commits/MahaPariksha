@@ -34,12 +34,12 @@ DEFAULT_BASE_URL = "https://railpariksha.app"
 NEG_FRACTIONS = {0.3333: "1/3", 0.25: "1/4", 0: None}
 
 CSS = """
-:root{--navy:#0B3D91;--navy2:#154BAF;--gold:#F5B400;--sun:#FFD066;--bg:#F4F6FB;--card:#fff;--text:#16203a;--muted:#5b6479;--ok:#1E9E5A;--line:#e3e8f3;--shadow:0 2px 12px rgba(20,40,90,.07)}
-@media (prefers-color-scheme:dark){:root{--bg:#0E1320;--card:#1A2133;--text:#e8ecf5;--muted:#9aa3b8;--line:#2a3350;--shadow:none;--navy2:#7aa7ff}}
+:root{--navy:#0A1633;--navy2:#154BAF;--gold:#E8BA4A;--sun:#F3D27C;--bg:#FAF8F2;--card:#fff;--text:#1b2236;--muted:#5d6475;--ok:#1E9E5A;--line:#e7e2d3;--shadow:0 2px 12px rgba(40,40,20,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#0A1226;--card:#131E3D;--text:#e8ecf5;--muted:#9aa3b8;--line:#2a3350;--shadow:none;--navy2:#7aa7ff}}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;font-family:"Noto Sans Devanagari","Mukta",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:17px}
 a{color:var(--navy2)}
-.top{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,#0B3D91,#154BAF);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.top{position:sticky;top:0;z-index:20;background:linear-gradient(135deg,#0A1633,#14264F);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .top .in{max-width:1040px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .top a{color:#fff;text-decoration:none}.brand{font-weight:800;font-size:1.15rem;letter-spacing:.2px}
 .brand small{display:block;color:var(--sun);font-weight:600;font-size:.72rem;letter-spacing:.3px}
@@ -49,7 +49,7 @@ a{color:var(--navy2)}
 .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
 main.wrap{padding-top:18px;padding-bottom:30px;max-width:900px}
 h1{margin:.3em 0 .2em;font-size:1.75rem;line-height:1.3}h2{margin:1.7em 0 .5em;font-size:1.3rem}
-.hero{background:linear-gradient(135deg,#0B3D91 0%,#1B56C6 100%);color:#fff;border-radius:22px;padding:26px 22px;margin:6px 0 10px;box-shadow:var(--shadow)}
+.hero{background:linear-gradient(135deg,#0A1633 0%,#17305E 100%);color:#fff;border-radius:22px;padding:26px 22px;margin:6px 0 10px;box-shadow:var(--shadow)}
 .hero h1{color:#fff;font-size:2rem;margin:.1em 0 .25em}.hero p{margin:.2em 0 .8em;color:#e5eeff}
 .badge{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;padding:3px 12px;font-size:.84rem;font-weight:700;color:var(--sun)}
 .hero .row{display:flex;gap:10px;flex-wrap:wrap}.btn2{display:inline-block;border:2px solid rgba(255,255,255,.55);color:#fff!important;font-weight:700;padding:10px 18px;border-radius:14px;text-decoration:none}
@@ -74,7 +74,7 @@ details summary{cursor:pointer;color:var(--navy2);font-weight:800;padding:6px 0}
 .crumbs{font-size:.86rem;color:var(--muted);margin-bottom:6px}.crumbs a{color:var(--muted)}
 .links{margin:.3em 0}.faq dt{font-weight:700;margin-top:10px}.faq dd{margin:.2em 0 0}
 .pager{display:flex;justify-content:space-between;gap:10px;margin:18px 0;flex-wrap:wrap}.pager a{background:var(--card);border:1px solid var(--line);padding:9px 16px;border-radius:12px;text-decoration:none;font-weight:700}
-.appcta{background:linear-gradient(135deg,#0B3D91,#1B56C6);color:#fff;border-radius:18px;padding:18px;margin:22px 0;text-align:center}.appcta a.cta{margin:4px}
+.appcta{background:linear-gradient(135deg,#0A1633,#17305E);color:#fff;border-radius:18px;padding:18px;margin:22px 0;text-align:center}.appcta a.cta{margin:4px}
 footer{background:var(--card);border-top:1px solid var(--line);padding:26px 16px;color:var(--muted);font-size:.9rem;margin-top:30px}
 footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}footer a{color:var(--muted)}footer h4{margin:.1em 0 .4em;color:var(--text)}
 @media (max-width:560px){.top .in{flex-wrap:nowrap}.brand small{display:none}.brand{font-size:1.02rem}.hero h1{font-size:1.55rem}body{font-size:16px}.nav a:not(.install){display:none}}
@@ -83,7 +83,7 @@ footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:r
 .brand{display:flex;align-items:center;gap:10px}.brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 2px 8px rgba(0,0,0,.3);transition:transform .3s}
 .brand:hover img{transform:rotate(-6deg) scale(1.06)}.brand span{line-height:1.15}
 .top{transition:padding .2s,box-shadow .2s}.top.sm .in{padding-top:6px;padding-bottom:6px}.top.sm .brand img{width:34px;height:34px}
-.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0B3D91,#1B56C6,#0e47ad,#2a6be0);background-size:300% 300%;animation:bg 14s ease infinite;display:grid;grid-template-columns:1.3fr .8fr;gap:10px;align-items:center;padding:30px 26px 0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0A1633,#14264F,#183463,#0F2247);background-size:300% 300%;animation:bg 14s ease infinite;display:grid;grid-template-columns:1.3fr .8fr;gap:10px;align-items:center;padding:30px 26px 0}
 .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07);animation:drift 11s ease-in-out infinite}
 .hero:before{width:260px;height:260px;right:-60px;top:-80px}.hero:after{width:180px;height:180px;left:-50px;bottom:40px;animation-delay:-5s}
 .hero .txt{position:relative;z-index:2;padding-bottom:20px}
@@ -160,6 +160,16 @@ html[lang="hi"] .q .bi .L-en,html[lang="en"] .q .bi .L-hi{font-weight:400}
 .pat td:last-child{min-width:90px;width:34%}
 @media (max-width:560px){.brand em{display:none}.top .in{gap:8px}.nav{gap:6px;flex-wrap:nowrap;margin-left:auto}.lang{padding:4px 10px;font-size:.82rem}.nav a.install{padding:6px 10px;font-size:.82rem;white-space:nowrap}.brand span{font-size:1rem}}
 .lt{font-weight:700;color:var(--navy2);white-space:nowrap}
+
+@font-face{font-family:"Lora";font-weight:700;font-display:swap;src:url(lora-700.woff) format("woff")}
+h1,h2,.brand span,.stat b,.quote{font-family:"Lora","Mukta",Georgia,serif}
+.hero h1{color:#FFF1D0;font-weight:700;letter-spacing:0}
+.hero p{color:#dfe6f7}.badge{color:var(--gold)}
+.top .brand small{font-family:"Mukta",sans-serif}
+.cta{color:#0A1633!important}
+a{color:var(--navy2)}
+@media (prefers-color-scheme:dark){a{color:#8DB0F5}.hero h1{color:#FFF1D0}}
+.hero:before,.hero:after{background:rgba(232,186,74,.08)}
 """
 
 
@@ -272,7 +282,7 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
-<script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><link rel="preload" href="/mukta-400.woff" as="font" type="font/woff" crossorigin><style>{CSS}</style>{structured}{ads_head}</head><body>
+<script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><link rel="preload" href="/lora-700.woff" as="font" type="font/woff" crossorigin><link rel="preload" href="/mukta-400.woff" as="font" type="font/woff" crossorigin><style>{CSS}</style>{structured}{ads_head}</head><body>
 <header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha<em> · रेलपरीक्षा</em><small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
 <nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a><button class="lang" id="lang" type="button" aria-label="Language">हिं / EN</button><a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
 <main class="wrap">{body}
@@ -688,7 +698,7 @@ def main():
         f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a></div>"
         f"<div class='trust'><span>✓ {bi('मुफ़्त', 'Free')}</span><span>✓ {bi('बिना साइन-अप', 'No sign-up')}</span><span>✓ {bi('ऑफलाइन भी', 'Works offline')}</span><span>✓ {bi('हिंदी + English', 'Hindi + English')}</span></div></div>"
         "<span class='glow'></span><img class='logo' src='logo-512.png' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
-        '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#F5B400"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0B3D91"/><circle cx="203" cy="38" r="3" fill="#FFD066"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
+        '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#E8BA4A"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0A1633"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0A1633"/><circle cx="203" cy="38" r="3" fill="#F3D27C"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
         "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>"
         f"<div class='stats rv'><div class='stat'><b data-count='{total_pyq}'>{total_pyq:,}</b><span>{bi('असली PYQ प्रश्न', 'real PYQ questions')}</span></div>"
         f"<div class='stat'><b data-count='{n_papers}'>{n_papers}</b><span>{bi('पिछले प्रश्न पत्र', 'past papers')}</span></div>"
