@@ -225,6 +225,24 @@ def course_ld(e, url, subjects, base):
     }
 
 
+def clean_urls(base):
+    """Cloudflare (workers.dev / pages.dev) answers /x.html with a redirect to /x, so links and the sitemap must
+    already use the extension-less address. CLEAN_URLS=1 forces it, CLEAN_URLS=0 forbids it."""
+    flag = os.environ.get("CLEAN_URLS")
+    if flag in ("0", "1"):
+        return flag == "1"
+    return base.split("//")[-1].split("/")[0].endswith((".workers.dev", ".pages.dev"))
+
+
+def strip_html_extensions(out):
+    for f in list(out.glob("*.html")) + [out / "sitemap.xml"]:
+        t = f.read_text(encoding="utf-8")
+        t = t.replace('"index.html"', '"/"').replace("'index.html'", "'/'").replace("/index.html", "/")
+        for q in ('"', "'", "#", "<"):
+            t = t.replace(".html" + q, q)
+        f.write_text(t, encoding="utf-8")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="site")
@@ -461,6 +479,8 @@ reports) to find and fix problems. You can send an error report on any question;
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
         + sitemap_entries + "</urlset>\n",
         encoding="utf-8")
+    if clean_urls(base):
+        strip_html_extensions(out)
     print(f"site: {len(url_meta)} pages -> {out}")
 
 

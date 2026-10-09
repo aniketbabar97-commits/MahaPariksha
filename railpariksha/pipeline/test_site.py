@@ -27,6 +27,19 @@ class SiteTests(unittest.TestCase):
             home = (Path(t) / "index.html").read_text(encoding="utf-8")
             self.assertIn("pyq-rrb_ntpc.html".replace("_", "_"), home.replace("pyq-rrb_ntpc", "pyq-rrb_ntpc"))
 
+    def test_clean_urls_for_cloudflare(self):
+        env = dict(os.environ, SITE_URL="https://railpariksha.example.workers.dev")
+        with tempfile.TemporaryDirectory() as t:
+            subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t],
+                           check=True, capture_output=True, env=env)
+            home = (Path(t) / "index.html").read_text(encoding="utf-8")
+            self.assertIn('rel="canonical" href="https://railpariksha.example.workers.dev/"', home)
+            sm = (Path(t) / "sitemap.xml").read_text(encoding="utf-8")
+            self.assertNotIn(".html", sm)
+            self.assertIn("/privacy</loc>", sm)
+            page = next(Path(t).glob("pyq-rrb-ntpc*.html")).read_text(encoding="utf-8")
+            self.assertNotIn('.html"', page)
+
     def test_ads_only_when_configured(self):
         env = dict(os.environ, ADSENSE_CLIENT="ca-pub-1", ADSENSE_SLOT="2")
         with tempfile.TemporaryDirectory() as t:
