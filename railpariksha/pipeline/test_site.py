@@ -21,6 +21,7 @@ class SiteTests(unittest.TestCase):
             pyq = [f for f in files if f.name.startswith("pyq-")]
             self.assertGreater(len(pyq), 500)
             self.assertTrue((Path(t) / "sitemap.xml").exists())
+            self.assertIn("pub-9100209280220037", (Path(t) / "app-ads.txt").read_text(encoding="utf-8"))
             for f in pyq[:50]:
                 self.assertNotIn("adsbygoogle", f.read_text(encoding="utf-8"))
             home = (Path(t) / "index.html").read_text(encoding="utf-8")
