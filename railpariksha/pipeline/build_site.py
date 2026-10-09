@@ -121,6 +121,45 @@ html[lang="hi"] .bi .L-en,html[lang="en"] .bi .L-hi{order:2;color:var(--muted);f
 .lang{border:2px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-weight:800;cursor:pointer;font-size:.9rem}
 .lang:hover{background:rgba(255,255,255,.16)}
 .q .bi{font-weight:700}.opts li .bi{font-weight:500}
+
+@font-face{font-family:"Mukta";font-weight:400;font-display:swap;src:url(mukta-400.woff) format("woff")}
+@font-face{font-family:"Mukta";font-weight:700;font-display:swap;src:url(mukta-700.woff) format("woff")}
+body{font-family:"Mukta","Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.6;letter-spacing:.005em}
+h1,h2,h3,b,strong{font-weight:700}
+h2{position:relative;padding-left:14px;margin:2em 0 .7em;font-size:1.38rem}
+h2:before{content:"";position:absolute;left:0;top:.2em;bottom:.2em;width:5px;border-radius:4px;background:linear-gradient(var(--gold),#ff9d00)}
+main.wrap{max-width:980px;padding-top:22px}
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}.trust span{background:rgba(255,255,255,.14);border-radius:999px;padding:4px 12px;font-size:.88rem;font-weight:700;color:#fff}
+.opts li{cursor:pointer;transition:background .15s,border-color .15s,transform .1s}.opts li:hover{border-color:var(--navy2);transform:translateX(2px)}
+.opts li.ok{background:#e6f6ec;border-color:#1E9E5A}.opts li.bad{background:#fdeaea;border-color:#d64545}
+@media (prefers-color-scheme:dark){.opts li.ok{background:#12301f}.opts li.bad{background:#3a1a1a}}
+.opts.done li{cursor:default;transform:none}
+.try{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}
+.try .meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.9rem;margin-bottom:8px}
+.try .qq{font-weight:700;font-size:1.12rem;margin:6px 0 12px}
+.try .opt{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:var(--bg);border:2px solid var(--line);border-radius:14px;padding:11px 14px;margin:8px 0;cursor:pointer;transition:all .15s}
+.try .opt:hover{border-color:var(--navy2);transform:translateX(3px)}.try .opt.ok{background:#e6f6ec;border-color:#1E9E5A}.try .opt.bad{background:#fdeaea;border-color:#d64545}
+@media (prefers-color-scheme:dark){.try .opt.ok{background:#12301f}.try .opt.bad{background:#3a1a1a}}
+.try .res{margin-top:12px;display:none}.try.done .res{display:block;animation:rise .35s ease}
+.try .row2{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.try .row2 a,.try .row2 button{font:inherit;font-weight:700;border-radius:12px;padding:9px 16px;cursor:pointer;text-decoration:none;border:2px solid var(--navy2);background:transparent;color:var(--navy2)}
+.try .row2 a.cta{background:var(--gold);border-color:var(--gold);color:#16203a}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.shots{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;margin:0 -4px;-webkit-overflow-scrolling:touch}
+.shots figure{flex:0 0 auto;width:210px;margin:0;scroll-snap-align:center;text-align:center}
+.shots img{width:100%;height:auto;border-radius:22px;box-shadow:0 10px 26px rgba(10,30,80,.28);border:1px solid var(--line);background:var(--card);transition:transform .25s}
+.shots figure:hover img{transform:translateY(-6px)}.shots figcaption{font-size:.86rem;color:var(--muted);margin-top:8px;font-weight:700}
+.pat{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.pat th,.pat td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line)}.pat th{background:rgba(21,75,175,.08);font-weight:700}
+.bar{display:block;height:8px;border-radius:6px;background:linear-gradient(90deg,var(--gold),#ff9d00)}
+.stage h3{margin:.1em 0 .3em;font-size:1.05rem}
+@media (max-width:640px){body{font-size:17px}.shots figure{width:170px}h2{font-size:1.22rem}}
+
+.brand em{font-style:normal}
+.opts li{display:flex;gap:8px;align-items:flex-start}.opts li>.bi{flex:1}
+html[lang="hi"] .q .bi .L-en,html[lang="en"] .q .bi .L-hi{font-weight:400}
+.pat td:last-child{min-width:90px;width:34%}
+@media (max-width:560px){.brand em{display:none}.top .in{gap:8px}.nav{gap:6px;flex-wrap:nowrap;margin-left:auto}.lang{padding:4px 10px;font-size:.82rem}.nav a.install{padding:6px 10px;font-size:.82rem;white-space:nowrap}.brand span{font-size:1rem}}
+.lt{font-weight:700;color:var(--navy2);white-space:nowrap}
 """
 
 
@@ -211,7 +250,10 @@ def ad_unit():
 
 LANG_JS = ("<script>(function(){var b=document.getElementById('lang');if(!b)return;b.addEventListener('click',function(){"
            "var n=document.documentElement.lang==='en'?'hi':'en';document.documentElement.lang=n;"
-           "try{localStorage.setItem('lang',n)}catch(e){}})})();</script>")
+           "try{localStorage.setItem('lang',n)}catch(e){}})})();"
+           "document.addEventListener('click',function(ev){var li=ev.target.closest&&ev.target.closest('.opts li');if(!li)return;var ul=li.parentNode;"
+           "if(ul.classList.contains('done'))return;ul.classList.add('done');var a=+ul.dataset.a,i=+li.dataset.i;"
+           "ul.children[a].classList.add('ok');if(i!==a)li.classList.add('bad');var d=ul.parentNode.querySelector('details');if(d)d.open=true});</script>")
 
 
 def page(title, desc, body, canonical, base, structured="", og_type="website"):
@@ -230,8 +272,8 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
-<script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><style>{CSS}</style>{structured}{ads_head}</head><body>
-<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha · रेलपरीक्षा<small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
+<script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><link rel="preload" href="/mukta-400.woff" as="font" type="font/woff" crossorigin><style>{CSS}</style>{structured}{ads_head}</head><body>
+<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha<em> · रेलपरीक्षा</em><small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
 <nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a><button class="lang" id="lang" type="button" aria-label="Language">हिं / EN</button><a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
 <main class="wrap">{body}
 <div class="appcta"><strong>{bi("रोज़ मुफ़्त अभ्यास करें!", "Practise free, every day!")}</strong><br>{bi("Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।", "Daily 10, flashcards, mock tests, streaks and 45,000+ real PYQs in Hindi and English.")}<br>
@@ -254,13 +296,13 @@ def bib(hi, en, cls=""):
 
 
 def question_html(q, n):
-    opts = "".join(f"<li>({bi(LETTERS[i], 'ABCDE'[i])}) {bib(esc(o), esc(q['o_en'][i]))}</li>" for i, o in enumerate(q["o_hi"]))
+    opts = "".join(f"<li data-i=\"{i}\"><span class=\"lt\">({bi(LETTERS[i], 'ABCDE'[i])})</span>{bib(esc(o), esc(q['o_en'][i]))}</li>" for i, o in enumerate(q["o_hi"]))
     extra = ""
     if q.get("hook_hi") or q.get("hook_en"):
         extra = "<p>💡 " + bib(esc(q.get("hook_hi") or q.get("hook_en")), esc(q.get("hook_en") or q.get("hook_hi"))) + "</p>"
     right = q["a"]
     return f"""<div class="card"><div class="q">{n}. {bib(esc(q['q_hi']), esc(q['q_en']))}</div>
-<ul class="opts">{opts}</ul>
+<ul class="opts" data-a="{q['a']}">{opts}</ul>
 <details><summary>{bi('उत्तर व स्पष्टीकरण देखें', 'Show answer and explanation')}</summary>
 <p class="ans">{bi('उत्तर', 'Answer')}: ({bi(LETTERS[right], 'ABCDE'[right])}) {bib(esc(q['o_hi'][right]), esc(q['o_en'][right]))}</p>
 {bib(esc(q['e_hi']), esc(q['e_en']))}{extra}</details></div>"""
@@ -341,6 +383,9 @@ EXAM_ICONS = {"rrb_ntpc": "🚉", "rrb_group_d": "🛤️", "rrb_alp": "🚂", "
               "rpf_constable": "🛡️", "rpf_si": "🎖️", "dfccil_executive": "📦"}
 SUBJECT_ICONS = {"maths": "➗", "reasoning": "🧩", "science": "🔬", "gk": "🌍", "railway_gk": "🚆", "computer": "💻",
                  "english": "🔤", "current_affairs": "📰"}
+
+EXAM_STRATEGY = json.loads((CONTENT / "exam_strategy.json").read_text(encoding="utf-8"))
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -509,8 +554,30 @@ def main():
             course_ld(e, url, subjects, base),
             faq_ld(faq_pairs),
         )
-        body = (crumbs + f"<h1>{esc(e['hi'])} अभ्यास प्रश्न {date.today().year}</h1>" + answer_para +
-                f"<h2>विषयवार अभ्यास · Practice by subject</h2>" + "".join(subj_links))
+        strat = EXAM_STRATEGY.get(e["id"], {})
+        pq, pm = e.get("paper_q"), e.get("paper_min")
+        pattern = ""
+        if pq and pm:
+            rows = "".join(
+                f"<tr><td>{bi(esc(subjects[en_['id']]['hi']), esc(subjects[en_['id']]['en']))}</td><td>{en_['w']}%</td>"
+                f"<td>~{round(pq * en_['w'] / 100)}</td><td><span class='bar' style='width:{en_['w'] * 2}%'></span></td></tr>"
+                for en_ in e["subjects"] if en_["id"] in subjects)
+            pattern = (
+                f"<h2>{bi('परीक्षा पैटर्न', 'Exam pattern')}</h2>"
+                f"<div class='stats'><div class='stat'><b>{pq}</b><span>{bi('प्रश्न', 'questions')}</span></div>"
+                f"<div class='stat'><b>{pm}</b><span>{bi('मिनट', 'minutes')}</span></div>"
+                f"<div class='stat'><b>{neg_fraction(neg) if neg else '0'}</b><span>{bi('नेगेटिव मार्किंग', 'negative marking')}</span></div></div>"
+                f"<table class='pat'><tr><th>{bi('विषय', 'Subject')}</th><th>{bi('भारांश', 'Weight')}</th><th>{bi('लगभग प्रश्न', 'Approx. questions')}</th><th></th></tr>{rows}</table>"
+                f"<p class='muted'>{bi('प्रश्नों की संख्या भारांश से निकाला गया अनुमान है; आधिकारिक अधिसूचना में अंतिम पैटर्न देखें।', 'Question counts are an estimate from the weightage; check the official notification for the final pattern.')}</p>")
+        stages = ""
+        if strat.get("stages"):
+            cards = "".join(
+                f"<div class='card stage'><h3>{bi(esc(st['hi']), esc(st['en']))}</h3>"
+                f"{bi(esc(st.get('detail_hi', '')), esc(st.get('detail_en', '')))}</div>"
+                for st in strat["stages"])
+            stages = f"<h2>{bi('चयन के चरण', 'Selection stages')}</h2>{cards}"
+        body = (crumbs + f"<h1>{esc(e['hi'])} अभ्यास प्रश्न {date.today().year}</h1>" + answer_para + pattern + stages +
+                f"<h2>{bi('विषयवार अभ्यास', 'Practise by subject')}</h2>" + "".join(subj_links))
         write(name, page(f"{e['hi']} अभ्यास प्रश्न {date.today().year} | {e['en']} MCQ Hindi | {ORG_NAME}",
                          f"{e['hi']} ({e['en']}) के लिए विषयवार अभ्यास प्रश्न, उत्तर व स्पष्टीकरण। {ORG_NAME} ऐप पर मुफ़्त मॉक टेस्ट।",
                          body, url, base, structured), priority=0.9, changefreq="weekly")
@@ -575,12 +642,51 @@ def main():
         "w.href='https://wa.me/?text='+encodeURIComponent((en?x[1]:x[0])+'\\n\\n'+location.origin+'/')});})();</script>"
         f"<h2>{bi('ऐप में क्या-क्या है', 'What’s inside the app')}</h2>"
         f"<div class='grid feats rv'>{feature_cards}</div>")
+    import telegram_bot as tb
+    web_pool = {}
+    for sid in ("maths", "reasoning", "gk", "science", "computer"):
+        pool = [r for r in tb.load_pyq(sid) if r.get("q_en") and len(r.get("o_en", [])) == len(r["o_hi"]) and r.get("e_en")
+                and len(r["q_hi"]) <= 220 and all(len(o) <= 70 for o in r["o_hi"]) and len(r["e_hi"]) <= 380]
+        pick = tb.pick(pool, "web-" + sid, date.today())
+        if pick:
+            web_pool[sid] = pick
+    try_data = json.dumps([
+        {"s": [subjects[k]["hi"], subjects[k]["en"]] if k in subjects else [k, k], "x": tb.exam_label(r.get("pyq")),
+         "q": [r["q_hi"], r["q_en"]], "o": [[a, b] for a, b in zip(r["o_hi"], r["o_en"])], "a": r["a"],
+         "e": [r["e_hi"], r["e_en"]]} for k, r in web_pool.items()], ensure_ascii=False).replace("</", "<\\/")
+    shot_caps = [("आज का मिशन", "Today’s mission"), ("पिछले साल के प्रश्न", "Previous year papers"),
+                 ("व्याख्या सहित उत्तर", "Answers with explanations"), ("रोज़ का करेंट अफेयर्स", "Daily current affairs"),
+                 ("स्मार्ट फ्लैशकार्ड", "Smart flashcards"), ("पूरा मॉक टेस्ट", "Full mock tests"),
+                 ("विषयवार अभ्यास", "Practice by subject")]
+    shots_html = "".join(
+        f"<figure><img loading='lazy' src='shot-{i}.webp' width='360' height='640' alt='RailPariksha app: {esc(en_)}'>"
+        f"<figcaption>{bi(esc(hi_), esc(en_))}</figcaption></figure>" for i, (hi_, en_) in enumerate(shot_caps, 1))
+    try_block = (
+        f"<h2>{bi('एक प्रश्न आज़माइए', 'Try a real question')}</h2>"
+        "<div class='try rv' id='try'><div class='meta'><span id='tm'></span><span id='tc'></span></div>"
+        "<div class='qq' id='tq'></div><div id='to'></div>"
+        "<div class='res' id='tr'><div id='te'></div><div class='row2'><button type='button' id='tn'>"
+        + bi('अगला प्रश्न →', 'Next question →') + "</button><a class='cta' href='" + PLAY_URL + "'>"
+        + bi('ऐप में और अभ्यास करें', 'Practise more in the app') + "</a></div></div></div>"
+        "<script>(function(){var D=" + try_data + ",i=0,el=function(id){return document.getElementById(id)},"
+        "L=function(){return document.documentElement.lang==='en'?1:0};"
+        "function bi(a){var s=document.createElement('span');s.innerHTML='<span class=\"hi\"></span><span class=\"en\"></span>';"
+        "s.firstChild.textContent=a[0];s.lastChild.textContent=a[1];return s}"
+        "function show(){if(!D.length)return;var d=D[i%D.length],t=el('try');t.classList.remove('done');"
+        "el('tm').innerHTML='';el('tm').appendChild(bi(d.s));el('tc').textContent=d.x+'  ·  '+(i%D.length+1)+'/'+D.length;"
+        "el('tq').innerHTML='';el('tq').appendChild(bi(d.q));var o=el('to');o.innerHTML='';"
+        "d.o.forEach(function(x,k){var b=document.createElement('button');b.type='button';b.className='opt';b.appendChild(bi(x));"
+        "b.addEventListener('click',function(){if(t.classList.contains('done'))return;t.classList.add('done');"
+        "o.children[d.a].classList.add('ok');if(k!==d.a)b.classList.add('bad');el('te').innerHTML='';el('te').appendChild(bi(d.e))});o.appendChild(b)})}"
+        "el('tn').addEventListener('click',function(){i++;show()});show()})();</script>")
+    shots_block = f"<h2>{bi('ऐप एक नज़र में', 'The app at a glance')}</h2><div class='shots rv'>{shots_html}</div>"
     body = (
         "<section class='hero'><div class='txt'><span class='badge'>" + bi('स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए', 'By students, for students') + " 🤝</span>"
         "<h1>" + bi('रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त', 'Railway exam preparation, completely free') + "</h1>"
         "<p>" + bi('RRB NTPC, ग्रुप D, ALP, JE, RPF के असली पिछले साल के प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी व्याख्या के साथ।',
                    'Real previous-year questions for RRB NTPC, Group D, ALP, JE and RPF, with answers and simple Hindi and English explanations.') + "</p>"
-        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a></div></div>"
+        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a></div>"
+        f"<div class='trust'><span>✓ {bi('मुफ़्त', 'Free')}</span><span>✓ {bi('बिना साइन-अप', 'No sign-up')}</span><span>✓ {bi('ऑफलाइन भी', 'Works offline')}</span><span>✓ {bi('हिंदी + English', 'Hindi + English')}</span></div></div>"
         "<span class='glow'></span><img class='logo' src='logo-512.png' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
         '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#F5B400"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0B3D91"/><circle cx="203" cy="38" r="3" fill="#FFD066"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
         "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>"
@@ -591,6 +697,7 @@ def main():
         "<div class='search'><input id='q' type='search' placeholder='खोजें / Search: NTPC 2025, गणित, Group D…' autocomplete='off' aria-label='Search'><div id='hits' hidden></div></div>"
         f"<h2 id='exams'>{bi('आप किस परीक्षा की तैयारी कर रहे हैं?', 'Which exam are you preparing for?')}</h2>"
         f"<div class='grid rv'>{''.join(exam_cards)}</div>"
+        + try_block + shots_block +
         f"<h2 id='papers'>{bi('पिछले साल के प्रश्न पत्र', 'Previous year papers')}</h2>"
         f"<div class='grid rv'>{pyq_cards}</div>"
         f"<h2 id='subjects'>{bi('विषय के अनुसार अभ्यास', 'Practise by subject')}</h2>"
