@@ -27,13 +27,24 @@ class SiteTests(unittest.TestCase):
             home = (Path(t) / "index.html").read_text(encoding="utf-8")
             self.assertIn("pyq-rrb_ntpc", home)
 
-    def test_clean_urls_for_cloudflare(self):
+    def test_preview_address_never_becomes_canonical(self):
+        """A workers.dev / pages.dev SITE_URL (the Cloudflare preview address) falls back to the production domain."""
         env = dict(os.environ, SITE_URL="https://railpariksha.example.workers.dev")
         with tempfile.TemporaryDirectory() as t:
             subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t],
                            check=True, capture_output=True, env=env)
             home = (Path(t) / "index.html").read_text(encoding="utf-8")
-            self.assertIn('rel="canonical" href="https://railpariksha.example.workers.dev/"', home)
+            self.assertIn('rel="canonical" href="https://railpariksha.in/"', home)
+            self.assertNotIn("workers.dev", (Path(t) / "sitemap.xml").read_text(encoding="utf-8"))
+            self.assertNotIn("workers.dev", (Path(t) / "robots.txt").read_text(encoding="utf-8"))
+
+    def test_clean_urls_for_cloudflare(self):
+        env = dict(os.environ, SITE_URL="https://example.org")
+        with tempfile.TemporaryDirectory() as t:
+            subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t],
+                           check=True, capture_output=True, env=env)
+            home = (Path(t) / "index.html").read_text(encoding="utf-8")
+            self.assertIn('rel="canonical" href="https://example.org/"', home)
             sm = (Path(t) / "sitemap.xml").read_text(encoding="utf-8")
             self.assertNotIn(".html", sm)
             self.assertIn("/privacy</loc>", sm)
