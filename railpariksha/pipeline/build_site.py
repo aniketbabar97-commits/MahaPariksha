@@ -77,7 +77,41 @@ details summary{cursor:pointer;color:var(--navy2);font-weight:800;padding:6px 0}
 .appcta{background:linear-gradient(135deg,#0B3D91,#1B56C6);color:#fff;border-radius:18px;padding:18px;margin:22px 0;text-align:center}.appcta a.cta{margin:4px}
 footer{background:var(--card);border-top:1px solid var(--line);padding:26px 16px;color:var(--muted);font-size:.9rem;margin-top:30px}
 footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}footer a{color:var(--muted)}footer h4{margin:.1em 0 .4em;color:var(--text)}
-@media (max-width:560px){.hero h1{font-size:1.55rem}body{font-size:16px}.nav a:not(.install){display:none}}
+@media (max-width:560px){.top .in{flex-wrap:nowrap}.brand small{display:none}.brand{font-size:1.02rem}.hero h1{font-size:1.55rem}body{font-size:16px}.nav a:not(.install){display:none}}
+
+/* ---- brand + motion ---- */
+.brand{display:flex;align-items:center;gap:10px}.brand img{width:42px;height:42px;border-radius:11px;box-shadow:0 2px 8px rgba(0,0,0,.3);transition:transform .3s}
+.brand:hover img{transform:rotate(-6deg) scale(1.06)}.brand span{line-height:1.15}
+.top{transition:padding .2s,box-shadow .2s}.top.sm .in{padding-top:6px;padding-bottom:6px}.top.sm .brand img{width:34px;height:34px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(120deg,#0B3D91,#1B56C6,#0e47ad,#2a6be0);background-size:300% 300%;animation:bg 14s ease infinite;display:grid;grid-template-columns:1.3fr .8fr;gap:10px;align-items:center;padding:30px 26px 0}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.07);animation:drift 11s ease-in-out infinite}
+.hero:before{width:260px;height:260px;right:-60px;top:-80px}.hero:after{width:180px;height:180px;left:-50px;bottom:40px;animation-delay:-5s}
+.hero .txt{position:relative;z-index:2;padding-bottom:20px}
+.hero .logo{position:relative;z-index:2;justify-self:center;width:min(230px,100%);height:auto;aspect-ratio:1/1;animation:float 5s ease-in-out infinite;filter:drop-shadow(0 14px 22px rgba(0,0,0,.35));border-radius:34px}
+.glow{position:absolute;z-index:1;right:9%;top:18%;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(255,208,102,.45),transparent 65%);animation:pulse 3.6s ease-in-out infinite}
+.track{grid-column:1/-1;position:relative;height:74px;margin:0 -26px;overflow:hidden;z-index:2}
+.train{position:absolute;bottom:14px;left:0;width:210px;animation:ride 16s linear infinite}
+.rails{position:absolute;left:0;right:0;bottom:0;height:16px;background:repeating-linear-gradient(90deg,#9fb6e6 0 3px,transparent 3px 22px);opacity:.9;animation:ties 1.1s linear infinite;border-top:3px solid #dbe6ff}
+.tick{overflow:hidden;white-space:nowrap;border-radius:14px;background:var(--card);border:1px solid var(--line);margin:12px 0;padding:10px 0;box-shadow:var(--shadow)}
+.tick div{display:inline-block;animation:marq 40s linear infinite;font-weight:700;color:var(--navy2)}.tick:hover div{animation-play-state:paused}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+.tile .ic{display:inline-block;transition:transform .25s}.tile:hover .ic{transform:scale(1.25) rotate(-8deg)}
+.stat b{font-variant-numeric:tabular-nums}.btn2,.cta{transition:transform .15s,box-shadow .15s}.cta:hover,.btn2:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.cta.pulse{animation:cta 2.4s ease-in-out infinite}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(18px,14px)}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}
+@keyframes pulse{0%,100%{opacity:.55;transform:scale(.92)}50%{opacity:1;transform:scale(1.08)}}
+@keyframes ride{0%{transform:translateX(-230px)}100%{transform:translateX(calc(100vw + 40px))}}
+@keyframes ties{to{background-position:-22px 0}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes cta{0%,100%{box-shadow:0 0 0 0 rgba(245,180,0,.55)}60%{box-shadow:0 0 0 14px rgba(245,180,0,0)}}
+@media (max-width:640px){.hero{grid-template-columns:1fr;padding:22px 18px 0}.hero .logo{width:130px;order:-1;justify-self:start}.glow{display:none}.track{margin:0 -18px}.train{width:150px}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.quote{background:linear-gradient(135deg,#fff8e1,#fff);border-left:5px solid var(--gold);font-size:1.12rem}
+@media (prefers-color-scheme:dark){.quote{background:linear-gradient(135deg,#2a2410,#1A2133)}}
+.feat .ic{font-size:1.5rem;display:block}.feats .card{cursor:default}.feats .card:hover .ic{animation:wob .6s}
+@keyframes wob{25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
 """
 
 
@@ -173,7 +207,7 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canonical}">
-<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{ORG_NAME}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
@@ -183,7 +217,7 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
 <style>{CSS}</style>{structured}{ads_head}</head><body>
-<header class="top"><div class="in"><a class="brand" href="/">RailPariksha · रेलपरीक्षा<small>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए</small></a>
+<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha · रेलपरीक्षा<small>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए</small></span></a>
 <nav class="nav"><a href="/#exams">परीक्षाएँ</a><a href="/#papers">पिछले प्रश्न पत्र</a><a href="/#subjects">विषय</a><a href="{TELEGRAM_URL}">Telegram</a><a class="install" href="{PLAY_URL}">ऐप इंस्टॉल करें</a></nav></div></header>
 <main class="wrap">{body}
 <div class="appcta"><strong>रोज़ मुफ़्त अभ्यास करें!</strong><br>Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।<br>
@@ -481,24 +515,60 @@ def main():
     n_papers = sum(len(sub) for sub in site_pyq.load(CONTENT).values())
     subject_chips = "".join(f"<a href='subject-{s2['id']}.html'>{SUBJECT_ICONS.get(s2['id'], '📘')} {esc(s2['hi'])}</a>"
                             for s2 in tax["subjects"] if any((s2["id"], t["id"]) in topic_pages for t in s2["topics"]))
+    mot = json.loads((CONTENT / "motivation" / "motivation.json").read_text(encoding="utf-8"))
+    mot = [m for m in mot if m.get("hi") and m.get("en")]
+    mot_today = mot[date.today().toordinal() % len(mot)]
+    n_cards = sum(len(json.loads(f.read_text(encoding="utf-8"))) for f in (CONTENT / "flashcards").glob("*.json"))
+    n_sheets = sum(len(json.loads(f.read_text(encoding="utf-8"))) for f in (CONTENT / "cheat_sheets").glob("*.json"))
+    n_mcq = len(qs)
+    features = [
+        ("🎯", "Daily 10", "हर दिन आपकी कमज़ोर जगहों से 10 प्रश्न"),
+        ("🗂️", f"{n_cards:,} फ्लैशकार्ड", "भूलने से पहले याद कराने वाला स्मार्ट रिवीज़न"),
+        ("📝", "मॉक टेस्ट", "टाइमर, पैलेट और असली नेगेटिव मार्किंग के साथ"),
+        ("📕", "मिस्टेक बुक", "हर गलत उत्तर तब तक लौटता है जब तक आप सीख न लें"),
+        ("📰", "रोज़ का करेंट अफेयर्स", "सुबह की डाइजेस्ट और क्विज़"),
+        ("🧾", f"{n_sheets} चीट शीट", "फ़ॉर्मूले और फ़ैक्ट एक नज़र में"),
+        ("🔥", "स्ट्रीक और लेवल", "रोज़ पढ़ाई की आदत, जनरल से राजधानी तक"),
+        ("🏆", "लीडरबोर्ड", "अपनी परीक्षा के दूसरे उम्मीदवारों से रैंक की तुलना"),
+        ("⚡", "60-सेकंड स्पीड राउंड", "प्लेटफ़ॉर्म पर इंतज़ार के पलों के लिए"),
+        ("📶", "ऑफलाइन भी", "एक बार डाउनलोड, फिर बिना इंटरनेट"),
+        ("🌐", "हिंदी ⇄ English", "हर प्रश्न, विकल्प और व्याख्या दोनों भाषा में"),
+        ("💪", "रोज़ की प्रेरणा", f"{len(mot)}+ कोट्स और स्टडी टिप्स"),
+    ]
+    feature_cards = "".join(f"<div class='card feat'><span class='ic'>{i}</span><b>{esc(t)}</b><br><span class='muted'>{esc(d)}</span></div>"
+                            for i, t, d in features)
+    mot_json = json.dumps([[m["hi"], m["en"]] for m in mot], ensure_ascii=False).replace("</", "<\\/")
+    motivation_block = (
+        "<h2>आज की प्रेरणा · Today's motivation</h2>"
+        f"<div class='card quote rv'><p id='mhi'>{esc(mot_today['hi'])}</p><p class='muted' id='men'>{esc(mot_today['en'])}</p>"
+        "<a class='cta' id='mwa' href='#'>WhatsApp पर शेयर करें</a></div>"
+        f"<script>(function(){{var m={mot_json},d=Math.floor(Date.now()/864e5)%m.length,x=m[d];"
+        "document.getElementById('mhi').textContent=x[0];document.getElementById('men').textContent=x[1];"
+        "document.getElementById('mwa').href='https://wa.me/?text='+encodeURIComponent(x[0]+'\\n\\n'+location.origin+'/');})();</script>"
+        "<h2>ऐप में क्या-क्या है · What's inside the app</h2>"
+        f"<div class='grid feats rv'>{feature_cards}</div>")
     body = (
-        "<section class='hero'><span class='badge'>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए 🤝</span>"
+        "<section class='hero'><div class='txt'><span class='badge'>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए 🤝</span>"
         "<h1>रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त</h1>"
         "<p>RRB NTPC, ग्रुप D, ALP, JE, RPF के असली पिछले साल के प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी व्याख्या के साथ। "
         "Free practice for every major railway exam, in Hindi and English.</p>"
-        f"<div class='row'><a class='cta' href='{PLAY_URL}'>ऐप डाउनलोड करें</a><a class='btn2' href='{TELEGRAM_URL}'>Telegram चैनल</a></div></section>"
-        f"<div class='stats'><div class='stat'><b>{total_pyq:,}</b><span>असली PYQ प्रश्न</span></div>"
-        f"<div class='stat'><b>{n_papers}</b><span>पिछले प्रश्न पत्र</span></div>"
-        f"<div class='stat'><b>{len(tax['exams'])}</b><span>परीक्षाएँ</span></div>"
+        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>ऐप डाउनलोड करें</a><a class='btn2' href='{TELEGRAM_URL}'>Telegram चैनल</a></div></div>"
+        "<span class='glow'></span><img class='logo' src='logo-512.png' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
+        '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#F5B400"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0B3D91"/><circle cx="203" cy="38" r="3" fill="#FFD066"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
+        "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>"
+        f"<div class='stats rv'><div class='stat'><b data-count='{total_pyq}'>{total_pyq:,}</b><span>असली PYQ प्रश्न</span></div>"
+        f"<div class='stat'><b data-count='{n_papers}'>{n_papers}</b><span>पिछले प्रश्न पत्र</span></div>"
+        f"<div class='stat'><b data-count='{len(tax['exams'])}'>{len(tax['exams'])}</b><span>परीक्षाएँ</span></div>"
         "<div class='stat'><b>हिंदी + EN</b><span>हर प्रश्न दोनों भाषा में</span></div></div>"
         "<div class='search'><input id='q' type='search' placeholder='खोजें: जैसे NTPC 2025, गणित, Group D…' autocomplete='off' aria-label='Search'><div id='hits' hidden></div></div>"
         "<h2 id='exams'>आप किस परीक्षा की तैयारी कर रहे हैं? · Choose your exam</h2>"
-        f"<div class='grid'>{''.join(exam_cards)}</div>"
+        f"<div class='grid rv'>{''.join(exam_cards)}</div>"
         "<h2 id='papers'>पिछले साल के प्रश्न पत्र · Previous year papers</h2>"
-        f"<div class='grid'>{pyq_cards}</div>"
+        f"<div class='grid rv'>{pyq_cards}</div>"
         "<h2 id='subjects'>विषय के अनुसार अभ्यास · Practice by subject</h2>"
-        f"<div class='chips'>{subject_chips}</div>"
-        "<h2>कैसे काम करता है · How it works</h2><div class='steps'>"
+        f"<div class='chips rv'>{subject_chips}</div>"
+        + motivation_block +
+        "<h2>कैसे काम करता है · How it works</h2><div class='steps rv'>"
         "<div class='card'><b>1. परीक्षा चुनें</b><br>अपनी परीक्षा चुनें और उसका सिलेबस व पैटर्न देखें।</div>"
         "<div class='card'><b>2. रोज़ अभ्यास करें</b><br>Daily 10, टॉपिक टेस्ट और असली PYQ, व्याख्या के साथ।</div>"
         "<div class='card'><b>3. मॉक टेस्ट दें</b><br>ऐप में टाइमर और सही नेगेटिव मार्किंग के साथ पूरा मॉक।</div></div>"
@@ -510,6 +580,15 @@ def main():
                  "for(var x=0;x<w.length;x++){if(s.indexOf(w[x])<0){m=false;break}}if(m)o.push(d[k])}"
                  "h.innerHTML=o.length?o.map(function(e){return '<a href=\"'+e[1]+'\">'+e[0]+'</a>'}).join(''):'<a>कुछ नहीं मिला</a>';h.hidden=false})})})();</script>")
     body += search_js
+    motion_js = ("<script>(function(){var t=document.querySelector('.top'),on=function(){t&&t.classList.toggle('sm',window.scrollY>40)};"
+                 "window.addEventListener('scroll',on,{passive:true});on();"
+                 "var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')})}else{"
+                 "var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});"
+                 "els.forEach(function(e){io.observe(e)})}"
+                 "document.querySelectorAll('[data-count]').forEach(function(b){var n=+b.dataset.count,s=null;if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;"
+                 "var o=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;o.disconnect();function f(ts){s=s||ts;var p=Math.min((ts-s)/1400,1),v=Math.floor(n*(1-Math.pow(1-p,3)));"
+                 "b.textContent=v.toLocaleString('en-IN');if(p<1)requestAnimationFrame(f);else b.textContent=n.toLocaleString('en-IN')}requestAnimationFrame(f)});o.observe(b)})})();</script>")
+    body += motion_js
     write("index.html", page(f"{ORG_NAME} — RRB NTPC, ग्रुप डी, RPF अभ्यास प्रश्न हिंदी में",
                              "RRB NTPC, Group D, ALP, JE, RPF Constable & SI practice questions in Hindi with answers & explanations. Free daily quiz, flashcards and mock tests.",
                              body, home_url, base, structured), priority=1.0, changefreq="weekly")
