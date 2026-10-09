@@ -33,7 +33,7 @@ def load(content_dir):
 def add_pyq_pages(h, tax, content_dir, base, write):
     """h: dict of helpers from build_site (page, esc, question_html, crumbs_html, json_ld, breadcrumb_ld,
     faq_ld, ad_unit, ORG_NAME). Returns the HTML of a block linking the exam indexes, for the home page."""
-    page, esc, qhtml = h["page"], h["esc"], h["question_html"]
+    page, esc, qhtml, bi, bib = h["page"], h["esc"], h["question_html"], h["bi"], h["bib"]
     crumbs_html, json_ld, breadcrumb_ld, ad_unit = h["crumbs_html"], h["json_ld"], h["breadcrumb_ld"], h["ad_unit"]
     org = h["ORG_NAME"]
     subj = {s["id"]: s for s in tax["subjects"]}
@@ -67,35 +67,35 @@ def add_pyq_pages(h, tax, content_dir, base, write):
                         if i + 1 == AD_AFTER and len(chunk) > AD_AFTER + 3:
                             body_qs.append(ad_unit())
                     body_qs.append(ad_unit())
-                    prev_a = (f"<a href='pyq-{slug(label)}-{sid}-{n - 1}.html'>← पिछला भाग</a>" if n > 1 else "<span></span>")
-                    next_a = (f"<a href='pyq-{slug(label)}-{sid}-{n + 1}.html'>अगला भाग →</a>" if n < len(pages) else "<span></span>")
+                    prev_a = (f"<a href='pyq-{slug(label)}-{sid}-{n - 1}.html'>← {bi('पिछला भाग', 'Previous part')}</a>" if n > 1 else "<span></span>")
+                    next_a = (f"<a href='pyq-{slug(label)}-{sid}-{n + 1}.html'>{bi('अगला भाग', 'Next part')} →</a>" if n < len(pages) else "<span></span>")
                     body_qs.append(f"<div class='pager'>{prev_a}{next_a}</div>")
-                    others = "".join(f"<a href='{nm}'>{esc(subj.get(o, {'hi': o})['hi'])}</a>"
+                    others = "".join(f"<a href='{nm}'>{bi(esc(subj.get(o, {'hi': o, 'en': o})['hi']), esc(subj.get(o, {'hi': o, 'en': o})['en']))}</a>"
                                      for o, nm in first_pages.items() if o != sid)
                     if others:
-                        body_qs.append(f"<h2>इसी पेपर के अन्य विषय</h2><div class='chips'>{others}</div>")
-                    intro = (f"<div class='answer'>{esc(label)} — {esc(s['hi'])} ({esc(s['en'])}) के "
-                             f"{len(chunk)} प्रश्न{part}, सही उत्तर और हिंदी-अंग्रेज़ी स्पष्टीकरण सहित। "
-                             f"These are the {s['en']} questions from {esc(label)} with answers and bilingual "
-                             f"explanations.</div>")
+                        body_qs.append(f"<h2>{bi('इसी पेपर के अन्य विषय', 'Other subjects in this paper')}</h2><div class='chips'>{others}</div>")
+                    intro = (f"<div class='answer'>" + bi(
+                        f"{esc(label)} — {esc(s['hi'])} ({esc(s['en'])}) के {len(chunk)} प्रश्न{part}, सही उत्तर और हिंदी-अंग्रेज़ी स्पष्टीकरण सहित।",
+                        f"{len(chunk)} {esc(s['en'])} questions{' (part ' + str(n) + ')' if len(pages) > 1 else ''} from {esc(label)}, with answers and Hindi and English explanations.")
+                        + "</div>")
                     structured = json_ld(breadcrumb_ld(base, [("Home", "index.html"), (ename_hi, idx), (label, None)]))
-                    body = (crumbs + f"<h1>{esc(label)} — {esc(s['hi'])}{part}</h1>"
-                            f"<p class='muted'>{esc(ename_en)} previous year paper · {esc(s['en'])}</p>" + intro
+                    body = (crumbs + f"<h1>{esc(label)} — {bi(esc(s['hi']), esc(s['en']))}{part}</h1>"
+                            f"<p class='muted'>{esc(ename_en)} · {bi('पिछले साल का प्रश्न पत्र', 'previous year paper')}</p>" + intro
                             + "".join(body_qs))
                     write(name, page(f"{label} {s['hi']} प्रश्न उत्तर सहित{part} | {ename_en} PYQ | {org}",
                                      f"{label}: {s['hi']} ({s['en']}) के {len(chunk)} प्रश्न, सही उत्तर व स्पष्टीकरण।",
                                      body, url, base, structured), priority=0.6, changefreq="yearly")
                     parts.append(f"<a href='{name}'>{esc(s['hi'])}{part} ({len(chunk)})</a>")
-            rows.append(f"<div class='card'><strong>{esc(label)}</strong> <span class='muted'>· {total} प्रश्न</span>"
+            rows.append(f"<div class='card'><strong>{esc(label)}</strong> <span class='muted'>· {total} {bi('प्रश्न', 'questions')}</span>"
                         f"<p class='links'>{' · '.join(parts)}</p></div>")
         idx = f"pyq-{stem}.html"
         body = (crumbs_html([("Home", "index.html"), (ename_hi, None)]) +
-                f"<h1>{esc(ename_hi)} — पिछले साल के प्रश्न पत्र</h1>"
-                f"<p class='muted'>{esc(ename_en)} previous year papers, {len(papers)} shifts/papers</p>" + "".join(rows))
+                f"<h1>{bi(esc(ename_hi), esc(ename_en))} — {bi('पिछले साल के प्रश्न पत्र', 'previous year papers')}</h1>"
+                f"<p class='muted'>{len(papers)} {bi('प्रश्न पत्र (शिफ्ट)', 'papers (shifts)')}</p>" + "".join(rows))
         write(idx, page(f"{ename_hi} ({ename_en}) पिछले साल के प्रश्न पत्र उत्तर सहित | {org}",
                         f"{ename_en} के सभी पिछले साल के प्रश्न पत्र: तारीख व शिफ्ट के अनुसार, सही उत्तर और स्पष्टीकरण सहित।",
                         body, f"{base}/{idx}", base, json_ld(breadcrumb_ld(base, [("Home", "index.html"), (ename_hi, None)]))),
               priority=0.8, changefreq="monthly")
-        index_links.append(f"<a class='card' href='{idx}'><strong>{esc(ename_hi)}</strong><br>"
-                           f"<span class='muted'>{len(papers)} papers · PYQ</span></a>")
+        index_links.append(f"<a class='card' href='{idx}'><strong>{bi(esc(ename_hi), esc(ename_en))}</strong><br>"
+                           f"<span class='muted'>{len(papers)} {bi('प्रश्न पत्र', 'papers')}</span></a>")
     return "".join(index_links)

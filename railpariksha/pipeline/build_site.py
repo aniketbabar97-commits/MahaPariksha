@@ -112,6 +112,15 @@ footer .cols{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:r
 @media (prefers-color-scheme:dark){.quote{background:linear-gradient(135deg,#2a2410,#1A2133)}}
 .feat .ic{font-size:1.5rem;display:block}.feats .card{cursor:default}.feats .card:hover .ic{animation:wob .6s}
 @keyframes wob{25%{transform:rotate(-12deg)}75%{transform:rotate(12deg)}}
+
+/* ---- language switch ---- */
+html[lang="en"] .hi,html[lang="hi"] .en{display:none}
+.bi{display:flex;flex-direction:column;gap:2px}
+html[lang="hi"] .bi .L-hi,html[lang="en"] .bi .L-en{order:1}
+html[lang="hi"] .bi .L-en,html[lang="en"] .bi .L-hi{order:2;color:var(--muted);font-size:.9em}
+.lang{border:2px solid rgba(255,255,255,.6);background:transparent;color:#fff;border-radius:999px;padding:5px 12px;font-weight:800;cursor:pointer;font-size:.9rem}
+.lang:hover{background:rgba(255,255,255,.16)}
+.q .bi{font-weight:700}.opts li .bi{font-weight:500}
 """
 
 
@@ -200,6 +209,11 @@ def ad_unit():
             f'<script>(adsbygoogle=window.adsbygoogle||[]).push({{}});</script></div>')
 
 
+LANG_JS = ("<script>(function(){var b=document.getElementById('lang');if(!b)return;b.addEventListener('click',function(){"
+           "var n=document.documentElement.lang==='en'?'hi':'en';document.documentElement.lang=n;"
+           "try{localStorage.setItem('lang',n)}catch(e){}})})();</script>")
+
+
 def page(title, desc, body, canonical, base, structured="", og_type="website"):
     ads_head = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client='
                 f'{ADSENSE_CLIENT}" crossorigin="anonymous"></script>') if ADSENSE_CLIENT else ""
@@ -216,27 +230,40 @@ def page(title, desc, body, canonical, base, structured="", og_type="website"):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{base}/og-image.png">
-<style>{CSS}</style>{structured}{ads_head}</head><body>
-<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha · रेलपरीक्षा<small>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए</small></span></a>
-<nav class="nav"><a href="/#exams">परीक्षाएँ</a><a href="/#papers">पिछले प्रश्न पत्र</a><a href="/#subjects">विषय</a><a href="{TELEGRAM_URL}">Telegram</a><a class="install" href="{PLAY_URL}">ऐप इंस्टॉल करें</a></nav></div></header>
+<script>try{{var l=localStorage.getItem("lang");if(l==="en"||l==="hi")document.documentElement.lang=l}}catch(e){{}}</script><style>{CSS}</style>{structured}{ads_head}</head><body>
+<header class="top"><div class="in"><a class="brand" href="/"><img src="logo-192.png" width="42" height="42" alt="RailPariksha logo"><span>RailPariksha · रेलपरीक्षा<small>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", "By students, for students")}</small></span></a>
+<nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a><button class="lang" id="lang" type="button" aria-label="Language">हिं / EN</button><a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
 <main class="wrap">{body}
-<div class="appcta"><strong>रोज़ मुफ़्त अभ्यास करें!</strong><br>Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।<br>
-<a class="cta" href="{PLAY_URL}">Google Play से डाउनलोड करें</a> <a class="btn2" href="{TELEGRAM_URL}">Telegram चैनल जुड़ें</a></div></main>
-<footer><div class="cols"><div><h4>RailPariksha</h4>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए बनाया गया मुफ़्त अभ्यास ऐप।</div>
-<div><h4>लिंक</h4><a href="/">होम</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="privacy.html">Privacy Policy</a></div>
-<div><h4>सूचना</h4>RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।<br>{SUPPORT_EMAIL}</div></div></footer></body></html>"""
+<div class="appcta"><strong>{bi("रोज़ मुफ़्त अभ्यास करें!", "Practise free, every day!")}</strong><br>{bi("Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।", "Daily 10, flashcards, mock tests, streaks and 45,000+ real PYQs in Hindi and English.")}<br>
+<a class="cta" href="{PLAY_URL}">{bi("Google Play से डाउनलोड करें", "Get it on Google Play")}</a> <a class="btn2" href="{TELEGRAM_URL}">{bi("Telegram चैनल जुड़ें", "Join our Telegram")}</a></div></main>
+<footer><div class="cols"><div><h4>RailPariksha</h4>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए बनाया गया मुफ़्त अभ्यास ऐप।", "A free practice app made by students, for students.")}</div>
+<div><h4>{bi("लिंक", "Links")}</h4><a href="/">{bi("होम", "Home")}</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="privacy.html">Privacy Policy</a></div>
+<div><h4>{bi("सूचना", "Notice")}</h4>{bi("RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।", "RailPariksha is an independent educational app, not affiliated with Indian Railways, RRB or RPF. Check official notices on the official sites.")}<br>{SUPPORT_EMAIL}</div></div>{LANG_JS}</footer></body></html>"""
+
+
+def bi(hi, en):
+    """Inline text in both languages; the page's language switch shows one and hides the other."""
+    return f'<span class="hi">{hi}</span><span class="en">{en}</span>'
+
+
+def bib(hi, en, cls=""):
+    """Block of text in both languages: the chosen language leads, the other follows in a muted tone."""
+    if hi.strip() == en.strip():
+        return f'<div class="bi {cls}"><div>{hi}</div></div>'
+    return f'<div class="bi {cls}"><div class="L-hi">{hi}</div><div class="L-en">{en}</div></div>'
 
 
 def question_html(q, n):
-    opts = "".join(f"<li>({LETTERS[i]}) {esc(o)}</li>" for i, o in enumerate(q["o_hi"]))
+    opts = "".join(f"<li>({bi(LETTERS[i], 'ABCDE'[i])}) {bib(esc(o), esc(q['o_en'][i]))}</li>" for i, o in enumerate(q["o_hi"]))
     extra = ""
-    if q.get("hook_hi"):
-        extra += f"<p>💡 {esc(q['hook_hi'])}</p>"
-    return f"""<div class="card"><div class="q">{n}. {esc(q['q_hi'])}</div>
-<div class="muted">{esc(q['q_en'])}</div><ul class="opts">{opts}</ul>
-<details><summary>उत्तर व स्पष्टीकरण देखें</summary>
-<p class="ans">उत्तर: ({LETTERS[q['a']]}) {esc(q['o_hi'][q['a']])}</p>
-<p>{esc(q['e_hi'])}</p>{extra}<p class="muted">{esc(q['e_en'])}</p></details></div>"""
+    if q.get("hook_hi") or q.get("hook_en"):
+        extra = "<p>💡 " + bib(esc(q.get("hook_hi") or q.get("hook_en")), esc(q.get("hook_en") or q.get("hook_hi"))) + "</p>"
+    right = q["a"]
+    return f"""<div class="card"><div class="q">{n}. {bib(esc(q['q_hi']), esc(q['q_en']))}</div>
+<ul class="opts">{opts}</ul>
+<details><summary>{bi('उत्तर व स्पष्टीकरण देखें', 'Show answer and explanation')}</summary>
+<p class="ans">{bi('उत्तर', 'Answer')}: ({bi(LETTERS[right], 'ABCDE'[right])}) {bib(esc(q['o_hi'][right]), esc(q['o_en'][right]))}</p>
+{bib(esc(q['e_hi']), esc(q['e_en']))}{extra}</details></div>"""
 
 
 def question_answer_plain(q):
@@ -487,12 +514,12 @@ def main():
         write(name, page(f"{e['hi']} अभ्यास प्रश्न {date.today().year} | {e['en']} MCQ Hindi | {ORG_NAME}",
                          f"{e['hi']} ({e['en']}) के लिए विषयवार अभ्यास प्रश्न, उत्तर व स्पष्टीकरण। {ORG_NAME} ऐप पर मुफ़्त मॉक टेस्ट।",
                          body, url, base, structured), priority=0.9, changefreq="weekly")
-        exam_cards.append(f"<a class='card tile' href='{name}'><span class='ic'>{EXAM_ICONS.get(e['id'], '📘')}</span><strong>{esc(e['hi'])}</strong><br><span class='muted'>{esc(e['en'])}</span></a>")
+        exam_cards.append(f"<a class='card tile' href='{name}'><span class='ic'>{EXAM_ICONS.get(e['id'], '📘')}</span><strong>{bib(esc(e['hi']), esc(e['en']))}</strong></a>")
 
     # ---- Previous-year papers ---------------------------------------
     import site_pyq
     pyq_cards = site_pyq.add_pyq_pages(
-        dict(page=page, esc=esc, question_html=question_html, crumbs_html=crumbs_html, json_ld=json_ld,
+        dict(page=page, esc=esc, question_html=question_html, bi=bi, bib=bib, crumbs_html=crumbs_html, json_ld=json_ld,
              breadcrumb_ld=breadcrumb_ld, faq_ld=faq_ld, ad_unit=ad_unit, ORG_NAME=ORG_NAME),
         tax, CONTENT, base, write)
 
@@ -513,7 +540,7 @@ def main():
     )
     total_pyq = sum(len(v) for sub in site_pyq.load(CONTENT).values() for paper in sub.values() for v in paper.values())
     n_papers = sum(len(sub) for sub in site_pyq.load(CONTENT).values())
-    subject_chips = "".join(f"<a href='subject-{s2['id']}.html'>{SUBJECT_ICONS.get(s2['id'], '📘')} {esc(s2['hi'])}</a>"
+    subject_chips = "".join(f"<a href='subject-{s2['id']}.html'>{SUBJECT_ICONS.get(s2['id'], '📘')} {bi(esc(s2['hi']), esc(s2['en']))}</a>"
                             for s2 in tax["subjects"] if any((s2["id"], t["id"]) in topic_pages for t in s2["topics"]))
     mot = json.loads((CONTENT / "motivation" / "motivation.json").read_text(encoding="utf-8"))
     mot = [m for m in mot if m.get("hi") and m.get("en")]
@@ -522,63 +549,64 @@ def main():
     n_sheets = sum(len(json.loads(f.read_text(encoding="utf-8"))) for f in (CONTENT / "cheat_sheets").glob("*.json"))
     n_mcq = len(qs)
     features = [
-        ("🎯", "Daily 10", "हर दिन आपकी कमज़ोर जगहों से 10 प्रश्न"),
-        ("🗂️", f"{n_cards:,} फ्लैशकार्ड", "भूलने से पहले याद कराने वाला स्मार्ट रिवीज़न"),
-        ("📝", "मॉक टेस्ट", "टाइमर, पैलेट और असली नेगेटिव मार्किंग के साथ"),
-        ("📕", "मिस्टेक बुक", "हर गलत उत्तर तब तक लौटता है जब तक आप सीख न लें"),
-        ("📰", "रोज़ का करेंट अफेयर्स", "सुबह की डाइजेस्ट और क्विज़"),
-        ("🧾", f"{n_sheets} चीट शीट", "फ़ॉर्मूले और फ़ैक्ट एक नज़र में"),
-        ("🔥", "स्ट्रीक और लेवल", "रोज़ पढ़ाई की आदत, जनरल से राजधानी तक"),
-        ("🏆", "लीडरबोर्ड", "अपनी परीक्षा के दूसरे उम्मीदवारों से रैंक की तुलना"),
-        ("⚡", "60-सेकंड स्पीड राउंड", "प्लेटफ़ॉर्म पर इंतज़ार के पलों के लिए"),
-        ("📶", "ऑफलाइन भी", "एक बार डाउनलोड, फिर बिना इंटरनेट"),
-        ("🌐", "हिंदी ⇄ English", "हर प्रश्न, विकल्प और व्याख्या दोनों भाषा में"),
-        ("💪", "रोज़ की प्रेरणा", f"{len(mot)}+ कोट्स और स्टडी टिप्स"),
+        ("🎯", "Daily 10", "Daily 10", "हर दिन आपकी कमज़ोर जगहों से 10 प्रश्न", "Ten questions a day from your weak spots"),
+        ("🗂️", f"{n_cards:,} फ्लैशकार्ड", f"{n_cards:,} flashcards", "भूलने से पहले याद कराने वाला स्मार्ट रिवीज़न", "Smart revision that reminds you before you forget"),
+        ("📝", "मॉक टेस्ट", "Mock tests", "टाइमर, पैलेट और असली नेगेटिव मार्किंग के साथ", "With a timer, question palette and real negative marking"),
+        ("📕", "मिस्टेक बुक", "Mistake book", "हर गलत उत्तर तब तक लौटता है जब तक आप सीख न लें", "Every wrong answer comes back until you master it"),
+        ("📰", "रोज़ का करेंट अफेयर्स", "Daily current affairs", "सुबह की डाइजेस्ट और क्विज़", "A morning digest and a quiz"),
+        ("🧾", f"{n_sheets} चीट शीट", f"{n_sheets} cheat sheets", "फ़ॉर्मूले और फ़ैक्ट एक नज़र में", "Formulas and facts at a glance"),
+        ("🔥", "स्ट्रीक और लेवल", "Streaks and levels", "रोज़ पढ़ाई की आदत, जनरल से राजधानी तक", "A daily study habit, from General to Rajdhani"),
+        ("🏆", "लीडरबोर्ड", "Leaderboard", "अपनी परीक्षा के दूसरे उम्मीदवारों से रैंक की तुलना", "Compare your rank with other candidates of your exam"),
+        ("⚡", "60-सेकंड स्पीड राउंड", "60-second speed round", "प्लेटफ़ॉर्म पर इंतज़ार के पलों के लिए", "For the minutes you wait on a platform"),
+        ("📶", "ऑफलाइन भी", "Works offline", "एक बार डाउनलोड, फिर बिना इंटरनेट", "Download once, then no internet needed"),
+        ("🌐", "हिंदी ⇄ English", "Hindi ⇄ English", "हर प्रश्न, विकल्प और व्याख्या दोनों भाषा में", "Every question, option and explanation in both languages"),
+        ("💪", "रोज़ की प्रेरणा", "Daily motivation", f"{len(mot)}+ कोट्स और स्टडी टिप्स", f"{len(mot)}+ quotes and study tips"),
     ]
-    feature_cards = "".join(f"<div class='card feat'><span class='ic'>{i}</span><b>{esc(t)}</b><br><span class='muted'>{esc(d)}</span></div>"
-                            for i, t, d in features)
+    feature_cards = "".join(f"<div class='card feat'><span class='ic'>{i}</span><b>{bi(esc(th), esc(te))}</b><br><span class='muted'>{bi(esc(dh), esc(de))}</span></div>"
+                            for i, th, te, dh, de in features)
     mot_json = json.dumps([[m["hi"], m["en"]] for m in mot], ensure_ascii=False).replace("</", "<\\/")
     motivation_block = (
-        "<h2>आज की प्रेरणा · Today's motivation</h2>"
-        f"<div class='card quote rv'><p id='mhi'>{esc(mot_today['hi'])}</p><p class='muted' id='men'>{esc(mot_today['en'])}</p>"
-        "<a class='cta' id='mwa' href='#'>WhatsApp पर शेयर करें</a></div>"
+        f"<h2>{bi('आज की प्रेरणा', 'Today’s motivation')}</h2>"
+        f"<div class='card quote rv'><div class='bi'><div class='L-hi' id='mhi'>{esc(mot_today['hi'])}</div><div class='L-en' id='men'>{esc(mot_today['en'])}</div></div>"
+        f"<a class='cta' id='mwa' href='#'>{bi('WhatsApp पर शेयर करें', 'Share on WhatsApp')}</a></div>"
         f"<script>(function(){{var m={mot_json},d=Math.floor(Date.now()/864e5)%m.length,x=m[d];"
         "document.getElementById('mhi').textContent=x[0];document.getElementById('men').textContent=x[1];"
-        "document.getElementById('mwa').href='https://wa.me/?text='+encodeURIComponent(x[0]+'\\n\\n'+location.origin+'/');})();</script>"
-        "<h2>ऐप में क्या-क्या है · What's inside the app</h2>"
+        "var w=document.getElementById('mwa');w.addEventListener('click',function(){var en=document.documentElement.lang==='en';"
+        "w.href='https://wa.me/?text='+encodeURIComponent((en?x[1]:x[0])+'\\n\\n'+location.origin+'/')});})();</script>"
+        f"<h2>{bi('ऐप में क्या-क्या है', 'What’s inside the app')}</h2>"
         f"<div class='grid feats rv'>{feature_cards}</div>")
     body = (
-        "<section class='hero'><div class='txt'><span class='badge'>स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए 🤝</span>"
-        "<h1>रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त</h1>"
-        "<p>RRB NTPC, ग्रुप D, ALP, JE, RPF के असली पिछले साल के प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी व्याख्या के साथ। "
-        "Free practice for every major railway exam, in Hindi and English.</p>"
-        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>ऐप डाउनलोड करें</a><a class='btn2' href='{TELEGRAM_URL}'>Telegram चैनल</a></div></div>"
+        "<section class='hero'><div class='txt'><span class='badge'>" + bi('स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए', 'By students, for students') + " 🤝</span>"
+        "<h1>" + bi('रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त', 'Railway exam preparation, completely free') + "</h1>"
+        "<p>" + bi('RRB NTPC, ग्रुप D, ALP, JE, RPF के असली पिछले साल के प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी व्याख्या के साथ।',
+                   'Real previous-year questions for RRB NTPC, Group D, ALP, JE and RPF, with answers and simple Hindi and English explanations.') + "</p>"
+        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a></div></div>"
         "<span class='glow'></span><img class='logo' src='logo-512.png' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
         '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#F5B400"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0B3D91"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0B3D91"/><circle cx="203" cy="38" r="3" fill="#FFD066"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'
         "<div class='tick'><div>🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English &nbsp;•&nbsp; 🚉 RRB NTPC &nbsp;•&nbsp; 🛤️ Group D &nbsp;•&nbsp; 🚂 ALP &nbsp;•&nbsp; 🔧 Technician &nbsp;•&nbsp; 🏗️ JE &nbsp;•&nbsp; 🩺 Paramedical &nbsp;•&nbsp; 🛡️ RPF Constable &nbsp;•&nbsp; 🎖️ RPF SI &nbsp;•&nbsp; 📦 DFCCIL &nbsp;•&nbsp; मुफ़्त · हिंदी + English</div></div>"
-        f"<div class='stats rv'><div class='stat'><b data-count='{total_pyq}'>{total_pyq:,}</b><span>असली PYQ प्रश्न</span></div>"
-        f"<div class='stat'><b data-count='{n_papers}'>{n_papers}</b><span>पिछले प्रश्न पत्र</span></div>"
-        f"<div class='stat'><b data-count='{len(tax['exams'])}'>{len(tax['exams'])}</b><span>परीक्षाएँ</span></div>"
-        "<div class='stat'><b>हिंदी + EN</b><span>हर प्रश्न दोनों भाषा में</span></div></div>"
-        "<div class='search'><input id='q' type='search' placeholder='खोजें: जैसे NTPC 2025, गणित, Group D…' autocomplete='off' aria-label='Search'><div id='hits' hidden></div></div>"
-        "<h2 id='exams'>आप किस परीक्षा की तैयारी कर रहे हैं? · Choose your exam</h2>"
+        f"<div class='stats rv'><div class='stat'><b data-count='{total_pyq}'>{total_pyq:,}</b><span>{bi('असली PYQ प्रश्न', 'real PYQ questions')}</span></div>"
+        f"<div class='stat'><b data-count='{n_papers}'>{n_papers}</b><span>{bi('पिछले प्रश्न पत्र', 'past papers')}</span></div>"
+        f"<div class='stat'><b data-count='{len(tax['exams'])}'>{len(tax['exams'])}</b><span>{bi('परीक्षाएँ', 'exams')}</span></div>"
+        f"<div class='stat'><b>हिंदी + EN</b><span>{bi('हर प्रश्न दोनों भाषा में', 'every question in both')}</span></div></div>"
+        "<div class='search'><input id='q' type='search' placeholder='खोजें / Search: NTPC 2025, गणित, Group D…' autocomplete='off' aria-label='Search'><div id='hits' hidden></div></div>"
+        f"<h2 id='exams'>{bi('आप किस परीक्षा की तैयारी कर रहे हैं?', 'Which exam are you preparing for?')}</h2>"
         f"<div class='grid rv'>{''.join(exam_cards)}</div>"
-        "<h2 id='papers'>पिछले साल के प्रश्न पत्र · Previous year papers</h2>"
+        f"<h2 id='papers'>{bi('पिछले साल के प्रश्न पत्र', 'Previous year papers')}</h2>"
         f"<div class='grid rv'>{pyq_cards}</div>"
-        "<h2 id='subjects'>विषय के अनुसार अभ्यास · Practice by subject</h2>"
+        f"<h2 id='subjects'>{bi('विषय के अनुसार अभ्यास', 'Practise by subject')}</h2>"
         f"<div class='chips rv'>{subject_chips}</div>"
         + motivation_block +
-        "<h2>कैसे काम करता है · How it works</h2><div class='steps rv'>"
-        "<div class='card'><b>1. परीक्षा चुनें</b><br>अपनी परीक्षा चुनें और उसका सिलेबस व पैटर्न देखें।</div>"
-        "<div class='card'><b>2. रोज़ अभ्यास करें</b><br>Daily 10, टॉपिक टेस्ट और असली PYQ, व्याख्या के साथ।</div>"
-        "<div class='card'><b>3. मॉक टेस्ट दें</b><br>ऐप में टाइमर और सही नेगेटिव मार्किंग के साथ पूरा मॉक।</div></div>"
+        f"<h2>{bi('कैसे काम करता है', 'How it works')}</h2><div class='steps rv'>"
+        f"<div class='card'><b>{bi('1. परीक्षा चुनें', '1. Pick your exam')}</b><br>{bi('अपनी परीक्षा चुनें और उसका सिलेबस व पैटर्न देखें।', 'Choose your exam and see its syllabus and pattern.')}</div>"
+        f"<div class='card'><b>{bi('2. रोज़ अभ्यास करें', '2. Practise daily')}</b><br>{bi('Daily 10, टॉपिक टेस्ट और असली PYQ, व्याख्या के साथ।', 'Daily 10, topic tests and real PYQs, with explanations.')}</div>"
+        f"<div class='card'><b>{bi('3. मॉक टेस्ट दें', '3. Take mock tests')}</b><br>{bi('ऐप में टाइमर और सही नेगेटिव मार्किंग के साथ पूरा मॉक।', 'Full mocks in the app, with a timer and correct negative marking.')}</div></div>"
         + answer_para)
     search_js = ("<script>(function(){var i=document.getElementById('q'),h=document.getElementById('hits'),d=null;"
                  "function load(c){if(d)return c();fetch('search.json').then(function(r){return r.json()}).then(function(j){d=j;c()})}"
                  "i.addEventListener('input',function(){var t=i.value.trim().toLowerCase();if(t.length<2){h.hidden=true;return}"
                  "load(function(){var w=t.split(/\\s+/),o=[];for(var k=0;k<d.length&&o.length<12;k++){var s=d[k][0].toLowerCase(),m=true;"
                  "for(var x=0;x<w.length;x++){if(s.indexOf(w[x])<0){m=false;break}}if(m)o.push(d[k])}"
-                 "h.innerHTML=o.length?o.map(function(e){return '<a href=\"'+e[1]+'\">'+e[0]+'</a>'}).join(''):'<a>कुछ नहीं मिला</a>';h.hidden=false})})})();</script>")
+                 "h.innerHTML=o.length?o.map(function(e){return '<a href=\"'+e[1]+'\">'+e[0]+'</a>'}).join(''):'<a>कुछ नहीं मिला / Nothing found</a>';h.hidden=false})})})();</script>")
     body += search_js
     motion_js = ("<script>(function(){var t=document.querySelector('.top'),on=function(){t&&t.classList.toggle('sm',window.scrollY>40)};"
                  "window.addEventListener('scroll',on,{passive:true});on();"

@@ -40,6 +40,18 @@ class SiteTests(unittest.TestCase):
             page = next(Path(t).glob("pyq-rrb-ntpc*.html")).read_text(encoding="utf-8")
             self.assertNotIn('.html"', page)
 
+    def test_language_switch_and_bilingual_questions(self):
+        with tempfile.TemporaryDirectory() as t:
+            subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t, "--base-url", "https://example.org"],
+                           check=True, capture_output=True)
+            home = (Path(t) / "index.html").read_text(encoding="utf-8")
+            self.assertIn('id="lang"', home)
+            self.assertIn('<span class="en">Install app</span>', home)
+            page = next(Path(t).glob("pyq-rrb-ntpc*.html")).read_text(encoding="utf-8")
+            self.assertIn('class="L-hi"', page)
+            self.assertIn('class="L-en"', page)
+            self.assertIn('<span class="en">A</span>', page)
+
     def test_ads_only_when_configured(self):
         env = dict(os.environ, ADSENSE_CLIENT="ca-pub-1", ADSENSE_SLOT="2")
         with tempfile.TemporaryDirectory() as t:
