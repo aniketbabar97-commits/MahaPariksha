@@ -48,6 +48,7 @@ CONTENT = ROOT / "content"
 FONTS = ROOT / "app/assets/fonts"
 PLAY_URL = ca_post.PLAY_URL
 SITE_URL = "https://railpariksha.in"
+YOUTUBE_URL = "https://www.youtube.com/@RailPariksha_Official"
 IST = timezone(timedelta(hours=5, minutes=30))
 
 # Telegram's own limits for quiz polls and captions.
@@ -92,12 +93,13 @@ WELCOME = (
     "🧠 फ़ैक्ट, फ़ॉर्मूला और चीट शीट\n"
     "💪 शाम को पढ़ाई की टिप\n\n"
     f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {PLAY_URL}\n"
-    f"🌐 वेबसाइट: {SITE_URL}\n\n"
+    f"🌐 वेबसाइट: {SITE_URL}\n"
+    f"▶️ YouTube (रोज़ 6 शॉर्ट्स): {YOUTUBE_URL}\n\n"
     "कोई प्रश्न गलत लगे तो ऐप में Report कर दीजिए, हम सुधारते हैं। साथ पढ़ेंगे तो साथ निकलेंगे 🤝"
 )
 DESCRIPTION = (
     "हम भी आपकी तरह रेलवे की तैयारी कर रहे स्टूडेंट्स हैं। रोज़: करेंट अफेयर्स, PYQ क्विज़, फ़ैक्ट। "
-    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {PLAY_URL} · वेबसाइट: {SITE_URL}"
+    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {PLAY_URL} · वेबसाइट: {SITE_URL} · YouTube: {YOUTUBE_URL}"
 )
 
 
@@ -376,7 +378,7 @@ def tip_text(day):
     parts = [f"{icon} {html.escape(item['hi'])}"]
     for s in special_day(day):
         parts.append(f"📅 <b>आज:</b> {html.escape(s['title_hi'])}\n{html.escape(s.get('detail_hi', ''))}")
-    parts.append(f"🚆 आज की प्रैक्टिस अभी करें, रोज़ 10 प्रश्न भी काफ़ी हैं:\n{PLAY_URL}\n🌐 {SITE_URL}")
+    parts.append(f"🚆 आज की प्रैक्टिस अभी करें, रोज़ 10 प्रश्न भी काफ़ी हैं:\n{PLAY_URL}\n🌐 {SITE_URL}\n▶️ YouTube: {YOUTUBE_URL}")
     return "\n\n".join(parts)[:MESSAGE_MAX]
 
 

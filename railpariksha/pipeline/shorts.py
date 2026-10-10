@@ -133,7 +133,8 @@ def description_for(q, lang="hi"):
             "We are students too. RailPariksha is made by students, for students: free, in Hindi and English.\n"
             f"Free app: {tb.PLAY_URL}\n"
             f"Website: {SITE}\n"
-            f"Telegram (daily quizzes and current affairs): {CHANNEL}\n\n"
+            f"Telegram (daily quizzes and current affairs): {CHANNEL}\n"
+            f"Subscribe for 6 new Shorts every day: {tb.YOUTUBE_URL}\n\n"
             "#RRBNTPC #RRBGroupD #RRBALP #RRBJE #RPF #Railway #PYQ #Shorts"
         )[:DESC_MAX]
     return (
@@ -141,7 +142,8 @@ def description_for(q, lang="hi"):
         "हम भी आपकी तरह स्टूडेंट्स हैं। RailPariksha स्टूडेंट्स ने स्टूडेंट्स के लिए बनाया है।\n"
         f"मुफ़्त ऐप: {tb.PLAY_URL}\n"
         f"वेबसाइट: {SITE}\n"
-        f"Telegram (रोज़ के क्विज़ और करेंट अफेयर्स): {CHANNEL}\n\n"
+        f"Telegram (रोज़ के क्विज़ और करेंट अफेयर्स): {CHANNEL}\n"
+        f"रोज़ 6 नए Shorts के लिए Subscribe करें: {tb.YOUTUBE_URL}\n\n"
         "#RRBNTPC #RRBGroupD #RRBALP #RRBJE #RPF #Railway #PYQ #Shorts"
     )[:DESC_MAX]
 
