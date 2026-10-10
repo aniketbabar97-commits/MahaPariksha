@@ -28,6 +28,12 @@ One cron trigger does all of it: `30 0-17 * * *` (UTC). `plan()` in `ops/schedul
 6. The workflows' own `schedule:` entries have been removed, so the Worker is the only thing that starts them. If the
    Worker is ever off, run the workflows by hand (Actions, Run workflow) or restore a `schedule:` as a fallback.
 
+## Never twice
+Both workflows skip a post that already went out: a Shorts slot is skipped if the same slot and language ran in the last
+55 minutes, and a Telegram quiz, fact, tip or weekly post is skipped if the same kind ran in the last 40 minutes. So a
+double trigger (a stray second cron, a retry, or someone opening the test link again) cannot upload or post twice. When
+you really want a repeat, tick **force** in Run workflow. Setup, refresh and announce never skip.
+
 ## Renewing
 The token expires after a year. When runs stop, the Worker's logs (Workers, Logs) show `FAILED 401`; make a new token
 and replace the `GH_TOKEN` secret.

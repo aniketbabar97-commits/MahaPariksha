@@ -19,8 +19,14 @@ on:
         type: choice
         options: [auto, hi, en]
         default: auto
+      force:
+        description: Run even if the same slot already ran in the last hour (normally that is skipped, so nothing is uploaded twice)
+        type: boolean
+        default: false
+run-name: Shorts ${{ inputs.slot }} ${{ inputs.lang }}
 permissions:
   contents: read
+  actions: read
 concurrency:
   group: railpariksha-shorts
   cancel-in-progress: false
@@ -38,15 +44,32 @@ jobs:
       SHORTS_VOICE_EN: ${{ vars.SHORTS_VOICE_EN }}
       LANG_CHOICE: ${{ github.event.inputs.lang || 'auto' }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - id: dup
+        if: ${{ inputs.force != true }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          since=$(date -u -d '55 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+          name="Shorts ${{ inputs.slot }} ${{ inputs.lang }}"
+          n=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/railpariksha_shorts.yml/runs?created=%3E%3D$since&per_page=50" --jq "[.workflow_runs[] | select(.display_title==\"$name\" and .id < $GITHUB_RUN_ID) | select(.status!=\"completed\" or .conclusion==\"success\")] | length")
+          if [ "$n" -gt 0 ]; then
+            echo "::warning::\"$name\" already ran in the last 55 minutes; skipping so nothing is uploaded twice (tick force to run anyway)"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.dup.outputs.skip != 'true'
+        uses: actions/checkout@v4
+      - if: steps.dup.outputs.skip != 'true'
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libraqm0
-      - run: pip install -q pillow requests gtts edge-tts
-      - run: python railpariksha/pipeline/shorts.py --slot "$SLOT" --lang "$LANG_CHOICE" --out short_out
+      - if: steps.dup.outputs.skip != 'true'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libraqm0
+      - if: steps.dup.outputs.skip != 'true'
+        run: pip install -q pillow requests gtts edge-tts
+      - if: steps.dup.outputs.skip != 'true'
+        run: python railpariksha/pipeline/shorts.py --slot "$SLOT" --lang "$LANG_CHOICE" --out short_out
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.dup.outputs.skip != 'true'
         with:
           name: short-${{ env.SLOT }}
           path: short_out/*.mp4

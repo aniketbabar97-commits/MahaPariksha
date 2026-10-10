@@ -917,6 +917,7 @@ reports) to find and fix problems. You can send an error report on any question;
     else:
         app_body = (f"<section class='xhero'><h1>{bi('RailPariksha ऐप जल्द Google Play पर', 'The RailPariksha app is coming to Google Play')}</h1>"
                     f"<p>{bi('मुफ़्त RRB / RPF तैयारी: पिछले साल के प्रश्न, रोज़ का क्विज़ और मॉक टेस्ट, हिंदी और English में। लॉन्च की ख़बर सबसे पहले पाने के लिए Telegram से जुड़ें। रोज़ के क्विज़ वहीं मिलते हैं।', 'Free RRB / RPF preparation: previous-year questions, daily quizzes and mock tests in Hindi and English. Join our Telegram to hear first when it launches; the daily quizzes are there already.')}</p>"
+                    f"<h2>{bi('तब तक यहाँ अभ्यास करें', 'Meanwhile, practise here')}</h2>"
                     f"<div class='row'><a class='cta' href='{TELEGRAM_URL}'>{bi('Telegram चैनल जुड़ें', 'Join our Telegram')}</a>"
                     f"<a class='btn2' href='{YOUTUBE_URL}'>{bi('YouTube पर देखें', 'Watch on YouTube')}</a>"
                     f"<a class='btn2' href='index.html'>{bi('वेबसाइट पर अभ्यास करें', 'Practise on the website')}</a></div></section>")
