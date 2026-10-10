@@ -89,7 +89,7 @@ WELCOME = (
     "RailPariksha स्टूडेंट्स ने स्टूडेंट्स के लिए बनाया है। कोई कोचिंग नहीं, कोई बड़ा दावा नहीं, बस रोज़ की मेहनत।\n\n"
     "इस चैनल पर हर दिन:\n"
     "📰 सुबह: आज का करेंट अफेयर्स\n"
-    "📝 दिन में 3 क्विज़, असली पिछले साल के प्रश्न (जवाब और व्याख्या के साथ)\n"
+    "📝 हर घंटे एक क्विज़: असली पिछले साल के प्रश्न, हिंदी और English बारी-बारी (जवाब और व्याख्या के साथ)\n"
     "🧠 फ़ैक्ट, फ़ॉर्मूला और चीट शीट\n"
     "💪 शाम को पढ़ाई की टिप\n\n"
     f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {APP_URL}\n"
@@ -562,6 +562,17 @@ class Bot:
         except TelegramError as e:
             if "not modified" not in e.description:
                 print(f"::warning::could not set the channel description ({e.description}); give the bot 'Change channel info'")
+        # Edit the pinned welcome in place when there is one (no new post, no extra "pinned" notice in the channel).
+        try:
+            pinned = self._call("getChat", {"chat_id": self.chat_id}).get("result", {}).get("pinned_message")
+            if pinned:
+                self._call("editMessageText", {"chat_id": self.chat_id, "message_id": pinned["message_id"], "text": WELCOME,
+                                               "parse_mode": "HTML", "disable_web_page_preview": True})
+                return
+        except TelegramError as e:
+            if "not modified" in e.description:
+                return
+            print(f"::notice::could not edit the pinned welcome ({e.description}); posting a new one")
         self.message(WELCOME, pin=True)
 
     def ensure_setup(self):
