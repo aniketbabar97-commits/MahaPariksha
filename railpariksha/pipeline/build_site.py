@@ -19,6 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "content"
 TELEGRAM_URL = os.environ.get("TELEGRAM_URL") or "https://t.me/RailParikshaApp"
+YOUTUBE_URL = "https://www.youtube.com/@RailPariksha_Official"
 PLAY_URL = "https://play.google.com/store/apps/details?id=app.railpariksha"
 SUPPORT_EMAIL = os.environ.get("SUPPORT_EMAIL", "support@railpariksha.app")
 LETTERS = ["अ", "ब", "क", "ड"]
@@ -326,9 +327,9 @@ def page(title, desc, body, canonical, base, structured="", og_type="website", t
 <nav class="nav"><a href="/#exams">{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers">{bi("पिछले प्रश्न पत्र", "Papers")}</a><a href="/#subjects">{bi("विषय", "Subjects")}</a><a href="{TELEGRAM_URL}">Telegram</a>@@LANGSWITCH@@<a class="install" href="{PLAY_URL}">{bi("ऐप इंस्टॉल करें", "Install app")}</a></nav></div></header>
 <main class="wrap">{body}
 <div class="appcta"><strong>{bi("रोज़ मुफ़्त अभ्यास करें!", "Practise free, every day!")}</strong><br>{bi("Daily 10, फ्लैशकार्ड, मॉक टेस्ट, स्ट्रीक और 45,000+ असली PYQ, हिंदी व अंग्रेज़ी में।", "Daily 10, flashcards, mock tests, streaks and 45,000+ real PYQs in Hindi and English.")}<br>
-<a class="cta" href="{PLAY_URL}">{bi("Google Play से डाउनलोड करें", "Get it on Google Play")}</a> <a class="btn2" href="{TELEGRAM_URL}">{bi("Telegram चैनल जुड़ें", "Join our Telegram")}</a></div></main>
+<a class="cta" href="{PLAY_URL}">{bi("Google Play से डाउनलोड करें", "Get it on Google Play")}</a> <a class="btn2" href="{TELEGRAM_URL}">{bi("Telegram चैनल जुड़ें", "Join our Telegram")}</a> <a class="btn2" href="{YOUTUBE_URL}">{bi("YouTube पर देखें", "Watch on YouTube")}</a></div></main>
 <footer><div class="cols"><div><h3>RailPariksha</h3>{bi("स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए बनाया गया मुफ़्त अभ्यास ऐप।", "A free practice app made by students, for students.")}</div>
-<div><h3>{bi("लिंक", "Links")}</h3><a href="/">{bi("होम", "Home")}</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="privacy.html">Privacy Policy</a></div>
+<div><h3>{bi("लिंक", "Links")}</h3><a href="/">{bi("होम", "Home")}</a><br><a href="{PLAY_URL}">Google Play</a><br><a href="{TELEGRAM_URL}">Telegram</a><br><a href="{YOUTUBE_URL}">YouTube</a><br><a href="privacy.html">Privacy Policy</a></div>
 <div><h3>{bi("सूचना", "Notice")}</h3>{bi("RailPariksha एक स्वतंत्र शैक्षणिक ऐप है; भारतीय रेलवे, RRB या RPF से संबद्ध नहीं है। आधिकारिक सूचनाएँ आधिकारिक साइट पर देखें।", "RailPariksha is an independent educational app, not affiliated with Indian Railways, RRB or RPF. Check official notices on the official sites.")}<br>{SUPPORT_EMAIL}</div></div>{LANG_JS}</footer>
 <nav class="bnav" aria-label="Main"><a href="/"><b>🏠</b>{bi("होम", "Home")}</a><a href="/#exams"><b>🚉</b>{bi("परीक्षाएँ", "Exams")}</a><a href="/#papers"><b>📄</b>{bi("प्रश्न पत्र", "Papers")}</a><a href="/#subjects"><b>📚</b>{bi("विषय", "Subjects")}</a><a class="go" href="{PLAY_URL}"><b>⬇️</b>{bi("ऐप", "App")}</a></nav></body></html>"""
 
@@ -750,7 +751,7 @@ def main():
         "major RRB and RPF exam: NTPC, Group D, ALP, JE, Paramedical, RPF Constable and Sub-Inspector.") + "</div>")
     structured = json_ld(
         {"@context": "https://schema.org", "@type": "Organization", "name": ORG_NAME,
-         "url": home_url, "logo": f"{base}/logo-tile-460.webp", "sameAs": [TELEGRAM_URL, PLAY_URL]},
+         "url": home_url, "logo": f"{base}/logo-tile-460.webp", "sameAs": [TELEGRAM_URL, YOUTUBE_URL, PLAY_URL]},
         {"@context": "https://schema.org", "@type": "SoftwareApplication", "name": ORG_NAME,
          "operatingSystem": "Android", "applicationCategory": "EducationApplication", "installUrl": PLAY_URL,
          "inLanguage": ["hi", "en"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "INR"}},
@@ -837,7 +838,7 @@ def main():
         "<h1>" + bi('रेलवे परीक्षा की तैयारी, बिल्कुल मुफ़्त', 'Railway exam preparation, completely free') + "</h1>"
         "<p>" + bi('RRB NTPC, ग्रुप D, ALP, JE, RPF के असली पिछले साल के प्रश्न, सही उत्तर और सरल हिंदी-अंग्रेज़ी व्याख्या के साथ।',
                    'Real previous-year questions for RRB NTPC, Group D, ALP, JE and RPF, with answers and simple Hindi and English explanations.') + "</p>"
-        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a></div>"
+        f"<div class='row'><a class='cta pulse' href='{PLAY_URL}'>{bi('ऐप डाउनलोड करें', 'Download the app')}</a><a class='btn2' href='{TELEGRAM_URL}'>{bi('Telegram चैनल', 'Telegram channel')}</a><a class='btn2' href='{YOUTUBE_URL}'>{bi('YouTube चैनल', 'YouTube channel')}</a></div>"
         f"<div class='trust'><span>✓ {bi('मुफ़्त', 'Free')}</span><span>✓ {bi('बिना साइन-अप', 'No sign-up')}</span><span>✓ {bi('ऑफलाइन भी', 'Works offline')}</span><span>✓ {bi('हिंदी + English', 'Hindi + English')}</span></div></div>"
         "<span class='glow'></span><img class='logo' src='logo-tile-460.webp' width='230' height='230' alt='RailPariksha logo' fetchpriority='high'>"
         '<div class="track"><svg class="train" viewBox="0 0 210 58" aria-hidden="true"><g><rect x="4" y="8" width="150" height="36" rx="8" fill="#fff"/><path d="M154 8h20q24 2 32 26v10h-52z" fill="#f4f8ff"/><rect x="4" y="28" width="202" height="6" fill="#E8BA4A"/><rect x="16" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="46" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="76" y="14" width="22" height="12" rx="3" fill="#0A1633"/><rect x="106" y="14" width="22" height="12" rx="3" fill="#0A1633"/><path d="M160 14h14q14 2 20 14h-34z" fill="#0A1633"/><circle cx="203" cy="38" r="3" fill="#F3D27C"/><circle cx="36" cy="48" r="6" fill="#16203a"/><circle cx="80" cy="48" r="6" fill="#16203a"/><circle cx="130" cy="48" r="6" fill="#16203a"/><circle cx="176" cy="48" r="6" fill="#16203a"/></g></svg><div class="rails"></div></div></section>'

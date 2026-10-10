@@ -47,6 +47,8 @@ PYQ_DIR = ROOT / "content/pyq"
 CONTENT = ROOT / "content"
 FONTS = ROOT / "app/assets/fonts"
 PLAY_URL = ca_post.PLAY_URL
+SITE_URL = "https://railpariksha.in"
+YOUTUBE_URL = "https://www.youtube.com/@RailPariksha_Official"
 IST = timezone(timedelta(hours=5, minutes=30))
 
 # Telegram's own limits for quiz polls and captions.
@@ -67,7 +69,15 @@ POLL_SLOTS = {
     "poll_noon": (1, ["science", "reasoning", "railway_gk", "science", "reasoning", "computer", "science"]),
     "poll_evening": (2, ["gk", "railway_gk", "gk", "current_affairs", "gk", "railway_gk", "gk"]),
 }
-SLOTS = ["ca", *POLL_SLOTS, "fact", "tip", "weekly", "announce", "setup", "refresh"]
+# The hourly quiz: one subject per slot from this cycle. Its length is odd on purpose, so the subject does not
+# line up with the language (which alternates every hour).
+QUIZ_CYCLE = ["maths", "reasoning", "gk", "science", "maths", "reasoning", "gk", "railway_gk", "science",
+              "computer", "reasoning"]
+SUBJECT_EN = {
+    "maths": "Maths", "reasoning": "Reasoning", "science": "Science", "gk": "General Knowledge",
+    "railway_gk": "Railway GK", "computer": "Computer", "english": "English", "current_affairs": "Current Affairs",
+}
+SLOTS = ["ca", *POLL_SLOTS, "quiz", "fact", "tip", "weekly", "announce", "setup", "refresh"]
 
 GENERIC = re.compile(r"official answer key|आधिकारिक उत्तर कुंजी|published answer key|प्रकाशित उत्तर कुंजी", re.I)
 # Anything that needs a picture, a diagram or a seating layout is skipped: a poll is text only.
@@ -82,12 +92,14 @@ WELCOME = (
     "📝 दिन में 3 क्विज़, असली पिछले साल के प्रश्न (जवाब और व्याख्या के साथ)\n"
     "🧠 फ़ैक्ट, फ़ॉर्मूला और चीट शीट\n"
     "💪 शाम को पढ़ाई की टिप\n\n"
-    f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {PLAY_URL}\n\n"
+    f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {PLAY_URL}\n"
+    f"🌐 वेबसाइट: {SITE_URL}\n"
+    f"▶️ YouTube (रोज़ 6 शॉर्ट्स): {YOUTUBE_URL}\n\n"
     "कोई प्रश्न गलत लगे तो ऐप में Report कर दीजिए, हम सुधारते हैं। साथ पढ़ेंगे तो साथ निकलेंगे 🤝"
 )
 DESCRIPTION = (
     "हम भी आपकी तरह रेलवे की तैयारी कर रहे स्टूडेंट्स हैं। रोज़: करेंट अफेयर्स, PYQ क्विज़, फ़ैक्ट। "
-    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {PLAY_URL}"
+    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {PLAY_URL} · वेबसाइट: {SITE_URL} · YouTube: {YOUTUBE_URL}"
 )
 
 
@@ -149,19 +161,39 @@ def poll_ok(q):
         return False
 
 
-def poll_payload(q, chat_id, prefix):
+def poll_ok_en(q):
+    """Whether a question can be a clean text-only English quiz poll."""
+    try:
+        opts, a = q["o_en"], q["a"]
+        if not isinstance(a, int) or len(opts) != 4 or not 0 <= a < 4:
+            return False
+        if len(set(opts)) != 4 or any(not o.strip() or len(o) > POLL_OPTION_MAX for o in opts):
+            return False
+        text = q["q_en"]
+        if not re.search(r"[A-Za-z]{3}", text) or len(text) > POLL_QUESTION_MAX - 60:
+            return False
+        if VISUAL.search(text) or any(VISUAL.search(o) for o in opts) or VISUAL.search(q.get("q_hi") or ""):
+            return False
+        e_en = q.get("e_en") or ""
+        return bool(e_en.strip()) and not GENERIC.search(e_en) and not GENERIC.search(q.get("e_hi") or "")
+    except (KeyError, TypeError, AttributeError):
+        return False
+
+
+def poll_payload(q, chat_id, prefix, lang="hi"):
     label = exam_label(q.get("pyq"))
     head = f"{prefix} {label}".strip() if label else prefix
-    question = f"{head}\n{q['q_hi'].strip()}"
+    text = q["q_en" if lang == "en" else "q_hi"].strip()
+    question = f"{head}\n{text}"
     if len(question) > POLL_QUESTION_MAX:
-        question = f"{prefix}\n{q['q_hi'].strip()}"
+        question = f"{prefix}\n{text}"
     return {
         "chat_id": chat_id,
         "question": question[:POLL_QUESTION_MAX],
-        "options": [o.strip() for o in q["o_hi"]],
+        "options": [o.strip() for o in q["o_en" if lang == "en" else "o_hi"]],
         "type": "quiz",
         "correct_option_id": q["a"],
-        "explanation": shorten(q["e_hi"], POLL_EXPLANATION_MAX),
+        "explanation": shorten(q["e_en" if lang == "en" else "e_hi"], POLL_EXPLANATION_MAX),
         "is_anonymous": True,
     }
 
@@ -169,14 +201,46 @@ def poll_payload(q, chat_id, prefix):
 _POOLS = {}
 
 
-def load_pyq(subject):
-    """Every PYQ of a subject that can be a clean poll. The packs are read once per run."""
+def load_pyq(subject, lang="hi"):
+    """Every PYQ of a subject that can be a clean poll in a language. The packs are read once per run."""
     if not _POOLS:
         for p in sorted(PYQ_DIR.glob("*.json")):
             for r in json.loads(p.read_text(encoding="utf-8")):
-                if poll_ok(r):
-                    _POOLS.setdefault(r.get("s"), []).append(r)
-    return _POOLS.get(subject, [])
+                for lg, ok in (("hi", poll_ok), ("en", poll_ok_en)):
+                    if ok(r):
+                        _POOLS.setdefault((lg, r.get("s")), []).append(r)
+    return _POOLS.get((lang, subject), [])
+
+
+def rotation(now_ist=None):
+    """(slot number, language) of an hour in India. The slot number grows by one every hour, so each hour gets
+    its own question; the language alternates hourly and flips every day, so a given clock hour is Hindi one
+    day and English the next."""
+    now = (now_ist or datetime.now(IST)).astimezone(IST)
+    n = now.date().toordinal() * 24 + now.hour
+    return n, "en" if (now.date().toordinal() + now.hour) % 2 else "hi"
+
+
+def cycle_step(n):
+    """(subject, step) of slot number n: the subject from QUIZ_CYCLE and how many times that subject has come
+    up before, which is its position in its own shuffle."""
+    pos = n % len(QUIZ_CYCLE)
+    subject = QUIZ_CYCLE[pos]
+    return subject, (n // len(QUIZ_CYCLE)) * QUIZ_CYCLE.count(subject) + QUIZ_CYCLE[:pos].count(subject)
+
+
+def quiz_for(n, lang, chat_id, pools=None):
+    """The hourly quiz poll for slot number n, or None. Each subject walks its own fixed shuffle one step at a
+    time, so nothing repeats until the subject's whole pool has been used."""
+    subject, step = cycle_step(n)
+    pool = (pools or {}).get(subject) if pools is not None else load_pyq(subject, lang)
+    if not pool:
+        return None
+    ordered = sorted(pool, key=lambda r: r.get("id", ""))
+    random.Random(f"railpariksha-hourly-{lang}-{subject}").shuffle(ordered)
+    q = ordered[step % len(ordered)]
+    prefix = f"🚆 {SUBJECT_EN[subject]} PYQ ·" if lang == "en" else f"🚆 {SUBJECT_HI[subject]} PYQ ·"
+    return poll_payload(q, chat_id, prefix, lang)
 
 
 def pick(pool, key, day, offset=0):
@@ -314,7 +378,7 @@ def tip_text(day):
     parts = [f"{icon} {html.escape(item['hi'])}"]
     for s in special_day(day):
         parts.append(f"📅 <b>आज:</b> {html.escape(s['title_hi'])}\n{html.escape(s.get('detail_hi', ''))}")
-    parts.append(f"🚆 आज की प्रैक्टिस अभी करें, रोज़ 10 प्रश्न भी काफ़ी हैं:\n{PLAY_URL}")
+    parts.append(f"🚆 आज की प्रैक्टिस अभी करें, रोज़ 10 प्रश्न भी काफ़ी हैं:\n{PLAY_URL}\n🌐 {SITE_URL}\n▶️ YouTube: {YOUTUBE_URL}")
     return "\n\n".join(parts)[:MESSAGE_MAX]
 
 
@@ -332,7 +396,7 @@ def weekly_text(day):
             n += 1
     if n == 0:
         return None
-    lines += ["", f"📲 पूरी क्विज़ और मॉक टेस्ट ऐप में: {PLAY_URL}", "", "#WeeklyRecap #CurrentAffairs #RRB"]
+    lines += ["", f"📲 पूरी क्विज़ और मॉक टेस्ट ऐप में: {PLAY_URL}", f"🌐 {SITE_URL}", "", "#WeeklyRecap #CurrentAffairs #RRB"]
     return "\n".join(lines)
 
 
@@ -528,7 +592,7 @@ class Bot:
 # Slots
 # ---------------------------------------------------------------------------------------------
 
-def run_slot(bot, slot, day, text=None, out=None):
+def run_slot(bot, slot, day, text=None, out=None, hour=None):
     if slot == "setup":
         bot.ensure_setup()
         return
@@ -565,6 +629,14 @@ def run_slot(bot, slot, day, text=None, out=None):
             if payload:
                 bot.poll(payload)
                 break
+    elif slot == "quiz":
+        when = datetime.now(IST) if hour is None else datetime(day.year, day.month, day.day, hour, tzinfo=IST)
+        n, lang = rotation(when)
+        payload = quiz_for(n, lang, bot.chat_id)
+        if payload is None:
+            print(f"::warning::no eligible {lang} question for slot {n}")
+            return
+        bot.poll(payload)
     elif slot in POLL_SLOTS:
         payload = poll_for(slot, day, bot.chat_id)
         if payload is None:
@@ -588,6 +660,7 @@ def main():
     ap.add_argument("--slot", required=True, choices=SLOTS)
     ap.add_argument("--date", help="YYYY-MM-DD (default: today in India)")
     ap.add_argument("--text", help="message for the announce slot")
+    ap.add_argument("--hour", type=int, help="hour in India for the hourly quiz (default: now)")
     ap.add_argument("--dry-run", action="store_true", help="print what would be sent; send nothing")
     ap.add_argument("--out", help="folder to also write the picture card to")
     a = ap.parse_args()
@@ -598,7 +671,7 @@ def main():
         return 0
     bot = Bot(token, chat, dry_run=a.dry_run, out=a.out)
     try:
-        run_slot(bot, a.slot, day, text=a.text, out=a.out)
+        run_slot(bot, a.slot, day, text=a.text, out=a.out, hour=a.hour)
         if not a.dry_run:
             members = bot.member_count()
             line = f"Telegram slot `{a.slot}` posted {bot.sent} message(s); channel members: {members}"

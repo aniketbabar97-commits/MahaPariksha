@@ -44,6 +44,12 @@ void main() {
       final spec = QuizBuilder(repo, progress).beast(seconds: 60);
       expect(spec.questions, isNotEmpty);
       await open(tester, BeastModeScreen(spec: spec, seconds: 60), lang);
+      // The options are in a lazy ListView: after a long random question they are below the fold and not built
+      // yet, so scroll until the first one exists.
+      for (var i = 0; i < 6 && find.byType(InkWell).evaluate().isEmpty; i++) {
+        await tester.drag(find.byType(ListView).first, const Offset(0, -300), warnIfMissed: false);
+        await tester.pump(const Duration(milliseconds: 200));
+      }
       await tester.tap(find.byType(InkWell).first, warnIfMissed: false);
       await tester.pump(const Duration(milliseconds: 800));
       await tester.pump(const Duration(seconds: 2));
