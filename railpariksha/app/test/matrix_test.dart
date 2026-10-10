@@ -79,6 +79,7 @@ void main() {
   late List<PyqSet> pyqSets;
 
   setUpAll(() async {
+    TodayScreen.hourNow = () => 14; // the greeting changes with the time of day; keep the audit deterministic
     await _loadMukta();
     repo = ContentRepo();
     await repo.load();
