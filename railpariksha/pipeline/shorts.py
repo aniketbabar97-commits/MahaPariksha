@@ -5,8 +5,10 @@ One vertical (1080x1920) video of about 20 seconds per run: the question and fou
 think-time countdown, then the answer with the worked explanation and the app link. The question is chosen
 by date from a fixed shuffle (no stored state, nothing repeats for months), exactly like the Telegram polls.
 
-  python pipeline/shorts.py --slot morning --out /tmp/short      render the video, upload when secrets exist
-  python pipeline/shorts.py --slot evening --dry-run              print the plan, render nothing
+  python pipeline/shorts.py --slot 1 --out /tmp/short      render the video, upload when secrets exist
+  python pipeline/shorts.py --slot 4 --lang en --dry-run   print the plan, render nothing
+
+Six a day (slots 1..6, 07:00 to 22:00 IST); the language alternates and flips daily (--lang auto).
 
 Upload needs three secrets (see docs/YOUTUBE.md): YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN. Without
 them the video is still rendered and the workflow keeps it as a downloadable file, so it can be uploaded by
@@ -16,6 +18,7 @@ notice and exit 0, never a broken video.
 import argparse
 import json
 import os
+import random
 import subprocess
 import sys
 import textwrap
@@ -26,41 +29,116 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import telegram_bot as tb  # noqa: E402
 
 W, H = 1080, 1920
-SLOTS = {"morning": ("poll_morning", 0), "evening": ("poll_evening", 3)}
+# Six Shorts a day, about three hours apart (IST). YouTube's default quota is 10,000 units a day and one upload
+# costs 1,600, so six is the most that fits; an hourly schedule would be refused after the sixth.
+SLOT_HOURS = [7, 10, 13, 16, 19, 22]
 THINK_SECONDS = 5
 QUESTION_SECONDS = 4
 ANSWER_SECONDS = 9
 CHANNEL = os.environ.get("TELEGRAM_URL") or "https://t.me/RailParikshaApp"
+SITE = tb.SITE_URL
 TITLE_MAX = 100
 DESC_MAX = 4800
+Q_MAX, OPT_MAX, EXPL_MAX = 230, 60, 420
 
 
-def choose(slot, day, pools=None):
-    """The question for a slot and day, or None. Shorter text only: it has to fit a phone screen."""
-    n, subjects = tb.POLL_SLOTS[SLOTS[slot][0]]
-    subject = subjects[day.weekday()]
-    pool = (pools or {}).get(subject) if pools is not None else tb.load_pyq(subject)
-    pool = [q for q in (pool or []) if fits(q)]
-    return tb.pick(pool, "short-" + subject, day, offset=n * 7 + SLOTS[slot][1])
+def rotation(slot, day):
+    """(slot number, language) for slot 1..6 of a day: the language alternates through the day and flips
+    every day, so a given clock time is Hindi one day and English the next."""
+    n = day.toordinal() * len(SLOT_HOURS) + slot - 1
+    return n, "en" if (day.toordinal() + slot) % 2 else "hi"
 
 
-def fits(q):
-    return len(q["q_hi"]) <= 230 and all(len(o) <= 60 for o in q["o_hi"]) and len(q["o_hi"]) == 4 \
-        and len(q["e_hi"]) <= 420
+def choose(slot, day, lang=None, pools=None):
+    """The question for a slot and day, or None. Shorter text only: it has to fit a phone screen. Subjects follow
+    the same cycle as the Telegram hourly quiz, and each subject walks its own fixed shuffle, so nothing repeats
+    until the subject's whole pool has been used."""
+    n, auto = rotation(slot, day)
+    lang = lang or auto
+    subject, step = tb.cycle_step(n)
+    pool = (pools or {}).get(subject) if pools is not None else tb.load_pyq(subject, lang)
+    pool = sorted((q for q in (pool or []) if fits(q, lang)), key=lambda r: r.get("id", ""))
+    if not pool:
+        return None
+    random.Random(f"railpariksha-short-{lang}-{subject}").shuffle(pool)
+    return pool[step % len(pool)]
 
 
-def title_for(q):
+def fits(q, lang="hi"):
+    """Cheap length limits, then the real layout: the question, four options, the answer line, two lines of
+    explanation and the three link lines must all fit on the 1920 px frame."""
+    k = "en" if lang == "en" else "hi"
+    if not (len(q["q_" + k]) <= Q_MAX and len(q["o_" + k]) == 4 and all(len(o) <= OPT_MAX for o in q["o_" + k])
+            and len(q["e_" + k]) <= EXPL_MAX):
+        return False
+    return layout_end(q, lang) <= OPTIONS_END_MAX
+
+
+OPTIONS_END_MAX = H - 330 - 90 - 2 * 66  # room below the options for the answer line, 2 explanation lines, links
+_MEASURE = {}
+
+
+def _estimate_lines(text, font, width):
+    """Wrapped line count from cached per-character widths (cheap; the shaped text is never wider than the sum
+    of its characters, so this errs towards more lines, never fewer)."""
+    cache = _MEASURE.setdefault(id(font), {})
+
+    def w(s):
+        total = 0.0
+        for c in s:
+            if c not in cache:
+                cache[c] = font.getlength(c)
+            total += cache[c]
+        return total
+
+    space, lines, cur = w(" "), 1, 0.0
+    for word in text.split():
+        ww = w(word)
+        if cur and cur + space + ww > width:
+            lines, cur = lines + 1, ww
+        else:
+            cur = cur + space + ww if cur else ww
+    return lines
+
+
+def layout_end(q, lang):
+    """The y at which the last option box ends in render_frames (estimated, slightly pessimistic)."""
+    if "fonts" not in _MEASURE:
+        _MEASURE["fonts"] = _fonts()
+    fonts = _MEASURE["fonts"]
+    k = "en" if lang == "en" else "hi"
+    pad = 70
+    y = 280 + 90 * _estimate_lines(q["q_" + k], fonts["big"], W - 2 * pad) + 40
+    for opt in q["o_" + k]:
+        y += max(110, 70 * _estimate_lines(opt, fonts["opt"], W - 2 * pad - 130) + 40) + 28
+    return y
+
+
+def title_for(q, lang="hi"):
+    if lang == "en":
+        head = tb.SUBJECT_EN.get(q.get("s"), "RRB")
+        return tb.shorten(f"{head} PYQ: can you answer this? #Shorts #RRB #Railway", TITLE_MAX)
     head = tb.SUBJECT_HI.get(q.get("s"), "PYQ")
     return tb.shorten(f"{head} का PYQ: क्या आप सही उत्तर दे पाएँगे? #Shorts #RRB #Railway", TITLE_MAX)
 
 
-def description_for(q):
+def description_for(q, lang="hi"):
     label = tb.exam_label(q.get("pyq"))
+    if lang == "en":
+        return (
+            f"A real previous-year railway exam question ({label}).\n\n"
+            "We are students too. RailPariksha is made by students, for students: free, in Hindi and English.\n"
+            f"Free app: {tb.PLAY_URL}\n"
+            f"Website: {SITE}\n"
+            f"Telegram (daily quizzes and current affairs): {CHANNEL}\n\n"
+            "#RRBNTPC #RRBGroupD #RRBALP #RRBJE #RPF #Railway #PYQ #Shorts"
+        )[:DESC_MAX]
     return (
         f"रेलवे परीक्षा का असली पिछले साल का प्रश्न ({label}).\n\n"
         "हम भी आपकी तरह स्टूडेंट्स हैं। RailPariksha स्टूडेंट्स ने स्टूडेंट्स के लिए बनाया है।\n"
-        f"📲 मुफ़्त ऐप: {tb.PLAY_URL}\n"
-        f"💬 रोज़ के क्विज़ और करेंट अफेयर्स: {CHANNEL}\n\n"
+        f"मुफ़्त ऐप: {tb.PLAY_URL}\n"
+        f"वेबसाइट: {SITE}\n"
+        f"Telegram (रोज़ के क्विज़ और करेंट अफेयर्स): {CHANNEL}\n\n"
         "#RRBNTPC #RRBGroupD #RRBALP #RRBJE #RPF #Railway #PYQ #Shorts"
     )[:DESC_MAX]
 
@@ -111,10 +189,11 @@ def _background():
     return img
 
 
-def render_frames(q, out_dir):
+def render_frames(q, out_dir, lang="hi"):
     """Writes PNG frames and returns [(path, seconds)] in play order."""
     from PIL import ImageDraw
     fonts = _fonts()
+    k = "en" if lang == "en" else "hi"
     pad = 70
     labels = ["A", "B", "C", "D"]
     frames = []
@@ -125,11 +204,11 @@ def render_frames(q, out_dir):
         d.text((pad, 90), "RailPariksha", font=fonts["head"], fill=(232, 186, 74))
         d.text((pad, 160), tb.exam_label(q.get("pyq")), font=fonts["small"], fill=(190, 210, 245))
         y = 280
-        for line in _wrap(d, q["q_hi"].strip(), fonts["big"], W - 2 * pad):
+        for line in _wrap(d, q["q_" + k].strip(), fonts["big"], W - 2 * pad):
             d.text((pad, y), line, font=fonts["big"], fill=(255, 255, 255))
             y += 90
         y += 40
-        for i, opt in enumerate(q["o_hi"]):
+        for i, opt in enumerate(q["o_" + k]):
             lines = _wrap(d, opt.strip(), fonts["opt"], W - 2 * pad - 130)
             h = max(110, 70 * len(lines) + 40)
             right = reveal == i
@@ -156,13 +235,23 @@ def render_frames(q, out_dir):
         img.save(p)
         frames.append((p, 1))
     img, d, y = base(reveal=q["a"])
-    d.text((pad, y + 10), "सही उत्तर: " + labels[q["a"]], font=fonts["head"], fill=(160, 255, 190))
+    d.text((pad, y + 10), ("Correct answer: " if lang == "en" else "सही उत्तर: ") + labels[q["a"]],
+           font=fonts["head"], fill=(160, 255, 190))
     y += 90
-    for line in _wrap(d, tb.shorten(q["e_hi"], 360), fonts["expl"], W - 2 * pad)[:6]:
+    room = max(1, (H - 330 - y) // 66)  # the three link lines below need the last 330 px
+    lines = _wrap(d, tb.shorten(q["e_" + k], 360), fonts["expl"], W - 2 * pad)
+    if len(lines) > room:
+        lines = lines[:room]
+        lines[-1] = lines[-1].rstrip(" ,;:.") + "…"
+    for line in lines:
         d.text((pad, y), line, font=fonts["expl"], fill=(255, 255, 255))
         y += 66
-    d.text((pad, H - 170), "मुफ़्त ऐप + रोज़ के क्विज़: Telegram @RailParikshaApp", font=fonts["small"], fill=(232, 186, 74))
-    d.text((pad, H - 110), "स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए", font=fonts["small"], fill=(190, 210, 245))
+    foot = ["Free app: RailPariksha on Google Play", f"Website: {SITE.split('//')[1]}",
+            f"Telegram: {CHANNEL.split('//')[1]}"] if lang == "en" else \
+        ["मुफ़्त ऐप: Google Play पर RailPariksha", f"वेबसाइट: {SITE.split('//')[1]}",
+         f"Telegram: {CHANNEL.split('//')[1]}"]
+    for i, line in enumerate(foot):
+        d.text((pad, H - 270 + i * 60), line, font=fonts["small"], fill=(232, 186, 74))
     p = out_dir / "a.png"
     img.save(p)
     frames.append((p, ANSWER_SECONDS))
@@ -209,12 +298,13 @@ def check(resp):
     raise RuntimeError(f"{resp.status_code} from {resp.url.split('?')[0]}: {why}")
 
 
-def upload(mp4, title, description):
+def upload(mp4, title, description, lang="hi"):
     import requests
     token = access_token()
     meta = {
         "snippet": {"title": title, "description": description, "categoryId": "27",
-                    "tags": ["RRB", "NTPC", "Group D", "Railway", "PYQ", "RPF"], "defaultLanguage": "hi"},
+                    "tags": ["RRB", "NTPC", "Group D", "Railway", "PYQ", "RPF"], "defaultLanguage": lang,
+                    "defaultAudioLanguage": lang},
         "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
     }
     init = requests.post(
@@ -230,18 +320,21 @@ def upload(mp4, title, description):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--slot", required=True, choices=list(SLOTS))
+    ap.add_argument("--slot", required=True, type=int, choices=range(1, len(SLOT_HOURS) + 1),
+                    help="1..6 of the day, in order 07:00 10:00 13:00 16:00 19:00 22:00 IST")
+    ap.add_argument("--lang", choices=["auto", "hi", "en"], default="auto")
     ap.add_argument("--out", default="short_out")
     ap.add_argument("--date", help="YYYY-MM-DD (default: today, IST)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
     day = date.fromisoformat(args.date) if args.date else tb.today_ist()
-    q = choose(args.slot, day)
+    lang = rotation(args.slot, day)[1] if args.lang == "auto" else args.lang
+    q = choose(args.slot, day, lang)
     if q is None:
         print("::notice::no suitable question for this slot today")
         return 0
-    title, desc = title_for(q), description_for(q)
-    print(f"[{args.slot}] {q.get('id')} | {title}")
+    title, desc = title_for(q, lang), description_for(q, lang)
+    print(f"[slot {args.slot} {lang}] {q.get('id')} | {title}")
     if args.dry_run:
         print(desc)
         return 0
@@ -250,13 +343,13 @@ def main():
         return 0
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
-    mp4 = out / f"short_{day.isoformat()}_{args.slot}.mp4"
-    encode(render_frames(q, out), mp4)
+    mp4 = out / f"short_{day.isoformat()}_{args.slot}_{lang}.mp4"
+    encode(render_frames(q, out, lang), mp4)
     (out / mp4.with_suffix(".txt.meta").name).write_text(f"{title}\n\n{desc}", encoding="utf-8")
     print(f"rendered {mp4} ({mp4.stat().st_size // 1024} KiB)")
     if all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")):
         try:
-            print(f"uploaded: https://youtube.com/shorts/{upload(mp4, title, desc)}")
+            print(f"uploaded: https://youtube.com/shorts/{upload(mp4, title, desc, lang)}")
         except Exception as e:  # noqa: BLE001
             print(f"::warning::upload failed ({e}); the video is kept as a workflow file")
     else:

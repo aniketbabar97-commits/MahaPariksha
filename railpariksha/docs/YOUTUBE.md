@@ -1,11 +1,19 @@
 # YouTube Shorts automation
 
-`pipeline/shorts.py` and the workflow **RailPariksha Shorts** make one vertical video (about 20 s) twice a day
-(09:00 and 19:00 IST) from a previous-year question: question and options, a 5-second countdown, then the answer,
-a short explanation, and the Telegram and app links. Questions rotate by date; nothing repeats for months.
+`pipeline/shorts.py` and the workflow **RailPariksha Shorts** make one vertical video (about 20 s) six times a day
+(07:00, 10:00, 13:00, 16:00, 19:00 and 22:00 IST) from a previous-year question: question and options, a 5-second
+countdown, then the answer, a short explanation, and the app, website and Telegram links (also in every video
+description). The language alternates between Hindi and English through the day and flips every day, so a
+given clock time is Hindi one day and English the next. Each subject walks its own fixed shuffle, so nothing
+repeats within a language for months.
+
+Why six and not hourly: YouTube's default API quota is 10,000 units a day and one upload costs 1,600, so six
+uploads (9,600) is the most that fits. More needs a quota-extension request in the same compliance audit form.
+A brand-new channel may also be limited to a handful of uploads a day until it is verified by phone (Studio,
+Settings, Channel, Feature eligibility).
 
 ## What works with no setup
-Run the workflow (Actions, RailPariksha Shorts, Run workflow). It builds the video and keeps it as a downloadable
+Run the workflow (Actions, RailPariksha Shorts, Run workflow; pick a slot 1 to 6 and a language). It builds the video and keeps it as a downloadable
 file for 7 days, so you can upload it to YouTube Studio by hand in a minute. The title and description are in the
 log.
 

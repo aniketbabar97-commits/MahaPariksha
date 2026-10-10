@@ -6,19 +6,18 @@
 name: RailPariksha Telegram
 on:
   schedule:
-    - cron: "30 2 * * *"   # 08:00 IST  quiz poll (maths / reasoning)
-    - cron: "30 5 * * *"   # 11:00 IST  flashcard or cheat sheet
-    - cron: "0 8 * * *"    # 13:30 IST  quiz poll (science / railway GK / computer)
-    - cron: "30 11 * * *"  # 17:00 IST  study tip and the app link
-    - cron: "30 14 * * *"  # 20:00 IST  quiz poll (general knowledge / railway GK)
-    - cron: "30 13 * * 0"  # Sunday 19:00 IST  the week's current affairs
+    # Every hour from 06:00 to 23:00 IST. What is posted depends on the hour (see the slot step): a PYQ quiz
+    # poll, alternating Hindi and English hour by hour, except 11:00 (fact / cheat sheet) and 17:00 (study tip
+    # and the app, website links).
+    - cron: "30 0-17 * * *"
+    - cron: "30 13 * * 0"  # Sunday 19:00 IST  the week's current affairs (the hourly quiz skips that hour)
   workflow_dispatch:
     inputs:
       slot:
         description: Which post to send now
         type: choice
         default: announce
-        options: [announce, setup, refresh, ca, poll_morning, fact, poll_noon, tip, poll_evening, weekly]
+        options: [announce, setup, refresh, ca, quiz, poll_morning, fact, poll_noon, tip, poll_evening, weekly]
       text:
         description: Text for "announce" (plain text, sent as written)
         required: false
@@ -37,17 +36,19 @@ jobs:
     steps:
       - id: slot
         run: |
+          hour=$(TZ=Asia/Kolkata date +%H); hour=$((10#$hour)); dow=$(TZ=Asia/Kolkata date +%u)
           case "${{ github.event.schedule }}" in
-            "30 2 * * *")  s=poll_morning ;;
-            "30 5 * * *")  s=fact ;;
-            "0 8 * * *")   s=poll_noon ;;
-            "30 11 * * *") s=tip ;;
-            "30 14 * * *") s=poll_evening ;;
+            "30 0-17 * * *")
+              if   [ "$hour" = 11 ]; then s=fact
+              elif [ "$hour" = 17 ]; then s=tip
+              elif [ "$hour" = 19 ] && [ "$dow" = 7 ]; then s=none   # the weekly recap posts at this hour
+              else s=quiz; fi ;;
             "30 13 * * 0") s=weekly ;;
             *)             s="${{ github.event.inputs.slot }}" ;;
           esac
           echo "slot=$s" >> "$GITHUB_OUTPUT"
-          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then echo "have=true" >> "$GITHUB_OUTPUT"
+          if [ "$s" = none ]; then echo "::notice::nothing to post at this hour"
+          elif [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then echo "have=true" >> "$GITHUB_OUTPUT"
           else echo "::notice::TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set; nothing to post."; fi
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

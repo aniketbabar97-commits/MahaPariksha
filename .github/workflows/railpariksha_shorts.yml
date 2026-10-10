@@ -1,18 +1,28 @@
-# Makes one YouTube Short from a previous-year question, twice a day, and uploads it when the YouTube secrets
+# Makes one YouTube Short from a previous-year question, six times a day (Hindi and English alternating), and uploads it when the YouTube secrets
 # exist (YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN; see railpariksha/docs/YOUTUBE.md). Without them the
 # video is still built and kept as a workflow file, so it can be uploaded by hand. See pipeline/shorts.py.
 name: RailPariksha Shorts
 on:
   schedule:
-    - cron: "30 3 * * *"   # 09:00 IST
-    - cron: "30 13 * * *"  # 19:00 IST
+    # Six a day, IST. YouTube's default API quota (10,000 units, 1,600 per upload) allows six at most.
+    - cron: "30 1 * * *"    # 07:00 IST  slot 1
+    - cron: "30 4 * * *"    # 10:00 IST  slot 2
+    - cron: "30 7 * * *"    # 13:00 IST  slot 3
+    - cron: "30 10 * * *"   # 16:00 IST  slot 4
+    - cron: "30 13 * * *"   # 19:00 IST  slot 5
+    - cron: "30 16 * * *"   # 22:00 IST  slot 6
   workflow_dispatch:
     inputs:
       slot:
-        description: Which slot to make
+        description: Which slot of the day (1 = 07:00 ... 6 = 22:00 IST)
         type: choice
-        options: [morning, evening]
-        default: morning
+        options: ["1", "2", "3", "4", "5", "6"]
+        default: "1"
+      lang:
+        description: Language (auto alternates, and flips every day)
+        type: choice
+        options: [auto, hi, en]
+        default: auto
 permissions:
   contents: read
 concurrency:
@@ -27,7 +37,8 @@ jobs:
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
       TELEGRAM_URL: ${{ vars.TELEGRAM_URL }}
-      SLOT: ${{ github.event.inputs.slot || (github.event.schedule == '30 3 * * *' && 'morning' || 'evening') }}
+      SLOT: ${{ github.event.inputs.slot || fromJSON('{"30 1 * * *":"1","30 4 * * *":"2","30 7 * * *":"3","30 10 * * *":"4","30 13 * * *":"5","30 16 * * *":"6"}')[github.event.schedule] }}
+      LANG_CHOICE: ${{ github.event.inputs.lang || 'auto' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -35,7 +46,7 @@ jobs:
           python-version: "3.12"
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg libraqm0
       - run: pip install -q pillow requests
-      - run: python railpariksha/pipeline/shorts.py --slot "$SLOT" --out short_out
+      - run: python railpariksha/pipeline/shorts.py --slot "$SLOT" --lang "$LANG_CHOICE" --out short_out
       - uses: actions/upload-artifact@v4
         if: always()
         with:

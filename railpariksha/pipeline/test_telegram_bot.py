@@ -87,6 +87,31 @@ class Content(unittest.TestCase):
         day_polls = {tb.poll_for(s, DAY, "@c")["question"] for s in tb.POLL_SLOTS}
         self.assertEqual(len(day_polls), 3)
 
+    def test_hourly_quiz_alternates_language_and_never_repeats(self):
+        from datetime import datetime, timedelta
+        seen, langs = set(), set()
+        for i in range(30):
+            for h in range(6, 24):
+                n, lang = tb.rotation(datetime(2026, 10, 1, h, tzinfo=tb.IST) + timedelta(days=i))
+                p = tb.quiz_for(n, lang, "c")
+                self.assertTrue(p and len(p["question"]) <= tb.POLL_QUESTION_MAX)
+                self.assertEqual(len(p["options"]), 4)
+                self.assertLessEqual(len(p["explanation"]), tb.POLL_EXPLANATION_MAX)
+                if lang == "hi":
+                    self.assertTrue(re.search(r"[ऀ-ॿ]", p["question"]))
+                else:
+                    self.assertTrue(re.search(r"[A-Za-z]{3}", p["question"]))
+                    self.assertFalse(re.search(r"[ऀ-ॿ]", p["question"] + "".join(p["options"])))
+                seen.add((lang, p["question"]))
+        self.assertEqual(len(seen), 30 * 18)
+        # the same clock hour is Hindi one day and English the next
+        a = tb.rotation(datetime(2026, 10, 1, 9, tzinfo=tb.IST))[1]
+        b = tb.rotation(datetime(2026, 10, 2, 9, tzinfo=tb.IST))[1]
+        self.assertNotEqual(a, b)
+        # consecutive hours alternate
+        self.assertNotEqual(tb.rotation(datetime(2026, 10, 1, 9, tzinfo=tb.IST))[1],
+                            tb.rotation(datetime(2026, 10, 1, 10, tzinfo=tb.IST))[1])
+
     def test_text_posts_are_valid_html_and_within_limits(self):
         for i in range(60):
             day = DAY + timedelta(days=i)
