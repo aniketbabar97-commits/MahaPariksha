@@ -18,9 +18,15 @@ on:
       text:
         description: Text for "announce" (plain text, sent as written)
         required: false
+      force:
+        description: Post even if the same kind of post went out in the last 40 minutes (normally that is skipped, so nothing is posted twice)
+        type: boolean
+        default: false
+run-name: Telegram ${{ inputs.slot }}
 
 permissions:
   contents: read
+  actions: read
 
 # Posts must not overlap or be cancelled halfway.
 concurrency:
@@ -34,11 +40,21 @@ jobs:
       - id: slot
         run: |
           s="${{ github.event.inputs.slot }}"
+          # The scheduled kinds are posted once: if the same kind already went out (or is running) in the last 40
+          # minutes, skip, so a double trigger never posts twice. "force" overrides; setup, refresh and announce never skip.
+          case "$s" in quiz|fact|tip|weekly)
+            if [ "${{ inputs.force }}" != "true" ]; then
+              since=$(date -u -d '40 minutes ago' +%Y-%m-%dT%H:%M:%SZ)
+              n=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/railpariksha_telegram.yml/runs?created=%3E%3D$since&per_page=50" --jq "[.workflow_runs[] | select(.display_title==\"Telegram $s\" and .id < $GITHUB_RUN_ID) | select(.status!=\"completed\" or .conclusion==\"success\")] | length")
+              if [ "$n" -gt 0 ]; then echo "::warning::a $s post already went out in the last 40 minutes; skipping (tick force to post anyway)"; s=none; fi
+            fi ;;
+          esac
           echo "slot=$s" >> "$GITHUB_OUTPUT"
           if [ "$s" = none ]; then echo "::notice::nothing to post at this hour"
           elif [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then echo "have=true" >> "$GITHUB_OUTPUT"
           else echo "::notice::TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set; nothing to post."; fi
         env:
+          GH_TOKEN: ${{ github.token }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       - if: steps.slot.outputs.have == 'true'
