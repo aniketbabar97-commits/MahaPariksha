@@ -34,6 +34,11 @@ log.
 6. If uploads stop later with `invalid_grant`, the token was revoked or expired (consent screen back in Testing, or the
    password changed): repeat step 4 and replace `YT_REFRESH_TOKEN`.
 
+## Wording of the videos
+Title = exam + subject + year (what students search), no hashtags in it. Description = a keyword line, the four links,
+then five hashtags. Tags are set per exam and subject. See `docs/store/youtube/channel_text.md` for the channel
+keywords to paste into Studio.
+
 ## Limits to know
 - **Unverified API projects upload as private.** Google locks videos uploaded through the API from an
   unaudited project to private. Until the project passes the YouTube API compliance audit (a form on the API

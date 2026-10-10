@@ -40,7 +40,11 @@ class ShortsTests(unittest.TestCase):
         q = shorts.choose(4, date(2026, 10, 9), "en")
         for lang in ("hi", "en"):
             self.assertLessEqual(len(shorts.title_for(q, lang)), shorts.TITLE_MAX)
-            self.assertIn("#Shorts", shorts.title_for(q, lang))
+            self.assertIn("PYQ", shorts.title_for(q, lang))
+            self.assertNotIn("#", shorts.title_for(q, lang))  # hashtags live in the description
+            self.assertLessEqual(len(shorts.hashtags_for(q).split()), 5)
+            self.assertIn("#Shorts", shorts.hashtags_for(q))
+            self.assertLessEqual(sum(len(t) + 1 for t in shorts.tags_for(q, lang)), 500)
             desc = shorts.description_for(q, lang)
             for link in (tb.PLAY_URL, tb.SITE_URL, shorts.CHANNEL):
                 self.assertIn(link, desc)
