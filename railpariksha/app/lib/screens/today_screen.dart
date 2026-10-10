@@ -26,8 +26,13 @@ class TodayScreen extends StatelessWidget {
   final ValueChanged<int> onNavigate;
   const TodayScreen({super.key, required this.onNavigate});
 
+  /// Hour of day the greeting is chosen by. Tests pin it, so the screen renders the same at any time of day
+  /// (the morning greeting ends in an emoji that the test font draws as a solid block).
+  @visibleForTesting
+  static int Function() hourNow = () => DateTime.now().hour;
+
   String _greeting(BuildContext context) {
-    final h = DateTime.now().hour;
+    final h = hourNow();
     if (h < 12) return context.tr('सुप्रभात! 🌅', 'Good morning! 🌅');
     if (h < 17) return context.tr('नमस्ते! ☀️', 'Good afternoon! ☀️');
     return context.tr('शुभ संध्या! 🌙', 'Good evening! 🌙');
