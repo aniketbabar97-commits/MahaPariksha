@@ -25,7 +25,8 @@ One cron trigger does all of it: `30 0-17 * * *` (UTC). `plan()` in `ops/schedul
 4. **Cron** (the Worker, Settings, Triggers, Cron Triggers, Add): `30 0-17 * * *`.
 5. **Test**: open `https://railpariksha-scheduler.<your-subdomain>.workers.dev/?run=<RUN_KEY>`. It answers with one
    line per workflow started ("started"), and the runs appear in GitHub Actions within seconds.
-6. Tell Claude it works; the workflows' own `schedule:` entries are then removed so nothing runs twice.
+6. The workflows' own `schedule:` entries have been removed, so the Worker is the only thing that starts them. If the
+   Worker is ever off, run the workflows by hand (Actions, Run workflow) or restore a `schedule:` as a fallback.
 
 ## Renewing
 The token expires after a year. When runs stop, the Worker's logs (Workers, Logs) show `FAILED 401`; make a new token

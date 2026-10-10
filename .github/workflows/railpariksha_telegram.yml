@@ -5,12 +5,9 @@
 # secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID. Without them every run ends quietly.
 name: RailPariksha Telegram
 on:
-  schedule:
-    # Every hour from 06:00 to 23:00 IST. What is posted depends on the hour (see the slot step): a PYQ quiz
-    # poll, alternating Hindi and English hour by hour, except 11:00 (fact / cheat sheet) and 17:00 (study tip
-    # and the app, website links).
-    - cron: "30 0-17 * * *"
-    - cron: "30 13 * * 0"  # Sunday 19:00 IST  the week's current affairs (the hourly quiz skips that hour)
+  # Started by the Cloudflare Worker `railpariksha-scheduler` (railpariksha/ops/scheduler_worker.js, set up as in
+  # railpariksha/docs/SCHEDULER.md): every hour 06:00 to 23:00 IST it dispatches `quiz`, except 11:00 `fact`,
+  # 17:00 `tip` and Sunday 19:00 `weekly`. GitHub's own `schedule:` is not used: it ran hours late or not at all.
   workflow_dispatch:
     inputs:
       slot:
@@ -36,16 +33,7 @@ jobs:
     steps:
       - id: slot
         run: |
-          hour=$(TZ=Asia/Kolkata date +%H); hour=$((10#$hour)); dow=$(TZ=Asia/Kolkata date +%u)
-          case "${{ github.event.schedule }}" in
-            "30 0-17 * * *")
-              if   [ "$hour" = 11 ]; then s=fact
-              elif [ "$hour" = 17 ]; then s=tip
-              elif [ "$hour" = 19 ] && [ "$dow" = 7 ]; then s=none   # the weekly recap posts at this hour
-              else s=quiz; fi ;;
-            "30 13 * * 0") s=weekly ;;
-            *)             s="${{ github.event.inputs.slot }}" ;;
-          esac
+          s="${{ github.event.inputs.slot }}"
           echo "slot=$s" >> "$GITHUB_OUTPUT"
           if [ "$s" = none ]; then echo "::notice::nothing to post at this hour"
           elif [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then echo "have=true" >> "$GITHUB_OUTPUT"
