@@ -319,8 +319,7 @@ def render_frames(q, out_dir, lang="hi", q_seconds=QUESTION_SECONDS, a_seconds=A
 
 
 # ----------------------------------------------------------------------------------------------
-# Sound: a voice that reads the question and the answer (best effort, Google's text-to-speech through the gTTS
-# package), a tick for each countdown second and a chime when the answer appears. Any failure along the way
+# Sound: a voice that reads the question and the answer (best effort, neural voices through edge-tts, then gTTS), a tick for each countdown second and a chime when the answer appears. Any failure along the way
 # (no gTTS, no network, a reading that runs too long) drops the voice and keeps the ticks and the chime, so a
 # video is never lost to its sound.
 # ----------------------------------------------------------------------------------------------
@@ -341,17 +340,48 @@ def _duration(path):
     return float(out.strip())
 
 
+# Voices: Microsoft's neural voices (the `edge-tts` package; natural Indian Hindi and English) first, Google's
+# plainer text-to-speech (`gtts`) as the fallback. Change a voice with the repository variables SHORTS_VOICE_HI and
+# SHORTS_VOICE_EN, for example hi-IN-MadhurNeural (male) or en-IN-PrabhatNeural (male).
+NEURAL_VOICES = {"hi": "hi-IN-SwaraNeural", "en": "en-IN-NeerjaNeural"}
+NEURAL_RATE = "+10%"
+
+
+def _neural(text, lang, path):
+    import asyncio
+    import edge_tts
+    voice = os.environ.get(f"SHORTS_VOICE_{lang.upper()}") or NEURAL_VOICES[lang]
+    proxy = os.environ.get("HTTPS_PROXY") or None
+
+    async def go():
+        await edge_tts.Communicate(text, voice, rate=NEURAL_RATE, proxy=proxy).save(str(path))
+
+    last = None
+    for _ in range(2):
+        try:
+            asyncio.run(go())
+            return
+        except Exception as e:  # noqa: BLE001
+            last = e
+    raise last
+
+
+def _plain(text, lang, path):
+    from gtts import gTTS
+    raw = path.with_suffix(".raw.mp3")
+    gTTS(text, lang=lang, tld="co.in").save(str(raw))
+    _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-filter:a", f"atempo={VOICE_TEMPO[lang]}", str(path)])
+
+
 def speak(text, lang, path):
-    """Writes the spoken text as a speed-adjusted mp3 and returns its length in seconds, or None on any failure."""
-    try:
-        from gtts import gTTS
-        raw = path.with_suffix(".raw.mp3")
-        gTTS(text, lang=lang, tld="co.in").save(str(raw))
-        _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-filter:a", f"atempo={VOICE_TEMPO[lang]}", str(path)])
-        return _duration(path)
-    except Exception as e:  # noqa: BLE001
-        print(f"::notice::no voice ({type(e).__name__}: {str(e)[:120]})")
-        return None
+    """Writes the spoken text as an mp3 and returns its length in seconds, or None when no voice could be made."""
+    for name, make in (("neural", _neural), ("plain", _plain)):
+        try:
+            make(text, lang, path)
+            return _duration(path)
+        except Exception as e:  # noqa: BLE001
+            print(f"::notice::{name} voice failed ({type(e).__name__}: {str(e)[:120]})")
+    return None
 
 
 def narration(q, lang):
