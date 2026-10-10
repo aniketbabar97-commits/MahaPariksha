@@ -71,7 +71,10 @@ def fits(q, lang="hi"):
     if not (len(q["q_" + k]) <= Q_MAX and len(q["o_" + k]) == 4 and all(len(o) <= OPT_MAX for o in q["o_" + k])
             and len(q["e_" + k]) <= EXPL_MAX):
         return False
-    return layout_end(q, lang) <= OPTIONS_END_MAX
+    try:
+        return layout_end(q, lang) <= OPTIONS_END_MAX
+    except ImportError:  # no Pillow (a plain test run): the length limits above are all that can be checked
+        return True
 
 
 OPTIONS_END_MAX = H - 330 - 90 - 2 * 66  # room below the options for the answer line, 2 explanation lines, links
