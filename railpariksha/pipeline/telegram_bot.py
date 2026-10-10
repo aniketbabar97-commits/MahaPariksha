@@ -99,8 +99,8 @@ WELCOME = (
 )
 DESCRIPTION = (
     "हम भी आपकी तरह रेलवे की तैयारी कर रहे स्टूडेंट्स हैं। रोज़: करेंट अफेयर्स, PYQ क्विज़, फ़ैक्ट। "
-    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {APP_URL} · वेबसाइट: {SITE_URL} · YouTube: {YOUTUBE_URL}"
-)
+    f"ऐप: {APP_URL} · वेबसाइट: {SITE_URL} · YouTube: {YOUTUBE_URL}"
+)  # Telegram allows 255 characters; test_telegram_bot checks it
 
 
 class TelegramError(Exception):
@@ -476,7 +476,7 @@ def make_card(day, qs, count=4):
             ty += 52
         y += box_h + gap
     d.text((70, H - 150), "रोज़ की तैयारी, मुफ़्त ऐप में", font=f_foot, fill=(255, 196, 60))
-    d.text((70, H - 100), "45,000+ असली PYQ • Play Store: RailPariksha", font=f_date, fill=(220, 235, 255))
+    d.text((70, H - 100), "45,000+ असली PYQ • ऐप: railpariksha.in/app", font=f_date, fill=(220, 235, 255))
     buf = io.BytesIO()
     img.save(buf, "PNG", optimize=True)
     return buf.getvalue()
