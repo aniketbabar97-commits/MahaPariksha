@@ -197,6 +197,18 @@ def access_token():
     return r.json()["access_token"]
 
 
+def check(resp):
+    """raise_for_status, but with Google's own reason (accessNotConfigured, quotaExceeded, ...) in the message."""
+    if resp.ok:
+        return
+    try:
+        err = resp.json()["error"]
+        why = f"{err.get('status', '')} {err.get('message', '')} {[e.get('reason') for e in err.get('errors', [])]}"
+    except Exception:  # noqa: BLE001
+        why = resp.text[:300]
+    raise RuntimeError(f"{resp.status_code} from {resp.url.split('?')[0]}: {why}")
+
+
 def upload(mp4, title, description):
     import requests
     token = access_token()
@@ -209,10 +221,10 @@ def upload(mp4, title, description):
         "https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status",
         headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=UTF-8",
                  "X-Upload-Content-Type": "video/mp4"}, data=json.dumps(meta), timeout=60)
-    init.raise_for_status()
+    check(init)
     r = requests.put(init.headers["Location"], data=mp4.read_bytes(),
                      headers={"Content-Type": "video/mp4"}, timeout=600)
-    r.raise_for_status()
+    check(r)
     return r.json().get("id")
 
 
