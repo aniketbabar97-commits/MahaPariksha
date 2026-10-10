@@ -1,4 +1,5 @@
 """Offline tests for shorts.py (no network, no ffmpeg)."""
+import shutil
 import sys
 import tempfile
 import unittest
@@ -60,6 +61,22 @@ class ShortsTests(unittest.TestCase):
                 self.assertTrue(all(p.stat().st_size > 5000 for p, _ in frames))
                 total = sum(s for _, s in frames)
                 self.assertTrue(15 <= total <= 40, total)
+
+    def test_narration_reads_question_options_and_answer(self):
+        d = date(2026, 10, 8)
+        for lang in ("hi", "en"):
+            q = shorts.choose(2, d, lang)
+            said_q, said_a = shorts.narration(q, lang)
+            self.assertIn(q["q_" + lang].strip(), said_q)
+            self.assertIn("D", said_q)  # all four options are read
+            self.assertIn(q["o_" + lang][q["a"]].strip(), said_a)
+
+    @unittest.skipUnless(shutil.which("ffmpeg") and shutil.which("ffprobe"), "needs ffmpeg")
+    def test_sound_track_without_voice_has_the_right_length(self):
+        with tempfile.TemporaryDirectory() as t:
+            wav = shorts.build_audio(4, 9, None, Path(t) / "s.wav")
+            secs = shorts._duration(wav)
+            self.assertAlmostEqual(secs, 4 + shorts.THINK_SECONDS + 9, delta=0.3)
 
     @unittest.skipUnless(tb.card_available(), "needs Pillow with raqm")
     def test_layout_estimate_is_never_below_the_real_wrap(self):

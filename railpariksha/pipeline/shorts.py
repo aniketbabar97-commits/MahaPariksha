@@ -17,6 +17,7 @@ notice and exit 0, never a broken video.
 """
 import argparse
 import json
+import math
 import os
 import random
 import subprocess
@@ -248,7 +249,7 @@ def _background():
     return img
 
 
-def render_frames(q, out_dir, lang="hi"):
+def render_frames(q, out_dir, lang="hi", q_seconds=QUESTION_SECONDS, a_seconds=ANSWER_SECONDS):
     """Writes PNG frames and returns [(path, seconds)] in play order."""
     from PIL import ImageDraw
     fonts = _fonts()
@@ -286,7 +287,7 @@ def render_frames(q, out_dir, lang="hi"):
     img, _, _ = base()
     p = out_dir / "q.png"
     img.save(p)
-    frames.append((p, QUESTION_SECONDS))
+    frames.append((p, q_seconds))
     for n in range(THINK_SECONDS, 0, -1):
         img, d, y = base()
         d.text((W / 2 - 60, max(y + 20, 1380)), str(n), font=fonts["count"], fill=(232, 186, 74))
@@ -313,23 +314,128 @@ def render_frames(q, out_dir, lang="hi"):
         d.text((pad, H - 270 + i * 60), line, font=fonts["small"], fill=(232, 186, 74))
     p = out_dir / "a.png"
     img.save(p)
-    frames.append((p, ANSWER_SECONDS))
+    frames.append((p, a_seconds))
     return frames
 
 
-def encode(frames, out_mp4):
-    """H.264 + silent AAC (Shorts accepts silent, but some players want a track), 30 fps, yuv420p."""
+# ----------------------------------------------------------------------------------------------
+# Sound: a voice that reads the question and the answer (best effort, Google's text-to-speech through the gTTS
+# package), a tick for each countdown second and a chime when the answer appears. Any failure along the way
+# (no gTTS, no network, a reading that runs too long) drops the voice and keeps the ticks and the chime, so a
+# video is never lost to its sound.
+# ----------------------------------------------------------------------------------------------
+
+VOICE_TEMPO = {"hi": 1.25, "en": 1.35}   # gTTS speaks slowly; atempo speeds it up and keeps the pitch
+MAX_QUESTION_VOICE = 22    # seconds; longer than this and the question is not read aloud
+MAX_ANSWER_VOICE = 20
+CHIME_SECONDS = 0.7
+
+
+def _run(cmd):
+    subprocess.run(cmd, check=True, capture_output=True)
+
+
+def _duration(path):
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                         check=True, capture_output=True, text=True).stdout
+    return float(out.strip())
+
+
+def speak(text, lang, path):
+    """Writes the spoken text as a speed-adjusted mp3 and returns its length in seconds, or None on any failure."""
+    try:
+        from gtts import gTTS
+        raw = path.with_suffix(".raw.mp3")
+        gTTS(text, lang=lang, tld="co.in").save(str(raw))
+        _run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(raw), "-filter:a", f"atempo={VOICE_TEMPO[lang]}", str(path)])
+        return _duration(path)
+    except Exception as e:  # noqa: BLE001
+        print(f"::notice::no voice ({type(e).__name__}: {str(e)[:120]})")
+        return None
+
+
+def narration(q, lang):
+    """(question text, answer text) to be read aloud."""
+    k = "en" if lang == "en" else "hi"
+    opts, a = q["o_" + k], q["a"]
+    letter = "ABCD"[a]
+    if lang == "en":
+        question = f"{q['q_en'].strip()} " + " ".join(f"Option {'ABCD'[i]}. {o.strip()}." for i, o in enumerate(opts))
+        answer = f"The correct answer is option {letter}. {opts[a].strip()}. {tb.shorten(q['e_en'], 130)}"
+    else:
+        question = f"{q['q_hi'].strip()} " + " ".join(f"विकल्प {'ABCD'[i]}। {o.strip()}।" for i, o in enumerate(opts))
+        answer = f"सही उत्तर है विकल्प {letter}। {opts[a].strip()}। {tb.shorten(q['e_hi'], 130)}"
+    return question, answer
+
+
+def plan_sound(q, lang, out_dir):
+    """(question seconds, answer seconds, voice files or None). The frames are timed to the voice."""
+    try:
+        qtext, atext = narration(q, lang)
+        qv, av = out_dir / "voice_q.mp3", out_dir / "voice_a.mp3"
+        dq, da = speak(qtext, lang, qv), speak(atext, lang, av)
+        if dq is None or da is None or dq > MAX_QUESTION_VOICE or da > MAX_ANSWER_VOICE:
+            # The options may be what made it long: try the question alone before giving up on the voice.
+            if dq is not None and da is not None and dq > MAX_QUESTION_VOICE:
+                dq = speak(q["q_" + ("en" if lang == "en" else "hi")].strip(), lang, qv)
+            if dq is None or da is None or dq > MAX_QUESTION_VOICE or da > MAX_ANSWER_VOICE:
+                return QUESTION_SECONDS, ANSWER_SECONDS, None
+        return max(QUESTION_SECONDS, math.ceil(dq + 0.8)), max(ANSWER_SECONDS, math.ceil(da + 1.0 + CHIME_SECONDS)), (qv, av)
+    except Exception as e:  # noqa: BLE001
+        print(f"::notice::sound planning failed ({e}); using ticks and chime only")
+        return QUESTION_SECONDS, ANSWER_SECONDS, None
+
+
+def build_audio(q_seconds, a_seconds, voice, out_wav):
+    """One track: question voice (or silence), a tick per countdown second, then the chime and the answer voice."""
+    fmt = "aresample=44100,aformat=sample_fmts=fltp:channel_layouts=stereo"
+    chains = []
+    cmd = ["ffmpeg", "-y", "-loglevel", "error"]
+    n = 0
+    # 0: question voice or silence
+    if voice:
+        cmd += ["-i", str(voice[0])]
+    else:
+        cmd += ["-f", "lavfi", "-t", str(q_seconds), "-i", "anullsrc=r=44100:cl=stereo"]
+    chains.append(f"[{n}:a]{fmt},apad=whole_dur={q_seconds},atrim=0:{q_seconds}[q]")
+    n += 1
+    # 1: the tick (a short 880 Hz blip once a second)
+    cmd += ["-f", "lavfi", "-i", "sine=frequency=880:duration=0.07"]
+    chains.append(f"[{n}:a]{fmt},afade=t=out:st=0.04:d=0.03,apad=whole_dur=1,volume=0.5,aloop=loop={THINK_SECONDS - 1}:size=44100,"
+                  f"atrim=0:{THINK_SECONDS}[t]")
+    n += 1
+    # 2: the chime (two notes)
+    cmd += ["-f", "lavfi", "-i", f"sine=frequency=784:duration=0.18", "-f", "lavfi", "-i", "sine=frequency=1047:duration=0.5"]
+    chains.append(f"[{n}:a]{fmt}[c1];[{n + 1}:a]{fmt},afade=t=out:st=0.2:d=0.3[c2];[c1][c2]concat=n=2:v=0:a=1,"
+                  f"volume=0.45,apad=whole_dur={a_seconds},atrim=0:{a_seconds}[c]")
+    n += 2
+    # 3: the answer voice (after the chime) or silence
+    if voice:
+        cmd += ["-i", str(voice[1])]
+        chains.append(f"[{n}:a]{fmt},adelay={int(CHIME_SECONDS * 1000)}|{int(CHIME_SECONDS * 1000)},apad=whole_dur={a_seconds},"
+                      f"atrim=0:{a_seconds}[v];[c][v]amix=inputs=2:normalize=0[a]")
+    else:
+        chains.append("[c]anull[a]")
+    chains.append("[q][t][a]concat=n=3:v=0:a=1[out]")
+    cmd += ["-filter_complex", ";".join(chains), "-map", "[out]", str(out_wav)]
+    _run(cmd)
+    return out_wav
+
+
+def encode(frames, out_mp4, audio=None):
+    """H.264 + AAC, 30 fps, yuv420p. `audio` is a wav track; without one the audio is silent (some players want
+    a track)."""
     lst = out_mp4.with_suffix(".txt")
     lines = []
     for path, secs in frames:
         lines += [f"file '{path.resolve()}'", f"duration {secs}"]
     lines.append(f"file '{frames[-1][0].resolve()}'")
     lst.write_text("\n".join(lines), encoding="utf-8")
+    sound = ["-i", str(audio)] if audio else ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
     subprocess.run([
-        "ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
-        "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo", "-shortest",
+        "ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst), *sound, "-shortest",
         "-vf", "fps=30,format=yuv420p", "-c:v", "libx264", "-preset", "medium", "-crf", "21",
-        "-c:a", "aac", "-b:a", "96k", "-movflags", "+faststart", str(out_mp4)], check=True)
+        "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(out_mp4)], check=True)
 
 
 # ----------------------------------------------------------------------------------------------
@@ -403,7 +509,15 @@ def main():
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     mp4 = out / f"short_{day.isoformat()}_{args.slot}_{lang}.mp4"
-    encode(render_frames(q, out, lang), mp4)
+    q_seconds, a_seconds, voice = plan_sound(q, lang, out)
+    frames = render_frames(q, out, lang, q_seconds, a_seconds)
+    try:
+        audio = build_audio(q_seconds, a_seconds, voice, out / "sound.wav")
+    except Exception as e:  # noqa: BLE001
+        print(f"::notice::sound failed ({e}); silent video")
+        audio = None
+    print(f"sound: {'voice + ' if voice else ''}{'ticks and chime' if audio else 'none'}; {q_seconds}s question, {a_seconds}s answer")
+    encode(frames, mp4, audio)
     (out / mp4.with_suffix(".txt.meta").name).write_text(f"{title}\n\n{desc}", encoding="utf-8")
     print(f"rendered {mp4} ({mp4.stat().st_size // 1024} KiB)")
     if all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")):

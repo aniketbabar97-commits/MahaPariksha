@@ -34,6 +34,13 @@ log.
 6. If uploads stop later with `invalid_grant`, the token was revoked or expired (consent screen back in Testing, or the
    password changed): repeat step 4 and replace `YT_REFRESH_TOKEN`.
 
+## Sound
+Each Short has a voice reading the question, the options and then the answer with a short explanation (Google text to
+speech through the `gtts` package, sped up 1.2 to 1.35x), a tick for every countdown second and a chime when the answer
+appears. If the voice cannot be made (no network, or the reading would run past about 22 s for the question or 20 s for
+the answer) the video keeps the ticks and the chime and is never lost. Frames are timed to the voice, so a Short runs
+about 25 to 50 seconds.
+
 ## Wording of the videos
 Title = exam + subject + year (what students search), no hashtags in it. Description = a keyword line, the four links,
 then five hashtags. Tags are set per exam and subject. See `docs/store/youtube/channel_text.md` for the channel
