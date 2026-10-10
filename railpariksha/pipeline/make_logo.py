@@ -141,6 +141,8 @@ def main():
         im = fit(tile, size, pad=0.0)
         im.save(SITE / f"logo-tile-{size}.webp", quality=88, method=6)
     save(fit(tile, 32, pad=0.0), SITE / "favicon-32.png")
+    # /favicon.ico: browsers and crawlers ask for this path whatever the <link> says
+    full.resize((48, 48), Image.LANCZOS).convert("RGBA").save(SITE / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
     # store banners
     save(banner(1024, 500, tile, 330, 104, 40), PLAY / "feature_graphic_1024x500.png", rgb=True)
     save(banner(1200, 630, tile, 400, 118, 44), SITE / "og-image.png", rgb=True)

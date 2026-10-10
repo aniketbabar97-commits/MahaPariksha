@@ -17,7 +17,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FEED = ROOT / "content/ca_feed.json"
-PLAY_URL = "https://play.google.com/store/apps/details?id=app.railpariksha"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import links  # noqa: E402
+
+APP_URL = links.APP_URL  # railpariksha.in/app: "coming soon" now, the Play listing after launch (see links.py)
 MONTHS_HI = ["जनवरी", "फ़रवरी", "मार्च", "अप्रैल", "मई", "जून", "जुलाई", "अगस्त", "सितंबर", "अक्टूबर", "नवंबर", "दिसंबर"]
 
 
@@ -42,7 +45,7 @@ def telegram_text(day, qs):
     lines += ["", "❓ *आज का सवाल:*", qs[0]["q_hi"]]
     for letter, opt in zip("ABCD", qs[0]["o_hi"]):
         lines.append(f"{letter}. {opt}")
-    lines += ["", "जवाब और पूरी क्विज़ ऐप में 👇", PLAY_URL, "", "#RRB #RailwayExam #CurrentAffairs #RailPariksha"]
+    lines += ["", "जवाब और पूरी क्विज़ ऐप में 👇", APP_URL, "", "#RRB #RailwayExam #CurrentAffairs #RailPariksha"]
     return "\n".join(lines)
 
 
@@ -57,7 +60,7 @@ def shorts_script(day, qs):
         lines.append(f"       (on screen: {q['o_hi'][q['a']]})")
         t += 10
     lines += ["", f"[{t}–{t + 5} s] CTA: \"रोज़ ऐसे ही 5 खबरें और 45,000+ PYQ — RailPariksha ऐप, लिंक डिस्क्रिप्शन में।\"", "",
-              "Description:", f"आज का करेंट अफेयर्स {hindi_date(day)} | RRB NTPC, Group D, ALP, RPF | RailPariksha ऐप: {PLAY_URL}",
+              "Description:", f"आज का करेंट अफेयर्स {hindi_date(day)} | RRB NTPC, Group D, ALP, RPF | RailPariksha ऐप: {APP_URL}",
               "#RRB #RailwayExam #CurrentAffairs #NTPC #GroupD #RPF"]
     return "\n".join(lines)
 
