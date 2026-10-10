@@ -35,11 +35,13 @@ log.
    password changed): repeat step 4 and replace `YT_REFRESH_TOKEN`.
 
 ## Sound
-Each Short has a voice reading the question, the options and then the answer with a short explanation (Google text to
-speech through the `gtts` package, sped up 1.2 to 1.35x), a tick for every countdown second and a chime when the answer
-appears. If the voice cannot be made (no network, or the reading would run past about 22 s for the question or 20 s for
-the answer) the video keeps the ticks and the chime and is never lost. Frames are timed to the voice, so a Short runs
-about 25 to 50 seconds.
+Each Short has a voice reading the question, the options and then the answer with a short explanation, a tick for
+every countdown second and a chime when the answer appears. The voice is Microsoft's neural voice for Indian Hindi
+(`hi-IN-SwaraNeural`) or Indian English (`en-IN-NeerjaNeural`) through the `edge-tts` package; if that is unreachable
+it falls back to Google's plainer voice (`gtts`), and if neither works (or a reading would run past about 22 s for the
+question or 20 s for the answer) the video keeps the ticks and the chime and is never lost. To switch to a male voice
+set the repository variables `SHORTS_VOICE_HI` (for example `hi-IN-MadhurNeural`) and `SHORTS_VOICE_EN` (for example
+`en-IN-PrabhatNeural`). Frames are timed to the voice, so a Short runs about 25 to 50 seconds.
 
 ## Wording of the videos
 Title = exam + subject + year (what students search), no hashtags in it. Description = a keyword line, the four links,
