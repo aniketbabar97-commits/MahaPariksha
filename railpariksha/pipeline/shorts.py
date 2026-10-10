@@ -117,34 +117,88 @@ def layout_end(q, lang):
     return y
 
 
+# YouTube weighs the title, the first lines of the description and the viewer's behaviour (watch time, replays,
+# likes, shares). Hashtags matter little and tags barely at all; the first three hashtags in the description are
+# shown above the title, and a video with more than 15 is ignored for hashtags, so each Short carries five.
+EXAM_TAGS = [("NTPC", "#RRBNTPC"), ("Group D", "#RRBGroupD"), ("ALP", "#RRBALP"), ("JE", "#RRBJE"),
+             ("Technician", "#RRBTechnician"), ("Constable", "#RPFConstable"), ("RPF SI", "#RPFSI")]
+SUBJECT_TAGS = {"maths": "#Maths", "reasoning": "#Reasoning", "gk": "#GeneralKnowledge", "science": "#Science",
+                "railway_gk": "#RailwayGK", "computer": "#Computer", "current_affairs": "#CurrentAffairs"}
+
+
+def exam_and_year(q):
+    """('RRB NTPC UG CBT-1', '2025') from 'RRB NTPC UG CBT-1 · 12 Aug 2025 · Shift 1'."""
+    parts = [p.strip() for p in (q.get("pyq") or "").split(" · ")]
+    exam = parts[0] if parts and parts[0] else "RRB"
+    year = next((w for w in (parts[1].split() if len(parts) > 1 else []) if w.isdigit() and len(w) == 4), "")
+    return exam, year
+
+
+def hashtags_for(q):
+    exam = exam_and_year(q)[0]
+    tags = [t for key, t in EXAM_TAGS if key in exam][:2] or ["#RRB"]
+    tags.append(SUBJECT_TAGS.get(q.get("s"), "#PYQ"))
+    tags += ["#RailwayExam", "#Shorts"]
+    out = []
+    for t in tags:
+        if t not in out:
+            out.append(t)
+    return " ".join(out[:5])
+
+
 def title_for(q, lang="hi"):
+    """The exam, the subject and the year first: that is what students type into search."""
+    exam, year = exam_and_year(q)
+    when = f" {year}" if year else ""
     if lang == "en":
-        head = tb.SUBJECT_EN.get(q.get("s"), "RRB")
-        return tb.shorten(f"{head} PYQ: can you answer this? #Shorts #RRB #Railway", TITLE_MAX)
-    head = tb.SUBJECT_HI.get(q.get("s"), "PYQ")
-    return tb.shorten(f"{head} का PYQ: क्या आप सही उत्तर दे पाएँगे? #Shorts #RRB #Railway", TITLE_MAX)
+        subject = tb.SUBJECT_EN.get(q.get("s"), "")
+        return tb.shorten(f"{exam} {subject} PYQ{when}: can you solve it?".replace("  ", " "), TITLE_MAX)
+    subject = tb.SUBJECT_HI.get(q.get("s"), "")
+    return tb.shorten(f"{exam} {subject} PYQ{when}: क्या आप हल कर पाएँगे?".replace("  ", " "), TITLE_MAX)
+
+
+def tags_for(q, lang="hi"):
+    exam, year = exam_and_year(q)
+    subject = tb.SUBJECT_EN.get(q.get("s"), "")
+    tags = [exam, f"{exam} previous year questions", f"{exam} {subject}".strip(), "RRB PYQ",
+            "railway exam preparation", "RRB NTPC", "RRB Group D", "RRB ALP", "RRB JE", "RPF constable",
+            "railway exam free preparation"]
+    if year:
+        tags.append(f"{exam} {year}")
+    if lang == "hi":
+        tags += ["रेलवे परीक्षा की तैयारी", "RRB पिछले साल के प्रश्न", f"RRB {tb.SUBJECT_HI.get(q.get('s'), '')}".strip()]
+    out, size = [], 0
+    for t in tags:
+        if t and t not in out and size + len(t) + 1 <= 480:
+            out.append(t)
+            size += len(t) + 1
+    return out
 
 
 def description_for(q, lang="hi"):
+    exam, year = exam_and_year(q)
     label = tb.exam_label(q.get("pyq"))
     if lang == "en":
+        subject = tb.SUBJECT_EN.get(q.get("s"), "")
         return (
-            f"A real previous-year railway exam question ({label}).\n\n"
+            f"{exam} {subject} previous year question ({label}). Think before the countdown ends, then check the "
+            "answer and explanation.\n\n"
             "We are students too. RailPariksha is made by students, for students: free, in Hindi and English.\n"
             f"Free app: {tb.PLAY_URL}\n"
             f"Website: {SITE}\n"
             f"Telegram (daily quizzes and current affairs): {CHANNEL}\n"
             f"Subscribe for 6 new Shorts every day: {tb.YOUTUBE_URL}\n\n"
-            "#RRBNTPC #RRBGroupD #RRBALP #RRBJE #RPF #Railway #PYQ #Shorts"
+            f"{hashtags_for(q)}"
         )[:DESC_MAX]
+    subject = tb.SUBJECT_HI.get(q.get("s"), "")
     return (
-        f"रेलवे परीक्षा का असली पिछले साल का प्रश्न ({label}).\n\n"
+        f"{exam} {subject} का पिछले साल का प्रश्न ({label}). काउंटडाउन खत्म होने से पहले सोचिए, फिर उत्तर और व्याख्या देखिए।\n\n"
         "हम भी आपकी तरह स्टूडेंट्स हैं। RailPariksha स्टूडेंट्स ने स्टूडेंट्स के लिए बनाया है।\n"
         f"मुफ़्त ऐप: {tb.PLAY_URL}\n"
         f"वेबसाइट: {SITE}\n"
         f"Telegram (रोज़ के क्विज़ और करेंट अफेयर्स): {CHANNEL}\n"
         f"रोज़ 6 नए Shorts के लिए Subscribe करें: {tb.YOUTUBE_URL}\n\n"
-        "#RRBNTPC #RRBGroupD #RRBALP #RRBJE #RPF #Railway #PYQ #Shorts"
+        f"{hashtags_for(q)}"
     )[:DESC_MAX]
 
 
@@ -303,12 +357,12 @@ def check(resp):
     raise RuntimeError(f"{resp.status_code} from {resp.url.split('?')[0]}: {why}")
 
 
-def upload(mp4, title, description, lang="hi"):
+def upload(mp4, title, description, lang="hi", tags=None):
     import requests
     token = access_token()
     meta = {
         "snippet": {"title": title, "description": description, "categoryId": "27",
-                    "tags": ["RRB", "NTPC", "Group D", "Railway", "PYQ", "RPF"], "defaultLanguage": lang,
+                    "tags": tags or ["RRB", "NTPC", "Group D", "Railway", "PYQ", "RPF"], "defaultLanguage": lang,
                     "defaultAudioLanguage": lang},
         "status": {"privacyStatus": "public", "selfDeclaredMadeForKids": False},
     }
@@ -354,7 +408,7 @@ def main():
     print(f"rendered {mp4} ({mp4.stat().st_size // 1024} KiB)")
     if all(os.environ.get(k) for k in ("YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN")):
         try:
-            print(f"uploaded: https://youtube.com/shorts/{upload(mp4, title, desc, lang)}")
+            print(f"uploaded: https://youtube.com/shorts/{upload(mp4, title, desc, lang, tags_for(q, lang))}")
         except Exception as e:  # noqa: BLE001
             print(f"::warning::upload failed ({e}); the video is kept as a workflow file")
     else:
