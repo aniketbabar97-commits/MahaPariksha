@@ -96,6 +96,27 @@ def banner(w, h, tile, tile_h, name_px, tag_px):
     return img.convert("RGB")
 
 
+def youtube_banner(tile):
+    """2048x1152; everything that matters sits in the 1235x338 safe area every device shows."""
+    w, h = 2048, 1152
+    img = gradient(w, h).convert("RGBA")
+    d = ImageDraw.Draw(img)
+    name = ImageFont.truetype(str(FONTS / "Lora-Bold.ttf"), 120)
+    tag = ImageFont.truetype(str(FONTS / "Lora-Bold.ttf"), 44)
+    line = "RRB  •  RPF  EXAM  PREP  •  FREE"
+    t = tile.resize((round(tile.width * 260 / tile.height), 260), Image.LANCZOS)
+    gap = 44
+    text_w = max(d.textlength("RailPariksha", font=name), d.textlength(line, font=tag))
+    x0 = round((w - (t.width + gap + text_w)) / 2)
+    img.alpha_composite(t, (x0, (h - t.height) // 2))
+    x = x0 + t.width + gap
+    cy = h // 2
+    d.text((x, cy + 10), "RailPariksha", font=name, fill=CREAM, anchor="ls")
+    d.text((x, cy + 82), line, font=tag, fill=GOLD, anchor="ls")
+    d.rounded_rectangle((x, cy + 104, x + d.textlength(line, font=tag), cy + 112), radius=4, fill=GOLD)
+    return img.convert("RGB")
+
+
 def main():
     full = recolour(Image.open(SRC))
     full.save(ROOT / "docs/brand/logo_recoloured_1024.png", optimize=True)
@@ -123,6 +144,9 @@ def main():
     # store banners
     save(banner(1024, 500, tile, 330, 104, 40), PLAY / "feature_graphic_1024x500.png", rgb=True)
     save(banner(1200, 630, tile, 400, 118, 44), SITE / "og-image.png", rgb=True)
+    yt = ROOT / "docs/store/youtube"
+    save(youtube_banner(tile), yt / "banner_2048x1152.png", rgb=True)
+    save(full.resize((800, 800), Image.LANCZOS), yt / "profile_800x800.png", rgb=True)
     print("done")
 
 
