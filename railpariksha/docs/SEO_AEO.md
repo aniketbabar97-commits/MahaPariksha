@@ -50,7 +50,7 @@ page (home → exam/subject cards → topic pages → back up via breadcrumbs an
 ## Domain placeholder
 
 No production domain is live yet (see `docs/LAUNCH.md`). `build_site.py` defaults to
-`https://railpariksha.app` for canonical/OG/sitemap/JSON-LD URLs when `--base-url`/`SITE_URL` is
+`https://railpariksha.in` for canonical/OG/sitemap/JSON-LD URLs when `--base-url`/`SITE_URL` is
 not passed (previously these were relative "/page.html", which is invalid for sitemap `<loc>` and
 schema.org `url` fields). Pass the real `--base-url` once the domain is live.
 

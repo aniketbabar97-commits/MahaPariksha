@@ -87,6 +87,12 @@ class Content(unittest.TestCase):
         day_polls = {tb.poll_for(s, DAY, "@c")["question"] for s in tb.POLL_SLOTS}
         self.assertEqual(len(day_polls), 3)
 
+    def test_channel_text_fits_telegram_limits_and_keeps_the_links(self):
+        self.assertLessEqual(len(tb.DESCRIPTION), 255)  # a longer one is cut, and the last link with it
+        for link in (tb.APP_URL, tb.SITE_URL, tb.YOUTUBE_URL):
+            self.assertIn(link, tb.DESCRIPTION)
+        self.assertLessEqual(len(tb.WELCOME), tb.MESSAGE_MAX)
+
     def test_hourly_quiz_alternates_language_and_never_repeats(self):
         from datetime import datetime, timedelta
         seen, langs = set(), set()

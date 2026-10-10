@@ -5,7 +5,7 @@ RailPariksha is a separate app from Bharari in this same repo — use its own do
 never reuse Bharari's `ANDROID_KEYSTORE_*` secrets or `app.bharari` package.
 
 ## 1. Accounts and identity (day 1)
-- [ ] Buy a domain (e.g. `railpariksha.app`) and create the mailbox `support@railpariksha.app`.
+- [x] Domain bought: `railpariksha.in`. Create the address `support@railpariksha.in` (Cloudflare, Email, Email Routing, forward to your own mailbox).
       With a different email, build with `--dart-define=SUPPORT_EMAIL=you@x.com` and set `SUPPORT_EMAIL` for the site.
 - [ ] Create (or reuse) a Google Play developer account ($25 one-time). A new personal account must run a
       **closed test with at least 12 testers for 14 continuous days** before production.

@@ -18,7 +18,7 @@ import '../widgets/celebrate.dart';
 import '../widgets/common.dart';
 import 'results_screen.dart';
 
-const kSupportEmail = String.fromEnvironment('SUPPORT_EMAIL', defaultValue: 'support@railpariksha.app');
+const kSupportEmail = String.fromEnvironment('SUPPORT_EMAIL', defaultValue: 'support@railpariksha.in');
 
 void startQuiz(BuildContext context, QuizSpec spec) {
   if (spec.questions.isEmpty) {

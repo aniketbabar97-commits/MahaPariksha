@@ -127,7 +127,32 @@ class SiteTests(unittest.TestCase):
             urls = re.findall(r"<loc>https://example.org([^<]*)</loc>", (out / "sitemap.xml").read_text(encoding="utf-8"))
             self.assertGreater(len(urls), 2 * 2000)
             self.assertEqual([u for u in urls if not exists(u or "/")][:5], [])
-            self.assertEqual(len(pages), len(urls))
+            self.assertEqual(len([f for f in pages if f.name != "app.html"]), len(urls))  # /app is not in the sitemap
+            self.assertNotIn("/app<", (out / "sitemap.xml").read_text(encoding="utf-8"))
+            self.assertTrue((out / "app.html").is_file() and (out / "en" / "app.html").is_file())
+
+    def test_app_page_is_coming_soon_until_launch_then_redirects_to_play(self):
+        play = "play.google.com/store/apps/details?id=app.railpariksha"
+        for live in ("", "1"):
+            env = dict(os.environ, APP_LIVE=live)
+            with tempfile.TemporaryDirectory() as t:
+                subprocess.run([sys.executable, str(HERE / "build_site.py"), "--out", t, "--base-url", "https://example.org"],
+                               check=True, capture_output=True, env=env)
+                out = Path(t)
+                home = (out / "index.html").read_text(encoding="utf-8")
+                app = (out / "app.html").read_text(encoding="utf-8")
+                # Every button on every page goes to our own /app address, never straight to Google Play.
+                self.assertNotIn('href="https://' + play, home)
+                self.assertIn('href="/app"', home)
+                if live:
+                    self.assertIn(play, app)
+                    self.assertIn("/app " + "https://" + play, (out / "_redirects").read_text(encoding="utf-8"))
+                    self.assertIn("installUrl", home)
+                else:
+                    self.assertNotIn(play, app)
+                    self.assertIn("t.me/RailParikshaApp", app)
+                    self.assertFalse((out / "_redirects").exists())
+                    self.assertNotIn("installUrl", home)
 
     def test_ads_only_when_configured(self):
         env = dict(os.environ, ADSENSE_CLIENT="ca-pub-1", ADSENSE_SLOT="2")

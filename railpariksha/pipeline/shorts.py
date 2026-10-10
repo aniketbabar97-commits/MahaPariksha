@@ -185,7 +185,7 @@ def description_for(q, lang="hi"):
             f"{exam} {subject} previous year question ({label}). Think before the countdown ends, then check the "
             "answer and explanation.\n\n"
             "We are students too. RailPariksha is made by students, for students: free, in Hindi and English.\n"
-            f"Free app: {tb.PLAY_URL}\n"
+            f"Free app: {tb.APP_URL}\n"
             f"Website: {SITE}\n"
             f"Telegram (daily quizzes and current affairs): {CHANNEL}\n"
             f"Subscribe for 6 new Shorts every day: {tb.YOUTUBE_URL}\n\n"
@@ -195,7 +195,7 @@ def description_for(q, lang="hi"):
     return (
         f"{exam} {subject} का पिछले साल का प्रश्न ({label}). काउंटडाउन खत्म होने से पहले सोचिए, फिर उत्तर और व्याख्या देखिए।\n\n"
         "हम भी आपकी तरह स्टूडेंट्स हैं। RailPariksha स्टूडेंट्स ने स्टूडेंट्स के लिए बनाया है।\n"
-        f"मुफ़्त ऐप: {tb.PLAY_URL}\n"
+        f"मुफ़्त ऐप: {tb.APP_URL}\n"
         f"वेबसाइट: {SITE}\n"
         f"Telegram (रोज़ के क्विज़ और करेंट अफेयर्स): {CHANNEL}\n"
         f"रोज़ 6 नए Shorts के लिए Subscribe करें: {tb.YOUTUBE_URL}\n\n"
@@ -306,9 +306,9 @@ def render_frames(q, out_dir, lang="hi", q_seconds=QUESTION_SECONDS, a_seconds=A
     for line in lines:
         d.text((pad, y), line, font=fonts["expl"], fill=(255, 255, 255))
         y += 66
-    foot = ["Free app: RailPariksha on Google Play", f"Website: {SITE.split('//')[1]}",
+    foot = [f"Free app: {tb.APP_URL.split('//')[1]}", f"Website: {SITE.split('//')[1]}",
             f"Telegram: {CHANNEL.split('//')[1]}"] if lang == "en" else \
-        ["मुफ़्त ऐप: Google Play पर RailPariksha", f"वेबसाइट: {SITE.split('//')[1]}",
+        [f"मुफ़्त ऐप: {tb.APP_URL.split('//')[1]}", f"वेबसाइट: {SITE.split('//')[1]}",
          f"Telegram: {CHANNEL.split('//')[1]}"]
     for i, line in enumerate(foot):
         d.text((pad, H - 270 + i * 60), line, font=fonts["small"], fill=(232, 186, 74))

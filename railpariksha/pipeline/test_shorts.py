@@ -47,7 +47,7 @@ class ShortsTests(unittest.TestCase):
             self.assertIn("#Shorts", shorts.hashtags_for(q))
             self.assertLessEqual(sum(len(t) + 1 for t in shorts.tags_for(q, lang)), 500)
             desc = shorts.description_for(q, lang)
-            for link in (tb.PLAY_URL, tb.SITE_URL, shorts.CHANNEL):
+            for link in (tb.APP_URL, tb.SITE_URL, shorts.CHANNEL):
                 self.assertIn(link, desc)
         self.assertIn("स्टूडेंट्स", shorts.description_for(q, "hi"))
 

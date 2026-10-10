@@ -46,7 +46,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PYQ_DIR = ROOT / "content/pyq"
 CONTENT = ROOT / "content"
 FONTS = ROOT / "app/assets/fonts"
-PLAY_URL = ca_post.PLAY_URL
+APP_URL = ca_post.APP_URL
 SITE_URL = "https://railpariksha.in"
 YOUTUBE_URL = "https://www.youtube.com/@RailPariksha_Official"
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -92,15 +92,15 @@ WELCOME = (
     "📝 दिन में 3 क्विज़, असली पिछले साल के प्रश्न (जवाब और व्याख्या के साथ)\n"
     "🧠 फ़ैक्ट, फ़ॉर्मूला और चीट शीट\n"
     "💪 शाम को पढ़ाई की टिप\n\n"
-    f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {PLAY_URL}\n"
+    f"📲 हमारा मुफ़्त ऐप (हिंदी + अंग्रेज़ी, ऑफलाइन भी): {APP_URL}\n"
     f"🌐 वेबसाइट: {SITE_URL}\n"
     f"▶️ YouTube (रोज़ 6 शॉर्ट्स): {YOUTUBE_URL}\n\n"
     "कोई प्रश्न गलत लगे तो ऐप में Report कर दीजिए, हम सुधारते हैं। साथ पढ़ेंगे तो साथ निकलेंगे 🤝"
 )
 DESCRIPTION = (
     "हम भी आपकी तरह रेलवे की तैयारी कर रहे स्टूडेंट्स हैं। रोज़: करेंट अफेयर्स, PYQ क्विज़, फ़ैक्ट। "
-    f"स्टूडेंट्स द्वारा, स्टूडेंट्स के लिए। ऐप: {PLAY_URL} · वेबसाइट: {SITE_URL} · YouTube: {YOUTUBE_URL}"
-)
+    f"ऐप: {APP_URL} · वेबसाइट: {SITE_URL} · YouTube: {YOUTUBE_URL}"
+)  # Telegram allows 255 characters; test_telegram_bot checks it
 
 
 class TelegramError(Exception):
@@ -302,7 +302,7 @@ def hindi_date(day):
 def ca_caption(day, qs):
     """Digest as a photo caption: as many headlines as fit in Telegram's 1024 characters."""
     head = f"📰 <b>आज का करेंट अफेयर्स: {hindi_date(day)}</b>\nरेलवे परीक्षा के लिए ज़रूरी बातें:\n\n"
-    foot = f"\n📲 पूरी क्विज़ और 45,000+ PYQ ऐप में: {PLAY_URL}\n#RRB #RailwayExam #CurrentAffairs"
+    foot = f"\n📲 पूरी क्विज़ और 45,000+ PYQ ऐप में: {APP_URL}\n#RRB #RailwayExam #CurrentAffairs"
     body = ""
     for i, q in enumerate(qs, 1):
         line = f"{i}. {html.escape(fact_of_headline(q))}\n"
@@ -315,7 +315,7 @@ def ca_caption(day, qs):
 def ca_text(day, qs):
     lines = [f"📰 <b>आज का करेंट अफेयर्स: {hindi_date(day)}</b>", "रेलवे परीक्षा के लिए ज़रूरी बातें:", ""]
     lines += [f"{i}. {html.escape(fact_of_headline(q))}" for i, q in enumerate(qs, 1)]
-    lines += ["", f"📲 पूरी क्विज़ और 45,000+ PYQ ऐप में: {PLAY_URL}", "", "#RRB #RailwayExam #CurrentAffairs"]
+    lines += ["", f"📲 पूरी क्विज़ और 45,000+ PYQ ऐप में: {APP_URL}", "", "#RRB #RailwayExam #CurrentAffairs"]
     return "\n".join(lines)[:MESSAGE_MAX]
 
 
@@ -378,7 +378,7 @@ def tip_text(day):
     parts = [f"{icon} {html.escape(item['hi'])}"]
     for s in special_day(day):
         parts.append(f"📅 <b>आज:</b> {html.escape(s['title_hi'])}\n{html.escape(s.get('detail_hi', ''))}")
-    parts.append(f"🚆 आज की प्रैक्टिस अभी करें, रोज़ 10 प्रश्न भी काफ़ी हैं:\n{PLAY_URL}\n🌐 {SITE_URL}\n▶️ YouTube: {YOUTUBE_URL}")
+    parts.append(f"🚆 आज की प्रैक्टिस अभी करें, रोज़ 10 प्रश्न भी काफ़ी हैं:\n{APP_URL}\n🌐 {SITE_URL}\n▶️ YouTube: {YOUTUBE_URL}")
     return "\n\n".join(parts)[:MESSAGE_MAX]
 
 
@@ -396,7 +396,7 @@ def weekly_text(day):
             n += 1
     if n == 0:
         return None
-    lines += ["", f"📲 पूरी क्विज़ और मॉक टेस्ट ऐप में: {PLAY_URL}", f"🌐 {SITE_URL}", "", "#WeeklyRecap #CurrentAffairs #RRB"]
+    lines += ["", f"📲 पूरी क्विज़ और मॉक टेस्ट ऐप में: {APP_URL}", f"🌐 {SITE_URL}", "", "#WeeklyRecap #CurrentAffairs #RRB"]
     return "\n".join(lines)
 
 
@@ -476,7 +476,7 @@ def make_card(day, qs, count=4):
             ty += 52
         y += box_h + gap
     d.text((70, H - 150), "रोज़ की तैयारी, मुफ़्त ऐप में", font=f_foot, fill=(255, 196, 60))
-    d.text((70, H - 100), "45,000+ असली PYQ • Play Store: RailPariksha", font=f_date, fill=(220, 235, 255))
+    d.text((70, H - 100), "45,000+ असली PYQ • ऐप: railpariksha.in/app", font=f_date, fill=(220, 235, 255))
     buf = io.BytesIO()
     img.save(buf, "PNG", optimize=True)
     return buf.getvalue()
